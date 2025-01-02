@@ -1,0 +1,121 @@
+<p><span class="title">inputFilePage</span><span class="type">object</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3471">3471</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+File dialog event page. This page is used by the IFDB Storage Server
+file dialog to return information to the game UI. The IFDB dialog page
+can't itself perform scripting actions on the enclosing dialog frame,
+since it's being served from a different domain - browsers prohibit
+cross-domain scripting for security reasons. The IFDB dialog must
+therefore navigate back to a page within the game server domain in order
+to return information through scripting. This is that page: when the
+IFDB page is ready to return information, it navigates its frame to this
+page, passing the return values in the request parameters. Since this
+page is served by the game server, within the game server domain, the
+browser allows it to use scripting actions on its enclosing frame. We
+finish the job by dismissing the dialog in the UI.
+
+**`inputFilePage`**` :   `[`WebResource`](../object/WebResource.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">inputFilePage</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>WebResource<code class="language-plaintext highlighter-rouge">](../object/WebResource.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>vpath<code class="language-plaintext highlighter-rouge">](#vpath)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>group<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#group)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#priority)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>processRequest<code class="language-plaintext highlighter-rouge">](#processRequest)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>matchRequest<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#matchRequest)</code>  <code class="language-plaintext highlighter-rouge">[</code>sendAck<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#sendAck)</code>  <code class="language-plaintext highlighter-rouge">[</code>sendXML<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#sendXML)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="vpath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vpath</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3472">3472</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="processRequest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processRequest (req, query)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3473">3473</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

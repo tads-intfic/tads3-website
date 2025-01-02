@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Finishing
+<a href="toc.html" class="nav">Table of Contents</a> \| Finishing
 Touches  
-<span class="navnp"><a href="convsumm.htm" class="nav"><em>Prev:</em> Summary</a>
-   <a href="starting.htm" class="nav"><em>Next:</em> Starting Out Right</a>
+<span class="navnp"><a href="convsumm.html" class="nav"><em>Prev:</em> Summary</a>
+   <a href="starting.html" class="nav"><em>Next:</em> Starting Out Right</a>
     </span>
 
 </div>
@@ -23,11 +25,11 @@ bring the tutorial to its conclusion.
 
 <div class="sectoc">
 
-[Starting Out Right](starting.htm)  
-[Scoring](scoring.htm)  
-[Hints](hints.htm)  
-[What More?](whatmore.htm)  
-[Conclusion](conclusion.htm)  
+[Starting Out Right](starting.html)  
+[Scoring](scoring.html)  
+[Hints](hints.html)  
+[What More?](whatmore.html)  
+[Conclusion](conclusion.html)  
 
 </div>
 
@@ -38,10 +40,10 @@ bring the tutorial to its conclusion.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Finishing
+<a href="toc.html" class="nav">Table of Contents</a> \| Finishing
 Touches  
-<span class="navnp"><a href="convsumm.htm" class="nav"><em>Prev:</em> Summary</a>
-   <a href="starting.htm" class="nav"><em>Next:</em> Starting Out Right</a>
+<span class="navnp"><a href="convsumm.html" class="nav"><em>Prev:</em> Summary</a>
+   <a href="starting.html" class="nav"><em>Next:</em> Starting Out Right</a>
     </span>
 
 </div>

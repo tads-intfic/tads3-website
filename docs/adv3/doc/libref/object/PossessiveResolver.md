@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PossessiveResolver</span><span class="type">class</span>
 
 [resolver.t](../file/resolver.t.html)\[[1068](../source/resolver.t.html#1068)\]

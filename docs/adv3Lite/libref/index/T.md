@@ -1,3 +1,5 @@
+---
+---
 # T
 
 [**`t3AllocProp`**](../file/t3.h.html#t3AllocProp) - global function in

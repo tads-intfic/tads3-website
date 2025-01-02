@@ -1,3 +1,5 @@
+---
+---
 TADS 3 Library Reference Manual Not Installed
 
 # TADS 3 Library Reference Manual - Not Installed
@@ -10,4 +12,4 @@ the on-line edition of the documentation on the
 automatically display the on-line documentation after a few moments, you
 might try navigating manually to this page:  
   
-<http://www.tads.org/t3doc/doc/libref/index.htm>
+<http://www.tads.org/t3doc/doc/libref/index.html>

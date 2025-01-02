@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NetException</span><span class="type">class</span>
 
 [tadsnet.t](../file/tadsnet.t.html)\[[360](../source/tadsnet.t.html#360)\]

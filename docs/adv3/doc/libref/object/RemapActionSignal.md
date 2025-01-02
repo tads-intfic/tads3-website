@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RemapActionSignal</span><span class="type">class</span>
 
 [exec.t](../file/exec.t.html)\[[1353](../source/exec.t.html#1353)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Tip</span><span class="type">class</span>
 
 [tips.t](../file/tips.t.html)\[[96](../source/tips.t.html#96)\]

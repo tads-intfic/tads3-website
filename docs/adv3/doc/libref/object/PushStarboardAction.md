@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PushStarboardAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[3008](../source/actions.t.html#3008)\]

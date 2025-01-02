@@ -1,3 +1,5 @@
+---
+---
 <span class="title">consultablePreinit</span><span class="type">object</span>
 
 [topicEntry.t](../file/topicEntry.t.html)\[[387](../source/topicEntry.t.html#387)\]

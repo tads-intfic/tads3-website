@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ThrowAt</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1390](../source/actions.t.html#1390)\]

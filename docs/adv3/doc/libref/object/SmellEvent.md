@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SmellEvent</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[881](../source/objects.t.html#881)\]

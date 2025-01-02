@@ -1,3 +1,5 @@
+---
+---
 # input.t
 
 [documentation](../file/input.t.html)

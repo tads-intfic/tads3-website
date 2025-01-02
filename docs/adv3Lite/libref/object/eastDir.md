@@ -1,3 +1,5 @@
+---
+---
 <span class="title">eastDir</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[1797](../source/travel.t.html#1797)\]

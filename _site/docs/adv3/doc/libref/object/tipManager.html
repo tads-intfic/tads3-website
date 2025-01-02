@@ -1,0 +1,177 @@
+<p><span class="title">tipManager</span><span class="type">object</span></p>
+
+<p><a href="../file/tips.t.html">tips.t</a>[<a href="../source/tips.t.html#23">23</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The tip manager keeps track of which tips we have shown. Since we don't
+want to unnecessarily show any tips more than once, we store this
+information both transiently (in the tipManager) and persistently (in
+the tip objects themselves). This should make sure that we at least
+cover these two types of cases:
+
+\- The player sees a tip, then restarts, undos or restores to an earlier
+position. - The player sees a tip, saves, then resumes play at some
+later time.
+
+`transient `**`tipManager`**` :   `[`InitObject`](../object/InitObject.html)`   `[`PostRestoreObject`](../object/PostRestoreObject.html)`   `[`PostUndoObject`](../object/PostUndoObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">tipManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>InitObject<code class="language-plaintext highlighter-rouge">](../object/InitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>PostRestoreObject<code class="language-plaintext highlighter-rouge">](../object/PostRestoreObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>PostUndoObject<code class="language-plaintext highlighter-rouge">](../object/PostUndoObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>pendingTips<code class="language-plaintext highlighter-rouge">](#pendingTips)</code>  <code class="language-plaintext highlighter-rouge">[</code>shownTips<code class="language-plaintext highlighter-rouge">](#shownTips)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PostRestoreObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>restoreCode<code class="language-plaintext highlighter-rouge">](../object/PostRestoreObject.html#restoreCode)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTips<code class="language-plaintext highlighter-rouge">](#showTips)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="pendingTips"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pendingTips</code></p>
+
+<p><a href="../file/tips.t.html">tips.t</a>[<a href="../source/tips.t.html#76">76</a>]</p>
+
+<div class="desc">
+
+a vector of tips to be displayed before the next prompt
+
+</div>
+
+<p><span id="shownTips"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shownTips</code></p>
+
+<p><a href="../file/tips.t.html">tips.t</a>[<a href="../source/tips.t.html#87">87</a>]</p>
+
+<div class="desc">
+
+A transient list of shown tips. Note that this must be a list and not a
+vector. When updating a list, we actually replace it with a new list,
+since lists are immutable. This is a transient change - it affects only
+the value of the shownTips property. Updating a vector, however,
+modifies the vector itself and leaves the property with the same
+reference. A vector itself is always persistent, so this change would be
+lost after E.G. a restore.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/tips.t.html">tips.t</a>[<a href="../source/tips.t.html#45">45</a>]</p>
+
+<div class="desc">
+
+update tip information after a restore, restart or undo
+
+</div>
+
+<p><span id="showTips"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showTips ( )</code></p>
+
+<p><a href="../file/tips.t.html">tips.t</a>[<a href="../source/tips.t.html#28">28</a>]</p>
+
+<div class="desc">
+
+Show pending tips. This is called by a PromptDaemon before each new
+round of input.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

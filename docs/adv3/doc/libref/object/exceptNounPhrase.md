@@ -1,3 +1,5 @@
+---
+---
 <span class="title">exceptNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`exceptNounPhrase(singleComplete)`](../object/exceptNounPhrase(singleComplete).html)</span>` :   `[`ExceptListProd`](../object/ExceptListProd.html)

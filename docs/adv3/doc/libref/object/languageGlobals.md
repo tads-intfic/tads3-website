@@ -1,3 +1,5 @@
+---
+---
 <span class="title">languageGlobals</span><span class="type">object</span>
 
 [en_us.t](../file/en_us.t.html)\[[118](../source/en_us.t.html#118)\]

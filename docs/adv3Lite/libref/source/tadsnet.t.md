@@ -1,3 +1,5 @@
+---
+---
 # tadsnet.t
 
 [documentation](../file/tadsnet.t.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AmbiguousMultiDefiniteError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5674](../source/parser.t.html#5674)\]

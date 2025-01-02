@@ -1,0 +1,320 @@
+<p><span class="title">ActorTopicDatabase</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2841">2841</a>],
+<a href="../file/scenetopic.t.html">scenetopic.t</a>[<a href="../source/scenetopic.t.html#78">78</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A TopicDatabase is an object that can contain TopicEntries and return
+the best match on request. ActorTopicDatabase is a specialization of
+TopicDatabase for use with the conversation system, and is used as a
+mix-in class in the list of classes from which Actor and ActorState
+inherit.
+
+*Modified in
+[scenetopic.t](../file/scenetopic.t.html)\[[78](../source/scenetopic.t.html#78)\]:*  
+Modifications to ActorTopicDatabase for SceneTopic extension
+
+`class `**`ActorTopicDatabase`**` :   `[`TopicDatabase`](../object/TopicDatabase.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TopicDatabase<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Actor<code class="language-plaintext highlighter-rouge">](../object/Actor.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ActorState`](../object/ActorState.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>askForTopics<code class="language-plaintext highlighter-rouge">](#askForTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>askTopics<code class="language-plaintext highlighter-rouge">](#askTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandTopics<code class="language-plaintext highlighter-rouge">](#commandTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>defaultAgendaTopic<code class="language-plaintext highlighter-rouge">](#defaultAgendaTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>giveTopics<code class="language-plaintext highlighter-rouge">](#giveTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiateTopics<code class="language-plaintext highlighter-rouge">](#initiateTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>miscTopics<code class="language-plaintext highlighter-rouge">](#miscTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>queryTopics<code class="language-plaintext highlighter-rouge">](#queryTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayTopics<code class="language-plaintext highlighter-rouge">](#sayTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>sceneEndTopics<code class="language-plaintext highlighter-rouge">](#sceneEndTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>sceneStartTopics<code class="language-plaintext highlighter-rouge">](#sceneStartTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTopics<code class="language-plaintext highlighter-rouge">](#showTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>talkTopics<code class="language-plaintext highlighter-rouge">](#talkTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>tellTopics<code class="language-plaintext highlighter-rouge">](#tellTopics)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>initiateTopic<code class="language-plaintext highlighter-rouge">](#initiateTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>listableTopics<code class="language-plaintext highlighter-rouge">](#listableTopics)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>getBestMatch<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#getBestMatch)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="askForTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2857">2857</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="askTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2851">2851</a>]</p>
+
+<div class="desc">
+
+The various lists of TopicEntries located within this TopicDatabase. For
+exampel the askTopics list would contain a list of all our AskTopics.
+Note that the same TopicEntry can appear in more than one list; for
+example an AskTellTopic would appear in both the askTopics list and the
+tellTopics list, and a DefaultAnyTopic would appear in all the lists
+apart from initiateTopics.
+
+</div>
+
+<p><span id="commandTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2861">2861</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="defaultAgendaTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">defaultAgendaTopic</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2921">2921</a>]</p>
+
+<div class="desc">
+
+Obtain the identify of any DefaultAgendaTopic contained in this database
+
+</div>
+
+<p><span id="giveTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">giveTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2855">2855</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="initiateTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initiateTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2859">2859</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="miscTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">miscTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2860">2860</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="queryTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">queryTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2854">2854</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2853">2853</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sceneEndTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sceneEndTopics</code></p>
+
+<p><a href="../file/scenetopic.t.html">scenetopic.t</a>[<a href="../source/scenetopic.t.html#80">80</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sceneStartTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sceneStartTopics</code></p>
+
+<p><a href="../file/scenetopic.t.html">scenetopic.t</a>[<a href="../source/scenetopic.t.html#79">79</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="showTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2856">2856</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="talkTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">talkTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2858">2858</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="tellTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tellTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2852">2852</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="initiateTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initiateTopic (top)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2925">2925</a>]</p>
+
+<div class="desc">
+
+Handle an InitiateTopic
+
+</div>
+
+<p><span id="listableTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listableTopics ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2870">2870</a>]</p>
+
+<div class="desc">
+
+Return a list of our listable topics, that is the topic entries located
+within us that should be included in a topic inventory listing because
+they are (a) currently reachable and (b) currently marked for listing.
+The resulting list forms part of the list passed to the
+suggestedTopicLister.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

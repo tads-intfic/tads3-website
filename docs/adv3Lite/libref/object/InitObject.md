@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InitObject</span><span class="type">class</span>
 
 [\_main.t](../file/_main.t.html)\[[489](../source/_main.t.html#489)\]

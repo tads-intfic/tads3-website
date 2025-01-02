@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,9 +8,9 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Actions  
-<span class="navnp"><a href="thought.htm" class="nav"><em>Prev:</em> Thoughts</a>
-    <a href="actionoverview.htm" class="nav"><em>Next:</em> Overview</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Actions  
+<span class="navnp"><a href="thought.html" class="nav"><em>Prev:</em> Thoughts</a>
+    <a href="actionoverview.html" class="nav"><em>Next:</em> Overview</a>
     </span>
 
 </div>
@@ -22,19 +24,19 @@ and how to define your own actions.
 
 <div class="sectoc">
 
-[Overview](actionoverview.htm)  
-[Action Results](actres.htm)  
-[Messages](message.htm)  
-[Doers](doer.htm)  
-[Implicit Actions](implicit.htm)  
-[Reacting to Actions](react.htm)  
-[Defining New Actions](define.htm)  
-[Literal and Numeric Actions](literalact.htm)  
-[Topic Actions](topicact.htm)  
-[Querying the World Model](query.htm)  
-[Scope](scope.htm)  
-[Debugging Commands](debug.htm)  
-[Action Reference](actionref.htm)  
+[Overview](actionoverview.html)  
+[Action Results](actres.html)  
+[Messages](message.html)  
+[Doers](doer.html)  
+[Implicit Actions](implicit.html)  
+[Reacting to Actions](react.html)  
+[Defining New Actions](define.html)  
+[Literal and Numeric Actions](literalact.html)  
+[Topic Actions](topicact.html)  
+[Querying the World Model](query.html)  
+[Scope](scope.html)  
+[Debugging Commands](debug.html)  
+[Action Reference](actionref.html)  
 
 </div>
 
@@ -45,9 +47,9 @@ and how to define your own actions.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Actions  
-<span class="navnp"><a href="thought.htm" class="nav"><em>Prev:</em> Thoughts</a>
-    <a href="actionoverview.htm" class="nav"><em>Next:</em> Overview</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Actions  
+<span class="navnp"><a href="thought.html" class="nav"><em>Prev:</em> Thoughts</a>
+    <a href="actionoverview.html" class="nav"><em>Next:</em> Overview</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LockableWithKey</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[4021](../source/objects.t.html#4021)\]

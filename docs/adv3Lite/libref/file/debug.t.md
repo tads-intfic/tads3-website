@@ -1,3 +1,5 @@
+---
+---
 <span class="title">debug.t</span><span class="type">file</span>
 
 [source file](../source/debug.t.html)

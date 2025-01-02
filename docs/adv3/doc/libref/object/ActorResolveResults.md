@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ActorResolveResults</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5703](../source/parser.t.html#5703)\]

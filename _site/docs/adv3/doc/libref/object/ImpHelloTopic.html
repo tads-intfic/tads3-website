@@ -1,0 +1,188 @@
+<p><span class="title">ImpHelloTopic</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3319">3319</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+An implied greeting topic. This handles ONLY implied greetings.
+
+Note that we have a higher-than-normal score by default. This makes it
+easy to program two common cases for conversational states. First, the
+more common case, where you want a single message for both implied and
+explicit greetings: just create a HelloTopic, since that responds to
+both kinds. Second, the less common case, where we want to
+differentiate, writing separate responses for implied and explicit
+greetings: create a HelloTopic for the explicit kind, and ALSO create an
+ImpHelloTopic for the implied kind. Since the ImpHelloTopic has a higher
+score, it'll overshadow the HelloTopic object when it matches an implied
+greeting; but since ImpHelloTopic doesn't match an explicit greeting,
+we'll fall back on the HelloTopic for that.
+
+`class `**`ImpHelloTopic`**` :   `[`MiscTopic`](../object/MiscTopic.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ImpHelloTopic</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MiscTopic<code class="language-plaintext highlighter-rouge">](../object/MiscTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>impliesGreeting<code class="language-plaintext highlighter-rouge">](#impliesGreeting)</code>  <code class="language-plaintext highlighter-rouge">[</code>includeInList<code class="language-plaintext highlighter-rouge">](#includeInList)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchList<code class="language-plaintext highlighter-rouge">](#matchList)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchScore<code class="language-plaintext highlighter-rouge">](#matchScore)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>altTalkCount<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#altTalkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>altTopicList<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#altTopicList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConversational<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#isConversational)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>talkCount<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#talkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicGroupActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupScoreAdjustment<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicGroupScoreAdjustment)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicResponse<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicResponse)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>noteInvocation<code class="language-plaintext highlighter-rouge">](#noteInvocation)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MiscTopic</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isMatchPossible<code class="language-plaintext highlighter-rouge">](../object/MiscTopic.html#isMatchPossible)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchTopic<code class="language-plaintext highlighter-rouge">](../object/MiscTopic.html#matchTopic)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addAltTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addAltTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>adjustScore<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#adjustScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>anyAltIsActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#anyAltIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>breakTopicTie<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#breakTopicTie)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkIsActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#checkIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>deferToEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#deferToEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicOwner<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#getTopicOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#handleTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeTopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#initializeTopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteAltInvocation<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#noteAltInvocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>setTopicPronouns<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#setTopicPronouns)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="impliesGreeting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">impliesGreeting</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3328">3328</a>]</p>
+
+<div class="desc">
+
+this is itself a greeting, so we obviously don't want to trigger another
+greeting to greet the greeting
+
+</div>
+
+<p><span id="includeInList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">includeInList</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3320">3320</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="matchList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchList</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3321">3321</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="matchScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchScore</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3322">3322</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="noteInvocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteInvocation (fromActor)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3334">3334</a>]</p>
+
+<div class="desc">
+
+if we use this as a greeting upon entering a ConvNode, we'll want to
+stay in the node afterward
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

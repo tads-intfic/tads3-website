@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> AgendaItems  
-<span class="navnp"><a href="actorstate.htm" class="nav"><em>Prev:</em> Actor States</a>
-    <a href="asktell.htm" class="nav"><em>Next:</em> Basic Ask/Tell</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> AgendaItems  
+<span class="navnp"><a href="actorstate.html" class="nav"><em>Prev:</em> Actor States</a>
+    <a href="asktell.html" class="nav"><em>Next:</em> Basic Ask/Tell</a>
     </span>
 
 </div>
@@ -53,7 +55,7 @@ turn.
 
 Note that AgendaItems are not invoked when conversation has taken place
 on the same turn, except in the special case of a
-[DefaultAgendaTopic](initiate.htm#defaultagenda) which can be used to
+[DefaultAgendaTopic](initiate.html#defaultagenda) which can be used to
 allow an NPC to pursue its own conversational agenda rather than giving
 a bland default response to something the player character says (this
 will be discussed more fully in a later section). Apart from the special
@@ -111,7 +113,7 @@ However, it won't be invoked at all unless we also do one of two things:
 Note that we could also call the addToAgenda() method indirectly via the
 \<.agenda item\> tag, e.g. <span class="code">\<.agenda
 guardWarnAgenda\></span>, though this also adds the item to the
-agendaLists of any [DefaultAgendaTopics](defaultagendatopic.htm)
+agendaLists of any [DefaultAgendaTopics](defaultagendatopic.html)
 associated with the Actor, which may or may not be what we want to do
 (we shall describe DefaultAgendaTopics more fully in a later section).
 If for some reason we want to prevent an AgendaItem from being invoked
@@ -226,10 +228,10 @@ which can be used to allow an NPC either to initiate a conversation or
 to seize the conversational initiative during a lull in the
 conversation. By default it is invoked when the actor can speak to the
 player character (they're within audible distance of each other), and
-there isn't a current [conversation node](convnode.htm), and either the
+there isn't a current [conversation node](convnode.html), and either the
 player character hasn't conversed on the same turn or the play character
 has said something that triggers a
-[DefaultAgendaTopic](initiate.htm#defaultagenda) (for which see below).
+[DefaultAgendaTopic](initiate.html#defaultagenda) (for which see below).
 Once again, if you need to define a further condition on the isReady
 property of a ConvAgendaItem you need to *and* it with the inherited
 handling, for example:
@@ -406,10 +408,10 @@ the current ActorState.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> AgendaItems  
-<span class="navnp"><a href="actorstate.htm" class="nav"><em>Prev:</em> Actor States</a>
-    <a href="asktell.htm" class="nav"><em>Next:</em> Basic Ask/Tell</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> AgendaItems  
+<span class="navnp"><a href="actorstate.html" class="nav"><em>Prev:</em> Actor States</a>
+    <a href="asktell.html" class="nav"><em>Next:</em> Basic Ask/Tell</a>
     </span>
 
 </div>

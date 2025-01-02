@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nestedRoomOut</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[1952](../source/travel.t.html#1952)\]

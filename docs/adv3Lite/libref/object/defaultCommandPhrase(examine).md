@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultCommandPhrase(examine)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[98](../source/grammar.t.html#98)\]

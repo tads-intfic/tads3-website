@@ -1,3 +1,5 @@
+---
+---
 <span class="title">adv3LibInit</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[507](../source/misc.t.html#507)\]

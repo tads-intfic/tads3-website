@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>DefaultConsultTopic : <a
-href="defaulttopics-overview.htm">DefaultTopic</a><br />
+href="defaulttopics-overview.html">DefaultTopic</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="consulttopic.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="scoring-overview.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="consulttopic.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="scoring-overview.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -20,7 +22,7 @@ href="scoring-overview.htm">[Next]</a></td>
 If the player tries to consult our History Book about something for
 which we've defined no response, we need an appropriate message to be
 displayed. We use a DefaultConsultTopic for this purpose (just as we use
-other [DefaultTopic](defaulttopics-overview.htm) types in
+other [DefaultTopic](defaulttopics-overview.html) types in
 conversation).  
   
 An appropriate DefaultConsultTopic is not hard to define. Since a book

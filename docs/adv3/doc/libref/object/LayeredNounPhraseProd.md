@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LayeredNounPhraseProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1293](../source/parser.t.html#1293)\]

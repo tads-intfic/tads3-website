@@ -1,0 +1,242 @@
+<p><span class="title">BasicOpenable</span><span class="type">class</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3379">3379</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A "basic openable" is an object that keeps open/closed status, and which
+can be linked to another object to maintain that status. This basic
+class doesn't handle any special commands; it's purely for keeping track
+of internal open/closed state.
+
+`class `**`BasicOpenable`**` :   `[`Linkable`](../object/Linkable.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BasicOpenable</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Linkable<code class="language-plaintext highlighter-rouge">](../object/Linkable.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BasicOpenable</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BasicDoor<code class="language-plaintext highlighter-rouge">](../object/BasicDoor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Door<code class="language-plaintext highlighter-rouge">](../object/Door.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AutoClosingDoor<code class="language-plaintext highlighter-rouge">](../object/AutoClosingDoor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SecretDoor<code class="language-plaintext highlighter-rouge">](../object/SecretDoor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>HiddenDoor<code class="language-plaintext highlighter-rouge">](../object/HiddenDoor.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Openable<code class="language-plaintext highlighter-rouge">](../object/Openable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Door<code class="language-plaintext highlighter-rouge">](../object/Door.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AutoClosingDoor<code class="language-plaintext highlighter-rouge">](../object/AutoClosingDoor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Matchbook<code class="language-plaintext highlighter-rouge">](../object/Matchbook.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>OpenableContainer<code class="language-plaintext highlighter-rouge">](../object/OpenableContainer.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>KeyedContainer<code class="language-plaintext highlighter-rouge">](../object/KeyedContainer.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>LockableContainer`](../object/LockableContainer.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>cannotMoveThroughMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTouchThroughMsg<code class="language-plaintext highlighter-rouge">](#cannotTouchThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiallyOpen<code class="language-plaintext highlighter-rouge">](#initiallyOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen_<code class="language-plaintext highlighter-rouge">](#isOpen_)</code>  <code class="language-plaintext highlighter-rouge">[</code>openDesc<code class="language-plaintext highlighter-rouge">](#openDesc)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>initializeThing<code class="language-plaintext highlighter-rouge">](#initializeThing)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen<code class="language-plaintext highlighter-rouge">](#isOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>makeOpen<code class="language-plaintext highlighter-rouge">](#makeOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryImplicitRemoveObstructor<code class="language-plaintext highlighter-rouge">](#tryImplicitRemoveObstructor)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Linkable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>masterObject<code class="language-plaintext highlighter-rouge">](../object/Linkable.html#masterObject)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="cannotMoveThroughMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveThroughMsg</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3468">3468</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotTouchThroughMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTouchThroughMsg</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3467">3467</a>]</p>
+
+<div class="desc">
+
+if we can't reach or move something through the container, it must be
+because we're closed
+
+</div>
+
+<p><span id="initiallyOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initiallyOpen</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3387">3387</a>]</p>
+
+<div class="desc">
+
+Initial open/closed setting. Set this to true to make the object open
+initially. If this object is linked to another object (as in the two
+sides of a door), you only need to set this property in the \*master\*
+object - the other side will automatically link up to the master object
+during initialization.
+
+</div>
+
+<p><span id="isOpen_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isOpen_</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3474">3474</a>]</p>
+
+<div class="desc">
+
+Internal open/closed status. Do not use this for initialization - set
+initiallyOpen in the master object instead.
+
+</div>
+
+<p><span id="openDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openDesc</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3432">3432</a>]</p>
+
+<div class="desc">
+
+Open status name. This is an adjective describing whether the object is
+opened or closed. In English, this will return "open" or "closed."
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="initializeThing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeThing ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3436">3436</a>]</p>
+
+<div class="desc">
+
+initialization
+
+</div>
+
+<p><span id="isOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isOpen ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3393">3393</a>]</p>
+
+<div class="desc">
+
+Flag: door is open. Travel is only possible when the door is open.
+Return the master's status.
+
+</div>
+
+<p><span id="makeOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">makeOpen (stat)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3412">3412</a>]</p>
+
+<div class="desc">
+
+Make the object open or closed. By default, we'll simply set the isOpen
+flag to the new status. Objects can override this to apply side effects
+of opening or closing the object.
+
+</div>
+
+<p><span id="tryImplicitRemoveObstructor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryImplicitRemoveObstructor (sense, obj)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3450">3450</a>]</p>
+
+<div class="desc">
+
+If we're obstructing a sense path, it must be because we're closed. Try
+implicitly opening.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

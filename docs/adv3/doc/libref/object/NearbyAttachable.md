@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NearbyAttachable</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[3311](../source/extras.t.html#3311)\]

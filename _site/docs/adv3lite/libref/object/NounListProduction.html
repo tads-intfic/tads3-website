@@ -1,0 +1,139 @@
+<p><span class="title">NounListProduction</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4056">4056</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+NounListProduction is a special Production subclass for lists including
+more than one noun.
+
+Each instance should have two '-\&gt;' properties: np1\_ and np2\_. These
+should be set to the match sub-tree for the first and second elements of
+the noun list (respectively). Note that we assume there are only two
+elements in each list grammar item - this isn't because we want to limit
+noun lists to two elements, but rather because we assume that the
+grammars for longer lists will be constructed recursively out of
+two-element nodes: A, B, C, D becomes something along the lines of
+List(a, List(b, List(c, List(d)))).
+
+`class `**`NounListProduction`**` :   `[`Production`](../object/Production.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NounListProduction</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Production<code class="language-plaintext highlighter-rouge">](../object/Production.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NounListProduction</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>disambigList(list)<code class="language-plaintext highlighter-rouge">](../object/disambigList(list).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>disambigOrdinalList(head)<code class="language-plaintext highlighter-rouge">](../object/disambigOrdinalList(head).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>disambigOrdinalList(tail)<code class="language-plaintext highlighter-rouge">](../object/disambigOrdinalList(tail).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>exceptListBody(list)<code class="language-plaintext highlighter-rouge">](../object/exceptListBody(list).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nonTerminalNounMultiList(multi)<code class="language-plaintext highlighter-rouge">](../object/nonTerminalNounMultiList(multi).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nonTerminalNounMultiList(pair)<code class="language-plaintext highlighter-rouge">](../object/nonTerminalNounMultiList(pair).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounMultiList(multi)`](../object/nounMultiList(multi).html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>determiner<code class="language-plaintext highlighter-rouge">](../object/Production.html#determiner)</code>  <code class="language-plaintext highlighter-rouge">[</code>nounPhraseRole<code class="language-plaintext highlighter-rouge">](../object/Production.html#nounPhraseRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>npClass<code class="language-plaintext highlighter-rouge">](../object/Production.html#npClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>parent<code class="language-plaintext highlighter-rouge">](../object/Production.html#parent)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>visitProd<code class="language-plaintext highlighter-rouge">](#visitProd)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addNounListItem<code class="language-plaintext highlighter-rouge">](../object/Production.html#addNounListItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>build<code class="language-plaintext highlighter-rouge">](../object/Production.html#build)</code>  <code class="language-plaintext highlighter-rouge">[</code>findAction<code class="language-plaintext highlighter-rouge">](../object/Production.html#findAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>findChild<code class="language-plaintext highlighter-rouge">](../object/Production.html#findChild)</code>  <code class="language-plaintext highlighter-rouge">[</code>findParent<code class="language-plaintext highlighter-rouge">](../object/Production.html#findParent)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNounPhraseRole<code class="language-plaintext highlighter-rouge">](../object/Production.html#getNounPhraseRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>getText<code class="language-plaintext highlighter-rouge">](../object/Production.html#getText)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTokens<code class="language-plaintext highlighter-rouge">](../object/Production.html#getTokens)</code>  <code class="language-plaintext highlighter-rouge">[</code>grammarInfoForBuild<code class="language-plaintext highlighter-rouge">](../object/Production.html#grammarInfoForBuild)</code>  <code class="language-plaintext highlighter-rouge">[</code>isChildOf<code class="language-plaintext highlighter-rouge">](../object/Production.html#isChildOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteEndOfSentence<code class="language-plaintext highlighter-rouge">](../object/Production.html#noteEndOfSentence)</code>  <code class="language-plaintext highlighter-rouge">[</code>visitLiteral<code class="language-plaintext highlighter-rouge">](../object/Production.html#visitLiteral)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="visitProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">visitProd (cmd, np, prod)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4062">4062</a>]</p>
+
+<div class="desc">
+
+Visit a production during the build process. When parsing the second
+element, we'll add a new NounPhrase to the current slot's list.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

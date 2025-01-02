@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](basictravel.htm)
-  [\[Next\]](makinglifemoreproblematic.htm)*
+*[\[Previous\]](basictravel.html)
+  [\[Next\]](makinglifemoreproblematic.html)*
 
 ## Climbing the Tree - Remapping Behaviour
 
@@ -113,7 +115,7 @@ back so it reads:
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](basictravel.htm)
-  [\[Next\]](makinglifemoreproblematic.htm)*
+*[\[Previous\]](basictravel.html)
+  [\[Next\]](makinglifemoreproblematic.html)*
 
 </div>

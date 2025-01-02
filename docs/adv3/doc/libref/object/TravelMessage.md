@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TravelMessage</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[2062](../source/travel.t.html#2062)\]

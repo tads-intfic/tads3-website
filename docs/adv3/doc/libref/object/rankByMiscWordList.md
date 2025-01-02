@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rankByMiscWordList</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[5924](../source/parser.t.html#5924)\]

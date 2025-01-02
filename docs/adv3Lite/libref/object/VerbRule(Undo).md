@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Undo)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2356](../source/grammar.t.html#2356)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,9 +8,9 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> Conclusion  
-<span class="navnp"><a href="whatmore.htm" class="nav"><em>Prev:</em> What More?</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> Conclusion  
+<span class="navnp"><a href="whatmore.html" class="nav"><em>Prev:</em> What More?</a>
 </span>
 
 </div>
@@ -53,7 +55,7 @@ but *some* people do) then consider taking the following steps:
     of the system you're trying to use.
 3.  Make use of the debugging tools provided, either in Windows
     Workbench (if you're using it) or (or additionally) those provided
-    by [adv3Lite](../manual/debug.htm). They may help you track down
+    by [adv3Lite](../manual/debug.html). They may help you track down
     what's going awry.
 4.  Take a look at the library source code to see if that can help you
     figure out what's going on.
@@ -75,9 +77,9 @@ February 2013*
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> Conclusion  
-<span class="navnp"><a href="whatmore.htm" class="nav"><em>Prev:</em> What More?</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> Conclusion  
+<span class="navnp"><a href="whatmore.html" class="nav"><em>Prev:</em> What More?</a>
 </span>
 
 </div>

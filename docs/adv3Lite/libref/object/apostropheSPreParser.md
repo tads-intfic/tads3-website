@@ -1,3 +1,5 @@
+---
+---
 <span class="title">apostropheSPreParser</span><span class="type">object</span>
 
 [english.t](../file/english.t.html)\[[5489](../source/english.t.html#5489)\]

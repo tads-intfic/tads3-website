@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>sightPresence &amp; isListed<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="findingincode.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="hidden.htm">[Next]</a></td>
+href="findingincode.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="hidden.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -32,7 +34,7 @@ stoneTablet : Tablet '(loose) stone tablet\*tablets' 'stone tablet' @squ
 ;  
   
 You may recall that the way out of this cave is through a stone archway
-we defined someway back as example of an [ExitPortal](exitportal.htm).
+we defined someway back as example of an [ExitPortal](exitportal.html).
 This would seem a good place to hide the stone tablet; the player will
 only learn of the tablet's existence if he or she examines this arch. We
 don't want the stone tablet listed separately until it's free of the
@@ -70,8 +72,8 @@ under slightly different conditions. Again, with items that descend from
 NonPortable, which would not normally be listed anyway, manipulating
 sightPresence can often be the most efficient means of bringing
 something to light (as in the example of the [hole at the end of the
-fluid link](lever(2).htm#tinyhole), which we'll come to eventually).
-Otherwise, though, it is usually simpler to use the [Hidden](hidden.htm)
+fluid link](lever(2).html#tinyhole), which we'll come to eventually).
+Otherwise, though, it is usually simpler to use the [Hidden](hidden.html)
 class, which we shall look at next.  
   
   

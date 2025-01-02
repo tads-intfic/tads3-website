@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Topic</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[9994](../source/thing.t.html#9994)\],

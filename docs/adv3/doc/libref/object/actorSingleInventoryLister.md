@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorSingleInventoryLister</span><span class="type">object</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4490](../source/msg_neu.t.html#4490)\]

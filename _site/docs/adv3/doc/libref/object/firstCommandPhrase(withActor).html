@@ -1,0 +1,135 @@
+<p><span class="title">firstCommandPhrase(withActor)</span><span class="type">grammar</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#5095">5095</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Command with explicit target actor. When a command starts with an
+actor's name followed by a comma followed by a verb, we take it as being
+directed to the actor.
+
+`grammar `<span class="gramalt">[`firstCommandPhrase`](../object/firstCommandPhrase.html)`(withActor)`</span>` :   `[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">firstCommandPhrase(withActor)</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>FirstCommandProdWithActor<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProdWithActor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>CommandProdWithActor<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithActor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>CommandProd<code class="language-plaintext highlighter-rouge">](../object/CommandProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>BasicProd<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html)  
+</code>                                         object<code class="language-plaintext highlighter-rouge">  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FirstCommandProd<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>CommandProd<code class="language-plaintext highlighter-rouge">](../object/CommandProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>BasicProd<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html)  
+</code>                                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">CommandProdWithActor</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>resolvedActor_<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithActor.html#resolvedActor_)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolver_<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithActor.html#resolver_)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">CommandProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getActorPhrase<code class="language-plaintext highlighter-rouge">](../object/CommandProd.html#getActorPhrase)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>firstTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#firstTokenIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSpecialResponseMatch<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#isSpecialResponseMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#lastTokenIndex)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>execActorPhrase<code class="language-plaintext highlighter-rouge">](#execActorPhrase)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">CommandProdWithActor</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getActorPhrase<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithActor.html#getActorPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>getResolver<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithActor.html#getResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTargetActor<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithActor.html#getTargetActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasTargetActor<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithActor.html#hasTargetActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveNouns<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithActor.html#resolveNouns)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>canResolveTo<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#canResolveTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigText<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigText)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigTokenList)</code>  <code class="language-plaintext highlighter-rouge">[</code>setOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#setOrigTokenList)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">FirstCommandProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>countCommands<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProd.html#countCommands)</code>  <code class="language-plaintext highlighter-rouge">[</code>getCommandSepIndex<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProd.html#getCommandSepIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>getCommandTokens<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProd.html#getCommandTokens)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextCommandIndex<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProd.html#getNextCommandIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>isEndOfSentence<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProd.html#isEndOfSentence)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveFirstAction<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProd.html#resolveFirstAction)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="execActorPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execActorPhrase (issuingActor)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#5100">5100</a>]</p>
+
+<div class="desc">
+
+"execute" the target actor phrase
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

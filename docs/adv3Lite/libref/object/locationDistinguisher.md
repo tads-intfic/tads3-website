@@ -1,3 +1,5 @@
+---
+---
 <span class="title">locationDistinguisher</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[1609](../source/parser.t.html#1609)\]

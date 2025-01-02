@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AutoClosingDoor</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[3024](../source/travel.t.html#3024)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](remap.htm)   [\[Next\]](otherresponsestoactions.htm)*
+*[\[Previous\]](remap.html)   [\[Next\]](otherresponsestoactions.html)*
 
 ### Messages
 
@@ -643,7 +645,7 @@ documentation set, or a complete set of quick-reference charts for TADS
 target="_top">http://users.ox.ac.uk/~manc0049/TADSGuide/QRefs.zip</a>.
 Since this information is so important for TADS 3 authors, it's also
 included in this *Guide* at [Appendix
-A](appendixa-actionmessagepropert.htm) (though you'll probably find the
+A](appendixa-actionmessagepropert.html) (though you'll probably find the
 downloaded chart a bit easier to use, since you can print it out on the
 two sides of a single sheet of paper). The chart doesn't list all the
 messages defined in the library (that would make such an unwieldy
@@ -826,6 +828,6 @@ Default in Appendix A).
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](remap.htm)   [\[Next\]](otherresponsestoactions.htm)*
+*[\[Previous\]](remap.html)   [\[Next\]](otherresponsestoactions.html)*
 
 </div>

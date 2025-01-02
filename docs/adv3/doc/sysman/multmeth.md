@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Multi-Methods  
-<span class="navnp"><a href="opoverload.htm" class="nav"><em>Prev:</em> Operator
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Multi-Methods  
+<span class="navnp"><a href="opoverload.html" class="nav"><em>Prev:</em> Operator
 Overloading</a>    
-<a href="dynobj.htm" class="nav"><em>Next:</em> Dynamic Object
+<a href="dynobj.html" class="nav"><em>Next:</em> Dynamic Object
 Creation</a>     </span>
 
 </div>
@@ -726,11 +728,11 @@ change in future updates.)
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Multi-Methods  
-<span class="navnp"><a href="opoverload.htm" class="nav"><em>Prev:</em> Operator
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Multi-Methods  
+<span class="navnp"><a href="opoverload.html" class="nav"><em>Prev:</em> Operator
 Overloading</a>    
-<a href="dynobj.htm" class="nav"><em>Next:</em> Dynamic Object
+<a href="dynobj.html" class="nav"><em>Next:</em> Dynamic Object
 Creation</a>     </span>
 
 </div>

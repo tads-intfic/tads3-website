@@ -1,3 +1,5 @@
+---
+---
 <span class="title">HiddenDoor</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[3010](../source/travel.t.html#3010)\]

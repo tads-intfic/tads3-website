@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PullAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2346](../source/actions.t.html#2346)\]

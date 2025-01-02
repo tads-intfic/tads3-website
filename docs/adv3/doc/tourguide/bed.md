@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Bed : BasicBed, <a
-href="surface.htm">Surface</a><br />
+href="surface.html">Surface</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="nominalplatform.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="chair.htm">[Next]</a></td>
+href="nominalplatform.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="chair.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

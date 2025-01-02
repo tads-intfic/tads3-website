@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PluralProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[2092](../source/parser.t.html#2092)\]

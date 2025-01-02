@@ -1,3 +1,5 @@
+---
+---
 # array.h
 
 [documentation](../file/array.h.html)

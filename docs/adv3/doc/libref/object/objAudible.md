@@ -1,3 +1,5 @@
+---
+---
 <span class="title">objAudible</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[161](../source/precond.t.html#161)\]

@@ -1,0 +1,174 @@
+<p><span class="title">EmptyNounError</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5178">5178</a>],
+<a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#343">343</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Empty noun slot error. This occurs when there are no noun phrases in a
+functional slot in the predicate (e.g., when the player types "TAKE"
+without a direct object).
+
+`class `**`EmptyNounError`**` :   `[`CommandError`](../object/CommandError.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">EmptyNounError</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>CommandError<code class="language-plaintext highlighter-rouge">](../object/CommandError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ParseError<code class="language-plaintext highlighter-rouge">](../object/ParseError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Exception<code class="language-plaintext highlighter-rouge">](../object/Exception.html)  
+</code>                                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>curable<code class="language-plaintext highlighter-rouge">](#curable)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">CommandError</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>cmd<code class="language-plaintext highlighter-rouge">](../object/CommandError.html#cmd)</code>  <code class="language-plaintext highlighter-rouge">[</code>errStage<code class="language-plaintext highlighter-rouge">](../object/CommandError.html#errStage)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ParseError</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allowOnRespell<code class="language-plaintext highlighter-rouge">](../object/ParseError.html#allowOnRespell)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>errmsg_<code class="language-plaintext highlighter-rouge">](../object/Exception.html#errmsg_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>display<code class="language-plaintext highlighter-rouge">](#display)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryCuring<code class="language-plaintext highlighter-rouge">](#tryCuring)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ParseError</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>rankCorrection<code class="language-plaintext highlighter-rouge">](../object/ParseError.html#rankCorrection)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>displayException<code class="language-plaintext highlighter-rouge">](../object/Exception.html#displayException)</code>  <code class="language-plaintext highlighter-rouge">[</code>getExceptionMessage<code class="language-plaintext highlighter-rouge">](../object/Exception.html#getExceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStackTrace<code class="language-plaintext highlighter-rouge">](../object/Exception.html#showStackTrace)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="curable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curable</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5220">5220</a>]</p>
+
+<div class="desc">
+
+we can cure by asking the player for the missing noun phrase
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (cmd, role)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5179">5179</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="display"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">display ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5186">5186</a>],
+<a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#344">344</a>]</p>
+
+<div class="desc">
+
+our message is a missing noun query (e.g., "What do want to open?")
+
+</div>
+
+<p><span id="tryCuring"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryCuring (toks, dict)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5195">5195</a>]</p>
+
+<div class="desc">
+
+Try curing the error. After a missing noun query, the player can respond
+with a simple noun phrase answering the question.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

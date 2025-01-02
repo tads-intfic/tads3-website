@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ImplicitActionFilter</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[883](../source/output.t.html#883)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DisambigOrdinalOutOfRangeException</span><span class="type">class</span>
 
 [disambig.t](../file/disambig.t.html)\[[518](../source/disambig.t.html#518)\]

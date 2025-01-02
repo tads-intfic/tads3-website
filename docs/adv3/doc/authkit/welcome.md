@@ -1,3 +1,5 @@
+---
+---
 Welcome to TADS 3
 
 <div id="main">
@@ -25,7 +27,7 @@ the Player Kit download on [tads.org](http://www.tads.org).
 ## Problems?
 
 If you run into any problems with TADS, please check the [System
-Compatibility Notes](../compat.htm). There are a few known problems with
+Compatibility Notes](../compat.html). There are a few known problems with
 certain Windows configurations, and the notes explain how to fix these.
 You should read the compatibility notes in particular if:
 
@@ -36,14 +38,14 @@ You should read the compatibility notes in particular if:
 ## <span id="getting_started">Documentation</span>
 
 The TADS 3 documentation is organized into several manuals, which you
-can find them on the [User's Manuals](../../doc/index.htm) page.
+can find them on the [User's Manuals](../../doc/index.html) page.
 
 If you're new to TADS, there are two introductory books by Eric Eve to
 choose from. *Getting Started in TADS 3* is a tutorial designed for
 beginners, especially those without prior programming experience.
 *Learning TADS 3* is written for confident newcomers and those with a
 little programming experience. They're both available on the [User's
-Manuals](../../doc/index.htm) page.
+Manuals](../../doc/index.html) page.
 
 You can find help with programming and game design questions on a number
 of Interactive Fiction community forums. For links to IF community

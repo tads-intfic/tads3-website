@@ -1,3 +1,5 @@
+---
+---
 <span class="title">State</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[805](../source/thing.t.html#805)\]

@@ -1,0 +1,333 @@
+<p><span class="title">SpecialTopic</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3751">3751</a>],
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2743">2743</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A "special" topic. This is a topic that responds to its own unique,
+custom command input. In other words, rather than responding to a normal
+command like ASK ABOUT or SHOW TO, we'll respond to a command for which
+we define our own syntax. Our special syntax doesn't have to follow any
+of the ordinary parsing conventions, because whenever our ConvNode is
+active, we get a shot at parsing player input before the regular parser
+gets to see it.
+
+A special topic MUST be part of a ConvNode, because these are inherently
+meaningful only in context. A special topic is active only when its
+conversation node is active.
+
+Special topics are automatically Suggested Topics as well as Topic
+Entries. Because special topics use their own custom grammar, it's
+unreasonable to expect a player to guess at the custom grammar, so we
+should always provide a topic inventory suggestion for every special
+topic.
+
+*Modified in
+[en_us.t](../file/en_us.t.html)\[[2743](../source/en_us.t.html#2743)\]:*  
+For SpecialTopic matches, treat some strings as "weak": if the user's
+input consists of just one of these weak strings and nothing else, don't
+match the topic.
+
+`class `**`SpecialTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)`   `[`SuggestedTopicTree`](../object/SuggestedTopicTree.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SpecialTopic</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html)  
+</code>                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>SuggestedTopicTree<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopicTree.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>fullName<code class="language-plaintext highlighter-rouge">](#fullName)</code>  <code class="language-plaintext highlighter-rouge">[</code>includeInList<code class="language-plaintext highlighter-rouge">](#includeInList)</code>  <code class="language-plaintext highlighter-rouge">[</code>keywordList<code class="language-plaintext highlighter-rouge">](#keywordList)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchPat<code class="language-plaintext highlighter-rouge">](#matchPat)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>timesToSuggest<code class="language-plaintext highlighter-rouge">](#timesToSuggest)</code>  <code class="language-plaintext highlighter-rouge">[</code>weakPat<code class="language-plaintext highlighter-rouge">](#weakPat)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>altTalkCount<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#altTalkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>altTopicList<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#altTopicList)</code>  <code class="language-plaintext highlighter-rouge">[</code>impliesGreeting<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#impliesGreeting)</code>  <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConversational<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#isConversational)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchScore<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>talkCount<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#talkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicGroupActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupScoreAdjustment<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicGroupScoreAdjustment)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicResponse<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicResponse)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">SuggestedTopic</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>associatedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#associatedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>curiositySatisfied<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#curiositySatisfied)</code>  <code class="language-plaintext highlighter-rouge">[</code>location<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#location)</code>  <code class="language-plaintext highlighter-rouge">[</code>suggestionGroup<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#suggestionGroup)</code>  <code class="language-plaintext highlighter-rouge">[</code>suggestTo<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#suggestTo)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getConvNode<code class="language-plaintext highlighter-rouge">](#getConvNode)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeSpecialTopic<code class="language-plaintext highlighter-rouge">](#initializeSpecialTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>isMatchPossible<code class="language-plaintext highlighter-rouge">](#isMatchPossible)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchPreParse<code class="language-plaintext highlighter-rouge">](#matchPreParse)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchTopic<code class="language-plaintext highlighter-rouge">](#matchTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteSuggestion<code class="language-plaintext highlighter-rouge">](#noteSuggestion)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addAltTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addAltTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>adjustScore<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#adjustScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>anyAltIsActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#anyAltIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>breakTopicTie<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#breakTopicTie)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkIsActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#checkIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>deferToEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#deferToEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicOwner<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#getTopicOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#handleTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeTopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#initializeTopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteAltInvocation<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#noteAltInvocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteInvocation<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#noteInvocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>setTopicPronouns<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#setTopicPronouns)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">SuggestedTopicTree</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>associatedTopicIsActive<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopicTree.html#associatedTopicIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>associatedTopicTalkCount<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopicTree.html#associatedTopicTalkCount)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">SuggestedTopic</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>associatedTopicCanMatch<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#associatedTopicCanMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>findEnclosingSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#findEnclosingSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>findOuterSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#findOuterSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>fromEnclosingSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#fromEnclosingSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#initializeSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSuggestionActive<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#isSuggestionActive)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="fullName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fullName</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3816">3816</a>]</p>
+
+<div class="desc">
+
+our suggestion (topic inventory) full name is usually the same as the
+base name; special topics usually aren't grouped in topic suggestion
+listings, since each topic usually has its own unique, custom syntax
+
+</div>
+
+<p><span id="includeInList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">includeInList</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3822">3822</a>]</p>
+
+<div class="desc">
+
+include in the specialTopics list of our parent topic database
+
+</div>
+
+<p><span id="keywordList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">keywordList</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3766">3766</a>]</p>
+
+<div class="desc">
+
+Our keyword list. Each special topic instance must define a list of
+strings giving the keywords we match. The special topic will match user
+input if the user input consists exclusively of words from this keyword
+list. The user input doesn't have to include all of the words defined
+here, but all of the words in the user's input have to appear here to
+match.
+
+Alternatively, an instance can specifically define its own custom
+regular expression pattern instead of using the keyword list; the
+regular expression allows the instance to include punctuation in the
+syntax, or apply more restrictive criteria than simply matching the
+keywords.
+
+</div>
+
+<p><span id="matchPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchPat</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3805">3805</a>]</p>
+
+<div class="desc">
+
+our regular expression pattern - we'll build this automatically from the
+keyword list if this isn't otherwise defined
+
+</div>
+
+<p><span id="name"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3808">3808</a>]</p>
+
+<div class="desc">
+
+our suggestion (topic inventory) base name
+
+</div>
+
+<p><span id="timesToSuggest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timesToSuggest</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3830">3830</a>]</p>
+
+<div class="desc">
+
+By default, don't limit the number of times we'll suggest this topic.
+Since a special topic is valid only in a particular ConvNode context, we
+normally want all of the topics in that context to be available, even if
+they've been used before.
+
+</div>
+
+<p><span id="weakPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">weakPat</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2762">2762</a>]</p>
+
+<div class="desc">
+
+Our "weak" strings - 'i', 'l', 'look': these are weak because a user
+typing one of these strings by itself is probably actually trying to
+enter the command of the same name, rather than entering a special
+topic. These come up in cases where the special topic is something like
+"say I don't know" or "tell him you'll look into it".
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="getConvNode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getConvNode ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3900">3900</a>]</p>
+
+<div class="desc">
+
+find our enclosing ConvNode object
+
+</div>
+
+<p><span id="initializeSpecialTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeSpecialTopic ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3780">3780</a>]</p>
+
+<div class="desc">
+
+Initialize the special topic. This runs during pre-initialization, to
+give us a chance to do pre-game set-up.
+
+This routine adds the topic's keywords to the global dictionary, under
+the 'special' token type. Since a special topic's keywords are accepted
+when the special topic is active, it would be wrong for the parser to
+claim that the words are unknown when the special topic isn't active. By
+adding the keywords to the dictionary, we let the parser know that
+they're valid words, so that it won't claim that they're unknown.
+
+</div>
+
+<p><span id="isMatchPossible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isMatchPossible (actor, scopeList)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3860">3860</a>]</p>
+
+<div class="desc">
+
+a special topic is always matchable, since we match on literal text
+
+</div>
+
+<p><span id="matchPreParse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchPreParse (str, procStr)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3867">3867</a>],
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2744">2744</a>]</p>
+
+<div class="desc">
+
+Match a string during pre-parsing. By default, we'll match the string if
+all of its words (as defined by the regular expression parser) match our
+keywords.
+
+</div>
+
+<p><span id="matchTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchTopic (fromActor, topic)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3833">3833</a>]</p>
+
+<div class="desc">
+
+check for a match
+
+</div>
+
+<p><span id="noteSuggestion"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteSuggestion ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3819">3819</a>]</p>
+
+<div class="desc">
+
+on being suggested, update the special topic history
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

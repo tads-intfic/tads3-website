@@ -1,3 +1,5 @@
+---
+---
 <span class="title">detPluralOnlyNounPhrase(main)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[585](../source/grammar.t.html#585)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> HTTPServer  
-<span class="navnp"><a href="httpreq.htm" class="nav"><em>Prev:</em> HTTPRequest</a>
-    <a href="icic.htm" class="nav"><em>Next:</em> IntrinsicClass</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> HTTPServer  
+<span class="navnp"><a href="httpreq.html" class="nav"><em>Prev:</em> HTTPRequest</a>
+    <a href="icic.html" class="nav"><em>Next:</em> IntrinsicClass</a>    
 </span>
 
 </div>
@@ -80,7 +82,7 @@ The host name and port number determine the network address where your
 server will accept connections.
 
 For the standard TADS Web UI setup, simply use
-[<span class="code">getLaunchHostAddr()</span>](tadsnet.htm#getLaunchHostAddr)
+[<span class="code">getLaunchHostAddr()</span>](tadsnet.html#getLaunchHostAddr)
 as the host name and <span class="code">nil</span> as the port number.
 This creates a listener on a free port on the same address that the
 client used to connect to the external Web server that launched the
@@ -124,9 +126,9 @@ There are three main ways of selecting a custom host address:
   because most computers only have one network address, meaning there's
   only the one address to choose from anyway. You can get the default
   host name with the
-  [<span class="code">getHostName()</span>](tadsnet.htm#getHostName)
+  [<span class="code">getHostName()</span>](tadsnet.html#getHostName)
   function. You can also get the default IP address with the
-  [<span class="code">getLocalIP()</span>](tadsnet.htm#getHostName)
+  [<span class="code">getLocalIP()</span>](tadsnet.html#getHostName)
   function.
 - In some cases, you'll only want the program to accept *local*
   connections - that is, clients running on the same machine. You might
@@ -199,9 +201,9 @@ request/reply pair is essentially a stand-alone unit of conversation.
 
 The <span class="code">HTTPServer</span> object handles each incoming
 request by creating an
-[<span class="code">HTTPRequest</span>](httpreq.htm) object, and placing
+[<span class="code">HTTPRequest</span>](httpreq.html) object, and placing
 this in the network event queue. Your program receives these by calling
-the [getNetEvent()](tadsnet.htm#getNetEvent) function, which waits for
+the [getNetEvent()](tadsnet.html#getNetEvent) function, which waits for
 and returns the next network event. The
 <span class="code">HTTPRequest</span> object provides methods that let
 you retrieve the request information and send the reply. The basic
@@ -313,7 +315,7 @@ servers that are still active.
 
 ## Save, restore, undo
 
-HTTPServer objects are inherently [transient](objdef.htm#transient).
+HTTPServer objects are inherently [transient](objdef.html#transient).
 This is because they're associated with live operating system resources
 (threads and network sockets) that can't be saved in a file. This means
 that any object properties that refer to HTTPServer objects will be
@@ -370,10 +372,10 @@ prohibit creating an HTTPServer at all.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> HTTPServer  
-<span class="navnp"><a href="httpreq.htm" class="nav"><em>Prev:</em> HTTPRequest</a>
-    <a href="icic.htm" class="nav"><em>Next:</em> IntrinsicClass</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> HTTPServer  
+<span class="navnp"><a href="httpreq.html" class="nav"><em>Prev:</em> HTTPRequest</a>
+    <a href="icic.html" class="nav"><em>Next:</em> IntrinsicClass</a>    
 </span>
 
 </div>

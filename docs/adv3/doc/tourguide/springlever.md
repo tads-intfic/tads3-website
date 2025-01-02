@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SpringLever : <a
-href="lever.htm">Lever</a><br />
+href="lever.html">Lever</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="labeleddial.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="settable.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="labeleddial.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="settable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -27,7 +29,7 @@ to happen unless the hexagonal crystal is in the hexagonal hole and the
 wheel points to a destination other than where the ship already is, so
 we first test for these cases. If the conditions for setting sail are
 met, we display a suitable message making use of wheel.curDirection
-(defined in the [LabeledDial](labeleddial.htm) example above) to
+(defined in the [LabeledDial](labeleddial.html) example above) to
 describe the direction of travel, and then move the ship into its new
 destination as defined by wheel.curDestination:  
   

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> tads-io
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> tads-io
 Function Set  
-<span class="navnp"><a href="regex.htm" class="nav"><em>Prev:</em> Regular Expressions</a>
-    <a href="tadsnet.htm" class="nav"><em>Next:</em> tads-net Function
+<span class="navnp"><a href="regex.html" class="nav"><em>Prev:</em> Regular Expressions</a>
+    <a href="tadsnet.html" class="nav"><em>Next:</em> tads-net Function
 Set</a>     </span>
 
 </div>
@@ -51,7 +53,7 @@ to implement a number of special UI effects, including the standard
 adventure game "status line" feature.
 
 Using the Banner API requires some knowledge of the underlying display
-model, which is described in detail in the [Banner Model](banners.htm)
+model, which is described in detail in the [Banner Model](banners.html)
 section.
 
 ## tads-io functions
@@ -516,7 +518,7 @@ If *which* is not one of the above values, the function returns
 <span class="code">nil</span>.
 
 The character set name returned can be used to create a
-[<span class="code">CharacterSet</span>](charset.htm) object to perform
+[<span class="code">CharacterSet</span>](charset.html) object to perform
 character-to-byte and byte-to-character mappings.
 
 </div>
@@ -569,7 +571,7 @@ a standard set of buttons:
   "Cancel" buttons
 
 Alternatively, *buttons* can be a list (or a [list-like
-object](opoverload.htm#listlike)) specifying a custom set of buttons.
+object](opoverload.html#listlike)) specifying a custom set of buttons.
 Each element of the list is either a string giving a custom label for
 the button, or one of the <span class="code">InDlgLblXxx</span> values
 listed below to select a standard label. The standard labels should be
@@ -884,7 +886,7 @@ status codes are:
   successfully selected a file. The following additional elements are in
   the returned list:
 
-  - \[2\] = the selected file name, as a [FileName](filename.htm) object
+  - \[2\] = the selected file name, as a [FileName](filename.html) object
   - \[3\] = <span class="code">nil</span> (reserved for future use)
   - \[4\] = warning message string, or <span class="code">nil</span>
 
@@ -925,7 +927,7 @@ status codes are:
   in the UI). There are no additional return list elements.
 
 Files selected with inputFile() are granted special permissions that
-bypass the [file safety](terp.htm#file-safety) settings. The program is
+bypass the [file safety](terp.html#file-safety) settings. The program is
 allowed to read a file selected with an Open dialog, and is allowed to
 write a file selected with a Save dialog, even if the file safety
 settings would normally prohibit access to the same file. The special
@@ -937,7 +939,7 @@ program can't deceive the user about the basic read or write operation
 being proposed. It could use the prompt message to lie about the purpose
 of the file access, but it can't lie about the basic nature of the
 access.) The special permission is stored as an internal attribute of
-the [FileName](filename.htm) object returned by inputFile() function, so
+the [FileName](filename.html) object returned by inputFile() function, so
 you have to use the actual FileName object returned to exercise the
 special permission. For example, converting the FileName to a string and
 then attempting to open the file via the string will revert to the
@@ -1121,7 +1123,7 @@ written to a log console is captured in a text file rather than being
 displayed.
 
 *filename* is a string giving the name of the file to write, a
-[FileName](filename.htm) object, or a [TemporaryFile](tempfile.htm)
+[FileName](filename.html) object, or a [TemporaryFile](tempfile.html)
 object; any existing file with the same name will be overwritten.
 *charset* can be a <span class="code">CharacterSet</span> object, a
 string giving the name of a character set, or
@@ -1160,9 +1162,9 @@ also displayed to the main game window; a log console has no display
 component at all, so you can use a log console to capture text
 exclusively to a file, without also showing it to the user.
 
-Starting in 3.1.1, the [file safety](terp.htm#file-safety) settings must
-allow write access to the target file. [FileName](filename.htm) objects
-obtained from [inputFile()](tadsio.htm#inputFile) "save" dialogs are
+Starting in 3.1.1, the [file safety](terp.html#file-safety) settings must
+allow write access to the target file. [FileName](filename.html) objects
+obtained from [inputFile()](tadsio.html#inputFile) "save" dialogs are
 always accessible.
 
 </div>
@@ -1248,8 +1250,8 @@ Log console output to a file, or stop logging.
 
 If *fname* is not <span class="code">nil</span>, this starts logging to
 the specified file. *fname* can be a string giving the name of the file
-for saving the log, a [FileName](filename.htm) object, or a
-[TemporaryFile](tempfile.htm) object. If *fname* refers to an existing
+for saving the log, a [FileName](filename.html) object, or a
+[TemporaryFile](tempfile.html) object. If *fname* refers to an existing
 file, the existing file will be overwritten by the new log output.
 
 If *fname* is <span class="code">nil</span>, the function turns off the
@@ -1289,12 +1291,12 @@ LogTypeScript), any previous script file will be closed. Recordings
 don't nest; starting a new recording simply stops any previous recording
 of the same type.
 
-Refer to [Input Scripts](scripts.htm) for more details on scripts,
+Refer to [Input Scripts](scripts.html) for more details on scripts,
 including the differences between Command-line and Event scripts.
 
-Starting in 3.1.1, the [file safety](terp.htm#file-safety) settings must
-allow write access to the target file. [FileName](filename.htm) objects
-obtained from [inputFile()](tadsio.htm#inputFile) "save" dialogs are
+Starting in 3.1.1, the [file safety](terp.html#file-safety) settings must
+allow write access to the target file. [FileName](filename.html) objects
+obtained from [inputFile()](tadsio.html#inputFile) "save" dialogs are
 always accessible.
 
 </div>
@@ -1310,8 +1312,8 @@ input.
 
 If *filename* is not <span class="code">nil</span>, this starts reading
 from the given file. *filename* can be a string containing the name of a
-file in the local file system, a [FileName](filename.htm) object, or a
-[TemporaryFile](tempfile.htm) object.
+file in the local file system, a [FileName](filename.html) object, or a
+[TemporaryFile](tempfile.html) object.
 
 If *filename* is <span class="code">nil</span>, this cancels input from
 the current script, as though the end of the file had been reached. If
@@ -1357,7 +1359,7 @@ interpreter will resume reading from the old script file. Scripts can be
 nested in this manner to any depth. This allows one script file to
 "include" another, for example.
 
-See [Script Files](scripts.htm) for information on how input scripts are
+See [Script Files](scripts.html) for information on how input scripts are
 interpreted.
 
 **Status queries:** In version 3.0.17 and later, this function can also
@@ -1387,9 +1389,9 @@ try-catch to handle this situation: if the function throws a
 RuntimeError (with errno\_ == 2019), it means that you're running on a
 version of the VM that doesn't support the function.
 
-Starting in 3.1.1, the [file safety](terp.htm#file-safety) settings must
-allow read access to the target file. [FileName](filename.htm) objects
-obtained from [inputFile()](tadsio.htm#inputFile) "open" dialogs are
+Starting in 3.1.1, the [file safety](terp.html#file-safety) settings must
+allow read access to the target file. [FileName](filename.html) objects
+obtained from [inputFile()](tadsio.html#inputFile) "open" dialogs are
 always accessible.
 
 </div>
@@ -1633,9 +1635,9 @@ upon its type:
   order, separated by commas
 - nil: nothing is displayed
 - objects with implicit string conversions (e.g., a
-  [ByteArray](bytearr.htm) or [Date](date.htm) object) are converted to
+  [ByteArray](bytearr.html) or [Date](date.html) object) are converted to
   strings using their default string formatting, and the the results are
-  displayed; see the [toString()](tadsgen.htm#toString) function
+  displayed; see the [toString()](tadsgen.html#toString) function
 - any other type is invalid; a run-time error is generated ("invalid
   type for built-in function")
 
@@ -1962,11 +1964,11 @@ we resume editing the command; we could do this before the call to
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> tads-io
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> tads-io
 Function Set  
-<span class="navnp"><a href="regex.htm" class="nav"><em>Prev:</em> Regular Expressions</a>
-    <a href="tadsnet.htm" class="nav"><em>Next:</em> tads-net Function
+<span class="navnp"><a href="regex.html" class="nav"><em>Prev:</em> Regular Expressions</a>
+    <a href="tadsnet.html" class="nav"><em>Next:</em> tads-net Function
 Set</a>     </span>
 
 </div>

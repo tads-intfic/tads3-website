@@ -1,3 +1,5 @@
+---
+---
 <span class="title">flushEventsPage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[1437](../source/webui.t.html#1437)\]

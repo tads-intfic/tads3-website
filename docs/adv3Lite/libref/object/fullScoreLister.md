@@ -1,3 +1,5 @@
+---
+---
 <span class="title">fullScoreLister</span><span class="type">object</span>
 
 [score.t](../file/score.t.html)\[[209](../source/score.t.html#209)\]

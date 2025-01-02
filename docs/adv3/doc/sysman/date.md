@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Date  
-<span class="navnp"><a href="collect.htm" class="nav"><em>Prev:</em> Collection</a>
-    <a href="dict.htm" class="nav"><em>Next:</em> Dictionary</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Date  
+<span class="navnp"><a href="collect.html" class="nav"><em>Prev:</em> Collection</a>
+    <a href="dict.html" class="nav"><em>Next:</em> Dictionary</a>    
 </span>
 
 </div>
@@ -26,7 +28,7 @@ problems with relative ease, such as computing the number of days
 between two dates, finding the date that's a given number of days (or
 weeks, months, years, etc) after or before a given date, finding the day
 of the week of a given date, or finding the next or previous date that
-falls on a given weekday. It works with the [TimeZone](timezone.htm)
+falls on a given weekday. It works with the [TimeZone](timezone.html)
 class to perform conversions between universal time (UTC) and local time
 in virtually any time zone, taking into account the historical changes
 in the definitions of local time zones around the world (including the
@@ -127,7 +129,7 @@ reference date:
 
 <div class="fdef">
 
-*number* is an integer or [BigNumber](bignum.htm) giving a Julian day
+*number* is an integer or [BigNumber](bignum.html) giving a Julian day
 number (see [getJulianDay()](#getJulianDay)), which is the number of
 days since January 1, 4713 BCE on the (proleptic) Julian calendar, at
 noon UTC. The fractional portion (if any) is the fraction of a day past
@@ -139,7 +141,7 @@ noon UTC, counting a day as exactly 24 hours (86,400 seconds).
 
 <div class="fdef">
 
-*number* is an integer or [BigNumber](bignum.htm) giving the number of
+*number* is an integer or [BigNumber](bignum.html) giving the number of
 seconds since January 1, 1970, at 00:00 UTC, which is also known as the
 Unix Epoch. If the value is negative, it's the number of seconds before
 the Epoch.
@@ -244,12 +246,12 @@ them in terms of her ordinary wall clock time.
 When you do wish to specify a particular time zone, you can supply one
 of the following:
 
-- a [TimeZone](timezone.htm) object
+- a [TimeZone](timezone.html) object
 - a string giving a time zone name, in a format accepted by the TimeZone
   constructor
 - a number giving a UTC offset in seconds
 
-See the [TimeZone](timezone.htm) class for full details on each of these
+See the [TimeZone](timezone.html) class for full details on each of these
 formats.
 
 ## Date arithmetic
@@ -268,7 +270,7 @@ given number of days before the given date (or after, if *number* is
 negative).
 
 You can add or subtract time values by using fractional days, specified
-as [BigNumber](bignum.htm) values. A day is defined for the purposes of
+as [BigNumber](bignum.html) values. A day is defined for the purposes of
 these calculations as exactly 86,400 seconds long, so an hour is 1/24th
 of a day, a minute is 1/1440th, and a second is 1/86400th. For example,
 <span class="code">new Date('2010-1-1') + 1.0/24</span> yields 1:00 AM
@@ -1259,7 +1261,7 @@ tz
 a timezone name or abbreviation, as a string of alphabetic characters,
 slashes, and underscores, which must match the name or abbreviation for
 a timezone in the zoneinfo database (see the [TimeZone
-class](timezone.htm) for more information); or a match to the gmtofs
+class](timezone.html) for more information); or a match to the gmtofs
 field type (below)
 
 gmtofs
@@ -1711,7 +1713,7 @@ Australia, for example.
 
 Because of all the ambiguity in the common zone names, the designers of
 the zoneinfo database came up with their own separate, unambiguous
-naming system. (See the [TimeZone](timezone.htm) class for more on the
+naming system. (See the [TimeZone](timezone.html) class for more on the
 zoneinfo database.) The zoneinfo system is based on narrowly defined
 locations. It names each location by continent and city, sometimes with
 a region (such as a US state) interposed: America/Los_Angeles,
@@ -1870,10 +1872,10 @@ time calculation over that entire period about one part in 51 million.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Date  
-<span class="navnp"><a href="collect.htm" class="nav"><em>Prev:</em> Collection</a>
-    <a href="dict.htm" class="nav"><em>Next:</em> Dictionary</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Date  
+<span class="navnp"><a href="collect.html" class="nav"><em>Prev:</em> Collection</a>
+    <a href="dict.html" class="nav"><em>Next:</em> Dictionary</a>    
 </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">doorOpen</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[929](../source/precond.t.html#929)\]

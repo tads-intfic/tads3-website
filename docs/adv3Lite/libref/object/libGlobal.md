@@ -1,3 +1,5 @@
+---
+---
 <span class="title">libGlobal</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[571](../source/misc.t.html#571)\]

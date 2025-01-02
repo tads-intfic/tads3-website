@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Vector  
-<span class="navnp"><a href="timezone.htm" class="nav"><em>Prev:</em> TimeZone</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Vector  
+<span class="navnp"><a href="timezone.html" class="nav"><em>Prev:</em> TimeZone</a>
    
-<a href="wlookup.htm" class="nav"><em>Next:</em> WeakRefLookupTable</a>
+<a href="wlookup.html" class="nav"><em>Next:</em> WeakRefLookupTable</a>
     </span>
 
 </div>
@@ -19,8 +21,8 @@
 
 # Vector
 
-Vector is a subclass of [Collection](collect.htm) that provides an
-ordered collection of elements, like [List](list.htm), but provides
+Vector is a subclass of [Collection](collect.html) that provides an
+ordered collection of elements, like [List](list.html), but provides
 "reference semantics," which means that you can modify the elements of a
 Vector directly.
 
@@ -264,9 +266,9 @@ then comparing A to another vector could exceed the maximum depth.
 ### String conversions
 
 A Vector value can be converted to a string using the
-[toString()](tadsgen.htm#toString) function. A Vector can also be used
+[toString()](tadsgen.html#toString) function. A Vector can also be used
 in a context where a non-string value is implicitly converted to a
-string, such as in the [tadsSay()](tadsio.htm#tadsSay) function or in a
+string, such as in the [tadsSay()](tadsio.html#tadsSay) function or in a
 string concatenation (that is, on the right-hand side of a "+" operator
 where the left-hand side is a string).
 
@@ -278,7 +280,7 @@ string <span class="code">'1,2,3'</span>.
 
 ## Vector methods
 
-Vector is a subclass of [Collection](collect.htm), so the Collection
+Vector is a subclass of [Collection](collect.html), so the Collection
 methods are available on a Vector object. In addition to the Collection
 methods, Vector provides many methods of its own, shown below.
 
@@ -870,7 +872,7 @@ ordering, and you can also sort values that have no system-defined
 order, such as object values.
 
 The *comparisonFunction* works the same way as the for the
-[List](list.htm) class's <span class="code">sort()</span> method.
+[List](list.html) class's <span class="code">sort()</span> method.
 
 </div>
 
@@ -1107,11 +1109,11 @@ has no effect on the vector to which y refers.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Vector  
-<span class="navnp"><a href="timezone.htm" class="nav"><em>Prev:</em> TimeZone</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Vector  
+<span class="navnp"><a href="timezone.html" class="nav"><em>Prev:</em> TimeZone</a>
    
-<a href="wlookup.htm" class="nav"><em>Next:</em> WeakRefLookupTable</a>
+<a href="wlookup.html" class="nav"><em>Next:</em> WeakRefLookupTable</a>
     </span>
 
 </div>

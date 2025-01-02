@@ -1,0 +1,191 @@
+<p><span class="title">SenseInfo</span><span class="type">class</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#31">31</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Sense Information entry. Thing.senseInfoTable() returns a list of these
+objects to provide full sensory detail on the objects within range of a
+sense.
+
+`class `**`SenseInfo`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SenseInfo</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>ambient<code class="language-plaintext highlighter-rouge">](#ambient)</code>  <code class="language-plaintext highlighter-rouge">[</code>obj<code class="language-plaintext highlighter-rouge">](#obj)</code>  <code class="language-plaintext highlighter-rouge">[</code>obstructor<code class="language-plaintext highlighter-rouge">](#obstructor)</code>  <code class="language-plaintext highlighter-rouge">[</code>trans<code class="language-plaintext highlighter-rouge">](#trans)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>compareTransTo<code class="language-plaintext highlighter-rouge">](#compareTransTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>selectMoreTrans<code class="language-plaintext highlighter-rouge">](#selectMoreTrans)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="ambient"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ambient</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#60">60</a>]</p>
+
+<div class="desc">
+
+the ambient sense energy level at this object
+
+</div>
+
+<p><span id="obj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obj</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#51">51</a>]</p>
+
+<div class="desc">
+
+the object being sensed
+
+</div>
+
+<p><span id="obstructor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obstructor</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#57">57</a>]</p>
+
+<div class="desc">
+
+the obstructor that introduces a non-transparent value of trans
+
+</div>
+
+<p><span id="trans"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">trans</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#54">54</a>]</p>
+
+<div class="desc">
+
+the transparency from the point of view to this object
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="compareTransTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compareTransTo (other)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#68">68</a>]</p>
+
+<div class="desc">
+
+compare this SenseInfo object's transparency to the other one; returns a
+number greater than zero if 'self' is more transparent, zero if they're
+equally transparent, or a negative number if 'self' is less transparent
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (obj, trans, obstructor, ambient)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#32">32</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="selectMoreTrans"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">selectMoreTrans (a, b)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#76">76</a>]</p>
+
+<div class="desc">
+
+Return the more transparent of two SenseInfo objects. Either argument
+can be nil, in which case we'll return the non-nil one; if both are nil,
+we'll return nil. If they're equal, we'll return the first one.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">spelledSmallNumber(digit)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[7729](../source/en_us.t.html#7729)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Moving Actors Around<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="actorknowledge.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="overview-actorstates.htm">[Next]</a></td>
+href="actorknowledge.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="overview-actorstates.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -28,10 +30,10 @@ scriptedTravelTo(dest); or else nestedActorAction(bob,North) or
 nestedActorAction(TravelVia, redDoor).  
   
 For a fuller discussion, see Mike Roberts's technical article on
-<a href="%20http://www.tads.org/howto/t3npcTravel.htm%20"
+<a href="%20http://www.tads.org/howto/t3npcTravel.html%20"
 target="_top">NPC Travel in TADS 3</a>.  
   
 It's also possible to have one actor automatically follow another
 (normally, but not necessarily, the player character) by putting it in
-an [AccompanyingState](accompanyingstate.htm). This is one of the
+an [AccompanyingState](accompanyingstate.html). This is one of the
 ActorState classes, which is what we'll be looking at next.  

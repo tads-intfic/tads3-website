@@ -1,3 +1,5 @@
+---
+---
 <span class="title">literalNounPhrase(string)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[783](../source/grammar.t.html#783)\]

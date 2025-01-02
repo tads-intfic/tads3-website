@@ -1,0 +1,243 @@
+<p><span class="title">cmdTokenizer</span><span class="type">object</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4763">4763</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Command tokenizer for US English. Other language modules should provide
+their own tokenizers to allow for differences in punctuation and other
+lexical elements.
+
+**`cmdTokenizer`**` :   `[`Tokenizer`](../object/Tokenizer.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">cmdTokenizer</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Tokenizer<code class="language-plaintext highlighter-rouge">](../object/Tokenizer.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>patAlphaDashAlpha<code class="language-plaintext highlighter-rouge">](#patAlphaDashAlpha)</code>  <code class="language-plaintext highlighter-rouge">[</code>patPunct<code class="language-plaintext highlighter-rouge">](#patPunct)</code>  <code class="language-plaintext highlighter-rouge">[</code>patSpelledTens<code class="language-plaintext highlighter-rouge">](#patSpelledTens)</code>  <code class="language-plaintext highlighter-rouge">[</code>patSpelledUnits<code class="language-plaintext highlighter-rouge">](#patSpelledUnits)</code>  <code class="language-plaintext highlighter-rouge">[</code>rules_<code class="language-plaintext highlighter-rouge">](#rules_)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>acceptAbbrTok<code class="language-plaintext highlighter-rouge">](#acceptAbbrTok)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildOrigText<code class="language-plaintext highlighter-rouge">](#buildOrigText)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokCvtAbbr<code class="language-plaintext highlighter-rouge">](#tokCvtAbbr)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokCvtApostropheS<code class="language-plaintext highlighter-rouge">](#tokCvtApostropheS)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokCvtPluralApostrophe<code class="language-plaintext highlighter-rouge">](#tokCvtPluralApostrophe)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokCvtSpelledNumber<code class="language-plaintext highlighter-rouge">](#tokCvtSpelledNumber)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Tokenizer</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>deleteRule<code class="language-plaintext highlighter-rouge">](../object/Tokenizer.html#deleteRule)</code>  <code class="language-plaintext highlighter-rouge">[</code>deleteRuleAt<code class="language-plaintext highlighter-rouge">](../object/Tokenizer.html#deleteRuleAt)</code>  <code class="language-plaintext highlighter-rouge">[</code>insertRule<code class="language-plaintext highlighter-rouge">](../object/Tokenizer.html#insertRule)</code>  <code class="language-plaintext highlighter-rouge">[</code>insertRuleAt<code class="language-plaintext highlighter-rouge">](../object/Tokenizer.html#insertRuleAt)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokCvtLower<code class="language-plaintext highlighter-rouge">](../object/Tokenizer.html#tokCvtLower)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokCvtSkip<code class="language-plaintext highlighter-rouge">](../object/Tokenizer.html#tokCvtSkip)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokenize<code class="language-plaintext highlighter-rouge">](../object/Tokenizer.html#tokenize)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="patAlphaDashAlpha"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patAlphaDashAlpha</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4962">4962</a>]</p>
+
+<div class="desc">
+
+add the part after the hyphen
+
+</div>
+
+<p><span id="patPunct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patPunct</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#5081">5081</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="patSpelledTens"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patSpelledTens</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#5077">5077</a>]</p>
+
+<div class="desc">
+
+some pre-compiled regular expressions
+
+</div>
+
+<p><span id="patSpelledUnits"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patSpelledUnits</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#5079">5079</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="rules_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rules_</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4764">4764</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="acceptAbbrTok"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acceptAbbrTok (txt)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4974">4974</a>]</p>
+
+<div class="desc">
+
+Check to see if we want to accept an abbreviated token - this is a token
+that ends in a period, which we use for abbreviated words like "Mr." or
+"Ave." We'll accept the token only if it appears as given - including
+the period - in the dictionary. Note that we ignore truncated matches,
+since the only way we'll accept a period in a word token is as the last
+character; there is thus no way that a token ending in a period could be
+a truncation of any longer valid token.
+
+</div>
+
+<p><span id="buildOrigText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildOrigText (toks)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#5013">5013</a>]</p>
+
+<div class="desc">
+
+Given a list of token strings, rebuild the original input string. We
+can't recover the exact input string, because the tokenization process
+throws away whitespace information, but we can at least come up with
+something that will display cleanly and produce the same results when
+run through the tokenizer.
+
+</div>
+
+<p><span id="tokCvtAbbr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokCvtAbbr (txt, typ, toks)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4994">4994</a>]</p>
+
+<div class="desc">
+
+Process an abbreviated token.
+
+When we find an abbreviation, we'll enter it with the abbreviated word
+minus the trailing period, plus the period as a separate token. We'll
+mark the period as an "abbreviation period" so that grammar rules will
+be able to consider treating it as an abbreviation -- but since it's
+also a regular period, grammar rules that treat periods as regular
+punctuation will also be able to try to match the result. This will
+ensure that we try it both ways - as abbreviation and as a word with
+punctuation - and pick the one that gives us the best result.
+
+</div>
+
+<p><span id="tokCvtApostropheS"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokCvtApostropheS (txt, typ, toks)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4900">4900</a>]</p>
+
+<div class="desc">
+
+Handle an apostrophe-s word. We'll return this as two separate tokens:
+one for the word preceding the apostrophe-s, and one for the
+apostrophe-s itself.
+
+</div>
+
+<p><span id="tokCvtPluralApostrophe"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokCvtPluralApostrophe (txt, typ, toks)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4924">4924</a>]</p>
+
+<div class="desc">
+
+Handle a plural apostrophe word ("the smiths' house"). We'll return this
+as two tokens: one for the plural word, and one for the apostrophe.
+
+</div>
+
+<p><span id="tokCvtSpelledNumber"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokCvtSpelledNumber (txt, typ, toks)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4948">4948</a>]</p>
+
+<div class="desc">
+
+Handle a spelled-out hyphenated number from 21 to 99. We'll return this
+as three separate tokens: a word for the tens name, a word for the
+hyphen, and a word for the units name.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Special</span><span class="type">class</span>
 
 [query.t](../file/query.t.html)\[[565](../source/query.t.html#565)\]

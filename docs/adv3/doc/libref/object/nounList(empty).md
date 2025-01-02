@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nounList(empty)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[5272](../source/en_us.t.html#5272)\]

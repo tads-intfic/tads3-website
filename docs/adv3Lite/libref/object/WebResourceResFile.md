@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebResourceResFile</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[980](../source/webui.t.html#980)\]

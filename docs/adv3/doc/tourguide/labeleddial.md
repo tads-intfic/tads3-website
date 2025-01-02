@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>LabeledDial : <a
-href="dial.htm">Dial</a><br />
+href="dial.html">Dial</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="button.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="springlever.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="button.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="springlever.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -27,7 +29,7 @@ will obviously have to turn the wheel to one of the other destinations
 to set sail for the first time.  
   
 We have already implemented the hexagonal hole (as a
-[RestrictedContainer](restrictedcontainer.htm)), so the next task is to
+[RestrictedContainer](restrictedcontainer.html)), so the next task is to
 construct the wheel. This in essence will be a thinly disguised dial
 that can be turned to N, S, W or E, so we shall use a LabeledDial to
 implement it. We list its possible settings in the **validSettings**

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ResolutionError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5230](../source/parser.t.html#5230)\]

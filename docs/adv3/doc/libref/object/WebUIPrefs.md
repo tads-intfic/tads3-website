@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebUIPrefs</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[2367](../source/webui.t.html#2367)\]

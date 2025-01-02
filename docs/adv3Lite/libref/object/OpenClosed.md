@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OpenClosed</span><span class="type">object</span>
 
 [english.t](../file/english.t.html)\[[1999](../source/english.t.html#1999)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LieIn</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1128](../source/actions.t.html#1128)\]

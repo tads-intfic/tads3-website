@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Distant</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[294](../source/extras.t.html#294)\]

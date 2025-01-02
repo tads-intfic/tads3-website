@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>TravelConnector: <a
-href="thing-thebasics.htm">Thing</a><br />
+href="thing-thebasics.html">Thing</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="askconnector.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="roomxxxxaction.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="askconnector.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="roomxxxxaction.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -63,7 +65,7 @@ true, AND the point-of-view actor for the listing can perceive the exit
 be sufficient light to see the exit).  
   
 **travelBarrier:** Barrier or barriers to travel. This property can be
-set to a single [TravelBarrier](travelbarrier.htm) object or to a list
+set to a single [TravelBarrier](travelbarrier.html) object or to a list
 of TravelBarrier objects. checkTravelBarriers() checks each barrier
 specified here.  
   
@@ -344,10 +346,10 @@ because any messages displayed here will come after any messages related
 to reactions from other objects. (By default this method does nothing,
 and can be freely overridden with your own code; note, however, that it
 is overridden by the library in TravelWithMessage, and hence in the
-subclasses of [TravelWithMessage](travelwithmessage.htm), such as
-[TravelMessage](travelmessage.htm),
-[NoTravelMessage](notravelmessage.htm), and
-[FakeConnector](fakeconnector.htm), as well).  
+subclasses of [TravelWithMessage](travelwithmessage.html), such as
+[TravelMessage](travelmessage.html),
+[NoTravelMessage](notravelmessage.html), and
+[FakeConnector](fakeconnector.html), as well).  
   
 **rememberTravel (origin, actor, dest):** Service routine: add a memory
 of a successful traversal of a travel connector. If we have a travel

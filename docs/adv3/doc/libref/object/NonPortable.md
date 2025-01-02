@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NonPortable</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[1704](../source/objects.t.html#1704)\]

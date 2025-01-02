@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>AccompanyingInTravelState : <a
-href="overview-actorstates.htm">ActorState</a><br />
+href="overview-actorstates.html">ActorState</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="accompanyingstate.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="guidedtourstate.htm">[Next]</a></td>
+href="accompanyingstate.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="guidedtourstate.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

@@ -1,13 +1,15 @@
+---
+---
 ## Game <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/mingame.htm" target="classes">A minimal game
+- *<a href="manual/mingame.html" target="classes">A minimal game
   definition</a>*
-- *<a href="manual/beginning.htm" target="classes">Beginnings</a>*
-- *<a href="manual/ending.htm" target="classes">Endings</a>*
+- *<a href="manual/beginning.html" target="classes">Beginnings</a>*
+- *<a href="manual/ending.html" target="classes">Endings</a>*
 - *<a href="https://www.tads.org/ifidgen/ifidgen" target="classes">IFID
   generator</a>*
-- *<a href="manual/score.htm" target="classes">Scoring</a>*
-- *<a href="https://www.tads.org/howto/gameinfo.htm"
+- *<a href="manual/score.html" target="classes">Scoring</a>*
+- *<a href="https://www.tads.org/howto/gameinfo.html"
   target="classes">GameInfo.txt &amp; cover art</a>*
 - *<a href="https://babel.ifarchive.org" target="classes">Treaty of
   Babel</a>*
@@ -30,7 +32,7 @@
 
 ## Tangibles <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/thing.htm" target="classes">Things</a>*
+- *<a href="manual/thing.html" target="classes">Things</a>*
 - *<a href="libref/object/LMentionable.html#initVocab"
   target="classes">Parsing the vocab string</a>*
 
@@ -65,13 +67,13 @@
 
 ## Locations & travel <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/room.htm" target="classes">Rooms &amp; regions</a>*
-- *<a href="manual/roomdesc.htm" target="classes">Room descriptions</a>*
-- *<a href="manual/door.htm" target="classes">Doors</a>*
-- *<a href="manual/travel.htm" target="classes">Travel connectors and
+- *<a href="manual/room.html" target="classes">Rooms &amp; regions</a>*
+- *<a href="manual/roomdesc.html" target="classes">Room descriptions</a>*
+- *<a href="manual/door.html" target="classes">Doors</a>*
+- *<a href="manual/travel.html" target="classes">Travel connectors and
   barriers</a>*
-- *<a href="manual/multiloc.htm" target="classes">MultiLocs</a>*
-- *<a href="manual/exit.htm" target="classes">Exits</a>*
+- *<a href="manual/multiloc.html" target="classes">MultiLocs</a>*
+- *<a href="manual/exit.html" target="classes">Exits</a>*
 
 <!-- -->
 
@@ -110,23 +112,23 @@
 
 ## Text, HTML, & multimedia <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.htm#specials"
+- *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.html#specials"
   target="classes">Escaped characters (backslash codes)</a>*
-- *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.htm#embeddings"
+- *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.html#embeddings"
   target="classes">Embedded expressions</a>*
-- *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.htm#strtpl"
+- *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.html#strtpl"
   target="classes">Embedded string templates</a>*
-  - *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.htm#oneof"
+  - *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.html#oneof"
     target="classes">&lt;&lt;one of&gt;&gt;</a>*
-  - *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.htm#firstTimeOnly"
+  - *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.html#firstTimeOnly"
     target="classes">&lt;&lt;first time&gt;&gt;</a>*
 - *<a href="libref/source/english.t.html#4172" target="classes">Message
   params tokens (English)</a>*
-- *<a href="https://www.tads.org/t3doc/doc/htmltads/intro.htm"
+- *<a href="https://www.tads.org/t3doc/doc/htmltads/intro.html"
   target="classes">Introduction to HTML TADS</a>*
-- *<a href="https://www.tads.org/t3doc/doc/sysman/regex.htm"
+- *<a href="https://www.tads.org/t3doc/doc/sysman/regex.html"
   target="classes">Regular expressions</a>*
-- *<a href="https://www.tads.org/t3doc/doc/sysman/string.htm"
+- *<a href="https://www.tads.org/t3doc/doc/sysman/string.html"
   target="classes">String methods</a>*
 - *<a href="libref/file/console.t.html#aHref" target="classes">aHref()</a>*
 
@@ -175,8 +177,8 @@
 
 ## Gadgetry <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/key.htm" target="classes">Keys</a>*
-- *<a href="manual/gadget.htm" target="classes">Gadgets</a>*
+- *<a href="manual/key.html" target="classes">Keys</a>*
+- *<a href="manual/gadget.html" target="classes">Gadgets</a>*
 
 <!-- -->
 
@@ -201,7 +203,7 @@
 
 ## Attachables & components <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/attachable.htm" target="classes">Attachables</a>*
+- *<a href="manual/attachable.html" target="classes">Attachables</a>*
 
 <!-- -->
 
@@ -225,11 +227,11 @@
 
 ## Actions, verbs, & Doers <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/action.htm" target="classes">Actions</a>*
-- *<a href="manual/doer.htm" target="classes">Doers</a>*
-- *<a href="manual/actionref.htm#grammar" target="classes">Grammar to
+- *<a href="manual/action.html" target="classes">Actions</a>*
+- *<a href="manual/doer.html" target="classes">Doers</a>*
+- *<a href="manual/actionref.html#grammar" target="classes">Grammar to
   Action</a>*
-- *<a href="manual/actionref.htm#actionlist" target="classes">All
+- *<a href="manual/actionref.html#actionlist" target="classes">All
   Actions</a>*
 
 <!-- -->
@@ -248,7 +250,7 @@
 
 ## Actors, NPCs, & conversations <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/actor.htm" target="classes">Actors</a>*
+- *<a href="manual/actor.html" target="classes">Actors</a>*
 
 <!-- -->
 
@@ -396,9 +398,9 @@
 
 ## Consultables & knowledge <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/topic.htm" target="classes">Topics</a>*
-- *<a href="manual/topicentry.htm" target="classes">Topic Entries</a>*
-- *<a href="manual/thought.htm" target="classes">Thoughts</a>*
+- *<a href="manual/topic.html" target="classes">Topics</a>*
+- *<a href="manual/topicentry.html" target="classes">Topic Entries</a>*
+- *<a href="manual/thought.html" target="classes">Thoughts</a>*
 
 <!-- -->
 
@@ -427,9 +429,9 @@
 
 ## Events & scenes <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/event.htm" target="classes">Events</a>*
-- *<a href="manual/eventlist.htm" target="classes">EventList</a>*
-- *<a href="manual/scene.htm" target="classes">Scenes</a>*
+- *<a href="manual/event.html" target="classes">Events</a>*
+- *<a href="manual/eventlist.html" target="classes">EventList</a>*
+- *<a href="manual/scene.html" target="classes">Scenes</a>*
 
 <!-- -->
 
@@ -463,7 +465,7 @@
 
 ## Sensory <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/senseregion.htm" target="classes">SenseRegion</a>*
+- *<a href="manual/senseregion.html" target="classes">SenseRegion</a>*
 
 <!-- -->
 
@@ -475,10 +477,10 @@
 
 ## Hints, goals & menus <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="manual/newbie.htm" target="classes">Help for New Players &amp;
+- *<a href="manual/newbie.html" target="classes">Help for New Players &amp;
   playerHelper</a>*
-- *<a href="manual/menu.htm" target="classes">Menus</a>*
-- *<a href="manual/hint.htm" target="classes">Hints, goals, extra hints</a>*
+- *<a href="manual/menu.html" target="classes">Menus</a>*
+- *<a href="manual/hint.html" target="classes">Hints, goals, extra hints</a>*
 
 <!-- -->
 
@@ -502,17 +504,17 @@
 
 - *<a href="libref/source/query.t.html#14" target="classes">Q: The
   general-purpose query object</a>*
-- *<a href="manual/extensions.htm" target="classes">Built-in extensions</a>*
+- *<a href="manual/extensions.html" target="classes">Built-in extensions</a>*
 
 <!-- -->
 
 - *<a href="libref/file/tadsgen.h.html" target="classes">General
   functions</a>*
 - *<a href="libref/file/misc.t.html" target="classes">Misc. functions</a>*
-- *<a href="manual/utility.htm" target="classes">Utility functions</a>*
-- *<a href="https://www.tads.org/t3doc/doc/sysman/list.htm"
+- *<a href="manual/utility.html" target="classes">Utility functions</a>*
+- *<a href="https://www.tads.org/t3doc/doc/sysman/list.html"
   target="classes">List methods</a>*
-- *<a href="https://www.tads.org/t3doc/doc/sysman/lookup.htm"
+- *<a href="https://www.tads.org/t3doc/doc/sysman/lookup.html"
   target="classes">LookupTable methods</a>*
 - *<a href="libref/file/tadsio.h.html" target="classes">I/O &amp; banner
   API</a>*

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ftDeath</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[877](../source/misc.t.html#877)\]

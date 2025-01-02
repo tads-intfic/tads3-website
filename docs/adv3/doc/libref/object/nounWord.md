@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nounWord</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`nounWord(noun)`](../object/nounWord(noun).html)</span>` :   `[`NounWordProd`](../object/NounWordProd.html)

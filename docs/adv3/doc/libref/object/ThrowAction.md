@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ThrowAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2296](../source/actions.t.html#2296)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RoomActorGrouper</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[1479](../source/lister.t.html#1479)\]

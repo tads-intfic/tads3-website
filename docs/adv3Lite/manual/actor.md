@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Actors  
-<span class="navnp"><a href="actionref.htm" class="nav"><em>Prev:</em> Action Reference</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Actors  
+<span class="navnp"><a href="actionref.html" class="nav"><em>Prev:</em> Action Reference</a>
    
-<a href="actoroverview.htm" class="nav"><em>Next:</em> NPC Overview</a>
+<a href="actoroverview.html" class="nav"><em>Next:</em> NPC Overview</a>
     </span>
 
 </div>
@@ -25,22 +27,22 @@ included in your game for the features described in this part to work.
 
 <div class="sectoc">
 
-[NPC Overview](actoroverview.htm)  
-[The Actor Object](actorobj.htm)  
-[Actor States](actorstate.htm)  
-[AgendaItems](agenda.htm)  
-[Basic Ask/Tell](asktell.htm)  
-[ActorTopicEntry](actortopicentry.htm)  
-[Suggesting Conversational Topics](suggest.htm)  
-[Special Topics](specialtopic.htm)  
-[Topic Groups](topicgroup.htm)  
-[Conversation Nodes](convnode.htm)  
-[Hello and Goodbye](hello.htm)  
-[Player Character and NPC Knowledge](knowledge.htm)  
-[Giving Orders to NPCs](orders.htm)  
-[String Tags and Object Tags](tags.htm)  
-[NPC-Initiated Conversation](initiate.htm)  
-[Changing the Player Character](changepc.htm)  
+[NPC Overview](actoroverview.html)  
+[The Actor Object](actorobj.html)  
+[Actor States](actorstate.html)  
+[AgendaItems](agenda.html)  
+[Basic Ask/Tell](asktell.html)  
+[ActorTopicEntry](actortopicentry.html)  
+[Suggesting Conversational Topics](suggest.html)  
+[Special Topics](specialtopic.html)  
+[Topic Groups](topicgroup.html)  
+[Conversation Nodes](convnode.html)  
+[Hello and Goodbye](hello.html)  
+[Player Character and NPC Knowledge](knowledge.html)  
+[Giving Orders to NPCs](orders.html)  
+[String Tags and Object Tags](tags.html)  
+[NPC-Initiated Conversation](initiate.html)  
+[Changing the Player Character](changepc.html)  
 
 </div>
 
@@ -51,10 +53,10 @@ included in your game for the features described in this part to work.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Actors  
-<span class="navnp"><a href="actionref.htm" class="nav"><em>Prev:</em> Action Reference</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Actors  
+<span class="navnp"><a href="actionref.html" class="nav"><em>Prev:</em> Action Reference</a>
    
-<a href="actoroverview.htm" class="nav"><em>Next:</em> NPC Overview</a>
+<a href="actoroverview.html" class="nav"><em>Next:</em> NPC Overview</a>
     </span>
 
 </div>

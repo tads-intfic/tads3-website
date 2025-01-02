@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Score)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2285](../source/grammar.t.html#2285)\]

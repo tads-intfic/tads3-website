@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SmellEvent</span><span class="type">class</span>
 
 [sensory.t](../file/sensory.t.html)\[[543](../source/sensory.t.html#543)\]

@@ -1,0 +1,210 @@
+<p><span class="title">Test</span><span class="type">class</span></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#484">484</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Test object can be used to create a series of testing commands in your
+game, for example:
+
+  
+Test 'foo' \['x me', 'i', 'wear uniform'\] \[uniform\];
+
+Would cause the uniform to be moved into the player character's
+inventory and then the commands X ME and then I and WEAR UNIFORM to be
+executed in response to TEST FOO.
+
+`class `**`Test`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Test</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>location<code class="language-plaintext highlighter-rouge">](#location)</code>  <code class="language-plaintext highlighter-rouge">[</code>reportHolding<code class="language-plaintext highlighter-rouge">](#reportHolding)</code>  <code class="language-plaintext highlighter-rouge">[</code>reportMove<code class="language-plaintext highlighter-rouge">](#reportMove)</code>  <code class="language-plaintext highlighter-rouge">[</code>testHolding<code class="language-plaintext highlighter-rouge">](#testHolding)</code>  <code class="language-plaintext highlighter-rouge">[</code>testList<code class="language-plaintext highlighter-rouge">](#testList)</code>  <code class="language-plaintext highlighter-rouge">[</code>testName<code class="language-plaintext highlighter-rouge">](#testName)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getHolding<code class="language-plaintext highlighter-rouge">](#getHolding)</code>  <code class="language-plaintext highlighter-rouge">[</code>run<code class="language-plaintext highlighter-rouge">](#run)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="location"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">location</code></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#495">495</a>]</p>
+
+<div class="desc">
+
+The location to move the player character to before running the test
+script
+
+</div>
+
+<p><span id="reportHolding"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reportHolding</code></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#513">513</a>]</p>
+
+<div class="desc">
+
+Flag: do we want to report on what items were added to inventory? By
+default we do.
+
+</div>
+
+<p><span id="reportMove"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reportMove</code></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#501">501</a>]</p>
+
+<div class="desc">
+
+Flag: Do we want to report any change of location by looking around in
+the new one? By default we will.
+
+</div>
+
+<p><span id="testHolding"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">testHolding</code></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#507">507</a>]</p>
+
+<div class="desc">
+
+The objects to move into the player character's inventory before running
+the test script.
+
+</div>
+
+<p><span id="testList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">testList</code></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#489">489</a>]</p>
+
+<div class="desc">
+
+The list commands to be executed when running this test.
+
+</div>
+
+<p><span id="testName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">testName</code></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#486">486</a>]</p>
+
+<div class="desc">
+
+The name of this test
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="getHolding"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getHolding ( )</code></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#517">517</a>]</p>
+
+<div class="desc">
+
+Move everything in the testHolding list into the actor's inventory
+
+</div>
+
+<p><span id="run"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">run ( )</code></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#535">535</a>]</p>
+
+<div class="desc">
+
+Run this test by passing the commands in testList through
+Parser.parse().
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

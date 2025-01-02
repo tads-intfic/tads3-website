@@ -1,3 +1,5 @@
+---
+---
 # output.t
 
 [documentation](../file/output.t.html)

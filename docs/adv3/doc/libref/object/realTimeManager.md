@@ -1,3 +1,5 @@
+---
+---
 <span class="title">realTimeManager</span><span class="type">object</span>
 
 [events.t](../file/events.t.html)\[[870](../source/events.t.html#870)\]

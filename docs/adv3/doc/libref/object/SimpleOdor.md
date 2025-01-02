@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SimpleOdor</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[739](../source/objects.t.html#739)\]

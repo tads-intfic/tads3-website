@@ -1,3 +1,5 @@
+---
+---
 <span class="title">yesOrNoPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`yesOrNoPhrase(no)`](../object/yesOrNoPhrase(no).html)**` :   `[`YesOrNoProduction`](../object/YesOrNoProduction.html)

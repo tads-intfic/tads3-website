@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>InConversationState : <a
-href="overview-actorstates.htm">ActorState</a><br />
+href="overview-actorstates.html">ActorState</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="guidedintravelstate.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="conversationreadystate.htm">[Next]</a></td>
+href="guidedintravelstate.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="conversationreadystate.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -21,7 +23,7 @@ href="conversationreadystate.htm">[Next]</a></td>
 The InConversationState is, as its name suggests, the state to use when
 an NPC is in conversation with the player character. Each
 InConversationState is normally associated with a
-[ConversationReadyState](conversationreadystate.htm), and the library
+[ConversationReadyState](conversationreadystate.html), and the library
 automatically handles switching between the two depending on whether a
 conversation is in progress or not. Addressing an actor who is in a
 ConversationReadyState will automatically cause the actor to switch into
@@ -88,7 +90,7 @@ ends.  <br />
 <td><strong>endConversation (actor, reason)</strong> - Exit the
 in-conversation state. 'reason' indicates why we're leaving the
 conversation - this is one of the <a
-href="endconvxxxcodes.htm">endConvXxx</a> enums defined in adv3.h. This
+href="endconvxxxcodes.html">endConvXxx</a> enums defined in adv3.h. This
 method is a convenience only; you aren't required to call this method to
 end the conversation, since you can simply switch to another actor state
 directly if you prefer. This method's main purpose is to display an

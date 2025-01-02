@@ -1,3 +1,5 @@
+---
+---
 <span class="title">roomPartID</span><span class="type">object</span>
 
 [roomparts.t](../file/roomparts.t.html)\[[20](../source/roomparts.t.html#20)\]

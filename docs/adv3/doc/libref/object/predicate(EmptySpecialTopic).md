@@ -1,3 +1,5 @@
+---
+---
 <span class="title">predicate(EmptySpecialTopic)</span><span class="type">grammar</span>
 
 [actions.t](../file/actions.t.html)\[[2118](../source/actions.t.html#2118)\]

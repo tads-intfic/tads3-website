@@ -1,3 +1,5 @@
+---
+---
 <span class="title">commandSpacingRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[617](../source/sysrules.t.html#617)\]

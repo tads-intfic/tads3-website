@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NoneWithContentsError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5546](../source/parser.t.html#5546)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Ceiling</span><span class="type">class</span>
 
 [roomparts.t](../file/roomparts.t.html)\[[118](../source/roomparts.t.html#118)\]

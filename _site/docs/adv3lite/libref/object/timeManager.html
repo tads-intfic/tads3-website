@@ -1,0 +1,215 @@
+<p><span class="title">timeManager</span><span class="type">object</span></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#15">15</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The timeManager object is used to keep track of the notional game time
+in the OBJTIME EXTENSION.
+
+**`timeManager`**` :   `[`InitObject`](../object/InitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">timeManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>InitObject<code class="language-plaintext highlighter-rouge">](../object/InitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>additionalTime<code class="language-plaintext highlighter-rouge">](#additionalTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>currentTime<code class="language-plaintext highlighter-rouge">](#currentTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>replacementTime<code class="language-plaintext highlighter-rouge">](#replacementTime)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addInterval<code class="language-plaintext highlighter-rouge">](#addInterval)</code>  <code class="language-plaintext highlighter-rouge">[</code>advanceTime<code class="language-plaintext highlighter-rouge">](#advanceTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>formatDate<code class="language-plaintext highlighter-rouge">](#formatDate)</code>  <code class="language-plaintext highlighter-rouge">[</code>reset<code class="language-plaintext highlighter-rouge">](#reset)</code>  <code class="language-plaintext highlighter-rouge">[</code>setTime<code class="language-plaintext highlighter-rouge">](#setTime)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="additionalTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">additionalTime</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#56">56</a>]</p>
+
+<div class="desc">
+
+The number of seconds to add to the time taken on the current turn in
+addition to the standard time for this action.
+
+</div>
+
+<p><span id="currentTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">currentTime</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#21">21</a>]</p>
+
+<div class="desc">
+
+In case the game doesn't specify a starting date we default to midnight
+on January 1st 2000.
+
+</div>
+
+<p><span id="replacementTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">replacementTime</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#63">63</a>]</p>
+
+<div class="desc">
+
+If this is not nil, use this as the number of seconds taken by the
+current turn instead of the number computed from the action plus
+additionalTime.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addInterval"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addInterval (interval)</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#130">130</a>]</p>
+
+<div class="desc">
+
+Adjust the currentDate by interval, where interval is specified as for
+the interval argument for the addInterval method of the Date class, i.e.
+as a list in the format \[years, months, days, hours, minutes,
+seconds\], from which trailing zeroes may be omitted.
+
+interval may also be specified as an integer (in which case it will be
+taken as the number of minutes to advance) or as a BigNumber (in which
+case it will be taken as the number of hours).
+
+</div>
+
+<p><span id="advanceTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">advanceTime (secs)</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#69">69</a>]</p>
+
+<div class="desc">
+
+Advance the time at the end of a turn (during the afterAction
+processing).
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#24">24</a>]</p>
+
+<div class="desc">
+
+Initialize the timeManager.
+
+</div>
+
+<p><span id="formatDate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">formatDate (fmt)</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#92">92</a>]</p>
+
+<div class="desc">
+
+Return a string containing the current date and time formatted by fmt,
+where fmt is one of the strings specified in the SystemManual entry for
+Date.
+
+</div>
+
+<p><span id="reset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reset ( )</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#43">43</a>]</p>
+
+<div class="desc">
+
+Reset action-dependent counts to zero for a new turn.
+
+</div>
+
+<p><span id="setTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setTime ([args])</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#101">101</a>]</p>
+
+<div class="desc">
+
+Set the current date and time. The possible arguments are those
+described for the Date constructor in the System Manual.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

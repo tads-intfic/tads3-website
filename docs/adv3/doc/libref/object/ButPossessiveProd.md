@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ButPossessiveProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[3060](../source/parser.t.html#3060)\]

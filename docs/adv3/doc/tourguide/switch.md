@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,18 +9,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Switch : <a
-href="onoffcontrol.htm">OnOffControl</a><br />
+href="onoffcontrol.html">OnOffControl</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="onoffcontrol.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="lever(2).htm">[Next]</a></td>
+<td style="text-align: right;"><a href="onoffcontrol.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="lever(2).html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 Switch is a simple extension of the generic
-[OnOffControl](onoffcontrol.htm) that can be used with a SWITCH command
+[OnOffControl](onoffcontrol.html) that can be used with a SWITCH command
 without specifying ON or OFF, and treats FLIP synonymously. SWITCH X or
 FLIP X thus turns X on if it was off and vice versa.  
   

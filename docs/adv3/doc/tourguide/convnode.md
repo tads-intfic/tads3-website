@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -10,16 +12,16 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 ActorTopicDatabase<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="conversationnodes-overview.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="yestopic.htm">[Next]</a></td>
+href="conversationnodes-overview.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="yestopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 ConvNode is the class used to set up a
-[ConversationNode](conversationnodes-overview.htm) in an NPC's
+[ConversationNode](conversationnodes-overview.html) in an NPC's
 conversational responses. We'll discuss the principal methods and
 properties of the ConvNode class below, but first we'll clarify the
 concept by means of an example.  
@@ -29,7 +31,7 @@ where the Golden Banana is stored, he'll find it enclosed in a glass
 case. To get at it, he'll need to cut the glass case open with a
 diamond. If Sarah is with him, she'll have the diamond in her ring, and
 he'll need to ask her for it (just as he did when he wanted to cut open
-the glass jar containing the [crystal](askfortopic.htm)). This time,
+the glass jar containing the [crystal](askfortopic.html)). This time,
 however, there's a catch; although Sarah can cut open the case, if she
 goes ahead and does so the microphone embedded in the pedestal under the
 case will pick up the sound, causing the curator to come in and discover
@@ -99,8 +101,8 @@ a reply:
 ;  
   
 This traps the invalid responses the player might make; we'll go on to
-give the valid ones when we come to look at [YesTopic](yestopic.htm),
-[NoTopic](notopic.htm) and [SpecialTopic](specialtopic.htm). But before
+give the valid ones when we come to look at [YesTopic](yestopic.html),
+[NoTopic](notopic.html) and [SpecialTopic](specialtopic.html). But before
 we do that we need to look at the ConvNode class in a bit more detail.
 The principal properties and methods you may want to use on ConvNode
 are:  
@@ -116,7 +118,7 @@ are:
 <td width="14"><strong></strong>·<strong></strong></td>
 <td><strong>npcGreetingMsg</strong> - use this to display a message when
 the NPC initiates a conversation (normally via a call to <a
-href="initiateconversation.htm">initiateConversation()</a>).  <br />
+href="initiateconversation.html">initiateConversation()</a>).  <br />
 </td>
 </tr>
 </tbody>
@@ -147,7 +149,7 @@ initiated more than once.  <br />
 <tr data-valign="top">
 <td width="14"><strong></strong>·<strong></strong></td>
 <td><strong>npcContinueMsg</strong> or <strong>npcContinueList</strong>
-- the <a href="overview-actorstates.htm">ActorState</a> class
+- the <a href="overview-actorstates.html">ActorState</a> class
 automatically displays the current ConvNode's continuation message
 (using either npcContinueMsg or npcContinueList, as appropriate) on each
 turn on which the ConvNode is active, and the player didn't address a
@@ -281,12 +283,12 @@ reachable.  <br />
 
   
 Note that the last two methods are only operative if the NPC's current
-ActorState is an [InConversationState](inconversationstate.htm), since
+ActorState is an [InConversationState](inconversationstate.html), since
 the notion of a conversation ending is only meaningful programmatically
 as an NPC switching out of an InConversationState. Thus, in the present
 example, where Sarah enters a ConvNode while in an AccompanyingState,
 these methods will never be called. We'll use an example where these
-methods are relevant [later](initiateconversation.htm). Basically,
+methods are relevant [later](initiateconversation.html). Basically,
 though, the three reasons a conversation might be terminated (when the
 NPC is in an InConversationState) are (a) if the player explicitly says
 goodbye (with a BYE command), corresponding to endCondBye; (b) if the
@@ -297,6 +299,6 @@ attentionSpan (endConvBoredom). The last two methods allow each of these
 situations to be handled differently, if required.  
   
 We'll see some more examples of ConvNodes when we come to look at the
-[initiateConversation](initiateconversation.htm) method.  
+[initiateConversation](initiateconversation.html) method.  
   
   

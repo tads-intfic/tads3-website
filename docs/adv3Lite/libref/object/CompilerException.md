@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CompilerException</span><span class="type">class</span>
 
 [dynfunc.t](../file/dynfunc.t.html)\[[158](../source/dynfunc.t.html#158)\]

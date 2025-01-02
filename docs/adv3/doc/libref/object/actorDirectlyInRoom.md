@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorDirectlyInRoom</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[308](../source/precond.t.html#308)\]

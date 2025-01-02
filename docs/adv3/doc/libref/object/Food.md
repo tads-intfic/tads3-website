@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Food</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5230](../source/objects.t.html#5230)\]

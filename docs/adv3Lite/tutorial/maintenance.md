@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \> The
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \> The
 Maintenance Room  
-<span class="navnp"><a href="ticket.htm" class="nav"><em>Prev:</em> Just the Ticket</a>
+<span class="navnp"><a href="ticket.html" class="nav"><em>Prev:</em> Just the Ticket</a>
    
-<a href="security.htm" class="nav"><em>Next:</em> The Security Area</a>
+<a href="security.html" class="nav"><em>Next:</em> The Security Area</a>
     </span>
 
 </div>
@@ -436,7 +438,7 @@ turn off the power switch and then carry the ID card through the metal
 detector without any problem.
 
 For further details of the concepts and features introduced in this
-section, refer to the [Containment](../manual/thing.htm#containment)
+section, refer to the [Containment](../manual/thing.html#containment)
 section of the article on Thing in the *adv3Lite Library Manual*.
 
 </div>
@@ -446,12 +448,12 @@ section of the article on Thing in the *adv3Lite Library Manual*.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \> The
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \> The
 Maintenance Room  
-<span class="navnp"><a href="ticket.htm" class="nav"><em>Prev:</em> Just the Ticket</a>
+<span class="navnp"><a href="ticket.html" class="nav"><em>Prev:</em> Just the Ticket</a>
    
-<a href="security.htm" class="nav"><em>Next:</em> The Security Area</a>
+<a href="security.html" class="nav"><em>Next:</em> The Security Area</a>
     </span>
 
 </div>

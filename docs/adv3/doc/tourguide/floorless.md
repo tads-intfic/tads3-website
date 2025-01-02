@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Floorless : object<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="floorlessroom.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="hiddendoor.htm">[Next]</a></td>
+href="floorlessroom.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="hiddendoor.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -19,7 +21,7 @@ href="hiddendoor.htm">[Next]</a></td>
   
 Floorless is a mix-in class which adds Floorless behaviour to any Room
 class; that is it takes away the floor from the list of [room
-parts](roomparts.htm), and provides the handling for a dropped object to
+parts](roomparts.html), and provides the handling for a dropped object to
 end up in another location.  
   
 Since the top of the mast is not exactly an (indoor) Room, in the sense

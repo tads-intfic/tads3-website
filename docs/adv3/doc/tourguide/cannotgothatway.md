@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>cannotGoThatWay<br />
 </strong></td>
-<td style="text-align: right;"><a href="roomparts.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="cannotgothatwayindark.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="roomparts.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="cannotgothatwayindark.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -19,7 +21,7 @@ href="cannotgothatwayindark.htm">[Next]</a></td>
 BasicLocation.cannotGoThatWay is called whenever an actor (usually the
 PC) attempts travel in a direction that is not currently available
 (except in the dark, when
-[cannotGoThatWayInDark](cannotgothatwayindark.htm) is used instead). By
+[cannotGoThatWayInDark](cannotgothatwayindark.html) is used instead). By
 default this simply displays a message saying you can't go that way, and
 listing the exits that are available from the current location. There
 may be occasions, however, when you'd like a different message

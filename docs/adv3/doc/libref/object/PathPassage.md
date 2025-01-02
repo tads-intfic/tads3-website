@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PathPassage</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[2643](../source/travel.t.html#2643)\],

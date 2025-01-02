@@ -1,0 +1,159 @@
+<p><span class="title">bannerUITracker</span><span class="type">object</span></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#503">503</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The banner UI tracker. This object keeps track of the current user
+interface display state; this object is transient because the
+interpreter's user interface is not part of the persistence mechanism.
+
+`transient `**`bannerUITracker`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">bannerUITracker</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>activeBanners_<code class="language-plaintext highlighter-rouge">](#activeBanners_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addBanner<code class="language-plaintext highlighter-rouge">](#addBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTracker<code class="language-plaintext highlighter-rouge">](#getTracker)</code>  <code class="language-plaintext highlighter-rouge">[</code>orderMatches<code class="language-plaintext highlighter-rouge">](#orderMatches)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeBanner<code class="language-plaintext highlighter-rouge">](#removeBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>skipDescendants<code class="language-plaintext highlighter-rouge">](#skipDescendants)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="activeBanners_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">activeBanners_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#745">745</a>]</p>
+
+<div class="desc">
+
+The vector of banners currently on the screen. This is a list of
+transient BannerUIWindow objects, stored in the same order as the banner
+layout list.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addBanner (handle, ostr, id, parentID, where, other, windowType, align, styleFlags)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#505">505</a>]</p>
+
+<div class="desc">
+
+add a banner to the active display list
+
+</div>
+
+<p><span id="getTracker"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTracker (win)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#652">652</a>]</p>
+
+<div class="desc">
+
+get the BannerUIWindow tracker object for a given BannerWindow
+
+</div>
+
+<p><span id="orderMatches"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">orderMatches (uiWin, where, otherID)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#664">664</a>]</p>
+
+<div class="desc">
+
+check a BannerUIWindow to see if it matches the given layout order
+
+</div>
+
+<p><span id="removeBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeBanner (id)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#618">618</a>]</p>
+
+<div class="desc">
+
+remove a banner from the active display list
+
+</div>
+
+<p><span id="skipDescendants"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">skipDescendants (idx)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#581">581</a>]</p>
+
+<div class="desc">
+
+Given an index in our list of active windows, skip the given item and
+all items whose windows are descended from this window. We'll leave the
+index positioned on the next entry in the list that isn't a descendant
+of the window at the given index. Note that this skips not only children
+but grandchildren (and so on) as well.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

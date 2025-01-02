@@ -1,3 +1,5 @@
+---
+---
 <span class="title">noTravel</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[1730](../source/travel.t.html#1730)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">\_MultiMethodPlaceholder</span><span class="type">class</span>
 
 [multmeth.t](../file/multmeth.t.html)\[[454](../source/multmeth.t.html#454)\]

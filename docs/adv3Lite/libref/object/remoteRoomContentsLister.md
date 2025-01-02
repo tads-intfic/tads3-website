@@ -1,3 +1,5 @@
+---
+---
 <span class="title">remoteRoomContentsLister</span><span class="type">object</span>
 
 [senseRegion.t](../file/senseRegion.t.html)\[[508](../source/senseRegion.t.html#508)\]

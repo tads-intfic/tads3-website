@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Greeting Protocols<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="conversationreadystate.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="topicentry.htm">[Next]</a></td>
+href="conversationreadystate.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="topicentry.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -27,8 +29,8 @@ concludes it with a similar winding-up exchange to signal that it's now
 over.  
   
 In order to handle the beginning and end of conversations, you put a
-[HelloTopic](hellotopic.htm) and a [ByeTopic](byetopic.htm) in the
-[ConversationReadyState](conversationreadystate.htm), for example:  
+[HelloTopic](hellotopic.html) and a [ByeTopic](byetopic.html) in the
+[ConversationReadyState](conversationreadystate.html), for example:  
   
 ++ sarahLooking : ConversationReadyState  
   isInitState = true  
@@ -68,11 +70,11 @@ The effect of this is that when the player character strikes up a
 conversation with Sarah, either explicitly through a GREET SARAH, TALK
 TO SARAH or SARAH, HELLO command, or implicitly by addressing a
 conversational command to her like ASK SARAH ABOUT HERSELF or TELL SARAH
-ABOUT BANANA, the greeting message from the [HelloTopic](hellotopic.htm)
+ABOUT BANANA, the greeting message from the [HelloTopic](hellotopic.html)
 will be displayed, and then Sarah will switch into the associated
 InConversationState. Conversely, once the conversation is over, Sarah
 will switch back into the ConversationReadyState and either the
-[ByeTopic](byetopic.htm) or the [ImpByeTopic](impbyetopic.htm) will be
+[ByeTopic](byetopic.html) or the [ImpByeTopic](impbyetopic.html) will be
 displayed, depending on whether the player ended the conversation
 explicitly with a BYE command, or implicitly by either leaving the
 location or failing to address a conversational command to Sarah for the

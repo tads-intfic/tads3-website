@@ -1,0 +1,203 @@
+<p><span class="title">turnEndRules</span><span class="type">object</span></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#75">75</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The turnEndRules execute the various things that need to happen at the
+end of each turn, including the current location's roomDaemon, any
+current Fuses and Daemons (via the eventManager), and advancing the turn
+counter. Additional rules can be added if game code wants something else
+to occur at the end of each turn. \[SYSRULES EXTENSION\]
+
+**`turnEndRules`**` :   `[`RuleBook`](../object/RuleBook.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">turnEndRules</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>RuleBook<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>contValue<code class="language-plaintext highlighter-rouge">](#contValue)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">RuleBook</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>actor<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html#actor)</code>  <code class="language-plaintext highlighter-rouge">[</code>contents<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html#contents)</code>  <code class="language-plaintext highlighter-rouge">[</code>defaultVal<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html#defaultVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>stopValue<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html#stopValue)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>follow<code class="language-plaintext highlighter-rouge">](#follow)</code>  <code class="language-plaintext highlighter-rouge">[</code>follow<code class="language-plaintext highlighter-rouge">](#follow)</code>  <code class="language-plaintext highlighter-rouge">[</code>follow<code class="language-plaintext highlighter-rouge">](#follow)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">RuleBook</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addToContents<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html#addToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>initBook<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html#initBook)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeFromContents<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html#removeFromContents)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execute)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="contValue"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contValue</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#76">76</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#85">85</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#96">96</a>]</p>
+
+<div class="desc">
+
+Execute the player character's current location's roomDaemon. \[SYSRULES
+EXTENSION\] + roomDaemonRule: Rule follow() {
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#113">113</a>]</p>
+
+<div class="desc">
+
+If the events.t module is included, execute all current Daemons and
+Fuses.
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#123">123</a>]</p>
+
+<div class="desc">
+
+Advance the turn counter
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="follow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">follow ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#81">81</a>]</p>
+
+<div class="desc">
+
+\[SYSRULES EXTENSION\] By default add a paragraph break before doing
+anything else at the end of turn.
+
+</div>
+
+<p><span id="follow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">follow ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#104">104</a>]</p>
+
+<div class="desc">
+
+If the events.t module is included, execute all current Daemons and
+Fuses \[SYSRULES EXTENSION\]
+
+</div>
+
+<p><span id="follow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">follow ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#118">118</a>]</p>
+
+<div class="desc">
+
+Advance the turn counter \[SYSRULES EXTENSION\]
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

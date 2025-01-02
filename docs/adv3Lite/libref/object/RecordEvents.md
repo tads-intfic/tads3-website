@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RecordEvents</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[2512](../source/actions.t.html#2512)\]

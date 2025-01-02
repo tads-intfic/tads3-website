@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AbortActionSignal</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5756](../source/parser.t.html#5756)\]

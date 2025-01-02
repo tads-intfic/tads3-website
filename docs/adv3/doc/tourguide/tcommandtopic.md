@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,18 +9,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>TCommandTopic : <a
-href="commandtopic.htm">CommandTopic</a><br />
+href="commandtopic.html">CommandTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="overridingobeycommand.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="amodifieddefaultcommandtopic.htm">[Next]</a></td>
+href="overridingobeycommand.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="amodifieddefaultcommandtopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-Having overridden [ActorState.obeyCommand](overridingobeycommand.htm) to
+Having overridden [ActorState.obeyCommand](overridingobeycommand.html) to
 make it easier for CommandTopics to handle commands with a direct
 object, the next step is to define a CommandTopic subclass that takes
 advantage of these changes. We'll call it TCommandTopic, for a topic

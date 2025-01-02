@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ParagraphLister</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[1399](../source/lister.t.html#1399)\]

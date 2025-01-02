@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](settingthescene.htm)   [\[Next\]](endingthegame.htm)*
+*[\[Previous\]](settingthescene.html)   [\[Next\]](endingthegame.html)*
 
 ## A Basic Burner
 
@@ -120,7 +122,7 @@ For a female NPC you'd define isHer = true.
 Both TopicEntry and ActorState are generic classes with several
 subclasses that tend to be the classes one uses in practice. At some
 point you should look at the more detailed explanation of their use in
-the "<a href="../techman/t3actor.htm" target="_top">Creating Dynamic
+the "<a href="../techman/t3actor.html" target="_top">Creating Dynamic
 Characters</a>" articles in the *Technical Manual*, but for now you can
 just follow the discussion here.  
   
@@ -289,6 +291,6 @@ games.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](settingthescene.htm)   [\[Next\]](endingthegame.htm)*
+*[\[Previous\]](settingthescene.html)   [\[Next\]](endingthegame.html)*
 
 </div>

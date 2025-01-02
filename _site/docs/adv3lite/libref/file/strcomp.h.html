@@ -1,0 +1,164 @@
+<p><span class="title">strcomp.h</span><span class="type">file</span></p>
+
+<p><a href="../source/strcomp.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<div class="fdesc">
+
+This header defines the StringComparator intrinsic class.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>StringComparator<code class="language-plaintext highlighter-rouge">](../object/StringComparator.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_MacroSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Macros</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>StrCompCaseFold<code class="language-plaintext highlighter-rouge">](#StrCompCaseFold)</code>  <code class="language-plaintext highlighter-rouge">[</code>StrCompMatch<code class="language-plaintext highlighter-rouge">](#StrCompMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>StrCompTrunc<code class="language-plaintext highlighter-rouge">](#StrCompTrunc)</code>  `</p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_TemplateSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Templates</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Macros_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Macros</span>  
+
+</div>
+
+<p><span id="StrCompCaseFold"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">StrCompCaseFold</code></p>
+
+<p><a href="../file/strcomp.h.html">strcomp.h</a>[<a href="../source/strcomp.h.html#129">129</a>]</p>
+
+<div class="desc">
+
+`0x0002`  
+Case folding - this flag is set when the two values match, but one or
+more characters differ in case (in other words, an upper-case letter in
+the input string matched a lower-case letter in the dictionary string,
+or vice versa).
+
+</div>
+
+<p><span id="StrCompMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">StrCompMatch</code></p>
+
+<p><a href="../file/strcomp.h.html">strcomp.h</a>[<a href="../source/strcomp.h.html#121">121</a>]</p>
+
+<div class="desc">
+
+`0x0001`  
+Match - this flag is set in the return code for all matching strings.
+(This flag isn't as useless as it might sound; its purpose is to ensure
+that the return value from matchValues() is non-zero for all matches,
+even when no other flag values are applicable.)
+
+</div>
+
+<p><span id="StrCompTrunc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">StrCompTrunc</code></p>
+
+<p><a href="../file/strcomp.h.html">strcomp.h</a>[<a href="../source/strcomp.h.html#140">140</a>]</p>
+
+<div class="desc">
+
+`0x0004`  
+Truncation - this flag is set when the input string is shorter than the
+value string (but matches the dictionary completely up to the input
+string's full length, and is at least as long as the truncation length
+specified in the constructor). This flag can only be returned when
+truncation is allowed (as indicated by a non-zero truncation length in
+the constructor), because truncated strings will never match at all when
+truncation isn't allowed.
+
+</div>
+
+<p><span id="_Enums_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Templates_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Templates</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

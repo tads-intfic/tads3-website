@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultCommandPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`defaultCommandPhrase(examine)`](../object/defaultCommandPhrase(examine).html)**` :   `[`CommandProduction`](../object/CommandProduction.html)

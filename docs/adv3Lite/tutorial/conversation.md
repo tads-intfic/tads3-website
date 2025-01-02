@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| The Art of
+<a href="toc.html" class="nav">Table of Contents</a> \| The Art of
 Conversation  
-<span class="navnp"><a href="takeoff.htm" class="nav"><em>Prev:</em> Taking Off</a>
-   <a href="asktell.htm" class="nav"><em>Next:</em> Ask, Tell, Give,
+<span class="navnp"><a href="takeoff.html" class="nav"><em>Prev:</em> Taking Off</a>
+   <a href="asktell.html" class="nav"><em>Next:</em> Ask, Tell, Give,
 Show</a>     </span>
 
 </div>
@@ -23,12 +25,12 @@ can be implemented in adv3Lite.
 
 <div class="sectoc">
 
-[Ask, Tell, Give, Show](asktell.htm)  
-[Queries and Suggestions](query.htm)  
-[Hello and Goodbye](hello.htm)  
-[Angela Wants Answers](convnode.htm)  
-[Diverse Defaults](defaults.htm)  
-[Summary](convsumm.htm)  
+[Ask, Tell, Give, Show](asktell.html)  
+[Queries and Suggestions](query.html)  
+[Hello and Goodbye](hello.html)  
+[Angela Wants Answers](convnode.html)  
+[Diverse Defaults](defaults.html)  
+[Summary](convsumm.html)  
 
 </div>
 
@@ -39,10 +41,10 @@ can be implemented in adv3Lite.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| The Art of
+<a href="toc.html" class="nav">Table of Contents</a> \| The Art of
 Conversation  
-<span class="navnp"><a href="takeoff.htm" class="nav"><em>Prev:</em> Taking Off</a>
-   <a href="asktell.htm" class="nav"><em>Next:</em> Ask, Tell, Give,
+<span class="navnp"><a href="takeoff.html" class="nav"><em>Prev:</em> Taking Off</a>
+   <a href="asktell.html" class="nav"><em>Next:</em> Ask, Tell, Give,
 Show</a>     </span>
 
 </div>

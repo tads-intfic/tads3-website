@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EmptyNounError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5178](../source/parser.t.html#5178)\],

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Hint</span><span class="type">class</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[362](../source/hintsys.t.html#362)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LookIn</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1049](../source/actions.t.html#1049)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">singleNoun(empty)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[215](../source/grammar.t.html#215)\]

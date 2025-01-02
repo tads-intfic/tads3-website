@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Conversation Nodes  
-<span class="navnp"><a href="topicgroup.htm" class="nav"><em>Prev:</em> Topic Groups</a>
-    <a href="hello.htm" class="nav"><em>Next:</em> Hello and Goodbye</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Conversation Nodes  
+<span class="navnp"><a href="topicgroup.html" class="nav"><em>Prev:</em> Topic Groups</a>
+    <a href="hello.html" class="nav"><em>Next:</em> Hello and Goodbye</a>
     </span>
 
 </div>
@@ -355,7 +357,7 @@ object block saying goodbye in them all.
 
 For a fuller explanation of the *reason* parameter, of saying goodbye,
 and of checking whether conversations are allowed to end, see the
-section on [Hello and Goodbye](hello.htm) below.
+section on [Hello and Goodbye](hello.html) below.
 
   
 
@@ -453,10 +455,10 @@ if there is one.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Conversation Nodes  
-<span class="navnp"><a href="topicgroup.htm" class="nav"><em>Prev:</em> Topic Groups</a>
-    <a href="hello.htm" class="nav"><em>Next:</em> Hello and Goodbye</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Conversation Nodes  
+<span class="navnp"><a href="topicgroup.html" class="nav"><em>Prev:</em> Topic Groups</a>
+    <a href="hello.html" class="nav"><em>Next:</em> Hello and Goodbye</a>
     </span>
 
 </div>

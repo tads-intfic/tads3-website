@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ShuffledIntegerList</span><span class="type">class</span>
 
 [eventList.t](../file/eventList.t.html)\[[678](../source/eventList.t.html#678)\]

@@ -1,3 +1,5 @@
+---
+---
 ## Global Messages
 
 <span id="acknowledge notify status">DMsg(acknowledge notify

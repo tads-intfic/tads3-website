@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ftVictory</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[880](../source/misc.t.html#880)\]

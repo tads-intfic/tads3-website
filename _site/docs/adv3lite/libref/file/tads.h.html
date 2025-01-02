@@ -1,0 +1,194 @@
+<p><span class="title">tads.h</span><span class="type">file</span></p>
+
+<p><a href="../source/tads.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<div class="fdesc">
+
+  
+This file is part of TADS 3.
+
+This file includes all of the standard TADS system headers, so programs
+can include this header alone rather than having to include all of the
+separate headers individually.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_MacroSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Macros</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>_tads_io_say<code class="language-plaintext highlighter-rouge">](#_tads_io_say)</code>  <code class="language-plaintext highlighter-rouge">[</code>breakLoop<code class="language-plaintext highlighter-rouge">](#breakLoop)</code>  <code class="language-plaintext highlighter-rouge">[</code>perInstance<code class="language-plaintext highlighter-rouge">](#perInstance)</code>  <code class="language-plaintext highlighter-rouge">[</code>TADS_IO_HEADER<code class="language-plaintext highlighter-rouge">](#TADS_IO_HEADER)</code>  `</p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_TemplateSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Templates</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Macros_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Macros</span>  
+
+</div>
+
+<p><span id="_tads_io_say"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_tads_io_say (str)</code></p>
+
+<p><a href="../file/tads.h.html">tads.h</a>[<a href="../source/tads.h.html#29">29</a>]</p>
+
+<div class="desc">
+
+`tadsSay(str)`  
+*no description available*
+
+</div>
+
+<p><span id="breakLoop"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">breakLoop</code></p>
+
+<p><a href="../file/tads.h.html">tads.h</a>[<a href="../source/tads.h.html#58">58</a>]</p>
+
+<div class="desc">
+
+`throw BreakLoopSignal`  
+Break out of a callback iteration, such as a forEachInstance() loop.
+This can be used within the callback code to break out of the loop.
+
+</div>
+
+<p><span id="perInstance"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">perInstance (expr)</code></p>
+
+<p><a href="../file/tads.h.html">tads.h</a>[<a href="../source/tads.h.html#81">81</a>]</p>
+
+<div class="desc">
+
+`(self.(targetprop) = (expr))`  
+Define a property value using an expression that's evaluated once per
+instance of the class where the property is defined. This is used like
+so:
+
+class MyClass: MySuperClass  
+prop1 = perInstance(new SubObject())  
+;
+
+Now, for each instance of MyClass, prop1 will be set to a separate
+instance of SubObject.
+
+Note that the per-instance property value is set "on demand" in each
+instance. This means that a particular instance's copy of the property
+will be set when the property is first evaluated. Note in particular
+that the value won't necessary be computed at compile time or during
+pre-initialization, because the value for a particular instance won't be
+calculated until the property is first used for a that instance.
+
+</div>
+
+<p><span id="TADS_IO_HEADER"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TADS_IO_HEADER</code></p>
+
+<p><a href="../file/tads.h.html">tads.h</a>[<a href="../source/tads.h.html#26">26</a>]</p>
+
+<div class="desc">
+
+`"tadsio.h"`  
+To allow the standard library and header files to be used with
+alternative I/O intrinsics, we explicitly use macros for the I/O
+dependencies in the library - specifically, the I/O intrinsic header
+file name, and the name of the default stream output function.
+
+We define defaults for these if they aren't otherwise defined. To
+compile library files with an alternative set of I/O intrinsics, define
+these symbols in the compiler (for example, by using the -D command-line
+option with t3make).
+
+</div>
+
+<p><span id="_Enums_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Templates_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Templates</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

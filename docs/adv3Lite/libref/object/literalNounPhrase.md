@@ -1,3 +1,5 @@
+---
+---
 <span class="title">literalNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`literalNounPhrase(number)`](../object/literalNounPhrase(number).html)**` :   `[`Production`](../object/Production.html)

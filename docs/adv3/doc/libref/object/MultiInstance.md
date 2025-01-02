@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MultiInstance</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[3049](../source/objects.t.html#3049)\]

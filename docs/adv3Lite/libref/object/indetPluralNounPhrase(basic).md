@@ -1,3 +1,5 @@
+---
+---
 <span class="title">indetPluralNounPhrase(basic)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[677](../source/grammar.t.html#677)\]

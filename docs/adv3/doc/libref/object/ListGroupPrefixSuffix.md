@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ListGroupPrefixSuffix</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[2178](../source/lister.t.html#2178)\]

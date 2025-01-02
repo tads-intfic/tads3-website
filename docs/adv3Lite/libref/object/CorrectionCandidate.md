@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CorrectionCandidate</span><span class="type">class</span>
 
 [spelling.t](../file/spelling.t.html)\[[317](../source/spelling.t.html#317)\]

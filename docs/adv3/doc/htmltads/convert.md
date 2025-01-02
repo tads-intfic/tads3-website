@@ -1,9 +1,11 @@
+---
+---
 Converting a TADS 2 game to HTML TADS
 
 # Converting a TADS 2 game to HTML TADS
 
 This document describes the steps to converting an existing TADS game to
-take advantage of HTML TADS. See the [introduction](intro.htm) for more
+take advantage of HTML TADS. See the [introduction](intro.html) for more
 information on HTML TADS. **Note:** this material only applies to TADS 2
 games. Since TADS 3 is **always** in "HTML mode," it's really not
 possible to write a "non-HTML" TADS 3 game in the first place, so
@@ -35,7 +37,7 @@ However, there are a number of areas where HTML TADS differs from
 standard HTML, particularly with tags that define the document
 structure, and you'll eventually want to familiarize yourself with these
 differences as you start to use the more advanced features; refer to
-[HTML TADS Deviations from Standard HTML Specifications](deviate.htm)
+[HTML TADS Deviations from Standard HTML Specifications](deviate.html)
 for complete details.
 
 ### Playing an existing TADS game with HTML TADS

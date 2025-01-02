@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](fillinginsomegaps.htm)
-  [\[Next\]](lookingthroughthewindow.htm)*
+*[\[Previous\]](fillinginsomegaps.html)
+  [\[Next\]](lookingthroughthewindow.html)*
 
 ## Counting the Cash
 
@@ -555,7 +557,7 @@ first argument to gTranscript.summarizeTranscript as
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](fillinginsomegaps.htm)
-  [\[Next\]](lookingthroughthewindow.htm)*
+*[\[Previous\]](fillinginsomegaps.html)
+  [\[Next\]](lookingthroughthewindow.html)*
 
 </div>

@@ -1,4 +1,6 @@
-Help Topics \> [Table of Contents](wbcont.htm)  
+---
+---
+Help Topics \> [Table of Contents](wbcont.html)  
   
 
 ![](../htmltads.jpg)  
@@ -569,6 +571,6 @@ value of a variable to make it valid, for example.
 ------------------------------------------------------------------------
 
   
-Help Topics \> [Table of Contents](wbcont.htm)  
+Help Topics \> [Table of Contents](wbcont.html)  
   
 Copyright ©1999, 2007 by Michael J. Roberts.

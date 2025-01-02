@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TellAboutImplicit</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[2087](../source/actions.t.html#2087)\]

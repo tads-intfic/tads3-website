@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Button</span><span class="type">class</span>
 
 [gadget.t](../file/gadget.t.html)\[[19](../source/gadget.t.html#19)\]

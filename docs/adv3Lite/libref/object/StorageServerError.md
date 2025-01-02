@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StorageServerError</span><span class="type">class</span>
 
 [\_main.t](../file/_main.t.html)\[[889](../source/_main.t.html#889)\]

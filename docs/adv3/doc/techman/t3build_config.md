@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Using Build
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Using Build
 Configurations  
-<span class="navnp"><a href="t3inout.htm" class="nav"><em>Prev:</em> Some Common
+<span class="navnp"><a href="t3inout.html" class="nav"><em>Prev:</em> Some Common
 Input/Output Issues</a>    
-<a href="t3inc.htm" class="nav"><em>Next:</em> Understanding Separate
+<a href="t3inc.html" class="nav"><em>Next:</em> Understanding Separate
 Compilation</a>     </span>
 
 </div>
@@ -224,12 +226,12 @@ through your new file.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Using Build
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Using Build
 Configurations  
-<span class="navnp"><a href="t3inout.htm" class="nav"><em>Prev:</em> Some Common
+<span class="navnp"><a href="t3inout.html" class="nav"><em>Prev:</em> Some Common
 Input/Output Issues</a>    
-<a href="t3inc.htm" class="nav"><em>Next:</em> Understanding Separate
+<a href="t3inc.html" class="nav"><em>Next:</em> Understanding Separate
 Compilation</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Collective</span><span class="type">class</span>
 
 [collective.t](../file/collective.t.html)\[[24](../source/collective.t.html#24)\]

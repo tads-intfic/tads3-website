@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Basic Actor Customization<br />
 </strong></td>
-<td style="text-align: right;"><a href="basicactors.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="actorknowledge.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="basicactors.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="actorknowledge.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -28,7 +30,7 @@ These message properties will also work perfectly well if they're
 defined as methods that return a single-quoted string. This means we
 could define one of these properties, cannotKissActorMsg, say, to return
 one of a list of messages. In this case we might like to use a
-[ShuffledEventList](shuffledeventlist.htm), but this won't quite do,
+[ShuffledEventList](shuffledeventlist.html), but this won't quite do,
 since we need something that *returns* a single-quoted string, not
 something that displays one. Fortunately, there is a class that can do
 this, namely the **ShuffledList**. We can place a list of strings (or

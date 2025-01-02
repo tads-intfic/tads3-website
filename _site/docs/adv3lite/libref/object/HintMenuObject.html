@@ -1,0 +1,142 @@
+<p><span class="title">HintMenuObject</span><span class="type">class</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#181">181</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A basic hint menu object. This is an abstract base class that
+encapsulates some behavior common to different hint menu classes.
+
+`class `**`HintMenuObject`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">HintMenuObject</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">HintMenuObject</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Goal<code class="language-plaintext highlighter-rouge">](../object/Goal.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>HintLongTopicItem<code class="language-plaintext highlighter-rouge">](../object/HintLongTopicItem.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>HintMenu<code class="language-plaintext highlighter-rouge">](../object/HintMenu.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TopHintMenu`](../object/TopHintMenu.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>topicOrder<code class="language-plaintext highlighter-rouge">](#topicOrder)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>compareForTopicSort<code class="language-plaintext highlighter-rouge">](#compareForTopicSort)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="topicOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicOrder</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#191">191</a>]</p>
+
+<div class="desc">
+
+The topic order. When we're about to show a list of open topics, we'll
+sort the list in ascending order of this property, then in ascending
+order of title. By default, we set this order value to 1000; if
+individual goals don't override this, then they'll simply be sorted
+lexically by topic name. This can be used if there's some basis other
+than alphabetical order for sorting the list.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="compareForTopicSort"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compareForTopicSort (other)</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#202">202</a>]</p>
+
+<div class="desc">
+
+Compare this goal to another, for the purposes of sorting a list of
+topics. Returns a positive number if this goal sorts after the other
+one, a negative number if this goal sorts before the other one, 0 if the
+relative order is arbitrary.
+
+By default, we'll sort by topicOrder if the topicOrder values are
+different, otherwise alphabetically by title.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

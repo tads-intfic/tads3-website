@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 The Metaclasses  
-<span class="navnp"><a href="model.htm" class="nav"><em>Prev:</em> Machine Model</a>
+<span class="navnp"><a href="model.html" class="nav"><em>Prev:</em> Machine Model</a>
    
-<a href="opcode.htm" class="nav"><em>Next:</em> Byte-Code Instruction
+<a href="opcode.html" class="nav"><em>Next:</em> Byte-Code Instruction
 Set</a>     </span>
 
 </div>
@@ -494,12 +496,12 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 The Metaclasses  
-<span class="navnp"><a href="model.htm" class="nav"><em>Prev:</em> Machine Model</a>
+<span class="navnp"><a href="model.html" class="nav"><em>Prev:</em> Machine Model</a>
    
-<a href="opcode.htm" class="nav"><em>Next:</em> Byte-Code Instruction
+<a href="opcode.html" class="nav"><em>Next:</em> Byte-Code Instruction
 Set</a>     </span>
 
 </div>

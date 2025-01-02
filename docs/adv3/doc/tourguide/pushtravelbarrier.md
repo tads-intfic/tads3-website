@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,19 +9,19 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>PushTravelBarrier : <a
-href="travelbarrier.htm">TravelBarrier</a><br />
+href="travelbarrier.html">TravelBarrier</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="travelpushable.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="intangibles-overview.htm">[Next]</a></td>
+href="travelpushable.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="intangibles-overview.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 A PushTravelBarrier is a special kind of
-[TravelBarrier](travelbarrier.htm) that can be used (by attaching it to
+[TravelBarrier](travelbarrier.html) that can be used (by attaching it to
 the travelBarrier property of a TravelConnector) to block (or
 selectively block) pushing a TravelPushable via this connector. By
 default a PushTravelBarrier blocks all TravelPushables, but this can be

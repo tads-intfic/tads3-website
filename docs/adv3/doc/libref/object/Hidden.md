@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Hidden</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[906](../source/objects.t.html#906)\]

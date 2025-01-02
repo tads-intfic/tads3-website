@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SensoryEvent</span><span class="type">class</span>
 
 [sensory.t](../file/sensory.t.html)\[[443](../source/sensory.t.html#443)\]

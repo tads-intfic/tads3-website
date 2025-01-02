@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \>
 WeakRefLookupTable  
-<span class="navnp"><a href="vector.htm" class="nav"><em>Prev:</em> Vector</a>
-    <a href="lib.htm" class="nav"><em>Next:</em> The System Library</a>
+<span class="navnp"><a href="vector.html" class="nav"><em>Prev:</em> Vector</a>
+    <a href="lib.html" class="nav"><em>Next:</em> The System Library</a>
     </span>
 
 </div>
@@ -19,7 +21,7 @@ WeakRefLookupTable
 
 # WeakRefLookupTable
 
-WeakRefLookupTable is a subclass of [LookupTable](lookup.htm). It
+WeakRefLookupTable is a subclass of [LookupTable](lookup.html). It
 behaves the same as the regular LookupTable class, and has the same
 methods; the only difference is that the values in a weak-reference
 table are only "weakly" referenced. (The keys are still "strongly"
@@ -49,11 +51,11 @@ class, just ignore it and use the base LookupTable class.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \>
 WeakRefLookupTable  
-<span class="navnp"><a href="vector.htm" class="nav"><em>Prev:</em> Vector</a>
-    <a href="lib.htm" class="nav"><em>Next:</em> The System Library</a>
+<span class="navnp"><a href="vector.html" class="nav"><em>Prev:</em> Vector</a>
+    <a href="lib.html" class="nav"><em>Next:</em> The System Library</a>
     </span>
 
 </div>

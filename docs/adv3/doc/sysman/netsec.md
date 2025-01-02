@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Network
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Network
 Safety  
-<span class="navnp"><a href="tadsnet.htm" class="nav"><em>Prev:</em> tads-net Function
+<span class="navnp"><a href="tadsnet.html" class="nav"><em>Prev:</em> tads-net Function
 Set</a>    
-<a href="scripts.htm" class="nav"><em>Next:</em> Input Scripts</a>    
+<a href="scripts.html" class="nav"><em>Next:</em> Input Scripts</a>    
 </span>
 
 </div>
@@ -64,7 +66,7 @@ options. The user interface varies by interpreter. In HTML TADS for
 Windows, the Options dialog controls these settings. For command-line
 interpreters, the <span class="code">-ns</span> option controls the
 safety level. See the [interpreter
-documentation](terp.htm#network-safety) for details.
+documentation](terp.html#network-safety) for details.
 
 The default safety settings are Level 1, local access only, for both
 client and server functions.
@@ -156,12 +158,12 @@ PC's firewall software.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Network
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Network
 Safety  
-<span class="navnp"><a href="tadsnet.htm" class="nav"><em>Prev:</em> tads-net Function
+<span class="navnp"><a href="tadsnet.html" class="nav"><em>Prev:</em> tads-net Function
 Set</a>    
-<a href="scripts.htm" class="nav"><em>Next:</em> Input Scripts</a>    
+<a href="scripts.html" class="nav"><em>Next:</em> Input Scripts</a>    
 </span>
 
 </div>

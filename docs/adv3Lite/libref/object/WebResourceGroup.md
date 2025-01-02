@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebResourceGroup</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[1228](../source/webui.t.html#1228)\]

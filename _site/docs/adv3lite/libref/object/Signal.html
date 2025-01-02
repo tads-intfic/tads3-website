@@ -1,0 +1,204 @@
+<p><span class="title">Signal</span><span class="type">object</span></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#29">29</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Signal is a kind of Relation that can be used to send a signal from a
+sender to all the objects related to that sender via this Signal
+Relation.
+
+For a signal to be sent from a sender to a receiver, a relationship
+first needs to be set up between them with a statement like:
+
+connect(sender, signal, receiver);
+
+Where signal is either the programmatic name or the string name of the
+signal we want sent.
+
+To break the link subsequently we can use:
+
+unconnect(sender, signal, receiver);
+
+\[SIGNALS EXTENSION\]
+
+**`Signal`**` :   `[`Relation`](../object/Relation.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Signal</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Relation<code class="language-plaintext highlighter-rouge">](../object/Relation.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>dispatchTab<code class="language-plaintext highlighter-rouge">](#dispatchTab)</code>  <code class="language-plaintext highlighter-rouge">[</code>propList<code class="language-plaintext highlighter-rouge">](#propList)</code>  <code class="language-plaintext highlighter-rouge">[</code>relationType<code class="language-plaintext highlighter-rouge">](#relationType)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Relation</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](../object/Relation.html#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>reciprocal<code class="language-plaintext highlighter-rouge">](../object/Relation.html#reciprocal)</code>  <code class="language-plaintext highlighter-rouge">[</code>relTab<code class="language-plaintext highlighter-rouge">](../object/Relation.html#relTab)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseName<code class="language-plaintext highlighter-rouge">](../object/Relation.html#reverseName)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addHandler<code class="language-plaintext highlighter-rouge">](#addHandler)</code>  <code class="language-plaintext highlighter-rouge">[</code>emit<code class="language-plaintext highlighter-rouge">](#emit)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeHandler<code class="language-plaintext highlighter-rouge">](#removeHandler)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Relation</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addRelation<code class="language-plaintext highlighter-rouge">](../object/Relation.html#addRelation)</code>  <code class="language-plaintext highlighter-rouge">[</code>inverselyRelatedTo<code class="language-plaintext highlighter-rouge">](../object/Relation.html#inverselyRelatedTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>isInverselyRelated<code class="language-plaintext highlighter-rouge">](../object/Relation.html#isInverselyRelated)</code>  <code class="language-plaintext highlighter-rouge">[</code>isRelated<code class="language-plaintext highlighter-rouge">](../object/Relation.html#isRelated)</code>  <code class="language-plaintext highlighter-rouge">[</code>makeUnique<code class="language-plaintext highlighter-rouge">](../object/Relation.html#makeUnique)</code>  <code class="language-plaintext highlighter-rouge">[</code>relatedTo<code class="language-plaintext highlighter-rouge">](../object/Relation.html#relatedTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeRelation<code class="language-plaintext highlighter-rouge">](../object/Relation.html#removeRelation)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execute)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="dispatchTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dispatchTab</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#99">99</a>]</p>
+
+<div class="desc">
+
+A LookupTable liniking objects that might emit this signal (potential
+senders) to potential receivers of this signal, so that notifications
+can be sent from the former to the latter. Game code should not need to
+manipulate this table directly; it should instead be updated via the
+supplied connect() and unconnect() functions.
+
+\[SIGNALS EXTENSION\]
+
+</div>
+
+<p><span id="propList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">propList</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#89">89</a>]</p>
+
+<div class="desc">
+
+A list of pointers to the properties to which additional arguments to
+our emit method should be assigned. \[SIGNALS EXTENSION\]
+
+</div>
+
+<p><span id="relationType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">relationType</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#31">31</a>]</p>
+
+<div class="desc">
+
+Signals can potentially relate many things to many other things.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addHandler"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addHandler (sender, receiver, handler)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#101">101</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="emit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">emit (sender, [args])</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#46">46</a>]</p>
+
+<div class="desc">
+
+Notify every object related to sender by us to handle us as a signal
+from sender.
+
+If additional args are supplied, they can take one of two forms. Either
+values, which are then assigned in turn to the properties listed in our
+propList property, or two-element lists of the form \[prop, val\] where
+prop is a property pointer and val is the value to be assigned to this
+property. Note that these two forms cannot be mixed in the same call to
+this method, unless all the list form arguments come at the end.
+
+\[SIGNALS EXTENSION\]
+
+</div>
+
+<p><span id="removeHandler"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeHandler (sender, receiver)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#109">109</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

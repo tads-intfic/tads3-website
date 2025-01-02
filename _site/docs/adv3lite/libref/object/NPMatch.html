@@ -1,0 +1,202 @@
+<p><span class="title">NPMatch</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3209">3209</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+NPMatch is an object that describes one object matching a noun phrase.
+
+`class `**`NPMatch`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NPMatch</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>flags<code class="language-plaintext highlighter-rouge">](#flags)</code>  <code class="language-plaintext highlighter-rouge">[</code>match<code class="language-plaintext highlighter-rouge">](#match)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>np<code class="language-plaintext highlighter-rouge">](#np)</code>  <code class="language-plaintext highlighter-rouge">[</code>obj<code class="language-plaintext highlighter-rouge">](#obj)</code>  <code class="language-plaintext highlighter-rouge">[</code>score<code class="language-plaintext highlighter-rouge">](#score)</code>  <code class="language-plaintext highlighter-rouge">[</code>strength<code class="language-plaintext highlighter-rouge">](#strength)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="flags"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flags</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3264">3264</a>]</p>
+
+<div class="desc">
+
+the selection/disambiguation flags (SelXxx)
+
+</div>
+
+<p><span id="match"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">match</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3258">3258</a>]</p>
+
+<div class="desc">
+
+the match flags - this is a combination of MatchXxx flags as returned
+from Mentionable.matchName()
+
+</div>
+
+<p><span id="name"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3278">3278</a>]</p>
+
+<div class="desc">
+
+The name, for announcement purposes. This is filled in by the Command
+during execution. The Command figures the name so that it's
+distinguished from all of the other objects in the same noun role in the
+command.
+
+</div>
+
+<p><span id="np"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">np</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3249">3249</a>]</p>
+
+<div class="desc">
+
+the NounPhrase we matched
+
+</div>
+
+<p><span id="obj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obj</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3252">3252</a>]</p>
+
+<div class="desc">
+
+the matching object
+
+</div>
+
+<p><span id="score"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">score</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3270">3270</a>]</p>
+
+<div class="desc">
+
+Disambiguation score. This is a number assigned by the action in
+scoreObjects().
+
+</div>
+
+<p><span id="strength"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">strength</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3261">3261</a>]</p>
+
+<div class="desc">
+
+the match strength, for sorting the match list
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (np, obj, match)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3210">3210</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

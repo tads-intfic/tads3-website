@@ -1,0 +1,146 @@
+<p><span class="title">ObjOpenCondition</span><span class="type">class</span></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#870">870</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Pre-condition: the object is open.
+
+`class `**`ObjOpenCondition`**` :   `[`PreCondition`](../object/PreCondition.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ObjOpenCondition</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PreCondition<code class="language-plaintext highlighter-rouge">](../object/PreCondition.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>doorOpen<code class="language-plaintext highlighter-rouge">](../object/doorOpen.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>objOpen<code class="language-plaintext highlighter-rouge">](../object/objOpen.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreCondition</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>preCondOrder<code class="language-plaintext highlighter-rouge">](../object/PreCondition.html#preCondOrder)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>checkPreCondition<code class="language-plaintext highlighter-rouge">](#checkPreCondition)</code>  <code class="language-plaintext highlighter-rouge">[</code>conditionFailed<code class="language-plaintext highlighter-rouge">](#conditionFailed)</code>  <code class="language-plaintext highlighter-rouge">[</code>verifyPreCondition<code class="language-plaintext highlighter-rouge">](#verifyPreCondition)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="checkPreCondition"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkPreCondition (obj, allowImplicit)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#871">871</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="conditionFailed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">conditionFailed (obj)</code></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#901">901</a>]</p>
+
+<div class="desc">
+
+The condition failed - report the failure and give up. We separate this
+to allow subclasses to report failure differently for specialized types
+of opening.
+
+</div>
+
+<p><span id="verifyPreCondition"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verifyPreCondition (obj)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#911">911</a>]</p>
+
+<div class="desc">
+
+reduce the likelihood rating for anything that isn't already open
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>DarkRoom : <a
-href="room.htm">Room</a><br />
+href="room.html">Room</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="throughpassage.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="travelmessage.htm">[Next]</a></td>
+href="throughpassage.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="travelmessage.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -23,7 +25,7 @@ secret passage we're now some way from the well-lit mainCave, it would
 not be surprising if we were now totally in the dark. We could simply
 override the brightness property to be 0 in the smallCave, but instead
 we'll make it a DarkRoom, which does this for us (using the [Room
-template](roomtemplate.htm)):  
+template](roomtemplate.html)):  
   
 smallCave : DarkRoom 'Small Cave' 'the small cave'  
   "The long narrow tunnel from the south comes to an end in this cramped,  

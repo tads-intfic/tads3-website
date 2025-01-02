@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TravelConnector</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[775](../source/travel.t.html#775)\]

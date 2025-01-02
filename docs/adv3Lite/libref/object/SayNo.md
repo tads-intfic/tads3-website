@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SayNo</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1779](../source/actions.t.html#1779)\]

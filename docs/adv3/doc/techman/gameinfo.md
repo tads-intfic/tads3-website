@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Bibliographic
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Bibliographic
 Metadata - the GameInfo Format  
-<span class="navnp"><a href="t3iautohot.htm" class="nav"><em>Prev:</em> Using AutoHotKey
+<span class="navnp"><a href="t3iautohot.html" class="nav"><em>Prev:</em> Using AutoHotKey
 with the Workbench Editor (Windows)</a>    
-<a href="depth.htm" class="nav"><em>Next:</em> TADS 3 In Depth</a>    
+<a href="depth.html" class="nav"><em>Next:</em> TADS 3 In Depth</a>    
 </span>
 
 </div>
@@ -49,7 +51,7 @@ present you a list of games sorted by the author's name could find that
 information using the GameInfo data.
 
 For full details on how GameInfo works internally, you can read the full
-[GameInfo Specification](http://www.tads.org/howto/gameinfo.htm) on the
+[GameInfo Specification](http://www.tads.org/howto/gameinfo.html) on the
 <a href="http://www.tads.org" data-<="" data-a="">tads.org</a> site.
 This article just gives you some quick "recipe" information about how to
 put GameInfo data in your project.
@@ -71,7 +73,7 @@ yourself. The easiest way to do this is to use the [on-line IFID
 generator](http://www.tads.org/ifidgen/ifidgen) on tads.org.
 
 You can find a lot more information about IFIDs in the full [GameInfo
-specification](http://www.tads.org/howto/gameinfo.htm). In brief, an
+specification](http://www.tads.org/howto/gameinfo.html). In brief, an
 IFID is an industry-standard UUID, which is a random 128-bit number
 written out in hexadecimal in the format
 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. Every game should have a unique
@@ -280,9 +282,9 @@ to the IF Archive will be stored indefinitely.
 
 **Url**  
 Format: http://...  
-Example: `Url: http://mywebsite.org/marsbynight.htm`  
+Example: `Url: http://mywebsite.org/marsbynight.html`  
 TADS 3 versionInfo example:
-`gameUrl = 'http://mywebsite.org/marsbynight.htm'`  
+`gameUrl = 'http://mywebsite.org/marsbynight.html'`  
   
 The URL for the game's web site. This must be an absolute URL with http:
 as the protocol. Since IF games that are uploaded to the Archive will be
@@ -691,12 +693,12 @@ and presenting it to users.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Bibliographic
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Bibliographic
 Metadata - the GameInfo Format  
-<span class="navnp"><a href="t3iautohot.htm" class="nav"><em>Prev:</em> Using AutoHotKey
+<span class="navnp"><a href="t3iautohot.html" class="nav"><em>Prev:</em> Using AutoHotKey
 with the Workbench Editor (Windows)</a>    
-<a href="depth.htm" class="nav"><em>Next:</em> TADS 3 In Depth</a>    
+<a href="depth.html" class="nav"><em>Next:</em> TADS 3 In Depth</a>    
 </span>
 
 </div>

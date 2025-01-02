@@ -1,4 +1,6 @@
-Help Topics \> [Table of Contents](wbcont.htm)  
+---
+---
+Help Topics \> [Table of Contents](wbcont.html)  
   
 
   
@@ -24,7 +26,7 @@ full-featured built-in text editor.
 
 TADS Workbench includes a "Wizard" that creates a starter game for you
 automatically. All you have to do is answer a few questions to tell TADS
-where to put your game files. See [Creating a New Game](newgame.htm) for
+where to put your game files. See [Creating a New Game](newgame.html) for
 step-by-step instructions.
 
 ## <span id="loadgame">Loading an Existing Game</span>
@@ -69,7 +71,7 @@ game.
 If you prefer to use a separate text editor application to edit your
 source code, you can use the "External Editor" page of the Options
 dialog to tell Workbench how to open your editor program. Refer to
-[Using an External Editor](helped.htm) for details.
+[Using an External Editor](helped.html) for details.
 
 ## Searching the Documentation
 
@@ -178,14 +180,14 @@ resource bundler, and executable builder. To compile your game, first
 configure your compilation options by opening the "Build" menu and
 selecting "Settings," then compile by opening the "Build" menu and
 selecting the appropriate "Compile" command. See [Compiling with TADS
-Workbench](helpcomp.htm) for details.
+Workbench](helpcomp.html) for details.
 
 ## Debugging
 
 The core of TADS Workbench is the TADS Debugger. After you've compiled
 your game, you can run it within TADS Workbench by using the "Go"
 command (on the toolbar or in the "Debug" menu). The [Debugger
-Overview](helptdb.htm) describes the debugger in greater detail.
+Overview](helptdb.html) describes the debugger in greater detail.
 
 ## <span id="config">Project Files (.t3c)</span>
 
@@ -218,6 +220,6 @@ into TADS Workbench.
 ------------------------------------------------------------------------
 
   
-Help Topics \> [Table of Contents](wbcont.htm)  
+Help Topics \> [Table of Contents](wbcont.html)  
   
 Copyright ©1999, 2007 by Michael J. Roberts.

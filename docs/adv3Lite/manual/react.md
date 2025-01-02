@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Reacting to Actions  
-<span class="navnp"><a href="implicit.htm" class="nav"><em>Prev:</em> Implicit Actions</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Reacting to Actions  
+<span class="navnp"><a href="implicit.html" class="nav"><em>Prev:</em> Implicit Actions</a>
    
-<a href="define.htm" class="nav"><em>Next:</em> Defining New Actions</a>
+<a href="define.html" class="nav"><em>Next:</em> Defining New Actions</a>
     </span>
 
 </div>
@@ -19,7 +21,7 @@
 
 # Reacting to Actions
 
-In the section on [action results](actres.htm) we saw how to make the
+In the section on [action results](actres.html) we saw how to make the
 objects directly involved in an action *respond* to it. In the present
 section we shall discuss how to make other objects not directly involved
 in an action *react* to it. When an action takes place, every object in
@@ -50,7 +52,7 @@ it (and possibly vetoing it), but the adv3 default is the other way
 round, and the option is provided in case you want to do it the adv3
 way.
 
-The [Scene](scene.htm) class also provides beforeAction() and
+The [Scene](scene.html) class also provides beforeAction() and
 afterAction() methods that work in much the same way. These are called
 on every currently active Scene immediately before roomBeforeAction()
 and roomAfterAction() (and their regional equivalents), allowing you to
@@ -278,11 +280,11 @@ and by the room.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Reacting to Actions  
-<span class="navnp"><a href="implicit.htm" class="nav"><em>Prev:</em> Implicit Actions</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Reacting to Actions  
+<span class="navnp"><a href="implicit.html" class="nav"><em>Prev:</em> Implicit Actions</a>
    
-<a href="define.htm" class="nav"><em>Next:</em> Defining New Actions</a>
+<a href="define.html" class="nav"><em>Next:</em> Defining New Actions</a>
     </span>
 
 </div>

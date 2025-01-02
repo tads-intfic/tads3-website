@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \> Just the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \> Just the
 Ticket  
-<span class="navnp"><a href="schemes.htm" class="nav"><em>Prev:</em> Schemes and Devices</a>
-    <a href="maintenance.htm" class="nav"><em>Next:</em> The Maintenance
+<span class="navnp"><a href="schemes.html" class="nav"><em>Prev:</em> Schemes and Devices</a>
+    <a href="maintenance.html" class="nav"><em>Next:</em> The Maintenance
 Room</a>     </span>
 
 </div>
@@ -209,11 +211,11 @@ and ticket work as expected. Use whichever version of
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \> Just the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \> Just the
 Ticket  
-<span class="navnp"><a href="schemes.htm" class="nav"><em>Prev:</em> Schemes and Devices</a>
-    <a href="maintenance.htm" class="nav"><em>Next:</em> The Maintenance
+<span class="navnp"><a href="schemes.html" class="nav"><em>Prev:</em> Schemes and Devices</a>
+    <a href="maintenance.html" class="nav"><em>Next:</em> The Maintenance
 Room</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">yesTopicObj</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1768](../source/actions.t.html#1768)\]

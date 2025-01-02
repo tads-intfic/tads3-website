@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Scoring  
-<span class="navnp"><a href="scene.htm" class="nav"><em>Prev:</em> Scenes</a>
-    <a href="senseregion.htm" class="nav"><em>Next:</em> SenseRegion</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Scoring  
+<span class="navnp"><a href="scene.html" class="nav"><em>Prev:</em> Scenes</a>
+    <a href="senseregion.html" class="nav"><em>Next:</em> SenseRegion</a>
     </span>
 
 </div>
@@ -90,10 +92,10 @@ calculation of the maximum available points.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Scoring  
-<span class="navnp"><a href="scene.htm" class="nav"><em>Prev:</em> Scenes</a>
-    <a href="senseregion.htm" class="nav"><em>Next:</em> SenseRegion</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Scoring  
+<span class="navnp"><a href="scene.html" class="nav"><em>Prev:</em> Scenes</a>
+    <a href="senseregion.html" class="nav"><em>Next:</em> SenseRegion</a>
     </span>
 
 </div>

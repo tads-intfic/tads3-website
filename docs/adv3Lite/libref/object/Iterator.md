@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Iterator</span><span class="type">class</span>
 
 [systype.h](../file/systype.h.html)\[[174](../source/systype.h.html#174)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">statuslineBanner</span><span class="type">object</span>
 
 [browser.t](../file/browser.t.html)\[[810](../source/browser.t.html#810)\]

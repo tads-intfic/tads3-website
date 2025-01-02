@@ -1,3 +1,5 @@
+---
+---
 <span class="title">compoundNounArticle(main)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[732](../source/grammar.t.html#732)\]

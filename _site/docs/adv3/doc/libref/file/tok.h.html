@@ -1,0 +1,224 @@
+<p><span class="title">tok.h</span><span class="type">file</span></p>
+
+<p><a href="../source/tok.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<div class="fdesc">
+
+This header defines some macros for the standard tokenizer class.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_MacroSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Macros</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getTokOrig<code class="language-plaintext highlighter-rouge">](#getTokOrig)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTokType<code class="language-plaintext highlighter-rouge">](#getTokType)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTokVal<code class="language-plaintext highlighter-rouge">](#getTokVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokRuleName<code class="language-plaintext highlighter-rouge">](#tokRuleName)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokRulePat<code class="language-plaintext highlighter-rouge">](#tokRulePat)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokRuleTest<code class="language-plaintext highlighter-rouge">](#tokRuleTest)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokRuleType<code class="language-plaintext highlighter-rouge">](#tokRuleType)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokRuleVal<code class="language-plaintext highlighter-rouge">](#tokRuleVal)</code>  `</p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_TemplateSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Templates</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Macros_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Macros</span>  
+
+</div>
+
+<p><span id="getTokOrig"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTokOrig (tok)</code></p>
+
+<p><a href="../file/tok.h.html">tok.h</a>[<a href="../source/tok.h.html#40">40</a>]</p>
+
+<div class="desc">
+
+`((tok)[3])`  
+Get the token's original text. This is the original text matched from
+the tokenized string.
+
+</div>
+
+<p><span id="getTokType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTokType (tok)</code></p>
+
+<p><a href="../file/tok.h.html">tok.h</a>[<a href="../source/tok.h.html#34">34</a>]</p>
+
+<div class="desc">
+
+`((tok)[2])`  
+Get the token type. This is a token enum value describing the type of
+the token.
+
+</div>
+
+<p><span id="getTokVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTokVal (tok)</code></p>
+
+<p><a href="../file/tok.h.html">tok.h</a>[<a href="../source/tok.h.html#28">28</a>]</p>
+
+<div class="desc">
+
+`((tok)[1])`  
+Get the token value. This is the parsed representation of the token; in
+most cases, this is simply the text of the original token, although it
+might be converted in some way (words are usually converted to
+lower-case, for example).
+
+</div>
+
+<p><span id="tokRuleName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokRuleName (rule)</code></p>
+
+<p><a href="../file/tok.h.html">tok.h</a>[<a href="../source/tok.h.html#48">48</a>]</p>
+
+<div class="desc">
+
+`(rule[1])`  
+Some internal convenience macros. (These are meant for internal use
+within the tokenizer class, rather than for client code, but we define
+them here because they're also useful for subclasses of the standard
+tokenizer.)
+
+</div>
+
+<p><span id="tokRulePat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokRulePat (rule)</code></p>
+
+<p><a href="../file/tok.h.html">tok.h</a>[<a href="../source/tok.h.html#49">49</a>]</p>
+
+<div class="desc">
+
+`(rule[2])`  
+*no description available*
+
+</div>
+
+<p><span id="tokRuleTest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokRuleTest (rule)</code></p>
+
+<p><a href="../file/tok.h.html">tok.h</a>[<a href="../source/tok.h.html#52">52</a>]</p>
+
+<div class="desc">
+
+`(rule[5])`  
+*no description available*
+
+</div>
+
+<p><span id="tokRuleType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokRuleType (rule)</code></p>
+
+<p><a href="../file/tok.h.html">tok.h</a>[<a href="../source/tok.h.html#50">50</a>]</p>
+
+<div class="desc">
+
+`(rule[3])`  
+*no description available*
+
+</div>
+
+<p><span id="tokRuleVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokRuleVal (rule)</code></p>
+
+<p><a href="../file/tok.h.html">tok.h</a>[<a href="../source/tok.h.html#51">51</a>]</p>
+
+<div class="desc">
+
+`(rule[4])`  
+*no description available*
+
+</div>
+
+<p><span id="_Enums_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Templates_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Templates</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

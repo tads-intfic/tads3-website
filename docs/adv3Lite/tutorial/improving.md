@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Improving the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Improving the
 Game  
-<span class="navnp"><a href="making.htm" class="nav"><em>Prev:</em> Making things happen</a>
+<span class="navnp"><a href="making.html" class="nav"><em>Prev:</em> Making things happen</a>
    
-<a href="weightier.htm" class="nav"><em>Next:</em> Weightier Matters</a>
+<a href="weightier.html" class="nav"><em>Next:</em> Weightier Matters</a>
     </span>
 
 </div>
@@ -307,12 +309,12 @@ substantial changes to the pedestal in the next section.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Improving the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Improving the
 Game  
-<span class="navnp"><a href="making.htm" class="nav"><em>Prev:</em> Making things happen</a>
+<span class="navnp"><a href="making.html" class="nav"><em>Prev:</em> Making things happen</a>
    
-<a href="weightier.htm" class="nav"><em>Next:</em> Weightier Matters</a>
+<a href="weightier.html" class="nav"><em>Next:</em> Weightier Matters</a>
     </span>
 
 </div>

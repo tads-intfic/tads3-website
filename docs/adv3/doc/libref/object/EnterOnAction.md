@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EnterOnAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2389](../source/actions.t.html#2389)\]

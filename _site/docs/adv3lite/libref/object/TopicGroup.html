@@ -1,0 +1,217 @@
+<p><span class="title">TopicGroup</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2941">2941</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A TopicGroup is an object that can be used to group ActorTopicEntries
+that share common features such as convKeys or isActive conditions. A
+TopicGroup can be used anywhere an ActorTopicEntry can be used, and any
+ActorTopicEntries should behave just as they would if they were in the
+TopicGroup's container, apart from the modifications imposed by the
+TopicGroup.
+
+`class `**`TopicGroup`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TopicGroup</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TopicGroup</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ConvNode`](../object/ConvNode.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>active<code class="language-plaintext highlighter-rouge">](#active)</code>  <code class="language-plaintext highlighter-rouge">[</code>convKeys<code class="language-plaintext highlighter-rouge">](#convKeys)</code>  <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreBoost<code class="language-plaintext highlighter-rouge">](#scoreBoost)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>nodeActive<code class="language-plaintext highlighter-rouge">](#nodeActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreBooster<code class="language-plaintext highlighter-rouge">](#scoreBooster)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="active"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">active</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2979">2979</a>]</p>
+
+<div class="desc">
+
+This TopicGroup is active if both its own isActive property is true and
+its location is active (this allows us to locate TopicGroups within
+other TopicGroups, for instance)
+
+</div>
+
+<p><span id="convKeys"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">convKeys</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2985">2985</a>]</p>
+
+<div class="desc">
+
+A list of convKeys that should be added to the convKeys of each of our
+TopicEntries.
+
+</div>
+
+<p><span id="getActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getActor</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3019">3019</a>]</p>
+
+<div class="desc">
+
+Our associated actor is our location's associated actor.
+
+</div>
+
+<p><span id="isActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActive</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2972">2972</a>]</p>
+
+<div class="desc">
+
+A TopicGroup's isActive property can be used to make all the
+TopicEntries enclosed within in inactive by being set to nil; if it is
+true then the enclosed TopicEntries are active if their own isActive
+property is true.
+
+</div>
+
+<p><span id="scoreBoost"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scoreBoost</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2991">2991</a>]</p>
+
+<div class="desc">
+
+A scoreBoost that should be added to the scoreBoost of each of our
+TopicEntries.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addTopic (obj)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2950">2950</a>]</p>
+
+<div class="desc">
+
+Add a topic entry to our database; since a TopicGroup isn't a
+TopicDatabase we simply ask our location to add it to its database. We
+also modify the convKeys and scoreBoost properties of any items
+contained in us according to our own convKeys and scoreBoost properties.
+
+</div>
+
+<p><span id="nodeActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nodeActive ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3013">3013</a>]</p>
+
+<div class="desc">
+
+If we're being used as a conversation node, our node is active when our
+own convKeys matches (i.e. overlaps with) that of our actor's
+activeKeys.
+
+</div>
+
+<p><span id="scoreBooster"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scoreBooster ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2997">2997</a>]</p>
+
+<div class="desc">
+
+By how much do we boost the score of any TopicEntries we contain? We
+need to add our own score boost to that our own location.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

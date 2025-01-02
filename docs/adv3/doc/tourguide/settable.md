@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,18 +9,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Settable : <a
-href="thing-introduction.htm">Thing</a><br />
+href="thing-introduction.html">Thing</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="springlever.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="numbereddial.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="springlever.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="numbereddial.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 Settable is the base class for the various types of Dial, like the
-[LabeledDial](labeleddial.htm) we constructed a couple of sections back.
+[LabeledDial](labeleddial.html) we constructed a couple of sections back.
 It can also be used to construct any other kind of settable control we
 care to devise. Here we'll use it to implement a slider on the Tardis
 control console; after all, now we've got the ship to sail round the

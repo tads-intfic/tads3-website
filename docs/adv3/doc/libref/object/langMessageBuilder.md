@@ -1,3 +1,5 @@
+---
+---
 <span class="title">langMessageBuilder</span><span class="type">object</span>
 
 [en_us.t](../file/en_us.t.html)\[[3758](../source/en_us.t.html#3758)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,15 +10,15 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Daemon : Event<br />
 </strong></td>
-<td style="text-align: right;"><a href="fuse.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="sensefuse.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="fuse.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="sensefuse.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-A Daemon is only slightly more complicated than a [Fuse](fuse.htm), in
+A Daemon is only slightly more complicated than a [Fuse](fuse.html), in
 that while a Fuse fires a one-off event by executing a method after a
 set number of turns, a Daemon repeatedly calls a method at fixed
 intervals (unless or until the Daemon is terminated).  
@@ -205,7 +207,7 @@ was felt to be too much of a nuisance, one could perhaps go on to
 implement, say, a wheelbarrow object in which the tablet could be pushed
 around for longer distances (which would not count as carrying it).
 We'll do this when we come to look at the
-[TravelPushable](travelpushable.htm) class.  
+[TravelPushable](travelpushable.html) class.  
   
   
   

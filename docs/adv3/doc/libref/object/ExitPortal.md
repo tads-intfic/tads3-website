@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ExitPortal</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[3149](../source/travel.t.html#3149)\]

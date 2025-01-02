@@ -1,0 +1,117 @@
+<p><span class="title">iobjTouchObj</span><span class="type">object</span></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#711">711</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Pre-condition: the indirect object must be able to touch the target
+object. This can be used for actions where the direct object is going to
+be manipulated by an "agent" of the action (i.e., the indirect object),
+rather than directly by the actor: MOVE X WITH Y, for example.
+
+Note that the target object of this condition should be the direct
+object in most cases, so this condition should usually be used like
+this:
+
+dobjFor(MoveWith) { preCond = \[iobjTouchObj\] }
+
+In other words, this is a precondition that we apply in most cases to
+the \*direct\* object.
+
+**`iobjTouchObj`**` :   `[`TouchObjCondition`](../object/TouchObjCondition.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">iobjTouchObj</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TouchObjCondition<code class="language-plaintext highlighter-rouge">](../object/TouchObjCondition.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PreCondition<code class="language-plaintext highlighter-rouge">](../object/PreCondition.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>sourceObj<code class="language-plaintext highlighter-rouge">](#sourceObj)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TouchObjCondition</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>preCondOrder<code class="language-plaintext highlighter-rouge">](../object/TouchObjCondition.html#preCondOrder)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TouchObjCondition</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>checkPreCondition<code class="language-plaintext highlighter-rouge">](../object/TouchObjCondition.html#checkPreCondition)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/TouchObjCondition.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>verifyPreCondition<code class="language-plaintext highlighter-rouge">](../object/TouchObjCondition.html#verifyPreCondition)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="sourceObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sourceObj</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#713">713</a>]</p>
+
+<div class="desc">
+
+the indirect object has to be able to touch the target object
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

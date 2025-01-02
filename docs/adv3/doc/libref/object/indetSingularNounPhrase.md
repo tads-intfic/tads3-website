@@ -1,3 +1,5 @@
+---
+---
 <span class="title">indetSingularNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`indetSingularNounPhrase(basic)`](../object/indetSingularNounPhrase(basic).html)</span>` :   `[`LayeredNounPhraseProd`](../object/LayeredNounPhraseProd.html)

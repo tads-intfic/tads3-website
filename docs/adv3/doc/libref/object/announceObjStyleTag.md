@@ -1,3 +1,5 @@
+---
+---
 <span class="title">announceObjStyleTag</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[915](../source/output.t.html#915)\]

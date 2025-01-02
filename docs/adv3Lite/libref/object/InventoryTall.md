@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InventoryTall</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[427](../source/actions.t.html#427)\]

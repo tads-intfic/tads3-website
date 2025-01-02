@@ -1,0 +1,160 @@
+<p><span class="title">styleTagFilter</span><span class="type">object</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1087">1087</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+"Style tag" filter. This is an output filter that expands our special
+style tags in output text.
+
+**`styleTagFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)`   `[`PreinitObject`](../object/PreinitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">styleTagFilter</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputFilter.html)  
+</code>                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>tagPattern<code class="language-plaintext highlighter-rouge">](#tagPattern)</code>  <code class="language-plaintext highlighter-rouge">[</code>tagTable<code class="language-plaintext highlighter-rouge">](#tagTable)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterText<code class="language-plaintext highlighter-rouge">](#filterText)</code>  <code class="language-plaintext highlighter-rouge">[</code>translateTag<code class="language-plaintext highlighter-rouge">](#translateTag)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="tagPattern"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tagPattern</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1089">1089</a>]</p>
+
+<div class="desc">
+
+pre-compile our frequently-used tag search pattern
+
+</div>
+
+<p><span id="tagTable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tagTable</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1197">1197</a>]</p>
+
+<div class="desc">
+
+Our tag translation table. We'll initialize this during preinit to a
+lookup table with all of the defined StyleTag objects.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1179">1179</a>]</p>
+
+<div class="desc">
+
+preinitialization
+
+</div>
+
+<p><span id="filterText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterText (ostr, val)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1093">1093</a>]</p>
+
+<div class="desc">
+
+filter for a style tag
+
+</div>
+
+<p><span id="translateTag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">translateTag (tag)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1156">1156</a>]</p>
+
+<div class="desc">
+
+Translate a tag
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

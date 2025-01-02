@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AskAboutImplicit</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[2077](../source/actions.t.html#2077)\]

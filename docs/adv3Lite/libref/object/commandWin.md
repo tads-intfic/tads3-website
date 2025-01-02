@@ -1,3 +1,5 @@
+---
+---
 <span class="title">commandWin</span><span class="type">object</span>
 
 [browser.t](../file/browser.t.html)\[[676](../source/browser.t.html#676)\]

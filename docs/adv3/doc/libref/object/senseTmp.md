@@ -1,3 +1,5 @@
+---
+---
 <span class="title">senseTmp</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[159](../source/thing.t.html#159)\]

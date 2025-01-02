@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](creatingyourfirsttads3project.htm)
-  [\[Next\]](furtherprogramming.htm)*
+*[\[Previous\]](creatingyourfirsttads3project.html)
+  [\[Next\]](furtherprogramming.html)*
 
 ## Programming Prolegomena
 
@@ -592,7 +594,7 @@ use of anonymous nested objects is a powerful and common feature of TADS
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](creatingyourfirsttads3project.htm)
-  [\[Next\]](furtherprogramming.htm)*
+*[\[Previous\]](creatingyourfirsttads3project.html)
+  [\[Next\]](furtherprogramming.html)*
 
 </div>

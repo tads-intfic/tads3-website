@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Portable Binary Encoding  
-<span class="navnp"><a href="format.htm" class="nav"><em>Prev:</em> Image File Format</a>
+<span class="navnp"><a href="format.html" class="nav"><em>Prev:</em> Image File Format</a>
    
-<a href="charmap.htm" class="nav"><em>Next:</em> Character Mapping</a>
+<a href="charmap.html" class="nav"><em>Next:</em> Character Mapping</a>
     </span>
 
 </div>
@@ -366,12 +368,12 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Portable Binary Encoding  
-<span class="navnp"><a href="format.htm" class="nav"><em>Prev:</em> Image File Format</a>
+<span class="navnp"><a href="format.html" class="nav"><em>Prev:</em> Image File Format</a>
    
-<a href="charmap.htm" class="nav"><em>Next:</em> Character Mapping</a>
+<a href="charmap.html" class="nav"><em>Next:</em> Character Mapping</a>
     </span>
 
 </div>

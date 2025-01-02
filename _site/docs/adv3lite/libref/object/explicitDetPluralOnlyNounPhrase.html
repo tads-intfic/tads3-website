@@ -1,0 +1,63 @@
+<p><span class="title">explicitDetPluralOnlyNounPhrase</span><span class="type">GrammarProd</span></p>
+
+<p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/explicitDetPluralOnlyNounPhrase(definite).html"><code class="language-plaintext highlighter-rouge">explicitDetPluralOnlyNounPhrase(definite)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a></p>
+
+<p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#638"><code class="language-plaintext highlighter-rouge">638</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="gramrule">
+
+'the' indetPluralOnlyNounPhrase-\&gt;np\_  
+
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/explicitDetPluralOnlyNounPhrase(definiteNumber).html"><code class="language-plaintext highlighter-rouge">explicitDetPluralOnlyNounPhrase(definiteNumber)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/QuantifierProduction.html"><code class="language-plaintext highlighter-rouge">QuantifierProduction</code></a></p>
+
+<p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#645"><code class="language-plaintext highlighter-rouge">645</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="gramrule">
+
+'the' numberPhrase-\&gt;quant\_ indetPluralNounPhrase-\&gt;np\_  
+
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/explicitDetPluralOnlyNounPhrase(possessive).html"><code class="language-plaintext highlighter-rouge">explicitDetPluralOnlyNounPhrase(possessive)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a></p>
+
+<p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#652"><code class="language-plaintext highlighter-rouge">652</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="gramrule">
+
+possessiveAdjPhrase-\&gt;poss\_ indetPluralOnlyNounPhrase-\&gt;np\_  
+\| indetPluralOnlyNounPhrase-\&gt;np\_ 'of' possessiveNounPhrase-\&gt;poss\_  
+
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/explicitDetPluralOnlyNounPhrase(possessiveNumber).html"><code class="language-plaintext highlighter-rouge">explicitDetPluralOnlyNounPhrase(possessiveNumber)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/QuantifierProduction.html"><code class="language-plaintext highlighter-rouge">QuantifierProduction</code></a></p>
+
+<p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#658"><code class="language-plaintext highlighter-rouge">658</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="gramrule">
+
+possessiveAdjPhrase-\&gt;poss\_ numberPhrase-\&gt;quant\_
+indetPluralNounPhrase-\&gt;np\_  
+\| 'the' numberPhrase-\&gt;quant\_ indetPluralNounPhrase-\&gt;np\_  
+'of' possessiveNounPhrase-\&gt;poss\_  
+
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/explicitDetPluralOnlyNounPhrase(possessiveNumber2).html"><code class="language-plaintext highlighter-rouge">explicitDetPluralOnlyNounPhrase(possessiveNumber2)</code></a></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/QuantifierProduction.html"><code class="language-plaintext highlighter-rouge">QuantifierProduction</code></a></p>
+
+<p><a href="../file/grammar.t.html"><code class="language-plaintext highlighter-rouge">grammar.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/grammar.t.html#668"><code class="language-plaintext highlighter-rouge">668</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="gramrule">
+
+numberPhrase-\&gt;quant\_ indetPluralNounPhrase-\&gt;np\_  
+'of' possessiveNounPhrase-\&gt;poss\_  
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

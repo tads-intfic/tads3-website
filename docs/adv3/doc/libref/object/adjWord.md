@@ -1,3 +1,5 @@
+---
+---
 <span class="title">adjWord</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`adjWord(adj)`](../object/adjWord(adj).html)</span>` :   `[`AdjPhraseWithVocab`](../object/AdjPhraseWithVocab.html)

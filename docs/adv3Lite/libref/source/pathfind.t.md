@@ -1,3 +1,5 @@
+---
+---
 # pathfind.t
 
 [documentation](../file/pathfind.t.html)

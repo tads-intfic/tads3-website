@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RoomConnector</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[2284](../source/travel.t.html#2284)\]

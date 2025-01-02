@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SmellObserver</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[890](../source/objects.t.html#890)\]

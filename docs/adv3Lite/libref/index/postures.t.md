@@ -1,3 +1,5 @@
+---
+---
 ## Classes
 
 <a href="../object/Bed.html#Bed" target="main"><code>Bed</code></a>  

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Topic
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Topic
 Entries  
-<span class="navnp"><a href="senseregion.htm" class="nav"><em>Prev:</em> SenseRegion</a>
-    <a href="thought.htm" class="nav"><em>Next:</em> Thoughts</a>    
+<span class="navnp"><a href="senseregion.html" class="nav"><em>Prev:</em> SenseRegion</a>
+    <a href="thought.html" class="nav"><em>Next:</em> Thoughts</a>    
 </span>
 
 </div>
@@ -174,11 +176,11 @@ must be present if you want to use thoughts.t or actor.t.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Yopic
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Yopic
 Entries  
-<span class="navnp"><a href="senseregion.htm" class="nav"><em>Prev:</em> SenseRegion</a>
-    <a href="thought.htm" class="nav"><em>Next:</em> Thoughts</a>    
+<span class="navnp"><a href="senseregion.html" class="nav"><em>Prev:</em> SenseRegion</a>
+    <a href="thought.html" class="nav"><em>Next:</em> Thoughts</a>    
 </span>
 
 </div>

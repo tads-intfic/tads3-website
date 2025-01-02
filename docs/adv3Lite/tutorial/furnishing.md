@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="cockpit.htm" class="nav">Cockpit Controls</a> \> Furnishing the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="cockpit.html" class="nav">Cockpit Controls</a> \> Furnishing the
 Cockpit  
-<span class="navnp"><a href="cockpit.htm" class="nav"><em>Prev:</em> Cockpit Controls</a>
+<span class="navnp"><a href="cockpit.html" class="nav"><em>Prev:</em> Cockpit Controls</a>
    
-<a href="actions.htm" class="nav"><em>Next:</em> Defining Actions</a>
+<a href="actions.html" class="nav"><em>Next:</em> Defining Actions</a>
     </span>
 
 </div>
@@ -333,12 +335,12 @@ actions.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="cockpit.htm" class="nav">Cockpit Controls</a> \> Furnishing the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="cockpit.html" class="nav">Cockpit Controls</a> \> Furnishing the
 Cockpit  
-<span class="navnp"><a href="cockpit.htm" class="nav"><em>Prev:</em> Cockpit Controls</a>
+<span class="navnp"><a href="cockpit.html" class="nav"><em>Prev:</em> Cockpit Controls</a>
    
-<a href="actions.htm" class="nav"><em>Next:</em> Defining Actions</a>
+<a href="actions.html" class="nav"><em>Next:</em> Defining Actions</a>
     </span>
 
 </div>

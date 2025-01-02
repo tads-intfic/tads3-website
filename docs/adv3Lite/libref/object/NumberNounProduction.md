@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NumberNounProduction</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[4188](../source/parser.t.html#4188)\]

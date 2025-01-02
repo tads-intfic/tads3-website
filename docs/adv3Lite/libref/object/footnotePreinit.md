@@ -1,3 +1,5 @@
+---
+---
 <span class="title">footnotePreinit</span><span class="type">object</span>
 
 [footnote.t](../file/footnote.t.html)\[[282](../source/footnote.t.html#282)\]

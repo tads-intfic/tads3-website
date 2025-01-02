@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CommandSignal</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[807](../source/parser.t.html#807)\]

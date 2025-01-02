@@ -1,0 +1,277 @@
+<p><span class="title">ShuffledEventList</span><span class="type">class</span></p>
+
+<p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#400">400</a>],
+<a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#362">362</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Shuffled event list. This is similar to a random event list, except that
+we fire our events in a "shuffled" order rather than an independently
+random order. "Shuffled order" means that we fire the events in random
+order, but we don't re-fire an event until we've run through all of the
+other events. The effect is as though we were dealing from a deck of
+cards.
+
+For the first time through the main list, we normally shuffle the
+strings immediately at startup, but this is optional. If shuffleFirst is
+set to nil, we will NOT shuffle the list the first time through - we'll
+run through it once in the given order, then shuffle for the next time
+through, then shuffle again for the next, and so on. So, if you want a
+specific order for the first time through, just define the list in the
+desired order and set shuffleFirst to nil.
+
+You can optionally specify a separate list of one-time-only sequential
+strings in the property firstEvents. We'll run through these strings
+once. When we've exhausted them, we'll switch to the main eventList
+list, showing it one time through in its given order, then shuffling it
+and running through it again, and so on. The firstEvents list is never
+shuffled - it's always shown in exactly the order given.
+
+*Modified in
+[eventListItem.t](../file/eventListItem.t.html)\[[362](../source/eventListItem.t.html#362)\]:*  
+Mofiications to ShuffledEventList for EventListItem extension
+
+`class `**`ShuffledEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html)`   `[`EventList`](../object/EventList.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ShuffledEventList</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>RandomFiringScript<code class="language-plaintext highlighter-rouge">](../object/RandomFiringScript.html)  
+</code>                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>EventList<code class="language-plaintext highlighter-rouge">](../object/EventList.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Script<code class="language-plaintext highlighter-rouge">](../object/Script.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>firstEvents<code class="language-plaintext highlighter-rouge">](#firstEvents)</code>  <code class="language-plaintext highlighter-rouge">[</code>shuffledList_<code class="language-plaintext highlighter-rouge">](#shuffledList_)</code>  <code class="language-plaintext highlighter-rouge">[</code>shuffleFirst<code class="language-plaintext highlighter-rouge">](#shuffleFirst)</code>  <code class="language-plaintext highlighter-rouge">[</code>suppressRepeats<code class="language-plaintext highlighter-rouge">](#suppressRepeats)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">RandomFiringScript</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>eventPercent<code class="language-plaintext highlighter-rouge">](../object/RandomFiringScript.html#eventPercent)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventReduceAfter<code class="language-plaintext highlighter-rouge">](../object/RandomFiringScript.html#eventReduceAfter)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventReduceTo<code class="language-plaintext highlighter-rouge">](../object/RandomFiringScript.html#eventReduceTo)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">EventList</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>curScriptState<code class="language-plaintext highlighter-rouge">](../object/EventList.html#curScriptState)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventList<code class="language-plaintext highlighter-rouge">](../object/EventList.html#eventList)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventListLen<code class="language-plaintext highlighter-rouge">](../object/EventList.html#eventListLen)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetEachCycle<code class="language-plaintext highlighter-rouge">](../object/EventList.html#resetEachCycle)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addItem<code class="language-plaintext highlighter-rouge">](#addItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>doScript<code class="language-plaintext highlighter-rouge">](#doScript)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextRandom<code class="language-plaintext highlighter-rouge">](#getNextRandom)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetList<code class="language-plaintext highlighter-rouge">](#resetList)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">RandomFiringScript</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>checkEventOdds<code class="language-plaintext highlighter-rouge">](../object/RandomFiringScript.html#checkEventOdds)</code>  <code class="language-plaintext highlighter-rouge">[</code>underusedReadyELIidx<code class="language-plaintext highlighter-rouge">](../object/RandomFiringScript.html#underusedReadyELIidx)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">EventList</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>advanceState<code class="language-plaintext highlighter-rouge">](../object/EventList.html#advanceState)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/EventList.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>doScriptEvent<code class="language-plaintext highlighter-rouge">](../object/EventList.html#doScriptEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>scriptDone<code class="language-plaintext highlighter-rouge">](../object/EventList.html#scriptDone)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Script</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getScriptState<code class="language-plaintext highlighter-rouge">](../object/Script.html#getScriptState)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="firstEvents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">firstEvents</code></p>
+
+<p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#405">405</a>]</p>
+
+<div class="desc">
+
+a list of events to go through sequentially, in the exact order
+specified, before firing any events from the main list
+
+</div>
+
+<p><span id="shuffledList_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shuffledList_</code></p>
+
+<p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#510">510</a>]</p>
+
+<div class="desc">
+
+our ShuffledList - we'll initialize this on demand
+
+</div>
+
+<p><span id="shuffleFirst"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shuffleFirst</code></p>
+
+<p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#415">415</a>]</p>
+
+<div class="desc">
+
+Flag: shuffle the eventList list before we show it for the first time.
+By default, this is set to true, so that the behavior is random on each
+independent run of the game. However, it might be desirable in some
+cases to always use the original ordering of the eventList list the
+first time through the list. If this is set to nil, we won't shuffle the
+list the first time through.
+
+</div>
+
+<p><span id="suppressRepeats"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">suppressRepeats</code></p>
+
+<p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#430">430</a>]</p>
+
+<div class="desc">
+
+Flag: suppress repeats in the shuffle. If this is true, it prevents a
+given event from showing up twice in a row, which could otherwise happen
+right after a shuffle. This is ignored for lists with one or two events:
+it's impossible to prevent repeats in a one-element list, and doing so
+in a two-element list would produce a predictable A-B-A-B... pattern.
+
+You might want to set this to nil for lists of three or four elements,
+since such short lists can result in fairly un-random-looking sequences
+when repeats are suppressed, because the available number of
+permutations drops significantly.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addItem (item, prop)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#417">417</a>]</p>
+
+<div class="desc">
+
+apply our suppressRepeats option to the shuffled list
+
+</div>
+
+<p><span id="doScript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doScript ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#433">433</a>]</p>
+
+<div class="desc">
+
+process the next step of the script
+
+</div>
+
+<p><span id="getNextRandom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNextRandom ( )</code></p>
+
+<p><a href="../file/eventList.t.html">eventList.t</a>[<a href="../source/eventList.t.html#490">490</a>],
+<a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#369">369</a>]</p>
+
+<div class="desc">
+
+Get the next random event. We'll pick an event from our list of events
+using a ShuffledIntegerList to ensure we pick each value once before
+re-using any values.
+
+*Modified in
+[eventListItem.t](../file/eventListItem.t.html)\[[369](../source/eventListItem.t.html#369)\]:*  
+For the EventListItem extenstion we modify this method so that it first
+chooses any as yet unused EventListItem from our eventList that's now
+ready to fire. If none is found, we use the inherited behaviour to
+select the next item indicated by our shuffledList\_ .
+
+</div>
+
+<p><span id="resetList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resetList ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/eventListItem.t.html">eventListItem.t</a>[<a href="../source/eventListItem.t.html#401">401</a>]</p>
+
+<div class="desc">
+
+Reset our eventList to clear out EventListItems that are done with
+(isDone = true). This is not called from any library code by default,
+but can be called from game code if game authors are worried about an
+accumulation of too many spent EventListItems in any given eventList.
+For many games, this probably won't be necessary.
+
+One potentially good place to call this from as at the end of each
+iteration of a ShuffledEventList, when the items are about to be
+reshuffled in any case. You can make this happen by setting the
+resetOnReshuffle property to true,
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

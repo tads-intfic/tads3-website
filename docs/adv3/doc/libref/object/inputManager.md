@@ -1,3 +1,5 @@
+---
+---
 <span class="title">inputManager</span><span class="type">object</span>
 
 [input.t](../file/input.t.html)\[[68](../source/input.t.html#68)\]

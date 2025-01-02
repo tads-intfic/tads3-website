@@ -1,3 +1,5 @@
+---
+---
 Adv3Lite Bookshelf
 
 <div class="title">
@@ -12,10 +14,10 @@ Adv3Lite Bookshelf
 
 ------------------------------------------------------------------------
 
-<a href="t3QuickStart.htm" target="_blank"><img src="qstart_cover.jpg"
+<a href="t3QuickStart.html" target="_blank"><img src="qstart_cover.jpg"
 class="book" /></a>
 
-<a href="t3QuickStart.htm" class="title" target="_blank"
+<a href="t3QuickStart.html" class="title" target="_blank"
 data-"="">Adv3Lite Quick Start Guide</a>  
 by Eric Eve
 
@@ -27,10 +29,10 @@ newcomers can experiment with if they want to dive straight in.
 
 ------------------------------------------------------------------------
 
-<a href="tutorial/index.htm" target="_blank"><img
+<a href="tutorial/index.html" target="_blank"><img
 src="tutorial/mancover.jpg" class="book" /></a>
 
-<a href="tutorial/index.htm" class="title" target="_blank">Adv3Lite
+<a href="tutorial/index.html" class="title" target="_blank">Adv3Lite
 Tutorial</a>  
 by Eric Eve
 
@@ -62,16 +64,16 @@ as a reference, to review the details of particular TADS features.
 
 *Learning TADS 3 With Adv3Lite* contains a number of exercises. Samples
 games suggesting solutions to some of these exercises may be found
-<a href="learning/exercises.htm" target="_blank">here</a>. Alternatively
+<a href="learning/exercises.html" target="_blank">here</a>. Alternatively
 you can treat these solutions as sample code illustrating various
 aspects of the adv3Lite library.
 
 ------------------------------------------------------------------------
 
-<a href="manual/index.htm" target="_blank"><img
+<a href="manual/index.html" target="_blank"><img
 src="manual/mancover.jpg" class="book" /></a>
 
-<a href="manual/index.htm" class="title" target="_blank">Adv3Lite
+<a href="manual/index.html" class="title" target="_blank">Adv3Lite
 Library Manual</a>  
 by Eric Eve
 
@@ -83,10 +85,10 @@ adv3Lite library.
 
 ------------------------------------------------------------------------
 
-<a href="sysman.htm" target="_blank"><img src="syscover.jpg"
+<a href="sysman.html" target="_blank"><img src="syscover.jpg"
 class="book" /></a>
 
-<a href="sysman.htm" class="title" target="_blank">TADS 3 System
+<a href="sysman.html" class="title" target="_blank">TADS 3 System
 Manual</a>  
 by Michael Roberts
 
@@ -110,10 +112,10 @@ library source code.
 
 ------------------------------------------------------------------------
 
-<a href="http://www.tads.org/t3doc/doc/htmltads/intro.htm"
+<a href="http://www.tads.org/t3doc/doc/htmltads/intro.html"
 target="_blank"><img src="htads_cover.jpg" class="book" /></a>
 
-<a href="http://www.tads.org/t3doc/doc/htmltads/intro.htm" class="title"
+<a href="http://www.tads.org/t3doc/doc/htmltads/intro.html" class="title"
 target="_blank">Introduction to HTML TADS</a>  
 by Michael Roberts
 
@@ -133,7 +135,7 @@ HTML.)
 
 <div class="indent">
 
-<a href="manual/changelog.htm" target="_blank"><strong>Adv3Lite Library
+<a href="manual/changelog.html" target="_blank"><strong>Adv3Lite Library
 Change History</strong></a>. A chronological log of changes to Adv3Lite,
 the alternative TADS 3 Adventure Framework Library.
 
@@ -172,14 +174,14 @@ each question you reply NO to, go to the next item in the list).
 
 1.  Do you need help installing and setting up TADS 3 and/or adv3Lite?
     IF YES -\>
-    <a href="t3QuickStart.htm" target="_blank">Quick Start Guide</a>
+    <a href="t3QuickStart.html" target="_blank">Quick Start Guide</a>
 2.  Are you already familiar with TADS 3? IF YES -\>
-    <a href="manual/index.htm" target="_blank">Adv3Lite Library Manual</a>
+    <a href="manual/index.html" target="_blank">Adv3Lite Library Manual</a>
 3.  Are you familiar with writing Interactive Fiction in another system
     (such as Inform)? IF YES -\>
     <a href="learning/LearningT3Lite.pdf" target="_blank">Learning TADS 3
     With Adv3Lite</a>
 4.  Perhaps you should start with the
-    <a href="tutorial/index.htm" target="_blank">Adv3Lite Tutorial</a>
+    <a href="tutorial/index.html" target="_blank">Adv3Lite Tutorial</a>
 
 </div>

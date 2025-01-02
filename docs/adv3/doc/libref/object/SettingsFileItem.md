@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SettingsFileItem</span><span class="type">class</span>
 
 [settings.t](../file/settings.t.html)\[[564](../source/settings.t.html#564)\]

@@ -1,3 +1,5 @@
+---
+---
 # debug.t
 
 [documentation](../file/debug.t.html)

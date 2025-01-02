@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TurnEndRule</span><span class="type">class</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[64](../source/sysrules.t.html#64)\]

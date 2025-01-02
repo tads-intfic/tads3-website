@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Notation and Conventions  
-<span class="navnp"><a href="goals.htm" class="nav"><em>Prev:</em> Design Goals</a>
-    <a href="model.htm" class="nav"><em>Next:</em> Machine Model</a>    
+<span class="navnp"><a href="goals.html" class="nav"><em>Prev:</em> Design Goals</a>
+    <a href="model.html" class="nav"><em>Next:</em> Machine Model</a>    
 </span>
 
 </div>
@@ -84,11 +86,11 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Notation and Conventions  
-<span class="navnp"><a href="goals.htm" class="nav"><em>Prev:</em> Design Goals</a>
-    <a href="model.htm" class="nav"><em>Next:</em> Machine Model</a>    
+<span class="navnp"><a href="goals.html" class="nav"><em>Prev:</em> Design Goals</a>
+    <a href="model.html" class="nav"><em>Next:</em> Machine Model</a>    
 </span>
 
 </div>

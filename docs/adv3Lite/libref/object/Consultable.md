@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Consultable</span><span class="type">class</span>
 
 [topicEntry.t](../file/topicEntry.t.html)\[[261](../source/topicEntry.t.html#261)\]

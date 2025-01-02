@@ -1,3 +1,5 @@
+---
+---
 <span class="title">englishOptions</span><span class="type">object</span>
 
 [english.t](../file/english.t.html)\[[23](../source/english.t.html#23)\]

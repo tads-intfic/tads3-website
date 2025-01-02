@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="cockpit.htm" class="nav">Cockpit Controls</a> \> Taking Off  
-<span class="navnp"><a href="responding.htm" class="nav"><em>Prev:</em> Responding to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="cockpit.html" class="nav">Cockpit Controls</a> \> Taking Off  
+<span class="navnp"><a href="responding.html" class="nav"><em>Prev:</em> Responding to
 Actions</a>    
-<a href="character.htm" class="nav"><em>Next:</em> Character
+<a href="character.html" class="nav"><em>Next:</em> Character
 Building</a>     </span>
 
 </div>
@@ -491,9 +493,9 @@ tools and features used. The main lesson of this chapter has been how to
 customize responses to actions and how to create new actions. What we've
 covered is really only an introduction to these topics, but it should be
 enough to get you started. For the full story on actions you will need
-to study the complete [Actions](../manual/action.htm) part of the
+to study the complete [Actions](../manual/action.html) part of the
 *adv3Lite Library Manual*. In particular, remember that the [Action
-Reference](../manual/actionref.htm) is your friend when you want to know
+Reference](../manual/actionref.html) is your friend when you want to know
 about the actions defined in the library.
 
 In the final section of this chapter we also illustrated how a Scene
@@ -514,11 +516,11 @@ game.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="cockpit.htm" class="nav">Cockpit Controls</a> \> Taking Off  
-<span class="navnp"><a href="responding.htm" class="nav"><em>Prev:</em> Responding to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="cockpit.html" class="nav">Cockpit Controls</a> \> Taking Off  
+<span class="navnp"><a href="responding.html" class="nav"><em>Prev:</em> Responding to
 Actions</a>    
-<a href="character.htm" class="nav"><em>Next:</em> Character
+<a href="character.html" class="nav"><em>Next:</em> Character
 Building</a>     </span>
 
 </div>

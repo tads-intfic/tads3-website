@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MoveWithAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2352](../source/actions.t.html#2352)\]

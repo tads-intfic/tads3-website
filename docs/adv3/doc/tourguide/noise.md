@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,15 +10,15 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Noise : SensoryEmanation<br />
 </strong></td>
-<td style="text-align: right;"><a href="odor.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="senseconnector.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="odor.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="senseconnector.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-The Noise class works precisely like the [Odor](odor.htm) class, except
+The Noise class works precisely like the [Odor](odor.html) class, except
 that it is used for sounds rather than smells. Precisely the same
 properties are available to customise it. We can continue our
 illustration by making the volcano the source of a sound as well as a
@@ -35,7 +37,7 @@ should see added to the description of the volcano when you EXAMINE
 MOUNT GLOOM.  
   
 To illustrate the descWithoutSource and hereWithoutSource properties
-we'll go back and add a ticking sound to the [bomb](sensefuse.htm) we
+we'll go back and add a ticking sound to the [bomb](sensefuse.html) we
 buried under a pile of rubble some time back, at the same time expanding
 what the bomb does when it explodes.  
   

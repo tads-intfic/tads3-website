@@ -1,3 +1,5 @@
+---
+---
 <span class="title">IobjResolver</span><span class="type">class</span>
 
 [resolver.t](../file/resolver.t.html)\[[783](../source/resolver.t.html#783)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Extending the Map  
-<span class="navnp"><a href="airmap1.htm" class="nav"><em>Prev:</em> Starting the Map</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Extending the Map  
+<span class="navnp"><a href="airmap1.html" class="nav"><em>Prev:</em> Starting the Map</a>
    
-<a href="airmap3.htm" class="nav"><em>Next:</em> Aboard the Plane</a>
+<a href="airmap3.html" class="nav"><em>Next:</em> Aboard the Plane</a>
     </span>
 
 </div>
@@ -315,7 +317,7 @@ the gatearea.t file:
 Okay, so let's explain this one step at a time.
 
 First off, we've created an object of the **ShuffledEventList** class.
-This is one of a number of [EventList](../manual/eventlist.htm) classes
+This is one of a number of [EventList](../manual/eventlist.html) classes
 that you can read about in more detail in the *adv3Lite Library Manual*.
 In brief, an EventList is an object which steps through each item in its
 <span class="code">eventList</span> property in turn when its
@@ -344,7 +346,7 @@ then stored in the compiled game file.
 Second, we need some way of driving this ShuffledEventList, and to that
 end we use a **Daemon** to keep calling its
 <span class="code">doScript()</span> method each turn. You can read all
-about Daemons and Fuses in the [Events](../manual/event.htm) section of
+about Daemons and Fuses in the [Events](../manual/event.html) section of
 the *adv3Lite Library Manual*. In brief, a Daemon is a special kind of
 object that calls a specified method on a specified object at a
 specified interval. The definition above, <span class="code">new
@@ -451,11 +453,11 @@ round the now extended map to make sure everything works as it should.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Extending the Map  
-<span class="navnp"><a href="airmap1.htm" class="nav"><em>Prev:</em> Starting the Map</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Extending the Map  
+<span class="navnp"><a href="airmap1.html" class="nav"><em>Prev:</em> Starting the Map</a>
    
-<a href="airmap3.htm" class="nav"><em>Next:</em> Aboard the Plane</a>
+<a href="airmap3.html" class="nav"><em>Next:</em> Aboard the Plane</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MessageHelper</span><span class="type">class</span>
 
 [en_us.t](../file/en_us.t.html)\[[3153](../source/en_us.t.html#3153)\]

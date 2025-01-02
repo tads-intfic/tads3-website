@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ObjectPreCondition</span><span class="type">class</span>
 
 [precond.t](../file/precond.t.html)\[[75](../source/precond.t.html#75)\]

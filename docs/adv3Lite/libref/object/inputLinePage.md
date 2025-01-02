@@ -1,3 +1,5 @@
+---
+---
 <span class="title">inputLinePage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[2222](../source/webui.t.html#2222)\]

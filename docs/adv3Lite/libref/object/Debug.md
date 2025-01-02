@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Debug</span><span class="type">object</span>
 
 [debug.t](../file/debug.t.html)\[[61](../source/debug.t.html#61)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AbortImplicitSignal</span><span class="type">class</span>
 
 [exec.t](../file/exec.t.html)\[[1337](../source/exec.t.html#1337)\]

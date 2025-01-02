@@ -1,3 +1,5 @@
+---
+---
 <span class="title">hyperlinkStyleTag</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[1006](../source/output.t.html#1006)\]

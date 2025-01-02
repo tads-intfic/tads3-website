@@ -1,3 +1,5 @@
+---
+---
 <span class="title">QDefaults</span><span class="type">object</span>
 
 [query.t](../file/query.t.html)\[[170](../source/query.t.html#170)\]

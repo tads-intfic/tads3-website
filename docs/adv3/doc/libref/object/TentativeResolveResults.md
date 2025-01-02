@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TentativeResolveResults</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[3828](../source/action.t.html#3828)\]

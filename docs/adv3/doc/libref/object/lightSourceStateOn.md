@@ -1,3 +1,5 @@
+---
+---
 <span class="title">lightSourceStateOn</span><span class="type">object</span>
 
 [en_us.t](../file/en_us.t.html)\[[3615](../source/en_us.t.html#3615)\]

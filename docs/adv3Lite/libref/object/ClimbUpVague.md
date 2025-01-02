@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ClimbUpVague</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1101](../source/actions.t.html#1101)\]

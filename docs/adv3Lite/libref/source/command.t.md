@@ -1,3 +1,5 @@
+---
+---
 # command.t
 
 [documentation](../file/command.t.html)

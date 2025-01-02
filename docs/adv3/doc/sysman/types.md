@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Fundamental
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Fundamental
 Datatypes  
-<span class="navnp"><a href="preproc.htm" class="nav"><em>Prev:</em> The Preprocessor</a>
-    <a href="strlit.htm" class="nav"><em>Next:</em> String Literals</a>
+<span class="navnp"><a href="preproc.html" class="nav"><em>Prev:</em> The Preprocessor</a>
+    <a href="strlit.html" class="nav"><em>Next:</em> String Literals</a>
     </span>
 
 </div>
@@ -129,7 +131,7 @@ arithmetic operators, for example, and comparing an enumerator to an
 integer value will always yield "unequal," *even if the enumerator's
 internal integer value happens to be equal to the given integer.*)
 
-See the section on [enumerators](enum.htm) for more details.
+See the section on [enumerators](enum.html) for more details.
 
 ## Property ID
 
@@ -272,7 +274,7 @@ Because lists are objects, a "list value" that's stored in a variable is
 actually a *reference* to a List object.
 
 For more details on lists, see the section on the [List intrinsic
-type](list.htm).
+type](list.html).
 
 ## String
 
@@ -300,9 +302,9 @@ amended.
 Because strings are objects, a "string value" that's stored in a
 variable is actually a *reference* to a String object.
 
-The [String Literals](strlit.htm) chapter has details on how to enter
+The [String Literals](strlit.html) chapter has details on how to enter
 strings in a program's source code. For information on manipulating
-string objects, see the [String intrinsic type](string.htm) section.
+string objects, see the [String intrinsic type](string.html) section.
 
 ## Object
 
@@ -333,11 +335,11 @@ immediate superclasses, or if any of the object's immediate superclasses
 are subclasses of the given class.
 
 The syntax for defining objects is described in more detail in the
-section on [defining objects](objdef.htm).
+section on [defining objects](objdef.html).
 
 All objects are subclasses of the root object class, Object. This class
 provides a number of methods, which all objects inherit. See the [Object
-intrinsic class](objic.htm) section for details
+intrinsic class](objic.html) section for details
 
 ## Intrinsic Classes
 
@@ -393,14 +395,14 @@ non-zero digit. For example, <span class="code">0.000010</span> has a
 precision of 2, since the first significant figure is the 1, and the
 trailing zero counts as another.
 
-See the [BigNumber](bignum.htm) section for details.
+See the [BigNumber](bignum.html) section for details.
 
 ### ByteArray
 
 The ByteArray class provides an array of raw bytes ("octets"), which is
 useful for manipulating binary files.
 
-Refer to the [ByteArray](bytearr.htm) section.
+Refer to the [ByteArray](bytearr.html) section.
 
 ### CharacterSet
 
@@ -408,7 +410,7 @@ The CharacterSet class provides services for mapping between Unicode
 (which the VM uses internally) and nearly any other character encoding.
 This is useful for reading and writing external text files.
 
-Refer to the [CharacterSet](charset.htm) section.
+Refer to the [CharacterSet](charset.html) section.
 
 ### Collection
 
@@ -417,7 +419,7 @@ LookupTable. This class defines a basic interface in common to all of
 the Collection classes, which lets you write certain code so that it
 works uniformly with any collection type.
 
-Refer to the [Collection](collect.htm) section.
+Refer to the [Collection](collect.html) section.
 
 ### Dictionary
 
@@ -426,14 +428,14 @@ vocabulary data for input parsers built with the GrammarProd class. The
 compiler has special features that make it easier to populate a
 Dictionary object's contents.
 
-Refer to the [Dictionary](dict.htm) section.
+Refer to the [Dictionary](dict.html) section.
 
 ### File
 
 The File class provides input/output services for manipulating external
 files.
 
-Refer to the [File](file.htm) section.
+Refer to the [File](file.html) section.
 
 ### GrammarProd
 
@@ -442,7 +444,7 @@ for implementing input parsers. The compiler has special features
 (specifically the <span class="code">grammar</span> object declaration
 statement) that make it easier to create GrammarProd objects.
 
-Refer to the [GrammarProd](gramprod.htm) section.
+Refer to the [GrammarProd](gramprod.html) section.
 
 ### IntrinsicClass
 
@@ -454,7 +456,7 @@ Iterator, which is of class IntrinsicClass. Naturally, the
 IntrinsicClass class is represented by an object called IntrinsicClass
 of class IntrinsicClass.
 
-Refer to the [IntrinsicClass](icic.htm) section.
+Refer to the [IntrinsicClass](icic.html) section.
 
 ### Iterator
 
@@ -463,7 +465,7 @@ contents of a Collection. The <span class="code">foreach</span>
 statement uses an Iterator internally to carry out its iteration, but
 you can use these objects explicitly as well.
 
-Refer to the [Iterator](iter.htm) section.
+Refer to the [Iterator](iter.html) section.
 
 ### LookupTable
 
@@ -472,7 +474,7 @@ an "associative array." This is a collection that behaves like an array,
 except that the index values can be arbitrary "key" values, not just
 integers.
 
-Refer to the [LookupTable](lookup.htm) section.
+Refer to the [LookupTable](lookup.html) section.
 
 ### RexPattern
 
@@ -485,7 +487,7 @@ some CPU time to perform, so you might be able to make your program run
 a little faster by pre-compiling regular expression patterns you use
 frequently.
 
-Refer to the [RexPattern](rexpat.htm) section.
+Refer to the [RexPattern](rexpat.html) section.
 
 ### StringComparator
 
@@ -496,14 +498,14 @@ options that let you control how input strings are interpreted. The
 customization options are especially useful for non-English languages
 where accented characters are common.
 
-Refer to the [StringComparator](strcomp.htm) section.
+Refer to the [StringComparator](strcomp.html) section.
 
 ### TadsObject
 
 The TadsObject class is the base class for all objects defined in source
 code.
 
-Refer to the [TadsObject](tadsobj.htm) section.
+Refer to the [TadsObject](tadsobj.html) section.
 
 ### Vector
 
@@ -511,7 +513,7 @@ The Vector class is similar to the basic List class, but with one
 important difference: Vectors are "mutable," meaning that the elements
 and length of a Vector can be changed dynamically during execution.
 
-Refer to the [Vector](vector.htm) section.
+Refer to the [Vector](vector.html) section.
 
 ### WeakRefLookupTable
 
@@ -526,7 +528,7 @@ Weak reference tables are useful for setting up caches and indices and
 the like, since they let you create a table that maps objects as long as
 they're around, but doesn't itself force them to stay around.
 
-Refer to the [WeakRefLookupTable](wlookup.htm) section.
+Refer to the [WeakRefLookupTable](wlookup.html) section.
 
 ## Notes for TADS 2 Users
 
@@ -541,11 +543,11 @@ in all cases.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Fundamental
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Fundamental
 Datatypes  
-<span class="navnp"><a href="preproc.htm" class="nav"><em>Prev:</em> The Preprocessor</a>
-    <a href="strlit.htm" class="nav"><em>Next:</em> String Literals</a>
+<span class="navnp"><a href="preproc.html" class="nav"><em>Prev:</em> The Preprocessor</a>
+    <a href="strlit.html" class="nav"><em>Next:</em> String Literals</a>
     </span>
 
 </div>

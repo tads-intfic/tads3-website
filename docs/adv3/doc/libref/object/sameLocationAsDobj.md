@@ -1,3 +1,5 @@
+---
+---
 <span class="title">sameLocationAsDobj</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[791](../source/precond.t.html#791)\]

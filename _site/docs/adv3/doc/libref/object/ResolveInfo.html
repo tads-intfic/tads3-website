@@ -1,0 +1,253 @@
+<p><span class="title">ResolveInfo</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#345">345</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The resolveNouns() method returns a list of ResolveInfo objects
+describing the objects matched to the noun phrase.
+
+`class `**`ResolveInfo`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ResolveInfo</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>dummyTentativeInfo<code class="language-plaintext highlighter-rouge">](../object/dummyTentativeInfo.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>flags_<code class="language-plaintext highlighter-rouge">](#flags_)</code>  <code class="language-plaintext highlighter-rouge">[</code>multiAnnounce<code class="language-plaintext highlighter-rouge">](#multiAnnounce)</code>  <code class="language-plaintext highlighter-rouge">[</code>np_<code class="language-plaintext highlighter-rouge">](#np_)</code>  <code class="language-plaintext highlighter-rouge">[</code>obj_<code class="language-plaintext highlighter-rouge">](#obj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>possRank_<code class="language-plaintext highlighter-rouge">](#possRank_)</code>  <code class="language-plaintext highlighter-rouge">[</code>pronounType_<code class="language-plaintext highlighter-rouge">](#pronounType_)</code>  <code class="language-plaintext highlighter-rouge">[</code>quant_<code class="language-plaintext highlighter-rouge">](#quant_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDistEquivInList<code class="language-plaintext highlighter-rouge">](#isDistEquivInList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isEquivalentInList<code class="language-plaintext highlighter-rouge">](#isEquivalentInList)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="flags_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flags_</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#393">393</a>]</p>
+
+<div class="desc">
+
+flags describing how we matched the object
+
+</div>
+
+<p><span id="multiAnnounce"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">multiAnnounce</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#440">440</a>]</p>
+
+<div class="desc">
+
+The pre-calculated multi-object announcement text for this object. When
+we iterate over the object list in a command with multiple direct or
+indirect objects (TAKE THE BOOK, BELL, AND CANDLE), we calculate the
+little announcement messages ("book:") for the objects BEFORE we execute
+the actual commands. We then use the pre-calculated announcements during
+our iteration. This ensures consistency in the basis for choosing the
+names, which is important in cases where the names include
+state-dependent information for the purposes of distinguishing one
+object from another. The relevant state can change over the course of
+executing the command on the objects in the iteration, so if we
+calculated the names on the fly we could end up with inconsistent
+naming. The user thinks of the objects in terms of their state at the
+start of the command, so the pre-calculation approach is not only more
+internally consistent, but is also more consistent with the user's
+perspective.
+
+</div>
+
+<p><span id="np_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">np_</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#420">420</a>]</p>
+
+<div class="desc">
+
+the noun phrase we parsed to come up with this object
+
+</div>
+
+<p><span id="obj_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obj_</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#390">390</a>]</p>
+
+<div class="desc">
+
+the object matched
+
+</div>
+
+<p><span id="possRank_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">possRank_</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#414">414</a>]</p>
+
+<div class="desc">
+
+The possessive ranking, if applicable. If this object is qualified by a
+possessive phrase ("my books"), we'll set this to a value indicating how
+strongly the possession applies to our object: 2 indicates that the
+object is explicitly owned by the object indicated in the possessive
+phrase, 1 indicates that it's directly held by the named possessor but
+not explicitly owned, and 0 indicates all else. In cases where there's
+no posessive qualifier, this will simply be zero.
+
+</div>
+
+<p><span id="pronounType_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pronounType_</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#417">417</a>]</p>
+
+<div class="desc">
+
+the pronoun type we matched, if any (as a PronounXxx enum)
+
+</div>
+
+<p><span id="quant_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">quant_</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#402">402</a>]</p>
+
+<div class="desc">
+
+By default, each ResolveInfo counts as one object, for the purposes of a
+quantity specifier (as in "five coins" or "both hats"). However, in some
+cases, a single resolved object might represent a collection of discrete
+objects and thus count as more than one for the purposes of the
+quantifier.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (obj, flags, np, =, nil)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#346">346</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="isDistEquivInList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isDistEquivInList (lst, dist)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#378">378</a>]</p>
+
+<div class="desc">
+
+Look for a ResolveInfo item in a list of ResolveInfo items that is
+equivalent to us according to a particular Distinguisher.
+
+</div>
+
+<p><span id="isEquivalentInList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isEquivalentInList (lst)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#363">363</a>]</p>
+
+<div class="desc">
+
+Look for a ResolveInfo item in a list of ResolveInfo items that is
+equivalent to us. Returns true if we find such an item, nil if not.
+
+Another ResolveInfo is equivalent to us if it refers to the same
+underlying game object that we do, or if it refers to a game object that
+is indistinguishable from our underlying game object.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

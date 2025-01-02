@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EmptyTopicPhraseProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[4275](../source/parser.t.html#4275)\]

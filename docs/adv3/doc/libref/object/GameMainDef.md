@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GameMainDef</span><span class="type">class</span>
 
 [misc.t](../file/misc.t.html)\[[55](../source/misc.t.html#55)\],

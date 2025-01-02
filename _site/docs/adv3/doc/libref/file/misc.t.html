@@ -1,0 +1,302 @@
+<p><span class="title">misc.t</span><span class="type">file</span></p>
+
+<p><a href="../source/misc.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library - miscellaneous definitions
+
+This module contains miscellaneous definitions that don't have a natural
+grouping with any larger modules, and which aren't complex enough to
+justify modules of their own.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>CyclicEventList<code class="language-plaintext highlighter-rouge">](../object/CyclicEventList.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>EventList<code class="language-plaintext highlighter-rouge">](../object/EventList.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExternalEventList<code class="language-plaintext highlighter-rouge">](../object/ExternalEventList.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FinishOption<code class="language-plaintext highlighter-rouge">](../object/FinishOption.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FinishType<code class="language-plaintext highlighter-rouge">](../object/FinishType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GameMainDef<code class="language-plaintext highlighter-rouge">](../object/GameMainDef.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RandomEventList<code class="language-plaintext highlighter-rouge">](../object/RandomEventList.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RandomFiringScript<code class="language-plaintext highlighter-rouge">](../object/RandomFiringScript.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Script<code class="language-plaintext highlighter-rouge">](../object/Script.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ShuffledEventList<code class="language-plaintext highlighter-rouge">](../object/ShuffledEventList.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ShuffledIntegerList<code class="language-plaintext highlighter-rouge">](../object/ShuffledIntegerList.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ShuffledList<code class="language-plaintext highlighter-rouge">](../object/ShuffledList.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>StopEventList<code class="language-plaintext highlighter-rouge">](../object/StopEventList.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SyncEventList<code class="language-plaintext highlighter-rouge">](../object/SyncEventList.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>adv3LibInit<code class="language-plaintext highlighter-rouge">](../object/adv3LibInit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>adv3LibPreinit<code class="language-plaintext highlighter-rouge">](../object/adv3LibPreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionAmusing<code class="language-plaintext highlighter-rouge">](../object/finishOptionAmusing.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionCredits<code class="language-plaintext highlighter-rouge">](../object/finishOptionCredits.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionFullScore<code class="language-plaintext highlighter-rouge">](../object/finishOptionFullScore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionQuit<code class="language-plaintext highlighter-rouge">](../object/finishOptionQuit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionRestart<code class="language-plaintext highlighter-rouge">](../object/finishOptionRestart.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionRestore<code class="language-plaintext highlighter-rouge">](../object/finishOptionRestore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionScore<code class="language-plaintext highlighter-rouge">](../object/finishOptionScore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionUndo<code class="language-plaintext highlighter-rouge">](../object/finishOptionUndo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ftDeath<code class="language-plaintext highlighter-rouge">](../object/ftDeath.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ftFailure<code class="language-plaintext highlighter-rouge">](../object/ftFailure.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ftGameOver<code class="language-plaintext highlighter-rouge">](../object/ftGameOver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ftVictory<code class="language-plaintext highlighter-rouge">](../object/ftVictory.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>libGlobal<code class="language-plaintext highlighter-rouge">](../object/libGlobal.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>restoreOptionRestoreAnother<code class="language-plaintext highlighter-rouge">](../object/restoreOptionRestoreAnother.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>restoreOptionStartOver<code class="language-plaintext highlighter-rouge">](../object/restoreOptionStartOver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>settingsUI<code class="language-plaintext highlighter-rouge">](../object/settingsUI.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>verboseModeSettingsItem<code class="language-plaintext highlighter-rouge">](../object/verboseModeSettingsItem.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>cls<code class="language-plaintext highlighter-rouge">](#cls)</code>  <code class="language-plaintext highlighter-rouge">[</code>failedRestoreOptions<code class="language-plaintext highlighter-rouge">](#failedRestoreOptions)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishGame<code class="language-plaintext highlighter-rouge">](#finishGame)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishGameMsg<code class="language-plaintext highlighter-rouge">](#finishGameMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>isListSubset<code class="language-plaintext highlighter-rouge">](#isListSubset)</code>  <code class="language-plaintext highlighter-rouge">[</code>main<code class="language-plaintext highlighter-rouge">](#main)</code>  <code class="language-plaintext highlighter-rouge">[</code>mainCommon<code class="language-plaintext highlighter-rouge">](#mainCommon)</code>  <code class="language-plaintext highlighter-rouge">[</code>mainRestore<code class="language-plaintext highlighter-rouge">](#mainRestore)</code>  <code class="language-plaintext highlighter-rouge">[</code>nilToList<code class="language-plaintext highlighter-rouge">](#nilToList)</code>  <code class="language-plaintext highlighter-rouge">[</code>overrides<code class="language-plaintext highlighter-rouge">](#overrides)</code>  <code class="language-plaintext highlighter-rouge">[</code>partitionList<code class="language-plaintext highlighter-rouge">](#partitionList)</code>  <code class="language-plaintext highlighter-rouge">[</code>processOptions<code class="language-plaintext highlighter-rouge">](#processOptions)</code>  <code class="language-plaintext highlighter-rouge">[</code>runGame<code class="language-plaintext highlighter-rouge">](#runGame)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="cls"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cls ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#550">550</a>]</p>
+
+<div class="desc">
+
+Clear the main game window. In most cases, you should call this rather
+than calling the low-level clearScreen() function directly, since this
+routine takes care of a couple of chores that should usually be done at
+the same time.
+
+First, we flush the transcript to ensure that no left-over reports that
+were displayed before we cleared the screen will show up on the new
+screen. Second, we call the low-level clearScreen() function to actually
+clear the display window. Finally, we re-display any \&lt;ABOUTBOX\&gt; tag,
+to ensure that the about-box will still be around; this is necessary
+because any existing \&lt;ABOUTBOX\&gt; tag is lost after the screen is
+cleared.
+
+</div>
+
+<p><span id="failedRestoreOptions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">failedRestoreOptions ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1992">1992</a>]</p>
+
+<div class="desc">
+
+Show failed startup restore options. If a restore operation fails at
+startup, we won't just proceed with the game, but ask the user what they
+want to do; we'll offer the options of restoring another game, quitting,
+or starting the game from the beginning.
+
+</div>
+
+<p><span id="finishGame"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishGame (extra)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1981">1981</a>]</p>
+
+<div class="desc">
+
+finish the game, offering the given extra options but no message
+
+</div>
+
+<p><span id="finishGameMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishGameMsg (msg, extra)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1903">1903</a>]</p>
+
+<div class="desc">
+
+Finish the game, showing a message explaining why the game has ended.
+This can be called when an event occurs that ends the game, such as the
+player character's death, winning, or any other endpoint in the story.
+
+We'll show a message defined by 'msg', using a standard format. The
+format depends on the language, but in English, it's usually the message
+surrounded by asterisks: "\*\*\* You have won! \*\*\*". 'msg' can be:
+
+  
+- nil, in which case we display nothing  
+- a string, which we'll display as the message  
+- a FinishType object, from which we'll get the message
+
+After showing the message (if any), we'll prompt the user with options
+for how to proceed. We'll always show the QUIT, RESTART, and RESTORE
+options; other options can be offered by listing one or more
+FinishOption objects in the 'extra' parameter, which is given as a list
+of FinishOption objects. The library defines a few non-default finish
+options, such as finishOptionUndo and finishOptionCredits; in addition,
+the game can subclass FinishOption to create its own custom options, as
+desired.
+
+</div>
+
+<p><span id="isListSubset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isListSubset (a, b)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2469">2469</a>]</p>
+
+<div class="desc">
+
+Determine if list a is a subset of list b. a is a subset of b if every
+element of a is in b.
+
+</div>
+
+<p><span id="main"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">main (args)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#599">599</a>]</p>
+
+<div class="desc">
+
+Main program entrypoint. The core run-time start-up code calls this
+after running pre-initialization and load-time initialization. This
+entrypoint is called when we're starting the game normally; when the
+game is launched through a saved-position file, mainRestore() will be
+invoked instead.
+
+</div>
+
+<p><span id="mainCommon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mainCommon (prop, [args])</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#624">624</a>]</p>
+
+<div class="desc">
+
+Common main entrypoint - this handles starting a new game or restoring
+an existing saved state.
+
+</div>
+
+<p><span id="mainRestore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mainRestore (args, restoreFile)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#614">614</a>]</p>
+
+<div class="desc">
+
+Main program entrypoint for restoring a saved-position file. This is
+invoked from the core run-time start-up code when the game is launched
+from the operating system via a saved-position file. For example, on
+Windows, double-clicking on a saved-position file on the Windows desktop
+launches the interpreter, which looks in the save file to find the game
+executable to run, then starts the game and invokes this entrypoint.
+
+</div>
+
+<p><span id="nilToList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nilToList (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2438">2438</a>]</p>
+
+<div class="desc">
+
+nilToList - convert a 'nil' value to an empty list. This can be useful
+for mix-in classes that will be used in different inheritance contexts,
+since the classes might or might not inherit a base class definition for
+list-valued methods such as preconditions. This provides a usable
+default for list-valued methods that return nothing from superclasses.
+
+</div>
+
+<p><span id="overrides"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">overrides (obj, base, prop)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#678">678</a>]</p>
+
+<div class="desc">
+
+Determine if the given object overrides the definition of the given
+property inherited from the given base class. Returns true if the object
+derives from the given base class, and the object's definition of the
+property comes from a different place than the base class's definition
+of the property.
+
+</div>
+
+<p><span id="partitionList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">partitionList (lst, fn)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2457">2457</a>]</p>
+
+<div class="desc">
+
+partitionList - partition a list into a pair of two lists, the first
+containing items that match the predicate 'fn', the second containing
+items that don't match 'fn'. 'fn' is a function pointer (usually an
+anonymous function) that takes a single argument - a list element - and
+returns true or nil.
+
+The return value is a list with two elements. The first element is a
+list giving the elements of the original list for which 'fn' returns
+true, the second element is a list giving the elements for which 'fn'
+returns nil.
+
+(Contributed by Tommy Nordgren.)
+
+</div>
+
+<p><span id="processOptions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processOptions (lst)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2003">2003</a>]</p>
+
+<div class="desc">
+
+Process a list of finishing options. We'll loop, showing prompts and
+reading responses, until we get a response that terminates the loop.
+
+</div>
+
+<p><span id="runGame"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">runGame (look)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#577">577</a>]</p>
+
+<div class="desc">
+
+Run the game. We start by showing the description of the initial
+location, if desired, and then we read and interpret commands until the
+game ends (via a "quit" command, winning, death of the player character,
+or any other way of terminating the game).
+
+This routine doesn't return until the game ends.
+
+Before calling this routine, the caller should already have set the
+global variable gPlayerChar to the player character actor.
+
+'look' is a flag indicating whether or not to look around; if this is
+true, we'll show a full description of the player character's initial
+location, as though the player were to type "look around" as the first
+command.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

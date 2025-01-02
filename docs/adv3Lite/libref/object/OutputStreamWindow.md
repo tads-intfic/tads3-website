@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OutputStreamWindow</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[1772](../source/output.t.html#1772)\]

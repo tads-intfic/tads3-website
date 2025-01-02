@@ -1,0 +1,193 @@
+<p><span class="title">quoteFilter</span><span class="type">object</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1563">1563</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+quoteFilter: this loooks for smart quotes in the output and checks that
+they are balanced.
+
+The problem with the smart quotes \&lt;q\&gt; \&lt;/q\&gt; is that if one is
+missing, or a spurious one is added, the error is perpetrated throughout
+the rest of the game (or until a compensating error is located). The
+purpose of quoteFilter is (a) to report such errors (to make them easier
+to fix) and (b) to prevent them being propagated beyond a single turn.
+In the main this works by having quoteFilter take over responsibility
+for turning the \&lt;q\&gt; and \&lt;/q\&gt; tags into the appropriate HTML entities
+rather than leaving it to the HTML rendering engine in the interpreter.
+The quoteFilter OutputFilter keeps its own track of whether a double
+quote or a single quote is rquired next, and resets this count at the
+start of each turn.
+
+**`quoteFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)`   `[`InitObject`](../object/InitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">quoteFilter</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputFilter.html)  
+</code>                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>InitObject<code class="language-plaintext highlighter-rouge">](../object/InitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>quoteCount<code class="language-plaintext highlighter-rouge">](#quoteCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>quotePat<code class="language-plaintext highlighter-rouge">](#quotePat)</code>  <code class="language-plaintext highlighter-rouge">[</code>showWarnings<code class="language-plaintext highlighter-rouge">](#showWarnings)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterText<code class="language-plaintext highlighter-rouge">](#filterText)</code>  <code class="language-plaintext highlighter-rouge">[</code>quoteCheck<code class="language-plaintext highlighter-rouge">](#quoteCheck)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="quoteCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">quoteCount</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1627">1627</a>]</p>
+
+<div class="desc">
+
+Our quoteCount is the net number of quote marks we've output this turn,
+i.e. the number of opening quote marks less the number of closing quote
+marks.
+
+</div>
+
+<p><span id="quotePat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">quotePat</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1630">1630</a>]</p>
+
+<div class="desc">
+
+Our rex pattern to match \&lt;q\&gt; and \&lt;/q\&gt;
+
+</div>
+
+<p><span id="showWarnings"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showWarnings</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1655">1655</a>]</p>
+
+<div class="desc">
+
+Should I show a warning when I find unmatched smart quotes over the
+course of a turn? Displaying such a warning would probably look
+intrusive in a released version, but might well be useful in a version
+sent out to beta-testers (so it shouldn't be tied to a version compiled
+for debugging). The showWarnings flag thus allows the warning messages
+to be turned on and off as desired.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1634">1634</a>]</p>
+
+<div class="desc">
+
+In Initialize this filter
+
+</div>
+
+<p><span id="filterText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterText (ostr, txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1564">1564</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="quoteCheck"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">quoteCheck ( )</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1664">1664</a>]</p>
+
+<div class="desc">
+
+The PromptDaemon set up in our execute() method at Initialization runs
+this method at the end of each turn. It checks to see if the number of
+opening smart quotes over the course of the turn just completed is the
+same as the number of closing smart quotes, and optionally prints a
+warning message if it is not.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

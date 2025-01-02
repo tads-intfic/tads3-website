@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>NoTopic : <a
-href="misctopic.htm">MiscTopic</a><br />
+href="misctopic.html">MiscTopic</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="yestopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="specialtopic.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="yestopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="specialtopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -19,10 +21,10 @@ href="specialtopic.htm">[Next]</a></td>
   
 A NoTopic responds to a NO command directed toward the currently
 conversing NPC. Like a YesTopic it is most useful inside a
-[ConvNode](convnode.htm).  
+[ConvNode](convnode.html).  
   
 As an example, add the following immediately after the
-[YesTopic](yestopic.htm) we've just defined:  
+[YesTopic](yestopic.html) we've just defined:  
   
 ++ NoTopic, SuggestedNoTopic  
   "\<q\>No, on second thoughts I think we'd better leave it for now.\</q\>  

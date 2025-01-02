@@ -1,3 +1,5 @@
+---
+---
 <span class="title">setScreenNamePage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[3537](../source/webui.t.html#3537)\]

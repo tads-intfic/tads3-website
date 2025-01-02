@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StretchyContainer</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[1059](../source/extras.t.html#1059)\]

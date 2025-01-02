@@ -1,3 +1,5 @@
+---
+---
 <span class="title">eventManager</span><span class="type">object</span>
 
 [events.t](../file/events.t.html)\[[20](../source/events.t.html#20)\]

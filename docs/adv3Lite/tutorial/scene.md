@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \> Making a
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \> Making a
 Scene  
-<span class="navnp"><a href="security.htm" class="nav"><em>Prev:</em> The Security Area</a>
-    <a href="recap.htm" class="nav"><em>Next:</em> Recapitulation</a>
+<span class="navnp"><a href="security.html" class="nav"><em>Prev:</em> The Security Area</a>
+    <a href="recap.html" class="nav"><em>Next:</em> Recapitulation</a>
     </span>
 
 </div>
@@ -31,7 +33,7 @@ is through the use of Scenes. A **Scene** is simply an object that
 starts and stops under author-controlled conditions, and which cause
 particular things to occur when it starts or stops or while it is
 happening. For the full details of Scenes you can read the section on
-[Scenes](../manual/scene.htm) in the *adv3Lite Library Manual*, but the
+[Scenes](../manual/scene.html) in the *adv3Lite Library Manual*, but the
 basics are fairly simple. A Scene begins when its **startsWhen**
 property evaluates to true, and ends when its **endsWhen** property
 becomes true. When the Scene starts its **whenStarting** method is
@@ -540,11 +542,11 @@ points in your story.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \> Making a
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \> Making a
 Scene  
-<span class="navnp"><a href="security.htm" class="nav"><em>Prev:</em> The Security Area</a>
-    <a href="recap.htm" class="nav"><em>Next:</em> Recapitulation</a>
+<span class="navnp"><a href="security.html" class="nav"><em>Prev:</em> The Security Area</a>
+    <a href="recap.html" class="nav"><em>Next:</em> Recapitulation</a>
     </span>
 
 </div>

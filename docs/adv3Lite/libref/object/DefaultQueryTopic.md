@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultQueryTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4243](../source/actor.t.html#4243)\]

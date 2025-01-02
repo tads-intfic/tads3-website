@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> NPC Travel  
-<span class="navnp"><a href="t3conv.htm" class="nav"><em>Prev:</em> Programming
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> NPC Travel  
+<span class="navnp"><a href="t3conv.html" class="nav"><em>Prev:</em> Programming
 Conversations with NPCs</a>    
-<a href="t3banner.htm" class="nav"><em>Next:</em> Using the Banner
+<a href="t3banner.html" class="nav"><em>Next:</em> Using the Banner
 API</a>     </span>
 
 </div>
@@ -137,7 +139,7 @@ that aren't directly adjacent. If the destination isn't connected to the
 starting location directly, the routine will do nothing. If you want
 your NPC to figure its own way between non-adjacent locations, take a
 look at the path-finder example (see the [TADS 3
-page](http://www.tads.org/tads3.htm) at tads.org).
+page](http://www.tads.org/tads3.html) at tads.org).
 
 ## Choosing a Method
 
@@ -173,11 +175,11 @@ And whatever you do, **don't** use moveInto() for NPC travel.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> NPC Travel  
-<span class="navnp"><a href="t3conv.htm" class="nav"><em>Prev:</em> Programming
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> NPC Travel  
+<span class="navnp"><a href="t3conv.html" class="nav"><em>Prev:</em> Programming
 Conversations with NPCs</a>    
-<a href="t3banner.htm" class="nav"><em>Next:</em> Using the Banner
+<a href="t3banner.html" class="nav"><em>Next:</em> Using the Banner
 API</a>     </span>
 
 </div>

@@ -1,0 +1,187 @@
+<p><span class="title">CustomVocab</span><span class="type">class</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2348">2348</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+CustomVocab objects define special-case vocabulary for the parser and
+name generation routines.
+
+The library provides a CustomVocab object with many common special-case
+words, but games and extensions can augment the built-in lists by
+defining their own CustomVocab objects that follow the same patterns.
+The library automatically includes all of the special word lists in all
+of the CustomVocab objects defined throughout the game.
+
+`class `**`CustomVocab`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">CustomVocab</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>englishCustomVocab<code class="language-plaintext highlighter-rouge">](../object/englishCustomVocab.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>irregularPlurals<code class="language-plaintext highlighter-rouge">](#irregularPlurals)</code>  <code class="language-plaintext highlighter-rouge">[</code>specialAOrAn<code class="language-plaintext highlighter-rouge">](#specialAOrAn)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbParams<code class="language-plaintext highlighter-rouge">](#verbParams)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="irregularPlurals"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">irregularPlurals</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2377">2377</a>]</p>
+
+<div class="desc">
+
+Irregular plural list. This is a list of words with plurals that can't
+be inferred from any of the usual spelling rules. The entries are in
+pairs: singular, \[plurals\]. The plurals are given in a list, since
+some words have more than one valid plural. The first plural is the
+preferred one; the remaining entries are alternates.
+
+</div>
+
+<p><span id="specialAOrAn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">specialAOrAn</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2367">2367</a>]</p>
+
+<div class="desc">
+
+The list of special-case a/an words. Choosing 'a' or 'an' is purely
+phonetic, and English orthography is notoriously inconsistent
+phonetically. What's more, the choice for many words varies by dialect,
+accent, and personal style. We try to cover as much as we can in our
+spelling-based rules, but it's hopeless to cover all the bases purely
+with spelling. At some point we just have to turn to a table of special
+cases.
+
+We apply the special rules based on the first word in a name. The first
+word is simply the first contiguous group of alphanumeric characters. If
+the first word in a name is found in this list, the setting here will
+override any spelling rules.
+
+The entries here are simply strings of the form 'a word' or 'an word'.
+Start with the appropriate form of a/an, then add a space, then the
+special word to match.
+
+</div>
+
+<p><span id="verbParams"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbParams</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2402">2402</a>]</p>
+
+<div class="desc">
+
+Verbs for substitution parameter strings. This is a list of strings,
+using the following template:
+
+  
+'infinitive/present3/past/past-participle'
+
+The 'infinitive' is the 'to' form of the verb (to go, to look, to see),
+but \*without\* the word 'to'. 'present3' is the third-person present
+form (is, goes, sees). 'past' is the past tense form (went, looked,
+saw). 'past-participle' is the past participle form; this is optional,
+and is needed only for verbs with distinct past and past participle
+forms (e.g., saw/seen, went/gone). Most regular verbs - those with the
+past formed by adding -ed to the infinitive - have identical past and
+participle forms.
+
+For every English verb except "to be", the entire present and past
+conjugations can be derived from these three bits of information. The
+past perfect, future, and future perfect conjugations can also be
+derived from this information, for any verb except "to be" and the
+auxiliary verbs (could, should, etc). The English library pre-defines
+"to be" and all of the auxiliary verbs, so there's no need to define
+those with this mechanism.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

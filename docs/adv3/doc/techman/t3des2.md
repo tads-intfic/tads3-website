@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,13 +8,13 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \>
-<a href="t3design.htm" class="nav">Tips on Designing your Game</a> \> IF
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \>
+<a href="t3design.html" class="nav">Tips on Designing your Game</a> \> IF
 Design: In Theory  
-<span class="navnp"><a href="t3des1.htm" class="nav"><em>Prev:</em> IF Design: In
+<span class="navnp"><a href="t3des1.html" class="nav"><em>Prev:</em> IF Design: In
 Practice</a>    
-<a href="t3oop.htm" class="nav"><em>Next:</em> Object-Oriented
+<a href="t3oop.html" class="nav"><em>Next:</em> Object-Oriented
 Programming Overview</a>     </span>
 
 </div>
@@ -936,13 +938,13 @@ gives you a fine tool for creating games; the rest is up to you.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \>
-<a href="t3design.htm" class="nav">Tips on Designing your Game</a> \> IF
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \>
+<a href="t3design.html" class="nav">Tips on Designing your Game</a> \> IF
 Design: In Theory  
-<span class="navnp"><a href="t3des1.htm" class="nav"><em>Prev:</em> IF Design: In
+<span class="navnp"><a href="t3des1.html" class="nav"><em>Prev:</em> IF Design: In
 Practice</a>    
-<a href="t3oop.htm" class="nav"><em>Next:</em> Object-Oriented
+<a href="t3oop.html" class="nav"><em>Next:</em> Object-Oriented
 Programming Overview</a>     </span>
 
 </div>

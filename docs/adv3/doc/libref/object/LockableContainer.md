@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LockableContainer</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5105](../source/objects.t.html#5105)\]

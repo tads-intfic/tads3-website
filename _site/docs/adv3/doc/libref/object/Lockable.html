@@ -1,0 +1,336 @@
+<p><span class="title">Lockable</span><span class="type">class</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3735">3735</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Lockable: a mix-in class that can be combined with an object's other
+superclasses to make the object respond to the verbs "lock" and
+"unlock." A Lockable requires no key.
+
+Note that Lockable should usually go BEFORE a Thing-derived class in the
+superclass list.
+
+`class `**`Lockable`**` :   `[`Linkable`](../object/Linkable.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Lockable</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Linkable<code class="language-plaintext highlighter-rouge">](../object/Linkable.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Lockable</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>IndirectLockable<code class="language-plaintext highlighter-rouge">](../object/IndirectLockable.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LockableContainer<code class="language-plaintext highlighter-rouge">](../object/LockableContainer.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LockableWithKey<code class="language-plaintext highlighter-rouge">](../object/LockableWithKey.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>KeyedContainer`](../object/KeyedContainer.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>autoUnlockOnOpen<code class="language-plaintext highlighter-rouge">](#autoUnlockOnOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiallyLocked<code class="language-plaintext highlighter-rouge">](#initiallyLocked)</code>  <code class="language-plaintext highlighter-rouge">[</code>isLocked_<code class="language-plaintext highlighter-rouge">](#isLocked_)</code>  <code class="language-plaintext highlighter-rouge">[</code>lockedDesc<code class="language-plaintext highlighter-rouge">](#lockedDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>lockStatusObvious<code class="language-plaintext highlighter-rouge">](#lockStatusObvious)</code>  <code class="language-plaintext highlighter-rouge">[</code>lockStatusReportable<code class="language-plaintext highlighter-rouge">](#lockStatusReportable)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Lock)<code class="language-plaintext highlighter-rouge">](#dobjFor(Lock))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(LockWith)<code class="language-plaintext highlighter-rouge">](#dobjFor(LockWith))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Open)<code class="language-plaintext highlighter-rouge">](#dobjFor(Open))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Unlock)<code class="language-plaintext highlighter-rouge">](#dobjFor(Unlock))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(UnlockWith)<code class="language-plaintext highlighter-rouge">](#dobjFor(UnlockWith))</code>  <code class="language-plaintext highlighter-rouge">[</code>examineStatus<code class="language-plaintext highlighter-rouge">](#examineStatus)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeThing<code class="language-plaintext highlighter-rouge">](#initializeThing)</code>  <code class="language-plaintext highlighter-rouge">[</code>isLocked<code class="language-plaintext highlighter-rouge">](#isLocked)</code>  <code class="language-plaintext highlighter-rouge">[</code>makeLocked<code class="language-plaintext highlighter-rouge">](#makeLocked)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Linkable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>masterObject<code class="language-plaintext highlighter-rouge">](../object/Linkable.html#masterObject)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="autoUnlockOnOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">autoUnlockOnOpen</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3914">3914</a>]</p>
+
+<div class="desc">
+
+Should we automatically unlock this door on OPEN? By default, we do this
+only if the lock status is obvious.
+
+</div>
+
+<p><span id="initiallyLocked"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initiallyLocked</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3740">3740</a>]</p>
+
+<div class="desc">
+
+Our initial locked state (i.e., at the start of the game). By default,
+we start out locked.
+
+</div>
+
+<p><span id="isLocked_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isLocked_</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3839">3839</a>]</p>
+
+<div class="desc">
+
+Internal locked state. Do not use this to set the initial state - set
+initiallyLocked in the master object instead.
+
+</div>
+
+<p><span id="lockedDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lockedDesc</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3797">3797</a>]</p>
+
+<div class="desc">
+
+Description of the object's current locked state. In English, this
+simply returns one of 'locked' or 'unlocked'. (Note that this is
+provided as a convenience to games, for generating messages about the
+object that include its state. The library doesn't use this message
+itself, so overriding this won't change any library messages - in
+particular, it won't change the examineStatus message.)
+
+</div>
+
+<p><span id="lockStatusObvious"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lockStatusObvious</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3812">3812</a>]</p>
+
+<div class="desc">
+
+Is our 'locked' status obvious? This should be set to true for an object
+whose locked/unlocked status can be visually observed, nil for an object
+whose status is not visuall apparent. For example, you can usually tell
+from the inside that a door is locked by looking at the position of the
+lock's paddle, but on the outside of a door there's usually no way to
+see the status.
+
+By default, since we can be locked and unlocked with simple LOCK and
+UNLOCK commands, we assume the status is as obvious as the mechanism
+must be to allow such simple commands.
+
+</div>
+
+<p><span id="lockStatusReportable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lockStatusReportable</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3833">3833</a>]</p>
+
+<div class="desc">
+
+Is our 'locked' status reportable in our current state? This is similar
+to lockStatusObvious, but serves a separate purpose: this tells us if we
+wish to report the lock status for aesthetic reasons.
+
+This property is primarily of interest to mix-ins. To allow mix-ins to
+get a say, regardless of the order of superclasses, we'll by default
+defer to any inherited value if there is in fact an inherited value. If
+there's no inherited value, we'll simply return true.
+
+We use this in the library for one case in particular: when we're mixed
+with Openable, we don't want to report the lock status for an open
+object because an Openable must by default be closed to be locked. That
+is, when an Openable is open, it's always unlocked, so reporting that
+it's unlocked is essentially redundant information.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="dobjFor(Lock)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Lock)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3857">3857</a>]</p>
+
+<div class="desc">
+
+"lock"
+
+</div>
+
+<p><span id="dobjFor(LockWith)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(LockWith)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3897">3897</a>]</p>
+
+<div class="desc">
+
+"lock with"
+
+</div>
+
+<p><span id="dobjFor(Open)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Open)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3925">3925</a>]</p>
+
+<div class="desc">
+
+A locked object can't be opened - apply a precondition and a check for
+"open" that ensures that we unlock this object before we can open it.
+
+If the lock status isn't obvious, don't try to unlock the object as a
+precondition. Instead, test to make sure it's unlocked in the 'check'
+routine, and fail.
+
+</div>
+
+<p><span id="dobjFor(Unlock)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Unlock)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3877">3877</a>]</p>
+
+<div class="desc">
+
+"unlock"
+
+</div>
+
+<p><span id="dobjFor(UnlockWith)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(UnlockWith)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3904">3904</a>]</p>
+
+<div class="desc">
+
+"unlock with"
+
+</div>
+
+<p><span id="examineStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">examineStatus ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3773">3773</a>]</p>
+
+<div class="desc">
+
+show our status
+
+</div>
+
+<p><span id="initializeThing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeThing ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3842">3842</a>]</p>
+
+<div class="desc">
+
+initialization
+
+</div>
+
+<p><span id="isLocked"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isLocked ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3746">3746</a>]</p>
+
+<div class="desc">
+
+Current locked state. Use our isLocked\_ status if we're the master,
+otherwise defer to the master.
+
+</div>
+
+<p><span id="makeLocked"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">makeLocked (stat)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3760">3760</a>]</p>
+
+<div class="desc">
+
+Make the object locked or unlocked. Objects can override this to apply
+side effects of locking or unlocking. By default, if we're the master,
+we'll simply set our isLocked\_ property to the new status, and
+otherwise defer to the master object.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

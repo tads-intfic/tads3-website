@@ -1,0 +1,426 @@
+<p>Resources in HTML TADS</p>
+
+<h1 id="resources-in-html-tads">Resources in HTML TADS</h1>
+
+<h3 id="what-is-a-resource">What is a “resource”?</h3>
+
+<p>If you’re a Macintosh or Windows system programmer (or you’ve done any
+other type of graphical user interface programming), you’re probably
+familiar with the term “resource,” meaning a bit of data, usually
+binary, that’s external to a program, and which is loaded and used by
+the program as it runs. Resources in this context are used for things
+such as icons, bitmaps, menu definitions, and other types of initialized
+binary data that would be inconvenient to type in to a C program
+directly; resources are also used to externalize things such as strings,
+so that they can be changed without recompiling the program (which is
+useful when translating a program to a different national language, for
+example). On most GUI systems, the operating system provides a set of
+tools, programmatic interfaces, and file format definitions for
+manipulating resources.</p>
+
+<p>HTML TADS uses the term “resource” for a similar concept, although the
+implementation is quite different. HTML TADS resources are <em>not</em>
+implemented using operating system resources. To avoid any confusion,
+keep in mind that normal operating system resources are never used in an
+HTML TADS context.</p>
+
+<p>HTML TADS allows the game author to incorporate certain types of binary
+data, such as JPEG, PNG, and MNG images, into a game. With normal HTML
+in a normal Web browser, these objects are referenced using URL’s
+(“Uniform Resource Locators,” the filename-like strings that identify
+web pages and graphics; URL’s usually look something like
+“http://www.somewhere.com/dir/whatever.html”).</p>
+
+<p>HTML TADS is not a normal browser, and it doesn’t interpret object
+references as URL’s. Instead, it uses resources.</p>
+
+<h3 id="specifying-resource-names"><span id="naming">Specifying resource names</span></h3>
+
+<p>A game author uses a resource by referring to the resource from an HTML
+tag in the game’s text. When the game displays the tag, HTML TADS loads
+the resource and displays it as specified by the tag.</p>
+
+<p>As mentioned earlier, with normal HTML, this type of reference is simply
+a URL that points to a file stored on a web server. With HTML TADS, the
+reference is instead a resource name.</p>
+
+<p>At its simplest, a resource name is very much like a relative URL –
+that is, one which is specified relative to the address of the page that
+references it, and therefore doesn’t contain any protocol or absolute
+path prefix. This type of URL reference might look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   &lt;IMG SRC="background.jpeg"&gt;
+</code></pre></div></div>
+
+<p>This tells the browser to load an image from a file called
+“background.jpeg”, looking in the same location as the current page.</p>
+
+<p>HTML TADS resource references work very much like this, because they’re
+simply filenames. The location of the “current page” for HTML TADS is
+always the directory that contains your .GAM file or .t3 file.</p>
+
+<p>For example, support you’re running Windows 95, and the compiled version
+of the game you’re working on is called <code class="language-plaintext highlighter-rouge">C:\TADS\GAMES\MYGAME.GAM</code>. The
+root location where HTML TADS will start looking for resource files is
+the directory containing the .GAM file, <code class="language-plaintext highlighter-rouge">C:\TADS\GAMES</code>. Now, suppose
+you use this tag in your game text:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;IMG SRC="picture.jpg"&gt;
+</code></pre></div></div>
+
+<p>HTML TADS will load the image from the file <code class="language-plaintext highlighter-rouge">C:\TADS\GAMES\PICTURE.JPG</code>,
+since it looks for the file you specify in the directory containing the
+.GAM or .t3 file.</p>
+
+<p>Note that you can <strong>never</strong> refer to resources across the internet - you
+can’t use “http:” or “ftp:” paths, for example. You can only refer to
+resources that are on the local computer’s hard disk.
+<span id="RelativePaths"></span></p>
+
+<h3 id="relative-paths">Relative Paths</h3>
+
+<p>The name of a resource can include a “relative path,” using roughly the
+same format as a relative URL. Since HTML TADS doesn’t interpret actual
+URL’s, you can’t start a resource name with “http://” as you would an
+absolute URL; instead, you use a path that’s relative to the current
+location (which is always the directory containing the .GAM or .t3
+file), just as you could use an URL relative to the current page.</p>
+
+<p>HTML TADS resource names that use relative paths <em>always</em> use slashes
+for the path separator characters, regardless of what conventions your
+operating system uses. TADS internally converts these paths into
+appropriate filenames for the local system. Because resource names
+always use a uniform notation, regardless of the type of operating
+system you’re using, you don’t have to worry about changing your game to
+make it run on other operating systems.</p>
+
+<p>Suppose you’re running on a Macintosh, and your compiled game file is
+called <code class="language-plaintext highlighter-rouge">Macintosh HD:TADS:Games:MyGame.gam</code>. Now suppose your game
+displays this tag:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;IMG SRC="pics/skull.png"&gt;
+</code></pre></div></div>
+
+<p>HTML TADS will convert this to a Macintosh filename, treating it as a
+path relative to the folder containing the .GAM or .t3 file, so it will
+look for a file called <code class="language-plaintext highlighter-rouge">Macintosh HD:TADS:Games:pics:skull.png</code>.
+<span id="CaseSensitivity"></span></p>
+
+<h3 id="case-sensitivity">Case Sensitivity</h3>
+
+<p>You need to be careful about using upper- and lower-case letters in your
+resource names. HTML TADS does not itself treat case as significant, but
+some file systems (notably Unix) do. If you’re developing your game on
+an operating system with case-sensitive filenames, you’ll need to use
+the exact mixture of upper- and lower-case letters in your resource
+references as you do in the actual filenames.</p>
+
+<p>Note that the HTML TADS <a href="#EmbeddedResources">resource mechanism</a> is
+<em>not</em> case-sensitive. So, if you develop a game on a system with
+case-sensitive filenames, and then you bundle your resources into the
+.GAM or .t3 file for distribution, the resource names will not
+distinguish case in the version your players receive. While this may
+appear at first glance to simplify things for you, it actually can
+create a problem: if you have two resources whose names differ only in
+case, HTML TADS will treat them as separate resources as long as they’re
+in external files, but it will <em>not</em> be able to tell them apart after
+you bundle them into the .GAM or .t3 file. So, if you’re developing on a
+case-sensitive operating system, be careful that your resource names are
+all unique irrespective of case.</p>
+
+<p>Note that resource names only need to be unique within a directory. You
+may still want to avoid using the same resource name for different files
+in different directories, because of the confusion it might create for
+you, but HTML TADS will distinguish files with the same name based on
+their paths, regardless of whether you’re using external files or
+bundled resources.</p>
+
+<h3 id="image-types">Image types</h3>
+
+<p>HTML TADS supports two static image formats: JPEG and PNG. Ideally, HTML
+TADS would support only one format, since this would make it easier to
+port HTML TADS to new operating systems; however, no single image format
+adequately addresses the full range of needs for storing images.
+Fortunately, the JPEG and PNG formats complement one another very well,
+so between the two, most needs should be met.</p>
+
+<p>In addition to the static image formats, HTML TADS supports MNG, an
+animated image format.</p>
+
+<p>Note that the GIF format is not supported. Although GIF is a widely
+deployed and popular image format, I chose not to support it in HTML
+TADS due to patent licensing restrictions on the GIF data compression
+system. PNG provides all of the benefits of GIF (and more), without the
+onerous restrictions encumbering GIF, and is becoming widely supported.</p>
+
+<p>You can learn more about the PNG format at
+<a href="http://www.cdrom.com/pub/png/">http://www.cdrom.com/pub/png/</a> . This site includes information about
+tools that support PNG. Even if the graphics software you prefer to use
+doesn’t support this format, conversion tools are available that produce
+PNG files from files in the other popular formats.</p>
+
+<p>Information about the MNG format can be found at <a href="http://www.libpng.org/pub/mng/">the MNG web
+site</a>.</p>
+
+<h3 id="sound-types">Sound types</h3>
+
+<p>HTML TADS supports four sound formats: MIDI, WAV, MPEG Audio 2.0 (layers
+I, II, and III, also known as MP1, MP2, and MP3, respectively), and Ogg
+Vorbis digital audio. Refer to <a href="sound.html">HTML TADS Sounds and Music</a>
+for information on the sound features in HTML TADS.</p>
+
+<p>We recommend using Ogg Vorbis over MP3. Ogg is generally considered a
+superior format in terms of playback quality and compression ratio, and
+it’s a fully open-source format. Some Linux Multimedia TADS players
+don’t support MP3 due to intellectual property entanglements, but all
+platforms support Ogg.</p>
+
+<h3 id="filename-suffixes">Filename suffixes</h3>
+
+<p>HTML TADS determines the type of object that a resource contains based
+on the resource’s suffix. You must always use an appropriate suffix when
+naming a resource. Here are the valid suffixes:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.JPG</code> - a JPEG image</li>
+  <li><code class="language-plaintext highlighter-rouge">.JPE</code> - a JPEG image</li>
+  <li><code class="language-plaintext highlighter-rouge">.JPEG</code> - a JPEG image</li>
+  <li><code class="language-plaintext highlighter-rouge">.PNG</code> - a PNG (Portable Network Graphics) image</li>
+  <li><code class="language-plaintext highlighter-rouge">.MNG</code> - an MNG (Multiple-image Network Graphics) animated image</li>
+  <li><code class="language-plaintext highlighter-rouge">.MID</code> - a MIDI music sequence</li>
+  <li><code class="language-plaintext highlighter-rouge">.MIDI</code> - a MIDI music sequence</li>
+  <li><code class="language-plaintext highlighter-rouge">.WAV</code> - waveform audio</li>
+  <li><code class="language-plaintext highlighter-rouge">.MPG</code> - MPEG audio 2.0 layer (II or III) sound</li>
+  <li><code class="language-plaintext highlighter-rouge">.MP2</code> - MPEG audio 2.0 layer II sound</li>
+  <li><code class="language-plaintext highlighter-rouge">.MP3</code> - MPEG audio 2.0 layer III sound</li>
+  <li><code class="language-plaintext highlighter-rouge">.OGG</code> - Ogg Vorbis digital audio</li>
+</ul>
+
+<p>Note that the suffix always begins with a period.</p>
+
+<p>Some of the types are associated with multiple suffixes. For example,
+JPEG images can use the suffixes .JPG, .JPE, and .JPEG. There’s no
+difference between the suffixes in these cases; the variations are
+allowed simply because the different suffixes are all in widespread use.
+<span id="EmbeddedResources"></span></p>
+
+<h3 id="embedding-resources-in-a-gam-or-t3-file">Embedding resources in a .GAM or .t3 file</h3>
+
+<p>To make it easy to distribute a game, you can embed all of your
+resources into your compiled .GAM or .t3 file. Once the resources are
+embedded, you only have to distribute the compiled game file - you don’t
+have to distribute all of the JPEGs and PNGs and OGGs and so on
+individually. (This also makes it a little more work for players to
+“cheat” by browsing the images in your game; the temptation could be
+overwhelming if you were to distribute your game with a set of .JPG
+files.)</p>
+
+<p>Since you may not want to go to the trouble of embedding your resources
+in the .GAM or .t3 file while you’re developing your game (since you’ll
+probably be recompiling the game frequently), the resource embedding
+mechanism is strictly optional. Most authors will want to use external
+files while developing a game, and then bundle everything into the
+compiled game file when building the distribution version of the game.
+You generally won’t want to bundle resources into the compiled game file
+while working on the game, since you’d need to apply the extra resource
+bundling step each time you compile the game.</p>
+
+<p>Note that, apart from the possible differences in <a href="#CaseSensitivity">case
+sensitivity</a> between your operating system and the
+HTML TADS resource mechanism, you won’t have to make any changes in your
+game to switch between using external files and bundled resources. The
+bundling mechanism stores the resources using the same name they’d have
+if they were external files.</p>
+
+<p>To embed resources into a .GAM or .t3 file, you use the TADS resource
+manager. For TADS 2, this is called TADSRSC; for TADS 3, it’s t3res.</p>
+
+<p>The simplest way of using the resource manager is to store all of your
+resources in one or more subdirectories of the directory containing the
+compiled game file. Since <a href="#RelativePaths">relative paths</a> work best for
+external files if you’re working this way, you’ll probably want to
+arrange your resources into this type of directory structure anyway.</p>
+
+<p>Suppose you have your resources in two subdirectories of the directory
+containing your .GAM file; the subdirectories are called <code class="language-plaintext highlighter-rouge">Rooms</code> and
+<code class="language-plaintext highlighter-rouge">Objects</code>. Using external files, you’d refer to resources in one of
+these directories using a tag like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;IMG SRC="Rooms/Cave.jpeg"&gt;
+</code></pre></div></div>
+
+<p>To bundle all of these resources into your .GAM file, you’d first
+compile your game as normal, then you’d run TADSRSC or t3res on it:</p>
+
+<p><code class="language-plaintext highlighter-rouge">tadsrsc mygame.gam Rooms Objects</code></p>
+
+<p><em>for TADS 2</em></p>
+
+<p><code class="language-plaintext highlighter-rouge">t3res mygame.t3 Rooms Objects</code></p>
+
+<p><em>for TADS 3</em></p>
+
+<p>This invokes the resource manager, and tells it to store every file in
+the <code class="language-plaintext highlighter-rouge">Rooms</code> and <code class="language-plaintext highlighter-rouge">Objects</code> subdirectories in your .GAM or .t3 file. The
+resource tool stores these resources using the same names they’d have if
+they were external files, so your cave picture gets stored as a resource
+called <code class="language-plaintext highlighter-rouge">Rooms/Cave.jpeg</code> in the game file.</p>
+
+<p>Note that you need to run TADSRSC/t3res each time you compile your game,
+because the TADS compiler overwrites any existing copy of your .GAM/.t3
+file each time you compile your game.</p>
+
+<p>When you refer to a resource, HTML TADS always looks for the resource in
+the .GAM or .t3 file first. If it can’t find a resource in the game
+file, it looks for an external file. <span id="ExternalResfiles"></span></p>
+
+<h3 id="using-external-resource-files-for-multiple-configurations">Using External Resource Files for Multiple Configurations</h3>
+
+<p>If you’re planning to distribute your game on CD-ROM, or better yet
+DVD-ROM, you’re probably not too concerned about how big your game is
+going to be when you bundle together all of your image and sound files.
+However, if you’re planning to distribute your game over the internet,
+you probably will be concerned about the total size of your distribution
+files, and you may want to accommodate players who have slow network
+connections.</p>
+
+<p>One approach to accommodating players who don’t want to download very
+large game files is simply to be conservative in your use of graphics
+and sound resources. HTML TADS allows you to use graphics and sounds as
+heavily or lightly as you like; if you use graphics and sound in only a
+few places, where they will provide the greatest impact, you can keep
+your total distribution size within reason.</p>
+
+<p>An alternative approach that some game authors may wish to consider is
+to offer their games in multiple configurations. The idea is that you
+offer your game in two or more pieces: a “core” file that everyone
+downloads, which includes the .GAM or .t3 file plus the minimum set of
+resources; and one or more add-on files that people can download at
+their option, and which contain additional resources that you consider
+optional. Alternatively, you could provide one file that contains
+full-quality versions of your resources, and a separate file that
+contains lower-quality (using fewer colors, for example, or lower
+resolution digitized sound) and therefore smaller versions of the same
+resources; people with slow connections would be able to download the
+lower-quality version if they wanted, but those who had a fast network
+connection (or lots of patience) would still be able to get the
+full-quality version.</p>
+
+<p>To facilitate these types of configuration options, HTML TADS lets you
+put your resources into separate files from your .GAM/.t3 file. With
+external resource files, you can still bundle a group of files into a
+single file for easier distribution, but now they’re separated from the
+.GAM/.t3 file for more versatile configuration.</p>
+
+<p><strong>TADS 2 Note:</strong> the external resource file mechanism requires TADSRSC
+version 2.2.4 or higher.</p>
+
+<h4 id="creating-external-resource-files">Creating External Resource Files</h4>
+
+<p>You prepare a secondary resource file using the same resource manager as
+you use to add resources to your .GAM/.t3 file. The only difference is
+that, in order to create your external resource file in the first place,
+you must use the <code class="language-plaintext highlighter-rouge">-create</code> option on the resource manager command line:</p>
+
+<p><code class="language-plaintext highlighter-rouge">tadsrsc -create mygame.rs0 -add Rooms</code></p>
+
+<p><em>for TADS 2</em></p>
+
+<p><code class="language-plaintext highlighter-rouge">t3res -create mygame.3r0 -add Rooms</code></p>
+
+<p><em>for TADS 3</em></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">-create</code> option tells the resource manager to create a new file
+rather than look for an existing file. You would never use this option
+with a .GAM or .t3 file, of course, because the TADS compiler creates
+the game file before you add resources to it; with a separate resource
+file, there’s no prior compilation step, so you need to create the file
+directly with the resource manager the first time you use it.</p>
+
+<h4 id="how-html-tads-loads-external-resource-files">How HTML TADS Loads External Resource Files</h4>
+
+<p>Whenever HTML TADS loads a game, it looks to see if there are any files
+in the same directory as the game with the same name as the game and the
+suffix “.rsN” (for TADS 2) or “.3rN” (for TADS 3), where N is a digit
+from 0 to 9. For example, if your game is called GOLD.GAM, HTML TADS
+will look in the same directory as GOLD.GAM for files called GOLD.RS0,
+GOLD.RS1, GOLD.RS2, and so on. For a TADS 3 game called GOLD.T3, the
+interpreter would look for GOLD.3R0, GOLD.3R1, GOLD.3R2, and so on. HTML
+TADS will open each file and add its resources to the resources in the
+.GAM/.t3 file.</p>
+
+<p>A resource in an external resource file overrides a resource of the same
+name in the .GAM or .t3 file. This allows you to place your minimum,
+core set of resources in the game file, so that everyone who downloads
+your game has at least that minimal set of resources, and then provide
+an “upgrade” resource file to players that don’t mind the additional
+download. Since the separate resource file overrides the .GAM file
+resources, players who download the additional file will automatically
+see the upgraded resources.</p>
+
+<p>If resources with the same name appear in multiple external resource
+files, the resource in the file with the highest suffix number overrides
+any conflicting resources. For example, if MYGAME.RS3 and MYGAME.RS1
+both contain a resource with the same name, the resource in MYGAME.RS3
+is used, and the one in MYGAME.RS1 is ignored. (Likewise for TADS 3
+files: MYGAME.3R3 overrides MYGAME.3R1.)</p>
+
+<p>Note that the player can optionally specify the path to the external
+resource files. By default, HTML TADS looks for resource files in the
+same directory that contains the .GAM file. If, for some reason, the
+player can’t put resource files into the same directory (which might be
+the case if some of the files are distributed on read-only media such as
+CD-ROM, while others are distributed for installation on the player’s
+hard disk), the player can specify another directory for resource files.
+To do this, the player uses the <code class="language-plaintext highlighter-rouge">-respath</code> command-line option when
+invoking HTML TADS:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    htmltads -respath d:\gold\res gold.gam
+</code></pre></div></div>
+
+<p>This tells HTML TADS to run GOLD.GAM from the current directory, but to
+look for GOLD.RS0, GOLD.RS1, and so on in the directory <code class="language-plaintext highlighter-rouge">D:\GOLD\RES</code>
+instead of in the current directory.</p>
+
+<h4 id="an-example-of-using-external-resource-files">An Example of Using External Resource Files</h4>
+
+<p>Numerous configurations are possible using this mechanism. As an
+example, one use of external resource files would be to provide a
+high-quality version of your sound effects for people that didn’t mind
+large files, and a lower-quality version for people with slow network
+connections. To do this, you’d sample your sound effects at full
+quality, then use the sound tool of your choice to produce smaller
+versions (for example, by reducing the quantization, or reducing a
+stereo recording to mono). Put the high-quality sounds in the directory
+AudioHQ, and put the more compact versions in AudioLQ. Now you can
+produce a pair of resource files for the sound effects:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    tadsrsc -create mygame.rs0 -add AudioLQ
+    tadsrsc -create mygame.rs1 -add AudioHQ
+</code></pre></div></div>
+
+<p>We’ve intentionally placed the higher-quality resources in the .RS1
+file, so that if a player should happen to have both resource files
+installed, the higher-quality ones will be used. (As described earlier,
+the resource mechanism automatically picks the resource in the
+highest-numbered resource file if the same resource name appears in
+multiple external resource files.)</p>
+
+<p>When you distribute your game, you would put together two zip files. The
+first contains MYGAME.GAM and MYGAME.RS0; this is the large version, for
+people with fast network connections. The second contains MYGAME.GAM and
+MYGAME.RS1; this is the compact version.
+<span id="compatibility"></span></p>
+
+<h3 id="embedded-resources-and-tads-2-gam-file-compatibility">Embedded Resources and TADS 2 .GAM File Compatibility</h3>
+
+<p>HTML TADS uses the same TADS .GAM file format as previous versions of
+TADS (file format version “C”), so games that you compile for HTML TADS
+can be read by older versions of the interpreter. However, note that
+embedded HTML resources do use a new resource type, which older
+interpreters will not recognize. Therefore, if you embed resources
+directly into your .GAM file, players that play the game with a
+character-mode interpreter must have at least version 2.2.3. If you do
+not embed resources directly in your .GAM file, this restriction does
+not apply; you may want to use external resource files, as described
+above, if this is of concern to you.</p>

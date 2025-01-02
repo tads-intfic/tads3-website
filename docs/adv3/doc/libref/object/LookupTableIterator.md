@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LookupTableIterator</span><span class="type">class</span>
 
 [lookup.h](../file/lookup.h.html)\[[143](../source/lookup.h.html#143)\]

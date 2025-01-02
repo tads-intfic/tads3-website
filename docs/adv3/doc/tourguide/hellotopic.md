@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,29 +9,29 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>HelloTopic : <a
-href="misctopic.htm">MiscTopic</a><br />
+href="misctopic.html">MiscTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="yesno+specialtopics.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="imphellotopic.htm">[Next]</a></td>
+href="yesno+specialtopics.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="imphellotopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 A HelloTopic is normally used in connection with [greeting
-protocols](greetingprotocols.htm). Its main purpose is to respond to a
+protocols](greetingprotocols.html). Its main purpose is to respond to a
 HELLO command or equivalent (such as TALK TO X). The normal place to put
 a HelloTopic would be in a
-[ConversationReadyState](conversationreadystate.htm), where it will
+[ConversationReadyState](conversationreadystate.html), where it will
 respond to any conversational command addressed to the NPC just before
 the NPC is switched into the corresponding
-[InConversationState](inconversationstate.htm). If you want to
+[InConversationState](inconversationstate.html). If you want to
 differentiate between the case in which a conversation starts with an
 explicit HELLO, or TALK TO command, and when it starts with some other
 conversational command such as ASK ABOUT, you can use an
-[ImpHelloTopic](imphellotopic.htm) for the latter.  
+[ImpHelloTopic](imphellotopic.html) for the latter.  
   
 Since King Solomon initiates the conversation the first time the player
 character walks in on him (we'll code that later), there's no need to

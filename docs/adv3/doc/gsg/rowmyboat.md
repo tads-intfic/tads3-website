@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](lettherebelight.htm)   [\[Next\]](goingshopping.htm)*
+*[\[Previous\]](lettherebelight.html)   [\[Next\]](goingshopping.html)*
 
 ## Row My Boat
 
@@ -344,6 +346,6 @@ your boat.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](lettherebelight.htm)   [\[Next\]](goingshopping.htm)*
+*[\[Previous\]](lettherebelight.html)   [\[Next\]](goingshopping.html)*
 
 </div>

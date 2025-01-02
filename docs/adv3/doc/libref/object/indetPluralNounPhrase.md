@@ -1,3 +1,5 @@
+---
+---
 <span class="title">indetPluralNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`indetPluralNounPhrase(basic)`](../object/indetPluralNounPhrase(basic).html)</span>` :   `[`LayeredNounPhraseProd`](../object/LayeredNounPhraseProd.html)

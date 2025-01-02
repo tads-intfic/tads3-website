@@ -1,3 +1,5 @@
+---
+---
 <span class="title">vector.h</span><span class="type">file</span>
 
 [source file](../source/vector.h.html)

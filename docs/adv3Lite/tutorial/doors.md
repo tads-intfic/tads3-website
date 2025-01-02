@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Doors and Locks  
-<span class="navnp"><a href="airmap3.htm" class="nav"><em>Prev:</em> Aboard the Plane</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Doors and Locks  
+<span class="navnp"><a href="airmap3.html" class="nav"><em>Prev:</em> Aboard the Plane</a>
    
-<a href="schemes.htm" class="nav"><em>Next:</em> Schemes and Devices</a>
+<a href="schemes.html" class="nav"><em>Next:</em> Schemes and Devices</a>
     </span>
 
 </div>
@@ -195,7 +197,7 @@ again make for a smoother playing experience.
 
 Once a key has been tried and found to work, the key will "remember"
 what it works on, so the parser can make an even better choice. You can
-find the full story on [keys](../manual/key.htm) in the *adv3Lite
+find the full story on [keys](../manual/key.html) in the *adv3Lite
 Library Manual*.
 
 Now try compiling and running the game once more and see if you can gain
@@ -453,7 +455,7 @@ players to have access to these commands, so when you come to compile
 your game for release you should use the 'Compile for Release' option in
 Workbench, and not use the <span class="code">-d</span> option when
 compiling from the command line. For further information on [debugging
-commands](../manual/debug.htm), consult the *adv3Lite Library Manual*.
+commands](../manual/debug.html), consult the *adv3Lite Library Manual*.
 
 So, try running the game and using the PURLOIN command to get hold of
 the ID card (after you've passed through the metal detector!), and then
@@ -591,11 +593,11 @@ features of adv3Lite.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Doors and Locks  
-<span class="navnp"><a href="airmap3.htm" class="nav"><em>Prev:</em> Aboard the Plane</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Doors and Locks  
+<span class="navnp"><a href="airmap3.html" class="nav"><em>Prev:</em> Aboard the Plane</a>
    
-<a href="schemes.htm" class="nav"><em>Next:</em> Schemes and Devices</a>
+<a href="schemes.html" class="nav"><em>Next:</em> Schemes and Devices</a>
     </span>
 
 </div>

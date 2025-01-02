@@ -1,3 +1,5 @@
+---
+---
 # V
 
 [**`VagueTravel`**](../object/VagueTravel.html) - object in

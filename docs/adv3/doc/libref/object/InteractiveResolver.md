@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InteractiveResolver</span><span class="type">class</span>
 
 [disambig.t](../file/disambig.t.html)\[[335](../source/disambig.t.html#335)\],

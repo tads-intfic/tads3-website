@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Sense</span><span class="type">class</span>
 
 [sense.t](../file/sense.t.html)\[[104](../source/sense.t.html#104)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PendingCommandMarker</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[10566](../source/actor.t.html#10566)\]

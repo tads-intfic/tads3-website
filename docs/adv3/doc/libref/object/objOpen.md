@@ -1,3 +1,5 @@
+---
+---
 <span class="title">objOpen</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[922](../source/precond.t.html#922)\]

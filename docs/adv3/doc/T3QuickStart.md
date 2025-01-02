@@ -1,3 +1,5 @@
+---
+---
 <div class="main" role="main">
 
 <div class="section">
@@ -349,12 +351,12 @@ of the tutorial manuals and are writing your own game(s), but for most
 people, they are not the best place to start.
 
 That said, the
-<a href="sysman/cover.htm" class="title" target="_blank">TADS 3 System
+<a href="sysman/cover.html" class="title" target="_blank">TADS 3 System
 Manual</a> does contain a lot of material that might be of interest to
 confident beginners with a strong programming background (whether
 professional, amateur or hobbyist) who want to see how things are done
 in TADS 3, and the earlier sections of the
-<a href="techman/cover.htm" class="title" target="_blank">TADS 3
+<a href="techman/cover.html" class="title" target="_blank">TADS 3
 Technical Manual</a> do contain a number of "how-to" articles that might
 be of interest to beginners. Nevertheless, for most new users of TADS 3
 these two reference manuals will not be the best place to start; for one

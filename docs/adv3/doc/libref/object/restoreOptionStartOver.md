@@ -1,3 +1,5 @@
+---
+---
 <span class="title">restoreOptionStartOver</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[2210](../source/misc.t.html#2210)\]

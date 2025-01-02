@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultWestWall</span><span class="type">object</span>
 
 [roomparts.t](../file/roomparts.t.html)\[[112](../source/roomparts.t.html#112)\]

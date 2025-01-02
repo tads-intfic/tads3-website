@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -10,9 +12,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 Parameters<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="definingverbs.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="pasttense.htm">[Next]</a></td>
+href="definingverbs.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="pasttense.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -27,6 +29,6 @@ For example, according to context this example might be displayed as
 highly flexible mechanism for writing general-purpose messages that can
 be automatically customised to a wide variety of particular situations.
 For a more detailed explanation of how these work, see the article on
-'<a href="../techman/t3msg.htm" target="_top">Message Parameter
+'<a href="../techman/t3msg.html" target="_top">Message Parameter
 Substitutions</a>' in the *Technical Manual*.<u>  
 </u>  

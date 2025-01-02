@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Component</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[282](../source/extras.t.html#282)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FileSyncException</span><span class="type">class</span>
 
 [file.t](../file/file.t.html)\[[135](../source/file.t.html#135)\]

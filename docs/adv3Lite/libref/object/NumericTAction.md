@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NumericTAction</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[2706](../source/action.t.html#2706)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InternalSeparatorMessage</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[145](../source/report.t.html#145)\]

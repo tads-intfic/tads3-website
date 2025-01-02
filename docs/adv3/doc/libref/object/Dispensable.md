@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Dispensable</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[1806](../source/extras.t.html#1806)\]

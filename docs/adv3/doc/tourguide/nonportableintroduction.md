@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>NonPortable Introduction<br />
 </strong></td>
-<td style="text-align: right;"><a href="inroomname.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="fixture.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="inroomname.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="fixture.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -43,24 +45,24 @@ A partial tree of NonPortable classes, some of which we have already
 met, is as follows:  
   
 **NonPortable**  
-<u>   </u>[Fixture](fixture.htm)  
-      [Component](component.htm)  
-         [ComplexComponent](complexcontainer.htm)  
-      [Decoration](decoration.htm)  
-         [Unthing](unthing.htm)  
-      [Distant](distant.htm)  
-      [Enterable](enterable.htm)  
-         [EntryPortal](entryportal.htm)  
-      [Exitable](shipboardroom.htm)  
-         [ExitPortal](exitportal.htm)  
-      [NominalPlatform](nominalplatform.htm)  
-      [Passage](introduction.htm)  
-      [Room](introduction.htm)  
-      [RoomPart](roomparts.htm)  
-      [SecretFixture](lockablecontainer.htm#secretfixture)  
-   [Immovable](immovable.htm)  
-      [Heavy](heavy.htm)  
-         [TravelPushable](travelpushable.htm)  
+<u>   </u>[Fixture](fixture.html)  
+      [Component](component.html)  
+         [ComplexComponent](complexcontainer.html)  
+      [Decoration](decoration.html)  
+         [Unthing](unthing.html)  
+      [Distant](distant.html)  
+      [Enterable](enterable.html)  
+         [EntryPortal](entryportal.html)  
+      [Exitable](shipboardroom.html)  
+         [ExitPortal](exitportal.html)  
+      [NominalPlatform](nominalplatform.html)  
+      [Passage](introduction.html)  
+      [Room](introduction.html)  
+      [RoomPart](roomparts.html)  
+      [SecretFixture](lockablecontainer.html#secretfixture)  
+   [Immovable](immovable.html)  
+      [Heavy](heavy.html)  
+         [TravelPushable](travelpushable.html)  
   
 **A Note on Notation  
 **In what follows we shall specify the room location of objects using

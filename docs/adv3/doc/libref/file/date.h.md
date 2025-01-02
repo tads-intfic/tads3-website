@@ -1,3 +1,5 @@
+---
+---
 <span class="title">date.h</span><span class="type">file</span>
 
 [source file](../source/date.h.html)

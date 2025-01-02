@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Aboard the Plane  
-<span class="navnp"><a href="airmap2.htm" class="nav"><em>Prev:</em> Extending the Map</a>
-    <a href="doors.htm" class="nav"><em>Next:</em> Doors and Locks</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Aboard the Plane  
+<span class="navnp"><a href="airmap2.html" class="nav"><em>Prev:</em> Extending the Map</a>
+    <a href="doors.html" class="nav"><em>Next:</em> Doors and Locks</a>
     </span>
 
 </div>
@@ -23,7 +25,7 @@
 We'll put the map of the plane in another separate source file, so start
 by adding a file to your project called plane.t (if you can't remember
 how to do this, refer to the instructions at the start of the [previous
-section](airmap2.htm)). Remember to make sure you new source file begins
+section](airmap2.html)). Remember to make sure you new source file begins
 with:
 
 <div class="code">
@@ -59,7 +61,7 @@ each room belongs to). A Region is simply a way of grouping rooms that
 have something significant in common. At first sight this may not seem
 all that useful, but we'll demonstrate a couple of uses for it by the
 time we reach the end of this section. If you're anxious to know more
-about them, you can read about [regions](../manual/room.htm#regions) in
+about them, you can read about [regions](../manual/room.html#regions) in
 the *Adv3Lite Library Manual*.
 
 Since all the rooms we're about to define are aboard a plane, the other
@@ -279,7 +281,7 @@ MultiLocs are best restricted to:
     square and retrieving the same coin from the same fountain in the
     southwest corner.
 
-The full story on [MultiLocs](../manual/multiloc.htm) can be found in
+The full story on [MultiLocs](../manual/multiloc.html) can be found in
 the *adv3Lite Library Manual*.
 
 Armed with these provisos, we can define a second MultiLoc to provide a
@@ -368,10 +370,10 @@ game again to ensure that everything works as expected.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Aboard the Plane  
-<span class="navnp"><a href="airmap2.htm" class="nav"><em>Prev:</em> Extending the Map</a>
-    <a href="doors.htm" class="nav"><em>Next:</em> Doors and Locks</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Aboard the Plane  
+<span class="navnp"><a href="airmap2.html" class="nav"><em>Prev:</em> Extending the Map</a>
+    <a href="doors.html" class="nav"><em>Next:</em> Doors and Locks</a>
     </span>
 
 </div>

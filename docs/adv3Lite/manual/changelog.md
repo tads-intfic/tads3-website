@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,9 +8,9 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Change Log</a> \> Change Log  
-<span class="navnp"><a href="conclusion.htm" class="nav"><em>Prev:</em> Conclusion</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Change Log</a> \> Change Log  
+<span class="navnp"><a href="conclusion.html" class="nav"><em>Prev:</em> Conclusion</a>
     <a href="manual_idx.html" class="nav"><em>Next:</em> Index</a>
    </span>
 
@@ -63,7 +65,7 @@ expected.
 ------------------------------------------------------------------------
 
 All the occurrences of gDobj and gIobj within verify routines have been
-replaced with [gVerifyDobj and gVerifyIobj](actres.htm#gTentative)
+replaced with [gVerifyDobj and gVerifyIobj](actres.html#gTentative)
 (respectively). This should help guard against any further run-time
 error bugs of the kind noted below in relation to locks and keys (that
 is, run-time errors resulting from attempts by verify routines to
@@ -72,7 +74,7 @@ values are).
 
 ------------------------------------------------------------------------
 
-The new Action property [failedActionCountsAsTurn](actres.htm#failturn)
+The new Action property [failedActionCountsAsTurn](actres.html#failturn)
 allows game code to optionally make actions that fail at the verify
 stage not count as a turn (so that no further turn processing takes
 place).
@@ -87,7 +89,7 @@ conditionally, a little like AgendaItems.
 ------------------------------------------------------------------------
 
 The library module extras.t now defines a
-[MinorItem](extra.htm#minoritem) class (based on work by Joey Cramsey)
+[MinorItem](extra.html#minoritem) class (based on work by Joey Cramsey)
 which can be used to define unobtrusive items that should only be
 mentioned in response to LOOK or WHATEVER ALL under certain
 circumstances (such as being directly in the outermost room, the actor's
@@ -120,7 +122,7 @@ in any case include the appropriate header file.
 
 The Room class now defines a new **noScriptAfterListen** property which,
 if true (the default) prevents the room's
-[roomDaemon()](room.htm#roomdaemon) method calling the room's doScript()
+[roomDaemon()](room.html#roomdaemon) method calling the room's doScript()
 method on the same turn as an intransitive LISTEN command. The purpose
 of this is to prevent the clash that might otherwise occur between the
 output of a LISTEN command and an atmospheric message describing a
@@ -133,7 +135,7 @@ sound, thereby avoiding output like:
 ------------------------------------------------------------------------
 
 The Action class now has an
-[isConversational](actoroverview.htm#conversational) property that can
+[isConversational](actoroverview.html#conversational) property that can
 be used to test whether an action is conversational. This is defined as
 true on all the conversational actions such as TalkTo, AskAbout,
 TellAbout and so on.
@@ -207,7 +209,7 @@ call checkRemove() from the check stage of other actions, depending on
 how they are implemented, if they could result in the removal of an
 object from its container without the actor taking the object. In some
 cases it may be easier to use the
-[checkReach(actor)](thing.htm#reaching) method to do this, especially
+[checkReach(actor)](thing.html#reaching) method to do this, especially
 where what is being modelled is the inaccessibility of the object to the
 player character's touch.
 
@@ -225,13 +227,13 @@ check stage before it gets going at the action stage.
 
 ------------------------------------------------------------------------
 
-The library now defines a [noHalt()](actres.htm#nohalt) function which
+The library now defines a [noHalt()](actres.html#nohalt) function which
 can be used in check methods to allow an action to proceed even if the
 check method needs to display some text.
 
 ------------------------------------------------------------------------
 
-The [Special](query.htm#special) class now invalidates the cached list
+The [Special](query.html#special) class now invalidates the cached list
 of active Specials (<span class="code">Special.allActive\_</span>) each
 time its <span class="code">first()</span> method is called. This
 ensures that the list of active Specials is recalculated every time the
@@ -244,7 +246,7 @@ it can be switched off by setting
 ------------------------------------------------------------------------
 
 The library now defines four new macros:
-[**gVerifyDobj**](actres.htm#gTentative), **gVerifyIobj**,
+[**gVerifyDobj**](actres.html#gTentative), **gVerifyIobj**,
 **gTentativeDobjIn(lst)** and **gTentativeIobjIn(lst)**. These are
 principally for use in verify routines of TIActions which want to depend
 on the identity of the other object (for example, of the direct object
@@ -366,7 +368,7 @@ SayTopics defined on the corresponding Actor object or its current
 ActorState. Moreover, several methods and properties are now available
 on the Actor class to tweak this behaviour as game authors wish. For
 full details see the relevant section of this manual on [when implicit
-say happens](specialtopic.htm#implicitsay).
+say happens](specialtopic.html#implicitsay).
 
 ------------------------------------------------------------------------
 
@@ -421,7 +423,7 @@ beginning with 'y', which is applicable only in English.
 
 ------------------------------------------------------------------------
 
-The new [ProxyActor](actorobj.htm#proxy) class can be used to continue
+The new [ProxyActor](actorobj.html#proxy) class can be used to continue
 the definition of a complex actor over more than one source file. Minor
 changes have also been made to the ActorState and AgendaItem classes to
 work with ProxyActor. Set the location property of a ProxyActor to the
@@ -447,12 +449,12 @@ attempting to construct a scope list for a Room.
 ------------------------------------------------------------------------
 
 It is now possible to define a list of exceptions that a
-[DefaultTopic](actortopicentry.htm#exceptions) will not match (allowing
+[DefaultTopic](actortopicentry.html#exceptions) will not match (allowing
 fallthrough to handling these topics elsewhere).
 
 ------------------------------------------------------------------------
 
-The library now defines a [Player](beginning.htm#definingpc) class that
+The library now defines a [Player](beginning.html#definingpc) class that
 can be used to define the player character (although the previous way of
 doing so still works perfectly well). This makes very little practical
 difference but is provided for game authors who feel that defining the
@@ -478,7 +480,7 @@ over any defines on the ActorState.
 ------------------------------------------------------------------------
 
 The **Region** class now defines a new
-[regionDaemon()](room.htm#regionprops) method that's called each turn on
+[regionDaemon()](room.html#regionprops) method that's called each turn on
 all the regions in which the player character is currently located.
 
 ------------------------------------------------------------------------
@@ -524,19 +526,19 @@ either on the TAction class or on individual Actions.
 
 ------------------------------------------------------------------------
 
-The [SymConn](../../extensions/docs/symconn.htm) extension has been
+The [SymConn](../../extensions/docs/symconn.html) extension has been
 significantly enhanced to make it easier to define connections that are
 two-way (using only single doors, passages and the like) but not
 necessarily strictly symmetrical. The extension also adds new
-[SymStairway](../../extensions/docs/symconn.htm#symstair) and
-[SymPathPassage](../../extensions/docs/symconn.htm#sympathpassage)
+[SymStairway](../../extensions/docs/symconn.html#symstair) and
+[SymPathPassage](../../extensions/docs/symconn.html#sympathpassage)
 classes, as well as number of properties and methods to facilitate
 varying the description of SymConnectors from either side.
 
 ------------------------------------------------------------------------
 
 The library now provides a new
-[Brightness](../../extensions/docs/brightness.htm) extension which can
+[Brightness](../../extensions/docs/brightness.html) extension which can
 be used to model different lighting levels. This is based on, but not
 identical to, the implementation of different levels of lighting in the
 adv3 library and is intended to supply what was previously the lack of
@@ -582,12 +584,12 @@ It is now possible to control the order in which rooms in a SenseRegion
 have their contents listed/described in response to an intransitive
 LOOK, LISTEN or SMELL command by using either the room's **listOrder**
 property, or, for finer-grained control, its
-[remoteRoomListOrder(pov)](senseregion.htm#listorder) method (based on a
+[remoteRoomListOrder(pov)](senseregion.html#listorder) method (based on a
 suggestion posted on intfiction.org by Joey "Jess" Cramsey).
 
 ------------------------------------------------------------------------
 
-The [TravelConnector](travel.htm) class now maintains a list of actors,
+The [TravelConnector](travel.html) class now maintains a list of actors,
 vehicles and push-travelers that have traversed the TravelConnector over
 the course of the game. This list is stored in the new **traversedBy**
 property, which can be queried by the new
@@ -616,7 +618,7 @@ travel commands; in such cses the actor will still leave the vehicle
 (since this is probably the most sensible default). If you want to
 change this behaviour for a particular vehicle (say a bike that can be
 ridden into a wood in response to ENTER WOOD) the simplest way to
-accomplish it is almost certainly via a [Doer](doer.htm#enterdoer).
+accomplish it is almost certainly via a [Doer](doer.html#enterdoer).
 
 ------------------------------------------------------------------------
 
@@ -681,13 +683,13 @@ doesn't appear to have any about foo.")
 
 ## <span id="v1.5">Version 1.5 (28-Mar-2016)</span>
 
-There is now a [Weight](../../extensions/docs/weight.htm) extension that
+There is now a [Weight](../../extensions/docs/weight.html) extension that
 can be used to track object weights in much the same way as the standard
 library already tracks bulk.
 
 ------------------------------------------------------------------------
 
-There is now a [SymConn](../../extensions/docs/symconn.htm) (Symmetrical
+There is now a [SymConn](../../extensions/docs/symconn.html) (Symmetrical
 Connectors) extension. This does two things. First, if a direction
 property of a room points to another room, it automatically sets up the
 connection back in the reverse direction (so, for example, if you
@@ -727,7 +729,7 @@ is principally to facilitate implementation of the SymConn extension.
 ------------------------------------------------------------------------
 
 The **Viewport** class in the
-[viewport](../../extensions/docs/viewport.htm#setrooms) extension now
+[viewport](../../extensions/docs/viewport.html#setrooms) extension now
 has a **setRooms()** method that can be called to change the rooms
 overlooked by the Viewport.
 
@@ -928,34 +930,34 @@ remote locations are not added to scope, and objects in remote locations
 are excluded from plural matches if there are also matches in the player
 character's current location (which is more likely to be what the player
 intended to refer to). For details, see the section on [Special Remote
-Scope Considerations](senseregion.htm#specialscope) in the SenseRegion
+Scope Considerations](senseregion.html#specialscope) in the SenseRegion
 chapter.
 
 ------------------------------------------------------------------------
 
 Several new extensions have been added.
-[Relations](../../extensions/docs/relations.htm) and
-[Rules](../../extensions/docs/rules.htm) both provide functionality
+[Relations](../../extensions/docs/relations.html) and
+[Rules](../../extensions/docs/rules.html) both provide functionality
 similar to their Inform 7 equivalents.
-[Sysrules](../../extensions/docs/sysrules.htm) (which needs the Rules
+[Sysrules](../../extensions/docs/sysrules.html) (which needs the Rules
 extension to work) defines a number of rulebooks and rules which can be
 used to fine-tune certain aspects of the turn-cycle.
 
-There is also a new [Collective](../../extensions/docs/collective.htm)
+There is also a new [Collective](../../extensions/docs/collective.html)
 extension which can help manage the relations between a collective and
 its individual items, for example a bunch of grapes from which a number
 of individual grapes may be taken.
 
-There is also a new [SceneTopic](../../extensions/docs/scenetopic.htm)
+There is also a new [SceneTopic](../../extensions/docs/scenetopic.html)
 extension, based on work by Donald Smith, that allows the use of
 ActorTopicEntries that are triggered by the beginning and ending of
 particular scenes: **SceneEndTopic** and **SceneEndTopic**.
 
-The new [Signals](../../extensions/docs/signals.htm) extension builds on
+The new [Signals](../../extensions/docs/signals.html) extension builds on
 the new Relations extensions to provide a framework for objects to send
 signals to other objects and handle them in user-defined ways.
 
-The new [Command Help](../../extensions/docs/cmdhelp.htm) extension
+The new [Command Help](../../extensions/docs/cmdhelp.html) extension
 provides an alternative response to an empty command. Instead of
 executing a LOOK command, the extension will offer the player a short
 menu of options asking what he or she wants to do. If the player
@@ -1015,7 +1017,7 @@ existing definitions. No functionality should be affected.
 
 ------------------------------------------------------------------------
 
-The [Sensory](../../extensions/docs/sensory.htm#simple) extension now
+The [Sensory](../../extensions/docs/sensory.html#simple) extension now
 defines **SimpleNoise** and **SimpleOdor** classes for sounds and smells
 associated with a location rather than with any particular object within
 that location. These may be particularly helpful for defining
@@ -1043,8 +1045,8 @@ effect as before; it just does it more directly.
 The <span class="code">NumberPhrase</span> class in parser.t has now
 been fully implemented. This has allowed two new action classes to be
 added: **NumericAction** and **NumericTAction** (see the manual section
-on [Numeric Actions](literalact.htm#numeric) for details). The Footnote
-action (in the [Footnote](..\..\extensions\docs\footnotes.htm)
+on [Numeric Actions](literalact.html#numeric) for details). The Footnote
+action (in the [Footnote](..\..\extensions\docs\footnotes.html)
 extension) has accordingly been redefined as a
 <span class="code">NumericAction</span>.
 
@@ -1195,7 +1197,7 @@ actions.
 
 ------------------------------------------------------------------------
 
-There is now an ActorState [template](actorstate.htm#template).
+There is now an ActorState [template](actorstate.html#template).
 
 ------------------------------------------------------------------------
 
@@ -1241,7 +1243,7 @@ character through a series of connectors, but previously it was not
 checking whether the travel actually succeeded, leading to odd results
 if progress was barred by a locked door or some other such obstacle.
 This is now fixed, and the new FollowAgendaItem method
-[travelBlocked(conn)](agenda.htm#followprops) allows game code to
+[travelBlocked(conn)](agenda.html#followprops) allows game code to
 respond to the blockage.
 
 ------------------------------------------------------------------------
@@ -1427,9 +1429,9 @@ different order.
 
 There are now three additional extensions, two of which have been
 "borrowed" from their adv3 equivalents:
-[footnotes](../../extensions/docs/footnotes.htm),
-[subtime](../../extensions/docs/subtime.htm) (subjective time) and
-[objtime](../../extensions/docs/objtime.htm) (objective time).
+[footnotes](../../extensions/docs/footnotes.html),
+[subtime](../../extensions/docs/subtime.html) (subjective time) and
+[objtime](../../extensions/docs/objtime.html) (objective time).
 
 ------------------------------------------------------------------------
 
@@ -1660,7 +1662,7 @@ TOUCH and FEEL the library now defines seven macros which convert:
   <span class="code">attackResponseMsg</span>
 
 For the full story see the section on [Attacking, Touching and
-Kissing](actorobj.htm#hitkiss) in the chapter on the Actor object.
+Kissing](actorobj.html#hitkiss) in the chapter on the Actor object.
 
 ------------------------------------------------------------------------
 
@@ -1671,16 +1673,16 @@ abbreviation for getting at the current turn count.
 ------------------------------------------------------------------------
 
 Various changes have been made to improve the way the GO TO command
-works in some less common cases. A new [ProxyDest](pathfind.htm#proxy)
+works in some less common cases. A new [ProxyDest](pathfind.html#proxy)
 class has been defined to prevent the parser perversely choosing an
 Enterable or Distant object as the target of a GO TO command when, for
 instance, the player is already at the destination specified, and the
-handling of the GoTo action on the [Distant](pathfind.htm#distant) class
+handling of the GoTo action on the [Distant](pathfind.html#distant) class
 has been altered so that an attempt to GO TO a Distant object can be
 interpreted as a request to go to the location specified in the Distant
 object's **destination** property.
 
-The [familiar](pathfind.htm#senseregion) property of **SenseRegion** has
+The [familiar](pathfind.html#senseregion) property of **SenseRegion** has
 been changed so that it now becomes true once the player character has
 visited any room in the SenseRegion. This allows the player character to
 navigate to other objects in the SenseRegion using the GO TO command
@@ -1859,7 +1861,7 @@ defined on the ReachProblemBlocker class, which made it awkward to
 customize the message for particular blocking objects; the
 ReachProblemBlocker class now delegates the message to the object that's
 blocking access. For further explanations of this and the next two
-changes see the [Querying the World Model](query.htm#touchobj) section
+changes see the [Querying the World Model](query.html#touchobj) section
 of this manual.
 
 ------------------------------------------------------------------------
@@ -1907,7 +1909,7 @@ X and LOOK UNDER X respectively, since these seem reasonable phrasings.
 
 ------------------------------------------------------------------------
 
-The library now defines two additional [utility functions](utility.htm)
+The library now defines two additional [utility functions](utility.html)
 **tryInt(val)** and **tryNum(val)**. The first of these tries to
 interpret *val* as an integer and returns an integer result if it can
 and nil otherwise; the second is similar but may return a BigNumber if
@@ -1942,7 +1944,7 @@ at the start of the game.
 
 ------------------------------------------------------------------------
 
-It is now slightly easier to customise [implicit action](implicit.htm)
+It is now slightly easier to customise [implicit action](implicit.html)
 reports (using a CustomMessages object) or to suppress them altogether
 for all actions or specific actions.
 
@@ -1975,7 +1977,7 @@ other objects in scope.
 
 ------------------------------------------------------------------------
 
-There is now a [DynamicRegion](../../extensions/docs/dynregion.htm)
+There is now a [DynamicRegion](../../extensions/docs/dynregion.html)
 extension that allows game code to define Regions that can expand or
 contract over the course of a game (ordinary Regions can't do this).
 
@@ -2073,7 +2075,7 @@ now interpret such commands more intelligently.
 ------------------------------------------------------------------------
 
 Bug fixed with the **SingletonInterator** class that prevented foreach
-from iterating properly over a singleton [Object](utility.htm#object).
+from iterating properly over a singleton [Object](utility.html#object).
 
 ------------------------------------------------------------------------
 
@@ -2242,7 +2244,7 @@ such objects will not be affected, but if you have any lockable objects
 that you want to start out unlocked you'll need to define
 <span class="code">isLocked = nil</span> on them (as is the case for the
 subclasses of Door defined for the plane in the
-[Airport](../tutorial/doors.htm#planedoors) game example in the
+[Airport](../tutorial/doors.html#planedoors) game example in the
 Tutorial).
 
 ------------------------------------------------------------------------
@@ -2257,7 +2259,7 @@ where conn is the TravelConnector just traversed.
 The three new Thing methods **describePushTravel(via)**,
 **beforeMovePushable(connector, dir)** and **describeMovePushable
 (connector, dest)** make it easier to customize the message that's
-displayed to describe [push-travel](Thing.htm#pushing). The first of
+displayed to describe [push-travel](Thing.html#pushing). The first of
 these is called on the direct object (the object pushed) when
 push-travel is via another object (up the stairs or through the door)
 for example, and is displayed just before the move; *via* is the
@@ -2287,7 +2289,7 @@ into the lawn') but may have other uses.
 
 ------------------------------------------------------------------------
 
-The two new [Thing](thing.htm#containmentprops) properties
+The two new [Thing](thing.html#containmentprops) properties
 **dropItemsBehind** and **dropItemsUnder** (both true by default)
 control what happens to items behind or under an object when that object
 is moved. The previous behaviour was inconsistent, in that objects
@@ -2303,21 +2305,21 @@ behind and/or under the item being moved are moved with it.
 
 ------------------------------------------------------------------------
 
-There is now a new [BagOfHolding](gadget.htm#bag) mix-in class which can
+There is now a new [BagOfHolding](gadget.html#bag) mix-in class which can
 be used to define objects into which items in the player character's
 inventory will automatically be moved if his/her hands become too full
 to take anything else.
 
 ------------------------------------------------------------------------
 
-The new [ContainerDoor](extra.htm#containerdoor) class can be used to
+The new [ContainerDoor](extra.html#containerdoor) class can be used to
 represent the door of a container defined on the remapIn property of a
 multiply-containing object.
 
 ------------------------------------------------------------------------
 
 Some improvements have been made to the listing of contents of items in
-[remote locations](senseregion.htm#remoteprops), and in particular a
+[remote locations](senseregion.html#remoteprops), and in particular a
 **remoteObjInName(pov)** method has been added to Thing (so that the
 listing of things in a remote object can be introduced with something
 like 'In the bucket at the far end of the room are...' instead of just
@@ -2342,17 +2344,17 @@ there.
 
 ------------------------------------------------------------------------
 
-Three new [ActorTopicEntry](actortopicentry.htm#types) classes have been
+Three new [ActorTopicEntry](actortopicentry.html#types) classes have been
 added: **AltTopic**, **AskTellShowTopic** and **AskTellGiveShowTopic**.
 Of these the most significant is
-[AltTopic](actortopicentry.htm#alttopic), which makes it easier to
+[AltTopic](actortopicentry.html#alttopic), which makes it easier to
 define alternative responses to conversational commands (just like its
 adv3 equivalent).
 
 ------------------------------------------------------------------------
 
 A **noResponse** property has been added to
-[ActorState](actorstate.htm#peculiar). If this is defined it makes the
+[ActorState](actorstate.html#peculiar). If this is defined it makes the
 ActorState behave just like an adv3 HermitActorState, i.e. the
 noResponse is displayed in response to any and all conversational
 commands (and no attempt is made to find a matching ActorTopicEntry).
@@ -2389,7 +2391,7 @@ used for permanent components (almost certainly the more common case).
 
 ------------------------------------------------------------------------
 
-There is now also a new [Attachable](attachable.htm#attachable) class,
+There is now also a new [Attachable](attachable.html#attachable) class,
 which can be used to define objects that can be attached to more than
 one thing at a time (as well has having more than one thing attached to
 them at a time). This is intended for more complex cases than the
@@ -2401,7 +2403,7 @@ together (which needs to be attached to all of them).
 ------------------------------------------------------------------------
 
 The relationship between locks and keys can now also be defined via the
-new [keyList](key.htm#keylist) property of Thing. Giving a Thing a
+new [keyList](key.html#keylist) property of Thing. Giving a Thing a
 <span class="code">keyList</span> property automatically makes it
 <span class="code">lockableWithKey</span>, and thereby makes it start
 out locked. This is in addition to the existing method of defining what
@@ -2411,15 +2413,15 @@ property.
 ------------------------------------------------------------------------
 
 Similarly, the rooms in a Region can now be initially specified in the
-**roomList** property of a [Region](room.htm#regionprops), which can in
+**roomList** property of a [Region](room.html#regionprops), which can in
 turn be specified via a template.
 
 ------------------------------------------------------------------------
 
 The infrastructure for defining actions involving [three
-objects](define.htm#threeobjects) has been improved, although to define
+objects](define.html#threeobjects) has been improved, although to define
 an action involving a direct object, indirect object and accessory
-object requires the new [TIAAction](../../extensions/docs/tiaaction.htm)
+object requires the new [TIAAction](../../extensions/docs/tiaaction.html)
 extension. Note that actions involving, say, two objects and a literal,
 or two objects and a topic, such as WRITE TEXT IN NOTEBOOK WITH PEN can
 now be defined without the use of an extension.
@@ -2429,14 +2431,14 @@ now be defined without the use of an extension.
 The Room class now has a number of methods like **canSeeOutTo(loc)**,
 and **canSeeInFrom(loc)** (and equivalents for hearing and smelling)
 that can be used to fine-tune sensory connections within
-[SenseRegions](senseregion.htm#inoutprops), in particular in cases where
+[SenseRegions](senseregion.html#inoutprops), in particular in cases where
 connections may be established or cut dynamically during the course of a
 game (e.g. when opening or shutting a window allows sound to pass or
 prevents it from passing).
 
 ------------------------------------------------------------------------
 
-There is now a collection of [sample games](../learning/exercises.htm)
+There is now a collection of [sample games](../learning/exercises.html)
 that can either be used in conjunction with the exercises in *Learning
 TADS 3 With Adv3Lite* or simply perused on their own as illustrations of
 various aspects of the library.
@@ -2444,13 +2446,13 @@ various aspects of the library.
 ------------------------------------------------------------------------
 
 Adv3Lite now comes with a small collection of
-[extensions](extensions.htm), which can be used to add functionality not
+[extensions](extensions.html), which can be used to add functionality not
 provided in the main library.
 
 ------------------------------------------------------------------------
 
 Conversely, there is now also a second version of the library called
-[adv3Liter](modules.htm#liter) which contains only the core modules.
+[adv3Liter](modules.html#liter) which contains only the core modules.
 This may be useful for educational purposes (perhaps to start teaching
 people how to write in TAD3 3 with only a much reduced version of the
 library to learn to start off with) or for authors who want to opt in to
@@ -2629,9 +2631,9 @@ ActorState, or, if there is none,
 The documentation has undergone a bit of reordering. For one thing, it
 has all been moved under a docs folder in the adv3Lite directory to make
 for a cleaner separation between from the library source files. There is
-now an [Adv3Lite Bookshelf](../index.htm) (similar to the TADS 3
+now an [Adv3Lite Bookshelf](../index.html) (similar to the TADS 3
 Bookshelf that comes with the standard TADS 3 documentation), a [Quick
-Start Guide](../t3QuickStart.htm) for adv3Lite, and a new book,
+Start Guide](../t3QuickStart.html) for adv3Lite, and a new book,
 [Learning TADS 3 With Adv3Lite](../learning/LearningT3Lite.pdf). This is
 very similar in format and content to the *Learning TADS 3* book that
 comes standard with TADS 3, but has been adapted for use with the
@@ -2681,12 +2683,12 @@ remote audio link with other, or
 remote audiovisual link. Use
 <span class="code">commLink.disconnect()</span> to sever the connection
 again. For further details read about the [Communications Link
-Special](query.htm#commlink) in the chapter on Querying the World Model.
+Special](query.html#commlink) in the chapter on Querying the World Model.
 
 ------------------------------------------------------------------------
 
 The new **setPlayer(actor, person)** function can be used to [change the
-player character](changepc.htm) to another *actor*. The *person*
+player character](changepc.html) to another *actor*. The *person*
 parameter is used to determine whether the new player character will be
 referred to in the first, second or third person; it should be supplied
 as either 1, 2 or 3; if it is not supplied it defaults to 2.
@@ -2699,7 +2701,7 @@ Roberts (this may be invisible to game code).
 
 ------------------------------------------------------------------------
 
-The new Mentionable method [filterResolveList()](thing.htm#filter)
+The new Mentionable method [filterResolveList()](thing.html#filter)
 allows objects to adjust the list of matched objects while the parser is
 deciding which objects to match to a player command. This can be used
 for an object to exclude itself or other objects from the match list.
@@ -2709,7 +2711,7 @@ also used by the new <span class="code">CollectiveGroup</span> class.
 
 ------------------------------------------------------------------------
 
-The new [CollectiveGroup](extra.htm#collective) class can be used to
+The new [CollectiveGroup](extra.html#collective) class can be used to
 represent (and stand in for) a group of similarly-named objects for
 selected actions.
 
@@ -2854,7 +2856,7 @@ dobjFor(ShowImplicit) on Thing. It is joined by a new property
 to execute a method on the current interlocutor at the end of a GIVE or
 SHOW command executed on a set of objects. Instructions on how to use
 these properties can be found in the new section on [Summarizing Give
-and Show.](actortopicentry.htm#summarizing)
+and Show.](actortopicentry.html#summarizing)
 
 ------------------------------------------------------------------------
 
@@ -2881,7 +2883,7 @@ not respond" instead of "Fred doesn't respond").
 
 ------------------------------------------------------------------------
 
-An [Instructions](instruct.htm) module has been added to the
+An [Instructions](instruct.html) module has been added to the
 English-specific part of the library. This allows games to provide a set
 of standard set of instructions for playing Interactive Fiction. It's
 based closely on the adv3 equivalent (from which it's largely taken),
@@ -2892,7 +2894,7 @@ players.
 ------------------------------------------------------------------------
 
 A second feature aimed at new players is the optional module
-[newbie.t](newbie.htm) in the English-specific part of the library. This
+[newbie.t](newbie.html) in the English-specific part of the library. This
 looks out for various kinds of malformed commands that new players often
 attempt to use and provides more helpful responses than the standard
 parser error messages, in an attempt to nudge new players in the right
@@ -2903,7 +2905,7 @@ them some help.
 ------------------------------------------------------------------------
 
 The third newbie-friendly feature that's been added is the
-[ExtraHint](hint.htm#extra) mechanism, which allows game authors to
+[ExtraHint](hint.html#extra) mechanism, which allows game authors to
 display hints to players who look as if they may be getting stuck.
 
 ------------------------------------------------------------------------
@@ -2951,7 +2953,7 @@ might plausibly work.
 
 ------------------------------------------------------------------------
 
-There is now an [Unthing](extra.htm#unthing) class which can be used to
+There is now an [Unthing](extra.html#unthing) class which can be used to
 represent objects that are absent.
 
 ------------------------------------------------------------------------
@@ -3115,7 +3117,7 @@ locations where PORT has no meaning.
 
 ------------------------------------------------------------------------
 
-The \<.roomdesc\> [style tag](room.htm#styletag) now works (it was
+The \<.roomdesc\> [style tag](room.html#styletag) now works (it was
 ignored before), and a new \<.roomcontents\> style tag has been added
 for formatting the listing of a rooms's contents.
 
@@ -3246,7 +3248,7 @@ player character to the location of the sign.
 
 It's now possible to set up test scripts for the purposes of debugging
 which can be run with commands like TEST FOO. For further details see
-the [Debugging Commands](debug.htm#tests) section of the manual.
+the [Debugging Commands](debug.html#tests) section of the manual.
 
 ------------------------------------------------------------------------
 
@@ -3292,7 +3294,7 @@ additional verbs, since all regular verbs can now be dealt with the
 irregular verbs.
 
 For further details see the sub-section on [Conjugations and
-Tenses](message.htm#conjugate_idx) in the Messages chapter.
+Tenses](message.html#conjugate_idx) in the Messages chapter.
 
 The **englishCustomVocab** currently defines a number of regular verbs
 in its **verbParams** list (along with over 200 irregular ones). These
@@ -3337,7 +3339,7 @@ In TADS 3.1.3 and above, it should now be possible to create new
 adv3Lite projects directly from Workbench's New Project wizard (provided
 the adv3Lite library directory is where Workbench expects to find it).
 For details, see the section on [Starting Out — A Minimal Game
-Definition](mingame.htm#including_idx)
+Definition](mingame.html#including_idx)
 
 ------------------------------------------------------------------------
 
@@ -3346,8 +3348,8 @@ representing all or part of a conversational exchange in contexts where
 simply using <span class="code">say()</span> or a double-quoted string
 could potentially confuse the conversation system and give rise to
 hard-to-find bugs in game code. For a fuller discussion see the
-subsections on [Actor-Specific and General Tags](tags.htm#actor-tag-idx)
-and on the use of [actorSay()](initiate.htm#actorsay_idx) to initiate
+subsections on [Actor-Specific and General Tags](tags.html#actor-tag-idx)
+and on the use of [actorSay()](initiate.html#actorsay_idx) to initiate
 NPC conversation.
 
 ------------------------------------------------------------------------
@@ -3373,7 +3375,7 @@ displayed.
 
 ------------------------------------------------------------------------
 
-The [Library Reference Manual](../libref/index.htm) is now included as a
+The [Library Reference Manual](../libref/index.html) is now included as a
 standard part of the documentation set. This is the adv3Lite equivalent
 of the Library Reference Manual that comes with adv3, namely a fully
 indexed and hyperlinked set of HTML files that allows you to look up
@@ -3387,7 +3389,7 @@ includes a Messages tab to help track down library messages and their
 BMsg or DMsg IDs. Jerry Ford's discovery-tool-generated messages CSV
 file is also included with the documentation set in order to provide an
 additional means of searching for library messages. For further details
-see [Finding Message IDs](message.htm#findingmsg) in the Messages
+see [Finding Message IDs](message.html#findingmsg) in the Messages
 chapter.
 
 ------------------------------------------------------------------------
@@ -3398,13 +3400,13 @@ immediately follows this change log.
 ------------------------------------------------------------------------
 
 The adv3Lite documentation now provides a link to the *TADS 3 System
-Manual* in one or two places. This is done via the file **sysman.htm**
+Manual* in one or two places. This is done via the file **sysman.html**
 in the adv3Lite directory. By default this redirects to the on-line
 version of the System Manual on www.tads.org, because the location of
 your local version will vary according to what operating system you're
-using. If you prefer you can edit sysman.htm to make it redirect to the
+using. If you prefer you can edit sysman.html to make it redirect to the
 local copy of the System Manual on your system. For instructions see the
-section on the [System Manual](mingame.htm#sysman) in the setup chapter.
+section on the [System Manual](mingame.html#sysman) in the setup chapter.
 
 ------------------------------------------------------------------------
 
@@ -3516,7 +3518,7 @@ ActorTopicEntry in question.
 While this change might be a minor nuisance, it should hopefully make it
 easier to activate and deactivate ActorTopicEntries in future. For
 further details see the discussion in the section on
-[ActorTopicEntry](actortopicentry.htm#activated).
+[ActorTopicEntry](actortopicentry.html#activated).
 
 ------------------------------------------------------------------------
 
@@ -3647,7 +3649,7 @@ the direct object. For example, if Bob has an active
 FOLLOW BOB, Bob will move through the next connector in his
 FollowAgendaItem's connectorList and the player character will follow
 him. For details see the section on
-[AgendaItems](agenda.htm#followagenda).
+[AgendaItems](agenda.html#followagenda).
 
 ------------------------------------------------------------------------
 
@@ -3657,7 +3659,7 @@ parameter *target* which is the object the actor is trying to reach.
 ------------------------------------------------------------------------
 
 The library now defines three new macros to act as named constants for
-use with [ConvAgendaItems](initiate.htm#convagendaitem):
+use with [ConvAgendaItems](initiate.html#convagendaitem):
 **InitiateConversationReason** (1), **ConversationLullReason** (2) and
 **DefaultTopicReason** (3). This may help make code that uses these
 constants a little more readable.
@@ -4106,7 +4108,7 @@ action to another (in the first case) or to execute one action in the
 course of another (in the second case), e.g.
 <span class="code">doInstead(PutIn, redBall, greenBox)</span> or
 <span class="code">doNested(Drop, gDobj)</span>. See the discussion on
-[Doer](doer.htm) for details.
+[Doer](doer.html) for details.
 
 Note that the existing Doer method <span class="code">redirect()</span>
 still exists and works as before, but is now a service method used by
@@ -4134,7 +4136,7 @@ methods. It evaluates to an object that can be used in situations where
 we want gActionListStr to be the subject of a sentence (so that any
 verbs need to agree with it in number depending on whether gReportList
 represents one or more objects). Consult the section on the
-[Report](actres.htm#report) phase of Actions Results for further
+[Report](actres.html#report) phase of Actions Results for further
 details.
 
 ------------------------------------------------------------------------
@@ -4143,7 +4145,7 @@ Two new verification macros have been added: **dangerous** and
 **nonObvious**. Both of these allow the action to go ahead unless it's
 an implicit action, but <span class="code">nonObvious</span> is given
 the same logical rank as <span class="code">illogical</span>. For
-further details see the [Verify](actres.htm#verify) section of the
+further details see the [Verify](actres.html#verify) section of the
 Action Results article.
 
 To allow these two new verification results to work, parts of the
@@ -4222,7 +4224,7 @@ tell an untruth), **PlugIn**, **PlugInto**, **Unplug** and
 In order to facilitate the implementation of the
 <span class="code">Plug</span> set of actions a new **PlugAttachable**
 mix-in class has been added. For details see the appropriate part of the
-[Attachables](attachable.htm#plug) section.
+[Attachables](attachable.html#plug) section.
 
 In order to facilitate the implementation of the
 <span class="code">PlugAttachable</span> class there has been some
@@ -4245,7 +4247,7 @@ implemented. Previously these were treated as synonyms of
 stage, so that game authors have more control over which items actors
 can apparently sit, stand or lie on (although there is no difference in
 the end result). For details see the new paragraph on [Pseudo-Postural
-Properties](thing.htm#posture) in the section on Thing.
+Properties](thing.html#posture) in the section on Thing.
 
 ------------------------------------------------------------------------
 
@@ -4255,7 +4257,7 @@ vocabulary that can be used to refer to objects (and optionally the name
 as well): **replaceVocab(voc)**, **addVocab(voc)**,
 **removeVocabWord(word, matchFlags?)** and **addVocabWord(word,
 matchFlags)**. For details see the paragraph on [Manipulating vocab at
-run-time](thing.htm#manipulatevocab) in the section on Thing.
+run-time](thing.html#manipulatevocab) in the section on Thing.
 
 ------------------------------------------------------------------------
 
@@ -4265,14 +4267,14 @@ order to refer to a particular object. For example, if an object with
 vocab 'dark green bottle; glass' is given a
 <span class="code">matchPhrase</span> of 'dark green', then it will
 match DARK GREEN BOTTLE but not just GREEN BOTTLE. For the full story
-see the paragraph on [Phrase Matching](thing.htm#phrase) in the section
+see the paragraph on [Phrase Matching](thing.html#phrase) in the section
 on Thing.
 
 ------------------------------------------------------------------------
 
 Sections of the vocab property can now be selectively inherited from
 superclasses. For details, see the explanation of the
-[vocab](thing.htm#inherit) property in the Thing section of the manual.
+[vocab](thing.html#inherit) property in the Thing section of the manual.
 
 ------------------------------------------------------------------------
 
@@ -4286,12 +4288,12 @@ to 10, to ensure that verify results take precedence.
 
 There is now a **SecretDoor** class. A SecretDoor is a kind of Door that
 only acts as a Door when it's open. For details see the
-[Extras](extra.htm#secretdoor) section.
+[Extras](extra.html#secretdoor) section.
 
 ------------------------------------------------------------------------
 
 Two new classes have been added to the conversation system:
-[TopicGroup](topicgroup.htm) and [ConvNode](convnode.htm#convnode) These
+[TopicGroup](topicgroup.html) and [ConvNode](convnode.html#convnode) These
 don't enable game authors to do anything that couldn't be done before,
 but they may make it more convenient, especially when definining
 Conversation Nodes.
@@ -4395,11 +4397,11 @@ a different sense from sight.
 
 ------------------------------------------------------------------------
 
-The draft [Tutorial](../tutorial/toc.htm) has now been completed.
+The draft [Tutorial](../tutorial/toc.html) has now been completed.
 
 ------------------------------------------------------------------------
 
-Work has begun on an [Action Reference](actionref.htm). This is
+Work has begun on an [Action Reference](actionref.html). This is
 currently still work in progress, but once it is complete it will list
 all the actions defined in the library referenced by an alphabetical
 list of the commands used to invoke those actions. Eventually it will
@@ -4501,7 +4503,7 @@ examining such objects might result in there being no output at all.
 
 ## <span id="v0.5">Version 0.5</span> (16 January 2013)
 
-Several changes have been made to the [MultiLoc](multiloc.htm) class,
+Several changes have been made to the [MultiLoc](multiloc.html) class,
 partly to fix a bug, and partly to enhance its flexibility.
 
 The problem was that the locationList property was being used for
@@ -4557,7 +4559,7 @@ shouldn't directly impact on user code.
 
 The library now defines a **Floor** class, and one instance of it,
 **defaultGround**. This is basically a MultiLoc, Decoration that is
-added into every [Room](room.htm#roomfloor). Its main purpose is to
+added into every [Room](room.html#roomfloor). Its main purpose is to
 facilitate the parser's ability to disambiguate items by their
 locations. Formely, if, say, there were two identical coins, one on a
 table and one directly in the room, the parser would have to ask "Which
@@ -4629,7 +4631,7 @@ announceMultiVerify is nil.
 There is now a DEBUG command that breaks into the debugger, just as it
 does in adv3. There are also DEBUG ACTIONS, DEBUG MESSAGES and DEBUG
 SPELLING options. For details see the section in the manual on
-[Debugging Commands](debug.htm).
+[Debugging Commands](debug.html).
 
 ------------------------------------------------------------------------
 
@@ -4844,7 +4846,7 @@ Paragraph breaks between the sentences listing the contents of items in
 a room description can be suppressed by setting
 **paraBrksBtwnSubcontents** to nil, either on a room-by-room basis or
 globally on gameMain. For further details on this and the previous
-change consult the section on [Room Descriptions](roomdesc.htm#further).
+change consult the section on [Room Descriptions](roomdesc.html#further).
 
 ------------------------------------------------------------------------
 
@@ -5448,24 +5450,24 @@ description. The \<\<mention a\>\> and \<\<mention the\>\> embedded
 expressions can be used to have one item in a room description listing
 mention another (and thereby suppress the subsequent listing of the same
 item). For full details see the new section on [Room
-Descriptions](roomdesc.htm).
+Descriptions](roomdesc.html).
 
 ------------------------------------------------------------------------
 
 The new **SenseRegion** class can be used to define regions with sensory
 connections, that is regions where it is possible to see (and possibly
 smell and hear) ojects in one room from another. For details see the new
-[SenseRegion](senseregion.htm) section of the manual.
+[SenseRegion](senseregion.html) section of the manual.
 
 ------------------------------------------------------------------------
 
 It is now possible to compile adv3Lite games for use with the
-[WebUI](webui.htm) (i.e. for playing on-line via a browser).
+[WebUI](webui.html) (i.e. for playing on-line via a browser).
 
 ------------------------------------------------------------------------
 
 Mainly to support the WebUI, a number of
-[inputManager](webui.htm#inputmanager) methods have been implemented
+[inputManager](webui.html#inputmanager) methods have been implemented
 (which are analogous to their adv3 counterparts). It is recommended that
 you always use these rather than the interpreter console i/o function
 equivalents. Note that in the adv3Lite version of these methods, there
@@ -5475,7 +5477,7 @@ processing).
 
 ------------------------------------------------------------------------
 
-The Parser's [DefaultAction](actionoverview.htm#default) (for a command
+The Parser's [DefaultAction](actionoverview.html#default) (for a command
 that consists purely of a noun) has been changed to the new
 ExamineOrGoToAction. This works exactly like the Examine action unless
 (a) the noun entered by the player is a room known to the player
@@ -5494,7 +5496,7 @@ requirement of storing the complete object table is unlikely to be an
 issue on a modern computer. If it is set to nil an additional setting
 now comes into effect: **objTablePreinit.lookInMethods**. If this is nil
 (the default), then objTablePreinit won't attempt to execute code (i.e.
-methods) to find conversation [tags](tags.htm) indicating objects it
+methods) to find conversation [tags](tags.html) indicating objects it
 needs to store in the object table; this is the safer option since
 executing methods out of context at preinit can easily cause run-time
 errors. For now, lookInMethods can be set to true to restore the
@@ -5514,7 +5516,7 @@ mark what the player character is holding as seen or known).
 ------------------------------------------------------------------------
 
 A minor change has been made to the way the [hiddenUnder and
-hiddenBehind](thing.htm#hidden) properties work. The new thing
+hiddenBehind](thing.html#hidden) properties work. The new thing
 properties **autoTakeOnLookUnder** and **autoTakeOnLookBehind** allow
 you to specify that anything hidden under or behind the object in
 question should be taken by the actor when s/he looks under or behind
@@ -5532,7 +5534,7 @@ game code.
 
 ------------------------------------------------------------------------
 
-The documentation of the [Thing](thing.htm) class now explains the use
+The documentation of the [Thing](thing.html) class now explains the use
 of the **owner** and **ownsContents** properties. These properties were
 present before but weren't previously documented in the manual.
 
@@ -5602,9 +5604,9 @@ should be listed separately was the wrong way round.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Change Log  
-<span class="navnp"><a href="conclusion.htm" class="nav"><em>Prev:</em> Conclusion</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Change Log  
+<span class="navnp"><a href="conclusion.html" class="nav"><em>Prev:</em> Conclusion</a>
    <a href="manual_idx.html" class="nav"><em>Next:</em> Index</a>    
 </span>
 

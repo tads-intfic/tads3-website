@@ -1,3 +1,5 @@
+---
+---
 <span class="title">throughSingleNoun</span><span class="type">GrammarProd</span>
 
 `grammar `**[`throughSingleNoun(main)`](../object/throughSingleNoun(main).html)**` :   `[`Production`](../object/Production.html)

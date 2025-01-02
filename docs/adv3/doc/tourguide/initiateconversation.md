@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,22 +10,22 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>initiateConversation<br />
 </strong></td>
-<td style="text-align: right;"><a href="specialtopic.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="agendaitem.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="specialtopic.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="agendaitem.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 While we can use the \<.convnode\> tag to have an NPC move into a
-[Conversation Node](conversationnodes-overview.htm) in the middle of a
+[Conversation Node](conversationnodes-overview.html) in the middle of a
 conversation, and perhaps pose a question to the Player Character (PC)
 at that point, you might want a truly proactive NPC actually to start a
 conversation. To achieve that, you can call the **NPC's
 initiateConversation(ActorState, node)** method, where ActorState is the
 ActorState you want the NPC to change to (normally an
-[InConversationState](inconversationstate.htm)), or nil if you don't
+[InConversationState](inconversationstate.html)), or nil if you don't
 want a change of ActorState, and node is the Conversation Node that you
 want to become active. Note that the node parameter can either be the
 ConvNode's object name, or the quoted string used at the ConvNode's tag.

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FinishType</span><span class="type">class</span>
 
 [misc.t](../file/misc.t.html)\[[871](../source/misc.t.html#871)\]

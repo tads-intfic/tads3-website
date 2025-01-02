@@ -1,3 +1,5 @@
+---
+---
 <span class="title">tipMode</span><span class="type">object</span>
 
 [tips.t](../file/tips.t.html)\[[202](../source/tips.t.html#202)\]

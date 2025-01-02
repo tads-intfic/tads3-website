@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SimpleAchievement</span><span class="type">class</span>
 
 [score.t](../file/score.t.html)\[[180](../source/score.t.html#180)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TopicEntry</span><span class="type">class</span>
 
 [topicEntry.t](../file/topicEntry.t.html)\[[16](../source/topicEntry.t.html#16)\]

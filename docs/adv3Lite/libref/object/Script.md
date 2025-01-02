@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Script</span><span class="type">class</span>
 
 [misc.t](../file/misc.t.html)\[[533](../source/misc.t.html#533)\]

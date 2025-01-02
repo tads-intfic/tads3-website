@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Carrier</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[10128](../source/thing.t.html#10128)\]

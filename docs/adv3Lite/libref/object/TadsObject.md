@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TadsObject</span><span class="type">class</span>
 
 [systype.h](../file/systype.h.html)\[[242](../source/systype.h.html#242)\],

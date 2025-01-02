@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Heidi: our first
+<a href="toc.html" class="nav">Table of Contents</a> \| Heidi: our first
 adv3Lite game  
-<span class="navnp"><a href="using.htm" class="nav"><em>Prev:</em> Using the Tools</a>
-   <a href="basicsource.htm" class="nav"><em>Next:</em> Creating the Basic
+<span class="navnp"><a href="using.html" class="nav"><em>Prev:</em> Using the Tools</a>
+   <a href="basicsource.html" class="nav"><em>Next:</em> Creating the Basic
 Source File</a>     </span>
 
 </div>
@@ -41,12 +43,12 @@ attempt (there’s time later for more advanced stuff).
 
 <div class="sectoc">
 
-[Creating the Basic Source File](basicsource.htm)  
-[Understanding the Source File](understanding.htm)  
-[Defining the Game's Locations](locations.htm)  
-[Adding the Bird and the Nest](bird.htm)  
-[Adding the Tree and the Branch](tree.htm)  
-[Finishing Touches](finishing.htm)  
+[Creating the Basic Source File](basicsource.html)  
+[Understanding the Source File](understanding.html)  
+[Defining the Game's Locations](locations.html)  
+[Adding the Bird and the Nest](bird.html)  
+[Adding the Tree and the Branch](tree.html)  
+[Finishing Touches](finishing.html)  
 
 </div>
 
@@ -57,10 +59,10 @@ attempt (there’s time later for more advanced stuff).
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Heidi: our first
+<a href="toc.html" class="nav">Table of Contents</a> \| Heidi: our first
 adv3Lite game  
-<span class="navnp"><a href="using.htm" class="nav"><em>Prev:</em> Using the Tools</a>
-   <a href="basicsource.htm" class="nav"><em>Next:</em> Creating the Basic
+<span class="navnp"><a href="using.html" class="nav"><em>Prev:</em> Using the Tools</a>
+   <a href="basicsource.html" class="nav"><em>Next:</em> Creating the Basic
 Source File</a>     </span>
 
 </div>

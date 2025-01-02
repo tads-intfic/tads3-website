@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SyncEventList</span><span class="type">class</span>
 
 [eventList.t](../file/eventList.t.html)\[[321](../source/eventList.t.html#321)\]

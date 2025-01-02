@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InputDef</span><span class="type">class</span>
 
 [input.t](../file/input.t.html)\[[19](../source/input.t.html#19)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">HintOpener</span><span class="type">class</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[32](../source/hintsys.t.html#32)\]

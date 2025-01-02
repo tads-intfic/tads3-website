@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TouchObjCondition</span><span class="type">class</span>
 
 [precond.t](../file/precond.t.html)\[[419](../source/precond.t.html#419)\]

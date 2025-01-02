@@ -1,3 +1,5 @@
+---
+---
 # httpsrv.h
 
 [documentation](../file/httpsrv.h.html)
@@ -135,7 +137,7 @@
          *   connections.  Clients connect to the port by including it in the
          *   HTTP URL, after the host name.  For example, if the server is on
          *   port 10815, the client would connect to a URL of the form
-         *   http://myserver.com:10815/index.htm.  
+         *   http://myserver.com:10815/index.html.  
          */
         getPortNum();
     }

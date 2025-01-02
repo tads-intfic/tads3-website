@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>ThroughPassage : Passage<br />
 </strong></td>
-<td style="text-align: right;"><a href="secretdoor.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="darkroom.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="secretdoor.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="darkroom.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -24,7 +26,7 @@ THROUGH and that takes you directly to its destination. This time we
 shan't implement a corresponding Passage object at the other end, so we
 need to set the tunnel's destination property to the room where we'll
 end up if we traverse the tunnel, the yet-to-be defined
-[smallCave](darkroom.htm) room.  
+[smallCave](darkroom.html) room.  
   
 Since we envisage this as quite a long tunnel, however, we could display
 a message representing the long walk down it when we travel through it;

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Finishing Touches  
-<span class="navnp"><a href="tree.htm" class="nav"><em>Prev:</em> Adding the Tree and the
+<span class="navnp"><a href="tree.html" class="nav"><em>Prev:</em> Adding the Tree and the
 Branch</a>    
-<a href="reviewing.htm" class="nav"><em>Next:</em> Reviewing the
+<a href="reviewing.html" class="nav"><em>Next:</em> Reviewing the
 Basics</a>     </span>
 
 </div>
@@ -357,12 +359,12 @@ game should now look like:
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Finishing Touches  
-<span class="navnp"><a href="tree.htm" class="nav"><em>Prev:</em> Adding the Tree and the
+<span class="navnp"><a href="tree.html" class="nav"><em>Prev:</em> Adding the Tree and the
 Branch</a>    
-<a href="reviewing.htm" class="nav"><em>Next:</em> Reviewing the
+<a href="reviewing.html" class="nav"><em>Next:</em> Reviewing the
 Basics</a>     </span>
 
 </div>

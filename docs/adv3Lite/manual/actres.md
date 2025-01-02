@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Action Results  
-<span class="navnp"><a href="actionoverview.htm" class="nav"><em>Prev:</em> Overview</a>
-    <a href="message.htm" class="nav"><em>Next:</em> Messages</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Action Results  
+<span class="navnp"><a href="actionoverview.html" class="nav"><em>Prev:</em> Overview</a>
+    <a href="message.html" class="nav"><em>Next:</em> Messages</a>    
 </span>
 
 </div>
@@ -265,7 +267,7 @@ verification macro *must* receive a single-quoted string value, and
 {can\\t} wash that."</span> would be programming errors that can be
 guaranteed to produce strange and unwanted results. (The explanation of
 the bits in curly braces like '{I} {can\\t}' will be covered later in
-the section on [messages](message.htm)).
+the section on [messages](message.html)).
 
 Note that your verify routines should contain nothing but one or more of
 the macros listed above and the conditional (if) statement needed to
@@ -441,7 +443,7 @@ properties like isDiggable and isCuttable, and the use of the more
 idiomatic isEdible in place of isEatable, the use of the canXXXPrepMe
 form where this reads more naturally than isXXXPrepable (e.g. canSitOnMe
 is used in preference to the rather awkward isSitOnable). If in doubt
-you can consult the list given in the [Action Reference](actionref.htm)
+you can consult the list given in the [Action Reference](actionref.html)
 (which may also be useful if you need to check the name of the action),
 but the property names in fact follow a largely consistent scheme:
 
@@ -511,7 +513,7 @@ several such properties such as <span class="code">isTakeable</span> and
 something that can be opened to be also something than can be closed (a
 door or a desk drawer, say). If in doubt, consult the library code in
 Thing.t (or, for many common cases, the [Action
-Reference](actionref.htm)) to see how these properties are defined.
+Reference](actionref.html)) to see how these properties are defined.
 
 Note that changing these other behavioural properties to true doesn't
 necessarily make the corresponding action work, in most cases it merely
@@ -587,7 +589,7 @@ code round such problems for every individual case. The solution
 provided by the adv3Lite library (shamelessly copied from the adv3
 library) is to use PreConditions, objects that encapsulate these
 frequently-occurring pre-conditions of carrying out an action and, where
-appropriate, trigger an [implicit action](implicit.htm) to try to meet
+appropriate, trigger an [implicit action](implicit.html) to try to meet
 the pre-condition on the player's behalf. The PreCondition objects
 currently defined in the adv3Lite library are:
 
@@ -1074,8 +1076,8 @@ complication for you by wrapping the indirect object of a TopicTCommand
 in a ResolvedTopic if it isn't one already.
 
 Note, however, that it may often be better to call
-<span class="code">doInstead()</span> on a [Doer](doer.htm). See the
-discussion [there](doer.htm#doerdoes) for the full implications.
+<span class="code">doInstead()</span> on a [Doer](doer.html). See the
+discussion [there](doer.html#doerdoes) for the full implications.
 
 Note also that when called elsewhere than a Doer,
 <span class="code">doInstead()</span> (or
@@ -1231,7 +1233,7 @@ two cases:
     yourself.
 2.  Changing the library's default behaviour for a class (although even
     then it might be simpler to create a
-    [CustomMessage](message.htm#custmessage) object to produce the same
+    [CustomMessage](message.html#custmessage) object to produce the same
     effect).
 
   
@@ -1294,10 +1296,10 @@ ATTACH and DETACH:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Action Results  
-<span class="navnp"><a href="actionoverview.htm" class="nav"><em>Prev:</em> Overview</a>
-    <a href="message.htm" class="nav"><em>Next:</em> Messages</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Action Results  
+<span class="navnp"><a href="actionoverview.html" class="nav"><em>Prev:</em> Overview</a>
+    <a href="message.html" class="nav"><em>Next:</em> Messages</a>    
 </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](buryingtheboots.htm)   [\[Next\]](lettherebelight.htm)*
+*[\[Previous\]](buryingtheboots.html)   [\[Next\]](lettherebelight.html)*
 
 ## Calling a Spade a Spade
 
@@ -413,6 +415,6 @@ chapter we'll add some more complications.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](buryingtheboots.htm)   [\[Next\]](lettherebelight.htm)*
+*[\[Previous\]](buryingtheboots.html)   [\[Next\]](lettherebelight.html)*
 
 </div>

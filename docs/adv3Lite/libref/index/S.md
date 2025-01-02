@@ -1,3 +1,5 @@
+---
+---
 # S
 
 [**`Sample`**](../object/Sample.html) - object in

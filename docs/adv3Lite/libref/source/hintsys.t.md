@@ -1,3 +1,5 @@
+---
+---
 # hintsys.t
 
 [documentation](../file/hintsys.t.html)

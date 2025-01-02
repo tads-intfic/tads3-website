@@ -1,0 +1,4424 @@
+<p><span class="title">playerActionMessages</span><span class="type">object</span></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2561">2561</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Verb messages for standard library verb implementations for actions
+performed by the player character. These return strings suitable for use
+in VerifyResult objects as well as for action reports (defaultReport,
+mainReport, and so on).
+
+Most of these messages are generic enough to be used for player and
+non-player character alike. However, some of the messages either are too
+terse (such as the default reports) or are phrased awkwardly for NPC
+use, so the NPC verb messages override those.
+
+**`playerActionMessages`**` :   `[`MessageHelper`](../object/MessageHelper.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">playerActionMessages</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MessageHelper<code class="language-plaintext highlighter-rouge">](../object/MessageHelper.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>alreadyAttachedMsg<code class="language-plaintext highlighter-rouge">](#alreadyAttachedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyBurningMsg<code class="language-plaintext highlighter-rouge">](#alreadyBurningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyClosedMsg<code class="language-plaintext highlighter-rouge">](#alreadyClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyHoldingMsg<code class="language-plaintext highlighter-rouge">](#alreadyHoldingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyInLocMsg<code class="language-plaintext highlighter-rouge">](#alreadyInLocMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyLockedMsg<code class="language-plaintext highlighter-rouge">](#alreadyLockedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyLyingMsg<code class="language-plaintext highlighter-rouge">](#alreadyLyingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyLyingOnMsg<code class="language-plaintext highlighter-rouge">](#alreadyLyingOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyOpenMsg<code class="language-plaintext highlighter-rouge">](#alreadyOpenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPulledMsg<code class="language-plaintext highlighter-rouge">](#alreadyPulledMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPushedMsg<code class="language-plaintext highlighter-rouge">](#alreadyPushedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPutBehindMsg<code class="language-plaintext highlighter-rouge">](#alreadyPutBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPutInMsg<code class="language-plaintext highlighter-rouge">](#alreadyPutInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPutOnMsg<code class="language-plaintext highlighter-rouge">](#alreadyPutOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPutUnderMsg<code class="language-plaintext highlighter-rouge">](#alreadyPutUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadySittingMsg<code class="language-plaintext highlighter-rouge">](#alreadySittingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadySittingOnMsg<code class="language-plaintext highlighter-rouge">](#alreadySittingOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyStandingMsg<code class="language-plaintext highlighter-rouge">](#alreadyStandingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyStandingOnMsg<code class="language-plaintext highlighter-rouge">](#alreadyStandingOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadySwitchedOffMsg<code class="language-plaintext highlighter-rouge">](#alreadySwitchedOffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadySwitchedOnMsg<code class="language-plaintext highlighter-rouge">](#alreadySwitchedOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyUnlockedMsg<code class="language-plaintext highlighter-rouge">](#alreadyUnlockedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyWearingMsg<code class="language-plaintext highlighter-rouge">](#alreadyWearingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>askVagueMsg<code class="language-plaintext highlighter-rouge">](#askVagueMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>candleNotLitMsg<code class="language-plaintext highlighter-rouge">](#candleNotLitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>candleOutOfFuelMsg<code class="language-plaintext highlighter-rouge">](#candleOutOfFuelMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAskSelfForMsg<code class="language-plaintext highlighter-rouge">](#cannotAskSelfForMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAskSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotAskSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAttachKeyToMsg<code class="language-plaintext highlighter-rouge">](#cannotAttachKeyToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAttachMsg<code class="language-plaintext highlighter-rouge">](#cannotAttachMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAttachToMsg<code class="language-plaintext highlighter-rouge">](#cannotAttachToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAttachToSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotAttachToSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBoardMsg<code class="language-plaintext highlighter-rouge">](#cannotBoardMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBurnDobjWithMsg<code class="language-plaintext highlighter-rouge">](#cannotBurnDobjWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBurnMsg<code class="language-plaintext highlighter-rouge">](#cannotBurnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBurnWithMsg<code class="language-plaintext highlighter-rouge">](#cannotBurnWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotCleanMsg<code class="language-plaintext highlighter-rouge">](#cannotCleanMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotCleanWithMsg<code class="language-plaintext highlighter-rouge">](#cannotCleanWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotClimbMsg<code class="language-plaintext highlighter-rouge">](#cannotClimbMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotCloseMsg<code class="language-plaintext highlighter-rouge">](#cannotCloseMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotConsultMsg<code class="language-plaintext highlighter-rouge">](#cannotConsultMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotCutWithMsg<code class="language-plaintext highlighter-rouge">](#cannotCutWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDetachFromMsg<code class="language-plaintext highlighter-rouge">](#cannotDetachFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDetachMsg<code class="language-plaintext highlighter-rouge">](#cannotDetachMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDetachPermanentMsg<code class="language-plaintext highlighter-rouge">](#cannotDetachPermanentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDigMsg<code class="language-plaintext highlighter-rouge">](#cannotDigMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDigWithMsg<code class="language-plaintext highlighter-rouge">](#cannotDigWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDoFromHereMsg<code class="language-plaintext highlighter-rouge">](#cannotDoFromHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDoThatMsg<code class="language-plaintext highlighter-rouge">](#cannotDoThatMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDrinkMsg<code class="language-plaintext highlighter-rouge">](#cannotDrinkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEatMsg<code class="language-plaintext highlighter-rouge">](#cannotEatMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEnterHeldMsg<code class="language-plaintext highlighter-rouge">](#cannotEnterHeldMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEnterMsg<code class="language-plaintext highlighter-rouge">](#cannotEnterMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEnterOnMsg<code class="language-plaintext highlighter-rouge">](#cannotEnterOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotExtinguishMsg<code class="language-plaintext highlighter-rouge">](#cannotExtinguishMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFastenMsg<code class="language-plaintext highlighter-rouge">](#cannotFastenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFastenToMsg<code class="language-plaintext highlighter-rouge">](#cannotFastenToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFindTopicMsg<code class="language-plaintext highlighter-rouge">](#cannotFindTopicMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFlipMsg<code class="language-plaintext highlighter-rouge">](#cannotFlipMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFollowSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotFollowSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGetOffOfMsg<code class="language-plaintext highlighter-rouge">](#cannotGetOffOfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGetOutMsg<code class="language-plaintext highlighter-rouge">](#cannotGetOutMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGiveToItselfMsg<code class="language-plaintext highlighter-rouge">](#cannotGiveToItselfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGiveToMsg<code class="language-plaintext highlighter-rouge">](#cannotGiveToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGiveToSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotGiveToSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoBackMsg<code class="language-plaintext highlighter-rouge">](#cannotGoBackMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThatWayInDarkMsg<code class="language-plaintext highlighter-rouge">](#cannotGoThatWayInDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThatWayMsg<code class="language-plaintext highlighter-rouge">](#cannotGoThatWayMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThroughMsg<code class="language-plaintext highlighter-rouge">](#cannotGoThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotJumpOffHereMsg<code class="language-plaintext highlighter-rouge">](#cannotJumpOffHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotJumpOffMsg<code class="language-plaintext highlighter-rouge">](#cannotJumpOffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotJumpOverMsg<code class="language-plaintext highlighter-rouge">](#cannotJumpOverMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotKissMsg<code class="language-plaintext highlighter-rouge">](#cannotKissMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotKissSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotKissSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLieOnMsg<code class="language-plaintext highlighter-rouge">](#cannotLieOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLightMsg<code class="language-plaintext highlighter-rouge">](#cannotLightMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLockMsg<code class="language-plaintext highlighter-rouge">](#cannotLockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLockWithMsg<code class="language-plaintext highlighter-rouge">](#cannotLockWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLookBehindMsg<code class="language-plaintext highlighter-rouge">](#cannotLookBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLookInClosedMsg<code class="language-plaintext highlighter-rouge">](#cannotLookInClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLookThroughMsg<code class="language-plaintext highlighter-rouge">](#cannotLookThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLookUnderMsg<code class="language-plaintext highlighter-rouge">](#cannotLookUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveActorMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveFixtureMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveFixtureMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveHeavyMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveHeavyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveImmovableMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveImmovableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMovePersonMsg<code class="language-plaintext highlighter-rouge">](#cannotMovePersonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMovePushableMsg<code class="language-plaintext highlighter-rouge">](#cannotMovePushableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveWithMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotOpenLockedMsg<code class="language-plaintext highlighter-rouge">](#cannotOpenLockedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotOpenMsg<code class="language-plaintext highlighter-rouge">](#cannotOpenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPlugInMsg<code class="language-plaintext highlighter-rouge">](#cannotPlugInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPlugInToMsg<code class="language-plaintext highlighter-rouge">](#cannotPlugInToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPourIntoMsg<code class="language-plaintext highlighter-rouge">](#cannotPourIntoMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPourMsg<code class="language-plaintext highlighter-rouge">](#cannotPourMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPourOntoMsg<code class="language-plaintext highlighter-rouge">](#cannotPourOntoMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPushTravelMsg<code class="language-plaintext highlighter-rouge">](#cannotPushTravelMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutActorMsg<code class="language-plaintext highlighter-rouge">](#cannotPutActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutBehindMsg<code class="language-plaintext highlighter-rouge">](#cannotPutBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutBehindRestrictedMsg<code class="language-plaintext highlighter-rouge">](#cannotPutBehindRestrictedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutBehindSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotPutBehindSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutFixtureMsg<code class="language-plaintext highlighter-rouge">](#cannotPutFixtureMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutHeavyMsg<code class="language-plaintext highlighter-rouge">](#cannotPutHeavyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutImmovableMsg<code class="language-plaintext highlighter-rouge">](#cannotPutImmovableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutInDispenserMsg<code class="language-plaintext highlighter-rouge">](#cannotPutInDispenserMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutInRestrictedMsg<code class="language-plaintext highlighter-rouge">](#cannotPutInRestrictedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutInSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotPutInSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutOnRestrictedMsg<code class="language-plaintext highlighter-rouge">](#cannotPutOnRestrictedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutOnSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotPutOnSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutPersonMsg<code class="language-plaintext highlighter-rouge">](#cannotPutPersonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutPushableMsg<code class="language-plaintext highlighter-rouge">](#cannotPutPushableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutUnderMsg<code class="language-plaintext highlighter-rouge">](#cannotPutUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutUnderRestrictedMsg<code class="language-plaintext highlighter-rouge">](#cannotPutUnderRestrictedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutUnderSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotPutUnderSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotRemoveHeldMsg<code class="language-plaintext highlighter-rouge">](#cannotRemoveHeldMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReturnToDispenserMsg<code class="language-plaintext highlighter-rouge">](#cannotReturnToDispenserMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotScrewMsg<code class="language-plaintext highlighter-rouge">](#cannotScrewMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotScrewWithMsg<code class="language-plaintext highlighter-rouge">](#cannotScrewWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSetToMsg<code class="language-plaintext highlighter-rouge">](#cannotSetToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotShowToItselfMsg<code class="language-plaintext highlighter-rouge">](#cannotShowToItselfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotShowToMsg<code class="language-plaintext highlighter-rouge">](#cannotShowToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotShowToSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotShowToSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSitOnMsg<code class="language-plaintext highlighter-rouge">](#cannotSitOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSleepMsg<code class="language-plaintext highlighter-rouge">](#cannotSleepMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotStandOnMsg<code class="language-plaintext highlighter-rouge">](#cannotStandOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotStandOnPathMsg<code class="language-plaintext highlighter-rouge">](#cannotStandOnPathMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSwitchMsg<code class="language-plaintext highlighter-rouge">](#cannotSwitchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeActorMsg<code class="language-plaintext highlighter-rouge">](#cannotTakeActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeFixtureMsg<code class="language-plaintext highlighter-rouge">](#cannotTakeFixtureMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeHeavyMsg<code class="language-plaintext highlighter-rouge">](#cannotTakeHeavyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeImmovableMsg<code class="language-plaintext highlighter-rouge">](#cannotTakeImmovableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeLocationMsg<code class="language-plaintext highlighter-rouge">](#cannotTakeLocationMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakePersonMsg<code class="language-plaintext highlighter-rouge">](#cannotTakePersonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakePushableMsg<code class="language-plaintext highlighter-rouge">](#cannotTakePushableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTalkToSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotTalkToSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTasteActorMsg<code class="language-plaintext highlighter-rouge">](#cannotTasteActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTastePersonMsg<code class="language-plaintext highlighter-rouge">](#cannotTastePersonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTellSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotTellSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotThrowAtContentsMsg<code class="language-plaintext highlighter-rouge">](#cannotThrowAtContentsMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotThrowAtSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotThrowAtSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotThrowToMsg<code class="language-plaintext highlighter-rouge">](#cannotThrowToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTurnMsg<code class="language-plaintext highlighter-rouge">](#cannotTurnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTurnOffMsg<code class="language-plaintext highlighter-rouge">](#cannotTurnOffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTurnOnMsg<code class="language-plaintext highlighter-rouge">](#cannotTurnOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTurnWithMsg<code class="language-plaintext highlighter-rouge">](#cannotTurnWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTypeOnMsg<code class="language-plaintext highlighter-rouge">](#cannotTypeOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnboardMsg<code class="language-plaintext highlighter-rouge">](#cannotUnboardMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnfastenFromMsg<code class="language-plaintext highlighter-rouge">](#cannotUnfastenFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnfastenMsg<code class="language-plaintext highlighter-rouge">](#cannotUnfastenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnlockMsg<code class="language-plaintext highlighter-rouge">](#cannotUnlockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnlockWithMsg<code class="language-plaintext highlighter-rouge">](#cannotUnlockWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnplugFromMsg<code class="language-plaintext highlighter-rouge">](#cannotUnplugFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnplugMsg<code class="language-plaintext highlighter-rouge">](#cannotUnplugMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnscrewMsg<code class="language-plaintext highlighter-rouge">](#cannotUnscrewMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnscrewWithMsg<code class="language-plaintext highlighter-rouge">](#cannotUnscrewWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cutNoEffectMsg<code class="language-plaintext highlighter-rouge">](#cutNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>dontThrowDirMsg<code class="language-plaintext highlighter-rouge">](#dontThrowDirMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>droppingSelfMsg<code class="language-plaintext highlighter-rouge">](#droppingSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>flashlightOnButDarkMsg<code class="language-plaintext highlighter-rouge">](#flashlightOnButDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>followAlreadyHereInDarkMsg<code class="language-plaintext highlighter-rouge">](#followAlreadyHereInDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>followAlreadyHereMsg<code class="language-plaintext highlighter-rouge">](#followAlreadyHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>followUnknownMsg<code class="language-plaintext highlighter-rouge">](#followUnknownMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>giveAlreadyHasMsg<code class="language-plaintext highlighter-rouge">](#giveAlreadyHasMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyDoesNotFitLockMsg<code class="language-plaintext highlighter-rouge">](#keyDoesNotFitLockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyNotDetachableMsg<code class="language-plaintext highlighter-rouge">](#keyNotDetachableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyNotOnKeyringMsg<code class="language-plaintext highlighter-rouge">](#keyNotOnKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchNotLitMsg<code class="language-plaintext highlighter-rouge">](#matchNotLitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>moveNoEffectMsg<code class="language-plaintext highlighter-rouge">](#moveNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>moveToNoEffectMsg<code class="language-plaintext highlighter-rouge">](#moveToNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeStandingMsg<code class="language-plaintext highlighter-rouge">](#mustBeStandingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustSpecifyTurnToMsg<code class="language-plaintext highlighter-rouge">](#mustSpecifyTurnToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>newlyDarkMsg<code class="language-plaintext highlighter-rouge">](#newlyDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noKeyNeededMsg<code class="language-plaintext highlighter-rouge">](#noKeyNeededMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noRoomToLieMsg<code class="language-plaintext highlighter-rouge">](#noRoomToLieMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noRoomToSitMsg<code class="language-plaintext highlighter-rouge">](#noRoomToSitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noRoomToStandMsg<code class="language-plaintext highlighter-rouge">](#noRoomToStandMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notAContainerMsg<code class="language-plaintext highlighter-rouge">](#notAContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notASurfaceMsg<code class="language-plaintext highlighter-rouge">](#notASurfaceMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notAttachedToMsg<code class="language-plaintext highlighter-rouge">](#notAttachedToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notAWeaponMsg<code class="language-plaintext highlighter-rouge">](#notAWeaponMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notCarryingMsg<code class="language-plaintext highlighter-rouge">](#notCarryingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notDoffableMsg<code class="language-plaintext highlighter-rouge">](#notDoffableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notFollowableMsg<code class="language-plaintext highlighter-rouge">](#notFollowableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingBehindMsg<code class="language-plaintext highlighter-rouge">](#nothingBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingBeyondDoorMsg<code class="language-plaintext highlighter-rouge">](#nothingBeyondDoorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingInsideMsg<code class="language-plaintext highlighter-rouge">](#nothingInsideMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingThroughMsg<code class="language-plaintext highlighter-rouge">](#nothingThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingThroughPassageMsg<code class="language-plaintext highlighter-rouge">](#nothingThroughPassageMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingToHearMsg<code class="language-plaintext highlighter-rouge">](#nothingToHearMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingToSmellMsg<code class="language-plaintext highlighter-rouge">](#nothingToSmellMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingUnderMsg<code class="language-plaintext highlighter-rouge">](#nothingUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notOnPlatformMsg<code class="language-plaintext highlighter-rouge">](#notOnPlatformMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notWearableMsg<code class="language-plaintext highlighter-rouge">](#notWearableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notWearingMsg<code class="language-plaintext highlighter-rouge">](#notWearingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>objNotForKeyringMsg<code class="language-plaintext highlighter-rouge">](#objNotForKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayAttachToMsg<code class="language-plaintext highlighter-rouge">](#okayAttachToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayBurnCandleMsg<code class="language-plaintext highlighter-rouge">](#okayBurnCandleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayBurnMatchMsg<code class="language-plaintext highlighter-rouge">](#okayBurnMatchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayCloseMsg<code class="language-plaintext highlighter-rouge">](#okayCloseMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayDetachFromMsg<code class="language-plaintext highlighter-rouge">](#okayDetachFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayDoffMsg<code class="language-plaintext highlighter-rouge">](#okayDoffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayDropMsg<code class="language-plaintext highlighter-rouge">](#okayDropMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayEatMsg<code class="language-plaintext highlighter-rouge">](#okayEatMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayExtinguishCandleMsg<code class="language-plaintext highlighter-rouge">](#okayExtinguishCandleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayExtinguishMatchMsg<code class="language-plaintext highlighter-rouge">](#okayExtinguishMatchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayJumpMsg<code class="language-plaintext highlighter-rouge">](#okayJumpMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayLockMsg<code class="language-plaintext highlighter-rouge">](#okayLockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayNotStandingOnMsg<code class="language-plaintext highlighter-rouge">](#okayNotStandingOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayOpenMsg<code class="language-plaintext highlighter-rouge">](#okayOpenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPullLeverMsg<code class="language-plaintext highlighter-rouge">](#okayPullLeverMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPullSpringLeverMsg<code class="language-plaintext highlighter-rouge">](#okayPullSpringLeverMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPushButtonMsg<code class="language-plaintext highlighter-rouge">](#okayPushButtonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPushLeverMsg<code class="language-plaintext highlighter-rouge">](#okayPushLeverMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPutBehindMsg<code class="language-plaintext highlighter-rouge">](#okayPutBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPutInMsg<code class="language-plaintext highlighter-rouge">](#okayPutInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPutOnMsg<code class="language-plaintext highlighter-rouge">](#okayPutOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPutUnderMsg<code class="language-plaintext highlighter-rouge">](#okayPutUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayTakeMsg<code class="language-plaintext highlighter-rouge">](#okayTakeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayTurnOffMsg<code class="language-plaintext highlighter-rouge">](#okayTurnOffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayTurnOnMsg<code class="language-plaintext highlighter-rouge">](#okayTurnOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayUnlockMsg<code class="language-plaintext highlighter-rouge">](#okayUnlockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayWearMsg<code class="language-plaintext highlighter-rouge">](#okayWearMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayYellMsg<code class="language-plaintext highlighter-rouge">](#okayYellMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>pullNoEffectMsg<code class="language-plaintext highlighter-rouge">](#pullNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>pushNoEffectMsg<code class="language-plaintext highlighter-rouge">](#pushNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>puttingSelfMsg<code class="language-plaintext highlighter-rouge">](#puttingSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayGoodbyeMsg<code class="language-plaintext highlighter-rouge">](#sayGoodbyeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayHelloMsg<code class="language-plaintext highlighter-rouge">](#sayHelloMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayNoMsg<code class="language-plaintext highlighter-rouge">](#sayNoMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayYesMsg<code class="language-plaintext highlighter-rouge">](#sayYesMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>setToInvalidMsg<code class="language-plaintext highlighter-rouge">](#setToInvalidMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>shouldNotBreakMsg<code class="language-plaintext highlighter-rouge">](#shouldNotBreakMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>shouldNotThrowAtFloorMsg<code class="language-plaintext highlighter-rouge">](#shouldNotThrowAtFloorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>stairwayNotDownMsg<code class="language-plaintext highlighter-rouge">](#stairwayNotDownMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>stairwayNotUpMsg<code class="language-plaintext highlighter-rouge">](#stairwayNotUpMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotBehindMsg<code class="language-plaintext highlighter-rouge">](#takeFromNotBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotInActorMsg<code class="language-plaintext highlighter-rouge">](#takeFromNotInActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotInMsg<code class="language-plaintext highlighter-rouge">](#takeFromNotInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotOnMsg<code class="language-plaintext highlighter-rouge">](#takeFromNotOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotUnderMsg<code class="language-plaintext highlighter-rouge">](#takeFromNotUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takingSelfMsg<code class="language-plaintext highlighter-rouge">](#takingSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tellVagueMsg<code class="language-plaintext highlighter-rouge">](#tellVagueMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwingSelfMsg<code class="language-plaintext highlighter-rouge">](#throwingSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>timePassesMsg<code class="language-plaintext highlighter-rouge">](#timePassesMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooDarkMsg<code class="language-plaintext highlighter-rouge">](#tooDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>turnToInvalidMsg<code class="language-plaintext highlighter-rouge">](#turnToInvalidMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownHowToLockMsg<code class="language-plaintext highlighter-rouge">](#unknownHowToLockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownHowToUnlockMsg<code class="language-plaintext highlighter-rouge">](#unknownHowToUnlockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>unlockRequiresKeyMsg<code class="language-plaintext highlighter-rouge">](#unlockRequiresKeyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>uselessToAttackMsg<code class="language-plaintext highlighter-rouge">](#uselessToAttackMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>whereToGoMsg<code class="language-plaintext highlighter-rouge">](#whereToGoMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>wrongAttachmentMsg<code class="language-plaintext highlighter-rouge">](#wrongAttachmentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>wrongDetachmentMsg<code class="language-plaintext highlighter-rouge">](#wrongDetachmentMsg)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>actorCannotSeeMsg<code class="language-plaintext highlighter-rouge">](#actorCannotSeeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>becomingTooLargeForActorMsg<code class="language-plaintext highlighter-rouge">](#becomingTooLargeForActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>becomingTooLargeForContainerMsg<code class="language-plaintext highlighter-rouge">](#becomingTooLargeForContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBeWearingMsg<code class="language-plaintext highlighter-rouge">](#cannotBeWearingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDoFromMsg<code class="language-plaintext highlighter-rouge">](#cannotDoFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEnterExitOnlyMsg<code class="language-plaintext highlighter-rouge">](#cannotEnterExitOnlyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFitIntoOpeningMsg<code class="language-plaintext highlighter-rouge">](#cannotFitIntoOpeningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFitOutOfOpeningMsg<code class="language-plaintext highlighter-rouge">](#cannotFitOutOfOpeningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFollowFromHereMsg<code class="language-plaintext highlighter-rouge">](#cannotFollowFromHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThatWayInVehicleMsg<code class="language-plaintext highlighter-rouge">](#cannotGoThatWayInVehicleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThroughClosedDoorMsg<code class="language-plaintext highlighter-rouge">](#cannotGoThroughClosedDoorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotHearMsg<code class="language-plaintext highlighter-rouge">](#cannotHearMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveComponentMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveComponentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveThroughClosedMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveThroughClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveThroughContainerMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveThroughContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveThroughMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPushObjectNestedMsg<code class="language-plaintext highlighter-rouge">](#cannotPushObjectNestedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPushObjectThatWayMsg<code class="language-plaintext highlighter-rouge">](#cannotPushObjectThatWayMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutComponentMsg<code class="language-plaintext highlighter-rouge">](#cannotPutComponentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReachIntoOpeningMsg<code class="language-plaintext highlighter-rouge">](#cannotReachIntoOpeningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReachObjectMsg<code class="language-plaintext highlighter-rouge">](#cannotReachObjectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReachOutOfOpeningMsg<code class="language-plaintext highlighter-rouge">](#cannotReachOutOfOpeningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReachThroughMsg<code class="language-plaintext highlighter-rouge">](#cannotReachThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSmellMsg<code class="language-plaintext highlighter-rouge">](#cannotSmellMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeComponentMsg<code class="language-plaintext highlighter-rouge">](#cannotTakeComponentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTasteMsg<code class="language-plaintext highlighter-rouge">](#cannotTasteMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotThrowThroughMsg<code class="language-plaintext highlighter-rouge">](#cannotThrowThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTouchThroughClosedMsg<code class="language-plaintext highlighter-rouge">](#cannotTouchThroughClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTouchThroughContainerMsg<code class="language-plaintext highlighter-rouge">](#cannotTouchThroughContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>circularlyBehindMsg<code class="language-plaintext highlighter-rouge">](#circularlyBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>circularlyInMsg<code class="language-plaintext highlighter-rouge">](#circularlyInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>circularlyOnMsg<code class="language-plaintext highlighter-rouge">](#circularlyOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>circularlyUnderMsg<code class="language-plaintext highlighter-rouge">](#circularlyUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>containerBecomingTooFullMsg<code class="language-plaintext highlighter-rouge">](#containerBecomingTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>containerTooFullMsg<code class="language-plaintext highlighter-rouge">](#containerTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>decorationNotImportantMsg<code class="language-plaintext highlighter-rouge">](#decorationNotImportantMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>doorClosesBehindMsg<code class="language-plaintext highlighter-rouge">](#doorClosesBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>droppingObjMsg<code class="language-plaintext highlighter-rouge">](#droppingObjMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>floorlessDropMsg<code class="language-plaintext highlighter-rouge">](#floorlessDropMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>foundKeyOnKeyringMsg<code class="language-plaintext highlighter-rouge">](#foundKeyOnKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>foundNoKeyOnKeyringMsg<code class="language-plaintext highlighter-rouge">](#foundNoKeyOnKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>handsBecomingTooFullForMsg<code class="language-plaintext highlighter-rouge">](#handsBecomingTooFullForMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>handsTooFullForMsg<code class="language-plaintext highlighter-rouge">](#handsTooFullForMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>heardButNotSeenMsg<code class="language-plaintext highlighter-rouge">](#heardButNotSeenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>invalidStagingContainerActorMsg<code class="language-plaintext highlighter-rouge">](#invalidStagingContainerActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>invalidStagingContainerMsg<code class="language-plaintext highlighter-rouge">](#invalidStagingContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>invalidStagingLocationMsg<code class="language-plaintext highlighter-rouge">](#invalidStagingLocationMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>lookInVaporousMsg<code class="language-plaintext highlighter-rouge">](#lookInVaporousMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>movedKeysToKeyringMsg<code class="language-plaintext highlighter-rouge">](#movedKeysToKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>movedKeyToKeyringMsg<code class="language-plaintext highlighter-rouge">](#movedKeyToKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeBurningMsg<code class="language-plaintext highlighter-rouge">](#mustBeBurningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeCarryingMsg<code class="language-plaintext highlighter-rouge">](#mustBeCarryingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeClosedMsg<code class="language-plaintext highlighter-rouge">](#mustBeClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeEmptyMsg<code class="language-plaintext highlighter-rouge">](#mustBeEmptyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeHoldingMsg<code class="language-plaintext highlighter-rouge">](#mustBeHoldingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeInMsg<code class="language-plaintext highlighter-rouge">](#mustBeInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeOpenMsg<code class="language-plaintext highlighter-rouge">](#mustBeOpenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeUnlockedMsg<code class="language-plaintext highlighter-rouge">](#mustBeUnlockedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeVisibleMsg<code class="language-plaintext highlighter-rouge">](#mustBeVisibleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustDetachMsg<code class="language-plaintext highlighter-rouge">](#mustDetachMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustGetOnMsg<code class="language-plaintext highlighter-rouge">](#mustGetOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustLieOnMsg<code class="language-plaintext highlighter-rouge">](#mustLieOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustOpenDoorMsg<code class="language-plaintext highlighter-rouge">](#mustOpenDoorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustSitOnMsg<code class="language-plaintext highlighter-rouge">](#mustSitOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nestedRoomTooHighMsg<code class="language-plaintext highlighter-rouge">](#nestedRoomTooHighMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nestedRoomTooHighToExitMsg<code class="language-plaintext highlighter-rouge">](#nestedRoomTooHighToExitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noiseSourceMsg<code class="language-plaintext highlighter-rouge">](#noiseSourceMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noResponseFromMsg<code class="language-plaintext highlighter-rouge">](#noResponseFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notAddressableMsg<code class="language-plaintext highlighter-rouge">](#notAddressableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notInterestedMsg<code class="language-plaintext highlighter-rouge">](#notInterestedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notWithIntangibleMsg<code class="language-plaintext highlighter-rouge">](#notWithIntangibleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notWithVaporousMsg<code class="language-plaintext highlighter-rouge">](#notWithVaporousMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>npcDescMsg<code class="language-plaintext highlighter-rouge">](#npcDescMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>objCannotHearActorMsg<code class="language-plaintext highlighter-rouge">](#objCannotHearActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>odorSourceMsg<code class="language-plaintext highlighter-rouge">](#odorSourceMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayFollowInSightMsg<code class="language-plaintext highlighter-rouge">](#okayFollowInSightMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPostureChangeMsg<code class="language-plaintext highlighter-rouge">](#okayPostureChangeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPushTravelMsg<code class="language-plaintext highlighter-rouge">](#okayPushTravelMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okaySetToMsg<code class="language-plaintext highlighter-rouge">](#okaySetToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayTurnToMsg<code class="language-plaintext highlighter-rouge">](#okayTurnToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>rearTooFullMsg<code class="language-plaintext highlighter-rouge">](#rearTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>refuseCommand<code class="language-plaintext highlighter-rouge">](#refuseCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomOkayPostureChangeMsg<code class="language-plaintext highlighter-rouge">](#roomOkayPostureChangeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>smelledButNotSeenMsg<code class="language-plaintext highlighter-rouge">](#smelledButNotSeenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>surfaceTooFullMsg<code class="language-plaintext highlighter-rouge">](#surfaceTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takenAndMovedToKeyringMsg<code class="language-plaintext highlighter-rouge">](#takenAndMovedToKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>thingDescMsg<code class="language-plaintext highlighter-rouge">](#thingDescMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>thingSmellDescMsg<code class="language-plaintext highlighter-rouge">](#thingSmellDescMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>thingSoundDescMsg<code class="language-plaintext highlighter-rouge">](#thingSoundDescMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwCatchMsg<code class="language-plaintext highlighter-rouge">](#throwCatchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwFallMsg<code class="language-plaintext highlighter-rouge">](#throwFallMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwFallShortMsg<code class="language-plaintext highlighter-rouge">](#throwFallShortMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwHitFallMsg<code class="language-plaintext highlighter-rouge">](#throwHitFallMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwHitMsg<code class="language-plaintext highlighter-rouge">](#throwHitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwShortMsg<code class="language-plaintext highlighter-rouge">](#throwShortMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooDistantMsg<code class="language-plaintext highlighter-rouge">](#tooDistantMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooHeavyForActorMsg<code class="language-plaintext highlighter-rouge">](#tooHeavyForActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooLargeForActorMsg<code class="language-plaintext highlighter-rouge">](#tooLargeForActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooLargeForContainerMsg<code class="language-plaintext highlighter-rouge">](#tooLargeForContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooLargeForRearMsg<code class="language-plaintext highlighter-rouge">](#tooLargeForRearMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooLargeForUndersideMsg<code class="language-plaintext highlighter-rouge">](#tooLargeForUndersideMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>totalTooHeavyForMsg<code class="language-plaintext highlighter-rouge">](#totalTooHeavyForMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>undersideTooFullMsg<code class="language-plaintext highlighter-rouge">](#undersideTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>unthingNotHereMsg<code class="language-plaintext highlighter-rouge">](#unthingNotHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>vehicleCannotDoFromMsg<code class="language-plaintext highlighter-rouge">](#vehicleCannotDoFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>willNotCatchMsg<code class="language-plaintext highlighter-rouge">](#willNotCatchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>willNotLetGoMsg<code class="language-plaintext highlighter-rouge">](#willNotLetGoMsg)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageHelper</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>askDisambigList<code class="language-plaintext highlighter-rouge">](../object/MessageHelper.html#askDisambigList)</code>  <code class="language-plaintext highlighter-rouge">[</code>shortTIMsg<code class="language-plaintext highlighter-rouge">](../object/MessageHelper.html#shortTIMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>shortTMsg<code class="language-plaintext highlighter-rouge">](../object/MessageHelper.html#shortTMsg)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="alreadyAttachedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyAttachedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3827">3827</a>]</p>
+
+<div class="desc">
+
+cannot attach because we're already attached to the given object
+
+</div>
+
+<p><span id="alreadyBurningMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyBurningMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3804">3804</a>]</p>
+
+<div class="desc">
+
+object is already burning
+
+</div>
+
+<p><span id="alreadyClosedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyClosedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3889">3889</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="alreadyHoldingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyHoldingMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2877">2877</a>]</p>
+
+<div class="desc">
+
+taking something already being held
+
+</div>
+
+<p><span id="alreadyInLocMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyInLocMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3983">3983</a>]</p>
+
+<div class="desc">
+
+actor is already in a location
+
+</div>
+
+<p><span id="alreadyLockedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyLockedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3892">3892</a>]</p>
+
+<div class="desc">
+
+already locked/unlocked
+
+</div>
+
+<p><span id="alreadyLyingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyLyingMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3990">3990</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="alreadyLyingOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyLyingOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3991">3991</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="alreadyOpenMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyOpenMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3888">3888</a>]</p>
+
+<div class="desc">
+
+already open/closed
+
+</div>
+
+<p><span id="alreadyPulledMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyPulledMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3663">3663</a>]</p>
+
+<div class="desc">
+
+lever is already in pulled state
+
+</div>
+
+<p><span id="alreadyPushedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyPushedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3652">3652</a>]</p>
+
+<div class="desc">
+
+lever is already in pushed state
+
+</div>
+
+<p><span id="alreadyPutBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyPutBehindMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2904">2904</a>]</p>
+
+<div class="desc">
+
+we can't put the dobj behind the iobj because it's already there
+
+</div>
+
+<p><span id="alreadyPutInMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyPutInMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2895">2895</a>]</p>
+
+<div class="desc">
+
+we can't put the dobj in the iobj because it's already there
+
+</div>
+
+<p><span id="alreadyPutOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyPutOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2898">2898</a>]</p>
+
+<div class="desc">
+
+we can't put the dobj on the iobj because it's already there
+
+</div>
+
+<p><span id="alreadyPutUnderMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyPutUnderMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2901">2901</a>]</p>
+
+<div class="desc">
+
+we can't put the dobj under the iobj because it's already there
+
+</div>
+
+<p><span id="alreadySittingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadySittingMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3988">3988</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="alreadySittingOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadySittingOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3989">3989</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="alreadyStandingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyStandingMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3986">3986</a>]</p>
+
+<div class="desc">
+
+actor is already standing/sitting on/lying on
+
+</div>
+
+<p><span id="alreadyStandingOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyStandingOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3987">3987</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="alreadySwitchedOffMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadySwitchedOffMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3725">3725</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="alreadySwitchedOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadySwitchedOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3724">3724</a>]</p>
+
+<div class="desc">
+
+switch is already on/off
+
+</div>
+
+<p><span id="alreadyUnlockedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyUnlockedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3893">3893</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="alreadyWearingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyWearingMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2846">2846</a>]</p>
+
+<div class="desc">
+
+already wearing item
+
+</div>
+
+<p><span id="askVagueMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askVagueMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3581">3581</a>]</p>
+
+<div class="desc">
+
+vague ASK/TELL (for ASK/TELL \&lt;actor\&gt; \&lt;topic\&gt; syntax errors)
+
+</div>
+
+<p><span id="candleNotLitMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">candleNotLitMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3764">3764</a>]</p>
+
+<div class="desc">
+
+extinguishing a candle that isn't lit
+
+</div>
+
+<p><span id="candleOutOfFuelMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">candleOutOfFuelMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3757">3757</a>]</p>
+
+<div class="desc">
+
+trying to light a candle with no fuel
+
+</div>
+
+<p><span id="cannotAskSelfForMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotAskSelfForMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3547">3547</a>]</p>
+
+<div class="desc">
+
+can't ask yourself for anything
+
+</div>
+
+<p><span id="cannotAskSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotAskSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3543">3543</a>]</p>
+
+<div class="desc">
+
+can't ask yourself about anything
+
+</div>
+
+<p><span id="cannotAttachKeyToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotAttachKeyToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3955">3955</a>]</p>
+
+<div class="desc">
+
+cannot attach key (dobj) to (iobj)
+
+</div>
+
+<p><span id="cannotAttachMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotAttachMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3817">3817</a>]</p>
+
+<div class="desc">
+
+cannot attach object to object
+
+</div>
+
+<p><span id="cannotAttachToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotAttachToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3819">3819</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotAttachToSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotAttachToSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3823">3823</a>]</p>
+
+<div class="desc">
+
+cannot attach to self
+
+</div>
+
+<p><span id="cannotBoardMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotBoardMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3967">3967</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotBurnDobjWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotBurnDobjWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3800">3800</a>]</p>
+
+<div class="desc">
+
+cannot burn this specific direct object with this specific iobj
+
+</div>
+
+<p><span id="cannotBurnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotBurnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3795">3795</a>]</p>
+
+<div class="desc">
+
+cannot burn
+
+</div>
+
+<p><span id="cannotBurnWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotBurnWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3796">3796</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotCleanMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotCleanMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3948">3948</a>]</p>
+
+<div class="desc">
+
+cannot clean object
+
+</div>
+
+<p><span id="cannotCleanWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotCleanWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3951">3951</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotClimbMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotClimbMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3879">3879</a>]</p>
+
+<div class="desc">
+
+cannot climb object
+
+</div>
+
+<p><span id="cannotCloseMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotCloseMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3884">3884</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotConsultMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotConsultMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3770">3770</a>]</p>
+
+<div class="desc">
+
+cannot consult object
+
+</div>
+
+<p><span id="cannotCutWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotCutWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3876">3876</a>]</p>
+
+<div class="desc">
+
+can't use iobj to cut anything
+
+</div>
+
+<p><span id="cannotDetachFromMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotDetachFromMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3857">3857</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotDetachMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotDetachMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3856">3856</a>]</p>
+
+<div class="desc">
+
+cannot detach object from object
+
+</div>
+
+<p><span id="cannotDetachPermanentMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotDetachPermanentMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3861">3861</a>]</p>
+
+<div class="desc">
+
+no obvious way to detach a permanent attachment
+
+</div>
+
+<p><span id="cannotDigMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotDigMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2870">2870</a>]</p>
+
+<div class="desc">
+
+cannot dig here
+
+</div>
+
+<p><span id="cannotDigWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotDigWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2873">2873</a>]</p>
+
+<div class="desc">
+
+not a digging implement
+
+</div>
+
+<p><span id="cannotDoFromHereMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotDoFromHereMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3364">3364</a>]</p>
+
+<div class="desc">
+
+cannot carry out a command from this location
+
+</div>
+
+<p><span id="cannotDoThatMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotDoThatMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2567">2567</a>]</p>
+
+<div class="desc">
+
+generic "can't do that" message - this is used when verification fails
+because an object doesn't define the action ("doXxx") method for the
+verb
+
+</div>
+
+<p><span id="cannotDrinkMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotDrinkMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3944">3944</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotEatMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotEatMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3943">3943</a>]</p>
+
+<div class="desc">
+
+not edible/drinkable
+
+</div>
+
+<p><span id="cannotEnterHeldMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotEnterHeldMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3976">3976</a>]</p>
+
+<div class="desc">
+
+cannot sit/lie/stand on something being held
+
+</div>
+
+<p><span id="cannotEnterMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotEnterMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4043">4043</a>]</p>
+
+<div class="desc">
+
+cannot enter/go through
+
+</div>
+
+<p><span id="cannotEnterOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotEnterOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3777">3777</a>]</p>
+
+<div class="desc">
+
+cannot enter anything on object
+
+</div>
+
+<p><span id="cannotExtinguishMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotExtinguishMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3807">3807</a>]</p>
+
+<div class="desc">
+
+cannot extinguish
+
+</div>
+
+<p><span id="cannotFastenMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotFastenMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4019">4019</a>]</p>
+
+<div class="desc">
+
+cannot fasten/unfasten
+
+</div>
+
+<p><span id="cannotFastenToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotFastenToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4020">4020</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotFindTopicMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotFindTopicMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3511">3511</a>]</p>
+
+<div class="desc">
+
+failed to find a topic in a consultable object
+
+</div>
+
+<p><span id="cannotFlipMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotFlipMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3783">3783</a>]</p>
+
+<div class="desc">
+
+cannot flip object
+
+</div>
+
+<p><span id="cannotFollowSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotFollowSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3604">3604</a>]</p>
+
+<div class="desc">
+
+cannot follow yourself
+
+</div>
+
+<p><span id="cannotGetOffOfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGetOffOfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3969">3969</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotGetOutMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGetOutMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3980">3980</a>]</p>
+
+<div class="desc">
+
+cannot get out (of current location)
+
+</div>
+
+<p><span id="cannotGiveToItselfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGiveToItselfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3559">3559</a>]</p>
+
+<div class="desc">
+
+can't give something to itself
+
+</div>
+
+<p><span id="cannotGiveToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGiveToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3571">3571</a>]</p>
+
+<div class="desc">
+
+can't give/show something to a non-actor
+
+</div>
+
+<p><span id="cannotGiveToSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGiveToSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3555">3555</a>]</p>
+
+<div class="desc">
+
+can't give yourself something
+
+</div>
+
+<p><span id="cannotGoBackMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGoBackMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3360">3360</a>]</p>
+
+<div class="desc">
+
+we don't know the way back for a GO BACK
+
+</div>
+
+<p><span id="cannotGoThatWayInDarkMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGoThatWayInDarkMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3356">3356</a>]</p>
+
+<div class="desc">
+
+travel attempted in the dark in a direction with no exit
+
+</div>
+
+<p><span id="cannotGoThatWayMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGoThatWayMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3353">3353</a>]</p>
+
+<div class="desc">
+
+travel attempted in a direction with no exit
+
+</div>
+
+<p><span id="cannotGoThroughMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGoThroughMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4045">4045</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotJumpOffHereMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotJumpOffHereMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3507">3507</a>]</p>
+
+<div class="desc">
+
+cannot jump off (with no direct object) from here
+
+</div>
+
+<p><span id="cannotJumpOffMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotJumpOffMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3504">3504</a>]</p>
+
+<div class="desc">
+
+cannot jump off object
+
+</div>
+
+<p><span id="cannotJumpOverMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotJumpOverMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3501">3501</a>]</p>
+
+<div class="desc">
+
+cannot jump over object
+
+</div>
+
+<p><span id="cannotKissMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotKissMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4134">4134</a>]</p>
+
+<div class="desc">
+
+cannot kiss something
+
+</div>
+
+<p><span id="cannotKissSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotKissSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4141">4141</a>]</p>
+
+<div class="desc">
+
+cannot kiss yourself
+
+</div>
+
+<p><span id="cannotLieOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotLieOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3964">3964</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotLightMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotLightMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3792">3792</a>]</p>
+
+<div class="desc">
+
+cannot light
+
+</div>
+
+<p><span id="cannotLockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotLockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3899">3899</a>]</p>
+
+<div class="desc">
+
+object is not lockable/unlockable
+
+</div>
+
+<p><span id="cannotLockWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotLockWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3912">3912</a>]</p>
+
+<div class="desc">
+
+object is not a key
+
+</div>
+
+<p><span id="cannotLookBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotLookBehindMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2804">2804</a>]</p>
+
+<div class="desc">
+
+this is an object we can't look behind/through
+
+</div>
+
+<p><span id="cannotLookInClosedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotLookInClosedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3896">3896</a>]</p>
+
+<div class="desc">
+
+cannot look in container because it's closed
+
+</div>
+
+<p><span id="cannotLookThroughMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotLookThroughMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2806">2806</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotLookUnderMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotLookUnderMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2805">2805</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotMoveActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveActorMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3006">3006</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotMoveFixtureMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveFixtureMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2910">2910</a>]</p>
+
+<div class="desc">
+
+trying to move a Fixture to a new container by some means (take, drop,
+put in, put on, etc)
+
+</div>
+
+<p><span id="cannotMoveHeavyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveHeavyMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2925">2925</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotMoveImmovableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveImmovableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2920">2920</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotMovePersonMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMovePersonMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3013">3013</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotMovePushableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMovePushableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2951">2951</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotMoveWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3692">3692</a>]</p>
+
+<div class="desc">
+
+cannot use object as an implement to move something
+
+</div>
+
+<p><span id="cannotOpenLockedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotOpenLockedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3905">3905</a>]</p>
+
+<div class="desc">
+
+attempting to open a locked object
+
+</div>
+
+<p><span id="cannotOpenMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotOpenMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3883">3883</a>]</p>
+
+<div class="desc">
+
+object is not openable/closable
+
+</div>
+
+<p><span id="cannotPlugInMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPlugInMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4027">4027</a>]</p>
+
+<div class="desc">
+
+cannot plug/unplug
+
+</div>
+
+<p><span id="cannotPlugInToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPlugInToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4028">4028</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPourIntoMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPourIntoMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3811">3811</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPourMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPourMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3810">3810</a>]</p>
+
+<div class="desc">
+
+cannot pour/pour in/pour on
+
+</div>
+
+<p><span id="cannotPourOntoMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPourOntoMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3813">3813</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPushTravelMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPushTravelMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3682">3682</a>]</p>
+
+<div class="desc">
+
+cannot push an object through travel
+
+</div>
+
+<p><span id="cannotPutActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutActorMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3007">3007</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPutBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutBehindMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3223">3223</a>]</p>
+
+<div class="desc">
+
+nothing can be put behind the given object
+
+</div>
+
+<p><span id="cannotPutBehindRestrictedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutBehindRestrictedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3247">3247</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPutBehindSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutBehindSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3237">3237</a>]</p>
+
+<div class="desc">
+
+trying to put something behind itself
+
+</div>
+
+<p><span id="cannotPutFixtureMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutFixtureMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2916">2916</a>]</p>
+
+<div class="desc">
+
+trying to put a Fixture in something
+
+</div>
+
+<p><span id="cannotPutHeavyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutHeavyMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2926">2926</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPutImmovableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutImmovableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2921">2921</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPutInDispenserMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutInDispenserMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3255">3255</a>]</p>
+
+<div class="desc">
+
+wrong item type for dispenser
+
+</div>
+
+<p><span id="cannotPutInRestrictedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutInRestrictedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3241">3241</a>]</p>
+
+<div class="desc">
+
+can't put something in/on/etc a restricted container/surface/etc
+
+</div>
+
+<p><span id="cannotPutInSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutInSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3227">3227</a>]</p>
+
+<div class="desc">
+
+trying to put something in itself
+
+</div>
+
+<p><span id="cannotPutOnRestrictedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutOnRestrictedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3243">3243</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPutOnSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutOnSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3230">3230</a>]</p>
+
+<div class="desc">
+
+trying to put something on itself
+
+</div>
+
+<p><span id="cannotPutPersonMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutPersonMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3015">3015</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPutPushableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutPushableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2955">2955</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPutUnderMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutUnderMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3219">3219</a>]</p>
+
+<div class="desc">
+
+can't put anything under iobj
+
+</div>
+
+<p><span id="cannotPutUnderRestrictedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutUnderRestrictedMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3245">3245</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPutUnderSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutUnderSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3233">3233</a>]</p>
+
+<div class="desc">
+
+trying to put something under itself
+
+</div>
+
+<p><span id="cannotRemoveHeldMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotRemoveHeldMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2963">2963</a>]</p>
+
+<div class="desc">
+
+can't REMOVE something that's being held
+
+</div>
+
+<p><span id="cannotReturnToDispenserMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotReturnToDispenserMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3251">3251</a>]</p>
+
+<div class="desc">
+
+trying to return something to a remove-only dispenser
+
+</div>
+
+<p><span id="cannotScrewMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotScrewMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4035">4035</a>]</p>
+
+<div class="desc">
+
+cannot screw/unscrew
+
+</div>
+
+<p><span id="cannotScrewWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotScrewWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4036">4036</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotSetToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotSetToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3696">3696</a>]</p>
+
+<div class="desc">
+
+cannot set object to setting
+
+</div>
+
+<p><span id="cannotShowToItselfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotShowToItselfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3567">3567</a>]</p>
+
+<div class="desc">
+
+can't show something to itself
+
+</div>
+
+<p><span id="cannotShowToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotShowToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3572">3572</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotShowToSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotShowToSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3563">3563</a>]</p>
+
+<div class="desc">
+
+can't show yourself something
+
+</div>
+
+<p><span id="cannotSitOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotSitOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3962">3962</a>]</p>
+
+<div class="desc">
+
+cannot sit/lie/stand/get on/get out of
+
+</div>
+
+<p><span id="cannotSleepMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotSleepMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3959">3959</a>]</p>
+
+<div class="desc">
+
+actor cannot sleep
+
+</div>
+
+<p><span id="cannotStandOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotStandOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3966">3966</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotStandOnPathMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotStandOnPathMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3972">3972</a>]</p>
+
+<div class="desc">
+
+standing on a PathPassage
+
+</div>
+
+<p><span id="cannotSwitchMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotSwitchMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3780">3780</a>]</p>
+
+<div class="desc">
+
+cannot switch object
+
+</div>
+
+<p><span id="cannotTakeActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTakeActorMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3005">3005</a>]</p>
+
+<div class="desc">
+
+try to take/move/put/taste an untakeable actor
+
+</div>
+
+<p><span id="cannotTakeFixtureMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTakeFixtureMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2913">2913</a>]</p>
+
+<div class="desc">
+
+trying to take a Fixture
+
+</div>
+
+<p><span id="cannotTakeHeavyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTakeHeavyMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2924">2924</a>]</p>
+
+<div class="desc">
+
+trying to take/move/put a Heavy object
+
+</div>
+
+<p><span id="cannotTakeImmovableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTakeImmovableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2919">2919</a>]</p>
+
+<div class="desc">
+
+trying to take/move/put an Immovable object
+
+</div>
+
+<p><span id="cannotTakeLocationMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTakeLocationMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2959">2959</a>]</p>
+
+<div class="desc">
+
+can't take something while occupying it
+
+</div>
+
+<p><span id="cannotTakePersonMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTakePersonMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3011">3011</a>]</p>
+
+<div class="desc">
+
+trying to take/move/put/taste a person
+
+</div>
+
+<p><span id="cannotTakePushableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTakePushableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2949">2949</a>]</p>
+
+<div class="desc">
+
+specialized Immovable messages for TravelPushables
+
+</div>
+
+<p><span id="cannotTalkToSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTalkToSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3539">3539</a>]</p>
+
+<div class="desc">
+
+can't talk to yourself
+
+</div>
+
+<p><span id="cannotTasteActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTasteActorMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3008">3008</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotTastePersonMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTastePersonMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3017">3017</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotTellSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTellSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3551">3551</a>]</p>
+
+<div class="desc">
+
+can't tell yourself about anything
+
+</div>
+
+<p><span id="cannotThrowAtContentsMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotThrowAtContentsMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4053">4053</a>]</p>
+
+<div class="desc">
+
+can't throw something at an object inside itself
+
+</div>
+
+<p><span id="cannotThrowAtSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotThrowAtSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4049">4049</a>]</p>
+
+<div class="desc">
+
+can't throw something at itself
+
+</div>
+
+<p><span id="cannotThrowToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotThrowToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4123">4123</a>]</p>
+
+<div class="desc">
+
+we're not a suitable target for THROW TO (because we're not an NPC)
+
+</div>
+
+<p><span id="cannotTurnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTurnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3706">3706</a>]</p>
+
+<div class="desc">
+
+cannot turn object
+
+</div>
+
+<p><span id="cannotTurnOffMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTurnOffMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3788">3788</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotTurnOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTurnOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3786">3786</a>]</p>
+
+<div class="desc">
+
+cannot turn object on/off
+
+</div>
+
+<p><span id="cannotTurnWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTurnWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3713">3713</a>]</p>
+
+<div class="desc">
+
+cannot turn anything with object
+
+</div>
+
+<p><span id="cannotTypeOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTypeOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3774">3774</a>]</p>
+
+<div class="desc">
+
+cannot type anything on object
+
+</div>
+
+<p><span id="cannotUnboardMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnboardMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3968">3968</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotUnfastenFromMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnfastenFromMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4023">4023</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotUnfastenMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnfastenMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4022">4022</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotUnlockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnlockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3901">3901</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotUnlockWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnlockWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3914">3914</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotUnplugFromMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnplugFromMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4031">4031</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotUnplugMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnplugMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4030">4030</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotUnscrewMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnscrewMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4038">4038</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotUnscrewWithMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnscrewWithMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4039">4039</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cutNoEffectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cutNoEffectMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3873">3873</a>]</p>
+
+<div class="desc">
+
+cannot cut that
+
+</div>
+
+<p><span id="dontThrowDirMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dontThrowDirMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4068">4068</a>]</p>
+
+<div class="desc">
+
+THROW \&lt;obj\&gt; \&lt;direction\&gt; isn't supported; use THROW AT instead
+
+</div>
+
+<p><span id="droppingSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">droppingSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2886">2886</a>]</p>
+
+<div class="desc">
+
+actor dropping self
+
+</div>
+
+<p><span id="flashlightOnButDarkMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flashlightOnButDarkMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3732">3732</a>]</p>
+
+<div class="desc">
+
+flashlight is on but doesn't light up
+
+</div>
+
+<p><span id="followAlreadyHereInDarkMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">followAlreadyHereInDarkMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3615">3615</a>]</p>
+
+<div class="desc">
+
+following an object that we \*think\* is in our same location (in other
+words, we're already in the location where we thought we last saw the
+object go), but it's too dark to see if that's really true
+
+</div>
+
+<p><span id="followAlreadyHereMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">followAlreadyHereMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3607">3607</a>]</p>
+
+<div class="desc">
+
+following an object that's in the same location as the actor
+
+</div>
+
+<p><span id="followUnknownMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">followUnknownMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3619">3619</a>]</p>
+
+<div class="desc">
+
+trying to follow an object, but don't know where it went from here
+
+</div>
+
+<p><span id="giveAlreadyHasMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">giveAlreadyHasMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3536">3536</a>]</p>
+
+<div class="desc">
+
+trying to give something to someone who already has the object
+
+</div>
+
+<p><span id="keyDoesNotFitLockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">keyDoesNotFitLockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3924">3924</a>]</p>
+
+<div class="desc">
+
+the key (iobj) does not fit the lock (dobj)
+
+</div>
+
+<p><span id="keyNotDetachableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">keyNotDetachableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3266">3266</a>]</p>
+
+<div class="desc">
+
+can't detach key (with no iobj specified) because it's not on a ring
+
+</div>
+
+<p><span id="keyNotOnKeyringMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">keyNotOnKeyringMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3263">3263</a>]</p>
+
+<div class="desc">
+
+the dobj isn't on the keyring
+
+</div>
+
+<p><span id="matchNotLitMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchNotLitMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3746">3746</a>]</p>
+
+<div class="desc">
+
+match not lit
+
+</div>
+
+<p><span id="moveNoEffectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveNoEffectMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3676">3676</a>]</p>
+
+<div class="desc">
+
+moving object has no effect
+
+</div>
+
+<p><span id="moveToNoEffectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveToNoEffectMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3679">3679</a>]</p>
+
+<div class="desc">
+
+cannot move object to other object
+
+</div>
+
+<p><span id="mustBeStandingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeStandingMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2667">2667</a>]</p>
+
+<div class="desc">
+
+actor must be standing before doing that
+
+</div>
+
+<p><span id="mustSpecifyTurnToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustSpecifyTurnToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3709">3709</a>]</p>
+
+<div class="desc">
+
+must specify setting to turn object to
+
+</div>
+
+<p><span id="newlyDarkMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">newlyDarkMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4144">4144</a>]</p>
+
+<div class="desc">
+
+it is now dark at actor's location
+
+</div>
+
+<p><span id="noKeyNeededMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noKeyNeededMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2664">2664</a>]</p>
+
+<div class="desc">
+
+no key is needed to lock or unlock this object
+
+</div>
+
+<p><span id="noRoomToLieMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noRoomToLieMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4001">4001</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noRoomToSitMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noRoomToSitMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3999">3999</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noRoomToStandMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noRoomToStandMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3997">3997</a>]</p>
+
+<div class="desc">
+
+no room to stand/sit/lie on dobj
+
+</div>
+
+<p><span id="notAContainerMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notAContainerMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3212">3212</a>]</p>
+
+<div class="desc">
+
+trying to put an object in a non-container
+
+</div>
+
+<p><span id="notASurfaceMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notASurfaceMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3215">3215</a>]</p>
+
+<div class="desc">
+
+trying to put an object on a non-surface
+
+</div>
+
+<p><span id="notAttachedToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notAttachedToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3865">3865</a>]</p>
+
+<div class="desc">
+
+dobj isn't attached to iobj
+
+</div>
+
+<p><span id="notAWeaponMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notAWeaponMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3640">3640</a>]</p>
+
+<div class="desc">
+
+obj is not a weapon
+
+</div>
+
+<p><span id="notCarryingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notCarryingMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2883">2883</a>]</p>
+
+<div class="desc">
+
+dropping an object not being carried
+
+</div>
+
+<p><span id="notDoffableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notDoffableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2842">2842</a>]</p>
+
+<div class="desc">
+
+doffing something that isn't wearable
+
+</div>
+
+<p><span id="notFollowableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notFollowableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3601">3601</a>]</p>
+
+<div class="desc">
+
+not a followable object
+
+</div>
+
+<p><span id="nothingBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingBehindMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2798">2798</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="nothingBeyondDoorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingBeyondDoorMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2813">2813</a>]</p>
+
+<div class="desc">
+
+there's nothing on the other side of a door we just opened
+
+</div>
+
+<p><span id="nothingInsideMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingInsideMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2794">2794</a>]</p>
+
+<div class="desc">
+
+generic messages for looking prepositionally
+
+</div>
+
+<p><span id="nothingThroughMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingThroughMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2800">2800</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="nothingThroughPassageMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingThroughPassageMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2809">2809</a>]</p>
+
+<div class="desc">
+
+looking through an open passage
+
+</div>
+
+<p><span id="nothingToHearMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingToHearMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2821">2821</a>]</p>
+
+<div class="desc">
+
+there's nothing here with a specific noise
+
+</div>
+
+<p><span id="nothingToSmellMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingToSmellMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2817">2817</a>]</p>
+
+<div class="desc">
+
+there's nothing here with a specific odor
+
+</div>
+
+<p><span id="nothingUnderMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingUnderMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2796">2796</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="notOnPlatformMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notOnPlatformMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3994">3994</a>]</p>
+
+<div class="desc">
+
+getting off something you're not on
+
+</div>
+
+<p><span id="notWearableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notWearableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2838">2838</a>]</p>
+
+<div class="desc">
+
+an item is not wearable
+
+</div>
+
+<p><span id="notWearingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notWearingMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2849">2849</a>]</p>
+
+<div class="desc">
+
+not wearing (item being doffed)
+
+</div>
+
+<p><span id="objNotForKeyringMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objNotForKeyringMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3259">3259</a>]</p>
+
+<div class="desc">
+
+the dobj doesn't fit on this keyring
+
+</div>
+
+<p><span id="okayAttachToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayAttachToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3850">3850</a>]</p>
+
+<div class="desc">
+
+default message for successful Attachable attachment
+
+</div>
+
+<p><span id="okayBurnCandleMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayBurnCandleMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3761">3761</a>]</p>
+
+<div class="desc">
+
+lighting a candle
+
+</div>
+
+<p><span id="okayBurnMatchMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayBurnMatchMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3749">3749</a>]</p>
+
+<div class="desc">
+
+lighting a match
+
+</div>
+
+<p><span id="okayCloseMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayCloseMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2860">2860</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="okayDetachFromMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayDetachFromMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3853">3853</a>]</p>
+
+<div class="desc">
+
+default message for successful Attachable detachment
+
+</div>
+
+<p><span id="okayDoffMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayDoffMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2855">2855</a>]</p>
+
+<div class="desc">
+
+default response to 'doff obj'
+
+</div>
+
+<p><span id="okayDropMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayDropMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2971">2971</a>]</p>
+
+<div class="desc">
+
+default 'drop' response
+
+</div>
+
+<p><span id="okayEatMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayEatMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3736">3736</a>]</p>
+
+<div class="desc">
+
+default acknowledgment for eating something
+
+</div>
+
+<p><span id="okayExtinguishCandleMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayExtinguishCandleMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3767">3767</a>]</p>
+
+<div class="desc">
+
+extinguishing a candle
+
+</div>
+
+<p><span id="okayExtinguishMatchMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayExtinguishMatchMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3753">3753</a>]</p>
+
+<div class="desc">
+
+extinguishing a match
+
+</div>
+
+<p><span id="okayJumpMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayJumpMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3497">3497</a>]</p>
+
+<div class="desc">
+
+"jump"
+
+</div>
+
+<p><span id="okayLockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayLockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2864">2864</a>]</p>
+
+<div class="desc">
+
+default response to lock/unlock
+
+</div>
+
+<p><span id="okayNotStandingOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayNotStandingOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4016">4016</a>]</p>
+
+<div class="desc">
+
+default report for getting off of a platform
+
+</div>
+
+<p><span id="okayOpenMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayOpenMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2858">2858</a>]</p>
+
+<div class="desc">
+
+default response to open/close
+
+</div>
+
+<p><span id="okayPullLeverMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPullLeverMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3667">3667</a>]</p>
+
+<div class="desc">
+
+default acknowledgment to pulling a lever
+
+</div>
+
+<p><span id="okayPullSpringLeverMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPullSpringLeverMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3671">3671</a>]</p>
+
+<div class="desc">
+
+default acknowledgment to pulling a spring-loaded lever
+
+</div>
+
+<p><span id="okayPushButtonMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPushButtonMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3649">3649</a>]</p>
+
+<div class="desc">
+
+default 'push button' acknowledgment
+
+</div>
+
+<p><span id="okayPushLeverMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPushLeverMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3656">3656</a>]</p>
+
+<div class="desc">
+
+default acknowledgment to pushing a lever
+
+</div>
+
+<p><span id="okayPutBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPutBehindMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3001">3001</a>]</p>
+
+<div class="desc">
+
+default successful 'put behind' response
+
+</div>
+
+<p><span id="okayPutInMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPutInMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2989">2989</a>]</p>
+
+<div class="desc">
+
+default successful 'put in' response
+
+</div>
+
+<p><span id="okayPutOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPutOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2993">2993</a>]</p>
+
+<div class="desc">
+
+default successful 'put on' response
+
+</div>
+
+<p><span id="okayPutUnderMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPutUnderMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2997">2997</a>]</p>
+
+<div class="desc">
+
+default successful 'put under' response
+
+</div>
+
+<p><span id="okayTakeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayTakeMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2967">2967</a>]</p>
+
+<div class="desc">
+
+default 'take' response
+
+</div>
+
+<p><span id="okayTurnOffMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayTurnOffMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3729">3729</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="okayTurnOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayTurnOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3728">3728</a>]</p>
+
+<div class="desc">
+
+default acknowledgment for switching on/off
+
+</div>
+
+<p><span id="okayUnlockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayUnlockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2866">2866</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="okayWearMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayWearMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2852">2852</a>]</p>
+
+<div class="desc">
+
+default response to 'wear obj'
+
+</div>
+
+<p><span id="okayYellMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayYellMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3494">3494</a>]</p>
+
+<div class="desc">
+
+"yell"
+
+</div>
+
+<p><span id="pullNoEffectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pullNoEffectMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3660">3660</a>]</p>
+
+<div class="desc">
+
+pulling object has no effect
+
+</div>
+
+<p><span id="pushNoEffectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pushNoEffectMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3646">3646</a>]</p>
+
+<div class="desc">
+
+pushing object has no effect
+
+</div>
+
+<p><span id="puttingSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">puttingSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2889">2889</a>]</p>
+
+<div class="desc">
+
+actor putting self in something
+
+</div>
+
+<p><span id="sayGoodbyeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayGoodbyeMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3479">3479</a>]</p>
+
+<div class="desc">
+
+"goodbye" with no target actor
+
+</div>
+
+<p><span id="sayHelloMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayHelloMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3476">3476</a>]</p>
+
+<div class="desc">
+
+"hello" with no target actor
+
+</div>
+
+<p><span id="sayNoMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayNoMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3483">3483</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayYesMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayYesMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3482">3482</a>]</p>
+
+<div class="desc">
+
+"yes"/"no" with no target actor
+
+</div>
+
+<p><span id="setToInvalidMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setToInvalidMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3699">3699</a>]</p>
+
+<div class="desc">
+
+invalid setting for generic Settable
+
+</div>
+
+<p><span id="shouldNotBreakMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shouldNotBreakMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3869">3869</a>]</p>
+
+<div class="desc">
+
+breaking object would serve no purpose
+
+</div>
+
+<p><span id="shouldNotThrowAtFloorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shouldNotThrowAtFloorMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4064">4064</a>]</p>
+
+<div class="desc">
+
+shouldn't throw something at the floor
+
+</div>
+
+<p><span id="stairwayNotDownMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stairwayNotDownMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3470">3470</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="stairwayNotUpMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stairwayNotUpMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3469">3469</a>]</p>
+
+<div class="desc">
+
+the stairway does not go up/down
+
+</div>
+
+<p><span id="takeFromNotBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeFromNotBehindMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3335">3335</a>]</p>
+
+<div class="desc">
+
+taking dobj from behind something, but dobj isn't behind iobj
+
+</div>
+
+<p><span id="takeFromNotInActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeFromNotInActorMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3339">3339</a>]</p>
+
+<div class="desc">
+
+taking dobj from an actor, but actor doesn't have iobj
+
+</div>
+
+<p><span id="takeFromNotInMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeFromNotInMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3325">3325</a>]</p>
+
+<div class="desc">
+
+taking dobj from iobj, but dobj isn't in iobj
+
+</div>
+
+<p><span id="takeFromNotOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeFromNotOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3328">3328</a>]</p>
+
+<div class="desc">
+
+taking dobj from surface, but dobj isn't on iobj
+
+</div>
+
+<p><span id="takeFromNotUnderMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeFromNotUnderMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3331">3331</a>]</p>
+
+<div class="desc">
+
+taking dobj from under something, but dobj isn't under iobj
+
+</div>
+
+<p><span id="takingSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takingSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2880">2880</a>]</p>
+
+<div class="desc">
+
+actor taking self ("take me")
+
+</div>
+
+<p><span id="tellVagueMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tellVagueMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3583">3583</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="throwingSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwingSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2892">2892</a>]</p>
+
+<div class="desc">
+
+actor throwing self
+
+</div>
+
+<p><span id="timePassesMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timePassesMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3473">3473</a>]</p>
+
+<div class="desc">
+
+"wait"
+
+</div>
+
+<p><span id="tooDarkMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooDarkMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2577">2577</a>]</p>
+
+<div class="desc">
+
+it's too dark to do that
+
+</div>
+
+<p><span id="turnToInvalidMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">turnToInvalidMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3717">3717</a>]</p>
+
+<div class="desc">
+
+invalid setting for dial
+
+</div>
+
+<p><span id="unknownHowToLockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unknownHowToLockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3918">3918</a>]</p>
+
+<div class="desc">
+
+we don't know how to lock/unlock this
+
+</div>
+
+<p><span id="unknownHowToUnlockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unknownHowToUnlockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3920">3920</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="unlockRequiresKeyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unlockRequiresKeyMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3908">3908</a>]</p>
+
+<div class="desc">
+
+object requires a key to unlock
+
+</div>
+
+<p><span id="uselessToAttackMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">uselessToAttackMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3643">3643</a>]</p>
+
+<div class="desc">
+
+no effect attacking obj
+
+</div>
+
+<p><span id="whereToGoMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">whereToGoMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3350">3350</a>]</p>
+
+<div class="desc">
+
+must say which way to go
+
+</div>
+
+<p><span id="wrongAttachmentMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">wrongAttachmentMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3834">3834</a>]</p>
+
+<div class="desc">
+
+dobj and/or iobj can be attached to certain things, but not to each
+other
+
+</div>
+
+<p><span id="wrongDetachmentMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">wrongDetachmentMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3838">3838</a>]</p>
+
+<div class="desc">
+
+dobj and iobj are attached, but they can't be taken apart
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="actorCannotSeeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorCannotSeeMsg (actor, obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3594">3594</a>]</p>
+
+<div class="desc">
+
+actor cannot see object being shown to actor
+
+</div>
+
+<p><span id="becomingTooLargeForActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">becomingTooLargeForActorMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3107">3107</a>]</p>
+
+<div class="desc">
+
+the object is becoming too large for the actor to hold
+
+</div>
+
+<p><span id="becomingTooLargeForContainerMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">becomingTooLargeForContainerMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3193">3193</a>]</p>
+
+<div class="desc">
+
+the current action would make obj too large for its container
+
+</div>
+
+<p><span id="cannotBeWearingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotBeWearingMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2624">2624</a>]</p>
+
+<div class="desc">
+
+must remove an article of clothing before a command
+
+</div>
+
+<p><span id="cannotDoFromMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotDoFromMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3411">3411</a>]</p>
+
+<div class="desc">
+
+cannot carry out a command from a nested room
+
+</div>
+
+<p><span id="cannotEnterExitOnlyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotEnterExitOnlyMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3447">3447</a>]</p>
+
+<div class="desc">
+
+cannot enter an exit-only passage
+
+</div>
+
+<p><span id="cannotFitIntoOpeningMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotFitIntoOpeningMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3045">3045</a>]</p>
+
+<div class="desc">
+
+cannot fit obj into cont through cont's opening
+
+</div>
+
+<p><span id="cannotFitOutOfOpeningMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotFitOutOfOpeningMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3053">3053</a>]</p>
+
+<div class="desc">
+
+cannot fit obj out of cont through cont's opening
+
+</div>
+
+<p><span id="cannotFollowFromHereMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotFollowFromHereMsg (srcLoc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3626">3626</a>]</p>
+
+<div class="desc">
+
+we're trying to follow an actor, but we last saw the actor in the given
+other location, so we have to go there to follow
+
+</div>
+
+<p><span id="cannotGoThatWayInVehicleMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGoThatWayInVehicleMsg (traveler)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3426">3426</a>]</p>
+
+<div class="desc">
+
+cannot go that way in a vehicle
+
+</div>
+
+<p><span id="cannotGoThroughClosedDoorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGoThroughClosedDoorMsg (door)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3367">3367</a>]</p>
+
+<div class="desc">
+
+can't travel through a close door
+
+</div>
+
+<p><span id="cannotHearMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotHearMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2603">2603</a>]</p>
+
+<div class="desc">
+
+cannot hear object
+
+</div>
+
+<p><span id="cannotMoveComponentMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveComponentMsg (loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2929">2929</a>]</p>
+
+<div class="desc">
+
+trying to move a component object
+
+</div>
+
+<p><span id="cannotMoveThroughClosedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveThroughClosedMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3037">3037</a>]</p>
+
+<div class="desc">
+
+cannot move obj because cont is closed
+
+</div>
+
+<p><span id="cannotMoveThroughContainerMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveThroughContainerMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3029">3029</a>]</p>
+
+<div class="desc">
+
+cannot move obj in our out of container cont
+
+</div>
+
+<p><span id="cannotMoveThroughMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveThroughMsg (obj, obs)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3021">3021</a>]</p>
+
+<div class="desc">
+
+cannot move obj through obstructor
+
+</div>
+
+<p><span id="cannotPushObjectNestedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPushObjectNestedMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3440">3440</a>]</p>
+
+<div class="desc">
+
+cannot push an object to a nested room
+
+</div>
+
+<p><span id="cannotPushObjectThatWayMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPushObjectThatWayMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3433">3433</a>]</p>
+
+<div class="desc">
+
+cannot push an object that way
+
+</div>
+
+<p><span id="cannotPutComponentMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutComponentMsg (loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2942">2942</a>]</p>
+
+<div class="desc">
+
+trying to put a component in something
+
+</div>
+
+<p><span id="cannotReachIntoOpeningMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotReachIntoOpeningMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3077">3077</a>]</p>
+
+<div class="desc">
+
+actor cannot fit hand into cont through cont's opening
+
+</div>
+
+<p><span id="cannotReachObjectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotReachObjectMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2755">2755</a>]</p>
+
+<div class="desc">
+
+cannot reach (i.e., touch) an object that is to be manipulated in a
+command - this is a generic message used when we cannot identify the
+specific reason that the object is in scope but cannot be touched
+
+</div>
+
+<p><span id="cannotReachOutOfOpeningMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotReachOutOfOpeningMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3085">3085</a>]</p>
+
+<div class="desc">
+
+actor cannot fit hand into cont through cont's opening
+
+</div>
+
+<p><span id="cannotReachThroughMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotReachThroughMsg (obj, loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2762">2762</a>]</p>
+
+<div class="desc">
+
+cannot reach an object through an obstructor
+
+</div>
+
+<p><span id="cannotSmellMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotSmellMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2610">2610</a>]</p>
+
+<div class="desc">
+
+cannot smell object
+
+</div>
+
+<p><span id="cannotTakeComponentMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTakeComponentMsg (loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2935">2935</a>]</p>
+
+<div class="desc">
+
+trying to take a component object
+
+</div>
+
+<p><span id="cannotTasteMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTasteMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2617">2617</a>]</p>
+
+<div class="desc">
+
+cannot taste object
+
+</div>
+
+<p><span id="cannotThrowThroughMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotThrowThroughMsg (target, loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4057">4057</a>]</p>
+
+<div class="desc">
+
+can't throw through a sense connector
+
+</div>
+
+<p><span id="cannotTouchThroughClosedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTouchThroughClosedMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3069">3069</a>]</p>
+
+<div class="desc">
+
+actor 'obj' cannot reach through cont because cont is closed
+
+</div>
+
+<p><span id="cannotTouchThroughContainerMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTouchThroughContainerMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3061">3061</a>]</p>
+
+<div class="desc">
+
+actor 'obj' cannot reach in our out of container 'cont'
+
+</div>
+
+<p><span id="circularlyBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">circularlyBehindMsg (x, y)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3317">3317</a>]</p>
+
+<div class="desc">
+
+putting y in x when x is already behind y
+
+</div>
+
+<p><span id="circularlyInMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">circularlyInMsg (x, y)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3293">3293</a>]</p>
+
+<div class="desc">
+
+putting y in x when x is already in y
+
+</div>
+
+<p><span id="circularlyOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">circularlyOnMsg (x, y)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3301">3301</a>]</p>
+
+<div class="desc">
+
+putting y in x when x is already on y
+
+</div>
+
+<p><span id="circularlyUnderMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">circularlyUnderMsg (x, y)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3309">3309</a>]</p>
+
+<div class="desc">
+
+putting y in x when x is already under y
+
+</div>
+
+<p><span id="containerBecomingTooFullMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">containerBecomingTooFullMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3204">3204</a>]</p>
+
+<div class="desc">
+
+the current action would increase obj's bulk so that container is too
+full
+
+</div>
+
+<p><span id="containerTooFullMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">containerTooFullMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3162">3162</a>]</p>
+
+<div class="desc">
+
+container doesn't have room for object
+
+</div>
+
+<p><span id="decorationNotImportantMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">decorationNotImportantMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2708">2708</a>]</p>
+
+<div class="desc">
+
+generic "that's not important" message for decorations
+
+</div>
+
+<p><span id="doorClosesBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doorClosesBehindMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3461">3461</a>]</p>
+
+<div class="desc">
+
+door closes behind actor during travel through door
+
+</div>
+
+<p><span id="droppingObjMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">droppingObjMsg (dropobj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2975">2975</a>]</p>
+
+<div class="desc">
+
+dropping an object
+
+</div>
+
+<p><span id="floorlessDropMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">floorlessDropMsg (dropobj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2982">2982</a>]</p>
+
+<div class="desc">
+
+default receiveDrop suffix for floorless rooms
+
+</div>
+
+<p><span id="foundKeyOnKeyringMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">foundKeyOnKeyringMsg (ring, key)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3927">3927</a>]</p>
+
+<div class="desc">
+
+found key on keyring
+
+</div>
+
+<p><span id="foundNoKeyOnKeyringMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">foundNoKeyOnKeyringMsg (ring)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3935">3935</a>]</p>
+
+<div class="desc">
+
+failed to find a key on keyring
+
+</div>
+
+<p><span id="handsBecomingTooFullForMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">handsBecomingTooFullForMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3115">3115</a>]</p>
+
+<div class="desc">
+
+the object is becoming large enough that the actor's hands are full
+
+</div>
+
+<p><span id="handsTooFullForMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">handsTooFullForMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3100">3100</a>]</p>
+
+<div class="desc">
+
+the actor doesn't have room to hold the object
+
+</div>
+
+<p><span id="heardButNotSeenMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">heardButNotSeenMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2587">2587</a>]</p>
+
+<div class="desc">
+
+object can be heard but not seen
+
+</div>
+
+<p><span id="invalidStagingContainerActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invalidStagingContainerActorMsg (cont, dest)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3383">3383</a>]</p>
+
+<div class="desc">
+
+cannot carry out travel while 'cont' (an actor) is holding 'dest'
+
+</div>
+
+<p><span id="invalidStagingContainerMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invalidStagingContainerMsg (cont, dest)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3375">3375</a>]</p>
+
+<div class="desc">
+
+cannot carry out travel while 'dest' is within 'cont'
+
+</div>
+
+<p><span id="invalidStagingLocationMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invalidStagingLocationMsg (dest)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3391">3391</a>]</p>
+
+<div class="desc">
+
+can't carry out travel because 'dest' isn't a valid staging location
+
+</div>
+
+<p><span id="lookInVaporousMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lookInVaporousMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2743">2743</a>]</p>
+
+<div class="desc">
+
+look in/look under/look through/look behind/search vaporous
+
+</div>
+
+<p><span id="movedKeysToKeyringMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">movedKeysToKeyringMsg (keyring, keys)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3284">3284</a>]</p>
+
+<div class="desc">
+
+we moved several keys to a keyring automatically
+
+</div>
+
+<p><span id="movedKeyToKeyringMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">movedKeyToKeyringMsg (keyring)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3277">3277</a>]</p>
+
+<div class="desc">
+
+we attached a key to a keyring automatically
+
+</div>
+
+<p><span id="mustBeBurningMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeBurningMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3739">3739</a>]</p>
+
+<div class="desc">
+
+object must be burning before doing that
+
+</div>
+
+<p><span id="mustBeCarryingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeCarryingMsg (obj, actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2700">2700</a>]</p>
+
+<div class="desc">
+
+actor must be holding the object before we can do that
+
+</div>
+
+<p><span id="mustBeClosedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeClosedMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2648">2648</a>]</p>
+
+<div class="desc">
+
+object must be closed before doing that
+
+</div>
+
+<p><span id="mustBeEmptyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeEmptyMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2632">2632</a>]</p>
+
+<div class="desc">
+
+all contents must be removed from object before doing that
+
+</div>
+
+<p><span id="mustBeHoldingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeHoldingMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2570">2570</a>]</p>
+
+<div class="desc">
+
+must be holding something before a command
+
+</div>
+
+<p><span id="mustBeInMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeInMsg (obj, loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2692">2692</a>]</p>
+
+<div class="desc">
+
+object must be in loc before doing that
+
+</div>
+
+<p><span id="mustBeOpenMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeOpenMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2640">2640</a>]</p>
+
+<div class="desc">
+
+object must be opened before doing that
+
+</div>
+
+<p><span id="mustBeUnlockedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeUnlockedMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2656">2656</a>]</p>
+
+<div class="desc">
+
+object must be unlocked before doing that
+
+</div>
+
+<p><span id="mustBeVisibleMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustBeVisibleMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2580">2580</a>]</p>
+
+<div class="desc">
+
+object must be visible
+
+</div>
+
+<p><span id="mustDetachMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustDetachMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3842">3842</a>]</p>
+
+<div class="desc">
+
+must detach the object before proceeding
+
+</div>
+
+<p><span id="mustGetOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustGetOnMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2685">2685</a>]</p>
+
+<div class="desc">
+
+must get on/in object
+
+</div>
+
+<p><span id="mustLieOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustLieOnMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2678">2678</a>]</p>
+
+<div class="desc">
+
+must be lying on/in object
+
+</div>
+
+<p><span id="mustOpenDoorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustOpenDoorMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3454">3454</a>]</p>
+
+<div class="desc">
+
+must open door before going that way
+
+</div>
+
+<p><span id="mustSitOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mustSitOnMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2671">2671</a>]</p>
+
+<div class="desc">
+
+must be sitting on/in chair
+
+</div>
+
+<p><span id="nestedRoomTooHighMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nestedRoomTooHighMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3398">3398</a>]</p>
+
+<div class="desc">
+
+destination is too high to enter from here
+
+</div>
+
+<p><span id="nestedRoomTooHighToExitMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nestedRoomTooHighToExitMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3405">3405</a>]</p>
+
+<div class="desc">
+
+enclosing room is too high to reach by GETTING OUT OF here
+
+</div>
+
+<p><span id="noiseSourceMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noiseSourceMsg (src)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2824">2824</a>]</p>
+
+<div class="desc">
+
+a sound appears to be coming from a source
+
+</div>
+
+<p><span id="noResponseFromMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noResponseFromMsg (other)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3529">3529</a>]</p>
+
+<div class="desc">
+
+actor won't respond to a request or other communicative gesture
+
+</div>
+
+<p><span id="notAddressableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notAddressableMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3522">3522</a>]</p>
+
+<div class="desc">
+
+cannot talk to an object (because it makes no sense to do so)
+
+</div>
+
+<p><span id="notInterestedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notInterestedMsg (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3575">3575</a>]</p>
+
+<div class="desc">
+
+actor isn't interested in something being given/shown
+
+</div>
+
+<p><span id="notWithIntangibleMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notWithIntangibleMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2729">2729</a>]</p>
+
+<div class="desc">
+
+generic "no can do" message for intangibles
+
+</div>
+
+<p><span id="notWithVaporousMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notWithVaporousMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2736">2736</a>]</p>
+
+<div class="desc">
+
+generic failure message for varporous objects
+
+</div>
+
+<p><span id="npcDescMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">npcDescMsg (npc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2786">2786</a>]</p>
+
+<div class="desc">
+
+default description of a non-player character
+
+</div>
+
+<p><span id="objCannotHearActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objCannotHearActorMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3587">3587</a>]</p>
+
+<div class="desc">
+
+object cannot hear actor
+
+</div>
+
+<p><span id="odorSourceMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">odorSourceMsg (src)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2831">2831</a>]</p>
+
+<div class="desc">
+
+an odor appears to be coming from a source
+
+</div>
+
+<p><span id="okayFollowInSightMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayFollowInSightMsg (loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3633">3633</a>]</p>
+
+<div class="desc">
+
+acknowledge a 'follow' for a target that was in sight
+
+</div>
+
+<p><span id="okayPostureChangeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPostureChangeMsg (posture)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4005">4005</a>]</p>
+
+<div class="desc">
+
+default report for standing up/sitting down/lying down
+
+</div>
+
+<p><span id="okayPushTravelMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPushTravelMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3685">3685</a>]</p>
+
+<div class="desc">
+
+acknowledge pushing an object through travel
+
+</div>
+
+<p><span id="okaySetToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okaySetToMsg (val)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3702">3702</a>]</p>
+
+<div class="desc">
+
+default 'set to' acknowledgment
+
+</div>
+
+<p><span id="okayTurnToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayTurnToMsg (val)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3720">3720</a>]</p>
+
+<div class="desc">
+
+default 'turn to' acknowledgment
+
+</div>
+
+<p><span id="rearTooFullMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rearTooFullMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3185">3185</a>]</p>
+
+<div class="desc">
+
+rear surface/space doesn't have room for object
+
+</div>
+
+<p><span id="refuseCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">refuseCommand (targetActor, issuingActor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3515">3515</a>]</p>
+
+<div class="desc">
+
+an actor doesn't accept a command from another actor
+
+</div>
+
+<p><span id="roomOkayPostureChangeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roomOkayPostureChangeMsg (posture, obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4009">4009</a>]</p>
+
+<div class="desc">
+
+default report for standing/sitting/lying in/on something
+
+</div>
+
+<p><span id="smelledButNotSeenMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">smelledButNotSeenMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2595">2595</a>]</p>
+
+<div class="desc">
+
+object can be smelled but not seen
+
+</div>
+
+<p><span id="surfaceTooFullMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">surfaceTooFullMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3169">3169</a>]</p>
+
+<div class="desc">
+
+surface doesn't have room for object
+
+</div>
+
+<p><span id="takenAndMovedToKeyringMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takenAndMovedToKeyringMsg (keyring)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3269">3269</a>]</p>
+
+<div class="desc">
+
+we took a key and attached it to a keyring
+
+</div>
+
+<p><span id="thingDescMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thingDescMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2770">2770</a>]</p>
+
+<div class="desc">
+
+generic long description of a Thing
+
+</div>
+
+<p><span id="thingSmellDescMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thingSmellDescMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2782">2782</a>]</p>
+
+<div class="desc">
+
+generic "smell" description of a Thing
+
+</div>
+
+<p><span id="thingSoundDescMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thingSoundDescMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2778">2778</a>]</p>
+
+<div class="desc">
+
+generic LISTEN TO description of a Thing
+
+</div>
+
+<p><span id="throwCatchMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwCatchMsg (obj, target)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4115">4115</a>]</p>
+
+<div class="desc">
+
+target catches object
+
+</div>
+
+<p><span id="throwFallMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwFallMsg (projectile, target)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4083">4083</a>]</p>
+
+<div class="desc">
+
+thrown object lands on target
+
+</div>
+
+<p><span id="throwFallShortMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwFallShortMsg (projectile, target, dest)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4107">4107</a>]</p>
+
+<div class="desc">
+
+thrown object falls short of distant target
+
+</div>
+
+<p><span id="throwHitFallMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwHitFallMsg (projectile, target, dest)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4090">4090</a>]</p>
+
+<div class="desc">
+
+thrown object bounces off target and falls to destination
+
+</div>
+
+<p><span id="throwHitMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwHitMsg (projectile, target)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4075">4075</a>]</p>
+
+<div class="desc">
+
+thrown object bounces off target (short report)
+
+</div>
+
+<p><span id="throwShortMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwShortMsg (projectile, target)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4099">4099</a>]</p>
+
+<div class="desc">
+
+thrown object falls short of distant target (sentence prefix only)
+
+</div>
+
+<p><span id="tooDistantMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooDistantMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2722">2722</a>]</p>
+
+<div class="desc">
+
+generic "that's too far away" message for Distant items
+
+</div>
+
+<p><span id="tooHeavyForActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooHeavyForActorMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3123">3123</a>]</p>
+
+<div class="desc">
+
+the object is too heavy (all by itself) for the actor to hold
+
+</div>
+
+<p><span id="tooLargeForActorMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooLargeForActorMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3093">3093</a>]</p>
+
+<div class="desc">
+
+the object is too large for the actor to hold
+
+</div>
+
+<p><span id="tooLargeForContainerMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooLargeForContainerMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3141">3141</a>]</p>
+
+<div class="desc">
+
+object is too large for container
+
+</div>
+
+<p><span id="tooLargeForRearMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooLargeForRearMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3155">3155</a>]</p>
+
+<div class="desc">
+
+object is too large to fit behind object
+
+</div>
+
+<p><span id="tooLargeForUndersideMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooLargeForUndersideMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3148">3148</a>]</p>
+
+<div class="desc">
+
+object is too large to fit under object
+
+</div>
+
+<p><span id="totalTooHeavyForMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">totalTooHeavyForMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3133">3133</a>]</p>
+
+<div class="desc">
+
+the object is too heavy (in combination with everything else being
+carried) for the actor to pick up
+
+</div>
+
+<p><span id="undersideTooFullMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">undersideTooFullMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3177">3177</a>]</p>
+
+<div class="desc">
+
+underside doesn't have room for object
+
+</div>
+
+<p><span id="unthingNotHereMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unthingNotHereMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2715">2715</a>]</p>
+
+<div class="desc">
+
+generic "you don't see that" message for "unthings"
+
+</div>
+
+<p><span id="vehicleCannotDoFromMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vehicleCannotDoFromMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3418">3418</a>]</p>
+
+<div class="desc">
+
+cannot carry out a command from within a vehicle in a nested room
+
+</div>
+
+<p><span id="willNotCatchMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">willNotCatchMsg (catcher)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4126">4126</a>]</p>
+
+<div class="desc">
+
+target does not want to catch anything
+
+</div>
+
+<p><span id="willNotLetGoMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">willNotLetGoMsg (holder, obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#3343">3343</a>]</p>
+
+<div class="desc">
+
+actor won't let go of a possession
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

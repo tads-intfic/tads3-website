@@ -1,3 +1,5 @@
+---
+---
 <span class="title">coverArtResource</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[1099](../source/webui.t.html#1099)\]

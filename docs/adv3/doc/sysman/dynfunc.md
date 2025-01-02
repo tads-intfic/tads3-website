@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> DynamicFunc  
-<span class="navnp"><a href="dict.htm" class="nav"><em>Prev:</em> Dictionary</a>
-    <a href="file.htm" class="nav"><em>Next:</em> File</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> DynamicFunc  
+<span class="navnp"><a href="dict.html" class="nav"><em>Prev:</em> Dictionary</a>
+    <a href="file.html" class="nav"><em>Next:</em> File</a>     </span>
 
 </div>
 
@@ -201,7 +203,7 @@ context variables (<span class="code">definingobj</span>,
 As a rule of thumb, you'll generally want to use the
 <span class="code">method</span> syntax any time you're going to plug
 the DynamicFunc into another object as a new method, using
-[<span class="code">setMethod()</span>](tadsobj.htm#setMethod). In those
+[<span class="code">setMethod()</span>](tadsobj.html#setMethod). In those
 cases you'll want the "live" <span class="code">self</span> value that's
 in effect in the invoked method. Any time you're going to use the
 DynamicFunc as a function, in contrast, you can use the
@@ -323,7 +325,7 @@ are properties. Now, though, we have this local variable
 variable access feature comes in.
 
 The way we provide local variable access to a dynamic function is to
-supply the compiler with a [StackFrameDesc](framedesc.htm) object for
+supply the compiler with a [StackFrameDesc](framedesc.html) object for
 the function containing the locals we want to be able to refer to. A
 StackFrameDesc is a system object that contains information on a running
 function or method in the active call stack. Among other things, a
@@ -333,7 +335,7 @@ the compiler, it will make all of the local variables in the frame
 available to the dynamic code.
 
 You obtain StackFrameDesc objects using the
-[t3GetStackTrace()](t3vm.htm#t3GetStackTrace) function. This function
+[t3GetStackTrace()](t3vm.html#t3GetStackTrace) function. This function
 returns information on the active call stack; when you use the
 <span class="code">T3GetStackDesc</span> flag, it includes a
 StackFrameDesc for each stack level.
@@ -461,11 +463,11 @@ The *sourceString* argument is a string containing the TADS source code
 to compile. It uses the syntax described [above](#funcSyntax).
 
 *globalTable* is optional. If it's included, it must be a
-[LookupTable](lookup.htm) object containing the global symbol table to
+[LookupTable](lookup.html) object containing the global symbol table to
 use for compiling the string. Each key in the table is a string
 containing a symbol name, and the value for a key is the meaning of that
 value. This is the same format as the table returned by
-[<span class="code">t3GetGlobalSymbols()</span>](t3vm.htm#t3GetGlobalSymbols),
+[<span class="code">t3GetGlobalSymbols()</span>](t3vm.html#t3GetGlobalSymbols),
 and in fact the <span class="code">t3GetGlobalSymbols()</span> table is
 exactly what you'll want to use in most cases. You're free to provide a
 custom table instead if you wish to use different symbol mappings, but
@@ -473,7 +475,7 @@ in most cases you'll want to compile the string with global symbols from
 the program's own compilation.
 
 *localFrame* is optional. If it's included, it must be a
-[StackFrameDesc](framedesc.htm) object, or a list of stack frame
+[StackFrameDesc](framedesc.html) object, or a list of stack frame
 objects. The function will have access to the local variables in the
 specified stack frame or frames; it can get their current values as well
 as assign new values, using the normal syntax for accessing local
@@ -738,9 +740,9 @@ the statically compiled code of the main program.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> DynamicFunc  
-<span class="navnp"><a href="dict.htm" class="nav"><em>Prev:</em> Dictionary</a>
-    <a href="file.htm" class="nav"><em>Next:</em> File</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> DynamicFunc  
+<span class="navnp"><a href="dict.html" class="nav"><em>Prev:</em> Dictionary</a>
+    <a href="file.html" class="nav"><em>Next:</em> File</a>     </span>
 
 </div>

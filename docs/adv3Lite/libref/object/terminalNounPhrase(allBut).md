@@ -1,3 +1,5 @@
+---
+---
 <span class="title">terminalNounPhrase(allBut)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[365](../source/grammar.t.html#365)\]

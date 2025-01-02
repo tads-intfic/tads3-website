@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Yes)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2022](../source/grammar.t.html#2022)\]

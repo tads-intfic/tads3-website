@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Defining the Game's Locations  
-<span class="navnp"><a href="understanding.htm" class="nav"><em>Prev:</em> Understanding the
+<span class="navnp"><a href="understanding.html" class="nav"><em>Prev:</em> Understanding the
 Source File</a>    
-<a href="bird.htm" class="nav"><em>Next:</em> Adding the Bird and the
+<a href="bird.html" class="nav"><em>Next:</em> Adding the Bird and the
 Nest</a>     </span>
 
 </div>
@@ -197,12 +199,12 @@ this tutorial.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Defining the Game's Locations  
-<span class="navnp"><a href="understanding.htm" class="nav"><em>Prev:</em> Understanding the
+<span class="navnp"><a href="understanding.html" class="nav"><em>Prev:</em> Understanding the
 Source File</a>    
-<a href="bird.htm" class="nav"><em>Next:</em> Adding the Bird and the
+<a href="bird.html" class="nav"><em>Next:</em> Adding the Bird and the
 Nest</a>     </span>
 
 </div>

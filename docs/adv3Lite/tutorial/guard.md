@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="character.htm" class="nav">Character Building</a> \> The
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="character.html" class="nav">Character Building</a> \> The
 Security Guard  
-<span class="navnp"><a href="npcoverview.htm" class="nav"><em>Prev:</em> Overview</a>
-    <a href="cortes.htm" class="nav"><em>Next:</em> Pablo Cortes</a>    
+<span class="navnp"><a href="npcoverview.html" class="nav"><em>Prev:</em> Overview</a>
+    <a href="cortes.html" class="nav"><em>Next:</em> Pablo Cortes</a>    
 </span>
 
 </div>
@@ -88,7 +90,7 @@ object, but we'll make him a bit more responsive in Chapter 11, when we
 implement some NPC conversation.
 
 For the full story on defining the basic [Actor
-Object](../manual/actorobj.htm), consult the *adv3Lite Library Manual*.
+Object](../manual/actorobj.html), consult the *adv3Lite Library Manual*.
 
 </div>
 
@@ -97,11 +99,11 @@ Object](../manual/actorobj.htm), consult the *adv3Lite Library Manual*.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="character.htm" class="nav">Character Building</a> \> The
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="character.html" class="nav">Character Building</a> \> The
 Security Guard  
-<span class="navnp"><a href="npcoverview.htm" class="nav"><em>Prev:</em> Overview</a>
-    <a href="cortes.htm" class="nav"><em>Next:</em> Pablo Cortes</a>    
+<span class="navnp"><a href="npcoverview.html" class="nav"><em>Prev:</em> Overview</a>
+    <a href="cortes.html" class="nav"><em>Next:</em> Pablo Cortes</a>    
 </span>
 
 </div>

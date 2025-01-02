@@ -1,3 +1,5 @@
+---
+---
 <table data-border="0" data-cellspacing="2">
 <colgroup>
 <col style="width: 50%" />
@@ -7,7 +9,7 @@
 <tr>
 <td style="text-align: right;" width="24" data-valign="top"><img
 src="cicon2.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="newchapterwithtext.htm"
+<td style="text-align: left;"><a href="newchapterwithtext.html"
 target="topicview">Preface</a><br />
 </td>
 </tr>
@@ -38,7 +40,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="generalintroduction.htm"
+<td style="text-align: left;"><a href="generalintroduction.html"
 target="topicview">General Introduction</a><br />
 </td>
 </tr>
@@ -55,7 +57,7 @@ target="topicview">General Introduction</a><br />
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
 <td style="text-align: left;"><a
-href="creatingyourfirsttads3project.htm" target="topicview">Creating
+href="creatingyourfirsttads3project.html" target="topicview">Creating
 your First TADS 3 Project</a><br />
 </td>
 </tr>
@@ -71,7 +73,7 @@ your First TADS 3 Project</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="programmingprolegomena.htm"
+<td style="text-align: left;"><a href="programmingprolegomena.html"
 target="topicview">Programming Prolegomena</a><br />
 </td>
 </tr>
@@ -87,7 +89,7 @@ target="topicview">Programming Prolegomena</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="furtherprogramming.htm"
+<td style="text-align: left;"><a href="furtherprogramming.html"
 target="topicview">Further Programming</a><br />
 </td>
 </tr>
@@ -103,7 +105,7 @@ target="topicview">Further Programming</a><br />
 <tr>
 <td style="text-align: right;" width="24" data-valign="top"><img
 src="cicon2.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="chapter2.htm"
+<td style="text-align: left;"><a href="chapter2.html"
 target="topicview">Chapter 2 - A Sample Game</a><br />
 </td>
 </tr>
@@ -119,7 +121,7 @@ target="topicview">Chapter 2 - A Sample Game</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="averysimplegame.htm"
+<td style="text-align: left;"><a href="averysimplegame.html"
 target="topicview">A Very Simple Game</a><br />
 </td>
 </tr>
@@ -135,7 +137,7 @@ target="topicview">A Very Simple Game</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="addingitemstothegame.htm"
+<td style="text-align: left;"><a href="addingitemstothegame.html"
 target="topicview">Adding Items to the Game</a><br />
 </td>
 </tr>
@@ -151,7 +153,7 @@ target="topicview">Adding Items to the Game</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="makingtheitemsdosomething.htm"
+<td style="text-align: left;"><a href="makingtheitemsdosomething.html"
 target="topicview">Making the Items do Something</a><br />
 </td>
 </tr>
@@ -182,7 +184,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="startinganewgame.htm"
+<td style="text-align: left;"><a href="startinganewgame.html"
 target="topicview">Starting a New Game</a><br />
 </td>
 </tr>
@@ -198,7 +200,7 @@ target="topicview">Starting a New Game</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="definingourfirstroom.htm"
+<td style="text-align: left;"><a href="definingourfirstroom.html"
 target="topicview">Defining Our First Room</a><br />
 </td>
 </tr>
@@ -214,7 +216,7 @@ target="topicview">Defining Our First Room</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="addinganobjecttotheroom.htm"
+<td style="text-align: left;"><a href="addinganobjecttotheroom.html"
 target="topicview">Adding an Object to the Room</a><br />
 </td>
 </tr>
@@ -230,7 +232,7 @@ target="topicview">Adding an Object to the Room</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="tyingupsomeloosestrings.htm"
+<td style="text-align: left;"><a href="tyingupsomeloosestrings.html"
 target="topicview">Tying Up Some Loose Strings</a><br />
 </td>
 </tr>
@@ -261,7 +263,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="basictravel.htm"
+<td style="text-align: left;"><a href="basictravel.html"
 target="topicview">Basic Travel</a><br />
 </td>
 </tr>
@@ -277,7 +279,7 @@ target="topicview">Basic Travel</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="climbingthetree.htm"
+<td style="text-align: left;"><a href="climbingthetree.html"
 target="topicview">Climbing the Tree</a><br />
 </td>
 </tr>
@@ -293,7 +295,7 @@ target="topicview">Climbing the Tree</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="makinglifemoreproblematic.htm"
+<td style="text-align: left;"><a href="makinglifemoreproblematic.html"
 target="topicview">Making Life More Problematic</a><br />
 </td>
 </tr>
@@ -309,7 +311,7 @@ target="topicview">Making Life More Problematic</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="rewardingtheeffort.htm"
+<td style="text-align: left;"><a href="rewardingtheeffort.html"
 target="topicview">Rewarding the Effort</a><br />
 </td>
 </tr>
@@ -325,7 +327,7 @@ target="topicview">Rewarding the Effort</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon2.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="controllingtheaction.htm"
+<td style="text-align: left;"><a href="controllingtheaction.html"
 target="topicview">Controlling the Action</a><br />
 </td>
 </tr>
@@ -341,7 +343,7 @@ target="topicview">Controlling the Action</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="verify.htm"
+<td style="text-align: left;"><a href="verify.html"
 target="topicview">Verify</a><br />
 </td>
 </tr>
@@ -357,7 +359,7 @@ target="topicview">Verify</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="check.htm"
+<td style="text-align: left;"><a href="check.html"
 target="topicview">Check</a><br />
 </td>
 </tr>
@@ -373,7 +375,7 @@ target="topicview">Check</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="action.htm"
+<td style="text-align: left;"><a href="action.html"
 target="topicview">Action</a><br />
 </td>
 </tr>
@@ -389,7 +391,7 @@ target="topicview">Action</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="precond.htm"
+<td style="text-align: left;"><a href="precond.html"
 target="topicview">PreCond</a><br />
 </td>
 </tr>
@@ -405,7 +407,7 @@ target="topicview">PreCond</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="remap.htm"
+<td style="text-align: left;"><a href="remap.html"
 target="topicview">Remap</a><br />
 </td>
 </tr>
@@ -421,7 +423,7 @@ target="topicview">Remap</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="messages.htm"
+<td style="text-align: left;"><a href="messages.html"
 target="topicview">Messages</a><br />
 </td>
 </tr>
@@ -437,7 +439,7 @@ target="topicview">Messages</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="otherresponsestoactions.htm"
+<td style="text-align: left;"><a href="otherresponsestoactions.html"
 target="topicview">Other Responses to Actions</a><br />
 </td>
 </tr>
@@ -468,7 +470,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="settingthescene.htm"
+<td style="text-align: left;"><a href="settingthescene.html"
 target="topicview">Setting the Scene</a><br />
 </td>
 </tr>
@@ -484,7 +486,7 @@ target="topicview">Setting the Scene</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="abasicburner.htm"
+<td style="text-align: left;"><a href="abasicburner.html"
 target="topicview">A Basic Burner</a><br />
 </td>
 </tr>
@@ -500,7 +502,7 @@ target="topicview">A Basic Burner</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="endingthegame.htm"
+<td style="text-align: left;"><a href="endingthegame.html"
 target="topicview">Ending the Game</a><br />
 </td>
 </tr>
@@ -516,7 +518,7 @@ target="topicview">Ending the Game</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="theartofconversation.htm"
+<td style="text-align: left;"><a href="theartofconversation.html"
 target="topicview">The Art of Conversation</a><br />
 </td>
 </tr>
@@ -532,7 +534,7 @@ target="topicview">The Art of Conversation</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="what&#39;sinaname.htm"
+<td style="text-align: left;"><a href="what&#39;sinaname.html"
 target="topicview">What's in a Name?</a><br />
 </td>
 </tr>
@@ -563,7 +565,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="crossingthestream.htm"
+<td style="text-align: left;"><a href="crossingthestream.html"
 target="topicview">Crossing the Stream</a><br />
 </td>
 </tr>
@@ -579,7 +581,7 @@ target="topicview">Crossing the Stream</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="doorsandwindows.htm"
+<td style="text-align: left;"><a href="doorsandwindows.html"
 target="topicview">Doors and Windows</a><br />
 </td>
 </tr>
@@ -595,7 +597,7 @@ target="topicview">Doors and Windows</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="buryingtheboots.htm"
+<td style="text-align: left;"><a href="buryingtheboots.html"
 target="topicview">Burying the Boots</a><br />
 </td>
 </tr>
@@ -611,7 +613,7 @@ target="topicview">Burying the Boots</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="callingaspadeaspade.htm"
+<td style="text-align: left;"><a href="callingaspadeaspade.html"
 target="topicview">Calling a Spade a Spade</a><br />
 </td>
 </tr>
@@ -642,7 +644,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="lettherebelight.htm"
+<td style="text-align: left;"><a href="lettherebelight.html"
 target="topicview">Let There be Light</a><br />
 </td>
 </tr>
@@ -658,7 +660,7 @@ target="topicview">Let There be Light</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="rowmyboat.htm"
+<td style="text-align: left;"><a href="rowmyboat.html"
 target="topicview">Row My Boat</a><br />
 </td>
 </tr>
@@ -674,7 +676,7 @@ target="topicview">Row My Boat</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="goingshopping.htm"
+<td style="text-align: left;"><a href="goingshopping.html"
 target="topicview">Going Shopping</a><br />
 </td>
 </tr>
@@ -690,7 +692,7 @@ target="topicview">Going Shopping</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="handlingcashtransactions.htm"
+<td style="text-align: left;"><a href="handlingcashtransactions.html"
 target="topicview">Handling Cash Transactions</a><br />
 </td>
 </tr>
@@ -721,7 +723,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="fillinginsomegaps.htm"
+<td style="text-align: left;"><a href="fillinginsomegaps.html"
 target="topicview">Filling in Some Gaps</a><br />
 </td>
 </tr>
@@ -737,7 +739,7 @@ target="topicview">Filling in Some Gaps</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="countingthecash.htm"
+<td style="text-align: left;"><a href="countingthecash.html"
 target="topicview">Counting the Cash</a><br />
 </td>
 </tr>
@@ -753,7 +755,7 @@ target="topicview">Counting the Cash</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="lookingthroughthewindow.htm"
+<td style="text-align: left;"><a href="lookingthroughthewindow.html"
 target="topicview">Looking Through the Window</a><br />
 </td>
 </tr>
@@ -769,7 +771,7 @@ target="topicview">Looking Through the Window</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="easingtestinganddebugging.htm"
+<td style="text-align: left;"><a href="easingtestinganddebugging.html"
 target="topicview">Easing Testing and Debugging</a><br />
 </td>
 </tr>
@@ -785,7 +787,7 @@ target="topicview">Easing Testing and Debugging</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="wheretogofromhere.htm"
+<td style="text-align: left;"><a href="wheretogofromhere.html"
 target="topicview">Where to go from here</a><br />
 </td>
 </tr>
@@ -802,7 +804,7 @@ target="topicview">Where to go from here</a><br />
 <td style="text-align: right;" width="24" data-valign="top"><img
 src="cicon2.gif" data-border="0" /></td>
 <td style="text-align: left;"><a
-href="appendixa-actionmessagepropert.htm" target="topicview">Appendix A
+href="appendixa-actionmessagepropert.html" target="topicview">Appendix A
 - Action Message Properties</a><br />
 </td>
 </tr>

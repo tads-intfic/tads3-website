@@ -1,3 +1,5 @@
+---
+---
 <span class="title">exitsTip</span><span class="type">object</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4388](../source/msg_neu.t.html#4388)\]

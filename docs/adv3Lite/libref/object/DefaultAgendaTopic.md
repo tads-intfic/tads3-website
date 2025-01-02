@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultAgendaTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4137](../source/actor.t.html#4137)\]

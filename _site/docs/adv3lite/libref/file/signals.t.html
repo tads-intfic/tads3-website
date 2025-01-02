@@ -1,0 +1,346 @@
+<p><span class="title">signals.t</span><span class="type">file</span></p>
+
+<p><a href="../source/signals.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+--------------------------------------------------------
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>Signal<code class="language-plaintext highlighter-rouge">](../object/Signal.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>connect<code class="language-plaintext highlighter-rouge">](#connect)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>unconnect<code class="language-plaintext highlighter-rouge">](#unconnect)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="connect"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">connect (sender, signal, receiver, handler?)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#313">313</a>]</p>
+
+<div class="desc">
+
+Function to set up a signalling relation between sender and receiver via
+the signal Signal. This first created a relation between sender and
+receiver \[using the RELATIONS extension) And then, if the handler
+parameter is supplied, adds an appropriate entry to the signal's
+dispatchTab table to register that this is the handler to use on the
+receiver when signal is sent to receiver from sender. \[SIGNALS
+EXTENSION\]
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (lit, lit)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#122">122</a>]</p>
+
+<div class="desc">
+
+Signals to handle common state changes on Thing \[SIGNALS EXTENSION\]
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (unlit, unlit)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#123">123</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (discover, discovered)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#124">124</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (undiscover, lost)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#125">125</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (lock, locked)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#126">126</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (unlock, unlocked)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#127">127</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (on, turned, on)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#128">128</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (off, turned, off)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#129">129</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (worn, worn)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#130">130</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (doff, doffed)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#131">131</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (move, moved)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#132">132</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (actmove, action, moved)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#133">133</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (seen, seen)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#134">134</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (examine, examine)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#135">135</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (take, take)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#136">136</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (drop, drop)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#137">137</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (open, open)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#138">138</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (close, closed)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#139">139</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (push, push)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#140">140</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (pull, pull)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#141">141</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (feel, feel)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#142">142</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="unconnect"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unconnect (sender, signal, receiver)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#327">327</a>]</p>
+
+<div class="desc">
+
+Function to remove the signalling relationship between sender and
+receiver via the signal Signal. \[SIGNALS EXTENSION\]
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

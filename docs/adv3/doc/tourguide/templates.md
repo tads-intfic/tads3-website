@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Templates<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="thesamplegame.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="startupcodegamemain.htm">[Next]</a></td>
+href="thesamplegame.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="startupcodegamemain.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -178,9 +180,9 @@ the template, you can look at a room definition and see its roomName and
 description at once.  
   
 Note that a template defined for a class is also valid for all its
-subclasses. So the [Room](room.htm) template we have just described can
-(and should) also be used for [OutdoorRoom](outdoorroom.htm),
-[DarkRoom](darkroom.htm) and [FloorlessRoom](floorlessroom.htm) (and,
+subclasses. So the [Room](room.html) template we have just described can
+(and should) also be used for [OutdoorRoom](outdoorroom.html),
+[DarkRoom](darkroom.html) and [FloorlessRoom](floorlessroom.html) (and,
 indeed, for any specialized subclasses of Room you may define in your
 own game).  
   
@@ -320,8 +322,8 @@ defines a template. Linkable inherits from object (so there's no
 template there). Fixture inherits from NonPortable which inherits from
 Thing which inherits from VocabObject; TravelConnector also inherits
 from Thing. The possible templates Passage can inherit from are
-therefore those for [Thing](thingtemplate.htm) and for
-[VocabObject](vocabobjecttemplate.htm). This foregoing definition is
+therefore those for [Thing](thingtemplate.html) and for
+[VocabObject](vocabobjecttemplate.html). This foregoing definition is
 thus equivalent to the following:  
   
 Passage template -\> masterObject;  
@@ -356,8 +358,8 @@ Passage -\>masterObject? 'vocabWords\_' 'name' @location? "desc"?;
   
 This applies equally to the other classes for which the library defines
 templates including the inherited keyword, namely
-[Enterable](enterabletemplate.htm) and
-[Exitable](exitabletemplate.htm).  
+[Enterable](enterabletemplate.html) and
+[Exitable](exitabletemplate.html).  
   
 Finally, to see how templates work with multiple inheritance, consider
 the following:  

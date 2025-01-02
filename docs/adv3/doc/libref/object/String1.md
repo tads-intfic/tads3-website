@@ -1,3 +1,5 @@
+---
+---
 <span class="title">String</span><span class="type">class</span>
 
 [systype.h](../file/systype.h.html)\[[307](../source/systype.h.html#307)\],

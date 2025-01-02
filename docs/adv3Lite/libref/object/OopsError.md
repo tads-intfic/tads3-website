@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OopsError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5112](../source/parser.t.html#5112)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GetOffOfAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2617](../source/actions.t.html#2617)\]

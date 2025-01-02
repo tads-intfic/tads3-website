@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Decoration</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[266](../source/extras.t.html#266)\]

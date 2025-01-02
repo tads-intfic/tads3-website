@@ -1,3 +1,5 @@
+---
+---
 # C
 
 [**`cacheAmbientInfo`**](../object/Thing.html#cacheAmbientInfo) - method

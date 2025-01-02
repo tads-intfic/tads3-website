@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Fueled Light Source  
-<span class="navnp"><a href="footnotes.htm" class="nav"><em>Prev:</em> Footnotes</a>
-    <a href="mobilecollectivegroup.htm" class="nav"><em>Next:</em>
+<span class="navnp"><a href="footnotes.html" class="nav"><em>Prev:</em> Footnotes</a>
+    <a href="mobilecollectivegroup.html" class="nav"><em>Next:</em>
 MobileCollectiveGroup</a>     </span>
 
 </div>
@@ -174,11 +176,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Fueled Light Source  
-<span class="navnp"><a href="footnotes.htm" class="nav"><em>Prev:</em> Footnotes</a>
-    <a href="mobilecollectivegroup.htm" class="nav"><em>Next:</em>
+<span class="navnp"><a href="footnotes.html" class="nav"><em>Prev:</em> Footnotes</a>
+    <a href="mobilecollectivegroup.html" class="nav"><em>Next:</em>
 MobileCollectiveGroup</a>     </span>
 
 </div>

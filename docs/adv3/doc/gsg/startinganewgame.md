@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](makingtheitemsdosomething.htm)
-  [\[Next\]](definingourfirstroom.htm)*
+*[\[Previous\]](makingtheitemsdosomething.html)
+  [\[Next\]](definingourfirstroom.html)*
 
 # Chapter 3 - Starting Out Again
 
@@ -178,7 +180,7 @@ me: Actor
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](makingtheitemsdosomething.htm)
-  [\[Next\]](definingourfirstroom.htm)*
+*[\[Previous\]](makingtheitemsdosomething.html)
+  [\[Next\]](definingourfirstroom.html)*
 
 </div>

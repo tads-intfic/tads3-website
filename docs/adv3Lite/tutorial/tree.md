@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Adding the Tree and the Branch  
-<span class="navnp"><a href="bird.htm" class="nav"><em>Prev:</em> Adding the Bird and the
+<span class="navnp"><a href="bird.html" class="nav"><em>Prev:</em> Adding the Bird and the
 Nest</a>    
-<a href="finishing.htm" class="nav"><em>Next:</em> Finishing Touches</a>
+<a href="finishing.html" class="nav"><em>Next:</em> Finishing Touches</a>
     </span>
 
 </div>
@@ -140,12 +142,12 @@ the game again and see what you can now do in it.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Adding the Tree and the Branch  
-<span class="navnp"><a href="bird.htm" class="nav"><em>Prev:</em> Adding the Bird and the
+<span class="navnp"><a href="bird.html" class="nav"><em>Prev:</em> Adding the Bird and the
 Nest</a>    
-<a href="finishing.htm" class="nav"><em>Next:</em> Finishing Touches</a>
+<a href="finishing.html" class="nav"><em>Next:</em> Finishing Touches</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Is the bird in
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Is the bird in
 the nest?  
-<span class="navnp"><a href="dropping.htm" class="nav"><em>Prev:</em> Dropping objects from
+<span class="navnp"><a href="dropping.html" class="nav"><em>Prev:</em> Dropping objects from
 the tree</a>    
-<a href="summing.htm" class="nav"><em>Next:</em> Summing Up</a>    
+<a href="summing.html" class="nav"><em>Next:</em> Summing Up</a>    
 </span>
 
 </div>
@@ -141,12 +143,12 @@ everything still behaves as you expect.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Is the bird in
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Is the bird in
 the nest?  
-<span class="navnp"><a href="dropping.htm" class="nav"><em>Prev:</em> Dropping objects from
+<span class="navnp"><a href="dropping.html" class="nav"><em>Prev:</em> Dropping objects from
 the tree</a>    
-<a href="summing.htm" class="nav"><em>Next:</em> Summing Up</a>    
+<a href="summing.html" class="nav"><em>Next:</em> Summing Up</a>    
 </span>
 
 </div>

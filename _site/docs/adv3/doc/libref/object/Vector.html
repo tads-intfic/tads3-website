@@ -1,0 +1,711 @@
+<p><span class="title">Vector</span><span class="type">class</span></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#26">26</a>],
+<a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#73">73</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The Vector intrinsic class provides a varying-length array type. Vectors
+can be expanded dynamically, and values within a vector can be changed.
+(In contrast, List is a constant type: a value within a list cannot be
+changed, and new values can't be added to a list. Any manipulation of a
+List results in a new, separate List object, leaving the original
+unchanged. Vector allows new values to be added and existing values to
+be changed in place, without creating a new object.)
+
+*Modified in
+[webui.t](../file/webui.t.html)\[[73](../source/webui.t.html#73)\]:*  
+Some handy Vector extensions
+
+`intrinsic class `**`Vector`**` :   `[`Collection`](../object/Collection.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Vector</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Collection<code class="language-plaintext highlighter-rouge">](../object/Collection.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Object`](../object/Object.html)<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Vector</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>AnonFuncPtr`](../object/AnonFuncPtr.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>append<code class="language-plaintext highlighter-rouge">](#append)</code>  <code class="language-plaintext highlighter-rouge">[</code>appendAll<code class="language-plaintext highlighter-rouge">](#appendAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>appendUnique<code class="language-plaintext highlighter-rouge">](#appendUnique)</code>  <code class="language-plaintext highlighter-rouge">[</code>applyAll<code class="language-plaintext highlighter-rouge">](#applyAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>clear<code class="language-plaintext highlighter-rouge">](#clear)</code>  <code class="language-plaintext highlighter-rouge">[</code>copyFrom<code class="language-plaintext highlighter-rouge">](#copyFrom)</code>  <code class="language-plaintext highlighter-rouge">[</code>countOf<code class="language-plaintext highlighter-rouge">](#countOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>countWhich<code class="language-plaintext highlighter-rouge">](#countWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>fillValue<code class="language-plaintext highlighter-rouge">](#fillValue)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEach<code class="language-plaintext highlighter-rouge">](#forEach)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEachAssoc<code class="language-plaintext highlighter-rouge">](#forEachAssoc)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAndRemove<code class="language-plaintext highlighter-rouge">](#getAndRemove)</code>  <code class="language-plaintext highlighter-rouge">[</code>getUnique<code class="language-plaintext highlighter-rouge">](#getUnique)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexOf<code class="language-plaintext highlighter-rouge">](#indexOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexOfMax<code class="language-plaintext highlighter-rouge">](#indexOfMax)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexOfMin<code class="language-plaintext highlighter-rouge">](#indexOfMin)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexWhich<code class="language-plaintext highlighter-rouge">](#indexWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>insertAt<code class="language-plaintext highlighter-rouge">](#insertAt)</code>  <code class="language-plaintext highlighter-rouge">[</code>join<code class="language-plaintext highlighter-rouge">](#join)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastIndexOf<code class="language-plaintext highlighter-rouge">](#lastIndexOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastIndexWhich<code class="language-plaintext highlighter-rouge">](#lastIndexWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastValWhich<code class="language-plaintext highlighter-rouge">](#lastValWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>length<code class="language-plaintext highlighter-rouge">](#length)</code>  <code class="language-plaintext highlighter-rouge">[</code>mapAll<code class="language-plaintext highlighter-rouge">](#mapAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>maxVal<code class="language-plaintext highlighter-rouge">](#maxVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>minVal<code class="language-plaintext highlighter-rouge">](#minVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>pop<code class="language-plaintext highlighter-rouge">](#pop)</code>  <code class="language-plaintext highlighter-rouge">[</code>prepend<code class="language-plaintext highlighter-rouge">](#prepend)</code>  <code class="language-plaintext highlighter-rouge">[</code>push<code class="language-plaintext highlighter-rouge">](#push)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeElement<code class="language-plaintext highlighter-rouge">](#removeElement)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeElementAt<code class="language-plaintext highlighter-rouge">](#removeElementAt)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeRange<code class="language-plaintext highlighter-rouge">](#removeRange)</code>  <code class="language-plaintext highlighter-rouge">[</code>setLength<code class="language-plaintext highlighter-rouge">](#setLength)</code>  <code class="language-plaintext highlighter-rouge">[</code>shift<code class="language-plaintext highlighter-rouge">](#shift)</code>  <code class="language-plaintext highlighter-rouge">[</code>sort<code class="language-plaintext highlighter-rouge">](#sort)</code>  <code class="language-plaintext highlighter-rouge">[</code>splice<code class="language-plaintext highlighter-rouge">](#splice)</code>  <code class="language-plaintext highlighter-rouge">[</code>subset<code class="language-plaintext highlighter-rouge">](#subset)</code>  <code class="language-plaintext highlighter-rouge">[</code>toList<code class="language-plaintext highlighter-rouge">](#toList)</code>  <code class="language-plaintext highlighter-rouge">[</code>valWhich<code class="language-plaintext highlighter-rouge">](#valWhich)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Collection</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>createIterator<code class="language-plaintext highlighter-rouge">](../object/Collection.html#createIterator)</code>  <code class="language-plaintext highlighter-rouge">[</code>createLiveIterator<code class="language-plaintext highlighter-rouge">](../object/Collection.html#createLiveIterator)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getPropList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropParams<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSuperclassList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getSuperclassList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isClass<code class="language-plaintext highlighter-rouge">](../object/Object.html#isClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTransient<code class="language-plaintext highlighter-rouge">](../object/Object.html#isTransient)</code>  <code class="language-plaintext highlighter-rouge">[</code>ofKind<code class="language-plaintext highlighter-rouge">](../object/Object.html#ofKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>propDefined<code class="language-plaintext highlighter-rouge">](../object/Object.html#propDefined)</code>  <code class="language-plaintext highlighter-rouge">[</code>propInherited<code class="language-plaintext highlighter-rouge">](../object/Object.html#propInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>propType<code class="language-plaintext highlighter-rouge">](../object/Object.html#propType)</code>  <code class="language-plaintext highlighter-rouge">[</code>valToSymbol<code class="language-plaintext highlighter-rouge">](../object/Object.html#valToSymbol)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="append"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">append (val)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#217">217</a>]</p>
+
+<div class="desc">
+
+Append an element to the vector. This works just like insertAt() with a
+starting index one higher than the length of the vector. This has almost
+the same effect as the '+' operator, but treats a list value like any
+other value by simply inserting the list as a single new element (rather
+than appending each item in the list individually, as the '+' operator
+would).
+
+</div>
+
+<p><span id="appendAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">appendAll (val)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#234">234</a>]</p>
+
+<div class="desc">
+
+Append all elements from a list or vector. This works like append(val),
+except that if 'val' is a list or vector, the elements of 'val' will be
+appended individually, like the '+' operator does. The difference
+between this method and the '+' operator is that this method modifies
+this Vector by adding the new elements directly to the existing Vector
+object, whereas the '+' operator creates a new Vector to store the
+result.
+
+</div>
+
+<p><span id="appendUnique"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">appendUnique (val)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#148">148</a>]</p>
+
+<div class="desc">
+
+append the elements of the list or vector 'val' to the elements of this
+vector, then remove repeated elements in the result; returns a new
+vector with the unique elements of the combination
+
+</div>
+
+<p><span id="applyAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">applyAll (func)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#74">74</a>]</p>
+
+<div class="desc">
+
+Apply a callback function to each element of the vector. For each
+element of the vector, invokes the callback, and replaces the element
+with the return value of the callback. Modifies the vector in-place, and
+returns 'self'.
+
+</div>
+
+<p><span id="clear"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clear ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#90">90</a>]</p>
+
+<div class="desc">
+
+return the popped element
+
+</div>
+
+<p><span id="copyFrom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">copyFrom (src, src_start, dst_start, cnt)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#50">50</a>]</p>
+
+<div class="desc">
+
+Copy from another vector or list. Elements are copied from the source
+vector or list starting at the element given by 'src_start', and are
+copied into 'self' starting at the index given by 'dst_start'. At most
+'cnt' values are copied, but we stop when we reach the last element of
+either the source or destination values. If either index is negative, it
+counts from the end of the vector: -1 is the last element, -2 is the
+second to last, and so on.
+
+</div>
+
+<p><span id="countOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countOf (val)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#135">135</a>]</p>
+
+<div class="desc">
+
+count the number of elements with the given value
+
+</div>
+
+<p><span id="countWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countWhich (cond)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#138">138</a>]</p>
+
+<div class="desc">
+
+count the number of elements for which the callback returns true
+
+</div>
+
+<p><span id="fillValue"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fillValue (val, start?, cnt?)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#59">59</a>]</p>
+
+<div class="desc">
+
+Fill with a given value, starting at the given element (the first
+element if not specified), and running for the given number of elements
+(the remaining existing elements of the vector, if not specified). The
+vector is expanded if necessary. A negative starting index counts
+backwards from the last element.
+
+</div>
+
+<p><span id="forEach"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEach (func)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#90">90</a>]</p>
+
+<div class="desc">
+
+Invoke the callback func(val) on each element, in order from first to
+last. No return value.
+
+</div>
+
+<p><span id="forEachAssoc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEachAssoc (func)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#96">96</a>]</p>
+
+<div class="desc">
+
+Invoke the callback func(index, val) on each element, in order from
+first to last. No return value.
+
+</div>
+
+<p><span id="getAndRemove"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getAndRemove (idx)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#78">78</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="getUnique"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getUnique ( )</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#141">141</a>]</p>
+
+<div class="desc">
+
+create a new vector consisting of the unique elements of this vector
+
+</div>
+
+<p><span id="indexOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexOf (val)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#107">107</a>]</p>
+
+<div class="desc">
+
+get the index of the first match for the given value
+
+</div>
+
+<p><span id="indexOfMax"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexOfMax (func?)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#309">309</a>]</p>
+
+<div class="desc">
+
+Get the index of the element the maximum value. If 'func' is missing,
+this simply returns the index of the element with the largest value,
+comparing the element values as though using the '\&gt;' and '\&lt;'
+operators. If 'func' is specified, it must be a function; it's called as
+func(x) for each element value x, and the result of the overall call is
+the index of the element for which func(x) returns the greatest value.
+For example, if you have a vector v containing string elements,
+v.indexOfMax({x: x.length()}) returns the index of the longest string.
+
+</div>
+
+<p><span id="indexOfMin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexOfMin (func?)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#286">286</a>]</p>
+
+<div class="desc">
+
+Get the index of the element with the minimum value. If 'func' is
+missing, this simply returns the index of the element with the smallest
+value, comparing the element values as though using the '\&gt;' and '\&lt;'
+operators. If 'func' is specified, it must be a function; it's called as
+func(x) for each element's value, and the result of the overall call is
+the index of the element for which func(x) returns the smallest value.
+For example, if you have a vector v containing string elements,
+v.indexOfMin({x: x.length()}) returns the index of the shortest string.
+
+</div>
+
+<p><span id="indexWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexWhich (cond)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#84">84</a>]</p>
+
+<div class="desc">
+
+Find the first element for which the given condition is true. Apply the
+callback function (which encodes the condition to evaluate) to each
+element in turn, starting with the first. For each element, if the
+callback returns nil, proceed to the next element; otherwise, stop and
+return the index of the element. If the callback never returns true for
+any element, we'll return nil.
+
+</div>
+
+<p><span id="insertAt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">insertAt (startingIndex, val, ...)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#188">188</a>]</p>
+
+<div class="desc">
+
+Insert one or more elements at the given index. If the starting index is
+1, the elements will be inserted before the first existing element. If
+the index is one higher than the number of elements, the elements will
+be inserted after all existing elements. A negative starting index
+counts from the end of the vector: -1 is the last element, -2 is the
+second to last, and so on. A zero starting index inserts after the last
+existing element.
+
+Note that a list value argument will simply be inserted as a single
+element.
+
+Returns 'self'.
+
+</div>
+
+<p><span id="join"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">join (sep?)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#261">261</a>]</p>
+
+<div class="desc">
+
+Combine the vector elements into a string. This converts each element
+into a string value using the usual default conversions (or throws an
+error if string conversion isn't possible), then concatenates the values
+together and returns the result. If 'separator' is provided, it's a
+string that's interposed between elements; if this is omitted, the
+elements are concatenated together with no extra characters in between.
+
+</div>
+
+<p><span id="lastIndexOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastIndexOf (val)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#116">116</a>]</p>
+
+<div class="desc">
+
+find the last element with the given value, and return its index
+
+</div>
+
+<p><span id="lastIndexWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastIndexWhich (cond)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#126">126</a>]</p>
+
+<div class="desc">
+
+Find the last element for which the condition is true, and return the
+index of the element. Applies the callback to each element in turn,
+starting with the last element and working backwards. For each element,
+if the callback returns nil, proceeds to the previous element;
+otherwise, stops and returns the index of the element. If the callback
+never returns true for any element, we'll return nil.
+
+</div>
+
+<p><span id="lastValWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastValWhich (cond)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#132">132</a>]</p>
+
+<div class="desc">
+
+Find the last element for which the condition is true, and return the
+value of the element
+
+</div>
+
+<p><span id="length"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">length ( )</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#39">39</a>]</p>
+
+<div class="desc">
+
+get the number of elements in the vector
+
+</div>
+
+<p><span id="mapAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mapAll (func)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#104">104</a>]</p>
+
+<div class="desc">
+
+Apply the callback function to each element of this vector, and return a
+new vector consisting of the results. Effectively maps the vector to a
+new vector using the given function, leaving the original vector
+unchanged.
+
+</div>
+
+<p><span id="maxVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">maxVal (func?)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#319">319</a>]</p>
+
+<div class="desc">
+
+Get the maximum element value. If 'func' is missing, this returns the
+largest element value. If 'func' is specified, it must be a function;
+it's called as func(x) for each element value x, and the result of the
+overall method call is the element value x that maximizes func(x). For
+example, if v is a vector containing string elements, v.minVal({x:
+x.length()}) returns the longest string.
+
+</div>
+
+<p><span id="minVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">minVal (func?)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#296">296</a>]</p>
+
+<div class="desc">
+
+Get the minimum element value. If 'func' is missing, this simply returns
+the smallest element value. If 'func' is specified, it must be a
+function; it's called as func(x) for each element value x, and the
+result of the overall method call is the element value x that minimizes
+func(x). For example, if v is a vector containing string elements,
+v.minVal({x: x.length()}) returns the shortest string.
+
+</div>
+
+<p><span id="pop"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pop ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#75">75</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="prepend"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">prepend (val)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#223">223</a>]</p>
+
+<div class="desc">
+
+Prepend an element. This works like insertAt() with a starting index of
+1.
+
+</div>
+
+<p><span id="push"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">push (ele)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#74">74</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="removeElement"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeElement (val)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#241">241</a>]</p>
+
+<div class="desc">
+
+Remove an element by value. Each element of the vector matching the
+given value is removed. The vector is modified in-place. The return
+value is 'self'.
+
+</div>
+
+<p><span id="removeElementAt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeElementAt (index)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#196">196</a>]</p>
+
+<div class="desc">
+
+Delete the element at the given index, reducing the length of the vector
+by one element. If 'index' is negative, it counts from the end of the
+vector: -1 is the last element, -2 is the second to last, and so on.
+Returns 'self'.
+
+</div>
+
+<p><span id="removeRange"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeRange (startingIndex, endingIndex)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#207">207</a>]</p>
+
+<div class="desc">
+
+Delete the range of elements starting at startingIndex and ending at
+endingIndex. The elements at the ends of the range are included in the
+deletion. If startingIndex == endingIndex, only one element is removed.
+If either index is negative, it counts backwards from the last element:
+-1 is the last element, -2 is the second to last, and so on. The length
+of the vector is reduced by the number of elements removed. Returns
+'self'.
+
+</div>
+
+<p><span id="setLength"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setLength (newElementCount)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#172">172</a>]</p>
+
+<div class="desc">
+
+Set the length - if this is shorter than the current length, existing
+items will be discarded; if it's longer, the newly added slots will be
+set to nil. Returns 'self'.
+
+</div>
+
+<p><span id="shift"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shift ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#76">76</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sort"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sort (descending?, comparisonFunction?)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#165">165</a>]</p>
+
+<div class="desc">
+
+Sort the vector in place; returns 'self'. If the 'descending' flag is
+provided and is not nil, we'll sort the vector in descending order
+rather than ascending order.
+
+If the 'comparisonFunction' argument is provided, it must be a callback
+function; the callback takes two arguments, and returns an integer less
+than zero if the first argument value is less than the second, zero if
+they're equal, and an integer greater than zero if the first is greater
+than the second. If no 'comparisonFunction' argument is provided, or
+it's provided and its value is nil, we'll simply compare the vector
+elements as ordinary values. The comparison function can be provided for
+caller-defined orderings, such as ordering a set of objects.
+
+</div>
+
+<p><span id="splice"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">splice (idx, del, ...)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#250">250</a>]</p>
+
+<div class="desc">
+
+Splice new values into the vector. Deletes the 'del' elements starting
+at 'idx', then inserts the extra arguments in their place. Updates the
+vector in place. To insert items without deleting anything, pass 0 for
+'del'. To delete items without inserting anything, omit any additional
+arguments. Returns 'self'.
+
+</div>
+
+<p><span id="subset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">subset (func)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#66">66</a>]</p>
+
+<div class="desc">
+
+Select a subset of the vector. Returns a new vector consisting only of
+the elements of this vector for which the callback function returns
+true.
+
+</div>
+
+<p><span id="toList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toList (start?, cnt?)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#36">36</a>]</p>
+
+<div class="desc">
+
+Create a list with the same elements as the vector. If 'start' is
+specified, it's the index of the first element we store; we'll store
+elements starting at index 'start'. If 'cnt' is specified, it gives the
+maximum number of elements for the new list; by default, we'll store all
+of the elements from 'start' to the last element.
+
+</div>
+
+<p><span id="valWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valWhich (cond)</code></p>
+
+<p><a href="../file/vector.h.html">vector.h</a>[<a href="../source/vector.h.html#113">113</a>]</p>
+
+<div class="desc">
+
+Find the first element for which the given condition is true, and return
+the value of the element.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

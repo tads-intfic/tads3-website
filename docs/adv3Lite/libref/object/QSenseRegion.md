@@ -1,3 +1,5 @@
+---
+---
 <span class="title">QSenseRegion</span><span class="type">object</span>
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1379](../source/senseRegion.t.html#1379)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RelativeDirection</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[139](../source/travel.t.html#139)\]

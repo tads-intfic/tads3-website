@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Candle &amp; FireSource<br />
 </strong></td>
-<td style="text-align: right;"><a href="flashlight.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="oillamp.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="flashlight.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="oillamp.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -18,13 +20,13 @@ href="oillamp.htm">[Next]</a></td>
   
 Candle is the other specialization of LightSource provided in the
 library (strictly speaking, it inherits from FueledLightSource, which in
-turn inherits from [LightSource](lightsource.htm)). It can, of course,
+turn inherits from [LightSource](lightsource.html)). It can, of course,
 be used to implement candles (as we'll do in just a minute), but it is
 useful for implementing any light source with a limited fuel supply or
 burn life (as we shall go on to explore).  
   
 We have already defined some candles in our game (back when we
-implemented a [Dispenser](dispenser.htm)). You may recall we in fact
+implemented a [Dispenser](dispenser.html)). You may recall we in fact
 defined our own RedCandle class. As yet, however, we have provided no
 means of lighting them. What we need for the task is a FireSource. One
 is available in the shape of the flaming torch attached to the wall, but

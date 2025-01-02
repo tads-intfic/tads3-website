@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CommandProduction</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[3631](../source/parser.t.html#3631)\]

@@ -1,0 +1,161 @@
+<p><span class="title">DefinitePluralProd</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2207">2207</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A plural phrase qualified by a definite article ("the books"). This type
+of phrasing doesn't specify anything about the specific number of items
+involved, except that they number more than one.
+
+In most cases, we take this to imply that all of the matching objects
+are intended to be included, with one exception: when we have an object
+that can serve as a collective for some of the other objects, we match
+only the collective but not the other objects. For example, if we type
+"take marbles," and we have five marbles and a bag of marbles that
+serves as a collective object for three of the five marbles, we'll match
+the bag and two marbles not in the bag, but NOT the marbles that are in
+the bag. This is usually desirable when there's a collective object,
+since it applies the command to the object standing in for the group
+rather than applying the command one by one to each of the individuals
+in the group.
+
+`class `**`DefinitePluralProd`**` :   `[`PluralProd`](../object/PluralProd.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DefinitePluralProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PluralProd<code class="language-plaintext highlighter-rouge">](../object/PluralProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>NounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>BasicProd<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html)  
+</code>                                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DefinitePluralProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(definite)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(definite).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>implicitDetPluralOnlyNounPhrase(main)`](../object/implicitDetPluralOnlyNounPhrase(main).html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>filterForCollectives<code class="language-plaintext highlighter-rouge">](#filterForCollectives)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>firstTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#firstTokenIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSpecialResponseMatch<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#isSpecialResponseMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#lastTokenIndex)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>resolveNouns<code class="language-plaintext highlighter-rouge">](#resolveNouns)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PluralProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>basicPluralResolveNouns<code class="language-plaintext highlighter-rouge">](../object/PluralProd.html#basicPluralResolveNouns)</code>  <code class="language-plaintext highlighter-rouge">[</code>getVerifyKeepers<code class="language-plaintext highlighter-rouge">](../object/PluralProd.html#getVerifyKeepers)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>filterTruncations<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html#filterTruncations)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>canResolveTo<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#canResolveTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigText<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigText)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigTokenList)</code>  <code class="language-plaintext highlighter-rouge">[</code>setOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#setOrigTokenList)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="filterForCollectives"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterForCollectives</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2215">2215</a>]</p>
+
+<div class="desc">
+
+prefer to keep collectives instead of their individuals
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="resolveNouns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveNouns (resolver, results)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2208">2208</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

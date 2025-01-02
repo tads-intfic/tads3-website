@@ -1,0 +1,165 @@
+<p><span class="title">commandSequencer</span><span class="type">object</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1611">1611</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Command Sequencer Filter. This is an output filter that handles the
+special \&lt;.commandsep\&gt; tag for visual command separation. This tag has
+the form of a style tag, but must be processed specially.
+
+\&lt;.commandsep\&gt; shows an appropriate separator between commands. Before
+the first command output or after the last command output, this has no
+effect. A run of multiple consecutive \&lt;.commandsep\&gt; tags is treated as
+a single tag.
+
+Between commands, we show gLibMessages.commandResultsSeparator. After an
+input line and before the first command result text, we show
+gLibMessages.commandResultsPrefix. After the last command result text
+before a new input line, we show gLibMessages.commandResultsSuffix. If
+we read two input lines, and there is no intervening text output at all,
+we show gLibMessages.commandResultsEmpty.
+
+The input manager should write a \&lt;.commandbefore\&gt; tag whenever it
+starts reading a command line, and a \&lt;.commandafter\&gt; tag whenever it
+finishes reading a command line.
+
+`transient `**`commandSequencer`**` :   `[`OutputFilter`](../object/OutputFilter.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">commandSequencer</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputFilter.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>patNextTag<code class="language-plaintext highlighter-rouge">](#patNextTag)</code>  <code class="language-plaintext highlighter-rouge">[</code>state_<code class="language-plaintext highlighter-rouge">](#state_)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>filterText<code class="language-plaintext highlighter-rouge">](#filterText)</code>  <code class="language-plaintext highlighter-rouge">[</code>setCommandMode<code class="language-plaintext highlighter-rouge">](#setCommandMode)</code>  <code class="language-plaintext highlighter-rouge">[</code>writeThrough<code class="language-plaintext highlighter-rouge">](#writeThrough)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="patNextTag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patNextTag</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1648">1648</a>]</p>
+
+<div class="desc">
+
+pre-compile our tag sequence pattern
+
+</div>
+
+<p><span id="state_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">state_</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1862">1862</a>]</p>
+
+<div class="desc">
+
+our current state - start out in before-command mode
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="filterText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterText (ostr, txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1656">1656</a>]</p>
+
+<div class="desc">
+
+Apply our filter
+
+</div>
+
+<p><span id="setCommandMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setCommandMode ( )</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1618">1618</a>]</p>
+
+<div class="desc">
+
+Force the sequencer into mid-command mode. This can be used to defeat
+the resequencing into before-results mode that occurs if any interactive
+command-line input must be read in the course of a command's execution.
+
+</div>
+
+<p><span id="writeThrough"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeThrough (txt)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1624">1624</a>]</p>
+
+<div class="desc">
+
+Internal routine: write the given text directly through us, skipping any
+filtering we'd otherwise apply.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

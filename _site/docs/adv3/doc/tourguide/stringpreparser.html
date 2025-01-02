@@ -1,0 +1,109 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>StringPreParser<br />
+</strong></td>
+<td style="text-align: right;"><a href="amodifieddefaultcommandtopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="telltoaction.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A StringPreParser object is a class that takes a command string and
+optionally transforms it into another string before it’s passed to the
+parser. We could, for example, use this to transform any command of the
+form TELL SARAH TO OPEN THE DOOR into SARAH, OPEN DOOR. Experienced
+players will know that they’re meant to try the latter form, but less
+experienced players will inevitably try commands like ASK SARAH TO GO
+NORTH or TELL SARAH TO FOLLOW ME and feel aggrieved that the game
+doesn’t understand them.</p>
+
+<p>Using a StringPreParser to massage an input string is always a slightly
+fragile mechanism, since the player may always enter something you
+hadn’t thought of which will result in the string being transformed into
+something you certainly didn’t want; but here’s a StringPreParser that
+makes a fair shot of turning TELL X TO Y or ASK X TO Y into X, Y:</p>
+
+<p>StringPreParser<br />
+  doParsing(str, which)<br />
+     {<br />
+         local workStr = str.toLower();<br />
+         /* First check that the string starts with ’tell’ or ’ask’ */<br />
+         if(!workStr.startsWith(‘tell ’) || !workStr.startsWith(‘ask ’))<br />
+           return str;<br />
+         /* If the string contains ’about ’ assume it’s a TELL ABOUT <br />
+          * or ASK ABOUT command<br />
+          */<br />
+         if(workStr.find(‘ about ’))<br />
+           return str;<br />
+           <br />
+         /* If the string doesn’t contain ’to’ it can’t be a TELL TO <br />
+            or ASK TO command */<br />
+              <br />
+         local locTo = workStr.find(‘ to ’);<br />
+         if(locTo == nil)<br />
+           return str;  <br />
+         <br />
+         local locSpace = workStr.find(‘ ’);         <br />
+         str = workStr.substr(locSpace + 1, locTo - locSpace - 1)<br />
+           + ’,’ + workStr.substr(locTo + 3);<br />
+         <br />
+         /* finally, replace ’you’ with ’me’ in case the player<br />
+          * typed TELL X TO X YOU or the like<br />
+          */<br />
+         str = str.findReplace(‘ you ’, ’ me ’, ReplaceAll);<br />
+         if(str.endsWith(‘ you’))<br />
+           str = str.findReplace(‘ you’, ’ me’, ReplaceOnce, str.length-5);<br />
+         return str;<br />
+     }<br />
+;</p>
+
+<p>One weakness of this is that it will not work with TELL HER TO OPEN THE
+DOOR even in contexts where it is obvious what HER refers to. A rather
+more robust way of handling this is to define a
+<a href="telltoaction.html">TellToAction</a> which does the job, which we’ll look at
+in the next section.</p>
+
+<p>On the other hand, a StringPreParser may be the only way you could
+straightforwardly translate X, GIVE ME Y into ASK X FOR Y.</p>
+
+<p>StringPreParser<br />
+  runOrder = 110<br />
+  doParsing(str, which)<br />
+     {<br />
+         local workStr = str.toLower;<br />
+         local iComma = workStr.find(‘,’);<br />
+         local iGiveMe = workStr.find(‘give me’);<br />
+         if(iComma == nil || iGiveMe == nil)<br />
+           return str;<br />
+         str = ’ask ’ + workStr.substr(1, iComma-1)<br />
+          + ’ for ’ + workStr.substr(iGiveMe + 8);<br />
+      <br />
+         return str;<br />
+     }<br />
+;</p>
+
+<p>To see this in action, let’s define an AskForTopic that turns ASK SARAH
+FOR A KISS into SARAH, KISS ME; then you can try SARAH, GIVE ME A KISS,
+which will be turned into ASK SARAH FOR KISS and thence into SARAH, KISS
+ME.</p>
+
+<p>First, we need a kiss topic:</p>
+
+<p>tKiss : Topic ’kiss’;</p>
+
+<p>Then we can define our AskForTopic for Sarah (directly located in
+sarah):</p>
+
+<p>+ AskForTopic @tKiss<br />
+  topicResponse()<br />
+  {<br />
+    ”&lt;q&gt;Give us a kiss.&lt;/q&gt; you ask.&lt;.p&gt;”;<br />
+    local tokList = Tokenizer.tokenize(‘kiss me’);<br />
+    executeCommand(getActor, gActor, tokList, true);<br />
+  }<br />
+;</p>
+

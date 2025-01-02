@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>GuidedTourState : <a
-href="accompanyingstate.htm">AccompanyingState</a><br />
+href="accompanyingstate.html">AccompanyingState</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="accompanyingintravelstate.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="guidedintravelstate.htm">[Next]</a></td>
+href="accompanyingintravelstate.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="guidedintravelstate.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -85,7 +87,7 @@ show the player character into  <br />
 <td><strong>escortStateClass</strong> - The class we use for our actor
 state during the escort travel. By default, we use the basic guided-tour
 accompanying travel state class (<a
-href="guidedintravelstate.htm">GuidedInTravelState</a>), but games will
+href="guidedintravelstate.html">GuidedInTravelState</a>), but games will
 probably want to use a customized subclass of this basic class in most
 cases. The main reason to use a custom subclass is to provide customized
 messages to describe the departure of the escorting actor.  <br />
@@ -181,5 +183,5 @@ her lead the way while she's in one of her GuidedTourStates.
 There's only one problem: so far we've provided no means for her to
 *get* into these GuidedTourStates. Since in this case it will require a
 mechanism we haven't yet come to, we'll have to wait until we do, which
-will be when we start defining some [AskTopics](asktopic.htm) for
+will be when we start defining some [AskTopics](asktopic.html) for
 Sarah.  

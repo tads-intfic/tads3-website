@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RealTimeSenseFuse</span><span class="type">class</span>
 
 [events.t](../file/events.t.html)\[[1202](../source/events.t.html#1202)\]

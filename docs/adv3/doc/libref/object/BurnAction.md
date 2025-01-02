@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BurnAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2452](../source/actions.t.html#2452)\]

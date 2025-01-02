@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OneWayRoomConnector</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[2361](../source/travel.t.html#2361)\]

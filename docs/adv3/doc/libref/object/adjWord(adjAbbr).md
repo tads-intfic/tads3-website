@@ -1,3 +1,5 @@
+---
+---
 <span class="title">adjWord(adjAbbr)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[6693](../source/en_us.t.html#6693)\]

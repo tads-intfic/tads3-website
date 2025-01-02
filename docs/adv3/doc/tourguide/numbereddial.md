@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>NumberedDial : <a
-href="dial.htm">Dial</a><br />
+href="dial.html">Dial</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="settable.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="dynamiclocations.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="settable.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="dynamiclocations.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

@@ -1,4 +1,6 @@
-Help Topics \> [Table of Contents](wbcont.htm)  
+---
+---
+Help Topics \> [Table of Contents](wbcont.html)  
   
 
   
@@ -171,7 +173,7 @@ The individual special items are:
 
 - ReadMe File: You can set this item to a file that contains notes about
   your game that you want to provide to players. This should be a plain
-  text (.txt) or HTML (.htm) file. Workbench will automatically include
+  text (.txt) or HTML (.html) file. Workbench will automatically include
   this file in the Release ZIP package and in the Windows SETUP package.
   This might sound a lot like an ordinary Feelie file - and it is. The
   only difference is that when you create the Windows SETUP package for
@@ -456,7 +458,7 @@ created whenever you use the "Compile for Debugging" command on the
 > of the game file directory, if you're using relative paths in the
 > resource names), so that the interpreter can find the resources as
 > external files at run-time. Refer to [resource naming
-> conventions](../htmltads/res.htm#naming) for information on how
+> conventions](../htmltads/res.html#naming) for information on how
 > multimedia versions of TADS find resource files.
 
 <span id="rlsgam">**Release .t3 file:**</span> This is the compiled
@@ -573,7 +575,7 @@ systems in the US and Western Europe).
 **Additional command-line options:** If you need to specify any
 command-line options that cannot be specified elsewhere in the dialog
 box, you can enter the text of the options here. Look
-[here](../../doc/t3build.htm) for the full set of compiler options. (In
+[here](../../doc/t3build.html) for the full set of compiler options. (In
 most cases, you won't need to put anything here, since all of the common
 compiler options are all accessible through the dialog without resorting
 to typing them in here directly.)
@@ -854,6 +856,6 @@ the source package.
 ------------------------------------------------------------------------
 
   
-Help Topics \> [Table of Contents](wbcont.htm)  
+Help Topics \> [Table of Contents](wbcont.html)  
   
 Copyright ©1999, 2007 by Michael J. Roberts.

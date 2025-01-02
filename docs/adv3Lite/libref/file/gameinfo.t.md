@@ -1,3 +1,5 @@
+---
+---
 <span class="title">gameinfo.t</span><span class="type">file</span>
 
 [source file](../source/gameinfo.t.html)

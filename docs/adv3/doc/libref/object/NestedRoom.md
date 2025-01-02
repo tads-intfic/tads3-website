@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NestedRoom</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[5590](../source/travel.t.html#5590)\]

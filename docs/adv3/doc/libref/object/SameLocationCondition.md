@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SameLocationCondition</span><span class="type">class</span>
 
 [precond.t](../file/precond.t.html)\[[732](../source/precond.t.html#732)\]

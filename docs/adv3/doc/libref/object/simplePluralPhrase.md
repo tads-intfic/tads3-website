@@ -1,3 +1,5 @@
+---
+---
 <span class="title">simplePluralPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`simplePluralPhrase(adj)`](../object/simplePluralPhrase(adj).html)</span>` : `

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Compiler</span><span class="type">object</span>
 
 [dynfunc.t](../file/dynfunc.t.html)\[[40](../source/dynfunc.t.html#40)\]

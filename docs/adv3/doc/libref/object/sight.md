@@ -1,3 +1,5 @@
+---
+---
 <span class="title">sight</span><span class="type">object</span>
 
 [sense.t](../file/sense.t.html)\[[252](../source/sense.t.html#252)\]

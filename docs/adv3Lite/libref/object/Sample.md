@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Sample</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[639](../source/newbie.t.html#639)\]

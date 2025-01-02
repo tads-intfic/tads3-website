@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ExactQuantifiedPluralProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[2382](../source/parser.t.html#2382)\]

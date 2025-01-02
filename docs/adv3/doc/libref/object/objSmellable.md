@@ -1,3 +1,5 @@
+---
+---
 <span class="title">objSmellable</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[183](../source/precond.t.html#183)\]

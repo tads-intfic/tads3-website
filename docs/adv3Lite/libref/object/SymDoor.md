@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SymDoor</span><span class="type">class</span>
 
 [symconn.t](../file/symconn.t.html)\[[641](../source/symconn.t.html#641)\]

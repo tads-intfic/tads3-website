@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultThought</span><span class="type">class</span>
 
 [thoughts.t](../file/thoughts.t.html)\[[77](../source/thoughts.t.html#77)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BoredomAgendaItem</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[5180](../source/actor.t.html#5180)\]

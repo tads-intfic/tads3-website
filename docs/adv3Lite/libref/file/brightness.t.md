@@ -1,3 +1,5 @@
+---
+---
 <span class="title">brightness.t</span><span class="type">file</span>
 
 [source file](../source/brightness.t.html)

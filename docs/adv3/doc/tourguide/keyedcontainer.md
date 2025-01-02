@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,13 +9,13 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>KeyedContainer : <a
-href="lockablewithkey.htm">LockableWithKey</a>, <a
-href="openablecontainer.htm">OpenableContainer</a><br />
+href="lockablewithkey.html">LockableWithKey</a>, <a
+href="openablecontainer.html">OpenableContainer</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="indirectlockable.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="lockablewithkey.htm">[Next]</a></td>
+href="indirectlockable.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="lockablewithkey.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

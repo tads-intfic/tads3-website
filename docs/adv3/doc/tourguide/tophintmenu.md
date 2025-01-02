@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>TopHintMenu : <a
-href="hintmenu.htm">HintMenu</a>, PreinitObject<br />
+href="hintmenu.html">HintMenu</a>, PreinitObject<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="hints-overview.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="hintmenu.htm">[Next]</a></td>
+href="hints-overview.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="hintmenu.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

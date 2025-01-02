@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Region</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[1940](../source/travel.t.html#1940)\],

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GuidedTourState</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[2402](../source/extras.t.html#2402)\]

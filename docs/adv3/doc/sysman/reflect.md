@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Reflection  
-<span class="navnp"><a href="undef.htm" class="nav"><em>Prev:</em> Capturing Calls to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Reflection  
+<span class="navnp"><a href="undef.html" class="nav"><em>Prev:</em> Capturing Calls to
 Undefined Methods</a>    
-<a href="icext.htm" class="nav"><em>Next:</em> Extending Intrinsic
+<a href="icext.html" class="nav"><em>Next:</em> Extending Intrinsic
 Classes</a>     </span>
 
 </div>
@@ -220,7 +222,7 @@ allocated during execution.
 You can dynamically determine how many arguments a given function or
 method takes.
 
-For a function, use [getFuncParams()](tadsgen.htm#getFuncParams):
+For a function, use [getFuncParams()](tadsgen.html#getFuncParams):
 
 <div class="code">
 
@@ -229,7 +231,7 @@ For a function, use [getFuncParams()](tadsgen.htm#getFuncParams):
 
 </div>
 
-For a method, use the [getPropParams](objic.htm#getPropParams) method of
+For a method, use the [getPropParams](objic.html#getPropParams) method of
 the containing object:
 
 <div class="code">
@@ -241,7 +243,7 @@ the containing object:
 
 ## Accessing named arguments
 
-You can get a list of all of the [named arguments](namedargs.htm)
+You can get a list of all of the [named arguments](namedargs.html)
 currently in effect by calling
 <span class="code">t3GetNamedArgList()</span>. This function returns a
 list of strings, where each string is the name of a currently active
@@ -250,7 +252,7 @@ named argument.
 You can retrieve the value of a named argument given its name via
 <span class="code">t3GetNamedArg()</span>.
 
-(These functions are part of the [t3vm](t3vm.htm) set.)
+(These functions are part of the [t3vm](t3vm.html) set.)
 
 ## Accessing compiler symbols: the <span class="code">reflectionServices</span> object
 
@@ -449,7 +451,7 @@ up the name in the symbol table and calls the property, if it's found.
 The <span class="code">t3GetGlobalSymbols()</span> function can also
 retrieve information on the preprocessor macros defined in the program's
 source code. This information is in the correct format for use with the
-[DynamicFunc](dynfunc.htm) class's dynamic compiler, so you can pass it
+[DynamicFunc](dynfunc.html) class's dynamic compiler, so you can pass it
 directly to the DynamicFunc constructor as the "macroTable" argument.
 
 To retrieve the macro information, specify the constant value
@@ -571,11 +573,11 @@ requirements are:
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Reflection  
-<span class="navnp"><a href="undef.htm" class="nav"><em>Prev:</em> Capturing Calls to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Reflection  
+<span class="navnp"><a href="undef.html" class="nav"><em>Prev:</em> Capturing Calls to
 Undefined Methods</a>    
-<a href="icext.htm" class="nav"><em>Next:</em> Extending Intrinsic
+<a href="icext.html" class="nav"><em>Next:</em> Extending Intrinsic
 Classes</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ObjOpenCondition</span><span class="type">class</span>
 
 [precond.t](../file/precond.t.html)\[[870](../source/precond.t.html#870)\]

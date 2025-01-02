@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PushTraveler</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[3314](../source/travel.t.html#3314)\],

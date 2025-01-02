@@ -1,3 +1,5 @@
+---
+---
 # status.t
 
 [documentation](../file/status.t.html)

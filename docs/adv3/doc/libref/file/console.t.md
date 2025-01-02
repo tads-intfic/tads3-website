@@ -1,3 +1,5 @@
+---
+---
 <span class="title">console.t</span><span class="type">file</span>
 
 [source file](../source/console.t.html)

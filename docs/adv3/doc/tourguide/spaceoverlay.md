@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SpaceOverlay : <a
-href="bulklimiter.htm">BulkLimiter</a><br />
+href="bulklimiter.html">BulkLimiter</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="stretchycontainer.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="underside.htm">[Next]</a></td>
+href="stretchycontainer.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="underside.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -21,8 +23,8 @@ href="underside.htm">[Next]</a></td>
 You are unlikely to use a SpaceOverlay directly (except perhaps to
 derive your own subclass from it). The main function of the SpaceOverlay
 class is to provide common functionality for its subclasses:
-[Underside](underside.htm), [RearContainer](rearcontainer.htm), and
-[RearSurface](rearsurface.htm). It is worth considering the SpaceOverlay
+[Underside](underside.html), [RearContainer](rearcontainer.html), and
+[RearSurface](rearsurface.html). It is worth considering the SpaceOverlay
 before its subclasses, however, in order to be aware of the common
 behaviour they all inherit.  
   
@@ -103,7 +105,7 @@ the SpaceOverlay are listed every time it is moved.  <br />
 
   
 Note that a SpaceOverlay will generally be implemented as a Component of
-a [ComplexContainer](complexcontainer.htm): in such a case the 'it' that
+a [ComplexContainer](complexcontainer.html): in such a case the 'it' that
 will actually be moved (causing SpaceOverlays such as its Underside or
 RearSurface) will be the ComplexContainer (though it will of course take
 its SpaceOverlays with it).  

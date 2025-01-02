@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ThoughtManager</span><span class="type">class</span>
 
 [thoughts.t](../file/thoughts.t.html)\[[20](../source/thoughts.t.html#20)\]

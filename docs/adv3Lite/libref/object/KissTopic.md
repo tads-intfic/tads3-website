@@ -1,3 +1,5 @@
+---
+---
 <span class="title">KissTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3634](../source/actor.t.html#3634)\]

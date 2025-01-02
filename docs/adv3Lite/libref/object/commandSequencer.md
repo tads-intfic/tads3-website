@@ -1,3 +1,5 @@
+---
+---
 <span class="title">commandSequencer</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[1227](../source/output.t.html#1227)\]

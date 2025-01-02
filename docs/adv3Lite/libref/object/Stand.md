@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Stand</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[722](../source/actions.t.html#722)\]

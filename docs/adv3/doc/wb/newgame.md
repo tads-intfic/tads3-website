@@ -1,4 +1,6 @@
-Help Topics \> [Table of Contents](wbcont.htm)  
+---
+---
+Help Topics \> [Table of Contents](wbcont.html)  
   
 
   
@@ -109,7 +111,7 @@ and test the changes.
 ## Step 6: Learning More about TADS
 
 At this point, you're ready to start learning more about TADS. The
-[Welcome](../authkit/welcome.htm) page has more information on where you
+[Welcome](../authkit/welcome.html) page has more information on where you
 can find documentation, examples, and other resources for learning TADS.
 
 Thanks for giving TADS a try!  
@@ -121,6 +123,6 @@ Thanks for giving TADS a try!
 ------------------------------------------------------------------------
 
   
-Help Topics \> [Table of Contents](wbcont.htm)  
+Help Topics \> [Table of Contents](wbcont.html)  
   
 Copyright ©1999, 2007 by Michael J. Roberts.

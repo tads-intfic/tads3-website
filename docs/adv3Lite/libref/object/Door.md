@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Door</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[736](../source/travel.t.html#736)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> The Web UI  
-<span class="navnp"><a href="lister.htm" class="nav"><em>Prev:</em> Lists and Listers</a>
-    <a href="extensions.htm" class="nav"><em>Next:</em> Extensions</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> The Web UI  
+<span class="navnp"><a href="lister.html" class="nav"><em>Prev:</em> Lists and Listers</a>
+    <a href="extensions.html" class="nav"><em>Next:</em> Extensions</a>
     </span>
 
 </div>
@@ -577,10 +579,10 @@ code as usual in that method.
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> The Web UI  
-<span class="navnp"><a href="lister.htm" class="nav"><em>Prev:</em> Lists and Listers</a>
-    <a href="extensions.htm" class="nav"><em>Next:</em> Extensions</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> The Web UI  
+<span class="navnp"><a href="lister.html" class="nav"><em>Prev:</em> Lists and Listers</a>
+    <a href="extensions.html" class="nav"><em>Next:</em> Extensions</a>
     </span>
 
 </div>

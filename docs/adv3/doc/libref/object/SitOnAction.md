@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SitOnAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2575](../source/actions.t.html#2575)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GameID</span><span class="type">class</span>
 
 [modid.t](../file/modid.t.html)\[[558](../source/modid.t.html#558)\]

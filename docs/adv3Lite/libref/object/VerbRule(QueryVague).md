@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(QueryVague)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[1798](../source/grammar.t.html#1798)\]

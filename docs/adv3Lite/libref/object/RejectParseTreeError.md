@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RejectParseTreeError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5162](../source/parser.t.html#5162)\]

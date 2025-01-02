@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ByteArray</span><span class="type">class</span>
 
 [bytearr.h](../file/bytearr.h.html)\[[26](../source/bytearr.h.html#26)\]

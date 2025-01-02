@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OutOf</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[10142](../source/thing.t.html#10142)\]

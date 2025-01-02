@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultCeiling</span><span class="type">object</span>
 
 [roomparts.t](../file/roomparts.t.html)\[[126](../source/roomparts.t.html#126)\]

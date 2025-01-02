@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NetRequestEvent</span><span class="type">class</span>
 
 [tadsnet.t](../file/tadsnet.t.html)\[[80](../source/tadsnet.t.html#80)\]

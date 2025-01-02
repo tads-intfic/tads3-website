@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](otherresponsestoactions.htm)
-  [\[Next\]](abasicburner.htm)*
+*[\[Previous\]](otherresponsestoactions.html)
+  [\[Next\]](abasicburner.html)*
 
 # Chapter 5 - Character Building
 
@@ -285,7 +287,7 @@ by redirecting the action to the smoke emanating from the fire.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](otherresponsestoactions.htm)
-  [\[Next\]](abasicburner.htm)*
+*[\[Previous\]](otherresponsestoactions.html)
+  [\[Next\]](abasicburner.html)*
 
 </div>

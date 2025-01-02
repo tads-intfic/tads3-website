@@ -1,3 +1,5 @@
+---
+---
 <span class="title">roomparaStyleTag</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[825](../source/output.t.html#825)\]

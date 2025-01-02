@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,18 +11,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>SecretDoor : BasicDoor<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="travelwithmessage.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="throughpassage.htm">[Next]</a></td>
+href="travelwithmessage.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="throughpassage.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-The description of [mainCave](stairwayup.htm) includes a rock to the
+The description of [mainCave](stairwayup.html) includes a rock to the
 north. We'll make this a secret door that reveals a secret passage
 behind when it is pushed to one side (using the [Thing
-template](thingstatetemplate.htm)):  
+template](thingstatetemplate.html)):  
   
 + rock: SecretDoor 'large rock' 'rock'  
   "A large rock \<\<isOpen ? 'lies to one side of a passage beyond'   
@@ -63,7 +65,7 @@ secretPassage : Room 'Secret Passage' 'the secret passage'
 ;  
   
 /\* This rock is simply the other side of the rock defined in mainCave   
- \* In this definition we use the [Passage template](passagetemplate.htm)  
+ \* In this definition we use the [Passage template](passagetemplate.html)  
  \*/  
   
 + rock2 : SecretDoor -\> rock 'large rock' 'large rock'  

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Verify, Check,
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Verify, Check,
 and When to Use Which  
-<span class="navnp"><a href="t3res.htm" class="nav"><em>Prev:</em> Action Results</a>
+<span class="navnp"><a href="t3res.html" class="nav"><em>Prev:</em> Action Results</a>
    
-<a href="t3verb.htm" class="nav"><em>Next:</em> How to Create Verbs</a>
+<a href="t3verb.html" class="nav"><em>Next:</em> How to Create Verbs</a>
     </span>
 
 </div>
@@ -449,12 +451,12 @@ called.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Verify, Check,
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Verify, Check,
 and When to Use Which  
-<span class="navnp"><a href="t3res.htm" class="nav"><em>Prev:</em> Action Results</a>
+<span class="navnp"><a href="t3res.html" class="nav"><em>Prev:</em> Action Results</a>
    
-<a href="t3verb.htm" class="nav"><em>Next:</em> How to Create Verbs</a>
+<a href="t3verb.html" class="nav"><em>Next:</em> How to Create Verbs</a>
     </span>
 
 </div>

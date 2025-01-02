@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AskConnector</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[1781](../source/travel.t.html#1781)\],

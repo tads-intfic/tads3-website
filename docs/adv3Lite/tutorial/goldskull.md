@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,9 +8,9 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Goldskull  
-<span class="navnp"><a href="summing.htm" class="nav"><em>Prev:</em> Summing Up</a>
-   <a href="goldmap.htm" class="nav"><em>Next:</em> Laying out the map</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Goldskull  
+<span class="navnp"><a href="summing.html" class="nav"><em>Prev:</em> Summing Up</a>
+   <a href="goldmap.html" class="nav"><em>Next:</em> Laying out the map</a>
     </span>
 
 </div>
@@ -21,12 +23,12 @@ In this chapter we implement another simple game.
 
 <div class="sectoc">
 
-[Laying out the map](goldmap.htm)  
-[Making things happen](making.htm)  
-[Improving the game](improving.htm)  
-[Weightier matters](weightier.htm)  
-[Everything in its place](inplace.htm)  
-[Retrospect](retro.htm)  
+[Laying out the map](goldmap.html)  
+[Making things happen](making.html)  
+[Improving the game](improving.html)  
+[Weightier matters](weightier.html)  
+[Everything in its place](inplace.html)  
+[Retrospect](retro.html)  
 
 </div>
 
@@ -37,9 +39,9 @@ In this chapter we implement another simple game.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Goldskull  
-<span class="navnp"><a href="summing.htm" class="nav"><em>Prev:</em> Summing Up</a>
-   <a href="goldmap.htm" class="nav"><em>Next:</em> Laying out the map</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Goldskull  
+<span class="navnp"><a href="summing.html" class="nav"><em>Prev:</em> Summing Up</a>
+   <a href="goldmap.html" class="nav"><em>Next:</em> Laying out the map</a>
     </span>
 
 </div>

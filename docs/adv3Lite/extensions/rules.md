@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Rules  
-<span class="navnp"><a href="roomparts.htm" class="nav"><em>Prev:</em> Room Parts</a>
-    <a href="scenetopic.htm" class="nav"><em>Next:</em> SceneTopic</a>
+<span class="navnp"><a href="roomparts.html" class="nav"><em>Prev:</em> Room Parts</a>
+    <a href="scenetopic.html" class="nav"><em>Next:</em> SceneTopic</a>
     </span>
 
 </div>
@@ -48,7 +50,7 @@ the Rule and RuleBook classes that allow rules and rulebooks to be
 defined. For some predefined rules and rulebooks that work with this
 extension and provide rule-based access to certain aspects of the
 action-processing and turn cycles, see the related
-[sysrules](sysrules.htm) extension.
+[sysrules](sysrules.html) extension.
 
   
 <span id="classes"></span>
@@ -269,7 +271,7 @@ following properties:
 - **aobj**: The accessory object of the current action. This may be
   specified as an object, a class, or a list of objects and/or classes.
   Note that this property is only applicable when the
-  [TIAAction](tiaaction.htm) extension is included in your game.
+  [TIAAction](tiaaction.html) extension is included in your game.
 - **matchObj**: an object or class or list of objects and/or classes one
   of which much match the first argument passed to the rulebook's
   <span class="code">follow()</span> method. For example if the rulebook
@@ -933,11 +935,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Room Parts  
-<span class="navnp"><a href="roomparts.htm" class="nav"><em>Prev:</em> Room Parts</a>
-    <a href="scenetopic.htm" class="nav"><em>Next:</em> SceneTopic</a>
+<span class="navnp"><a href="roomparts.html" class="nav"><em>Prev:</em> Room Parts</a>
+    <a href="scenetopic.html" class="nav"><em>Next:</em> SceneTopic</a>
     </span>
 
 </div>

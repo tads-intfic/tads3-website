@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> Scoring  
-<span class="navnp"><a href="starting.htm" class="nav"><em>Prev:</em> Starting Out Right</a>
-    <a href="hints.htm" class="nav"><em>Next:</em> Hints</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> Scoring  
+<span class="navnp"><a href="starting.html" class="nav"><em>Prev:</em> Starting Out Right</a>
+    <a href="hints.html" class="nav"><em>Next:</em> Hints</a>     </span>
 
 </div>
 
@@ -28,7 +30,7 @@ where keeping score would not be inappropriate, so in this section we'll
 briefly discuss how to go about it.
 
 The various methods of keeping score are discussed in the section on
-[Scoring](../manual/score.htm) in the *adv3Lite Library Manual*. Here
+[Scoring](../manual/score.html) in the *adv3Lite Library Manual*. Here
 we'll look at just one of them, which is probably the best to use unless
 there is a specific reason for not doing so (such as the presence of
 multiple possible routes through the game). This method consists of
@@ -294,10 +296,10 @@ reader.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> Scoring  
-<span class="navnp"><a href="starting.htm" class="nav"><em>Prev:</em> Starting Out Right</a>
-    <a href="hints.htm" class="nav"><em>Next:</em> Hints</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> Scoring  
+<span class="navnp"><a href="starting.html" class="nav"><em>Prev:</em> Starting Out Right</a>
+    <a href="hints.html" class="nav"><em>Next:</em> Hints</a>     </span>
 
 </div>
 

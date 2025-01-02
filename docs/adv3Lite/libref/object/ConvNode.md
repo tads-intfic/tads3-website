@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ConvNode</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3027](../source/actor.t.html#3027)\]

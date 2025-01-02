@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ResolveResults</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[41](../source/parser.t.html#41)\]

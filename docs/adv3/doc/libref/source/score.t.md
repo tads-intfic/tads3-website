@@ -1,3 +1,5 @@
+---
+---
 # score.t
 
 [documentation](../file/score.t.html)

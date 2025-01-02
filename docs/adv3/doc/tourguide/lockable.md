@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,18 +11,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Lockable : Linkable<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="locks+keys-introduction.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="indirectlockable.htm">[Next]</a></td>
+href="locks+keys-introduction.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="indirectlockable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 Lockable is a mix-in class that must be used with other classes such as
-[Door](door.htm) or Openable, but even when mixed-in the Lockable class
+[Door](door.html) or Openable, but even when mixed-in the Lockable class
 doesn't really do much, as we saw in the case of the
-[LockableContainer](lockablecontainer.htm), since it simply allows
+[LockableContainer](lockablecontainer.html), since it simply allows
 something to be locked and unlocked via LOCK and UNLOCK commands, which
 are carried out implicitly if the player tries to open whatever it is
 that's locked.  
@@ -96,7 +98,7 @@ quoted strings.  <br />
 <td><strong>lockStatusObvious</strong>: this should be true or nil
 depending on whether an actor should be able to tell by simple visual
 inspection that the object is locked. The library default is true. For a
-<a href="lockablewithkey.htm">LockableWithKey</a> (e.g. a door with a
+<a href="lockablewithkey.html">LockableWithKey</a> (e.g. a door with a
 keyhole) it might not be obvious whether the object is locked until the
 player tries to open it. In such a case the most desirable behaviour
 might be for the game to change lockStatusObvious from nil to true once
@@ -156,7 +158,7 @@ programmatically. Call makeLocked() instead.  <br />
 <td><strong>makeLocked(stat)</strong>: Call makeLocked(true) or
 makeLocked(nil) to lock or unlock the object programmatically (e.g. as
 the result of pushing a button or pulling a lever on an <a
-href="indirectlockable.htm">IndirectLockable</a>). You can also override
+href="indirectlockable.html">IndirectLockable</a>). You can also override
 this method if you want to produce some additional side-effects of
 locking or unlocking the object, but make sure you then call
 inherited(stat) somewhere in your makeLocked(stat) method.  <br />

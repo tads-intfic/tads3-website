@@ -1,3 +1,5 @@
+---
+---
 <span class="title">scoreNotifySettingsItem</span><span class="type">object</span>
 
 [score.t](../file/score.t.html)\[[577](../source/score.t.html#577)\]

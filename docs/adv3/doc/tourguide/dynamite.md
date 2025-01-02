@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Dynamite : <a
-href="candle.htm">Candle</a><br />
+href="candle.html">Candle</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="matchstick+matchbook.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="hiding+fiding-introduction.htm">[Next]</a></td>
+href="matchstick+matchbook.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="hiding+fiding-introduction.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -121,7 +123,7 @@ function definition, which means precisely the same as if we had written
 new Function { "You hear a muffled explosion nearby. "; }. We could have
 avoided all this complication had we used a Fuse on the dynamite,
 instead of trying to adapt the Candle. We'll remodel the dynamite using
-a [Fuse](fuse.htm) in due course.  
+a [Fuse](fuse.html) in due course.  
   
 Finally, we need to define the boulderFragments object that is to
 replace the boulder when the dynamite detonates:  
@@ -146,7 +148,7 @@ somewhere convenient like mainCave - but don't forget to set it back
 again (to nil) before starting the next section.  
   
 Finally, for the endGame() function, see above on
-[cannotGoThatWayInDark](cannotgothatwayindark.htm), where we first
+[cannotGoThatWayInDark](cannotgothatwayindark.html), where we first
 defined it.  
   
   

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*  [\[Next\]](generalintroduction.htm)*
+*  [\[Next\]](generalintroduction.html)*
 
 # Preface
 
@@ -83,6 +85,6 @@ May 2012
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*  [\[Next\]](generalintroduction.htm)*
+*  [\[Next\]](generalintroduction.html)*
 
 </div>

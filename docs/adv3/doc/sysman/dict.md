@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Dictionary  
-<span class="navnp"><a href="date.htm" class="nav"><em>Prev:</em> Date</a>
-    <a href="dynfunc.htm" class="nav"><em>Next:</em> DynamicFunc</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Dictionary  
+<span class="navnp"><a href="date.html" class="nav"><em>Prev:</em> Date</a>
+    <a href="dynfunc.html" class="nav"><em>Next:</em> DynamicFunc</a>    
 </span>
 
 </div>
@@ -20,7 +22,7 @@
 
 To facilitate command parsing, TADS 3 provides an intrinsic class called
 Dictionary. A Dictionary is a specialized type of lookup table designed
-specifically to work with the [GrammarProd](gramprod.htm) intrinsic
+specifically to work with the [GrammarProd](gramprod.html) intrinsic
 class, which is used to create parsers. A Dictionary stores the
 vocabulary for a grammar; more generically speaking, it stores
 associations between keys and objects, and can be efficiently searched
@@ -56,7 +58,7 @@ method takes the comparator object as an argument. When you set the
 comparator, subsequent look-up operations are performed using the
 matching rules contained in the new comparator.
 
-The intrinsic class [StringComparator](strcomp.htm) provides a
+The intrinsic class [StringComparator](strcomp.html) provides a
 customizable comparator implementation, compatible with the Dictionary
 requirements, that's very fast (since it's implemented as native code in
 the interpreter). When the StringComparator class doesn't provide enough
@@ -261,7 +263,7 @@ naturally.
 
 Add an object to the dictionary with the given string and property key.
 *str* can be a string value, or can be a list (or Vector or other
-[list-like object](opoverload.htm#listlike)) containing strings. If
+[list-like object](opoverload.html#listlike)) containing strings. If
 *str* is a list of strings, the result is the same as calling
 <span class="code">addWord()</span> once for each string in the list. If
 the word association to be added is already defined (i.e., another entry
@@ -430,7 +432,7 @@ with other strings, the object is not removed from those other
 associations, and likewise if the same string and property are
 associated with different objects, those object associations are not
 removed. *str* can be a string value, or it can be a list (or Vector or
-other [list-like object](opoverload.htm#listlike)) containing strings.
+other [list-like object](opoverload.html#listlike)) containing strings.
 If it's a list of strings, the result is the same as calling
 <span class="code">removeWord()</span> separately for each string in the
 list. If the word association to be removed is not defined, the
@@ -610,10 +612,10 @@ differences:
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Dictionary  
-<span class="navnp"><a href="date.htm" class="nav"><em>Prev:</em> Date</a>
-    <a href="dynfunc.htm" class="nav"><em>Next:</em> DynamicFunc</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Dictionary  
+<span class="navnp"><a href="date.html" class="nav"><em>Prev:</em> Date</a>
+    <a href="dynfunc.html" class="nav"><em>Next:</em> DynamicFunc</a>    
 </span>
 
 </div>

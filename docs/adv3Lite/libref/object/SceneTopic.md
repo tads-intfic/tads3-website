@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SceneTopic</span><span class="type">class</span>
 
 [scenetopic.t](../file/scenetopic.t.html)\[[87](../source/scenetopic.t.html#87)\]

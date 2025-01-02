@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SwitchableCaptureFilter</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[836](../source/output.t.html#836)\]

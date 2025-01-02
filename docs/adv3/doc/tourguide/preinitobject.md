@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,18 +9,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>PreinitObject: <a
-href="moduleexecobject.htm">ModuleExecObject</a><br />
+href="moduleexecobject.html">ModuleExecObject</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="initobject.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="presaveobject.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="initobject.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="presaveobject.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 A PreinitObject works in exactly the same way as an
-[InitObject](initobject.htm) with one important difference, its execute
+[InitObject](initobject.html) with one important difference, its execute
 method is executed at the preinitialization stage, not at game startup.
 Preinitialization is carried out by the *compiler* before the game image
 is written rather than by the *interpreter* when the game starts, and so

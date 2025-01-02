@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> Using the Tools  
-<span class="navnp"><a href="setting.htm" class="nav"><em>Prev:</em> Setting it all up</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> Using the Tools  
+<span class="navnp"><a href="setting.html" class="nav"><em>Prev:</em> Setting it all up</a>
    
-<a href="heidi.htm" class="nav"><em>Next:</em> Heidi: our first adv3Lite
+<a href="heidi.html" class="nav"><em>Next:</em> Heidi: our first adv3Lite
 game</a>     </span>
 
 </div>
@@ -103,8 +105,8 @@ text editor and compiler, your other important tools are the various
 forms of documentation. In additition to this tutorial the important
 ones are:
 
-1.  The [adv3Lite Library Manual](..\manual\index.htm)
-2.  The [TADS 3 System Manual](..\sysman.htm)
+1.  The [adv3Lite Library Manual](..\manual\index.html)
+2.  The [TADS 3 System Manual](..\sysman.html)
 3.  A few sections of the *TADS 3 Technical Manual* (though most of it
     is directed towards the adv3 library)
 4.  The adv3Lite library source code and the comments it contains (in
@@ -122,12 +124,12 @@ up straight away, but you will need to do so eventually.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Tools of the Trade</a> \> Using the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Tools of the Trade</a> \> Using the
 Tools  
-<span class="navnp"><a href="setting.htm" class="nav"><em>Prev:</em> Setting it all up</a>
+<span class="navnp"><a href="setting.html" class="nav"><em>Prev:</em> Setting it all up</a>
    
-<a href="heidi.htm" class="nav"><em>Next:</em> Heidi: our first adv3Lite
+<a href="heidi.html" class="nav"><em>Next:</em> Heidi: our first adv3Lite
 game</a>     </span>
 
 </div>

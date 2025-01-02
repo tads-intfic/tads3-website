@@ -1,3 +1,5 @@
+---
+---
 <span class="title">IllogicalAlreadyVerifyResult</span><span class="type">class</span>
 
 [verify.t](../file/verify.t.html)\[[335](../source/verify.t.html#335)\]

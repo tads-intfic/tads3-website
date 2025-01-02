@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Vehicle : <a
-href="nestedroom.htm">NestedRoom</a>, Traveler<br />
+href="nestedroom.html">NestedRoom</a>, Traveler<br />
 </strong></td>
-<td style="text-align: right;"><a href="booth.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="vehiclebarrier.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="booth.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="vehiclebarrier.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -203,7 +205,7 @@ doesn't actually move, and there's another reason it might not move
 besides its engine being switched off: the player might try to take it
 somewhere we decide a snowmobile shouldn't go. To restrict its movements
 we'll be setting up a special kind of TravelBarrier called a
-[VehicleBarrier](vehiclebarrier.htm), which is what we'll be looking at
+[VehicleBarrier](vehiclebarrier.html), which is what we'll be looking at
 next. Here we check for the presence of that VehicleBarrier among the
 travel barriers associated with the connector via which the snowmobile
 is being asked to travel, which connector is fortunately provided for us

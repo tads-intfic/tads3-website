@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DebugCtl</span><span class="type">object</span>
 
 [debug.t](../file/debug.t.html)\[[19](../source/debug.t.html#19)\]

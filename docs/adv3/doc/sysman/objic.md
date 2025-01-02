@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Object  
-<span class="navnp"><a href="lookup.htm" class="nav"><em>Prev:</em> LookupTable</a>
-    <a href="rexpat.htm" class="nav"><em>Next:</em> RexPattern</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Object  
+<span class="navnp"><a href="lookup.html" class="nav"><em>Prev:</em> LookupTable</a>
+    <a href="rexpat.html" class="nav"><em>Next:</em> RexPattern</a>    
 </span>
 
 </div>
@@ -279,7 +281,7 @@ Returns the datatype of the given property of the given object, or
 the property. This function does not evaluate the property, but merely
 determines its type. The return value is one of the
 <span class="code">TYPE_xxx</span> values (see the
-[reflection](reflect.htm) section for the list).
+[reflection](reflect.html) section for the list).
 
 </div>
 
@@ -290,10 +292,10 @@ determines its type. The return value is one of the
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Object  
-<span class="navnp"><a href="lookup.htm" class="nav"><em>Prev:</em> LookupTable</a>
-    <a href="rexpat.htm" class="nav"><em>Next:</em> RexPattern</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Object  
+<span class="navnp"><a href="lookup.html" class="nav"><em>Prev:</em> LookupTable</a>
+    <a href="rexpat.html" class="nav"><em>Next:</em> RexPattern</a>    
 </span>
 
 </div>

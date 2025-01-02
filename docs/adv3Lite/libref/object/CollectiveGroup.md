@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CollectiveGroup</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[471](../source/extras.t.html#471)\]

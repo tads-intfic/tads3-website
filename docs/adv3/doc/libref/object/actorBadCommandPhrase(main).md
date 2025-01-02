@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorBadCommandPhrase(main)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[5147](../source/en_us.t.html#5147)\]

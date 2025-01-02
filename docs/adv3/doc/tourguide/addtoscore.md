@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>addToScore<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="scoring-overview.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="achievement.htm">[Next]</a></td>
+href="scoring-overview.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="achievement.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -116,6 +118,6 @@ moveInto method:
 ;  
   
 Finally, note that the second parameter in addToScore may be an
-[Achievement](achievement.htm) object instead of a single-quoted string.
+[Achievement](achievement.html) object instead of a single-quoted string.
 We'll explain this in more detail once we've introduced the Achievement
 class.  

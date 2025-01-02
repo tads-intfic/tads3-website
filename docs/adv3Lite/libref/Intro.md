@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -103,9 +105,9 @@ authorship notices be removed or modified.
 
 ## Other Adv3Lite Documentation
 
-<a href="..\manual\index.htm" target="_top">Library Manual</a>
+<a href="..\manual\index.html" target="_top">Library Manual</a>
 
-<a href="..\tutorial\index.htm" target="_top">Tutorial</a>
+<a href="..\tutorial\index.html" target="_top">Tutorial</a>
 
 </div>
 

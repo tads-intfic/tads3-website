@@ -1,3 +1,5 @@
+---
+---
 <span class="title">browserGlobals</span><span class="type">object</span>
 
 [browser.t](../file/browser.t.html)\[[28](../source/browser.t.html#28)\]

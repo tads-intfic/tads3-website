@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BasicBed</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[6585](../source/travel.t.html#6585)\]

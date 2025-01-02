@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DividedInventoryLister</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[1603](../source/lister.t.html#1603)\]

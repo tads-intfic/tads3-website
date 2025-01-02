@@ -1,3 +1,5 @@
+---
+---
 # rules.t
 
 [documentation](../file/rules.t.html)

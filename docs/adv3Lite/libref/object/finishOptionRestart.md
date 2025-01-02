@@ -1,3 +1,5 @@
+---
+---
 <span class="title">finishOptionRestart</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[1185](../source/misc.t.html#1185)\]

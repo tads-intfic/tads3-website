@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Understanding
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Understanding
 Separate Compilation  
-<span class="navnp"><a href="t3build_config.htm" class="nav"><em>Prev:</em> Using Build
+<span class="navnp"><a href="t3build_config.html" class="nav"><em>Prev:</em> Using Build
 Configurations</a>    
-<a href="t3iautohot.htm" class="nav"><em>Next:</em> Using AutoHotKey
+<a href="t3iautohot.html" class="nav"><em>Next:</em> Using AutoHotKey
 with the Workbench Editor (Windows)</a>     </span>
 
 </div>
@@ -380,7 +382,7 @@ when I build for debugging, say. How can I do this?**
 The project makefile format doesn't have any conditional features of its
 own, so there's not a direct way to do this. Fortunately, there's a
 simple trick you can use to include a source file only in certain
-builds. Refer to the [Build Configurations article](t3build_config.htm)
+builds. Refer to the [Build Configurations article](t3build_config.html)
 for a description of the technique.
 
 **Makefiles are too complicated! What if I just want to use the
@@ -511,12 +513,12 @@ figures out what you've been changing and recompiles just those parts.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Understanding
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Understanding
 Separate Compilation  
-<span class="navnp"><a href="t3build_config.htm" class="nav"><em>Prev:</em> Using Build
+<span class="navnp"><a href="t3build_config.html" class="nav"><em>Prev:</em> Using Build
 Configurations</a>    
-<a href="t3iautohot.htm" class="nav"><em>Next:</em> Using AutoHotKey
+<a href="t3iautohot.html" class="nav"><em>Next:</em> Using AutoHotKey
 with the Workbench Editor (Windows)</a>     </span>
 
 </div>

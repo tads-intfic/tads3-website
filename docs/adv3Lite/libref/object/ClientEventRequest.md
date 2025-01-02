@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ClientEventRequest</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[768](../source/webui.t.html#768)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">notifyScenesAfterRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[186](../source/sysrules.t.html#186)\]

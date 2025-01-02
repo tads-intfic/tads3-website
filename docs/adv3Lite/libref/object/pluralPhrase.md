@@ -1,3 +1,5 @@
+---
+---
 <span class="title">pluralPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`pluralPhrase(main)`](../object/pluralPhrase(main).html)**` :   `[`CoreNounPhraseProduction`](../object/CoreNounPhraseProduction.html)

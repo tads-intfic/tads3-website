@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Source  
-<span class="navnp"><a href="actionref.htm" class="nav"><em>Prev:</em> ActionReference</a>
-    *Next:* <a href="actionref.htm" class="nav">ActionReference</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Source  
+<span class="navnp"><a href="actionref.html" class="nav"><em>Prev:</em> ActionReference</a>
+    *Next:* <a href="actionref.html" class="nav">ActionReference</a>
    </span>
 
 </div>
@@ -19,7 +21,7 @@
 # Source Reference
 
 This file contains *extracts* from various library source files,
-intended for reference from the [Action Reference](actionref.htm). It is
+intended for reference from the [Action Reference](actionref.html). It is
 not a complete listing. For complete listings please see the actual
 source files.
 
@@ -3569,10 +3571,10 @@ source files.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Source Reference  
-<span class="navnp"><a href="actionref.htm" class="nav"><em>Prev:</em> ActionReference</a>
-    *Next:* <a href="actionref.htm" class="nav">ActionReference</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Source Reference  
+<span class="navnp"><a href="actionref.html" class="nav"><em>Prev:</em> ActionReference</a>
+    *Next:* <a href="actionref.html" class="nav">ActionReference</a>
    </span>
 
 </div>

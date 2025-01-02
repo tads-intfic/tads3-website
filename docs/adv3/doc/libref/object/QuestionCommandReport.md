@@ -1,3 +1,5 @@
+---
+---
 <span class="title">QuestionCommandReport</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[266](../source/report.t.html#266)\]

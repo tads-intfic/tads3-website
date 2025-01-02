@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](abasicburner.htm)
-  [\[Next\]](theartofconversation.htm)*
+*[\[Previous\]](abasicburner.html)
+  [\[Next\]](theartofconversation.html)*
 
 ## Ending the Game
 
@@ -171,7 +173,7 @@ him, and so forth. That is what we shall try to do next.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](abasicburner.htm)
-  [\[Next\]](theartofconversation.htm)*
+*[\[Previous\]](abasicburner.html)
+  [\[Next\]](theartofconversation.html)*
 
 </div>

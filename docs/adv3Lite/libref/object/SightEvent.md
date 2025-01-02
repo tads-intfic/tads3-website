@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SightEvent</span><span class="type">class</span>
 
 [sensory.t](../file/sensory.t.html)\[[554](../source/sensory.t.html#554)\]

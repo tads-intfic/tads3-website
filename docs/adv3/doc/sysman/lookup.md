@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> LookupTable  
-<span class="navnp"><a href="list.htm" class="nav"><em>Prev:</em> List</a>
-    <a href="objic.htm" class="nav"><em>Next:</em> Object</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> LookupTable  
+<span class="navnp"><a href="list.html" class="nav"><em>Prev:</em> List</a>
+    <a href="objic.html" class="nav"><em>Next:</em> Object</a>    
 </span>
 
 </div>
@@ -80,7 +82,7 @@ the table.
 
 You can also create a LookupTable that's pre-loaded with an initial set
 of values. To do this, pass a list, Vector, or [list-like
-object](opoverload.htm#listlike) as the argument to the constructor:
+object](opoverload.html#listlike) as the argument to the constructor:
 
 <div class="code">
 
@@ -200,7 +202,7 @@ A LookupTable matches key values the same way the
 
 ## Iterating over a LookupTable's contents
 
-LookupTable is a subclass of [Collection](collect.htm), so you can use
+LookupTable is a subclass of [Collection](collect.html), so you can use
 the <span class="code">createIterator()</span> method to create an
 Iterator to iterate over the elements of the lookup table. The Iterator
 that a LookupTable creates is called a LookupTableIterator; it visits
@@ -214,7 +216,7 @@ each iteration.
 
 ## LookupTable methods
 
-LookupTable is a subclass of [Collection](collect.htm), and thus
+LookupTable is a subclass of [Collection](collect.html), and thus
 includes all Collection methods. In addition, LookupTable defines the
 methods listed below.
 
@@ -416,10 +418,10 @@ thousands of elements) that you use frequently.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> LookupTable  
-<span class="navnp"><a href="list.htm" class="nav"><em>Prev:</em> List</a>
-    <a href="objic.htm" class="nav"><em>Next:</em> Object</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> LookupTable  
+<span class="navnp"><a href="list.html" class="nav"><em>Prev:</em> List</a>
+    <a href="objic.html" class="nav"><em>Next:</em> Object</a>    
 </span>
 
 </div>

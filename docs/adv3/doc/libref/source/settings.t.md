@@ -1,3 +1,5 @@
+---
+---
 # settings.t
 
 [documentation](../file/settings.t.html)

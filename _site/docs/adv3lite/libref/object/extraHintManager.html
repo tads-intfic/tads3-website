@@ -1,0 +1,242 @@
+<p><span class="title">extraHintManager</span><span class="type">object</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#876">876</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The extraHintManager carries out the work of starting and stopping the
+display of ExtraHints, and determing which, if any, ExtraHint is ready
+to be displayed.
+
+**`extraHintManager`**` :   `[`PreinitObject`](../object/PreinitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">extraHintManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>activated<code class="language-plaintext highlighter-rouge">](#activated)</code>  <code class="language-plaintext highlighter-rouge">[</code>contents<code class="language-plaintext highlighter-rouge">](#contents)</code>  <code class="language-plaintext highlighter-rouge">[</code>daemonID<code class="language-plaintext highlighter-rouge">](#daemonID)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>activate<code class="language-plaintext highlighter-rouge">](#activate)</code>  <code class="language-plaintext highlighter-rouge">[</code>addToContents<code class="language-plaintext highlighter-rouge">](#addToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>cmdStr<code class="language-plaintext highlighter-rouge">](#cmdStr)</code>  <code class="language-plaintext highlighter-rouge">[</code>deactivate<code class="language-plaintext highlighter-rouge">](#deactivate)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>explainExtraHints<code class="language-plaintext highlighter-rouge">](#explainExtraHints)</code>  <code class="language-plaintext highlighter-rouge">[</code>extraHintsExist<code class="language-plaintext highlighter-rouge">](#extraHintsExist)</code>  <code class="language-plaintext highlighter-rouge">[</code>hintDaemon<code class="language-plaintext highlighter-rouge">](#hintDaemon)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeFromContents<code class="language-plaintext highlighter-rouge">](#removeFromContents)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="activated"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">activated</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#912">912</a>]</p>
+
+<div class="desc">
+
+The extraHintManager is activated if it has a running daemon
+
+</div>
+
+<p><span id="contents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contents</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#929">929</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="daemonID"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">daemonID</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#909">909</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="activate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">activate ( )</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#879">879</a>]</p>
+
+<div class="desc">
+
+Start the Daemon that checks whether to display any ExtraHints.
+
+</div>
+
+<p><span id="addToContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToContents (obj)</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#931">931</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cmdStr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmdStr (stat)</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#957">957</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="deactivate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">deactivate ( )</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#900">900</a>]</p>
+
+<div class="desc">
+
+Stop the Daemon that checks whether to display any ExtraHints.
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#936">936</a>]</p>
+
+<div class="desc">
+
+Build a list of all ExtraHints in our contents property at PreInit
+
+</div>
+
+<p><span id="explainExtraHints"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">explainExtraHints ( )</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#948">948</a>]</p>
+
+<div class="desc">
+
+Finally sort the ExtraHints in descending order of priority
+
+</div>
+
+<p><span id="extraHintsExist"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">extraHintsExist ( )</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#894">894</a>]</p>
+
+<div class="desc">
+
+Even if this module is included, there may be no ExtraHints defined in
+the game, in which case we might want to check whether any ExtraHints
+exist before offering them to the player.
+
+</div>
+
+<p><span id="hintDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hintDaemon ( )</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#920">920</a>]</p>
+
+<div class="desc">
+
+When we're active we run through every ExtraHint object in our contents
+and run its doHint() method till either we run out of ExtraHint objects
+or we find one that displays an extra hint, and so returns true.
+
+</div>
+
+<p><span id="removeFromContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeFromContents (obj)</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#933">933</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

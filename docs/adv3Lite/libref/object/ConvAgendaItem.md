@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ConvAgendaItem</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[5914](../source/actor.t.html#5914)\]

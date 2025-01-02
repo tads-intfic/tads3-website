@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SettingsFileComment</span><span class="type">class</span>
 
 [settings.t](../file/settings.t.html)\[[587](../source/settings.t.html#587)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FloorlessRoom</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[4845](../source/travel.t.html#4845)\]

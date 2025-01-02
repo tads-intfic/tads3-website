@@ -1,3 +1,5 @@
+---
+---
 # menucon.t
 
 [documentation](../file/menucon.t.html)

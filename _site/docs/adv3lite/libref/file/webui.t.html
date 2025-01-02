@@ -1,0 +1,94 @@
+<p><span class="title">webui.t</span><span class="type">file</span></p>
+
+<p><a href="../source/webui.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+This module defines some useful helper functions for implementing a TADS
+game with a Web-based user interface.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>ClientEventRequest<code class="language-plaintext highlighter-rouge">](../object/ClientEventRequest.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ClientSession<code class="language-plaintext highlighter-rouge">](../object/ClientSession.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DownloadTempFile<code class="language-plaintext highlighter-rouge">](../object/DownloadTempFile.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebCommandWin<code class="language-plaintext highlighter-rouge">](../object/WebCommandWin.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebLayoutWindow<code class="language-plaintext highlighter-rouge">](../object/WebLayoutWindow.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebResource<code class="language-plaintext highlighter-rouge">](../object/WebResource.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebResourceGroup<code class="language-plaintext highlighter-rouge">](../object/WebResourceGroup.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebResourceInit<code class="language-plaintext highlighter-rouge">](../object/WebResourceInit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebResourceResFile<code class="language-plaintext highlighter-rouge">](../object/WebResourceResFile.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebStatusWin<code class="language-plaintext highlighter-rouge">](../object/WebStatusWin.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebUIPrefs<code class="language-plaintext highlighter-rouge">](../object/WebUIPrefs.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebUIProfile<code class="language-plaintext highlighter-rouge">](../object/WebUIProfile.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebWindow<code class="language-plaintext highlighter-rouge">](../object/WebWindow.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>coverArtResource<code class="language-plaintext highlighter-rouge">](../object/coverArtResource.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventPage<code class="language-plaintext highlighter-rouge">](../object/eventPage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>flushEventsPage<code class="language-plaintext highlighter-rouge">](../object/flushEventsPage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>guestConnectPage<code class="language-plaintext highlighter-rouge">](../object/guestConnectPage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputDialogPage<code class="language-plaintext highlighter-rouge">](../object/inputDialogPage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputEventPage<code class="language-plaintext highlighter-rouge">](../object/inputEventPage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputFileCancel<code class="language-plaintext highlighter-rouge">](../object/inputFileCancel.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputFilePage<code class="language-plaintext highlighter-rouge">](../object/inputFilePage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputLinePage<code class="language-plaintext highlighter-rouge">](../object/inputLinePage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>mainWebGroup<code class="language-plaintext highlighter-rouge">](../object/mainWebGroup.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>morePromptDonePage<code class="language-plaintext highlighter-rouge">](../object/morePromptDonePage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>setPrefsPage<code class="language-plaintext highlighter-rouge">](../object/setPrefsPage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>setScreenNamePage<code class="language-plaintext highlighter-rouge">](../object/setScreenNamePage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>tempFileDownloadPage<code class="language-plaintext highlighter-rouge">](../object/tempFileDownloadPage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>uiStatePage<code class="language-plaintext highlighter-rouge">](../object/uiStatePage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>uploadFilePage<code class="language-plaintext highlighter-rouge">](../object/uploadFilePage.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>webMainWin<code class="language-plaintext highlighter-rouge">](../object/webMainWin.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>webSession<code class="language-plaintext highlighter-rouge">](../object/webSession.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>webuiResources<code class="language-plaintext highlighter-rouge">](../object/webuiResources.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>generateRandomKey<code class="language-plaintext highlighter-rouge">](#generateRandomKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>processNetRequests<code class="language-plaintext highlighter-rouge">](#processNetRequests)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="generateRandomKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">generateRandomKey ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#360">360</a>]</p>
+
+<div class="desc">
+
+Generate a random key. This returns a 128-bit random number as a hex
+string. This is designed for ephemeral identifiers, such as session
+keys.
+
+</div>
+
+<p><span id="processNetRequests"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processNetRequests (doneFunc, timeout?)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1493">1493</a>]</p>
+
+<div class="desc">
+
+Process network requests. Continues until doneFunc() returns true, or a
+timeout or error occurs. If we return because doneFunc() returned true,
+we'll return nil. Otherwise, we'll return the NetEvent that terminated
+the wait.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

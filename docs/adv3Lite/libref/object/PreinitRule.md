@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PreinitRule</span><span class="type">class</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[36](../source/sysrules.t.html#36)\]

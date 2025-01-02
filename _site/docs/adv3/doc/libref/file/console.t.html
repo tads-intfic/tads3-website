@@ -1,0 +1,289 @@
+<p><span class="title">console.t</span><span class="type">file</span></p>
+
+<p><a href="../source/console.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library - console input/output manager
+
+This module defines the low-level functions for handling input and
+output via the traditional interpreter's user interface, using the local
+keyboard and console via the "tads-io" function set.
+
+The functions in this module are designed primarily for internal use
+within the library itself. Games should use the higher level objects and
+functions defined in input.t and output.t instead of directly calling
+the functions defined here. The reason for separating these functions is
+so that we can substitute the Web UI versions for games that wish to use
+the Web UI insetad of the traditional console UI.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>statuslineBanner<code class="language-plaintext highlighter-rouge">](../object/statuslineBanner1.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>aHref<code class="language-plaintext highlighter-rouge">](#aHref)</code>  <code class="language-plaintext highlighter-rouge">[</code>aHrefAlt<code class="language-plaintext highlighter-rouge">](#aHrefAlt)</code>  <code class="language-plaintext highlighter-rouge">[</code>aioClearScreen<code class="language-plaintext highlighter-rouge">](#aioClearScreen)</code>  <code class="language-plaintext highlighter-rouge">[</code>aioInputDialog<code class="language-plaintext highlighter-rouge">](#aioInputDialog)</code>  <code class="language-plaintext highlighter-rouge">[</code>aioInputEvent<code class="language-plaintext highlighter-rouge">](#aioInputEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>aioInputFile<code class="language-plaintext highlighter-rouge">](#aioInputFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>aioInputLineCancel<code class="language-plaintext highlighter-rouge">](#aioInputLineCancel)</code>  <code class="language-plaintext highlighter-rouge">[</code>aioInputLineTimeout<code class="language-plaintext highlighter-rouge">](#aioInputLineTimeout)</code>  <code class="language-plaintext highlighter-rouge">[</code>aioMorePrompt<code class="language-plaintext highlighter-rouge">](#aioMorePrompt)</code>  <code class="language-plaintext highlighter-rouge">[</code>aioSay<code class="language-plaintext highlighter-rouge">](#aioSay)</code>  <code class="language-plaintext highlighter-rouge">[</code>aioSetLogFile<code class="language-plaintext highlighter-rouge">](#aioSetLogFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkHtmlMode<code class="language-plaintext highlighter-rouge">](#checkHtmlMode)</code>  <code class="language-plaintext highlighter-rouge">[</code>initDisplay<code class="language-plaintext highlighter-rouge">](#initDisplay)</code>  <code class="language-plaintext highlighter-rouge">[</code>initUI<code class="language-plaintext highlighter-rouge">](#initUI)</code>  <code class="language-plaintext highlighter-rouge">[</code>statusHTML<code class="language-plaintext highlighter-rouge">](#statusHTML)</code>  <code class="language-plaintext highlighter-rouge">[</code>terminateUI<code class="language-plaintext highlighter-rouge">](#terminateUI)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="aHref"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aHref (href, txt?, title?, flags, =, 0)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#189">189</a>]</p>
+
+<div class="desc">
+
+Generate a string to show hyperlinked text. If we're not in HTML mode,
+we'll simply return the text without the hyperlink; otherwise, we'll
+return the text with a hyperlink to the given HREF.
+
+If the display text is included, we'll generate the entire link,
+including the \&lt;A HREF\&gt; tag, the hyperlinked text contents, and the
+\&lt;/A\&gt; end tag. If the text is omitted, we'll simply generate the \&lt;A
+HREF\&gt; tag itself, leaving it to the caller to display the text and the
+\&lt;/A\&gt;.
+
+The optional 'flags' is a combination of AHREF_xxx flags indicating any
+special properties of the hyperlink.
+
+</div>
+
+<p><span id="aHrefAlt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aHrefAlt (href, linkedText, altText, title?)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#224">224</a>]</p>
+
+<div class="desc">
+
+Generate a string to show hyperlinked text, with alternate text if we're
+not in HTML mode. If we're in HTML mode, we'll return linkedTxt linked
+to the given HREF; if we're in plain text mode, we'll return the
+alternate text as-is.
+
+</div>
+
+<p><span id="aioClearScreen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aioClearScreen ( )</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#165">165</a>]</p>
+
+<div class="desc">
+
+Clear the screen
+
+</div>
+
+<p><span id="aioInputDialog"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aioInputDialog (icon, prompt, buttons, defaultButton, cancelButton)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#145">145</a>]</p>
+
+<div class="desc">
+
+Show an input dialog
+
+</div>
+
+<p><span id="aioInputEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aioInputEvent (timeout)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#113">113</a>]</p>
+
+<div class="desc">
+
+Read an input event
+
+</div>
+
+<p><span id="aioInputFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aioInputFile (prompt, dialogType, fileType, flags)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#135">135</a>]</p>
+
+<div class="desc">
+
+Show a file selector dialog
+
+</div>
+
+<p><span id="aioInputLineCancel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aioInputLineCancel (reset)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#102">102</a>]</p>
+
+<div class="desc">
+
+Cancel a suspended input line
+
+</div>
+
+<p><span id="aioInputLineTimeout"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aioInputLineTimeout (timeout)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#93">93</a>]</p>
+
+<div class="desc">
+
+Get a line of input from the keyboard, with timeout
+
+</div>
+
+<p><span id="aioMorePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aioMorePrompt ( )</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#124">124</a>]</p>
+
+<div class="desc">
+
+Show a "More" prompt
+
+</div>
+
+<p><span id="aioSay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aioSay (txt)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#83">83</a>]</p>
+
+<div class="desc">
+
+Write text to the main game window
+
+</div>
+
+<p><span id="aioSetLogFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aioSetLogFile (fname, logType?)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#155">155</a>]</p>
+
+<div class="desc">
+
+Set/remove the output logging file
+
+</div>
+
+<p><span id="checkHtmlMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkHtmlMode ( )</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#61">61</a>]</p>
+
+<div class="desc">
+
+Check to see if we're in HTML mode
+
+</div>
+
+<p><span id="initDisplay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initDisplay ( )</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#39">39</a>]</p>
+
+<div class="desc">
+
+Initialize the display. The library calls this at the start of the game,
+and after each RESTART, to set up the layout of the game window.
+
+</div>
+
+<p><span id="initUI"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initUI ( )</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#31">31</a>]</p>
+
+<div class="desc">
+
+Initialize the user interface. The library calls this once at the start
+of the interpreter session to set up the UI. For the console
+interpreter, we don't need to do anything here; the interpreter takes
+care of setting up the display window for us.
+
+</div>
+
+<p><span id="statusHTML"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">statusHTML (stage)</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#249">249</a>]</p>
+
+<div class="desc">
+
+Generate HTML to wrap the left/right portions of the status line. The
+basic status line has three stages: stage 0 precedes the left portion,
+stage 1 comes between the left and right portions, and stage 2 follows
+the right portion. If we're listing exits, we get two more stages: stage
+3 precedes the exit listing, stage 4 follows it.
+
+</div>
+
+<p><span id="terminateUI"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">terminateUI ( )</code></p>
+
+<p><a href="../file/console.t.html">console.t</a>[<a href="../source/console.t.html#52">52</a>]</p>
+
+<div class="desc">
+
+Shut down the user interface. The library calls this once just before
+the game is about to terminate.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

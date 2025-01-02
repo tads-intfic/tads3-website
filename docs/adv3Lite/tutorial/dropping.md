@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Dropping
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Dropping
 objects from the tree  
-<span class="navnp"><a href="climbing.htm" class="nav"><em>Prev:</em> Climbing the tree</a>
+<span class="navnp"><a href="climbing.html" class="nav"><em>Prev:</em> Climbing the tree</a>
    
-<a href="birdinnest.htm" class="nav"><em>Next:</em> Is the bird in the
+<a href="birdinnest.html" class="nav"><em>Next:</em> Is the bird in the
 nest?</a>     </span>
 
 </div>
@@ -134,7 +136,7 @@ explaining what I mean, but there's a limit to how many things I can
 explain at once without confusing you, and this one will just have to
 wait till a more opportune time; but if you really want to know about
 them now you could look at the section on [Reacting to
-Actions](../manual/react.htm) in the adv3Lite manual).
+Actions](../manual/react.html) in the adv3Lite manual).
 
 The next statement, <span class="code">"{The subj dobj} {falls} to the
 ground below. ";</span>, tells the player what's just happened. Since we
@@ -172,7 +174,7 @@ something more relevant and useful before displaying it to the player
 become either "The bird's nest falls" or "The baby bird falls" depending
 on which object Heidi drops). If you're anxious to find out more about
 message substitution parameters straight away you can read all about
-them in the [adv3Lite manual](../manual/message.htm#parameter), where
+them in the [adv3Lite manual](../manual/message.html#parameter), where
 you can find a complete list.
 
 The final statement, <span class="code">exit;</span>, prevents the rest
@@ -198,12 +200,12 @@ once again behaves as you expect.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Dropping
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Dropping
 objects from the tree  
-<span class="navnp"><a href="climbing.htm" class="nav"><em>Prev:</em> Climbing the tree</a>
+<span class="navnp"><a href="climbing.html" class="nav"><em>Prev:</em> Climbing the tree</a>
    
-<a href="birdinnest.htm" class="nav"><em>Next:</em> Is the bird in the
+<a href="birdinnest.html" class="nav"><em>Next:</em> Is the bird in the
 nest?</a>     </span>
 
 </div>

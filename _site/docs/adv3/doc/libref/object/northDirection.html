@@ -1,0 +1,109 @@
+<p><span class="title">northDirection</span><span class="type">object</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#166">166</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Individual compass directions.
+
+Our macro defines a direction object with a name based on the
+direction's room travel link property and the base class. So,
+DefineDirection(north, Compass) defines a direction object called
+'northDirection' based on the CompassDirection class, with the link
+property 'north' and default travel connector 'noTravel'.
+
+Note that we define a sorting order among the default directions as
+follows. First, we define several groups of related directions, which we
+put in a relative order: the compass directions, then the vertical
+directions, then the "relative" (in/out) directions, and finally the
+shipboard directions. Then, we order the directions within these groups.
+For the sortingOrder values, we use arbitrary integers with fairly wide
+separations, to leave plenty of room for custom game-specific directions
+to be added before, between, after, or within these pre-defined groups.
+
+**`northDirection`**` :   `[`CompassDirection`](../object/CompassDirection.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">northDirection</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>CompassDirection<code class="language-plaintext highlighter-rouge">](../object/CompassDirection.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Direction<code class="language-plaintext highlighter-rouge">](../object/Direction.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Direction</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allDirections<code class="language-plaintext highlighter-rouge">](../object/Direction.html#allDirections)</code>  <code class="language-plaintext highlighter-rouge">[</code>dirProp<code class="language-plaintext highlighter-rouge">](../object/Direction.html#dirProp)</code>  <code class="language-plaintext highlighter-rouge">[</code>sortingOrder<code class="language-plaintext highlighter-rouge">](../object/Direction.html#sortingOrder)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">CompassDirection</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>sayArriving<code class="language-plaintext highlighter-rouge">](../object/CompassDirection.html#sayArriving)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](../object/CompassDirection.html#sayDeparting)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Direction</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>defaultConnector<code class="language-plaintext highlighter-rouge">](../object/Direction.html#defaultConnector)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeDirection<code class="language-plaintext highlighter-rouge">](../object/Direction.html#initializeDirection)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeDirectionClass<code class="language-plaintext highlighter-rouge">](../object/Direction.html#initializeDirectionClass)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

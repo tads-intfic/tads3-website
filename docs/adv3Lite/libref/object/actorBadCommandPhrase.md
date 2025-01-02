@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorBadCommandPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)**` :   `[`Production`](../object/Production.html)

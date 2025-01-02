@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Feedback  
-<span class="navnp"><a href="../learning/exercises.htm" class="nav"><em>Prev:</em> Exercises
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Feedback  
+<span class="navnp"><a href="../learning/exercises.html" class="nav"><em>Prev:</em> Exercises
 &amp; Samples</a>    
-<a href="conclusion.htm" class="nav"><em>Next:</em> Conclusion</a>    
+<a href="conclusion.html" class="nav"><em>Next:</em> Conclusion</a>    
 </span>
 
 </div>
@@ -117,11 +119,11 @@ need to do so becomes apparent.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Feedback  
-<span class="navnp"><a href="../learning/exercises.htm" class="nav"><em>Prev:</em> Exercises
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Feedback  
+<span class="navnp"><a href="../learning/exercises.html" class="nav"><em>Prev:</em> Exercises
 &amp; Samples</a>    
-<a href="conclusion.htm" class="nav"><em>Next:</em> Conclusion</a>    
+<a href="conclusion.html" class="nav"><em>Next:</em> Conclusion</a>    
 </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VocabWord</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[762](../source/thing.t.html#762)\]

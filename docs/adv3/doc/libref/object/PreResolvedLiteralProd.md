@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PreResolvedLiteralProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1927](../source/parser.t.html#1927)\]

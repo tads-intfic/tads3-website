@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>TopicEntry : object<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="greetingprotocols.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="givetopic.htm">[Next]</a></td>
+href="greetingprotocols.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="givetopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -57,7 +59,7 @@ to which any set of responses may be defined (via SpecialTopic).
 The above explanation is probably too abstract and dense to be terribly
 meaningful at first reading. For a more digestible explanation you may
 want to read the article on
-<a href="../techman/t3conv.htm" target="_top">Programming Conversations
+<a href="../techman/t3conv.html" target="_top">Programming Conversations
 with NPCs</a> in the *Technical Manual*. In any case, hopefully the
 dense, abstract explanation given above will begin to make more sense
 when we start giving concrete examples.  
@@ -68,45 +70,45 @@ class of their own). In practice one uses one of the subclasses of
 TopicEntry:  
   
 TopicEntry  
-   [AltTopic](alttopic.htm)  
-   [CommandTopic](commandtopic.htm)  
-   [DefaultTopic](defaulttopics-overview.htm)  
-      [DefaultAskForTopic](defaultaskfortopic.htm)  
-      [DefaultAskTellTopic](defaultasktelltopic.htm)  
-      [DefaultAskTopic](defaultasktopic.htm)  
+   [AltTopic](alttopic.html)  
+   [CommandTopic](commandtopic.html)  
+   [DefaultTopic](defaulttopics-overview.html)  
+      [DefaultAskForTopic](defaultaskfortopic.html)  
+      [DefaultAskTellTopic](defaultasktelltopic.html)  
+      [DefaultAskTopic](defaultasktopic.html)  
       DefaultCommandTopic  
-      [DefaultConsultTopic](defaultconsulttopic.htm)  
-      [DefaultGiveShowTopic](defaultgiveshowtopic.htm)  
-      [DefaultGiveTopic](defaultgivetopic.htm)  
+      [DefaultConsultTopic](defaultconsulttopic.html)  
+      [DefaultGiveShowTopic](defaultgiveshowtopic.html)  
+      [DefaultGiveTopic](defaultgivetopic.html)  
       DefaultInitiateTopic  
-      [DefaultShowTopic](defaultshowtopic.htm)  
-      [DefaultTellTopic](defaulttelltopic.htm)  
-   [SpecialTopic](specialtopic.htm)  
+      [DefaultShowTopic](defaultshowtopic.html)  
+      [DefaultTellTopic](defaulttelltopic.html)  
+   [SpecialTopic](specialtopic.html)  
    ThingMatchTopic  
-      [GiveShowTopic](giveshowtopic.htm)  
-         [GiveTopic](givetopic.htm)  
-         [ShowTopic](showtopic.htm)  
-      [InitiateTopic](initiatetopic.htm)  
+      [GiveShowTopic](giveshowtopic.html)  
+         [GiveTopic](givetopic.html)  
+         [ShowTopic](showtopic.html)  
+      [InitiateTopic](initiatetopic.html)  
    TopicMatchTopic  
-      [AskTellTopic](asktelltopic.htm)  
-         [AskForAboutTopic](askaboutfortopic.htm)  
-         [AskForTopic](askfortopic.htm)  
+      [AskTellTopic](asktelltopic.html)  
+         [AskForAboutTopic](askaboutfortopic.html)  
+         [AskForTopic](askfortopic.html)  
          AskTellAboutForTopic  
-         [AskTopic](asktopic.htm)  
-         [TellTopic](telltopic.htm)  
-      [ConsultTopic](consulttopic.htm)  
+         [AskTopic](asktopic.html)  
+         [TellTopic](telltopic.html)  
+      [ConsultTopic](consulttopic.html)  
    TopicOrThingMatchTopic  
-      [AskTellGiveShowTopic](asktellgiveshowtopic.htm)  
-      [AskTellShowTopic](asktellshowtopic.htm)  
-   [MiscTopic](misctopic.htm)  
-      [ByeTopic](byetopic.htm)  
-      [HelloGoodbyeTopic](hellogoodbyetopic.htm)  
-      [HelloTopic](hellotopic.htm)  
-      [ImpByeTopic](impbyetopic.htm)  
-      [ImpHelloTopic](imphellotopic.htm)  
+      [AskTellGiveShowTopic](asktellgiveshowtopic.html)  
+      [AskTellShowTopic](asktellshowtopic.html)  
+   [MiscTopic](misctopic.html)  
+      [ByeTopic](byetopic.html)  
+      [HelloGoodbyeTopic](hellogoodbyetopic.html)  
+      [HelloTopic](hellotopic.html)  
+      [ImpByeTopic](impbyetopic.html)  
+      [ImpHelloTopic](imphellotopic.html)  
       YesNoTopic  
-         [NoTopic](notopic.htm)  
-         [YesTopic](yestopic.htm)  
+         [NoTopic](notopic.html)  
+         [YesTopic](yestopic.html)  
   
 The structure of this inheritance tree is important, because it gives a
 clear indication of the different subcategories of TopicEntry, each one
@@ -125,12 +127,12 @@ also important if you override certain of their methods, as we'll see
 presently.  
   
 We'll come across the other main types of TopicEntry in due course.
-[AltTopic](alttopic.htm) is used to provide an alternative response to
+[AltTopic](alttopic.html) is used to provide an alternative response to
 another TopicEntry under author-defined conditions.
-[DefaultTopics](defaulttopics-overview.htm) match any input relating to
+[DefaultTopics](defaulttopics-overview.html) match any input relating to
 the command in question, (i.e. a DefaultAskTopic matches ASK FRED ABOUT
 X whatever X is), and is activated by anything for which a more specific
-response has not been defined. [SpecialTopic](specialtopic.htm) responds
+response has not been defined. [SpecialTopic](specialtopic.html) responds
 to any author-defined string (e.g. PRAISE SARAH, TELL CURATOR A LIE or
 RECITE A POEM), but works only in the context of a Conversation Node.  
   

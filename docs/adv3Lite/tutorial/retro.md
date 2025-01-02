@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Retrospective  
-<span class="navnp"><a href="inplace.htm" class="nav"><em>Prev:</em> Everything in its
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Retrospective  
+<span class="navnp"><a href="inplace.html" class="nav"><em>Prev:</em> Everything in its
 place</a>    
-<a href="airport.htm" class="nav"><em>Next:</em> Airport</a>     </span>
+<a href="airport.html" class="nav"><em>Next:</em> Airport</a>     </span>
 
 </div>
 
@@ -68,7 +70,7 @@ remembering the name of the properties we'd otherwise have to override,
 and using the classes probably makes our code that much easier to read
 (though ultimately it's up to you which way of doing things you prefer).
 If you're interested, you can find a list of the most common of these
-classes in the section on [extras](../manual/extra.htm) in the *adv3Lite
+classes in the section on [extras](../manual/extra.html) in the *adv3Lite
 Manual*. At first sight it may look like there are quite a lot of them,
 but there are actually far fewer such classes than there are in adv3,
 and for the most part their names make their functions pretty clear. In
@@ -130,7 +132,7 @@ a pebble\>\> and \<\<list of listableContents\>\> to further customize
 the way items are listed in room descriptions, but don't worry if you're
 a bit hazy about the details. So long as you're aware of the kind of
 thing that can be done you can always refer back to the section on [Room
-Descriptions](../manual/roomdesc.htm) in the manual when you need it.
+Descriptions](../manual/roomdesc.html) in the manual when you need it.
 
 Seventh, we showed how the definition of the player character object can
 be made a little more compact by using the
@@ -138,7 +140,7 @@ be made a little more compact by using the
 define other properties of this object, such as its description.
 
 Finally, we demonstrated the use of PathPassage as another kind of
-[TravelConnector](../manual/travel.htm) object. Hopefully it was
+[TravelConnector](../manual/travel.html) object. Hopefully it was
 reasonably clear how this worked, but don't worry too much if it wasn't,
 because you'll be seeing more examples later on.
 
@@ -364,10 +366,10 @@ Goldskull with a complete listing of the game as it ended up.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Retrospective  
-<span class="navnp"><a href="inplace.htm" class="nav"><em>Prev:</em> Everything in its
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Retrospective  
+<span class="navnp"><a href="inplace.html" class="nav"><em>Prev:</em> Everything in its
 place</a>    
-<a href="airport.htm" class="nav"><em>Next:</em> Airport</a>     </span>
+<a href="airport.html" class="nav"><em>Next:</em> Airport</a>     </span>
 
 </div>

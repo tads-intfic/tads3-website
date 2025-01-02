@@ -1,0 +1,211 @@
+<p><span class="title">IndirectLockable</span><span class="type">class</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3975">3975</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A lockable that can't be locked and unlocked by direct action. The LOCK
+and UNLOCK commands cannot be used with this kind of lockable.
+
+This is useful for a couple of situations. First, it's useful when we
+want to create a locked object that simply can't be unlocked, such as a
+locked door that forms a permanent boundary of the map. Second, it's
+useful for locked objects that must be unlocked by some other means,
+such as manipulating an external mechanism (pulling a lever, say). In
+these cases, the trick is to figure out the separate means of unlocking
+the door, so we don't want the LOCK and UNLOCK commands to work
+directly.
+
+`class `**`IndirectLockable`**` :   `[`Lockable`](../object/Lockable.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">IndirectLockable</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Lockable<code class="language-plaintext highlighter-rouge">](../object/Lockable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Linkable<code class="language-plaintext highlighter-rouge">](../object/Linkable.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>cannotLockMsg<code class="language-plaintext highlighter-rouge">](#cannotLockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnlockMsg<code class="language-plaintext highlighter-rouge">](#cannotUnlockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>lockStatusObvious<code class="language-plaintext highlighter-rouge">](#lockStatusObvious)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Lockable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>autoUnlockOnOpen<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#autoUnlockOnOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiallyLocked<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#initiallyLocked)</code>  <code class="language-plaintext highlighter-rouge">[</code>isLocked_<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#isLocked_)</code>  <code class="language-plaintext highlighter-rouge">[</code>lockedDesc<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#lockedDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>lockStatusReportable<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#lockStatusReportable)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Lock)<code class="language-plaintext highlighter-rouge">](#dobjFor(Lock))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(LockWith)<code class="language-plaintext highlighter-rouge">](#dobjFor(LockWith))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Unlock)<code class="language-plaintext highlighter-rouge">](#dobjFor(Unlock))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(UnlockWith)<code class="language-plaintext highlighter-rouge">](#dobjFor(UnlockWith))</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Lockable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Open)<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#dobjFor(Open))</code>  <code class="language-plaintext highlighter-rouge">[</code>examineStatus<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#examineStatus)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeThing<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#initializeThing)</code>  <code class="language-plaintext highlighter-rouge">[</code>isLocked<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#isLocked)</code>  <code class="language-plaintext highlighter-rouge">[</code>makeLocked<code class="language-plaintext highlighter-rouge">](../object/Lockable.html#makeLocked)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Linkable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>masterObject<code class="language-plaintext highlighter-rouge">](../object/Linkable.html#masterObject)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="cannotLockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotLockMsg</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4005">4005</a>]</p>
+
+<div class="desc">
+
+the message we display in response to LOCK/UNLOCK
+
+</div>
+
+<p><span id="cannotUnlockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotUnlockMsg</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4006">4006</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="lockStatusObvious"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lockStatusObvious</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#4002">4002</a>]</p>
+
+<div class="desc">
+
+Since we can't be locked and unlocked with simple LOCK and UNLOCK
+commands, presume that the lock status isn't obvious. If the alternative
+mechanism that locks and unlocks the object makes the current status
+readily apparent, this should be overridden and set to true.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="dobjFor(Lock)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Lock)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3976">3976</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="dobjFor(LockWith)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(LockWith)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3984">3984</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="dobjFor(Unlock)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Unlock)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3985">3985</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="dobjFor(UnlockWith)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(UnlockWith)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3993">3993</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

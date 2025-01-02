@@ -1,0 +1,191 @@
+<p><span class="title">ReflexivePronoun</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4830">4830</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Base class for reflexive pronouns. These are pronouns like "himself"
+that specifically refer to an antecedent in the same sentence, rather
+than to an earlier sentence: ASK BOB ABOUT HIMSELF is an inquiry about
+Bob, while ASK BOB ABOUT HIM refers to some male antecedent from an
+earlier statement.
+
+Note that the first- and second-person reflexives are generally not
+needed in the parser. (We define them here anyway, because they're
+useful for message generation.) The third-person reflexive pronouns have
+distinct meanings in input from the corresponding ordinary pronouns, in
+that they refer to noun phrases within the same command rather than in
+earlier exchanges. In contrast, the second-person pronouns have the same
+meaning in ordinary and reflexive forms, at least within the confines of
+the IF parser: EXAMINE ME and EXAMINE MYSELF mean the same thing in all
+typical IF command syntax.
+
+`class `**`ReflexivePronoun`**` :   `[`Pronoun`](../object/Pronoun.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ReflexivePronoun</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Pronoun<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>Herself<code class="language-plaintext highlighter-rouge">](../object/Herself.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Himself<code class="language-plaintext highlighter-rouge">](../object/Himself.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Itself<code class="language-plaintext highlighter-rouge">](../object/Itself.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Myself<code class="language-plaintext highlighter-rouge">](../object/Myself.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Ourselves<code class="language-plaintext highlighter-rouge">](../object/Ourselves.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Themselves<code class="language-plaintext highlighter-rouge">](../object/Themselves.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Yourself<code class="language-plaintext highlighter-rouge">](../object/Yourself.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Yourselves<code class="language-plaintext highlighter-rouge">](../object/Yourselves.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>all<code class="language-plaintext highlighter-rouge">](#all)</code>  <code class="language-plaintext highlighter-rouge">[</code>person<code class="language-plaintext highlighter-rouge">](#person)</code>  <code class="language-plaintext highlighter-rouge">[</code>pronoun<code class="language-plaintext highlighter-rouge">](#pronoun)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Pronoun</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>aName<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#aName)</code>  <code class="language-plaintext highlighter-rouge">[</code>ante<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#ante)</code>  <code class="language-plaintext highlighter-rouge">[</code>reflexive<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#reflexive)</code>  <code class="language-plaintext highlighter-rouge">[</code>theName<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#theName)</code>  <code class="language-plaintext highlighter-rouge">[</code>theObjName<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#theObjName)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolve<code class="language-plaintext highlighter-rouge">](#resolve)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Pronoun</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>setAntecedents<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#setAntecedents)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="all"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">all</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4863">4863</a>]</p>
+
+<div class="desc">
+
+Class property - list of all reflexive pronoun objects. This keeps the
+reflexive pronouns in a separate list from the base Pronoun list.
+
+</div>
+
+<p><span id="person"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">person</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4856">4856</a>]</p>
+
+<div class="desc">
+
+my grammatical person is the same as my underlying pronoun's
+
+</div>
+
+<p><span id="pronoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pronoun</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4853">4853</a>]</p>
+
+<div class="desc">
+
+Get the corresponding ordinary (non-reflexive) form of the pronoun. For
+example, for HIMSELF we'd return HIM.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4832">4832</a>]</p>
+
+<div class="desc">
+
+during construction, set the regular pronoun to point back at me
+
+</div>
+
+<p><span id="resolve"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolve ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4847">4847</a>]</p>
+
+<div class="desc">
+
+A reflexive pronoun binds to another noun phrase contained in the same
+command, so we resolve using the parser's "late binding" scheme. We
+invoke this by returning the ordinary (non-reflexive) pronoun object
+representing the attributes that we match; upon seeing this, the parser
+will know to come back to this pronoun after it's finished resolving
+earlier phrases, and look for the appropriate pronoun binding within
+those other phrases.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

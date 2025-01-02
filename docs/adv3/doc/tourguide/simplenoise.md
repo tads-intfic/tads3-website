@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,18 +9,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SimpleNoise : <a
-href="noise.htm">Noise</a><br />
+href="noise.html">Noise</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="simpleodor.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="odor.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="simpleodor.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="odor.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 SimpleNoise is simply the sonic equivalent of
-[SimpleOdor](simpleodor.htm). Everything that applies to the one applies
+[SimpleOdor](simpleodor.html). Everything that applies to the one applies
 to the other, except for the obvious difference that a SimpleNoise
 response to LISTEN or LISTEN TO SOMETHING commands rather than SMELL and
 SMELL SOMETHING commands.  

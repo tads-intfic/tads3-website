@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Climbing the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Climbing the
 tree  
-<span class="navnp"><a href="cottage.htm" class="nav"><em>Prev:</em> Entering the
+<span class="navnp"><a href="cottage.html" class="nav"><em>Prev:</em> Entering the
 Cottage</a>    
-<a href="dropping.htm" class="nav"><em>Next:</em> Dropping objects from
+<a href="dropping.html" class="nav"><em>Next:</em> Dropping objects from
 the tree</a>     </span>
 
 </div>
@@ -118,7 +120,7 @@ simply of defining the following object:
 
 We'll meet Doers in more detail later. If you're itching with
 curiorisity about them already you can look up
-[Doers](../manual/doer.htm) in the adv3Lite manual. For now we need only
+[Doers](../manual/doer.html) in the adv3Lite manual. For now we need only
 note a handful of points. First, the property that's being defined
 through the Doer template ('climb tree') is its
 <span class="code">cmd</span> property. While 'climb tree' looks like
@@ -291,7 +293,7 @@ the same thing at TAKE HOUSE, but there's no
 little early in the tutorial to be worrying about this, so you can
 forget about it for now, but just in case you *are* worrying about how
 you're meant to know all this you can be reassured that it's all
-contained in an [Action Reference](../manual/actionref.htm), which we'll
+contained in an [Action Reference](../manual/actionref.html), which we'll
 meet again in a later chapter. Now that you have been reassured, you
 really *can* forget about it (or at least, stop worrying about it) for
 now.
@@ -306,12 +308,12 @@ behaves as you expect.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Climbing the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Climbing the
 tree  
-<span class="navnp"><a href="cottage.htm" class="nav"><em>Prev:</em> Entering the
+<span class="navnp"><a href="cottage.html" class="nav"><em>Prev:</em> Entering the
 Cottage</a>    
-<a href="dropping.htm" class="nav"><em>Next:</em> Dropping objects from
+<a href="dropping.html" class="nav"><em>Next:</em> Dropping objects from
 the tree</a>     </span>
 
 </div>

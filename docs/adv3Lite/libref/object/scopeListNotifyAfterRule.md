@@ -1,3 +1,5 @@
+---
+---
 <span class="title">scopeListNotifyAfterRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[209](../source/sysrules.t.html#209)\]

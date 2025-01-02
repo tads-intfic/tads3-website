@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>SuggestedTopic : object<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="defaultanytopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="suggestedasktopic.htm">[Next]</a></td>
+href="defaultanytopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="suggestedasktopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -38,7 +40,7 @@ using subclasses of the SuggestedTopic class:
 <tbody>
 <tr data-valign="TOP">
 <td width="28"></td>
-<td><a href="suggestedasktopic.htm">SuggestedAskTopic</a>  <br />
+<td><a href="suggestedasktopic.html">SuggestedAskTopic</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -52,7 +54,7 @@ using subclasses of the SuggestedTopic class:
 <tbody>
 <tr data-valign="TOP">
 <td width="28"></td>
-<td><a href="suggestedgivetopic.htm">SuggestedGiveTopic</a>  <br />
+<td><a href="suggestedgivetopic.html">SuggestedGiveTopic</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -66,7 +68,7 @@ using subclasses of the SuggestedTopic class:
 <tbody>
 <tr data-valign="TOP">
 <td width="28"></td>
-<td><a href="suggestednotopic.htm">SuggestedNoTopic</a>  <br />
+<td><a href="suggestednotopic.html">SuggestedNoTopic</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -80,7 +82,7 @@ using subclasses of the SuggestedTopic class:
 <tbody>
 <tr data-valign="TOP">
 <td width="28"></td>
-<td><a href="suggestedshowtopic.htm">SuggestedShowTopic</a>  <br />
+<td><a href="suggestedshowtopic.html">SuggestedShowTopic</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -94,7 +96,7 @@ using subclasses of the SuggestedTopic class:
 <tbody>
 <tr data-valign="TOP">
 <td width="28"></td>
-<td><a href="suggestedtelltopic.htm">SuggestedTellTopic</a>  <br />
+<td><a href="suggestedtelltopic.html">SuggestedTellTopic</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -108,7 +110,7 @@ using subclasses of the SuggestedTopic class:
 <tbody>
 <tr data-valign="TOP">
 <td width="28"></td>
-<td><a href="suggestedtopictree.htm">SuggestedTopicTree</a>  <br />
+<td><a href="suggestedtopictree.html">SuggestedTopicTree</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -122,7 +124,7 @@ using subclasses of the SuggestedTopic class:
 <tbody>
 <tr data-valign="TOP">
 <td width="28"></td>
-<td><a href="suggestedyestopic.htm">SuggestedYesTopic</a>  <br />
+<td><a href="suggestedyestopic.html">SuggestedYesTopic</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -302,8 +304,8 @@ SuggestedTopics are:
 <tbody>
 <tr data-valign="top">
 <td width="14">·</td>
-<td>Inside a <a href="convnode.htm">ConvNode</a> when there is an active
-<a href="specialtopic.htm">SpecialTopic</a>  <br />
+<td>Inside a <a href="convnode.html">ConvNode</a> when there is an active
+<a href="specialtopic.html">SpecialTopic</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -347,7 +349,7 @@ TO command respectively)  <br />
   
 It's perfectly feasible to add a new SuggestedTopic class to match a new
 TopicEntry class. For example, a little while back we showed how to
-implement a custom [PraiseTopic](misctopic.htm). The only problem with
+implement a custom [PraiseTopic](misctopic.html). The only problem with
 it is that the player might never know it's there, or that PRAISE SARAH
 (for example) is a valid conversational command. The ideal solution to
 this is to create a SuggestedPraiseTopic that can be mixed in with

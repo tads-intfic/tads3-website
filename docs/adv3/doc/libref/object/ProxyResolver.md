@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ProxyResolver</span><span class="type">class</span>
 
 [resolver.t](../file/resolver.t.html)\[[761](../source/resolver.t.html#761)\]

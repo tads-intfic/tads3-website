@@ -1,3 +1,5 @@
+---
+---
 # strcomp.h
 
 [documentation](../file/strcomp.h.html)

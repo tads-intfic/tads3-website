@@ -1,10 +1,12 @@
+---
+---
 Recent Changes to HTML TADS
 
 # Recent Changes to HTML TADS
 
 This file lists the changes that have been made recently to HTML TADS.
 This release also contains improvements to TADS itself, which are
-documented separately in [Recent Changes to TADS](t3changes.htm).
+documented separately in [Recent Changes to TADS](t3changes.html).
 
 Note that we've tried to keep all of the documentation that accompanies
 this release up-to-date with these changes. This file is provided as a
@@ -388,7 +390,7 @@ their release notes for details.)
   canceled in mid-play (rather than just cutting it off abruptly). You
   can also do cross-fades between a track being canceled and the new
   track replacing it. The new features are described in detail in the
-  [Sound](htmltads/sound.htm#fades) chapter of the HTML TADS
+  [Sound](htmltads/sound.html#fades) chapter of the HTML TADS
   documentation.
 - The new VOLUME attribute of the \<SOUND\> tag lets you control the
   relative playback volume of a track. The VOLUME value is from 0 to
@@ -1599,17 +1601,17 @@ their release notes for details.)
   Options" field in the Windows SETUP page of the Build Settings
   dialog):
 
-      startmenu="My Item Title" item1.htm
+      startmenu="My Item Title" item1.html
 
   This shows "My Item Title" as the title in the Start Menu group. When
-  the user selects this item, Windows opens the file "item1.htm" using
+  the user selects this item, Windows opens the file "item1.html" using
   whatever program is associated with that file type on the user's
   machine. The installer automatically includes the given file in the
   install set, so you don't need to list it separately with a FILE=
   line.
 
   A note on file formats: It's pretty safe to assume that everyone has
-  software installed for viewing plain text (.txt) and HTML (.htm)
+  software installed for viewing plain text (.txt) and HTML (.html)
   files, and most Windows machines have a Portable Document Format (aka
   Acrobat, or .pdf) reader as well. Other formats, such as Word (.doc)
   or other word processor formats, are less universal, so you're much
@@ -1832,7 +1834,7 @@ versions that only affect Windows can be differentiated.*
   tended to add a lot of extra space to rows and columns that would
   otherwise have been small. The interpreter now uses a more
   sophisticated algorithm described in the [table
-  layout](htmltads/tables.htm) section.
+  layout](htmltads/tables.html) section.
 - A bug in the HTML interpreter caused the interpreter to crash, on rare
   occasions, when using the Find or Find Next commands. The problem was
   tied to unpredictable particulars of memory allocation, so it was
@@ -1870,7 +1872,7 @@ versions that only affect Windows can be differentiated.*
   happened only rarely. This has been fixed.
 - "https:" has been added to the list of recognized internet hyperlink
   prefixes for the \<A HREF\> tag. (See the [\<A HREF\>
-  documentation](htmltads/deviate.htm#Achanges) for more details.)
+  documentation](htmltads/deviate.html#Achanges) for more details.)
 - In the Windows HTML interpreter's "Customize Theme" dialog, in the
   "Colors" page, the Status Line color buttons are now disabled when the
   "Override game colors" option is selected. When this option is
@@ -2455,7 +2457,7 @@ This version has no changes related to HTML TADS.
   much control over column widths, so it's unlikely that any games were
   able to achieve particular effects that would be affected by the
   changes. A more detailed description of the new layout algorithm can
-  be found in the [Table Layout Rules](htmltads/tables.htm)
+  be found in the [Table Layout Rules](htmltads/tables.html)
   documentation.
 - In the Windows HTML interpreter, the keyboard event processing had a
   problem that prevented the end-of-file indication from being returned
@@ -2519,7 +2521,7 @@ This version has no changes related to HTML TADS.
   the formatter used simple word wrapping. By default, the line breaking
   process acts the same as it used to, but several new features let the
   game override the default behavior. These changes are described in
-  detail in the [Line Breaking](htmltads/linebrk.htm) chapter of the
+  detail in the [Line Breaking](htmltads/linebrk.html) chapter of the
   documentation, but here's a summary:
   - A new HTML tag is now supported: \<WRAP\> tag, which controls the
     line breaking method. \<WRAP WORD\> selects the default mode,
@@ -2739,7 +2741,7 @@ This version has no changes related to HTML TADS.
 
 - The new ASRC and HSRC attributes of the \<IMG\> tag provide a way of
   implementing simple roll-over buttons. Refer to [Roll-over
-  Images](htmltads/deviate.htm#IMGrollover) in the documentation for
+  Images](htmltads/deviate.html#IMGrollover) in the documentation for
   details.
 - Fonts can now specify a BGCOLOR (background color) attribute in
   addition to the COLOR attribute. When a font specifies a background
@@ -3190,7 +3192,7 @@ This version has no changes related to HTML TADS.
   interpreter to determine if these link types are supported, using the
   new `__SYSINFO_LINKS_HTTP`, `__SYSINFO_LINKS_FTP`, and related
   capability codes. Refer to the [TADS 2.5.2 release
-  notes](../tadsver.htm#tads252) for details.
+  notes](../tadsver.html#tads252) for details.
 - The Windows HTML TADS Interpreter now keeps a list of recent games
   under the "File" menu. The four most recently-played games will be
   displayed under the file menu; to load one of these games, just select
@@ -3409,7 +3411,7 @@ This version has no changes related to HTML TADS.
   is now called "TADS Workbench." I've changed the name because the
   program is now more than just a debugger: TADS Workbench is an
   integrated environment that lets you build your program as well as
-  debug it. Refer to the [TADS Workbench help page](wb/tadswb.htm) for
+  debug it. Refer to the [TADS Workbench help page](wb/tadswb.html) for
   details on the new features.
 - The Windows HTML TADS interpreter now lets you load a new game without
   exiting and restarting the interpreter. You can select the "Load Game"
@@ -3472,7 +3474,7 @@ This version has no changes related to HTML TADS.
   HEIGHT attributes. If you put a percent sign ("%") after the WIDTH or
   HEIGHT value, the size will be a percentage of the main window size.
   This lets you scale a banner to the size of the main window. Refer to
-  [Banner Size Attributes](htmltads/banners.htm#size_attrs) for full
+  [Banner Size Attributes](htmltads/banners.html#size_attrs) for full
   details.
 - When a game is running in HTML mode, the `yorn()` built-in function
   now displays the player's input in the input font set in the
@@ -3514,7 +3516,7 @@ This version has no changes related to HTML TADS.
     support, which means that these windows can be attached to an edge
     of the main debugger window. This new feature gives you
     substantially greater power to customize your display layout. Look
-    [here](wb/dockwin.htm) for more information.
+    [here](wb/dockwin.html) for more information.
   - The debugger now checks for modified source files each time the main
     debugger window is activated. If you edit and save a source file
     with another program (your text editor, for example) while the file
@@ -3695,7 +3697,7 @@ This version has no changes related to HTML TADS.
 
 - The Windows version now supports MPEG 2.0 audio layers II and III
   (usually referred to as MP2 and MP3 files, respectively). For more
-  details refer to the [sound documentation](htmltads/sound.htm#mpeg).
+  details refer to the [sound documentation](htmltads/sound.html#mpeg).
 - Because the Windows version supports MPEG 2.0 audio layers II and III,
   the `systemInfo()` function returns `true` for the new feature codes
   related to MPEG: `__SYSINFO_MPEG_AUDIO`, `__SYSINFO_MPEG_AUDIO_2`, and
@@ -3703,7 +3705,7 @@ This version has no changes related to HTML TADS.
 - The \<A\> and \<AREA\> tags now accept two additional attributes that
   let you control how they enter their HREF commands. See the section in
   "Deviations from Standard HTML" on [\<A
-  HREF\>](htmltads/deviate.htm#Achanges) for details.
+  HREF\>](htmltads/deviate.html#Achanges) for details.
 - A new parameterized font, `TADS-Input`, lets the player specify the
   typeface, color, and style for text entered on command lines. If
   you're not trying to achieve a special effect of some kind during
@@ -3712,7 +3714,7 @@ This version has no changes related to HTML TADS.
   `commandPrompt` function; you can replace this function definition
   with your own if you want to override this behavior. See the
   documentation on [parameterized font
-  names](htmltads/deviate.htm#param_fonts) for details.
+  names](htmltads/deviate.html#param_fonts) for details.
 - The treatment of whitespace following \<P\> and \<BR\> tags is now
   slightly different than it was in past versions. In the past, if a
   \<P\> or \<BR\> tag occurred at the end of a line of source code, and
@@ -3772,7 +3774,7 @@ This version has no changes related to HTML TADS.
 - The \<A\> tag accepts a new attribute, PLAIN, that specifies that any
   text within the link should be rendered as ordinary text, rather than
   using the normal link attributes. Refer to [\<A\>
-  changes](htmltads/deviate.htm#Achanges) for more information.
+  changes](htmltads/deviate.html#Achanges) for more information.
 - In the preferences dialog, players can now select a fixed-width font,
   if desired, for the main game font. In the past, the main game font
   popup only offered proportional fonts; there was no particular reason
@@ -3822,7 +3824,7 @@ This version has no changes related to HTML TADS.
   updated after each turn) contained a link, and the mouse was
   positioned over the link when the user typed "quit" and then left
   there, a crash sometimes occurred. This has been corrected.
-- See [Recent Changes to TADS](../tadsver.htm) for information about
+- See [Recent Changes to TADS](../tadsver.html) for information about
   several generic TADS interpreter improvements and corrections that
   affect the HTML interpreter as well:
   - A new parser feature lets you define new methods, `dobjCheck` and
@@ -3897,7 +3899,7 @@ Here's a quick index to some selected highlights in this release:
   the game that created the saved game file, start the game, and
   immediately restore the saved position. Refer to the description of
   the new interpreter command line option "-r" in [Recent Changes to
-  TADS](../tadsver.htm) for more information.
+  TADS](../tadsver.html) for more information.
 - The "Preferences" dialog now provides an option to set the status line
   color scheme. This setting will control the status line colors for all
   non-HTML games, and for HTML games that use the default status line
@@ -3947,7 +3949,7 @@ Here's a quick index to some selected highlights in this release:
   types of explicit file I/O operations a game can perform. This setting
   is available from the command line, and is also available through the
   "Preferences" dialog. Refer to [Recent Changes to
-  TADS](../tadsver.htm) for details about this new setting.
+  TADS](../tadsver.html) for details about this new setting.
 - The interpreter now provides a preference setting controlling how the
   Alt+V keystroke is interpreted: you can set Alt+V to scroll up a page
   (as some Emacs and similar editors behave), or to use the normal
@@ -4024,14 +4026,14 @@ Here's a quick index to some selected highlights in this release:
   particular, TADS provides a way to use extended (non-ASCII) characters
   in a game while retaining game portability. This new TADS feature is
   supported in HTML TADS as well. Refer to the [character set
-  notes](charmap.htm) for more information.
+  notes](charmap.html) for more information.
 - <span id="Banners"></span>The BANNER tag has been extended to allow
   banners to be placed at the top, bottom, left, or right edges of the
-  window. Refer to the new [banner documentation](htmltads/banners.htm)
+  window. Refer to the new [banner documentation](htmltads/banners.html)
   for details.
 - <span id="GameInstaller"></span>A new utility lets you build a custom
   installer for your game, without any programming. Refer to the [game
-  distribution documentation](htmltads/dist.htm#build_setup) for
+  distribution documentation](htmltads/dist.html#build_setup) for
   details.
 - <span id="ExtResources"></span>A game author can now optionally create
   multiple resources bundle files, separate from the .GAM file, for
@@ -4040,7 +4042,7 @@ Here's a quick index to some selected highlights in this release:
   mechanism allows game authors to distribute their games in multiple
   configurations, so that players can choose how much of a game they
   want to download and install. This new mechanism is described in the
-  [resource file documentation](htmltads/res.htm#ExternalResfiles). Note
+  [resource file documentation](htmltads/res.html#ExternalResfiles). Note
   that this new feature requires the TADS resource manager (`tadsrsc`)
   version 2.2.4 or higher; the resource manager accompanies the TADS
   compiler and tools distribution.
@@ -4049,7 +4051,7 @@ Here's a quick index to some selected highlights in this release:
   specify the desktop icon that your executable uses. You specify this
   with the `maketrx32` command when you build your stand-alone game.
   Refer to the [game distribution
-  documentation](htmltads/dist.htm#maketrx32) for more information.
+  documentation](htmltads/dist.html#maketrx32) for more information.
 - If you build a stand-alone executable version of your game based on
   the HTML TADS interpreter, you can now specify a custom filename
   suffix (extension) to use for saved game files created by your game.
@@ -4058,24 +4060,24 @@ Here's a quick index to some selected highlights in this release:
   stand-alone game executable, allowing the player to start your game
   and restore a saved position in a single action by double-clicking on
   a saved game file. Refer to the [game distribution
-  documentation](htmltads/dist.htm#save_suffix) for more information.
+  documentation](htmltads/dist.html#save_suffix) for more information.
 - <span id="SystemInfo"></span>The new TADS `systemInfo()` built-in
   function provides a way for you to determine in your game code whether
   the interpreter which is executing your game has certain capabilities,
   including whether HTML can be used to format text. This function can
   be especially useful if you want to customize your game for different
   interpreter configurations. Refer to [Recent Changes to
-  TADS](../tadsver.htm) for details.
+  TADS](../tadsver.html) for details.
 - TADS has a new parser hook that gives you more control over how the
   TADS parser handles unknown words in player commands. Refer to [Recent
-  Changes to TADS](../tadsver.htm) for full details.
+  Changes to TADS](../tadsver.html) for full details.
 - TADS has a new language feature that lets you specify the superclass
   from which you want a method to inherit when you use the `inherited`
-  keyword. Refer to [Recent Changes to TADS](../tadsver.htm) for
+  keyword. Refer to [Recent Changes to TADS](../tadsver.html) for
   information.
 - TADS now allows you to change the object that represents the player
   character dynamically, using the new `parserSetMe` built-in function.
-  [Recent Changes to TADS](../tadsver.htm) has details.
+  [Recent Changes to TADS](../tadsver.html) has details.
 - HTML TADS now supports the \<Q\> tag from HTML 4.0. This tag encloses
   a passage in quotation marks. \<Q\> automatically uses typographical
   quotation marks if they're available in the character set. Nested
@@ -4123,7 +4125,7 @@ Here's a quick index to some selected highlights in this release:
   Standard HTML does not yet provide named entities for these charaters,
   but HTML TADS extends the standard entity list to support these
   additional characters. Refer to the [HTML TADS
-  Latin-2](htmltads/latin2.htm) table for the complete list.
+  Latin-2](htmltads/latin2.html) table for the complete list.
 - You can now enter hex digits in character entities by putting an "x"
   after the "#"; for example, "&#xF3" enters the hex value F3.
   <span id="MdiTdb"></span>
@@ -4201,7 +4203,7 @@ Here's a quick index to some selected highlights in this release:
   displayed for a given parameterized font, thus giving greater control
   over the final presentation to the player while still giving
   considerable control over the style to the game author. Refer to the
-  [HTML deviations documentation](htmltads/deviate.htm#param_fonts) for
+  [HTML deviations documentation](htmltads/deviate.html#param_fonts) for
   full details.
 - <span id="ParamColors"></span>In addition to the standard HTML color
   names and numerical RGB values, the HTML parser now provides a set of
@@ -4214,7 +4216,7 @@ Here's a quick index to some selected highlights in this release:
   colors through the "Preferences" dialog. You can use the new
   parameterized color names in any of the tag attributes that take a
   color value. Refer to the [HTML deviations
-  documentation](htmltads/deviate.htm#colors) for full details.
+  documentation](htmltads/deviate.html#colors) for full details.
 - <span id="StatusLine"></span>The HTML status line code in `adv.t`,
   which is enabled when you compile your game with the preprocessor
   symbol `USE_HTML_STATUS` defined, now automatically senses whether the
@@ -4224,7 +4226,7 @@ Here's a quick index to some selected highlights in this release:
   systems, while still taking advantage of HTML features when they're
   available. The enhanced status line code uses the new `systemInfo`
   built-in function, described in [Recent Changes to
-  TADS](../tadsver.htm), to sense whether HTML features are available at
+  TADS](../tadsver.html), to sense whether HTML features are available at
   run-time. Note that, even if you customize the status line, you may
   want to refer to the new `adv.t` status line code and use similar
   logic in your custom implementation, to support both types of

@@ -1,0 +1,144 @@
+<p><span class="title">PromptDaemon</span><span class="type">class</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#813">813</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Command Prompt Daemon. This is a special type of daemon that executes
+not according to the game clock, but rather once per command prompt. The
+system executes all of these daemons just before each time it prompts
+for a command line.
+
+`class `**`PromptDaemon`**` :   `[`Event`](../object/Event.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">PromptDaemon</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Event<code class="language-plaintext highlighter-rouge">](../object/Event.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BasicEvent<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">PromptDaemon</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OneTimePromptDaemon`](../object/OneTimePromptDaemon.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isPromptDaemon<code class="language-plaintext highlighter-rouge">](#isPromptDaemon)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>eventOrder<code class="language-plaintext highlighter-rouge">](../object/Event.html#eventOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextRunTime<code class="language-plaintext highlighter-rouge">](../object/Event.html#nextRunTime)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>obj_<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#obj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>prop_<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#prop_)</code>  <code class="language-plaintext highlighter-rouge">[</code>sense_<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#sense_)</code>  <code class="language-plaintext highlighter-rouge">[</code>source_<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#source_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>executeEvent<code class="language-plaintext highlighter-rouge">](#executeEvent)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/Event.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>delayEvent<code class="language-plaintext highlighter-rouge">](../object/Event.html#delayEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextRunTime<code class="language-plaintext highlighter-rouge">](../object/Event.html#getNextRunTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeEvent<code class="language-plaintext highlighter-rouge">](../object/Event.html#removeEvent)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>callMethod<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#callMethod)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventMatches<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#eventMatches)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="isPromptDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isPromptDaemon</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#826">826</a>]</p>
+
+<div class="desc">
+
+flag: we are a special per-command-prompt daemon
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="executeEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeEvent ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#815">815</a>]</p>
+
+<div class="desc">
+
+execute the daemon
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

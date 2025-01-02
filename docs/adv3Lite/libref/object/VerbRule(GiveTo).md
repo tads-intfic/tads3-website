@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(GiveTo)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2047](../source/grammar.t.html#2047)\]

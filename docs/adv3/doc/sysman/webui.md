@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="web.htm" class="nav">Playing on the Web</a> \> The Web UI  
-<span class="navnp"><a href="web.htm" class="nav"><em>Prev:</em> Playing on the Web</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="web.html" class="nav">Playing on the Web</a> \> The Web UI  
+<span class="navnp"><a href="web.html" class="nav"><em>Prev:</em> Playing on the Web</a>
    
-<a href="webdeploy.htm" class="nav"><em>Next:</em> Deploying your Web UI
+<a href="webdeploy.html" class="nav"><em>Next:</em> Deploying your Web UI
 game</a>     </span>
 
 </div>
@@ -617,7 +619,7 @@ of these main components:
   collection of sub-windows; roughly analogous to the TADS banner API
 - cmdwin.(js, css, htm) - a command-line window "widget", implementing a
   window that behaves like a traditional console terminal window
-- statwin(.js, css, .htm) - a status-line window, implementing the
+- statwin(.js, css, .html) - a status-line window, implementing the
   traditional IF status bar across the top of the screen
 
 The TADS code for the Web UI is in the file **webui.t**. This file
@@ -708,11 +710,11 @@ path-like name string, and parse XML trees using XMLpath-like syntax.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="web.htm" class="nav">Playing on the Web</a> \> The Web UI  
-<span class="navnp"><a href="web.htm" class="nav"><em>Prev:</em> Playing on the Web</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="web.html" class="nav">Playing on the Web</a> \> The Web UI  
+<span class="navnp"><a href="web.html" class="nav"><em>Prev:</em> Playing on the Web</a>
    
-<a href="webdeploy.htm" class="nav"><em>Next:</em> Deploying your Web UI
+<a href="webdeploy.html" class="nav"><em>Next:</em> Deploying your Web UI
 game</a>     </span>
 
 </div>

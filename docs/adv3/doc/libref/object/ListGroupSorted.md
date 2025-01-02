@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ListGroupSorted</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[2047](../source/lister.t.html#2047)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GoIn</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[665](../source/actions.t.html#665)\]

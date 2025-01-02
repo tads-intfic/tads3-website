@@ -1,3 +1,5 @@
+---
+---
 <span class="title">adv3LibPreinit</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[455](../source/misc.t.html#455)\]

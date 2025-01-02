@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(DetachFrom)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[3007](../source/grammar.t.html#3007)\]

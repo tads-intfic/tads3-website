@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,17 +9,17 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>EventList : <a
-href="script.htm">Script</a><br />
+href="script.html">Script</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="script.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="stopeventlist.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="script.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="stopeventlist.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-An EventList is a [Script](script.htm) object that works through a list
+An EventList is a [Script](script.html) object that works through a list
 of events in sequence, until the list is exhausted, after which it does
 nothing. Unlike a bare Script, which supplies only the bare framework,
 EventList is a fully-functional class, although one may often want to
@@ -89,8 +91,8 @@ anotherEventList : EventList
   
 An EventList with a single entry can sometimes be useful, as a way of
 having something happen once only. For this type of use, see the
-examples under [CyclicEventList](cycliceventlist.htm) and
-[InitiateTopic](initiatetopic.htm).  
+examples under [CyclicEventList](cycliceventlist.html) and
+[InitiateTopic](initiatetopic.html).  
   
   
   

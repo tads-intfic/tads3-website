@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="tools.htm" class="nav">The Tools</a> \> Running Programs: The
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="tools.html" class="nav">The Tools</a> \> Running Programs: The
 Interpreter  
-<span class="navnp"><a href="aloneexe.htm" class="nav"><em>Prev:</em> Stand-Alone
+<span class="navnp"><a href="aloneexe.html" class="nav"><em>Prev:</em> Stand-Alone
 Executables</a>    
-<a href="langsec.htm" class="nav"><em>Next:</em> The Language</a>    
+<a href="langsec.html" class="nav"><em>Next:</em> The Language</a>    
 </span>
 
 </div>
@@ -85,7 +87,7 @@ The interpreter options are:
   does not change your terminal's character set. If you want to change
   your terminal's character set, you must use whatever method that your
   operating system or terminal provides for making this change. Refer to
-  the section on [character sets](cmap.htm) for more details.
+  the section on [character sets](cmap.html) for more details.
 
 - -csl *xxx* - use *xxx* as the log file character set. By default, the
   interpreter uses a suitable default that depends on local conventions.
@@ -105,10 +107,10 @@ The interpreter options are:
 - -i *file* - read command-line input from *file*, rather than reading
   from the keyboard. If you specify this option, the interpreter will
   read commands from the given file whenever the inputLine() method (in
-  the ["tads-io" function set](tadsio.htm)) is invoked. This option
+  the ["tads-io" function set](tadsio.html)) is invoked. This option
   reads the script in "quiet" mode, meaning that no output is displayed
   on the console while the script is running. See [Script
-  Files](scripts.htm) for information on how input scripts are
+  Files](scripts.html) for information on how input scripts are
   interpreted.
 
 - -I *file* - read command-line input from *file*. This is similar to
@@ -279,18 +281,18 @@ The interpreter options are:
 
   Certain files are exempt from the file safety restrictions:
 
-  - Temporary files, created through the [TemporaryFile](tempfile.htm)
+  - Temporary files, created through the [TemporaryFile](tempfile.html)
     object. These aren't subject to file safety restrictions because
     they're inherently sandboxed; they can only be created through the
     TemporaryFile class, which imposes its own limits that are more
     restrictive than the normal file safety rules.
-  - [Special files](file.htm#specialFiles), which are also controlled by
+  - [Special files](file.html#specialFiles), which are also controlled by
     the system and thus inherently sandboxed.
-  - [Resource files](build.htm#resources), since these are restricted to
+  - [Resource files](build.html#resources), since these are restricted to
     read access and are limited to the program's own data.
-  - <span id="filename.htm">FileName</span> objects representing names
+  - <span id="filename.html">FileName</span> objects representing names
     manually chosen by the user via the
-    [inputFile()](tadsio.htm#inputFile) function. These FileName objects
+    [inputFile()](tadsio.html#inputFile) function. These FileName objects
     are marked with an internal attribute that allows them to bypass the
     file safety settings for the selected access mode only (that is, a
     file selected through an Open dialog can be read, and one selected
@@ -314,12 +316,12 @@ The interpreter options are:
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="tools.htm" class="nav">The Tools</a> \> Running Programs: The
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="tools.html" class="nav">The Tools</a> \> Running Programs: The
 Interpreter  
-<span class="navnp"><a href="aloneexe.htm" class="nav"><em>Prev:</em> Stand-Alone
+<span class="navnp"><a href="aloneexe.html" class="nav"><em>Prev:</em> Stand-Alone
 Executables</a>    
-<a href="langsec.htm" class="nav"><em>Next:</em> The Language</a>    
+<a href="langsec.html" class="nav"><em>Next:</em> The Language</a>    
 </span>
 
 </div>

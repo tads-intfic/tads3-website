@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Occluder</span><span class="type">class</span>
 
 [sense.t](../file/sense.t.html)\[[693](../source/sense.t.html#693)\]

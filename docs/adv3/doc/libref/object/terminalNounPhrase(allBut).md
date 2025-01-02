@@ -1,3 +1,5 @@
+---
+---
 <span class="title">terminalNounPhrase(allBut)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[5675](../source/en_us.t.html#5675)\]

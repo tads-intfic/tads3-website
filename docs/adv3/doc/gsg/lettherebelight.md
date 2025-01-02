@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](callingaspadeaspade.htm)   [\[Next\]](rowmyboat.htm)*
+*[\[Previous\]](callingaspadeaspade.html)   [\[Next\]](rowmyboat.html)*
 
 # Chapter 7 - Pushing the Boat Out
 
@@ -1031,6 +1033,6 @@ check that it still works. <br />
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](callingaspadeaspade.htm)   [\[Next\]](rowmyboat.htm)*
+*[\[Previous\]](callingaspadeaspade.html)   [\[Next\]](rowmyboat.html)*
 
 </div>

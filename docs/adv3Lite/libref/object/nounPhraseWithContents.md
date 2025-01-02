@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nounPhraseWithContents</span><span class="type">GrammarProd</span>
 
 `grammar `**[`nounPhraseWithContents(basic)`](../object/nounPhraseWithContents(basic).html)**` :   `[`Production`](../object/Production.html)

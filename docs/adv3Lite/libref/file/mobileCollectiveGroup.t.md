@@ -1,3 +1,5 @@
+---
+---
 <span class="title">mobileCollectiveGroup.t</span><span class="type">file</span>
 
 [source file](../source/mobileCollectiveGroup.t.html)

@@ -1,0 +1,194 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Conversation Nodes -
+Overview<br />
+</strong></td>
+<td style="text-align: right;"><a href="limitsuggestions.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="convnode.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The mechanisms we have seen so far, TopicEntries optionally combined
+with EventLists, allow some control over the how NPCs respond to
+conversational commands, but they don’t really allow a conversation to
+develop in a structured fashion. It’s true that with the use of
+AltTopics, the isActive property, &lt;.reveal&gt; tags and setKnowsAbout
+commands one can give <em>some</em> direction to a conversation, in that the
+game can keep track of what’s been talked about and who knows what and
+adjust NPC responses accordingly, but this only gives a limited sense of
+progression to a conversation. One reason for this is that (with the
+partial exception of <a href="initiatetopic.html">InitiateTopic</a>) every mechanism
+we’ve looked at so far is a mechanism for programming NPC <em>response</em>;
+our NPC’s can respond to ASK, TELL, GIVE and SHOW commands, but they
+don’t seem to have any real way of asking questions of their own, let
+alone of starting an entire conversation on their own initiative.</p>
+
+<p>This is where Conversation Nodes come in. With Conversation Nodes we can
+achieve the following:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14">·</td>
+<td>Have an NPC pose a question to the Player Character (and insist on
+an appropriate response)  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14">·</td>
+<td>Have an NPC initiate a conversation with the Player Character
+ <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14">·</td>
+<td>Program a conversation that follows a definite thread (or branching
+threads), rather than merely have the NPC respond to a series of ASK and
+TELL commands.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The basic mechanism for this is the <a href="convnode.html">ConvNode</a> class,
+which defines a Conversation node. When a Conversation node is active,
+the player can (optionally) be restricted to employing only the
+TopicEntries within that Conversation node (although, if you wish, you
+can also make the TopicEntries belonging to the current ActorState and
+the Actor available as well).</p>
+
+<p>There are basically two ways to enter a Conversation Node. The simplest
+is via the use of a <strong>&lt;.convode name&gt;</strong> tag in the text of an ordinary
+TopicEntry’s response. For example, if I want my NPC to enter the
+banana-talk Conversation Node in response to ASK ABOUT BANANA I could
+define an AskTopic thus:</p>
+
+<p>++ AskTopic @goldenBanana<br />
+   ”&lt;q&gt;What you think about this banana thing?&lt;/q&gt; you ask.\b<br />
+    &lt;q&gt;Banana?&lt;/q&gt; he queries, &lt;q&gt;Do you mean &lt;i&gt;the&lt;/i&gt; Banana - the Golden Banana of Discord?&lt;/q&gt;<br />
+    &lt;.convnode banana-talk&gt;”<br />
+;</p>
+
+<p>The corresponding Conversation Node object could then be defined as
+simply as</p>
+
+<p>+ ConvNode ’banana-talk’;</p>
+
+<p>With the appropriate TopicEntries located within the ConvNode. Note that
+a ConvNode must always be located either directly within the <em>Actor</em> to
+which it belongs, or (from TADS 3.0.9 onwards) within one of its
+ActorStates. Here we’ll stick to putting ConvNodes directly within the
+Actor.</p>
+
+<p>The second method of entering a Conversation Node is to call the
+<strong>initiateConversation(ActorState, ‘name’)</strong> method on the actor. For
+example, if I want an actor called fred to enter his fredChatting state
+and his ‘fred-fuming’ Conversation Node, I could call:</p>
+
+<p>fred.initiateConversation(fredChatting, ’fred-fuming’);</p>
+
+<p>If I want to use this method to put an Actor into a Conversation Node
+<em>without</em> changing its ActorState, I simply call the method with nil as
+the first parameter, e.g.</p>
+
+<p>fred.initiateConversation(nil, ’fred-fuming’);</p>
+
+<p>Alternatively, you can just call the setConvNode(‘name’) method on the
+Actor:</p>
+
+<p>fred.setConvNode(‘fred-fuming’);</p>
+
+<p>One way to <em>leave</em> a Conversation Node is to change to another
+Conversation Node using one of these methods. Another way is to do
+nothing, since, unless you arrange things to the contrary, the
+Conversation Node will only apply for one turn, and the game will leave
+the node after a single response. If you want the Actor to <em>stay</em> in the
+current Conversation Node (as you may), then you need to use a
+<strong>&lt;.convstay&gt;</strong> tag in the appropriate response or responses. For
+example, if the fuming Fred is forcing you to give a Yes or No answer to
+his irate question, you might put this in a DefaultAnyTopic that traps
+any other response other than Yes or No:</p>
+
+<p>+ ConvNode ’fred-fuming’;</p>
+
+<p>…</p>
+
+<p>++ DefaultAnyTopic<br />
+   ”&lt;q&gt;Don’t try to change the subject!&lt;/q&gt; Fred snaps, &lt;q&gt;Have <br />
+   you stopped sleeping with my wife, yes or no?&lt;/q&gt; &lt;.convstay&gt;”<br />
+;</p>
+
+<p>Since this type of situation requires the player to be able to give a
+yes or no answer, the library defines a <a href="yestopic.html">YesTopic</a> and a
+<a href="notopic.html">NoTopic</a> for the purpose (you can put a YesTopic or a
+NoTopic anywhere you can put any other kind of TopicEntry, but a Yes or
+No response will normally only make sense in the context of a
+Conversation Node).</p>
+
+<p>This may seem a little unfair on the player, who may wish to deny
+sleeping with Fred’s wife altogether. Well, we can handle this too, by
+means of a <a href="specialtopic.html">SpecialTopic</a> (which can only be used
+within a ConvNode).</p>
+
+<p>++ SpecialTopic ’deny sleeping with his wife’ [‘deny’, ’sleeping’, ’with’, ’his’, wife’]<br />
+    ”&lt;q&gt;I have never slept with your wife!&lt;/q&gt; you reply, &lt;q&gt;Good grief, man, I’ve got <br />
+     better taste than that!&lt;/q&gt;\b<br />
+     &lt;q&gt;So you’re insulting her now, are you, you ungrateful wretch!&lt;/q&gt; <br />
+      he cries, &lt;q&gt;Are you trying to tell me you find my wife so unattractive <br />
+     you don’t &lt;i&gt;want&lt;/i&gt; to sleep with her?&lt;/q&gt;&lt;.convode ’fred-wife-insulted’&gt; ”    <br />
+;</p>
+
+<p>If this doesn’t seem entirely clear yet, don’t worry. We’ll go over it
+all step-by-step and in more detail as we explore how to use these
+features in <em>The Quest of the Golden Banana</em>.</p>
+
+<p>Note that as from TADS 3.0.10 the name we give to a Conversation Node
+(the quoted string name, that is, like ‘fred-fuming’ in the above
+example) only needs to be unique to the particular <em>actor</em>. We could
+give the name ‘fred-fuming’ to Conversation Nodes in two (or more)
+different actors, and the system would know which one we meant in any
+given context (namely the one that belongs to the actor who’s being
+addressed).</p>
+

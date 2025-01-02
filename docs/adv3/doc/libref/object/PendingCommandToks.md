@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PendingCommandToks</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[10495](../source/actor.t.html#10495)\]

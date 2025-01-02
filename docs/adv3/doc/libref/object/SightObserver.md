@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SightObserver</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[845](../source/objects.t.html#845)\]

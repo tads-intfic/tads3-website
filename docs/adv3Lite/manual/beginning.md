@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Beginnings  
-<span class="navnp"><a href="topic.htm" class="nav"><em>Prev:</em>Topics</a>
-    <a href="ending.htm" class="nav"><em>Next:</em> Endings</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Beginnings  
+<span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em>Topics</a>
+    <a href="ending.html" class="nav"><em>Next:</em> Endings</a>    
 </span>
 
 </div>
@@ -23,7 +25,7 @@ with something a little more informative than a blank screen with a
 command prompt. In any case, for the game to work properly you need to
 define at least a basic set of data about the game and some of its
 starting conditions. We saw a brief example of this in the section on
-defining a [minimal game](mingame.htm), but now we should cover the
+defining a [minimal game](mingame.html), but now we should cover the
 topic a little more formally and in more depth.
 
 ## <span id="versioninfo">The versionInfo Object</span>
@@ -137,7 +139,7 @@ include:
   interpreter. For more details on how to do this see the notes
   [below](#aboutbox).
 - **maxScore()**: The maximum number of points possible in the game. If
-  the game includes the [scoring module](score.htm) at all, and this is
+  the game includes the [scoring module](score.html) at all, and this is
   non-nil, the SCORE and FULL SCORE commands will display this value to
   the player as a rough indication of how much farther there is to go in
   the game. By default, the library initializes this on demand, by
@@ -145,7 +147,7 @@ include:
   the game. The game can override this if needed to specify a specific
   maximum possible score, rather than relying on the automatic
   calculation.
-- **beforeRunsBeforeCheck**: Should the "[before](react.htm)"
+- **beforeRunsBeforeCheck**: Should the "[before](react.html)"
   notifications (beforeAction and roomBeforeAction) run before or after
   the "check" phase? The adv3 library traditionally ran the "before"
   notifiers first, but the adv3Lite runs the "before" notifiers after
@@ -220,7 +222,7 @@ include:
   is <span class="code">true</span>, but players can change it using the
   commands BRIEF and VERBOSE.
 - **fastGoTo**. By default <span class="code">fastGoTo</span> is nil,
-  but if it is set to true then the [GO TO](pathfind.htm) command will
+  but if it is set to true then the [GO TO](pathfind.html) command will
   move the player character continuously to his/her destination (unless
   some obstacle stops the journey) without the player needing to use the
   CONTINUE command.
@@ -313,7 +315,7 @@ Initialization" section of the *TADS 3 System Manual*.
 Every TADS 3 game written with the adv3Lite library must define one
 object to be the player character (the character from whose viewpoint
 the game is played). It is possible to [change the player
-character](changepc.htm) in the course of play, although many if not
+character](changepc.html) in the course of play, although many if not
 most games will probably stick to the same player character throughout;
 in any case a game must define which object is the player character at
 the start of play, in other words, the initial player character. If you
@@ -463,10 +465,10 @@ customized response to X ME.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Beginnings  
-<span class="navnp"><a href="topic.htm" class="nav"><em>Prev:</em> Topics</a>
-    <a href="ending.htm" class="nav"><em>Next:</em> Endings</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Beginnings  
+<span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em> Topics</a>
+    <a href="ending.html" class="nav"><em>Next:</em> Endings</a>    
 </span>
 
 </div>

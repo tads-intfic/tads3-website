@@ -1,3 +1,5 @@
+---
+---
 <span class="title">webMainWin</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[2714](../source/webui.t.html#2714)\]
@@ -37,7 +39,7 @@ in the sub-windows that make up the game's user interface.
 
 Games can customize the front page in any way they like. If you want to
 customize the HTML of the main page, you can substitute a different HTML
-(.htm) file, and change the processName() method to return the name of
+(.html) file, and change the processName() method to return the name of
 that file. If you want to use something other than a layout window as
 the front page, you can simply replace this whole class.
 
@@ -291,7 +293,7 @@ the window title
 <div class="desc">
 
 match the webuires directory path as the URL path, but map this to
-main.htm as the underlying resource name
+main.html as the underlying resource name
 
 </div>
 

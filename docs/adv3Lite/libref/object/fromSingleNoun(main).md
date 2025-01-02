@@ -1,3 +1,5 @@
+---
+---
 <span class="title">fromSingleNoun(main)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[270](../source/grammar.t.html#270)\]

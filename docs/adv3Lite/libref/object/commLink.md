@@ -1,3 +1,5 @@
+---
+---
 <span class="title">commLink</span><span class="type">object</span>
 
 [query.t](../file/query.t.html)\[[728](../source/query.t.html#728)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Defining and Using Verbs<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="languageinformation.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="messagesubstitutionparameters.htm">[Next]</a></td>
+href="languageinformation.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="messagesubstitutionparameters.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -23,10 +25,10 @@ fashion.
   
 For more information on defining your own verbs in TADS 3, consult the
 sections in the *Technical Manual* on
-'<a href="../techman/t3verb.htm" target="_top">How to Create Verbs</a>',
+'<a href="../techman/t3verb.html" target="_top">How to Create Verbs</a>',
 along with articles on
-'<a href="../techman/t3res.htm" target="_top">Action Results</a>' and
-'<a href="../techman/t3verchk.htm" target="_top">Good use of verify() and
+'<a href="../techman/t3res.html" target="_top">Action Results</a>' and
+'<a href="../techman/t3verchk.html" target="_top">Good use of verify() and
 check()</a>'. See also the discussion on 'Controlling the Action' in
 Section 4 of Chapter Five of *Getting Started in TADS 3*, and on
 defining CrossAction in Chapter Six of *Getting Started*.  

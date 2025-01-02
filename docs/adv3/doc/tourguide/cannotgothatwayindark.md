@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>cannotGoThatWayInDark<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="cannotgothatway.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="roomdarktravel.htm">[Next]</a></td>
+href="cannotgothatway.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="roomdarktravel.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -72,6 +74,6 @@ DISMALLY').
 Note also that there is one situation that the code above does not
 handle, namely if the player tries to go DOWN from the crewQuarters.
 We'll fix that next by overriding
-[roomDarkTravel](roomdarktravel.htm).  
+[roomDarkTravel](roomdarktravel.html).  
   
   

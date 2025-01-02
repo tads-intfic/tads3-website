@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,17 +9,17 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>StopEventList : <a
-href="eventlist.htm">EventList</a><br />
+href="eventlist.html">EventList</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="eventlist.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="cycliceventlist.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="eventlist.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="cycliceventlist.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-A StopEventList is just like an [EventList](eventlist.htm), except that
+A StopEventList is just like an [EventList](eventlist.html), except that
 when the last item in the list is reached, it is then repeated
 indefinitely.  
   
@@ -33,5 +35,5 @@ perhaps reminding the player of the essentials of what's been said.
   
 We'll be meeting plenty of examples of this in connection with the
 conversation system, for example in conjunction with
-[GiveShowTopic](giveshowtopic.htm), [AskTopic](asktopic.htm),
-[TellTopic](telltopic.htm), and [AskTellTopic](asktelltopic.htm).  
+[GiveShowTopic](giveshowtopic.html), [AskTopic](asktopic.html),
+[TellTopic](telltopic.html), and [AskTellTopic](asktelltopic.html).  

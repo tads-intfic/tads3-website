@@ -1,0 +1,33 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>StretchyContainer : <a href="container.html">Container</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="dispenser.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="spaceoverlay.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A StretchyContainer is simply a Container that changes bulk according to
+its contents. An example might be a sack, which would have virtually no
+bulk when empty, but becomes bulkier the more is put in it. We can leave
+one in the squareCave, which could be used for carting things around
+in:</p>
+
+<p>sack : StretchyContainer ’coarse brown sack’ ’coarse brown sack’ @squareCave<br />
+  initSpecialDesc = ”A coarse brown sack lies crumpled in the corner. ”<br />
+  bulkCapacity = 30<br />
+  minBulk = 1<br />
+;</p>
+
+<p>Presumably not even a StretchyContainer is infinitely elastic, so we
+give it a finite <strong>bulkCapacity</strong>. We can also set a <strong>minBulk</strong> which
+is the bulk of the sack when empty.</p>
+
+<p>Note that if we want to find out how bulky the sack has become at any
+point in our game code we need to test its <strong>getBulk()</strong> method, not its
+bulk property (which never changes).</p>

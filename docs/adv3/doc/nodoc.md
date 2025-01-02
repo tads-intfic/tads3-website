@@ -1,3 +1,5 @@
+---
+---
 TADS 3 Bookshelf Not Installed
 
 # TADS 3 Bookshelf - Not Installed
@@ -9,4 +11,4 @@ of the documentation on the [tads.org](http://www.tads.org) Web site. If
 your browser doesn't automatically display the on-line documentation
 after a few moments, you might try navigating manually to this page:  
   
-<http://www.tads.org/t3doc/doc/index.htm>
+<http://www.tads.org/t3doc/doc/index.html>

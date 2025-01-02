@@ -1,0 +1,239 @@
+<p><span class="title">ParagraphManager</span><span class="type">class</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#599">599</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Paragraph manager. We filter strings as they're about to be sent to the
+console to convert paragraph markers (represented in the source text
+using the "style tag" format, \&lt;.P\&gt;) into a configurable display
+rendering.
+
+We also process the zero-spacing paragraph, \&lt;.P0\&gt;. This doesn't
+generate any output, but otherwise acts like a paragraph break in that
+it suppresses any paragraph breaks that immediately follow.
+
+The special marker \&lt;./P0\&gt; cancels the effect of a \&lt;.P0\&gt;. This can be
+used if you want to ensure that a newline or paragraph break is
+displayed, even if a \&lt;.P0\&gt; was just displayed.
+
+Our special processing ensures that paragraph tags interact with one
+another and with other display elements specially:
+
+\- A run of multiple consecutive paragraph tags is treated as a single
+paragraph tag. This property is particularly important because it allows
+code to write out a paragraph marker without having to worry about
+whether preceding code or following code add paragraph markers of their
+own; if redundant markers are found, we'll filter them out
+automatically.
+
+\- We can suppress paragraph markers following other specific sequences.
+For example, if the paragraph break is rendered as a blank line, we
+might want to suppress an extra blank line for a paragraph break after
+an explicit blank line.
+
+\- We can suppress other specific sequences following a paragraph
+marker. For example, if the paragraph break is rendered as a newline
+plus a tab, we could suppress whitespace following the paragraph break.
+
+The paragraph manager should always be instantiated with transient
+instances, because this object's state is effectively part of the
+interpreter user interface, which doesn't participate in save and
+restore.
+
+`class `**`ParagraphManager`**` :   `[`OutputFilter`](../object/OutputFilter.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ParagraphManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputFilter.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>mainParagraphManager<code class="language-plaintext highlighter-rouge">](../object/mainParagraphManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuParagraphManager<code class="language-plaintext highlighter-rouge">](../object/menuParagraphManager.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>leadingMultiPat<code class="language-plaintext highlighter-rouge">](#leadingMultiPat)</code>  <code class="language-plaintext highlighter-rouge">[</code>leadingSinglePat<code class="language-plaintext highlighter-rouge">](#leadingSinglePat)</code>  <code class="language-plaintext highlighter-rouge">[</code>renderAfterInput<code class="language-plaintext highlighter-rouge">](#renderAfterInput)</code>  <code class="language-plaintext highlighter-rouge">[</code>renderText<code class="language-plaintext highlighter-rouge">](#renderText)</code>  <code class="language-plaintext highlighter-rouge">[</code>suppressAfter<code class="language-plaintext highlighter-rouge">](#suppressAfter)</code>  <code class="language-plaintext highlighter-rouge">[</code>suppressBefore<code class="language-plaintext highlighter-rouge">](#suppressBefore)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>filterText<code class="language-plaintext highlighter-rouge">](#filterText)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="leadingMultiPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">leadingMultiPat</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#635">635</a>]</p>
+
+<div class="desc">
+
+pre-compile some regular expression patterns we use a lot
+
+</div>
+
+<p><span id="leadingSinglePat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">leadingSinglePat</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#636">636</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="renderAfterInput"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">renderAfterInput</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#610">610</a>]</p>
+
+<div class="desc">
+
+Flag: show or hide paragraph breaks immediately after input. By default,
+we do not show paragraph breaks after an input line.
+
+</div>
+
+<p><span id="renderText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">renderText</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#604">604</a>]</p>
+
+<div class="desc">
+
+Rendering - this is what we display on the console to represent a
+paragraph break. By default, we'll display a blank line.
+
+</div>
+
+<p><span id="suppressAfter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">suppressAfter</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#632">632</a>]</p>
+
+<div class="desc">
+
+Following suppression. This is a regular expression that we match to
+individual characters. If the character immediately following a
+paragraph marker matches this expression, we'll suppress the character.
+We'll apply this to each character following a paragraph marker in turn
+until we find one that does not match; we'll suppress all of the
+characters that do match. By default, we suppress additional blank lines
+after a paragraph break.
+
+</div>
+
+<p><span id="suppressBefore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">suppressBefore</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#620">620</a>]</p>
+
+<div class="desc">
+
+Preceding suppression. This is a regular expression that we match to
+individual characters. If the character immediately preceding a
+paragraph marker matches this expression, we'll suppress the paragraph
+marker in the output. By default, we'll suppress a paragraph break
+following a blank line, because the default rendering would add a
+redundant blank line.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="filterText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterText (ostr, txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#640">640</a>]</p>
+
+<div class="desc">
+
+process a string that's about to be written to the console
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

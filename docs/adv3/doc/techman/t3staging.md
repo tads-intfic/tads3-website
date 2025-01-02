@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Using Nested
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Using Nested
 Rooms as Staging Locations  
-<span class="navnp"><a href="t3mi.htm" class="nav"><em>Prev:</em> Multiple Inheritance</a>
+<span class="navnp"><a href="t3mi.html" class="nav"><em>Prev:</em> Multiple Inheritance</a>
    
-<a href="t3odd_noun.htm" class="nav"><em>Next:</em> Handling Odd Noun
+<a href="t3odd_noun.html" class="nav"><em>Next:</em> Handling Odd Noun
 Phrases</a>     </span>
 
 </div>
@@ -560,12 +562,12 @@ otherwise inaccessible exit.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Using Nested
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Using Nested
 Rooms as Staging Locations  
-<span class="navnp"><a href="t3mi.htm" class="nav"><em>Prev:</em> Multiple Inheritance</a>
+<span class="navnp"><a href="t3mi.html" class="nav"><em>Prev:</em> Multiple Inheritance</a>
    
-<a href="t3odd_noun.htm" class="nav"><em>Next:</em> Handling Odd Noun
+<a href="t3odd_noun.html" class="nav"><em>Next:</em> Handling Odd Noun
 Phrases</a>     </span>
 
 </div>

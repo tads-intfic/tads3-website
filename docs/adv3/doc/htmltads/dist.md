@@ -1,3 +1,5 @@
+---
+---
 Distributing Your Game
 
 # Distributing Your Game

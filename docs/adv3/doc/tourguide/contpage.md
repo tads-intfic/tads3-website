@@ -1,3 +1,5 @@
+---
+---
 <table data-border="0" data-cellspacing="2">
 <colgroup>
 <col style="width: 50%" />
@@ -22,7 +24,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="generalintroduction.htm"
+<td style="text-align: left;"><a href="generalintroduction.html"
 target="topicview">General Introduction</a><br />
 </td>
 </tr>
@@ -38,7 +40,7 @@ target="topicview">General Introduction</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="thesamplegame.htm"
+<td style="text-align: left;"><a href="thesamplegame.html"
 target="topicview">The Sample Game</a><br />
 </td>
 </tr>
@@ -54,7 +56,7 @@ target="topicview">The Sample Game</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="templates.htm"
+<td style="text-align: left;"><a href="templates.html"
 target="topicview">Templates</a><br />
 </td>
 </tr>
@@ -70,7 +72,7 @@ target="topicview">Templates</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="startupcodegamemain.htm"
+<td style="text-align: left;"><a href="startupcodegamemain.html"
 target="topicview">Startup Code : gameMain</a><br />
 </td>
 </tr>
@@ -101,7 +103,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="introduction.htm"
+<td style="text-align: left;"><a href="introduction.html"
 target="topicview">Introduction</a><br />
 </td>
 </tr>
@@ -117,7 +119,7 @@ target="topicview">Introduction</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="outdoorroom.htm"
+<td style="text-align: left;"><a href="outdoorroom.html"
 target="topicview">OutdoorRoom</a><br />
 </td>
 </tr>
@@ -133,7 +135,7 @@ target="topicview">OutdoorRoom</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="fakeconnector.htm"
+<td style="text-align: left;"><a href="fakeconnector.html"
 target="topicview">FakeConnector</a><br />
 </td>
 </tr>
@@ -149,7 +151,7 @@ target="topicview">FakeConnector</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="deadendconnector.htm"
+<td style="text-align: left;"><a href="deadendconnector.html"
 target="topicview">DeadEndConnector</a><br />
 </td>
 </tr>
@@ -165,7 +167,7 @@ target="topicview">DeadEndConnector</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="roomconnector.htm"
+<td style="text-align: left;"><a href="roomconnector.html"
 target="topicview">RoomConnector</a><br />
 </td>
 </tr>
@@ -181,7 +183,7 @@ target="topicview">RoomConnector</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="asexit.htm"
+<td style="text-align: left;"><a href="asexit.html"
 target="topicview">asExit</a><br />
 </td>
 </tr>
@@ -197,7 +199,7 @@ target="topicview">asExit</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="enterable.htm"
+<td style="text-align: left;"><a href="enterable.html"
 target="topicview">Enterable</a><br />
 </td>
 </tr>
@@ -213,7 +215,7 @@ target="topicview">Enterable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="room.htm"
+<td style="text-align: left;"><a href="room.html"
 target="topicview">Room</a><br />
 </td>
 </tr>
@@ -229,7 +231,7 @@ target="topicview">Room</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="stairwaydown.htm"
+<td style="text-align: left;"><a href="stairwaydown.html"
 target="topicview">StairwayDown</a><br />
 </td>
 </tr>
@@ -245,7 +247,7 @@ target="topicview">StairwayDown</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="stairwayup.htm"
+<td style="text-align: left;"><a href="stairwayup.html"
 target="topicview">StairwayUp</a><br />
 </td>
 </tr>
@@ -261,7 +263,7 @@ target="topicview">StairwayUp</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="travelwithmessage.htm"
+<td style="text-align: left;"><a href="travelwithmessage.html"
 target="topicview">TravelWithMessage</a><br />
 </td>
 </tr>
@@ -277,7 +279,7 @@ target="topicview">TravelWithMessage</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="secretdoor.htm"
+<td style="text-align: left;"><a href="secretdoor.html"
 target="topicview">SecretDoor</a><br />
 </td>
 </tr>
@@ -293,7 +295,7 @@ target="topicview">SecretDoor</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="throughpassage.htm"
+<td style="text-align: left;"><a href="throughpassage.html"
 target="topicview">ThroughPassage</a><br />
 </td>
 </tr>
@@ -309,7 +311,7 @@ target="topicview">ThroughPassage</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="darkroom.htm"
+<td style="text-align: left;"><a href="darkroom.html"
 target="topicview">DarkRoom</a><br />
 </td>
 </tr>
@@ -325,7 +327,7 @@ target="topicview">DarkRoom</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="travelmessage.htm"
+<td style="text-align: left;"><a href="travelmessage.html"
 target="topicview">TravelMessage</a><br />
 </td>
 </tr>
@@ -341,7 +343,7 @@ target="topicview">TravelMessage</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="roomautoconnector.htm"
+<td style="text-align: left;"><a href="roomautoconnector.html"
 target="topicview">RoomAutoConnector</a><br />
 </td>
 </tr>
@@ -357,7 +359,7 @@ target="topicview">RoomAutoConnector</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="door.htm"
+<td style="text-align: left;"><a href="door.html"
 target="topicview">Door</a><br />
 </td>
 </tr>
@@ -373,7 +375,7 @@ target="topicview">Door</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="basicdoor.htm"
+<td style="text-align: left;"><a href="basicdoor.html"
 target="topicview">BasicDoor</a><br />
 </td>
 </tr>
@@ -389,7 +391,7 @@ target="topicview">BasicDoor</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="notravelmessage.htm"
+<td style="text-align: left;"><a href="notravelmessage.html"
 target="topicview">NoTravelMessage</a><br />
 </td>
 </tr>
@@ -405,7 +407,7 @@ target="topicview">NoTravelMessage</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="exitonlypassage.htm"
+<td style="text-align: left;"><a href="exitonlypassage.html"
 target="topicview">ExitOnlyPassage</a><br />
 </td>
 </tr>
@@ -421,7 +423,7 @@ target="topicview">ExitOnlyPassage</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="autoclosingdoor.htm"
+<td style="text-align: left;"><a href="autoclosingdoor.html"
 target="topicview">AutoClosingDoor</a><br />
 </td>
 </tr>
@@ -437,7 +439,7 @@ target="topicview">AutoClosingDoor</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="onewayroomconnector.htm"
+<td style="text-align: left;"><a href="onewayroomconnector.html"
 target="topicview">OneWayRoomConnector</a><br />
 </td>
 </tr>
@@ -453,7 +455,7 @@ target="topicview">OneWayRoomConnector</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="pathpassage.htm"
+<td style="text-align: left;"><a href="pathpassage.html"
 target="topicview">PathPassage</a><br />
 </td>
 </tr>
@@ -469,7 +471,7 @@ target="topicview">PathPassage</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="shipboardroom.htm"
+<td style="text-align: left;"><a href="shipboardroom.html"
 target="topicview">Shipboard</a><br />
 </td>
 </tr>
@@ -485,7 +487,7 @@ target="topicview">Shipboard</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="floorlessroom.htm"
+<td style="text-align: left;"><a href="floorlessroom.html"
 target="topicview">FloorlessRoom</a><br />
 </td>
 </tr>
@@ -501,7 +503,7 @@ target="topicview">FloorlessRoom</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="floorless.htm"
+<td style="text-align: left;"><a href="floorless.html"
 target="topicview">Floorless</a><br />
 </td>
 </tr>
@@ -517,7 +519,7 @@ target="topicview">Floorless</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hiddendoor.htm"
+<td style="text-align: left;"><a href="hiddendoor.html"
 target="topicview">HiddenDoor</a><br />
 </td>
 </tr>
@@ -533,7 +535,7 @@ target="topicview">HiddenDoor</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="entryportal.htm"
+<td style="text-align: left;"><a href="entryportal.html"
 target="topicview">EntryPortal</a><br />
 </td>
 </tr>
@@ -549,7 +551,7 @@ target="topicview">EntryPortal</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="exitportal.htm"
+<td style="text-align: left;"><a href="exitportal.html"
 target="topicview">ExitPortal</a><br />
 </td>
 </tr>
@@ -565,7 +567,7 @@ target="topicview">ExitPortal</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="travelbarrier.htm"
+<td style="text-align: left;"><a href="travelbarrier.html"
 target="topicview">TravelBarrier</a><br />
 </td>
 </tr>
@@ -581,7 +583,7 @@ target="topicview">TravelBarrier</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="askconnector.htm"
+<td style="text-align: left;"><a href="askconnector.html"
 target="topicview">AskConnector</a><br />
 </td>
 </tr>
@@ -597,7 +599,7 @@ target="topicview">AskConnector</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="travelconnector.htm"
+<td style="text-align: left;"><a href="travelconnector.html"
 target="topicview">TravelConnector</a><br />
 </td>
 </tr>
@@ -628,7 +630,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="roomxxxxaction.htm"
+<td style="text-align: left;"><a href="roomxxxxaction.html"
 target="topicview">roomXxxxAction</a><br />
 </td>
 </tr>
@@ -644,7 +646,7 @@ target="topicview">roomXxxxAction</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="roomparts.htm"
+<td style="text-align: left;"><a href="roomparts.html"
 target="topicview">roomParts</a><br />
 </td>
 </tr>
@@ -660,7 +662,7 @@ target="topicview">roomParts</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="cannotgothatway.htm"
+<td style="text-align: left;"><a href="cannotgothatway.html"
 target="topicview">cannotGoThatWay</a><br />
 </td>
 </tr>
@@ -676,7 +678,7 @@ target="topicview">cannotGoThatWay</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="cannotgothatwayindark.htm"
+<td style="text-align: left;"><a href="cannotgothatwayindark.html"
 target="topicview">cannotGoThatWayInDark</a><br />
 </td>
 </tr>
@@ -692,7 +694,7 @@ target="topicview">cannotGoThatWayInDark</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="roomdarktravel.htm"
+<td style="text-align: left;"><a href="roomdarktravel.html"
 target="topicview">roomDarkTravel</a><br />
 </td>
 </tr>
@@ -708,7 +710,7 @@ target="topicview">roomDarkTravel</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="travelerarriving.htm"
+<td style="text-align: left;"><a href="travelerarriving.html"
 target="topicview">enteringRoom</a><br />
 </td>
 </tr>
@@ -724,7 +726,7 @@ target="topicview">enteringRoom</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="inroomname.htm"
+<td style="text-align: left;"><a href="inroomname.html"
 target="topicview">inRoomName</a><br />
 </td>
 </tr>
@@ -755,7 +757,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="nonportableintroduction.htm"
+<td style="text-align: left;"><a href="nonportableintroduction.html"
 target="topicview">NonPortable Introduction</a><br />
 </td>
 </tr>
@@ -771,7 +773,7 @@ target="topicview">NonPortable Introduction</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="fixture.htm"
+<td style="text-align: left;"><a href="fixture.html"
 target="topicview">Fixture</a><br />
 </td>
 </tr>
@@ -787,7 +789,7 @@ target="topicview">Fixture</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="customfixture.htm"
+<td style="text-align: left;"><a href="customfixture.html"
 target="topicview">CustomFixture</a><br />
 </td>
 </tr>
@@ -803,7 +805,7 @@ target="topicview">CustomFixture</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="decoration.htm"
+<td style="text-align: left;"><a href="decoration.html"
 target="topicview">Decoration</a><br />
 </td>
 </tr>
@@ -819,7 +821,7 @@ target="topicview">Decoration</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="distant.htm"
+<td style="text-align: left;"><a href="distant.html"
 target="topicview">Distant</a><br />
 </td>
 </tr>
@@ -835,7 +837,7 @@ target="topicview">Distant</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="unthing.htm"
+<td style="text-align: left;"><a href="unthing.html"
 target="topicview">Unthing</a><br />
 </td>
 </tr>
@@ -851,7 +853,7 @@ target="topicview">Unthing</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="immovable.htm"
+<td style="text-align: left;"><a href="immovable.html"
 target="topicview">Immovable</a><br />
 </td>
 </tr>
@@ -867,7 +869,7 @@ target="topicview">Immovable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="customimmovable.htm"
+<td style="text-align: left;"><a href="customimmovable.html"
 target="topicview">CustomImmovable</a><br />
 </td>
 </tr>
@@ -883,7 +885,7 @@ target="topicview">CustomImmovable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="heavy.htm"
+<td style="text-align: left;"><a href="heavy.html"
 target="topicview">Heavy</a><br />
 </td>
 </tr>
@@ -899,7 +901,7 @@ target="topicview">Heavy</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="component.htm"
+<td style="text-align: left;"><a href="component.html"
 target="topicview">Component</a><br />
 </td>
 </tr>
@@ -930,7 +932,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="thing-introduction.htm"
+<td style="text-align: left;"><a href="thing-introduction.html"
 target="topicview">Thing - Introduction</a><br />
 </td>
 </tr>
@@ -946,7 +948,7 @@ target="topicview">Thing - Introduction</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="thing-thebasics.htm"
+<td style="text-align: left;"><a href="thing-thebasics.html"
 target="topicview">Thing - The Basics</a><br />
 </td>
 </tr>
@@ -962,7 +964,7 @@ target="topicview">Thing - The Basics</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="vocabwords.htm"
+<td style="text-align: left;"><a href="vocabwords.html"
 target="topicview">vocabWords</a><br />
 </td>
 </tr>
@@ -978,7 +980,7 @@ target="topicview">vocabWords</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="initdesc+initspecialdesc.htm"
+<td style="text-align: left;"><a href="initdesc+initspecialdesc.html"
 target="topicview">initDesc &amp; initSpecialDesc</a><br />
 </td>
 </tr>
@@ -994,7 +996,7 @@ target="topicview">initDesc &amp; initSpecialDesc</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="globalparamname.htm"
+<td style="text-align: left;"><a href="globalparamname.html"
 target="topicview">globalParamName</a><br />
 </td>
 </tr>
@@ -1010,7 +1012,7 @@ target="topicview">globalParamName</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="specialdesc.htm"
+<td style="text-align: left;"><a href="specialdesc.html"
 target="topicview">specialDesc</a><br />
 </td>
 </tr>
@@ -1026,7 +1028,7 @@ target="topicview">specialDesc</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="described.htm"
+<td style="text-align: left;"><a href="described.html"
 target="topicview">described</a><br />
 </td>
 </tr>
@@ -1042,7 +1044,7 @@ target="topicview">described</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="bulkandweight.htm"
+<td style="text-align: left;"><a href="bulkandweight.html"
 target="topicview">bulk and weight</a><br />
 </td>
 </tr>
@@ -1058,7 +1060,7 @@ target="topicview">bulk and weight</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="setsuperclasslist.htm"
+<td style="text-align: left;"><a href="setsuperclasslist.html"
 target="topicview">setSuperclassList</a><br />
 </td>
 </tr>
@@ -1074,7 +1076,7 @@ target="topicview">setSuperclassList</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="readable.htm"
+<td style="text-align: left;"><a href="readable.html"
 target="topicview">Readable</a><br />
 </td>
 </tr>
@@ -1090,7 +1092,7 @@ target="topicview">Readable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="food.htm"
+<td style="text-align: left;"><a href="food.html"
 target="topicview">Food</a><br />
 </td>
 </tr>
@@ -1106,7 +1108,7 @@ target="topicview">Food</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="disambigname.htm"
+<td style="text-align: left;"><a href="disambigname.html"
 target="topicview">disambigName</a><br />
 </td>
 </tr>
@@ -1122,7 +1124,7 @@ target="topicview">disambigName</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="wearable.htm"
+<td style="text-align: left;"><a href="wearable.html"
 target="topicview">Wearable</a><br />
 </td>
 </tr>
@@ -1153,7 +1155,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="containers-introduction.htm"
+<td style="text-align: left;"><a href="containers-introduction.html"
 target="topicview">Containers - Introduction</a><br />
 </td>
 </tr>
@@ -1169,7 +1171,7 @@ target="topicview">Containers - Introduction</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="bulklimiter.htm"
+<td style="text-align: left;"><a href="bulklimiter.html"
 target="topicview">BulkLimiter</a><br />
 </td>
 </tr>
@@ -1185,7 +1187,7 @@ target="topicview">BulkLimiter</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="surface.htm"
+<td style="text-align: left;"><a href="surface.html"
 target="topicview">Surface</a><br />
 </td>
 </tr>
@@ -1201,7 +1203,7 @@ target="topicview">Surface</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="basiccontainer.htm"
+<td style="text-align: left;"><a href="basiccontainer.html"
 target="topicview">BasicContainer</a><br />
 </td>
 </tr>
@@ -1217,7 +1219,7 @@ target="topicview">BasicContainer</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="container.htm"
+<td style="text-align: left;"><a href="container.html"
 target="topicview">Container</a><br />
 </td>
 </tr>
@@ -1233,7 +1235,7 @@ target="topicview">Container</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="openablecontainer.htm"
+<td style="text-align: left;"><a href="openablecontainer.html"
 target="topicview">OpenableContainer</a><br />
 </td>
 </tr>
@@ -1249,7 +1251,7 @@ target="topicview">OpenableContainer</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="notifyinsert+notifyremove.htm"
+<td style="text-align: left;"><a href="notifyinsert+notifyremove.html"
 target="topicview">notifyInsert &amp; notifyRemove</a><br />
 </td>
 </tr>
@@ -1265,7 +1267,7 @@ target="topicview">notifyInsert &amp; notifyRemove</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="lockablecontainer.htm"
+<td style="text-align: left;"><a href="lockablecontainer.html"
 target="topicview">LockableContainer</a><br />
 </td>
 </tr>
@@ -1281,7 +1283,7 @@ target="topicview">LockableContainer</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="restrictedcontainer.htm"
+<td style="text-align: left;"><a href="restrictedcontainer.html"
 target="topicview">RestrictedContainer</a><br />
 </td>
 </tr>
@@ -1297,7 +1299,7 @@ target="topicview">RestrictedContainer</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="dispenser.htm"
+<td style="text-align: left;"><a href="dispenser.html"
 target="topicview">Dispenser</a><br />
 </td>
 </tr>
@@ -1313,7 +1315,7 @@ target="topicview">Dispenser</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="stretchycontainer.htm"
+<td style="text-align: left;"><a href="stretchycontainer.html"
 target="topicview">StretchyContainer</a><br />
 </td>
 </tr>
@@ -1329,7 +1331,7 @@ target="topicview">StretchyContainer</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="spaceoverlay.htm"
+<td style="text-align: left;"><a href="spaceoverlay.html"
 target="topicview">SpaceOverlay</a><br />
 </td>
 </tr>
@@ -1345,7 +1347,7 @@ target="topicview">SpaceOverlay</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="underside.htm"
+<td style="text-align: left;"><a href="underside.html"
 target="topicview">Underside</a><br />
 </td>
 </tr>
@@ -1361,7 +1363,7 @@ target="topicview">Underside</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="rearcontainer.htm"
+<td style="text-align: left;"><a href="rearcontainer.html"
 target="topicview">RearContainer</a><br />
 </td>
 </tr>
@@ -1377,7 +1379,7 @@ target="topicview">RearContainer</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="rearsurface.htm"
+<td style="text-align: left;"><a href="rearsurface.html"
 target="topicview">RearSurface</a><br />
 </td>
 </tr>
@@ -1393,7 +1395,7 @@ target="topicview">RearSurface</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="complexcontainer.htm"
+<td style="text-align: left;"><a href="complexcontainer.html"
 target="topicview">ComplexContainer</a><br />
 </td>
 </tr>
@@ -1409,7 +1411,7 @@ target="topicview">ComplexContainer</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="containerdoor.htm"
+<td style="text-align: left;"><a href="containerdoor.html"
 target="topicview">ContainerDoor</a><br />
 </td>
 </tr>
@@ -1425,7 +1427,7 @@ target="topicview">ContainerDoor</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="singlecontainer.htm"
+<td style="text-align: left;"><a href="singlecontainer.html"
 target="topicview">SingleContainer</a><br />
 </td>
 </tr>
@@ -1441,7 +1443,7 @@ target="topicview">SingleContainer</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="bagofaffinity.htm"
+<td style="text-align: left;"><a href="bagofaffinity.html"
 target="topicview">BagOfHolding</a><br />
 </td>
 </tr>
@@ -1472,7 +1474,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="locks+keys-introduction.htm"
+<td style="text-align: left;"><a href="locks+keys-introduction.html"
 target="topicview">Locks &amp; Keys - Introduction</a><br />
 </td>
 </tr>
@@ -1488,7 +1490,7 @@ target="topicview">Locks &amp; Keys - Introduction</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="lockable.htm"
+<td style="text-align: left;"><a href="lockable.html"
 target="topicview">Lockable</a><br />
 </td>
 </tr>
@@ -1504,7 +1506,7 @@ target="topicview">Lockable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="indirectlockable.htm"
+<td style="text-align: left;"><a href="indirectlockable.html"
 target="topicview">IndirectLockable</a><br />
 </td>
 </tr>
@@ -1520,7 +1522,7 @@ target="topicview">IndirectLockable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="keyedcontainer.htm"
+<td style="text-align: left;"><a href="keyedcontainer.html"
 target="topicview">KeyedContainer</a><br />
 </td>
 </tr>
@@ -1536,7 +1538,7 @@ target="topicview">KeyedContainer</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="lockablewithkey.htm"
+<td style="text-align: left;"><a href="lockablewithkey.html"
 target="topicview">LockableWithKey</a><br />
 </td>
 </tr>
@@ -1552,7 +1554,7 @@ target="topicview">LockableWithKey</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="keyring.htm"
+<td style="text-align: left;"><a href="keyring.html"
 target="topicview">Keyring</a><br />
 </td>
 </tr>
@@ -1568,7 +1570,7 @@ target="topicview">Keyring</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="openable.htm"
+<td style="text-align: left;"><a href="openable.html"
 target="topicview">Openable</a><br />
 </td>
 </tr>
@@ -1584,7 +1586,7 @@ target="topicview">Openable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="basicopenable.htm"
+<td style="text-align: left;"><a href="basicopenable.html"
 target="topicview">BasicOpenable</a><br />
 </td>
 </tr>
@@ -1615,7 +1617,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="lightandfire-introduction.htm"
+<td style="text-align: left;"><a href="lightandfire-introduction.html"
 target="topicview">Light and Fire - Introduction</a><br />
 </td>
 </tr>
@@ -1631,7 +1633,7 @@ target="topicview">Light and Fire - Introduction</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="brightness.htm"
+<td style="text-align: left;"><a href="brightness.html"
 target="topicview">brightness</a><br />
 </td>
 </tr>
@@ -1647,7 +1649,7 @@ target="topicview">brightness</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="lightsource.htm"
+<td style="text-align: left;"><a href="lightsource.html"
 target="topicview">LightSource</a><br />
 </td>
 </tr>
@@ -1663,7 +1665,7 @@ target="topicview">LightSource</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="flashlight.htm"
+<td style="text-align: left;"><a href="flashlight.html"
 target="topicview">Flashlight</a><br />
 </td>
 </tr>
@@ -1679,7 +1681,7 @@ target="topicview">Flashlight</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="candle.htm"
+<td style="text-align: left;"><a href="candle.html"
 target="topicview">Candle &amp; FireSource</a><br />
 </td>
 </tr>
@@ -1695,7 +1697,7 @@ target="topicview">Candle &amp; FireSource</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="oillamp.htm"
+<td style="text-align: left;"><a href="oillamp.html"
 target="topicview">OilLamp</a><br />
 </td>
 </tr>
@@ -1711,7 +1713,7 @@ target="topicview">OilLamp</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="matchstick+matchbook.htm"
+<td style="text-align: left;"><a href="matchstick+matchbook.html"
 target="topicview">Matchstick &amp; Matchbook</a><br />
 </td>
 </tr>
@@ -1727,7 +1729,7 @@ target="topicview">Matchstick &amp; Matchbook</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="dynamite.htm"
+<td style="text-align: left;"><a href="dynamite.html"
 target="topicview">Dynamite</a><br />
 </td>
 </tr>
@@ -1758,7 +1760,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hiding+fiding-introduction.htm"
+<td style="text-align: left;"><a href="hiding+fiding-introduction.html"
 target="topicview">Hiding &amp; Finding - Introduction</a><br />
 </td>
 </tr>
@@ -1774,7 +1776,7 @@ target="topicview">Hiding &amp; Finding - Introduction</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="wordgames.htm"
+<td style="text-align: left;"><a href="wordgames.html"
 target="topicview">Hiding with Words</a><br />
 </td>
 </tr>
@@ -1790,7 +1792,7 @@ target="topicview">Hiding with Words</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="findingincode.htm"
+<td style="text-align: left;"><a href="findingincode.html"
 target="topicview">Finding by moving</a><br />
 </td>
 </tr>
@@ -1806,7 +1808,7 @@ target="topicview">Finding by moving</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="sightpresence+islisted.htm"
+<td style="text-align: left;"><a href="sightpresence+islisted.html"
 target="topicview">sightPresence &amp; isListed</a><br />
 </td>
 </tr>
@@ -1822,7 +1824,7 @@ target="topicview">sightPresence &amp; isListed</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hidden.htm"
+<td style="text-align: left;"><a href="hidden.html"
 target="topicview">Hidden</a><br />
 </td>
 </tr>
@@ -1838,7 +1840,7 @@ target="topicview">Hidden</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="presentlater.htm"
+<td style="text-align: left;"><a href="presentlater.html"
 target="topicview">PresentLater</a><br />
 </td>
 </tr>
@@ -1869,7 +1871,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="gadgets-introduction.htm"
+<td style="text-align: left;"><a href="gadgets-introduction.html"
 target="topicview">Gadgets - Introduction</a><br />
 </td>
 </tr>
@@ -1885,7 +1887,7 @@ target="topicview">Gadgets - Introduction</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="button.htm"
+<td style="text-align: left;"><a href="button.html"
 target="topicview">Button</a><br />
 </td>
 </tr>
@@ -1901,7 +1903,7 @@ target="topicview">Button</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="labeleddial.htm"
+<td style="text-align: left;"><a href="labeleddial.html"
 target="topicview">LabeledDial</a><br />
 </td>
 </tr>
@@ -1917,7 +1919,7 @@ target="topicview">LabeledDial</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="springlever.htm"
+<td style="text-align: left;"><a href="springlever.html"
 target="topicview">SpringLever</a><br />
 </td>
 </tr>
@@ -1933,7 +1935,7 @@ target="topicview">SpringLever</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="settable.htm"
+<td style="text-align: left;"><a href="settable.html"
 target="topicview">Settable</a><br />
 </td>
 </tr>
@@ -1949,7 +1951,7 @@ target="topicview">Settable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="numbereddial.htm"
+<td style="text-align: left;"><a href="numbereddial.html"
 target="topicview">NumberedDial</a><br />
 </td>
 </tr>
@@ -1965,7 +1967,7 @@ target="topicview">NumberedDial</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="dynamiclocations.htm"
+<td style="text-align: left;"><a href="dynamiclocations.html"
 target="topicview">Dynamic Locations</a><br />
 </td>
 </tr>
@@ -1981,7 +1983,7 @@ target="topicview">Dynamic Locations</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="lever.htm"
+<td style="text-align: left;"><a href="lever.html"
 target="topicview">Lever</a><br />
 </td>
 </tr>
@@ -1997,7 +1999,7 @@ target="topicview">Lever</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="dial.htm"
+<td style="text-align: left;"><a href="dial.html"
 target="topicview">Dial</a><br />
 </td>
 </tr>
@@ -2013,7 +2015,7 @@ target="topicview">Dial</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="onoffcontrol.htm"
+<td style="text-align: left;"><a href="onoffcontrol.html"
 target="topicview">OnOffControl</a><br />
 </td>
 </tr>
@@ -2029,7 +2031,7 @@ target="topicview">OnOffControl</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="switch.htm"
+<td style="text-align: left;"><a href="switch.html"
 target="topicview">Switch</a><br />
 </td>
 </tr>
@@ -2045,7 +2047,7 @@ target="topicview">Switch</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="lever(2).htm"
+<td style="text-align: left;"><a href="lever(2).html"
 target="topicview">Lever (2)</a><br />
 </td>
 </tr>
@@ -2061,7 +2063,7 @@ target="topicview">Lever (2)</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="anotherlock.htm"
+<td style="text-align: left;"><a href="anotherlock.html"
 target="topicview">A Card Lock</a><br />
 </td>
 </tr>
@@ -2092,7 +2094,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="fuse.htm"
+<td style="text-align: left;"><a href="fuse.html"
 target="topicview">Fuse</a><br />
 </td>
 </tr>
@@ -2108,7 +2110,7 @@ target="topicview">Fuse</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="daemon.htm"
+<td style="text-align: left;"><a href="daemon.html"
 target="topicview">Daemon</a><br />
 </td>
 </tr>
@@ -2124,7 +2126,7 @@ target="topicview">Daemon</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="sensefuse.htm"
+<td style="text-align: left;"><a href="sensefuse.html"
 target="topicview">SenseFuse</a><br />
 </td>
 </tr>
@@ -2140,7 +2142,7 @@ target="topicview">SenseFuse</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="sensedaemon.htm"
+<td style="text-align: left;"><a href="sensedaemon.html"
 target="topicview">SenseDaemon</a><br />
 </td>
 </tr>
@@ -2156,7 +2158,7 @@ target="topicview">SenseDaemon</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="promptdaemon.htm"
+<td style="text-align: left;"><a href="promptdaemon.html"
 target="topicview">PromptDaemon</a><br />
 </td>
 </tr>
@@ -2172,7 +2174,7 @@ target="topicview">PromptDaemon</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="onetimepromptdaemon.htm"
+<td style="text-align: left;"><a href="onetimepromptdaemon.html"
 target="topicview">OneTimePromptDaemon</a><br />
 </td>
 </tr>
@@ -2203,7 +2205,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="moduleexecobject.htm"
+<td style="text-align: left;"><a href="moduleexecobject.html"
 target="topicview">ModuleExecObject</a><br />
 </td>
 </tr>
@@ -2219,7 +2221,7 @@ target="topicview">ModuleExecObject</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="initobject.htm"
+<td style="text-align: left;"><a href="initobject.html"
 target="topicview">InitObject</a><br />
 </td>
 </tr>
@@ -2235,7 +2237,7 @@ target="topicview">InitObject</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="preinitobject.htm"
+<td style="text-align: left;"><a href="preinitobject.html"
 target="topicview">PreinitObject</a><br />
 </td>
 </tr>
@@ -2251,7 +2253,7 @@ target="topicview">PreinitObject</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="presaveobject.htm"
+<td style="text-align: left;"><a href="presaveobject.html"
 target="topicview">PreSaveObject</a><br />
 </td>
 </tr>
@@ -2267,7 +2269,7 @@ target="topicview">PreSaveObject</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="postrestoreobject.htm"
+<td style="text-align: left;"><a href="postrestoreobject.html"
 target="topicview">PostRestoreObject</a><br />
 </td>
 </tr>
@@ -2283,7 +2285,7 @@ target="topicview">PostRestoreObject</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="postundoobject.htm"
+<td style="text-align: left;"><a href="postundoobject.html"
 target="topicview">PostUndoObject</a><br />
 </td>
 </tr>
@@ -2299,7 +2301,7 @@ target="topicview">PostUndoObject</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="prerestartobject.htm"
+<td style="text-align: left;"><a href="prerestartobject.html"
 target="topicview">PreRestartObject</a><br />
 </td>
 </tr>
@@ -2330,7 +2332,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="travelpushable.htm"
+<td style="text-align: left;"><a href="travelpushable.html"
 target="topicview">TravelPushable</a><br />
 </td>
 </tr>
@@ -2346,7 +2348,7 @@ target="topicview">TravelPushable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="pushtravelbarrier.htm"
+<td style="text-align: left;"><a href="pushtravelbarrier.html"
 target="topicview">PushTravelBarrier</a><br />
 </td>
 </tr>
@@ -2377,7 +2379,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="intangibles-overview.htm"
+<td style="text-align: left;"><a href="intangibles-overview.html"
 target="topicview">Intangibles - Overview</a><br />
 </td>
 </tr>
@@ -2393,7 +2395,7 @@ target="topicview">Intangibles - Overview</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="intangible.htm"
+<td style="text-align: left;"><a href="intangible.html"
 target="topicview">Intangible</a><br />
 </td>
 </tr>
@@ -2409,7 +2411,7 @@ target="topicview">Intangible</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="distanceconnector.htm"
+<td style="text-align: left;"><a href="distanceconnector.html"
 target="topicview">DistanceConnector</a><br />
 </td>
 </tr>
@@ -2425,7 +2427,7 @@ target="topicview">DistanceConnector</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="occluder.htm"
+<td style="text-align: left;"><a href="occluder.html"
 target="topicview">Occluder</a><br />
 </td>
 </tr>
@@ -2441,7 +2443,7 @@ target="topicview">Occluder</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="vaporous.htm"
+<td style="text-align: left;"><a href="vaporous.html"
 target="topicview">Vaporous</a><br />
 </td>
 </tr>
@@ -2457,7 +2459,7 @@ target="topicview">Vaporous</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="simpleodor.htm"
+<td style="text-align: left;"><a href="simpleodor.html"
 target="topicview">SimpleOdor</a><br />
 </td>
 </tr>
@@ -2473,7 +2475,7 @@ target="topicview">SimpleOdor</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="simplenoise.htm"
+<td style="text-align: left;"><a href="simplenoise.html"
 target="topicview">SimpleNoise</a><br />
 </td>
 </tr>
@@ -2489,7 +2491,7 @@ target="topicview">SimpleNoise</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="odor.htm"
+<td style="text-align: left;"><a href="odor.html"
 target="topicview">Odor</a><br />
 </td>
 </tr>
@@ -2505,7 +2507,7 @@ target="topicview">Odor</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="noise.htm"
+<td style="text-align: left;"><a href="noise.html"
 target="topicview">Noise</a><br />
 </td>
 </tr>
@@ -2521,7 +2523,7 @@ target="topicview">Noise</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="senseconnector.htm"
+<td style="text-align: left;"><a href="senseconnector.html"
 target="topicview">SenseConnector</a><br />
 </td>
 </tr>
@@ -2537,7 +2539,7 @@ target="topicview">SenseConnector</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="sensoryevent.htm"
+<td style="text-align: left;"><a href="sensoryevent.html"
 target="topicview">SensoryEvent</a><br />
 </td>
 </tr>
@@ -2568,7 +2570,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="attachables-overview.htm"
+<td style="text-align: left;"><a href="attachables-overview.html"
 target="topicview">Attachables - Overview</a><br />
 </td>
 </tr>
@@ -2584,7 +2586,7 @@ target="topicview">Attachables - Overview</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="attachable.htm"
+<td style="text-align: left;"><a href="attachable.html"
 target="topicview">Attachable</a><br />
 </td>
 </tr>
@@ -2600,7 +2602,7 @@ target="topicview">Attachable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="nearbyattachable.htm"
+<td style="text-align: left;"><a href="nearbyattachable.html"
 target="topicview">NearbyAttachable</a><br />
 </td>
 </tr>
@@ -2616,7 +2618,7 @@ target="topicview">NearbyAttachable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="plugattachable.htm"
+<td style="text-align: left;"><a href="plugattachable.html"
 target="topicview">PlugAttachable</a><br />
 </td>
 </tr>
@@ -2632,7 +2634,7 @@ target="topicview">PlugAttachable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="permanentattachment.htm"
+<td style="text-align: left;"><a href="permanentattachment.html"
 target="topicview">PermanentAttachment</a><br />
 </td>
 </tr>
@@ -2663,7 +2665,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="nestedroomoverview.htm"
+<td style="text-align: left;"><a href="nestedroomoverview.html"
 target="topicview">NestedRoom Overview</a><br />
 </td>
 </tr>
@@ -2679,7 +2681,7 @@ target="topicview">NestedRoom Overview</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="nestedroom.htm"
+<td style="text-align: left;"><a href="nestedroom.html"
 target="topicview">NestedRoom</a><br />
 </td>
 </tr>
@@ -2695,7 +2697,7 @@ target="topicview">NestedRoom</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="basicchair.htm"
+<td style="text-align: left;"><a href="basicchair.html"
 target="topicview">BasicChair</a><br />
 </td>
 </tr>
@@ -2711,7 +2713,7 @@ target="topicview">BasicChair</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="platform.htm"
+<td style="text-align: left;"><a href="platform.html"
 target="topicview">Platform</a><br />
 </td>
 </tr>
@@ -2727,7 +2729,7 @@ target="topicview">Platform</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="nominalplatform.htm"
+<td style="text-align: left;"><a href="nominalplatform.html"
 target="topicview">NominalPlatform</a><br />
 </td>
 </tr>
@@ -2743,7 +2745,7 @@ target="topicview">NominalPlatform</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="bed.htm"
+<td style="text-align: left;"><a href="bed.html"
 target="topicview">Bed</a><br />
 </td>
 </tr>
@@ -2759,7 +2761,7 @@ target="topicview">Bed</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="chair.htm"
+<td style="text-align: left;"><a href="chair.html"
 target="topicview">Chair</a><br />
 </td>
 </tr>
@@ -2775,7 +2777,7 @@ target="topicview">Chair</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="highnestedroom.htm"
+<td style="text-align: left;"><a href="highnestedroom.html"
 target="topicview">HighNestedRoom</a><br />
 </td>
 </tr>
@@ -2791,7 +2793,7 @@ target="topicview">HighNestedRoom</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="outofreach.htm"
+<td style="text-align: left;"><a href="outofreach.html"
 target="topicview">OutOfReach</a><br />
 </td>
 </tr>
@@ -2807,7 +2809,7 @@ target="topicview">OutOfReach</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="booth.htm"
+<td style="text-align: left;"><a href="booth.html"
 target="topicview">Booth</a><br />
 </td>
 </tr>
@@ -2823,7 +2825,7 @@ target="topicview">Booth</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="vehicle.htm"
+<td style="text-align: left;"><a href="vehicle.html"
 target="topicview">Vehicle</a><br />
 </td>
 </tr>
@@ -2839,7 +2841,7 @@ target="topicview">Vehicle</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="vehiclebarrier.htm"
+<td style="text-align: left;"><a href="vehiclebarrier.html"
 target="topicview">VehicleBarrier</a><br />
 </td>
 </tr>
@@ -2870,7 +2872,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="multiloc.htm"
+<td style="text-align: left;"><a href="multiloc.html"
 target="topicview">MultiLoc</a><br />
 </td>
 </tr>
@@ -2886,7 +2888,7 @@ target="topicview">MultiLoc</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="multiinstance.htm"
+<td style="text-align: left;"><a href="multiinstance.html"
 target="topicview">MultiInstance</a><br />
 </td>
 </tr>
@@ -2902,7 +2904,7 @@ target="topicview">MultiInstance</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="multifaceted.htm"
+<td style="text-align: left;"><a href="multifaceted.html"
 target="topicview">MultiFaceted</a><br />
 </td>
 </tr>
@@ -2933,7 +2935,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="collectivegroup.htm"
+<td style="text-align: left;"><a href="collectivegroup.html"
 target="topicview">CollectiveGroup (static)</a><br />
 </td>
 </tr>
@@ -2949,7 +2951,7 @@ target="topicview">CollectiveGroup (static)</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="collectivegroup(mobile).htm"
+<td style="text-align: left;"><a href="collectivegroup(mobile).html"
 target="topicview">CollectiveGroup (mobile)</a><br />
 </td>
 </tr>
@@ -2980,7 +2982,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="script.htm"
+<td style="text-align: left;"><a href="script.html"
 target="topicview">Script</a><br />
 </td>
 </tr>
@@ -2996,7 +2998,7 @@ target="topicview">Script</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="eventlist.htm"
+<td style="text-align: left;"><a href="eventlist.html"
 target="topicview">EventList</a><br />
 </td>
 </tr>
@@ -3012,7 +3014,7 @@ target="topicview">EventList</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="stopeventlist.htm"
+<td style="text-align: left;"><a href="stopeventlist.html"
 target="topicview">StopEventList</a><br />
 </td>
 </tr>
@@ -3028,7 +3030,7 @@ target="topicview">StopEventList</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="cycliceventlist.htm"
+<td style="text-align: left;"><a href="cycliceventlist.html"
 target="topicview">CyclicEventList</a><br />
 </td>
 </tr>
@@ -3044,7 +3046,7 @@ target="topicview">CyclicEventList</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="randomeventlist.htm"
+<td style="text-align: left;"><a href="randomeventlist.html"
 target="topicview">RandomEventList</a><br />
 </td>
 </tr>
@@ -3060,7 +3062,7 @@ target="topicview">RandomEventList</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="shuffledeventlist.htm"
+<td style="text-align: left;"><a href="shuffledeventlist.html"
 target="topicview">ShuffledEventList</a><br />
 </td>
 </tr>
@@ -3076,7 +3078,7 @@ target="topicview">ShuffledEventList</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="externaleventlist.htm"
+<td style="text-align: left;"><a href="externaleventlist.html"
 target="topicview">ExternalEventList</a><br />
 </td>
 </tr>
@@ -3092,7 +3094,7 @@ target="topicview">ExternalEventList</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="synceventlist.htm"
+<td style="text-align: left;"><a href="synceventlist.html"
 target="topicview">SyncEventList</a><br />
 </td>
 </tr>
@@ -3108,7 +3110,7 @@ target="topicview">SyncEventList</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="randomfiringscript.htm"
+<td style="text-align: left;"><a href="randomfiringscript.html"
 target="topicview">RandomFiringScript</a><br />
 </td>
 </tr>
@@ -3139,7 +3141,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="overview-actors+npcs.htm"
+<td style="text-align: left;"><a href="overview-actors+npcs.html"
 target="topicview">Overview - Actors &amp; NPCs</a><br />
 </td>
 </tr>
@@ -3155,7 +3157,7 @@ target="topicview">Overview - Actors &amp; NPCs</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="basicactors.htm"
+<td style="text-align: left;"><a href="basicactors.html"
 target="topicview">Basic Actors</a><br />
 </td>
 </tr>
@@ -3171,7 +3173,7 @@ target="topicview">Basic Actors</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="actorcustomization.htm"
+<td style="text-align: left;"><a href="actorcustomization.html"
 target="topicview">Basic Actor Customization</a><br />
 </td>
 </tr>
@@ -3187,7 +3189,7 @@ target="topicview">Basic Actor Customization</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="actorknowledge.htm"
+<td style="text-align: left;"><a href="actorknowledge.html"
 target="topicview">Actor Knowledge</a><br />
 </td>
 </tr>
@@ -3203,7 +3205,7 @@ target="topicview">Actor Knowledge</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="movingactorsaround.htm"
+<td style="text-align: left;"><a href="movingactorsaround.html"
 target="topicview">Moving Actors Around</a><br />
 </td>
 </tr>
@@ -3234,7 +3236,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="overview-actorstates.htm"
+<td style="text-align: left;"><a href="overview-actorstates.html"
 target="topicview">Overview - Actor States</a><br />
 </td>
 </tr>
@@ -3250,7 +3252,7 @@ target="topicview">Overview - Actor States</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hermitactorstate.htm"
+<td style="text-align: left;"><a href="hermitactorstate.html"
 target="topicview">HermitActorState</a><br />
 </td>
 </tr>
@@ -3266,7 +3268,7 @@ target="topicview">HermitActorState</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="accompanyingstate.htm"
+<td style="text-align: left;"><a href="accompanyingstate.html"
 target="topicview">AccompanyingState</a><br />
 </td>
 </tr>
@@ -3282,7 +3284,7 @@ target="topicview">AccompanyingState</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="accompanyingintravelstate.htm"
+<td style="text-align: left;"><a href="accompanyingintravelstate.html"
 target="topicview">AccompanyingInTravelState</a><br />
 </td>
 </tr>
@@ -3298,7 +3300,7 @@ target="topicview">AccompanyingInTravelState</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="guidedtourstate.htm"
+<td style="text-align: left;"><a href="guidedtourstate.html"
 target="topicview">GuidedTourState</a><br />
 </td>
 </tr>
@@ -3314,7 +3316,7 @@ target="topicview">GuidedTourState</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="guidedintravelstate.htm"
+<td style="text-align: left;"><a href="guidedintravelstate.html"
 target="topicview">GuidedInTravelState</a><br />
 </td>
 </tr>
@@ -3330,7 +3332,7 @@ target="topicview">GuidedInTravelState</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="inconversationstate.htm"
+<td style="text-align: left;"><a href="inconversationstate.html"
 target="topicview">InConversationState</a><br />
 </td>
 </tr>
@@ -3346,7 +3348,7 @@ target="topicview">InConversationState</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="conversationreadystate.htm"
+<td style="text-align: left;"><a href="conversationreadystate.html"
 target="topicview">ConversationReadyState</a><br />
 </td>
 </tr>
@@ -3362,7 +3364,7 @@ target="topicview">ConversationReadyState</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="greetingprotocols.htm"
+<td style="text-align: left;"><a href="greetingprotocols.html"
 target="topicview">Greeting Protocols</a><br />
 </td>
 </tr>
@@ -3393,7 +3395,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="topicentry.htm"
+<td style="text-align: left;"><a href="topicentry.html"
 target="topicview">TopicEntry</a><br />
 </td>
 </tr>
@@ -3409,7 +3411,7 @@ target="topicview">TopicEntry</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="givetopic.htm"
+<td style="text-align: left;"><a href="givetopic.html"
 target="topicview">GiveTopic</a><br />
 </td>
 </tr>
@@ -3425,7 +3427,7 @@ target="topicview">GiveTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="showtopic.htm"
+<td style="text-align: left;"><a href="showtopic.html"
 target="topicview">ShowTopic</a><br />
 </td>
 </tr>
@@ -3441,7 +3443,7 @@ target="topicview">ShowTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="giveshowtopic.htm"
+<td style="text-align: left;"><a href="giveshowtopic.html"
 target="topicview">GiveShowTopic</a><br />
 </td>
 </tr>
@@ -3457,7 +3459,7 @@ target="topicview">GiveShowTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="alttopic.htm"
+<td style="text-align: left;"><a href="alttopic.html"
 target="topicview">AltTopic</a><br />
 </td>
 </tr>
@@ -3473,7 +3475,7 @@ target="topicview">AltTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="initiatetopic.htm"
+<td style="text-align: left;"><a href="initiatetopic.html"
 target="topicview">InitiateTopic</a><br />
 </td>
 </tr>
@@ -3489,7 +3491,7 @@ target="topicview">InitiateTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="asktopic.htm"
+<td style="text-align: left;"><a href="asktopic.html"
 target="topicview">AskTopic</a><br />
 </td>
 </tr>
@@ -3505,7 +3507,7 @@ target="topicview">AskTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="telltopic.htm"
+<td style="text-align: left;"><a href="telltopic.html"
 target="topicview">TellTopic</a><br />
 </td>
 </tr>
@@ -3521,7 +3523,7 @@ target="topicview">TellTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="asktelltopic.htm"
+<td style="text-align: left;"><a href="asktelltopic.html"
 target="topicview">AskTellTopic</a><br />
 </td>
 </tr>
@@ -3537,7 +3539,7 @@ target="topicview">AskTellTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="askfortopic.htm"
+<td style="text-align: left;"><a href="askfortopic.html"
 target="topicview">AskForTopic</a><br />
 </td>
 </tr>
@@ -3553,7 +3555,7 @@ target="topicview">AskForTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="askaboutfortopic.htm"
+<td style="text-align: left;"><a href="askaboutfortopic.html"
 target="topicview">AskAboutForTopic</a><br />
 </td>
 </tr>
@@ -3569,7 +3571,7 @@ target="topicview">AskAboutForTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="asktellshowtopic.htm"
+<td style="text-align: left;"><a href="asktellshowtopic.html"
 target="topicview">AskTellShowTopic</a><br />
 </td>
 </tr>
@@ -3585,7 +3587,7 @@ target="topicview">AskTellShowTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="asktellgiveshowtopic.htm"
+<td style="text-align: left;"><a href="asktellgiveshowtopic.html"
 target="topicview">AskTellGiveShowTopic</a><br />
 </td>
 </tr>
@@ -3601,7 +3603,7 @@ target="topicview">AskTellGiveShowTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="yesno+specialtopics.htm"
+<td style="text-align: left;"><a href="yesno+specialtopics.html"
 target="topicview">Yes,No &amp; SpecialTopics</a><br />
 </td>
 </tr>
@@ -3617,7 +3619,7 @@ target="topicview">Yes,No &amp; SpecialTopics</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hellotopic.htm"
+<td style="text-align: left;"><a href="hellotopic.html"
 target="topicview">HelloTopic</a><br />
 </td>
 </tr>
@@ -3633,7 +3635,7 @@ target="topicview">HelloTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="imphellotopic.htm"
+<td style="text-align: left;"><a href="imphellotopic.html"
 target="topicview">ImpHelloTopic</a><br />
 </td>
 </tr>
@@ -3649,7 +3651,7 @@ target="topicview">ImpHelloTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="byetopic.htm"
+<td style="text-align: left;"><a href="byetopic.html"
 target="topicview">ByeTopic</a><br />
 </td>
 </tr>
@@ -3665,7 +3667,7 @@ target="topicview">ByeTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="impbyetopic.htm"
+<td style="text-align: left;"><a href="impbyetopic.html"
 target="topicview">ImpByeTopic</a><br />
 </td>
 </tr>
@@ -3681,7 +3683,7 @@ target="topicview">ImpByeTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="leavebyetopic.htm"
+<td style="text-align: left;"><a href="leavebyetopic.html"
 target="topicview">LeaveByeTopic</a><br />
 </td>
 </tr>
@@ -3697,7 +3699,7 @@ target="topicview">LeaveByeTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="boredbyetopic.htm"
+<td style="text-align: left;"><a href="boredbyetopic.html"
 target="topicview">BoredByeTopic</a><br />
 </td>
 </tr>
@@ -3713,7 +3715,7 @@ target="topicview">BoredByeTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="actorbyetopic.htm"
+<td style="text-align: left;"><a href="actorbyetopic.html"
 target="topicview">ActorByeTopic</a><br />
 </td>
 </tr>
@@ -3729,7 +3731,7 @@ target="topicview">ActorByeTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hellogoodbyetopic.htm"
+<td style="text-align: left;"><a href="hellogoodbyetopic.html"
 target="topicview">HelloGoodbyeTopic</a><br />
 </td>
 </tr>
@@ -3745,7 +3747,7 @@ target="topicview">HelloGoodbyeTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="misctopic.htm"
+<td style="text-align: left;"><a href="misctopic.html"
 target="topicview">MiscTopic</a><br />
 </td>
 </tr>
@@ -3761,7 +3763,7 @@ target="topicview">MiscTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="topicgroup.htm"
+<td style="text-align: left;"><a href="topicgroup.html"
 target="topicview">TopicGroup</a><br />
 </td>
 </tr>
@@ -3792,7 +3794,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaulttopics-overview.htm"
+<td style="text-align: left;"><a href="defaulttopics-overview.html"
 target="topicview">DefaultTopics - Overview</a><br />
 </td>
 </tr>
@@ -3808,7 +3810,7 @@ target="topicview">DefaultTopics - Overview</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaultasktopic.htm"
+<td style="text-align: left;"><a href="defaultasktopic.html"
 target="topicview">DefaultAskTopic</a><br />
 </td>
 </tr>
@@ -3824,7 +3826,7 @@ target="topicview">DefaultAskTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaulttelltopic.htm"
+<td style="text-align: left;"><a href="defaulttelltopic.html"
 target="topicview">DefaultTellTopic</a><br />
 </td>
 </tr>
@@ -3840,7 +3842,7 @@ target="topicview">DefaultTellTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaultasktelltopic.htm"
+<td style="text-align: left;"><a href="defaultasktelltopic.html"
 target="topicview">DefaultAskTellTopic</a><br />
 </td>
 </tr>
@@ -3856,7 +3858,7 @@ target="topicview">DefaultAskTellTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaultgivetopic.htm"
+<td style="text-align: left;"><a href="defaultgivetopic.html"
 target="topicview">DefaultGiveTopic</a><br />
 </td>
 </tr>
@@ -3872,7 +3874,7 @@ target="topicview">DefaultGiveTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaultshowtopic.htm"
+<td style="text-align: left;"><a href="defaultshowtopic.html"
 target="topicview">DefaultShowTopic</a><br />
 </td>
 </tr>
@@ -3888,7 +3890,7 @@ target="topicview">DefaultShowTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaultgiveshowtopic.htm"
+<td style="text-align: left;"><a href="defaultgiveshowtopic.html"
 target="topicview">DefaultGiveShowTopic</a><br />
 </td>
 </tr>
@@ -3904,7 +3906,7 @@ target="topicview">DefaultGiveShowTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaultaskfortopic.htm"
+<td style="text-align: left;"><a href="defaultaskfortopic.html"
 target="topicview">DefaultAskForTopic</a><br />
 </td>
 </tr>
@@ -3920,7 +3922,7 @@ target="topicview">DefaultAskForTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaultanytopic.htm"
+<td style="text-align: left;"><a href="defaultanytopic.html"
 target="topicview">DefaultAnyTopic</a><br />
 </td>
 </tr>
@@ -3951,7 +3953,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="suggestedtopic.htm"
+<td style="text-align: left;"><a href="suggestedtopic.html"
 target="topicview">SuggestedTopic</a><br />
 </td>
 </tr>
@@ -3967,7 +3969,7 @@ target="topicview">SuggestedTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="suggestedasktopic.htm"
+<td style="text-align: left;"><a href="suggestedasktopic.html"
 target="topicview">SuggestedAskTopic</a><br />
 </td>
 </tr>
@@ -3983,7 +3985,7 @@ target="topicview">SuggestedAskTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="suggestedtelltopic.htm"
+<td style="text-align: left;"><a href="suggestedtelltopic.html"
 target="topicview">SuggestedTellTopic</a><br />
 </td>
 </tr>
@@ -3999,7 +4001,7 @@ target="topicview">SuggestedTellTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="suggestedgivetopic.htm"
+<td style="text-align: left;"><a href="suggestedgivetopic.html"
 target="topicview">SuggestedGiveTopic</a><br />
 </td>
 </tr>
@@ -4015,7 +4017,7 @@ target="topicview">SuggestedGiveTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="suggestedshowtopic.htm"
+<td style="text-align: left;"><a href="suggestedshowtopic.html"
 target="topicview">SuggestedShowTopic</a><br />
 </td>
 </tr>
@@ -4031,7 +4033,7 @@ target="topicview">SuggestedShowTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="suggestedyestopic.htm"
+<td style="text-align: left;"><a href="suggestedyestopic.html"
 target="topicview">SuggestedYesTopic</a><br />
 </td>
 </tr>
@@ -4047,7 +4049,7 @@ target="topicview">SuggestedYesTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="suggestednotopic.htm"
+<td style="text-align: left;"><a href="suggestednotopic.html"
 target="topicview">SuggestedNoTopic</a><br />
 </td>
 </tr>
@@ -4063,7 +4065,7 @@ target="topicview">SuggestedNoTopic</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="suggestedtopictree.htm"
+<td style="text-align: left;"><a href="suggestedtopictree.html"
 target="topicview">SuggestedTopicTree</a><br />
 </td>
 </tr>
@@ -4079,7 +4081,7 @@ target="topicview">SuggestedTopicTree</a><br />
 <tr>
 <td style="text-align: right;" width="72" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="limitsuggestions.htm"
+<td style="text-align: left;"><a href="limitsuggestions.html"
 target="topicview">limitSuggestions</a><br />
 </td>
 </tr>
@@ -4110,7 +4112,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="conversationnodes-overview.htm"
+<td style="text-align: left;"><a href="conversationnodes-overview.html"
 target="topicview">Conversation Nodes - Overview</a><br />
 </td>
 </tr>
@@ -4126,7 +4128,7 @@ target="topicview">Conversation Nodes - Overview</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="convnode.htm"
+<td style="text-align: left;"><a href="convnode.html"
 target="topicview">ConvNode</a><br />
 </td>
 </tr>
@@ -4142,7 +4144,7 @@ target="topicview">ConvNode</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="yestopic.htm"
+<td style="text-align: left;"><a href="yestopic.html"
 target="topicview">YesTopic</a><br />
 </td>
 </tr>
@@ -4158,7 +4160,7 @@ target="topicview">YesTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="notopic.htm"
+<td style="text-align: left;"><a href="notopic.html"
 target="topicview">NoTopic</a><br />
 </td>
 </tr>
@@ -4174,7 +4176,7 @@ target="topicview">NoTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="specialtopic.htm"
+<td style="text-align: left;"><a href="specialtopic.html"
 target="topicview">SpecialTopic</a><br />
 </td>
 </tr>
@@ -4190,7 +4192,7 @@ target="topicview">SpecialTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="initiateconversation.htm"
+<td style="text-align: left;"><a href="initiateconversation.html"
 target="topicview">initiateConversation</a><br />
 </td>
 </tr>
@@ -4221,7 +4223,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="agendaitem.htm"
+<td style="text-align: left;"><a href="agendaitem.html"
 target="topicview">AgendaItem</a><br />
 </td>
 </tr>
@@ -4237,7 +4239,7 @@ target="topicview">AgendaItem</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="convagendaitem.htm"
+<td style="text-align: left;"><a href="convagendaitem.html"
 target="topicview">ConvAgendaItem</a><br />
 </td>
 </tr>
@@ -4253,7 +4255,7 @@ target="topicview">ConvAgendaItem</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="delayedagendaitem.htm"
+<td style="text-align: left;"><a href="delayedagendaitem.html"
 target="topicview">DelayedAgendaItem</a><br />
 </td>
 </tr>
@@ -4269,7 +4271,7 @@ target="topicview">DelayedAgendaItem</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="moreagendaitemexamples.htm"
+<td style="text-align: left;"><a href="moreagendaitemexamples.html"
 target="topicview">More AgendaItem Examples</a><br />
 </td>
 </tr>
@@ -4300,7 +4302,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="overview-commandingnpcs.htm"
+<td style="text-align: left;"><a href="overview-commandingnpcs.html"
 target="topicview">Overview - Commanding NPCs</a><br />
 </td>
 </tr>
@@ -4316,7 +4318,7 @@ target="topicview">Overview - Commanding NPCs</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="commandtopic.htm"
+<td style="text-align: left;"><a href="commandtopic.html"
 target="topicview">CommandTopic</a><br />
 </td>
 </tr>
@@ -4332,7 +4334,7 @@ target="topicview">CommandTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaultcommandtopic.htm"
+<td style="text-align: left;"><a href="defaultcommandtopic.html"
 target="topicview">DefaultCommandTopic</a><br />
 </td>
 </tr>
@@ -4348,7 +4350,7 @@ target="topicview">DefaultCommandTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="overridingobeycommand.htm"
+<td style="text-align: left;"><a href="overridingobeycommand.html"
 target="topicview">Overriding obeyCommand</a><br />
 </td>
 </tr>
@@ -4364,7 +4366,7 @@ target="topicview">Overriding obeyCommand</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="tcommandtopic.htm"
+<td style="text-align: left;"><a href="tcommandtopic.html"
 target="topicview">TCommandTopic</a><br />
 </td>
 </tr>
@@ -4380,7 +4382,7 @@ target="topicview">TCommandTopic</a><br />
 <tr>
 <td style="text-align: right;" width="56" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="amodifieddefaultcommandtopic.htm"
+<td style="text-align: left;"><a href="amodifieddefaultcommandtopic.html"
 target="topicview">A Modified DefaultCommandTopic</a><br />
 </td>
 </tr>
@@ -4411,7 +4413,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="consultable.htm"
+<td style="text-align: left;"><a href="consultable.html"
 target="topicview">Consultable</a><br />
 </td>
 </tr>
@@ -4427,7 +4429,7 @@ target="topicview">Consultable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="consulttopic.htm"
+<td style="text-align: left;"><a href="consulttopic.html"
 target="topicview">ConsultTopic</a><br />
 </td>
 </tr>
@@ -4443,7 +4445,7 @@ target="topicview">ConsultTopic</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaultconsulttopic.htm"
+<td style="text-align: left;"><a href="defaultconsulttopic.html"
 target="topicview">DefaultConsultTopic</a><br />
 </td>
 </tr>
@@ -4474,7 +4476,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="scoring-overview.htm"
+<td style="text-align: left;"><a href="scoring-overview.html"
 target="topicview">Scoring - Overview</a><br />
 </td>
 </tr>
@@ -4490,7 +4492,7 @@ target="topicview">Scoring - Overview</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="addtoscore.htm"
+<td style="text-align: left;"><a href="addtoscore.html"
 target="topicview">addToScore</a><br />
 </td>
 </tr>
@@ -4506,7 +4508,7 @@ target="topicview">addToScore</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="achievement.htm"
+<td style="text-align: left;"><a href="achievement.html"
 target="topicview">Achievement</a><br />
 </td>
 </tr>
@@ -4522,7 +4524,7 @@ target="topicview">Achievement</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="simpleachievement.htm"
+<td style="text-align: left;"><a href="simpleachievement.html"
 target="topicview">SimpleAchievement</a><br />
 </td>
 </tr>
@@ -4538,7 +4540,7 @@ target="topicview">SimpleAchievement</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="awardpoints.htm"
+<td style="text-align: left;"><a href="awardpoints.html"
 target="topicview">awardPoints</a><br />
 </td>
 </tr>
@@ -4554,7 +4556,7 @@ target="topicview">awardPoints</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="awardpointsonce.htm"
+<td style="text-align: left;"><a href="awardpointsonce.html"
 target="topicview">awardPointsOnce</a><br />
 </td>
 </tr>
@@ -4570,7 +4572,7 @@ target="topicview">awardPointsOnce</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="scoreranktable.htm"
+<td style="text-align: left;"><a href="scoreranktable.html"
 target="topicview">scoreRankTable</a><br />
 </td>
 </tr>
@@ -4586,7 +4588,7 @@ target="topicview">scoreRankTable</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="maxscore.htm"
+<td style="text-align: left;"><a href="maxscore.html"
 target="topicview">maxScore</a><br />
 </td>
 </tr>
@@ -4617,7 +4619,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hints-overview.htm"
+<td style="text-align: left;"><a href="hints-overview.html"
 target="topicview">Hints - Overview</a><br />
 </td>
 </tr>
@@ -4633,7 +4635,7 @@ target="topicview">Hints - Overview</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="tophintmenu.htm"
+<td style="text-align: left;"><a href="tophintmenu.html"
 target="topicview">TopHintMenu</a><br />
 </td>
 </tr>
@@ -4649,7 +4651,7 @@ target="topicview">TopHintMenu</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hintmenu.htm"
+<td style="text-align: left;"><a href="hintmenu.html"
 target="topicview">HintMenu</a><br />
 </td>
 </tr>
@@ -4665,7 +4667,7 @@ target="topicview">HintMenu</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="goal.htm"
+<td style="text-align: left;"><a href="goal.html"
 target="topicview">Goal</a><br />
 </td>
 </tr>
@@ -4681,7 +4683,7 @@ target="topicview">Goal</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hint.htm"
+<td style="text-align: left;"><a href="hint.html"
 target="topicview">Hint</a><br />
 </td>
 </tr>
@@ -4712,7 +4714,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="concludingremarks.htm"
+<td style="text-align: left;"><a href="concludingremarks.html"
 target="topicview">Concluding Remarks</a><br />
 </td>
 </tr>
@@ -4728,7 +4730,7 @@ target="topicview">Concluding Remarks</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="languageinformation.htm"
+<td style="text-align: left;"><a href="languageinformation.html"
 target="topicview">Language Information</a><br />
 </td>
 </tr>
@@ -4744,7 +4746,7 @@ target="topicview">Language Information</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="definingverbs.htm"
+<td style="text-align: left;"><a href="definingverbs.html"
 target="topicview">Defining Verbs</a><br />
 </td>
 </tr>
@@ -4761,7 +4763,7 @@ target="topicview">Defining Verbs</a><br />
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
 <td style="text-align: left;"><a
-href="messagesubstitutionparameters.htm" target="topicview">Message
+href="messagesubstitutionparameters.html" target="topicview">Message
 Substitution Parameters</a><br />
 </td>
 </tr>
@@ -4777,7 +4779,7 @@ Substitution Parameters</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="pasttense.htm"
+<td style="text-align: left;"><a href="pasttense.html"
 target="topicview">Past Tense</a><br />
 </td>
 </tr>
@@ -4808,7 +4810,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="achievementtemplate.htm"
+<td style="text-align: left;"><a href="achievementtemplate.html"
 target="topicview">Achievement Template</a><br />
 </td>
 </tr>
@@ -4824,7 +4826,7 @@ target="topicview">Achievement Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="actortemplate.htm"
+<td style="text-align: left;"><a href="actortemplate.html"
 target="topicview">Actor Template</a><br />
 </td>
 </tr>
@@ -4840,7 +4842,7 @@ target="topicview">Actor Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="alttopictemplate.htm"
+<td style="text-align: left;"><a href="alttopictemplate.html"
 target="topicview">AltTopic Template</a><br />
 </td>
 </tr>
@@ -4856,7 +4858,7 @@ target="topicview">AltTopic Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="convnodetemplate.htm"
+<td style="text-align: left;"><a href="convnodetemplate.html"
 target="topicview">ConvNode Template</a><br />
 </td>
 </tr>
@@ -4872,7 +4874,7 @@ target="topicview">ConvNode Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="deadendconnectortemplate.htm"
+<td style="text-align: left;"><a href="deadendconnectortemplate.html"
 target="topicview">DeadEndConnectorTemplate</a><br />
 </td>
 </tr>
@@ -4888,7 +4890,7 @@ target="topicview">DeadEndConnectorTemplate</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="defaulttopictemplate.htm"
+<td style="text-align: left;"><a href="defaulttopictemplate.html"
 target="topicview">DefaultTopic Template</a><br />
 </td>
 </tr>
@@ -4904,7 +4906,7 @@ target="topicview">DefaultTopic Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="enterabletemplate.htm"
+<td style="text-align: left;"><a href="enterabletemplate.html"
 target="topicview">Enterable Template</a><br />
 </td>
 </tr>
@@ -4920,7 +4922,7 @@ target="topicview">Enterable Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="exitabletemplate.htm"
+<td style="text-align: left;"><a href="exitabletemplate.html"
 target="topicview">Exitable Template</a><br />
 </td>
 </tr>
@@ -4936,7 +4938,7 @@ target="topicview">Exitable Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="eventlisttemplate.htm"
+<td style="text-align: left;"><a href="eventlisttemplate.html"
 target="topicview">EventList Template</a><br />
 </td>
 </tr>
@@ -4952,7 +4954,7 @@ target="topicview">EventList Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="footnotetemplate.htm"
+<td style="text-align: left;"><a href="footnotetemplate.html"
 target="topicview">Footnote Template</a><br />
 </td>
 </tr>
@@ -4968,7 +4970,7 @@ target="topicview">Footnote Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="goaltemplate.htm"
+<td style="text-align: left;"><a href="goaltemplate.html"
 target="topicview">Goal Template</a><br />
 </td>
 </tr>
@@ -4984,7 +4986,7 @@ target="topicview">Goal Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="hinttemplate.htm"
+<td style="text-align: left;"><a href="hinttemplate.html"
 target="topicview">Hint Template</a><br />
 </td>
 </tr>
@@ -5000,7 +5002,7 @@ target="topicview">Hint Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="menuitemtemplate.htm"
+<td style="text-align: left;"><a href="menuitemtemplate.html"
 target="topicview">MenuItem Template</a><br />
 </td>
 </tr>
@@ -5016,7 +5018,7 @@ target="topicview">MenuItem Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="menulongtopicitemtemplate.htm"
+<td style="text-align: left;"><a href="menulongtopicitemtemplate.html"
 target="topicview">MenuLongTopicItem Template</a><br />
 </td>
 </tr>
@@ -5032,7 +5034,7 @@ target="topicview">MenuLongTopicItem Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="menutopicitemtemplate.htm"
+<td style="text-align: left;"><a href="menutopicitemtemplate.html"
 target="topicview">MenuTopicItem Template</a><br />
 </td>
 </tr>
@@ -5048,7 +5050,7 @@ target="topicview">MenuTopicItem Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="misctopictemplate.htm"
+<td style="text-align: left;"><a href="misctopictemplate.html"
 target="topicview">MiscTopic Template</a><br />
 </td>
 </tr>
@@ -5064,7 +5066,7 @@ target="topicview">MiscTopic Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="multiloctemplate.htm"
+<td style="text-align: left;"><a href="multiloctemplate.html"
 target="topicview">MultiLoc Template</a><br />
 </td>
 </tr>
@@ -5080,7 +5082,7 @@ target="topicview">MultiLoc Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="notravelmessagetemplate.htm"
+<td style="text-align: left;"><a href="notravelmessagetemplate.html"
 target="topicview">NoTravelMessage Template</a><br />
 </td>
 </tr>
@@ -5096,7 +5098,7 @@ target="topicview">NoTravelMessage Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="onewayroomconnectortemplate.htm"
+<td style="text-align: left;"><a href="onewayroomconnectortemplate.html"
 target="topicview">OneWayRoomConnector Template</a><br />
 </td>
 </tr>
@@ -5112,7 +5114,7 @@ target="topicview">OneWayRoomConnector Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="passagetemplate.htm"
+<td style="text-align: left;"><a href="passagetemplate.html"
 target="topicview">Passage Template</a><br />
 </td>
 </tr>
@@ -5128,7 +5130,7 @@ target="topicview">Passage Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="roomtemplate.htm"
+<td style="text-align: left;"><a href="roomtemplate.html"
 target="topicview">Room Template</a><br />
 </td>
 </tr>
@@ -5144,7 +5146,7 @@ target="topicview">Room Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="shuffledeventlisttemplate.htm"
+<td style="text-align: left;"><a href="shuffledeventlisttemplate.html"
 target="topicview">ShuffledEventList Template</a><br />
 </td>
 </tr>
@@ -5160,7 +5162,7 @@ target="topicview">ShuffledEventList Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="specialtopictemplate.htm"
+<td style="text-align: left;"><a href="specialtopictemplate.html"
 target="topicview">SpecialTopic Template</a><br />
 </td>
 </tr>
@@ -5176,7 +5178,7 @@ target="topicview">SpecialTopic Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="styletagtemplate.htm"
+<td style="text-align: left;"><a href="styletagtemplate.html"
 target="topicview">StyleTag Template</a><br />
 </td>
 </tr>
@@ -5192,7 +5194,7 @@ target="topicview">StyleTag Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="synceventlisttemplate.htm"
+<td style="text-align: left;"><a href="synceventlisttemplate.html"
 target="topicview">SyncEventList Template</a><br />
 </td>
 </tr>
@@ -5208,7 +5210,7 @@ target="topicview">SyncEventList Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="thingtemplate.htm"
+<td style="text-align: left;"><a href="thingtemplate.html"
 target="topicview">Thing Template</a><br />
 </td>
 </tr>
@@ -5224,7 +5226,7 @@ target="topicview">Thing Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="thingstatetemplate.htm"
+<td style="text-align: left;"><a href="thingstatetemplate.html"
 target="topicview">ThingState Template</a><br />
 </td>
 </tr>
@@ -5240,7 +5242,7 @@ target="topicview">ThingState Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="topicentrytemplate.htm"
+<td style="text-align: left;"><a href="topicentrytemplate.html"
 target="topicview">TopicEntry Template</a><br />
 </td>
 </tr>
@@ -5256,7 +5258,7 @@ target="topicview">TopicEntry Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="topicgrouptemplate.htm"
+<td style="text-align: left;"><a href="topicgrouptemplate.html"
 target="topicview">TopicGroup Template</a><br />
 </td>
 </tr>
@@ -5272,7 +5274,7 @@ target="topicview">TopicGroup Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="travelmessagetemplate.htm"
+<td style="text-align: left;"><a href="travelmessagetemplate.html"
 target="topicview">TravelMessage Template</a><br />
 </td>
 </tr>
@@ -5288,7 +5290,7 @@ target="topicview">TravelMessage Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="unthingtemplate.htm"
+<td style="text-align: left;"><a href="unthingtemplate.html"
 target="topicview">Unthing Template</a><br />
 </td>
 </tr>
@@ -5304,7 +5306,7 @@ target="topicview">Unthing Template</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="vocabobjecttemplate.htm"
+<td style="text-align: left;"><a href="vocabobjecttemplate.html"
 target="topicview">VocabObject Template</a><br />
 </td>
 </tr>
@@ -5335,7 +5337,7 @@ src="cicon2.gif" data-border="0" /></td>
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changesforv3_1_0.htm"
+<td style="text-align: left;"><a href="changesforv3_1_0.html"
 target="topicview">Changes for v3.1.0</a><br />
 </td>
 </tr>
@@ -5351,7 +5353,7 @@ target="topicview">Changes for v3.1.0</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changesforv3_0_17.htm"
+<td style="text-align: left;"><a href="changesforv3_0_17.html"
 target="topicview">Changes for v3.0.16</a><br />
 </td>
 </tr>
@@ -5367,7 +5369,7 @@ target="topicview">Changes for v3.0.16</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changesforv_3_0_12.htm"
+<td style="text-align: left;"><a href="changesforv_3_0_12.html"
 target="topicview">Changes for v3.0.12</a><br />
 </td>
 </tr>
@@ -5383,7 +5385,7 @@ target="topicview">Changes for v3.0.12</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changes2.htm"
+<td style="text-align: left;"><a href="changes2.html"
 target="topicview">Changes for v3.0.10</a><br />
 </td>
 </tr>
@@ -5399,7 +5401,7 @@ target="topicview">Changes for v3.0.10</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changes.htm"
+<td style="text-align: left;"><a href="changes.html"
 target="topicview">Changes for v3.0.9</a><br />
 </td>
 </tr>
@@ -5415,7 +5417,7 @@ target="topicview">Changes for v3.0.9</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changesforv3_0_8.htm"
+<td style="text-align: left;"><a href="changesforv3_0_8.html"
 target="topicview">Changes for v3.0.8</a><br />
 </td>
 </tr>
@@ -5431,7 +5433,7 @@ target="topicview">Changes for v3.0.8</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changesinjuly2004.htm"
+<td style="text-align: left;"><a href="changesinjuly2004.html"
 target="topicview">Changes for July-Sept 2004</a><br />
 </td>
 </tr>
@@ -5447,7 +5449,7 @@ target="topicview">Changes for July-Sept 2004</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changesforv3_0_7.htm"
+<td style="text-align: left;"><a href="changesforv3_0_7.html"
 target="topicview">Changes for v3.0.7</a><br />
 </td>
 </tr>
@@ -5463,7 +5465,7 @@ target="topicview">Changes for v3.0.7</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changesforv_3_0_6q.htm"
+<td style="text-align: left;"><a href="changesforv_3_0_6q.html"
 target="topicview">Changes for v.3.0.6q</a><br />
 </td>
 </tr>
@@ -5479,7 +5481,7 @@ target="topicview">Changes for v.3.0.6q</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changesformay2004.htm"
+<td style="text-align: left;"><a href="changesformay2004.html"
 target="topicview">Changes for May 2004</a><br />
 </td>
 </tr>
@@ -5495,7 +5497,7 @@ target="topicview">Changes for May 2004</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="changesforv3_0_6p.htm"
+<td style="text-align: left;"><a href="changesforv3_0_6p.html"
 target="topicview">Changes for v3.0.6p</a><br />
 </td>
 </tr>
@@ -5511,7 +5513,7 @@ target="topicview">Changes for v3.0.6p</a><br />
 <tr>
 <td style="text-align: right;" width="40" data-valign="top"><img
 src="cicon9.gif" data-border="0" /></td>
-<td style="text-align: left;"><a href="marchapril2004.htm"
+<td style="text-align: left;"><a href="marchapril2004.html"
 target="topicview">March/April 2004</a><br />
 </td>
 </tr>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](crossingthestream.htm)
-  [\[Next\]](callingaspadeaspade.htm)*
+*[\[Previous\]](crossingthestream.html)
+  [\[Next\]](callingaspadeaspade.html)*
 
 ## Burying the Boots
 
@@ -580,7 +582,7 @@ been.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](crossingthestream.htm)
-  [\[Next\]](callingaspadeaspade.htm)*
+*[\[Previous\]](crossingthestream.html)
+  [\[Next\]](callingaspadeaspade.html)*
 
 </div>

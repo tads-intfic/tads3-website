@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,8 +11,8 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>General Introduction<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="generalintroduction.htm">[Main]</a> <a
-href="thesamplegame.htm">[Next]</a></td>
+href="generalintroduction.html">[Main]</a> <a
+href="thesamplegame.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -108,8 +110,8 @@ significantly older version of TADS 3 a great deal in this guide
 <tr data-valign="top">
 <td width="14">·</td>
 <td>Update to TADS 3.1 before attempting to work through this Guide. See
-<a href="%20http://www.tads.org/t3dl.htm"
-target="_top">http://www.tads.org/t3dl.htm</a>.  <br />
+<a href="%20http://www.tads.org/t3dl.html"
+target="_top">http://www.tads.org/t3dl.html</a>.  <br />
 </td>
 </tr>
 </tbody>

@@ -1,0 +1,276 @@
+<p><span class="title">ReplaceRedirector</span><span class="type">class</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#950">950</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A ReplaceRedirector is a Redirector that uses replaceAction (or its
+execNestedAction equivalent) to redirect one action to another.
+
+`class `**`ReplaceRedirector`**` :   `[`Redirector`](../object/Redirector.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ReplaceRedirector</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Redirector<code class="language-plaintext highlighter-rouge">](../object/Redirector.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ReplaceRedirector</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Action<code class="language-plaintext highlighter-rouge">](../object/Action.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>IAction<code class="language-plaintext highlighter-rouge">](../object/IAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>LiteralAction<code class="language-plaintext highlighter-rouge">](../object/LiteralAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>MiscConvAction<code class="language-plaintext highlighter-rouge">](../object/MiscConvAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NumericAction<code class="language-plaintext highlighter-rouge">](../object/NumericAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SystemAction<code class="language-plaintext highlighter-rouge">](../object/SystemAction.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>FileOpAction<code class="language-plaintext highlighter-rouge">](../object/FileOpAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TopicAction<code class="language-plaintext highlighter-rouge">](../object/TopicAction.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>ImplicitConversationAction<code class="language-plaintext highlighter-rouge">](../object/ImplicitConversationAction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TAction<code class="language-plaintext highlighter-rouge">](../object/TAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>LiteralTAction<code class="language-plaintext highlighter-rouge">](../object/LiteralTAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NumericTAction<code class="language-plaintext highlighter-rouge">](../object/NumericTAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TIAction<code class="language-plaintext highlighter-rouge">](../object/TIAction.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>TIAAction<code class="language-plaintext highlighter-rouge">](../object/TIAAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TopicTAction<code class="language-plaintext highlighter-rouge">](../object/TopicTAction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TravelAction<code class="language-plaintext highlighter-rouge">](../object/TravelAction.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ActorTopicEntry<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AltTopic<code class="language-plaintext highlighter-rouge">](../object/AltTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskAboutForTopic<code class="language-plaintext highlighter-rouge">](../object/AskAboutForTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskForTopic<code class="language-plaintext highlighter-rouge">](../object/AskForTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskTellGiveShowTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellGiveShowTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskTellShowTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellShowTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskTellTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskTopic<code class="language-plaintext highlighter-rouge">](../object/AskTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>CommandTopic<code class="language-plaintext highlighter-rouge">](../object/CommandTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultAnyTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAnyTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>DefaultAgendaTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAgendaTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>DefaultAnyNonSayTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAnyNonSayTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultAskForTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskForTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultAskQueryTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskQueryTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultAskTellTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskTellTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultAskTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultCommandTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultCommandTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultConversationTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultConversationTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>DefaultNonSayTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultNonSayTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultGiveShowTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultGiveShowTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultGiveTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultGiveTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultQueryTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultQueryTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultSayQueryTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultSayQueryTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultSayTellTalkTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultSayTellTalkTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultSayTellTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultSayTellTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultSayTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultSayTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultShowTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultShowTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultTalkTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultTalkTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultTellTalkTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultTellTalkTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DefaultTellTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultTellTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>GiveShowTopic<code class="language-plaintext highlighter-rouge">](../object/GiveShowTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>GiveTopic<code class="language-plaintext highlighter-rouge">](../object/GiveTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>InitiateTopic<code class="language-plaintext highlighter-rouge">](../object/InitiateTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NodeContinuationTopic<code class="language-plaintext highlighter-rouge">](../object/NodeContinuationTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NodeEndCheck<code class="language-plaintext highlighter-rouge">](../object/NodeEndCheck.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MiscTopic<code class="language-plaintext highlighter-rouge">](../object/MiscTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>GreetingTopic<code class="language-plaintext highlighter-rouge">](../object/GreetingTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>ActorByeTopic<code class="language-plaintext highlighter-rouge">](../object/ActorByeTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>BoredByeTopic<code class="language-plaintext highlighter-rouge">](../object/BoredByeTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>ByeTopic<code class="language-plaintext highlighter-rouge">](../object/ByeTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>HelloGoodbyeTopic<code class="language-plaintext highlighter-rouge">](../object/HelloGoodbyeTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>HelloTopic<code class="language-plaintext highlighter-rouge">](../object/HelloTopic.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>ActorHelloTopic<code class="language-plaintext highlighter-rouge">](../object/ActorHelloTopic.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>ImpHelloTopic<code class="language-plaintext highlighter-rouge">](../object/ImpHelloTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>ImpByeTopic<code class="language-plaintext highlighter-rouge">](../object/ImpByeTopic.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>LeaveByeTopic<code class="language-plaintext highlighter-rouge">](../object/LeaveByeTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>HitTopic<code class="language-plaintext highlighter-rouge">](../object/HitTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>KissTopic<code class="language-plaintext highlighter-rouge">](../object/KissTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NoTopic<code class="language-plaintext highlighter-rouge">](../object/NoTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TouchTopic<code class="language-plaintext highlighter-rouge">](../object/TouchTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>YesNoTopic<code class="language-plaintext highlighter-rouge">](../object/YesNoTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>YesTopic<code class="language-plaintext highlighter-rouge">](../object/YesTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SceneTopic<code class="language-plaintext highlighter-rouge">](../object/SceneTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SceneEndTopic<code class="language-plaintext highlighter-rouge">](../object/SceneEndTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SceneStartTopic<code class="language-plaintext highlighter-rouge">](../object/SceneStartTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ShowTopic<code class="language-plaintext highlighter-rouge">](../object/ShowTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SlaveTopic<code class="language-plaintext highlighter-rouge">](../object/SlaveTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SpecialTopic<code class="language-plaintext highlighter-rouge">](../object/SpecialTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>QueryTopic<code class="language-plaintext highlighter-rouge">](../object/QueryTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SayTopic<code class="language-plaintext highlighter-rouge">](../object/SayTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TalkTopic<code class="language-plaintext highlighter-rouge">](../object/TalkTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskTalkTopic<code class="language-plaintext highlighter-rouge">](../object/AskTalkTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskTellTalkTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellTalkTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TellTalkTopic<code class="language-plaintext highlighter-rouge">](../object/TellTalkTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TellTalkShowTopic<code class="language-plaintext highlighter-rouge">](../object/TellTalkShowTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TellTopic<code class="language-plaintext highlighter-rouge">](../object/TellTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>BeforeRule<code class="language-plaintext highlighter-rouge">](../object/BeforeRule.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Thing<code class="language-plaintext highlighter-rouge">](../object/Thing.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Actor<code class="language-plaintext highlighter-rouge">](../object/Actor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Button<code class="language-plaintext highlighter-rouge">](../object/Button.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Collective<code class="language-plaintext highlighter-rouge">](../object/Collective.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DispensingCollective<code class="language-plaintext highlighter-rouge">](../object/DispensingCollective.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Consultable<code class="language-plaintext highlighter-rouge">](../object/Consultable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Container<code class="language-plaintext highlighter-rouge">](../object/Container.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Booth<code class="language-plaintext highlighter-rouge">](../object/Booth.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>OpenableContainer<code class="language-plaintext highlighter-rouge">](../object/OpenableContainer.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>KeyedContainer<code class="language-plaintext highlighter-rouge">](../object/KeyedContainer.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>LockableContainer<code class="language-plaintext highlighter-rouge">](../object/LockableContainer.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Door<code class="language-plaintext highlighter-rouge">](../object/Door.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SecretDoor<code class="language-plaintext highlighter-rouge">](../object/SecretDoor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Fixture<code class="language-plaintext highlighter-rouge">](../object/Fixture.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>CollectiveGroup<code class="language-plaintext highlighter-rouge">](../object/CollectiveGroup.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>MobileCollectiveGroup<code class="language-plaintext highlighter-rouge">](../object/MobileCollectiveGroup.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Component<code class="language-plaintext highlighter-rouge">](../object/Component.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ContainerDoor<code class="language-plaintext highlighter-rouge">](../object/ContainerDoor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Decoration<code class="language-plaintext highlighter-rouge">](../object/Decoration.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Distant<code class="language-plaintext highlighter-rouge">](../object/Distant.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>RoomPart<code class="language-plaintext highlighter-rouge">](../object/RoomPart.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Ceiling<code class="language-plaintext highlighter-rouge">](../object/Ceiling.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>DefaultWall<code class="language-plaintext highlighter-rouge">](../object/DefaultWall.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>SensoryEmanation<code class="language-plaintext highlighter-rouge">](../object/SensoryEmanation.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Noise<code class="language-plaintext highlighter-rouge">](../object/Noise.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>SimpleNoise<code class="language-plaintext highlighter-rouge">](../object/SimpleNoise.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Odor<code class="language-plaintext highlighter-rouge">](../object/Odor.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>SimpleOdor<code class="language-plaintext highlighter-rouge">](../object/SimpleOdor.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Unthing<code class="language-plaintext highlighter-rouge">](../object/Unthing.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Enterable<code class="language-plaintext highlighter-rouge">](../object/Enterable.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Heavy<code class="language-plaintext highlighter-rouge">](../object/Heavy.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Floor<code class="language-plaintext highlighter-rouge">](../object/Floor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Food<code class="language-plaintext highlighter-rouge">](../object/Food.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Immovable<code class="language-plaintext highlighter-rouge">](../object/Immovable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Key<code class="language-plaintext highlighter-rouge">](../object/Key.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Lever<code class="language-plaintext highlighter-rouge">](../object/Lever.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MinorItem<code class="language-plaintext highlighter-rouge">](../object/MinorItem.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Passage<code class="language-plaintext highlighter-rouge">](../object/Passage.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>PathPassage<code class="language-plaintext highlighter-rouge">](../object/PathPassage.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Player<code class="language-plaintext highlighter-rouge">](../object/Player.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>RearContainer<code class="language-plaintext highlighter-rouge">](../object/RearContainer.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Room<code class="language-plaintext highlighter-rouge">](../object/Room.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>OutdoorRoom<code class="language-plaintext highlighter-rouge">](../object/OutdoorRoom.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Settable<code class="language-plaintext highlighter-rouge">](../object/Settable.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Dial<code class="language-plaintext highlighter-rouge">](../object/Dial.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>NumberedDial<code class="language-plaintext highlighter-rouge">](../object/NumberedDial.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SimpleAttachable<code class="language-plaintext highlighter-rouge">](../object/SimpleAttachable.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AttachableComponent<code class="language-plaintext highlighter-rouge">](../object/AttachableComponent.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NearbyAttachable<code class="language-plaintext highlighter-rouge">](../object/NearbyAttachable.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Attachable<code class="language-plaintext highlighter-rouge">](../object/Attachable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>StairwayDown<code class="language-plaintext highlighter-rouge">](../object/StairwayDown.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>StairwayUp<code class="language-plaintext highlighter-rouge">](../object/StairwayUp.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SubComponent<code class="language-plaintext highlighter-rouge">](../object/SubComponent.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Surface<code class="language-plaintext highlighter-rouge">](../object/Surface.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Platform<code class="language-plaintext highlighter-rouge">](../object/Platform.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Bed<code class="language-plaintext highlighter-rouge">](../object/Bed.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Chair<code class="language-plaintext highlighter-rouge">](../object/Chair.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Switch<code class="language-plaintext highlighter-rouge">](../object/Switch.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Flashlight<code class="language-plaintext highlighter-rouge">](../object/Flashlight.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SymPassage<code class="language-plaintext highlighter-rouge">](../object/SymPassage.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SymDoor<code class="language-plaintext highlighter-rouge">](../object/SymDoor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SymPathPassage<code class="language-plaintext highlighter-rouge">](../object/SymPathPassage.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SymStairway<code class="language-plaintext highlighter-rouge">](../object/SymStairway.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Underside<code class="language-plaintext highlighter-rouge">](../object/Underside.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Wearable`](../object/Wearable.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>redirect<code class="language-plaintext highlighter-rouge">](#redirect)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>doInstead<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doInstead)</code>  <code class="language-plaintext highlighter-rouge">[</code>doNested<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doNested)</code>  <code class="language-plaintext highlighter-rouge">[</code>doOtherAction<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doOtherAction)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="redirect"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">redirect (cmd, altAction, dobj, :?, iobj, :?, aobj, :?, isReplacement, :, =, true)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#961">961</a>]</p>
+
+<div class="desc">
+
+User code should normally call this method via doInstead rather than
+directly. cmd is the current command object, altAction is the action we
+want to perform instead of the current action, dobj and iobj are the
+direct and indirect objects of the new action, and isReplacement
+determines whether the new action replaces the original one (if true) or
+merely takes place during the execution of the original one, which then
+resumes when the new action is complete (if isReplacement is nil).
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

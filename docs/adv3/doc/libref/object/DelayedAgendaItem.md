@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DelayedAgendaItem</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[5625](../source/actor.t.html#5625)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,22 +10,22 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Odor : SensoryEmanation<br />
 </strong></td>
-<td style="text-align: right;"><a href="simplenoise.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="noise.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="simplenoise.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="noise.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-The Odor class is the big brother of the [SimpleOdor](simpleodor.htm)
+The Odor class is the big brother of the [SimpleOdor](simpleodor.html)
 class we met just a little earlier. It's function is to represent a
 smell emanating an object or pervading a location, but in a way that
 gives the author more control than does the SimpleOdor. To make an
 object the source of an odour (or noise), simply locate the odour (or
 noise) within that object.  
   
-An Odor (or a [Noise](noise.htm) for that matter) provides several
+An Odor (or a [Noise](noise.html) for that matter) provides several
 properties for customisation:  
   
 **sourceDesc** - The description of the odour (or noise) that's added to

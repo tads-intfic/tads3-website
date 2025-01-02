@@ -1,0 +1,164 @@
+<p><span class="title">parser.t</span><span class="type">file</span></p>
+
+<p><a href="../source/parser.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library: parser
+
+This modules defines the language-independent parts of the command
+parser.
+
+Portions based on xiny.t, copyright 2002 by Steve Breslin and
+incorporated by permission.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>ActorResolveResults<code class="language-plaintext highlighter-rouge">](../object/ActorResolveResults.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>AllInContainerNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/AllInContainerNounPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>AllPluralProd<code class="language-plaintext highlighter-rouge">](../object/AllPluralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>AmbigResponseKeeper<code class="language-plaintext highlighter-rouge">](../object/AmbigResponseKeeper.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ArbitraryNounProd<code class="language-plaintext highlighter-rouge">](../object/ArbitraryNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>BasicContainerResolver<code class="language-plaintext highlighter-rouge">](../object/BasicContainerResolver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>BasicPossessiveProd<code class="language-plaintext highlighter-rouge">](../object/BasicPossessiveProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>BasicProd<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>BasicResolveResults<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>BothPluralProd<code class="language-plaintext highlighter-rouge">](../object/BothPluralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ButPossessiveProd<code class="language-plaintext highlighter-rouge">](../object/ButPossessiveProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ButProd<code class="language-plaintext highlighter-rouge">](../object/ButProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CancelCommandLineException<code class="language-plaintext highlighter-rouge">](../object/CancelCommandLineException.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandPhrase(ambiguousConj)<code class="language-plaintext highlighter-rouge">](../object/commandPhrase(ambiguousConj).html)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandPhrase(definiteConj)<code class="language-plaintext highlighter-rouge">](../object/commandPhrase(definiteConj).html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CommandProd<code class="language-plaintext highlighter-rouge">](../object/CommandProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CommandProdWithActor<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithActor.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CommandProdWithAmbiguousConj<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithAmbiguousConj.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CommandProdWithDefiniteConj<code class="language-plaintext highlighter-rouge">](../object/CommandProdWithDefiniteConj.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CommandRanking<code class="language-plaintext highlighter-rouge">](../object/CommandRanking.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CommandRankingByProblem<code class="language-plaintext highlighter-rouge">](../object/CommandRankingByProblem.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CommandRankingByWeakness<code class="language-plaintext highlighter-rouge">](../object/CommandRankingByWeakness.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CommandRankingCriterion<code class="language-plaintext highlighter-rouge">](../object/CommandRankingCriterion.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ContainerNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/ContainerNounPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ContainerResolver<code class="language-plaintext highlighter-rouge">](../object/ContainerResolver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefiniteNounProd<code class="language-plaintext highlighter-rouge">](../object/DefiniteNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefinitePluralProd<code class="language-plaintext highlighter-rouge">](../object/DefinitePluralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DirectionProd<code class="language-plaintext highlighter-rouge">](../object/DirectionProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DisambigPossessiveProd<code class="language-plaintext highlighter-rouge">](../object/DisambigPossessiveProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DisambigProd<code class="language-plaintext highlighter-rouge">](../object/DisambigProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>EmptyLiteralPhraseProd<code class="language-plaintext highlighter-rouge">](../object/EmptyLiteralPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>EmptyNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/EmptyNounPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>EmptyTopicPhraseProd<code class="language-plaintext highlighter-rouge">](../object/EmptyTopicPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>EverythingButProd<code class="language-plaintext highlighter-rouge">](../object/EverythingButProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>EverythingProd<code class="language-plaintext highlighter-rouge">](../object/EverythingProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExactQuantifiedPluralProd<code class="language-plaintext highlighter-rouge">](../object/ExactQuantifiedPluralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExactQuantifiedPossessivePluralProd<code class="language-plaintext highlighter-rouge">](../object/ExactQuantifiedPossessivePluralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExceptListProd<code class="language-plaintext highlighter-rouge">](../object/ExceptListProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExceptResolver<code class="language-plaintext highlighter-rouge">](../object/ExceptResolver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExceptResults<code class="language-plaintext highlighter-rouge">](../object/ExceptResults.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>firstCommandPhrase(commandOnly)<code class="language-plaintext highlighter-rouge">](../object/firstCommandPhrase(commandOnly).html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FirstCommandProd<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FirstCommandProdWithActor<code class="language-plaintext highlighter-rouge">](../object/FirstCommandProdWithActor.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HerAdjProd<code class="language-plaintext highlighter-rouge">](../object/HerAdjProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HerProd<code class="language-plaintext highlighter-rouge">](../object/HerProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HerselfProd<code class="language-plaintext highlighter-rouge">](../object/HerselfProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HersNounProd<code class="language-plaintext highlighter-rouge">](../object/HersNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HimProd<code class="language-plaintext highlighter-rouge">](../object/HimProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HimselfProd<code class="language-plaintext highlighter-rouge">](../object/HimselfProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HisAdjProd<code class="language-plaintext highlighter-rouge">](../object/HisAdjProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HisNounProd<code class="language-plaintext highlighter-rouge">](../object/HisNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ImpliedActorNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/ImpliedActorNounPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>IndefiniteNounButProd<code class="language-plaintext highlighter-rouge">](../object/IndefiniteNounButProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>IndefiniteNounProd<code class="language-plaintext highlighter-rouge">](../object/IndefiniteNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ItProd<code class="language-plaintext highlighter-rouge">](../object/ItProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ItsAdjProd<code class="language-plaintext highlighter-rouge">](../object/ItsAdjProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ItselfProd<code class="language-plaintext highlighter-rouge">](../object/ItselfProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ItsNounProd<code class="language-plaintext highlighter-rouge">](../object/ItsNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LayeredNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/LayeredNounPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListButProd<code class="language-plaintext highlighter-rouge">](../object/ListButProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LiteralProd<code class="language-plaintext highlighter-rouge">](../object/LiteralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>MeProd<code class="language-plaintext highlighter-rouge">](../object/MeProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>MineNounProd<code class="language-plaintext highlighter-rouge">](../object/MineNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>MissingObjectRanking<code class="language-plaintext highlighter-rouge">](../object/MissingObjectRanking.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>MyAdjProd<code class="language-plaintext highlighter-rouge">](../object/MyAdjProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>NounListProd<code class="language-plaintext highlighter-rouge">](../object/NounListProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>NounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>NounPhraseWithVocab<code class="language-plaintext highlighter-rouge">](../object/NounPhraseWithVocab.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>OopsResults<code class="language-plaintext highlighter-rouge">](../object/OopsResults.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ParseFailureException<code class="language-plaintext highlighter-rouge">](../object/ParseFailureException.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ParserException<code class="language-plaintext highlighter-rouge">](../object/ParserException.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PluralProd<code class="language-plaintext highlighter-rouge">](../object/PluralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PossessiveNounProd<code class="language-plaintext highlighter-rouge">](../object/PossessiveNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PossessivePluralProd<code class="language-plaintext highlighter-rouge">](../object/PossessivePluralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PossessivePronounAdjProd<code class="language-plaintext highlighter-rouge">](../object/PossessivePronounAdjProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PossessivePronounNounProd<code class="language-plaintext highlighter-rouge">](../object/PossessivePronounNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PreResolvedAmbigProd<code class="language-plaintext highlighter-rouge">](../object/PreResolvedAmbigProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PreResolvedLiteralProd<code class="language-plaintext highlighter-rouge">](../object/PreResolvedLiteralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PreResolvedProd<code class="language-plaintext highlighter-rouge">](../object/PreResolvedProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PronounProd<code class="language-plaintext highlighter-rouge">](../object/PronounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>QuantifiedPluralProd<code class="language-plaintext highlighter-rouge">](../object/QuantifiedPluralProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ReflexivePronounProd<code class="language-plaintext highlighter-rouge">](../object/ReflexivePronounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ReplacementCommandStringException<code class="language-plaintext highlighter-rouge">](../object/ReplacementCommandStringException.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ResolveAsker<code class="language-plaintext highlighter-rouge">](../object/ResolveAsker.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ResolveInfo<code class="language-plaintext highlighter-rouge">](../object/ResolveInfo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ResolveResults<code class="language-plaintext highlighter-rouge">](../object/ResolveResults.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RetryCommandTokensException<code class="language-plaintext highlighter-rouge">](../object/RetryCommandTokensException.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SingleNounProd<code class="language-plaintext highlighter-rouge">](../object/SingleNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SingleNounWithListProd<code class="language-plaintext highlighter-rouge">](../object/SingleNounWithListProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>StillToResolveItem<code class="language-plaintext highlighter-rouge">](../object/StillToResolveItem.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TerminateCommandException<code class="language-plaintext highlighter-rouge">](../object/TerminateCommandException.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TheirAdjProd<code class="language-plaintext highlighter-rouge">](../object/TheirAdjProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TheirsNounProd<code class="language-plaintext highlighter-rouge">](../object/TheirsNounProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ThemProd<code class="language-plaintext highlighter-rouge">](../object/ThemProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ThemselvesProd<code class="language-plaintext highlighter-rouge">](../object/ThemselvesProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TokenListProd<code class="language-plaintext highlighter-rouge">](../object/TokenListProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicProd<code class="language-plaintext highlighter-rouge">](../object/TopicProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TryAsActorResolveResults<code class="language-plaintext highlighter-rouge">](../object/TryAsActorResolveResults.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>VagueContainerDefiniteNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/VagueContainerDefiniteNounPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>VagueContainerIndefiniteNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/VagueContainerIndefiniteNounPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>VagueContainerNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/VagueContainerNounPhraseProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>VagueContainerResolver<code class="language-plaintext highlighter-rouge">](../object/VagueContainerResolver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>YouProd<code class="language-plaintext highlighter-rouge">](../object/YouProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>YourAdjProd<code class="language-plaintext highlighter-rouge">](../object/YourAdjProd.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>YoursNounProd<code class="language-plaintext highlighter-rouge">](../object/YoursNounProd.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>rankByActorSpecified<code class="language-plaintext highlighter-rouge">](../object/rankByActorSpecified.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByAllExcluded<code class="language-plaintext highlighter-rouge">](../object/rankByAllExcluded.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByAmbiguity<code class="language-plaintext highlighter-rouge">](../object/rankByAmbiguity.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByEmptyBut<code class="language-plaintext highlighter-rouge">](../object/rankByEmptyBut.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByEndAdj<code class="language-plaintext highlighter-rouge">](../object/rankByEndAdj.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByIndefinite<code class="language-plaintext highlighter-rouge">](../object/rankByIndefinite.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByInsufficient<code class="language-plaintext highlighter-rouge">](../object/rankByInsufficient.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByListForSingle<code class="language-plaintext highlighter-rouge">](../object/rankByListForSingle.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByLiteralLength<code class="language-plaintext highlighter-rouge">](../object/rankByLiteralLength.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByMiscWordList<code class="language-plaintext highlighter-rouge">](../object/rankByMiscWordList.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByMissing<code class="language-plaintext highlighter-rouge">](../object/rankByMissing.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByNonMatch<code class="language-plaintext highlighter-rouge">](../object/rankByNonMatch.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByNonMatchPoss<code class="language-plaintext highlighter-rouge">](../object/rankByNonMatchPoss.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByPluralTrunc<code class="language-plaintext highlighter-rouge">](../object/rankByPluralTrunc.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByPronoun<code class="language-plaintext highlighter-rouge">](../object/rankByPronoun.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankBySubcommands<code class="language-plaintext highlighter-rouge">](../object/rankBySubcommands.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByTokenCount<code class="language-plaintext highlighter-rouge">](../object/rankByTokenCount.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByTrunc<code class="language-plaintext highlighter-rouge">](../object/rankByTrunc.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByUnwantedPlural<code class="language-plaintext highlighter-rouge">](../object/rankByUnwantedPlural.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByVerbStructure<code class="language-plaintext highlighter-rouge">](../object/rankByVerbStructure.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByVocabNonMatch<code class="language-plaintext highlighter-rouge">](../object/rankByVocabNonMatch.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankByWeakness<code class="language-plaintext highlighter-rouge">](../object/rankByWeakness.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getResolvedObjects<code class="language-plaintext highlighter-rouge">](#getResolvedObjects)</code>  <code class="language-plaintext highlighter-rouge">[</code>intersectNounLists<code class="language-plaintext highlighter-rouge">](#intersectNounLists)</code>  <code class="language-plaintext highlighter-rouge">[</code>spliceList<code class="language-plaintext highlighter-rouge">](#spliceList)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryAskingForObject<code class="language-plaintext highlighter-rouge">](#tryAskingForObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryOops<code class="language-plaintext highlighter-rouge">](#tryOops)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryOopsMain<code class="language-plaintext highlighter-rouge">](#tryOopsMain)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="getResolvedObjects"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getResolvedObjects (lst)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#485">485</a>]</p>
+
+<div class="desc">
+
+Extract the objects from a list obtained with resolveNouns(). Returns a
+list composed only of the objects in the resolution information list.
+
+</div>
+
+<p><span id="intersectNounLists"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">intersectNounLists (lst1, lst2)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#447">447</a>]</p>
+
+<div class="desc">
+
+Intersect two resolved noun lists, returning a list consisting only of
+the unique objects from the two lists.
+
+</div>
+
+<p><span id="spliceList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">spliceList (lst, idx, newItems)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4551">4551</a>]</p>
+
+<div class="desc">
+
+splice a new sublist into a list, replacing the item at 'idx'
+
+</div>
+
+<p><span id="tryAskingForObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryAskingForObject (issuingActor, targetActor, resolver, results, responseProd)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4569">4569</a>]</p>
+
+<div class="desc">
+
+Try reading a response to a missing object question. If we successfully
+read a noun phrase that matches the given production rule, we'll resolve
+it, stash the resolved list in the resolvedObjects\_ property of the
+match tree, and return the match tree. If they enter something that
+doesn't look like a response to the question at all, we'll throw a
+new-command exception to process it.
+
+</div>
+
+<p><span id="tryOops"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryOops (tokList, issuingActor, targetActor, firstTokenIndex, cmdTokenList, cmdType)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4349">4349</a>]</p>
+
+<div class="desc">
+
+Look for an undefined word in a list of tokens, and give the player a
+chance to correct a typo with "OOPS" if appropriate.
+
+If we find an unknown word and we can prompt for interactive resolution,
+we'll do so, and we'll throw an appropriate exception to handle the
+response. If we can't resolve the missing word interactively, we'll
+throw a parse failure exception.
+
+If there are no undefined words in the command, we'll simply return.
+
+tokList is the list of tokens under examination; this is a subset of the
+full command token list. cmdTokenList is the full command token list, in
+the usual tokenizer format. firstTokenIndex is the index of the first
+token in tokList within cmdTokenList.
+
+cmdType is an rmcXxx code giving the type of input we're reading.
+
+</div>
+
+<p><span id="tryOopsMain"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryOopsMain (tokList, issuingActor, targetActor, firstTokenIndex, cmdTokenList, cmdType)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4360">4360</a>]</p>
+
+<div class="desc">
+
+main "oops" processor
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

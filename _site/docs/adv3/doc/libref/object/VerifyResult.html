@@ -1,0 +1,254 @@
+<p><span class="title">VerifyResult</span><span class="type">class</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#55">55</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Verification result class. Verification routines return a verification
+result describing whether or not an action is allowed, and how much
+sense the command seems to make. When a verification fails, it must
+include a message describing why the command isn't allowed.
+
+It is important to understand that the purpose of verification results
+is to guess what's in the player's mind, not to reflect the full
+internal state of the game. We use verification results to figure out
+what a player means with a command, so if we were to rely on information
+the player doesn't have, we would not correctly guess the player's
+intentions. So, in choosing a verification result, only information that
+ought to be obvious to the player should be consdidered.
+
+For example, suppose we have a closed door; suppose further that the
+door happens to be locked, but that there's no way for the player to see
+that just by looking at the door. Now, if the player types "close door,"
+we should return "currently illogical" - common sense tells the player
+that the door is something that can be opened and closed, so we wouldn't
+return "always illogical," but the player can plainly see that the door
+is already closed and thus would know that it makes no sense to close it
+again. In other words, the player would conclude looking at the door
+that closing it is currently illogical, so that's the result we should
+generate.
+
+What if the player types "open door," though? In this case, should we
+return "currently illogical" as well, because the door is locked? The
+answer is no. We know that the command won't succeed because we know
+from looking at the internal game state that the door is locked, but
+that doesn't matter - it's what the \*player\* knows that's important,
+not what the internal game state tells us. So, what should we return
+here? It might seem strange, but the correct result is "logical" - as
+far as the player is concerned, the door is something that can be opened
+and closed, and it is currently closed, so it makes perfect sense to
+open it.
+
+`class `**`VerifyResult`**` :   `[`MessageResult`](../object/MessageResult.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">VerifyResult</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MessageResult<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">VerifyResult</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>DangerousVerifyResult<code class="language-plaintext highlighter-rouge">](../object/DangerousVerifyResult.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>IllogicalNowVerifyResult<code class="language-plaintext highlighter-rouge">](../object/IllogicalNowVerifyResult.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>IllogicalAlreadyVerifyResult<code class="language-plaintext highlighter-rouge">](../object/IllogicalAlreadyVerifyResult.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>IllogicalVerifyResult<code class="language-plaintext highlighter-rouge">](../object/IllogicalVerifyResult.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>IllogicalSelfVerifyResult<code class="language-plaintext highlighter-rouge">](../object/IllogicalSelfVerifyResult.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>InaccessibleVerifyResult<code class="language-plaintext highlighter-rouge">](../object/InaccessibleVerifyResult.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LogicalVerifyResult<code class="language-plaintext highlighter-rouge">](../object/LogicalVerifyResult.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NonObviousVerifyResult`](../object/NonObviousVerifyResult.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>allowAction<code class="language-plaintext highlighter-rouge">](#allowAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>excludePluralMatches<code class="language-plaintext highlighter-rouge">](#excludePluralMatches)</code>  <code class="language-plaintext highlighter-rouge">[</code>resultRank<code class="language-plaintext highlighter-rouge">](#resultRank)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>messageProp_<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#messageProp_)</code>  <code class="language-plaintext highlighter-rouge">[</code>messageText_<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#messageText_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>compareTo<code class="language-plaintext highlighter-rouge">](#compareTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>identicalTo<code class="language-plaintext highlighter-rouge">](#identicalTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>isWorseThan<code class="language-plaintext highlighter-rouge">](#isWorseThan)</code>  <code class="language-plaintext highlighter-rouge">[</code>shouldInsertBefore<code class="language-plaintext highlighter-rouge">](#shouldInsertBefore)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveMessageText<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#resolveMessageText)</code>  <code class="language-plaintext highlighter-rouge">[</code>setMessage<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#setMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMessage<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#showMessage)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="allowAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowAction</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#60">60</a>]</p>
+
+<div class="desc">
+
+Is the action allowed? This returns true if the command can be allowed
+to proceed on the basis of the verification, nil if not.
+
+</div>
+
+<p><span id="excludePluralMatches"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">excludePluralMatches</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#152">152</a>]</p>
+
+<div class="desc">
+
+Should we exclude plurals from being matched, when this type of result
+is present? By default, we don't; some illogical types might want to
+exclude plurals because the result types indicate such obvious
+illogicalities.
+
+</div>
+
+<p><span id="resultRank"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resultRank</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#144">144</a>]</p>
+
+<div class="desc">
+
+Our result ranking relative to other results. Each result class defines
+a ranking level so that we can determine whether one result is better
+(more approving) or worse (more disapproving) than another.
+
+To allow easy insertion of new library extension result types or
+game-specific result types, we assign widely spaced rankings to the
+pre-defined results. This is arbitrary; the only thing that matters in
+comparing two results is the order of the rank values.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="compareTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compareTo (other)</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#96">96</a>]</p>
+
+<div class="desc">
+
+compare to another: negative if I'm worse than the other, zero if we're
+the same, positive if I'm better
+
+</div>
+
+<p><span id="identicalTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">identicalTo (other)</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#127">127</a>]</p>
+
+<div class="desc">
+
+Determine if I'm identical to another result. Note that it's possible
+for two items to compare the same but not be identical - compareTo() is
+concerned only with logicalness ranking, but identicalTo() determines if
+the two items are exactly the same. Some subclasses (such as
+LogicalVerifyResult) distinguish among items that compare the same but
+have different reasons for their rankings.
+
+</div>
+
+<p><span id="isWorseThan"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isWorseThan (other)</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#86">86</a>]</p>
+
+<div class="desc">
+
+Am I worse than another result? Returns true if this result is more
+disapproving than the other.
+
+</div>
+
+<p><span id="shouldInsertBefore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shouldInsertBefore (other)</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#108">108</a>]</p>
+
+<div class="desc">
+
+Determine if I should appear in a result list before the given result
+object. By default, this is true if I'm worse than the given result, but
+some types of results use special sorting orders.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

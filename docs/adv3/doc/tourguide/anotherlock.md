@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>A Card Lock<br />
 </strong></td>
-<td style="text-align: right;"><a href="lever(2).htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="fuse.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="lever(2).html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="fuse.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -95,7 +97,7 @@ brass key found elsewhere.
 The introduction of the card key leaves us with one or two pieces of
 tidying up to do. First of all, a card key is not the sort of thing that
 should be added to our keyring, so we need to override its isMyKey
-method as envisaged when we first encountered the [Keyring](keyring.htm)
+method as envisaged when we first encountered the [Keyring](keyring.html)
 class:  
   
 Keyring 'silver (key) keyring/ring' 'silver keyring' @firstAidKit  

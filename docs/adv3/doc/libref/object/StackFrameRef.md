@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StackFrameRef</span><span class="type">class</span>
 
 [systype.h](../file/systype.h.html)\[[1316](../source/systype.h.html#1316)\]

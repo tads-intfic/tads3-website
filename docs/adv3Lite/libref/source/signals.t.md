@@ -1,3 +1,5 @@
+---
+---
 # signals.t
 
 [documentation](../file/signals.t.html)

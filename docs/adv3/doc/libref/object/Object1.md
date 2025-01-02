@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Object</span><span class="type">class</span>
 
 [systype.h](../file/systype.h.html)\[[38](../source/systype.h.html#38)\],

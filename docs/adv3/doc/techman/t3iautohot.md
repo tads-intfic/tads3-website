@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Using AutoHotKey with
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Using AutoHotKey with
 the Workbench Editor (Windows)  
-<span class="navnp"><a href="t3inc.htm" class="nav"><em>Prev:</em> Understanding Separate
+<span class="navnp"><a href="t3inc.html" class="nav"><em>Prev:</em> Understanding Separate
 Compilation</a>    
-<a href="gameinfo.htm" class="nav"><em>Next:</em> Bibliographic Metadata
+<a href="gameinfo.html" class="nav"><em>Next:</em> Bibliographic Metadata
 - the GameInfo Format</a>     </span>
 
 </div>
@@ -84,7 +86,7 @@ adding the following to the file and then saving it:
     The fifth line, #i::Send <i></i>{Left 4} uses exactly the same principle to give us a matched pair of opening and closing italicizing tags with the cursor placed between them, so that Win+i give us <i>|</i> (where | marks the position of the cursor). 
     The sixth and seventh lines make it a bit easier to enter reveal and convnode tags, converting Win+r into <.reveal |> and Win+c into <.convnode |> (where | once again denotes the position where the cursor ends up, not a literal vertical bar).
     The final line, #[::Send &#123;&#123;}{}}{Left} causes Win+[ to output a matched pair of braces with the cursor placed between them, like this: {|}. We might use this to enter a parameter substitution string in our TADS source code. Note a small complication here. Since opening and closing braces (along with one or two other characters, such as +,^,!, and #) have a special meaning in a Send statement, we need to escape them by surrounding them with braces.
-    The above examples all used the Win key as an element of the hotkey combination, but plenty of other keys can be defined for the purpose. For the full list consult the AutoHotKey help file or visit http://www.autohotkey.com/docs/Hotkeys.htm
+    The above examples all used the Win key as an element of the hotkey combination, but plenty of other keys can be defined for the purpose. For the full list consult the AutoHotKey help file or visit http://www.autohotkey.com/docs/Hotkeys.html
 
     Hotstrings
 

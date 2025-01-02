@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OutputStream</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[176](../source/output.t.html#176)\]

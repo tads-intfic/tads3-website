@@ -1,3 +1,5 @@
+---
+---
 <span class="title">lying</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[136](../source/actor.t.html#136)\]

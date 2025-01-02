@@ -1,3 +1,5 @@
+---
+---
 # collective.t
 
 [documentation](../file/collective.t.html)

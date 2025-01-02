@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Room Parts  
-<span class="navnp"><a href="relations.htm" class="nav"><em>Prev:</em> Relations</a>
-    <a href="rules.htm" class="nav"><em>Next:</em> Rules</a>     </span>
+<span class="navnp"><a href="relations.html" class="nav"><em>Prev:</em> Relations</a>
+    <a href="rules.html" class="nav"><em>Next:</em> Rules</a>     </span>
 
 </div>
 
@@ -123,10 +125,10 @@ property to nil).
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Room Parts  
-<span class="navnp"><a href="relations.htm" class="nav"><em>Prev:</em> Relations</a>
-    <a href="rules.htm" class="nav"><em>Next:</em> Rules</a>     </span>
+<span class="navnp"><a href="relations.html" class="nav"><em>Prev:</em> Relations</a>
+    <a href="rules.html" class="nav"><em>Next:</em> Rules</a>     </span>
 
 </div>

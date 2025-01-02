@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Input Scripts  
-<span class="navnp"><a href="netsec.htm" class="nav"><em>Prev:</em> Network Safety</a>
-    <a href="pack.htm" class="nav"><em>Next:</em> Byte Packing</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Input Scripts  
+<span class="navnp"><a href="netsec.html" class="nav"><em>Prev:</em> Network Safety</a>
+    <a href="pack.html" class="nav"><em>Next:</em> Byte Packing</a>    
 </span>
 
 </div>
@@ -48,7 +50,7 @@ function.
 
 You can start reading a script immediately when you start the game by
 using the Interpreter's <span class="code">-i</span> option. Refer to
-[Running Programs](terp.htm) for information on this option.
+[Running Programs](terp.html) for information on this option.
 
 The Interpreter <span class="code">-i</span> option causes the game to
 read from the script starting with the very first command line. On
@@ -60,7 +62,7 @@ any user intervention.
 
 The intrinsic function <span class="code">setScriptFile()</span> lets
 you start reading from a script under program control. Refer to [the
-tads-io Function Set](tadsio.htm) for details on this function.
+tads-io Function Set](tadsio.html) for details on this function.
 
 The adv3 library uses <span class="code">setScriptFile()</span> to
 implement the REPLAY command, which you can use to invoke a script from
@@ -75,7 +77,7 @@ containing the commands and events you enter as you play.
 To create a script from an entire session, use the Interpreter's
 <span class="code">-o</span> option. This causes the Interpreter to
 write events throughout the session to the file. See [Running
-Programs](terp.htm) for details on Interpreter options.
+Programs](terp.html) for details on Interpreter options.
 
 If your game is based on the adv3 library, you can use the RECORD
 command to record a script. This command starts recording events
@@ -310,10 +312,10 @@ it merely suppresses the warning if it does.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Input Scripts  
-<span class="navnp"><a href="netsec.htm" class="nav"><em>Prev:</em> Network Safety</a>
-    <a href="pack.htm" class="nav"><em>Next:</em> Byte Packing</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Input Scripts  
+<span class="navnp"><a href="netsec.html" class="nav"><em>Prev:</em> Network Safety</a>
+    <a href="pack.html" class="nav"><em>Next:</em> Byte Packing</a>    
 </span>
 
 </div>

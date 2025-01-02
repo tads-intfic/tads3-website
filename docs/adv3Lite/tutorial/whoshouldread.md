@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> Who Should Read This
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> Who Should Read This
 Book?  
-<span class="navnp"><a href="whatis.htm" class="nav"><em>Prev:</em>What is adv3Lite?</a>
-    <a href="howtouse.htm" class="nav"><em>Next:</em> How to Use This
+<span class="navnp"><a href="whatis.html" class="nav"><em>Prev:</em>What is adv3Lite?</a>
+    <a href="howtouse.html" class="nav"><em>Next:</em> How to Use This
 Book</a>     </span>
 
 </div>
@@ -40,7 +42,7 @@ aim to cover every aspect either of the language or of the adv3Lite
 library, but it does aim to take you to the point where you can start
 using the system on your own and find out what else you need to know by
 consulting the *TADS 3 System Manual* and the [adv3Lite Library
-Manual](../manual/index.htm). The target reader of this tutorial is thus
+Manual](../manual/index.html). The target reader of this tutorial is thus
 someone who is prepared to work through the sample games step-by-step,
 typing out the code and trying it out, picking up the basic essentials
 of the system as they go along. If you don't have the patience for that,
@@ -83,11 +85,11 @@ I'll say a little more about the various ways you can use this book.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> Who Should Read This
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> Who Should Read This
 Book?  
-<span class="navnp"><a href="whatis.htm" class="nav"><em>Prev:</em> What is adv3Lite?</a>
-    <a href="howtouse.htm" class="nav"><em>Next:</em> How to Use This
+<span class="navnp"><a href="whatis.html" class="nav"><em>Prev:</em> What is adv3Lite?</a>
+    <a href="howtouse.html" class="nav"><em>Next:</em> How to Use This
 Book</a>     </span>
 
 </div>

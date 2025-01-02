@@ -1,3 +1,5 @@
+---
+---
 <span class="title">sound</span><span class="type">object</span>
 
 [sense.t](../file/sense.t.html)\[[259](../source/sense.t.html#259)\]

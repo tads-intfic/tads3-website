@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Topics  
-<span class="navnp"><a href="multiloc.htm" class="nav"><em>Prev:</em>Multilocs</a>
-    <a href="beginning.htm" class="nav"><em>Next:</em> Beginnings</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Topics  
+<span class="navnp"><a href="multiloc.html" class="nav"><em>Prev:</em>Multilocs</a>
+    <a href="beginning.html" class="nav"><em>Next:</em> Beginnings</a>
     </span>
 
 </div>
@@ -39,7 +41,7 @@ Topic:
 </div>
 
 Note that the property we are defining in the Topic template is the
-[vocab](thing.htm#vocab) property, which works in precisely the same way
+[vocab](thing.html#vocab) property, which works in precisely the same way
 as it does for Thing (both Thing and Topic inherit the way vocab works
 from LMentionable). Amongst other things this means that by defining
 this property we are also defining the name property of the Topic (and
@@ -95,10 +97,10 @@ of the familiar property:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Topics  
-<span class="navnp"><a href="multiloc.htm" class="nav"><em>Prev:</em> MultiLocs</a>
-    <a href="beginning.htm" class="nav"><em>Next:</em> Beginnings</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Topics  
+<span class="navnp"><a href="multiloc.html" class="nav"><em>Prev:</em> MultiLocs</a>
+    <a href="beginning.html" class="nav"><em>Next:</em> Beginnings</a>
     </span>
 
 </div>

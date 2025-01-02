@@ -1,3 +1,5 @@
+---
+---
 <span class="title">thingPreinit</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[9200](../source/thing.t.html#9200)\]

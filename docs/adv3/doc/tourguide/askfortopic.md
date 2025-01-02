@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>AskForTopic : <a
-href="asktelltopic.htm">AskTellTopic</a><br />
+href="asktelltopic.html">AskTellTopic</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="asktelltopic.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="askaboutfortopic.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="asktelltopic.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="askaboutfortopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -72,7 +74,7 @@ duly obliges by doing it herself:
 ;  
   
 We'll handle cutting open the glass display case later, when we come to
-look at [ConvNode](convnode.htm). For now we'll proceed with a different
+look at [ConvNode](convnode.html). For now we'll proceed with a different
 example, the root and the carbuncle we need from Solomon. First we need
 to make Solomon prevent the PC from taking either the root or the
 carbuncle unless he's given permission for them to be taken. We'll add a

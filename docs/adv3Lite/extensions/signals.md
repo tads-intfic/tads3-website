@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Sensory  
-<span class="navnp"><a href="sensory.htm" class="nav"><em>Prev:</em> Sensory</a>
-    <a href="subtime.htm" class="nav"><em>Next:</em> Subtime</a>    
+<span class="navnp"><a href="sensory.html" class="nav"><em>Prev:</em> Sensory</a>
+    <a href="subtime.html" class="nav"><em>Next:</em> Subtime</a>    
 </span>
 
 </div>
@@ -25,7 +27,7 @@ The purpose of the [signals.t](../signals.t) extension is to provide a
 means for one object to send signals to another (which can then respond
 to them) and to provide a mechanism for establishing and breaking
 signalling links between objects. This mechanism employs the
-[Relations](relations.htm) extension, which must also be present.
+[Relations](relations.html) extension, which must also be present.
 
   
 <span id="classes"></span>
@@ -49,7 +51,7 @@ this extension defines the following new classes, objects and methods:
 ## Usage
 
 Include the signals.t file after the library files but before your game
-source files. The [Relations](relations.htm) extensions (relations.t)
+source files. The [Relations](relations.html) extensions (relations.t)
 must also be present.
 
 The basic mechanism is that an object (the sender) sends a signal by
@@ -653,11 +655,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Sensory  
-<span class="navnp"><a href="sensory.htm" class="nav"><em>Prev:</em> Sensory</a>
-    <a href="subtime.htm" class="nav"><em>Next:</em> Subtime</a>    
+<span class="navnp"><a href="sensory.html" class="nav"><em>Prev:</em> Sensory</a>
+    <a href="subtime.html" class="nav"><em>Next:</em> Subtime</a>    
 </span>
 
 </div>

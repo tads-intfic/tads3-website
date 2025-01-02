@@ -1,3 +1,5 @@
+---
+---
 <span class="title">tipStyleTag</span><span class="type">object</span>
 
 [tips.t](../file/tips.t.html)\[[171](../source/tips.t.html#171)\]

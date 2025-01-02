@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SuggestedTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[1151](../source/actor.t.html#1151)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -10,9 +12,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 Overview<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="limitsuggestions.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="convnode.htm">[Next]</a></td>
+href="limitsuggestions.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="convnode.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -27,7 +29,7 @@ commands one can give *some* direction to a conversation, in that the
 game can keep track of what's been talked about and who knows what and
 adjust NPC responses accordingly, but this only gives a limited sense of
 progression to a conversation. One reason for this is that (with the
-partial exception of [InitiateTopic](initiatetopic.htm)) every mechanism
+partial exception of [InitiateTopic](initiatetopic.html)) every mechanism
 we've looked at so far is a mechanism for programming NPC *response*;
 our NPC's can respond to ASK, TELL, GIVE and SHOW commands, but they
 don't seem to have any real way of asking questions of their own, let
@@ -88,7 +90,7 @@ TELL commands.  <br />
 |     |     |
 
   
-The basic mechanism for this is the [ConvNode](convnode.htm) class,
+The basic mechanism for this is the [ConvNode](convnode.html) class,
 which defines a Conversation node. When a Conversation node is active,
 the player can (optionally) be restricted to employing only the
 TopicEntries within that Conversation node (although, if you wish, you
@@ -157,15 +159,15 @@ any other response other than Yes or No:
 ;  
   
 Since this type of situation requires the player to be able to give a
-yes or no answer, the library defines a [YesTopic](yestopic.htm) and a
-[NoTopic](notopic.htm) for the purpose (you can put a YesTopic or a
+yes or no answer, the library defines a [YesTopic](yestopic.html) and a
+[NoTopic](notopic.html) for the purpose (you can put a YesTopic or a
 NoTopic anywhere you can put any other kind of TopicEntry, but a Yes or
 No response will normally only make sense in the context of a
 Conversation Node).  
   
 This may seem a little unfair on the player, who may wish to deny
 sleeping with Fred's wife altogether. Well, we can handle this too, by
-means of a [SpecialTopic](specialtopic.htm) (which can only be used
+means of a [SpecialTopic](specialtopic.html) (which can only be used
 within a ConvNode).  
   
 ++ SpecialTopic 'deny sleeping with his wife' \['deny', 'sleeping', 'with', 'his', wife'\]  

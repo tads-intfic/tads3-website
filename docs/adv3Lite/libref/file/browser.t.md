@@ -1,3 +1,5 @@
+---
+---
 <span class="title">browser.t</span><span class="type">file</span>
 
 [source file](../source/browser.t.html)

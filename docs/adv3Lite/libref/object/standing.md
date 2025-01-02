@@ -1,3 +1,5 @@
+---
+---
 <span class="title">standing</span><span class="type">object</span>
 
 [postures.t](../file/postures.t.html)\[[83](../source/postures.t.html#83)\]

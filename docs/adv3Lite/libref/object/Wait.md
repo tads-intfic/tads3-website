@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Wait</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[526](../source/actions.t.html#526)\]

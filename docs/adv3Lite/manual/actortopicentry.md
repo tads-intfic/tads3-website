@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> ActorTopicEntry  
-<span class="navnp"><a href="asktell.htm" class="nav"><em>Prev:</em> Basic Ask/Tell</a>
-    <a href="suggest.htm" class="nav"><em>Next:</em> Suggesting
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> ActorTopicEntry  
+<span class="navnp"><a href="asktell.html" class="nav"><em>Prev:</em> Basic Ask/Tell</a>
+    <a href="suggest.html" class="nav"><em>Next:</em> Suggesting
 Conversational Topics</a>     </span>
 
 </div>
@@ -48,10 +50,10 @@ conversational similuation than the basic ask/tell system provides.
 We may broadly divide the methods and properties of the ActorTopicEntry
 class into four groups:
 
-1.  Those it derives from the [TopicEntry](topicentry.htm) class, which
+1.  Those it derives from the [TopicEntry](topicentry.html) class, which
     we have already covered, such as matchScore, matchObj, topicResponse
     and isActive.
-2.  Those relating to [suggesting](suggest.htm) topics of conversation
+2.  Those relating to [suggesting](suggest.html) topics of conversation
     to the player, which we'll discuss in the next section. These
     include name, autoname, timesToSuggest, curiositySatisfied,
     curiosityAroused, suggestAs, timesInvoked, keyTopics,
@@ -72,14 +74,14 @@ conversational.
 
 The **impliesGreeting** property is used to determine whether the
 response should trigger an implicit greeting. This is explained in more
-detail in the section below on [Hello and Goodbye](hello.htm).
+detail in the section below on [Hello and Goodbye](hello.html).
 
 The **getActor()** method simply returns the Actor to which this
 ActorTopicEntry belongs.
 
 The **nodeActive()** method can be used to determine whether this
 ActorTopicEntry belongs to the current [Conversation
-Node](convnode.htm). This will be explained more fully in the section on
+Node](convnode.html). This will be explained more fully in the section on
 Conversation Nodes.
 
 The remaining three require slightly fuller explanations.
@@ -93,10 +95,10 @@ a better sense of flow than is possible with the basic ask/tell system.
 One is to nudge the player by suggesting what topics it might be
 particularly appropriate to pursue, which can to some extent be done
 simply in the text of a topic response, but can also be done by
-presenting an explicit list of [suggestions](suggest.htm). The other is
+presenting an explicit list of [suggestions](suggest.html). The other is
 to place some kind of restriction on which topics follow on from a
 particular point in the conversation, effectively treating certain
-points in the conversation as [nodes](convnode.htm) which constrain or
+points in the conversation as [nodes](convnode.html) which constrain or
 direct the choice of immediately succeeding topics. Of course one might
 want to combine these by presenting a list of topics that are available
 at any particular node.
@@ -207,7 +209,7 @@ his response to the question about the dark tower. Note that in this
 particular case we could have gone about this a different way by using a
 \<.known\> tag or a \<.reveal\> tag, but we'll take a look at those when
 we come to discuss player and non-player character
-[knowledge](knowledge.htm).
+[knowledge](knowledge.html).
 
 A more immediate question might be, why bother with the activated
 property at all? Why not simply have the \<.activate\> tag set the
@@ -277,13 +279,13 @@ specialized classes will be deferred to the appropriate sections.
   SHOW X TO Y
 - **AskTellGiveShowTopic**: responds to ASK ABOUT Y or TELL X ABOUT Y or
   GIVE X TO Y OR SHOW X TO Y
-- **SayTopic**: a kind of [SpecialTopic](specialtopic.htm) that responds
+- **SayTopic**: a kind of [SpecialTopic](specialtopic.html) that responds
   to SAY WHATEVER or just WHATEVER (for further details see
-  [below](specialtopic.htm#saytopic)).
-- **QueryTopic**: a kind of [SpecialTopic](specialtopic.htm) that
+  [below](specialtopic.html#saytopic)).
+- **QueryTopic**: a kind of [SpecialTopic](specialtopic.html) that
   responds to questions like ASK WHERE\|WHEN\|WHY\|HOW\|WHY\|WHO
   SUCH-AND-SUCH (for further details see
-  [below](querytopic.htm#saytopic)).
+  [below](querytopic.html#saytopic)).
 - **YesTopic**: responds to YES or SAY YES
 - **NoTopic**: responds to NO or SAY NO
 - **YesNoTopic**: responds to YES or NO
@@ -294,22 +296,22 @@ specialized classes will be deferred to the appropriate sections.
 - **TouchTopic**: responds to TOUCH X, FEEL X and the like *but only if
   **isFeelable** on the actor is true*.
 - **InitiateTopic**: an actor-initiated TopicEntry (see the section on
-  [NPC-Initiated Conversation](initiate.htm) below).
+  [NPC-Initiated Conversation](initiate.html) below).
 - **NodeContinuationTopic**: a special kind of InitiateTopic for use in
-  [Conversation Nodes](convnode.htm).
+  [Conversation Nodes](convnode.html).
 - **NodeEndCheck**: another special kind of InitiateTopic for use in
-  [Conversation Nodes](convnode.htm).
-- **CommandTopic**: responds to [commands](orders.htm) given to NPCs
+  [Conversation Nodes](convnode.html).
+- **CommandTopic**: responds to [commands](orders.html) given to NPCs
   (e.g. BOB, TAKE BALL).
 - **HelloTopic**: responds to TALK TO X or HELLO or X, HELLO (see the
-  section on [Hello and Goodbye](hello.htm) below)
+  section on [Hello and Goodbye](hello.html) below)
 - **ByeTopic**: responds to BYE or X, BYE (see the section on [Hello and
-  Goodbye](hello.htm) below)
+  Goodbye](hello.html) below)
 - **HelloGoodbyeTopic**: responds to HELLO or BYE
 - **ImpHelloTopic**, **ActorHelloTopic**, **ImpByeTopic**,
   **BoredByeTopic**, **LeaveByeTopic**, **ActorByeTopic**: used for
   various kinds of implicit or actor-initiated Hellos and Goodbyes (see
-  the section on [Hello and Goodbye](hello.htm) below)
+  the section on [Hello and Goodbye](hello.html) below)
 - **AltTopic**: used to provide one or more alternative responses to
   conversational commands (see the section on [AltTopic](#alttopic)
   below)
@@ -334,7 +336,7 @@ interaction with NPCs. They allows responses to be made dependent on the
 current ActorState or on conditions specified on the isActive property
 or in any other way that ActorTopicEntries can be manipulated. For other
 ways of handling ATTACK, TOUCH and KISS on Actors see the discussion of
-[Attacking, Touching and Kissing](actorobj.htm#hitkiss) in the chapter
+[Attacking, Touching and Kissing](actorobj.html#hitkiss) in the chapter
 on the Actor object.
 
 An ActorState's <span class="code">noResponse</span> property is not
@@ -362,7 +364,7 @@ sub-topics, like this:
 </div>
 
 Just how you'd go about that is discussed in the section on
-[suggesting](suggest.htm) topics.
+[suggesting](suggest.html) topics.
 
 In addition to the ActorTopicEntry classes listed above are the various
 kinds of <span id="default_idx">DefaultTopic</span> (which match the
@@ -379,8 +381,8 @@ defined):
 - **DefaultAgendaTopic**: responds to any conversational command that a
   DefaultAnyTopic would and gives the NPC the opportunity to seize the
   conversational initiative via an AgendaItem. This is explained more
-  fully [below](initiate.htm#defaultagenda) in the section on
-  [NPC-Initiated Conversation](initiate.htm).
+  fully [below](initiate.html#defaultagenda) in the section on
+  [NPC-Initiated Conversation](initiate.html).
 - **DefaultAskTopic**: provides a default response for ASK X ABOUT Y
 - **DefaultTellTopic**: provides a default response for TELL X ABOUT Y
 - **DefaultAskTellTopic**: provides a default response for ASK X ABOUT Y
@@ -826,10 +828,10 @@ that triggers it:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> ActorTopicEntry  
-<span class="navnp"><a href="asktell.htm" class="nav"><em>Prev:</em> Basic Ask/Tell</a>
-    <a href="suggest.htm" class="nav"><em>Next:</em> Suggesting
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> ActorTopicEntry  
+<span class="navnp"><a href="asktell.html" class="nav"><em>Prev:</em> Basic Ask/Tell</a>
+    <a href="suggest.html" class="nav"><em>Next:</em> Suggesting
 Conversational Topics</a>     </span>
 
 </div>

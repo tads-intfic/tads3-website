@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actionDictionary</span><span class="type">object</span>
 
 [spelling.t](../file/spelling.t.html)\[[364](../source/spelling.t.html#364)\]

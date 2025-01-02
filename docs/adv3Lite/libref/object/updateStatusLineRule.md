@@ -1,3 +1,5 @@
+---
+---
 <span class="title">updateStatusLineRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[583](../source/sysrules.t.html#583)\]

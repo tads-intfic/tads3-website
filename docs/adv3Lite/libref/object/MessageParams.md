@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MessageParams</span><span class="type">class</span>
 
 [messages.t](../file/messages.t.html)\[[903](../source/messages.t.html#903)\]

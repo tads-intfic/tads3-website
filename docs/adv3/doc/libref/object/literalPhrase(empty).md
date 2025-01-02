@@ -1,3 +1,5 @@
+---
+---
 <span class="title">literalPhrase(empty)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[7228](../source/en_us.t.html#7228)\]

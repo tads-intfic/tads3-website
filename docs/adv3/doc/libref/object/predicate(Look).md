@@ -1,3 +1,5 @@
+---
+---
 <span class="title">predicate(Look)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[9745](../source/en_us.t.html#9745)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(CmdMenu)</span><span class="type">grammar</span>
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[845](../source/cmdhelp.t.html#845)\]

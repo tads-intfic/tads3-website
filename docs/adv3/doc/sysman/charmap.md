@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Source File
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Source File
 Character Sets  
-<span class="navnp"><a href="progstru.htm" class="nav"><em>Prev:</em> Source Code
+<span class="navnp"><a href="progstru.html" class="nav"><em>Prev:</em> Source Code
 Structure</a>    
-<a href="preproc.htm" class="nav"><em>Next:</em> The Preprocessor</a>
+<a href="preproc.html" class="nav"><em>Next:</em> The Preprocessor</a>
     </span>
 
 </div>
@@ -83,7 +85,7 @@ Central/Eastern Europe), you'd use this command:
 
 If the TADS 3 distribution doesn't include a mapping file for the
 character set you're using, you can [build your own mapping
-file](cmap.htm).
+file](cmap.html).
 
 The compiler provides several built-in character set names that you can
 use, in addition to those supplied by mapping files:
@@ -217,12 +219,12 @@ or a \#charset directive at the very start of the file, or by using the
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Source File
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Source File
 Character Sets  
-<span class="navnp"><a href="progstru.htm" class="nav"><em>Prev:</em> Source Code
+<span class="navnp"><a href="progstru.html" class="nav"><em>Prev:</em> Source Code
 Structure</a>    
-<a href="preproc.htm" class="nav"><em>Next:</em> The Preprocessor</a>
+<a href="preproc.html" class="nav"><em>Next:</em> The Preprocessor</a>
     </span>
 
 </div>

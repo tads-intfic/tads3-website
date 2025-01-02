@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SwitchOff</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1074](../source/actions.t.html#1074)\]

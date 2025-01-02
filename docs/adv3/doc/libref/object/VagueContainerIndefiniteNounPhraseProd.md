@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VagueContainerIndefiniteNounPhraseProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[3512](../source/parser.t.html#3512)\]

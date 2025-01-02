@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OopsIAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[3127](../source/actions.t.html#3127)\]

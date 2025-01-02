@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Lists and Listers  
-<span class="navnp"><a href="utility.htm" class="nav"><em>Prev:</em> Utility Functions</a>
-    <a href="webui.htm" class="nav"><em>Next:</em> The Web UI</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Lists and Listers  
+<span class="navnp"><a href="utility.html" class="nav"><em>Prev:</em> Utility Functions</a>
+    <a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
 </span>
 
 </div>
@@ -142,7 +144,7 @@ following additional methods on <span class="code">ItemLister</span>:
   names of items in this list that are being worn. By default we use the
   value of <span class="code">showAdditionalInfo</span>. Note that the
   text ' (being worn)' can be customized by using a
-  [CustomMessages](message.htm#custmessage_idx) object to change the
+  [CustomMessages](message.html#custmessage_idx) object to change the
   text of the <span class="code">being worn</span> BMsg.
 - **showSubListing**: flag - do we want to show the contents of items
   listed in inventory (in parentheses after the name, e.g. 'a bag (in
@@ -203,13 +205,13 @@ The specific kinds of Lister defined in the library are:
 - **lookInLister**: lists the contents of an object in response to LOOK
   IN/UNDER/BEHIND.
 - **simpleAttachmentLister**: lists the items attached to a
-  [SimpleAttachable](attachable.htm).
+  [SimpleAttachable](attachable.html).
 - **plugAttachableLister**: lists the items plugged into a
-  [PlugAttachable](attachable.htm#plug).
+  [PlugAttachable](attachable.html#plug).
 - **CustomRoomLister**: A lister that can be readily customized to
   tailor the text before and after the list of miscellaneous items in a
   room description. For further details see the chapter on [Room
-  Descriptions](roomdesc.htm#customroomlister).
+  Descriptions](roomdesc.html#customroomlister).
 - **subLister**: The subLister is used by other listers such as
   <span class="code">inventoryLister</span> and
   <span class="code">wornLister</span> to show the contents of listed
@@ -330,8 +332,8 @@ box you could do something like this:
 </div>
 
 For more information on customizing the way items are listed in room
-descriptions, see the chapters on [Room Descriptions](roomdesc.htm) and
-(for remote rooms) [SenseRegions](senseregion.htm#descriptions).
+descriptions, see the chapters on [Room Descriptions](roomdesc.html) and
+(for remote rooms) [SenseRegions](senseregion.html#descriptions).
 
   
 <span id="generating"></span>
@@ -431,7 +433,7 @@ view of an actor *pov* using the Lister *lister*. In essence it does
 much the same job for a remote location as
 <span class="code">listContents()</span> does for the player character's
 immediate location, but is only relevant when two or more locations are
-connected by sight within a [SenseRegion](senseregion.htm).
+connected by sight within a [SenseRegion](senseregion.html).
 
 Lists are also generated and/or used at various other places in the
 library, such as in the definition of the
@@ -443,7 +445,7 @@ couple of places in actor.t that show lists of suggested topics, the
 list the attached objects), and the
 <span class="code">showFullScore()</span> method of the
 <span class="code">libScore</span> object (used to show a list of
-[achievements](score.htm)). Interested readers are referred to the
+[achievements](score.html)). Interested readers are referred to the
 Library Reference Manual for details.
 
   
@@ -503,10 +505,10 @@ also available to user code:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Lists and Listers  
-<span class="navnp"><a href="utility.htm" class="nav"><em>Prev:</em> Utility Functions</a>
-    <a href="webui.htm" class="nav"><em>Next:</em> The Web UI</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Lists and Listers  
+<span class="navnp"><a href="utility.html" class="nav"><em>Prev:</em> Utility Functions</a>
+    <a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
 </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 # L
 
 [**`langAdjust`**](../file/english.t.html#langAdjust) - global function

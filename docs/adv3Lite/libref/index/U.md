@@ -1,3 +1,5 @@
+---
+---
 # U
 
 [**`uiPrefs`**](../object/ClientSession.html#uiPrefs) - property of

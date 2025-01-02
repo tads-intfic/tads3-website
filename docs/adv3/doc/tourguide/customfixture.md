@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>CustomFixture : <a
-href="fixture.htm">Fixture</a><br />
+href="fixture.html">Fixture</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="fixture.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="decoration.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="fixture.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="decoration.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -25,7 +27,7 @@ copy it.
   
 We haven't yet reached the point in our game where we need a
 CustomFixture, but we'll eventually use one to represent the pillars in
-a [temple](lever.htm#temple).  
+a [temple](lever.html#temple).  
   
 See also the similar but subtly different
-[CustomImmovable](customimmovable.htm).  
+[CustomImmovable](customimmovable.html).  

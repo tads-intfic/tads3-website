@@ -1,3 +1,5 @@
+---
+---
 <span class="title">compoundNounArticle</span><span class="type">GrammarProd</span>
 
 `grammar `**[`compoundNounArticle(main)`](../object/compoundNounArticle(main).html)**` :   `[`Production`](../object/Production.html)

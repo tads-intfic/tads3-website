@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ThingMatchTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3036](../source/actor.t.html#3036)\]

@@ -1,3 +1,5 @@
+---
+---
 # C
 
 [**`cachedRoute`**](../object/Pathfinder.html#cachedRoute) - property of

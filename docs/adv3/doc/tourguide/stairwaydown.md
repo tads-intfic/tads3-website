@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>StairwayDown : Stairway<br />
 </strong></td>
-<td style="text-align: right;"><a href="room.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="stairwayup.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="room.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="stairwayup.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -27,9 +29,9 @@ commands. The ladder can simply be defined as:
 ;  
   
 Here we are simply using the standard [Thing
-template](thingtemplate.htm), although since StairwayDown inherits
+template](thingtemplate.html), although since StairwayDown inherits
 (indirectly) from Passage, it can also use the [Passage
-template](passagetemplate.htm).  
+template](passagetemplate.html).  
   
 We can then add a down property to the room definition to point to this
 connector:  
@@ -50,7 +52,7 @@ entranceCave : Room 'Entrance Cave' 'the entrance cave'
   
 Note that as yet nothing defines where we end up when we go down the
 ladder. This is because there will be a corresponding
-[StairwayUp](stairwayup.htm) in the cave below, and the StairwayUp will
+[StairwayUp](stairwayup.html) in the cave below, and the StairwayUp will
 point to downLadder as its **masterObject**. The game will automatically
 link the StairwayUp to its masterObject and *vice versa*, so that when
 we traverse the StairwayDown it will know that its destination is in the

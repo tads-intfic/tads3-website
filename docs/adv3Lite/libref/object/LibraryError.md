@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LibraryError</span><span class="type">class</span>
 
 [misc.t](../file/misc.t.html)\[[2061](../source/misc.t.html#2061)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InventoryWide</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[439](../source/actions.t.html#439)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MenuItem</span><span class="type">class</span>
 
 [menusys.t](../file/menusys.t.html)\[[275](../source/menusys.t.html#275)\],

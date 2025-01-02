@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FileIOException</span><span class="type">class</span>
 
 [file.t](../file/file.t.html)\[[152](../source/file.t.html#152)\]

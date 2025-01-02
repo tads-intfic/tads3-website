@@ -1,3 +1,5 @@
+---
+---
 <span class="title">throughSingleNoun</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`throughSingleNoun(main)`](../object/throughSingleNoun(main).html)</span>` :   `[`PrepSingleNounProd`](../object/PrepSingleNounProd.html)

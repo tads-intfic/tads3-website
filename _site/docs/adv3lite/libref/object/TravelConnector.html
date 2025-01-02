@@ -1,0 +1,605 @@
+<p><span class="title">TravelConnector</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1085">1085</a>],
+<a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#348">348</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A TravelConnector is an object that can be attached to the directional
+exit property of a room to facilitate (or optionally block) travel in
+the associated direction and carry out any side-effects of that travel.
+A TravelConnector may be used as an abstract object to implement travel,
+or a subclass of TravelConnector such as Door, Passage, StairwayUp or
+StairwayDown may be used to represent a physical object via which travel
+occurs. The Room class also inherits from TravelConnector.
+
+Whether the base TravelConnector class or one of its subclasses is used,
+travel is carried out via a TravelConnector by calling its travelVia()
+method.
+
+*Modified in
+[objtime.t](../file/objtime.t.html)\[[348](../source/objtime.t.html#348)\]:*  
+Modifications to TravelConnector for the OBJTIME EXTENSION. The purpose
+of these modifications is to allow different TravelConnectors to take
+different amounts of time to traverse.
+
+`class `**`TravelConnector`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TravelConnector</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TravelConnector</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Door<code class="language-plaintext highlighter-rouge">](../object/Door.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SecretDoor<code class="language-plaintext highlighter-rouge">](../object/SecretDoor.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Passage<code class="language-plaintext highlighter-rouge">](../object/Passage.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PathPassage<code class="language-plaintext highlighter-rouge">](../object/PathPassage.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Room<code class="language-plaintext highlighter-rouge">](../object/Room.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>OutdoorRoom<code class="language-plaintext highlighter-rouge">](../object/OutdoorRoom.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>StairwayDown<code class="language-plaintext highlighter-rouge">](../object/StairwayDown.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>StairwayUp<code class="language-plaintext highlighter-rouge">](../object/StairwayUp.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>SymConnector<code class="language-plaintext highlighter-rouge">](../object/SymConnector.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SymPassage<code class="language-plaintext highlighter-rouge">](../object/SymPassage.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SymDoor<code class="language-plaintext highlighter-rouge">](../object/SymDoor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SymPathPassage<code class="language-plaintext highlighter-rouge">](../object/SymPathPassage.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SymStairway<code class="language-plaintext highlighter-rouge">](../object/SymStairway.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>UnlistedProxyConnector`](../object/UnlistedProxyConnector.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>noExit<code class="language-plaintext highlighter-rouge">](../object/noExit.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>destination<code class="language-plaintext highlighter-rouge">](#destination)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorApparent<code class="language-plaintext highlighter-rouge">](#isConnectorApparent)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorListed<code class="language-plaintext highlighter-rouge">](#isConnectorListed)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen<code class="language-plaintext highlighter-rouge">](#isOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>PushTravelVia<code class="language-plaintext highlighter-rouge">](#PushTravelVia)</code>  <code class="language-plaintext highlighter-rouge">[</code>suppressTravelDescForPushTravel<code class="language-plaintext highlighter-rouge">](#suppressTravelDescForPushTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>transmitsLight<code class="language-plaintext highlighter-rouge">](#transmitsLight)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelBarriers<code class="language-plaintext highlighter-rouge">](#travelBarriers)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalTime<code class="language-plaintext highlighter-rouge">](#traversalTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversed<code class="language-plaintext highlighter-rouge">](#traversed)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversedBy<code class="language-plaintext highlighter-rouge">](#traversedBy)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>afterTravelNotifications<code class="language-plaintext highlighter-rouge">](#afterTravelNotifications)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeTravelNotifications<code class="language-plaintext highlighter-rouge">](#beforeTravelNotifications)</code>  <code class="language-plaintext highlighter-rouge">[</code>canTravelerPass<code class="language-plaintext highlighter-rouge">](#canTravelerPass)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkPushTravel<code class="language-plaintext highlighter-rouge">](#checkPushTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkTravelBarriers<code class="language-plaintext highlighter-rouge">](#checkTravelBarriers)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(GoThrough)<code class="language-plaintext highlighter-rouge">](#dobjFor(GoThrough))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(TravelVia)<code class="language-plaintext highlighter-rouge">](#dobjFor(TravelVia))</code>  <code class="language-plaintext highlighter-rouge">[</code>execTravel<code class="language-plaintext highlighter-rouge">](#execTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>explainTravelBarrier<code class="language-plaintext highlighter-rouge">](#explainTravelBarrier)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDepartingDirection<code class="language-plaintext highlighter-rouge">](#getDepartingDirection)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDestination<code class="language-plaintext highlighter-rouge">](#getDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTraveler<code class="language-plaintext highlighter-rouge">](#getTraveler)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasBeenTraversedBy<code class="language-plaintext highlighter-rouge">](#hasBeenTraversedBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjFor(PushTravelThrough)<code class="language-plaintext highlighter-rouge">](#iobjFor(PushTravelThrough))</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorVisible<code class="language-plaintext highlighter-rouge">](#isConnectorVisible)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDestinationKnown<code class="language-plaintext highlighter-rouge">](#isDestinationKnown)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteTraversal<code class="language-plaintext highlighter-rouge">](#noteTraversal)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayActorFollowing<code class="language-plaintext highlighter-rouge">](#sayActorFollowing)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](#sayDeparting)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayNoDestination<code class="language-plaintext highlighter-rouge">](#sayNoDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelDesc<code class="language-plaintext highlighter-rouge">](#travelDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelVia<code class="language-plaintext highlighter-rouge">](#travelVia)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalMsg<code class="language-plaintext highlighter-rouge">](#traversalMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalTimeFrom<code class="language-plaintext highlighter-rouge">](#traversalTimeFrom)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="destination"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">destination</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1124">1124</a>]</p>
+
+<div class="desc">
+
+The room to which this TravelConnector leads when it is traversed
+
+</div>
+
+<p><span id="isConnectorApparent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConnectorApparent</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1093">1093</a>]</p>
+
+<div class="desc">
+
+Is this connector apparent? That is, would it be apparent to an observer
+under normal lighting conditions, as opposed to being concealed? By
+default we'll suppose a TravelConnector is apparent unless it's
+explicitly hidden.
+
+</div>
+
+<p><span id="isConnectorListed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConnectorListed</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1099">1099</a>]</p>
+
+<div class="desc">
+
+Should this exit be shown in the exit lister? By default we'll assumed
+it should be it it's visible.
+
+</div>
+
+<p><span id="isOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isOpen</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1149">1149</a>]</p>
+
+<div class="desc">
+
+A travel connector is usually open.
+
+</div>
+
+<p><span id="PushTravelVia"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">PushTravelVia</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1515">1515</a>]</p>
+
+<div class="desc">
+
+The appropriate PushTravelAction for pushing something something through
+a TravelConnector.
+
+</div>
+
+<p><span id="suppressTravelDescForPushTravel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">suppressTravelDescForPushTravel</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1523">1523</a>]</p>
+
+<div class="desc">
+
+If we display a message for pushing something via us, we probably don't
+also want the travelDesc describing the actor's travel. Game code can
+override if both messages are wanted when push-travelling.
+
+</div>
+
+<p><span id="transmitsLight"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">transmitsLight</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1105">1105</a>]</p>
+
+<div class="desc">
+
+Does light pass through this TravelConnector from its destination (so
+that it's visible in the dark even its location is dark.).
+
+</div>
+
+<p><span id="travelBarriers"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelBarriers</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1355">1355</a>]</p>
+
+<div class="desc">
+
+an additional TravelBarrier or a list of TravelBarriers to check on this
+TravelConnector to see if travel is allowed.
+
+</div>
+
+<p><span id="traversalTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">traversalTime</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#353">353</a>]</p>
+
+<div class="desc">
+
+The number of seconds it takes to traverse this connector (in addition
+to any that come from the Travel action). \[OBJTIME EXTENSION ONLY\]
+
+</div>
+
+<p><span id="traversed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">traversed</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1282">1282</a>]</p>
+
+<div class="desc">
+
+Have we been traversed by the player character? Return true if and only
+if we have.
+
+</div>
+
+<p><span id="traversedBy"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">traversedBy</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1269">1269</a>]</p>
+
+<div class="desc">
+
+A list of the actors, vehicles and pushTraverers that have traversed
+this TravelConnector. This is maintained by the noteTraversal(), so game
+code should normally treat this property as read-only.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="afterTravelNotifications"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterTravelNotifications (actor)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1304">1304</a>]</p>
+
+<div class="desc">
+
+Carry out the after travel notifications for this actor
+
+</div>
+
+<p><span id="beforeTravelNotifications"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beforeTravelNotifications (actor)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1285">1285</a>]</p>
+
+<div class="desc">
+
+Carry out the before travel notifications for this actor.
+
+</div>
+
+<p><span id="canTravelerPass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canTravelerPass (actor)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1328">1328</a>]</p>
+
+<div class="desc">
+
+Method that should return true is actor is allowed to pass through this
+TravelConnector and nil otherwise. We allow travel by default but this
+could be overridden to block travel under certain conditions.
+
+</div>
+
+<p><span id="checkPushTravel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkPushTravel ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1499">1499</a>]</p>
+
+<div class="desc">
+
+Check the travel barriers on the indirect object of the action
+
+</div>
+
+<p><span id="checkTravelBarriers"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkTravelBarriers (traveler)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1363">1363</a>]</p>
+
+<div class="desc">
+
+Check all the travel barriers associated with this connector to
+determine whether the traveler is allowed to pass through this travel
+connector.
+
+</div>
+
+<p><span id="dobjFor(GoThrough)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(GoThrough)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1480">1480</a>]</p>
+
+<div class="desc">
+
+For now, we just call the travelVia() method on the TravelConnector.
+Subsequentlly we might add appropriate code for the other action phases.
+
+</div>
+
+<p><span id="dobjFor(TravelVia)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(TravelVia)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1465">1465</a>]</p>
+
+<div class="desc">
+
+The TravelVia action is supplied so game code can execute a TravelVia
+action on a TravelConnector; there is no TRAVEL VIA command that can be
+issued directly by a player, but a player command may be translated into
+this action.
+
+</div>
+
+<p><span id="execTravel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execTravel (actor, traveler, conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1199">1199</a>]</p>
+
+<div class="desc">
+
+Execute the travel for this actor via this connector
+
+</div>
+
+<p><span id="explainTravelBarrier"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">explainTravelBarrier (actor)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1335">1335</a>]</p>
+
+<div class="desc">
+
+If canTravelerPass returns nil explainTravelBarrier should display a
+message explaining why travel has been prohibited.
+
+</div>
+
+<p><span id="getDepartingDirection"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getDepartingDirection (traveler)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1450">1450</a>]</p>
+
+<div class="desc">
+
+Get the direction traveler needs to go in to traverse this connector
+from traveler's current location.
+
+</div>
+
+<p><span id="getDestination"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getDestination (origin)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1130">1130</a>]</p>
+
+<div class="desc">
+
+The room to which this TravelConnector leads when it is traversed from
+origin.
+
+</div>
+
+<p><span id="getTraveler"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTraveler (actor)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1181">1181</a>]</p>
+
+<div class="desc">
+
+Get the traveler associated with this actor. Normally the traveler will
+be the same as the actor, but if the actor is in a vehicle, then the
+traveler will be the vehicle.
+
+</div>
+
+<p><span id="hasBeenTraversedBy"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hasBeenTraversedBy (traveler)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1275">1275</a>]</p>
+
+<div class="desc">
+
+Test whether this TravelConnector has been traversed by traveler (which
+may be an actor, a vehicle, or something pushed through the
+TravelConnector by an actor).
+
+</div>
+
+<p><span id="iobjFor(PushTravelThrough)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjFor(PushTravelThrough)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1486">1486</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="isConnectorVisible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConnectorVisible ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1112">1112</a>]</p>
+
+<div class="desc">
+
+A TravelConnector (or at least, the exit it represents) is visible if
+it's apparent (i.e. not concealed in some way) and if the lighting
+conditions are adequate, or if it's visible in the dark.
+
+</div>
+
+<p><span id="isDestinationKnown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isDestinationKnown ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1141">1141</a>]</p>
+
+<div class="desc">
+
+Does the player char know where this travel connector leads? By default
+s/he doesn't until s/he's visited its destination, but this could be
+overridden for an area the PC is supposed to know well when the game
+starts, such as their own house.
+
+</div>
+
+<p><span id="noteTraversal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteTraversal (actor)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1246">1246</a>]</p>
+
+<div class="desc">
+
+If the actor doing the traveling is the player character, display the
+travelDesc. Note that although this might normally be a simple
+description of the travel, the travelDesc method could also be used to
+carry out any other side-effects of the travel via this connector.
+
+</div>
+
+<p><span id="sayActorFollowing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayActorFollowing (follower, leader)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1417">1417</a>]</p>
+
+<div class="desc">
+
+Display a message to say that follower is following leader in the
+direction of this connector.
+
+</div>
+
+<p><span id="sayDeparting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDeparting (traveler)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1396">1396</a>]</p>
+
+<div class="desc">
+
+Display a message to say that an actor is departing via this connector.
+On the base class the default behaviour is to describe the departure via
+a compass direction. The actor in question would normally be an NPC
+visible to the player character.
+
+</div>
+
+<p><span id="sayNoDestination"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayNoDestination ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1234">1234</a>]</p>
+
+<div class="desc">
+
+Display a message saying that this travel connector doesn't actually
+lead anywhere; this may be needed if our destination is nil and our
+noteTraversal() method doesn't display anything.
+
+</div>
+
+<p><span id="travelDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelDesc ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1345">1345</a>]</p>
+
+<div class="desc">
+
+Carry out any side effects of travel if the traveler is the player
+character. Typically we might just display some text describing the
+travel here, but this method could be used for any side-effects of the
+travel. If the TravelConnector is mixed in with an EventList class then
+the default behaviour is to call the doScript() method here to drive the
+EventList.
+
+</div>
+
+<p><span id="travelVia"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelVia (actor)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1155">1155</a>]</p>
+
+<div class="desc">
+
+Carrier out travel via this connector, first checking that travel
+through this connector is permitted for this actor.
+
+</div>
+
+<p><span id="traversalMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">traversalMsg ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1438">1438</a>]</p>
+
+<div class="desc">
+
+Create a phrase describing the direction of travel through this
+connector (e.g. 'to the north')
+
+</div>
+
+<p><span id="traversalTimeFrom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">traversalTimeFrom (origin)</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#360">360</a>]</p>
+
+<div class="desc">
+
+If we want to vary the time to go through this TravelConnector depending
+on where the traveler is starting from (only really relevant for rooms),
+we can override this method instead. \[OBJTIME EXTENSION ONLY\]
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

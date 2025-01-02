@@ -1,3 +1,5 @@
+---
+---
 <span class="title">miscWordList</span><span class="type">GrammarProd</span>
 
 `grammar `**[`miscWordList(list)`](../object/miscWordList(list).html)**` :   `[`MiscWordListProduction`](../object/MiscWordListProduction.html)

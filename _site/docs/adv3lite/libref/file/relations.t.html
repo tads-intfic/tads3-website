@@ -1,0 +1,132 @@
+<p><span class="title">relations.t</span><span class="type">file</span></p>
+
+<p><a href="../source/relations.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+RELATIONS EXTENSION by Eric Eve July 2014
+
+The relations.t extension allows Inform7-style relations to be defined
+in a TADS 3 game.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>Relation<code class="language-plaintext highlighter-rouge">](../object/Relation.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ListRelations)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ListRelations).html)</code>  <code class="language-plaintext highlighter-rouge">[</code>VerbRule(RelationDetails)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(RelationDetails).html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>DerivedRelation<code class="language-plaintext highlighter-rouge">](../object/DerivedRelation.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListRelations<code class="language-plaintext highlighter-rouge">](../object/ListRelations.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RelationDetails<code class="language-plaintext highlighter-rouge">](../object/RelationDetails.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>relationPathfinder<code class="language-plaintext highlighter-rouge">](../object/relationPathfinder.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>relationTable<code class="language-plaintext highlighter-rouge">](../object/relationTable.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>relate<code class="language-plaintext highlighter-rouge">](#relate)</code>  <code class="language-plaintext highlighter-rouge">[</code>related<code class="language-plaintext highlighter-rouge">](#related)</code>  <code class="language-plaintext highlighter-rouge">[</code>relationPath<code class="language-plaintext highlighter-rouge">](#relationPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>unrelate<code class="language-plaintext highlighter-rouge">](#unrelate)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="relate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">relate (a, rel, b)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#503">503</a>]</p>
+
+<div class="desc">
+
+Make a related to b via the rel relation. The rel parameter can be
+specified either as an object (in which case its the relevant relation
+object) or as a single-quoted string (in which cast it's either the name
+or the reverseName of a relation object.
+
+PART OF THE RELATIONS EXTENSION
+
+</div>
+
+<p><span id="related"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">related (a, rel, b?)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#578">578</a>]</p>
+
+<div class="desc">
+
+If two arguments are supplied (e.g. related(a, knows)) returns a list of
+items related to a via the rel relation. If three arguments are supplied
+(e.g. related(a, knows, b)) then return true if a is related to b via
+the knows relation and b otherwise.
+
+PART OF THE RELATIONS EXTENSION
+
+</div>
+
+<p><span id="relationPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">relationPath (start, rel, target)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#753">753</a>]</p>
+
+<div class="desc">
+
+Find a path from start to target via the rel relation, where rel can be
+a single relation or a list of relations, and can be specified either
+via a relation object name or a string name (or reverseName). We provide
+this as a convenient wrapper for the more verbose method call.
+
+PART OF THE RELATIONS EXTENSION.
+
+</div>
+
+<p><span id="unrelate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unrelate (a, rel, b)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#539">539</a>]</p>
+
+<div class="desc">
+
+Remove the rel relation between a and b
+
+PART OF THE RELATIONS EXTENSION
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LocType</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[10033](../source/thing.t.html#10033)\],

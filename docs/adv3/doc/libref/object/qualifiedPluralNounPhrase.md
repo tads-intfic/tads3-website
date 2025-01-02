@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedPluralNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`qualifiedPluralNounPhrase(all)`](../object/qualifiedPluralNounPhrase(all).html)</span>` :   `[`AllPluralProd`](../object/AllPluralProd.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">predicate(TellAboutImplicit)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[9497](../source/en_us.t.html#9497)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OpenAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2496](../source/actions.t.html#2496)\]

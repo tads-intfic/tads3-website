@@ -1,3 +1,5 @@
+---
+---
 <span class="title">hintsys.t</span><span class="type">file</span>
 
 [source file](../source/hintsys.t.html)

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="web.htm" class="nav">Playing on the Web</a> \> Deploying your
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="web.html" class="nav">Playing on the Web</a> \> Deploying your
 Web UI game  
-<span class="navnp"><a href="webui.htm" class="nav"><em>Prev:</em> The Web UI</a>
-    <a href="webhost.htm" class="nav"><em>Next:</em> Setting up a custom
+<span class="navnp"><a href="webui.html" class="nav"><em>Prev:</em> The Web UI</a>
+    <a href="webhost.html" class="nav"><em>Next:</em> Setting up a custom
 TADS Web server</a>     </span>
 
 </div>
@@ -64,7 +66,7 @@ Second, you can set up your own server specifically for your game. This
 gives you full control over the server, but it's much more complicated -
 it requires that you have your own Web server, and it involves some
 software installation and configuration. The details are covered
-[here](webhost.htm).
+[here](webhost.html).
 
 ## Publishing for stand-alone play
 
@@ -184,22 +186,22 @@ operations on the storage server.
 
 #### Saving and restoring games
 
-The [saveGame()](tadsgen.htm#saveGame) and
-[restoreGame()](tadsgen.htm#restoreGame) functions automatically use the
+The [saveGame()](tadsgen.html#saveGame) and
+[restoreGame()](tadsgen.html#restoreGame) functions automatically use the
 storage server session information that IFDB passes to the interpreter
 upon launch. This is transparent to your game; you don't have to do
 anything different.
 
 #### Log files
 
-The [setLogFile()](tadsio.htm#setLogFile),
-[setScriptFile()](tadsio.htm#setScriptFile), and
-[logConsoleCreate()](tadsio.htm#logConsoleCreate) automatically use the
+The [setLogFile()](tadsio.html#setLogFile),
+[setScriptFile()](tadsio.html#setScriptFile), and
+[logConsoleCreate()](tadsio.html#logConsoleCreate) automatically use the
 storage server session information, transparently to your game.
 
 #### File objects
 
-The [File](file.htm) intrinsic class automatically uses the storage
+The [File](file.html) intrinsic class automatically uses the storage
 server session information to manage files. When you open a file, the
 File class communicates with the storage server to read or write the
 file data.
@@ -257,7 +259,7 @@ possible. If you really need to use File objects, you should at least
 warn the player that logging in to IFDB is strongly recommended; you can
 determine if a storage server session is in use by checking
 webSession.storageSID. Alternatively, if you're using File objects for
-temporary storage only, you can use [TemporaryFile](tempfile.htm)
+temporary storage only, you can use [TemporaryFile](tempfile.html)
 objects to create server-side temporary files without any user
 interaction.
 
@@ -268,11 +270,11 @@ interaction.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="web.htm" class="nav">Playing on the Web</a> \> Deploying your
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="web.html" class="nav">Playing on the Web</a> \> Deploying your
 Web UI game  
-<span class="navnp"><a href="webui.htm" class="nav"><em>Prev:</em> The Web UI</a>
-    <a href="webhost.htm" class="nav"><em>Next:</em> Setting up a custom
+<span class="navnp"><a href="webui.html" class="nav"><em>Prev:</em> The Web UI</a>
+    <a href="webhost.html" class="nav"><em>Next:</em> Setting up a custom
 TADS Web server</a>     </span>
 
 </div>

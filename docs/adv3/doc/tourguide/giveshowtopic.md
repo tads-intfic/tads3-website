@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>GiveShowTopic : <a
-href="topicentry.htm">ThingMatchTopic</a><br />
+href="topicentry.html">ThingMatchTopic</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="showtopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="alttopic.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="showtopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="alttopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -38,7 +40,7 @@ player to complete the task:
 If you try this out, however, it will rapidly become obvious that it
 generates something of an unrealistic succession if Sarah is shown both
 the ring (sans diamond) and the diamond (sans ring) in either order.
-We'll see how to fix that shortly using [AltTopic](alttopic.htm). In the
+We'll see how to fix that shortly using [AltTopic](alttopic.html). In the
 meantime let's add some more GiveShowTopics.  
   
 You'll remember some time ago we installed a vending machine to dispense
@@ -129,7 +131,7 @@ and perhaps you feel it's a shame that TADS 3 couldn't find some way to
 avoid this sort of thing in this case too. Well, if you are thinking
 that, you'll be glad to know that TADS 3 does provide an alternative
 here, which we'll look at shortly when we come to discuss
-[InitiateTopic](initiatetopic.htm).  
+[InitiateTopic](initiatetopic.html).  
   
 King Solomon, meanwhile, is fairly anxious to recover a certain bronze
 bowl he's mislaid, so we need to provide for handing it over to him. The

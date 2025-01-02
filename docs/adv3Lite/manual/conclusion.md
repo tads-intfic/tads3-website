@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Conclusion  
-<span class="navnp"><a href="feedback.htm" class="nav"><em>Prev:</em> Feedback</a>
-    *Next:* <a href="changelog.htm" class="nav">Change Log</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Conclusion  
+<span class="navnp"><a href="feedback.html" class="nav"><em>Prev:</em> Feedback</a>
+    *Next:* <a href="changelog.html" class="nav">Change Log</a>
    </span>
 
 </div>
@@ -49,10 +51,10 @@ November 2013*
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Conclusion  
-<span class="navnp"><a href="feedback.htm" class="nav"><em>Prev:</em> Feedback</a>
-    *Next:* <a href="changelog.htm" class="nav">Change Log</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Conclusion  
+<span class="navnp"><a href="feedback.html" class="nav"><em>Prev:</em> Feedback</a>
+    *Next:* <a href="changelog.html" class="nav">Change Log</a>
    </span>
 
 </div>

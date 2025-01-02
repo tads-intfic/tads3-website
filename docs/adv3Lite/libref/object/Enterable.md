@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Enterable</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[797](../source/extras.t.html#797)\]

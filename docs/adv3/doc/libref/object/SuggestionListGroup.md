@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SuggestionListGroup</span><span class="type">class</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5688](../source/msg_neu.t.html#5688)\]

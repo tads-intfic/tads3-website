@@ -1,3 +1,5 @@
+---
+---
 <span class="title">compoundNounPhrase(of)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[721](../source/grammar.t.html#721)\]

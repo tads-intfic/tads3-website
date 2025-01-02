@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ActorTopicDatabase</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[2841](../source/actor.t.html#2841)\],

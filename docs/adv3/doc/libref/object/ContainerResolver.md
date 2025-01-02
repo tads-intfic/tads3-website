@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ContainerResolver</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[3288](../source/parser.t.html#3288)\]

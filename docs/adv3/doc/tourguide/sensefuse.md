@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,17 +9,17 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SenseFuse : <a
-href="fuse.htm">Fuse</a><br />
+href="fuse.html">Fuse</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="daemon.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="sensedaemon.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="daemon.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="sensedaemon.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-One problem you may have with a [Fuse](fuse.htm) is that it could go off
+One problem you may have with a [Fuse](fuse.html) is that it could go off
 when the player character is not near enough to perceive the result, but
 that any text defined in the method that's executed when the Fuse fires
 will be displayed whether it describes something the player character
@@ -167,7 +169,7 @@ not always be so convenient, and we're trying to illustrate a
 SenseFuse!  
   
 Later on we'll make this bomb a bit more interesting, for example by
-adding a [Noise](noise.htm) object to make it tick. In the meantime note
+adding a [Noise](noise.html) object to make it tick. In the meantime note
 the use of the specialDesc property on the rubble; we override
 useSpecialDesc so that this specialDesc is displayed only after the bomb
 has gone off, and we set specialDescOrder to 70 (lower than the default

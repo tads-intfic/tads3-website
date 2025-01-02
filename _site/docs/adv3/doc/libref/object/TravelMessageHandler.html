@@ -1,0 +1,323 @@
+<p><span class="title">TravelMessageHandler</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#210">210</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Travel Message Handler. This contains a set of messages that are
+specific to different types of TravelConnector objects, to describe NPC
+arrivals and departures via these connectors when the NPC's are in view
+of the player character.
+
+This base class implements the methods simply by calling the
+corresponding gLibMessages message methods.
+
+The purpose of providing this variety of connector-specific handlers is
+to make it easy for individual travelers to customize the
+arrival/departure messages for specific connector subclasses. These
+messages sometimes benefit from customization for specific
+traveler/connector combinations; the easiest way to enable such granular
+customization is to make it possible to override a message per connector
+type on the traveler object.
+
+`class `**`TravelMessageHandler`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TravelMessageHandler</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TravelMessageHandler</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ActorState<code class="language-plaintext highlighter-rouge">](../object/ActorState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AccompanyingInTravelState<code class="language-plaintext highlighter-rouge">](../object/AccompanyingInTravelState.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>GuidedInTravelState<code class="language-plaintext highlighter-rouge">](../object/GuidedInTravelState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AccompanyingState<code class="language-plaintext highlighter-rouge">](../object/AccompanyingState.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>GuidedTourState<code class="language-plaintext highlighter-rouge">](../object/GuidedTourState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ConversationReadyState<code class="language-plaintext highlighter-rouge">](../object/ConversationReadyState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>HermitActorState<code class="language-plaintext highlighter-rouge">](../object/HermitActorState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>InConversationState<code class="language-plaintext highlighter-rouge">](../object/InConversationState.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Traveler<code class="language-plaintext highlighter-rouge">](../object/Traveler.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Actor<code class="language-plaintext highlighter-rouge">](../object/Actor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>UntakeableActor<code class="language-plaintext highlighter-rouge">](../object/UntakeableActor.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Person<code class="language-plaintext highlighter-rouge">](../object/Person.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Vehicle`](../object/Vehicle.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getNominalTraveler<code class="language-plaintext highlighter-rouge">](#getNominalTraveler)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArriving<code class="language-plaintext highlighter-rouge">](#sayArriving)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingDir<code class="language-plaintext highlighter-rouge">](#sayArrivingDir)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingDownStairs<code class="language-plaintext highlighter-rouge">](#sayArrivingDownStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingLocally<code class="language-plaintext highlighter-rouge">](#sayArrivingLocally)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingThroughPassage<code class="language-plaintext highlighter-rouge">](#sayArrivingThroughPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingUpStairs<code class="language-plaintext highlighter-rouge">](#sayArrivingUpStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingViaPath<code class="language-plaintext highlighter-rouge">](#sayArrivingViaPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](#sayDeparting)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingDir<code class="language-plaintext highlighter-rouge">](#sayDepartingDir)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingDownStairs<code class="language-plaintext highlighter-rouge">](#sayDepartingDownStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingLocally<code class="language-plaintext highlighter-rouge">](#sayDepartingLocally)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingThroughPassage<code class="language-plaintext highlighter-rouge">](#sayDepartingThroughPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingUpStairs<code class="language-plaintext highlighter-rouge">](#sayDepartingUpStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingViaPath<code class="language-plaintext highlighter-rouge">](#sayDepartingViaPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayTravelingRemotely<code class="language-plaintext highlighter-rouge">](#sayTravelingRemotely)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="getNominalTraveler"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNominalTraveler ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#216">216</a>]</p>
+
+<div class="desc">
+
+Get the traveler for the purposes of arrival/departure messages.
+Implementations that aren't themselves the travelers should override
+this to supply the correct nominal traveler.
+
+</div>
+
+<p><span id="sayArriving"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArriving (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#219">219</a>]</p>
+
+<div class="desc">
+
+generic arrival/departure - for the base TravelConnector class
+
+</div>
+
+<p><span id="sayArrivingDir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingDir (dir, conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#233">233</a>]</p>
+
+<div class="desc">
+
+directional arrival/departure - for RoomConnector
+
+</div>
+
+<p><span id="sayArrivingDownStairs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingDownStairs (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#255">255</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayArrivingLocally"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingLocally (dest, conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#223">223</a>]</p>
+
+<div class="desc">
+
+generic local arrival and departure messages
+
+</div>
+
+<p><span id="sayArrivingThroughPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingThroughPassage (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#237">237</a>]</p>
+
+<div class="desc">
+
+arrival/departure via a ThroughPassage
+
+</div>
+
+<p><span id="sayArrivingUpStairs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingUpStairs (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#253">253</a>]</p>
+
+<div class="desc">
+
+arrival/departure up/down stairs
+
+</div>
+
+<p><span id="sayArrivingViaPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingViaPath (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#247">247</a>]</p>
+
+<div class="desc">
+
+arrival/departure via a PathPassage
+
+</div>
+
+<p><span id="sayDeparting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDeparting (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#220">220</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayDepartingDir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingDir (dir, conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#234">234</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayDepartingDownStairs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingDownStairs (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#259">259</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayDepartingLocally"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingLocally (dest, conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#225">225</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayDepartingThroughPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingThroughPassage (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#241">241</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayDepartingUpStairs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingUpStairs (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#257">257</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayDepartingViaPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingViaPath (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#249">249</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayTravelingRemotely"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayTravelingRemotely (dest, conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#229">229</a>]</p>
+
+<div class="desc">
+
+generic remote travel message
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

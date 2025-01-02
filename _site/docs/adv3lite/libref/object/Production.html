@@ -1,0 +1,843 @@
+<p><span class="title">Production</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3302">3302</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Our root class for grammar productions. (A "production" represents a
+match to a syntax rule, as defined with a 'grammar' template.)
+
+The language module's grammar rules can define certain special
+properties on any production match object, and we'll find them in the
+course of building the command from the match tree:
+
+endOfSentence=true - define this on a production for a sentence-ending
+verb conjunction. In English (and most Western languages), this can be
+used with rules that match punctuation marks like periods, exclamation
+points, and question marks, since these marks typically end a sentence.
+The parser distinguishes between the grammar rules for the first clause
+in a sentence vs subsequent clauses. It starts a new input line with the
+first-in-sentence rule, then uses the additional clause rule for each
+subsequent clause. When a clause ends with a sentence-ending mark,
+though, we'll treat the next clause as a sentence opener again.
+
+`class `**`Production`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Production</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Production</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>actorBadCommandPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/actorBadCommandPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>atSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/atSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>BadListProduction<code class="language-plaintext highlighter-rouge">](../object/BadListProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>singleNoun(multiple)<code class="language-plaintext highlighter-rouge">](../object/singleNoun(multiple).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>commandOnlyConjunction(nonSentenceEnding)<code class="language-plaintext highlighter-rouge">](../object/commandOnlyConjunction(nonSentenceEnding).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>commandOnlyConjunction(sentenceEnding)<code class="language-plaintext highlighter-rouge">](../object/commandOnlyConjunction(sentenceEnding).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>commandOrNounConjunction(main)<code class="language-plaintext highlighter-rouge">](../object/commandOrNounConjunction(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>CommandProduction<code class="language-plaintext highlighter-rouge">](../object/CommandProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>commandPhrase(ambiguousConj)<code class="language-plaintext highlighter-rouge">](../object/commandPhrase(ambiguousConj).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>commandPhrase(definiteConj)<code class="language-plaintext highlighter-rouge">](../object/commandPhrase(definiteConj).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>defaultCommandPhrase(examine)<code class="language-plaintext highlighter-rouge">](../object/defaultCommandPhrase(examine).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>firstCommandPhrase(askTellActorTo)<code class="language-plaintext highlighter-rouge">](../object/firstCommandPhrase(askTellActorTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>firstCommandPhrase(commandOnly)<code class="language-plaintext highlighter-rouge">](../object/firstCommandPhrase(commandOnly).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>firstCommandPhrase(withActor)<code class="language-plaintext highlighter-rouge">](../object/firstCommandPhrase(withActor).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhrase(miscPrep)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhrase(miscPrep).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithAll(main)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithAll(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(main)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>compoundNounArticle(main)<code class="language-plaintext highlighter-rouge">](../object/compoundNounArticle(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>compoundNounPhrase(of)<code class="language-plaintext highlighter-rouge">](../object/compoundNounPhrase(of).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>compoundNounPhrase(simple)<code class="language-plaintext highlighter-rouge">](../object/compoundNounPhrase(simple).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>compoundNounPrep(main)<code class="language-plaintext highlighter-rouge">](../object/compoundNounPrep(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>compoundPluralPhrase(of)<code class="language-plaintext highlighter-rouge">](../object/compoundPluralPhrase(of).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>compoundPluralPhrase(simple)<code class="language-plaintext highlighter-rouge">](../object/compoundPluralPhrase(simple).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>contentsPrep(main)<code class="language-plaintext highlighter-rouge">](../object/contentsPrep(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>contentsPrepOrVerb(main)<code class="language-plaintext highlighter-rouge">](../object/contentsPrepOrVerb(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ContentsQualifierProduction<code class="language-plaintext highlighter-rouge">](../object/ContentsQualifierProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>nounPhraseWithContents(contents)<code class="language-plaintext highlighter-rouge">](../object/nounPhraseWithContents(contents).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pluralPhraseWithContents(contents)<code class="language-plaintext highlighter-rouge">](../object/pluralPhraseWithContents(contents).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(theOnesContaining)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(theOnesContaining).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(theOneContaining)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(theOneContaining).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>CoreNounPhraseProduction<code class="language-plaintext highlighter-rouge">](../object/CoreNounPhraseProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>nounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/nounPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pluralPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/pluralPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>detPluralNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/detPluralNounPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>detPluralOnlyNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/detPluralOnlyNounPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(root)<code class="language-plaintext highlighter-rouge">](../object/directionName(root).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>disambigListItem(noun)<code class="language-plaintext highlighter-rouge">](../object/disambigListItem(noun).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>disambigListItem(plural)<code class="language-plaintext highlighter-rouge">](../object/disambigListItem(plural).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>disambigListItem(possessive)<code class="language-plaintext highlighter-rouge">](../object/disambigListItem(possessive).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>disambigPhrase(all)<code class="language-plaintext highlighter-rouge">](../object/disambigPhrase(all).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>disambigPhrase(any)<code class="language-plaintext highlighter-rouge">](../object/disambigPhrase(any).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>disambigPhrase(list)<code class="language-plaintext highlighter-rouge">](../object/disambigPhrase(list).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>disambigPhrase(ordinalList)<code class="language-plaintext highlighter-rouge">](../object/disambigPhrase(ordinalList).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DisambigProduction<code class="language-plaintext highlighter-rouge">](../object/DisambigProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>mainDisambigPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/mainDisambigPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>EmptyNounProduction<code class="language-plaintext highlighter-rouge">](../object/EmptyNounProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>literalPhrase(empty)<code class="language-plaintext highlighter-rouge">](../object/literalPhrase(empty).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>nounList(empty)<code class="language-plaintext highlighter-rouge">](../object/nounList(empty).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(empty)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(empty).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simplePluralPhrase(empty)<code class="language-plaintext highlighter-rouge">](../object/simplePluralPhrase(empty).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>singleNoun(empty)<code class="language-plaintext highlighter-rouge">](../object/singleNoun(empty).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>exceptListBody(single)<code class="language-plaintext highlighter-rouge">](../object/exceptListBody(single).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ExceptListProduction<code class="language-plaintext highlighter-rouge">](../object/ExceptListProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>exceptList(main)<code class="language-plaintext highlighter-rouge">](../object/exceptList(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>exceptNounPhrase(singleComplete)<code class="language-plaintext highlighter-rouge">](../object/exceptNounPhrase(singleComplete).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>exceptNounPhrase(singlePossessive)<code class="language-plaintext highlighter-rouge">](../object/exceptNounPhrase(singlePossessive).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(definite)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(definite).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(possessive)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(possessive).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralOnlyNounPhrase(definite)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralOnlyNounPhrase(definite).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralOnlyNounPhrase(possessive)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>forSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/forSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>fromSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/fromSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>implicitDetPluralOnlyNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/implicitDetPluralOnlyNounPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>indetPluralNounPhrase(basic)<code class="language-plaintext highlighter-rouge">](../object/indetPluralNounPhrase(basic).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>indetPluralOnlyNounPhrase(basic)<code class="language-plaintext highlighter-rouge">](../object/indetPluralOnlyNounPhrase(basic).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>indetSingularNounPhrase(basic)<code class="language-plaintext highlighter-rouge">](../object/indetSingularNounPhrase(basic).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>inSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/inSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>literalNounPhrase(number)<code class="language-plaintext highlighter-rouge">](../object/literalNounPhrase(number).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>literalNounPhrase(string)<code class="language-plaintext highlighter-rouge">](../object/literalNounPhrase(string).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LiteralNounProduction<code class="language-plaintext highlighter-rouge">](../object/LiteralNounProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>literalPhrase(miscList)<code class="language-plaintext highlighter-rouge">](../object/literalPhrase(miscList).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>literalPhrase(string)<code class="language-plaintext highlighter-rouge">](../object/literalPhrase(string).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LocationalProduction<code class="language-plaintext highlighter-rouge">](../object/LocationalProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>disambigPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/disambigPhrase(locational).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>indetPluralNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetPluralNounPhrase(locational).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>indetPluralOnlyNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetPluralOnlyNounPhrase(locational).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>indetSingularNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetSingularNounPhrase(locational).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(theOnesIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(theOnesIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(anyOneIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(anyOneIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(theOneIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(theOneIn).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LocationPrepProduction<code class="language-plaintext highlighter-rouge">](../object/LocationPrepProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>locationPrep(from)<code class="language-plaintext highlighter-rouge">](../object/locationPrep(from).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>locationPrep(in)<code class="language-plaintext highlighter-rouge">](../object/locationPrep(in).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>locationPrep(on)<code class="language-plaintext highlighter-rouge">](../object/locationPrep(on).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>MiscWordListProduction<code class="language-plaintext highlighter-rouge">](../object/MiscWordListProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>miscWordList(list)<code class="language-plaintext highlighter-rouge">](../object/miscWordList(list).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>miscWordList(wordOrNumber)<code class="language-plaintext highlighter-rouge">](../object/miscWordList(wordOrNumber).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounConjunction(main)<code class="language-plaintext highlighter-rouge">](../object/nounConjunction(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounList(list)<code class="language-plaintext highlighter-rouge">](../object/nounList(list).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounList(nonTerminal)<code class="language-plaintext highlighter-rouge">](../object/nounList(nonTerminal).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounList(terminal)<code class="language-plaintext highlighter-rouge">](../object/nounList(terminal).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NounListProduction<code class="language-plaintext highlighter-rouge">](../object/NounListProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>disambigList(list)<code class="language-plaintext highlighter-rouge">](../object/disambigList(list).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>disambigOrdinalList(head)<code class="language-plaintext highlighter-rouge">](../object/disambigOrdinalList(head).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>disambigOrdinalList(tail)<code class="language-plaintext highlighter-rouge">](../object/disambigOrdinalList(tail).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>exceptListBody(list)<code class="language-plaintext highlighter-rouge">](../object/exceptListBody(list).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>nonTerminalNounMultiList(multi)<code class="language-plaintext highlighter-rouge">](../object/nonTerminalNounMultiList(multi).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>nonTerminalNounMultiList(pair)<code class="language-plaintext highlighter-rouge">](../object/nonTerminalNounMultiList(pair).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>nounMultiList(multi)<code class="language-plaintext highlighter-rouge">](../object/nounMultiList(multi).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounMultiList(nonterminal)<code class="language-plaintext highlighter-rouge">](../object/nounMultiList(nonterminal).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounPhraseWithContents(basic)<code class="language-plaintext highlighter-rouge">](../object/nounPhraseWithContents(basic).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounWord(noun)<code class="language-plaintext highlighter-rouge">](../object/nounWord(noun).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounWord(nounAbbr)<code class="language-plaintext highlighter-rouge">](../object/nounWord(nounAbbr).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounWord(nounApostS)<code class="language-plaintext highlighter-rouge">](../object/nounWord(nounApostS).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NumberNounProduction<code class="language-plaintext highlighter-rouge">](../object/NumberNounProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>numberObjPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/numberObjPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>numberPhrase(digits)<code class="language-plaintext highlighter-rouge">](../object/numberPhrase(digits).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>numberPhrase(spelled)<code class="language-plaintext highlighter-rouge">](../object/numberPhrase(spelled).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>poundNumberPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/poundNumberPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>onSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/onSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>oopsCommand(main)<code class="language-plaintext highlighter-rouge">](../object/oopsCommand(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>OopsProduction<code class="language-plaintext highlighter-rouge">](../object/OopsProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>oopsPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/oopsPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>OrdinalProduction<code class="language-plaintext highlighter-rouge">](../object/OrdinalProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>disambigListItem(ordinal)<code class="language-plaintext highlighter-rouge">](../object/disambigListItem(ordinal).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>disambigOrdinalItem(main)<code class="language-plaintext highlighter-rouge">](../object/disambigOrdinalItem(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>outOfSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/outOfSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>pluralPhraseWithContents(basic)<code class="language-plaintext highlighter-rouge">](../object/pluralPhraseWithContents(basic).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>PossessiveProduction<code class="language-plaintext highlighter-rouge">](../object/PossessiveProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(definiteNpApostropheS)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(definiteNpApostropheS).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(her)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(her).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(his)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(his).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(indefiniteNpApostropheS)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(indefiniteNpApostropheS).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(its)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(its).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(my)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(my).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(npApostropheS)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(npApostropheS).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(their)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(their).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(your)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(your).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(hers)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(hers).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(his)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(his).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(its)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(its).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(mine)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(mine).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(npApostropheS)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(npApostropheS).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(theirs)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(theirs).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(yours)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(yours).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>PronounProduction<code class="language-plaintext highlighter-rouge">](../object/PronounProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(her)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(her).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(herself)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(herself).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(him)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(him).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(himself)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(himself).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(it)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(it).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(itself)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(itself).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(me)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(me).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(them)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(them).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(themselves)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(themselves).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(us)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(us).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pronounPhrase(you)<code class="language-plaintext highlighter-rouge">](../object/pronounPhrase(you).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>putPrep(main)<code class="language-plaintext highlighter-rouge">](../object/putPrep(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>putPrepSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/putPrepSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/qualifiedNounPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(all)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(all).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(determiner)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(determiner).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(anyPlural)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(anyPlural).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(arbitrary)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(arbitrary).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(definite)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(definite).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(indefinite)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(indefinite).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(possessive)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(possessive).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>QuantifierProduction<code class="language-plaintext highlighter-rouge">](../object/QuantifierProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>disambigPhrase(both)<code class="language-plaintext highlighter-rouge">](../object/disambigPhrase(both).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(definiteNumber)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(definiteNumber).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(possessiveNumber)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(possessiveNumber).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(possessiveNumber2)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(possessiveNumber2).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralOnlyNounPhrase(definiteNumber)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralOnlyNounPhrase(definiteNumber).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralOnlyNounPhrase(possessiveNumber)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralOnlyNounPhrase(possessiveNumber).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralOnlyNounPhrase(possessiveNumber2)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralOnlyNounPhrase(possessiveNumber2).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(allNum)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(allNum).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(anyNum)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(anyNum).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(both)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(both).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(definiteNum)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(definiteNum).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>quotedStringPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/quotedStringPhrase(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(adjAndOne)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(adjAndOne).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(adjAndOnes)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(adjAndOnes).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(list)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(list).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(literal)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(literal).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(literalAndList)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(literalAndList).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(misc)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(misc).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(noun)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(noun).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simplePluralPhrase(adjAndOnes)<code class="language-plaintext highlighter-rouge">](../object/simplePluralPhrase(adjAndOnes).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simplePluralPhrase(misc)<code class="language-plaintext highlighter-rouge">](../object/simplePluralPhrase(misc).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>simplePluralPhrase(plural)<code class="language-plaintext highlighter-rouge">](../object/simplePluralPhrase(plural).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>singleNoun(normal)<code class="language-plaintext highlighter-rouge">](../object/singleNoun(normal).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>singleNounOnly(main)<code class="language-plaintext highlighter-rouge">](../object/singleNounOnly(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledHundred(aHundred)<code class="language-plaintext highlighter-rouge">](../object/spelledHundred(aHundred).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledHundred(aHundredPlus)<code class="language-plaintext highlighter-rouge">](../object/spelledHundred(aHundredPlus).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledHundred(hundreds)<code class="language-plaintext highlighter-rouge">](../object/spelledHundred(hundreds).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledHundred(hundredsPlus)<code class="language-plaintext highlighter-rouge">](../object/spelledHundred(hundredsPlus).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledHundred(small)<code class="language-plaintext highlighter-rouge">](../object/spelledHundred(small).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledMillion(aMillion)<code class="language-plaintext highlighter-rouge">](../object/spelledMillion(aMillion).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledMillion(aMillionAndSmall)<code class="language-plaintext highlighter-rouge">](../object/spelledMillion(aMillionAndSmall).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledMillion(millions)<code class="language-plaintext highlighter-rouge">](../object/spelledMillion(millions).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledMillion(millionsAndSmall)<code class="language-plaintext highlighter-rouge">](../object/spelledMillion(millionsAndSmall).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledMillion(millionsPlus)<code class="language-plaintext highlighter-rouge">](../object/spelledMillion(millionsPlus).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledNumber(main)<code class="language-plaintext highlighter-rouge">](../object/spelledNumber(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledSmallNumber(digit)<code class="language-plaintext highlighter-rouge">](../object/spelledSmallNumber(digit).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledSmallNumber(teen)<code class="language-plaintext highlighter-rouge">](../object/spelledSmallNumber(teen).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledSmallNumber(tens)<code class="language-plaintext highlighter-rouge">](../object/spelledSmallNumber(tens).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledSmallNumber(tensAndUnits)<code class="language-plaintext highlighter-rouge">](../object/spelledSmallNumber(tensAndUnits).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledSmallNumber(zero)<code class="language-plaintext highlighter-rouge">](../object/spelledSmallNumber(zero).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledThousand(aThousand)<code class="language-plaintext highlighter-rouge">](../object/spelledThousand(aThousand).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledThousand(aThousandAndSmall)<code class="language-plaintext highlighter-rouge">](../object/spelledThousand(aThousandAndSmall).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledThousand(thousands)<code class="language-plaintext highlighter-rouge">](../object/spelledThousand(thousands).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledThousand(thousandsAndSmall)<code class="language-plaintext highlighter-rouge">](../object/spelledThousand(thousandsAndSmall).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>spelledThousand(thousandsPlus)<code class="language-plaintext highlighter-rouge">](../object/spelledThousand(thousandsPlus).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>terminalNounPhrase(allBut)<code class="language-plaintext highlighter-rouge">](../object/terminalNounPhrase(allBut).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>terminalNounPhrase(anyBut)<code class="language-plaintext highlighter-rouge">](../object/terminalNounPhrase(anyBut).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>terminalNounPhrase(pluralExcept)<code class="language-plaintext highlighter-rouge">](../object/terminalNounPhrase(pluralExcept).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>throughSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/throughSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TopicNounProduction<code class="language-plaintext highlighter-rouge">](../object/TopicNounProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>aboutTopicPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/aboutTopicPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>topicPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/topicPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>topicPhrase(misc)<code class="language-plaintext highlighter-rouge">](../object/topicPhrase(misc).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>toSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/toSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>VerbProduction<code class="language-plaintext highlighter-rouge">](../object/VerbProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>defaultVerbPhrase(noun)<code class="language-plaintext highlighter-rouge">](../object/defaultVerbPhrase(noun).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>EnTravelVia<code class="language-plaintext highlighter-rouge">](../object/EnTravelVia.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(About)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(About).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Again)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Again).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AskAbout)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AskAbout).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AskAboutImplicit)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AskAboutImplicit).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AskAboutWhat)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AskAboutWhat).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AskFor)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AskFor).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AskForImplicit)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AskForImplicit).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AskVague)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AskVague).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AskWhomFor)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AskWhomFor).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Attach)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Attach).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AttachTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AttachTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Attack)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Attack).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AttackWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AttackWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(AuxQuery)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(AuxQuery).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Board)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Board).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Break)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Break).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Brief)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Brief).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Burn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Burn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(BurnWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(BurnWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Clean)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Clean).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(CleanWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(CleanWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Climb)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Climb).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ClimbDown)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ClimbDown).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ClimbDownWhat)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ClimbDownWhat).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ClimbUp)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ClimbUp).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ClimbUpWhat)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ClimbUpWhat).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Close)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Close).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(CmdMenu)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(CmdMenu).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ConsultAbout)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ConsultAbout).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ConsultWhatAbout)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ConsultWhatAbout).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Continue)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Continue).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Credits)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Credits).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Cut)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Cut).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(CutWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(CutWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Debug)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Debug).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(DebugI)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(DebugI).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Detach)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Detach).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(DetachFrom)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(DetachFrom).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Dig)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Dig).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(DigWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(DigWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Doff)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Doff).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Drink)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Drink).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Drop)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Drop).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Eat)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Eat).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Enter)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Enter).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(EnterOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(EnterOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Evaluate)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Evaluate).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Examine)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Examine).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Exits)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Exits).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ExitsColour)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ExitsColour).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ExitsMode)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ExitsMode).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Extinguish)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Extinguish).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ExtraHints)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ExtraHints).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Fasten)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Fasten).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(FastenTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(FastenTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Feel)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Feel).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(FiatLux)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(FiatLux).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Flip)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Flip).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Follow)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Follow).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Footnote)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Footnote).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(FootnotesFull)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(FootnotesFull).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(FootnotesMedium)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(FootnotesMedium).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(FootnotesOff)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(FootnotesOff).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(FootnotesStatus)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(FootnotesStatus).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(FullScore)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(FullScore).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GetOff)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GetOff).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GetOut)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GetOut).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GetOutOf)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GetOutOf).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GiveTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GiveTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GiveToImplicit)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GiveToImplicit).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GiveToType2)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GiveToType2).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GoAlong)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GoAlong).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GoBack)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GoBack).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GoNear)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GoNear).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Goodbye)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Goodbye).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GoSomewhere)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GoSomewhere).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GoThrough)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GoThrough).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(GoTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(GoTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Hello)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Hello).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Help)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Help).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Hints)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Hints).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(HintsOff)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(HintsOff).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(In)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(In).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(instructions)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(instructions).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Intro)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Intro).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Inventory)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Inventory).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(InventoryTall)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(InventoryTall).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(InventoryWide)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(InventoryWide).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Jump)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Jump).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(JumpOff)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(JumpOff).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(JumpOffIntransitive)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(JumpOffIntransitive).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(JumpOver)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(JumpOver).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(KeepGoing)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(KeepGoing).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Kiss)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Kiss).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Lie)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Lie).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LieIn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LieIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LieOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LieOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Light)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Light).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Listen)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Listen).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ListenTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ListenTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ListRelations)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ListRelations).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ListTests)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ListTests).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Lock)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Lock).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LockWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LockWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Look)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Look).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LookBehind)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LookBehind).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LookHere)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LookHere).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LookIn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LookIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LookThrough)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LookThrough).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LookUnder)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LookUnder).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LookUp)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LookUp).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(LookX)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(LookX).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Move)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Move).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(MoveTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(MoveTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(MoveWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(MoveWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(No)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(No).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Notify)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Notify).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(NotifyOff)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(NotifyOff).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(NotifyOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(NotifyOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Open)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Open).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Out)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Out).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PlugIn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PlugIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PlugInto)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PlugInto).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PlugIntoWhat)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PlugIntoWhat).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Pour)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Pour).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PourInto)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PourInto).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PourOnto)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PourOnto).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Pull)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Pull).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Purloin)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Purloin).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Push)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Push).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PushTravelClimbDown)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PushTravelClimbDown).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PushTravelClimbUp)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PushTravelClimbUp).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PushTravelDir)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PushTravelDir).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PushTravelEnter)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PushTravelEnter).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PushTravelGetOutOf)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PushTravelGetOutOf).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PushTravelThrough)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PushTravelThrough).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PutBehind)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PutBehind).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PutIn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PutIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PutOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PutOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PutUnder)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PutUnder).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(PutWhere)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(PutWhere).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Query)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Query).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Query2)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Query2).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(QueryAbout)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(QueryAbout).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(QueryVague)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(QueryVague).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Quit)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Quit).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Read)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Read).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Record)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Record).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(RecordEvents)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(RecordEvents).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(RecordEventsString)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(RecordEventsString).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(RecordOff)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(RecordOff).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(RecordString)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(RecordString).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(RelationDetails)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(RelationDetails).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Remove)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Remove).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ReplayQuiet)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ReplayQuiet).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ReplayString)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ReplayString).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Restart)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Restart).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Restore)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Restore).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(RestoreString)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(RestoreString).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Sample)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Sample).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Save)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Save).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(SaveString)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(SaveString).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Say)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Say).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(SayTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(SayTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Score)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Score).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Screw)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Screw).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ScrewWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ScrewWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ScriptOff)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ScriptOff).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ScriptOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ScriptOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ScriptString)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ScriptString).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Search)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Search).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Seek)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Seek).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Set)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Set).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(SetTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(SetTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ShowTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ShowTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ShowToImplicit)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ShowToImplicit).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ShowToType2)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ShowToType2).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Sit)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Sit).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(SitIn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(SitIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(SitOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(SitOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Sleep)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Sleep).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Smell)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Smell).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(SmellSomething)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(SmellSomething).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Stand)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Stand).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(StandIn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(StandIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(StandOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(StandOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Strike)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Strike).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Switch)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Switch).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(SwitchOff)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(SwitchOff).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(SwitchOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(SwitchOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Take)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Take).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TakeFrom)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TakeFrom).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TalkAbout)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TalkAbout).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TalkAboutImplicit)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TalkAboutImplicit).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TalkTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TalkTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Taste)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Taste).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TellAbout)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TellAbout).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TellAboutImplicit)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TellAboutImplicit).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TellAboutWhat)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TellAboutWhat).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TellThat)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TellThat).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TellTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TellTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TellVague)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TellVague).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Test)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Test).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Think)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Think).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ThinkAbout)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ThinkAbout).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Throw)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Throw).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ThrowAt)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ThrowAt).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ThrowDir)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ThrowDir).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ThrowDirDown)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ThrowDirDown).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ThrowTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ThrowTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(ThrowToType2)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(ThrowToType2).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Topics)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Topics).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Travel)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Travel).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Turn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Turn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TurnTo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TurnTo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TurnWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TurnWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TypeLiteralOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TypeLiteralOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TypeLiteralOnWhat)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TypeLiteralOnWhat).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(TypeOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(TypeOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Undo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Undo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Unfasten)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Unfasten).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(UnfastenFrom)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(UnfastenFrom).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Unlock)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Unlock).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(UnlockWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(UnlockWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Unplug)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Unplug).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(UnplugFrom)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(UnplugFrom).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Unscrew)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Unscrew).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(UnscrewWith)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(UnscrewWith).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(VagueTravel)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(VagueTravel).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Verbose)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Verbose).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Version)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Version).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Wait)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Wait).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Wear)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Wear).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhatAmICarrying)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhatAmICarrying).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhatIsNoun)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhatIsNoun).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhatNext)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhatNext).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhatsHere)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhatsHere).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhatsThePoint)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhatsThePoint).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhatThisGame)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhatThisGame).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhereAmI)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhereAmI).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhereGo)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhereGo).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhereHelp)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhereHelp).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WhoAmI)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WhoAmI).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Write)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Write).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(WriteOn)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(WriteOn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Yell)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Yell).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VerbRule(Yes)<code class="language-plaintext highlighter-rouge">](../object/VerbRule(Yes).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>withSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/withSingleNoun(main).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>YesOrNoProduction<code class="language-plaintext highlighter-rouge">](../object/YesOrNoProduction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>yesOrNoPhrase(no)<code class="language-plaintext highlighter-rouge">](../object/yesOrNoPhrase(no).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>yesOrNoPhrase(yes)`](../object/yesOrNoPhrase(yes).html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>determiner<code class="language-plaintext highlighter-rouge">](#determiner)</code>  <code class="language-plaintext highlighter-rouge">[</code>nounPhraseRole<code class="language-plaintext highlighter-rouge">](#nounPhraseRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>npClass<code class="language-plaintext highlighter-rouge">](#npClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>parent<code class="language-plaintext highlighter-rouge">](#parent)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addNounListItem<code class="language-plaintext highlighter-rouge">](#addNounListItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>build<code class="language-plaintext highlighter-rouge">](#build)</code>  <code class="language-plaintext highlighter-rouge">[</code>findAction<code class="language-plaintext highlighter-rouge">](#findAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>findChild<code class="language-plaintext highlighter-rouge">](#findChild)</code>  <code class="language-plaintext highlighter-rouge">[</code>findParent<code class="language-plaintext highlighter-rouge">](#findParent)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNounPhraseRole<code class="language-plaintext highlighter-rouge">](#getNounPhraseRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>getText<code class="language-plaintext highlighter-rouge">](#getText)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTokens<code class="language-plaintext highlighter-rouge">](#getTokens)</code>  <code class="language-plaintext highlighter-rouge">[</code>grammarInfoForBuild<code class="language-plaintext highlighter-rouge">](#grammarInfoForBuild)</code>  <code class="language-plaintext highlighter-rouge">[</code>isChildOf<code class="language-plaintext highlighter-rouge">](#isChildOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteEndOfSentence<code class="language-plaintext highlighter-rouge">](#noteEndOfSentence)</code>  <code class="language-plaintext highlighter-rouge">[</code>visitLiteral<code class="language-plaintext highlighter-rouge">](#visitLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>visitProd<code class="language-plaintext highlighter-rouge">](#visitProd)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="determiner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">determiner</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3487">3487</a>]</p>
+
+<div class="desc">
+
+The determiner that this production applies to the noun phrase it's part
+of, as a Determiner object. If this is non-nil, this Determiner will be
+set in the current NounPhrase when we visit this production in the build
+process.
+
+</div>
+
+<p><span id="nounPhraseRole"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nounPhraseRole</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3446">3446</a>]</p>
+
+<div class="desc">
+
+My assigned noun phrase role, as a NounRole object. This must be
+explicitly set for the top node in a noun slot (which can be a noun list
+production, a single noun production, a topic, etc).
+
+In a positional language grammar, the predicate production will mark its
+immediate child in each noun phrase slot by setting this according to
+the role that the sub-tree plays in the predicate grammar.
+Non-positional languages that use grammatical case or other ways of
+encoding the role information must set this some other way.
+
+</div>
+
+<p><span id="npClass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">npClass</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3432">3432</a>]</p>
+
+<div class="desc">
+
+The NounPhrase subclass to use for noun phrases within this sub-tree. By
+default, we look to our parent; if we don't have a parent, we use the
+base NounPhrase class.
+
+Special phrase types (topics, literals, and numbers) have their own
+NounPhrase subclasses. This is important because the resolution rules
+for these phrase types differ from the regular object resolution rules.
+
+</div>
+
+<p><span id="parent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parent</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3502">3502</a>]</p>
+
+<div class="desc">
+
+My parent production. The low-level GrammarProd mechanism doesn't set
+this up, so we set it up ourselves in the course of building out the
+tree. In build(), just before we visit each sub-production, we set the
+sub-production's 'parent' property to point back to the parent
+production. This property is therefore always set while we're traversing
+the child's tree, but won't necessarily be set yet if we're not
+currently working somewhere within the child's tree. That means that you
+can always look at 'parent' within your own build() routine or a child
+build() routine, but you can't necessarily look at it across the tree or
+within your own children.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addNounListItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addNounListItem (cmd, prod)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3404">3404</a>]</p>
+
+<div class="desc">
+
+Add a new NounPhrase item to the list under construction. Certain
+productions are associated with specific functional slots in the
+abstract command - direct object, indirect object, EXCEPT list, etc.
+This routine is for such production subclasses to override, to direct
+new noun phrases into the appropriate slot lists. In a grammar, the
+functional role is typically at a higher level in the tree, with
+ordinary noun phrases plugged in underneath.
+
+Our default handling is to first check our nounPhraseRole property; if
+it's set, it tells us the role that this sub-tree plays in the predicate
+(direct object, indirect object, accessory). We use that information to
+add the new NounPhrase to the Command list that we're building for our
+assigned role.
+
+If nounPhraseRole is nil, then we simply pass the request up to our
+parent. Eventually we should reach a node encoding the function slot.
+
+</div>
+
+<p><span id="build"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">build (cmd, np)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3329">3329</a>]</p>
+
+<div class="desc">
+
+Build the command for this production and its children. By default,
+we'll simply traverse into our children.
+
+</div>
+
+<p><span id="findAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findAction ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3538">3538</a>]</p>
+
+<div class="desc">
+
+Find the action. This finds the child of type VerbProduction, then
+retrieves the action from the verb production.
+
+</div>
+
+<p><span id="findChild"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findChild (cls)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3550">3550</a>]</p>
+
+<div class="desc">
+
+Find a child of a given class.
+
+</div>
+
+<p><span id="findParent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findParent (func)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3509">3509</a>]</p>
+
+<div class="desc">
+
+Find a parent matching a given test. We'll scan up the parent tree,
+looking for the nearest parent p for which func(p) returns true,
+returning p. If we can't find one, we return nil.
+
+</div>
+
+<p><span id="getNounPhraseRole"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNounPhraseRole ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3452">3452</a>]</p>
+
+<div class="desc">
+
+Get our noun phrase role. If we don't have a role defined directly,
+we'll inherit the role from our parent node.
+
+</div>
+
+<p><span id="getText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getText ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3304">3304</a>]</p>
+
+<div class="desc">
+
+get the original text of the command for this match
+
+</div>
+
+<p><span id="getTokens"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTokens ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3315">3315</a>]</p>
+
+<div class="desc">
+
+get my original token list, in canonical tokenizer format
+
+</div>
+
+<p><span id="grammarInfoForBuild"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">grammarInfoForBuild ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3379">3379</a>]</p>
+
+<div class="desc">
+
+Get the grammar match list for build() purposes. By default, this simply
+returns the grammarInfo() results, which are automatically generated by
+the compiler to return a list of the "-\&gt;prop" values from the matched
+grammar rule. Some rules might want to modify that default value list,
+so we provide this routine as an override hook.
+
+</div>
+
+<p><span id="isChildOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isChildOf (prod)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3520">3520</a>]</p>
+
+<div class="desc">
+
+Is this production a child of the given production?
+
+</div>
+
+<p><span id="noteEndOfSentence"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteEndOfSentence (cmd, prod)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3416">3416</a>]</p>
+
+<div class="desc">
+
+Note an end-of-sentence marker. We'll simply notify our parent by
+default.
+
+</div>
+
+<p><span id="visitLiteral"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">visitLiteral (cmd, np, tok)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3463">3463</a>]</p>
+
+<div class="desc">
+
+Visit a literal token child in our sub-tree. This is called during the
+build process for each literal token in our child list. By default, we
+add the token to the command's current noun phrase.
+
+</div>
+
+<p><span id="visitProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">visitProd (cmd, np, prod)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3475">3475</a>]</p>
+
+<div class="desc">
+
+Visit a production object in our list. This is called during the build
+process for each production object in our child list. By default, we
+simply build the child production recursively.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

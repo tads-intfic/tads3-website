@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](messages.htm)   [\[Next\]](settingthescene.htm)*
+*[\[Previous\]](messages.html)   [\[Next\]](settingthescene.html)*
 
 ### Other Responses to Actions
 
@@ -347,6 +349,6 @@ Instead of:
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](messages.htm)   [\[Next\]](settingthescene.htm)*
+*[\[Previous\]](messages.html)   [\[Next\]](settingthescene.html)*
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(PlugIntoWhat)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[3262](../source/grammar.t.html#3262)\]

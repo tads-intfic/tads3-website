@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FuncCommand</span><span class="type">class</span>
 
 [command.t](../file/command.t.html)\[[1403](../source/command.t.html#1403)\]

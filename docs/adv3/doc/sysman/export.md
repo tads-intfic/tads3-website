@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Exporting
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Exporting
 Symbols  
-<span class="navnp"><a href="icext.htm" class="nav"><em>Prev:</em> Extending Intrinsic
+<span class="navnp"><a href="icext.html" class="nav"><em>Prev:</em> Extending Intrinsic
 Classes</a>    
-<a href="errmsg.htm" class="nav"><em>Next:</em> VM Run-Time Error
+<a href="errmsg.html" class="nav"><em>Next:</em> VM Run-Time Error
 Codes</a>     </span>
 
 </div>
@@ -116,7 +118,7 @@ when a call is made to an undefined property. This method is invoked
 with the original property ID as the first argument, and the original
 argument list as the remaining arguments. The adv3 library provides an
 exported definition for this proeprty. See the section on [capturing
-undefined method calls](undef.htm).
+undefined method calls](undef.html).
 
 ## Compiler-Supplied Exports
 
@@ -145,12 +147,12 @@ invocation of anonymous function pointers.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Exporting
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Exporting
 Symbols  
-<span class="navnp"><a href="icext.htm" class="nav"><em>Prev:</em> Extending Intrinsic
+<span class="navnp"><a href="icext.html" class="nav"><em>Prev:</em> Extending Intrinsic
 Classes</a>    
-<a href="errmsg.htm" class="nav"><em>Next:</em> VM Run-Time Error
+<a href="errmsg.html" class="nav"><em>Next:</em> VM Run-Time Error
 Codes</a>     </span>
 
 </div>

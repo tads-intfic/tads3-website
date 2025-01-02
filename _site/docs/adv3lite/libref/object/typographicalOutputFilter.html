@@ -1,0 +1,173 @@
+<p><span class="title">typographicalOutputFilter</span><span class="type">object</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1866">1866</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Typographical effects output filter. This filter looks for certain
+sequences in the text and converts them to typographical equivalents.
+Authors could simply write the HTML for the typographical markups in the
+first place, but it's easier to write the typewriter-like sequences and
+let this filter convert to HTML.
+
+We perform the following conversions:
+
+'---' -\&gt; &zwnbsp;&mdash;  
+'--' -\&gt; &zwnbsp;&ndash;  
+sentence-ending punctuation -\&gt; same + &ensp;
+
+Since this routine is called so frequently, we hard-code the replacement
+strings, rather than using properties, for slightly faster performance.
+Since this routine is so simple, games that want to customize the
+replacement style should simply replace this entire routine with a new
+routine that applies the customizations.
+
+Note that we define this filter in the English-specific part of the
+library, because it seems almost certain that each language will want to
+customize it for local conventions.
+
+**`typographicalOutputFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">typographicalOutputFilter</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputFilter.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>abbreviations<code class="language-plaintext highlighter-rouge">](#abbreviations)</code>  <code class="language-plaintext highlighter-rouge">[</code>abbrevPat<code class="language-plaintext highlighter-rouge">](#abbrevPat)</code>  <code class="language-plaintext highlighter-rouge">[</code>eosPattern<code class="language-plaintext highlighter-rouge">](#eosPattern)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>filterText<code class="language-plaintext highlighter-rouge">](#filterText)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="abbreviations"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">abbreviations</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1948">1948</a>]</p>
+
+<div class="desc">
+
+Common abbreviations. These are excluded from being treated as sentence
+endings when they appear with a trailing period.
+
+Note that abbrevPat must be rebuilt manually if you change this on the
+fly - abbrevPat is static, so it picks up the initial value of this
+property at start-up, and doesn't re-evaluate it while the game is
+running.
+
+</div>
+
+<p><span id="abbrevPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">abbrevPat</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1936">1936</a>]</p>
+
+<div class="desc">
+
+pattern for abbreviations that were mistaken for sentence endings
+
+</div>
+
+<p><span id="eosPattern"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eosPattern</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1923">1923</a>]</p>
+
+<div class="desc">
+
+The end-of-sentence pattern. This looks a bit complicated, but all we're
+looking for is a period, exclamation point, or question mark, optionally
+followed by any number of closing group marks (right parentheses or
+square brackets, closing HTML tags, or double or single quotes in either
+straight or curly styles), all followed by an ordinary space.
+
+If a lower-case letter follows the space, though, we won't consider it a
+sentence ending. This applies most commonly after quoted passages ending
+with what would normally be sentence-ending punctuation: "'Who are you?'
+he asked." In these cases, the enclosing sentence isn't ending, so we
+don't want the extra space. We can tell the enclosing sentence isn't
+ending because a non-capital letter follows.
+
+Note that we specifically look only for ordinary spaces. Any
+sentence-ending punctuation that's followed by a quoted space or any
+typographical space overrides this substitution.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="filterText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterText (ostr, val)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1867">1867</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

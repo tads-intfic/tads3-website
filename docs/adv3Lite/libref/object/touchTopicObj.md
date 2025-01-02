@@ -1,3 +1,5 @@
+---
+---
 <span class="title">touchTopicObj</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[3706](../source/actor.t.html#3706)\]

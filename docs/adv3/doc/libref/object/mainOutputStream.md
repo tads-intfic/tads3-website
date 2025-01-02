@@ -1,3 +1,5 @@
+---
+---
 <span class="title">mainOutputStream</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[409](../source/output.t.html#409)\]

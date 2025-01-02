@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedPluralNounPhrase(determiner)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[506](../source/grammar.t.html#506)\]

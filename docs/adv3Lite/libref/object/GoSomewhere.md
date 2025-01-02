@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GoSomewhere</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[766](../source/newbie.t.html#766)\]

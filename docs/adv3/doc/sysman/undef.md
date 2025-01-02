@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Capturing Calls to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Capturing Calls to
 Undefined Methods  
-<span class="navnp"><a href="anonfn.htm" class="nav"><em>Prev:</em> Anonymous Functions</a>
-    <a href="reflect.htm" class="nav"><em>Next:</em> Reflection</a>    
+<span class="navnp"><a href="anonfn.html" class="nav"><em>Prev:</em> Anonymous Functions</a>
+    <a href="reflect.html" class="nav"><em>Next:</em> Reflection</a>    
 </span>
 
 </div>
@@ -72,7 +74,7 @@ the adv3 library **does** export
 <span class="code">propNotDefined</span>, so the mechanism is enabled
 automatically if you're writing a library-based game.
 
-Refer to the section on [exporting symbols](export.htm) for details on
+Refer to the section on [exporting symbols](export.html) for details on
 the export mechanism.
 
 ## Throwing an Exception for Undefined Properties
@@ -156,11 +158,11 @@ easy to implement.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Capturing Calls to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Capturing Calls to
 Undefined Methods  
-<span class="navnp"><a href="anonfn.htm" class="nav"><em>Prev:</em> Anonymous Functions</a>
-    <a href="reflect.htm" class="nav"><em>Next:</em> Reflection</a>    
+<span class="navnp"><a href="anonfn.html" class="nav"><em>Prev:</em> Anonymous Functions</a>
+    <a href="reflect.html" class="nav"><em>Next:</em> Reflection</a>    
 </span>
 
 </div>

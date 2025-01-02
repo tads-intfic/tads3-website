@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedSingularNounPhrase(arbitrary)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[407](../source/grammar.t.html#407)\]

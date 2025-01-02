@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OrdinalRangeError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5695](../source/parser.t.html#5695)\]

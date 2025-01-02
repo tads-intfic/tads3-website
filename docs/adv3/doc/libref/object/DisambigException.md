@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DisambigException</span><span class="type">class</span>
 
 [disambig.t](../file/disambig.t.html)\[[471](../source/disambig.t.html#471)\]

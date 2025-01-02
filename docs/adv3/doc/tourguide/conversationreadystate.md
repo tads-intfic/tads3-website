@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ConversationReadyState : <a
-href="overview-actorstates.htm">ActorState</a><br />
+href="overview-actorstates.html">ActorState</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="inconversationstate.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="greetingprotocols.htm">[Next]</a></td>
+href="inconversationstate.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="greetingprotocols.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -26,7 +28,7 @@ ConversationReadyState, the actor automatically switches into the
 associated InConversationState. What the associated state is may be
 defined either explicitly by setting the **inConvState** property, or
 implicitly by nesting the ConversationReadyState inside its associated
-[InConversationState](inconversationstate.htm). Here we'll use the
+[InConversationState](inconversationstate.html). Here we'll use the
 latter method, even though here, as typically, the
 ConversationReadyStates we'll be defining are the initial states of the
 actors in question.  

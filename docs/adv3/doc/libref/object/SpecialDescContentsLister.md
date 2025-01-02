@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SpecialDescContentsLister</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[1438](../source/lister.t.html#1438)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CommandProdWithActor</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[793](../source/parser.t.html#793)\]

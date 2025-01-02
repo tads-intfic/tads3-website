@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>BasicOpenable: Linkable<br />
 </strong></td>
-<td style="text-align: right;"><a href="openable.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="lightandfire-introduction.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="openable.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="lightandfire-introduction.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -20,8 +22,8 @@ BasicOpenable is the base class for openable items. It defines the basic
 behaviour for objects that can be opened and closed, but no special
 handling for commands (such as OPEN and CLOSE) that might commonly be
 used for openable objects. It is much more likely that you will use
-subclasses of BasicOpenable (such as [Openable](openable.htm),
-[BasicDoor](basicdoor.htm) and their subclasses) than BasicOpenable in
+subclasses of BasicOpenable (such as [Openable](openable.html),
+[BasicDoor](basicdoor.html) and their subclasses) than BasicOpenable in
 game code. It is conceivable that you might want to subclass a custom
 kind of openable object from BasicOpenable, as it is conceivable that
 you might want to implement a BasicOpenable object in a game for an

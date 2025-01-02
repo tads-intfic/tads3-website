@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SenseConnector : <a
-href="multiloc.htm">Multiloc</a><br />
+href="multiloc.html">Multiloc</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="noise.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="sensoryevent.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="noise.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="sensoryevent.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -24,7 +26,7 @@ is realistic enough, but there are occasions when it's not quite what we
 want; on such occasions we can join two or more locations by a
 SenseConnector, which can pass one or more senses between locations with
 varying degrees of transparency. The
-[DistanceConnector](distanceconnector.htm) we have already met is a
+[DistanceConnector](distanceconnector.html) we have already met is a
 specialized kind of SenseConnector that passes all four senses (taste
 excluded as not really relevant) as distant.  
   
@@ -47,7 +49,7 @@ character if s/he's nearby, but as yet there's nothing to tell the
 player when the bomb explodes if the player character goes wandering off
 into a neighbouring location. There are several ways this could be
 achieved, including the brute force method of (say) a [prompt
-daemon](promptdaemon.htm) that checks once a turn whether the bomb is
+daemon](promptdaemon.html) that checks once a turn whether the bomb is
 still present and reports the explosion if it is not, giving a different
 message according to the location of the actor, and then removing itself
 from the list of active events, something like this:  

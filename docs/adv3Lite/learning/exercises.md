@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../manual/topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../manual/final.htm" class="nav">Final Moves</a> \> Exercises &
+<a href="../manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../manual/final.html" class="nav">Final Moves</a> \> Exercises &
 Samples  
-<span class="navnp"><a href="../manual/extensions.htm" class="nav"><em>Prev:</em>
+<span class="navnp"><a href="../manual/extensions.html" class="nav"><em>Prev:</em>
 Extensions</a>    
-<a href="../manual/feedback.htm" class="nav"><em>Next:</em> Feedback</a>
+<a href="../manual/feedback.html" class="nav"><em>Next:</em> Feedback</a>
     </span>
 
 </div>
@@ -44,7 +46,7 @@ Consultables and more action handling.
 demonstration of various kinds of light source. Note that while it shows
 how to create a fueled light source from scratch, in practice it might
 be easier to use the [fueled light
-source](../../extensions/docs/fueled.htm) extension. This example also
+source](../../extensions/docs/fueled.html) extension. This example also
 illustrates how to modify VerbRules (the grammar applicable to various
 actions) and how to define an AMUSING option.
 
@@ -66,7 +68,7 @@ illustration of SenseRegions and the sensory connections they provide.
 It also illustrates the used of MultiLocs, Noises and Odors, as well as
 a simple NPC and another travel-pushable. It shows how to create a
 SoundEvent class from scratch, but in practice this might be more easily
-done by making use of the [Sensory](../../extensions/docs/fueled.htm)
+done by making use of the [Sensory](../../extensions/docs/fueled.html)
 extension.
 
 [Exercise 22 - Attachments](Exercise%2022.t) is primarily an
@@ -84,12 +86,12 @@ includes a couple of examples of simple Scenes.
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../manual/final.htm" class="nav">Final Moves</a> \> Exercises &
+<a href="../manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../manual/final.html" class="nav">Final Moves</a> \> Exercises &
 Samples  
-<span class="navnp"><a href="../manual/extensions.htm" class="nav"><em>Prev:</em>
+<span class="navnp"><a href="../manual/extensions.html" class="nav"><em>Prev:</em>
 Extensions</a>    
-<a href="../manual/feedback.htm" class="nav"><em>Next:</em> Feedback</a>
+<a href="../manual/feedback.html" class="nav"><em>Next:</em> Feedback</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Fuse</span><span class="type">class</span>
 
 [events.t](../file/events.t.html)\[[341](../source/events.t.html#341)\]

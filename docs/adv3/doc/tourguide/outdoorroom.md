@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>OutdoorRoom : <a
-href="room.htm">Room</a><br />
+href="room.html">Room</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="introduction.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="fakeconnector.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="introduction.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="fakeconnector.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -48,7 +50,7 @@ floor and ceiling). Recall that we have already set the location
 property of the me object to outsideCave so that the player character
 will begin here.  
   
-Remember that the [Room template](roomtemplate.htm) (which also applies
+Remember that the [Room template](roomtemplate.html) (which also applies
 to OutdoorRoom) allows this abbreviated form of definition: the template
 is defined as 'roomName' 'destName'? 'name'? "desc"?; which means that
 the first single-quoted string after the class name is the roomName
@@ -99,11 +101,11 @@ you might often want to override it, as in this case where Parser Valley
 is a proper name we want used both for the roomName and the destName.  
   
 We'll define one extra property for OutsideRoom at this point, namely
-its atmosphereList. If this is defined to hold a [Script](script.htm)
+its atmosphereList. If this is defined to hold a [Script](script.html)
 object, the roomDaemon will automatically call its doScript method each
 turn; in practice this means we can make it an anonymous nested object
 of a Script class. Here we use a
-[ShuffledEventList](shuffledeventlist.htm) to display a series of
+[ShuffledEventList](shuffledeventlist.html) to display a series of
 strings in random order.  
   
 In order to vary the description of cars leaving the car park, we use

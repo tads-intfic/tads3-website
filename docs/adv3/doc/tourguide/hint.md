@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,15 +10,15 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Hint : MenuSubTopicItem<br />
 </strong></td>
-<td style="text-align: right;"><a href="goal.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="concludingremarks.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="goal.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="concludingremarks.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-As we have seen, most of the hints given within a [Goal](goal.htm)
+As we have seen, most of the hints given within a [Goal](goal.html)
 object are single-quoted strings, but there may be occasions when we
 want a hint to do a bit more than display a message, and in that case we
 can use a Hint object.  

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedSingularNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`qualifiedSingularNounPhrase(anyOneIn)`](../object/qualifiedSingularNounPhrase(anyOneIn).html)**` :   `[`LocationalProduction`](../object/LocationalProduction.html)

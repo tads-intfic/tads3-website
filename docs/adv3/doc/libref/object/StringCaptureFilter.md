@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StringCaptureFilter</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[731](../source/output.t.html#731)\]

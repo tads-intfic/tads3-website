@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Containers - Introduction<br />
 </strong></td>
-<td style="text-align: right;"><a href="wearable.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="bulklimiter.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="wearable.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="bulklimiter.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -25,18 +27,18 @@ the container.
 Another way of defining containers in the TADS 3 library is as
 descendants of the BulkLimiter class:  
   
-[BulkLimiter](bulklimiter.htm)  
-   [BasicContainer](basiccontainer.htm)  
-      [Container](container.htm)  
-         [Booth](booth.htm)  
-         [Dispenser](dispenser.htm)  
-            [Matchbook](matchstick+matchbook.htm)  
-      [OpenableContainer](openablecontainer.htm)  
-         [KeyedContainer](keyedcontainer.htm)  
-         [LockableContainer](lockablecontainer.htm)  
-      [RestrictedContainer](restrictedcontainer.htm)  
-      [SingleContainer](singlecontainer.htm)  
-      [StretchyContainer](stretchycontainer.htm)  
+[BulkLimiter](bulklimiter.html)  
+   [BasicContainer](basiccontainer.html)  
+      [Container](container.html)  
+         [Booth](booth.html)  
+         [Dispenser](dispenser.html)  
+            [Matchbook](matchstick+matchbook.html)  
+      [OpenableContainer](openablecontainer.html)  
+         [KeyedContainer](keyedcontainer.html)  
+         [LockableContainer](lockablecontainer.html)  
+      [RestrictedContainer](restrictedcontainer.html)  
+      [SingleContainer](singlecontainer.html)  
+      [StretchyContainer](stretchycontainer.html)  
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -46,7 +48,7 @@ descendants of the BulkLimiter class:
 <tbody>
 <tr data-valign="TOP">
 <td width="57"></td>
-<td><a href="spaceoverlay.htm">SpaceOverlay</a>  <br />
+<td><a href="spaceoverlay.html">SpaceOverlay</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -64,7 +66,7 @@ descendants of the BulkLimiter class:
 <tbody>
 <tr data-valign="TOP">
 <td width="100"></td>
-<td><a href="rearcontainer.htm">RearContainer</a>  <br />
+<td><a href="rearcontainer.html">RearContainer</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -78,7 +80,7 @@ descendants of the BulkLimiter class:
 <tbody>
 <tr data-valign="TOP">
 <td width="100"></td>
-<td>      <a href="rearsurface.htm">RearSurface</a>  <br />
+<td>      <a href="rearsurface.html">RearSurface</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -92,7 +94,7 @@ descendants of the BulkLimiter class:
 <tbody>
 <tr data-valign="TOP">
 <td width="100"></td>
-<td><a href="underside.htm">Underside</a>  <br />
+<td><a href="underside.html">Underside</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -102,23 +104,23 @@ descendants of the BulkLimiter class:
 |-----|-----|
 |     |     |
 
-    [Surface](surface.htm)  
-      [Bed](bed.htm)  
-      [Chair](chair.htm)  
-      [Platform](platform.htm)  
-         [NominalPlatform](nominalplatform.htm)  
+    [Surface](surface.html)  
+      [Bed](bed.html)  
+      [Chair](chair.html)  
+      [Platform](platform.html)  
+         [NominalPlatform](nominalplatform.html)  
   
 Some of these will be left to later chapters, since they inherit from
 other classes we haven't dealt with yet (e.g. Bed, Chair and Platform
-are all types of [NestedRoom](nestedroom.htm), which we'll deal with
+are all types of [NestedRoom](nestedroom.html), which we'll deal with
 later, and we'll need to delay discussion of
-[KeyedContainer](keyedcontainer.htm) until we discuss locks and keys in
+[KeyedContainer](keyedcontainer.html) until we discuss locks and keys in
 the next chapter). In the present chapter we'll cover the simpler kind
 of containers. We'll also be covering the following functionally related
 classes:  
   
-   [ComplexComponent](complexcontainer.htm)  
-   [ComplexContainer](complexcontainer.htm)  
+   [ComplexComponent](complexcontainer.html)  
+   [ComplexContainer](complexcontainer.html)  
   
   
   

@@ -1,3 +1,5 @@
+---
+---
 # query.t
 
 [documentation](../file/query.t.html)

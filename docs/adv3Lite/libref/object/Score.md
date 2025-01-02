@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Score</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[198](../source/actions.t.html#198)\]

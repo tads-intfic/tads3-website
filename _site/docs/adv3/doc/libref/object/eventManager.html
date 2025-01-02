@@ -1,0 +1,185 @@
+<p><span class="title">eventManager</span><span class="type">object</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#425">425</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Event Manager. This is a schedulable object that keeps track of fuses
+and daemons, and schedules their execution.
+
+**`eventManager`**` :   `[`BasicEventManager`](../object/BasicEventManager.html)`   `[`Schedulable`](../object/Schedulable.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">eventManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BasicEventManager<code class="language-plaintext highlighter-rouge">](../object/BasicEventManager.html)  
+</code>                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Schedulable<code class="language-plaintext highlighter-rouge">](../object/Schedulable.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>curEvent_<code class="language-plaintext highlighter-rouge">](#curEvent_)</code>  <code class="language-plaintext highlighter-rouge">[</code>events_<code class="language-plaintext highlighter-rouge">](#events_)</code>  <code class="language-plaintext highlighter-rouge">[</code>scheduleOrder<code class="language-plaintext highlighter-rouge">](#scheduleOrder)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Schedulable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allSchedulables<code class="language-plaintext highlighter-rouge">](../object/Schedulable.html#allSchedulables)</code>  <code class="language-plaintext highlighter-rouge">[</code>gameClockTime<code class="language-plaintext highlighter-rouge">](../object/Schedulable.html#gameClockTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextRunTime<code class="language-plaintext highlighter-rouge">](../object/Schedulable.html#nextRunTime)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>executeList<code class="language-plaintext highlighter-rouge">](#executeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>executePrompt<code class="language-plaintext highlighter-rouge">](#executePrompt)</code>  <code class="language-plaintext highlighter-rouge">[</code>executeTurn<code class="language-plaintext highlighter-rouge">](#executeTurn)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextRunTime<code class="language-plaintext highlighter-rouge">](#getNextRunTime)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEventManager</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addEvent<code class="language-plaintext highlighter-rouge">](../object/BasicEventManager.html#addEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeCurrentEvent<code class="language-plaintext highlighter-rouge">](../object/BasicEventManager.html#removeCurrentEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeEvent<code class="language-plaintext highlighter-rouge">](../object/BasicEventManager.html#removeEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeMatchingEvents<code class="language-plaintext highlighter-rouge">](../object/BasicEventManager.html#removeMatchingEvents)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Schedulable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>calcScheduleOrder<code class="language-plaintext highlighter-rouge">](../object/Schedulable.html#calcScheduleOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/Schedulable.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/Schedulable.html#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>incNextRunTime<code class="language-plaintext highlighter-rouge">](../object/Schedulable.html#incNextRunTime)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="curEvent_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curEvent_</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#563">563</a>]</p>
+
+<div class="desc">
+
+the event currently being executed
+
+</div>
+
+<p><span id="events_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">events_</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#560">560</a>]</p>
+
+<div class="desc">
+
+our list of fuses and daemons
+
+</div>
+
+<p><span id="scheduleOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scheduleOrder</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#432">432</a>]</p>
+
+<div class="desc">
+
+Use a scheduling order of 1000 to ensure we go after all actors. By
+default, actors use scheduling orders in the range 100 to 400, so our
+order of 1000 ensures that fuses and daemons run after all characters on
+a given turn.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="executeList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeList (lst)</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#499">499</a>]</p>
+
+<div class="desc">
+
+internal service routine - execute the fuses and daemons in the given
+list, in eventOrder priority order
+
+</div>
+
+<p><span id="executePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executePrompt ( )</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#489">489</a>]</p>
+
+<div class="desc">
+
+Execute a command prompt turn. We'll execute each per-command-prompt
+daemon.
+
+</div>
+
+<p><span id="executeTurn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeTurn ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#467">467</a>]</p>
+
+<div class="desc">
+
+Execute a turn. We'll execute each fuse and each daemon that is
+currently schedulable.
+
+</div>
+
+<p><span id="getNextRunTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNextRunTime ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#438">438</a>]</p>
+
+<div class="desc">
+
+Get the next run time. We'll find the lowest run time of our fuses and
+daemons and return that.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

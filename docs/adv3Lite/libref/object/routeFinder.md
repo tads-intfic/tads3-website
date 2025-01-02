@@ -1,3 +1,5 @@
+---
+---
 <span class="title">routeFinder</span><span class="type">object</span>
 
 [pathfind.t](../file/pathfind.t.html)\[[136](../source/pathfind.t.html#136)\]

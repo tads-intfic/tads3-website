@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Array</span><span class="type">class</span>
 
 [array.h](../file/array.h.html)\[[15](../source/array.h.html#15)\]

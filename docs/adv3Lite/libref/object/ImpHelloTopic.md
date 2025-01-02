@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ImpHelloTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3831](../source/actor.t.html#3831)\]

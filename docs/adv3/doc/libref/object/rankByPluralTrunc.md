@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rankByPluralTrunc</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[5925](../source/parser.t.html#5925)\]

@@ -1,0 +1,546 @@
+<p><span class="title">MenuItem</span><span class="type">class</span></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#275">275</a>],
+<a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#44">44</a>],
+<a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#16">16</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A MenuItem is a given item in the menu tree. In general all you need to
+do to use menus is create a tree of MenuItems with titles.
+
+To display a menu tree, call displayMenu() on the top menu in the tree.
+That routine displays the menu and processes user input until the user
+dismisses the menu, automatically displaying submenus as necessary.
+
+*Modified in
+[menucon.t](../file/menucon.t.html)\[[44](../source/menucon.t.html#44)\]:*  
+Menu Item - user interface implementation for the console
+
+*Modified in
+[menuweb.t](../file/menuweb.t.html)\[[16](../source/menuweb.t.html#16)\]:*  
+Menu Item - user interface implementation for the console
+
+`class `**`MenuItem`**` :   `[`MenuObject`](../object/MenuObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MenuItem</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MenuObject<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MenuItem</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>HintMenu<code class="language-plaintext highlighter-rouge">](../object/HintMenu.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TopHintMenu<code class="language-plaintext highlighter-rouge">](../object/TopHintMenu.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>MenuLongTopicItem<code class="language-plaintext highlighter-rouge">](../object/MenuLongTopicItem.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>HintLongTopicItem<code class="language-plaintext highlighter-rouge">](../object/HintLongTopicItem.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>MenuTopicItem<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Goal`](../object/Goal.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>bgcolor<code class="language-plaintext highlighter-rouge">](#bgcolor)</code>  <code class="language-plaintext highlighter-rouge">[</code>curKeyList<code class="language-plaintext highlighter-rouge">](#curKeyList)</code>  <code class="language-plaintext highlighter-rouge">[</code>curMenu<code class="language-plaintext highlighter-rouge">](#curMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>fgcolor<code class="language-plaintext highlighter-rouge">](#fgcolor)</code>  <code class="language-plaintext highlighter-rouge">[</code>fullScreenMode<code class="language-plaintext highlighter-rouge">](#fullScreenMode)</code>  <code class="language-plaintext highlighter-rouge">[</code>heading<code class="language-plaintext highlighter-rouge">](#heading)</code>  <code class="language-plaintext highlighter-rouge">[</code>indent<code class="language-plaintext highlighter-rouge">](#indent)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen<code class="language-plaintext highlighter-rouge">](#isOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyList<code class="language-plaintext highlighter-rouge">](#keyList)</code>  <code class="language-plaintext highlighter-rouge">[</code>prevMenuLink<code class="language-plaintext highlighter-rouge">](#prevMenuLink)</code>  <code class="language-plaintext highlighter-rouge">[</code>title<code class="language-plaintext highlighter-rouge">](#title)</code>  <code class="language-plaintext highlighter-rouge">[</code>topbarbg<code class="language-plaintext highlighter-rouge">](#topbarbg)</code>  <code class="language-plaintext highlighter-rouge">[</code>topbarfg<code class="language-plaintext highlighter-rouge">](#topbarfg)</code>  <code class="language-plaintext highlighter-rouge">[</code>topMenu<code class="language-plaintext highlighter-rouge">](#topMenu)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>contents<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#contents)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuOrder<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#menuOrder)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>display<code class="language-plaintext highlighter-rouge">](#display)</code>  <code class="language-plaintext highlighter-rouge">[</code>enterSubMenu<code class="language-plaintext highlighter-rouge">](#enterSubMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>formatXML<code class="language-plaintext highlighter-rouge">](#formatXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getChildIndex<code class="language-plaintext highlighter-rouge">](#getChildIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>getKeysXML<code class="language-plaintext highlighter-rouge">](#getKeysXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextMenu<code class="language-plaintext highlighter-rouge">](#getNextMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPrevMenu<code class="language-plaintext highlighter-rouge">](#getPrevMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>getXML<code class="language-plaintext highlighter-rouge">](#getXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>refreshTopMenuBanner<code class="language-plaintext highlighter-rouge">](#refreshTopMenuBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeStatusLine<code class="language-plaintext highlighter-rouge">](#removeStatusLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeTopMenuBanner<code class="language-plaintext highlighter-rouge">](#removeTopMenuBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMenu<code class="language-plaintext highlighter-rouge">](#showMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMenuHtml<code class="language-plaintext highlighter-rouge">](#showMenuHtml)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMenuText<code class="language-plaintext highlighter-rouge">](#showMenuText)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTopMenuBanner<code class="language-plaintext highlighter-rouge">](#showTopMenuBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>updateContents<code class="language-plaintext highlighter-rouge">](#updateContents)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addToContents<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#addToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>compareForMenuSort<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#compareForMenuSort)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeContents<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#initializeContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeLocation<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#initializeLocation)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="bgcolor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bgcolor</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#311">311</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="curKeyList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curKeyList</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#354">354</a>]</p>
+
+<div class="desc">
+
+the current key list - we'll set this on entry to the start of each
+showMenuXxx method, so that we keep track of the actual key list in use,
+as inherited from the top-level menu
+
+</div>
+
+<p><span id="curMenu"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curMenu</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#41">41</a>]</p>
+
+<div class="desc">
+
+current menu, and current top-level menu
+
+</div>
+
+<p><span id="fgcolor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fgcolor</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#310">310</a>]</p>
+
+<div class="desc">
+
+foreground (text) and background colors, as HTML color names
+
+</div>
+
+<p><span id="fullScreenMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fullScreenMode</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#328">328</a>]</p>
+
+<div class="desc">
+
+full-screen mode: make our menu take up the whole screen (apart from the
+instructions bar, of course)
+
+</div>
+
+<p><span id="heading"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">heading</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#283">283</a>]</p>
+
+<div class="desc">
+
+the heading - this is shown when this menu is active; by default, we
+simply use the title
+
+</div>
+
+<p><span id="indent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indent</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#322">322</a>]</p>
+
+<div class="desc">
+
+number of spaces to indent the menu's contents
+
+</div>
+
+<p><span id="isOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isOpen</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#45">45</a>]</p>
+
+<div class="desc">
+
+is the menu open?
+
+</div>
+
+<p><span id="keyList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">keyList</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#347">347</a>]</p>
+
+<div class="desc">
+
+The keys used to navigate the menus, in order:
+
+\[quit, previous, up, down, select\]
+
+Since multiple keys can be used for the same navigation, the list is
+implemented as a List of Lists. Keys must be given as lower-case in
+order to match input, since we convert all input keys to lower-case
+before matching them.
+
+In the sublist for each key, we use the first element as the key name we
+show in the instruction bar at the top of the screen.
+
+By default, we use our parent menu's key list, if we have a parent; if
+we have no parent, we use the standard keys from the library messages.
+
+</div>
+
+<p><span id="prevMenuLink"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">prevMenuLink</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#363">363</a>]</p>
+
+<div class="desc">
+
+Title for the link to the previous menu, if any. If the menu has a
+parent menu, we'll display this link next to the menu title in the top
+instructions/title bar. If this is nil, we won't display a link at all.
+Note that this can contain an HTML fragment; for example, you could use
+an \&lt;IMG\&gt; tag to display an icon here.
+
+</div>
+
+<p><span id="title"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">title</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#277">277</a>]</p>
+
+<div class="desc">
+
+the name of the menu; this is listed in the parent menu
+
+</div>
+
+<p><span id="topbarbg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topbarbg</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#319">319</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="topbarfg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topbarfg</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#318">318</a>]</p>
+
+<div class="desc">
+
+Foreground and background colors for the top instructions bar. By
+default, we use the color scheme of the parent menu, or the inverse of
+our main menu color scheme if we're the top menu.
+
+</div>
+
+<p><span id="topMenu"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topMenu</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#42">42</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="display"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">display ( )</code></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#51">51</a>],
+<a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#23">23</a>]</p>
+
+<div class="desc">
+
+Call menu.display when you're ready to show the menu. This should be
+called on the top-level menu; we run the entire menu display process,
+and return when the user exits from the menu tree.
+
+*Modified in
+[menuweb.t](../file/menuweb.t.html)\[[23](../source/menuweb.t.html#23)\]:*  
+Call menu.display when you're ready to show the menu. This should be
+called on the top-level menu; we run the entire menu display process,
+and return when the user exits from the menu tree.
+
+</div>
+
+<p><span id="enterSubMenu"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">enterSubMenu (idx)</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#61">61</a>]</p>
+
+<div class="desc">
+
+navigate into a submenu
+
+</div>
+
+<p><span id="formatXML"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">formatXML (func)</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#146">146</a>]</p>
+
+<div class="desc">
+
+Prepare a title or content string for our XML output. If 'val' is a
+string, we'll run it through the output formatter to expand any special
+\&lt;.xxx\&gt; sequences. If 'val' is a property, we'll evaluate the property
+of self, capturing the output if it generates any or capturing the
+string if it returns one. In all cases, we take the result string and
+convert TADS special characters to HTML, and finally html-escape the
+result for inclusion in XML output, and return the resulting string.
+
+</div>
+
+<p><span id="getChildIndex"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getChildIndex (child)</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#409">409</a>]</p>
+
+<div class="desc">
+
+get the index in the parent of the given child menu
+
+</div>
+
+<p><span id="getKeysXML"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getKeysXML (buf)</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#119">119</a>]</p>
+
+<div class="desc">
+
+get the XML description of the top-level key list
+
+</div>
+
+<p><span id="getNextMenu"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNextMenu (menu)</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#379">379</a>]</p>
+
+<div class="desc">
+
+Get the next menu in our list following the given menu. Returns nil if
+we don't find the given menu, or the given menu is the last menu.
+
+</div>
+
+<p><span id="getPrevMenu"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPrevMenu (menu)</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#396">396</a>]</p>
+
+<div class="desc">
+
+Get the menu previous tot he given menu. Returns nil if we don't find
+the given menu or the given menu is the first one.
+
+</div>
+
+<p><span id="getXML"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getXML (from)</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#87">87</a>]</p>
+
+<div class="desc">
+
+Package my menu items as XML, to send to the javascript API. 'from' is
+the menu we just navigated from, if any. This is nil when we enter the
+top level menu, since we're not navigating from another menu; when we
+navigate from a parent to a child, this is the parent; when we return
+from a child to a parent, this is the child; and when we move directly
+from sibling to sibling (via a next/previous chapter command), this is
+the sibling. When we display a new topic in a topic list menu, this is
+simply 'self'.
+
+</div>
+
+<p><span id="refreshTopMenuBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">refreshTopMenuBanner (topMenu)</code></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#486">486</a>]</p>
+
+<div class="desc">
+
+Refresh the contents of the top bar with the instructions
+
+</div>
+
+<p><span id="removeStatusLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeStatusLine ( )</code></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#557">557</a>]</p>
+
+<div class="desc">
+
+Remove the status line banner prior to displaying the menu
+
+</div>
+
+<p><span id="removeTopMenuBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeTopMenuBanner ( )</code></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#538">538</a>]</p>
+
+<div class="desc">
+
+Remove the top banner window
+
+</div>
+
+<p><span id="showMenu"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showMenu (from)</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#48">48</a>]</p>
+
+<div class="desc">
+
+show this menu as a submenu
+
+</div>
+
+<p><span id="showMenuHtml"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showMenuHtml (topMenu)</code></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#262">262</a>]</p>
+
+<div class="desc">
+
+Show the menu using HTML. Return nil when the user selects QUIT to exit
+the menu entirely.
+
+</div>
+
+<p><span id="showMenuText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showMenuText (topMenu)</code></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#129">129</a>]</p>
+
+<div class="desc">
+
+Display the menu in plain text mode. This is used when the interpreter
+only supports the old tads2-style text-mode single-line status area.
+
+Returns true if we should return to the parent menu, nil if the user
+selected QUIT to exit the menu system entirely.
+
+</div>
+
+<p><span id="showTopMenuBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showTopMenuBanner (topMenu)</code></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#457">457</a>]</p>
+
+<div class="desc">
+
+showTopMenuBanner creates the banner for the menu using the banner API.
+The banner contains the title of the menu on the left and the navigation
+keys on the right.
+
+</div>
+
+<p><span id="updateContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">updateContents ( )</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#371">371</a>]</p>
+
+<div class="desc">
+
+Update our contents. By default, we'll do nothing; subclasses can
+override this to manage dynamic menus if desired. This is called just
+before the menu is displayed, each time it's displayed.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

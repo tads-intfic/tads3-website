@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>HelloGoodbyeTopic : <a
-href="misctopic.htm">MiscTopic</a><br />
+href="misctopic.html">MiscTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="boredbyetopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="misctopic.htm">[Next]</a></td>
+href="boredbyetopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="misctopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -21,7 +23,7 @@ href="misctopic.htm">[Next]</a></td>
 A HelloGoobyeTopic is used for both greeting and farewell. It may be
 difficult to imagine how the same response could be suitable for both,
 but perhaps the following (which we'll use for the curator - put it in
-his [ConversationReadyState](conversationreadystate.htm)) just about
+his [ConversationReadyState](conversationreadystate.html)) just about
 does the trick:  
   
 +++ HelloGoodbyeTopic  

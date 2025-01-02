@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DarkRoom</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[4739](../source/travel.t.html#4739)\]

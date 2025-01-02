@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Subtime  
-<span class="navnp"><a href="signals.htm" class="nav"><em>Prev:</em> Signals</a>
-    <a href="symconn.htm" class="nav"><em>Next:</em> Symconn</a>    
+<span class="navnp"><a href="signals.html" class="nav"><em>Prev:</em> Signals</a>
+    <a href="symconn.html" class="nav"><em>Next:</em> Symconn</a>    
 </span>
 
 </div>
@@ -512,7 +514,7 @@ of intermediate times between major plot points.
 
 One final note: if you want to display a clock in the status line, or
 show the current time with every prompt, this is the wrong module to use
-(use the [Objective Time](objtime.htm) module instead). A key assumption
+(use the [Objective Time](objtime.html) module instead). A key assumption
 of the scheme implemented here is that the time will be checked only
 occasionally, when it occurs to the player to look. If the game is
 constantly checking the time programmatically, it'll defeat the whole
@@ -531,11 +533,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Subtime  
-<span class="navnp"><a href="signals.htm" class="nav"><em>Prev:</em> Signals</a>
-    <a href="symconn.htm" class="nav"><em>Next:</em> Symconn</a>    
+<span class="navnp"><a href="signals.html" class="nav"><em>Prev:</em> Signals</a>
+    <a href="symconn.html" class="nav"><em>Next:</em> Symconn</a>    
 </span>
 
 </div>

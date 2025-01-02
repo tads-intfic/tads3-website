@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Lever</span><span class="type">class</span>
 
 [gadget.t](../file/gadget.t.html)\[[50](../source/gadget.t.html#50)\]

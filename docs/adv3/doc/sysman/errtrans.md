@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="local.htm" class="nav">Translating and Localizing TADS</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="local.html" class="nav">Translating and Localizing TADS</a> \>
 Translating Error Messages  
-<span class="navnp"><a href="local.htm" class="nav"><em>Prev:</em> Translating and
+<span class="navnp"><a href="local.html" class="nav"><em>Prev:</em> Translating and
 Localizing TADS</a>    
-<a href="cmap.htm" class="nav"><em>Next:</em> Creating a
+<a href="cmap.html" class="nav"><em>Next:</em> Creating a
 Character-Mapping File</a>     </span>
 
 </div>
@@ -204,12 +206,12 @@ message ID.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="local.htm" class="nav">Translating and Localizing TADS</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="local.html" class="nav">Translating and Localizing TADS</a> \>
 Translating Error Messages  
-<span class="navnp"><a href="local.htm" class="nav"><em>Prev:</em> Translating and
+<span class="navnp"><a href="local.html" class="nav"><em>Prev:</em> Translating and
 Localizing TADS</a>    
-<a href="cmap.htm" class="nav"><em>Next:</em> Creating a
+<a href="cmap.html" class="nav"><em>Next:</em> Creating a
 Character-Mapping File</a>     </span>
 
 </div>

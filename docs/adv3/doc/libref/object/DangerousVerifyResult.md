@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DangerousVerifyResult</span><span class="type">class</span>
 
 [verify.t](../file/verify.t.html)\[[293](../source/verify.t.html#293)\]

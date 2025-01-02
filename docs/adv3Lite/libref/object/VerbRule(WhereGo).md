@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(WhereGo)</span><span class="type">grammar</span>
 
 [newbie.t](../file/newbie.t.html)\[[869](../source/newbie.t.html#869)\]

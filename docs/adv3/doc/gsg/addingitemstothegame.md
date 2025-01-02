@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](averysimplegame.htm)
-  [\[Next\]](makingtheitemsdosomething.htm)*
+*[\[Previous\]](averysimplegame.html)
+  [\[Next\]](makingtheitemsdosomething.html)*
 
 ## Adding Items to the Game
 
@@ -322,7 +324,7 @@ Surface and a Container.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](averysimplegame.htm)
-  [\[Next\]](makingtheitemsdosomething.htm)*
+*[\[Previous\]](averysimplegame.html)
+  [\[Next\]](makingtheitemsdosomething.html)*
 
 </div>

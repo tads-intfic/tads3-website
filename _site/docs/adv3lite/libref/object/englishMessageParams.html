@@ -1,0 +1,197 @@
+<p><span class="title">englishMessageParams</span><span class="type">object</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4175">4175</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The message parameters object. The language module must provide one
+instance of MessageParams, to fill in the language-specific list of
+parameter names and expansion functions.
+
+\[Required\]
+
+**`englishMessageParams`**` :   `[`MessageParams`](../object/MessageParams.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">englishMessageParams</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MessageParams<code class="language-plaintext highlighter-rouge">](../object/MessageParams.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>params<code class="language-plaintext highlighter-rouge">](#params)</code>  <code class="language-plaintext highlighter-rouge">[</code>sentenceOrder<code class="language-plaintext highlighter-rouge">](#sentenceOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>sLetters<code class="language-plaintext highlighter-rouge">](#sLetters)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbTab<code class="language-plaintext highlighter-rouge">](#verbTab)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageParams</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>langObj<code class="language-plaintext highlighter-rouge">](../object/MessageParams.html#langObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>paramTab<code class="language-plaintext highlighter-rouge">](../object/MessageParams.html#paramTab)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>awkwardEnding<code class="language-plaintext highlighter-rouge">](#awkwardEnding)</code>  <code class="language-plaintext highlighter-rouge">[</code>cmdInfoReflexive<code class="language-plaintext highlighter-rouge">](#cmdInfoReflexive)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageParams</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>cmdInfo<code class="language-plaintext highlighter-rouge">](../object/MessageParams.html#cmdInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>expand<code class="language-plaintext highlighter-rouge">](../object/MessageParams.html#expand)</code>  <code class="language-plaintext highlighter-rouge">[</code>findStrParam<code class="language-plaintext highlighter-rouge">](../object/MessageParams.html#findStrParam)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="params"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">params</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4202">4202</a>]</p>
+
+<div class="desc">
+
+The English parameter mappings. The base library doesn't use any of
+these directly, so parameter names and mappings are entirely up to the
+language module. The only part of the library that uses the parameters
+is the library message strings, which are all defined by the language
+module itself. Other translations are free to use different parameter
+names, and don't have to replicate 1-for-1 the parameters defined for
+English. Translations only have to define the parameters needed for
+their own library messages (plus any others they want to provide for use
+by game authors, of course).
+
+\[Required\]
+
+</div>
+
+<p><span id="sentenceOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sentenceOrder</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4186">4186</a>]</p>
+
+<div class="desc">
+
+The language's general sentence order. This should be a string
+containing the letters S, V, and O in the appropriate order for the
+language. S is for Subject, V is for Verb, and O is for Object. For
+example, English is an SVO language, since the general order of an
+English sentence is Subject Verb Object.
+
+This can be left nil for languages with no prevailing sentence order.
+
+</div>
+
+<p><span id="sLetters"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sLetters</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4649">4649</a>]</p>
+
+<div class="desc">
+
+Word-ending letter combinations that are awkward to follow with a
+contracted verb such a 've.
+
+</div>
+
+<p><span id="verbTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbTab</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4643">4643</a>]</p>
+
+<div class="desc">
+
+verb table - we build this at preinit from the verb parameters
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="awkwardEnding"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">awkwardEnding (nam)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4655">4655</a>]</p>
+
+<div class="desc">
+
+Does nam end with one of the letter combinations in sLetters, in which
+case it's awkward to follow it with a contraction.
+
+</div>
+
+<p><span id="cmdInfoReflexive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmdInfoReflexive (ctx, srcObj, objProp)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4571">4571</a>]</p>
+
+<div class="desc">
+
+Check for reflexives in cmdInfo. This is called when we see a noun
+phrase being used as an object of the verb (i.e., in a role other than
+as the subject of the verb). If appropriate, we can return a reflexive
+pronoun instead of the noun we'd normally generate. If no reflexive is
+required, we return nil, and the caller will use the normal noun or
+pronoun instead.
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#4593">4593</a>]</p>
+
+<div class="desc">
+
+On construction, fill in the verb parameters from CustomVocab objects.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

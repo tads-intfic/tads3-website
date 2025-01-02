@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Immovable</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[1998](../source/objects.t.html#1998)\]

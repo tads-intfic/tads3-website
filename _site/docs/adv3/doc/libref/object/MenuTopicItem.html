@@ -1,0 +1,305 @@
+<p><span class="title">MenuTopicItem</span><span class="type">class</span></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#421">421</a>],
+<a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#590">590</a>],
+<a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#240">240</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+MenuTopicItem displays a series of entries successively. This is
+intended to be used for displaying something like a list of hints for a
+topic. Set menuContents to be a list of strings to be displayed.
+
+*Modified in
+[menucon.t](../file/menucon.t.html)\[[590](../source/menucon.t.html#590)\]:*  
+Menu topic item - console UI implementation
+
+*Modified in
+[menuweb.t](../file/menuweb.t.html)\[[240](../source/menuweb.t.html#240)\]:*  
+Menu topic item - console UI implementation
+
+`class `**`MenuTopicItem`**` :   `[`MenuItem`](../object/MenuItem.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MenuTopicItem</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MenuItem<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MenuObject<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MenuTopicItem</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Goal`](../object/Goal.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>chunkSize<code class="language-plaintext highlighter-rouge">](#chunkSize)</code>  <code class="language-plaintext highlighter-rouge">[</code>heading<code class="language-plaintext highlighter-rouge">](#heading)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastDisplayed<code class="language-plaintext highlighter-rouge">](#lastDisplayed)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuContents<code class="language-plaintext highlighter-rouge">](#menuContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuTopicListEnd<code class="language-plaintext highlighter-rouge">](#menuTopicListEnd)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextMenuTopicLink<code class="language-plaintext highlighter-rouge">](#nextMenuTopicLink)</code>  <code class="language-plaintext highlighter-rouge">[</code>title<code class="language-plaintext highlighter-rouge">](#title)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>bgcolor<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#bgcolor)</code>  <code class="language-plaintext highlighter-rouge">[</code>curKeyList<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#curKeyList)</code>  <code class="language-plaintext highlighter-rouge">[</code>curMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#curMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>fgcolor<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#fgcolor)</code>  <code class="language-plaintext highlighter-rouge">[</code>fullScreenMode<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#fullScreenMode)</code>  <code class="language-plaintext highlighter-rouge">[</code>indent<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#indent)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#isOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyList<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#keyList)</code>  <code class="language-plaintext highlighter-rouge">[</code>prevMenuLink<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#prevMenuLink)</code>  <code class="language-plaintext highlighter-rouge">[</code>topbarbg<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#topbarbg)</code>  <code class="language-plaintext highlighter-rouge">[</code>topbarfg<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#topbarfg)</code>  <code class="language-plaintext highlighter-rouge">[</code>topMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#topMenu)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>contents<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#contents)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuOrder<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#menuOrder)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>displaySubItem<code class="language-plaintext highlighter-rouge">](#displaySubItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextTopicXML<code class="language-plaintext highlighter-rouge">](#getNextTopicXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicXML<code class="language-plaintext highlighter-rouge">](#getTopicXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getXML<code class="language-plaintext highlighter-rouge">](#getXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>redrawWinHtml<code class="language-plaintext highlighter-rouge">](#redrawWinHtml)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMenuHtml<code class="language-plaintext highlighter-rouge">](#showMenuHtml)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMenuText<code class="language-plaintext highlighter-rouge">](#showMenuText)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>display<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#display)</code>  <code class="language-plaintext highlighter-rouge">[</code>enterSubMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#enterSubMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>formatXML<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#formatXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getChildIndex<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#getChildIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>getKeysXML<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#getKeysXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#getNextMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPrevMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#getPrevMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>refreshTopMenuBanner<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#refreshTopMenuBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeStatusLine<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#removeStatusLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeTopMenuBanner<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#removeTopMenuBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#showMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTopMenuBanner<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#showTopMenuBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>updateContents<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#updateContents)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addToContents<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#addToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>compareForMenuSort<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#compareForMenuSort)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeContents<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#initializeContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeLocation<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#initializeLocation)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="chunkSize"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">chunkSize</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#447">447</a>]</p>
+
+<div class="desc">
+
+The maximum number of our sub-items that we'll display at once. This is
+only used on interpreters with banner capabilities, and is ignored in
+full-screen mode.
+
+</div>
+
+<p><span id="heading"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">heading</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#426">426</a>]</p>
+
+<div class="desc">
+
+heading, displayed while we're showing this topic list
+
+</div>
+
+<p><span id="lastDisplayed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastDisplayed</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#440">440</a>]</p>
+
+<div class="desc">
+
+the index of the last item we displayed from our menuContents list
+
+</div>
+
+<p><span id="menuContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuContents</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#437">437</a>]</p>
+
+<div class="desc">
+
+A list of strings and/or MenuTopicSubItem items. Each one of these is
+meant to be something like a single hint on our topic. We display these
+items one at a time when our menu item is selected.
+
+</div>
+
+<p><span id="menuTopicListEnd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuTopicListEnd</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#450">450</a>]</p>
+
+<div class="desc">
+
+we'll display this after we've shown all of our items
+
+</div>
+
+<p><span id="nextMenuTopicLink"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextMenuTopicLink</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#429">429</a>]</p>
+
+<div class="desc">
+
+hyperlink text for showing the next menu
+
+</div>
+
+<p><span id="title"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">title</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#423">423</a>]</p>
+
+<div class="desc">
+
+the name of this topic, as it appears in our parent menu
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="displaySubItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">displaySubItem (idx, lastBeforeInput, eol)</code></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#875">875</a>]</p>
+
+<div class="desc">
+
+Display an item from our list. 'idx' is the index in our list of the
+item to display. 'lastBeforeInput' indicates whether or not this is the
+last item we're going to show before pausing for user input. 'eol' gives
+the newline sequence to display at the end of the line.
+
+</div>
+
+<p><span id="getNextTopicXML"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNextTopicXML ( )</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#270">270</a>]</p>
+
+<div class="desc">
+
+get the next topic, in XML format
+
+</div>
+
+<p><span id="getTopicXML"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTopicXML (i)</code></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#281">281</a>]</p>
+
+<div class="desc">
+
+get the XML formatted description of the item at the given index
+
+</div>
+
+<p><span id="getXML"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getXML (from)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/menuweb.t.html">menuweb.t</a>[<a href="../source/menuweb.t.html#242">242</a>]</p>
+
+<div class="desc">
+
+get the XML description of my menu list
+
+</div>
+
+<p><span id="redrawWinHtml"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">redrawWinHtml (topIdx)</code></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#782">782</a>]</p>
+
+<div class="desc">
+
+redraw the window in HTML mode, starting with the given item at the top
+of the window
+
+</div>
+
+<p><span id="showMenuHtml"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showMenuHtml (topMenu)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#654">654</a>]</p>
+
+<div class="desc">
+
+Display and run our menu in HTML mode.
+
+</div>
+
+<p><span id="showMenuText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showMenuText (topMenu)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/menucon.t.html">menucon.t</a>[<a href="../source/menucon.t.html#594">594</a>]</p>
+
+<div class="desc">
+
+Display and run our menu in text mode.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

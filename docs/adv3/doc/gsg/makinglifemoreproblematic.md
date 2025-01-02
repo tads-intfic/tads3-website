@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](climbingthetree.htm)
-  [\[Next\]](rewardingtheeffort.htm)*
+*[\[Previous\]](climbingthetree.html)
+  [\[Next\]](rewardingtheeffort.html)*
 
 ## Making Life More Problematic
 
@@ -1327,7 +1329,7 @@ You don't need to worry about that just yet - there's plenty more to do
 in this guide first - but if when you try to implement something similar
 in your own game you find TADS 3 doing its best to frustrate you at
 every turn, you'll also find that help is at hand in the article on
-'<a href="../techman/t3staging.htm" target="_top">Using NestedRooms as
+'<a href="../techman/t3staging.html" target="_top">Using NestedRooms as
 Staging Locations</a>' in the *Technical Manual*.  
   
 
@@ -1335,5 +1337,5 @@ Staging Locations</a>' in the *Technical Manual*.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](climbingthetree.htm)
-  [\[Next\]](rewardingtheeffort.htm)*
+*[\[Previous\]](climbingthetree.html)
+  [\[Next\]](rewardingtheeffort.html)*

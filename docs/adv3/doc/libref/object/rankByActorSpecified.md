@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rankByActorSpecified</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[5923](../source/parser.t.html#5923)\]

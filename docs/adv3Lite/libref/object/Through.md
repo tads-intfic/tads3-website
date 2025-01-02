@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Through</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[10145](../source/thing.t.html#10145)\]

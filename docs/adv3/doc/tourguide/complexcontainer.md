@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ComplexContainer : <a
-href="thing-thebasics.htm">Thing</a><br />
+href="thing-thebasics.html">Thing</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="rearsurface.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="containerdoor.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="rearsurface.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="containerdoor.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -22,8 +24,8 @@ LockableContainer, an item's contents are deemed to be either in it or
 on it (or, by extension, under it or behind it), but only one of these
 at a time. So what happens if we have something like desk that we want
 to put things both on and in? Well, we've already seen how one solution
-might work, because we've been using it with [Underside](underside.htm)
-and [RearContainer](rearcontainer.htm), namely to define a second
+might work, because we've been using it with [Underside](underside.html)
+and [RearContainer](rearcontainer.html), namely to define a second
 object, say a desk drawer, to act as the container, and remap all the
 commands relating to looking in, opening, closing, and putting things
 into the desk to the drawer object instead:  
@@ -55,7 +57,7 @@ have defined the key to be of class Key which we haven't actually
 introduced yet, but since the object definition is so simple it would be
 pointless to make it a Thing only to have to change it later. We'll see
 how this Key works when we come to discuss the
-[LockableWithKey](lockablewithkey.htm) class.  
+[LockableWithKey](lockablewithkey.html) class.  
   
 Note also that although the cabinDeskDrawer, being in the cabinDesk's
 contents, is strictly speaking notionally on its surface, this doesn't
@@ -105,7 +107,7 @@ stop from the end of the desc property and put one at the start of ".
 It's open"; that way the description will look right whether the table
 is open or closed).  
   
-Note that [inRoomDesc](specialdesc.htm) is *not* a property defined in
+Note that [inRoomDesc](specialdesc.html) is *not* a property defined in
 the library; it was a custom property we defined some way back as a
 convenient way of adding the description of NonPortable objects to the
 room description. Here this simply avoids our having to go back and

@@ -1,3 +1,5 @@
+---
+---
 # spelling.t
 
 [documentation](../file/spelling.t.html)

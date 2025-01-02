@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorActionRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[277](../source/sysrules.t.html#277)\]

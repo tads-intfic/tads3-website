@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ScopeList</span><span class="type">class</span>
 
 [query.t](../file/query.t.html)\[[923](../source/query.t.html#923)\]

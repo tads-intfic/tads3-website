@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,18 +9,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Immovable : <a
-href="nonportableintroduction.htm">NonPortable</a><br />
+href="nonportableintroduction.html">NonPortable</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="unthing.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="customimmovable.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="unthing.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="customimmovable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 An Immovable object is one that can't be moved but isn't obviously fixed
-in place. The practical difference between a [Fixture](fixture.htm) and
+in place. The practical difference between a [Fixture](fixture.html) and
 an Immovable is that moving the former is forbidden in the verify
 method, while moving the latter is disallowed in the action method.  
   

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">spelledThousand(thousandsAndSmall)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[1278](../source/grammar.t.html#1278)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="character.htm" class="nav">Character Building</a> \> Overview  
-<span class="navnp"><a href="character.htm" class="nav"><em>Prev:</em> Character
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="character.html" class="nav">Character Building</a> \> Overview  
+<span class="navnp"><a href="character.html" class="nav"><em>Prev:</em> Character
 Building</a>    
-<a href="guard.htm" class="nav"><em>Next:</em> The Security Guard</a>
+<a href="guard.html" class="nav"><em>Next:</em> The Security Guard</a>
     </span>
 
 </div>
@@ -82,11 +84,11 @@ AgendaItems, and leave conversation and TopicEntries to Chapter 11.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="character.htm" class="nav">Character Building</a> \> Overview  
-<span class="navnp"><a href="character.htm" class="nav"><em>Prev:</em> Character
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="character.html" class="nav">Character Building</a> \> Overview  
+<span class="navnp"><a href="character.html" class="nav"><em>Prev:</em> Character
 Building</a>    
-<a href="guard.htm" class="nav"><em>Next:</em> The Security Guard</a>
+<a href="guard.html" class="nav"><em>Next:</em> The Security Guard</a>
     </span>
 
 </div>

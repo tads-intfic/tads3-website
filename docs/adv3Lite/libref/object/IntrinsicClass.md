@@ -1,3 +1,5 @@
+---
+---
 <span class="title">IntrinsicClass</span><span class="type">class</span>
 
 [systype.h](../file/systype.h.html)\[[108](../source/systype.h.html#108)\]

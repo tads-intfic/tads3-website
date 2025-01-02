@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`qualifiedNounPhrase(main)`](../object/qualifiedNounPhrase(main).html)</span>` :   `[`LayeredNounPhraseProd`](../object/LayeredNounPhraseProd.html)

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>NoTravelMessage : <a
-href="travelmessage.htm">TravelMessage</a><br />
+href="travelmessage.html">TravelMessage</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="basicdoor.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="exitonlypassage.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="basicdoor.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="exitonlypassage.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -22,7 +24,7 @@ giant underground lake. This means that it should be fairly apparent
 that the PC cannot proceed south. In this situation we may want to
 display a custom message if the player nevertheless attempts to walk out
 onto the lake; a NoTravelMessage will perform this role (using the
-[NoTravelMessage template](notravelmessagetemplate.htm)):  
+[NoTravelMessage template](notravelmessagetemplate.html)):  
   
   
 lakeRoom: Room 'Lake Shore'  
@@ -33,7 +35,7 @@ lakeRoom: Room 'Lake Shore'
   southwest asExit(south)  
 **;  
   
-This is very similar to a [FakeConnector](fakeconnector.htm). The only
+This is very similar to a [FakeConnector](fakeconnector.html). The only
 difference is a direction attached to a NoTravelMessage won't be
 included in a list of exits (e.g. in response to an EXITS command, or in
 the status line), whereas that attached to a FakeConnector will. A

@@ -1,0 +1,116 @@
+<p><span class="title">routeFinder</span><span class="type">object</span></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#136">136</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Pathfinder specialized for finding a route through the game map. Note
+that this can only find a route through TravelConnector objects (which
+includes direction properties attached to Rooms, Doors and other
+TravelConnectors).
+
+**`routeFinder`**` :   `[`Pathfinder`](../object/Pathfinder.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">routeFinder</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Pathfinder<code class="language-plaintext highlighter-rouge">](../object/Pathfinder.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>excludeLockedDoors<code class="language-plaintext highlighter-rouge">](#excludeLockedDoors)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Pathfinder</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>cachedRoute<code class="language-plaintext highlighter-rouge">](../object/Pathfinder.html#cachedRoute)</code>  <code class="language-plaintext highlighter-rouge">[</code>currentDestination<code class="language-plaintext highlighter-rouge">](../object/Pathfinder.html#currentDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>nodesVisited<code class="language-plaintext highlighter-rouge">](../object/Pathfinder.html#nodesVisited)</code>  <code class="language-plaintext highlighter-rouge">[</code>pathsFound<code class="language-plaintext highlighter-rouge">](../object/Pathfinder.html#pathsFound)</code>  <code class="language-plaintext highlighter-rouge">[</code>steps<code class="language-plaintext highlighter-rouge">](../object/Pathfinder.html#steps)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>findDestinations<code class="language-plaintext highlighter-rouge">](#findDestinations)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Pathfinder</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>findPath<code class="language-plaintext highlighter-rouge">](../object/Pathfinder.html#findPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeOneStep<code class="language-plaintext highlighter-rouge">](../object/Pathfinder.html#takeOneStep)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="excludeLockedDoors"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">excludeLockedDoors</code></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#215">215</a>]</p>
+
+<div class="desc">
+
+the destination is only of interest if it's not nowhere, the default
+unknown destination, or the location we're trying to leave.
+
+if it's none of these, add it to the list of possible paths
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="findDestinations"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findDestinations (cur)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#138">138</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

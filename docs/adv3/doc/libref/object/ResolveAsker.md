@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ResolveAsker</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[312](../source/parser.t.html#312)\]

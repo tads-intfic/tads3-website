@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EventAction</span><span class="type">class</span>
 
 [events.t](../file/events.t.html)\[[570](../source/events.t.html#570)\]

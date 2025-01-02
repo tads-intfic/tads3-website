@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CommandActorAction</span><span class="type">class</span>
 
 [resolver.t](../file/resolver.t.html)\[[1059](../source/resolver.t.html#1059)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ScriptOff</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[2405](../source/actions.t.html#2405)\]

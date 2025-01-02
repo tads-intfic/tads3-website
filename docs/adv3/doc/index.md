@@ -1,3 +1,5 @@
+---
+---
 <div>
 
 [TADS 3](../../index.html)
@@ -6,7 +8,7 @@
 
 </div>
 
-<a href="../adv3lite/index.htm" class="nav-element">Adv3Lite
+<a href="../adv3lite/index.html" class="nav-element">Adv3Lite
 Bookshelf</a> <a href="#" class="nav-element current">Adv3 Bookshelf</a>
 <a href="#" class="nav-element">Cheat Sheets</a>
 
@@ -30,9 +32,9 @@ Bookshelf</a> <a href="#" class="nav-element current">Adv3 Bookshelf</a>
 <td colspan="2"><hr /></td>
 </tr>
 <tr>
-<td class="bookimg"><a href="T3QuickStart.htm" target="_blank"><img
+<td class="bookimg"><a href="T3QuickStart.html" target="_blank"><img
 src="qstart_cover.jpg" class="book" /></a></td>
-<td><a href="T3QuickStart.htm" class="title" target="_blank">TADS 3
+<td><a href="T3QuickStart.html" class="title" target="_blank">TADS 3
 Quick Start Guide</a><br />
 by Eric Eve
 <p>This brief guide is probably the best place to start for newcomers to
@@ -87,7 +89,7 @@ most interested in. As you develop your game, you can return to the book
 as a reference, to review the details of particular TADS features.</p>
 <p><em>This book refers to a collection of sample games, which are
 available as a separate download - <a
-href="http://www.tads.org/learning_tads3_sample_games.htm"
+href="http://www.tads.org/learning_tads3_sample_games.html"
 class="visible">click here</a> to download.</em></p></td>
 </tr>
 <tr>
@@ -111,9 +113,9 @@ version is recommended if you want to make a printed copy.</em></p></td>
 <td colspan="2"><hr /></td>
 </tr>
 <tr>
-<td class="bookimg"><a href="sysman/cover.htm" target="_blank"><img
+<td class="bookimg"><a href="sysman/cover.html" target="_blank"><img
 src="syscover.jpg" class="book" /></a></td>
-<td><a href="sysman/cover.htm" class="title" target="_blank">TADS 3
+<td><a href="sysman/cover.html" class="title" target="_blank">TADS 3
 System Manual</a><br />
 by Michael Roberts
 <p>This book is a reference to the TADS 3 language and the T3 VM,
@@ -125,9 +127,9 @@ to find the details on the system.</p></td>
 <td colspan="2"><hr /></td>
 </tr>
 <tr>
-<td class="bookimg"><a href="techman/cover.htm" target="_blank"><img
+<td class="bookimg"><a href="techman/cover.html" target="_blank"><img
 src="techcover.jpg" class="book" /></a></td>
-<td><a href="techman/cover.htm" class="title" target="_blank">TADS 3
+<td><a href="techman/cover.html" class="title" target="_blank">TADS 3
 Technical Manual</a><br />
 edited by Michael Roberts
 <p>This is a collection of technical articles about key aspects of the
@@ -152,9 +154,9 @@ library source code.</p></td>
 <td colspan="2"><hr /></td>
 </tr>
 <tr>
-<td class="bookimg"><a href="htmltads/intro.htm" target="_blank"><img
+<td class="bookimg"><a href="htmltads/intro.html" target="_blank"><img
 src="htads_cover.jpg" class="book" /></a></td>
-<td><a href="htmltads/intro.htm" class="title"
+<td><a href="htmltads/intro.html" class="title"
 target="_blank">Introduction to HTML TADS</a><br />
 by Michael Roberts
 <p>TADS 3 uses a variant of HTML as its formatting language. These notes
@@ -176,15 +178,15 @@ HTML.)</p></td>
 
 <div class="indent">
 
-<a href="t3changes.htm" target="_blank"><strong>TADS 3 System Change
+<a href="t3changes.html" target="_blank"><strong>TADS 3 System Change
 History</strong></a>. This is a chronological log of changes to the TADS
 3 language, tools, and Virtual Machine.
 
-<a href="../lib/adv3/changes.htm" target="_blank"><strong>Adv3 Library
+<a href="../lib/adv3/changes.html" target="_blank"><strong>Adv3 Library
 Change History</strong></a>. A chronological log of changes to Adv3, the
 standard TADS 3 Adventure Framework Library.
 
-<a href="changes.htm" target="_blank"><strong>HTML TADS Interpreter and
+<a href="changes.html" target="_blank"><strong>HTML TADS Interpreter and
 Workbench Change History</strong></a>. This is a log of changes to the
 HTML TADS user interface, which includes the HTML TADS Interpreter and
 the Workbench development environment on Windows.

@@ -1,0 +1,45 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Door : <a href="basicdoor.html">BasicDoor</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="roomautoconnector.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="basicdoor.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A basic door is easy to implement; here we’ll illustrate a simple
+double-sided door by placing one between anotherCave and a room to the
+south that we’ll call lakeShore. We point the south property of
+anotherCave to one side of the door (lakeDoor), the north property of
+lakeShore to the other side of the door (lakeDoor2) and make sure that
+one side of the door (lakeDoor2) points to the other side (lakeDoor) as
+its masterObject. Door inherits from Passage and hence from Thing; we
+use the <a href="thingtemplate.html">Thing template</a> for lakeDoor and the
+<a href="passagetemplate.html">Passage template</a> for lakeDoor2:</p>
+
+<p>anotherCave: Room ’Another Cave’<br />
+  ”There’s something artificial about this cave. It’s almost as if it’s trying<br />
+   to be a room. The floor is suspiciously level, the walls are almost<br />
+   smooth, and there’s a smart new door set into the south wall, with a<br />
+   bright electric light mounted above it. The rougher, larger central<br />
+   cave lies to the north. ”<br />
+  north = mainCave<br />
+  **south = lakeDoor<br />
+**;</p>
+
+<p>+ lakeDoor : Door ’smart new door’ ’smart new door’;</p>
+
+<p>lakeRoom: Room ’Lake Shore’<br />
+  ”This is the northern shore of a giant underground lake. A door leads north. ”<br />
+  north = lakeDoor2<br />
+;</p>
+
+<p>+ lakeDoor2 : Door -&gt;lakeDoor ’door’ ’door’;</p>
+
+<p>Later, we’ll make this more interesting by adding a special kind of lock
+to the door.</p>

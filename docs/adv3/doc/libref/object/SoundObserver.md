@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SoundObserver</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[870](../source/objects.t.html#870)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Metaclass Identifier List  
-<span class="navnp"><a href="fnset_t3.htm" class="nav"><em>Prev:</em> t3vm Function Set</a>
-    <a href="save.htm" class="nav"><em>Next:</em> Saving and Restoring
+<span class="navnp"><a href="fnset_t3.html" class="nav"><em>Prev:</em> t3vm Function Set</a>
+    <a href="save.html" class="nav"><em>Next:</em> Saving and Restoring
 State</a>     </span>
 
 </div>
@@ -28,7 +30,7 @@ The T3 VM uses metaclass identifiers to associate metaclass types with
 their implementations. A T3 application stores the identifiers of the
 metaclasses it uses in its image file; the VM uses these identifiers to
 allow the application to call code in the metaclasses. Refer to the
-[machine model](model.htm#metaclass_id) documentation for details of
+[machine model](model.html#metaclass_id) documentation for details of
 this mechanism.
 
 Metaclass identifiers are universally unique. A given metaclass ID
@@ -91,11 +93,11 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Metaclass Identifier List  
-<span class="navnp"><a href="fnset_t3.htm" class="nav"><em>Prev:</em> t3vm Function Set</a>
-    <a href="save.htm" class="nav"><em>Next:</em> Saving and Restoring
+<span class="navnp"><a href="fnset_t3.html" class="nav"><em>Prev:</em> t3vm Function Set</a>
+    <a href="save.html" class="nav"><em>Next:</em> Saving and Restoring
 State</a>     </span>
 
 </div>

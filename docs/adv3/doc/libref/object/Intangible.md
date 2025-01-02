@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Intangible</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[40](../source/objects.t.html#40)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(GoSomewhere)</span><span class="type">grammar</span>
 
 [newbie.t](../file/newbie.t.html)\[[780](../source/newbie.t.html#780)\]

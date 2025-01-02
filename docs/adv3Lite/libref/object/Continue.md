@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Continue</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[813](../source/actions.t.html#813)\]

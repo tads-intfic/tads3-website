@@ -1,3 +1,5 @@
+---
+---
 <span class="title">inputlineStyleTag</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[832](../source/output.t.html#832)\]

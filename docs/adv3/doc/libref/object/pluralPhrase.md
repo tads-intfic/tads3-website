@@ -1,3 +1,5 @@
+---
+---
 <span class="title">pluralPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`pluralPhrase(main)`](../object/pluralPhrase(main).html)</span>` :   `[`LayeredNounPhraseProd`](../object/LayeredNounPhraseProd.html)

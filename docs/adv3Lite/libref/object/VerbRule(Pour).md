@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Pour)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2900](../source/grammar.t.html#2900)\]

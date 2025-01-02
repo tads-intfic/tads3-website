@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>LeaveByeTopic: <a
-href="misctopic.htm">MiscTopic</a><br />
+href="misctopic.html">MiscTopic</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="impbyetopic.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="boredbyetopic.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="impbyetopic.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="boredbyetopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -33,7 +35,7 @@ conversation ends as a result of boredom or travel. Note that in this
 case the (more specific) LeaveByeTopic will be used when the PC departs,
 and the (less specific) ImpByeTopic will be used when the curator
 becomes bored, although we could achieve the same effect by using a
-[BoredByeTopic](boredbyetopic.htm).  
+[BoredByeTopic](boredbyetopic.html).  
   
   
   

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Minimal Game
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Minimal Game
 Definition  
-<span class="navnp"><a href="modules.htm" class="nav"><em>Prev:</em> Core and Optional
+<span class="navnp"><a href="modules.html" class="nav"><em>Prev:</em> Core and Optional
 Modules</a>    
-<a href="core.htm" class="nav"><em>Next:</em> The Core Library</a>    
+<a href="core.html" class="nav"><em>Next:</em> The Core Library</a>    
 </span>
 
 </div>
@@ -23,7 +25,7 @@ Modules</a>    
 # Starting Out — A Minimal Game Definition
 
 The minimal game in adv3Lite is very similar to that in adv3. At the
-basic minimum it must contain a [gameMain](beginning.htm#gamemain)
+basic minimum it must contain a [gameMain](beginning.html#gamemain)
 object defining the initial player character, the object defining the
 player character, and the player character's starting location. Unlike
 in adv3 the player character can be of class Thing, which requires a few
@@ -77,7 +79,7 @@ identifying itself as the initial player character:
 </div>
 
 In practice, any real game would want also to include a
-[versionInfo](beginning.htm#versioninfo) object to provide information
+[versionInfo](beginning.html#versioninfo) object to provide information
 about the game, and at the very least a showIntro() method on gameMain
 to display an introduction to the game, as well as some description of
 the player character and a more fully-implemented starting location. The
@@ -298,7 +300,7 @@ above), here is another way:
 ## The System Manual
 
 From time to time it may prove useful to consult the [TADS 3 System
-Manual](../sysman.htm) while working on an adv3Lite game. This contains
+Manual](../sysman.html) while working on an adv3Lite game. This contains
 a wealth of information about the TADS 3 language and its intrinsic
 classes, all of which are important to know about when programming in
 TADS 3. The contents page of this manual and the Adv3Lite Tutorial thus
@@ -312,7 +314,7 @@ default behaviour is thus to link to the online version at
 [www.tads.org](http://www.tads.org). If you have a fast and reliable
 internet connection you may be perfectly happy with this, but if you
 prefer you can quite easily change the set-up to reference your local
-copy of the System Manual simply by editing the file **sysman.htm** in
+copy of the System Manual simply by editing the file **sysman.html** in
 your adv3Lite/docs directory. When you first open this file you should
 find it looks like this:
 
@@ -321,19 +323,19 @@ find it looks like this:
     <html>
     <head>
     <title>System Manual</title>
-    <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.htm">
+    <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.html">
 
 
     <!-- REPLACE THE URL ABOVE WITH THE PATH TO THE TADS 3 System documentation on your system-->
 
     <!-- For a 64-bit Windows System (e.g. Windows 7) this might be: -->
-    <!-- <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.htm"> -->
+    <!-- <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.html"> -->
 
     <!-- FOR A 32-Bit Windows system (e.g. Windows XP) this might be: -->
-    <!--  <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.htm"> -->
+    <!--  <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.html"> -->
 
     <!-- FOR UNIX-like systems it might be something along the lines of -->
-    <!--  <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin /TADS 3/doc/sysman/toc.htm"> -->
+    <!--  <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin /TADS 3/doc/sysman/toc.html"> -->
     </head>
 
 </div>
@@ -344,18 +346,18 @@ to edit the line:
 <div class="code">
 
      
-    <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.htm">
+    <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.html">
 
 </div>
 
 So that the url it redirects to is the location of the System Manual's
-toc.htm file on your machine. For example, if you're running a 64-bit
+toc.html file on your machine. For example, if you're running a 64-bit
 version of Windows (such as Windows 7) you'll probably need to change
 this line to:
 
 <div class="code">
 
-    <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.htm"> 
+    <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.html"> 
      
 
 </div>
@@ -365,7 +367,7 @@ need:
 
 <div class="code">
 
-    <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.htm"> 
+    <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.html"> 
      
 
 </div>
@@ -375,7 +377,7 @@ extensive, possibly to something like:
 
 <div class="code">
 
-    <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin/TADS 3/doc/sysman/toc.htm"> 
+    <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin/TADS 3/doc/sysman/toc.html"> 
      
 
 </div>
@@ -386,7 +388,7 @@ one of the other versions that fits the bill. Obviously, you'll need to
 check that it conforms to the actual location of the TADS 3 installation
 on your system. The good news, though, is that this change only needs to
 be done in one place, since all links from the adv3Lite documentation to
-the System Manual are routed through sysman.htm.
+the System Manual are routed through sysman.html.
 
 </div>
 
@@ -395,12 +397,12 @@ the System Manual are routed through sysman.htm.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Minimal Game
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Minimal Game
 Definition  
-<span class="navnp"><a href="modules.htm" class="nav"><em>Prev:</em> Core and Optional
+<span class="navnp"><a href="modules.html" class="nav"><em>Prev:</em> Core and Optional
 Modules</a>    
-<a href="core.htm" class="nav"><em>Next:</em> The Core Library</a>    
+<a href="core.html" class="nav"><em>Next:</em> The Core Library</a>    
 </span>
 
 </div>

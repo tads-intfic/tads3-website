@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ReplacementCommandStringException</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[7025](../source/parser.t.html#7025)\]

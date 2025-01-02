@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SenseTimeFuse</span><span class="type">class</span>
 
 [objtime.t](../file/objtime.t.html)\[[324](../source/objtime.t.html#324)\]

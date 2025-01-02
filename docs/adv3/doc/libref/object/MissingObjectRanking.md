@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MissingObjectRanking</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[4743](../source/parser.t.html#4743)\]

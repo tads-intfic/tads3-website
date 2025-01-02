@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AntecedentScopeError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5381](../source/parser.t.html#5381)\]

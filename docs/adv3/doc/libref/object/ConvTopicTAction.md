@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ConvTopicTAction</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[6072](../source/action.t.html#6072)\]

@@ -1,0 +1,580 @@
+<p><span class="title">libGlobal</span><span class="type">object</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#571">571</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Library global variables
+
+**`libGlobal`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">libGlobal</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>commandLineArgs<code class="language-plaintext highlighter-rouge">](#commandLineArgs)</code>  <code class="language-plaintext highlighter-rouge">[</code>curAction<code class="language-plaintext highlighter-rouge">](#curAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>curActor<code class="language-plaintext highlighter-rouge">](#curActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>curCommand<code class="language-plaintext highlighter-rouge">](#curCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>curIssuingActor<code class="language-plaintext highlighter-rouge">](#curIssuingActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>exitListerObj<code class="language-plaintext highlighter-rouge">](#exitListerObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>extraDestInfo<code class="language-plaintext highlighter-rouge">](#extraDestInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>extraHintManagerObj<code class="language-plaintext highlighter-rouge">](#extraHintManagerObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>footnoteClass<code class="language-plaintext highlighter-rouge">](#footnoteClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>hintManagerObj<code class="language-plaintext highlighter-rouge">](#hintManagerObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>IFID<code class="language-plaintext highlighter-rouge">](#IFID)</code>  <code class="language-plaintext highlighter-rouge">[</code>inventoryTall<code class="language-plaintext highlighter-rouge">](#inventoryTall)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastAction<code class="language-plaintext highlighter-rouge">](#lastAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastActorForUndo<code class="language-plaintext highlighter-rouge">](#lastActorForUndo)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastCommand<code class="language-plaintext highlighter-rouge">](#lastCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastCommandForAgain<code class="language-plaintext highlighter-rouge">](#lastCommandForAgain)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastCommandForUndo<code class="language-plaintext highlighter-rouge">](#lastCommandForUndo)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastLoc<code class="language-plaintext highlighter-rouge">](#lastLoc)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastTypedOnObj<code class="language-plaintext highlighter-rouge">](#lastTypedOnObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastWrittenOnObj<code class="language-plaintext highlighter-rouge">](#lastWrittenOnObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>libMessageObj<code class="language-plaintext highlighter-rouge">](#libMessageObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>nameTable_<code class="language-plaintext highlighter-rouge">](#nameTable_)</code>  <code class="language-plaintext highlighter-rouge">[</code>objectNameTab<code class="language-plaintext highlighter-rouge">](#objectNameTab)</code>  <code class="language-plaintext highlighter-rouge">[</code>parserDebugMode<code class="language-plaintext highlighter-rouge">](#parserDebugMode)</code>  <code class="language-plaintext highlighter-rouge">[</code>playerChar<code class="language-plaintext highlighter-rouge">](#playerChar)</code>  <code class="language-plaintext highlighter-rouge">[</code>playerCharName<code class="language-plaintext highlighter-rouge">](#playerCharName)</code>  <code class="language-plaintext highlighter-rouge">[</code>revealedNameTab<code class="language-plaintext highlighter-rouge">](#revealedNameTab)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreObj<code class="language-plaintext highlighter-rouge">](#scoreObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>thoughtManagerObj<code class="language-plaintext highlighter-rouge">](#thoughtManagerObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>totalTurns<code class="language-plaintext highlighter-rouge">](#totalTurns)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addExtraDestInfo<code class="language-plaintext highlighter-rouge">](#addExtraDestInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>getCommandSwitch<code class="language-plaintext highlighter-rouge">](#getCommandSwitch)</code>  <code class="language-plaintext highlighter-rouge">[</code>setRevealed<code class="language-plaintext highlighter-rouge">](#setRevealed)</code>  <code class="language-plaintext highlighter-rouge">[</code>setUnrevealed<code class="language-plaintext highlighter-rouge">](#setUnrevealed)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="commandLineArgs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandLineArgs</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#702">702</a>]</p>
+
+<div class="desc">
+
+Command line arguments. The library sets this to a list of strings
+containing the arguments passed to the program on the command line. This
+list contains the command line arguments parsed according to the local
+conventions for the operating system and C++ library. The standard
+parsing procedure used by most systems is to break the line into tokens
+delimited by space characters. Many systems also allow space characters
+to be embedded in tokens by quoting the tokens. The first argument is
+always the name of the .t3 file currently executing.
+
+</div>
+
+<p><span id="curAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curAction</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#663">663</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="curActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curActor</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#661">661</a>]</p>
+
+<div class="desc">
+
+Current command information. We keep track of the current command's
+actor and action here.
+
+</div>
+
+<p><span id="curCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curCommand</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#666">666</a>]</p>
+
+<div class="desc">
+
+The current Command object
+
+</div>
+
+<p><span id="curIssuingActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curIssuingActor</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#662">662</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="exitListerObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exitListerObj</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#675">675</a>]</p>
+
+<div class="desc">
+
+the exitLister object, if included in the build
+
+</div>
+
+<p><span id="extraDestInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">extraDestInfo</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#757">757</a>]</p>
+
+<div class="desc">
+
+A lookup table to store information about the destinations of direction
+properties not connected to objects (i.e. direction properties defined
+as strings or methods
+
+</div>
+
+<p><span id="extraHintManagerObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">extraHintManagerObj</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#681">681</a>]</p>
+
+<div class="desc">
+
+the extra hint manager, if included in the build
+
+</div>
+
+<p><span id="footnoteClass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">footnoteClass</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#618">618</a>]</p>
+
+<div class="desc">
+
+The global Footnote class object. We use a global for this, rather than
+referencing Footnote directly, to allow the footnote module to be left
+out entirely if the game doesn't make use of footnotes. The footnote
+class should set this during pre-initialization.
+
+</div>
+
+<p><span id="hintManagerObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hintManagerObj</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#678">678</a>]</p>
+
+<div class="desc">
+
+the hint manager, if included in the build
+
+</div>
+
+<p><span id="IFID"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">IFID</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#689">689</a>]</p>
+
+<div class="desc">
+
+The game's IFID, as defined in the game's main module ID object. If the
+game has multiple IFIDs in the module list, this will store only the
+first IFID in the list. NOTE: the library initializes this automatically
+during preinit; don't set this manually.
+
+</div>
+
+<p><span id="inventoryTall"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inventoryTall</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#851">851</a>]</p>
+
+<div class="desc">
+
+Flag determining whether inventory listing should be in the wide (nil)
+or tall (true) format. By default we start out with the wide format
+(inventoryTall = nil), although game code could override this.
+
+</div>
+
+<p><span id="lastAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastAction</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#669">669</a>]</p>
+
+<div class="desc">
+
+The last action to be performed.
+
+</div>
+
+<p><span id="lastActorForUndo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastActorForUndo</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#652">652</a>]</p>
+
+<div class="desc">
+
+Most recent target actor phrase; this goes with lastCommandForUndo. This
+is nil if the last command did not specify an actor (i.e., was
+implicitly for the player character), otherwise is the string the player
+typed specifying a target actor.
+
+</div>
+
+<p><span id="lastCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastCommand</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#672">672</a>]</p>
+
+<div class="desc">
+
+The previous Command object
+
+</div>
+
+<p><span id="lastCommandForAgain"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastCommandForAgain</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#655">655</a>]</p>
+
+<div class="desc">
+
+The text of the last command to be repeated by Again
+
+</div>
+
+<p><span id="lastCommandForUndo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastCommandForUndo</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#643">643</a>]</p>
+
+<div class="desc">
+
+Most recent command, for 'undo' purposes. This is the last command the
+player character performed, or the last initial command a player
+directed to an NPC.
+
+Note that if the player directed a series of commands to an NPC with a
+single command line, only the first command on such a command line is
+retained here, because it is only the first such command that counts as
+a player's turn in terms of the game clock. Subsequent commands are
+executed by the NPC's on the NPC's own time, and do not count against
+the PC's game clock time. The first command counts against the PC's
+clock because of the time it takes the PC to give the command to the
+NPC.
+
+</div>
+
+<p><span id="lastLoc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastLoc</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#749">749</a>]</p>
+
+<div class="desc">
+
+The last location visited by the player char before a travel action.
+Noted to allow travel back.
+
+</div>
+
+<p><span id="lastTypedOnObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastTypedOnObj</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#838">838</a>]</p>
+
+<div class="desc">
+
+The object last typed on
+
+</div>
+
+<p><span id="lastWrittenOnObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastWrittenOnObj</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#835">835</a>]</p>
+
+<div class="desc">
+
+The object last written on
+
+</div>
+
+<p><span id="libMessageObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">libMessageObj</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#593">593</a>]</p>
+
+<div class="desc">
+
+The current library messages object. This is the source object for
+messages that don't logically relate to the actor carrying out the
+comamand. It's mostly used for meta-command replies, and for text
+fragments that are used to construct descriptions.
+
+This message object isn't generally used for parser messages or action
+replies - most of those come from the objects given by the current
+actor's getParserMessageObj() or getActionMessageObj(), respectively.
+
+By default, this is set to libMessages. The library never changes this
+itself, but a game can change this if it wants to switch to a new set of
+messages during a game. (If you don't need to change messages during a
+game, but simply want to customize some of the default messages, you
+don't need to set this variable - you can simply use 'modify
+libMessages' instead. This variable is designed for cases where you want
+to \*dynamically\* change the standard messages during the game.)
+
+</div>
+
+<p><span id="nameTable_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nameTable_</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#844">844</a>]</p>
+
+<div class="desc">
+
+our name table for parameter substitutions - a LookupTable that we set
+up during preinit
+
+</div>
+
+<p><span id="objectNameTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objectNameTab</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#829">829</a>]</p>
+
+<div class="desc">
+
+The symbol table for every game object.
+
+</div>
+
+<p><span id="parserDebugMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parserDebugMode</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#627">627</a>]</p>
+
+<div class="desc">
+
+flag: the parser is in 'debug' mode, in which it displays the parse tree
+for each command entered
+
+</div>
+
+<p><span id="playerChar"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">playerChar</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#598">598</a>]</p>
+
+<div class="desc">
+
+The current player character
+
+</div>
+
+<p><span id="playerCharName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">playerCharName</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#601">601</a>]</p>
+
+<div class="desc">
+
+The name of the current player character
+
+</div>
+
+<p><span id="revealedNameTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">revealedNameTab</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#824">824</a>]</p>
+
+<div class="desc">
+
+The global lookup table of all revealed keys. This table is keyed by the
+string naming the revelation; the value associated with each key is not
+used (we always just set it to true).
+
+</div>
+
+<p><span id="scoreObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scoreObj</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#609">609</a>]</p>
+
+<div class="desc">
+
+The global score object. We use a global for this, rather than
+referencing libScore directly, to allow the score module to be left out
+entirely if the game doesn't make use of scoring. The score module
+should set this during pre-initialization.
+
+</div>
+
+<p><span id="thoughtManagerObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thoughtManagerObj</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#832">832</a>]</p>
+
+<div class="desc">
+
+The thought manager object, if it exists.
+
+</div>
+
+<p><span id="totalTurns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">totalTurns</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#621">621</a>]</p>
+
+<div class="desc">
+
+the total number of turns so far
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addExtraDestInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addExtraDestInfo (source, dirn, dest)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#766">766</a>]</p>
+
+<div class="desc">
+
+Add an item to the extraDestInfo table keyed on the source room plus the
+direction taken, with the value being the destination arrived at (which
+most of the time will probably be the same as the source, since in most
+cases where we create one of these records, no travel will have taken
+place.
+
+</div>
+
+<p><span id="getCommandSwitch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getCommandSwitch (s)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#722">722</a>]</p>
+
+<div class="desc">
+
+Retrieve a "switch" from the command line. Switches are options
+specifies with the conventional Unix "-xxx" notation. This searches for
+a command option that equals the given string or starts with the given
+substring. If we find it, we return the part of the option after the
+given substring - this is conventionally the value of the switch. For
+example, the command line might look like this:
+
+  
+t3run mygame.t3 -name=MyGame -user=Bob
+
+Searching for '-name=' would return 'MyGame', and searching for '-user='
+would return' Bob'.
+
+If the switch is found but has no value attached, the return value is an
+empty string. If the switch isn't found at all, the return value is nil.
+
+</div>
+
+<p><span id="setRevealed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setRevealed (tag)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#800">800</a>]</p>
+
+<div class="desc">
+
+Mark a tag as revealed. This adds an entry for the tag to the
+revealedNameTab table. We simply set the table entry to 'true'; the
+presence of the tag in the table constitutes the indication that the tag
+has been revealed.
+
+(Games and library extensions can use 'modify' to override this and
+store more information in the table entry. For example, you could store
+the time when the information was first revealed, or the location where
+it was learned. If you do override this, just be sure to set the
+revealedNameTab entry for the tag to a non-nil and non-zero value, so
+that any code testing the presence of the table entry will see that the
+slot is indeed set.)
+
+We put the revealedNameTab table and the setRevealed method here rather
+than on conversationManager so that it's available to games that don't
+include actor.t.
+
+</div>
+
+<p><span id="setUnrevealed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setUnrevealed (tag)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#813">813</a>]</p>
+
+<div class="desc">
+
+Mark a tag as unrevealed. This removes the entry for the tag from the
+revealedNameTab table.
+
+We put the revealedNameTab table and the setRevealed method here rather
+than on conversationManager so that it's available to games that don't
+include actor.t.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

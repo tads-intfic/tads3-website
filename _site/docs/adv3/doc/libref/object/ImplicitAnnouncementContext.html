@@ -1,0 +1,170 @@
+<p><span class="title">ImplicitAnnouncementContext</span><span class="type">class</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8007">8007</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Implicit action context. This is passed to the message methods that
+generate implicit action announcements, to indicate the context in which
+the message is to be used.
+
+`class `**`ImplicitAnnouncementContext`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ImplicitAnnouncementContext</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ImplicitAnnouncementContext</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ListImpCtx`](../object/ListImpCtx.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>standardImpCtx<code class="language-plaintext highlighter-rouge">](../object/standardImpCtx.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryingImpCtx<code class="language-plaintext highlighter-rouge">](../object/tryingImpCtx.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getVerbCtx<code class="language-plaintext highlighter-rouge">](#getVerbCtx)</code>  <code class="language-plaintext highlighter-rouge">[</code>isInList<code class="language-plaintext highlighter-rouge">](#isInList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isInSublist<code class="language-plaintext highlighter-rouge">](#isInSublist)</code>  <code class="language-plaintext highlighter-rouge">[</code>useInfPhrase<code class="language-plaintext highlighter-rouge">](#useInfPhrase)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>buildImplicitAnnouncement<code class="language-plaintext highlighter-rouge">](#buildImplicitAnnouncement)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="getVerbCtx"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getVerbCtx</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8026">8026</a>]</p>
+
+<div class="desc">
+
+our getVerbPhrase context - by default, don't use one
+
+</div>
+
+<p><span id="isInList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isInList</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8016">8016</a>]</p>
+
+<div class="desc">
+
+is this message going in a list?
+
+</div>
+
+<p><span id="isInSublist"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isInSublist</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8023">8023</a>]</p>
+
+<div class="desc">
+
+Are we in a sublist of 'just trying' or 'just asking' messages? (We can
+only have sublist groupings one level deep, so we don't need to worry
+about what kind of sublist we're in.)
+
+</div>
+
+<p><span id="useInfPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">useInfPhrase</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8013">8013</a>]</p>
+
+<div class="desc">
+
+Should we use the infinitive form of the verb, or the participle form
+for generating the announcement? By default, use use the participle
+form: "(first OPENING THE BOX)".
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="buildImplicitAnnouncement"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildImplicitAnnouncement (txt)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8029">8029</a>]</p>
+
+<div class="desc">
+
+generate the announcement message given the action description
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

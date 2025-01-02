@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Character Mapping  
-<span class="navnp"><a href="bincode.htm" class="nav"><em>Prev:</em> Portable Binary
+<span class="navnp"><a href="bincode.html" class="nav"><em>Prev:</em> Portable Binary
 Encoding</a>    
-<a href="debug.htm" class="nav"><em>Next:</em> Debug Records</a>    
+<a href="debug.html" class="nav"><em>Next:</em> Debug Records</a>    
 </span>
 
 </div>
@@ -305,7 +307,7 @@ points. The mapping software will use the 16-bit character codes to
 generate the correct encoding.
 
 All multi-byte datatypes in the file use the standard [T3 portable
-binary encoding](bincode.htm).
+binary encoding](bincode.html).
 
 #### Header
 
@@ -420,12 +422,12 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Character Mapping  
-<span class="navnp"><a href="bincode.htm" class="nav"><em>Prev:</em> Portable Binary
+<span class="navnp"><a href="bincode.html" class="nav"><em>Prev:</em> Portable Binary
 Encoding</a>    
-<a href="debug.htm" class="nav"><em>Next:</em> Debug Records</a>    
+<a href="debug.html" class="nav"><em>Next:</em> Debug Records</a>    
 </span>
 
 </div>

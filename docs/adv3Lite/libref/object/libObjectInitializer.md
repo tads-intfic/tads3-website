@@ -1,3 +1,5 @@
+---
+---
 <span class="title">libObjectInitializer</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[2295](../source/misc.t.html#2295)\]

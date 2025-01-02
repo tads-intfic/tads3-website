@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,19 +9,19 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>HiddenDoor : <a
-href="secretdoor.htm">SecretDoor</a><br />
+href="secretdoor.html">SecretDoor</a><br />
 Other Examples<br />
 </strong></td>
-<td style="text-align: right;"><a href="floorless.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="entryportal.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="floorless.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="entryportal.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 A HiddenDoor is a variation on SecretDoor, the difference being that
-while a [SecretDoor](secretdoor.htm) is a visible object (like the rock
+while a [SecretDoor](secretdoor.html) is a visible object (like the rock
 we used before) that is not apparently a door, a HiddenDoor isn't even
 visible until it's been opened. For our example we'll create a section
 of the foreward bulkhead of the cabin that slides open at the press of a

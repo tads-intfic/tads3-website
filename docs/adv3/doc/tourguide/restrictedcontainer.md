@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -10,9 +12,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 RestrictedHolder<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="lockablecontainer.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="dispenser.htm">[Next]</a></td>
+href="lockablecontainer.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="dispenser.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -219,8 +221,8 @@ or from
 Note that there are also RestrictedSurface, RestrictedUnderside,
 RestrictedRearSurface and RestrictedRearContainer classes which work
 analogously to RestrictedContainer except that they relate respectively
-to [Surface](surface.htm), [Underside](underside.htm),
-[RearSurface](rearsurface.htm) and [RearContainer](rearcontainer.htm).
+to [Surface](surface.html), [Underside](underside.html),
+[RearSurface](rearsurface.html) and [RearContainer](rearcontainer.html).
 All these RestrictedWhatever classes derive from the common
 RestrictedHolder base class which define validContents and canPutIn(obj)
 as described for RestrictedContainer above.  

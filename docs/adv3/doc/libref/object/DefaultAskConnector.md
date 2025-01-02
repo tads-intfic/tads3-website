@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultAskConnector</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[1916](../source/travel.t.html#1916)\]

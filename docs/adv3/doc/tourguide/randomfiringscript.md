@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>RandomFiringScript: object<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="synceventlist.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="overview-actors+npcs.htm">[Next]</a></td>
+href="synceventlist.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="overview-actors+npcs.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -19,8 +21,8 @@ href="overview-actors+npcs.htm">[Next]</a></td>
   
 RandomFiringScript is a mix-in class that can be added to any
 Script-like object to reduce the percentage of time it fires.
-[ShuffledEventList](shuffledeventlist.htm) and
-[RandomEventList](randomeventlist.htm) already inherit from
+[ShuffledEventList](shuffledeventlist.html) and
+[RandomEventList](randomeventlist.html) already inherit from
 RandomFiringScript, but you can mix with any of the other Script
 subclasses, provided you list it first, e.g.  
   

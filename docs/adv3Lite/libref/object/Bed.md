@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Bed</span><span class="type">class</span>
 
 [postures.t](../file/postures.t.html)\[[570](../source/postures.t.html#570)\]

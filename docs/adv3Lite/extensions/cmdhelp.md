@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Command Help  
-<span class="navnp"><a href="collective.htm" class="nav"><em>Prev:</em> Collective</a>
+<span class="navnp"><a href="collective.html" class="nav"><em>Prev:</em> Collective</a>
    
-<a href="dynregion.htm" class="nav"><em>Next:</em> Dynamic Region</a>
+<a href="dynregion.html" class="nav"><em>Next:</em> Dynamic Region</a>
     </span>
 
 </div>
@@ -228,12 +230,12 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Command Help  
-<span class="navnp"><a href="collective.htm" class="nav"><em>Prev:</em> Collective</a>
+<span class="navnp"><a href="collective.html" class="nav"><em>Prev:</em> Collective</a>
    
-<a href="dynregion.htm" class="nav"><em>Next:</em> Dynamic Region</a>
+<a href="dynregion.html" class="nav"><em>Next:</em> Dynamic Region</a>
     </span>
 
 </div>

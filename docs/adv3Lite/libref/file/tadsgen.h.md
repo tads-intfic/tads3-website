@@ -1,3 +1,5 @@
+---
+---
 <span class="title">tadsgen.h</span><span class="type">file</span>
 
 [source file](../source/tadsgen.h.html)

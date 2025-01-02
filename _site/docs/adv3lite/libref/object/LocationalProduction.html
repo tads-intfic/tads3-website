@@ -1,0 +1,161 @@
+<p><span class="title">LocationalProduction</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4312">4312</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+LocationalProduction is a subclass of Production for phrases that
+involve locational qualifiers, as in "the book on the table".
+
+Each grammar rule of this type needs to define two special '-\&gt;'
+associations in its template:
+
+cont\_ is the locational qualifier. This is also just an ordinary noun
+phrase. This is the "the table" part in "the book on the table".
+
+prep\_ is the preposition production. This should be \*or\* contain a
+LocationTypeProduction match, which tells us the type of containment
+relationship specified by the grammar. \*Alternatively\*, you can define
+locType directly on this production. This specifies a LocType object
+giving the containment relationship.
+
+`class `**`LocationalProduction`**` :   `[`Production`](../object/Production.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">LocationalProduction</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Production<code class="language-plaintext highlighter-rouge">](../object/Production.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">LocationalProduction</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>disambigPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/disambigPhrase(locational).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>indetPluralNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetPluralNounPhrase(locational).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>indetPluralOnlyNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetPluralOnlyNounPhrase(locational).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>indetSingularNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetSingularNounPhrase(locational).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(theOnesIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(theOnesIn).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(anyOneIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(anyOneIn).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(theOneIn)`](../object/qualifiedSingularNounPhrase(theOneIn).html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>locType<code class="language-plaintext highlighter-rouge">](#locType)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>determiner<code class="language-plaintext highlighter-rouge">](../object/Production.html#determiner)</code>  <code class="language-plaintext highlighter-rouge">[</code>nounPhraseRole<code class="language-plaintext highlighter-rouge">](../object/Production.html#nounPhraseRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>npClass<code class="language-plaintext highlighter-rouge">](../object/Production.html#npClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>parent<code class="language-plaintext highlighter-rouge">](../object/Production.html#parent)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>visitProd<code class="language-plaintext highlighter-rouge">](#visitProd)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addNounListItem<code class="language-plaintext highlighter-rouge">](../object/Production.html#addNounListItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>build<code class="language-plaintext highlighter-rouge">](../object/Production.html#build)</code>  <code class="language-plaintext highlighter-rouge">[</code>findAction<code class="language-plaintext highlighter-rouge">](../object/Production.html#findAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>findChild<code class="language-plaintext highlighter-rouge">](../object/Production.html#findChild)</code>  <code class="language-plaintext highlighter-rouge">[</code>findParent<code class="language-plaintext highlighter-rouge">](../object/Production.html#findParent)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNounPhraseRole<code class="language-plaintext highlighter-rouge">](../object/Production.html#getNounPhraseRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>getText<code class="language-plaintext highlighter-rouge">](../object/Production.html#getText)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTokens<code class="language-plaintext highlighter-rouge">](../object/Production.html#getTokens)</code>  <code class="language-plaintext highlighter-rouge">[</code>grammarInfoForBuild<code class="language-plaintext highlighter-rouge">](../object/Production.html#grammarInfoForBuild)</code>  <code class="language-plaintext highlighter-rouge">[</code>isChildOf<code class="language-plaintext highlighter-rouge">](../object/Production.html#isChildOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteEndOfSentence<code class="language-plaintext highlighter-rouge">](../object/Production.html#noteEndOfSentence)</code>  <code class="language-plaintext highlighter-rouge">[</code>visitLiteral<code class="language-plaintext highlighter-rouge">](../object/Production.html#visitLiteral)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="locType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">locType</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4359">4359</a>]</p>
+
+<div class="desc">
+
+Our location type. This is a LocType object giving the location
+relationship specified by this locational phrase. For languages that
+special locational phrases prepositionally, this will be set by the
+LocationPrepProduction in our sub-tree. For languages that use case
+inflection to specify the type of relationship, this must be set by the
+noun phrase sub-tree instead.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="visitProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">visitProd (cmd, np, prod)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4319">4319</a>]</p>
+
+<div class="desc">
+
+Visit a production. When we process the locational qualifier phrase,
+we'll build out the sub-tree in the context of a new NounPhrase, which
+we attach as a locational qualifier to the encompassing noun phrase
+under construction.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

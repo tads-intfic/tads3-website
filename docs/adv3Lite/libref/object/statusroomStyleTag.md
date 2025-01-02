@@ -1,3 +1,5 @@
+---
+---
 <span class="title">statusroomStyleTag</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[1010](../source/output.t.html#1010)\]

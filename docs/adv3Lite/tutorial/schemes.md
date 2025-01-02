@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,9 +8,9 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Making a Scene  
-<span class="navnp"><a href="doors.htm" class="nav"><em>Prev:</em> Doors and Locks</a>
-   <a href="ticket.htm" class="nav"><em>Next:</em> Just the Ticket</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Making a Scene  
+<span class="navnp"><a href="doors.html" class="nav"><em>Prev:</em> Doors and Locks</a>
+   <a href="ticket.html" class="nav"><em>Next:</em> Just the Ticket</a>
     </span>
 
 </div>
@@ -23,11 +25,11 @@ process.
 
 <div class="sectoc">
 
-[Just the Ticket](ticket.htm)  
-[The Maintenance Room](maintenance.htm)  
-[The Security Area](security.htm)  
-[Making a Scene](scene.htm)  
-[Recapitulation](recap.htm)  
+[Just the Ticket](ticket.html)  
+[The Maintenance Room](maintenance.html)  
+[The Security Area](security.html)  
+[Making a Scene](scene.html)  
+[Recapitulation](recap.html)  
 
 </div>
 
@@ -38,10 +40,10 @@ process.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Schemes and
+<a href="toc.html" class="nav">Table of Contents</a> \| Schemes and
 Devices  
-<span class="navnp"><a href="doors.htm" class="nav"><em>Prev:</em> Doors and Locks</a>
-   <a href="ticket.htm" class="nav"><em>Next:</em> Just the Ticket</a>
+<span class="navnp"><a href="doors.html" class="nav"><em>Prev:</em> Doors and Locks</a>
+   <a href="ticket.html" class="nav"><em>Next:</em> Just the Ticket</a>
     </span>
 
 </div>

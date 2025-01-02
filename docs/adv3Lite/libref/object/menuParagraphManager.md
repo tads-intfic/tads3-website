@@ -1,3 +1,5 @@
+---
+---
 <span class="title">menuParagraphManager</span><span class="type">object</span>
 
 [menusys.t](../file/menusys.t.html)\[[131](../source/menusys.t.html#131)\]

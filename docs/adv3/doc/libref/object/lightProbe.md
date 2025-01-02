@@ -1,3 +1,5 @@
+---
+---
 <span class="title">lightProbe</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[1652](../source/travel.t.html#1652)\]

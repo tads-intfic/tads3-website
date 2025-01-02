@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ShuffledList</span><span class="type">class</span>
 
 [eventList.t](../file/eventList.t.html)\[[522](../source/eventList.t.html#522)\]

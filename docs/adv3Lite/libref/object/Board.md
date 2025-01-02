@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Board</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1109](../source/actions.t.html#1109)\]

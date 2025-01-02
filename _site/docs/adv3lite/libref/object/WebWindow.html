@@ -1,0 +1,317 @@
+<p><span class="title">WebWindow</span><span class="type">class</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1667">1667</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Web Window tracker. This is a game object that controls and remembers
+the state of a "window" in the browser user interface. By "window", we
+basically mean an HTML page, which might reside at the top level of the
+browser itself, or inside an IFRAME element within an enclosing page.
+
+Each WebWindow class corresponds to a particular HTML page that we serve
+the client. The HTML page is the expression of the window in the
+browser, and the WebWindow object is the expression of the same
+information in the game program. The two are different facets of the
+same conceptual UI object. The reason we need the two separate
+expressions is that the server controls everything, but the client has
+to do the actual display work, and the two parts of the program speak
+different languages - the server is TADS, and the client is HTML.
+
+The WebWindow object on the server lets us easily reconstruct the UI
+state in a newly opened browser window, or when the user performs a page
+refresh. This object's job is to send information to the client on
+demand that allows the client to display the page in its current state.
+
+Note that a given WebWindow/HTML page combination can be used more than
+once within the same UI. The pages defined in the library are designed
+to be generic and reusable, so you might use the same window class more
+than once for different purposes within the UI. The library pages can
+also be subclassed, by subclassing the WebWindow object and creating a
+customized copy of the corresponding HTML page resource.
+
+`class `**`WebWindow`**` :   `[`WebResourceResFile`](../object/WebResourceResFile.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WebWindow</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>WebResourceResFile<code class="language-plaintext highlighter-rouge">](../object/WebResourceResFile.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>WebResource<code class="language-plaintext highlighter-rouge">](../object/WebResource.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WebWindow</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>WebCommandWin<code class="language-plaintext highlighter-rouge">](../object/WebCommandWin.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>WebLayoutWindow<code class="language-plaintext highlighter-rouge">](../object/WebLayoutWindow.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>WebStatusWin`](../object/WebStatusWin.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>pathName<code class="language-plaintext highlighter-rouge">](#pathName)</code>  <code class="language-plaintext highlighter-rouge">[</code>src<code class="language-plaintext highlighter-rouge">](#src)</code>  <code class="language-plaintext highlighter-rouge">[</code>sthCtx<code class="language-plaintext highlighter-rouge">](#sthCtx)</code>  <code class="language-plaintext highlighter-rouge">[</code>vpath<code class="language-plaintext highlighter-rouge">](#vpath)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResourceResFile</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>binaryExts<code class="language-plaintext highlighter-rouge">](../object/WebResourceResFile.html#binaryExts)</code>  <code class="language-plaintext highlighter-rouge">[</code>browserExtToMime<code class="language-plaintext highlighter-rouge">](../object/WebResourceResFile.html#browserExtToMime)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>group<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#group)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#priority)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>clearWindow<code class="language-plaintext highlighter-rouge">](#clearWindow)</code>  <code class="language-plaintext highlighter-rouge">[</code>flushWin<code class="language-plaintext highlighter-rouge">](#flushWin)</code>  <code class="language-plaintext highlighter-rouge">[</code>getState<code class="language-plaintext highlighter-rouge">](#getState)</code>  <code class="language-plaintext highlighter-rouge">[</code>processName<code class="language-plaintext highlighter-rouge">](#processName)</code>  <code class="language-plaintext highlighter-rouge">[</code>sendWinEvent<code class="language-plaintext highlighter-rouge">](#sendWinEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>sendWinEventTo<code class="language-plaintext highlighter-rouge">](#sendWinEventTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>winFromPath<code class="language-plaintext highlighter-rouge">](#winFromPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>write<code class="language-plaintext highlighter-rouge">](#write)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResourceResFile</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isTextFile<code class="language-plaintext highlighter-rouge">](../object/WebResourceResFile.html#isTextFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchRequest<code class="language-plaintext highlighter-rouge">](../object/WebResourceResFile.html#matchRequest)</code>  <code class="language-plaintext highlighter-rouge">[</code>processRequest<code class="language-plaintext highlighter-rouge">](../object/WebResourceResFile.html#processRequest)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>sendAck<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#sendAck)</code>  <code class="language-plaintext highlighter-rouge">[</code>sendXML<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#sendXML)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="name"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1750">1750</a>]</p>
+
+<div class="desc">
+
+the name of this window
+
+</div>
+
+<p><span id="pathName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pathName</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1753">1753</a>]</p>
+
+<div class="desc">
+
+the full path name of this window, in "win.sub.sub" format
+
+</div>
+
+<p><span id="src"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">src</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1689">1689</a>]</p>
+
+<div class="desc">
+
+The window's actual source location, as a resource path. A given
+WebWindow subclass corresponds to a particular HMTL page, since the
+class and the page are facets of the same conceptual object (one facet
+is the browser expression, the other is the game program expression).
+
+</div>
+
+<p><span id="sthCtx"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sthCtx</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1747">1747</a>]</p>
+
+<div class="desc">
+
+specialsToHtml context
+
+</div>
+
+<p><span id="vpath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vpath</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1680">1680</a>]</p>
+
+<div class="desc">
+
+The URL path to the window's HTML definition file, as seen by the
+browser. For the pre-defined library window types, we expose the HTML
+file in the root of the URL namespace - e.g., "/main.html". The files are
+actually stored in the /webuires folder, but we expose them to the
+browser as though they were in the root folder to make embedded object
+references on the pages simpler. The browser figures the path to an
+embedded object relative to the containing page, so by placing the
+containing page in the root folder, embedded object paths don't have to
+worry about referencing parent folders.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="clearWindow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clearWindow ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1718">1718</a>]</p>
+
+<div class="desc">
+
+Clear the window. Subclasses must override this.
+
+</div>
+
+<p><span id="flushWin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flushWin ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1707">1707</a>]</p>
+
+<div class="desc">
+
+Flush the window. This sends any buffered text to the UI.
+
+</div>
+
+<p><span id="getState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getState (client)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1728">1728</a>]</p>
+
+<div class="desc">
+
+Get the window's current state. This returns a string containing an XML
+fragment that describes the state of the window. This information is
+sent to the HTML page when the browser asks for the current layout state
+when first loaded or when the page is refreshed. The XML format for each
+subclass is specific to the Javascript on the class's HTML page.
+
+</div>
+
+<p><span id="processName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processName (n)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1692">1692</a>]</p>
+
+<div class="desc">
+
+process a request path referencing me into my actual resource path
+
+</div>
+
+<p><span id="sendWinEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sendWinEvent (evt)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1731">1731</a>]</p>
+
+<div class="desc">
+
+send an event related to this window to all clients
+
+</div>
+
+<p><span id="sendWinEventTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sendWinEventTo (evt, client)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1741">1741</a>]</p>
+
+<div class="desc">
+
+send a window event to a specific client
+
+</div>
+
+<p><span id="winFromPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">winFromPath (path)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1699">1699</a>]</p>
+
+<div class="desc">
+
+Resolve a window path name. For container windows, this should search
+the sub-windows for the given path. By default, we match simply if the
+path matches our name.
+
+</div>
+
+<p><span id="write"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">write (txt)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1713">1713</a>]</p>
+
+<div class="desc">
+
+Write text to the window. Subclasses with stream-oriented APIs must
+override this.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

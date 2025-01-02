@@ -1,3 +1,5 @@
+---
+---
 <span class="title">IndirectObject</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[3863](../source/parser.t.html#3863)\]

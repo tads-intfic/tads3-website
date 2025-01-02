@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Dispenser : <a
-href="thing-introduction.htm">Thing</a><br />
+href="thing-introduction.html">Thing</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="restrictedcontainer.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="stretchycontainer.htm">[Next]</a></td>
+href="restrictedcontainer.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="stretchycontainer.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -100,7 +102,7 @@ class RedCandle : Dispensable, Candle 'red candle\*candles' 'red candle'
   myDispenser = candleBox  
 ;  
   
-[Candle](candle.htm) is a library class that we'll come to presently.
+[Candle](candle.html) is a library class that we'll come to presently.
 What needs to be noted here is that since all the red candles will be
 identical, we set **isEquivalent** to true on the class definition; this
 tells the library that all members of the RedCandle class are

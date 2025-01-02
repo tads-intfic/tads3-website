@@ -1,0 +1,124 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ConvAgendaItem : <a href="agendaitem.html">AgendaItem</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="agendaitem.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="delayedagendaitem.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The comments in the library code describe the ConvAgendaItem thus:</p>
+
+<p>*A “conversational” agenda item. This type of item is ready to execute
+only when the actor hasn’t engaged in conversation during the same turn.
+This type of item is ideal for situations where we want the actor to
+pursue a conversational topic, because we won’t initiate the action
+until we get a turn where the player didn’t directly talk to us.</p>
+<ul>
+  <li>The main thing to note about a ConvAgendaItem is that the only way it
+differs from a standard AgendaItem is by overriding the isReady
+property<br />
+to achieve the desired effect, namely by defining it as:</li>
+</ul>
+
+<p>class ConvAgendaItem: AgendaItem<br />
+    isReady = (!getActor().conversedThisTurn() <br />
+       &amp;&amp; getActor().canTalkTo(otherActor)<br />
+       &amp;&amp; inherited()) </p>
+
+<p>    otherActor = (gPlayerChar)<br />
+; </p>
+
+<p>This means that if you want to use your own isReady condition on a
+ConvAgendaItem you must be careful to include the inherited condition as
+well:</p>
+
+<p>myChatAgenda: ConvAgendaItem<br />
+   isReady = inherited &amp;&amp; myCustomCondition<br />
+    invokeItem()<br />
+   {<br />
+     /*your code here */<br />
+   }<br />
+;</p>
+
+<p>For our first example of a ConvAgendaItem, we’ll simply add the
+ConvAgendaItem to the actor’s agendaList and leave the isReady condition
+alone. Suppose we want Sarah to react to the news that the main cave
+exit is blocked; we might define a ConvAgendaItem for her thus:</p>
+
+<p>+ sarahWantsOut : ConvAgendaItem<br />
+  invokeItem()<br />
+  {<br />
+    ”&lt;q&gt;What I want to know,&lt;/q&gt; {the sarah/she} remarks, &lt;q&gt;is how we’re<br />
+      going to get out of here now that the main exit’s blocked.&lt;/q&gt; ”;<br />
+    isDone = true;<br />
+  }<br />
+;</p>
+
+<p>In order for this to be added to her agenda at the right point in the
+game, we need to make a small change to the TellTopic in which she’s
+told about the rockfall:</p>
+
+<p>+ TellTopic, SuggestedTellTopic, StopEventList @tRockfall<br />
+   [<br />
+     {: ”&lt;q&gt;We won’t get out the way we came it,&lt;/q&gt; you warn her, &lt;q&gt;I’m<br />
+        afraid there’s just been a rockfall, blocking the way back out<br />
+        to the outside world!&lt;/q&gt; &lt;&lt;sarah.setKnowsAbout(tRockfall)&gt;&gt;\b<br />
+        &lt;q&gt;Oh wonderful!&lt;/q&gt; {the sarah/she} declares, as if it was your<br />
+        fault. <strong>&lt;&lt;sarah.addToAgenda(sarahWantsOut)&gt;&gt;</strong>“ },<br />
+     ’&lt;q&gt;The way out back through the caves is blocked by a rockfall.&lt;/q&gt;<br />
+       you say.\b<br />
+      &lt;q&gt;Yes, you already told me.&lt;/q&gt; she reminds you. ’         <br />
+   ]     <br />
+   timesToSuggest = 1<br />
+   name = ’the rockfall’<br />
+   isActive = entranceTunnel.blocked<br />
+;</p>
+
+<p>For our second example, we’ll turn curatorSurprise into a
+ConvAgendaItem. While we’re at it we’ll do the job properly by making it
+initiate a Conversation Node. Note also how we change the isReady
+condition from what we had before:</p>
+
+<p>+ curatorSurprise : ConvAgendaItem<br />
+  initiallyActive = true<br />
+  isReady = (getActor.canSee(carbuncle) &amp;&amp; carbuncle.isIn(gPlayerChar) &amp;&amp; inherited)<br />
+  invokeItem<br />
+  {<br />
+     getActor.initiateConversation(curatorTalking, ’curator-carbuncle’);<br />
+     isDone = true;<br />
+  }  <br />
+  agendaOrder = 150<br />
+;</p>
+
+<p>+ ConvNode ’curator-carbuncle’<br />
+  npcGreetingMsg = ”&lt;q&gt;What’s that you’re carrying?&lt;/q&gt; {the curator/he}<br />
+   inquires, his eyes lighting up in amazed excitement at the sight of the<br />
+   carbuncle, &lt;q&gt;May I take a closer look?&lt;/q&gt; ”;<br />
+;</p>
+
+<p>++ YesTopic<br />
+   topicResponse<br />
+   {<br />
+     ”&lt;q&gt;Yes, sure.&lt;/q&gt; you agree.\b ”;<br />
+     nestedAction(GiveTo, carbuncle, getActor());<br />
+   }<br />
+;</p>
+
+<p>++ NoTopic<br />
+    ”&lt;q&gt;No - it’s not for you.&lt;/q&gt; you reply sternly.\b<br />
+     &lt;q&gt;Oh please, do show it to me!&lt;/q&gt; he begs. ”<br />
+;   </p>
+
+<p>One way to try this out if you’ve included Nikos Chantziaras’s
+ncDebugActions in your project is to SNARF the carbuncle and the cap,
+PUT the carbuncle in the cap, WEAR the cap, then POW to the large sign.
+Go WEST from there, engage the curator in conversation, and remove the
+cap while talking to him.</p>
+

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Distinguisher</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1242](../source/parser.t.html#1242)\]

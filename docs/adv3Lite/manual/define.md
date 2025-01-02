@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Defining New Actions  
-<span class="navnp"><a href="react.htm" class="nav"><em>Prev:</em> Reacting to Actions</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Defining New Actions  
+<span class="navnp"><a href="react.html" class="nav"><em>Prev:</em> Reacting to Actions</a>
    
-<a href="literalact.htm" class="nav"><em>Next:</em> Literal Actions</a>
+<a href="literalact.html" class="nav"><em>Next:</em> Literal Actions</a>
     </span>
 
 </div>
@@ -27,7 +29,7 @@ new [IActions](#iaction), [TActions](#taction) and
 [TIActions](#tiaction) (actions that take no objects, a direct object
 that's a physical game object, or a direct object and an indirect object
 that are both physical game objects). Actions involving
-[literals](literalact.htm) and [topics](topicact.htm) raise additional
+[literals](literalact.html) and [topics](topicact.html) raise additional
 issues that we'll look at in the sections to follow.
 
 <span id="synonyms"></span>
@@ -273,7 +275,7 @@ completeness. Note also that although it's possible to define a VerbRule
 for an action that takes three objects (direct object, indirect object
 and accessory), the adv3Lite library has no direct support for such
 actions unless you include the
-[TIAAction](../../extensions/docs/tiaaction.htm) extension.
+[TIAAction](../../extensions/docs/tiaaction.html) extension.
 
 Sometimes you may want to define a command with one or more optional
 words; for example you might want HANG COAT ON HOOK or HANG COAT UP ON
@@ -373,7 +375,7 @@ Of course, your action may need to be more complex than this, in which
 case you'd need to define a more complicated execAction() method, for
 example to handle situations when the player character actually is
 asleep, in a dream sequence say (although another way of handling this
-might be via a [Doer](doer.htm) to handle the special cases, for
+might be via a [Doer](doer.html) to handle the special cases, for
 example:)
 
 <div class="code">
@@ -492,7 +494,7 @@ To prevent an action accepting ALL altogether you can set its
 FOO ALL with "Sorry; ALL is not allowed with this command." You can also
 set this globally for most actions using
 <span class="code">gameMain.allActionsAllowAll</span>; see the
-description of the [gameMain](beginning.htm#gamemain) object.
+description of the [gameMain](beginning.html#gamemain) object.
 
 Both these ways of modifying what ALL does can be used on both new and
 existing actions (in the case of existing ones you'd need to use a
@@ -588,7 +590,7 @@ property as and if they wish.
 The third step is defining the appropriate action handling methods on
 Thing (and on any subclass of Thing for which you want different default
 behaviour). For this step you basically need to follow the principles
-already explained in the [Action Results](actres.htm) section above. So
+already explained in the [Action Results](actres.html) section above. So
 for our Rub and Repair actions we might define:
 
 <div class="code">
@@ -981,7 +983,7 @@ without being heavily prompted. Actions involving a direct object,
 indirect object and accessory object (e.g. PUT COIN IN SLOT WITH
 TWEEZERS) are not directly supported in the main adv3Lite library but
 can be implemented with the use of the
-[TIAAction](../../extensions/docs/tiaaction.htm) extension. Actions
+[TIAAction](../../extensions/docs/tiaaction.html) extension. Actions
 involving two simulation objects and a literal or topic can, however, in
 principle be implemented with the tools in the main library by using a
 couple of tricks.
@@ -1138,11 +1140,11 @@ implement, but this is unlikely to occur very often in practice.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Defining New Actions  
-<span class="navnp"><a href="react.htm" class="nav"><em>Prev:</em> Reacting to Actions</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Defining New Actions  
+<span class="navnp"><a href="react.html" class="nav"><em>Prev:</em> Reacting to Actions</a>
    
-<a href="literalact.htm" class="nav"><em>Next:</em> Literal Actions</a>
+<a href="literalact.html" class="nav"><em>Next:</em> Literal Actions</a>
     </span>
 
 </div>

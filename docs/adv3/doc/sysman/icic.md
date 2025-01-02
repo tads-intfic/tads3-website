@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \>
 IntrinsicClass  
-<span class="navnp"><a href="httpsrv.htm" class="nav"><em>Prev:</em> HTTPServer</a>
-    <a href="iter.htm" class="nav"><em>Next:</em> Iterator</a>    
+<span class="navnp"><a href="httpsrv.html" class="nav"><em>Prev:</em> HTTPServer</a>
+    <a href="iter.html" class="nav"><em>Next:</em> Iterator</a>    
 </span>
 
 </div>
@@ -153,11 +155,11 @@ testing don't work for this test.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \>
 IntrinsicClass  
-<span class="navnp"><a href="httpsrv.htm" class="nav"><em>Prev:</em> HTTPServer</a>
-    <a href="iter.htm" class="nav"><em>Next:</em> Iterator</a>    
+<span class="navnp"><a href="httpsrv.html" class="nav"><em>Prev:</em> HTTPServer</a>
+    <a href="iter.html" class="nav"><em>Next:</em> Iterator</a>    
 </span>
 
 </div>

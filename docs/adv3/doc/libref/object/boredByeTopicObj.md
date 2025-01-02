@@ -1,3 +1,5 @@
+---
+---
 <span class="title">boredByeTopicObj</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[3493](../source/actor.t.html#3493)\]

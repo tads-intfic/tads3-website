@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nounWord(noun)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[787](../source/grammar.t.html#787)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">standing</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[120](../source/actor.t.html#120)\]

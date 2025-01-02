@@ -1,0 +1,147 @@
+<p><span class="title">ConvTopicResolver</span><span class="type">class</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#6553">6553</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A topic resolver specialized for conversational actions (ASK ABOUT, TELL
+ABOUT, etc). When we resolve the topic, we'll differentiate the
+resolution to differentiate based on the knowledge of the actor who's
+performing the command.
+
+`class `**`ConvTopicResolver`**` :   `[`TopicResolver`](../object/TopicResolver.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ConvTopicResolver</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TopicResolver<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Resolver<code class="language-plaintext highlighter-rouge">](../object/Resolver.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicResolver</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isGlobalScope<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#isGlobalScope)</code>  <code class="language-plaintext highlighter-rouge">[</code>qualifierResolver_<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#qualifierResolver_)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicProd<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#topicProd)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Resolver</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>action_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#action_)</code>  <code class="language-plaintext highlighter-rouge">[</code>actor_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#actor_)</code>  <code class="language-plaintext highlighter-rouge">[</code>equivs_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#equivs_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSubResolver<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#isSubResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>issuer_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#issuer_)</code>  <code class="language-plaintext highlighter-rouge">[</code>scope_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#scope_)</code>  <code class="language-plaintext highlighter-rouge">[</code>whichMessageObject<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#whichMessageObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>whichObject<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#whichObject)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>objInConvScope<code class="language-plaintext highlighter-rouge">](#objInConvScope)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveTopic<code class="language-plaintext highlighter-rouge">](#resolveTopic)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicResolver</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterAmbiguousNounPhrase<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#filterAmbiguousNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterPluralPhrase<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#filterPluralPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterPossRank<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#filterPossRank)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAll<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#getAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAllDefaults<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#getAllDefaults)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDefaultObject<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#getDefaultObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPossessiveResolver<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#getPossessiveResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>getQualifierResolver<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#getQualifierResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatch<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#noMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchPoss<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#noMatchPoss)</code>  <code class="language-plaintext highlighter-rouge">[</code>noVocabMatch<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#noVocabMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>objInPhysicalScope<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#objInPhysicalScope)</code>  <code class="language-plaintext highlighter-rouge">[</code>objInScope<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#objInScope)</code>  <code class="language-plaintext highlighter-rouge">[</code>packageTopicList<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#packageTopicList)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetResolver<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#resetResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveUnknownNounPhrase<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html#resolveUnknownNounPhrase)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Resolver</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allowAll<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#allowAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>cacheScopeList<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#cacheScopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterAll<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#filterAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterAmbiguousEquivalents<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#filterAmbiguousEquivalents)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAction<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPronounDefault<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getPronounDefault)</code>  <code class="language-plaintext highlighter-rouge">[</code>getRawPronounAntecedent<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getRawPronounAntecedent)</code>  <code class="language-plaintext highlighter-rouge">[</code>getReflexiveBinding<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getReflexiveBinding)</code>  <code class="language-plaintext highlighter-rouge">[</code>getScopeList<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getScopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTargetActor<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getTargetActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchName<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#matchName)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolvePronounAntecedent<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#resolvePronounAntecedent)</code>  <code class="language-plaintext highlighter-rouge">[</code>selectIndefinite<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#selectIndefinite)</code>  <code class="language-plaintext highlighter-rouge">[</code>withGlobals<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#withGlobals)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="objInConvScope"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objInConvScope (obj)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#6595">6595</a>]</p>
+
+<div class="desc">
+
+Determine if an object is in "conversational" scope - this returns true
+if the object is in physical scope or it's known to the actor performing
+the command.
+
+</div>
+
+<p><span id="resolveTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveTopic (lst, requiredNum, np)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#6560">6560</a>]</p>
+
+<div class="desc">
+
+Resolve the topic phrase. We'll break up the vocabulary matches into
+three sublists: the objects that are either in physical scope or known
+to the actor performing the command; objects that the actor considers
+likely topics; and everything else.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

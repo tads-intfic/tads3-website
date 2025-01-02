@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultAction</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[3046](../source/action.t.html#3046)\]

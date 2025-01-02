@@ -1,3 +1,5 @@
+---
+---
 <span class="title">reportImplicitActionsRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[444](../source/sysrules.t.html#444)\]

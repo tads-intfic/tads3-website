@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Workbench
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Workbench
 Project Starter Templates  
-<span class="navnp"><a href="mediatypes.htm" class="nav"><em>Prev:</em> Internet Media Types
+<span class="navnp"><a href="mediatypes.html" class="nav"><em>Prev:</em> Internet Media Types
 for TADS</a>    
-<a href="t3spec.htm" class="nav"><em>Next:</em> T3 VM Technical
+<a href="t3spec.html" class="nav"><em>Next:</em> T3 VM Technical
 Documentation</a>     </span>
 
 </div>
@@ -226,12 +228,12 @@ the folders in Library Paths list.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Workbench
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Workbench
 Project Starter Templates  
-<span class="navnp"><a href="mediatypes.htm" class="nav"><em>Prev:</em> Internet Media Types
+<span class="navnp"><a href="mediatypes.html" class="nav"><em>Prev:</em> Internet Media Types
 for TADS</a>    
-<a href="t3spec.htm" class="nav"><em>Next:</em> T3 VM Technical
+<a href="t3spec.html" class="nav"><em>Next:</em> T3 VM Technical
 Documentation</a>     </span>
 
 </div>

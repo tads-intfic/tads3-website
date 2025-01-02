@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PushForeAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2996](../source/actions.t.html#2996)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>OneWayRoomConnector : <a
-href="roomconnector.htm">RoomConnector</a><br />
+href="roomconnector.html">RoomConnector</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="autoclosingdoor.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="pathpassage.htm">[Next]</a></td>
+href="autoclosingdoor.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="pathpassage.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -21,7 +23,7 @@ href="pathpassage.htm">[Next]</a></td>
 Probably the most common use for a OneWayRoomConnector is to impose some
 kind of condition on traveling from one room to a second (but not the
 other way, or at least not symmetrically, which would call for a
-[RoomConnector](roomconnector.htm)). In this situation a
+[RoomConnector](roomconnector.html)). In this situation a
 OneWayRoomConnector can be used as a nested anonymous object on one of
 the first room's direction properties, its canTravelerPass method
 overridden to define the conditions under which travel is possible, and
@@ -35,7 +37,7 @@ For example, the description of mainCave refers to a huge boulder
 blocking the exit to the west. Later, we'll implement a way of removing
 this obstacle by blowing it up with a stick of dynamite - so this isn't
 an obstacle that can readily be implemented as a
-[SecretDoor](secretdoor.htm), like the rock to the north. Instead, we
+[SecretDoor](secretdoor.html), like the rock to the north. Instead, we
 could add a OneWayRoomConnector to check whether the boulder is present,
 and simply disallow travel west if it is:  
   
@@ -68,7 +70,7 @@ mainCave: Room 'Large Cave'
 ;  
   
 In this case the [OneWayRoomConnector
-template](onewayroomconnectortemplate.htm) simply defines the -\>
+template](onewayroomconnectortemplate.html) simply defines the -\>
 property as the destination property, so -\>roundCave means that
 roundCave is where we end up when travel is allowed via this connector.
 Since the only way into the roundCave is by going west from mainCave, we

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> ByteArray  
-<span class="navnp"><a href="bignum.htm" class="nav"><em>Prev:</em> BigNumber</a>
-    <a href="charset.htm" class="nav"><em>Next:</em> CharacterSet</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> ByteArray  
+<span class="navnp"><a href="bignum.html" class="nav"><em>Prev:</em> BigNumber</a>
+    <a href="charset.html" class="nav"><em>Next:</em> CharacterSet</a>
     </span>
 
 </div>
@@ -108,7 +110,7 @@ original array.
 ## Converting a ByteArray to a string
 
 You can convert a ByteArray to a string value using the
-[<span class="code">toString()</span>](tadsgen.htm#toString) function.
+[<span class="code">toString()</span>](tadsgen.html#toString) function.
 This simply treats each byte in the string as a Unicode character code,
 and creates a string with those characters.
 
@@ -141,7 +143,7 @@ file in "raw" mode. Once a file is opened in raw mode, use the
 <span class="code">readBytes()</span> and
 <span class="code">writeBytes()</span> methods of the File object to
 read bytes from the file into a ByteArray, and to write bytes from a
-ByteArray into the file. Refer to the [File class](file.htm) for
+ByteArray into the file. Refer to the [File class](file.html) for
 information on the file input/output.
 
 ## ByteArray methods
@@ -220,7 +222,7 @@ size specified when the object was created.
 Maps the bytes in the array to a string.
 
 If *charset* is specified and isn't <span class="code">nil</span>, it
-must be either a [CharacterSet](charset.htm) object, or a string giving
+must be either a [CharacterSet](charset.html) object, or a string giving
 the name of a character set. The method maps the bytes in the array to a
 string using the given character set mapping.
 
@@ -321,7 +323,7 @@ The static version of the method doesn't take a starting index argument,
 since it always stores the packed bytes at index 1 in the new array.
 This version of the method returns the newly created ByteArray object.
 
-See [Byte Packing](pack.htm) for more information.
+See [Byte Packing](pack.html) for more information.
 
 </div>
 
@@ -467,7 +469,7 @@ starting index:
 
 </div>
 
-See [Byte Packing](pack.htm) for more information.
+See [Byte Packing](pack.html) for more information.
 
 </div>
 
@@ -528,10 +530,10 @@ correct format code.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> ByteArray  
-<span class="navnp"><a href="bignum.htm" class="nav"><em>Prev:</em> BigNumber</a>
-    <a href="charset.htm" class="nav"><em>Next:</em> CharacterSet</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> ByteArray  
+<span class="navnp"><a href="bignum.html" class="nav"><em>Prev:</em> BigNumber</a>
+    <a href="charset.html" class="nav"><em>Next:</em> CharacterSet</a>
     </span>
 
 </div>

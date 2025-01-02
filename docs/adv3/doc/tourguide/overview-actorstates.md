@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Overview - Actor States<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="movingactorsaround.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="hermitactorstate.htm">[Next]</a></td>
+href="movingactorsaround.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="hermitactorstate.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -33,20 +35,20 @@ its associated actor, and which defines the state the actor is in.
 Although one can use the ActorState class itself (and in some cases,
 particularly with non-human NPCs this may be appropriate), often it is
 the more specialized subclasses of ActorState that are employed. The
-simplest of these, the [HermitActorState](hermitactorstate.htm), it used
+simplest of these, the [HermitActorState](hermitactorstate.html), it used
 when you want the NPC to ignore the PC altogether (because the NPC is
 unconscious, preoccupied with something else, or just pointedly ignoring
 the PC). An NPC who's ready to engage in conversation with the PC but is
 not actually talking with him at the moment would probably be in a
-[ConversationReadyState](conversationreadystate.htm), which would switch
-to an associate [InConversationState](inconversationstate.htm) while
+[ConversationReadyState](conversationreadystate.html), which would switch
+to an associate [InConversationState](inconversationstate.html) while
 conversation is actually in progress. For a sidekick NPC who's following
 the PC around of his travels (or a hostile one that's pursuing him)
-you'd use an [AccompanyingState](accompanyingstate.htm) (together with
-an [AccompanyingInTravelState](accompanyingintravelstate.htm)), while if
+you'd use an [AccompanyingState](accompanyingstate.html) (together with
+an [AccompanyingInTravelState](accompanyingintravelstate.html)), while if
 you want the NPC to lead the PC around, you might use
-[GuidedTourState](guidedtourstate.htm) and
-[GuidedInTravelState](guidedintravelstate.htm).  
+[GuidedTourState](guidedtourstate.html) and
+[GuidedInTravelState](guidedintravelstate.html).  
   
 Although some of these states have special methods and properties that
 apply to them, they all derive a great many properties and methods in

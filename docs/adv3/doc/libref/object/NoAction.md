@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NoAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2011](../source/actions.t.html#2011)\]

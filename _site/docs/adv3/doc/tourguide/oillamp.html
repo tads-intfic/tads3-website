@@ -1,0 +1,147 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>OilLamp : <a href="candle.html">Candle</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="candle.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="matchstick+matchbook.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Actually, there’s no OilLamp class in the TADS 3 library, but that
+doesn’t stop us creating an oil lamp of our own. We’ve deliberately made
+the candles rather annoying to use, so the player will need a steadier
+light source, even before s/he encounters the flashlight in the
+Tardis.</p>
+
+<p>In fact, an oil lamp is virtually the same as a candle, in that when lit
+it gives off light, and continues to burn until extinguished by the
+player or until it runs out of fuel. We can therefore base our oil lamp
+on the Candle class. The main complication comes from the fact that,
+unlike a candle, an oil lamp can be refuelled, so we need to add
+handling for oil being poured into the lamp. We also need to provide a
+description that depends on the state of the lamp, and to have the lamp
+warn the player when it’s about to go out. The last can conveniently be
+achieved in the burnDaemon method, which is called once every turn that
+the lamp is lit.</p>
+
+<p>oilLamp : FireSource, Candle ’brass (oil) lamp’ ’brass oil lamp’ @sack<br />
+  desc()<br />
+  {<br />
+    ”It’s a fine, polished brass oil lamp, in good working order. ”;<br />
+    if(isLit)<br />
+    {<br />
+      ”It’s currently lit”;<br />
+      if(fuelLevel&lt;4)<br />
+        ”, but the flame is starting to burn low”;<br />
+      ”. ”;<br />
+    }<br />
+  }<br />
+  fuelLevel = 20<br />
+  fuelCapacity = 100<br />
+  burnDaemon()<br />
+  {    <br />
+    if(fuelLevel &lt; 4 &amp;&amp; fuelLevel &gt; 0)<br />
+      ”\nThe oil lamp is starting to burn low. ”;<br />
+    inherited;  <br />
+  }<br />
+  iobjFor(PourInto)<br />
+  {<br />
+    verify() <br />
+     { <br />
+       <br />
+       if(fuelLevel == fuelCapacity)<br />
+         illogicalNow(‘The oil lamp is already full.’ );<br />
+       if(isLit)<br />
+         illogicalNow(‘You can\t pour fuel into the lamp while it\s lit. ’);       <br />
+     }<br />
+    check()<br />
+    {<br />
+      if(gDobj.oilLevel == nil)      <br />
+         failCheck(‘That\s not appropriate fuel for an oil lamp. ’);      <br />
+    }<br />
+    action()<br />
+    {<br />
+      local fuelTransferred = min(gDobj.oilLevel, fuelCapacity - fuelLevel);<br />
+      fuelLevel += fuelTransferred;      <br />
+      gDobj.oilLevel -= fuelTransferred;<br />
+      if(fuelLevel == fuelCapacity)<br />
+        ”You refill the lamp. ”;<br />
+      else<br />
+        ”You pour some oil into the lamp. ”;<br />
+    }<br />
+  }<br />
+  bulk = 2<br />
+  weight = 2 + (4 * fuelLevel)/fuelCapacity<br />
+;</p>
+
+<p>There’s nothing <em>very</em> complicated in any of this. We include the check
+for fuelLevel &gt; 0 (as well as fuelLevel &lt; 4) in the overridden
+burnDaemon to avoid being told that the lamp is burning low after it’s
+gone out. The two checks in verifyIobjPourInto prevent the player from
+filling a lamp that’s already full, or pouring oil in while the lamp is
+lit, while checkIobjPourInto won’t allow anything to be poured into the
+lamp from an object that hasn’t got a non-nil oilLevel property. The
+action method then calculates the amount of oil poured in, which is the
+lesser of the amount of oil in the source container and the amount
+needed to fill the oil lamp to capacity. This quantity is then added to
+the fuelLevel in the lamp and deducted from the oilLevel in the source
+container, following which an appropriate message is displayed to
+describe the action. Since one might expect the weight of the oil lamp
+to vary with the amount of fuel it contains, the weight property is
+calculated appropriately.</p>
+
+<p>The obvious source for oil for the lamp is the oil can we have already
+defined. But to make it suitable as a source for the lamp, we almost
+have to redefine it totally. While we’re at it, we’ll also move it into
+the smallCave:</p>
+
+<p>oilCan : Thing ’oil can/oilcan’ ’can of oil’ @smallCave<br />
+  ”The can is &lt;&lt;howFull()&gt;&gt;. ”<br />
+  howFull()<br />
+  {<br />
+    if(oilLevel&lt;1)<br />
+      ”empty”;<br />
+    else if(oilLevel &lt; maxOilLevel/10)<br />
+      ”almost empty”;<br />
+    else if(oilLevel &lt; maxOilLevel/3)<br />
+      ”about quarter full”;<br />
+    else if(oilLevel &lt; (2*maxOilLevel)/3)<br />
+      ”about half full”;<br />
+    else<br />
+      ”more or less full”;<br />
+  }<br />
+  initSpecialDesc = ”An old oil can lies abandoned on the ground. ”<br />
+  dobjFor(PourOnto) { verify() { } }<br />
+  dobjFor(PourInto) <br />
+   { <br />
+     verify() <br />
+     { <br />
+       if(oilLevel &lt; 1) illogicalNow(‘The oil can is empty. ’);<br />
+     } <br />
+   }<br />
+  dobjFor(LookIn) asDobjFor(Examine)<br />
+  initializeThing()<br />
+  {<br />
+    inherited;<br />
+    oilLevel = maxOilLevel;<br />
+  }<br />
+  oilLevel = 0<br />
+  maxOilLevel = 500<br />
+  weight = 1 + (10 * oilLevel)/maxOilLevel<br />
+;</p>
+
+<p>This is perhaps less complicated than it looks. The lengthy howFull()
+method merely provides a description (or rough estimate) of the amount
+of oil left in the can. The verifyDobjPourInto makes it illogical to
+pour any more oil from the lamp when it is empty. The initializeThing
+method makes sure the can starts off full, and once again we calculate
+the weight based on the amount of oil left in the can. It would probably
+be an unnecessary complication to add any further handling for PourOnto,
+since the amount of oil involved in lubricating the latch on the
+sailors’ locker (or anything else that we may decide needs lubricating)
+is likely to be negligible.</p>

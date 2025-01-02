@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CharacterSet</span><span class="type">class</span>
 
 [charset.h](../file/charset.h.html)\[[22](../source/charset.h.html#22)\]

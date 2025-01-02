@@ -1,3 +1,5 @@
+---
+---
 # banner.t
 
 [documentation](../file/banner.t.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">paper</span><span class="type">object</span>
 
 [sense.t](../file/sense.t.html)\[[62](../source/sense.t.html#62)\]

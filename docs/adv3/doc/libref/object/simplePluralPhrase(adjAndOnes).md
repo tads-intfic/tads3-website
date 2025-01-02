@@ -1,3 +1,5 @@
+---
+---
 <span class="title">simplePluralPhrase(adjAndOnes)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[6937](../source/en_us.t.html#6937)\]

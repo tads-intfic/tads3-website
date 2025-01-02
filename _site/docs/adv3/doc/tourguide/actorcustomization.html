@@ -1,0 +1,63 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Basic Actor Customization<br />
+</strong></td>
+<td style="text-align: right;"><a href="basicactors.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="actorknowledge.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>One of the most basic ways we can start to customize an actor is to
+override some of his/her standard message properties to customize the
+response the actor gives to such commands as KISS SARAH or HIT SARAH. We
+can do this very simply by defining appropriate message properties on
+the actor, such as <strong>cannotKissActorMsg</strong> and <strong>uselessToAttackMsg</strong>,
+and then assigning them a single-quoted string to contain the message we
+want displayed in response to KISS or HIT (for example).</p>
+
+<p>These message properties will also work perfectly well if they’re
+defined as methods that return a single-quoted string. This means we
+could define one of these properties, cannotKissActorMsg, say, to return
+one of a list of messages. In this case we might like to use a
+<a href="shuffledeventlist.html">ShuffledEventList</a>, but this won’t quite do,
+since we need something that <em>returns</em> a single-quoted string, not
+something that displays one. Fortunately, there is a class that can do
+this, namely the <strong>ShuffledList</strong>. We can place a list of strings (or
+anything else we like) in a ShuffledList’s <strong>valueList</strong> property, and
+then call its <strong>getNextValue</strong> method to return a random element from
+the list. The advantage of using this method over simply using the
+rand() function with a list of strings is the same as the advantage of
+using a ShuffledEventList over a RandomEventList, namely that the
+ShuffledList will keep working through the complete list of items in its
+valueList property before repeating any of them.</p>
+
+<p>Taking advantage of the message properties and a ShuffledList we could
+accordingly customize Sarah to cope with being hit and kissed in her own
+particular way:</p>
+
+<p>sarah : Person ’attractive young woman/brunette’ ’young woman’ @lakeRoom<br />
+  ”She’s an attractive brunette, somewhere in her mid-twenties. ”<br />
+  isHer = true<br />
+  properName = ’Sarah’<br />
+  globalParamName = ’sarah’  <br />
+  <br />
+  **uselessToAttackMsg = ’&lt;q&gt;Ouch! What did you do that for?&lt;/q&gt; she complains. ’<br />
+  cannotKissActorMsg { return noKissMessages.getNextValue; }<br />
+  <br />
+  noKissMessages : ShuffledList<br />
+  {<br />
+   valueList = <br />
+   [<br />
+   ’&lt;q&gt;Hey! What do you think you\re doing!&lt;/q&gt; she complains. ’,<br />
+   ’&lt;q&gt;Stop that!&lt;/q&gt; she tells you. ’,<br />
+   ’&lt;q&gt;Keep your hands off me!&lt;/q&gt; she demands. ’,<br />
+   ’&lt;q&gt;Don\t &lt;i&gt;do&lt;/i&gt; that!&lt;/q&gt; {the sarah/she} tells you. ’<br />
+   ]<br />
+  }<br />
+**;</p>

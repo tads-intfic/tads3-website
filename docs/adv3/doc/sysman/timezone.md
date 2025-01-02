@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> TimeZone  
-<span class="navnp"><a href="tempfile.htm" class="nav"><em>Prev:</em> TemporaryFile</a>
-    <a href="vector.htm" class="nav"><em>Next:</em> Vector</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> TimeZone  
+<span class="navnp"><a href="tempfile.html" class="nav"><em>Prev:</em> TemporaryFile</a>
+    <a href="vector.html" class="nav"><em>Next:</em> Vector</a>    
 </span>
 
 </div>
@@ -19,7 +21,7 @@
 # TimeZone
 
 A TimeZone object represents a local time zone. It works with the
-[Date](date.htm) class to convert between local time zones and universal
+[Date](date.html) class to convert between local time zones and universal
 time (UTC) when parsing, displaying, and manipulating dates and times.
 
 In most cases, you won't need to use the TimeZone object directly, even
@@ -261,7 +263,7 @@ interest. The method finds the appropriate history item and returns it;
 the return value is a list containing \[*date*, *offset*, *save*,
 *abbr*\]:
 
-\[1\] *date* is a [Date](date.htm) object giving the moment in time when
+\[1\] *date* is a [Date](date.html) object giving the moment in time when
 the history item took effect
 
 \[2\] *offset* is the zone's standard time offset from UTC in
@@ -445,10 +447,10 @@ terms of the local date.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> TimeZone  
-<span class="navnp"><a href="tempfile.htm" class="nav"><em>Prev:</em> TemporaryFile</a>
-    <a href="vector.htm" class="nav"><em>Next:</em> Vector</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> TimeZone  
+<span class="navnp"><a href="tempfile.html" class="nav"><em>Prev:</em> TemporaryFile</a>
+    <a href="vector.html" class="nav"><em>Next:</em> Vector</a>    
 </span>
 
 </div>

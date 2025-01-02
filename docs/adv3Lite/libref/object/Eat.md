@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Eat</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1175](../source/actions.t.html#1175)\]

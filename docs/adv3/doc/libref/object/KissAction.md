@@ -1,3 +1,5 @@
+---
+---
 <span class="title">KissAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2125](../source/actions.t.html#2125)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LMentionable</span><span class="type">class</span>
 
 [english.t](../file/english.t.html)\[[44](../source/english.t.html#44)\]

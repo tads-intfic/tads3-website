@@ -1,3 +1,5 @@
+---
+---
 <span class="title">displayProbe</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[10153](../source/thing.t.html#10153)\]

@@ -1,0 +1,237 @@
+<p><span class="title">Exception</span><span class="type">class</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#657">657</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Base class for all exception objects. We derive all exceptions from this
+base class so that we can write 'catch' blocks that catch all exceptions
+by catching 'Exception'.
+
+The displayException() method displays a message describing the
+exception. Subclasses should override this method.
+
+`class `**`Exception`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Exception</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Exception</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>AbortActionSignal<code class="language-plaintext highlighter-rouge">](../object/AbortActionSignal.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>AbortImplicitSignal<code class="language-plaintext highlighter-rouge">](../object/AbortImplicitSignal.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>BreakLoopSignal<code class="language-plaintext highlighter-rouge">](../object/BreakLoopSignal.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>CircularExecException<code class="language-plaintext highlighter-rouge">](../object/CircularExecException.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>CommandSignal<code class="language-plaintext highlighter-rouge">](../object/CommandSignal.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ExitCommandLineSignal<code class="language-plaintext highlighter-rouge">](../object/ExitCommandLineSignal.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>CompilerException<code class="language-plaintext highlighter-rouge">](../object/CompilerException.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>EndOfFileException<code class="language-plaintext highlighter-rouge">](../object/EndOfFileException.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ExitActionSignal<code class="language-plaintext highlighter-rouge">](../object/ExitActionSignal.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ExitSignal<code class="language-plaintext highlighter-rouge">](../object/ExitSignal.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>FileException<code class="language-plaintext highlighter-rouge">](../object/FileException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FileClosedException<code class="language-plaintext highlighter-rouge">](../object/FileClosedException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FileCreationException<code class="language-plaintext highlighter-rouge">](../object/FileCreationException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FileIOException<code class="language-plaintext highlighter-rouge">](../object/FileIOException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FileModeException<code class="language-plaintext highlighter-rouge">](../object/FileModeException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FileNotFoundException<code class="language-plaintext highlighter-rouge">](../object/FileNotFoundException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FileOpenException<code class="language-plaintext highlighter-rouge">](../object/FileOpenException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FileSafetyException<code class="language-plaintext highlighter-rouge">](../object/FileSafetyException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FileSyncException<code class="language-plaintext highlighter-rouge">](../object/FileSyncException.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LibraryError<code class="language-plaintext highlighter-rouge">](../object/LibraryError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ArgumentMismatchError<code class="language-plaintext highlighter-rouge">](../object/ArgumentMismatchError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NetException<code class="language-plaintext highlighter-rouge">](../object/NetException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>NetSafetyException<code class="language-plaintext highlighter-rouge">](../object/NetSafetyException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SocketDisconnectException<code class="language-plaintext highlighter-rouge">](../object/SocketDisconnectException.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ParseError<code class="language-plaintext highlighter-rouge">](../object/ParseError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BadMultiError<code class="language-plaintext highlighter-rouge">](../object/BadMultiError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>CommandError<code class="language-plaintext highlighter-rouge">](../object/CommandError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>EmptyNounError<code class="language-plaintext highlighter-rouge">](../object/EmptyNounError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>RejectParseTreeError<code class="language-plaintext highlighter-rouge">](../object/RejectParseTreeError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>NotUnderstoodError<code class="language-plaintext highlighter-rouge">](../object/NotUnderstoodError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>OopsError<code class="language-plaintext highlighter-rouge">](../object/OopsError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>CantOopsError<code class="language-plaintext highlighter-rouge">](../object/CantOopsError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ResolutionError<code class="language-plaintext highlighter-rouge">](../object/ResolutionError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ActorResolutionError<code class="language-plaintext highlighter-rouge">](../object/ActorResolutionError.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>InsufficientNounsError<code class="language-plaintext highlighter-rouge">](../object/InsufficientNounsError.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>NoneInLocationError<code class="language-plaintext highlighter-rouge">](../object/NoneInLocationError.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>NoneInOwnerError<code class="language-plaintext highlighter-rouge">](../object/NoneInOwnerError.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>NoneWithContentsError<code class="language-plaintext highlighter-rouge">](../object/NoneWithContentsError.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>UnmatchedNounError<code class="language-plaintext highlighter-rouge">](../object/UnmatchedNounError.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>AmbiguousMultiDefiniteError<code class="language-plaintext highlighter-rouge">](../object/AmbiguousMultiDefiniteError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AmbiguousError<code class="language-plaintext highlighter-rouge">](../object/AmbiguousError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>OrdinalRangeError<code class="language-plaintext highlighter-rouge">](../object/OrdinalRangeError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>PronounError<code class="language-plaintext highlighter-rouge">](../object/PronounError.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>AntecedentScopeError<code class="language-plaintext highlighter-rouge">](../object/AntecedentScopeError.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>NoAntecedentError<code class="language-plaintext highlighter-rouge">](../object/NoAntecedentError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>UnmatchedActorError<code class="language-plaintext highlighter-rouge">](../object/UnmatchedActorError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>UnknownWordError<code class="language-plaintext highlighter-rouge">](../object/UnknownWordError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ProgramException<code class="language-plaintext highlighter-rouge">](../object/ProgramException.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>QuittingException<code class="language-plaintext highlighter-rouge">](../object/QuittingException.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RestartSignal<code class="language-plaintext highlighter-rouge">](../object/RestartSignal.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RuntimeError<code class="language-plaintext highlighter-rouge">](../object/RuntimeError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>StorageServerError<code class="language-plaintext highlighter-rouge">](../object/StorageServerError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TerminateCommandException<code class="language-plaintext highlighter-rouge">](../object/TerminateCommandException.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TokenizerError<code class="language-plaintext highlighter-rouge">](../object/TokenizerError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TokErrorNoMatch<code class="language-plaintext highlighter-rouge">](../object/TokErrorNoMatch.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>UnboundMultiMethod<code class="language-plaintext highlighter-rouge">](../object/UnboundMultiMethod.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>UnboundInheritedMultiMethod<code class="language-plaintext highlighter-rouge">](../object/UnboundInheritedMultiMethod.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>UnknownCharSetException`](../object/UnknownCharSetException.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>errmsg_<code class="language-plaintext highlighter-rouge">](#errmsg_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>displayException<code class="language-plaintext highlighter-rouge">](#displayException)</code>  <code class="language-plaintext highlighter-rouge">[</code>getExceptionMessage<code class="language-plaintext highlighter-rouge">](#getExceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStackTrace<code class="language-plaintext highlighter-rouge">](#showStackTrace)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="errmsg_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errmsg_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#693">693</a>]</p>
+
+<div class="desc">
+
+Private member: The error message passed to the constructor, if any.
+Note that this doesn't necessarily contain the actual displayed
+exception message, since displayException() can be overridden in
+subclasses to display additional parameters or other text entirely. The
+definitive message is the one that displayException() generates. If you
+want the displayed message as a string, use getExceptionMessage().
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (msg?, ...)</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#659">659</a>]</p>
+
+<div class="desc">
+
+construct, with an optional message describing the error
+
+</div>
+
+<p><span id="displayException"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">displayException ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#667">667</a>]</p>
+
+<div class="desc">
+
+display the exception - should always be overridden
+
+</div>
+
+<p><span id="getExceptionMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getExceptionMessage ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#678">678</a>]</p>
+
+<div class="desc">
+
+Get the exception message as a string. This captures the output of
+displayException() and returns it a string. Use this instead of
+accessing errmsg\_, since that member is private and might not reflect
+the actual displayed message.
+
+</div>
+
+<p><span id="showStackTrace"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStackTrace (stackList)</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#702">702</a>]</p>
+
+<div class="desc">
+
+Display a stack trace, given a list of T3StackInfo objects. Note that,
+for efficiency, we do not by default cache a stack trace when an
+exception occurs; individual subclasses can obtain a stack trace if
+desired at construction and use the information to show a stack trace
+for the exception.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Overview - Commanding NPCs<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="moreagendaitemexamples.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="commandtopic.htm">[Next]</a></td>
+href="moreagendaitemexamples.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="commandtopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -24,7 +26,7 @@ but it is possible to override this behaviour.
   
 An NPC's response to a command is, in the first instance, defined in the
 **obeyCommand(fromActor, action)** method of its current
-[ActorState](overview-actorstates.htm). If this returns nil, then the
+[ActorState](overview-actorstates.html). If this returns nil, then the
 actor will refuse the command; if it returns true then the actor will
 obey the command. For example, if you wanted an actor in a particular
 ActorState always to obey the commands TAKE, ATTACK and JUMP (but no
@@ -109,8 +111,8 @@ But it's far from ideal.
   
 By now you're maybe wondering if there's anything like the TopicEntry
 mechanism that could come to the rescue here. Well, luckily, there is,
-for the library defines a [CommandTopic](commandtopic.htm) and a
-[DefaultCommandTopic](defaultcommandtopic.htm), which, with a bit of
+for the library defines a [CommandTopic](commandtopic.html) and a
+[DefaultCommandTopic](defaultcommandtopic.html), which, with a bit of
 judicious tweaking, can both make it easier to program NPCs' responses
 to commands, and provide a far more powerful mechanism for handling
 them. But first, we'll start with fairly simple uses of these classes.  

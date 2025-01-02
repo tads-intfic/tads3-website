@@ -1,3 +1,5 @@
+---
+---
 <span class="title">compoundPluralPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`compoundPluralPhrase(of)`](../object/compoundPluralPhrase(of).html)**` :   `[`Production`](../object/Production.html)

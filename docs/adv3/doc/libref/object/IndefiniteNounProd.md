@@ -1,3 +1,5 @@
+---
+---
 <span class="title">IndefiniteNounProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[2427](../source/parser.t.html#2427)\]

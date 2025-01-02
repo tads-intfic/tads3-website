@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> TravelConnectors
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> TravelConnectors
 and Barriers  
-<span class="navnp"><a href="door.htm" class="nav"><em>Prev:</em>Doors</a>
-    <a href="key.htm" class="nav"><em>Next:</em> Keys</a>     </span>
+<span class="navnp"><a href="door.html" class="nav"><em>Prev:</em>Doors</a>
+    <a href="key.html" class="nav"><em>Next:</em> Keys</a>     </span>
 
 </div>
 
@@ -61,12 +63,12 @@ these purposes are as follows:
   character is meant to start out knowing where the exit leads (though
   it may be easier to define familiar = true on a region than to set
   isDestination = true on a whole lot of TravelConnectors). This
-  property is mostly relevant to the [routeFinder](pathfind.htm) (the
+  property is mostly relevant to the [routeFinder](pathfind.html) (the
   mechanism behind the GO TO command). Note that a Room is a
   TravelConnector whose destination is itself (so that if an exit leads
   directly to a room the destination of that exit is known if the
   destination room has been visited). Note also that a slightly
-  different rule applies to [doors](door.htm): the isDestinationKnown
+  different rule applies to [doors](door.html): the isDestinationKnown
   property of both sides of a door becomes true once the player
   character passes through one or other side of it.
 - **noteTraversal(actor)** This method is called when *actor* traverses
@@ -86,7 +88,7 @@ these purposes are as follows:
   the default behaviour of travelDesc is to call the TravelConnector's
   doScript() method if the TravelConnector is also a Script; this makes
   it easy to vary the message displayed when the player character
-  traverses the connector by adding an [EventList](eventList.htm) class
+  traverses the connector by adding an [EventList](eventList.html) class
   to the TravelConnector's class list and defining an
   <span class="code">eventList</span> property on it.
 - **traversedBy** A list of all the actors, vehicles and push-travelers
@@ -214,7 +216,7 @@ want (since we wouldn't want the same travel restrictions to apply to
 the attempt to return from the bedroom to the landing), but if you do
 want a TravelConnector that works the same both ways, you could try
 using the <span class="code">SymConnector</span> defined in the
-[symconn](../../extensions/docs/symconn.htm) extension.
+[symconn](../../extensions/docs/symconn.html) extension.
 
 <span id="travelbarrier"></span>
 
@@ -320,10 +322,10 @@ connector) can refer to them.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> TravelConnectors
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> TravelConnectors
 and Barriers  
-<span class="navnp"><a href="door.htm" class="nav"><em>Prev:</em> Doors</a>
-    <a href="key.htm" class="nav"><em>Next:</em> Keys</a>     </span>
+<span class="navnp"><a href="door.html" class="nav"><em>Prev:</em> Doors</a>
+    <a href="key.html" class="nav"><em>Next:</em> Keys</a>     </span>
 
 </div>

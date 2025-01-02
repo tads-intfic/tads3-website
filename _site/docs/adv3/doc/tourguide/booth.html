@@ -1,0 +1,141 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Booth : BasicPlatform, <a href="container.html">Container</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="outofreach.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="vehicle.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A booth is a nested room that serves as a small enclosure within a
+larger room. Booths can serve as regular containers as well as nested
+rooms, and can be made openable by addition of the Openable mix-in
+class. Note that booths don’t have to be fully enclosed, nor do they
+actually have to be closable. Examples of booths might include a
+cardboard box large enough for an actor to stand in, a closet and a
+shallow pit.</p>
+
+<p>For our example of a booth we’ll put a large packing case in the temple
+cellar; the trick is that it has a secret compartment that only opens
+when the case itself is closed. Thus the only way for an actor to
+discover the secret compartment is to climb inside the packing case and
+close it while inside. We’ll also put three gold coins in plain view in
+the case as a red herring, although the inscription on the coins (Greek
+for Vespasian) provides a (probably pretty cryptic) clue to the
+provenance of the ancient packing case.</p>
+
+<p>templeCellar : DarkRoom ’Cellar beneath Temple’ ’the cellar beneath the Temple’<br />
+  …<br />
+;</p>
+
+<p>+ packingCase : Openable, Booth, Heavy ’large packing case/lid’ ’large packing case’<br />
+  ”The packing case, which looks large enough to get into, looks positively<br />
+   ancient. It’s made of some kind of wood that has darkened with age but<br />
+   might possibly be cedar. ”<br />
+   initSpecialDesc = ”An ancient wooden packing case sits in the corner. ”<br />
+   useInitSpecialDesc()<br />
+    {<br />
+        /* show our initial description only when the actor isn’t in me */<br />
+        return inherited() &amp;&amp; !gActor.isIn(self);<br />
+    }<br />
+   interiorDesc = ”Although it looked quite large on the outside, it feels<br />
+    rather cramped on the inside. ”<br />
+   roomName = (‘Inside ’ + theName)<br />
+   defaultPosture = (isOpen ? standing : lying)<br />
+   makeOpen(stat)<br />
+   {<br />
+     if(stat)<br />
+       callWithSenseContext(secretCompartment, sight,<br />
+       {: ”Opening the case closes the secret compartment. ” } );<br />
+     else<br />
+     {<br />
+       foreach (local cur in allContents())<br />
+            {<br />
+                /* if this is a standing actor, disallow closure */<br />
+                if (cur.isActor &amp;&amp; cur.posture == standing)<br />
+                {<br />
+                    /* <br />
+                     *   we can’t close - issue a failure report and<br />
+                     *   terminate the command <br />
+                     */<br />
+                    reportFailure(‘{You/he} cannot close the packing case while<br />
+                        someone inside it is standing up. ’);<br />
+                    exit;<br />
+                }<br />
+            }<br />
+     }<br />
+     inherited(stat);<br />
+     if(!stat)<br />
+      callWithSenseContext(secretCompartment, sight,<br />
+       {: ”Closing the case opens a secret compartment in the bottom of the case. ” } );<br />
+   }<br />
+   /* enforce the low headroom when the box is closed */<br />
+    makeStandingUp()<br />
+    {<br />
+        if (isOpen)<br />
+        {<br />
+            /* we’re open, so proceed as normal */<br />
+            inherited();<br />
+        }<br />
+        else<br />
+        {<br />
+            /* the box is closed, so they can’t stand up */<br />
+            reportFailure(‘There\s not enough room to stand up in<br />
+                the packing case while it\s closed. ’);<br />
+        }<br />
+    }<br />
+    basicExamine()<br />
+    {<br />
+      if(gActor.isIn(self) &amp;&amp; gActor.canSee(self) &amp;&amp; !isOpen)<br />
+        interiorDesc;<br />
+      else<br />
+        inherited;       <br />
+    }<br />
+;</p>
+
+<p>++ GoldCoin;<br />
+++ GoldCoin;<br />
+++ GoldCoin;</p>
+
+<p>++ secretCompartment : Container, Fixture ’secret compartment’ ’secret compartment’<br />
+   ”The secret compartment runs the width of the case and about half its<br />
+    length. ”<br />
+   isOpen = (!packingCase.isOpen)<br />
+   sightPresence = (isOpen)   <br />
+;</p>
+
+<p>+++ bronzeBowl : Container ’bronze bowl’ ’bronze bowl’ <br />
+  ”It’s of ancient and somewhat curious design, cast with two rows of<br />
+    pomegranates all the way round the outside. ”<br />
+   bulkCapcity = 4<br />
+   bulk = 5<br />
+   weight = 5 <br />
+;</p>
+
+<p>class GoldCoin : Thing ’gold coin*coins’ ’gold coin’<br />
+  ”It looks ancient. The only writing you can make out on it looks<br />
+   like ΟΥΕCΠΑCΙΑ&amp;NuΟC. ”<br />
+   isEquivalent = true<br />
+;</p>
+
+<p>If you have trouble with the Greek letters, you can just about get there
+using “OUECPACIANOC” using a P for a capital Pi (the C represents a
+capital Sigma, since this is the way a Sigma was frequently written in
+ancient texts). This is simply a transliteration of VESPASIANOS,
+Vespasian being the Roman Emperor at the time of the destruction of the
+Jerusalem temple (by his son Titus) in 70 CE, the use of Greek
+suggesting that the coins came from the eastern (Greek speaking) rather
+than western (Latin speaking) part of the empire.</p>
+
+<p>Of more note to most TADS 3 authors will be the use of
+callWithSenseContext to ensure that the messages about the revealing of
+the secret compartment are only displayed when the player character is
+inside the case, and the code (largely borrowed from the TADS 3 sample
+game) to prevent closing the case while anyone’s standing inside, or
+standing inside while the case is closed.</p>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(GetOutOf)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[3155](../source/grammar.t.html#3155)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LookInAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[1788](../source/actions.t.html#1788)\]

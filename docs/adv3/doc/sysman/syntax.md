@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Typographical
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Typographical
 Conventions  
-<span class="navnp"><a href="intro.htm" class="nav"><em>Prev:</em> Introduction</a>
+<span class="navnp"><a href="intro.html" class="nav"><em>Prev:</em> Introduction</a>
    
-<a href="naming.htm" class="nav"><em>Next:</em> Naming Conventions</a>
+<a href="naming.html" class="nav"><em>Next:</em> Naming Conventions</a>
     </span>
 
 </div>
@@ -186,12 +188,12 @@ the ellipsis.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Typographical
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Typographical
 Conventions  
-<span class="navnp"><a href="intro.htm" class="nav"><em>Prev:</em> Introduction</a>
+<span class="navnp"><a href="intro.html" class="nav"><em>Prev:</em> Introduction</a>
    
-<a href="naming.htm" class="nav"><em>Next:</em> Naming Conventions</a>
+<a href="naming.html" class="nav"><em>Next:</em> Naming Conventions</a>
     </span>
 
 </div>

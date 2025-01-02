@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebWinOutputStream</span><span class="type">class</span>
 
 [browser.t](../file/browser.t.html)\[[777](../source/browser.t.html#777)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LogConsole</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[1700](../source/output.t.html#1700)\]

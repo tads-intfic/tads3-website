@@ -1,0 +1,52 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>HintMenu : MenuItem,
+HintMenuObject<br />
+</strong></td>
+<td style="text-align: right;"><a href="tophintmenu.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="goal.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Unless your hint system is going to be very simple, you’ll probably want
+to split it into submenus. To do this you use a series of HintMenu
+objects, which would be located directly in the
+<a href="tophintmenu.html">TopHintMenu</a>. In the present game we might do this by
+splitting the hints according to region:</p>
+
+<p>TopHintMenu;</p>
+
+<p>+ HintMenu ’In the First Set of Caves’<br />
+;</p>
+
+<p>+ HintMenu ’Aboard the ship’<br />
+;</p>
+
+<p>+ HintMenu ’The Tardis and its Destinations’<br />
+;</p>
+
+<p>+ HintMenu ’On the East Side of the Lake’<br />
+;</p>
+
+<p>+ HintMenu ’On the South Side of the Lake’<br />
+;</p>
+
+<p>+ HintMenu ’On the West Side of the Lake’<br />
+;</p>
+
+<p>Note that the Menu template defines the single-quoted string as the
+title property, so, for example, our first HintMenu could have been
+defined as:</p>
+
+<p>+ HintMenu<br />
+    title = ’In the First Set of Caves’<br />
+;</p>
+
+<p>Note also that each of these menus is only displayed if it contains
+currently open goals.</p>

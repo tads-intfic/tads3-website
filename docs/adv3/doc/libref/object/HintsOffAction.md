@@ -1,3 +1,5 @@
+---
+---
 <span class="title">HintsOffAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[3141](../source/actions.t.html#3141)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">inputEventPage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[3426](../source/webui.t.html#3426)\]

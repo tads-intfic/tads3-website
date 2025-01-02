@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Narrator</span><span class="type">object</span>
 
 [messages.t](../file/messages.t.html)\[[21](../source/messages.t.html#21)\]

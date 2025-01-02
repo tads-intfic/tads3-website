@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="ui.htm" class="nav">The User Interface</a> \> The Banner Window
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="ui.html" class="nav">The User Interface</a> \> The Banner Window
 Display Model  
-<span class="navnp"><a href="dispfn.htm" class="nav"><em>Prev:</em> The Default Display
+<span class="navnp"><a href="dispfn.html" class="nav"><em>Prev:</em> The Default Display
 Function</a>    
-<a href="web.htm" class="nav"><em>Next:</em> Playing on the Web</a>    
+<a href="web.html" class="nav"><em>Next:</em> Playing on the Web</a>    
 </span>
 
 </div>
@@ -28,7 +30,7 @@ information.
 
 To use the Banner API, it's necessary to understand its underlying
 display model. This section explains the display model. The API
-functions are part of the [tads-io](tadsio.htm) function set, so refer
+functions are part of the [tads-io](tadsio.html) function set, so refer
 to that section for details on the functions.
 
 ## Screen layout overview
@@ -467,7 +469,7 @@ bannerSizeToContents() functionality.
 
 ## Banner Functions
 
-The banner API is implemented as part of the [tads-io](tadsio.htm)
+The banner API is implemented as part of the [tads-io](tadsio.html)
 function set, which provides programmatic control over the TADS user
 interface. The banner functions all have names of the form bannerXxx.
 
@@ -531,12 +533,12 @@ important ways:
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="ui.htm" class="nav">The User Interface</a> \> The Banner Window
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="ui.html" class="nav">The User Interface</a> \> The Banner Window
 Display Model  
-<span class="navnp"><a href="dispfn.htm" class="nav"><em>Prev:</em> The Default Display
+<span class="navnp"><a href="dispfn.html" class="nav"><em>Prev:</em> The Default Display
 Function</a>    
-<a href="web.htm" class="nav"><em>Next:</em> Playing on the Web</a>    
+<a href="web.html" class="nav"><em>Next:</em> Playing on the Web</a>    
 </span>
 
 </div>

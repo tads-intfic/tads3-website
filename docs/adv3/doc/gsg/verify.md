@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](controllingtheaction.htm)   [\[Next\]](check.htm)*
+*[\[Previous\]](controllingtheaction.html)   [\[Next\]](check.html)*
 
 ### Verify
 
@@ -513,6 +515,6 @@ therefore use `check()` instead.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](controllingtheaction.htm)   [\[Next\]](check.htm)*
+*[\[Previous\]](controllingtheaction.html)   [\[Next\]](check.html)*
 
 </div>

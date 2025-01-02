@@ -1,8 +1,10 @@
+---
+---
 # adv3Lite periplus
 
 - <a href="about.html" target="classes">About this periplus</a>
 - <a href="libref/index.html" target="_blank">adv3Lite class reference</a>
-- <a href="manual/toc.htm" target="_blank">adv3Lite Library manual</a>
+- <a href="manual/toc.html" target="_blank">adv3Lite Library manual</a>
 - <a href="LearningT3Lite.pdf" target="_blank">Learning TADS 3 with
   adv3Lite</a>
 - <a href="TemplatesQref.PDF" target="classes">Template quick

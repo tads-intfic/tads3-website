@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Procedural Code  
-<span class="navnp"><a href="expr.htm" class="nav"><em>Prev:</em> Expressions and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Procedural Code  
+<span class="navnp"><a href="expr.html" class="nav"><em>Prev:</em> Expressions and
 Operators</a>    
-<a href="optparams.htm" class="nav"><em>Next:</em> Optional
+<a href="optparams.html" class="nav"><em>Next:</em> Optional
 Parameters</a>     </span>
 
 </div>
@@ -229,7 +231,7 @@ caller doesn't supply a second argument value. When the caller *does*
 provide two arguments, the caller's value overrides the default value.
 
 For more information, including a couple of subtleties that are worth
-knowing about, see the [optional parameters section](optparams.htm).
+knowing about, see the [optional parameters section](optparams.html).
 
 ### <span id="namedArgs">Named arguments</span>
 
@@ -285,7 +287,7 @@ parameters in the same order as in the function definition, but the
 named parameters can be mixed into the list in any order.
 
 For full details on named parameters and why (and when) you'd want to
-use them, see the [named arguments chapter](namedargs.htm).
+use them, see the [named arguments chapter](namedargs.html).
 
 ### <span id="funcModRep">Replacing or modifying a function</span>
 
@@ -566,7 +568,7 @@ you define a method that's not *initially* attached to any object, but
 only so that you can attach it dynamically, at run-time, as an actual
 method of one or more objects. You do this using
 <span class="code">TadsObject.setMethod()</span>, which you can find
-more about [here](tadsobj.htm#setMethod).
+more about [here](tadsobj.html#setMethod).
 
 ### <span id="varargs">Varying argument lists</span>
 
@@ -1159,7 +1161,7 @@ datatype:
 - **all other types:** a run-time error ("invalid type") is generated
 
 For more on embedded expressions, see the section on [string
-literals](strlit.htm#embeddings).
+literals](strlit.html#embeddings).
 
 ### <span id="return">return</span>
 
@@ -1638,7 +1640,7 @@ statements) once for each element of a Collection.
 </div>
 
 <span class="synPar">loopVar</span> can take one of two forms: it can be
-any "lvalue" (see the [expressions](expr.htm#commonEles) section for
+any "lvalue" (see the [expressions](expr.html#commonEles) section for
 details), such as a local variable, an object property, or an indexed
 lvalue; or it can be of this form:
 
@@ -2422,7 +2424,7 @@ Exception instance is valid here, and it's frequently useful to use
 previously caught Exception instance, or simply a static Exception
 instance.
 
-Refer to the section on [exception handling](except.htm) for more
+Refer to the section on [exception handling](except.html) for more
 details on <span class="code">try</span> and
 <span class="code">throw</span>.
 
@@ -2540,7 +2542,7 @@ of those modes of egress.
 
 For more details on <span class="code">try</span> and
 <span class="code">throw</span>, refer to the section on [exception
-handling](except.htm).
+handling](except.html).
 
 ## <span id="tads2">Notes for TADS 2 users</span>
 
@@ -2579,11 +2581,11 @@ more important ones:
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Procedural Code  
-<span class="navnp"><a href="expr.htm" class="nav"><em>Prev:</em> Expressions and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Procedural Code  
+<span class="navnp"><a href="expr.html" class="nav"><em>Prev:</em> Expressions and
 Operators</a>    
-<a href="optparams.htm" class="nav"><em>Next:</em> Optional
+<a href="optparams.html" class="nav"><em>Next:</em> Optional
 Parameters</a>     </span>
 
 </div>

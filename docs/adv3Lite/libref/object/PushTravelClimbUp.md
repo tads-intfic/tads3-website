@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PushTravelClimbUp</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1696](../source/actions.t.html#1696)\]

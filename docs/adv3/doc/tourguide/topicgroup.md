@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>TopicGroup : object<br />
 </strong></td>
-<td style="text-align: right;"><a href="misctopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="defaulttopics-overview.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="misctopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="defaulttopics-overview.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -140,7 +142,7 @@ bob : Person 'bob' 'Bob'
 ;  
   
 Note that in this case, if any of these individual actor states have
-[DefaultTopics](defaulttopics-overview.htm) that might mask bob and
+[DefaultTopics](defaulttopics-overview.html) that might mask bob and
 dora, these actor states would need to define
 excludeMatch = \[bob, dora\].  
   

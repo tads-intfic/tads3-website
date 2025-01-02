@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ReplaceRedirector</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[950](../source/thing.t.html#950)\]

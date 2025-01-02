@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Named Arguments  
-<span class="navnp"><a href="optparams.htm" class="nav"><em>Prev:</em> Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Named Arguments  
+<span class="navnp"><a href="optparams.html" class="nav"><em>Prev:</em> Optional
 Parameters</a>    
-<a href="except.htm" class="nav"><em>Next:</em> Exceptions and Error
+<a href="except.html" class="nav"><em>Next:</em> Exceptions and Error
 Handling</a>     </span>
 
 </div>
@@ -112,7 +114,7 @@ This defines a function that takes a required named parameter
 <span class="code">a</span>, and an optional named parameter
 <span class="code">b</span>.
 
-Refer to the [optional parameters chapter](optparams.htm) for full
+Refer to the [optional parameters chapter](optparams.html) for full
 details.
 
 ## Mixing named and positional arguments
@@ -552,7 +554,7 @@ arguments.
 ## Reflection for named arguments
 
 Named arguments have some dynamic access capabilities similar to the
-[reflection](reflect.htm) system for objects.
+[reflection](reflect.html) system for objects.
 
 You can retrieve a list of all of the named arguments in effect by
 calling the function <span class="code">t3GetNamedArgList()</span>. Each
@@ -563,7 +565,7 @@ To get the value for a named argument given its name, use
 
 Positional arguments are not accessible via these functions, of course.
 
-(These functions are part of the [t3vm](t3vm.htm) set.)
+(These functions are part of the [t3vm](t3vm.html) set.)
 
 ## <span id="benefits">Motivation and benefits</span>
 
@@ -877,11 +879,11 @@ cases be a net performance improvement:
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Named Arguments  
-<span class="navnp"><a href="optparams.htm" class="nav"><em>Prev:</em> Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Named Arguments  
+<span class="navnp"><a href="optparams.html" class="nav"><em>Prev:</em> Optional
 Parameters</a>    
-<a href="except.htm" class="nav"><em>Next:</em> Exceptions and Error
+<a href="except.html" class="nav"><em>Next:</em> Exceptions and Error
 Handling</a>     </span>
 
 </div>

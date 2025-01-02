@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RestartSignal</span><span class="type">class</span>
 
 [\_main.t](../file/_main.t.html)\[[219](../source/_main.t.html#219)\]

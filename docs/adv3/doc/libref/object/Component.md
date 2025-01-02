@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Component</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[1896](../source/objects.t.html#1896)\]

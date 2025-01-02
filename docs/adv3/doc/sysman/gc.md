@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Garbage Collection
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Garbage Collection
 and Finalization  
-<span class="navnp"><a href="dynobj.htm" class="nav"><em>Prev:</em> Dynamic Object
+<span class="navnp"><a href="dynobj.html" class="nav"><em>Prev:</em> Dynamic Object
 Creation</a>    
-<a href="expr.htm" class="nav"><em>Next:</em> Expressions and
+<a href="expr.html" class="nav"><em>Next:</em> Expressions and
 Operators</a>     </span>
 
 </div>
@@ -121,12 +123,12 @@ the garbage collector gets around to finalizing the object.
 
 Note also that you can explicitly invoke the garbage collector with the
 <span class="code">t3RunGC()</span> function in the [t3vm function
-set](t3vm.htm).
+set](t3vm.html).
 
 ## firstObj()/nextObj()
 
-The [<span class="code">firstObj()</span>](tadsgen.htm#firstObj) and
-[<span class="code">nextObj()</span>](tadsgen.htm#nextObj) functions let
+The [<span class="code">firstObj()</span>](tadsgen.html#firstObj) and
+[<span class="code">nextObj()</span>](tadsgen.html#nextObj) functions let
 you visit all of the objects currently in memory. This can have the
 sometimes surprising effect of retrieving objects that aren't currently
 reachable by any other means. Unreachable objects are only removed when
@@ -140,7 +142,7 @@ in memory, whether they're reachable or not.
 If you want to ensure that existing dead objects are removed from memory
 before visiting objects with <span class="code">firstObj()</span> and
 <span class="code">nextObj()</span>, you can call
-[<span class="code">t3RunGC()</span>](t3vm.htm#t3RunGC) just before your
+[<span class="code">t3RunGC()</span>](t3vm.html#t3RunGC) just before your
 object loop. This will ensure that any objects that are unreachable when
 the loop is about to start will be removed from memory and thus excluded
 from the object loop. This won't absolutely guarantee that you won't
@@ -184,12 +186,12 @@ makes no difference to the program.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Garbage Collection
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Garbage Collection
 and Finalization  
-<span class="navnp"><a href="dynobj.htm" class="nav"><em>Prev:</em> Dynamic Object
+<span class="navnp"><a href="dynobj.html" class="nav"><em>Prev:</em> Dynamic Object
 Creation</a>    
-<a href="expr.htm" class="nav"><em>Next:</em> Expressions and
+<a href="expr.html" class="nav"><em>Next:</em> Expressions and
 Operators</a>     </span>
 
 </div>

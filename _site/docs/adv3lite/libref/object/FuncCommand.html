@@ -1,0 +1,136 @@
+<p><span class="title">FuncCommand</span><span class="type">class</span></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1403">1403</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A FuncCommand is a special version of Command that carries out its
+action via a custom callback function, rather than by executing a
+regular Action. This can be used to create a simple one-off custom
+command without having to create a separate Action for it.
+
+`class `**`FuncCommand`**` :   `[`Command`](../object/Command.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">FuncCommand</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Command<code class="language-plaintext highlighter-rouge">](../object/Command.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>func<code class="language-plaintext highlighter-rouge">](#func)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Command</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>acc<code class="language-plaintext highlighter-rouge">](../object/Command.html#acc)</code>  <code class="language-plaintext highlighter-rouge">[</code>accInfo<code class="language-plaintext highlighter-rouge">](../object/Command.html#accInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>accNPs<code class="language-plaintext highlighter-rouge">](../object/Command.html#accNPs)</code>  <code class="language-plaintext highlighter-rouge">[</code>accs<code class="language-plaintext highlighter-rouge">](../object/Command.html#accs)</code>  <code class="language-plaintext highlighter-rouge">[</code>action<code class="language-plaintext highlighter-rouge">](../object/Command.html#action)</code>  <code class="language-plaintext highlighter-rouge">[</code>actions<code class="language-plaintext highlighter-rouge">](../object/Command.html#actions)</code>  <code class="language-plaintext highlighter-rouge">[</code>actor<code class="language-plaintext highlighter-rouge">](../object/Command.html#actor)</code>  <code class="language-plaintext highlighter-rouge">[</code>actorNPs<code class="language-plaintext highlighter-rouge">](../object/Command.html#actorNPs)</code>  <code class="language-plaintext highlighter-rouge">[</code>actorPerson<code class="language-plaintext highlighter-rouge">](../object/Command.html#actorPerson)</code>  <code class="language-plaintext highlighter-rouge">[</code>actors<code class="language-plaintext highlighter-rouge">](../object/Command.html#actors)</code>  <code class="language-plaintext highlighter-rouge">[</code>afterReports<code class="language-plaintext highlighter-rouge">](../object/Command.html#afterReports)</code>  <code class="language-plaintext highlighter-rouge">[</code>aobj<code class="language-plaintext highlighter-rouge">](../object/Command.html#aobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>badMulti<code class="language-plaintext highlighter-rouge">](../object/Command.html#badMulti)</code>  <code class="language-plaintext highlighter-rouge">[</code>cmdErr<code class="language-plaintext highlighter-rouge">](../object/Command.html#cmdErr)</code>  <code class="language-plaintext highlighter-rouge">[</code>disambig<code class="language-plaintext highlighter-rouge">](../object/Command.html#disambig)</code>  <code class="language-plaintext highlighter-rouge">[</code>disambigIdx<code class="language-plaintext highlighter-rouge">](../object/Command.html#disambigIdx)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobj<code class="language-plaintext highlighter-rouge">](../object/Command.html#dobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjInfo<code class="language-plaintext highlighter-rouge">](../object/Command.html#dobjInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjNPs<code class="language-plaintext highlighter-rouge">](../object/Command.html#dobjNPs)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjs<code class="language-plaintext highlighter-rouge">](../object/Command.html#dobjs)</code>  <code class="language-plaintext highlighter-rouge">[</code>endOfSentence<code class="language-plaintext highlighter-rouge">](../object/Command.html#endOfSentence)</code>  <code class="language-plaintext highlighter-rouge">[</code>implicitActionReports<code class="language-plaintext highlighter-rouge">](../object/Command.html#implicitActionReports)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobj<code class="language-plaintext highlighter-rouge">](../object/Command.html#iobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjInfo<code class="language-plaintext highlighter-rouge">](../object/Command.html#iobjInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjNPs<code class="language-plaintext highlighter-rouge">](../object/Command.html#iobjNPs)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjs<code class="language-plaintext highlighter-rouge">](../object/Command.html#iobjs)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastAction<code class="language-plaintext highlighter-rouge">](../object/Command.html#lastAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>madeTopic<code class="language-plaintext highlighter-rouge">](../object/Command.html#madeTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchedAll<code class="language-plaintext highlighter-rouge">](../object/Command.html#matchedAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchedMulti<code class="language-plaintext highlighter-rouge">](../object/Command.html#matchedMulti)</code>  <code class="language-plaintext highlighter-rouge">[</code>miscWordLists<code class="language-plaintext highlighter-rouge">](../object/Command.html#miscWordLists)</code>  <code class="language-plaintext highlighter-rouge">[</code>missingNouns<code class="language-plaintext highlighter-rouge">](../object/Command.html#missingNouns)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextTokens<code class="language-plaintext highlighter-rouge">](../object/Command.html#nextTokens)</code>  <code class="language-plaintext highlighter-rouge">[</code>npList<code class="language-plaintext highlighter-rouge">](../object/Command.html#npList)</code>  <code class="language-plaintext highlighter-rouge">[</code>npListSorted<code class="language-plaintext highlighter-rouge">](../object/Command.html#npListSorted)</code>  <code class="language-plaintext highlighter-rouge">[</code>npToResolve<code class="language-plaintext highlighter-rouge">](../object/Command.html#npToResolve)</code>  <code class="language-plaintext highlighter-rouge">[</code>originalAction<code class="language-plaintext highlighter-rouge">](../object/Command.html#originalAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>parseTree<code class="language-plaintext highlighter-rouge">](../object/Command.html#parseTree)</code>  <code class="language-plaintext highlighter-rouge">[</code>predActive<code class="language-plaintext highlighter-rouge">](../object/Command.html#predActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>predPriority<code class="language-plaintext highlighter-rouge">](../object/Command.html#predPriority)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](../object/Command.html#priority)</code>  <code class="language-plaintext highlighter-rouge">[</code>reflexiveAnte<code class="language-plaintext highlighter-rouge">](../object/Command.html#reflexiveAnte)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokenLen<code class="language-plaintext highlighter-rouge">](../object/Command.html#tokenLen)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbProd<code class="language-plaintext highlighter-rouge">](../object/Command.html#verbProd)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Command</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addDisambigNP<code class="language-plaintext highlighter-rouge">](../object/Command.html#addDisambigNP)</code>  <code class="language-plaintext highlighter-rouge">[</code>addNounListItem<code class="language-plaintext highlighter-rouge">](../object/Command.html#addNounListItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>addNounProd<code class="language-plaintext highlighter-rouge">](../object/Command.html#addNounProd)</code>  <code class="language-plaintext highlighter-rouge">[</code>afterReport<code class="language-plaintext highlighter-rouge">](../object/Command.html#afterReport)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildCommandString<code class="language-plaintext highlighter-rouge">](../object/Command.html#buildCommandString)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildObjLists<code class="language-plaintext highlighter-rouge">](../object/Command.html#buildObjLists)</code>  <code class="language-plaintext highlighter-rouge">[</code>calcPriority<code class="language-plaintext highlighter-rouge">](../object/Command.html#calcPriority)</code>  <code class="language-plaintext highlighter-rouge">[</code>changeAction<code class="language-plaintext highlighter-rouge">](../object/Command.html#changeAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>clone<code class="language-plaintext highlighter-rouge">](../object/Command.html#clone)</code>  <code class="language-plaintext highlighter-rouge">[</code>cloneNP<code class="language-plaintext highlighter-rouge">](../object/Command.html#cloneNP)</code>  <code class="language-plaintext highlighter-rouge">[</code>emptyNounRole<code class="language-plaintext highlighter-rouge">](../object/Command.html#emptyNounRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>exec<code class="language-plaintext highlighter-rouge">](../object/Command.html#exec)</code>  <code class="language-plaintext highlighter-rouge">[</code>execCombos<code class="language-plaintext highlighter-rouge">](../object/Command.html#execCombos)</code>  <code class="language-plaintext highlighter-rouge">[</code>execDoer<code class="language-plaintext highlighter-rouge">](../object/Command.html#execDoer)</code>  <code class="language-plaintext highlighter-rouge">[</code>execIter<code class="language-plaintext highlighter-rouge">](../object/Command.html#execIter)</code>  <code class="language-plaintext highlighter-rouge">[</code>fetchDisambigReply<code class="language-plaintext highlighter-rouge">](../object/Command.html#fetchDisambigReply)</code>  <code class="language-plaintext highlighter-rouge">[</code>fixPriority<code class="language-plaintext highlighter-rouge">](../object/Command.html#fixPriority)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEachNP<code class="language-plaintext highlighter-rouge">](../object/Command.html#forEachNP)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEachObj<code class="language-plaintext highlighter-rouge">](../object/Command.html#forEachObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>getCommandPhrase<code class="language-plaintext highlighter-rouge">](../object/Command.html#getCommandPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteMiscWords<code class="language-plaintext highlighter-rouge">](../object/Command.html#noteMiscWords)</code>  <code class="language-plaintext highlighter-rouge">[</code>npTokenLen<code class="language-plaintext highlighter-rouge">](../object/Command.html#npTokenLen)</code>  <code class="language-plaintext highlighter-rouge">[</code>numNounSlots<code class="language-plaintext highlighter-rouge">](../object/Command.html#numNounSlots)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveNouns<code class="language-plaintext highlighter-rouge">](../object/Command.html#resolveNouns)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveReflexive<code class="language-plaintext highlighter-rouge">](../object/Command.html#resolveReflexive)</code>  <code class="language-plaintext highlighter-rouge">[</code>saveReflexiveAnte<code class="language-plaintext highlighter-rouge">](../object/Command.html#saveReflexiveAnte)</code>  <code class="language-plaintext highlighter-rouge">[</code>sortList<code class="language-plaintext highlighter-rouge">](../object/Command.html#sortList)</code>  <code class="language-plaintext highlighter-rouge">[</code>startDisambigReply<code class="language-plaintext highlighter-rouge">](../object/Command.html#startDisambigReply)</code>  <code class="language-plaintext highlighter-rouge">[</code>terseOK<code class="language-plaintext highlighter-rouge">](../object/Command.html#terseOK)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="func"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">func</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1421">1421</a>]</p>
+
+<div class="desc">
+
+the callback function for carrying out our command action
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (prod, func)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1408">1408</a>]</p>
+
+<div class="desc">
+
+Create: provide the grammar match object, if any, and the callback
+function to execute to carry out the command.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

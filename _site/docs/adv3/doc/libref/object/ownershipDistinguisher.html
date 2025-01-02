@@ -1,0 +1,191 @@
+<p><span class="title">ownershipDistinguisher</span><span class="type">object</span></p>
+
+<p><a href="../file/disambig.t.html">disambig.t</a>[<a href="../source/disambig.t.html#129">129</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Ownership Distinguisher. This distinguisher can tell two objects apart
+if they have different owners. "Unowned" objects are identified by their
+immediate containers instead of their owners.
+
+Note that while location \*can\* distinguish items with this
+distinguisher, ownership takes priority: if an object has an owner, the
+owner is the distinguishing feature. The reason location is a factor at
+all is that we need something parallel to ownership for the purposes of
+phrasing distinguishing descriptions of unowned objects. The
+best-sounding phrasing, at least in English, is to refer to the unowned
+objects by location.
+
+**`ownershipDistinguisher`**` :   `[`Distinguisher`](../object/Distinguisher.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ownershipDistinguisher</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Distinguisher<code class="language-plaintext highlighter-rouge">](../object/Distinguisher.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>aName<code class="language-plaintext highlighter-rouge">](#aName)</code>  <code class="language-plaintext highlighter-rouge">[</code>canDistinguish<code class="language-plaintext highlighter-rouge">](#canDistinguish)</code>  <code class="language-plaintext highlighter-rouge">[</code>countName<code class="language-plaintext highlighter-rouge">](#countName)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchName<code class="language-plaintext highlighter-rouge">](#matchName)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePrompt<code class="language-plaintext highlighter-rouge">](#notePrompt)</code>  <code class="language-plaintext highlighter-rouge">[</code>objInScope<code class="language-plaintext highlighter-rouge">](#objInScope)</code>  <code class="language-plaintext highlighter-rouge">[</code>theName<code class="language-plaintext highlighter-rouge">](#theName)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="aName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aName (obj)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3534">3534</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="canDistinguish"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canDistinguish (a, b)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/disambig.t.html">disambig.t</a>[<a href="../source/disambig.t.html#130">130</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="countName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countName (obj, cnt)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3536">3536</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="matchName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchName (obj, origTokens, adjustedTokens, matchList, fullMatchList)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/disambig.t.html">disambig.t</a>[<a href="../source/disambig.t.html#180">180</a>]</p>
+
+<div class="desc">
+
+otherwise, use the inherited handling
+
+</div>
+
+<p><span id="name"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name (obj)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3533">3533</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="notePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePrompt (lst)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3539">3539</a>]</p>
+
+<div class="desc">
+
+note that we're prompting based on this distinguisher
+
+</div>
+
+<p><span id="objInScope"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objInScope (obj, matchList, fullMatchList)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/disambig.t.html">disambig.t</a>[<a href="../source/disambig.t.html#160">160</a>]</p>
+
+<div class="desc">
+
+One or both objects are owned, so we can tell them apart if and only if
+they have different owners.
+
+</div>
+
+<p><span id="theName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">theName (obj)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3535">3535</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

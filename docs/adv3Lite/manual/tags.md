@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> String Tags and Object
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> String Tags and Object
 Tags  
-<span class="navnp"><a href="orders.htm" class="nav"><em>Prev:</em> Giving Orders to
+<span class="navnp"><a href="orders.html" class="nav"><em>Prev:</em> Giving Orders to
 NPCs</a>    
-<a href="initiate.htm" class="nav"><em>Next:</em> NPC-Initiated
+<a href="initiate.html" class="nav"><em>Next:</em> NPC-Initiated
 Conversation</a>     </span>
 
 </div>
@@ -157,12 +159,12 @@ current interlocutor after such an interjection.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> String Tags and Object
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> String Tags and Object
 Tags  
-<span class="navnp"><a href="orders.htm" class="nav"><em>Prev:</em> Giving Orders to
+<span class="navnp"><a href="orders.html" class="nav"><em>Prev:</em> Giving Orders to
 NPCs</a>    
-<a href="initiate.htm" class="nav"><em>Next:</em> NPC-Initiated
+<a href="initiate.html" class="nav"><em>Next:</em> NPC-Initiated
 Conversation</a>     </span>
 
 </div>

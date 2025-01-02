@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>OneTimePromptDaemon: <a
-href="promptdaemon.htm">PromptDaemon</a><br />
+href="promptdaemon.html">PromptDaemon</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="promptdaemon.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="moduleexecobject.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="promptdaemon.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="moduleexecobject.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -59,7 +61,7 @@ OneTimePromptDaemon, InitObject
   }  
 ;  
   
-Don't worry about how [initiateConversation](initiateconversation.htm)
+Don't worry about how [initiateConversation](initiateconversation.html)
 works for now, we'll be going into that later. For now it suffices to
 know that this is the statement we need to execute to get Sarah chatting
 just before the first turn, so that the player's first command can be a
@@ -78,7 +80,7 @@ class FirstTurnPromptDaemon: OneTimePromptDaemon, InitObject
 ;  
   
 Rather more noteworthy here is the combination of OneTimePromptDaemon
-with [InitObject](initobject.htm), which we'll discuss next.  
+with [InitObject](initobject.html), which we'll discuss next.  
   
   
   

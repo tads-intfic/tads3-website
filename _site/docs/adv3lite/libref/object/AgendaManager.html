@@ -1,0 +1,157 @@
+<p><span class="title">AgendaManager</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5630">5630</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Base class for items (Actors and DefaultAgendaTopics) that can handle
+
+`class `**`AgendaManager`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">AgendaManager</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">AgendaManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Actor<code class="language-plaintext highlighter-rouge">](../object/Actor.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultAgendaTopic`](../object/DefaultAgendaTopic.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>agendaList<code class="language-plaintext highlighter-rouge">](#agendaList)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addToAgenda<code class="language-plaintext highlighter-rouge">](#addToAgenda)</code>  <code class="language-plaintext highlighter-rouge">[</code>executeAgenda<code class="language-plaintext highlighter-rouge">](#executeAgenda)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeFromAgenda<code class="language-plaintext highlighter-rouge">](#removeFromAgenda)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="agendaList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">agendaList</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5636">5636</a>]</p>
+
+<div class="desc">
+
+Our agendaList is the list of AgendaItems we're ready to execute when
+they're isReady property is true.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addToAgenda"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToAgenda ([lst])</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5643">5643</a>]</p>
+
+<div class="desc">
+
+add an agenda item. We try to make this as author-proof as possible so
+that the method will accept addToAgenda(item), addToAgenda(item1, item2,
+...) or addToAgenda(\[item1, item2,..\])
+
+</div>
+
+<p><span id="executeAgenda"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeAgenda ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5696">5696</a>]</p>
+
+<div class="desc">
+
+Execute the next item in our agenda, if there are any items in the
+agenda that are ready to execute. We'll return true if we found an item
+to execute, nil if not.
+
+</div>
+
+<p><span id="removeFromAgenda"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeFromAgenda ([lst])</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5676">5676</a>]</p>
+
+<div class="desc">
+
+remove one or more agenda items
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

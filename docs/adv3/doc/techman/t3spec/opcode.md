@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Byte-Code Instruction Set  
-<span class="navnp"><a href="metacl.htm" class="nav"><em>Prev:</em> The Metaclasses</a>
+<span class="navnp"><a href="metacl.html" class="nav"><em>Prev:</em> The Metaclasses</a>
    
-<a href="format.htm" class="nav"><em>Next:</em> Image File Format</a>
+<a href="format.html" class="nav"><em>Next:</em> Image File Format</a>
     </span>
 
 </div>
@@ -152,7 +154,7 @@ case the size is encoded in the operand data. Some instructions have no
 operands; the opcode byte is the entirety of such instructions.
 
 Operands are encoded in a portable binary format. Refer to the [TADS
-portable binary encoding documentation](bincode.htm) for details of the
+portable binary encoding documentation](bincode.html) for details of the
 portable representations used; this format specifies for each of a set
 of datatypes a coding that uses the same size and byte layout on all
 types of computers.
@@ -882,7 +884,7 @@ the type of *val1*:
 - Integer: *val2* must also be a number, or NUM_VAL_REQD is thrown. The
   result is the arithmetic sum of the two integer values.
 - String: *val2* is implicitly converted to a string (see [data
-  conversions](model.htm#conversions)). The result is the string
+  conversions](model.html#conversions)). The result is the string
   concatenation of *val1* and *val2*. The result is always a new object;
   the string contained in *val1* is not altered, but instead a new
   string object is created.
@@ -1565,7 +1567,7 @@ is no valid "self" object (i.e., the code executing is inside a function
 rather than a method), throw an error (FUNCPTR_VAL_REQD).
 
 If the *val* is of type object, check the "ObjectCallProp" [predefined
-property ID](model.htm#predefined). If the predefined symbol
+property ID](model.html#predefined). If the predefined symbol
 "ObjectCallProp" is defined in the image, and the object referenced by
 *val* defines or inherits this property, retrieve the value of this
 property, which must be of type function pointer; if it's not throw an
@@ -1611,7 +1613,7 @@ property's value:
 **Case 2:** If the object *target_val* does **not** define or inherit
 the property *prop_id*, check to see if *target_val* defines or inherits
 the imported property with the [predefined property
-identifier](model.htm#predefined) "propNotDefined". If this property is
+identifier](model.html#predefined) "propNotDefined". If this property is
 defined, push *prop_id* as an additional (first) argument, and then
 proceed with **case 1** above as though the "propNotDefined" property
 had been invoked in the first place. If the "propNotDefined" property is
@@ -1666,7 +1668,7 @@ according to the type of the value stored in the property:
 **Case 2:** If the object *target_val* does **not** define or inherit
 the property *prop_id*, check to see if *target_val* defines or inherits
 the imported property with the [predefined property
-identifier](model.htm#predefined) "propNotDefined". If this property is
+identifier](model.html#predefined) "propNotDefined". If this property is
 defined, push *prop_id* as an additional (first) argument, and then
 proceed with **case 1** above as though the "propNotDefined" property
 had been invoked in the first place. If the "propNotDefined" property is
@@ -2861,7 +2863,7 @@ been executed.*
 Pop the top element of the stack, calling this *exception_obj*. If this
 value is not of type object, throw an error (OBJ_VAL_REQD). Otherwise,
 handle the exception as described in the VM specification section on
-[exceptions](model.htm#exceptions).
+[exceptions](model.html#exceptions).
 
 To summarize, the VM searches the exception table of the current stack
 frame for a suitable handler; if a suitable handler is not found, the VM
@@ -3008,7 +3010,7 @@ is simply an index into the metaclass dependency table. The image file
 contains the metaclass dependency table, which establishes the
 correspondence between the *metaclass_id* index value and the actual
 metaclass, which the table identifies by a universally unique metaclass
-name. Refer to the [metaclass ID list](model.htm#metaclass_id) for more
+name. Refer to the [metaclass ID list](model.html#metaclass_id) for more
 information on the metaclass dependency table.
 
 **Compiler note:** A byte-code constructor *must* return the "self"
@@ -3038,7 +3040,7 @@ UBYTE *metaclass_id*
 Stack: *same as* [NEW1](#opc_new1)
 
 This instruction performs the same operation as [NEW1](#opc_new1), but
-the object created is [transient](model.htm#transient).
+the object created is [transient](model.html#transient).
 <span id="opc_trnew2"></span>
 
 ------------------------------------------------------------------------
@@ -3050,7 +3052,7 @@ UINT2 *metaclass_id*
 Stack: *same as* [NEW1](#opc_new1)
 
 This instruction performs the same operation as [NEW2](#opc_new1), but
-the object created is [transient](model.htm#transient).
+the object created is [transient](model.html#transient).
 <span id="opc_inclcl"></span>
 
 ------------------------------------------------------------------------
@@ -4086,12 +4088,12 @@ Revision: December, 2009
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Byte-Code Instruction Set  
-<span class="navnp"><a href="metacl.htm" class="nav"><em>Prev:</em> The Metaclasses</a>
+<span class="navnp"><a href="metacl.html" class="nav"><em>Prev:</em> The Metaclasses</a>
    
-<a href="format.htm" class="nav"><em>Next:</em> Image File Format</a>
+<a href="format.html" class="nav"><em>Next:</em> Image File Format</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](generalintroduction.htm)
-  [\[Next\]](programmingprolegomena.htm)*
+*[\[Previous\]](generalintroduction.html)
+  [\[Next\]](programmingprolegomena.html)*
 
 </div>
 
@@ -209,11 +211,11 @@ download package - the program name might not be the same everywhere.
 
 If you want more advanced instructions, or you’d like a fuller
 explanation of what everything means, please read the article on
-<a href="../techman/t3start.htm" target="_top">Creating Your First TADS
+<a href="../techman/t3start.html" target="_top">Creating Your First TADS
 3 Project</a> in the TADS 3 Technical Manual. When you come to create a
 larger project you might want to split it over several source files,
 which is explained in the article on
-<a href="../techman/t3inc.htm" target="_top">separate compilation</a> in
+<a href="../techman/t3inc.html" target="_top">separate compilation</a> in
 the *Technical Manual*, but this is not something you need worry about
 for the purposes of this Guide.
 
@@ -241,5 +243,5 @@ for the purposes of this Guide.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](generalintroduction.htm)
-  [\[Next\]](programmingprolegomena.htm)*
+*[\[Previous\]](generalintroduction.html)
+  [\[Next\]](programmingprolegomena.html)*

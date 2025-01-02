@@ -1,3 +1,5 @@
+---
+---
 <span class="title">symVocabPreinit</span><span class="type">object</span>
 
 [symconn.t](../file/symconn.t.html)\[[227](../source/symconn.t.html#227)\]

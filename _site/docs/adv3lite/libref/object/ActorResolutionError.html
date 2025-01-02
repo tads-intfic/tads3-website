@@ -1,0 +1,156 @@
+<p><span class="title">ActorResolutionError</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5300">5300</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+ActorResolutionError - this is for resolution errors that are in the
+context of what the target actor of the command (the addressee) can see.
+These require the Command in addition to the noun phrase, since that
+provides the target actor information.
+
+`class `**`ActorResolutionError`**` :   `[`ResolutionError`](../object/ResolutionError.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorResolutionError</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ResolutionError<code class="language-plaintext highlighter-rouge">](../object/ResolutionError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ParseError<code class="language-plaintext highlighter-rouge">](../object/ParseError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Exception<code class="language-plaintext highlighter-rouge">](../object/Exception.html)  
+</code>                                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorResolutionError</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>InsufficientNounsError<code class="language-plaintext highlighter-rouge">](../object/InsufficientNounsError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NoneInLocationError<code class="language-plaintext highlighter-rouge">](../object/NoneInLocationError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NoneInOwnerError<code class="language-plaintext highlighter-rouge">](../object/NoneInOwnerError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NoneWithContentsError<code class="language-plaintext highlighter-rouge">](../object/NoneWithContentsError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>UnmatchedNounError<code class="language-plaintext highlighter-rouge">](../object/UnmatchedNounError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AmbiguousMultiDefiniteError`](../object/AmbiguousMultiDefiniteError.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>cmd<code class="language-plaintext highlighter-rouge">](#cmd)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ResolutionError</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>np<code class="language-plaintext highlighter-rouge">](../object/ResolutionError.html#np)</code>  <code class="language-plaintext highlighter-rouge">[</code>txt<code class="language-plaintext highlighter-rouge">](../object/ResolutionError.html#txt)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ParseError</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allowOnRespell<code class="language-plaintext highlighter-rouge">](../object/ParseError.html#allowOnRespell)</code>  <code class="language-plaintext highlighter-rouge">[</code>curable<code class="language-plaintext highlighter-rouge">](../object/ParseError.html#curable)</code>  <code class="language-plaintext highlighter-rouge">[</code>errStage<code class="language-plaintext highlighter-rouge">](../object/ParseError.html#errStage)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>errmsg_<code class="language-plaintext highlighter-rouge">](../object/Exception.html#errmsg_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ResolutionError</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>rankCorrection<code class="language-plaintext highlighter-rouge">](../object/ResolutionError.html#rankCorrection)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ParseError</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>display<code class="language-plaintext highlighter-rouge">](../object/ParseError.html#display)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryCuring<code class="language-plaintext highlighter-rouge">](../object/ParseError.html#tryCuring)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>displayException<code class="language-plaintext highlighter-rouge">](../object/Exception.html#displayException)</code>  <code class="language-plaintext highlighter-rouge">[</code>getExceptionMessage<code class="language-plaintext highlighter-rouge">](../object/Exception.html#getExceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStackTrace<code class="language-plaintext highlighter-rouge">](../object/Exception.html#showStackTrace)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="cmd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmd</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5308">5308</a>]</p>
+
+<div class="desc">
+
+the command that we were attempting to resolve
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (cmd, np)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5301">5301</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

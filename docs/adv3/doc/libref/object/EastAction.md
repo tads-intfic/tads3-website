@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EastAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2804](../source/actions.t.html#2804)\]

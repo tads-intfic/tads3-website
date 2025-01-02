@@ -1,3 +1,5 @@
+---
+---
 <span class="title">settingsManager</span><span class="type">object</span>
 
 [settings.t](../file/settings.t.html)\[[289](../source/settings.t.html#289)\]

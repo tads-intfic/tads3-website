@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultLogicalVerifyResult</span><span class="type">object</span>
 
 [verify.t](../file/verify.t.html)\[[417](../source/verify.t.html#417)\]

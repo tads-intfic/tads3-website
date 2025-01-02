@@ -1,3 +1,5 @@
+---
+---
 <span class="title">verboseModeSettingsItem</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[524](../source/misc.t.html#524)\]

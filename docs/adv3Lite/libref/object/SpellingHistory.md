@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SpellingHistory</span><span class="type">class</span>
 
 [spelling.t](../file/spelling.t.html)\[[437](../source/spelling.t.html#437)\]

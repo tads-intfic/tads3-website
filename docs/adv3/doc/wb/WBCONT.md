@@ -1,3 +1,5 @@
+---
+---
   
   
   
@@ -15,33 +17,33 @@
   
   
 
-[Creating a New Game: Step-by-Step Instructions](newgame.htm)
+[Creating a New Game: Step-by-Step Instructions](newgame.html)
 
-[Getting Started with TADS](../authkit/welcome.htm#getting_started)
+[Getting Started with TADS](../authkit/welcome.html#getting_started)
 
-[Overview of TADS Workbench](tadswb.htm)
+[Overview of TADS Workbench](tadswb.html)
 
-[Customizing Workbench](custom.htm)
+[Customizing Workbench](custom.html)
 
-[Loading an Existing Game](tadswb.htm#loadgame)
+[Loading an Existing Game](tadswb.html#loadgame)
 
-[Text Editing Features](editor.htm)
+[Text Editing Features](editor.html)
 
-[Compiling](helpcomp.htm)
+[Compiling](helpcomp.html)
 
-[Debugging](helptdb.htm)
+[Debugging](helptdb.html)
 
-[Scripting and Auto-Scripting](script.htm)
+[Scripting and Auto-Scripting](script.html)
 
-[Using an External Editor](helped.htm)
+[Using an External Editor](helped.html)
 
-[Project (.t3c) Files](tadswb.htm#config)
+[Project (.t3c) Files](tadswb.html#config)
 
-[Using Extension Libraries](exts.htm)
+[Using Extension Libraries](exts.html)
 
-[Docking Windows](dockwin.htm)
+[Docking Windows](dockwin.html)
 
-[TADS Documentation Links](../authkit/welcome.htm#documentation)  
+[TADS Documentation Links](../authkit/welcome.html#documentation)  
   
   
   

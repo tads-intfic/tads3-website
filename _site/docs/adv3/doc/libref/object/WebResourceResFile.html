@@ -1,0 +1,231 @@
+<p><span class="title">WebResourceResFile</span><span class="type">class</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#980">980</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A resource file request handler. This handles a request by sending the
+contents of the resource file matching the given name.
+
+To expose a bundled game resource as a Web object that the client can
+access and download via HTTP, simply create an instance of this class,
+and set the virtual path (the vpath property) to the resource name. See
+coverArtResource below for an example - that object creates a URL for
+the Cover Art image so that the browser can download and display it.
+
+You can expose \*all\* bundled resources in the entire game simply by
+creating an object like this:
+
+  
+WebResourceResFile  
+vpath = static new RexPattern('/')  
+;
+
+That creates a URL mapping that matches \*any\* URL path that
+corresponds to a bundled resource name. The library intentionally
+doesn't provide an object like this by default, as a security measure;
+the default configuration as a rule tries to err on the side of caution,
+and in this case the cautious thing to do is to hide everything by
+default. There's really no system-level security risk in exposing all
+resources, since the only files available as resources are files you
+explicitly bundle into the build anyway; but even so, some resources
+might be for internal use within the game, so we don't want to just
+assume that everything should be downloadable.
+
+You can also expose resources on a directory-by-directory basis, simply
+by specifying a longer path prefix:
+
+  
+WebResourceResFile  
+vpath = static new RexPattern('/graphics/')  
+;
+
+Again, the library doesn't define anything like this by default, since
+we don't want to impose any assumptions about how your resources are
+organized.
+
+`class `**`WebResourceResFile`**` :   `[`WebResource`](../object/WebResource.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WebResourceResFile</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>WebResource<code class="language-plaintext highlighter-rouge">](../object/WebResource.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WebResourceResFile</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>WebWindow<code class="language-plaintext highlighter-rouge">](../object/WebWindow.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>WebCommandWin<code class="language-plaintext highlighter-rouge">](../object/WebCommandWin.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>WebLayoutWindow<code class="language-plaintext highlighter-rouge">](../object/WebLayoutWindow.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>WebStatusWin`](../object/WebStatusWin.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>coverArtResource<code class="language-plaintext highlighter-rouge">](../object/coverArtResource.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>webMainWin<code class="language-plaintext highlighter-rouge">](../object/webMainWin.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>webuiResources<code class="language-plaintext highlighter-rouge">](../object/webuiResources.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>binaryExts<code class="language-plaintext highlighter-rouge">](#binaryExts)</code>  <code class="language-plaintext highlighter-rouge">[</code>browserExtToMime<code class="language-plaintext highlighter-rouge">](#browserExtToMime)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>group<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#group)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#priority)</code>  <code class="language-plaintext highlighter-rouge">[</code>vpath<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#vpath)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isTextFile<code class="language-plaintext highlighter-rouge">](#isTextFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchRequest<code class="language-plaintext highlighter-rouge">](#matchRequest)</code>  <code class="language-plaintext highlighter-rouge">[</code>processName<code class="language-plaintext highlighter-rouge">](#processName)</code>  <code class="language-plaintext highlighter-rouge">[</code>processRequest<code class="language-plaintext highlighter-rouge">](#processRequest)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>sendAck<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#sendAck)</code>  <code class="language-plaintext highlighter-rouge">[</code>sendXML<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#sendXML)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="binaryExts"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">binaryExts</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1083">1083</a>]</p>
+
+<div class="desc">
+
+table of common binary file extensions
+
+</div>
+
+<p><span id="browserExtToMime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">browserExtToMime</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1043">1043</a>]</p>
+
+<div class="desc">
+
+extension to MIME type map for important browser file types
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="isTextFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isTextFile (fname)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1061">1061</a>]</p>
+
+<div class="desc">
+
+Determine if the given file is a text file or a binary file. By default,
+we base the determination solely on the filename suffix, checking the
+extension against a list of common file types.
+
+</div>
+
+<p><span id="matchRequest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchRequest (query, req)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#986">986</a>]</p>
+
+<div class="desc">
+
+Match a request. A resource file resource matches if we match the
+virtual path setting for the resource, and the requested resource file
+exists.
+
+</div>
+
+<p><span id="processName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processName (n)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1054">1054</a>]</p>
+
+<div class="desc">
+
+Process the name. This takes the path string from the query, and returns
+the resource file name to look for. By default, we simply return the
+same name specified by the client, minus the leading '/' (since resource
+paths are always relative).
+
+</div>
+
+<p><span id="processRequest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processRequest (req, query)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#992">992</a>]</p>
+
+<div class="desc">
+
+process the request: send the resource file's contents
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

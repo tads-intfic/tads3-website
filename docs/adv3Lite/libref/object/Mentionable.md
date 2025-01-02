@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Mentionable</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[18](../source/thing.t.html#18)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Translating and
+<a href="toc.html" class="nav">Table of Contents</a> \| Translating and
 Localizing TADS  
-<span class="navnp"><a href="webhost.htm" class="nav"><em>Prev:</em> Setting up a custom
+<span class="navnp"><a href="webhost.html" class="nav"><em>Prev:</em> Setting up a custom
 TADS Web server</a>    
-<a href="errtrans.htm" class="nav"><em>Next:</em> Translating Error
+<a href="errtrans.html" class="nav"><em>Next:</em> Translating Error
 Messages</a>     </span>
 
 </div>
@@ -25,8 +27,8 @@ sets and languages.
 
 <div class="sectoc">
 
-[Translating Error Messages](errtrans.htm)  
-[Creating a Character-Mapping File](cmap.htm)  
+[Translating Error Messages](errtrans.html)  
+[Creating a Character-Mapping File](cmap.html)  
 
 </div>
 
@@ -37,11 +39,11 @@ sets and languages.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Translating and
+<a href="toc.html" class="nav">Table of Contents</a> \| Translating and
 Localizing TADS  
-<span class="navnp"><a href="webhost.htm" class="nav"><em>Prev:</em> Setting up a custom
+<span class="navnp"><a href="webhost.html" class="nav"><em>Prev:</em> Setting up a custom
 TADS Web server</a>    
-<a href="errtrans.htm" class="nav"><em>Next:</em> Translating Error
+<a href="errtrans.html" class="nav"><em>Next:</em> Translating Error
 Messages</a>     </span>
 
 </div>

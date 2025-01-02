@@ -1,3 +1,5 @@
+---
+---
 <span class="title">gameHintStatus</span><span class="type">object</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[665](../source/hintsys.t.html#665)\]

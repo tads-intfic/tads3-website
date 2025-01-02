@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Dynamic Object
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Dynamic Object
 Creation  
-<span class="navnp"><a href="multmeth.htm" class="nav"><em>Prev:</em> Multi-Methods</a>
-    <a href="gc.htm" class="nav"><em>Next:</em> Garbage Collection and
+<span class="navnp"><a href="multmeth.html" class="nav"><em>Prev:</em> Multi-Methods</a>
+    <a href="gc.html" class="nav"><em>Next:</em> Garbage Collection and
 Finalization</a>     </span>
 
 </div>
@@ -180,7 +182,7 @@ In some cases you might wish to be notified when a particular object is
 about to be deleted. To satisfy this need, TADS 3 includes a
 "finalization" mechanism that calls a method, called a "finalizer," when
 an object is about to be deleted. Refer to the [garbage
-collection](gc.htm) section for details on finalization.
+collection](gc.html) section for details on finalization.
 
 ## Notes for TADS 2 users
 
@@ -227,11 +229,11 @@ dangling reference).
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Dynamic Object
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Dynamic Object
 Creation  
-<span class="navnp"><a href="multmeth.htm" class="nav"><em>Prev:</em> Multi-Methods</a>
-    <a href="gc.htm" class="nav"><em>Next:</em> Garbage Collection and
+<span class="navnp"><a href="multmeth.html" class="nav"><em>Prev:</em> Multi-Methods</a>
+    <a href="gc.html" class="nav"><em>Next:</em> Garbage Collection and
 Finalization</a>     </span>
 
 </div>

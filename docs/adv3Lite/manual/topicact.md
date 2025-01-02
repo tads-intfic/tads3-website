@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Topic Actions  
-<span class="navnp"><a href="literalact.htm" class="nav"><em>Prev:</em> Literal Actions</a>
-    <a href="query.htm" class="nav"><em>Next:</em> Querying the World
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Topic Actions  
+<span class="navnp"><a href="literalact.html" class="nav"><em>Prev:</em> Literal Actions</a>
+    <a href="query.html" class="nav"><em>Next:</em> Querying the World
 Model</a>     </span>
 
 </div>
@@ -32,7 +34,7 @@ a **TopicTAction**.
 But there is an important difference between topics and literals.
 Whereas the literal target of a LiteralAction or LiteralTAction is never
 an object defined in game code, the topic target of a TopicAction or
-TopicTAction usually is. The target may be a [Topic](topic.htm) or it
+TopicTAction usually is. The target may be a [Topic](topic.html) or it
 may be a physical game object (i.e. a Thing) referred to as though it
 were a Topic (for example there could be an orb of destiny object
 defined as a Thing in the game that can be thought about via a THINK
@@ -93,7 +95,7 @@ player used to describe the topic is assigned to the temporary Topic's
 vocab property, and hence to its name property. The temporary Topic
 object is anonymous and won't match any Topic or Thing defined in game
 code, but its getTopicText() property could be matched to a regular
-expression, for example (the [TopicEntry](topicentry.htm) class caters
+expression, for example (the [TopicEntry](topicentry.html) class caters
 for this, for example).
 
 If you're handling a TopicAction or TopicTAction that's already defined
@@ -101,7 +103,7 @@ in the adv3Lite library, you don't have to worry about any of this too
 much, since all these library-defined TopicActions and TopicTActions are
 designed to be handled by TopicEntry objects, so all you need to do is
 to define the appropriate TopicDatabase and the TopicEntries within it
-(as in the [Consultables](topicentry.htm) and [Thoughts](thought.htm)
+(as in the [Consultables](topicentry.html) and [Thoughts](thought.html)
 above, and in the conversational commands discussed later on in this
 manual).
 
@@ -269,10 +271,10 @@ that it's the one that ends up getting chosen in cases of ambiguity.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Topic Actions  
-<span class="navnp"><a href="literalact.htm" class="nav"><em>Prev:</em> Literal Actions</a>
-    <a href="query.htm" class="nav"><em>Next:</em> Querying the World
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Topic Actions  
+<span class="navnp"><a href="literalact.html" class="nav"><em>Prev:</em> Literal Actions</a>
+    <a href="query.html" class="nav"><em>Next:</em> Querying the World
 Model</a>     </span>
 
 </div>

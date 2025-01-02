@@ -1,3 +1,5 @@
+---
+---
 <span class="title">array.h</span><span class="type">file</span>
 
 [source file](../source/array.h.html)

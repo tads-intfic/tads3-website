@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rankByTokenCount</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[6037](../source/parser.t.html#6037)\]

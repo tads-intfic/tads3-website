@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BigNumber</span><span class="type">class</span>
 
 [bignum.h](../file/bignum.h.html)\[[37](../source/bignum.h.html#37)\],

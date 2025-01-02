@@ -1,0 +1,188 @@
+<p><span class="title">DefiniteNounProd</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1996">1996</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Base class for noun phrase productions with definite articles.
+
+`class `**`DefiniteNounProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)`   `[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DefiniteNounProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>NounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BasicProd<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html)  
+</code>                         object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>AmbigResponseKeeper<code class="language-plaintext highlighter-rouge">](../object/AmbigResponseKeeper.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DefiniteNounProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BasicPossessiveProd<code class="language-plaintext highlighter-rouge">](../object/BasicPossessiveProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ButPossessiveProd<code class="language-plaintext highlighter-rouge">](../object/ButPossessiveProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>exceptNounPhrase(singlePossessive)<code class="language-plaintext highlighter-rouge">](../object/exceptNounPhrase(singlePossessive).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DisambigPossessiveProd<code class="language-plaintext highlighter-rouge">](../object/DisambigPossessiveProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>disambigListItem(possessive)<code class="language-plaintext highlighter-rouge">](../object/disambigListItem(possessive).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PossessiveNounProd<code class="language-plaintext highlighter-rouge">](../object/PossessiveNounProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(possessive)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(possessive).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PossessivePluralProd<code class="language-plaintext highlighter-rouge">](../object/PossessivePluralProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(possessive)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(possessive).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralOnlyNounPhrase(possessive)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ContainerNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/ContainerNounPhraseProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>indetPluralNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetPluralNounPhrase(locational).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>indetPluralOnlyNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetPluralOnlyNounPhrase(locational).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>indetSingularNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetSingularNounPhrase(locational).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>PreResolvedAmbigProd<code class="language-plaintext highlighter-rouge">](../object/PreResolvedAmbigProd.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(definite)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(definite).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>VagueContainerNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/VagueContainerNounPhraseProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AllInContainerNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/AllInContainerNounPhraseProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(theOnesIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(theOnesIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VagueContainerDefiniteNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/VagueContainerDefiniteNounPhraseProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(theOneIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(theOneIn).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VagueContainerIndefiniteNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/VagueContainerIndefiniteNounPhraseProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(anyOneIn)`](../object/qualifiedSingularNounPhrase(anyOneIn).html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>filterForCollectives<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html#filterForCollectives)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>firstTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#firstTokenIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSpecialResponseMatch<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#isSpecialResponseMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#lastTokenIndex)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AmbigResponseKeeper</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>ambigResponses_<code class="language-plaintext highlighter-rouge">](../object/AmbigResponseKeeper.html#ambigResponses_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>reduceDefinite<code class="language-plaintext highlighter-rouge">](#reduceDefinite)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveDefinite<code class="language-plaintext highlighter-rouge">](#resolveDefinite)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveNouns<code class="language-plaintext highlighter-rouge">](#resolveNouns)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>filterTruncations<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html#filterTruncations)</code>  <code class="language-plaintext highlighter-rouge">[</code>getVerifyKeepers<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html#getVerifyKeepers)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>canResolveTo<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#canResolveTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigText<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigText)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigTokenList)</code>  <code class="language-plaintext highlighter-rouge">[</code>setOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#setOrigTokenList)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AmbigResponseKeeper</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addAmbigResponse<code class="language-plaintext highlighter-rouge">](../object/AmbigResponseKeeper.html#addAmbigResponse)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAmbigResponses<code class="language-plaintext highlighter-rouge">](../object/AmbigResponseKeeper.html#getAmbigResponses)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="reduceDefinite"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reduceDefinite (lst, resolver, results)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2086">2086</a>]</p>
+
+<div class="desc">
+
+Do any additional subclass-specific filtering to further reduce the list
+before we decide whether or not we have sufficient specificity. We call
+this just before deciding whether or not to prompt for more information
+("which book do you mean...?"). By default, this simply returns the same
+list unchanged; subclasses that have some further way of narrowing down
+the options can use this opportunity to apply that extra narrowing.
+
+</div>
+
+<p><span id="resolveDefinite"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveDefinite (asker, origText, lst, responseKeeper, resolver, results)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2008">2008</a>]</p>
+
+<div class="desc">
+
+Resolve an underlying phrase using definite noun phrase rules.
+
+</div>
+
+<p><span id="resolveNouns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveNouns (resolver, results)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1997">1997</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

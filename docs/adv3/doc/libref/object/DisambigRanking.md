@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DisambigRanking</span><span class="type">class</span>
 
 [disambig.t](../file/disambig.t.html)\[[282](../source/disambig.t.html#282)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,13 +8,13 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \>
-<a href="t3actor.htm" class="nav">Creating Dynamic Characters</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \>
+<a href="t3actor.html" class="nav">Creating Dynamic Characters</a> \>
 Programming Conversations with NPCs  
-<span class="navnp"><a href="convbkg.htm" class="nav"><em>Prev:</em> Choosing a Conversation
+<span class="navnp"><a href="convbkg.html" class="nav"><em>Prev:</em> Choosing a Conversation
 System</a>    
-<a href="t3npcTravel.htm" class="nav"><em>Next:</em> NPC Travel</a>    
+<a href="t3npcTravel.html" class="nav"><em>Next:</em> NPC Travel</a>    
 </span>
 
 </div>
@@ -21,14 +23,14 @@ System</a>    
 
 # Programming Conversations with NPCs
 
-In the [previous part of this article](convbkg.htm), I offered my
+In the [previous part of this article](convbkg.html), I offered my
 recommendations for a conversation system based on the traditional
 ASK/TELL model, but with some enhancements. The TADS 3 library provides
 support for a lot of the effects I described in my recommendations.
 
 The library doesn't lock you into using any particular conversation
 style; I think it would be relatively easy to implement any of the
-systems mentioned in my [survey](convbkg.htm#survey). Many of the
+systems mentioned in my [survey](convbkg.html#survey). Many of the
 library classes for conversation support could be repurposed for other
 types of conversations, and if all else fails you can always ignore this
 part of the library and build your own completely custom conversation
@@ -243,7 +245,7 @@ anything.)
 
 ## Default responses
 
-As I talked about in the [Recommendations](convbkg.htm#recommendations)
+As I talked about in the [Recommendations](convbkg.html#recommendations)
 section, it's important to provide a good set of customized "default
 responses" for each character, to handle the times when the player asks
 about something that you haven't anticipated. The topic entry system
@@ -585,7 +587,7 @@ the enclosing group conditions are AND'ed together.
 
 In many cases, the "isActive" condition of a given response will simply
 depend on the actor's state. If we go back to the "hair on fire" example
-in the [first part](t3actor.htm) of this article, we'd want the man to
+in the [first part](t3actor.html) of this article, we'd want the man to
 respond to the BACCARAT topic (and, in fact, most topics) differently in
 the hair-on-fire state than in the sitting-at-table state.
 
@@ -645,7 +647,7 @@ directly in the actor.
 ## Topic inventory
 
 If you don't like the "topic inventory" idea I described in the
-[Recommendations](convbkg.htm#recommendations) section, you can skip
+[Recommendations](convbkg.html#recommendations) section, you can skip
 this part. Briefly, the idea is to mark selected topics as suggestions,
 and display a list of the currently open suggestions to the player at
 certain times, such as when the player enters a TOPICS command to
@@ -1935,7 +1937,7 @@ question.
 
 ### Conversations and Agendas
 
-Back in the [first part](t3actor.htm) of this article, we mentioned the
+Back in the [first part](t3actor.html) of this article, we mentioned the
 "agenda" mechanism, which provides a way of giving an NPC goals to carry
 out. The agenda feature is a good way to handle some NPC-initiated
 conversations.
@@ -2038,13 +2040,13 @@ dynamic features as you need them.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \>
-<a href="t3actor.htm" class="nav">Creating Dynamic Characters</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \>
+<a href="t3actor.html" class="nav">Creating Dynamic Characters</a> \>
 Programming Conversations with NPCs  
-<span class="navnp"><a href="convbkg.htm" class="nav"><em>Prev:</em> Choosing a Conversation
+<span class="navnp"><a href="convbkg.html" class="nav"><em>Prev:</em> Choosing a Conversation
 System</a>    
-<a href="t3npcTravel.htm" class="nav"><em>Next:</em> NPC Travel</a>    
+<a href="t3npcTravel.html" class="nav"><em>Next:</em> NPC Travel</a>    
 </span>
 
 </div>

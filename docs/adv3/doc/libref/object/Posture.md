@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Posture</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[103](../source/actor.t.html#103)\],

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Booth</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[224](../source/extras.t.html#224)\],

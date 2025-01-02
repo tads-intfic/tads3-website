@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Gadgets - Introduction<br />
 </strong></td>
-<td style="text-align: right;"><a href="presentlater.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="button.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="presentlater.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="button.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -25,17 +27,17 @@ can be used in gadgets, and then go on to construct a couple of gadgets
 What (for want of a better general term) we might call the library's
 'gadget' classes include:  
   
-[Button](button.htm)  
+[Button](button.html)  
   
-[Lever](lever.htm)  
-   [SpringLever](springlever.htm)  
+[Lever](lever.html)  
+   [SpringLever](springlever.html)  
   
-[OnOffControl](onoffcontrol.htm)  
-   [Switch](switch.htm)  
+[OnOffControl](onoffcontrol.html)  
+   [Switch](switch.html)  
   
-[Settable](settable.htm)  
-   [Dial](dial.htm)  
-      [LabeledDial](labeleddial.htm)  
-      [NumberedDial](numbereddial.htm)  
+[Settable](settable.html)  
+   [Dial](dial.html)  
+      [LabeledDial](labeleddial.html)  
+      [NumberedDial](numbereddial.html)  
   
   

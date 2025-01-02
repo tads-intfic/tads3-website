@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -10,9 +12,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 Overview<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="startupcodegamemain.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="outdoorroom.htm">[Next]</a></td>
+href="startupcodegamemain.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="outdoorroom.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -29,27 +31,27 @@ allow travel between Rooms: their class hierarchy is
 **TravelConnector**  
    Passage  
       Stairway  
-             [StairwayDown](stairwaydown.htm)  
-         [StairwayUp](stairwayup.htm)  
+             [StairwayDown](stairwaydown.html)  
+         [StairwayUp](stairwayup.html)  
   
-      [ThroughPassage](throughpassage.htm)  
-         [BasicDoor](basicdoor.htm)  
-            [Door](door.htm)  
-               [AutoClosingDoor](autoclosingdoor.htm)  
-            [SecretDoor](secretdoor.htm)  
-               [HiddenDoor](hiddendoor.htm)  
-         [ExitOnlyPassage](exitonlypassage.htm)  
-         [PathPassage](pathpassage.htm)  
-   [RoomConnector](roomconnector.htm)  
-      [OneWayRoomConnector](onewayroomconnector.htm)  
-      [RoomAutoConnector](roomautoconnector.htm)  
-         [Room](room.htm)  
-            [DarkRoom](darkroom.htm)  
-            [FloorlessRoom](floorlessroom.htm)  
-            [OutdoorRoom](outdoorroom.htm)  
-   [TravelMessage](travelmessage.htm)  
-      [DeadEndConnector](deadendconnector.htm)  
-      [NoTravelMessage](notravelmessage.htm)  
+      [ThroughPassage](throughpassage.html)  
+         [BasicDoor](basicdoor.html)  
+            [Door](door.html)  
+               [AutoClosingDoor](autoclosingdoor.html)  
+            [SecretDoor](secretdoor.html)  
+               [HiddenDoor](hiddendoor.html)  
+         [ExitOnlyPassage](exitonlypassage.html)  
+         [PathPassage](pathpassage.html)  
+   [RoomConnector](roomconnector.html)  
+      [OneWayRoomConnector](onewayroomconnector.html)  
+      [RoomAutoConnector](roomautoconnector.html)  
+         [Room](room.html)  
+            [DarkRoom](darkroom.html)  
+            [FloorlessRoom](floorlessroom.html)  
+            [OutdoorRoom](outdoorroom.html)  
+   [TravelMessage](travelmessage.html)  
+      [DeadEndConnector](deadendconnector.html)  
+      [NoTravelMessage](notravelmessage.html)  
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -59,7 +61,7 @@ allow travel between Rooms: their class hierarchy is
 <tbody>
 <tr data-valign="TOP">
 <td width="42"></td>
-<td>         <a href="fakeconnector.htm">FakeConnector</a>  <br />
+<td>         <a href="fakeconnector.html">FakeConnector</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -87,7 +89,7 @@ allow travel between Rooms: their class hierarchy is
 <tbody>
 <tr data-valign="TOP">
 <td width="42"></td>
-<td> <a href="askconnector.htm">AskConnector</a>  <br />
+<td> <a href="askconnector.html">AskConnector</a>  <br />
 </td>
 </tr>
 </tbody>
@@ -104,20 +106,20 @@ This is not the case with RoomConnector and its descendants or
 TravelMessage and its.  
   
 Note that TravelMessage also descends from
-[TravelWithMessage](travelwithmessage.htm).  
+[TravelWithMessage](travelwithmessage.html).  
   
-There is also a [ShipBoardRoom](shipboardroom.htm) class that can be
+There is also a [ShipBoardRoom](shipboardroom.html) class that can be
 used as a mix-in class for other kinds of room.  
   
 Room and its subclasses have a number of methods and properties that it
 is sometimes useful to override, these include:  
   
-[atmosphereList](outdoorroom.htm)  
-[brightness](secretdoor.htm)  
-[destName](outdoorroom.htm)  
-[enteringRoom](travelerarriving.htm)  
-[roomAfterAction](roomxxxxaction.htm)  
-[roomBeforeAction](roomxxxxaction.htm)  
-[roomParts](roomparts.htm)  
+[atmosphereList](outdoorroom.html)  
+[brightness](secretdoor.html)  
+[destName](outdoorroom.html)  
+[enteringRoom](travelerarriving.html)  
+[roomAfterAction](roomxxxxaction.html)  
+[roomBeforeAction](roomxxxxaction.html)  
+[roomParts](roomparts.html)  
   
   

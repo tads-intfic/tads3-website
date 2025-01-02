@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,22 +9,22 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SimpleOdor : <a
-href="odor.htm">Odor</a><br />
+href="odor.html">Odor</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="vaporous.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="simplenoise.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="vaporous.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="simplenoise.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-Along with its close relative, [SimpleNoise](simplenoise.htm),
+Along with its close relative, [SimpleNoise](simplenoise.html),
 SimpleOdor offers a very straightforward way of representing an
 intangible sensory presence (i.e. a sound or smell), which can be
 associated either with a location, a particular object, or a number of
 objects. For more sophisticated behaviour involving smells you may want
-to consider the [Odor](odor.htm) class, which we shall come to
+to consider the [Odor](odor.html) class, which we shall come to
 shortly.  
   
 Let's suppose that we want the player to know that there's a whiff of
@@ -85,7 +87,7 @@ the same answer each time, and this is certainly rather more than we can
 do by setting one smellDesc property.  
   
 If we really want, we can take this a stage further still. SimpleOdor
-(and [SimpleNoise](simplenoise.htm)) have an **isAmbient** property
+(and [SimpleNoise](simplenoise.html)) have an **isAmbient** property
 which, by default, is set to true. If we set it to nil, the SimpleOdor
 won't wait for us to SMELL anything, it'll announce its presence each
 time we get a description of the room - or each time we examine the cave
@@ -100,7 +102,7 @@ entrance or the red glow:
 You may or may not think the effect is appropriate here; it calls
 attention to a smell that the player might otherwise miss, but could
 quickly become monotonous. We are getting to the point where it might be
-better to use the greater complexity of an [Odor](odor.htm) to get the
+better to use the greater complexity of an [Odor](odor.html) to get the
 effect we'd really like. Nevertheless, we introduce the isAmbient
 property here just to show what it does; whether you prefer to leave
 isAmbient as nil or true here is up to you. It also illustrates a point

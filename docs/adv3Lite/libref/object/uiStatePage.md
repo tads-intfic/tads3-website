@@ -1,3 +1,5 @@
+---
+---
 <span class="title">uiStatePage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[1464](../source/webui.t.html#1464)\]

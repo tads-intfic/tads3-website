@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedPluralNounPhrase(all)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[5888](../source/en_us.t.html#5888)\]

@@ -1,0 +1,418 @@
+<p><span class="title">Traveler</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#273">273</a>],
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2769">2769</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Traveler is an object that can travel. The two main kinds of travelers
+are Actors and Vehicles. A vehicle can contain multiple actors, so a
+single vehicle travel operation could move several actors.
+
+This class is intended to be multiply inherited, since it is not based
+on any simulation object class.
+
+*Modified in
+[en_us.t](../file/en_us.t.html)\[[2769](../source/en_us.t.html#2769)\]:*  
+English-specific Traveler changes
+
+`class `**`Traveler`**` :   `[`TravelMessageHandler`](../object/TravelMessageHandler.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Traveler</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TravelMessageHandler<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Traveler</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Actor<code class="language-plaintext highlighter-rouge">](../object/Actor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>UntakeableActor<code class="language-plaintext highlighter-rouge">](../object/UntakeableActor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Person<code class="language-plaintext highlighter-rouge">](../object/Person.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Vehicle`](../object/Vehicle.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getTravelerActors<code class="language-plaintext highlighter-rouge">](#getTravelerActors)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTravelerMotiveActors<code class="language-plaintext highlighter-rouge">](#getTravelerMotiveActors)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canTravelVia<code class="language-plaintext highlighter-rouge">](#canTravelVia)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkDirectlyInRoom<code class="language-plaintext highlighter-rouge">](#checkDirectlyInRoom)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkMovingTravelerInto<code class="language-plaintext highlighter-rouge">](#checkMovingTravelerInto)</code>  <code class="language-plaintext highlighter-rouge">[</code>describeArrival<code class="language-plaintext highlighter-rouge">](#describeArrival)</code>  <code class="language-plaintext highlighter-rouge">[</code>describeDeparture<code class="language-plaintext highlighter-rouge">](#describeDeparture)</code>  <code class="language-plaintext highlighter-rouge">[</code>describeNpcArrival<code class="language-plaintext highlighter-rouge">](#describeNpcArrival)</code>  <code class="language-plaintext highlighter-rouge">[</code>describeNpcDeparture<code class="language-plaintext highlighter-rouge">](#describeNpcDeparture)</code>  <code class="language-plaintext highlighter-rouge">[</code>explainNoTravelVia<code class="language-plaintext highlighter-rouge">](#explainNoTravelVia)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEachTravelingActor<code class="language-plaintext highlighter-rouge">](#forEachTravelingActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNotifyTable<code class="language-plaintext highlighter-rouge">](#getNotifyTable)</code>  <code class="language-plaintext highlighter-rouge">[</code>isActorTraveling<code class="language-plaintext highlighter-rouge">](#isActorTraveling)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTravelerCarrying<code class="language-plaintext highlighter-rouge">](#isTravelerCarrying)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelerLocName<code class="language-plaintext highlighter-rouge">](#travelerLocName)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelerPreCond<code class="language-plaintext highlighter-rouge">](#travelerPreCond)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelerRemoteLocName<code class="language-plaintext highlighter-rouge">](#travelerRemoteLocName)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelerSeenBy<code class="language-plaintext highlighter-rouge">](#travelerSeenBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelerTravelTo<code class="language-plaintext highlighter-rouge">](#travelerTravelTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelerTravelWithin<code class="language-plaintext highlighter-rouge">](#travelerTravelWithin)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelMessageHandler</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getNominalTraveler<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#getNominalTraveler)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArriving<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArriving)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingDir<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingDir)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingDownStairs<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingDownStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingLocally<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingLocally)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingThroughPassage<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingThroughPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingUpStairs<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingUpStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingViaPath<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingViaPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDeparting)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingDir<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingDir)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingDownStairs<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingDownStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingLocally<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingLocally)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingThroughPassage<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingThroughPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingUpStairs<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingUpStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingViaPath<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingViaPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayTravelingRemotely<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayTravelingRemotely)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="getTravelerActors"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTravelerActors</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#723">723</a>]</p>
+
+<div class="desc">
+
+Get the list of actors taking part in the travel. When an actor is the
+traveler, this list simply contains the actor itself; for a vehicle or
+other composite traveler that moves more than one actor at a time, this
+should return the list of all of the actors involved in the travel.
+
+</div>
+
+<p><span id="getTravelerMotiveActors"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTravelerMotiveActors</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#734">734</a>]</p>
+
+<div class="desc">
+
+Get the list of actors traveling undo their own power. In the case of an
+actor traveling directly, this is just the actor; in the case of an
+actor pushing something, this is likewise the actor; in the case of a
+group of actors traveling together, this is the list of traveling
+actors; in the case of a vehicle, this is an empty list, since anyone
+traveling with the vehicle is traveling under the vehicle's power.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="canTravelVia"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canTravelVia (connector, dest)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#308">308</a>]</p>
+
+<div class="desc">
+
+Can the traveler travel via the given connector to the given
+destination? Returns true if the travel is permitted, nil if not.
+
+By default, this simply returns true to indicate that the travel is
+allowed. Individual instances can override this to enforce limitations
+on what kind of travel the traveler can perform.
+
+</div>
+
+<p><span id="checkDirectlyInRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkDirectlyInRoom (dest, allowImplicit)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#279">279</a>]</p>
+
+<div class="desc">
+
+Check, using pre-condition rules, that the traveler is directly in the
+given room. We'll attempt to implicitly remove the actor from any nested
+rooms within the given room.
+
+</div>
+
+<p><span id="checkMovingTravelerInto"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkMovingTravelerInto (room, allowImplicit)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#289">289</a>]</p>
+
+<div class="desc">
+
+Check, using pre-condition rules, that the traveler is in the given
+room, moving the traveler to the room if possible.
+
+</div>
+
+<p><span id="describeArrival"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">describeArrival (origin, backConnector)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#415">415</a>]</p>
+
+<div class="desc">
+
+Show my arrival message - this is shown when I'm entering a room in view
+of the player character from a location where the player character could
+not see me. 'backConnector' is the connector in the destination location
+from which we appear to be emerging.
+
+</div>
+
+<p><span id="describeDeparture"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">describeDeparture (dest, connector)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#327">327</a>]</p>
+
+<div class="desc">
+
+Show my departure message - this is shown when I'm leaving a room where
+the player character can see me for another room where the player
+character cannot see me.
+
+</div>
+
+<p><span id="describeNpcArrival"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">describeNpcArrival (origin, backConnector)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#462">462</a>]</p>
+
+<div class="desc">
+
+Describe the arrival of a non-player character or any other traveler
+that doesn't involve the player character.
+
+</div>
+
+<p><span id="describeNpcDeparture"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">describeNpcDeparture (dest, connector)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#355">355</a>]</p>
+
+<div class="desc">
+
+Describe the departure of a non-player character, or any traveler not
+involving the player character.
+
+</div>
+
+<p><span id="explainNoTravelVia"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">explainNoTravelVia (connector, dest)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#320">320</a>]</p>
+
+<div class="desc">
+
+Explain why the given travel is not possible. This is called when
+canTravelVia() returns nil, to display a report to the player explaining
+why the travel was disallowed.
+
+By default, we do nothing, since our default canTravelVia() never
+disallows any travel. If canTravelVia() is overridden to disallow travel
+under some conditions, this must be overridden to generate an
+appropriate explanatory report.
+
+</div>
+
+<p><span id="forEachTravelingActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEachTravelingActor (func)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#710">710</a>]</p>
+
+<div class="desc">
+
+invoke a callback function for each traveling actor
+
+</div>
+
+<p><span id="getNotifyTable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNotifyTable ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#665">665</a>]</p>
+
+<div class="desc">
+
+Get a lookup table giving the set of objects to be notified of a
+beforeTravel/afterTravel event. By default, we return a table including
+every object connected to the traveler by containment.
+
+</div>
+
+<p><span id="isActorTraveling"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActorTraveling (actor)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#681">681</a>]</p>
+
+<div class="desc">
+
+Is the given actor traveling with this traveler? Returns true if the
+actor is in my getTravelerActors list.
+
+</div>
+
+<p><span id="isTravelerCarrying"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isTravelerCarrying (obj)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#692">692</a>]</p>
+
+<div class="desc">
+
+Is the given object being carried by the traveler? Returns true if the
+object is inside the traveler itself, or is inside any of the actors
+traveling.
+
+</div>
+
+<p><span id="travelerLocName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerLocName ( )</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2776">2776</a>]</p>
+
+<div class="desc">
+
+Get my location's name, from the PC's perspective, for describing my
+arrival to or departure from my current location. We'll simply return
+our location's destName, or "the area" if it doesn't have one.
+
+</div>
+
+<p><span id="travelerPreCond"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerPreCond (conn)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#298">298</a>]</p>
+
+<div class="desc">
+
+Get the travel preconditions specific to the traveler, for the given
+connector. By default, we return no extra conditions.
+
+</div>
+
+<p><span id="travelerRemoteLocName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerRemoteLocName ( )</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2792">2792</a>]</p>
+
+<div class="desc">
+
+Get my "remote" location name, from the PC's perspective. This returns
+my location name, but only if my location is remote from the PC's
+perspective - that is, my location has to be outside of the PC's
+top-level room. If we're within the PC's top-level room, we'll simply
+return an empty string.
+
+</div>
+
+<p><span id="travelerSeenBy"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerSeenBy (actor)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#675">675</a>]</p>
+
+<div class="desc">
+
+Determine if the given actor can see this traveler. By default, we'll
+simply check to see if the actor can see 'self'.
+
+</div>
+
+<p><span id="travelerTravelTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerTravelTo (dest, connector, backConnector)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#555">555</a>]</p>
+
+<div class="desc">
+
+Travel to a new location. Moves the traveler to a new location via the
+given connector, triggering any side effects of the travel.
+
+Note that this routine is not normally called directly; in most cases,
+the actor's travelTo is called, and it in turn invokes this method in
+the appropriate traveler.
+
+'dest' is the new location to which we're traveling. 'connector' is the
+TravelConnector we're traversing from the source location to reach the
+new destination; the connector is normally the invoker of this routine.
+'backConnector' is the connector in the destination from which the actor
+will appear to emerge on the other end of the travel.
+
+</div>
+
+<p><span id="travelerTravelWithin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerTravelWithin (actor, dest)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#655">655</a>]</p>
+
+<div class="desc">
+
+Perform "local" travel - that is, travel between nested rooms within a
+single top-level location. By default, we simply defer to the actor to
+let it perform the local travel.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Banishing (and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Banishing (and
 Changing) Awkward Messages  
-<span class="navnp"><a href="advtop.htm" class="nav"><em>Prev:</em> Advanced Topics</a>
+<span class="navnp"><a href="advtop.html" class="nav"><em>Prev:</em> Advanced Topics</a>
    
-<a href="t3cycle.htm" class="nav"><em>Next:</em> The Command Execution
+<a href="t3cycle.html" class="nav"><em>Next:</em> The Command Execution
 Cycle</a>     </span>
 
 </div>
@@ -94,7 +96,7 @@ spurious additional period/full stop.:
 It's possible to overcome this with a bit more fiddling, but it does
 become very fiddly. The proper way to fix this is by using a custom
 openableContentsLister; this method is explained further in the article
-on [Listers](t3lister.htm#openable). There is, however, a much easier
+on [Listers](t3lister.html#openable). There is, however, a much easier
 way if you include the custmsg.t extension in your game. This extension
 defines a new property, openStatusReportable (on analogy with the
 library's lockStatusReportable). If this property is set to nil, the
@@ -563,12 +565,12 @@ trying to deal with.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Banishing (and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Banishing (and
 Changing) Awkward Messages  
-<span class="navnp"><a href="advtop.htm" class="nav"><em>Prev:</em> Advanced Topics</a>
+<span class="navnp"><a href="advtop.html" class="nav"><em>Prev:</em> Advanced Topics</a>
    
-<a href="t3cycle.htm" class="nav"><em>Next:</em> The Command Execution
+<a href="t3cycle.html" class="nav"><em>Next:</em> The Command Execution
 Cycle</a>     </span>
 
 </div>

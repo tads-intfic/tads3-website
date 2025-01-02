@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](addingitemstothegame.htm)
-  [\[Next\]](startinganewgame.htm)*
+*[\[Previous\]](addingitemstothegame.html)
+  [\[Next\]](startinganewgame.html)*
 
 ## Making the Items do Something
 
@@ -819,7 +821,7 @@ puzzles of increasing complexity.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](addingitemstothegame.htm)
-  [\[Next\]](startinganewgame.htm)*
+*[\[Previous\]](addingitemstothegame.html)
+  [\[Next\]](startinganewgame.html)*
 
 </div>

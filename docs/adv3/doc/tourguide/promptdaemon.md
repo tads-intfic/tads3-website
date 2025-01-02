@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>PromptDaemon : Event<br />
 </strong></td>
-<td style="text-align: right;"><a href="sensedaemon.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="onetimepromptdaemon.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="sensedaemon.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="onetimepromptdaemon.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -37,5 +39,5 @@ Then, when you've finished with the promptDaemon you can simply call:
 daemonID.removeEvent();  
   
 An example of the possible use of a PromptDaemon is given later in
-connexion with a [bomb](senseconnector.htm).  
+connexion with a [bomb](senseconnector.html).  
   

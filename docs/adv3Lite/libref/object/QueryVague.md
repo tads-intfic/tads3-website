@@ -1,3 +1,5 @@
+---
+---
 <span class="title">QueryVague</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1785](../source/actions.t.html#1785)\]

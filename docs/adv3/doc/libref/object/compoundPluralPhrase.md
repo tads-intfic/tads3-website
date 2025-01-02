@@ -1,3 +1,5 @@
+---
+---
 <span class="title">compoundPluralPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`compoundPluralPhrase(of)`](../object/compoundPluralPhrase(of).html)</span>` :   `[`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)

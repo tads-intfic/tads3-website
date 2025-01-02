@@ -1,0 +1,171 @@
+<p><span class="title">Topic</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#39">39</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Topic is an object representing some piece of knowledge in the story.
+Actors can use Topic objects in commands such as "ask" and "tell".
+
+A physical simulation object can be a Topic through multiple
+inheritance. In addition, a game can define Topic objects for abstract
+conversation topics that don't correspond to simulation objects; for
+example, a topic could be created for "the meaning of life" to allow a
+command such as "ask guru about meaning of life."
+
+The key distinction between Topic objects and regular objects is that a
+Topic can represent an abstract, non-physical concept that isn't
+connected to any "physical" object in the simulation.
+
+`class `**`Topic`**` :   `[`VocabObject`](../object/VocabObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Topic</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>VocabObject<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canResolvePossessive<code class="language-plaintext highlighter-rouge">](#canResolvePossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>isKnown<code class="language-plaintext highlighter-rouge">](#isKnown)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">VocabObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>disambigPromptOrder<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#disambigPromptOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>owner<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#owner)</code>  <code class="language-plaintext highlighter-rouge">[</code>pluralOrder<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#pluralOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>vocabLikelihood<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#vocabLikelihood)</code>  <code class="language-plaintext highlighter-rouge">[</code>vocabWords<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#vocabWords)</code>  <code class="language-plaintext highlighter-rouge">[</code>weakTokens<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#weakTokens)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canBeSensed<code class="language-plaintext highlighter-rouge">](#canBeSensed)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">VocabObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addToDictionary<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#addToDictionary)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>expandPronounList<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#expandPronounList)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterResolveList<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#filterResolveList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getFacets<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#getFacets)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNominalOwner<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#getNominalOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>inheritVocab<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#inheritVocab)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeVocab<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#initializeVocab)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeVocabWith<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#initializeVocabWith)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOwnedBy<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#isOwnedBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchName<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#matchName)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchNameCommon<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#matchNameCommon)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchNameDisambig<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#matchNameDisambig)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwNoMatchForLocation<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#throwNoMatchForLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwNoMatchForPossessive<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#throwNoMatchForPossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwNothingInLocation<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html#throwNothingInLocation)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="canResolvePossessive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canResolvePossessive</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#69">69</a>]</p>
+
+<div class="desc">
+
+a topic cannot by default be used to resolve a possessive phrase
+
+</div>
+
+<p><span id="isKnown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isKnown</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#57">57</a>]</p>
+
+<div class="desc">
+
+Is the topic known? If this is true, the topic is in scope for actions
+that operate on topics, such as "ask about" and "tell about." If this is
+nil, the topic isn't known.
+
+By default, we mark all topics as known to begin with, which allows
+discussion of any topic at any time. Some authors prefer to keep track
+of which topics the player character actually has reason to know about
+within the context of the game, making topics available for conversation
+only after they become known for some good reason, such as another
+character mentioning them in conversation.
+
+Note that, as with Thing.isKnown, this is only the DEFAULT 'known'
+property. Each actor can have its own separate 'known' property by
+defining the actor's 'knownProp' to a different property name.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="canBeSensed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canBeSensed (sense, trans, ambient)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#66">66</a>]</p>
+
+<div class="desc">
+
+Topics are abstract objects, so they can't be sensed with any of the
+physical senses, even if they're ever included as part of a containment
+hierarchy (which might be convenient in some cases for purposes of
+associating a topic with a physical object, for example).
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

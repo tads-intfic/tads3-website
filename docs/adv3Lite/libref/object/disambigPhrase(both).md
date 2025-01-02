@@ -1,3 +1,5 @@
+---
+---
 <span class="title">disambigPhrase(both)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[995](../source/grammar.t.html#995)\]

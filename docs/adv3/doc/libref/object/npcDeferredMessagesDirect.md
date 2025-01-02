@@ -1,3 +1,5 @@
+---
+---
 <span class="title">npcDeferredMessagesDirect</span><span class="type">object</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2457](../source/msg_neu.t.html#2457)\]

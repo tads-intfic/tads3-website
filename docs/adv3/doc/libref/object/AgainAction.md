@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AgainAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[70](../source/actions.t.html#70)\]

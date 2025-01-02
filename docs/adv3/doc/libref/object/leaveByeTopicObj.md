@@ -1,3 +1,5 @@
+---
+---
 <span class="title">leaveByeTopicObj</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[3494](../source/actor.t.html#3494)\]

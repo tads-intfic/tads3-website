@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TipModeAction</span><span class="type">class</span>
 
 [tips.t](../file/tips.t.html)\[[216](../source/tips.t.html#216)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Switch</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5318](../source/objects.t.html#5318)\]

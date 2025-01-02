@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultWestWall</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[5493](../source/travel.t.html#5493)\]

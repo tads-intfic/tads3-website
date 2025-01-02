@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Messages  
-<span class="navnp"><a href="actres.htm" class="nav"><em>Prev:</em> Action Results</a>
-    <a href="doer.htm" class="nav"><em>Next:</em> Doers</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Messages  
+<span class="navnp"><a href="actres.html" class="nav"><em>Prev:</em> Action Results</a>
+    <a href="doer.html" class="nav"><em>Next:</em> Doers</a>     </span>
 
 </div>
 
@@ -104,8 +106,8 @@ exceptionally ripe"). For that kind of thing you'd typically just
 override an appropriate message property (or method) with your own
 string (e.g. <span class="code">smellDesc = "The cheese smells
 exceptionally ripe. "</span>), using, for example, one of the properties
-provided for the purpose on the [Thing](thing.htm) class or one of the
-methods described in the discussion of [Action Results](actres.htm).
+provided for the purpose on the [Thing](thing.html) class or one of the
+methods described in the discussion of [Action Results](actres.html).
 
   
 
@@ -475,7 +477,7 @@ facilities to search your entire project). This may work, but it's not
 ideal, so adv3Lite now provides a couple of alternatives.
 
 1.  You can use the Messages tab of the [Library Reference
-    Manual](../libref/index.htm). This will bring up alphabetical list
+    Manual](../libref/index.html). This will bring up alphabetical list
     of all the message ID's of the DMsg() and BMsg() definitions in the
     library. Clicking on any of these will bring up a complete list of
     all the DMsg() and BMsg() definitions in the main panel, which
@@ -1472,9 +1474,9 @@ them.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Messages  
-<span class="navnp"><a href="actres.htm" class="nav"><em>Prev:</em> Action Results</a>
-    <a href="doer.htm" class="nav"><em>Next:</em> Doers</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Messages  
+<span class="navnp"><a href="actres.html" class="nav"><em>Prev:</em> Action Results</a>
+    <a href="doer.html" class="nav"><em>Next:</em> Doers</a>     </span>
 
 </div>

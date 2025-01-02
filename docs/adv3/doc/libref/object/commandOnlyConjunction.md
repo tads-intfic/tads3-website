@@ -1,3 +1,5 @@
+---
+---
 <span class="title">commandOnlyConjunction</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`commandOnlyConjunction(nonSentenceEnding)`](../object/commandOnlyConjunction(nonSentenceEnding).html)</span>` :   `[`BasicProd`](../object/BasicProd.html)

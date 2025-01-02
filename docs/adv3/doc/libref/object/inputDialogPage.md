@@ -1,3 +1,5 @@
+---
+---
 <span class="title">inputDialogPage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[3443](../source/webui.t.html#3443)\]

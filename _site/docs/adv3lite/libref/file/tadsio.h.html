@@ -1,0 +1,2732 @@
+<p><span class="title">tadsio.h</span><span class="type">file</span></p>
+
+<p><a href="../source/tadsio.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<div class="fdesc">
+
+This header defines the tads-io intrinsic function set.
+
+The TADS input/output function set provides access to the user
+interface. This lets you read input from the keyboard and display output
+on the monitor or terminal. It also provides access to windowing
+features (via the "banner" functions) on systems that support multiple
+display windows (which doesn't necessarily mean GUI-type systems: many
+character-mode systems support the banner operations as well, simply by
+dividing up the character-mode screen into rectangular regions).
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>bannerClear<code class="language-plaintext highlighter-rouge">](#bannerClear)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerCreate<code class="language-plaintext highlighter-rouge">](#bannerCreate)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerDelete<code class="language-plaintext highlighter-rouge">](#bannerDelete)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerFlush<code class="language-plaintext highlighter-rouge">](#bannerFlush)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerGetInfo<code class="language-plaintext highlighter-rouge">](#bannerGetInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerGoTo<code class="language-plaintext highlighter-rouge">](#bannerGoTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerSay<code class="language-plaintext highlighter-rouge">](#bannerSay)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerSetScreenColor<code class="language-plaintext highlighter-rouge">](#bannerSetScreenColor)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerSetSize<code class="language-plaintext highlighter-rouge">](#bannerSetSize)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerSetTextColor<code class="language-plaintext highlighter-rouge">](#bannerSetTextColor)</code>  <code class="language-plaintext highlighter-rouge">[</code>bannerSizeToContents<code class="language-plaintext highlighter-rouge">](#bannerSizeToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>clearScreen<code class="language-plaintext highlighter-rouge">](#clearScreen)</code>  <code class="language-plaintext highlighter-rouge">[</code>flushOutput<code class="language-plaintext highlighter-rouge">](#flushOutput)</code>  <code class="language-plaintext highlighter-rouge">[</code>getLocalCharSet<code class="language-plaintext highlighter-rouge">](#getLocalCharSet)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputDialog<code class="language-plaintext highlighter-rouge">](#inputDialog)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputEvent<code class="language-plaintext highlighter-rouge">](#inputEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputFile<code class="language-plaintext highlighter-rouge">](#inputFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputKey<code class="language-plaintext highlighter-rouge">](#inputKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputLine<code class="language-plaintext highlighter-rouge">](#inputLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputLineCancel<code class="language-plaintext highlighter-rouge">](#inputLineCancel)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputLineTimeout<code class="language-plaintext highlighter-rouge">](#inputLineTimeout)</code>  <code class="language-plaintext highlighter-rouge">[</code>logConsoleClose<code class="language-plaintext highlighter-rouge">](#logConsoleClose)</code>  <code class="language-plaintext highlighter-rouge">[</code>logConsoleCreate<code class="language-plaintext highlighter-rouge">](#logConsoleCreate)</code>  <code class="language-plaintext highlighter-rouge">[</code>logConsoleSay<code class="language-plaintext highlighter-rouge">](#logConsoleSay)</code>  <code class="language-plaintext highlighter-rouge">[</code>logInputEvent<code class="language-plaintext highlighter-rouge">](#logInputEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>morePrompt<code class="language-plaintext highlighter-rouge">](#morePrompt)</code>  <code class="language-plaintext highlighter-rouge">[</code>resExists<code class="language-plaintext highlighter-rouge">](#resExists)</code>  <code class="language-plaintext highlighter-rouge">[</code>setLogFile<code class="language-plaintext highlighter-rouge">](#setLogFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>setScriptFile<code class="language-plaintext highlighter-rouge">](#setScriptFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>statusMode<code class="language-plaintext highlighter-rouge">](#statusMode)</code>  <code class="language-plaintext highlighter-rouge">[</code>statusRight<code class="language-plaintext highlighter-rouge">](#statusRight)</code>  <code class="language-plaintext highlighter-rouge">[</code>systemInfo<code class="language-plaintext highlighter-rouge">](#systemInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>tadsSay<code class="language-plaintext highlighter-rouge">](#tadsSay)</code>  <code class="language-plaintext highlighter-rouge">[</code>timeDelay<code class="language-plaintext highlighter-rouge">](#timeDelay)</code>  `</p>
+
+<p><span id="_MacroSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Macros</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>BannerAfter<code class="language-plaintext highlighter-rouge">](#BannerAfter)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerAlignBottom<code class="language-plaintext highlighter-rouge">](#BannerAlignBottom)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerAlignLeft<code class="language-plaintext highlighter-rouge">](#BannerAlignLeft)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerAlignRight<code class="language-plaintext highlighter-rouge">](#BannerAlignRight)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerAlignTop<code class="language-plaintext highlighter-rouge">](#BannerAlignTop)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerBefore<code class="language-plaintext highlighter-rouge">](#BannerBefore)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerFirst<code class="language-plaintext highlighter-rouge">](#BannerFirst)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerLast<code class="language-plaintext highlighter-rouge">](#BannerLast)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerSizeAbsolute<code class="language-plaintext highlighter-rouge">](#BannerSizeAbsolute)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerSizePercent<code class="language-plaintext highlighter-rouge">](#BannerSizePercent)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerStyleAutoHScroll<code class="language-plaintext highlighter-rouge">](#BannerStyleAutoHScroll)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerStyleAutoVScroll<code class="language-plaintext highlighter-rouge">](#BannerStyleAutoVScroll)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerStyleBorder<code class="language-plaintext highlighter-rouge">](#BannerStyleBorder)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerStyleHScroll<code class="language-plaintext highlighter-rouge">](#BannerStyleHScroll)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerStyleHStrut<code class="language-plaintext highlighter-rouge">](#BannerStyleHStrut)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerStyleMoreMode<code class="language-plaintext highlighter-rouge">](#BannerStyleMoreMode)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerStyleTabAlign<code class="language-plaintext highlighter-rouge">](#BannerStyleTabAlign)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerStyleVScroll<code class="language-plaintext highlighter-rouge">](#BannerStyleVScroll)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerStyleVStrut<code class="language-plaintext highlighter-rouge">](#BannerStyleVStrut)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerTypeText<code class="language-plaintext highlighter-rouge">](#BannerTypeText)</code>  <code class="language-plaintext highlighter-rouge">[</code>BannerTypeTextGrid<code class="language-plaintext highlighter-rouge">](#BannerTypeTextGrid)</code>  <code class="language-plaintext highlighter-rouge">[</code>CharsetDisplay<code class="language-plaintext highlighter-rouge">](#CharsetDisplay)</code>  <code class="language-plaintext highlighter-rouge">[</code>CharsetFileCont<code class="language-plaintext highlighter-rouge">](#CharsetFileCont)</code>  <code class="language-plaintext highlighter-rouge">[</code>CharsetFileName<code class="language-plaintext highlighter-rouge">](#CharsetFileName)</code>  <code class="language-plaintext highlighter-rouge">[</code>CloseCommand<code class="language-plaintext highlighter-rouge">](#CloseCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorAqua<code class="language-plaintext highlighter-rouge">](#ColorAqua)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorBlack<code class="language-plaintext highlighter-rouge">](#ColorBlack)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorBlue<code class="language-plaintext highlighter-rouge">](#ColorBlue)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorCyan<code class="language-plaintext highlighter-rouge">](#ColorCyan)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorFuchsia<code class="language-plaintext highlighter-rouge">](#ColorFuchsia)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorGray<code class="language-plaintext highlighter-rouge">](#ColorGray)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorGreen<code class="language-plaintext highlighter-rouge">](#ColorGreen)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorInput<code class="language-plaintext highlighter-rouge">](#ColorInput)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorLime<code class="language-plaintext highlighter-rouge">](#ColorLime)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorMagenta<code class="language-plaintext highlighter-rouge">](#ColorMagenta)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorMaroon<code class="language-plaintext highlighter-rouge">](#ColorMaroon)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorNavy<code class="language-plaintext highlighter-rouge">](#ColorNavy)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorOlive<code class="language-plaintext highlighter-rouge">](#ColorOlive)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorPurple<code class="language-plaintext highlighter-rouge">](#ColorPurple)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorRed<code class="language-plaintext highlighter-rouge">](#ColorRed)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorRGB<code class="language-plaintext highlighter-rouge">](#ColorRGB)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorSilver<code class="language-plaintext highlighter-rouge">](#ColorSilver)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorStatusBg<code class="language-plaintext highlighter-rouge">](#ColorStatusBg)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorStatusText<code class="language-plaintext highlighter-rouge">](#ColorStatusText)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorTeal<code class="language-plaintext highlighter-rouge">](#ColorTeal)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorText<code class="language-plaintext highlighter-rouge">](#ColorText)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorTextBg<code class="language-plaintext highlighter-rouge">](#ColorTextBg)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorTransparent<code class="language-plaintext highlighter-rouge">](#ColorTransparent)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorWhite<code class="language-plaintext highlighter-rouge">](#ColorWhite)</code>  <code class="language-plaintext highlighter-rouge">[</code>ColorYellow<code class="language-plaintext highlighter-rouge">](#ColorYellow)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileTypeBin<code class="language-plaintext highlighter-rouge">](#FileTypeBin)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileTypeCmd<code class="language-plaintext highlighter-rouge">](#FileTypeCmd)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileTypeData<code class="language-plaintext highlighter-rouge">](#FileTypeData)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileTypeLog<code class="language-plaintext highlighter-rouge">](#FileTypeLog)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileTypeT3Image<code class="language-plaintext highlighter-rouge">](#FileTypeT3Image)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileTypeT3Save<code class="language-plaintext highlighter-rouge">](#FileTypeT3Save)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileTypeText<code class="language-plaintext highlighter-rouge">](#FileTypeText)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileTypeUnknown<code class="language-plaintext highlighter-rouge">](#FileTypeUnknown)</code>  <code class="language-plaintext highlighter-rouge">[</code>HelpCommand<code class="language-plaintext highlighter-rouge">](#HelpCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgIconError<code class="language-plaintext highlighter-rouge">](#InDlgIconError)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgIconInfo<code class="language-plaintext highlighter-rouge">](#InDlgIconInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgIconNone<code class="language-plaintext highlighter-rouge">](#InDlgIconNone)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgIconQuestion<code class="language-plaintext highlighter-rouge">](#InDlgIconQuestion)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgIconWarning<code class="language-plaintext highlighter-rouge">](#InDlgIconWarning)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgLblCancel<code class="language-plaintext highlighter-rouge">](#InDlgLblCancel)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgLblNo<code class="language-plaintext highlighter-rouge">](#InDlgLblNo)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgLblOk<code class="language-plaintext highlighter-rouge">](#InDlgLblOk)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgLblYes<code class="language-plaintext highlighter-rouge">](#InDlgLblYes)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgOk<code class="language-plaintext highlighter-rouge">](#InDlgOk)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgOkCancel<code class="language-plaintext highlighter-rouge">](#InDlgOkCancel)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgYesNo<code class="language-plaintext highlighter-rouge">](#InDlgYesNo)</code>  <code class="language-plaintext highlighter-rouge">[</code>InDlgYesNoCancel<code class="language-plaintext highlighter-rouge">](#InDlgYesNoCancel)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtEndQuietScript<code class="language-plaintext highlighter-rouge">](#InEvtEndQuietScript)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtEndScript<code class="language-plaintext highlighter-rouge">](#InEvtEndScript)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtEof<code class="language-plaintext highlighter-rouge">](#InEvtEof)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtHref<code class="language-plaintext highlighter-rouge">](#InEvtHref)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtKey<code class="language-plaintext highlighter-rouge">](#InEvtKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtLine<code class="language-plaintext highlighter-rouge">](#InEvtLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtNoTimeout<code class="language-plaintext highlighter-rouge">](#InEvtNoTimeout)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtNotimeout<code class="language-plaintext highlighter-rouge">](#InEvtNotimeout)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtSysCommand<code class="language-plaintext highlighter-rouge">](#InEvtSysCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>InEvtTimeout<code class="language-plaintext highlighter-rouge">](#InEvtTimeout)</code>  <code class="language-plaintext highlighter-rouge">[</code>InFileCancel<code class="language-plaintext highlighter-rouge">](#InFileCancel)</code>  <code class="language-plaintext highlighter-rouge">[</code>InFileFailure<code class="language-plaintext highlighter-rouge">](#InFileFailure)</code>  <code class="language-plaintext highlighter-rouge">[</code>InFileOpen<code class="language-plaintext highlighter-rouge">](#InFileOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>InFileSave<code class="language-plaintext highlighter-rouge">](#InFileSave)</code>  <code class="language-plaintext highlighter-rouge">[</code>InFileSuccess<code class="language-plaintext highlighter-rouge">](#InFileSuccess)</code>  <code class="language-plaintext highlighter-rouge">[</code>LogTypeCommand<code class="language-plaintext highlighter-rouge">](#LogTypeCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>LogTypeScript<code class="language-plaintext highlighter-rouge">](#LogTypeScript)</code>  <code class="language-plaintext highlighter-rouge">[</code>LogTypeTranscript<code class="language-plaintext highlighter-rouge">](#LogTypeTranscript)</code>  <code class="language-plaintext highlighter-rouge">[</code>MainWindowLogHandle<code class="language-plaintext highlighter-rouge">](#MainWindowLogHandle)</code>  <code class="language-plaintext highlighter-rouge">[</code>QuitCommand<code class="language-plaintext highlighter-rouge">](#QuitCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>RestoreCommand<code class="language-plaintext highlighter-rouge">](#RestoreCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>SaveCommand<code class="language-plaintext highlighter-rouge">](#SaveCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>ScriptFileEvent<code class="language-plaintext highlighter-rouge">](#ScriptFileEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>ScriptFileNonstop<code class="language-plaintext highlighter-rouge">](#ScriptFileNonstop)</code>  <code class="language-plaintext highlighter-rouge">[</code>ScriptFileQuiet<code class="language-plaintext highlighter-rouge">](#ScriptFileQuiet)</code>  <code class="language-plaintext highlighter-rouge">[</code>ScriptReqGetStatus<code class="language-plaintext highlighter-rouge">](#ScriptReqGetStatus)</code>  <code class="language-plaintext highlighter-rouge">[</code>StatModeNormal<code class="language-plaintext highlighter-rouge">](#StatModeNormal)</code>  <code class="language-plaintext highlighter-rouge">[</code>StatModeStatus<code class="language-plaintext highlighter-rouge">](#StatModeStatus)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoAudioCrossfade<code class="language-plaintext highlighter-rouge">](#SysInfoAudioCrossfade)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoAudioFade<code class="language-plaintext highlighter-rouge">](#SysInfoAudioFade)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoBanners<code class="language-plaintext highlighter-rouge">](#SysInfoBanners)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoFadeMIDI<code class="language-plaintext highlighter-rouge">](#SysInfoFadeMIDI)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoFadeMPEG<code class="language-plaintext highlighter-rouge">](#SysInfoFadeMPEG)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoFadeOGG<code class="language-plaintext highlighter-rouge">](#SysInfoFadeOGG)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoFadeWAV<code class="language-plaintext highlighter-rouge">](#SysInfoFadeWAV)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoIClassHTML<code class="language-plaintext highlighter-rouge">](#SysInfoIClassHTML)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoIClassText<code class="language-plaintext highlighter-rouge">](#SysInfoIClassText)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoIClassTextGUI<code class="language-plaintext highlighter-rouge">](#SysInfoIClassTextGUI)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoInterpClass<code class="language-plaintext highlighter-rouge">](#SysInfoInterpClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoJpeg<code class="language-plaintext highlighter-rouge">](#SysInfoJpeg)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoLinksFtp<code class="language-plaintext highlighter-rouge">](#SysInfoLinksFtp)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoLinksHttp<code class="language-plaintext highlighter-rouge">](#SysInfoLinksHttp)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoLinksMailto<code class="language-plaintext highlighter-rouge">](#SysInfoLinksMailto)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoLinksNews<code class="language-plaintext highlighter-rouge">](#SysInfoLinksNews)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoLinksTelnet<code class="language-plaintext highlighter-rouge">](#SysInfoLinksTelnet)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoMidi<code class="language-plaintext highlighter-rouge">](#SysInfoMidi)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoMng<code class="language-plaintext highlighter-rouge">](#SysInfoMng)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoMngAlpha<code class="language-plaintext highlighter-rouge">](#SysInfoMngAlpha)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoMngTrans<code class="language-plaintext highlighter-rouge">](#SysInfoMngTrans)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoMpeg<code class="language-plaintext highlighter-rouge">](#SysInfoMpeg)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoMpeg1<code class="language-plaintext highlighter-rouge">](#SysInfoMpeg1)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoMpeg2<code class="language-plaintext highlighter-rouge">](#SysInfoMpeg2)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoMpeg3<code class="language-plaintext highlighter-rouge">](#SysInfoMpeg3)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoOgg<code class="language-plaintext highlighter-rouge">](#SysInfoOgg)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoOsName<code class="language-plaintext highlighter-rouge">](#SysInfoOsName)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoPng<code class="language-plaintext highlighter-rouge">](#SysInfoPng)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoPngAlpha<code class="language-plaintext highlighter-rouge">](#SysInfoPngAlpha)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoPngTrans<code class="language-plaintext highlighter-rouge">](#SysInfoPngTrans)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoPrefImages<code class="language-plaintext highlighter-rouge">](#SysInfoPrefImages)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoPrefLinks<code class="language-plaintext highlighter-rouge">](#SysInfoPrefLinks)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoPrefMusic<code class="language-plaintext highlighter-rouge">](#SysInfoPrefMusic)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoPrefSounds<code class="language-plaintext highlighter-rouge">](#SysInfoPrefSounds)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoTextColors<code class="language-plaintext highlighter-rouge">](#SysInfoTextColors)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoTextHilite<code class="language-plaintext highlighter-rouge">](#SysInfoTextHilite)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoTxcAnsiFg<code class="language-plaintext highlighter-rouge">](#SysInfoTxcAnsiFg)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoTxcAnsiFgBg<code class="language-plaintext highlighter-rouge">](#SysInfoTxcAnsiFgBg)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoTxcNone<code class="language-plaintext highlighter-rouge">](#SysInfoTxcNone)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoTxcParam<code class="language-plaintext highlighter-rouge">](#SysInfoTxcParam)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoTxcRGB<code class="language-plaintext highlighter-rouge">](#SysInfoTxcRGB)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoVersion<code class="language-plaintext highlighter-rouge">](#SysInfoVersion)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoWav<code class="language-plaintext highlighter-rouge">](#SysInfoWav)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoWavMidiOvl<code class="language-plaintext highlighter-rouge">](#SysInfoWavMidiOvl)</code>  <code class="language-plaintext highlighter-rouge">[</code>SysInfoWavOvl<code class="language-plaintext highlighter-rouge">](#SysInfoWavOvl)</code>  <code class="language-plaintext highlighter-rouge">[</code>UndoCommand<code class="language-plaintext highlighter-rouge">](#UndoCommand)</code>  `</p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_TemplateSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Templates</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="bannerClear"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerClear (handle)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#350">350</a>]</p>
+
+<div class="desc">
+
+Clear the contents of a banner window. 'color' is the color to use for
+the screen color after clearing the window, given as a ColorXxx value
+(see below).
+
+</div>
+
+<p><span id="bannerCreate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerCreate (parent, where, other, windowType, align, size, sizeUnits, styleFlags)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#336">336</a>]</p>
+
+<div class="desc">
+
+Create a banner window. Returns the "handle" of the new window, which is
+used to identify the window in subsequent bannerXxx() functions. Not all
+interpreters support banner windows; if the interpreter does not support
+this feature, the return value is nil.
+
+'parent' is the handle of the parent window; if this is nil, the banner
+is split off from the main display window. 'where' is a BannerXxx value
+giving the list position; if this is BannerBefore or BannerAfter,
+'other' is the handle of an existing banner window child of the same
+parent. 'windowType' is a BannerTypeXxx value giving the type of window
+to create. 'align' is a BannerAlignXxx value giving the alignment - that
+is, the edge of the parent window to which the new banner window
+attaches. 'size' is the size of the window, in the units given by
+'sizeUnits', which is a BannerSizeXxx value. 'styleFlags' is a
+combination of BannerStyleXxx bit flags that specifies the desired
+combination of visual styles and UI behavior for the new window.
+
+</div>
+
+<p><span id="bannerDelete"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerDelete (handle)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#343">343</a>]</p>
+
+<div class="desc">
+
+Delete a banner window. 'handle' is the handle to the window to be
+removed.
+
+</div>
+
+<p><span id="bannerFlush"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerFlush (handle)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#368">368</a>]</p>
+
+<div class="desc">
+
+Flush all buffers for a banner window. This ensures that any text
+written with bannerSay() is actually displayed for the user to see
+(rather than being held in internal buffers).
+
+</div>
+
+<p><span id="bannerGetInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerGetInfo (handle)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#418">418</a>]</p>
+
+<div class="desc">
+
+Get information on the banner. This returns a list giving a detailed set
+of information describing the banner.
+
+</div>
+
+<p><span id="bannerGoTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerGoTo (handle, row, col)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#393">393</a>]</p>
+
+<div class="desc">
+
+Go to to an output position. This is meaningful only for
+BannerTypeTextGrid windows. This sets the next text output position to
+the given row and column in the text grid; the next call to bannerSay()
+will display its output starting at this position.
+
+</div>
+
+<p><span id="bannerSay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerSay (handle, ...)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#361">361</a>]</p>
+
+<div class="desc">
+
+Write text to a banner window. The text is displayed in the given
+banner. For a BannerTypeText window, HTML tags in the text are
+interpreted; for a BannerTypeTextGrid window, the text is written
+exactly as given, without any HTML interpretation.
+
+The value list is handled the same way as the arguments to tadsSay() in
+terms of type conversions.
+
+</div>
+
+<p><span id="bannerSetScreenColor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerSetScreenColor (handle, color)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#412">412</a>]</p>
+
+<div class="desc">
+
+Set the "screen color" in the banner window. This is the color used to
+fill parts of the window that aren't displaying any text, and as the
+background color for all text displayed when the text background color
+is ColorTransparent. Setting the screen color immediately sets the color
+for the entire window - even text previously displayed in the window is
+affected by this change.
+
+</div>
+
+<p><span id="bannerSetSize"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerSetSize (handle, size, sizeUnits, isAdvisory)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#432">432</a>]</p>
+
+<div class="desc">
+
+Set the size of a banner. This explicitly sets the banner's height (for
+a top or bottom banner) or width (for a left or right) banner to the
+'size', which is specified in units given by 'sizeUnits', which is a
+BannerSizeXxx constant. If 'isAdvisory' is true, the caller is
+indicating that this call will be followed soon by a call to
+bannerSizeToContents(). On systems that support sizing to contents, an
+"advisory" call to bannerSetSize() will simply be ignored in
+anticipation of the upcoming call to bannerSizeToContents(). On systems
+that don't support sizing to contents, an advisory call will actually
+resize the window.
+
+</div>
+
+<p><span id="bannerSetTextColor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerSetTextColor (handle, fg, bg)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#402">402</a>]</p>
+
+<div class="desc">
+
+Set text foreground and background colors. This affects the color of
+subsequently displayed text; text displayed previously is not affected.
+The colors are given as ColorXxx values (see below). If 'bg' is
+ColorTransparent, then text is shown with the current screen color in
+the window.
+
+</div>
+
+<p><span id="bannerSizeToContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bannerSizeToContents (handle)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#385">385</a>]</p>
+
+<div class="desc">
+
+Size a banner to fit its contents. This resizes the banner such that the
+contents just fit. In the case of a top- or bottom-aligned banner, the
+height is set just high enough to hold all of the text currently
+displayed. In the case of a left- or right-aligned banner, the width is
+set just wide enough to hold the widest single word that can't be broken
+across lines. In all cases, the size includes any fixed margin space, to
+ensure that all of the text in the window is actually visible without
+scrolling.
+
+Note that not all systems support this function. On systems where the
+function is not supported, this call has no effect. Because of this, you
+should always use this function in conjunction with an "advisory" call
+to bannerSetSize().
+
+</div>
+
+<p><span id="clearScreen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clearScreen ( )</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#48">48</a>]</p>
+
+<div class="desc">
+
+Clear the display. This clears the main window.
+
+</div>
+
+<p><span id="flushOutput"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flushOutput ( )</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#265">265</a>]</p>
+
+<div class="desc">
+
+Flush text output and update the main display window. This ensures that
+any text displayed with tadsSay() is actually displayed, for the user to
+see (rather than being held in internal buffers).
+
+</div>
+
+<p><span id="getLocalCharSet"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getLocalCharSet (which)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#258">258</a>]</p>
+
+<div class="desc">
+
+Get the local default character set. 'which' is a CharsetXxx value
+giving which local character set to retrieve. Returns a string giving
+the name of the given local character set.
+
+</div>
+
+<p><span id="inputDialog"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputDialog (icon, prompt, buttons, defaultButton, cancelButton)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#123">123</a>]</p>
+
+<div class="desc">
+
+Display a simple "message box" dialog (known on some systems as an
+"alert" dialog). This displays a dialog that includes a short message
+for the user to read, an icon indicating the general nature of the
+condition that gave rise to the dialog (an error, a warning, a choice
+for the user to make, etc.), and a set of push-buttons that dismiss the
+dialog and (in some cases) let the user choose among options. 'icon' is
+an InDlgIconXxx value giving the type of icon to show, if any; 'prompt'
+is the message string to display; 'buttons' gives the set of buttons to
+display; 'defaultButton' is the index (starting at 1) among the buttons
+of the default button; and 'cancelButton' is the index of the
+cancellation button.
+
+'buttons' can be given as an InDlgXxx constant (InDlgOk, InDlgOkCancel,
+etc.) to select one of the standard sets of buttons. Or, it can be a
+list giving a custom set of buttons, in which case each element of the
+list is either a string giving a custom label for the button, or one of
+the InDlgLblXxx values to select a standard label. The standard labels
+should be used when possible, as these will be automatically localized;
+labels given explicitly as strings will be used exactly as given. If a
+list of custom button labels is given, the buttons are displayed in the
+dialog in the order of the list (usually left to right, but this could
+vary according to system conventions and localization).
+
+Each custom button label string can incorporate an ampersand ("&amp;"). The
+letter immediately following the ampersand, if provided, is used as the
+keyboard shortcut for the button. This is particularly important on
+character-mode systems, where the "dialog" is typically shown merely as
+a text prompt, and the user responds by selecting the letter of the
+desired option. Typically, you should use the first character of a
+button label as its keyboard shortcut, but this obviously won't work
+when two button labels have the same first letter; in these cases, you
+should choose another letter from the button label, preferably something
+like the first letter of the second word of the button label, or the
+first letter of the stressed syllable of the most important word of the
+label.
+
+The return value is the index among the buttons of the button that the
+user selects to dismiss the dialog. The function doesn't return until
+the user selects one of the buttons.
+
+</div>
+
+<p><span id="inputEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputEvent (timeout?)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#79">79</a>]</p>
+
+<div class="desc">
+
+Read a single input event. Waits until an input event is available, then
+returns the event as a list. The first element of the list is an
+InEvtXxx value indicating the type of the event; the remainder of the
+list varies according to the event type. If 'timeout' is provided, it
+gives the maximum waiting interval in milliseconds; if no input event
+occurs within this interval, the function returns an InEvtTimeout event.
+
+</div>
+
+<p><span id="inputFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputFile (prompt, dialogType, fileType, flags)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#183">183</a>]</p>
+
+<div class="desc">
+
+Display a file selector dialog. This prompts the user to select a file.
+On GUI systems, this will typically display the standard system file
+selection dialog; on character-mode systems, it might simply display the
+prompt string and let the user type the name of a file directly.
+
+'prompt' is the message string to display in the dialog to let the user
+know what type of file is being requested. 'dialogType' is one of the
+InFileXxx constants specifying whether the request is to select an
+existing file or to specify the name for a new file. 'fileType' is a
+FileTypeXxx constant giving the format of the file being requested; this
+is used on some systems to filter the displayed list of existing files
+so that only files of the same format are included, to reduce clutter.
+'flags' is reserved for future use and should simply be set to zero.
+
+The return value is a list. The first element is an integer giving the
+status: InFileSuccess indicates that the user successfully selected a
+file, whose name is given as a string in the second element of the
+result list; InFileFailure indicates a system error of some kind showing
+the dialog; and InFileCancel indicates that the user explicitly canceled
+the dialog.
+
+On success (return list\[1\] == InFileSuccess), the list contains the
+following additional elements:
+
+  
+\[2\] = the selected filename  
+\[3\] = nil (reserved for future use)  
+\[4\] = script warning message, or nil if no warning
+
+The warning message is a string to be displayed to the user to warn
+about a possible error condition in the script input. The script reader
+checks the file specified in the script to see if it's valid; if the
+dialog type is Open, the script reader verifies that the file exists,
+and for a Save dialog the reader warns if the file \*does\* already
+exist or is not writable. In the conventional UI, the script reader
+displays these warnings directly to the user through the console UI, but
+this isn't possible in the Web UI since the user might be running on a
+remote browser. Instead, the script reader still checks for the possible
+errors, but rather than displaying any warnings, it returns them here.
+The caller is responsible for displaying the warning and asking the user
+for confirmation.
+
+For localization purposes, the warning message starts with a two-letter
+code indicating the specific error, followed by a space, followed by the
+English text of the warning. The codes are:
+
+  
+OV - the script might overwrite an existing file (Save dialog)  
+WR - the file can't be created/written (Save dialog)  
+RD - the file doesn't exist/can't be read (Open dialog)
+
+Note that the warning message will always be nil if the script reader
+displayed the warning message itself. This means that your program can
+unconditionally display this message if it's non-nil - there's no danger
+that the script reader will have redundantly displayed the message.
+
+</div>
+
+<p><span id="inputKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputKey ( )</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#68">68</a>]</p>
+
+<div class="desc">
+
+Read a single keystroke from the keyboard. Waits until the user presses
+a key, then returns the keystroke as a string.
+
+</div>
+
+<p><span id="inputLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputLine ( )</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#62">62</a>]</p>
+
+<div class="desc">
+
+Read a line of text from the keyboard. Pauses to let the user edit and
+enter a command line, then returns the entered text as a string.
+
+</div>
+
+<p><span id="inputLineCancel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputLineCancel (reset)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#315">315</a>]</p>
+
+<div class="desc">
+
+Cancel an input line that was interrupted by timeout. This function must
+be called after an inputLineTimeout() returns with an InEvtTimeout
+status indication and before any subsequent output function that
+displays anything in the main window, or any input fucntion other than
+inputLineTimeout().
+
+This function updates the UI to reflect that command line editing is no
+longer in progress. If 'reset' is true, it also resets the internal
+memory of the command editing session, so that a subsequent call to
+inputLineTimeout() will start from scratch with an empty command line.
+If 'reset' is nil, this function merely adjusts the UI, but does not
+clear the internal memory; the next call to inputLineTimeout() will
+automatically restore the editing status, re-displaying what the user
+had typed so far on the interrupted command line and restoring the
+cursor position to its position when the timeout occurred.
+
+Note that it's not necessary (or desirable) to call this function after
+a timed-out input line if the next input/output function that affects
+the main window is simply another call to inputLineTimeout(). In this
+case, inputLineTimeout() simply picks up where it left off, without any
+indication to the user that the input editing was ever interrupted.
+
+</div>
+
+<p><span id="inputLineTimeout"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputLineTimeout (timeout?)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#288">288</a>]</p>
+
+<div class="desc">
+
+Read a line of text from the keyboard. Waits for the user to edit and
+enter a command line. If a 'timeout' value is specified, it gives the
+maximum interval to wait for the user to finish entering the input, in
+milliseconds. If the timeout expires before the user finishes entering
+the line, the function stops waiting and returns.
+
+The return value is a list. The first element is an InEvtXxx code giving
+the status. If the status is InEvtLine, the second element is a string
+giving the command line the user entered. If the status is InEvtTimeout,
+the second element is a string giving the text of the command line so
+far - that is, the text that the user had typed up to the point when the
+timeout expired. Other status codes have no additional list elements.
+
+When an InEvtTimeout status is returned, the caller must either cancel
+the interrupted input line with inputLineCancel(), or must make another
+call to inputLineTimeout() without any intervening call to any output
+function that displays anything in the main window, or any input
+function other than inputLineTimeout().
+
+</div>
+
+<p><span id="logConsoleClose"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">logConsoleClose (handle)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#449">449</a>]</p>
+
+<div class="desc">
+
+Close a log console. This closes the file associated with the log
+console and deletes the console object. The given console handle is no
+longer valid after this function is called.
+
+</div>
+
+<p><span id="logConsoleCreate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">logConsoleCreate (filename, charset, width)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#442">442</a>]</p>
+
+<div class="desc">
+
+Create a log file console. This creates a console that has no display,
+but simply captures its output to the given log file. Writing to a log
+console is different from writing to a regular text file in that we
+apply all of the normal formatting (including text-only-mode HTML
+interpretation) to the output sent to this console.
+
+</div>
+
+<p><span id="logConsoleSay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">logConsoleSay (handle, ...)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#456">456</a>]</p>
+
+<div class="desc">
+
+Write text to a log console. This works the same as tadsSay(), but
+writes the output to the given log console rather than to the main
+output window.
+
+</div>
+
+<p><span id="logInputEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">logInputEvent (evt)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#479">479</a>]</p>
+
+<div class="desc">
+
+Log an input event that's obtained externally - i.e., from a source
+other than the system input APIs (inputLine, inputKey, inputEvent, etc).
+This adds the event to any command or event log that the system is
+currently writing, as set with setLogFile().
+
+It's only necessary to call this function when obtaining user input from
+custom code that bypasses the system input APIs. The system input
+functions all log events automatically, so you must not call this for
+input obtained from them (doing so would write each input twice, since
+it's already being written once by the input functions). For example,
+this is useful for the Web UI, since it obtains input via network
+transactions with the javascript client.
+
+'evt' is a list describing the event, using the same format that
+inputEvent() returns. Note one special extension: if the first element
+of the list is a string, the string is used as the tag name if we're
+writing an event script. This can be used to write custom events or
+events with no InEvtXxx type code, such as \&lt;dialog\&gt; input events.
+
+</div>
+
+<p><span id="morePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">morePrompt ( )</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#56">56</a>]</p>
+
+<div class="desc">
+
+Show the "more" prompt, if supported on the platform. This causes a
+"more" prompt to be displayed, according to local system conventions, as
+though consecutive text output had exceeded the screen/window height.
+
+</div>
+
+<p><span id="resExists"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resExists (fname)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#220">220</a>]</p>
+
+<div class="desc">
+
+Determine if a multimedia resource exists. 'fname' is the name of a
+resource (a JPEG image file, PNG image file, etc), given in URL-style
+path notation. Returns true if the resource is available, nil if not.
+
+</div>
+
+<p><span id="setLogFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setLogFile (fname, logType?)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#43">43</a>]</p>
+
+<div class="desc">
+
+Set the output log file (which records the output transcript) or the
+command log file (which records command lines the user enters). 'fname'
+is the name of the file to open, and 'logType' gives the type of log to
+open, as a LogTypeXxx value.
+
+</div>
+
+<p><span id="setScriptFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setScriptFile (filename, flags?)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#251">251</a>]</p>
+
+<div class="desc">
+
+Set the script input file. This opens the given file as the script input
+file. 'filename' is a string giving the name of the file to open, and
+'flags' is a combination of ScriptFileXxx bit flags giving the mode to
+use to read the file. When a script file is active, the system reads
+command-line input from the file rather than from the keyboard. This
+lets the program replay an input script.
+
+Note that the ScriptFileEvent flag is ignored if included in the 'flags'
+parameter. The script reader automatically determines the script type by
+examining the file's contents, so you can't set the type using flags.
+This flag is used only in "get status" requests (ScriptReqGetStatus) -
+it's included in the returned flags if applicable. The purpose of this
+flag is to let you determine what the script reader decided about the
+script, rather than telling the script reader how to interpret the
+script.
+
+If 'filename' is nil, this cancels the current script. If the script was
+invoked from an enclosing script, this resumes the enclosing script,
+otherwise it resumes reading input from the keyboard. The 'flags'
+argument is ignored in this case.
+
+New in 3.0.17: if 'filename' is one of the ScriptReqXxx constants, this
+performs a special script request. See the ScriptReqXxx constants for
+details. Note that calling this function with a ScriptReqXxx constant on
+an VM prior to 3.0.17 will result in a run-time error, so you can use
+try-catch to detect whether the request is supported.
+
+</div>
+
+<p><span id="statusMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">statusMode (mode)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#203">203</a>]</p>
+
+<div class="desc">
+
+Set the status-line display mode. This is meaningful only with text-only
+interpreters that don't support banner windows; other interpreters
+ignore this. 'mode' is a StatModeXxx constant giving the new mode.
+
+</div>
+
+<p><span id="statusRight"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">statusRight (txt)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#212">212</a>]</p>
+
+<div class="desc">
+
+Write text on the right half of the status line. This is meaningful only
+for text-only interpreters that don't support banner windows; other
+interpreters ignore this. On non-banner interpreters, this sets the
+right half of the status line to display the given text,
+right-justified.
+
+</div>
+
+<p><span id="systemInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">systemInfo (infoType, ...)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#195">195</a>]</p>
+
+<div class="desc">
+
+Retrieve local system information. 'infoType' is a SysInfoXxx constant
+giving the type of information to retrieve. Additional arguments and the
+return value vary according to the infoType value.
+
+</div>
+
+<p><span id="tadsSay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tadsSay (val, ...)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#35">35</a>]</p>
+
+<div class="desc">
+
+Display values on the console. One or more values can be displayed. Each
+value can be a string, in which case the string is displayed as given
+(with HTML interpretation); an integer, in which case it's converted to
+a string, using a decimal (base 10) radix and displayed; a BigNumber, in
+which case it's converted to a string using the default formatting; or
+nil, in which case nothing is displayed.
+
+</div>
+
+<p><span id="timeDelay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timeDelay (delayMilliseconds)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#188">188</a>]</p>
+
+<div class="desc">
+
+Pause for the given number of milliseconds.
+
+</div>
+
+<p><span id="_Macros_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Macros</span>  
+
+</div>
+
+<p><span id="BannerAfter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerAfter</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#659">659</a>]</p>
+
+<div class="desc">
+
+`4`  
+*no description available*
+
+</div>
+
+<p><span id="BannerAlignBottom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerAlignBottom</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#671">671</a>]</p>
+
+<div class="desc">
+
+`1`  
+*no description available*
+
+</div>
+
+<p><span id="BannerAlignLeft"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerAlignLeft</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#672">672</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="BannerAlignRight"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerAlignRight</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#673">673</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="BannerAlignTop"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerAlignTop</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#670">670</a>]</p>
+
+<div class="desc">
+
+`0`  
+banner alignment types
+
+</div>
+
+<p><span id="BannerBefore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerBefore</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#658">658</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="BannerFirst"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerFirst</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#656">656</a>]</p>
+
+<div class="desc">
+
+`1`  
+banner insertion point specifies (for 'where' in bannerCreate)
+
+</div>
+
+<p><span id="BannerLast"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerLast</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#657">657</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="BannerSizeAbsolute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerSizeAbsolute</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#679">679</a>]</p>
+
+<div class="desc">
+
+`2 /* size is in natural units of window type */`  
+*no description available*
+
+</div>
+
+<p><span id="BannerSizePercent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerSizePercent</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#678">678</a>]</p>
+
+<div class="desc">
+
+`1 /* size is a percentage of available space */`  
+banner size unit types
+
+</div>
+
+<p><span id="BannerStyleAutoHScroll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerStyleAutoHScroll</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#688">688</a>]</p>
+
+<div class="desc">
+
+`0x0010 /* automatic horizontal scrolling */`  
+*no description available*
+
+</div>
+
+<p><span id="BannerStyleAutoVScroll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerStyleAutoVScroll</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#687">687</a>]</p>
+
+<div class="desc">
+
+`0x0008 /* automatic vertical scrolling */`  
+*no description available*
+
+</div>
+
+<p><span id="BannerStyleBorder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerStyleBorder</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#684">684</a>]</p>
+
+<div class="desc">
+
+`0x0001 /* banner has a visible border */`  
+banner style flags
+
+</div>
+
+<p><span id="BannerStyleHScroll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerStyleHScroll</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#686">686</a>]</p>
+
+<div class="desc">
+
+`0x0004 /* horizontal scrollbar */`  
+*no description available*
+
+</div>
+
+<p><span id="BannerStyleHStrut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerStyleHStrut</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#691">691</a>]</p>
+
+<div class="desc">
+
+`0x0080 /* include in parent's auto width */`  
+*no description available*
+
+</div>
+
+<p><span id="BannerStyleMoreMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerStyleMoreMode</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#690">690</a>]</p>
+
+<div class="desc">
+
+`0x0040 /* use MORE mode */`  
+*no description available*
+
+</div>
+
+<p><span id="BannerStyleTabAlign"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerStyleTabAlign</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#689">689</a>]</p>
+
+<div class="desc">
+
+`0x0020 /* alignment support */`  
+*no description available*
+
+</div>
+
+<p><span id="BannerStyleVScroll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerStyleVScroll</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#685">685</a>]</p>
+
+<div class="desc">
+
+`0x0002 /* vertical scrollbar */`  
+*no description available*
+
+</div>
+
+<p><span id="BannerStyleVStrut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerStyleVStrut</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#692">692</a>]</p>
+
+<div class="desc">
+
+`0x0100 /* include in parent's auto height */`  
+*no description available*
+
+</div>
+
+<p><span id="BannerTypeText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerTypeText</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#664">664</a>]</p>
+
+<div class="desc">
+
+`1 /* ordinary text stream window */`  
+banner types
+
+</div>
+
+<p><span id="BannerTypeTextGrid"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BannerTypeTextGrid</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#665">665</a>]</p>
+
+<div class="desc">
+
+`2 /* text grid window */`  
+*no description available*
+
+</div>
+
+<p><span id="CharsetDisplay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">CharsetDisplay</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#649">649</a>]</p>
+
+<div class="desc">
+
+`1 /* the display/keyboard character set */`  
+selectors for getLocalCharSet
+
+</div>
+
+<p><span id="CharsetFileCont"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">CharsetFileCont</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#651">651</a>]</p>
+
+<div class="desc">
+
+`3 /* default file contents character set */`  
+*no description available*
+
+</div>
+
+<p><span id="CharsetFileName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">CharsetFileName</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#650">650</a>]</p>
+
+<div class="desc">
+
+`2 /* the file system character set */`  
+*no description available*
+
+</div>
+
+<p><span id="CloseCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">CloseCommand</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#517">517</a>]</p>
+
+<div class="desc">
+
+`0x0005 /* close the game window */`  
+*no description available*
+
+</div>
+
+<p><span id="ColorAqua"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorAqua</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#736">736</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x00, 0xFF, 0xFF)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorBlack"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorBlack</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#729">729</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x00, 0x00, 0x00)`  
+some specific colors by name, for convenience
+
+</div>
+
+<p><span id="ColorBlue"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorBlue</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#732">732</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x00, 0x00, 0xFF)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorCyan"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorCyan</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#735">735</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x00, 0xFF, 0xFF)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorFuchsia"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorFuchsia</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#742">742</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0xFF, 0x00, 0xFF)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorGray"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorGray</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#739">739</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x80, 0x80, 0x80)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorGreen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorGreen</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#733">733</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x00, 0x80, 0x00)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorInput"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorInput</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#726">726</a>]</p>
+
+<div class="desc">
+
+`0x06000000`  
+*no description available*
+
+</div>
+
+<p><span id="ColorLime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorLime</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#743">743</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x00, 0xFF, 0x00)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorMagenta"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorMagenta</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#737">737</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0xFF, 0x00, 0xFF)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorMaroon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorMaroon</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#740">740</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x80, 0x00, 0x00)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorNavy"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorNavy</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#745">745</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x00, 0x00, 0x80)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorOlive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorOlive</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#744">744</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x80, 0x80, 0x00)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorPurple"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorPurple</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#741">741</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x80, 0x00, 0x80)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorRed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorRed</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#731">731</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0xff, 0x00, 0x00)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorRGB"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorRGB (r, g, b)</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#719">719</a>]</p>
+
+<div class="desc">
+
+`((((r) &amp; 0xff) &lt;&lt; 16) + (((g) &amp; 0xff) &lt;&lt; 8) + ((b) &amp; 0xff))`  
+Color codes. A color can be specified with explicit RGB (red-green-blue)
+component values, or can be "parameterized," which means that the color
+uses a pre-defined color for a particular purpose.
+
+RGB colors are specified with each component given in the range 0 to
+255; the color (0,0,0) is pure black, and (255,255,255) is pure white.
+
+The special value "transparent" is not a color at all, but rather
+specifies that the current screen color should be used.
+
+The "Text" and "TextBg" colors are the current default text and text
+background colors. The actual colors displayed for these values depend
+on the system, and on some systems these colors might be configurable by
+the user through a preferences selection. These are the same colors
+selected by the HTML parameterized color names 'text' and 'bgcolor'.
+
+The "StatusText" and "StatusBg" colors are the current default
+statusline text and background colors, which depend on the system and
+may be user-configurable on some systems. These are the same colors
+selected by the HTML parameterized color names 'statustext' and
+'statusbg'.
+
+The "input" color is the current default input text color.
+
+</div>
+
+<p><span id="ColorSilver"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorSilver</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#738">738</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0xC0, 0xC0, 0xC0)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorStatusBg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorStatusBg</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#725">725</a>]</p>
+
+<div class="desc">
+
+`0x05000000`  
+*no description available*
+
+</div>
+
+<p><span id="ColorStatusText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorStatusText</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#724">724</a>]</p>
+
+<div class="desc">
+
+`0x04000000`  
+*no description available*
+
+</div>
+
+<p><span id="ColorTeal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorTeal</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#746">746</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0x00, 0x80, 0x80)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorText</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#722">722</a>]</p>
+
+<div class="desc">
+
+`0x02000000`  
+*no description available*
+
+</div>
+
+<p><span id="ColorTextBg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorTextBg</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#723">723</a>]</p>
+
+<div class="desc">
+
+`0x03000000`  
+*no description available*
+
+</div>
+
+<p><span id="ColorTransparent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorTransparent</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#721">721</a>]</p>
+
+<div class="desc">
+
+`0x01000000`  
+*no description available*
+
+</div>
+
+<p><span id="ColorWhite"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorWhite</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#730">730</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0xff, 0xff, 0xff)`  
+*no description available*
+
+</div>
+
+<p><span id="ColorYellow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ColorYellow</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#734">734</a>]</p>
+
+<div class="desc">
+
+`ColorRGB(0xFF, 0xFF, 0x00)`  
+*no description available*
+
+</div>
+
+<p><span id="FileTypeBin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileTypeBin</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#561">561</a>]</p>
+
+<div class="desc">
+
+`8 /* binary data file */`  
+*no description available*
+
+</div>
+
+<p><span id="FileTypeCmd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileTypeCmd</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#559">559</a>]</p>
+
+<div class="desc">
+
+`5 /* command input file */`  
+*no description available*
+
+</div>
+
+<p><span id="FileTypeData"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileTypeData</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#558">558</a>]</p>
+
+<div class="desc">
+
+`4 /* arbitrary data file */`  
+*no description available*
+
+</div>
+
+<p><span id="FileTypeLog"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileTypeLog</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#557">557</a>]</p>
+
+<div class="desc">
+
+`2 /* a transcript (log) file */`  
+constants for inputFile() file type codes
+
+</div>
+
+<p><span id="FileTypeT3Image"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileTypeT3Image</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#563">563</a>]</p>
+
+<div class="desc">
+
+`12 /* T3 executable image (game) file */`  
+*no description available*
+
+</div>
+
+<p><span id="FileTypeT3Save"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileTypeT3Save</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#564">564</a>]</p>
+
+<div class="desc">
+
+`15 /* T3 saved state file */`  
+*no description available*
+
+</div>
+
+<p><span id="FileTypeText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileTypeText</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#560">560</a>]</p>
+
+<div class="desc">
+
+`7 /* text file */`  
+*no description available*
+
+</div>
+
+<p><span id="FileTypeUnknown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileTypeUnknown</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#562">562</a>]</p>
+
+<div class="desc">
+
+`11 /* unknown file type */`  
+*no description available*
+
+</div>
+
+<p><span id="HelpCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">HelpCommand</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#518">518</a>]</p>
+
+<div class="desc">
+
+`0x0006 /* show game HELP */`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgIconError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgIconError</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#533">533</a>]</p>
+
+<div class="desc">
+
+`4`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgIconInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgIconInfo</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#531">531</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgIconNone"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgIconNone</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#529">529</a>]</p>
+
+<div class="desc">
+
+`0`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgIconQuestion"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgIconQuestion</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#532">532</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgIconWarning"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgIconWarning</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#530">530</a>]</p>
+
+<div class="desc">
+
+`1`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgLblCancel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgLblCancel</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#536">536</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgLblNo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgLblNo</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#538">538</a>]</p>
+
+<div class="desc">
+
+`4`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgLblOk"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgLblOk</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#535">535</a>]</p>
+
+<div class="desc">
+
+`1`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgLblYes"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgLblYes</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#537">537</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgOk"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgOk</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#524">524</a>]</p>
+
+<div class="desc">
+
+`1`  
+constants for inputDialog()
+
+</div>
+
+<p><span id="InDlgOkCancel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgOkCancel</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#525">525</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgYesNo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgYesNo</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#526">526</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="InDlgYesNoCancel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InDlgYesNoCancel</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#527">527</a>]</p>
+
+<div class="desc">
+
+`4`  
+*no description available*
+
+</div>
+
+<p><span id="InEvtEndQuietScript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtEndQuietScript</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#507">507</a>]</p>
+
+<div class="desc">
+
+`10000`  
+*no description available*
+
+</div>
+
+<p><span id="InEvtEndScript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtEndScript</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#508">508</a>]</p>
+
+<div class="desc">
+
+`10003`  
+*no description available*
+
+</div>
+
+<p><span id="InEvtEof"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtEof</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#504">504</a>]</p>
+
+<div class="desc">
+
+`5`  
+*no description available*
+
+</div>
+
+<p><span id="InEvtHref"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtHref</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#501">501</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="InEvtKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtKey</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#499">499</a>]</p>
+
+<div class="desc">
+
+`1`  
+constants for the event codes returned by the inputEvent() and
+inputLineTimeout() intrinsic functions
+
+</div>
+
+<p><span id="InEvtLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtLine</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#505">505</a>]</p>
+
+<div class="desc">
+
+`6`  
+*no description available*
+
+</div>
+
+<p><span id="InEvtNoTimeout"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtNoTimeout</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#502">502</a>]</p>
+
+<div class="desc">
+
+`4`  
+*no description available*
+
+</div>
+
+<p><span id="InEvtNotimeout"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtNotimeout</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#503">503</a>]</p>
+
+<div class="desc">
+
+`4 /* (note minor capitalization variation) */`  
+*no description available*
+
+</div>
+
+<p><span id="InEvtSysCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtSysCommand</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#506">506</a>]</p>
+
+<div class="desc">
+
+`0x100`  
+*no description available*
+
+</div>
+
+<p><span id="InEvtTimeout"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InEvtTimeout</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#500">500</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="InFileCancel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InFileCancel</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#552">552</a>]</p>
+
+<div class="desc">
+
+`2 /* player canceled the file selector */`  
+*no description available*
+
+</div>
+
+<p><span id="InFileFailure"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InFileFailure</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#551">551</a>]</p>
+
+<div class="desc">
+
+`1 /* an error occurred asking for a file */`  
+*no description available*
+
+</div>
+
+<p><span id="InFileOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InFileOpen</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#543">543</a>]</p>
+
+<div class="desc">
+
+`1 /* open an existing file for reading */`  
+inputFile() dialog types
+
+</div>
+
+<p><span id="InFileSave"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InFileSave</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#544">544</a>]</p>
+
+<div class="desc">
+
+`2 /* save to the file */`  
+*no description available*
+
+</div>
+
+<p><span id="InFileSuccess"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InFileSuccess</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#550">550</a>]</p>
+
+<div class="desc">
+
+`0 /* success - 2nd list element is filename */`  
+inputFile() return codes - these are returned in the first element of
+the list returned from inputFile()
+
+</div>
+
+<p><span id="LogTypeCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">LogTypeCommand</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#484">484</a>]</p>
+
+<div class="desc">
+
+`2 /* log only command-line input */`  
+*no description available*
+
+</div>
+
+<p><span id="LogTypeScript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">LogTypeScript</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#485">485</a>]</p>
+
+<div class="desc">
+
+`3 /* log all input events */`  
+*no description available*
+
+</div>
+
+<p><span id="LogTypeTranscript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">LogTypeTranscript</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#483">483</a>]</p>
+
+<div class="desc">
+
+`1 /* log all input and output to a transcript */`  
+log file types
+
+</div>
+
+<p><span id="MainWindowLogHandle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MainWindowLogHandle</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#493">493</a>]</p>
+
+<div class="desc">
+
+`(-1)`  
+The special log console handle for the main console window's transcript.
+This can be used as the handle in logConsoleSay(), to write text
+directly to the main console's log file, if any. Note that this console
+cannot be closed via logConsoleClose(); use setLogFile(nil) instead.
+
+</div>
+
+<p><span id="QuitCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QuitCommand</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#516">516</a>]</p>
+
+<div class="desc">
+
+`0x0004 /* QUIT the game */`  
+*no description available*
+
+</div>
+
+<p><span id="RestoreCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">RestoreCommand</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#514">514</a>]</p>
+
+<div class="desc">
+
+`0x0002 /* RESTORE a saved position */`  
+*no description available*
+
+</div>
+
+<p><span id="SaveCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SaveCommand</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#513">513</a>]</p>
+
+<div class="desc">
+
+`0x0001 /* SAVE the current position */`  
+Command codes for InEvtSysCommand
+
+</div>
+
+<p><span id="ScriptFileEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ScriptFileEvent</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#632">632</a>]</p>
+
+<div class="desc">
+
+`4 /* this is an event script (query only) */`  
+*no description available*
+
+</div>
+
+<p><span id="ScriptFileNonstop"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ScriptFileNonstop</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#631">631</a>]</p>
+
+<div class="desc">
+
+`2 /* turn off MORE prompt while reading script */`  
+*no description available*
+
+</div>
+
+<p><span id="ScriptFileQuiet"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ScriptFileQuiet</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#630">630</a>]</p>
+
+<div class="desc">
+
+`1 /* do not display output while reading script */`  
+flags for setScriptFile
+
+</div>
+
+<p><span id="ScriptReqGetStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ScriptReqGetStatus</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#644">644</a>]</p>
+
+<div class="desc">
+
+`0x7000`  
+Script Request - get current script status. In 3.0.17+, passing this
+constant as the 'filename' argument to getScriptFile() will perform a
+"get script status" request. If there's no script file in progress, the
+function returns nil. If a script file is being read, the function
+returns an integer value giving a combination of ScriptFileXxx flag
+values indicating the current script status. Note that a return value of
+0 (zero) means that a script is running but none of the ScriptFileXxx
+flags are applicable.
+
+</div>
+
+<p><span id="StatModeNormal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">StatModeNormal</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#624">624</a>]</p>
+
+<div class="desc">
+
+`0 /* displaying normal text */`  
+constants for statusMode
+
+</div>
+
+<p><span id="StatModeStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">StatModeStatus</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#625">625</a>]</p>
+
+<div class="desc">
+
+`1 /* display status line text */`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoAudioCrossfade"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoAudioCrossfade</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#601">601</a>]</p>
+
+<div class="desc">
+
+`36`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoAudioFade"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoAudioFade</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#600">600</a>]</p>
+
+<div class="desc">
+
+`35`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoBanners"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoBanners</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#598">598</a>]</p>
+
+<div class="desc">
+
+`33`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoFadeMIDI"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoFadeMIDI</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#619">619</a>]</p>
+
+<div class="desc">
+
+`0x0008`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoFadeMPEG"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoFadeMPEG</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#616">616</a>]</p>
+
+<div class="desc">
+
+`0x0001`  
+SysInfoAudioFade and SysInfoAudioCrossfade result codes
+
+</div>
+
+<p><span id="SysInfoFadeOGG"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoFadeOGG</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#617">617</a>]</p>
+
+<div class="desc">
+
+`0x0002`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoFadeWAV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoFadeWAV</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#618">618</a>]</p>
+
+<div class="desc">
+
+`0x0004`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoIClassHTML"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoIClassHTML</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#613">613</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoIClassText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoIClassText</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#611">611</a>]</p>
+
+<div class="desc">
+
+`1`  
+SysInfoInterpClass codes
+
+</div>
+
+<p><span id="SysInfoIClassTextGUI"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoIClassTextGUI</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#612">612</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoInterpClass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoInterpClass</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#599">599</a>]</p>
+
+<div class="desc">
+
+`34`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoJpeg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoJpeg</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#571">571</a>]</p>
+
+<div class="desc">
+
+`5`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoLinksFtp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoLinksFtp</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#586">586</a>]</p>
+
+<div class="desc">
+
+`21`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoLinksHttp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoLinksHttp</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#585">585</a>]</p>
+
+<div class="desc">
+
+`20`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoLinksMailto"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoLinksMailto</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#588">588</a>]</p>
+
+<div class="desc">
+
+`23`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoLinksNews"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoLinksNews</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#587">587</a>]</p>
+
+<div class="desc">
+
+`22`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoLinksTelnet"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoLinksTelnet</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#589">589</a>]</p>
+
+<div class="desc">
+
+`24`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoMidi"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoMidi</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#574">574</a>]</p>
+
+<div class="desc">
+
+`8`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoMng"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoMng</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#593">593</a>]</p>
+
+<div class="desc">
+
+`28`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoMngAlpha"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoMngAlpha</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#595">595</a>]</p>
+
+<div class="desc">
+
+`30`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoMngTrans"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoMngTrans</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#594">594</a>]</p>
+
+<div class="desc">
+
+`29`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoMpeg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoMpeg</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#581">581</a>]</p>
+
+<div class="desc">
+
+`15`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoMpeg1"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoMpeg1</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#582">582</a>]</p>
+
+<div class="desc">
+
+`16`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoMpeg2"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoMpeg2</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#583">583</a>]</p>
+
+<div class="desc">
+
+`17`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoMpeg3"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoMpeg3</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#584">584</a>]</p>
+
+<div class="desc">
+
+`18`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoOgg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoOgg</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#592">592</a>]</p>
+
+<div class="desc">
+
+`27`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoOsName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoOsName</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#570">570</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoPng"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoPng</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#572">572</a>]</p>
+
+<div class="desc">
+
+`6`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoPngAlpha"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoPngAlpha</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#591">591</a>]</p>
+
+<div class="desc">
+
+`26`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoPngTrans"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoPngTrans</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#590">590</a>]</p>
+
+<div class="desc">
+
+`25`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoPrefImages"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoPrefImages</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#577">577</a>]</p>
+
+<div class="desc">
+
+`11`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoPrefLinks"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoPrefLinks</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#580">580</a>]</p>
+
+<div class="desc">
+
+`14`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoPrefMusic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoPrefMusic</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#579">579</a>]</p>
+
+<div class="desc">
+
+`13`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoPrefSounds"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoPrefSounds</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#578">578</a>]</p>
+
+<div class="desc">
+
+`12`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoTextColors"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoTextColors</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#597">597</a>]</p>
+
+<div class="desc">
+
+`32`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoTextHilite"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoTextHilite</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#596">596</a>]</p>
+
+<div class="desc">
+
+`31`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoTxcAnsiFg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoTxcAnsiFg</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#606">606</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoTxcAnsiFgBg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoTxcAnsiFgBg</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#607">607</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoTxcNone"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoTxcNone</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#604">604</a>]</p>
+
+<div class="desc">
+
+`0`  
+SysInfoTextColors support level codes
+
+</div>
+
+<p><span id="SysInfoTxcParam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoTxcParam</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#605">605</a>]</p>
+
+<div class="desc">
+
+`1`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoTxcRGB"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoTxcRGB</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#608">608</a>]</p>
+
+<div class="desc">
+
+`4`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoVersion"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoVersion</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#569">569</a>]</p>
+
+<div class="desc">
+
+`2`  
+constants for systemInfo information type codes
+
+</div>
+
+<p><span id="SysInfoWav"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoWav</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#573">573</a>]</p>
+
+<div class="desc">
+
+`7`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoWavMidiOvl"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoWavMidiOvl</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#575">575</a>]</p>
+
+<div class="desc">
+
+`9`  
+*no description available*
+
+</div>
+
+<p><span id="SysInfoWavOvl"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SysInfoWavOvl</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#576">576</a>]</p>
+
+<div class="desc">
+
+`10`  
+*no description available*
+
+</div>
+
+<p><span id="UndoCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">UndoCommand</code></p>
+
+<p><a href="../file/tadsio.h.html">tadsio.h</a>[<a href="../source/tadsio.h.html#515">515</a>]</p>
+
+<div class="desc">
+
+`0x0003 /* UNDO one turn */`  
+*no description available*
+
+</div>
+
+<p><span id="_Enums_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Templates_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Templates</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

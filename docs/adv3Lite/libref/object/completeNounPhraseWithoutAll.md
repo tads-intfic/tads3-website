@@ -1,3 +1,5 @@
+---
+---
 <span class="title">completeNounPhraseWithoutAll</span><span class="type">GrammarProd</span>
 
 `grammar `**[`completeNounPhraseWithoutAll(main)`](../object/completeNounPhraseWithoutAll(main).html)**` :   `[`Production`](../object/Production.html)

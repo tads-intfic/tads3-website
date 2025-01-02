@@ -1,3 +1,5 @@
+---
+---
 <span class="title">playerActionMessages</span><span class="type">object</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2561](../source/msg_neu.t.html#2561)\]

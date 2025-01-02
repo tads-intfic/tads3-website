@@ -1,3 +1,5 @@
+---
+---
 <span class="title">\_multiMethodRegistry</span><span class="type">object</span>
 
 [multmeth.t](../file/multmeth.t.html)\[[775](../source/multmeth.t.html#775)\]

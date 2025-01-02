@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(ListRelations)</span><span class="type">grammar</span>
 
 [relations.t](../file/relations.t.html)\[[830](../source/relations.t.html#830)\]

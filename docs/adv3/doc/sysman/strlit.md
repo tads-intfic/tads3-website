@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> String Literals  
-<span class="navnp"><a href="types.htm" class="nav"><em>Prev:</em> Fundamental Datatypes</a>
-    <a href="enum.htm" class="nav"><em>Next:</em> Enumerators</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> String Literals  
+<span class="navnp"><a href="types.html" class="nav"><em>Prev:</em> Fundamental Datatypes</a>
+    <a href="enum.html" class="nav"><em>Next:</em> Enumerators</a>    
 </span>
 
 </div>
@@ -345,8 +347,8 @@ text to a file, or when you're writing an HTML
 
 There's another bit of syntax that looks very similar to the string
 literal syntax, but doesn't define an ordinary string. You can define a
-static [RexPattern](rexpat.htm) object, which represents a [regular
-expression](regex.htm), using the "R" string syntax:
+static [RexPattern](rexpat.html) object, which represents a [regular
+expression](regex.html), using the "R" string syntax:
 
 <div class="code">
 
@@ -358,7 +360,7 @@ The regular expression literal syntax consists of a capital "R" followed
 immediately (with no intervening spaces) by an open quote. Single and
 double quotes are interchangeable for regular expression literals.
 
-For more details, see [regular expression literals](rexpat.htm#rexlit)
+For more details, see [regular expression literals](rexpat.html#rexlit)
 in the RexPattern section.
 
 ## Plain vs. typographical quotes
@@ -858,7 +860,7 @@ the string is evaluated*, which will probably be out of context.
 
 sprintf-style formatting
 
-Starting in 3.1.1, you can specify a [sprintf()](tadsgen.htm#sprintf)
+Starting in 3.1.1, you can specify a [sprintf()](tadsgen.html#sprintf)
 formatting code directly in an embedded expression, to customize how the
 value is displayed. To do this, place the <span class="code">%</span>
 code immediately after the opening <span class="code">\<\<</span>,
@@ -1646,10 +1648,10 @@ unknown \\ combinations, and simply leaves the entire sequence
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> String Literals  
-<span class="navnp"><a href="types.htm" class="nav"><em>Prev:</em> Fundamental Datatypes</a>
-    <a href="enum.htm" class="nav"><em>Next:</em> Enumerators</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> String Literals  
+<span class="navnp"><a href="types.html" class="nav"><em>Prev:</em> Fundamental Datatypes</a>
+    <a href="enum.html" class="nav"><em>Next:</em> Enumerators</a>    
 </span>
 
 </div>

@@ -1,0 +1,160 @@
+<p><span class="title">Daemon</span><span class="type">class</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#744">744</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Daemon. A daemon is an event that fires repeatedly at given intervals.
+When a daemon is executed, it is scheduled again for execution after its
+interval elapses again.
+
+`class `**`Daemon`**` :   `[`Event`](../object/Event.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Daemon</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Event<code class="language-plaintext highlighter-rouge">](../object/Event.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BasicEvent<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Daemon</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>SenseDaemon`](../object/SenseDaemon.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>interval_<code class="language-plaintext highlighter-rouge">](#interval_)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>eventOrder<code class="language-plaintext highlighter-rouge">](../object/Event.html#eventOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>isPromptDaemon<code class="language-plaintext highlighter-rouge">](../object/Event.html#isPromptDaemon)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextRunTime<code class="language-plaintext highlighter-rouge">](../object/Event.html#nextRunTime)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>obj_<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#obj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>prop_<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#prop_)</code>  <code class="language-plaintext highlighter-rouge">[</code>sense_<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#sense_)</code>  <code class="language-plaintext highlighter-rouge">[</code>source_<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#source_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>executeEvent<code class="language-plaintext highlighter-rouge">](#executeEvent)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>delayEvent<code class="language-plaintext highlighter-rouge">](../object/Event.html#delayEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextRunTime<code class="language-plaintext highlighter-rouge">](../object/Event.html#getNextRunTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeEvent<code class="language-plaintext highlighter-rouge">](../object/Event.html#removeEvent)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicEvent</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>callMethod<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#callMethod)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventMatches<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html#eventMatches)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="interval_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">interval_</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#788">788</a>]</p>
+
+<div class="desc">
+
+our execution interval, in turns
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (obj, prop, interval)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#753">753</a>]</p>
+
+<div class="desc">
+
+Creation. 'interval' is the number of turns between invocations of the
+daemon; this should be at least 1, which causes the daemon to be invoked
+on each turn. The first execution will be (interval-1) turns in the
+future - so if interval is 1, the daemon will first be executed on the
+current turn, and if interval is 2, the daemon will be executed on the
+next turn.
+
+</div>
+
+<p><span id="executeEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeEvent ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#778">778</a>]</p>
+
+<div class="desc">
+
+execute the daemon
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

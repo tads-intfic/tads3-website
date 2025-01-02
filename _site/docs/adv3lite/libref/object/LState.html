@@ -1,0 +1,166 @@
+<p><span class="title">LState</span><span class="type">class</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#1919">1919</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+LState is the language-specific base class for State objects.
+
+\[Required\]
+
+`class `**`LState`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">LState</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">LState</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>State`](../object/State.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>additionalInfo<code class="language-plaintext highlighter-rouge">](#additionalInfo)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addToName<code class="language-plaintext highlighter-rouge">](#addToName)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAdditionalInfo<code class="language-plaintext highlighter-rouge">](#getAdditionalInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>initWord<code class="language-plaintext highlighter-rouge">](#initWord)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="additionalInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">additionalInfo</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#1956">1956</a>]</p>
+
+<div class="desc">
+
+Additional info to be added to the item name when it appears in a
+listing and is in the corresponding state
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addToName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToName (obj, str)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#1927">1927</a>]</p>
+
+<div class="desc">
+
+Add the state name to an object name under construction. 'obj' is the
+object, and 'str' the object name being built. This adds the appropriate
+adjective for the state to the name.
+
+\[Required\]
+
+</div>
+
+<p><span id="getAdditionalInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getAdditionalInfo (obj)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#1963">1963</a>]</p>
+
+<div class="desc">
+
+Get the string providing additional info about this object when it's in
+a particular state (such as '(providing light)', the only additional
+state info actually defined in the English library)
+
+</div>
+
+<p><span id="initWord"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initWord (w)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#1946">1946</a>]</p>
+
+<div class="desc">
+
+Initialize a state adjective. The base library calls this during preinit
+for each word, given as a string. The language module must define this
+routine, but it doesn't have to do anything. The English version adds
+the word to the dictionary, so that the spelling corrector can recognize
+it.
+
+\[Required\]
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

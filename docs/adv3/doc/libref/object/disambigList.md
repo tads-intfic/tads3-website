@@ -1,3 +1,5 @@
+---
+---
 <span class="title">disambigList</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`disambigList(list)`](../object/disambigList(list).html)</span>` :   `[`DisambigProd`](../object/DisambigProd.html)

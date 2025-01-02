@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DirectObject</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[3845](../source/parser.t.html#3845)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="cockpit.htm" class="nav">Cockpit Controls</a> \> Defining
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="cockpit.html" class="nav">Cockpit Controls</a> \> Defining
 Actions  
-<span class="navnp"><a href="furnishing.htm" class="nav"><em>Prev:</em> Furnishing the
+<span class="navnp"><a href="furnishing.html" class="nav"><em>Prev:</em> Furnishing the
 Cockpit</a>    
-<a href="responding.htm" class="nav"><em>Next:</em> Responding to
+<a href="responding.html" class="nav"><em>Next:</em> Responding to
 Actions</a>     </span>
 
 </div>
@@ -410,8 +412,8 @@ check() and action() stages on Thing, but in the next section we'll be
 seeing how to use them to customize the behaviour of particular objects
 (such as the wheel, the control stick and the thrust lever). In the
 meantime, if you want to learn more about defining actions you can read
-the sections on [Action Results](../manual/actres.htm) and [Defining New
-Actions](../manual/define.htm) in the *adv3Lite Library Manual*.
+the sections on [Action Results](../manual/actres.html) and [Defining New
+Actions](../manual/define.html) in the *adv3Lite Library Manual*.
 
 One further question may be occurring to you at this point, if it hasn't
 already: How do I know if the library already defines an action I might
@@ -427,7 +429,7 @@ familiar commands, and when you're just starting out, few if any of the
 action names will be familiar to you.
 
 Fortunately help is at hand in the form of the [Action
-Reference](../manual/actionref.htm), which lists all the actions defined
+Reference](../manual/actionref.html), which lists all the actions defined
 in the adv3Lite library together with an alphabetical list of all the
 commands that can trigger them. This list also supplies the names of
 some of the properties you'll most commonly want to customize when
@@ -441,12 +443,12 @@ to help you on your way.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="cockpit.htm" class="nav">Cockpit Controls</a> \> Defining
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="cockpit.html" class="nav">Cockpit Controls</a> \> Defining
 Actions  
-<span class="navnp"><a href="furnishing.htm" class="nav"><em>Prev:</em> Furnishing the
+<span class="navnp"><a href="furnishing.html" class="nav"><em>Prev:</em> Furnishing the
 Cockpit</a>    
-<a href="responding.htm" class="nav"><em>Next:</em> Responding to
+<a href="responding.html" class="nav"><em>Next:</em> Responding to
 Actions</a>     </span>
 
 </div>

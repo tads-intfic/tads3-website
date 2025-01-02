@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Help)</span><span class="type">grammar</span>
 
 [newbie.t](../file/newbie.t.html)\[[582](../source/newbie.t.html#582)\]

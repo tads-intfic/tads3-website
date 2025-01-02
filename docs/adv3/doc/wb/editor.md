@@ -1,4 +1,6 @@
-Help Topics \> [Table of Contents](wbcont.htm)  
+---
+---
+Help Topics \> [Table of Contents](wbcont.html)  
   
 
   
@@ -47,7 +49,7 @@ works.
 Workbench provides keyboard customization not only in the editor, but
 throughout the entire environment. You can customize the editor key
 mapping using the general-purpose Workbench keyboard customizer. This is
-described in detail in [Customizing Workbench](custom.htm).
+described in detail in [Customizing Workbench](custom.html).
 
 ## Cursor key variations
 
@@ -100,7 +102,7 @@ When you open a file, the editor selects a default language mode for the
 file. This is typically based on the file's extension - the part of the
 filename following the last period (".") in the name. For example, the
 editor assumes that any file that ends in ".t" or ".h" is a TADS source
-file, and assumes that any file ending in ".htm" or ".html" is an HTML
+file, and assumes that any file ending in ".html" or ".html" is an HTML
 (Web page source) file.
 
 You can explicitly change the language mode for a window after opening
@@ -1110,6 +1112,6 @@ compilers support COM, as do compilers from other vendors.
 ------------------------------------------------------------------------
 
   
-Help Topics \> [Table of Contents](wbcont.htm)  
+Help Topics \> [Table of Contents](wbcont.html)  
   
 Copyright ©1999, 2007 by Michael J. Roberts.

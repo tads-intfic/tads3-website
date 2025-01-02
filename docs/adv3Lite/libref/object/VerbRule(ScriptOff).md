@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(ScriptOff)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2398](../source/grammar.t.html#2398)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">emanationControl</span><span class="type">object</span>
 
 [sensory.t](../file/sensory.t.html)\[[353](../source/sensory.t.html#353)\]

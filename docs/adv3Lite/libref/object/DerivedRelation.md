@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DerivedRelation</span><span class="type">object</span>
 
 [relations.t](../file/relations.t.html)\[[400](../source/relations.t.html#400)\]

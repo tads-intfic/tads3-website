@@ -1,3 +1,5 @@
+---
+---
 <span class="title">tipManager</span><span class="type">object</span>
 
 [tips.t](../file/tips.t.html)\[[23](../source/tips.t.html#23)\]

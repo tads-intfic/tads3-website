@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SayYes</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1773](../source/actions.t.html#1773)\]

@@ -1,3 +1,5 @@
+---
+---
 TADS 3 Technical Manual
 
 # TADS 3 Technical Manual
@@ -18,9 +20,9 @@ Michael Roberts · Andreas Sewe**
   
   
   
-[Table of Contents](toc.htm)  
+[Table of Contents](toc.html)  
   
-[Introduction](intro.htm)  
+[Introduction](intro.html)  
   
   
   

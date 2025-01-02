@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Implicit Actions  
-<span class="navnp"><a href="doer.htm" class="nav"><em>Prev:</em> Doers</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Implicit Actions  
+<span class="navnp"><a href="doer.html" class="nav"><em>Prev:</em> Doers</a>
    
-<a href="react.htm" class="nav"><em>Next:</em> Reacting to Actions</a>
+<a href="react.html" class="nav"><em>Next:</em> Reacting to Actions</a>
     </span>
 
 </div>
@@ -43,9 +45,9 @@ instance the attempt to open it did not succeed.
 ## Triggering Implicit Actions
 
 The commonest way for an implicit action to be triggered is via a
-[PreCondition](actres.htm#precond), that is an object used to define
+[PreCondition](actres.html#precond), that is an object used to define
 what conditions must hold in order for a particular action to go ahead
-(as discussed in the section on [Action Results](actres.htm#precond)).
+(as discussed in the section on [Action Results](actres.html#precond)).
 You can, however, trigger an implicit action explicitly in your own code
 using the **tryImplicitAction()** macro. This takes the form
 <span class="code">tryImplicitAction(*action-name*, *objs...*)</span>,
@@ -149,7 +151,7 @@ actions to be reported:
 
 To suppress the implicit action reports that would stem from a
 particular action applied to particular objects, we can use a
-[Doer](doer.htm), like so:
+[Doer](doer.html), like so:
 
 <div class="code">
 
@@ -183,7 +185,7 @@ true at the end of the action even if it throws an exception.
 
 Finally, we can customize some of the fragments of text that go to build
 up implicit action reports by using a
-[CustomMessages](message.htm#custmessage_idx) object like so:
+[CustomMessages](message.html#custmessage_idx) object like so:
 
 <div class="code">
 
@@ -210,11 +212,11 @@ ball\]'. Note where the spaces need to occur in these textual fragments.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Implicit Actions  
-<span class="navnp"><a href="doer.htm" class="nav"><em>Prev:</em> Doers</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Implicit Actions  
+<span class="navnp"><a href="doer.html" class="nav"><em>Prev:</em> Doers</a>
    
-<a href="react.htm" class="nav"><em>Next:</em> Reacting to Actions</a>
+<a href="react.html" class="nav"><em>Next:</em> Reacting to Actions</a>
     </span>
 
 </div>

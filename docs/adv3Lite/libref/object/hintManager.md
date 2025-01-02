@@ -1,3 +1,5 @@
+---
+---
 <span class="title">hintManager</span><span class="type">object</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[549](../source/hintsys.t.html#549)\]

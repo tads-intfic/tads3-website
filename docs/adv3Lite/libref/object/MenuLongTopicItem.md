@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MenuLongTopicItem</span><span class="type">class</span>
 
 [menusys.t](../file/menusys.t.html)\[[474](../source/menusys.t.html#474)\],

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultTellTalkTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4264](../source/actor.t.html#4264)\]

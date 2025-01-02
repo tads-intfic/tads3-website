@@ -1,3 +1,5 @@
+---
+---
 <span class="title">npcMessagesDirect</span><span class="type">object</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2258](../source/msg_neu.t.html#2258)\]

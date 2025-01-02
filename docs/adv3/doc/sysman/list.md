@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> List  
-<span class="navnp"><a href="iter.htm" class="nav"><em>Prev:</em> Iterator</a>
-    <a href="lookup.htm" class="nav"><em>Next:</em> LookupTable</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> List  
+<span class="navnp"><a href="iter.html" class="nav"><em>Prev:</em> Iterator</a>
+    <a href="lookup.html" class="nav"><em>Next:</em> LookupTable</a>    
 </span>
 
 </div>
@@ -37,7 +39,7 @@ function will modify the list, and similarly that you can modify a list
 passed in as an argument to your functions without having to worry about
 how the changes will affect the caller.
 
-This is discussed in more detail in the [Vector](vector.htm) class
+This is discussed in more detail in the [Vector](vector.html) class
 section.
 
 ## String conversions
@@ -45,7 +47,7 @@ section.
 ### String conversions
 
 A list can be converted to a string using the
-[toString()](tadsgen.htm#toString) function. A list can also be used in
+[toString()](tadsgen.html#toString) function. A list can also be used in
 a context where a non-string value is implicitly converted to a string,
 such as on the right-hand side of a "+" operator where the left-hand
 side is a string.
@@ -58,7 +60,7 @@ with commas separating elements. For example,
 
 ## List iterations
 
-A List is a subclass of [Collection](collect.htm), so you can use the
+A List is a subclass of [Collection](collect.html), so you can use the
 <span class="code">createIterator()</span> method to create an Iterator
 to iterate over the elements of the list. The Iterator that a List
 creates is called an IndexedIterator, and visits the elements of the
@@ -67,7 +69,7 @@ list in index order (the first element visited is the element at index
 
 ## List methods
 
-List is a subclass of [Collection](collect.htm), and thus defines the
+List is a subclass of [Collection](collect.html), and thus defines the
 Collection methods. In addition, List defines the methods shown below.
 
 <span class="code">append(*val*)</span>
@@ -259,7 +261,7 @@ This creates a list of the first 20 Fibonacci numbers:
 </div>
 
 (For a simple way of generating a list consisting of a repeated fixed
-value, see the [makeList()](tadsgen.htm#makeList) function.)
+value, see the [makeList()](tadsgen.html#makeList) function.)
 
 </div>
 
@@ -724,10 +726,10 @@ method returns <span class="code">nil</span>.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> List  
-<span class="navnp"><a href="iter.htm" class="nav"><em>Prev:</em> Iterator</a>
-    <a href="lookup.htm" class="nav"><em>Next:</em> LookupTable</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> List  
+<span class="navnp"><a href="iter.html" class="nav"><em>Prev:</em> Iterator</a>
+    <a href="lookup.html" class="nav"><em>Next:</em> LookupTable</a>    
 </span>
 
 </div>

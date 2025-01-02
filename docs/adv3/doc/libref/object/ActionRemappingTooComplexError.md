@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ActionRemappingTooComplexError</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[6668](../source/action.t.html#6668)\]

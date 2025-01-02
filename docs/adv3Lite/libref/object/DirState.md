@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DirState</span><span class="type">object</span>
 
 [english.t](../file/english.t.html)\[[2009](../source/english.t.html#2009)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> NPC-Initiated
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> NPC-Initiated
 Conversation  
-<span class="navnp"><a href="tags.htm" class="nav"><em>Prev:</em> String Tags and Object
+<span class="navnp"><a href="tags.html" class="nav"><em>Prev:</em> String Tags and Object
 Tags</a>    
-<a href="changepc.htm" class="nav"><em>Next:</em> Changing the Player
+<a href="changepc.html" class="nav"><em>Next:</em> Changing the Player
 Character</a>     </span>
 
 </div>
@@ -92,14 +94,14 @@ it simply does nothing, so no harm is done.
 
 ## <span id="convagendaitem">ConvAgendaItem</span>
 
-A ConvAgendaItem is a special kind of [AgendaItem](agenda.htm), which is
+A ConvAgendaItem is a special kind of [AgendaItem](agenda.html), which is
 discussed along with the other types of AgendaItem in the section on
 AgendaItems above. Unless you override the isReady property of a
 ConvAgendaItem to do something else (in which case you should normally
 define it as <span class="code">yourNewCondition && inherited</span>), a
 ConvAgendaItem will be triggered when no conversation has taken place on
 that turn and the NPC is in a position to talk to the player character
-but isn't currently at a [conversation node](convnode.htm). A
+but isn't currently at a [conversation node](convnode.html). A
 ConvAgendaItem can be used:
 
 1.  To allow its Actor to initiate a conversation with the player
@@ -135,7 +137,7 @@ conversation from the corresponding actor. This means:
     with the NPC, whether or not s/he was before.
 3.  That if the player character was not previously in conversation with
     the NPC an actor-initiated greeting will be attempted via any
-    [ActorHelloTopic](hello.htm#actorhello) that's been defined.
+    [ActorHelloTopic](hello.html#actorhello) that's been defined.
 
 This does mean that a ConvAgendaItem should not be used for
 non-conversational purposes, but on the positive side it also means that
@@ -532,7 +534,7 @@ makes Martha the current interlocutor if she wasn't before and notes
 that she has conversed with the player character on this turn. For
 further examples of and reasons for using
 <span class="code">actorSay()</span> in this kind of situation see the
-discussion of [actor-specific tags](tags.htm#actor-tag-idx).
+discussion of [actor-specific tags](tags.html#actor-tag-idx).
 
 The actorSay() method should, however, be used sparingly, and not as the
 normal way of initiating or carrying on a conversation. For one thing,
@@ -548,12 +550,12 @@ situations such as the one illustrated here where it is convenient.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> NPC-Initiated
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> NPC-Initiated
 Conversation  
-<span class="navnp"><a href="tags.htm" class="nav"><em>Prev:</em> String Tags and Object
+<span class="navnp"><a href="tags.html" class="nav"><em>Prev:</em> String Tags and Object
 Tags</a>    
-<a href="changepc.htm" class="nav"><em>Next:</em> Changing the Player
+<a href="changepc.html" class="nav"><em>Next:</em> Changing the Player
 Character</a>     </span>
 
 </div>

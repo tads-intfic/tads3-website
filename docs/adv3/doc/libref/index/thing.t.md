@@ -1,3 +1,5 @@
+---
+---
 ## Classes
 
 <a href="../object/BagAffinityInfo.html#BagAffinityInfo"

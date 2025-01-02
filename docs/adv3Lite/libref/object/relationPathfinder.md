@@ -1,3 +1,5 @@
+---
+---
 <span class="title">relationPathfinder</span><span class="type">object</span>
 
 [relations.t](../file/relations.t.html)\[[629](../source/relations.t.html#629)\]

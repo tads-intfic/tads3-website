@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Introduction  
-<span class="navnp"><a href="begin.htm" class="nav"><em>Prev:</em> Opening Moves</a>
-    <a href="modules.htm" class="nav"><em>Next:</em> Core and Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Introduction  
+<span class="navnp"><a href="begin.html" class="nav"><em>Prev:</em> Opening Moves</a>
+    <a href="modules.html" class="nav"><em>Next:</em> Core and Optional
 Modules</a>     </span>
 
 </div>
@@ -22,8 +24,8 @@ This manual is intended to explain the main features of the adv3Lite
 library, an alternative library for use with the TADS 3 Interactive
 Fiction system. If you need help with the TADS 3 *language*, or other
 aspects of TADS 3 such as using the compiler, please refer to the [TADS
-3 System Manual](../sysman.htm), or start by working through the
-[Tutorial](../tutorial/index.htm). The present manual assumes at least
+3 System Manual](../sysman.html), or start by working through the
+[Tutorial](../tutorial/index.html). The present manual assumes at least
 basic familiarity with the TADS 3 language.
 
 The adv3Lite library is intended as a simpler alternative to the adv3
@@ -204,10 +206,10 @@ number of puzzling parser problems. Indeed, without Mike's work on TADS
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Introduction  
-<span class="navnp"><a href="begin.htm" class="nav"><em>Prev:</em> Opening Moves</a>
-    <a href="modules.htm" class="nav"><em>Next:</em> Core and Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Introduction  
+<span class="navnp"><a href="begin.html" class="nav"><em>Prev:</em> Opening Moves</a>
+    <a href="modules.html" class="nav"><em>Next:</em> Core and Optional
 Modules</a>     </span>
 
 </div>

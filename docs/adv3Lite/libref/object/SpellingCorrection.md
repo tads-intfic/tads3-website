@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SpellingCorrection</span><span class="type">class</span>
 
 [spelling.t](../file/spelling.t.html)\[[800](../source/spelling.t.html#800)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">askTravelOut</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[1979](../source/travel.t.html#1979)\]

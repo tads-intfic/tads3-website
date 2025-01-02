@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ListGroupCustom</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[2029](../source/lister.t.html#2029)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Daemon</span><span class="type">class</span>
 
 [events.t](../file/events.t.html)\[[396](../source/events.t.html#396)\]

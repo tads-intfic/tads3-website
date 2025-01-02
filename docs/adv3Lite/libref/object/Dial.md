@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Dial</span><span class="type">class</span>
 
 [gadget.t](../file/gadget.t.html)\[[220](../source/gadget.t.html#220)\]

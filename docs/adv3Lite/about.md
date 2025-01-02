@@ -1,3 +1,5 @@
+---
+---
 # adv3Lite periplus
 
 ------------------------------------------------------------------------
@@ -18,7 +20,7 @@
 
 **<a href="https://www.tads.org" target="_blank">TADS 3</a>** is a free
 authoring system for writing your own interactive fiction (IF).
-**<a href="https://users.ox.ac.uk/~manc0049/TADSGuide/adv3Lite.htm"
+**<a href="https://users.ox.ac.uk/~manc0049/TADSGuide/adv3Lite.html"
 target="_blank">adv3Lite</a>** is an alternate class library for TADS 3
 whose goal is to simplify certain aspects of the standard adv3 library
 and introduce features found in other IF systems.
@@ -63,11 +65,11 @@ complete language and library documentation.
 
 - <a href="https://www.tads.org" target="_blank">TADS 3</a>, a free
   authoring system for writing your own interactive fiction
-- <a href="https://users.ox.ac.uk/~manc0049/TADSGuide/adv3Lite.htm"
+- <a href="https://users.ox.ac.uk/~manc0049/TADSGuide/adv3Lite.html"
   target="_blank">adv3Lite</a>, an alternate library for TADS 3
 - <a href="libref/index.html" target="_blank">Complete adv3Lite class
   reference</a>
-- <a href="https://www.tads.org/t3doc/doc/sysman/toc.htm"
+- <a href="https://www.tads.org/t3doc/doc/sysman/toc.html"
   target="_blank">TADS 3 System Manual</a>, covers the TADS 3 language
   as well as system and utility functions
 - <a href="https://intfiction.org/c/authoring/tads/20"

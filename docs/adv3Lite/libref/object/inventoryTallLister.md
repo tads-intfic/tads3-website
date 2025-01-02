@@ -1,3 +1,5 @@
+---
+---
 <span class="title">inventoryTallLister</span><span class="type">object</span>
 
 [lister.t](../file/lister.t.html)\[[186](../source/lister.t.html#186)\]

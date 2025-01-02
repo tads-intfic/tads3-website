@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ConvType</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[1950](../source/actor.t.html#1950)\]

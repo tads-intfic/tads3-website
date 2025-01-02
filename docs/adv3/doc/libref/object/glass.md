@@ -1,3 +1,5 @@
+---
+---
 <span class="title">glass</span><span class="type">object</span>
 
 [sense.t](../file/sense.t.html)\[[72](../source/sense.t.html#72)\]

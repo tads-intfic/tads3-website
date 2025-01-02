@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InsufficientNounsError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5406](../source/parser.t.html#5406)\]

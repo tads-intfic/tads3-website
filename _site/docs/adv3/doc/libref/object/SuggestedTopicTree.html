@@ -1,0 +1,165 @@
+<p><span class="title">SuggestedTopicTree</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1398">1398</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A suggested topic that applies to an entire AltTopic group.
+
+Normally, a suggestion is tied to an individual TopicEntry. This means
+that when a topic has several AltTopic alternatives, each AltTopic can
+be its own separate, independent suggestion. A particular alternative
+can be a suggestion or not, independently of the other alternatives for
+the same TopicEntry. Since each AltTopic is a separate suggestion,
+asking about one of the alternatives won't have any effect on the
+"curiosity" about the other alternatives - in other words, the other
+alternatives will be separately suggested when they become active.
+
+In many cases, it's better for an entire set of alternatives to be
+treated as a single suggested topic. That is, we want to suggest the
+topic when ANY of the alternatives is active, and asking about any one
+of the alternatives will satisfy the PC's curiosity for ALL of the
+alternatives. This sort of arrangement is usually better for cases where
+the conditions that trigger the different alternatives aren't things
+that ought to make the PC think to ask the same question again.
+
+Use this class by associating it with the \*root\* TopicEntry of the
+group of alternatives. You can do this most simply by mixing this class
+into the superclass list of the root TopicEntry:
+
+  
++ AskTellTopic, SuggestedTopicTree, SuggestedAskTopic  
+// ...  
+; ++ AltTopic ... ; ++ AltTopic ... ;
+
+This makes the entire group of AltTopics part of the same suggestion.
+Note that you must \*also\* include SuggestedAsk, SuggestedTellTopic, or
+one of the other specialized types among the superclass, to indicate
+which kind of suggestion this is.
+
+`class `**`SuggestedTopicTree`**` :   `[`SuggestedTopic`](../object/SuggestedTopic.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SuggestedTopicTree</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>SuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SuggestedTopicTree</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>SpecialTopic`](../object/SpecialTopic.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">SuggestedTopic</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>associatedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#associatedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>curiositySatisfied<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#curiositySatisfied)</code>  <code class="language-plaintext highlighter-rouge">[</code>fullName<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#fullName)</code>  <code class="language-plaintext highlighter-rouge">[</code>location<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#location)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>suggestionGroup<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#suggestionGroup)</code>  <code class="language-plaintext highlighter-rouge">[</code>suggestTo<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#suggestTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>timesToSuggest<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#timesToSuggest)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>associatedTopicIsActive<code class="language-plaintext highlighter-rouge">](#associatedTopicIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>associatedTopicTalkCount<code class="language-plaintext highlighter-rouge">](#associatedTopicTalkCount)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">SuggestedTopic</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>associatedTopicCanMatch<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#associatedTopicCanMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>findEnclosingSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#findEnclosingSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>findOuterSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#findOuterSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>fromEnclosingSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#fromEnclosingSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#initializeSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSuggestionActive<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#isSuggestionActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteSuggestion<code class="language-plaintext highlighter-rouge">](../object/SuggestedTopic.html#noteSuggestion)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="associatedTopicIsActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">associatedTopicIsActive ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1400">1400</a>]</p>
+
+<div class="desc">
+
+is the associated topic active?
+
+</div>
+
+<p><span id="associatedTopicTalkCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">associatedTopicTalkCount ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1407">1407</a>]</p>
+
+<div class="desc">
+
+get the number of previous invocations of the associated topic
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

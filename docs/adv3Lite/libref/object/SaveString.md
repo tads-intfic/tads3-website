@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SaveString</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[2731](../source/actions.t.html#2731)\]

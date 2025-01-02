@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](addinganobjecttotheroom.htm)
-  [\[Next\]](basictravel.htm)*
+*[\[Previous\]](addinganobjecttotheroom.html)
+  [\[Next\]](basictravel.html)*
 
 ## Tying Up Some Loose Strings
 
@@ -562,7 +564,7 @@ shall follow from now on.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](addinganobjecttotheroom.htm)
-  [\[Next\]](basictravel.htm)*
+*[\[Previous\]](addinganobjecttotheroom.html)
+  [\[Next\]](basictravel.html)*
 
 </div>

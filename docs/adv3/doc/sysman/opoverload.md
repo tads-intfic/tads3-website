@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Operator
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Operator
 Overloading  
-<span class="navnp"><a href="inlineobj.htm" class="nav"><em>Prev:</em> Inline Objects</a>
-    <a href="multmeth.htm" class="nav"><em>Next:</em> Multi-Methods</a>
+<span class="navnp"><a href="inlineobj.html" class="nav"><em>Prev:</em> Inline Objects</a>
+    <a href="multmeth.html" class="nav"><em>Next:</em> Multi-Methods</a>
     </span>
 
 </div>
@@ -544,11 +546,11 @@ probably best to use this sort of overloading sparingly.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Operator
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Operator
 Overloading  
-<span class="navnp"><a href="inlineobj.htm" class="nav"><em>Prev:</em> Inline Objects</a>
-    <a href="multmeth.htm" class="nav"><em>Next:</em> Multi-Methods</a>
+<span class="navnp"><a href="inlineobj.html" class="nav"><em>Prev:</em> Inline Objects</a>
+    <a href="multmeth.html" class="nav"><em>Next:</em> Multi-Methods</a>
     </span>
 
 </div>

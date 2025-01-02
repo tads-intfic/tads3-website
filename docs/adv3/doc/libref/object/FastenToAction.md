@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FastenToAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2636](../source/actions.t.html#2636)\]

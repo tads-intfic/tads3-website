@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RestrictedContainer</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5063](../source/objects.t.html#5063)\]

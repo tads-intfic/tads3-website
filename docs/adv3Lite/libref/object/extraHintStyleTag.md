@@ -1,3 +1,5 @@
+---
+---
 <span class="title">extraHintStyleTag</span><span class="type">object</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[868](../source/hintsys.t.html#868)\]

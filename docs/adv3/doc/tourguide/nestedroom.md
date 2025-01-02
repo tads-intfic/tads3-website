@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>NestedRoom : BasicLocation<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="nestedroomoverview.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="basicchair.htm">[Next]</a></td>
+href="nestedroomoverview.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="basicchair.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

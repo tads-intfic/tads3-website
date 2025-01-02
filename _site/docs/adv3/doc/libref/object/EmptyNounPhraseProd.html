@@ -1,0 +1,258 @@
+<p><span class="title">EmptyNounPhraseProd</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4028">4028</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+An empty noun phrase production is one that matches, typically with
+non-zero badness value, as a placeholder when a command is missing a
+noun phrase where one is required.
+
+Each grammar rule instance of this rule class must define the property
+'responseProd' to be the production that should be used to parse any
+response to an interactive prompt for the missing object.
+
+`class `**`EmptyNounPhraseProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">EmptyNounPhraseProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>NounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BasicProd<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">EmptyNounPhraseProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ImpliedActorNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/ImpliedActorNounPhraseProd.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>nounList(empty)<code class="language-plaintext highlighter-rouge">](../object/nounList(empty).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>singleNoun(empty)`](../object/singleNoun(empty).html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>asker_<code class="language-plaintext highlighter-rouge">](#asker_)</code>  <code class="language-plaintext highlighter-rouge">[</code>fallbackResponseProd<code class="language-plaintext highlighter-rouge">](#fallbackResponseProd)</code>  <code class="language-plaintext highlighter-rouge">[</code>newMatch<code class="language-plaintext highlighter-rouge">](#newMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>responseProd<code class="language-plaintext highlighter-rouge">](#responseProd)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>filterForCollectives<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html#filterForCollectives)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>firstTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#firstTokenIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSpecialResponseMatch<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#isSpecialResponseMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#lastTokenIndex)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getImpliedObject<code class="language-plaintext highlighter-rouge">](#getImpliedObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigText<code class="language-plaintext highlighter-rouge">](#getOrigText)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigTokenList<code class="language-plaintext highlighter-rouge">](#getOrigTokenList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isEmptyPhrase<code class="language-plaintext highlighter-rouge">](#isEmptyPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveNouns<code class="language-plaintext highlighter-rouge">](#resolveNouns)</code>  <code class="language-plaintext highlighter-rouge">[</code>setPrompt<code class="language-plaintext highlighter-rouge">](#setPrompt)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>filterTruncations<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html#filterTruncations)</code>  <code class="language-plaintext highlighter-rouge">[</code>getVerifyKeepers<code class="language-plaintext highlighter-rouge">](../object/NounPhraseProd.html#getVerifyKeepers)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>canResolveTo<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#canResolveTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>setOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#setOrigTokenList)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="asker_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asker_</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4152">4152</a>]</p>
+
+<div class="desc">
+
+The ResolveAsker we use to generate our prompt. Use the base
+ResolveAsker by default; this can be overridden when the prompt is to be
+customized.
+
+</div>
+
+<p><span id="fallbackResponseProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fallbackResponseProd</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4145">4145</a>]</p>
+
+<div class="desc">
+
+Our fallback response production - if responseProd is nil, this must be
+supplied for cases where we can't get the production from the action.
+This is ignored if responseProd is non-nil.
+
+</div>
+
+<p><span id="newMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">newMatch</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4130">4130</a>]</p>
+
+<div class="desc">
+
+the new match, when we get an interactive response to a query for the
+missing object
+
+</div>
+
+<p><span id="responseProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">responseProd</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4138">4138</a>]</p>
+
+<div class="desc">
+
+Our "response" production - this is the production we use to parse the
+player's input in response to our disambiguation prompt. A subclass can
+leave this as nil, in which case we'll attempt to get the appropriate
+response production from the action.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="getImpliedObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getImpliedObject (resolver, results)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4094">4094</a>]</p>
+
+<div class="desc">
+
+Get an implied object to automatically fill in for the missing noun
+phrase. By default, we simply ask the 'results' object for the missing
+object.
+
+</div>
+
+<p><span id="getOrigText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getOrigText ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4115">4115</a>]</p>
+
+<div class="desc">
+
+Get my original text. If I have a new match tree, return the text from
+the new match tree. Otherwise, we have no original text, since we're an
+empty phrase.
+
+</div>
+
+<p><span id="getOrigTokenList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getOrigTokenList ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4105">4105</a>]</p>
+
+<div class="desc">
+
+Get my tokens. If I have a new match tree, return the tokens from the
+new match tree. Otherwise, we don't have any tokens, since we're empty.
+
+</div>
+
+<p><span id="isEmptyPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isEmptyPhrase ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4124">4124</a>]</p>
+
+<div class="desc">
+
+I'm an empty noun phrase, unless I already have a new match object.
+
+</div>
+
+<p><span id="resolveNouns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveNouns (resolver, results)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4038">4038</a>]</p>
+
+<div class="desc">
+
+resolve the empty phrase
+
+</div>
+
+<p><span id="setPrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setPrompt (response, asker)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4030">4030</a>]</p>
+
+<div class="desc">
+
+customize the way we generate the prompt and parse the response
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

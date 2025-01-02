@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](rewardingtheeffort.htm)   [\[Next\]](verify.htm)*
+*[\[Previous\]](rewardingtheeffort.html)   [\[Next\]](verify.html)*
 
 ## Controlling the Action
 
@@ -72,7 +74,7 @@ considered to be something else by TADS 3. For example in the command
 keyboard**, the keyboard is actually the direct object and 'qwerty' is
 the *literal object*). Beyond making sure that you're aware of this
 complication, we can afford to ignore it for now (when you want the full
-story, read the article on [How to Create Verbs](..\techman\t3verb.htm)
+story, read the article on [How to Create Verbs](..\techman\t3verb.html)
 in the Technical Manual).
 
   
@@ -421,13 +423,13 @@ dobjFor(TakeWith)
    }  
 }  
   
-The [verify()](verify.htm), [check()](check.htm), [action()](action.htm)
-and [preCondition](precond.htm) methods are described in some detail in
+The [verify()](verify.html), [check()](check.html), [action()](action.html)
+and [preCondition](precond.html) methods are described in some detail in
 the articles
-"<a href="../techman/t3verb.htm" target="_top">How to Create Verbs in
+"<a href="../techman/t3verb.html" target="_top">How to Create Verbs in
 TADS 3</a>",
-"<a href="../techman/t3res.htm" target="_top">TADS 3 Action results</a>"
-and "<a href="../techman/t3verchk.htm" target="_top">On good usage of
+"<a href="../techman/t3res.html" target="_top">TADS 3 Action results</a>"
+and "<a href="../techman/t3verchk.html" target="_top">On good usage of
 verify() and check() in TADS 3 games</a>" in the *Technical Manual*.
 These are all articles you will want to read sooner rather than later;
 you might find it particularly useful to read the "TADS 3 Actions
@@ -458,6 +460,6 @@ ground we're about to cover.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](rewardingtheeffort.htm)   [\[Next\]](verify.htm)*
+*[\[Previous\]](rewardingtheeffort.html)   [\[Next\]](verify.html)*
 
 </div>

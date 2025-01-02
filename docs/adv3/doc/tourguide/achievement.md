@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Achievement : object<br />
 </strong></td>
-<td style="text-align: right;"><a href="addtoscore.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="simpleachievement.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="addtoscore.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="simpleachievement.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -25,7 +27,7 @@ into the museum corridor open, since this is a puzzle that takes several
 steps to solve, but if we just put addToScore in, say,
 blankSteelDoor.makeOpen(), then players could keep adding to their score
 by repeatedly opening the blank steel door once they'd worked out how to
-[fix the button](attachable.htm). We *could* prevent this by adding a
+[fix the button](attachable.html). We *could* prevent this by adding a
 hasBeenOpened property to the blankSteelDoor, setting it to true when
 the door is opened, and only calling addToScore if hasBeenOpened is nil.
 But it would be nice if there was an addToScoreOnce function that
@@ -148,8 +150,8 @@ achievement with the given number of points.  <br />
 <tr data-valign="top">
 <td width="14"><strong></strong>·<strong></strong></td>
 <td><strong>points</strong> - the number of points awarded for this
-Achievement if either its <a href="awardpoints.htm">awardPoints</a> or
-its <a href="awardpointsonce.htm">awardPointsOnce</a> method is called.
+Achievement if either its <a href="awardpoints.html">awardPoints</a> or
+its <a href="awardpointsonce.html">awardPointsOnce</a> method is called.
  <br />
 </td>
 </tr>
@@ -168,7 +170,7 @@ its <a href="awardpointsonce.htm">awardPointsOnce</a> method is called.
 be awarded for this Achievement if its points can be awarded for it more
 than once. By default this is simply the same as <em>points</em>. This
 figure is used by the library routine that calculates the <a
-href="maxscore.htm">maximum score</a>.  <br />
+href="maxscore.html">maximum score</a>.  <br />
 </td>
 </tr>
 </tbody>
@@ -392,7 +394,7 @@ already seen, such as:
 **;  
   
 Note that we have used the [Achievement
-Template](achievementtemplate.htm) in these definitions.  
+Template](achievementtemplate.html) in these definitions.  
   
   
   

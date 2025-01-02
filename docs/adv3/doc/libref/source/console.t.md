@@ -1,3 +1,5 @@
+---
+---
 # console.t
 
 [documentation](../file/console.t.html)

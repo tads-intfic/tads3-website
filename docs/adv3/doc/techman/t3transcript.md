@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Manipulating the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Manipulating the
 Transcript  
-<span class="navnp"><a href="t3cycle.htm" class="nav"><em>Prev:</em> The Command Execution
+<span class="navnp"><a href="t3cycle.html" class="nav"><em>Prev:</em> The Command Execution
 Cycle</a>    
-<a href="t3scope.htm" class="nav"><em>Next:</em> Redefining Scope</a>
+<a href="t3scope.html" class="nav"><em>Next:</em> Redefining Scope</a>
     </span>
 
 </div>
@@ -48,7 +50,7 @@ a bit of a nuisance to the unwary game author, particularly when you
 want to interrupt the flow of text with a dramatic pause or a special
 prompt for user input at a particular point, and the transcript ruins
 the effect. However, there are quite straightforward ways to deal with
-this (see the article on [Some Common Input/Output Issues](t3inout.htm)
+this (see the article on [Some Common Input/Output Issues](t3inout.html)
 if you need help with them), and once you learn how to manipulate the
 transcript, it can be used to good effect. In particular you can use it
 to reorder reports that otherwise seem to be in the wrong sequence, or,
@@ -421,7 +423,7 @@ CommandReportMessages, CommandAnnouncements, and others.
 the reports that use
 [MessageResult](../libref/object/MessageResult.html) to construct their
 messages. They typically result from using the macros described in the
-article on [Action Results](t3res.htm#action). The various types of
+article on [Action Results](t3res.html#action). The various types of
 CommandReportMessage (with links to the appropriate sections in the
 Library Reference Manual) are:
 
@@ -668,7 +670,7 @@ performing actions on their own initiative).
 The usual flow of events is that executeCommand() eventually calls
 executeAction() wrapped within the withCommandTranscript() function (for
 the roles of executeCommand and executeAction see the article on the
-[Command Execution Cycle](t3cycle.htm)). In this context,
+[Command Execution Cycle](t3cycle.html)). In this context,
 withCommandTranscript() creates a new CommandTranscript object, installs
 it on the mainOutputStream (so that it becomes the gTranscript object),
 calls executeAction(), uninstalls the CommandTranscript object, and then
@@ -721,8 +723,8 @@ saying something different.
 
 In order to manipulate the transcript effectively, it is very helpful to
 know (or know where to look up) the details of the
-[Vector](../sysman/vector.htm) intrinsic class and to be reasonably
-comfortable with [Anonymous Functions](../sysman/anonfn.htm), since
+[Vector](../sysman/vector.html) intrinsic class and to be reasonably
+comfortable with [Anonymous Functions](../sysman/anonfn.html), since
 these are extremely useful in manipulating Vectors, and are also
 essential in the summarizeAction() method we shall look at next.
 
@@ -899,7 +901,7 @@ coins' here, but that would have made our code a little less general.
 
 For a similar but slightly more elaborate example of this kind of thing,
 see the section on 'Counting the Cash' in the [Getting
-Started](../gsg/countingthecash.htm) guide.
+Started](../gsg/countingthecash.html) guide.
 
 Of course, giving coins to an NPC is not the only case where reports on
 multiple coins could be improved. It may be we'd want to expand the
@@ -1838,12 +1840,12 @@ wrong with your latest attempt.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Manipulating the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Manipulating the
 Transcript  
-<span class="navnp"><a href="t3cycle.htm" class="nav"><em>Prev:</em> The Command Execution
+<span class="navnp"><a href="t3cycle.html" class="nav"><em>Prev:</em> The Command Execution
 Cycle</a>    
-<a href="t3scope.htm" class="nav"><em>Next:</em> Redefining Scope</a>
+<a href="t3scope.html" class="nav"><em>Next:</em> Redefining Scope</a>
     </span>
 
 </div>

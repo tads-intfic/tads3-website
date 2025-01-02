@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SearchAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[1791](../source/actions.t.html#1791)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">objTablePreinit</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[6398](../source/actor.t.html#6398)\]

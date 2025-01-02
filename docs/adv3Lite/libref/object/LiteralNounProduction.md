@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LiteralNounProduction</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[4206](../source/parser.t.html#4206)\]

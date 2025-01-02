@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DetachFromAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2472](../source/actions.t.html#2472)\]

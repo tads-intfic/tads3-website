@@ -1,3 +1,5 @@
+---
+---
 <span class="title">libScore</span><span class="type">object</span>
 
 [score.t](../file/score.t.html)\[[297](../source/score.t.html#297)\]

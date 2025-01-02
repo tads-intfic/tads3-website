@@ -1,0 +1,164 @@
+<p><span class="title">SpecialsToHtmlState</span><span class="type">class</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1133">1133</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Stream state object for String.specialsToHtml().
+
+`class `**`SpecialsToHtmlState`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SpecialsToHtmlState</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>flags_<code class="language-plaintext highlighter-rouge">](#flags_)</code>  <code class="language-plaintext highlighter-rouge">[</code>tag_<code class="language-plaintext highlighter-rouge">](#tag_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>resetLine<code class="language-plaintext highlighter-rouge">](#resetLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetState<code class="language-plaintext highlighter-rouge">](#resetState)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="flags_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flags_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1170">1170</a>]</p>
+
+<div class="desc">
+
+Internal output state flags at end of last string parsed. This is a
+combination of bit flags:
+
+0x0001 - last string ended within a line of text  
+0x0002 - caps flag '\\' pending  
+0x0004 - lowercase flag '\v' pending  
+0x0008 - last string ended within an HTML tag  
+0x0010 - last string ended in double-quoted HTML tag attribute text  
+0x0020 - last string ended in single-quoted HTML tag attribute text  
+0x0040 - last string ended with an ordinary space  
+0x0080 - last string ended with a quoted space '\\ '  
+0x0100 - \&lt;Q\&gt; parity level: 0=double quotes, 1=single quotes  
+0x0300 - distance from last '\t' tab column (0..3)
+
+</div>
+
+<p><span id="tag_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tag_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1173">1173</a>]</p>
+
+<div class="desc">
+
+tag in progress at end of last string parsed
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="resetLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resetLine ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1149">1149</a>]</p>
+
+<div class="desc">
+
+Explicitly reset to the start of a line. This can be called after a
+non-output operation that resets the line position, such as reading an
+input line.
+
+</div>
+
+<p><span id="resetState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resetState ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1138">1138</a>]</p>
+
+<div class="desc">
+
+Reset the state. This should be used when the output stream context is
+reset, such as when clearing the window.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

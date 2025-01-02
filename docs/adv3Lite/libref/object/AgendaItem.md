@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AgendaItem</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[5790](../source/actor.t.html#5790)\]

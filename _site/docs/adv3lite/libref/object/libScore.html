@@ -1,0 +1,266 @@
+<p><span class="title">libScore</span><span class="type">object</span></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#336">336</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The main game score object.
+
+**`libScore`**` :   `[`PreinitObject`](../object/PreinitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">libScore</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>fullScoreList<code class="language-plaintext highlighter-rouge">](#fullScoreList)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreNotify<code class="language-plaintext highlighter-rouge">](#scoreNotify)</code>  <code class="language-plaintext highlighter-rouge">[</code>totalScore<code class="language-plaintext highlighter-rouge">](#totalScore)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addToScore_<code class="language-plaintext highlighter-rouge">](#addToScore_)</code>  <code class="language-plaintext highlighter-rouge">[</code>calcMaxScore<code class="language-plaintext highlighter-rouge">](#calcMaxScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>runScoreNotifier<code class="language-plaintext highlighter-rouge">](#runScoreNotifier)</code>  <code class="language-plaintext highlighter-rouge">[</code>showFullScore<code class="language-plaintext highlighter-rouge">](#showFullScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>showScore<code class="language-plaintext highlighter-rouge">](#showScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>showScoreMessage<code class="language-plaintext highlighter-rouge">](#showScoreMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showScoreNoMaxMessage<code class="language-plaintext highlighter-rouge">](#showScoreNoMaxMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showScoreRank<code class="language-plaintext highlighter-rouge">](#showScoreRank)</code>  <code class="language-plaintext highlighter-rouge">[</code>showScoreRankMessage<code class="language-plaintext highlighter-rouge">](#showScoreRankMessage)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="fullScoreList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fullScoreList</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#511">511</a>]</p>
+
+<div class="desc">
+
+Vector for the full score achievement list. This is a list of all of the
+Achievement objects awarded for accomplishments so far.
+
+</div>
+
+<p><span id="scoreNotify"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scoreNotify</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#521">521</a>]</p>
+
+<div class="desc">
+
+current score notification status - if on, we'll show a message at the
+end of each turn where the score changes, otherwise we won't mention
+anything
+
+</div>
+
+<p><span id="totalScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">totalScore</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#514">514</a>]</p>
+
+<div class="desc">
+
+the total number of points scored so far
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addToScore_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToScore_ (points, desc)</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#349">349</a>]</p>
+
+<div class="desc">
+
+Add to the score. 'points' is the number of points to add to the score,
+and 'desc' is a string describing the reason the points are being
+awarded, or an Achievement object describing the points.
+
+We keep a list of each unique achievement. If 'desc' is already in this
+list, we'll simply add the given number of points to the existing entry
+for the same description.
+
+Note that, if 'desc' is an Achievement object, it will match a previous
+item only if it's exactly the same Achievement instance.
+
+</div>
+
+<p><span id="calcMaxScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">calcMaxScore ( )</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#529">529</a>]</p>
+
+<div class="desc">
+
+Compute the sum of the maximum point values of the Achievement objects
+in the game. Point values are optional in Achievement objects; if there
+are no Achievement objects with non-nil point values, this will simply
+return nil.
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#569">569</a>]</p>
+
+<div class="desc">
+
+execute pre-initialization
+
+</div>
+
+<p><span id="runScoreNotifier"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">runScoreNotifier ( )</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#411">411</a>]</p>
+
+<div class="desc">
+
+Explicitly run the score notification daemon.
+
+</div>
+
+<p><span id="showFullScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showFullScore ( )</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#497">497</a>]</p>
+
+<div class="desc">
+
+Display the full score. 'explicit' is true if the player asked for the
+full score explicitly, as with a FULL SCORE command; if we're showing
+the full score automatically in the course of some other action,
+'explicit' should be nil.
+
+</div>
+
+<p><span id="showScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showScore ( )</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#420">420</a>]</p>
+
+<div class="desc">
+
+Show the simple score
+
+</div>
+
+<p><span id="showScoreMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showScoreMessage (points, maxPoints, turns)</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#440">440</a>]</p>
+
+<div class="desc">
+
+show the basic score message
+
+</div>
+
+<p><span id="showScoreNoMaxMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showScoreNoMaxMessage (points, turns)</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#449">449</a>]</p>
+
+<div class="desc">
+
+show the basic score message with no maximum
+
+</div>
+
+<p><span id="showScoreRank"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showScoreRank (points)</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#460">460</a>]</p>
+
+<div class="desc">
+
+show the score rank message
+
+</div>
+
+<p><span id="showScoreRankMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showScoreRankMessage (msg)</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#485">485</a>]</p>
+
+<div class="desc">
+
+show the full message for a given score rank string
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

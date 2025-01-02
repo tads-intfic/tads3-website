@@ -1,0 +1,163 @@
+<p><span class="title">Script</span><span class="type">class</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#533">533</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Generic script object. This class can be used to implement a simple
+state machine.
+
+We define Script in misc.t rather than eventList.t so that other parts
+of the library can safely test whether something is ofKind(Script) even
+it eventList.t is not present. The various types and subclasses of
+script are defined in eventList.t to allow them to be optionally
+excluded from the build if they're not needed in a particular game.
+
+`class `**`Script`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Script</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Script</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>EventList<code class="language-plaintext highlighter-rouge">](../object/EventList.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>CyclicEventList<code class="language-plaintext highlighter-rouge">](../object/CyclicEventList.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ExternalEventList<code class="language-plaintext highlighter-rouge">](../object/ExternalEventList.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>RandomEventList<code class="language-plaintext highlighter-rouge">](../object/RandomEventList.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ShuffledEventList<code class="language-plaintext highlighter-rouge">](../object/ShuffledEventList.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>StopEventList<code class="language-plaintext highlighter-rouge">](../object/StopEventList.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SyncEventList`](../object/SyncEventList.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>curScriptState<code class="language-plaintext highlighter-rouge">](#curScriptState)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>doScript<code class="language-plaintext highlighter-rouge">](#doScript)</code>  <code class="language-plaintext highlighter-rouge">[</code>getScriptState<code class="language-plaintext highlighter-rouge">](#getScriptState)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="curScriptState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curScriptState</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#565">565</a>]</p>
+
+<div class="desc">
+
+Property giving our current state. This should never be used directly;
+instead, getScriptState() should always be used, since getScriptState()
+can be overridden so that the state depends on something other than this
+internal state property. The meaning of the state identifier is specific
+to each subclass.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="doScript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doScript ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#553">553</a>]</p>
+
+<div class="desc">
+
+Process the next step of the script. This routine must be overridden to
+perform the action of the script. This routine's action should call
+getScriptState() to get our current state, and should update the
+internal state appropriately to take us to the next step after the
+current one.
+
+By default, we don't do anything at all.
+
+</div>
+
+<p><span id="getScriptState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getScriptState ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#538">538</a>]</p>
+
+<div class="desc">
+
+Get the current state. This returns a value that gives the current state
+of the script, which is usually simply an integer.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Relation</span><span class="type">class</span>
 
 [relations.t](../file/relations.t.html)\[[19](../source/relations.t.html#19)\]

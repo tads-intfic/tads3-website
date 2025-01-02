@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AmbiguousError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5600](../source/parser.t.html#5600)\]

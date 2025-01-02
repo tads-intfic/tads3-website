@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StringComparator</span><span class="type">class</span>
 
 [strcomp.h](../file/strcomp.h.html)\[[29](../source/strcomp.h.html#29)\]

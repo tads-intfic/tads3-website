@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Object-Oriented
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Object-Oriented
 Programming Overview  
-<span class="navnp"><a href="t3des2.htm" class="nav"><em>Prev:</em> IF Design: In Theory</a>
-    <a href="t3inout.htm" class="nav"><em>Next:</em> Some Common
+<span class="navnp"><a href="t3des2.html" class="nav"><em>Prev:</em> IF Design: In Theory</a>
+    <a href="t3inout.html" class="nav"><em>Next:</em> Some Common
 Input/Output Issues</a>     </span>
 
 </div>
@@ -238,11 +240,11 @@ objects.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Object-Oriented
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Object-Oriented
 Programming Overview  
-<span class="navnp"><a href="t3des2.htm" class="nav"><em>Prev:</em> IF Design: In Theory</a>
-    <a href="t3inout.htm" class="nav"><em>Next:</em> Some Common
+<span class="navnp"><a href="t3des2.html" class="nav"><em>Prev:</em> IF Design: In Theory</a>
+    <a href="t3inout.html" class="nav"><em>Next:</em> Some Common
 Input/Output Issues</a>     </span>
 
 </div>

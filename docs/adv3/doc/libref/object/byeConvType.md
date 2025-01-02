@@ -1,3 +1,5 @@
+---
+---
 <span class="title">byeConvType</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[2002](../source/actor.t.html#2002)\]

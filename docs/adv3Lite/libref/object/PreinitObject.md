@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PreinitObject</span><span class="type">class</span>
 
 [\_main.t](../file/_main.t.html)\[[471](../source/_main.t.html#471)\],

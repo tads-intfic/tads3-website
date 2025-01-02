@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,24 +9,24 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>MultiFaceted : <a
-href="multiinstance.htm">MultiInstance</a><br />
+href="multiinstance.html">MultiInstance</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="multiinstance.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="collectivegroup.htm">[Next]</a></td>
+href="multiinstance.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="collectivegroup.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-MultiFaceted is almost identical to [MultiInstance](multiinstance.htm),
+MultiFaceted is almost identical to [MultiInstance](multiinstance.html),
 except that it is used to place copies of what is notionally the *same*
 object in multiple locations, rather than copies of what are similar but
 numerically distinct objects. For example, although the forest contains
 many trees, it is only one forest, so that if we might want to refer to
 both the trees and the forest throughout its extent we should use a
-[MultiInstance](multiinstance.htm) to represent the trees and a
+[MultiInstance](multiinstance.html) to represent the trees and a
 MultiFaceted to represent the forest:  
   
 MultiFaceted  
@@ -47,7 +49,7 @@ know what you're talking about if you immediately try to EXAMINE THEM in
 another.  
   
 Apart from this difference, everything said about
-[MultiInstance](multiinstance.htm) applies to MultiFaceted and need not
+[MultiInstance](multiinstance.html) applies to MultiFaceted and need not
 be repeated. You can use exactly the same methods to move MultiFaceted
 objects around dynamically, or specify the initial locations the
 instance objects should occupy.  

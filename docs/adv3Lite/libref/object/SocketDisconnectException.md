@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SocketDisconnectException</span><span class="type">class</span>
 
 [tadsnet.t](../file/tadsnet.t.html)\[[393](../source/tadsnet.t.html#393)\]

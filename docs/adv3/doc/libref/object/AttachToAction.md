@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AttachToAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2469](../source/actions.t.html#2469)\]

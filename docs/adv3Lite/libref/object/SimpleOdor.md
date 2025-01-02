@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SimpleOdor</span><span class="type">class</span>
 
 [sensory.t](../file/sensory.t.html)\[[232](../source/sensory.t.html#232)\]

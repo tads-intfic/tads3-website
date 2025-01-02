@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Keyring : <a
-href="bagofaffinity.htm">BagOfHolding</a><br />
+href="bagofaffinity.html">BagOfHolding</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="lockablewithkey.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="openable.htm">[Next]</a></td>
+href="lockablewithkey.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="openable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -60,4 +62,4 @@ cardHolder: Keyring 'plastic cardholder' 'plastic cardholder'
 ;  
   
 We'll be doing something like this presently, when we come to implement
-a [card key](anotherlock.htm).  
+a [card key](anotherlock.html).  

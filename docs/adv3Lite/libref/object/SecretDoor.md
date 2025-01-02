@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SecretDoor</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[879](../source/extras.t.html#879)\]

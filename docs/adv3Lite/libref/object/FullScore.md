@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FullScore</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[238](../source/actions.t.html#238)\]

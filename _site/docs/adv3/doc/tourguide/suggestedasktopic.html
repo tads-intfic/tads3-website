@@ -1,0 +1,122 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SuggestedAskTopic : <a href="suggestedtopic.html">SuggestedTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="suggestedtopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="suggestedtelltopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A SuggestedAskTopic is the particular type of
+<a href="suggestedtopic.html">SuggestedTopic</a> that prompts the player to Ask
+About such-and-such a thing.</p>
+
+<p>For example, in addition to making the diamond ring a suggested topic
+for Sarah, we could do the same for asking about herself:</p>
+
+<p>++ AskTopic, <strong>SuggestedAskTopic</strong>, StopEventList @sarah<br />
+  [ {: ”&lt;q&gt;What brings you here?&lt;/q&gt; you wonder,\b<br />
+     &lt;q&gt;I was just taking a walk in the valley when some madman snatched my ring<br />
+     off me and ran in here, shouting at me to come and find it if I wanted it<br />
+     back.&lt;/q&gt; she tells you, &lt;q&gt;So I followed him in. Now I<br />
+     just want to find my ring and get out of here.&lt;/q&gt;&lt;&lt;gSetKnown(diamondRing)&gt;&gt;“ },<br />
+    {: ”&lt;q&gt;And you are…?&lt;/q&gt; you ask.\b<br />
+       &lt;q&gt;&lt;&lt;sarah.makeProper&gt;&gt;,&lt;/q&gt; she tells you, &lt;q&gt;My name’s Sarah. Pleased<br />
+       to meet you - and I’ll be even more pleased if you help me find my ring.&lt;/q&gt;“ },<br />
+      ’&lt;q&gt;So you you\ve never been in these caves before?&lt;/q&gt; you ask.\b<br />
+       &lt;q&gt;No, never,&lt;/q&gt; she replies, &lt;q&gt;and I wouldn\t be here now if my ring<br />
+        hadn\t been stolen. Caves aren\t really my thing, though these<br />
+        aren\t at all what I expected!&lt;/q&gt; she nods towards the lake and the<br />
+        ship, and a pensive expression crosses her face, &lt;q&gt;I suppose it might<br />
+        be interesting to explore - but I really should get back.&lt;/q&gt;’,<br />
+      ’&lt;q&gt;What are you so anxious to get back to?&lt;/q&gt; you ask.\b<br />
+       &lt;q&gt;Fresh air and open sky, for a start!&lt;/q&gt; she laughs. ’              <br />
+  ]     <br />
+  <strong>name = ’herself’</strong><br />
+;</p>
+
+<p>(I’m assuming here that we’ve adopted my suggested modification to
+<a href="suggestedtopic.html">SuggestedTopic</a>, so that we don’t need to set
+timesToSuggest by hand).</p>
+
+<p>When the player character is conversing with Solomon, there’s a couple
+of interesting objects he’ll probably want to ask about anyway, but as
+we haven’t provided any responses for them as yet, they’ll furnish good
+examples of further SuggestedAskTopics. In both case they should be
+located inside the solomonTalking state. First the carbuncle:</p>
+
+<p>++ AskTellTopic, SuggestedAskTopic, StopEventList @carbuncle<br />
+  [<br />
+    ’&lt;q&gt;That\s a very fine looking carbuncle you have there.&lt;/q&gt; you remark.\b<br />
+     &lt;q&gt;Indeed it is,&lt;/q&gt; {the solomon/he} concurs, &lt;q&gt;I\m told there\s not<br />
+     another like it under the sun.&lt;/q&gt;’,</p>
+
+<p>    ’&lt;q&gt;How did you come by that carbuncle?&lt;/q&gt; you ask.\b<br />
+     &lt;q&gt;It was one of the gifts the Queen of Sheba gave me <br />
+     when she came to be dazzled by my great wisdom.&lt;/q&gt; he tells you.\b’,    </p>
+
+<p>    ’&lt;q&gt;That gem must be worth a fortune.&lt;/q&gt; you observe.\b<br />
+     &lt;q&gt;No doubt.&lt;/q&gt; the king concurs dryly. ’      <br />
+  ]<br />
+  name = ’the carbuncle’<br />
+  isActive = (!carbuncle.moved)<br />
+;</p>
+
+<p>Note that we make this a SuggestedAskTopic although it’s also an
+AskTellTopic; the player could TELL SOLOMON ABOUT CARBUNCLE as well as
+ASK SOLOMON ABOUT CARBUNCLE, but we only suggest one or the other (in
+this case ASK ABOUT). Note also that we provide an isActive condition
+that makes the topic (and hence the corresponding suggestion) active
+only until the carbuncle has been moved.</p>
+
+<p>We should also add an entry to deal with the Baaras Root:</p>
+
+<p>++ AskTopic, SuggestedAskTopic, StopEventList @baarasRoot<br />
+  [<br />
+     ’&lt;q&gt;What is that curious root you &lt;&lt;baarasRoot.moved ? ’had’ :<br />
+     ’have’&gt;&gt; there?&lt;/q&gt; you inquire.\b<br />
+     &lt;q&gt;It grows in a ravine near a place called Baaras, hence we call<br />
+     it the Baaras-root - though the heathen call it Mandragora.&lt;/q&gt; he<br />
+     tells you, &lt;q&gt;It has many interesting properties.&lt;/q&gt;‘ ,<br />
+    ’&lt;q&gt;Tell me more about the properties of this Baaras-root,&lt;/q&gt; you <br />
+     request.\b<br />
+     &lt;q&gt;Well,&lt;/q&gt; {the solomon/he} explains, &lt;q&gt;when growing, it emits<br />
+     a bright light towards evening. At any time of day it proves hard<br />
+     to pick, for it shrinks up to elude the grasp of anyone who approaches<br />
+     with the intention of plucking it from the ground - although it can<br />
+     be made to sit still by pouring on it, er, certain secretions of the<br />
+     human body. Even then it is highly dangerous to obtain.&lt;/q&gt;’,<br />
+    ’&lt;q&gt;So why is the Baaras root so dangerous to pick?&lt;/q&gt; you wonder.\b<br />
+     &lt;q&gt;Why - because unless you manage to carry off the root, suspending it from<br />
+      your hand, the mere touch proves fatal.&lt;/q&gt; he tells you, &lt;q&gt;That\s<br />
+      why we normally use a dog - if you tie a dog to the root and walk<br />
+      away, the dog will try to run after you, pulling the root from the<br />
+      ground. It\s instant death for the dog, of course, but it\s<br />
+      then perfectly safe to pick up the root and carry it away.&lt;/q&gt;’,<br />
+    ’&lt;q&gt;So what on earth makes the Baaras root worth all the bother<br />
+      of plucking it up from the ground? Especially since it seems so<br />
+      deadly!&lt;/q&gt; you wonder.\b<br />
+     &lt;q&gt;Ah. Its value is that it is also fatal to demons.&lt;/q&gt; {the solomon/he}<br />
+     tells you. &lt;q&gt;It\s one of the most effective counters to demons I know.&lt;/q&gt;’, <br />
+    ’&lt;q&gt;So the Baaras root is good against demons?&lt;/q&gt; you ask.\b<br />
+     &lt;q&gt;Highly effective.&lt;/q&gt; he assures you, &lt;q&gt;Nothing better.&lt;/q&gt;‘ <br />
+  ]<br />
+  name = ’the root’<br />
+;</p>
+
+<p>In case you’re wondering where I obtained these bizarre details, they
+come (more or less) straight from Josephus, <em>Jewish War</em>, 7.180-85.
+Although Josephus is there talking about first-century CE Palestine, he
+elsewhere notes (<em>Jewish Antiquities</em> 8.45-49) that God had granted
+Solomon particular expertise in the art of expelling demons, and that
+he, Josephus, had witnessed a fellow Jew successfully employing the
+incantations and the <em>root</em> prescribed by Solomon in an exorcism. It’s a
+fair guess, then, that Josephus envisages Solomon prescribing the Baaras
+root for use against demons (which, of course, is not at all the same as
+supposing that Solomon actually ever did anything of the sort - but once
+again we are depicting the Solomon of legend here).</p>

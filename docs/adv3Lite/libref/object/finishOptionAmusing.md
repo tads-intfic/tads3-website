@@ -1,3 +1,5 @@
+---
+---
 <span class="title">finishOptionAmusing</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[1325](../source/misc.t.html#1325)\]

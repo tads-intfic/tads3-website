@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SystemAction</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[6612](../source/action.t.html#6612)\]

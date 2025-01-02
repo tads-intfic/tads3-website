@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RandomFiringScript</span><span class="type">class</span>
 
 [misc.t](../file/misc.t.html)\[[917](../source/misc.t.html#917)\]

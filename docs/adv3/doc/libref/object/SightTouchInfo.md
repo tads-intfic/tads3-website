@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SightTouchInfo</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[1016](../source/thing.t.html#1016)\]

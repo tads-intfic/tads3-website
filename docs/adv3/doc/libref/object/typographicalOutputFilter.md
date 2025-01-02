@@ -1,3 +1,5 @@
+---
+---
 <span class="title">typographicalOutputFilter</span><span class="type">object</span>
 
 [en_us.t](../file/en_us.t.html)\[[3669](../source/en_us.t.html#3669)\]

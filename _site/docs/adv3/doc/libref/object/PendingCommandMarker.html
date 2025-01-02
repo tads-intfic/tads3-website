@@ -1,0 +1,129 @@
+<p><span class="title">PendingCommandMarker</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#10566">10566</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A pending command marker. This is not an actual pending command; rather,
+it's just a queue marker. We sometimes want to synchronize some other
+activity with an actor's progress through its command queue; for
+example, we might want one actor to wait until another actor has
+executed a particular pending action. These markers can be used for this
+kind of synchronization; they move through the queue like ordinary
+pending commands, so we can tell if an actor has reached a particular
+command by observing the marker's progress through the queue.
+
+`class `**`PendingCommandMarker`**` :   `[`PendingCommandInfo`](../object/PendingCommandInfo.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">PendingCommandMarker</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PendingCommandInfo<code class="language-plaintext highlighter-rouge">](../object/PendingCommandInfo.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>hasCommand<code class="language-plaintext highlighter-rouge">](#hasCommand)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PendingCommandInfo</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>issuer_<code class="language-plaintext highlighter-rouge">](../object/PendingCommandInfo.html#issuer_)</code>  <code class="language-plaintext highlighter-rouge">[</code>startOfSentence_<code class="language-plaintext highlighter-rouge">](../object/PendingCommandInfo.html#startOfSentence_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PendingCommandInfo</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/PendingCommandInfo.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>executePending<code class="language-plaintext highlighter-rouge">](../object/PendingCommandInfo.html#executePending)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="hasCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hasCommand</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#10568">10568</a>]</p>
+
+<div class="desc">
+
+I have no command to execute
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

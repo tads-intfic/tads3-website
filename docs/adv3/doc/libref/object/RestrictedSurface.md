@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RestrictedSurface</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5209](../source/objects.t.html#5209)\]

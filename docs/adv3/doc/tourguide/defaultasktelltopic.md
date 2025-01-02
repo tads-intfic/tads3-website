@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>DefaultAskTellTopic : <a
-href="defaulttopics-overview.htm">DefaultTopic</a><br />
+href="defaulttopics-overview.html">DefaultTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="defaulttelltopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="defaultgivetopic.htm">[Next]</a></td>
+href="defaulttelltopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="defaultgivetopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -31,7 +33,7 @@ ABOUT and TELL ABOUT. The DefaultAskTellTopic is perhaps best used in
 situations where the author does not expect it to be so heavily
 employed, perhaps on relatively minor NPCs, or in little-used
 ActorStates, or as a means of catching irrelevant responses in a
-[Conversation Node](conversationnodes-overview.htm) (see below).  
+[Conversation Node](conversationnodes-overview.html) (see below).  
   
 By way of illustration, we'll provide DefaultAskTellTopics for the
 curator and Solomon, which would be placed in their respective

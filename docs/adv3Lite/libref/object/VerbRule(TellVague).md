@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(TellVague)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[1981](../source/grammar.t.html#1981)\]

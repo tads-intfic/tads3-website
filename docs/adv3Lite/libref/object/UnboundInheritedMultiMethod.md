@@ -1,3 +1,5 @@
+---
+---
 <span class="title">UnboundInheritedMultiMethod</span><span class="type">class</span>
 
 [multmeth.t](../file/multmeth.t.html)\[[440](../source/multmeth.t.html#440)\]

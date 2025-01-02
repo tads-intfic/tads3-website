@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SettingsFileData</span><span class="type">class</span>
 
 [settings.t](../file/settings.t.html)\[[465](../source/settings.t.html#465)\]

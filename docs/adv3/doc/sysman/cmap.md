@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="local.htm" class="nav">Translating and Localizing TADS</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="local.html" class="nav">Translating and Localizing TADS</a> \>
 Creating a Character-Mapping File  
-<span class="navnp"><a href="errtrans.htm" class="nav"><em>Prev:</em> Translating Error
+<span class="navnp"><a href="errtrans.html" class="nav"><em>Prev:</em> Translating Error
 Messages</a>     </span>
 
 </div>
@@ -241,10 +243,10 @@ TADS 3 distribution).
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="local.htm" class="nav">Translating and Localizing TADS</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="local.html" class="nav">Translating and Localizing TADS</a> \>
 Creating a Character-Mapping File  
-<span class="navnp"><a href="errtrans.htm" class="nav"><em>Prev:</em> Translating Error
+<span class="navnp"><a href="errtrans.html" class="nav"><em>Prev:</em> Translating Error
 Messages</a>     </span>
 
 </div>

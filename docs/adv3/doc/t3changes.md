@@ -1,3 +1,5 @@
+---
+---
 TADS 3 Change History
 
 # TADS 3 Change History
@@ -11,7 +13,7 @@ organized by release, with the most recent release first.
 Machine engine. There are separate release notes for most operating
 system install packages - HTML TADS, FrobTADS, CocoaTADS, etc. For
 changes to the Adv3 library, see [Recent Library
-Changes](../lib/adv3/changes.htm).)
+Changes](../lib/adv3/changes.html).)
 
 ### Changes for 3.1.3 (May 16, 2013)
 
@@ -183,19 +185,19 @@ Changes](../lib/adv3/changes.htm).)
   compile and evaluate an expression containing an inline object
   definition, the result will be an instance of the object defined in
   the expression.
-  For full details, see [inline objects](sysman/inlineobj.htm) in the
+  For full details, see [inline objects](sysman/inlineobj.html) in the
   System Manual.
-- The new String method [match()](sysman/string.htm#match) complements
-  the [find()](sysman/string.htm#find) method by checking for a match at
+- The new String method [match()](sysman/string.html#match) complements
+  the [find()](sysman/string.html#find) method by checking for a match at
   a given position in the subject string rather than searching for a
   match.
-- [FileName.getFileInfo()](sysman/filename.htm#getFileInfo) now returns
+- [FileName.getFileInfo()](sysman/filename.html#getFileInfo) now returns
   additional information on the file. The new fileAttrs property of the
   FileInfo object provides information on file attributes used on some
   operating systems: the "hidden" and "system" attributes, and whether
   the program has read and/or write access to the file.
 - The documentation for
-  [FileName.removeDirectory()](sysman/filename.htm#removeDirectory) has
+  [FileName.removeDirectory()](sysman/filename.html#removeDirectory) has
   been changed to specify that the method definitely fails if
   *deleteContents* is nil and the directory to be removed isn't already
   empty. In the past, the documentation stated that the behavior for a
@@ -316,7 +318,7 @@ Changes](../lib/adv3/changes.htm).)
   values until run-time; constant folding improves the execution speed
   of affected expressions for obvious reasons.
 
-- You can now use [sprintf](sysman/tadsgen.htm#sprintf) format codes
+- You can now use [sprintf](sysman/tadsgen.html#sprintf) format codes
   directly within embedded expressions. To do this, start the expression
   with a "%" code immediately after the angle brackets, with no
   intervening spaces. For example, `"x in octal is <<%o x>>"` will
@@ -325,16 +327,16 @@ Changes](../lib/adv3/changes.htm).)
   code, so you can use the entire range of format code syntax that
   sprintf() accepts.
 
-- The new [sprintf](sysman/tadsgen.htm#sprintf) format codes %r and %R
+- The new [sprintf](sysman/tadsgen.html#sprintf) format codes %r and %R
   generate Roman numerals for integer values, in lower- and upper-case.
 
-- The String methods [find()](sysman/string.htm#find) and
-  [findReplace()](sysman/string.htm#findReplace) now accept a RexPattern
+- The String methods [find()](sysman/string.html#find) and
+  [findReplace()](sysman/string.html#findReplace) now accept a RexPattern
   object as the search target. An ordinary string can also still be
   used, of course. This essentially makes String.find() and
   String.findReplace() replicate the functionality of
-  [rexSearch()](sysman/tadsgen.htm#rexSearch) and
-  [rexReplace()](sysman/tadsgen.htm#rexReplace), respectively; the main
+  [rexSearch()](sysman/tadsgen.html#rexSearch) and
+  [rexReplace()](sysman/tadsgen.html#rexReplace), respectively; the main
   benefit is that the syntax for the String methods is a little cleaner
   and more intuitive, since the subject string is moved out of the
   parameter list.
@@ -342,8 +344,8 @@ Changes](../lib/adv3/changes.htm).)
   creating static RexPattern objects. For example, `str.find(R'%w+')`
   finds the first word in a string.
 
-- The String method [findReplace()](sysman/string.htm#findReplace) and
-  the [rexReplace()](sysman/tadsgen.htm#rexReplace) function each now
+- The String method [findReplace()](sysman/string.html#findReplace) and
+  the [rexReplace()](sysman/tadsgen.html#rexReplace) function each now
   take an optional additional argument, *limit*, specifying the maximum
   number of replacements to perform. If the *limit* argument is omitted,
   the ReplaceOnce and ReplaceAll flags determine the limit; if *limit*
@@ -353,17 +355,17 @@ Changes](../lib/adv3/changes.htm).)
   a limit count. Zero means that no replacements are performed, in which
   case the original subject string is returned unchanged.
 
-- The new String function [findAll()](sysman/string.htm#findAll)
+- The new String function [findAll()](sysman/string.html#findAll)
   searches a string for all occurrences of a given substring or regular
   expression, and returns a list of the matches.
 
 - Two new functions implement reverse searches in strings:
-  [rexSearchLast()](sysman/tadsgen.htm#rexSearchLast) and
-  [String.findLast()](sysman/string.htm#findLast) These functions search
+  [rexSearchLast()](sysman/tadsgen.html#rexSearchLast) and
+  [String.findLast()](sysman/string.html#findLast) These functions search
   a string from right to left, allowing you to find the last (rightmost)
   match for a substring or regular expression pattern.
 
-- The [rexGroup()](sysman/tadsgen.htm#rexGroup) function can now be used
+- The [rexGroup()](sysman/tadsgen.html#rexGroup) function can now be used
   to get information on the entire match, by passing 0 for the group
   number. rexGroup(0) returns the same format as the other groups, but
   contains the text and location of the entire match rather than of a
@@ -403,22 +405,22 @@ Changes](../lib/adv3/changes.htm).)
   The new case conversion and case-folding support affects several
   areas:
 
-  - [Regular expressions](sysman/regex.htm): when the \<nocase\> flag is
+  - [Regular expressions](sysman/regex.html): when the \<nocase\> flag is
     specified, the matcher uses case folding to match each contiguous
     string of literals. (In past versions, characters were compared by
     converting to the pattern character's case using the one-to-one
     conversions only.)
-  - The String methods [toUpper()](sysman/string.htm#toUpper) and
-    [toLower()](sysman/string.htm#toLower) use the new case conversion
+  - The String methods [toUpper()](sysman/string.html#toUpper) and
+    [toLower()](sysman/string.html#toLower) use the new case conversion
     tables. In the past, these used the older one-to-one case conversion
     tables.
   - The new String methods
-    [toTitleCase()](sysman/string.htm#toTitleCase) and
-    [toFoldedCase()](sysman/string.htm#toFoldedCase) use the new tables.
+    [toTitleCase()](sysman/string.html#toTitleCase) and
+    [toFoldedCase()](sysman/string.html#toFoldedCase) use the new tables.
   - The new String method
-    [compareIgnoreCase()](sysman/string.htm#compareIgnoreCase) uses the
+    [compareIgnoreCase()](sysman/string.html#compareIgnoreCase) uses the
     full case folding tables to perform a case-insensitive comparison.
-  - The [StringComparator](sysman/strcomp.htm) class now uses full case
+  - The [StringComparator](sysman/strcomp.html) class now uses full case
     folding when the comparator isn't case-sensitive. In the past,
     caseless comparisons were done by converting each input character to
     match the case of the corresponding dictionary character, using the
@@ -429,7 +431,7 @@ Changes](../lib/adv3/changes.htm).)
   some on the language in use and some on string context. TADS doesn't
   currently support any of the conditional mappings.
 
-- The new String method [toTitleCase()](sysman/string.htm#toTitleCase)
+- The new String method [toTitleCase()](sysman/string.html#toTitleCase)
   converts each character in the string to "title case". This is the
   same as upper case for most characters, but varies for some
   characters. For example, a character representing a ligature (e.g.,
@@ -437,7 +439,7 @@ Changes](../lib/adv3/changes.htm).)
   corresponding series of separate letters with only the first letter
   capitalized (so U+FB03 becomes the three separate letters F, f, i).
 
-- The new String method [toFoldedCase()](sysman/string.htm#toFoldedCase)
+- The new String method [toFoldedCase()](sysman/string.html#toFoldedCase)
   converts each character in the string to its case-folded equivalent,
   as defined in the Unicode standard. The point of case folding is to
   erase case differences between strings, to allow for case-insensitive
@@ -450,7 +452,7 @@ Changes](../lib/adv3/changes.htm).)
   turns into ss, so that 'WEISS' will match 'weiß' in a case-insensitive
   comparison).
 
-- The new String method [compareTo()](sysman/string.htm#compareTo)
+- The new String method [compareTo()](sysman/string.html#compareTo)
   compares the target string to another string, returning a negative
   number if the target string sorts before the second string, 0 if
   they're identical, or a positive number i the target string sorts
@@ -468,7 +470,7 @@ Changes](../lib/adv3/changes.htm).)
   callback invocation.
 
 - The new String method
-  [compareIgnoreCase()](sysman/string.htm#compareIgnoreCase) compares
+  [compareIgnoreCase()](sysman/string.html#compareIgnoreCase) compares
   the target string to another string, using the case-folded version of
   each string. It returns the same type of result as compareTo() -
   negative if the target string sorts before the other string, zero if
@@ -479,17 +481,17 @@ Changes](../lib/adv3/changes.htm).)
   constructs the full case-folded versions of the two strings (it does
   the case folding character by character as it compares the strings).
 
-- The new function [concat()](sysman/tadsgen.htm#concat) returns a
+- The new function [concat()](sysman/tadsgen.html#concat) returns a
   string with the concatenation of the argument values. This is
   essentially the same as using the "+" operator to concatenate a series
   of strings, but it's more efficient when combining three or more
   values, since the "+" operator is applied successively in pairs and so
   has to build and copy an intermediate result string at each step.
 
-- The new function [abs()](sysman/tadsgen.htm#abs) returns the absolute
+- The new function [abs()](sysman/tadsgen.html#abs) returns the absolute
   value of an integer or BigNumber value.
 
-- The new function [sgn()](sysman/tadsgen.htm#sgn) returns the SGN
+- The new function [sgn()](sysman/tadsgen.html#sgn) returns the SGN
   (sign) of an integer or BigNumber value. The SGN is 1 for a positive
   argument, 0 for zero, and -1 for a negative argument.
 
@@ -508,8 +510,8 @@ Changes](../lib/adv3/changes.htm).)
   near the start of the reply body data. ([bugdb.tads.org
   \#0000139](http://bugdb.tads.org/view.php?id=0000139))
 
-- The new [HTTPRequest](sysman/httpreq.htm) method
-  [sendReplyAsync()](sysman/httpreq.htm#sendReplyAsync) lets you send
+- The new [HTTPRequest](sysman/httpreq.html) method
+  [sendReplyAsync()](sysman/httpreq.html#sendReplyAsync) lets you send
   the reply to an HTTP request asynchronously, in a background thread,
   so that the main program thread can continue to service other requests
   while the reply is sent. This is useful when the reply contains a
@@ -534,7 +536,7 @@ Changes](../lib/adv3/changes.htm).)
   games use to handle their HTML media objects, so most game authors
   shouldn't have to use sendReplyAsync() directly.
 
-- The new class [FileName](sysman/filename.htm) provides a portable way
+- The new class [FileName](sysman/filename.html) provides a portable way
   to manipulate file names and directory paths, and methods to operate
   on the corresponding file system objects named. Each operating system
   has its own file path syntax, so it's always been difficult to use
@@ -560,8 +562,8 @@ Changes](../lib/adv3/changes.htm).)
   malicious use and give the user control over the scope of a program's
   file system access.
 
-- The [inputFile()](sysman/tadsio.htm#inputFile) function now returns a
-  [FileName](sysman/filename.htm) object to represent the file chosen by
+- The [inputFile()](sysman/tadsio.html#inputFile) function now returns a
+  [FileName](sysman/filename.html) object to represent the file chosen by
   the user, rather than a string. Existing code shouldn't be affected
   unless it's unusually dependent upon the result being a string, since
   the FileName object can be passed to any of the functions that open
@@ -579,11 +581,11 @@ Changes](../lib/adv3/changes.htm).)
 
 - Several of the system-level functions that access files are now
   subject to file safety restrictions:
-  [saveGame()](sysman/tadsgen.htm#saveGame),
-  [restoreGame()](sysman/tadsgen.htm#restoreGame),
-  [setLogFile()](sysman/tadsio.htm#setLogFile),
-  [setScriptFile()](sysman/tadsio.htm#setLogFile), and
-  [logConsoleCreate()](sysman/tadsio.htm#logConsoleCreate) now enforce
+  [saveGame()](sysman/tadsgen.html#saveGame),
+  [restoreGame()](sysman/tadsgen.html#restoreGame),
+  [setLogFile()](sysman/tadsio.html#setLogFile),
+  [setScriptFile()](sysman/tadsio.html#setLogFile), and
+  [logConsoleCreate()](sysman/tadsio.html#logConsoleCreate) now enforce
   the appropriate read or write permissions according to the file safety
   settings.
 
@@ -603,24 +605,24 @@ Changes](../lib/adv3/changes.htm).)
 
   The thing that's changed - that allows us to bring these functions
   into the file safety mechanism - is the new ability of
-  [inputFile()](sysman/tadsio.htm#inputFile) to mark its filename result
+  [inputFile()](sysman/tadsio.html#inputFile) to mark its filename result
   as coming from a manual user selection, and the corresponding file
   safety enhancement that grants access permissions to such manually
   selected files. This ensures that user file selections for Save,
   Restore, etc. will still work properly, even when they're outside the
   sandbox.
 
-- The new [Date](sysman/date.htm) built-in class provides extensive
+- The new [Date](sysman/date.html) built-in class provides extensive
   functionality for parsing, formatting, and doing arithmetic with
   calendar dates and times; it works with the new
-  [TimeZone](sysman/timezone.htm) class to convert between universal
+  [TimeZone](sysman/timezone.html) class to convert between universal
   time and local time anywhere in the world, correctly accounting for
   historical changes in time zone definitions and daylight savings time.
   This should be especially useful to authors writing games involving
   time travel, or set during the early morning hours on certain Sundays
   in March or November.
 
-- The new function [makeList()](sysman/tadsgen.htm#makeList) constructs
+- The new function [makeList()](sysman/tadsgen.html#makeList) constructs
   a list consisting of a repeated value.
 
 - The system library's main startup code (in lib/\_main.t) now allows
@@ -632,7 +634,7 @@ Changes](../lib/adv3/changes.htm).)
   argument list parameter if you don't need it.
 
 - Lists and vectors can now be converted to strings, explicitly with
-  [toString()](sysman/tadsgen.htm#toString) as well as in contexts where
+  [toString()](sysman/tadsgen.html#toString) as well as in contexts where
   non-string values are automatically coerced to strings, such as on the
   right-hand side of a "+" operator where the left-hand side is a string
   value. The string representation of a list or vector is the
@@ -642,13 +644,13 @@ Changes](../lib/adv3/changes.htm).)
 
 - In implicit string conversions, the value `true` is now acceptable,
   and is converted to the string 'true'. In the past, `true` worked this
-  way with the [toString](sysman/tadsgen.htm#toString) function, but not
+  way with the [toString](sysman/tadsgen.html#toString) function, but not
   in implicit string conversions (such as when a value is used on the
   right-hand side of a "+" operator when the left-hand side is a string:
   `'x=' + true` caused a run-time error in the past, but now returns
   'x=true').
 
-- The [toString](sysman/tadsgen.htm#toString) function and implicit
+- The [toString](sysman/tadsgen.html#toString) function and implicit
   string conversions now accept properties, function pointers, pointers
   to built-in functions, and enum values. If the reflection services
   module (reflect.t) is included in the build, these types will be
@@ -663,13 +665,13 @@ Changes](../lib/adv3/changes.htm).)
   represented either by its symbolic name (if it has one and reflect.t
   is included in the build) or a generic "object#" format.
 
-- The List method [sublist()](sysman/list.htm#sublist) now accepts
+- The List method [sublist()](sysman/list.html#sublist) now accepts
   negative *length* values, for better consistency with similar methods
   (e.g., String.substr). A negative length essentially states the length
   relative to the end of the list, in that it gives the number of
   elements to omit from the end of the result list.
 
-- The [byte packing language](sysman/pack.htm) now lets you specify that
+- The [byte packing language](sysman/pack.html) now lets you specify that
   a square-bracketed group is to be packed from/unpacked into subgroups
   per iteration for a repeated item, rather than using a single sublist
   for the whole group. The "!" modifier makes this change. For example,
@@ -695,16 +697,16 @@ Changes](../lib/adv3/changes.htm).)
   % codes, but these particular classes tend to be used often enough
   that it's nice to have shorthand versions.)
 
-- The new [\_\_objref()](sysman/expr.htm#__objref) operator lets you
+- The new [\_\_objref()](sysman/expr.html#__objref) operator lets you
   test for the existence of a particular object symbol, optionally
   generating a warning or error message if the symbol isn't defined or
   is defined as something other than an object. This is similar to the
-  [defined()](sysman/expr.htm#defined) operator, but is specialized for
+  [defined()](sysman/expr.html#defined) operator, but is specialized for
   object references.
 
-- The [randomize()](sysman/tadsgen.htm#randomize) built-in function can
+- The [randomize()](sysman/tadsgen.html#randomize) built-in function can
   do several new tricks. First, it allows you to select from three
-  different RNG algorithms to use in [rand()](sysman/tadsgen.htm#rand):
+  different RNG algorithms to use in [rand()](sysman/tadsgen.html#rand):
   the default ISAAC algorithm (the original TADS 3 RNG), a Linear
   Congruential Generator (or LCG, the long-time de facto standard for
   computer RNGs), and the Mersenne Twister (a newer algorithm that's
@@ -729,7 +731,7 @@ Changes](../lib/adv3/changes.htm).)
   \#0000109](http://bugdb.tads.org/view.php?id=0000109))
 
 - The new interpreter command-line option
-  [-d](sysman/terp.htm#-d-option) specifies the default directory for
+  [-d](sysman/terp.html#-d-option) specifies the default directory for
   file input/output. This is the directory that the File object uses to
   open files whose names are specified with relative paths. If -d isn't
   specified, the default is the folder containing the .t3 file. (In past
@@ -737,7 +739,7 @@ Changes](../lib/adv3/changes.htm).)
   always the .t3 file's folder. This means the behavior in the absence
   of a -d option is the same as in the past.)
 
-  The new option [-sd](sysman/terp.htm#-sd-option) lets you separately
+  The new option [-sd](sysman/terp.html#-sd-option) lets you separately
   specify the "sandbox" directory for the file safety feature. In the
   absence of an -sd setting, the sandbox directory is the same as -d
   setting, or simply the .t3 file's containing folder if there's no -d
@@ -972,11 +974,11 @@ functionality it contains.
 
 - It's now possible for a TADS game to be a Web server. This is
   accomplished with the new intrinsic classes
-  [HTTPServer](sysman/httpsrv.htm), which handles the low-level
+  [HTTPServer](sysman/httpsrv.html), which handles the low-level
   networking required to receive and parse HTTP requests from Web
-  clients, and [HTTPRequest](sysman/httpreq.htm), which represents an
+  clients, and [HTTPRequest](sysman/httpreq.html), which represents an
   incoming HTTP request from a client; and the new intrinsic function
-  set [tads-net](sysman/tadsnet.htm), which contains additional support
+  set [tads-net](sysman/tadsnet.html), which contains additional support
   functions for networking operations.
   The new HTTP server support classes are designed to automatically
   handle all of the low-level necessities of a network service, while
@@ -993,7 +995,7 @@ functionality it contains.
 
 - In addition to the new ability to act as a Web server, TADS games can
   now also make HTTP requests as clients, via the new function
-  [sendNetRequest()](sysman/tadsnet.htm#sendNetRequest). This lets a
+  [sendNetRequest()](sysman/tadsnet.html#sendNetRequest). This lets a
   game send information to and receive information from remote Internet
   servers during play.
 
@@ -1037,7 +1039,7 @@ functionality it contains.
          desc = """The sign reads "Beware of Backslash!""""
 
   There are a couple of subtleties you should be aware of, so take a
-  look at the [System Manual](sysman/strlit.htm#tripleQuotes) for
+  look at the [System Manual](sysman/strlit.html#tripleQuotes) for
   details.
 
 - Single-quoted strings can now use \<\< \>\> expression embeddings
@@ -1046,10 +1048,10 @@ functionality it contains.
   concatenating the embedded expressions to the surrounding string
   fragments. For example, `'one <<two>> three <<four>> five'` is
   equivalent to `'one ' + two + ' three ' + four + ' five'`. See [String
-  Literals](sysman/strlit.htm#embedSgl) in the System Manual for more
+  Literals](sysman/strlit.html#embedSgl) in the System Manual for more
   details.
 
-- A new [string embedding template](sysman/strlit.htm#strtpl) syntax
+- A new [string embedding template](sysman/strlit.html#strtpl) syntax
   lets you create custom keywords and phrases for use inside embedded
   expressions. The compiler translates each custom template invocation
   into a function call, so this is merely a syntactic convenience, but
@@ -1092,10 +1094,10 @@ functionality it contains.
   As with other embedding syntax, \<\<if\>\> can be used in
   single-quoted strings as well.
 
-  Full details are in the [System Manual](sysman/strlit.htm#embeddedIf).
+  Full details are in the [System Manual](sysman/strlit.html#embeddedIf).
 
 - Another new embedding syntax, [\<\<one
-  of\>\>](sysman/strlit.htm#oneof), makes it easier to create lists of
+  of\>\>](sysman/strlit.html#oneof), makes it easier to create lists of
   alternative messages to be chosen randomly or in a cycle (or a
   combination of the two). \<\<one of\>\> variations are defined for
   simple random selection, shuffling, cycling, "stop" lists, and for
@@ -1109,7 +1111,7 @@ functionality it contains.
   inside other \<\<one of\>\> structures and \<\<if\>\> structures.
 
 - One more new special embedding: [\<\<first
-  time\>\>](sysman/strlit.htm#firstTimeOnly) shows a message the first
+  time\>\>](sysman/strlit.html#firstTimeOnly) shows a message the first
   time the enclosing string is displayed, and omits it after that. This
   is really just a special case of \<\<one of\>\> (and, in fact, the
   compiler actually rewrites it that way), but it's such a common motif
@@ -1129,7 +1131,7 @@ functionality it contains.
   dynamic control over objects and classes by letting you add new
   methods to an existing object. This makes it possible to perform
   almost any sort of transformation on an object. See the [TadsObject
-  documentation](sysman/tadsobj.htm) for details.
+  documentation](sysman/tadsobj.html) for details.
 
 - The new `method` keyword lets you define a "floating" method. This is
   a routine that's not associated with an object, but which nonetheless
@@ -1141,7 +1143,7 @@ functionality it contains.
   floating method definition looks just like an ordinary function
   definition, except that whole thing is preceded by the keyword
   `method` instead of the optional `function` keyword. See the System
-  Manual for [more details](sysman/proccode.htm#floatingMethods).
+  Manual for [more details](sysman/proccode.html#floatingMethods).
   The `method` keyword can also be used to create anonymous methods.
   These look and act almost the same as anonymous functions. The
   difference is that an anonymous method doesn't share its method
@@ -1149,10 +1151,10 @@ functionality it contains.
   enclosing lexical scope. Instead, an anonymous method takes on the
   "live" values for those variables each time it's called. As with named
   floating methods, anonymous methods are designed for attaching to
-  objects via setMethod(). [Details](sysman/anonfn.htm#anonMethods) are
+  objects via setMethod(). [Details](sysman/anonfn.html#anonMethods) are
   in the System Manual.
 
-- The new intrinsic class [DynamicFunc](sysman/dynfunc.htm) makes it
+- The new intrinsic class [DynamicFunc](sysman/dynfunc.html) makes it
   possible for a running program to extend itself by creating new code
   on the fly. New code is created by compiling a string that contains
   source code text, just as you'd use in the main program source code.
@@ -1166,7 +1168,7 @@ functionality it contains.
   you can use a DynamicFunc in TadsObject.setMethod() to create a new
   method for an object.
 
-- [GrammarProd](sysman/gramprod.htm) objects can now be dynamically
+- [GrammarProd](sysman/gramprod.html) objects can now be dynamically
   created, and the grammar rules for an existing GrammarProd can be
   modified at run-time. The new methods deleteAlt() and clearAlts()
   remove existing alternatives from a GrammarProd, and the new method
@@ -1175,7 +1177,7 @@ functionality it contains.
 
 - It's now possible to retrieve information on the preprocessor macros
   defined by the compiled program. This is handled through the existing
-  function [t3GetGlobalSymbols()](sysman/t3vm.htm#t3GetGlobalSymbols),
+  function [t3GetGlobalSymbols()](sysman/t3vm.html#t3GetGlobalSymbols),
   which now takes an optional argument value that selects which type of
   symbol information to retrieve. The argument is one of the following
   constant values: T3GlobalSymbols, to retrieve the global symbol table;
@@ -1223,7 +1225,7 @@ functionality it contains.
   This operator is particularly useful in libraries, since it makes it
   possible to write code that conditionally references objects only when
   they're actually part of the program. See the [System
-  Manual](sysman/expr.htm#defined) for details.
+  Manual](sysman/expr.html#defined) for details.
   Note that "defined" still has its separate meaning within \#if
   preprocessor expressions. There, the operator determines if the symbol
   is defined as a **preprocessor** (#define) symbol. When used outside
@@ -1257,7 +1259,7 @@ functionality it contains.
   variables. Use the `local` keyword as usual, at the beginning of the
   function's expression. The syntax is analogous to defining locals
   within a `for` statement's initializer clause. See [Anonymous
-  Functions](sysman/anonfn.htm#shortFormLocals) in the System Manual for
+  Functions](sysman/anonfn.html#shortFormLocals) in the System Manual for
   details and examples.
   This is convenient because it lets you use the short-form syntax even
   if the function requires a local variable or two. In the past, you had
@@ -1302,7 +1304,7 @@ functionality it contains.
     `for (local i in 1..20, sum = 0 ; lst[i] != nil ; sum += lst[i])`.
 
   The new syntax is described in more detail in the [System
-  Manual](sysman/proccode.htm#for).
+  Manual](sysman/proccode.html#for).
 
 - A new language feature lets you pass argument values to functions and
   methods using explicit argument names. This has several important
@@ -1320,7 +1322,7 @@ functionality it contains.
   code clarity reasons, but the TADS version is designed to address a
   particular coding problem that comes up time and again in IF library
   design. The details take a little work to explain; the new System
-  Manual chapter on [Named Arguments](sysman/namedargs.htm) has the full
+  Manual chapter on [Named Arguments](sysman/namedargs.html) has the full
   story.
 
 - New syntax makes it easier to define functions and methods that take
@@ -1337,9 +1339,9 @@ functionality it contains.
   parameters, and because it requires fairly tedious extra syntax in the
   callee to check for the presence of the extra arguments and retrieve
   their values. The new syntax is described in detail in the new System
-  Manual chapter on [optional parameters](sysman/optparams.htm).
+  Manual chapter on [optional parameters](sysman/optparams.html).
 
-- The new [`invokee`](sysman/expr.htm#invokee) pseudo-variable retrieves
+- The new [`invokee`](sysman/expr.html#invokee) pseudo-variable retrieves
   a pointer to the function currently executing. This is most useful for
   anonymous functions, since it provides a way for an anonymous function
   to invoke itself recursively.
@@ -1392,7 +1394,7 @@ functionality it contains.
   object provides methods to get and set the values of local variables,
   and to retrieve the method context variables (self, targetobj,
   targetprop, definingobj). See the System Manual chapter for [more
-  information](sysman/framedesc.htm).
+  information](sysman/framedesc.html).
 
 - A new language and VM feature make it possible to "overload"
   operators. This means that you can define a method on an object or
@@ -1403,7 +1405,7 @@ functionality it contains.
   on specialized objects, and (2) to create a custom object that mimics
   the low-level interface of one of the built-in types or classes. The
   details are described more fully in a [new
-  chapter](sysman/opoverload.htm) in the system manual.
+  chapter](sysman/opoverload.html) in the system manual.
   Operator overloading has three significant limitations. First, you
   can't *override* operators pre-defined by intrinsic classes. For
   example, you can't redefine the indexing operator "\[\]" for a List,
@@ -1468,9 +1470,9 @@ functionality it contains.
   distance" of a given string. This new function isn't a full-fledged
   spelling corrector, but provides a very fast version of a key
   infrastructure element for building one. Refer to the [Dictionary
-  class documentation](sysman/dict.htm#spellingCorrection) for details.
+  class documentation](sysman/dict.html#spellingCorrection) for details.
 
-- The new intrinsic class [StringBuffer](sysman/strbuf.htm) is a mutable
+- The new intrinsic class [StringBuffer](sysman/strbuf.html) is a mutable
   version of the character string object. Unlike regular String objects,
   a StringBuffer's text contents can be modified in place, without
   creating new String objects. StringBuffer is designed especially for
@@ -1484,7 +1486,7 @@ functionality it contains.
   toString(). You can also extract a substring of the buffer using the
   substr() method, just like for a regular string.
 
-- The [rexReplace()](sysman/tadsgen.htm#rexReplace) function has several
+- The [rexReplace()](sysman/tadsgen.html#rexReplace) function has several
   new features that make it more powerful and more convenient to use:
   - You can now specify a function to determine the replacement text to
     use for each match. If you supply a function (regular or anonymous)
@@ -1539,7 +1541,7 @@ functionality it contains.
     string; we have to assume the function returns exactly what it
     wants, since it can perform similar case manipulations of its own.
 
-- The String method [findReplace()](sysman/string.htm#findReplace) has a
+- The String method [findReplace()](sysman/string.html#findReplace) has a
   few new features:
   - You can now specify a list of search strings, and a list of
     corresponding replacements. This makes it possible to perform a
@@ -1582,7 +1584,7 @@ functionality it contains.
   all whitespace, the way \<space\> did in the past, use
   \<space\|vspace\>.
 
-- Look-back [assertions](sysman/regex.htm#assertions) are now supported
+- Look-back [assertions](sysman/regex.html#assertions) are now supported
   in the regular expression language. A look-back assertion tests a
   sub-pattern against the characters *preceding* the current match
   point, which makes it possible to apply conditions to the preceding
@@ -1603,7 +1605,7 @@ functionality it contains.
   is the same as removing the assertion entirely, since a condition that
   has to be true zero or more times is really no condition at all.
 
-- The new function [sprintf()](sysman/tadsgen.htm#sprintf) creates
+- The new function [sprintf()](sysman/tadsgen.html#sprintf) creates
   formatted text from data values according to a format template string.
   This is similar to the sprintf() function in many C-like languages.
   This style of string formatting is sometimes more compact and
@@ -1611,7 +1613,7 @@ functionality it contains.
   useful for formatting numbers, since it has several style options for
   integers and floating-point values that are tedious to code by hand.
 
-- The new String method [splice()](sysman/string.htm#splice) lets you
+- The new String method [splice()](sysman/string.html#splice) lets you
   delete a portion of a string, insert new text into a string, or both
   at the same time. splice(idx, del, ins) deletes *del* characters
   starting at index *idx*, and then inserts the string *ins* in their
@@ -1622,19 +1624,19 @@ functionality it contains.
   argument, which specifies a number of characters to discard from the
   end of the string.
 
-- The new String method [split()](sysman/string.htm#split) divides a
+- The new String method [split()](sysman/string.html#split) divides a
   string into substrings at a given delimiter, which can be given as
   either a string or a RexPattern (regular expression pattern). It can
   alternatively split a string into substrings of a fixed length. This
   method comes in handy for surprisingly many simple string parsing
   jobs.
 
-- The new List method [join()](sysman/list.htm#join) concatenates the
+- The new List method [join()](sysman/list.html#join) concatenates the
   elements of the list together into a string.
-  [Vector](sysman/vector.htm) has this same new method.
+  [Vector](sysman/vector.html) has this same new method.
 
 - The new String method
-  [specialsToHtml()](sysman/string.htm#specialsToHtml) converts special
+  [specialsToHtml()](sysman/string.html#specialsToHtml) converts special
   TADS characters (such as \n and \b sequences) to standard HTML
   equivalents. This is designed specifically for the Web UI, to make it
   easier to port games between the traditional console UI and the Web UI
@@ -1642,7 +1644,7 @@ functionality it contains.
   formatting codes.
 
 - Another new String method,
-  [specialsToText()](sysman/string.htm#specialsToText), is similar to
+  [specialsToText()](sysman/string.html#specialsToText), is similar to
   specialsToHtml(), but converts the string to plain text. Special TADS
   characters are converted to their plain text equivalents, the basic
   HTML "&" entities are converted to their character equivalents, a few
@@ -1652,15 +1654,15 @@ functionality it contains.
   way a TADS string would look as displayed on the regular output
   console.
 
-- The new string methods [urlEncode()](sysman/string.htm#urlEncode) and
-  [urlDecode()](sysman/string.htm#urlDecode) simplify encoding and
+- The new string methods [urlEncode()](sysman/string.html#urlEncode) and
+  [urlDecode()](sysman/string.html#urlDecode) simplify encoding and
   decoding URL parameter strings, for use in HTTP network requests.
   urlEncode() converts special characters to "%" encodings; urlDecode()
   reverses the effect, translating "%" encodings back to the character
   equivalents.
 
-- Two new String methods, [sha256()](sysman/string.htm#sha256) and
-  [digestMD5()](sysman/string.htm#digestMD5), calculate standard hash
+- Two new String methods, [sha256()](sysman/string.html#sha256) and
+  [digestMD5()](sysman/string.html#digestMD5), calculate standard hash
   values for the string's contents. sha256() calculates the 256-bit
   SHA-2 (Secure Hash Algorithm 2) hash, and digestMD5() calculates the
   MD5 message digest. The same methods are available on ByteArray to
@@ -1712,16 +1714,16 @@ functionality it contains.
   less than zero. In the past, all repeat counts less than 1 were
   treated as though 1 were specified.
 
-- The new List method [splice()](sysman/list.htm#splice) lets you delete
+- The new List method [splice()](sysman/list.html#splice) lets you delete
   a portion of a List, insert new elements into the list, or both at the
   same time. splice(idx, del, ins1, ins2, ...) deletes *del* elements of
   the list starting at index *idx*, and then inserts the new elements
   *ins1*, *ins2*, etc., in their place. The new elements are optional;
   if they're omitted, the method only does the deletion. If *del* is 0,
   the method only does the insertion. The equivalent method is also now
-  available for [Vector](sysman/vector.htm#splice).
+  available for [Vector](sysman/vector.html#splice).
 
-- The new static List method [generate()](sysman/list.htm#generate)
+- The new static List method [generate()](sysman/list.html#generate)
   creates a list with a given number of elements by invoking a callback
   function to generate each element's value. This is similar to
   mapAll(), but rather than transforming an existing list, generate()
@@ -1780,7 +1782,7 @@ functionality it contains.
   you'll already know the basics. ByteArray and String have their own
   versions of the methods as well, for times when you want to prepare
   byte structures in memory rather than in a file. For details, see
-  [Byte Packing](sysman/pack.htm) in the System Manual.
+  [Byte Packing](sysman/pack.html) in the System Manual.
 
 - A new static (class-level) File method, File.getRootName(), extracts
   the "root" portion of a filename string. This is the portion of the
@@ -1836,7 +1838,7 @@ functionality it contains.
   .t3 file, since bundled resources are always accessible, regardless of
   file safety settings.
 
-- The new intrinsic class [TemporaryFile](sysman/tempfile.htm) provides
+- The new intrinsic class [TemporaryFile](sysman/tempfile.html) provides
   support for temporary files in the local file system. A temporary file
   is a file that only exists for the duration of the program's
   execution, and is automatically deleted when the program exits. You
@@ -1886,7 +1888,7 @@ functionality it contains.
   and other tools can extract this information and display it to the
   user when browsing a collection of saved game files, to help jog the
   user's memory about the game position saved in the file. See
-  [saveGame()](sysman/tadsgen.htm#saveGame) in the System Manual for
+  [saveGame()](sysman/tadsgen.html#saveGame) in the System Manual for
   details.
 
 - The setLogFile() and setScriptFile() built-in functions now return
@@ -1902,7 +1904,7 @@ functionality it contains.
   new method is required to make this determination. IntrinsicClass is
   only used for the *representation* of an intrinsic class, and isn't
   involved in the inheritance structure. For more information, see the
-  [IntrinsicClass](sysman/icic.htm) documentation.
+  [IntrinsicClass](sysman/icic.html) documentation.
 
 - You can now enter expressions containing anonymous functions
   interactively in the debugger (such as in the "Watch" list, breakpoint
@@ -1939,7 +1941,7 @@ functionality it contains.
 - The rand() function can now generate a random string based on a
   template string. When rand() is called with a single string argument,
   the function returns a string of random characters chosen according to
-  the template. See the [rand()](sysman/tadsgen.htm#rand) documentation
+  the template. See the [rand()](sysman/tadsgen.html#rand) documentation
   for details.
 
 - The interpreter now automatically seeds the random number generator at
@@ -1985,7 +1987,7 @@ functionality it contains.
   containing the text "true" or "nil", in that it now ignores leading
   and trailing spaces.
 
-- The new function [toNumber()](sysman/tadsgen.htm#toNumber) is similar
+- The new function [toNumber()](sysman/tadsgen.html#toNumber) is similar
   to toInteger(), but also parses strings representing BigNumber values.
   If the input is a string representing a floating point value (i.e., it
   has a decimal point or uses the 'E' exponential format), or an integer
@@ -2000,7 +2002,7 @@ functionality it contains.
   wouldn't be updated with a new resource until it was relinked for some
   other reason.
 
-- The new "if-nil" operator [`??`](sysman/expr.htm#ifnil) checks an
+- The new "if-nil" operator [`??`](sysman/expr.html#ifnil) checks an
   expression to see if the value is nil, and if so yields a default
   value. `a ?? b` yields *a* if *a* is not nil, otherwise it yields *b*.
   This is a concise and efficient (in terms of code size and execution
@@ -2729,7 +2731,7 @@ functionality it contains.
   your resources, refer to them using your subdirectory path - for
   example, you'd write \<IMG SRC="mylibres/compass.png"\> to refer to an
   image resource file.
-- The [t3GetStackTrace()](sysman/t3vm.htm) function (in the 't3vm'
+- The [t3GetStackTrace()](sysman/t3vm.html) function (in the 't3vm'
   function set) has a new optional argument that lets you get
   information on a single stack level. This provides more efficient
   access to stack trace information in cases where you only want
@@ -2847,7 +2849,7 @@ functionality it contains.
   Currently, there's only one special file defined: LibraryDefaultsFile,
   which is a text file that's used to store the library's global
   settings.
-- The new GrammarProd method [getGrammarInfo()](sysman/gramprod.htm)
+- The new GrammarProd method [getGrammarInfo()](sysman/gramprod.html)
   provides programmatic access to information on GrammarProd objects,
   which allows the game to retrieve full information on the 'grammar'
   statements in the source code. Sample code demonstrating how to use
@@ -3685,14 +3687,14 @@ called 3.0.6l.*
   function works just like replacing a function with the "replace"
   keyword, except that the new function can invoke the previous version
   of the function by using the "replaced" keyword. Refer to the
-  [Procedural Code](sysman/proccode.htm) section of the documentation
+  [Procedural Code](sysman/proccode.html) section of the documentation
   for details.
 - Two new TadsObject methods, createInstanceOf() and
   createTransientInstanceOf(), enable a program to dynamically
   instantiate an object based on multiple superclasses. Refer to the
-  [TadsObject reference](sysman/tadsobj.htm) for details of the new
+  [TadsObject reference](sysman/tadsobj.html) for details of the new
   methods.
-- The [object template](sysman/objdef.htm) syntax has been extended to
+- The [object template](sysman/objdef.html) syntax has been extended to
   include optional elements and alternative elements. An element is
   marked optional by placing a question mark after it; alternative
   elements are separated by '\|' tokens.
@@ -3906,7 +3908,7 @@ called 3.0.6l.*
   Note that this isn't a search list; only one -R option can be in
   effect.
 - Added a new method, isRoundTripMappable(), to the [CharacterSet
-  intrinsic class](sysman/charset.htm). This new method provides an easy
+  intrinsic class](sysman/charset.html). This new method provides an easy
   way to determine if a set of characters has an exact, one-to-one
   mapping in a given local character set.
 - The compiler now warns when a grammar rule ends with an empty
@@ -4132,7 +4134,7 @@ called 3.0.6l.*
   optional new controls, but use defaults that provide roughly the old
   TADS 2 behavior. The changes are implemented in both the text-only and
   HTML interpreters. The new text-wrapping rules are described in detail
-  in the [Formatting](sysman/fmt.htm) documentation, but here's a
+  in the [Formatting](sysman/fmt.html) documentation, but here's a
   summary of the changes:
   - The game can switch at any between "word-wrap" and "character-wrap"
     modes. In word-wrap mode, text can be broken only at word
@@ -4166,7 +4168,7 @@ called 3.0.6l.*
   log file. This can be used to capture game output to a file, using the
   standard output formatting (including HTML interpretation and word
   wrapping), without displaying anything to the player. Refer to the
-  [tads-io function set documentation](sysman/tadsio.htm) for details.
+  [tads-io function set documentation](sysman/tadsio.html) for details.
 
 ### Changes for 3.0.6a (11/23/2002)
 
@@ -4188,7 +4190,7 @@ called 3.0.6l.*
   notation "\$(VARNAME)": the variable name is enclosed in parentheses
   preceded by a dollar sign. The adv3 library (adv3.tl) uses this
   capability to parameterize the language-specific library and message
-  file selection. See [Compiling and Linking](sysman/build.htm) for more
+  file selection. See [Compiling and Linking](sysman/build.html) for more
   information.
 - The text-only interpreters now treat "&nbsp;" as a true non-breaking
   space. (In the past, "&nbsp;" was treated the same as "\\ ", the
@@ -4279,7 +4281,7 @@ called 3.0.6l.*
   sets because of the large size of these sets. Authors working in
   languages which require character sets not included in the default
   mapping library can create their own mapping file or files (see the
-  [character mapping documentation](sysman/charmap.htm)), then bundle
+  [character mapping documentation](sysman/charmap.html)), then bundle
   the file(s) into a custom library (a .t3r file) using the `t3res`
   tool. Specify this .t3r file in the new Character Map Library field,
   and the installer will automatically bundle this file into your game's
@@ -4367,7 +4369,7 @@ called 3.0.6l.*
 
 ### Changes for 3.0.5g (09/08/2002)
 
-- The [Dictionary](sysman/dict.htm) intrinsic class has been
+- The [Dictionary](sysman/dict.html) intrinsic class has been
   substantially altered. The central change is that the caller can now
   specify a "comparator" object that defines how strings in the
   dictionary are compared to input strings; this allows the game to
@@ -4378,15 +4380,15 @@ called 3.0.6l.*
   and isWordDefined) have changed slightly to provide additional
   information from the comparator about how an input word matches a
   dictionary word.
-- Added the [StringComparator](sysman/strcomp.htm) intrinsic class. This
-  class works with the [Dictionary](sysman/dict.htm) intrinsic class to
+- Added the [StringComparator](sysman/strcomp.html) intrinsic class. This
+  class works with the [Dictionary](sysman/dict.html) intrinsic class to
   specify customized rules for matching input words to dictionary words.
   StringComparator provides options that specify whether or not upper-
   and lower-case letters are distinguished; whether words can be
   truncated (abbreviated) on input, and to what minimum length; and a
   set of equivalence mappings that allow alternative spellings on input,
   such as using unaccented equivalents of accented characters.
-- The [GrammarProd](sysman/gramprod.htm) intrinsic class method
+- The [GrammarProd](sysman/gramprod.html) intrinsic class method
   parseTokens() now uses the supplied Dictionary to perform comparisons
   to literal tokens. Each input token is compared to literal tokens in
   the grammar rules using the Dictionary's current comparator. Literal
@@ -4398,14 +4400,14 @@ called 3.0.6l.*
 
 ### Changes for 3.0.5f (09/02/2002)
 
-- Added the new method findReplace() to the [String](sysman/string.htm)
+- Added the new method findReplace() to the [String](sysman/string.html)
   intrinsic class. This new method is similar to the
-  [rexReplace()](sysman/tadsgen.htm) function, but is slightly more
+  [rexReplace()](sysman/tadsgen.html) function, but is slightly more
   efficient for situations where the text to be replaced is a simple
   constant string rather than a regular expression pattern. It's also
   slightly simpler to use, since it's not necessary to worry about any
   special regular expression interpretation of the search string.
-- Added the new intrinsic class [RexPattern](sysman/rexpat.htm). This
+- Added the new intrinsic class [RexPattern](sysman/rexpat.html). This
   new class encapsulates a "compiled" regular expression pattern, which
   can be used in place of a pattern string in the regular expression
   functions. Compiling an expression converts it from a string into an
@@ -4428,7 +4430,7 @@ called 3.0.6l.*
   transparent in terms of functionality, although a few new VM
   instructions have been added, so code compiled with this new version
   of the compiler will not run with older VM versions.
-- Added two new [LookupTable](sysman/lookup.htm) methods: keysToList(),
+- Added two new [LookupTable](sysman/lookup.html) methods: keysToList(),
   which returns a list consisting of all of the keys in the table; and
   valsToList(), which returns a list consisting of all of the values in
   the table. In both cases, the lists are in arbitrary order.
@@ -4526,7 +4528,7 @@ called 3.0.6l.*
 ### Changes for 3.0.5a (07/14/2002)
 
 - A new set of functions, collectively called the [banner
-  API](sysman/banners.htm), provides more direct programmatic control
+  API](sysman/banners.html), provides more direct programmatic control
   over the appearance of the user interface than was available in past
   versions of TADS. The new API allows the program to divide the display
   into multiple "banners," which are non-overlapping windows, each with
@@ -4581,11 +4583,11 @@ called 3.0.6l.*
   mechanisms (save, restore, undo, restart). A transient object is not
   saved to a saved state file, and isn't affected by restore, undo, or
   restart operations. This is described more fully in the [Object
-  Definitions](sysman/objdef.htm) section of the documentation.
-- The [saveGame](sysman/tadsgen.htm) function works differently than it
+  Definitions](sysman/objdef.html) section of the documentation.
+- The [saveGame](sysman/tadsgen.html) function works differently than it
   used to. The function no longer saves the execution context, so it no
   longer has the "setjmp" behavior.
-- The [restoreGame](sysman/tadsgen.htm) function works differently as
+- The [restoreGame](sysman/tadsgen.html) function works differently as
   well. Because saveGame no longer saves the execution context,
   restoreGame no longer restores it, so the function simply returns on
   successful completion - it doesn't have the "longjmp" behavior any
@@ -4594,17 +4596,17 @@ called 3.0.6l.*
   operation, via local variables on the stack as well as with transient
   objects, and gives the program complete control over execution flow
   throughout the operation.
-- The [restartGame](sysman/tadsgen.htm) function also has a new design.
+- The [restartGame](sysman/tadsgen.html) function also has a new design.
   The function no longer requires a function to jump to, but simply
   resets object state and returns. As with the restoreGame changes, this
   allows the program complete control over execution flow and allows any
   amount of session information to be retained across the Restart
   operation.
-- All instances of the [File](sysman/file.htm) intrinsic class are now
+- All instances of the [File](sysman/file.html) intrinsic class are now
   transient. The static creation methods of the File class always return
   transient objects.
 - It is now possible to open "resources" as though they were files, and
-  read their data using the [File intrinsic class](sysman/file.htm). Two
+  read their data using the [File intrinsic class](sysman/file.html). Two
   new static construction methods make this possible: openTextResource()
   and openRawResource().
 - The option flags for the String.htmlify() method have been renamed, to
@@ -5106,7 +5108,7 @@ called 3.0.6l.*
   breaking into the debugger if the .t3 program enters an infinite loop.
 - The 'replace' and 'modify' keywords can now be used to change
   'grammar' definitions. Refer to the [Grammar
-  Rules](sysman/gramprod.htm) documentation for details.
+  Rules](sysman/gramprod.html) documentation for details.
 - A grammar production object can now be declared without creating any
   rules associated with the production. The new syntax is simply
   "grammar *production_name*;" (that is, a "grammar" statement that
@@ -5219,7 +5221,7 @@ called 3.0.6l.*
   "-i" option, for example).
 - Added the new input event code INEVT_END_QUIET_SCRIPT, which is
   described in the documentation for the
-  [inputLineTimeout](sysman/tadsio.htm) intrinsic function.
+  [inputLineTimeout](sysman/tadsio.html) intrinsic function.
 - Added a couple of small usabilty enhancements to Workbench for
   Windows:
   - Pushing the Return/Enter key when keyboard focus is in the Project
@@ -5241,10 +5243,10 @@ called 3.0.6l.*
 ### Changes for 03/10/2002
 
 - Added the new method removeElement() to the [Vector intrinsic
-  class](sysman/vector.htm). This new method removes an element by
+  class](sysman/vector.html). This new method removes an element by
   value, modifying the vector in-place.
 - Added the new method forEachWord() to the [Dictionary intrinsic
-  class](sysman/dict.htm). This new method provides a way of enumerating
+  class](sysman/dict.html). This new method provides a way of enumerating
   all of the entries in a Dictionary object.
 - Added information to the LICENSE.TXT file making it clear that derived
   versions of the library are permitted with few restrictions.
@@ -5295,7 +5297,7 @@ called 3.0.6l.*
   this is intended to make it even easier to notice when something is
   wrong, since authors will not be accustomed to seeing a summary count
   at all when everything is well.
-- The [Iterator intrinsic class](sysman/iter.htm) has the new methods
+- The [Iterator intrinsic class](sysman/iter.html) has the new methods
   getCurVal() and getCurKey(), which return the value and key of the
   current element of the iteration, respectively. For indexed
   collections, the "key" is the index of the current element.
@@ -5424,7 +5426,7 @@ called 3.0.6l.*
 
 ### Changes for 01/13/2002
 
-- The compiler can now read ["library" files](sysman/build.htm), which
+- The compiler can now read ["library" files](sysman/build.html), which
   are lists of source files to be included in the compilation. Library
   files can be used to simplify compiler command lines and makefiles
   when including sets of source files that usually act as a group, such
@@ -5478,7 +5480,7 @@ called 3.0.6l.*
 ### Changes for 01/05/2002
 
 - Added the new intrinsic functions
-  [`inputLineTimeout()`](sysman/tadsio.htm), which allows reading a line
+  [`inputLineTimeout()`](sysman/tadsio.html), which allows reading a line
   of text with an optional timeout. This function can be used to combine
   command-line input with real-time effects, because it allows a command
   line to be interrupted if the command isn't completed before a
@@ -5535,8 +5537,8 @@ called 3.0.6l.*
 
 - The compiler now accepts URL-style portable path names in \#include
   directives, and in fact prefers them. Refer to the [preprocessor
-  chapter](sysman/preproc.htm) for details.
-- Added a new method, [createClone](sysman/tadsobj.htm), to the
+  chapter](sysman/preproc.html) for details.
+- Added a new method, [createClone](sysman/tadsobj.html), to the
   TadsObject intrinsic class. This method returns a newly-created object
   that is an identical copy of the original object.
 
@@ -5651,7 +5653,7 @@ called 3.0.6l.*
 
 ### Changes for 11/17/2001
 
-- Extended the [object template](sysman/objdef.htm) syntax to allow
+- Extended the [object template](sysman/objdef.html) syntax to allow
   template inheritance. A template definition can now include the
   keyword "`inherited`" as its final token; this indicates that the
   template "inherits" the templates of its class's superclasses.
@@ -5777,7 +5779,7 @@ called 3.0.6l.*
 ### Changes for 09/09/2001
 
 - Added a new function to the ["tads-io" function
-  set](sysman/tadsio.htm): `flushOutput()`, which immediately flushes
+  set](sysman/tadsio.html): `flushOutput()`, which immediately flushes
   text output to the display and updates the window, if possible.
 - Fixed a compiler bug that caused incorrect code to be generated for
   implicit constructors for classes with multiple superclasses. This
@@ -5791,7 +5793,7 @@ called 3.0.6l.*
 
 - Added new syntax that provides a short-hand notation for defining a
   group of properties with similar names and parameters: the new
-  ["propertyset" syntax](sysman/objdef.htm).
+  ["propertyset" syntax](sysman/objdef.html).
 - Added a new keyword, "targetprop", a pseudo-variable that evaluates to
   the current target property pointer. The target property is the
   property that was invoked to reach the current method; this new
@@ -5815,7 +5817,7 @@ called 3.0.6l.*
   reflection services. This module is optional, but if it is included,
   the \_main.t module uses reflection to show stack trace listings for
   unhandled runtime exceptions.
-- Added [t3GetStackTrace()](sysman/t3vm.htm) to the 't3vm' intrinsic
+- Added [t3GetStackTrace()](sysman/t3vm.html) to the 't3vm' intrinsic
   function set. This function returns information on the call stack.
 - The RuntimeException object defined in \_main.t now stores a stack
   trace (in the form returned by t3GetStackTrace()) in its stack\_
@@ -5931,20 +5933,20 @@ called 3.0.6l.*
   caused problems if used, including interpreter crashes. In such cases,
   `propDefined()` now properly returns the intrinsic class object where
   the intrinsic method is defined.
-- Extended the [object template](sysman/objdef.htm) mechanism to allow
+- Extended the [object template](sysman/objdef.html) mechanism to allow
   class-specific templates to be defined.
-- Extended the [firstObj()](sysman/tadsgen.htm) and
-  [nextObj()](sysman/tadsgen.htm) intrinsic functions to take a new
+- Extended the [firstObj()](sysman/tadsgen.html) and
+  [nextObj()](sysman/tadsgen.html) intrinsic functions to take a new
   *flags* argument, which allows the caller to specify whether to
   enumerate instances only, classes only, or both.
 - Changed the TadsObject class to allow use of the `new` operator with
   no arguments. In the past, at least one argument (giving the immediate
   superclass of the new object) was required; now a `new TadsObject`
   with no arguments is understood to create a base TadsObject.
-- Added the [File intrinsic class](sysman/file.htm), which provides a
+- Added the [File intrinsic class](sysman/file.html), which provides a
   new interface to external file input/output. This replaces the
   file-related functions in the ["tads-io" intrinsic function
-  set](sysman/tadsio.htm), which have been removed. Specifically, the
+  set](sysman/tadsio.html), which have been removed. Specifically, the
   following functions have been removed:
   - `fileClose`
   - `fileGetPos`
@@ -5966,12 +5968,12 @@ called 3.0.6l.*
   base class's constructor, in the same order in which the base classes
   are listed in the superclass list.
 - Added grouped sub-alternatives to rules in the [`grammar`
-  statement](sysman/gramprod.htm). This allows portions of an
+  statement](sysman/gramprod.html). This allows portions of an
   alternative in a rule definition to be grouped for alternation; for
   example, a rule can be defined as
   "`('take' | 'get' | 'pick' 'up') nounList->lst_`", which is more
   concise than flattening out the grouped alternation manually.
-- Added the [`#ifempty` and `#ifnempty`](sysman/preproc.htm)
+- Added the [`#ifempty` and `#ifnempty`](sysman/preproc.html)
   variable-arguments expansion operators, which allow conditional
   expansion in a varargs macro depending on whether or not the varargs
   part is empty.
@@ -5979,17 +5981,17 @@ called 3.0.6l.*
   writing the expanded results on standard output. When -P is specified,
   no compilation or linking is performed, so no object or image files
   are created.
-- Added new [String intrinsic class](sysman/string.htm) methods:
+- Added new [String intrinsic class](sysman/string.html) methods:
   `startsWith()`, `endsWith()`, and `mapToByteArray`.
 - Added a feature to the `substr()` method of the [String intrinsic
-  class](sysman/string.htm): if the starting index (the first argument)
+  class](sysman/string.html): if the starting index (the first argument)
   is negative, it indicates an offset from the end of the string: -1 is
   the last character of the string, -2 the second-to-last, and so on.
 - Added a new function to the ["tads-io" function
-  set](sysman/tadsio.htm): `getLocalCharSet`, which returns the name of
+  set](sysman/tadsio.html): `getLocalCharSet`, which returns the name of
   one of the active local character sets on the current system.
 - Added new functionality to the ["tads-io" function
-  set](sysman/tadsio.htm) for files. Files can now be opened in "raw"
+  set](sysman/tadsio.html) for files. Files can now be opened in "raw"
   mode, which allows reading and writing byte arrays. Bytes written to
   and read from a file in raw mode are not translated or modified in any
   way; this mode offers direct access to external files, for purposes
@@ -5997,16 +5999,16 @@ called 3.0.6l.*
   The `fileRead()` and `fileWrite()` functions in this mode take
   ByteArray arguments.
 - Added new functionality to the ["tads-io" function
-  set](sysman/tadsio.htm): the `fileOpen()` routine can now take an
-  object of intrinsic class [CharacterSet](sysman/charset.htm) instead
+  set](sysman/tadsio.html): the `fileOpen()` routine can now take an
+  object of intrinsic class [CharacterSet](sysman/charset.html) instead
   of a character set name. If you've already instantiated a CharacterSet
   object for other reasons, it is more efficient to re-use the same
   object by reference in this manner than to pass the name of the
   character set to `fileOpen()`, since `fileOpen()` has to create
   another mapping object when given only a character set name.
-- Added the new [CharacterSet](sysman/charset.htm) intrinsic class.
-- Added the new [ByteArray](sysman/bytearr.htm) intrinsic class.
-- In the [Object intrinsic class](sysman/objic.htm), method formerly
+- Added the new [CharacterSet](sysman/charset.html) intrinsic class.
+- Added the new [ByteArray](sysman/bytearr.html) intrinsic class.
+- In the [Object intrinsic class](sysman/objic.html), method formerly
   known as `isClass()` has been renamed to `ofKind()`. x.ofKind(y)
   returns true if x is an instance or subclass or y. In addition, this
   method has been changed so that x.ofKind(x) returns true for any x.
@@ -6031,7 +6033,7 @@ called 3.0.6l.*
 - Fixed a preprocessor bug: if the argument of a \#message was missing
   its closing right parenthesis, the preprocessor got stuck in an
   infinite loop. This has been corrected.
-- Fixed a bug in the [Vector intrinsic class](sysman/vector.htm) (and,
+- Fixed a bug in the [Vector intrinsic class](sysman/vector.html) (and,
   by inheritance, in the Array intrinsic class): if the `insertAt`
   method was called on an empty vector, a crash occurred. This has been
   corrected.
@@ -6074,7 +6076,7 @@ called 3.0.6l.*
 
 - **Incompatible intrinsic class API change:** The return value of the
   `parseTokens()` method in the [GrammarProd intrinsic
-  class](sysman/gramprod.htm) has been changed. In the past, this method
+  class](sysman/gramprod.html) has been changed. In the past, this method
   returned a list, each of whose elements was a sublist of two elements.
   Each sublist described one successful match tree; the first element of
   each sublist was the number of tokens matched, and the second was the
@@ -6090,9 +6092,9 @@ called 3.0.6l.*
   the root object in the match tree. Since the root object in a tree
   encompasses the entire match, its token range necessarily encompasses
   the range of tokens for the entire match.
-- Added [variable-argument macros](sysman/preproc.htm).
+- Added [variable-argument macros](sysman/preproc.html).
 - Fixed a problem in the [GrammarProd intrinsic
-  class](sysman/gramprod.htm) that prevented a rule from being matched
+  class](sysman/gramprod.html) that prevented a rule from being matched
   when it ended with the special '\*' token and was used as a
   subproduction in another rule. This now works correctly.
 - Fixed a problem in the compiler that caused a spurious warning message
@@ -6101,10 +6103,10 @@ called 3.0.6l.*
   more than one source file but not in *all* source files; each file
   that did *not* declare the dictionary displayed the warning. This has
   been corrected.
-- Added the [`delegated` keyword](sysman/expr.htm), which allows
+- Added the [`delegated` keyword](sysman/expr.html), which allows
   delegating a method call to an unrelated object.
 - Added the [`getMethodDefiner()` intrinsic
-  function](sysman/tadsgen.htm), which returns the object that defines
+  function](sysman/tadsgen.html), which returns the object that defines
   the currently executing method.
 - Changed the default name of the ASCII character set mapping to
   "us-ascii" for better readability. The old name ("asc7dflt") is still
@@ -6115,7 +6117,7 @@ called 3.0.6l.*
 ### Changes for 04/29/2001
 
 - Fixed a problem in the [GrammarProd intrinsic
-  class](sysman/gramprod.htm) that caused incorrect results to be
+  class](sysman/gramprod.html) that caused incorrect results to be
   returned with productions that matched exactly zero tokens.
 
 - Extended the `grammar` syntax to allow the "`->`" notation to be used
@@ -6127,7 +6129,7 @@ called 3.0.6l.*
   literal is matched with truncation; and when a production has several
   alternatives with different literals.
 
-- Modified the [GrammarProd intrinsic class](sysman/gramprod.htm) so
+- Modified the [GrammarProd intrinsic class](sysman/gramprod.html) so
   that each match object now includes more direct information on the
   tokens involved in the match. The parser now sets the firstTokenIndex
   and lastTokenIndex properties of each match object to indicate the
@@ -6144,7 +6146,7 @@ called 3.0.6l.*
 
 - The compiler now creates a dictionary entry in the default dictionary,
   if one is defined, for each literal string that appears in a
-  ["grammar"](sysman/gramprod.htm) statement's rule list. If no default
+  ["grammar"](sysman/gramprod.html) statement's rule list. If no default
   dictionary is defined when a "grammar" statement is encountered, the
   statement's literals are not entered into any dictionary. Each literal
   string is associated with the production object and the property
@@ -6154,7 +6156,7 @@ called 3.0.6l.*
   determine if a given string, when entered by a user at run-time, was
   known in the context of a grammar literal.
 
-- The ["grammar"](sysman/gramprod.htm) syntax has been extended to allow
+- The ["grammar"](sysman/gramprod.html) syntax has been extended to allow
   a "tag" to be associated with each "grammar" statement. To specify a
   tag, specify any symbol or number in parentheses after the production
   name. For example:
@@ -6165,7 +6167,7 @@ called 3.0.6l.*
   "grammarInfo" method, described below.
 
 - The compiler now automatically creates a method for each
-  [grammar](sysman/gramprod.htm) match object that makes it possible to
+  [grammar](sysman/gramprod.html) match object that makes it possible to
   traverse match trees without knowing their internal structure in
   advance. The new method is called "grammarInfo," and it returns a
   list. The list's first element is a string giving the name of the
@@ -6174,7 +6176,7 @@ called 3.0.6l.*
   value of a property appearing after an arrow ("-\>") in the
   production's rule list.
 
-- Modified the [grammar](sysman/gramprod.htm) production matching
+- Modified the [grammar](sysman/gramprod.html) production matching
   algorithm so that \[badness\] matches are examined as a group rather
   than individually. In particular, when a number of \[badness\]
   alternatives arise simultaneously, the parser had in the past examined
@@ -6209,17 +6211,17 @@ called 3.0.6l.*
 
 - A new mechanism allows capturing calls to undefined methods and
   properties. When a call is made to an undefined method, the VM now
-  calls a new property, [`propNotDefined()`](sysman/undef.htm), on the
+  calls a new property, [`propNotDefined()`](sysman/undef.html), on the
   target object. The new method receives as arguments the the undefined
   property ID and the arguments to the original method call. If
   `propNotDefined` is itself not defined, the VM simply returns nil for
   the undefined method call, as it did in the past.
-- Added some new [regular expression](sysman/regex.htm) features:
+- Added some new [regular expression](sysman/regex.html) features:
   - Character classes can now be combined with '\|', as in
     \<upper\|digit\> (matches any upper-case letter or any digit).
   - Character classes can now be complemented with '^', as in \<^upper\>
     (matches anything *except* upper-case letters).
-  - Added some [named character expressions](sysman/regex.htm), which
+  - Added some [named character expressions](sysman/regex.html), which
     look similar to character-class expressions, and which can be
     combined with character-class expressions via '\|': \<upper\|star\>
     matches any upper-case letter or an asterisk.
@@ -6236,22 +6238,22 @@ called 3.0.6l.*
 
 - The object definition syntax has been extended to allow an object's
   property list to be enclosed in braces. Refer to the [Object
-  Definitions documentation](sysman/objdef.htm) for details.
+  Definitions documentation](sysman/objdef.html) for details.
 - The object definition syntax now provides ["nested"
-  objects](sysman/objdef.htm). A nested object is an anonymous object
+  objects](sysman/objdef.html). A nested object is an anonymous object
   defined in-line within another object, with a property of the
   enclosing object initialized with a reference to the nested object;
   this syntax is convenient for defining certain types of small helper
   objects.
 - The language now has a [static property
-  initialization](sysman/objdef.htm) syntax, which allows a property to
+  initialization](sysman/objdef.html) syntax, which allows a property to
   be initialized with a non-constant value computed at compile-time.
 - Changed the behavior of the '+' property. The new behavior is much
   simpler than the previous behavior: if an object is defined with *N*
   plus signs, its '+' property is initialized to the most recent object
   defined with *N*-1 plus signs. Explicitly setting the '+' property in
   an object list is now irrelevant. Refer to the
-  [documentation](sysman/objdef.htm) for details.
+  [documentation](sysman/objdef.html) for details.
 - Changed the default filename suffix for image files to ".t3" (it was
   formerly ".t3x") to make image filenames somewhat more friendly
   looking.
@@ -6278,7 +6280,7 @@ called 3.0.6l.*
   tree (using the `getSuperclassList()` method), or used the
   `propDefined()` method, the behavior was incorrect, and could lead to
   VM crashes. This has been corrected.
-- Added [documentation](sysman/charmap.htm) on the `#charset` directive
+- Added [documentation](sysman/charmap.html) on the `#charset` directive
   and using source files encoded in Unicode UCS-2.
 - Added a `#charset "asc7dflt"` directive to each system source and
   header file included with the compiler distribution. This directive
@@ -6301,27 +6303,27 @@ called 3.0.6l.*
 
 ### Changes for February 24, 2001
 
-- Added the [`t3AllocProp()`](sysman/t3vm.htm) intrinsic function, which
+- Added the [`t3AllocProp()`](sysman/t3vm.html) intrinsic function, which
   allocates a new property ID.
-- Added the [`Object.getPropList()`](sysman/objic.htm) method, which
+- Added the [`Object.getPropList()`](sysman/objic.html) method, which
   returns a list of properties directly defined by an object.
-- Added the [`Object.getPropParams(`*`prop`*`)`](sysman/objic.htm)
+- Added the [`Object.getPropParams(`*`prop`*`)`](sysman/objic.html)
   method, which returns information on the parameters taken by a
   property or method.
-- Added the [`getFuncParams(`*`funcptr`*`)`](sysman/tadsgen.htm)
+- Added the [`getFuncParams(`*`funcptr`*`)`](sysman/tadsgen.html)
   intrinsic function, which returns information ont he parameters taken
   by a function.
 
 ### Changes for February 10, 2001
 
-- The new [`property` statement](sysman/proccode.htm) allows a program
+- The new [`property` statement](sysman/proccode.html) allows a program
   to explicitly declare property symbols. This is optional, but can be
   useful in certain cases in library code.
-- Added the [LookupTable intrinsic class](sysman/lookup.htm), which
+- Added the [LookupTable intrinsic class](sysman/lookup.html), which
   implements a general-purpose associative array type. A LookupTable is
   similar to a Vector, but whereas a Vector can use only integers as
   indices, a Hashtable can use any value as an index.
-- Added the new [`t3GetGlobalSymbols()`](sysman/reflect.htm) intrinsic
+- Added the new [`t3GetGlobalSymbols()`](sysman/reflect.html) intrinsic
   function, which provides programmatic access to the compile-time names
   of objects, properties, functions, intrinsic classes, and enumerators.
 - The preprocessor now treats square brackets ("\[ \]") and braces ("{
@@ -6397,16 +6399,16 @@ called 3.0.6l.*
 - Fixed a problem with the `Vector` intrinsic class that caused
   pre-initialized data to be loaded incorrectly.
 - Corrected the documentation (the [expressions
-  chapter](sysman/expr.htm)) to reflect the correct precedence of the
+  chapter](sysman/expr.html)) to reflect the correct precedence of the
   "`[]`" and "`.`" operators, which should be above the unary operators.
-- Added four new methods to the [List intrinsic class](sysman/list.htm):
+- Added four new methods to the [List intrinsic class](sysman/list.html):
   `prepend(`*`val`*`)`, which inserts a new value at the start of a
   list; `insertAt(`*`index, val1, val2, ...`*`)`, which inserts one or
   more values into a list at a given position;
   `removeElementAt(`*`index`*`)`, which deletes the element at the given
   index; and `removeRange(`*`startIndex, endIndex`*`)`, which removes
   the elements in the given range of indices.
-- Added a new method to the [Vector intrinsic class](sysman/vector.htm):
+- Added a new method to the [Vector intrinsic class](sysman/vector.html):
   `prepend(`*`val`*`)`, which inserts a new value at the start of a
   vector.
 - It is no longer legal to apply the unary "`&`" operator to an object
@@ -6488,14 +6490,14 @@ called 3.0.6l.*
 
 ### Changes for 5/21/2000
 
-- Add a new [Vector](sysman/vector.htm) intrinsic class, a subclass of
+- Add a new [Vector](sysman/vector.html) intrinsic class, a subclass of
   Array that combines the reference semantics of an Array with the
   dynamic sizing capabilities of a List. Vector is substantially more
   efficient than List when constructing a collection iteratively.
-- Added some new List methods: [sort](sysman/list.htm),
-  [append](sysman/list.htm), [appendUnique](sysman/list.htm).
+- Added some new List methods: [sort](sysman/list.html),
+  [append](sysman/list.html), [appendUnique](sysman/list.html).
 - Added new Array methods: sort, appendUnique.
-- Added an [error message translation mechanism](sysman/errtrans.htm),
+- Added an [error message translation mechanism](sysman/errtrans.html),
   which allows non-English versions of the interpreter's and compiler's
   error messages to be substituted at run-time. Messages can be loaded
   from an external file, so there is no need to recompile the system to
@@ -6509,12 +6511,12 @@ called 3.0.6l.*
 ### Changes for 5/11/2000
 
 - Changed the name of the `say` function in the "tads-io" intrinsic
-  function set to [`tadsSay`](sysman/tadsio.htm). This allows the
+  function set to [`tadsSay`](sysman/tadsio.html). This allows the
   library to define its own higher-level function called `say`; since
   user code should almost always call the library's function rather than
   the low-level direct console output function, it is desirable to give
   the library version the shorter, more convenient name.
-- Added the `appendUnique()` method to the [List](sysman/list.htm) and
+- Added the `appendUnique()` method to the [List](sysman/list.html) and
   Array intrinsic classes.
 
 ### Changes for 4/24/2000
@@ -6526,9 +6528,9 @@ called 3.0.6l.*
 
 ### Changes for 4/22/2000
 
-- Added the [`foreach` statement](sysman/proccode.htm).
-- Added the [Collection](sysman/collect.htm) and
-  [Iterator](sysman/iter.htm) classes. [List](sysman/list.htm) and Array
+- Added the [`foreach` statement](sysman/proccode.html).
+- Added the [Collection](sysman/collect.html) and
+  [Iterator](sysman/iter.html) classes. [List](sysman/list.html) and Array
   are now subclasses of Collection, so these classes can create Iterator
   objects to visit their elements.
 - The Windows HTML interpreter now supports PNG transparency (this is a
@@ -6546,25 +6548,25 @@ called 3.0.6l.*
 
 ### Changes since 3.0.0
 
-- Added the [htmlify()](sysman/string.htm) method to the String class.
+- Added the [htmlify()](sysman/string.html) method to the String class.
   This method converts any HTML markup-significant characters in the
   string to their HTML equivalents; in particular, it converts an
   ampersand ("&") to "&amp;" and a less-than sign ("\<") to "&lt;", and
   can also optionally quote spaces, tabs, and newlines to ensure display
   fidelity for these whitespace characters as well.
-- Added a [shortest-match modifier](sysman/regex.htm) to the regular
+- Added a [shortest-match modifier](sysman/regex.html) to the regular
   expression closure operators ("\*", "+", and "?"). This feature
   provides precise control over how matches are allocated in expressions
   involving multiple closures.
-- Added the [non-capturing modifier](sysman/regex.htm) to the regular
+- Added the [non-capturing modifier](sysman/regex.html) to the regular
   expression group syntax; this allows a parenthesized group to be
   omitted from the counted groups.
-- Added [look-ahead assertions](sysman/regex.htm) to the regular
+- Added [look-ahead assertions](sysman/regex.html) to the regular
   expression syntax.
-- Added the regular expression [interval operator](sysman/regex.htm),
+- Added the regular expression [interval operator](sysman/regex.html),
   which provides a compact notation for specifying a specific number of
   repetitions of a sub-expression.
-- Renamed a few [list methods](sysman/list.htm) and array methods, and
+- Renamed a few [list methods](sysman/list.html) and array methods, and
   expanded both sets for greater consistency and more complete
   functionality:
   - indexOf
@@ -6591,7 +6593,7 @@ called 3.0.6l.*
   debugger, because this is the only time the system has access to the
   necessary source line information.
 - Added a "character map library" mechanism to the [stand-alone
-  interpreter](sysman/alone.htm). This new feature allows a set of
+  interpreter](sysman/alone.html). This new feature allows a set of
   character map (.tcm) files to be bundled with a stand-alone game,
   eliminating the need to distribute separate .tcm files with a
   stand-alone game. (Having to distribute .tcm files seemed to defeat
@@ -6618,7 +6620,7 @@ called 3.0.6l.*
   other types of modular execution objects, such as perhaps a
   post-restore initializer sequence, a command parsing initializer
   sequence, and so on. Refer to the [library
-  pre-initialization](sysman/init.htm) documentation for details.
+  pre-initialization](sysman/init.html) documentation for details.
 - Added the `-r` option to the interpreter, allowing games to be
   restored directly from the command. The saved state files now include
   information on the image file that created them, so if you're
@@ -6636,12 +6638,12 @@ called 3.0.6l.*
 
 ### Changes since 03/26/2000
 
-- Added a new [library pre-initialization](sysman/init.htm) mechanism
+- Added a new [library pre-initialization](sysman/init.html) mechanism
   based on "initialization objects" rather than a simple preinit()
   method. This new mechanism should be especially useful for library
   developers, since new initialization objects can be plugged in without
   touching any library or user code
-- It is now possible to [extend intrinsic classes](t3icext.htm) with
+- It is now possible to [extend intrinsic classes](t3icext.html) with
   user-defined methods.
 
 ### Changes since 03/21/2000
@@ -6672,7 +6674,7 @@ called 3.0.6l.*
 - Renamed the `getSize()` method in the Array class to `length()`, for
   consistency with List and String.
 - Added the 'is in' and 'not in' operators. See the ["is in" and "not
-  in" expressions](sysman/expr.htm) section.
+  in" expressions](sysman/expr.html) section.
 - The debugger now has "program arguments" settings. You can access
   these settings via a dialog, which you can open using the "Program
   Arguments" item on the "Debug" menu. You can use the program arguments
@@ -6682,7 +6684,7 @@ called 3.0.6l.*
 - Added several new regular expression features: \<Case\> and
   \<NoCase\>, \<Alpha\>, \<Upper\>, \<Lower\>, \<Digit\>, \<AlphaNum\>,
   \<Space\>, \<Punct\>. Refer to the new [regular expressions
-  section](sysman/regex.htm) of the documentation for details.
+  section](sysman/regex.html) of the documentation for details.
 - Enhanced the regular expression parser to detect and remove cycles in
   compiled patterns. It is possible (pretty easy, actually) to introduce
   "infinite loops" into a pattern; the easiest way to do this is to put
@@ -6705,7 +6707,7 @@ called 3.0.6l.*
 
 ### Changes since 03/12/2000
 
-- Added [default display methods](t3dispfn.htm), which allow string
+- Added [default display methods](t3dispfn.html), which allow string
   display to be routed through a method of the active "self" object in
   effect each time a string is displayed and each time an expression
   embedded in a string via the \<\< \>\> syntax is displayed. This
@@ -6713,17 +6715,17 @@ called 3.0.6l.*
   allows for "stateful" filtering (in that the filtering function is a
   method of the object that initiated the filtering, and can therefore
   look at properties of "self" to perform its work).
-- Added the ["short form" anonymous function](t3anonfn.htm#shortForm)
+- Added the ["short form" anonymous function](t3anonfn.html#shortForm)
   syntax, which is much more compact than the long form, but can only be
   used to define functions that consist solely of a single expression.
 - Added the `subset()` and `applyAll()` methods to the
-  [array](t3array.htm) and [list](sysman/list.htm) intrinsic classes.
-- Added [documentation for the List intrinsic class](sysman/list.htm).
+  [array](t3array.html) and [list](sysman/list.html) intrinsic classes.
+- Added [documentation for the List intrinsic class](sysman/list.html).
 - Added the `-cs` interpreter option, which allows the user to specify a
   character set to use for the display and keyboard. Refer to the new
-  [interpreter section](t3run.htm) in the documentation.
+  [interpreter section](t3run.html) in the documentation.
 - As mentioned above, there is a [new section on the
-  interpreter](t3run.htm) in the documentation.
+  interpreter](t3run.html) in the documentation.
 - The TADS 3 HTML interpreter and debugger for Windows now use a
   separate registry key for storing their preference settings. In
   addition, the TADS 3 debugger's global preferences file is now called

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="reviewing.htm" class="nav">Reviewing the Basics</a> \> Methods,
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> \> Methods,
 Functions and Statements  
-<span class="navnp"><a href="containment.htm" class="nav"><em>Prev:</em> Object
+<span class="navnp"><a href="containment.html" class="nav"><em>Prev:</em> Object
 Containment</a>    
-<a href="inherit.htm" class="nav"><em>Next:</em> Inheritance,
+<a href="inherit.html" class="nav"><em>Next:</em> Inheritance,
 Modification and Overriding</a>     </span>
 
 </div>
@@ -728,7 +730,7 @@ to read these three sections. On the other hand, if you're comfortable
 with what we've just covered in this section and would like to carry on
 reading the next straight away, that's fine too, but I would still
 recommend that you read those three sections of the [TADS 3 System
-Manual](../sysman.htm) sooner or later.
+Manual](../sysman.html) sooner or later.
 
 </div>
 
@@ -737,12 +739,12 @@ Manual](../sysman.htm) sooner or later.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="reviewing.htm" class="nav">Reviewing the Basics</a> \> Methods,
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> \> Methods,
 Functions and Statements  
-<span class="navnp"><a href="containment.htm" class="nav"><em>Prev:</em> Object
+<span class="navnp"><a href="containment.html" class="nav"><em>Prev:</em> Object
 Containment</a>    
-<a href="inherit.htm" class="nav"><em>Next:</em> Inheritance,
+<a href="inherit.html" class="nav"><em>Next:</em> Inheritance,
 Modification and Overriding</a>     </span>
 
 </div>

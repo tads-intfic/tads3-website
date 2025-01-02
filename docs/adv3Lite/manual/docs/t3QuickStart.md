@@ -1,3 +1,5 @@
+---
+---
 Adv3Lite Quick Start Guide
 
 # Adv3Lite Quick Start Guide
@@ -208,12 +210,12 @@ want to use the reference material to remind you of material you first
 encountered in a tutorial, but they have quite different functions.
 
 The two *tutorial* manuals are the
-<a href="tutorial/index.htm" class="title" target="_blank">Adv3Lite
+<a href="tutorial/index.html" class="title" target="_blank">Adv3Lite
 Tutorial</a> and <a href="learning/LearningT3Lite.pdf" class="title"
 target="_blank">Learning TADS 3 With Adv3Lite</a>. If you're already
 reasonably familiar with TADS 3 (but want to find out about Adv3Lite),
 you could probably skip these tutorials and go straight to the
-<a href="manual/index.htm" target="_blank">Adv3Lite Manual</a>.
+<a href="manual/index.html" target="_blank">Adv3Lite Manual</a>.
 Otherwise, you should probably start with one of the introductory
 tutorials. So why are there two introductory tutorials and which of them
 should you choose?
@@ -225,7 +227,7 @@ Different people will therefore benefit from different approaches.
 
 For most new users the answer to the question "Where do I go next?" is
 either the
-<a href="tutorial/index.htm" class="title" target="_blank">Adv3Lite
+<a href="tutorial/index.html" class="title" target="_blank">Adv3Lite
 Tutorial</a> or <a href="learning/LearningT3Lite.pdf" class="title"
 target="_blank">Learning TADS 3 With Adv3Lite</a>. If you're still
 unsure which to start off with, take a quick look (by skimming) through
@@ -234,7 +236,7 @@ more comfortable with.
 
 ### 2a. The Adv3Lite Tutorial
 
-The <a href="tutorial/index.htm" class="title" target="_blank">Adv3Lite
+The <a href="tutorial/index.html" class="title" target="_blank">Adv3Lite
 Tutorial</a> walks you through the creation of three adv3Lite games (two
 very short, one quite a bit bigger), explaining features of the system
 as it goes along but not presenting them in a particularly systematic
@@ -273,12 +275,12 @@ or more of the tutorial manuals and are writing your own game(s), but
 for most people, they are not the best place to start.
 
 That said, the
-<a href="sysman.htm" class="title" target="_blank">TADS 3 System
+<a href="sysman.html" class="title" target="_blank">TADS 3 System
 Manual</a> does contain a lot of material that might be of interest to
 confident beginners with a strong programming background (whether
 professional, amateur or hobbyist) who want to see how things are done
 in TADS 3, and the
-<a href="manual/index.htm" target="_blank">adv3Lite Manual</a> does
+<a href="manual/index.html" target="_blank">adv3Lite Manual</a> does
 contain a fairly complete and systematic account of the features of the
 adv3Lite library, which could be a useful place to start for people who
 know TADS 3 but what to find out about adv3Lite. Nevertheless, for most
@@ -379,7 +381,7 @@ happens. You may learn something from this approach, and you should at
 least start to get some kind of feel for what writing a TADS 3 game
 looks like. If you find at any stage that this approach is simply
 confusing and frustrating, then give it up and go and start reading the
-<a href="tutorial/index.htm" class="title" target="_blank">Adv3Lite
+<a href="tutorial/index.html" class="title" target="_blank">Adv3Lite
 Tutorial</a> or <a href="learning/LearningT3Lite.pdf" class="title"
 target="_blank">Learning TADS 3 With Adv3Lite</a> instead. But if you
 feel you're beginning to deduce how at least some of it works, then feel
@@ -1463,7 +1465,7 @@ may have learned something by studying the sample code and trying it
 out. If you feel confident enough to experiment a little more on your
 own, by all means do so, but at this stage it's getting pretty near the
 point when you will need to move on to the
-<a href="tutorial/index.htm" class="title" target="_blank">Adv3Lite
+<a href="tutorial/index.html" class="title" target="_blank">Adv3Lite
 Tutorial</a> or <a href="learning/LearningT3Lite.pdf" class="title"
 target="_blank">Learning TADS 3 With Adv3Lite</a>.
 

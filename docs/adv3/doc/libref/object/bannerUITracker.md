@@ -1,3 +1,5 @@
+---
+---
 <span class="title">bannerUITracker</span><span class="type">object</span>
 
 [banner.t](../file/banner.t.html)\[[503](../source/banner.t.html#503)\]

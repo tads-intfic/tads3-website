@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ActorRole</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[3901](../source/parser.t.html#3901)\]

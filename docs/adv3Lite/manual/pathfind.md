@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Pathfinding  
-<span class="navnp"><a href="instruct.htm" class="nav"><em>Prev:</em> Instructions</a>
-    <a href="scene.htm" class="nav"><em>Next:</em> Scenes</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Pathfinding  
+<span class="navnp"><a href="instruct.html" class="nav"><em>Prev:</em> Instructions</a>
+    <a href="scene.html" class="nav"><em>Next:</em> Scenes</a>    
 </span>
 
 </div>
@@ -94,7 +96,7 @@ moving the player character until either s/he reaches X or something
 which point the CONTINUE command can still be used to attempt to resume
 the journey, although it will only proceed one step at a time). You can
 also set <span class="code">fastGoTo</span> to true within individual
-[Regions](room.htm#regions) to allow CONTINUE-less GO TO between rooms
+[Regions](room.html#regions) to allow CONTINUE-less GO TO between rooms
 within a given Region, also this setting will have no effect if
 <span class="code">gameMain.fastGoTo</span> is true (since the fast GOTO
 option is then enabled globally).
@@ -471,10 +473,10 @@ way.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Pathfinding  
-<span class="navnp"><a href="instruct.htm" class="nav"><em>Prev:</em> Instructions</a>
-    <a href="scene.htm" class="nav"><em>Next:</em> Scenes</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Pathfinding  
+<span class="navnp"><a href="instruct.html" class="nav"><em>Prev:</em> Instructions</a>
+    <a href="scene.html" class="nav"><em>Next:</em> Scenes</a>    
 </span>
 
 </div>

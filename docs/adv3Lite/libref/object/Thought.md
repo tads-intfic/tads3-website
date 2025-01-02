@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Thought</span><span class="type">class</span>
 
 [thoughts.t](../file/thoughts.t.html)\[[67](../source/thoughts.t.html#67)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BasicEvent</span><span class="type">class</span>
 
 [events.t](../file/events.t.html)\[[581](../source/events.t.html#581)\]

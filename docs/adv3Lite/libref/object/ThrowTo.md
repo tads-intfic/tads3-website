@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ThrowTo</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1394](../source/actions.t.html#1394)\]

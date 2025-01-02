@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Platform</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[6699](../source/travel.t.html#6699)\]

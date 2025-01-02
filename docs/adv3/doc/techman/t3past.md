@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Writing a Game
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Writing a Game
 in the Past Tense  
-<span class="navnp"><a href="t3globalremap.htm" class="nav"><em>Prev:</em> Global Command
+<span class="navnp"><a href="t3globalremap.html" class="nav"><em>Prev:</em> Global Command
 Remapping</a>    
-<a href="mediatypes.htm" class="nav"><em>Next:</em> Internet Media Types
+<a href="mediatypes.html" class="nav"><em>Next:</em> Internet Media Types
 for TADS</a>     </span>
 
 </div>
@@ -95,7 +97,7 @@ making verbs agree in person and number with the subject. The remainder
 of this article describes the new features of the substitution parameter
 framework that are specific to handling the past tense, and which are
 not covered in the older article [Message Parameter Substitutions in the
-TADS 3 Library](t3msg.htm). From now on, we'll assume that you have some
+TADS 3 Library](t3msg.html). From now on, we'll assume that you have some
 familiarity with the material exposed therein.
 
 If you have read the article in question, you have probably noticed that
@@ -513,12 +515,12 @@ tense is.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Writing a Game
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Writing a Game
 in the Past Tense  
-<span class="navnp"><a href="t3globalremap.htm" class="nav"><em>Prev:</em> Global Command
+<span class="navnp"><a href="t3globalremap.html" class="nav"><em>Prev:</em> Global Command
 Remapping</a>    
-<a href="mediatypes.htm" class="nav"><em>Next:</em> Internet Media Types
+<a href="mediatypes.html" class="nav"><em>Next:</em> Internet Media Types
 for TADS</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nullDistinguisher</span><span class="type">object</span>
 
 [disambig.t](../file/disambig.t.html)\[[90](../source/disambig.t.html#90)\]

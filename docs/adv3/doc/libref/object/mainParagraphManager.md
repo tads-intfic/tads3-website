@@ -1,3 +1,5 @@
+---
+---
 <span class="title">mainParagraphManager</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[638](../source/output.t.html#638)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">directionName(east)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[3104](../source/en_us.t.html#3104)\]

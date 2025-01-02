@@ -1,3 +1,5 @@
+---
+---
 Welcome to the TADS Player Kit
 
 <div id="main">
@@ -59,7 +61,7 @@ Kit is free and has everything you need to create original IF with TADS.
 ## Problems?
 
 If you run into any problems with TADS, check the [system compatibility
-notes](../compat.htm). There are a few known problems with certain
+notes](../compat.html). There are a few known problems with certain
 Windows configurations, and the notes explain how to fix these. You
 should read the compatibility notes in particular if:
 

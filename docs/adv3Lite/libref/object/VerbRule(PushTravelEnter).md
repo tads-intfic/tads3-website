@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(PushTravelEnter)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[3351](../source/grammar.t.html#3351)\]

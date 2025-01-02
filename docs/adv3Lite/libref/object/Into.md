@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Into</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[10141](../source/thing.t.html#10141)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SensoryEmanation</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[31](../source/extras.t.html#31)\],

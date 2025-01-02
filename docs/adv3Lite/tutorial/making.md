@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Goldskull</a> \> Making things
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Goldskull</a> \> Making things
 happen  
-<span class="navnp"><a href="goldmap.htm" class="nav"><em>Prev:</em> Laying out the map</a>
-    <a href="improving.htm" class="nav"><em>Next:</em> Improving the
+<span class="navnp"><a href="goldmap.html" class="nav"><em>Prev:</em> Laying out the map</a>
+    <a href="improving.html" class="nav"><em>Next:</em> Improving the
 Game</a>     </span>
 
 </div>
@@ -163,11 +165,11 @@ adv3Lite in the process.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Goldskull</a> \> Making things
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Goldskull</a> \> Making things
 happen  
-<span class="navnp"><a href="goldmap.htm" class="nav"><em>Prev:</em> Laying out the map</a>
-    <a href="improving.htm" class="nav"><em>Next:</em> Improving the
+<span class="navnp"><a href="goldmap.html" class="nav"><em>Prev:</em> Laying out the map</a>
+    <a href="improving.html" class="nav"><em>Next:</em> Improving the
 Game</a>     </span>
 
 </div>

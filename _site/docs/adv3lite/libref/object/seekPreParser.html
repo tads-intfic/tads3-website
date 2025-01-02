@@ -1,0 +1,133 @@
+<p><span class="title">seekPreParser</span><span class="type">object</span></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#896">896</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The StringPreparser and the TopicAction which follows are designed to
+deal with command like LOOK FOR X, FIND Y or SEARCH FOR Z. The
+complication is that in the standard library these are all forms of LOOK
+UP X, which prompt the response "What do you want to look that up in?".
+This is likely to confuse new players.
+
+The StringPreparser checks to see if there's a Consultable in the
+current location. If so, then we use the standard library handling, on
+the assumption that the player is trying to looking something up in it.
+If not we change the command to SEEK X in order to invoke the new
+SeekAction defined below.
+
+**`seekPreParser`**` :   `[`StringPreParser`](../object/StringPreParser.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">seekPreParser</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>StringPreParser<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>pat<code class="language-plaintext highlighter-rouge">](#pat)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>regList<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#regList)</code>  <code class="language-plaintext highlighter-rouge">[</code>regListSorted<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#regListSorted)</code>  <code class="language-plaintext highlighter-rouge">[</code>runOrder<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#runOrder)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>doParsing<code class="language-plaintext highlighter-rouge">](#doParsing)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>registerPreParser<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#registerPreParser)</code>  <code class="language-plaintext highlighter-rouge">[</code>runAll<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#runAll)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="pat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pat</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#911">911</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="doParsing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doParsing (str, which)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#897">897</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

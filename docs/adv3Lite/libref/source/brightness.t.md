@@ -1,3 +1,5 @@
+---
+---
 # brightness.t
 
 [documentation](../file/brightness.t.html)

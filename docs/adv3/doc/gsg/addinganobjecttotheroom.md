@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](definingourfirstroom.htm)
-  [\[Next\]](tyingupsomeloosestrings.htm)*
+*[\[Previous\]](definingourfirstroom.html)
+  [\[Next\]](tyingupsomeloosestrings.html)*
 
 ## Adding an Object to the Room
 
@@ -463,7 +465,7 @@ objects.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](definingourfirstroom.htm)
-  [\[Next\]](tyingupsomeloosestrings.htm)*
+*[\[Previous\]](definingourfirstroom.html)
+  [\[Next\]](tyingupsomeloosestrings.html)*
 
 </div>

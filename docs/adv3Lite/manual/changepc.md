@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Changing the Player
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Changing the Player
 Character  
-<span class="navnp"><a href="initiate.htm" class="nav"><em>Prev:</em> NPC-Initiated
+<span class="navnp"><a href="initiate.html" class="nav"><em>Prev:</em> NPC-Initiated
 Conversation</a>    
-<a href="final.htm" class="nav"><em>Next:</em> Final Moves</a>    
+<a href="final.html" class="nav"><em>Next:</em> Final Moves</a>    
 </span>
 
 </div>
@@ -171,12 +173,12 @@ than this.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Changing the Player
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Changing the Player
 Character  
-<span class="navnp"><a href="initiate.htm" class="nav"><em>Prev:</em> NPC-Initiated
+<span class="navnp"><a href="initiate.html" class="nav"><em>Prev:</em> NPC-Initiated
 Conversation</a>    
-<a href="final.htm" class="nav"><em>Next:</em> Final Moves</a>    
+<a href="final.html" class="nav"><em>Next:</em> Final Moves</a>    
 </span>
 
 </div>

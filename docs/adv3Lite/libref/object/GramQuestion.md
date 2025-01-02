@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GramQuestion</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1081](../source/parser.t.html#1081)\]

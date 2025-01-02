@@ -1,3 +1,5 @@
+---
+---
 # browser.t
 
 [documentation](../file/browser.t.html)

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Flashlight : <a
-href="lightsource.htm">LightSource</a>, <a
-href="switch.htm">Switch</a><br />
+href="lightsource.html">LightSource</a>, <a
+href="switch.html">Switch</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="lightsource.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="candle.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="lightsource.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="candle.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

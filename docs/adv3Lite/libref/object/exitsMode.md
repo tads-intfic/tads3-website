@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ExitsMode</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[139](../source/actions.t.html#139)\]

@@ -1,0 +1,146 @@
+<p><span class="title">OneTimePromptDaemon</span><span class="type">class</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#523">523</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A one-time-only prompt daemon is a regular command prompt daemon, except
+that it fires only once. After it fires once, the daemon automatically
+deactivates itself, so that it won't fire again.
+
+Prompt daemons are occasionally useful for non-recurring processing,
+when you want to defer some bit of code until a "safe" time between
+turns. In these cases, the regular PromptDaemon is inconvenient to use
+because it automatically recurs. This subclass is handy for these cases,
+since it lets you schedule some bit of processing for a single deferred
+execution.
+
+One special situation where one-time prompt daemons can be handy is in
+triggering conversational events - such as initiating a conversation -
+at the very beginning of the game. Initiating a conversation can only be
+done from within an action context, but no action context is in effect
+during the game's initialization. An easy way to deal with this is to
+create a one-time prompt daemon during initialization, and then trigger
+the event from the daemon's callback method. The prompt daemon will set
+up a daemon action environment just before the first command prompt is
+displayed, at which point the callback will be able to trigger the event
+as though it were in ordinary action handler code.
+
+`class `**`OneTimePromptDaemon`**` :   `[`PromptDaemon`](../object/PromptDaemon.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">OneTimePromptDaemon</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PromptDaemon<code class="language-plaintext highlighter-rouge">](../object/PromptDaemon.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Event<code class="language-plaintext highlighter-rouge">](../object/Event.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PromptDaemon</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isPromptDaemon<code class="language-plaintext highlighter-rouge">](../object/PromptDaemon.html#isPromptDaemon)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>captureText<code class="language-plaintext highlighter-rouge">](../object/Event.html#captureText)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventOrder<code class="language-plaintext highlighter-rouge">](../object/Event.html#eventOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>executed<code class="language-plaintext highlighter-rouge">](../object/Event.html#executed)</code>  <code class="language-plaintext highlighter-rouge">[</code>interval_<code class="language-plaintext highlighter-rouge">](../object/Event.html#interval_)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextRunTime<code class="language-plaintext highlighter-rouge">](../object/Event.html#nextRunTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>obj_<code class="language-plaintext highlighter-rouge">](../object/Event.html#obj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>prop_<code class="language-plaintext highlighter-rouge">](../object/Event.html#prop_)</code>  <code class="language-plaintext highlighter-rouge">[</code>senseObj_<code class="language-plaintext highlighter-rouge">](../object/Event.html#senseObj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>senseProp_<code class="language-plaintext highlighter-rouge">](../object/Event.html#senseProp_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>executeEvent<code class="language-plaintext highlighter-rouge">](#executeEvent)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>callMethod<code class="language-plaintext highlighter-rouge">](../object/Event.html#callMethod)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/Event.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>delayEvent<code class="language-plaintext highlighter-rouge">](../object/Event.html#delayEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventMatches<code class="language-plaintext highlighter-rouge">](../object/Event.html#eventMatches)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextRunTime<code class="language-plaintext highlighter-rouge">](../object/Event.html#getNextRunTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeEvent<code class="language-plaintext highlighter-rouge">](../object/Event.html#removeEvent)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="executeEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeEvent ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#524">524</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

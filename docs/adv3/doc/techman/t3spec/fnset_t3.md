@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 t3vm Function Set  
-<span class="navnp"><a href="debug.htm" class="nav"><em>Prev:</em> Debug Records</a>
+<span class="navnp"><a href="debug.html" class="nav"><em>Prev:</em> Debug Records</a>
    
-<a href="metalist.htm" class="nav"><em>Next:</em> Metaclass Identifier
+<a href="metalist.html" class="nav"><em>Next:</em> Metaclass Identifier
 List</a>     </span>
 
 </div>
@@ -25,7 +27,7 @@ List</a>     </span>
 
 ## The "t3vm" Intrinsic Function Set
 
-The T3 VM uses [intrinsic function sets](model.htm#intrinsics) to
+The T3 VM uses [intrinsic function sets](model.html#intrinsics) to
 provide access to built-in functionality in the VM itself and in the
 host application environment. The T3 specification allows host
 environments and application configurations to define and provide their
@@ -243,12 +245,12 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 t3vm Function Set  
-<span class="navnp"><a href="debug.htm" class="nav"><em>Prev:</em> Debug Records</a>
+<span class="navnp"><a href="debug.html" class="nav"><em>Prev:</em> Debug Records</a>
    
-<a href="metalist.htm" class="nav"><em>Next:</em> Metaclass Identifier
+<a href="metalist.html" class="nav"><em>Next:</em> Metaclass Identifier
 List</a>     </span>
 
 </div>

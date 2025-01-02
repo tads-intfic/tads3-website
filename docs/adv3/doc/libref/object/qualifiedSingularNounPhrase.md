@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedSingularNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`qualifiedSingularNounPhrase(anyOneIn)`](../object/qualifiedSingularNounPhrase(anyOneIn).html)</span>` :   `[`VagueContainerIndefiniteNounPhraseProd`](../object/VagueContainerIndefiniteNounPhraseProd.html)

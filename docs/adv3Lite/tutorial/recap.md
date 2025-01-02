@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \>
 Recapitulation  
-<span class="navnp"><a href="scene.htm" class="nav"><em>Prev:</em> Making a Scene</a>
+<span class="navnp"><a href="scene.html" class="nav"><em>Prev:</em> Making a Scene</a>
    
-<a href="cockpit.htm" class="nav"><em>Next:</em> Cockpit Controls</a>
+<a href="cockpit.html" class="nav"><em>Next:</em> Cockpit Controls</a>
     </span>
 
 </div>
@@ -110,10 +112,10 @@ can be defined in an action handler, the others being
 <span class="code">preCond</span>, <span class="code">remap</span>,
 <span class="code">verify()</span> and
 <span class="code">report()</span>. If you want the full story right
-away you can find it in the [Action Results](../manual/actres.htm)
+away you can find it in the [Action Results](../manual/actres.html)
 section of the *adv3Lite Library Manual*, or if you want the absolute
 complete full story you can read the entire [Part IV:
-Actions](../manual/action.htm) part of the manual. Alternatively you may
+Actions](../manual/action.html) part of the manual. Alternatively you may
 prefer to wait until you've been exposed to a bit more of the mechanics
 of action handling in Chapter Ten of this tutorial.
 
@@ -330,7 +332,7 @@ Instead, you need to do this:
 </div>
 
 You can read more about [remapXXX properties and Multiple
-Containment](../manual/thing.htm#remapxxx) in the *adv3Lite Library
+Containment](../manual/thing.html#remapxxx) in the *adv3Lite Library
 Manual*.
 
 ## <span id="hiding">Hiding Things</span>
@@ -414,7 +416,7 @@ alternative mechanism for multiple containment in general, unless you
 really do need the player character to be able to *hide* objects in,
 under or behind other objects.
 
-You can read more about [Hiding Things](../manual/thing.htm#hidden)
+You can read more about [Hiding Things](../manual/thing.html#hidden)
 using the hiddenXXX properties in the *adv3Lite Library Manual*.
 
 ## Bulk
@@ -476,7 +478,7 @@ game, or they are truly vital to your plot or puzzle structure, they are
 best avoided.
 
 You may wish to read more about [Bulk and
-BulkCapacity](../manual/thing.htm#bulk) in the *adv3Lite Library
+BulkCapacity](../manual/thing.html#bulk) in the *adv3Lite Library
 Manual*.
 
 ## Topics and TopicEntries
@@ -571,8 +573,8 @@ items in the matchObj list are requested:
 
 </div>
 
-The full story on [Topics](../manual/topic.htm) and
-[TopicEntries](../manual/topicentry.htm) can be found in the *adv3Lite
+The full story on [Topics](../manual/topic.html) and
+[TopicEntries](../manual/topicentry.html) can be found in the *adv3Lite
 Library Manual*, which you might want to consult at this point, so the
 same information need not be reproduced in all its detail here.
 
@@ -592,7 +594,7 @@ other side-effects of traveling. You also need to define the
 **destination** property to define where the TravelConnector leads to.
 For the full story, including all the other methods and properties of
 TravelConnector, see the section on [Travel Connectors and
-Barriers](../manual/travel.htm) in the *adv3Lite Library Manual*.
+Barriers](../manual/travel.html) in the *adv3Lite Library Manual*.
 
 There's usually no need to define an abstract TravelConnector as a
 distinct defined object. The most normal way to define one is as an
@@ -640,7 +642,7 @@ test whether a Scene has ever been started (whether it's ended or not)
 by seeing whether its **startedAt** property is non-nil.
 
 There are a number of other Scene properties and methods, and for the
-full story you should read the Section on [Scenes](../manual/scene.htm)
+full story you should read the Section on [Scenes](../manual/scene.html)
 in the *adv3Lite Library Manual*. But we shall in any case be making
 further use of Scenes in the next couple of chapters, so you'll have
 plenty more opportunity to see how they can be used in practice.
@@ -668,7 +670,7 @@ to the rear of the plane and (b) this inhibition is automatically put in
 place when the criminal passengers are moved into the front of the
 plane.
 
-You can read more about [Reacting to Travel](../manual/react.htm#travel)
+You can read more about [Reacting to Travel](../manual/react.html#travel)
 in the *adv3Lite Library Manual*.
 
 ## Conclusion
@@ -689,12 +691,12 @@ on to the new material to be introduced in the next chapter.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \>
 Recapitulation  
-<span class="navnp"><a href="scene.htm" class="nav"><em>Prev:</em> Making a Scene</a>
+<span class="navnp"><a href="scene.html" class="nav"><em>Prev:</em> Making a Scene</a>
    
-<a href="cockpit.htm" class="nav"><em>Next:</em> Cockpit Controls</a>
+<a href="cockpit.html" class="nav"><em>Next:</em> Cockpit Controls</a>
     </span>
 
 </div>

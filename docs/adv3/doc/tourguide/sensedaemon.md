@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,17 +9,17 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SenseDaemon : <a
-href="daemon.htm">Daemon</a><br />
+href="daemon.html">Daemon</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="sensefuse.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="promptdaemon.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="sensefuse.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="promptdaemon.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-A SenseDaemon, like a [SenseFuse](sensefuse.htm), is for use when you
+A SenseDaemon, like a [SenseFuse](sensefuse.html), is for use when you
 want players to see its output only when a certain object can be
 sensed.  
   
@@ -41,7 +43,7 @@ object, but need not be) using the sense *sense* (which could be sight,
 sound, smell or touch - most likely one of the first two).  
   
 We'll create an example of a SenseDaemon when we come to
-[CyclicEventList](cycliceventlist.htm).  
+[CyclicEventList](cycliceventlist.html).  
   
   
   

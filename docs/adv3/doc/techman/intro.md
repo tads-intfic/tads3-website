@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,8 +8,8 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Introduction  
-<span class="navnp"><a href="fund.htm" class="nav"><em>Next:</em> Fundamentals</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Introduction  
+<span class="navnp"><a href="fund.html" class="nav"><em>Next:</em> Fundamentals</a>
     </span>
 
 </div>
@@ -62,7 +64,7 @@ figure out for yourself how some part of the system works, I'd be
 especially grateful if you'd consider contributing an article on the
 subject for a future edition. To facilitate user participation, I've set
 up a page on tads.org with a "wish list" of new articles for future
-editions: <http://www.tads.org/t3techlist.htm>.
+editions: <http://www.tads.org/t3techlist.html>.
 
 —
 
@@ -79,8 +81,8 @@ editions: <http://www.tads.org/t3techlist.htm>.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Introduction  
-<span class="navnp"><a href="fund.htm" class="nav"><em>Next:</em> Fundamentals</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Introduction  
+<span class="navnp"><a href="fund.html" class="nav"><em>Next:</em> Fundamentals</a>
     </span>
 
 </div>

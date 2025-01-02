@@ -1,3 +1,5 @@
+---
+---
 <span class="title">cmdTokenizer</span><span class="type">object</span>
 
 [tokens.t](../file/tokens.t.html)\[[66](../source/tokens.t.html#66)\]

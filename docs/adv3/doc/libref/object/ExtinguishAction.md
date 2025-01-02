@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ExtinguishAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2466](../source/actions.t.html#2466)\]

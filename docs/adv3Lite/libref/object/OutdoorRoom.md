@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OutdoorRoom</span><span class="type">class</span>
 
 [roomparts.t](../file/roomparts.t.html)\[[94](../source/roomparts.t.html#94)\]

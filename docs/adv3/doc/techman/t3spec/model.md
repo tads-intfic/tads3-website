@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Machine Model  
-<span class="navnp"><a href="notation.htm" class="nav"><em>Prev:</em> Notation and
+<span class="navnp"><a href="notation.html" class="nav"><em>Prev:</em> Notation and
 Conventions</a>    
-<a href="metacl.htm" class="nav"><em>Next:</em> The Metaclasses</a>    
+<a href="metacl.html" class="nav"><em>Next:</em> The Metaclasses</a>    
 </span>
 
 </div>
@@ -230,7 +232,7 @@ attempt to interpret the contents of character strings. All rendering
 and other interpretation is up to the host application environment.
 
 For an example of special character interpretation, refer to [TADS
-Special Characters](tadsspch.htm).
+Special Characters](tadsspch.html).
 
 ### Character Set Translation
 
@@ -484,7 +486,7 @@ containing the VM.
 Because the generic object interface doesn't contain information about
 any specific metaclasses, new metaclasses can be added through the
 interface. This VM specification includes a set of [pre-defined
-metaclasses](metacl.htm), but individual VM implementations can extend
+metaclasses](metacl.html), but individual VM implementations can extend
 this set through the generic interface. For example, a VM could provide
 a high-level object type for a language other than TADS, such as for C++
 or Java.
@@ -778,7 +780,7 @@ The compiler is responsible for constructing the metaclass dependency
 table and for generating the appropriate metaclass index values in the
 image file.
 
-Refer to the [Metaclass Identifier List Appendix](metalist.htm) for a
+Refer to the [Metaclass Identifier List Appendix](metalist.html) for a
 list of the defined metaclasses.
 
 ### Metaclass Versioning
@@ -976,7 +978,7 @@ machine.
 
 **Data Register 0 (R0):** this register is used for temporary storage of
 data values. This register can contain any value that can be stored in a
-stack location. The Return Value ([RETVAL](opcode.htm#opc_retval))
+stack location. The Return Value ([RETVAL](opcode.html#opc_retval))
 instruction, for example, stores the return value of a function in this
 register.
 
@@ -1286,7 +1288,7 @@ specifies:
   function's method header) of the handler code. This is stored as a
   UINT2 value.
 
-Following the exception table are the [debugger records](debug.htm). The
+Following the exception table are the [debugger records](debug.html). The
 debug records contain information for source-level symbolic debugging:
 the names and scopes of the local variables, and the byte code position
 of the first instruction of each line of executable code. Debug records
@@ -1527,7 +1529,7 @@ available. The function set selection process will ensure that a program
 prepared to expect a particular function set will only load into a VM
 that has been configured with that function set. However, one function
 set is required in *all* T3 implementations: [the "t3vm" function
-set](fnset_t3.htm).
+set](fnset_t3.html).
 
 ------------------------------------------------------------------------
 
@@ -2384,12 +2386,12 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Machine Model  
-<span class="navnp"><a href="notation.htm" class="nav"><em>Prev:</em> Notation and
+<span class="navnp"><a href="notation.html" class="nav"><em>Prev:</em> Notation and
 Conventions</a>    
-<a href="metacl.htm" class="nav"><em>Next:</em> The Metaclasses</a>    
+<a href="metacl.html" class="nav"><em>Next:</em> The Metaclasses</a>    
 </span>
 
 </div>

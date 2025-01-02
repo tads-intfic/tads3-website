@@ -1,0 +1,166 @@
+<p><span class="title">TravelWithMessage</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2015">2015</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A mix-in class that can be added to objects that also inherit from
+TravelConnector to add a message as the connector is traversed.
+
+Note that this isn't itself a travel connector; it's just a class that
+should be combined with TravelConnector or one of its subclasses. This
+class should be in the superclass list before the
+TravelConnector-derived superclass.
+
+`class `**`TravelWithMessage`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TravelWithMessage</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TravelWithMessage</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TravelMessage<code class="language-plaintext highlighter-rouge">](../object/TravelMessage.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DeadEndConnector<code class="language-plaintext highlighter-rouge">](../object/DeadEndConnector.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>NoTravelMessage<code class="language-plaintext highlighter-rouge">](../object/NoTravelMessage.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>FakeConnector`](../object/FakeConnector.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>npcTravelDesc<code class="language-plaintext highlighter-rouge">](#npcTravelDesc)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>noteTraversal<code class="language-plaintext highlighter-rouge">](#noteTraversal)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTravelDesc<code class="language-plaintext highlighter-rouge">](#showTravelDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelDesc<code class="language-plaintext highlighter-rouge">](#travelDesc)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="npcTravelDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">npcTravelDesc</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2033">2033</a>]</p>
+
+<div class="desc">
+
+My message to display when any non-player character traverses the
+connector. If this is not overridden, no message will be displayed when
+an NPC travels through the connector.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="noteTraversal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteTraversal (traveler)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2048">2048</a>]</p>
+
+<div class="desc">
+
+on traversing the connector, show our message
+
+</div>
+
+<p><span id="showTravelDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showTravelDesc ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2039">2039</a>]</p>
+
+<div class="desc">
+
+Display my message. By default, we show one message for the player
+character and another message for NPC's.
+
+</div>
+
+<p><span id="travelDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelDesc ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2022">2022</a>]</p>
+
+<div class="desc">
+
+My message to display when the player character traverses the connector.
+This should be overridden with the custom message for the connector. By
+default, if we're a Script, we'll invoke the script to show the next
+message.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

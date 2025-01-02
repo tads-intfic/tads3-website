@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| T3 VM Technical
+<a href="toc.html" class="nav">Table of Contents</a> \| T3 VM Technical
 Documentation  
-<span class="navnp"><a href="t3projectStarters.htm" class="nav"><em>Prev:</em> Workbench
+<span class="navnp"><a href="t3projectStarters.html" class="nav"><em>Prev:</em> Workbench
 Project Starter Templates</a>    
-<a href="t3spec/intro.htm" class="nav"><em>Next:</em> Introduction</a>
+<a href="t3spec/intro.html" class="nav"><em>Next:</em> Introduction</a>
     </span>
 
 </div>
@@ -36,21 +38,21 @@ the machine.
 
 <div class="sectoc">
 
-[Introduction](t3spec/intro.htm)  
-[Design Philosophy](t3spec/philos.htm)  
-[Design Goals](t3spec/goals.htm)  
-[Notation and Conventions](t3spec/notation.htm)  
-[Machine Model](t3spec/model.htm)  
-[The Metaclasses](t3spec/metacl.htm)  
-[Byte-Code Instruction Set](t3spec/opcode.htm)  
-[Image File Format](t3spec/format.htm)  
-[Portable Binary Encoding](t3spec/bincode.htm)  
-[Character Mapping](t3spec/charmap.htm)  
-[Debug Records](t3spec/debug.htm)  
-[t3vm Function Set](t3spec/fnset_t3.htm)  
-[Metaclass Identifier List](t3spec/metalist.htm)  
-[Saving and Restoring State](t3spec/save.htm)  
-[TADS Special Characters](t3spec/tadsspch.htm)  
+[Introduction](t3spec/intro.html)  
+[Design Philosophy](t3spec/philos.html)  
+[Design Goals](t3spec/goals.html)  
+[Notation and Conventions](t3spec/notation.html)  
+[Machine Model](t3spec/model.html)  
+[The Metaclasses](t3spec/metacl.html)  
+[Byte-Code Instruction Set](t3spec/opcode.html)  
+[Image File Format](t3spec/format.html)  
+[Portable Binary Encoding](t3spec/bincode.html)  
+[Character Mapping](t3spec/charmap.html)  
+[Debug Records](t3spec/debug.html)  
+[t3vm Function Set](t3spec/fnset_t3.html)  
+[Metaclass Identifier List](t3spec/metalist.html)  
+[Saving and Restoring State](t3spec/save.html)  
+[TADS Special Characters](t3spec/tadsspch.html)  
 
 </div>
 
@@ -61,11 +63,11 @@ the machine.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| T3 VM Technical
+<a href="toc.html" class="nav">Table of Contents</a> \| T3 VM Technical
 Documentation  
-<span class="navnp"><a href="t3projectStarters.htm" class="nav"><em>Prev:</em> Workbench
+<span class="navnp"><a href="t3projectStarters.html" class="nav"><em>Prev:</em> Workbench
 Project Starter Templates</a>    
-<a href="t3spec/intro.htm" class="nav"><em>Next:</em> Introduction</a>
+<a href="t3spec/intro.html" class="nav"><em>Next:</em> Introduction</a>
     </span>
 
 </div>

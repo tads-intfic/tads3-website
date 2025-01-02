@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AskFor</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1907](../source/actions.t.html#1907)\]

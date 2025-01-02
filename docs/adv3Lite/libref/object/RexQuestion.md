@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RexQuestion</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1157](../source/parser.t.html#1157)\]

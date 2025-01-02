@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Continue)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2470](../source/grammar.t.html#2470)\]

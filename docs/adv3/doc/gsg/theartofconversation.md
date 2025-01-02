@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](endingthegame.htm)   [\[Next\]](whatsinaname.htm)*
+*[\[Previous\]](endingthegame.html)   [\[Next\]](whatsinaname.html)*
 
 ## The Art of Conversation
 
@@ -143,7 +145,7 @@ burner now behaves (you can get into conversation with him either
 explicitly with **talk to burner** or by trying to give him or show him
 something). At some point you will also want to have a careful read of
 the articles on
-<a href="../techman/t3conv.htm" target="_top">Programming Conversations
+<a href="../techman/t3conv.html" target="_top">Programming Conversations
 with NPCs</a> in TADS 3 in the *Technical Manual*, though there's no
 need to do that until you've completed this guide.  
   
@@ -1058,6 +1060,6 @@ these problems in the next section.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](endingthegame.htm)   [\[Next\]](whatsinaname.htm)*
+*[\[Previous\]](endingthegame.html)   [\[Next\]](whatsinaname.html)*
 
 </div>

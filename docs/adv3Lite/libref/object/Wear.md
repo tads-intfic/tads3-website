@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Wear</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1081](../source/actions.t.html#1081)\]

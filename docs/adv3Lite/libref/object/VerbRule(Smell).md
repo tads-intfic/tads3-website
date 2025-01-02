@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Smell)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[1635](../source/grammar.t.html#1635)\]

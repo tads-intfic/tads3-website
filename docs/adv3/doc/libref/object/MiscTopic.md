@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MiscTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3259](../source/actor.t.html#3259)\]

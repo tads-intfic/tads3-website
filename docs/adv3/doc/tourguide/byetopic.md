@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,21 +9,21 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ByeTopic : <a
-href="misctopic.htm">MiscTopic</a><br />
+href="misctopic.html">MiscTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="imphellotopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="impbyetopic.htm">[Next]</a></td>
+href="imphellotopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="impbyetopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 A ByeTopic is usually used in connection with [greeting
-protocols](greetingprotocols.htm), to handle the end of a conversation.
+protocols](greetingprotocols.html), to handle the end of a conversation.
 As such, it is normally located in the
-[ConversationReadyState](conversationreadystate.htm) to which the actor
+[ConversationReadyState](conversationreadystate.html) to which the actor
 returns at the conclusion of the conversation. The ByeTopic handles
 explicit termination of a conversation (via a BYE command).  
   

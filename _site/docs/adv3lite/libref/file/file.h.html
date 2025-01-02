@@ -1,0 +1,243 @@
+<p><span class="title">file.h</span><span class="type">file</span></p>
+
+<p><a href="../source/file.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<div class="fdesc">
+
+This header defines the File intrinsic class.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>File<code class="language-plaintext highlighter-rouge">](../object/File.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TemporaryFile<code class="language-plaintext highlighter-rouge">](../object/TemporaryFile.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_MacroSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Macros</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>FileAccessRead<code class="language-plaintext highlighter-rouge">](#FileAccessRead)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileAccessReadWriteKeep<code class="language-plaintext highlighter-rouge">](#FileAccessReadWriteKeep)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileAccessReadWriteTrunc<code class="language-plaintext highlighter-rouge">](#FileAccessReadWriteTrunc)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileAccessWrite<code class="language-plaintext highlighter-rouge">](#FileAccessWrite)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileModeData<code class="language-plaintext highlighter-rouge">](#FileModeData)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileModeRaw<code class="language-plaintext highlighter-rouge">](#FileModeRaw)</code>  <code class="language-plaintext highlighter-rouge">[</code>FileModeText<code class="language-plaintext highlighter-rouge">](#FileModeText)</code>  <code class="language-plaintext highlighter-rouge">[</code>LibraryDefaultsFile<code class="language-plaintext highlighter-rouge">](#LibraryDefaultsFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>WebUIPrefsFile<code class="language-plaintext highlighter-rouge">](#WebUIPrefsFile)</code>  `</p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_TemplateSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Templates</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Macros_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Macros</span>  
+
+</div>
+
+<p><span id="FileAccessRead"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileAccessRead</code></p>
+
+<p><a href="../file/file.h.html">file.h</a>[<a href="../source/file.h.html#38">38</a>]</p>
+
+<div class="desc">
+
+`0x0001`  
+Read mode - the file is opened for reading (writing is not allowed).
+When opened in this mode, the file must exist, or a
+FileNotFoundException is thrown from the open method.
+
+</div>
+
+<p><span id="FileAccessReadWriteKeep"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileAccessReadWriteKeep</code></p>
+
+<p><a href="../file/file.h.html">file.h</a>[<a href="../source/file.h.html#55">55</a>]</p>
+
+<div class="desc">
+
+`0x0003`  
+Read/write mode, keeping existing contents - the file is opened for both
+reading and writing. If the file does not exist, a new file is created.
+If the file does already exist, the existing contents of the file are
+kept intact on open.
+
+</div>
+
+<p><span id="FileAccessReadWriteTrunc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileAccessReadWriteTrunc</code></p>
+
+<p><a href="../file/file.h.html">file.h</a>[<a href="../source/file.h.html#64">64</a>]</p>
+
+<div class="desc">
+
+`0x0004`  
+Read/write mode, truncating existing contents - the file is opened for
+both reading and writing. If the file does not exist, a new file is
+created. If the file does already exist, the existing contents of the
+file are discarded (i.e., the file is truncated to zero length) on open.
+
+</div>
+
+<p><span id="FileAccessWrite"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileAccessWrite</code></p>
+
+<p><a href="../file/file.h.html">file.h</a>[<a href="../source/file.h.html#47">47</a>]</p>
+
+<div class="desc">
+
+`0x0002`  
+Write mode - the file is opened for writing (reading is not allowed).
+When opened in this mode, if the file doesn't already exist, a new file
+is created; if the file does already exist, the existing data in the
+file are discarded (i.e., the file is truncated to zero length) on open.
+
+</div>
+
+<p><span id="FileModeData"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileModeData</code></p>
+
+<p><a href="../file/file.h.html">file.h</a>[<a href="../source/file.h.html#77">77</a>]</p>
+
+<div class="desc">
+
+`2`  
+"data" mode
+
+</div>
+
+<p><span id="FileModeRaw"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileModeRaw</code></p>
+
+<p><a href="../file/file.h.html">file.h</a>[<a href="../source/file.h.html#80">80</a>]</p>
+
+<div class="desc">
+
+`3`  
+"raw" mode
+
+</div>
+
+<p><span id="FileModeText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FileModeText</code></p>
+
+<p><a href="../file/file.h.html">file.h</a>[<a href="../source/file.h.html#74">74</a>]</p>
+
+<div class="desc">
+
+`1`  
+text mode
+
+</div>
+
+<p><span id="LibraryDefaultsFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">LibraryDefaultsFile</code></p>
+
+<p><a href="../file/file.h.html">file.h</a>[<a href="../source/file.h.html#112">112</a>]</p>
+
+<div class="desc">
+
+`0x0001`  
+The library defaults file. This is the special file where the library
+stores user-controlled start-up default settings.
+
+</div>
+
+<p><span id="WebUIPrefsFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">WebUIPrefsFile</code></p>
+
+<p><a href="../file/file.h.html">file.h</a>[<a href="../source/file.h.html#118">118</a>]</p>
+
+<div class="desc">
+
+`0x0002`  
+Web UI preference settings file. This is the special file where we store
+display style settings for the Web UI.
+
+</div>
+
+<p><span id="_Enums_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Templates_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Templates</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

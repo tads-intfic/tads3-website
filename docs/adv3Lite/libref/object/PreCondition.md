@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PreCondition</span><span class="type">class</span>
 
 [precond.t](../file/precond.t.html)\[[20](../source/precond.t.html#20)\]

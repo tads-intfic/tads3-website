@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Action</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[22](../source/action.t.html#22)\],

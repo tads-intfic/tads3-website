@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| The System
+<a href="toc.html" class="nav">Table of Contents</a> \| The System
 Library  
-<span class="navnp"><a href="wlookup.htm" class="nav"><em>Prev:</em> WeakRefLookupTable</a>
+<span class="navnp"><a href="wlookup.html" class="nav"><em>Prev:</em> WeakRefLookupTable</a>
    
-<a href="init.htm" class="nav"><em>Next:</em> Program Initialization</a>
+<a href="init.html" class="nav"><em>Next:</em> Program Initialization</a>
     </span>
 
 </div>
@@ -34,10 +36,10 @@ interest to most TADS 3 programmers, whether using adv3 or not.
 
 <div class="sectoc">
 
-[Program Initialization](init.htm)  
-[Basic Tokenizer](tok.htm)  
-[Miscellaneous Library Definitions](libmisc.htm)  
-[Replacing the System Library](nodef.htm)  
+[Program Initialization](init.html)  
+[Basic Tokenizer](tok.html)  
+[Miscellaneous Library Definitions](libmisc.html)  
+[Replacing the System Library](nodef.html)  
 
 </div>
 
@@ -48,11 +50,11 @@ interest to most TADS 3 programmers, whether using adv3 or not.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| The System
+<a href="toc.html" class="nav">Table of Contents</a> \| The System
 Library  
-<span class="navnp"><a href="wlookup.htm" class="nav"><em>Prev:</em> WeakRefLookupTable</a>
+<span class="navnp"><a href="wlookup.html" class="nav"><em>Prev:</em> WeakRefLookupTable</a>
    
-<a href="init.htm" class="nav"><em>Next:</em> Program Initialization</a>
+<a href="init.html" class="nav"><em>Next:</em> Program Initialization</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">parserStyleTag</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[1035](../source/output.t.html#1035)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StackFrameDesc</span><span class="type">class</span>
 
 [systype.h](../file/systype.h.html)\[[1248](../source/systype.h.html#1248)\]

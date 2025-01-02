@@ -1,3 +1,5 @@
+---
+---
 # thoughts.t
 
 [documentation](../file/thoughts.t.html)

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Attachables  
-<span class="navnp"><a href="optional.htm" class="nav"><em>Prev:</em> Optional Modules</a>
-    <a href="event.htm" class="nav"><em>Next:</em> Events</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Attachables  
+<span class="navnp"><a href="optional.html" class="nav"><em>Prev:</em> Optional Modules</a>
+    <a href="event.html" class="nav"><em>Next:</em> Events</a>    
 </span>
 
 </div>
@@ -270,9 +272,9 @@ class and define its **needsExplicitSocket** property as nil, e.g.:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Attachables  
-<span class="navnp"><a href="optional.htm" class="nav"><em>Prev:</em> Optional Modules</a>
-    <a href="event.htm" class="nav"><em>Next:</em>Events</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Attachables  
+<span class="navnp"><a href="optional.html" class="nav"><em>Prev:</em> Optional Modules</a>
+    <a href="event.html" class="nav"><em>Next:</em>Events</a>     </span>
 
 </div>

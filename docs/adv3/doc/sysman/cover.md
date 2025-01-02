@@ -1,3 +1,5 @@
+---
+---
 TADS 3 System Manual
 
 # TADS 3 System Manual
@@ -13,9 +15,9 @@ TADS 3 System Manual
   
   
   
-[Table of Contents](toc.htm)  
+[Table of Contents](toc.html)  
   
-[Introduction](intro.htm)  
+[Introduction](intro.html)  
   
   
   

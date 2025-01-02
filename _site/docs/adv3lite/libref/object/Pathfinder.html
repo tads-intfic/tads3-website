@@ -1,0 +1,204 @@
+<p><span class="title">Pathfinder</span><span class="type">class</span></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#5">5</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+*no description available*
+
+`class `**`Pathfinder`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Pathfinder</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>pcRouteFinder<code class="language-plaintext highlighter-rouge">](../object/pcRouteFinder.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>relationPathfinder<code class="language-plaintext highlighter-rouge">](../object/relationPathfinder.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>routeFinder<code class="language-plaintext highlighter-rouge">](../object/routeFinder.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>cachedRoute<code class="language-plaintext highlighter-rouge">](#cachedRoute)</code>  <code class="language-plaintext highlighter-rouge">[</code>currentDestination<code class="language-plaintext highlighter-rouge">](#currentDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>nodesVisited<code class="language-plaintext highlighter-rouge">](#nodesVisited)</code>  <code class="language-plaintext highlighter-rouge">[</code>pathsFound<code class="language-plaintext highlighter-rouge">](#pathsFound)</code>  <code class="language-plaintext highlighter-rouge">[</code>steps<code class="language-plaintext highlighter-rouge">](#steps)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>findDestinations<code class="language-plaintext highlighter-rouge">](#findDestinations)</code>  <code class="language-plaintext highlighter-rouge">[</code>findPath<code class="language-plaintext highlighter-rouge">](#findPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeOneStep<code class="language-plaintext highlighter-rouge">](#takeOneStep)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="cachedRoute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cachedRoute</code></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#123">123</a>]</p>
+
+<div class="desc">
+
+The most recently calculated route
+
+</div>
+
+<p><span id="currentDestination"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">currentDestination</code></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#126">126</a>]</p>
+
+<div class="desc">
+
+The destination of the most recently calculated route.
+
+</div>
+
+<p><span id="nodesVisited"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nodesVisited</code></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#28">28</a>]</p>
+
+<div class="desc">
+
+A Vector containing all the nodes we have visited so far in our attempt
+to find a route. This enables us to cull paths that lead somewhere we've
+already been.
+
+</div>
+
+<p><span id="pathsFound"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pathsFound</code></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#14">14</a>]</p>
+
+<div class="desc">
+
+When populated the pathsFound will contain a Vector of path Vectors,
+each path Vector comprising a series of two element lists, the first
+element describing the route taken and the second the destination
+arrived at (e.g. \[northDir, hall\] meaning go north to reach the hall).
+
+</div>
+
+<p><span id="steps"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">steps</code></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#20">20</a>]</p>
+
+<div class="desc">
+
+The number of steps we have tried so far. We start with 1, being the
+null step to our starting point.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="findDestinations"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findDestinations (cur)</code></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#117">117</a>]</p>
+
+<div class="desc">
+
+Find all the destinations one step away from cur
+
+</div>
+
+<p><span id="findPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findPath (start, target)</code></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#31">31</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="takeOneStep"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeOneStep ( )</code></p>
+
+<p><a href="../file/pathfind.t.html">pathfind.t</a>[<a href="../source/pathfind.t.html#96">96</a>]</p>
+
+<div class="desc">
+
+note which nodes have now been visited
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

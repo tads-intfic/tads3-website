@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Topic Groups  
-<span class="navnp"><a href="specialtopic.htm" class="nav"><em>Prev:</em> Special Topics</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Topic Groups  
+<span class="navnp"><a href="specialtopic.html" class="nav"><em>Prev:</em> Special Topics</a>
    
-<a href="convnode.htm" class="nav"><em>Next:</em> Conversation Nodes</a>
+<a href="convnode.html" class="nav"><em>Next:</em> Conversation Nodes</a>
     </span>
 
 </div>
@@ -40,7 +42,7 @@ In particular, a TopicGroup defines the following properties:
   one of its own convKeys is that of an active node.
 
 A TopicGroup can be of particular use for defining Conversation Nodes:
-the [ConvNode](convnode.htm#convnode) subclass of TopicGroup is provided
+the [ConvNode](convnode.html#convnode) subclass of TopicGroup is provided
 especially for this purpose.
 
 The TopicGroup template is defined as <span class="code">+scoreBoost?
@@ -80,11 +82,11 @@ another when the player types a partial query like WHERE HEAR).
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Topic Groups  
-<span class="navnp"><a href="specialtopic.htm" class="nav"><em>Prev:</em> Special Topics</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Topic Groups  
+<span class="navnp"><a href="specialtopic.html" class="nav"><em>Prev:</em> Special Topics</a>
    
-<a href="convnode.htm" class="nav"><em>Next:</em> Conversation Nodes</a>
+<a href="convnode.html" class="nav"><em>Next:</em> Conversation Nodes</a>
     </span>
 
 </div>

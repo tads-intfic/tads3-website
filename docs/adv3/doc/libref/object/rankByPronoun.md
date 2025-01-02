@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rankByPronoun</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[5930](../source/parser.t.html#5930)\]

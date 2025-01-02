@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ChildNameAsOther</span><span class="type">class</span>
 
 [en_us.t](../file/en_us.t.html)\[[2076](../source/en_us.t.html#2076)\]

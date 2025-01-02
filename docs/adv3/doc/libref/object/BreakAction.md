@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BreakAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2478](../source/actions.t.html#2478)\]

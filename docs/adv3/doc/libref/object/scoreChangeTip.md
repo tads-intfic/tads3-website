@@ -1,3 +1,5 @@
+---
+---
 <span class="title">scoreChangeTip</span><span class="type">object</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4359](../source/msg_neu.t.html#4359)\]

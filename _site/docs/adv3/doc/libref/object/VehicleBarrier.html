@@ -1,0 +1,135 @@
+<p><span class="title">VehicleBarrier</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#7007">7007</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A VehicleBarrier is a TravelConnector that allows actors to travel, but
+blocks vehicles. By default, we block all vehicles, but subclasses can
+customize this so that we block only specific vehicles.
+
+`class `**`VehicleBarrier`**` :   `[`TravelBarrier`](../object/TravelBarrier.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">VehicleBarrier</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TravelBarrier<code class="language-plaintext highlighter-rouge">](../object/TravelBarrier.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canTravelerPass<code class="language-plaintext highlighter-rouge">](#canTravelerPass)</code>  <code class="language-plaintext highlighter-rouge">[</code>explainTravelBarrier<code class="language-plaintext highlighter-rouge">](#explainTravelBarrier)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="canTravelerPass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canTravelerPass (traveler)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#7014">7014</a>]</p>
+
+<div class="desc">
+
+Determine if the given traveler can pass through this connector. By
+default, we'll return nil for a Vehicle, true for anything else. This
+can be overridden to allow specific vehicles to pass, or to filter on
+any other criteria.
+
+</div>
+
+<p><span id="explainTravelBarrier"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">explainTravelBarrier (traveler)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#7017">7017</a>]</p>
+
+<div class="desc">
+
+explain why we can't pass
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,22 +9,22 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>YesTopic : <a
-href="misctopic.htm">MiscTopic</a><br />
+href="misctopic.html">MiscTopic</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="convnode.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="notopic.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="convnode.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="notopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 A YesTopic simply responds to a YES command typed by the player. It is
-most useful when placed in a [ConvNode](convnode.htm). For now we'll
+most useful when placed in a [ConvNode](convnode.html). For now we'll
 give a single example of a YesTopic we'll use to handle the player's
 replying YES to the question Sarah's just asked (about cutting open the
 glass display case). We'll also make it a
-[SuggestedYesTopic](suggestedyestopic.htm) so that it includes saying
+[SuggestedYesTopic](suggestedyestopic.html) so that it includes saying
 yes among the things suggested to the player at this point (for reasons
 that will shortly become apparent). Obviously, this YesTopic should be
 placed in the ConvNode we've just defined:  

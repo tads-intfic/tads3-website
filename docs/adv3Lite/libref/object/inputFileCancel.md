@@ -1,3 +1,5 @@
+---
+---
 <span class="title">inputFileCancel</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[3501](../source/webui.t.html#3501)\]

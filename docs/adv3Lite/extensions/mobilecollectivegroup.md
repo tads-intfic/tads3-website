@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 MobileCollectiveGroup  
-<span class="navnp"><a href="fueled.htm" class="nav"><em>Prev:</em> Fueled Light Source</a>
-    <a href="postures.htm" class="nav"><em>Next:</em> Postures</a>    
+<span class="navnp"><a href="fueled.html" class="nav"><em>Prev:</em> Fueled Light Source</a>
+    <a href="postures.html" class="nav"><em>Next:</em> Postures</a>    
 </span>
 
 </div>
@@ -23,7 +25,7 @@ MobileCollectiveGroup
 
 The MobileCollectiveGroup extension implements the
 **MobileCollectiveGroup** class, a type of
-[CollectiveGroup](../../docs/manual/extra.htm#collective) that can be
+[CollectiveGroup](../../docs/manual/extra.html#collective) that can be
 used to represent two or more similar objects (e.g. to give a summarized
 description) when those objects may move around (so that the number of
 them that are in scope can vary from one turn to the next).
@@ -44,7 +46,7 @@ extras.t and events.t since this extension makes use of both of them.
 
 To make use of the MobileCollectiveGroup class, simply define an object
 as a MobileCollectiveGroup and then use it in just the same way you
-would a [CollectiveGroup](../../docs/manual/extra.htm#collective), the
+would a [CollectiveGroup](../../docs/manual/extra.html#collective), the
 only difference being that it will work as required even if its member
 objects are moved around. In most cases you shouldn't need to do any
 more than this, since the MobileCollectiveGroup class should take care
@@ -139,11 +141,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 MobileCollectiveGroup  
-<span class="navnp"><a href="fueled.htm" class="nav"><em>Prev:</em> Fueled Light Source</a>
-    <a href="postures.htm" class="nav"><em>Next:</em> Postures</a>    
+<span class="navnp"><a href="fueled.html" class="nav"><em>Prev:</em> Fueled Light Source</a>
+    <a href="postures.html" class="nav"><em>Next:</em> Postures</a>    
 </span>
 
 </div>

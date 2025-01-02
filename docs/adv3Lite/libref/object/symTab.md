@@ -1,3 +1,5 @@
+---
+---
 <span class="title">symTab</span><span class="type">object</span>
 
 [debug.t](../file/debug.t.html)\[[246](../source/debug.t.html#246)\]

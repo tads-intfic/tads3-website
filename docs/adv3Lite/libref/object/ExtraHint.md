@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ExtraHint</span><span class="type">class</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[761](../source/hintsys.t.html#761)\]

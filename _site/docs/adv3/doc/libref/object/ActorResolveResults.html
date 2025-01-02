@@ -1,0 +1,177 @@
+<p><span class="title">ActorResolveResults</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5703">5703</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Specialized noun-phrase resolution results gatherer for resolving a
+command actor (i.e., the target actor of a command).
+
+`class `**`ActorResolveResults`**` :   `[`BasicResolveResults`](../object/BasicResolveResults.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorResolveResults</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BasicResolveResults<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ResolveResults<code class="language-plaintext highlighter-rouge">](../object/ResolveResults.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>allowActionRemapping<code class="language-plaintext highlighter-rouge">](#allowActionRemapping)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicResolveResults</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allowEquivalentFiltering<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#allowEquivalentFiltering)</code>  <code class="language-plaintext highlighter-rouge">[</code>issuingActor_<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#issuingActor_)</code>  <code class="language-plaintext highlighter-rouge">[</code>targetActor_<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#targetActor_)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>getImpliedObject<code class="language-plaintext highlighter-rouge">](#getImpliedObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>singleObjectRequired<code class="language-plaintext highlighter-rouge">](#singleObjectRequired)</code>  <code class="language-plaintext highlighter-rouge">[</code>uniqueObjectRequired<code class="language-plaintext highlighter-rouge">](#uniqueObjectRequired)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicResolveResults</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allNotAllowed<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#allNotAllowed)</code>  <code class="language-plaintext highlighter-rouge">[</code>ambiguousNounPhrase<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#ambiguousNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>askMissingLiteral<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#askMissingLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>askMissingObject<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#askMissingObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>beginSingleObjSlot<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#beginSingleObjSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>beginTopicSlot<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#beginTopicSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>canResolveInteractively<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#canResolveInteractively)</code>  <code class="language-plaintext highlighter-rouge">[</code>emptyNounPhrase<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#emptyNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>endSingleObjSlot<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#endSingleObjSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>endTopicSlot<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#endTopicSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterWithDistinguisher<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#filterWithDistinguisher)</code>  <code class="language-plaintext highlighter-rouge">[</code>incCommandCount<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#incCommandCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>insufficientQuantity<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#insufficientQuantity)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatch<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForAll<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noMatchForAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForAllBut<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noMatchForAllBut)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForListBut<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noMatchForListBut)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForLocation<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noMatchForLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForPossessive<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noMatchForPossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForPronoun<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noMatchForPronoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchPossessive<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noMatchPossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteActorSpecified<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteActorSpecified)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteAdjEnding<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteAdjEnding)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteBadPrep<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteBadPrep)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteEmptyBut<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteEmptyBut)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteIndefinite<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteIndefinite)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteLiteral<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteMatches<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteMatches)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteMiscWordList<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteMiscWordList)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteNounSlots<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteNounSlots)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePlural<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#notePlural)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePronoun<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#notePronoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteWeakPhrasing<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noteWeakPhrasing)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingInLocation<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#nothingInLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noVocabMatch<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#noVocabMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>reflexiveNotAllowed<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#reflexiveNotAllowed)</code>  <code class="language-plaintext highlighter-rouge">[</code>setActors<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#setActors)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownNounPhrase<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#unknownNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>wrongReflexive<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#wrongReflexive)</code>  <code class="language-plaintext highlighter-rouge">[</code>zeroQuantity<code class="language-plaintext highlighter-rouge">](../object/BasicResolveResults.html#zeroQuantity)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="allowActionRemapping"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowActionRemapping</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5740">5740</a>]</p>
+
+<div class="desc">
+
+don't allow action remapping while resolving the actor
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5704">5704</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="getImpliedObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getImpliedObject (np, resolver)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5718">5718</a>]</p>
+
+<div class="desc">
+
+set the initial actor context to the PC - this type of resolver is set
+up to determine the actor context, so we don't usually know the actual
+actor context yet when setting up this resolver
+
+</div>
+
+<p><span id="singleObjectRequired"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleObjectRequired (txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5733">5733</a>]</p>
+
+<div class="desc">
+
+an actor phrase must address a single actor
+
+</div>
+
+<p><span id="uniqueObjectRequired"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">uniqueObjectRequired (txt, matchList)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5727">5727</a>]</p>
+
+<div class="desc">
+
+there's no default for the actor - it's usually simply a syntax error
+when the actor is omitted
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

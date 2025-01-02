@@ -1,0 +1,220 @@
+<p><span class="title">inventoryTallLister</span><span class="type">object</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#186">186</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+inventoryTallLister for displaying an inventory list in TALL format.
+
+**`inventoryTallLister`**` :   `[`ItemLister`](../object/ItemLister.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">inventoryTallLister</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ItemLister<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Lister<code class="language-plaintext highlighter-rouge">](../object/Lister.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>contentsListedProp<code class="language-plaintext highlighter-rouge">](#contentsListedProp)</code>  <code class="language-plaintext highlighter-rouge">[</code>indentLevel<code class="language-plaintext highlighter-rouge">](#indentLevel)</code>  <code class="language-plaintext highlighter-rouge">[</code>listRecursively<code class="language-plaintext highlighter-rouge">](#listRecursively)</code>  <code class="language-plaintext highlighter-rouge">[</code>maxIndentLevel<code class="language-plaintext highlighter-rouge">](#maxIndentLevel)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ItemLister</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>showAdditionalInfo<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#showAdditionalInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>showSubListing<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#showSubListing)</code>  <code class="language-plaintext highlighter-rouge">[</code>showWornInfo<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#showWornInfo)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>listed<code class="language-plaintext highlighter-rouge">](#listed)</code>  <code class="language-plaintext highlighter-rouge">[</code>listName<code class="language-plaintext highlighter-rouge">](#listName)</code>  <code class="language-plaintext highlighter-rouge">[</code>showContentsTall<code class="language-plaintext highlighter-rouge">](#showContentsTall)</code>  <code class="language-plaintext highlighter-rouge">[</code>showListEmpty<code class="language-plaintext highlighter-rouge">](#showListEmpty)</code>  <code class="language-plaintext highlighter-rouge">[</code>showListPrefix<code class="language-plaintext highlighter-rouge">](#showListPrefix)</code>  <code class="language-plaintext highlighter-rouge">[</code>showListSuffix<code class="language-plaintext highlighter-rouge">](#showListSuffix)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ItemLister</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>show<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#show)</code>  <code class="language-plaintext highlighter-rouge">[</code>showList<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#showList)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Lister</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>buildList<code class="language-plaintext highlighter-rouge">](../object/Lister.html#buildList)</code>  <code class="language-plaintext highlighter-rouge">[</code>listOrder<code class="language-plaintext highlighter-rouge">](../object/Lister.html#listOrder)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="contentsListedProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contentsListedProp</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#307">307</a>]</p>
+
+<div class="desc">
+
+The property on a Thing-derived container to test whether its contents
+should be listed when listing with this lister
+
+</div>
+
+<p><span id="indentLevel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indentLevel</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#298">298</a>]</p>
+
+<div class="desc">
+
+The current indentation level for listing subcontents recursively
+
+</div>
+
+<p><span id="listRecursively"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listRecursively</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#313">313</a>]</p>
+
+<div class="desc">
+
+Flag, so we want to list contents of contents when using this lister; by
+default we do.
+
+</div>
+
+<p><span id="maxIndentLevel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">maxIndentLevel</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#301">301</a>]</p>
+
+<div class="desc">
+
+The maximum level of indentation we want to allow for listed nested
+subcontents.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="listed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listed (obj)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#188">188</a>]</p>
+
+<div class="desc">
+
+is the object listed in an inventory list?
+
+</div>
+
+<p><span id="listName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listName (o)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#276">276</a>]</p>
+
+<div class="desc">
+
+A version of the listName method that doesn't list an items contents in
+parenthesis after its name, which would be inappropriate to the tall
+inventory format.
+
+</div>
+
+<p><span id="showContentsTall"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showContentsTall (lst, parent, paraBrk, =, true)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#207">207</a>]</p>
+
+<div class="desc">
+
+List the player's inventory in tall format, i.e., as a columnar list
+with each item on a new line. This method may call itself recursively to
+list subcontents (such as the visible contents of any containers in the
+player character's inventory).
+
+</div>
+
+<p><span id="showListEmpty"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListEmpty (paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#319">319</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="showListPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListPrefix (lst, pl, paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#315">315</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="showListSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListSuffix (lst, pl, paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#317">317</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

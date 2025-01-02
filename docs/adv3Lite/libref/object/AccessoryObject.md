@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AccessoryObject</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[3883](../source/parser.t.html#3883)\]

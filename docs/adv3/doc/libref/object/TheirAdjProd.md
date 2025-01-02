@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TheirAdjProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[2712](../source/parser.t.html#2712)\]

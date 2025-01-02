@@ -1,3 +1,5 @@
+---
+---
 <span class="title">spelling.t</span><span class="type">file</span>
 
 [source file](../source/spelling.t.html)

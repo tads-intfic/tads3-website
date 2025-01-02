@@ -1,3 +1,5 @@
+---
+---
 <span class="title">extraHintManager</span><span class="type">object</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[876](../source/hintsys.t.html#876)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RemoveAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[1767](../source/actions.t.html#1767)\]

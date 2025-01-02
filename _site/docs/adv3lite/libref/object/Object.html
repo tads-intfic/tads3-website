@@ -1,0 +1,338 @@
+<p><span class="title">Object</span><span class="type">class</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#37">37</a>],
+<a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1618">1618</a>],
+<a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#235">235</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The root object class. All objects descend from this class.
+
+*Modified in
+[misc.t](../file/misc.t.html)\[[1618](../source/misc.t.html#1618)\]:*  
+Add some methods to the base Object that make it \*somewhat\*
+interchangeable with lists and vectors. Certain operations that are
+normally specific to the collection types have obvious degenerations for
+the singleton case. In particular, a singleton can be thought of as a
+collection consisting of one value, so operations that iterate over a
+collection degenerate to one iteration on a singleton.
+
+*Modified in
+[reflect.t](../file/reflect.t.html)\[[235](../source/reflect.t.html#235)\]:*  
+Modify the basic Object class to provide a to-symbol mapping
+
+`intrinsic class `**`Object`**` : `
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Object</code></strong><br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Object</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BigNumber<code class="language-plaintext highlighter-rouge">](../object/BigNumber.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ByteArray<code class="language-plaintext highlighter-rouge">](../object/ByteArray.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>CharacterSet<code class="language-plaintext highlighter-rouge">](../object/CharacterSet.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Collection<code class="language-plaintext highlighter-rouge">](../object/Collection.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>List<code class="language-plaintext highlighter-rouge">](../object/List.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>LookupTable<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>WeakRefLookupTable<code class="language-plaintext highlighter-rouge">](../object/WeakRefLookupTable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Vector<code class="language-plaintext highlighter-rouge">](../object/Vector.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AnonFuncPtr<code class="language-plaintext highlighter-rouge">](../object/AnonFuncPtr.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Date<code class="language-plaintext highlighter-rouge">](../object/Date.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Dictionary<code class="language-plaintext highlighter-rouge">](../object/Dictionary.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>File<code class="language-plaintext highlighter-rouge">](../object/File.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>FileName<code class="language-plaintext highlighter-rouge">](../object/FileName.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>GrammarProd<code class="language-plaintext highlighter-rouge">](../object/GrammarProd.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>HTTPRequest<code class="language-plaintext highlighter-rouge">](../object/HTTPRequest.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>HTTPServer<code class="language-plaintext highlighter-rouge">](../object/HTTPServer.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>IntrinsicClass<code class="language-plaintext highlighter-rouge">](../object/IntrinsicClass.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Iterator<code class="language-plaintext highlighter-rouge">](../object/Iterator.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>IndexedIterator<code class="language-plaintext highlighter-rouge">](../object/IndexedIterator.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>LookupTableIterator<code class="language-plaintext highlighter-rouge">](../object/LookupTableIterator.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RexPattern<code class="language-plaintext highlighter-rouge">](../object/RexPattern.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>String<code class="language-plaintext highlighter-rouge">](../object/String.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>StringComparator<code class="language-plaintext highlighter-rouge">](../object/StringComparator.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TadsObject<code class="language-plaintext highlighter-rouge">](../object/TadsObject.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TemporaryFile<code class="language-plaintext highlighter-rouge">](../object/TemporaryFile.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TimeZone`](../object/TimeZone.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>callInherited<code class="language-plaintext highlighter-rouge">](#callInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>createIterator<code class="language-plaintext highlighter-rouge">](#createIterator)</code>  <code class="language-plaintext highlighter-rouge">[</code>createLiveIterator<code class="language-plaintext highlighter-rouge">](#createLiveIterator)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEach<code class="language-plaintext highlighter-rouge">](#forEach)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropList<code class="language-plaintext highlighter-rouge">](#getPropList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropParams<code class="language-plaintext highlighter-rouge">](#getPropParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSuperclassList<code class="language-plaintext highlighter-rouge">](#getSuperclassList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isClass<code class="language-plaintext highlighter-rouge">](#isClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTransient<code class="language-plaintext highlighter-rouge">](#isTransient)</code>  <code class="language-plaintext highlighter-rouge">[</code>mapAll<code class="language-plaintext highlighter-rouge">](#mapAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>ofKind<code class="language-plaintext highlighter-rouge">](#ofKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>propDefined<code class="language-plaintext highlighter-rouge">](#propDefined)</code>  <code class="language-plaintext highlighter-rouge">[</code>propInherited<code class="language-plaintext highlighter-rouge">](#propInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>propType<code class="language-plaintext highlighter-rouge">](#propType)</code>  <code class="language-plaintext highlighter-rouge">[</code>valToSymbol<code class="language-plaintext highlighter-rouge">](#valToSymbol)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="callInherited"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">callInherited (cl, prop, [args])</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1655">1655</a>]</p>
+
+<div class="desc">
+
+Call an inherited method directly. This has the same effect that calling
+'inherited cl.prop' would from within a method, but allows you to do
+this from an arbitrary point \*outside\* of the object's own code. I.e.,
+you can say 'obj.callInherited(cl, &amp;prop)' and get the effect that
+'inherited c.prop' would have had from within an 'obj' method.
+
+</div>
+
+<p><span id="createIterator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createIterator ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1632">1632</a>]</p>
+
+<div class="desc">
+
+create an iterator
+
+</div>
+
+<p><span id="createLiveIterator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createLiveIterator ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1642">1642</a>]</p>
+
+<div class="desc">
+
+create a live iterator (this allows 'foreach' to be used with an
+arbitrary object, iterating once over the loop with the object value)
+
+</div>
+
+<p><span id="forEach"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEach (func)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1626">1626</a>]</p>
+
+<div class="desc">
+
+forEach on an object simply calls the function on the object
+
+</div>
+
+<p><span id="getPropList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPropList ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#60">60</a>]</p>
+
+<div class="desc">
+
+Get a list of my directly-defined properties. When called on intrinsic
+class objects, this returns a list of properties defined for instances
+of the class, as well as static properties of the class.
+
+</div>
+
+<p><span id="getPropParams"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPropParams (prop)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#70">70</a>]</p>
+
+<div class="desc">
+
+get parameter list information for the given method - returns a list:
+\[minimumArgc, optionalArgc, varargs\], where minimumArgc is the minimum
+number of arguments, optionalArgc is the number of additional optional
+arguments, and varargs is true if the function takes a varying number of
+arguments greater than or equal to the minimum, nil if not.
+
+</div>
+
+<p><span id="getSuperclassList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getSuperclassList ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#46">46</a>]</p>
+
+<div class="desc">
+
+get the list of direct superclasses of this object
+
+</div>
+
+<p><span id="isClass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isClass ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#76">76</a>]</p>
+
+<div class="desc">
+
+determine if I'm a "class" object - returns true if the object was
+defined with the "class" keyword, nil otherwise
+
+</div>
+
+<p><span id="isTransient"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isTransient ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#87">87</a>]</p>
+
+<div class="desc">
+
+determine if this instance is transient
+
+</div>
+
+<p><span id="mapAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mapAll (func)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1620">1620</a>]</p>
+
+<div class="desc">
+
+mapAll for an object simply applies a function to the object
+
+</div>
+
+<p><span id="ofKind"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ofKind (cls)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#43">43</a>]</p>
+
+<div class="desc">
+
+Determine if I'm an instance or subclass of the given class 'cls'. Note
+that x.ofKind(x) returns true - an object is of its own kind.
+
+</div>
+
+<p><span id="propDefined"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">propDefined (prop, flags?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#49">49</a>]</p>
+
+<div class="desc">
+
+determine if a property is defined or inherited by this object
+
+</div>
+
+<p><span id="propInherited"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">propInherited (prop, origTargetObj, definingObj, flags?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#84">84</a>]</p>
+
+<div class="desc">
+
+Determine if a property is inherited further from the given object.
+definingObj is usually the value of the 'definingobj' pseudo-variable,
+and origTargetObj is usually the value of the 'targetobj'
+pseudo-variable.
+
+</div>
+
+<p><span id="propType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">propType (prop)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#52">52</a>]</p>
+
+<div class="desc">
+
+get the type of a property defined for this object
+
+</div>
+
+<p><span id="valToSymbol"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valToSymbol ( )</code></p>
+
+<p><a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#236">236</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

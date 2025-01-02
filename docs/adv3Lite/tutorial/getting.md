@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> Getting What You
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> Getting What You
 Need  
-<span class="navnp"><a href="tools.htm" class="nav"><em>Prev:</em> Tools of the Trade</a>
+<span class="navnp"><a href="tools.html" class="nav"><em>Prev:</em> Tools of the Trade</a>
    
-<a href="setting.htm" class="nav"><em>Next:</em> Setting it all up</a>
+<a href="setting.html" class="nav"><em>Next:</em> Setting it all up</a>
     </span>
 
 </div>
@@ -29,7 +31,7 @@ in this book.
 For a Windows system, you want the Windows authoring kit that comes with
 Windows Workbench. For Mac O/S X or Linux/Unix the recommended TADS
 authoring system is FrobTADS. Both of these can be downloaded from
-<http://www.tads.org/tads3.htm>. Even if you don't have a Windows
+<http://www.tads.org/tads3.html>. Even if you don't have a Windows
 system, however, you might want to consider trying to run Windows
 Workbench under WINE, Parallels or Crossover (see, for example, the
 discussion about this on
@@ -77,12 +79,12 @@ newer version.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Tools of the Trade</a> \> Getting What
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Tools of the Trade</a> \> Getting What
 You Need  
-<span class="navnp"><a href="tools.htm" class="nav"><em>Prev:</em> Tools of the Trade</a>
+<span class="navnp"><a href="tools.html" class="nav"><em>Prev:</em> Tools of the Trade</a>
    
-<a href="setting.htm" class="nav"><em>Next:</em> Setting it all up</a>
+<a href="setting.html" class="nav"><em>Next:</em> Setting it all up</a>
     </span>
 
 </div>

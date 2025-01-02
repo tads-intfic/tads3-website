@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NoTravelMessage</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[2084](../source/travel.t.html#2084)\]

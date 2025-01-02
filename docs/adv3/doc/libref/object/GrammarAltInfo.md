@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GrammarAltInfo</span><span class="type">class</span>
 
 [gramprod.t](../file/gramprod.t.html)\[[43](../source/gramprod.t.html#43)\]

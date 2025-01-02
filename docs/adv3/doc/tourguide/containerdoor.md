@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ContainerDoor : <a
-href="component.htm">Component</a><br />
+href="component.html">Component</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="complexcontainer.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="singlecontainer.htm">[Next]</a></td>
+href="complexcontainer.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="singlecontainer.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -25,7 +27,7 @@ in the container), since this would have the effect of putting the door
 *inside* the container, where it would vanish out of sight when the
 container was closed. You would therefore normally use a ContainerDoor
 as a component of (located in) a
-[ComplexContainer](complexcontainer.htm); it then maps OPEN, CLOSE,
+[ComplexContainer](complexcontainer.html); it then maps OPEN, CLOSE,
 LOCK, UNLOCK, LOOK IN and LOOK BEHIND commands to the subContainer of
 that ComplexContainer.  
   

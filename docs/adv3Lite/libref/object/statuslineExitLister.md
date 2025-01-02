@@ -1,3 +1,5 @@
+---
+---
 <span class="title">statuslineExitLister</span><span class="type">object</span>
 
 [exits.t](../file/exits.t.html)\[[354](../source/exits.t.html#354)\]

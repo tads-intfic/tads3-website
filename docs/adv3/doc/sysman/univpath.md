@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="tools.htm" class="nav">The Tools</a> \> Universal Paths  
-<span class="navnp"><a href="build.htm" class="nav"><em>Prev:</em> Compiling and Linking</a>
-    <a href="aloneexe.htm" class="nav"><em>Next:</em> Stand-Alone
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="tools.html" class="nav">The Tools</a> \> Universal Paths  
+<span class="navnp"><a href="build.html" class="nav"><em>Prev:</em> Compiling and Linking</a>
+    <a href="aloneexe.html" class="nav"><em>Next:</em> Stand-Alone
 Executables</a>     </span>
 
 </div>
@@ -26,10 +28,10 @@ your Windows "X:\Y\Z" paths will work on a Linux machine, or vice versa.
 TADS accepts the universal path syntax in several places:
 
 - <span class="code">\#include</span> directives in TADS source files
-- File names in [.t3m project files](build.htm#projects)
+- File names in [.t3m project files](build.html#projects)
 - File and directory option arguments in .t3m files (-I, -o, -Os, -FL,
   -FI, -Fs, -Fy, -Fo, -Fa)
-- [File.universalToLocal()](file.htm#universalToLocal)
+- [File.universalToLocal()](file.html#universalToLocal)
 
 In all of these situations, when you specify a directory path to a file,
 you should use the universal notation instead of your local system's
@@ -124,10 +126,10 @@ place.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="tools.htm" class="nav">The Tools</a> \> Universal Paths  
-<span class="navnp"><a href="build.htm" class="nav"><em>Prev:</em> Compiling and Linking</a>
-    <a href="aloneexe.htm" class="nav"><em>Next:</em> Stand-Alone
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="tools.html" class="nav">The Tools</a> \> Universal Paths  
+<span class="navnp"><a href="build.html" class="nav"><em>Prev:</em> Compiling and Linking</a>
+    <a href="aloneexe.html" class="nav"><em>Next:</em> Stand-Alone
 Executables</a>     </span>
 
 </div>

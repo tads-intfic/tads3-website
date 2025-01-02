@@ -1,0 +1,542 @@
+<p><span class="title">BannerWindow</span><span class="type">class</span></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#40">40</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A BannerWindow corresponds to an on-screen banner. For each banner
+window a game wants to display, the game must create an object of this
+class.
+
+Note that merely creating a BannerWindow object doesn't actually display
+a banner window. Once a BannerWindow is created, the game must call the
+object's showBanner() method to create the on-screen window for the
+banner.
+
+BannerWindow instances are intended to be persistent (not transient).
+The banner manager keeps track of each banner window that's actually
+being displayed separately via an internal transient object; the game
+doesn't need to worry about these tracking objects, since the banner
+manager automatically handles them.
+
+`class `**`BannerWindow`**` :   `[`OutputStreamWindow`](../object/OutputStreamWindow.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BannerWindow</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OutputStreamWindow<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>contentsMenuBanner<code class="language-plaintext highlighter-rouge">](../object/contentsMenuBanner.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>longTopicBanner<code class="language-plaintext highlighter-rouge">](../object/longTopicBanner.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>statuslineBanner<code class="language-plaintext highlighter-rouge">](../object/statuslineBanner1.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>topMenuBanner<code class="language-plaintext highlighter-rouge">](../object/topMenuBanner.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>align_<code class="language-plaintext highlighter-rouge">](#align_)</code>  <code class="language-plaintext highlighter-rouge">[</code>handle_<code class="language-plaintext highlighter-rouge">](#handle_)</code>  <code class="language-plaintext highlighter-rouge">[</code>id_<code class="language-plaintext highlighter-rouge">](#id_)</code>  <code class="language-plaintext highlighter-rouge">[</code>inited_<code class="language-plaintext highlighter-rouge">](#inited_)</code>  <code class="language-plaintext highlighter-rouge">[</code>parentID_<code class="language-plaintext highlighter-rouge">](#parentID_)</code>  <code class="language-plaintext highlighter-rouge">[</code>size_<code class="language-plaintext highlighter-rouge">](#size_)</code>  <code class="language-plaintext highlighter-rouge">[</code>sizeUnits_<code class="language-plaintext highlighter-rouge">](#sizeUnits_)</code>  <code class="language-plaintext highlighter-rouge">[</code>styleFlags_<code class="language-plaintext highlighter-rouge">](#styleFlags_)</code>  <code class="language-plaintext highlighter-rouge">[</code>windowType_<code class="language-plaintext highlighter-rouge">](#windowType_)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStreamWindow</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>outputStream_<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html#outputStream_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>clearWindow<code class="language-plaintext highlighter-rouge">](#clearWindow)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>createOutputStreamObj<code class="language-plaintext highlighter-rouge">](#createOutputStreamObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>createSystemBanner<code class="language-plaintext highlighter-rouge">](#createSystemBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>cursorTo<code class="language-plaintext highlighter-rouge">](#cursorTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>flushBanner<code class="language-plaintext highlighter-rouge">](#flushBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>getBannerID<code class="language-plaintext highlighter-rouge">](#getBannerID)</code>  <code class="language-plaintext highlighter-rouge">[</code>initBannerWindow<code class="language-plaintext highlighter-rouge">](#initBannerWindow)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeBanner<code class="language-plaintext highlighter-rouge">](#removeBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>setScreenColor<code class="language-plaintext highlighter-rouge">](#setScreenColor)</code>  <code class="language-plaintext highlighter-rouge">[</code>setSize<code class="language-plaintext highlighter-rouge">](#setSize)</code>  <code class="language-plaintext highlighter-rouge">[</code>setTextColor<code class="language-plaintext highlighter-rouge">](#setTextColor)</code>  <code class="language-plaintext highlighter-rouge">[</code>showBanner<code class="language-plaintext highlighter-rouge">](#showBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>showForRestore<code class="language-plaintext highlighter-rouge">](#showForRestore)</code>  <code class="language-plaintext highlighter-rouge">[</code>sizeToContents<code class="language-plaintext highlighter-rouge">](#sizeToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>updateForRestore<code class="language-plaintext highlighter-rouge">](#updateForRestore)</code>  <code class="language-plaintext highlighter-rouge">[</code>writeToBanner<code class="language-plaintext highlighter-rouge">](#writeToBanner)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStreamWindow</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>captureOutput<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html#captureOutput)</code>  <code class="language-plaintext highlighter-rouge">[</code>createOutputStream<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html#createOutputStream)</code>  <code class="language-plaintext highlighter-rouge">[</code>setOutputStream<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html#setOutputStream)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="align_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">align_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#450">450</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="handle_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">handle_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#441">441</a>]</p>
+
+<div class="desc">
+
+the handle to my system-level banner window
+
+</div>
+
+<p><span id="id_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">id_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#438">438</a>]</p>
+
+<div class="desc">
+
+The creator-assigned ID string to identify the banner persistently. This
+is only needed for banners created dynamically; for BannerWindow objects
+defined statically at compile time, simply leave this value as nil, and
+we'll use the object itself as the identifier.
+
+</div>
+
+<p><span id="inited_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inited_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#429">429</a>]</p>
+
+<div class="desc">
+
+flag: this banner has been initialized with initBannerWindow()
+
+</div>
+
+<p><span id="parentID_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parentID_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#448">448</a>]</p>
+
+<div class="desc">
+
+Creation parameters. We store these when we create the banner, and
+update them as needed when the banner's display attributes are changed.
+
+</div>
+
+<p><span id="size_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">size_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#451">451</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sizeUnits_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sizeUnits_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#452">452</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="styleFlags_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">styleFlags_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#453">453</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="windowType_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">windowType_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#449">449</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="clearWindow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clearWindow ( )</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#309">309</a>]</p>
+
+<div class="desc">
+
+Clear my banner window. This clears out all of the contents of our
+on-screen display area.
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (id)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#54">54</a>]</p>
+
+<div class="desc">
+
+Construct the object.
+
+'id' is a globally unique identifying string for the banner. When we
+dynamically create a banner object, we have to provide a unique
+identifying string, so that we can correlate transient on-screen banners
+with the banners in a saved state when restoring the saved state.
+
+Note that no ID string is needed for BannerWindow objects defined
+statically at compile-time, because the object itself ('self') is a
+suitably unique and stable identifier.
+
+</div>
+
+<p><span id="createOutputStreamObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createOutputStreamObj ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#375">375</a>]</p>
+
+<div class="desc">
+
+create our banner output stream
+
+</div>
+
+<p><span id="createSystemBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createSystemBanner (parent, where, other, windowType, align, size, sizeUnits, styleFlags)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#361">361</a>]</p>
+
+<div class="desc">
+
+Create the system-level banner window. This can be customized as needed,
+although this default implementation should be suitable for most
+instances.
+
+Returns true if we are successful in creating the system window, nil if
+we fail.
+
+</div>
+
+<p><span id="cursorTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cursorTo (row, col)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#326">326</a>]</p>
+
+<div class="desc">
+
+Move the cursor to the given row/column position. This can only be used
+with text-grid banners; for ordinary text banners, this has no effect.
+
+</div>
+
+<p><span id="flushBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flushBanner ( )</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#267">267</a>]</p>
+
+<div class="desc">
+
+flush any pending output to the banner
+
+</div>
+
+<p><span id="getBannerID"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getBannerID ( )</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#334">334</a>]</p>
+
+<div class="desc">
+
+Get the banner identifier. If our 'id\_' property is set to nil, we'll
+assume that we're a statically-defined object, in which case 'self' is a
+suitable identifier. Otherwise, we'll return the identifier string.
+
+</div>
+
+<p><span id="initBannerWindow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initBannerWindow ( )</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#422">422</a>]</p>
+
+<div class="desc">
+
+Initialize the banner window. This is called during initialization (when
+first starting the game, or when resetting with RESTART). If the banner
+is to be displayed from the start of the game, this can set up the
+on-screen display.
+
+Note that we might already have an on-screen handle when this is called.
+This indicates that we're restarting an ongoing session, and that this
+banner already existed in the session before the RESTART operation. If
+desired, we can attach ourselves to the existing on-screen banner,
+avoiding the redrawing that would occur if we created a new window.
+
+If this window depends upon another window for its layout order
+placement (i.e., we'll call showBanner() with another BannerWindow given
+as the 'other' parameter), then this routine should call the other
+window's initBannerWindow() method before creating its own window, to
+ensure that the other window has a system window and thus will be
+meaningful to establish the layout order.
+
+Overriding implementations should check the 'inited\_' property. If this
+property is true, then it can be assumed that we've already been
+initialized and don't require further initialization. This routine can
+be called multiple times because dependent windows might call us
+directly, before we're called for our regular initialization.
+
+</div>
+
+<p><span id="removeBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeBanner ( )</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#237">237</a>]</p>
+
+<div class="desc">
+
+Remove the banner. This removes the banner's on-screen window. The
+BannerWindow object itself remains valid, but after this method returns,
+the BannerWindow no longer has an associated display window.
+
+Note that any child banners of ours will become undisplayable after
+we're gone. A child banner depends upon its parent to obtain display
+space, so once the parent is gone, its children no longer have any way
+to obtain any display space. Our children remain valid objects even
+after we're closed, but they won't be visible on the display.
+
+</div>
+
+<p><span id="setScreenColor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setScreenColor (color)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#319">319</a>]</p>
+
+<div class="desc">
+
+set the screen color in the banner window
+
+</div>
+
+<p><span id="setSize"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setSize (size, sizeUnits, isAdvisory)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#280">280</a>]</p>
+
+<div class="desc">
+
+Set the banner window to a specific size. 'size' is the new size, in
+units given by 'sizeUnits', which is a BannerSizeXxx constant.
+
+'isAdvisory' is true or nil; if true, it indicates that the size setting
+is purely advisory, and that a sizeToContents() call will eventually
+follow to set the actual size. When 'isAdvisory is true, the interpreter
+is free to ignore the request if sizeToContents()
+
+</div>
+
+<p><span id="setTextColor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setTextColor (fg, bg)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#316">316</a>]</p>
+
+<div class="desc">
+
+set the text color in the banner
+
+</div>
+
+<p><span id="showBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showBanner (parent, where, other, windowType, align, size, sizeUnits, styleFlags)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#104">104</a>]</p>
+
+<div class="desc">
+
+Show the banner. The game should call this method when it first wants to
+display the banner.
+
+'parent' is the parent banner; this is an existing BannerWindow object.
+If 'parent' is nil, then the parent is the main game text window. The
+new window's display space is obtained by carving space out of the
+parent's area, according to the alignment and size values specified.
+
+'where' and 'other' give the position of the banner among the children
+of the given parent. 'where' is one of the constants BannerFirst,
+BannerLast, BannerBefore, or BannerAfter. If 'where' is BannerBefore or
+BannerAfter, 'other' gives the BannerWindow object to be used as the
+reference point in the parent's child list; 'other' is ignored in other
+cases. Note that 'other' must always be another child of the same
+parent; if it's not, then we act as though 'where' were given as
+BannerLast.
+
+'windowType' is a BannerTypeXxx constant giving the new window's type.
+
+'align' is a BannerAlignXxx constant giving the alignment of the new
+window. 'size' is an integer giving the size of the banner, in units
+specified by 'sizeUnits', which is a BannerSizeXxx constant. If 'size'
+is nil, it indicates that the caller doesn't care about the size,
+usually because the caller will be resizing the banner soon anyway; the
+banner will initially have zero size in this case if we create a new
+window, or will retain the existing size if there's already a system
+window.
+
+'styleFlags' is a combination of BannerStyleXxx constants (combined with
+the bitwise OR operator, '\|'), giving the requested display style of
+the new banner window.
+
+Note that if we already have a system banner window, and the existing
+banner window has the same characteristics as the new creation
+parameters, we'll simply re-use the existing window rather than closing
+and re-creating it; this reduces unnecessary redrawing in cases where
+the window isn't changing. If the caller explicitly wants to create a
+new window even if we already have a window, the caller should simply
+call removeBanner() before calling this routine.
+
+</div>
+
+<p><span id="showForRestore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showForRestore (parent, where, other)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#343">343</a>]</p>
+
+<div class="desc">
+
+Restore this banner. This is called after a RESTORE or UNDO operation
+that finds that this banner was being displayed at the time the state
+was saved but is not currently displayed in the active UI. We'll show
+the banner using the characteristics saved persistently.
+
+</div>
+
+<p><span id="sizeToContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sizeToContents ( )</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#299">299</a>]</p>
+
+<div class="desc">
+
+Size the banner to its current contents. Note that some systems do not
+support this operation, so callers should always make an advisory call
+to setSize() first to set a size based on the expected content size.
+
+</div>
+
+<p><span id="updateForRestore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">updateForRestore ( )</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#390">390</a>]</p>
+
+<div class="desc">
+
+Update my contents after being restored. By default, this does nothing;
+instances might want to override this to refresh the contents of the
+banner if the banner is normally updated only in response to specific
+events. Note that it's not necessary to do anything here if the banner
+will soon be updated automatically as part of normal processing; for
+example, the status line banner is updated at each new command line via
+a prompt-daemon, so there's no need for the status line banner to do
+anything here.
+
+</div>
+
+<p><span id="writeToBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeToBanner (txt)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#260">260</a>]</p>
+
+<div class="desc">
+
+write the given text to the banner
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

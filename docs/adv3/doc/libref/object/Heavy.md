@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Heavy</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[2054](../source/objects.t.html#2054)\]

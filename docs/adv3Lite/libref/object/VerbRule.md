@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule</span><span class="type">GrammarProd</span>
 
 `VerbRule(About)      `*`// original source text`*  

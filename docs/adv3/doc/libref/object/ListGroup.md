@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ListGroup</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[1877](../source/lister.t.html#1877)\]

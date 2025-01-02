@@ -1,0 +1,206 @@
+<p><span class="title">QSenseRegion</span><span class="type">object</span></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1379">1379</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+This Special redefines canHear, canSee, canSmell, canTalkTo and
+canThrowTo to take account of possible sensory connections across rooms
+in a SenseRegion
+
+**`QSenseRegion`**` :   `[`Special`](../object/Special.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">QSenseRegion</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Special<code class="language-plaintext highlighter-rouge">](../object/Special.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>active<code class="language-plaintext highlighter-rouge">](#active)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Special</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>all<code class="language-plaintext highlighter-rouge">](../object/Special.html#all)</code>  <code class="language-plaintext highlighter-rouge">[</code>allActive_<code class="language-plaintext highlighter-rouge">](../object/Special.html#allActive_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canHear<code class="language-plaintext highlighter-rouge">](#canHear)</code>  <code class="language-plaintext highlighter-rouge">[</code>canSee<code class="language-plaintext highlighter-rouge">](#canSee)</code>  <code class="language-plaintext highlighter-rouge">[</code>canSmell<code class="language-plaintext highlighter-rouge">](#canSmell)</code>  <code class="language-plaintext highlighter-rouge">[</code>canTalkTo<code class="language-plaintext highlighter-rouge">](#canTalkTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>canThrowTo<code class="language-plaintext highlighter-rouge">](#canThrowTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>nonBlocker<code class="language-plaintext highlighter-rouge">](#nonBlocker)</code>  <code class="language-plaintext highlighter-rouge">[</code>reachBlocker<code class="language-plaintext highlighter-rouge">](#reachBlocker)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Special</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allActive<code class="language-plaintext highlighter-rouge">](../object/Special.html#allActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>classInit<code class="language-plaintext highlighter-rouge">](../object/Special.html#classInit)</code>  <code class="language-plaintext highlighter-rouge">[</code>first<code class="language-plaintext highlighter-rouge">](../object/Special.html#first)</code>  <code class="language-plaintext highlighter-rouge">[</code>next<code class="language-plaintext highlighter-rouge">](../object/Special.html#next)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="active"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">active</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1388">1388</a>]</p>
+
+<div class="desc">
+
+This Special should be active whenever this module is included.
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1385">1385</a>]</p>
+
+<div class="desc">
+
+Gives this Special a slightly higher priority than QDefaults, so that it
+takes priority.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="canHear"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canHear (a, b)</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1440">1440</a>]</p>
+
+<div class="desc">
+
+Can A hear B? We return true if there's a clear sound path from A to B.
+
+</div>
+
+<p><span id="canSee"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canSee (a, b)</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1395">1395</a>]</p>
+
+<div class="desc">
+
+Can A see B? We return true if and only if B is in light and there's a
+clear sight path from A to B.
+
+</div>
+
+<p><span id="canSmell"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canSmell (a, b)</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1485">1485</a>]</p>
+
+<div class="desc">
+
+Can A smell B? We return true if there's a clear scent path from A to B.
+
+</div>
+
+<p><span id="canTalkTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canTalkTo (a, b)</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1531">1531</a>]</p>
+
+<div class="desc">
+
+For A to be able to talk to B, A must both be able to hear B and either
+be in the same room as B or in a room that's close enough to be able to
+converse with B
+
+</div>
+
+<p><span id="canThrowTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canThrowTo (a, b)</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1554">1554</a>]</p>
+
+<div class="desc">
+
+Can A throw an object to B?
+
+</div>
+
+<p><span id="nonBlocker"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nonBlocker (o, b)</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1601">1601</a>]</p>
+
+<div class="desc">
+
+Is o the kind of object that would block movement from one room to the
+room containing b? It is unless o is a room and the room and b are both
+in a SenseRegion for which autoGoTo is true.
+
+</div>
+
+<p><span id="reachBlocker"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reachBlocker (a, b)</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1582">1582</a>]</p>
+
+<div class="desc">
+
+Determine if A can reach B, and if not, what stands in the way. Returns
+a list of containers along the path between A and B that obstruct the
+reach. If the two objects are in separate rooms, the top-level room
+containing A is in the list to represent the room separation. If there's
+no obstruction, we return an empty list.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,0 +1,251 @@
+<p><span class="title">WebUIPrefs</span><span class="type">class</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2367">2367</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Web UI preferences. This object contains the in-memory version of the
+display style preferences file.
+
+Each client session has its own copy of this object, because each client
+can be associated with a different user, and each user has their own
+preferences file.
+
+`class `**`WebUIPrefs`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WebUIPrefs</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>clientSession<code class="language-plaintext highlighter-rouge">](#clientSession)</code>  <code class="language-plaintext highlighter-rouge">[</code>curProfile<code class="language-plaintext highlighter-rouge">](#curProfile)</code>  <code class="language-plaintext highlighter-rouge">[</code>curProPat<code class="language-plaintext highlighter-rouge">](#curProPat)</code>  <code class="language-plaintext highlighter-rouge">[</code>profileTab<code class="language-plaintext highlighter-rouge">](#profileTab)</code>  <code class="language-plaintext highlighter-rouge">[</code>proItemPat<code class="language-plaintext highlighter-rouge">](#proItemPat)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSettingsFile<code class="language-plaintext highlighter-rouge">](#getSettingsFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>getXML<code class="language-plaintext highlighter-rouge">](#getXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>loadSettings<code class="language-plaintext highlighter-rouge">](#loadSettings)</code>  <code class="language-plaintext highlighter-rouge">[</code>openSettingsFile<code class="language-plaintext highlighter-rouge">](#openSettingsFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>readSettings<code class="language-plaintext highlighter-rouge">](#readSettings)</code>  <code class="language-plaintext highlighter-rouge">[</code>saveSettings<code class="language-plaintext highlighter-rouge">](#saveSettings)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="clientSession"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clientSession</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2558">2558</a>]</p>
+
+<div class="desc">
+
+the client session for this preference list
+
+</div>
+
+<p><span id="curProfile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curProfile</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2567">2567</a>]</p>
+
+<div class="desc">
+
+current active profile selected by the user
+
+</div>
+
+<p><span id="curProPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curProPat</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2434">2434</a>]</p>
+
+<div class="desc">
+
+current profile ID pattern - current-profile:xxx
+
+</div>
+
+<p><span id="profileTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">profileTab</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2564">2564</a>]</p>
+
+<div class="desc">
+
+profile table - this is a LookupTable of WebUIProfile objects keyed by
+profile name
+
+</div>
+
+<p><span id="proItemPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">proItemPat</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2437">2437</a>]</p>
+
+<div class="desc">
+
+setting ID pattern for profile items - nnn.xxx=yyy
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (c)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2368">2368</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="getSettingsFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getSettingsFile ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2504">2504</a>]</p>
+
+<div class="desc">
+
+get the settings file path
+
+</div>
+
+<p><span id="getXML"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getXML ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2523">2523</a>]</p>
+
+<div class="desc">
+
+get the current settings as XML, to send to the web UI
+
+</div>
+
+<p><span id="loadSettings"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">loadSettings ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2378">2378</a>]</p>
+
+<div class="desc">
+
+read the settings file
+
+</div>
+
+<p><span id="openSettingsFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openSettingsFile (access)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2483">2483</a>]</p>
+
+<div class="desc">
+
+open the settings file
+
+</div>
+
+<p><span id="readSettings"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">readSettings (f)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2393">2393</a>]</p>
+
+<div class="desc">
+
+read settings from a file
+
+</div>
+
+<p><span id="saveSettings"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">saveSettings ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2440">2440</a>]</p>
+
+<div class="desc">
+
+save the current settings to the user's config file
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

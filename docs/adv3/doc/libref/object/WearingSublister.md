@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WearingSublister</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[1727](../source/lister.t.html#1727)\]

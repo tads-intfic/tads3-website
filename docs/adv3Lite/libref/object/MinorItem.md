@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MinorItem</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[1021](../source/extras.t.html#1021)\]

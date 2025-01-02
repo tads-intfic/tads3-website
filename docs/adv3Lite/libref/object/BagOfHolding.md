@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BagOfHolding</span><span class="type">class</span>
 
 [gadget.t](../file/gadget.t.html)\[[292](../source/gadget.t.html#292)\]

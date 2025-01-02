@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nodeEndCheckObj</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[4900](../source/actor.t.html#4900)\]

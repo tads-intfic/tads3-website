@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NominalPlatform</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[6726](../source/travel.t.html#6726)\]

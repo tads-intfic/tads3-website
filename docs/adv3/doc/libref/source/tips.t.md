@@ -1,3 +1,5 @@
+---
+---
 # tips.t
 
 [documentation](../file/tips.t.html)

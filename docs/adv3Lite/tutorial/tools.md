@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Tools of the
+<a href="toc.html" class="nav">Table of Contents</a> \| Tools of the
 Trade  
-<span class="navnp"><a href="acknowledge.htm" class="nav"><em>Prev:</em> Acknowledgements
+<span class="navnp"><a href="acknowledge.html" class="nav"><em>Prev:</em> Acknowledgements
 and Explanations</a>
-   <a href="getting.htm" class="nav"><em>Next:</em> Getting What You
+   <a href="getting.html" class="nav"><em>Next:</em> Getting What You
 Need</a>     </span>
 
 </div>
@@ -24,9 +26,9 @@ to write interactive fiction, and how to set everything up.
 
 <div class="sectoc">
 
-[Getting What You Need](getting.htm)  
-[Setting it all up](setting.htm)  
-[Using the Tools](setting.htm)  
+[Getting What You Need](getting.html)  
+[Setting it all up](setting.html)  
+[Using the Tools](setting.html)  
 
 </div>
 
@@ -37,11 +39,11 @@ to write interactive fiction, and how to set everything up.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Tools of the
+<a href="toc.html" class="nav">Table of Contents</a> \| Tools of the
 Trade  
-<span class="navnp"><a href="acknowledge.htm" class="nav"><em>Prev:</em> Acknowledgements
+<span class="navnp"><a href="acknowledge.html" class="nav"><em>Prev:</em> Acknowledgements
 and Explanations</a>
-   <a href="getting.htm" class="nav"><em>Next:</em> Getting What You
+   <a href="getting.html" class="nav"><em>Next:</em> Getting What You
 Need</a>     </span>
 
 </div>

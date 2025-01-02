@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,17 +9,17 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>EntryPortal : <a
-href="enterable.htm">Enterable</a><br />
+href="enterable.html">Enterable</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="hiddendoor.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="exitportal.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="hiddendoor.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="exitportal.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-An EntryPortal is just like an [Enterable](enterable.htm), except that
+An EntryPortal is just like an [Enterable](enterable.html), except that
 you can go through it as well as enter it. It can be used, for example,
 for an archway that is plainly the entrance to another destination:  
   
@@ -53,6 +55,6 @@ The property pointed to by -\> in the template is actually the connector
 traversed, not the destination reached, when the EntryPortal is entered,
 although when, as here, the connector is a Room this has the same effect
 (see this discussion of the distinction in connection with the
-[Enterable](enterable.htm) class, from which EntryPortal inherits).
+[Enterable](enterable.html) class, from which EntryPortal inherits).
 Entry portal inherits from Enterable and hence inherits the [Enterable
-template](enterabletemplate.htm).  
+template](enterabletemplate.html).  

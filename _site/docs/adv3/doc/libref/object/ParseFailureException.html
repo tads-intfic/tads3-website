@@ -1,0 +1,179 @@
+<p><span class="title">ParseFailureException</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6961">6961</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Parsing failure exception. This exception is parameterized with message
+information describing the failure, and can be used to route the failure
+notification to the issuing actor.
+
+`class `**`ParseFailureException`**` :   `[`ParserException`](../object/ParserException.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ParseFailureException</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ParserException<code class="language-plaintext highlighter-rouge">](../object/ParserException.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Exception<code class="language-plaintext highlighter-rouge">](../object/Exception.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>args_<code class="language-plaintext highlighter-rouge">](#args_)</code>  <code class="language-plaintext highlighter-rouge">[</code>message_<code class="language-plaintext highlighter-rouge">](#message_)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>errmsg_<code class="language-plaintext highlighter-rouge">](../object/Exception.html#errmsg_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>displayException<code class="language-plaintext highlighter-rouge">](#displayException)</code>  <code class="language-plaintext highlighter-rouge">[</code>notifyActor<code class="language-plaintext highlighter-rouge">](#notifyActor)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getExceptionMessage<code class="language-plaintext highlighter-rouge">](../object/Exception.html#getExceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStackTrace<code class="language-plaintext highlighter-rouge">](../object/Exception.html#showStackTrace)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="args_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">args_</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6988">6988</a>]</p>
+
+<div class="desc">
+
+the (varargs) parameters to the message
+
+</div>
+
+<p><span id="message_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">message_</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6985">6985</a>]</p>
+
+<div class="desc">
+
+the message property ID
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (messageProp, [args])</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6962">6962</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="displayException"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">displayException ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6982">6982</a>]</p>
+
+<div class="desc">
+
+Tell the target actor to notify the issuing actor. We route the
+notification from the target to the issuer in keeping with conversation
+we're modelling: the issuer asked the target to do something, so the
+target is now replying with information explaining why the target can't
+do as asked.
+
+</div>
+
+<p><span id="notifyActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notifyActor (targetActor, issuingActor)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6970">6970</a>]</p>
+
+<div class="desc">
+
+notify the issuing actor of the problem
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

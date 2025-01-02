@@ -1,0 +1,118 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>MultiInstance : BaseMultiLoc<br />
+</strong></td>
+<td style="text-align: right;"><a href="multiloc.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="multifaceted.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The MultiInstance class is used for creating copies of objects,
+typically Decorations, in multiple locations. This can often be
+preferable to using <a href="multiloc.html">MultiLoc</a> for this purpose, since a
+MultiLoc is a single object, and thus (for example) will be lit for all
+locations even if it’s lit only in one.</p>
+
+<p>A typical use for a MultiInstance might be for creating trees in a
+forest. The trees are not interestingly distinctive, but they are
+numerically distinct objects. To put a ‘trees’ Decoration object in each
+location where we mention the forest, we first create a MultiInstance
+shell object and set its <strong>locationList</strong> property to the list of
+locations we want the trees to appear in, and then set up a template
+trees object in its <strong>instanceObject</strong> property.</p>
+
+<p>MultiInstance<br />
+  locationList = [snowForest, nwForestPath, neForestPath, snowForestEdge]<br />
+  instanceObject: Decoration { ’pine tree/trees/pines’ ’trees’<br />
+        ”The trees, mainly tall pines, are covered in snow. ”<br />
+        isPlural = true<br />
+      }<br />
+;</p>
+
+<p>This is all you have to do; the library does the rest of the work by
+creating an instance of your template object in each of the rooms listed
+in the locationList. The library also adds MultiInstanceInstance to the
+class list of the objects it creates (so you don’t have to bother). This
+basically handles specialized handling for <strong>moveInto</strong> so you can move
+the instance objects around (assuming you can find a way to refer to
+them) and everything will be kept in sync with the MultiInstance object.
+Probably the more useful way to relocate MultiInstanceInstance objects
+dynamically is to call the <strong>moveInto(loc)</strong>, <strong>moveIntoAdd(loc)</strong>, and
+<strong>moveOutOf(loc)</strong> methods of the MultiInstance object. For example, if
+we wanted the forest to grow into a new location during the course of
+the game (which we don’t), we could give the MultiInstance object a name
+(such as ‘trees’) and then call:</p>
+
+<p>   trees.moveIntoAdd(newLocation);</p>
+
+<p>Note that if we called trees.moveInto(newLocation) the trees would be
+removed from every other location. If on the other hand we wanted to
+chop down part of the forest (which we don’t) we could call:</p>
+
+<p>    trees.moveOutOf(neForestPath);</p>
+
+<p>Finally, we don’t have to use the locationList to specify the initial
+location of the trees. As an alternative, we could have defined a
+ForestRoom class for use at each of our forested locations, and then
+have used MultiInstance’s (or rather MultiLoc’s)
+<strong>initialLocationClass</strong> property to define where we wanted the trees to
+appear:</p>
+
+<p>MultiInstance<br />
+  initialLocationClass = ForestRoom<br />
+  instanceObject: Decoration { ’pine tree/trees/pines’ ’trees’<br />
+        ”The trees, mainly tall pines, are covered in snow. ”<br />
+        isPlural = true<br />
+      }<br />
+;</p>
+
+<p>As a third (though in this case utterly pointless) alternative, we could
+simply have overridden the <strong>isInitiallyIn(obj)</strong> method:</p>
+
+<p>MultiInstance<br />
+  isInitiallyIn(obj) { return obj in in (snowForest, nwForestPath, neForestPath, snowForestEdge); }<br />
+  instanceObject: Decoration { ’pine tree/trees/pines’ ’trees’<br />
+        ”The trees, mainly tall pines, are covered in snow. ”<br />
+        isPlural = true<br />
+      }<br />
+;</p>
+
+<p>There may, however, be more complex cases in which this would be useful
+for implementing a rule for determining where the MultiInstanceInstances
+should start out. Lastly, and even more pointlessly in this case, you
+could override <strong>buildLocationList()</strong> to construct the initial list of
+locations:</p>
+
+<p>MultiInstance <br />
+  buildLocationList() <br />
+  { <br />
+     local lst; <br />
+     lst = new Vector(16);<br />
+     lst.append(snowForest);<br />
+     lst.append(nwForestPath);<br />
+     lst.append(neForestPath);<br />
+     lst.append(snowForestEdge);<br />
+     return lst.toList();<br />
+  }<br />
+  instanceObject: Decoration { ’pine tree/trees/pines’ ’trees’<br />
+        ”The trees, mainly tall pines, are covered in snow. ”<br />
+        isPlural = true<br />
+      }<br />
+;</p>
+
+<p>Of course the method could simply have been defined:</p>
+
+<p> buildLocationList() { return [snowForest, nwForestPath, neForestPath, snowForestEdge]; }</p>
+
+<p>But since there is absolutely no point in overriding the method in this
+case anyway, we might as well make it appear more complicated to
+simulate a situation in which you <em>might</em> actually want to use this
+method; though it’s hard to think of a case where this could achieve
+something that couldn’t be achieved just as well by overriding
+isInitiallyIn(obj).</p>
+

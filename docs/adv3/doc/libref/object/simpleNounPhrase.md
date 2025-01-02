@@ -1,3 +1,5 @@
+---
+---
 <span class="title">simpleNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`simpleNounPhrase(adj)`](../object/simpleNounPhrase(adj).html)</span>` :   `[`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)

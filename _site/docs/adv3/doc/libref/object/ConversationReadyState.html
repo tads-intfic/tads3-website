@@ -1,0 +1,330 @@
+<p><span class="title">ConversationReadyState</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4742">4742</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A "ready for conversation" state. This can be used as the base class for
+actor states when the actor is receptive to conversation, and we want to
+have the sense of a conversational context. The key feature that this
+class provides is the ability to provide messages when engaging and
+disengaging the conversation.
+
+Note that this state is NOT required for conversation, since the basic
+ActorState object accepts conversational commands like ASK, TELL, GIVE,
+and TAKE. The special feature of the "conversation ready" state is that
+we explicitly move the actor to a separate state when conversation
+begins. This is especially appropriate for states in which the NPC is
+actively carrying on some other activity; the conversation should
+interrupt those states, so that the actor stops the other activity and
+gives us its full attention.
+
+This type of state can be associated with its in-conversation state
+object in one of two ways. First, the inConvState property can be
+explicitly set to point to the in-conversation state object. Second,
+this object can be nested inside its in-conversation state object via
+the 'location' property (so you can use the '+' syntax to put this
+object inside its in-conversation state object). The 'ready' object goes
+inside the 'conversing' object because a single 'conversing' object can
+frequently be shared among several 'ready' states.
+
+`class `**`ConversationReadyState`**` :   `[`ActorState`](../object/ActorState.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ConversationReadyState</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ActorState<code class="language-plaintext highlighter-rouge">](../object/ActorState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TravelMessageHandler<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html)  
+</code>                         object<code class="language-plaintext highlighter-rouge">  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ActorTopicDatabase<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TopicDatabase<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html)  
+</code>                                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getImpliedConvState<code class="language-plaintext highlighter-rouge">](#getImpliedConvState)</code>  <code class="language-plaintext highlighter-rouge">[</code>inConvState<code class="language-plaintext highlighter-rouge">](#inConvState)</code>  <code class="language-plaintext highlighter-rouge">[</code>stateSuggestedTopics<code class="language-plaintext highlighter-rouge">](#stateSuggestedTopics)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ActorState</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>autoSuggest<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#autoSuggest)</code>  <code class="language-plaintext highlighter-rouge">[</code>isInitState<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#isInitState)</code>  <code class="language-plaintext highlighter-rouge">[</code>location<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#location)</code>  <code class="language-plaintext highlighter-rouge">[</code>stateDesc<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#stateDesc)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>askForTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#askForTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>askTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#askTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#commandTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>giveTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#giveTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiateTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#initiateTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>miscTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#miscTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#showTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>specialTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#specialTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>tellTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#tellTopics)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>limitSuggestions<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#limitSuggestions)</code>  <code class="language-plaintext highlighter-rouge">[</code>suggestedTopics<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#suggestedTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupActive<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#topicGroupActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupScoreAdjustment<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#topicGroupScoreAdjustment)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>enterConversation<code class="language-plaintext highlighter-rouge">](#enterConversation)</code>  <code class="language-plaintext highlighter-rouge">[</code>enterFromConversation<code class="language-plaintext highlighter-rouge">](#enterFromConversation)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleConversation<code class="language-plaintext highlighter-rouge">](#handleConversation)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeActorState<code class="language-plaintext highlighter-rouge">](#initializeActorState)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiateTopic<code class="language-plaintext highlighter-rouge">](#initiateTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>notifyTopicResponse<code class="language-plaintext highlighter-rouge">](#notifyTopicResponse)</code>  <code class="language-plaintext highlighter-rouge">[</code>showGreetingMsg<code class="language-plaintext highlighter-rouge">](#showGreetingMsg)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ActorState</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>activateState<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#activateState)</code>  <code class="language-plaintext highlighter-rouge">[</code>afterAction<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#afterAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>afterTravel<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#afterTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>arrivingTurn<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#arrivingTurn)</code>  <code class="language-plaintext highlighter-rouge">[</code>arrivingWithDesc<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#arrivingWithDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeAction<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#beforeAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeTravel<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#beforeTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>deactivateState<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#deactivateState)</code>  <code class="language-plaintext highlighter-rouge">[</code>distantSpecialDesc<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#distantSpecialDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>endConversation<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#endConversation)</code>  <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNominalTraveler<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#getNominalTraveler)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSuggestedTopicList<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#getSuggestedTopicList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicOwner<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#getTopicOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>justFollowed<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#justFollowed)</code>  <code class="language-plaintext highlighter-rouge">[</code>obeyCommand<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#obeyCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>remoteSpecialDesc<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#remoteSpecialDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>showSpecialDescInContents<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#showSpecialDescInContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>specialDesc<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#specialDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>specialDescListWith<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#specialDescListWith)</code>  <code class="language-plaintext highlighter-rouge">[</code>suggestTopicsFor<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#suggestTopicsFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeTurn<code class="language-plaintext highlighter-rouge">](../object/ActorState.html#takeTurn)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelMessageHandler</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>sayArriving<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArriving)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingDir<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingDir)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingDownStairs<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingDownStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingLocally<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingLocally)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingThroughPassage<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingThroughPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingUpStairs<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingUpStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArrivingViaPath<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayArrivingViaPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDeparting)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingDir<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingDir)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingDownStairs<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingDownStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingLocally<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingLocally)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingThroughPassage<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingThroughPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingUpStairs<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingUpStairs)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDepartingViaPath<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayDepartingViaPath)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayTravelingRemotely<code class="language-plaintext highlighter-rouge">](../object/TravelMessageHandler.html#sayTravelingRemotely)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>showTopicResponse<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#showTopicResponse)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#addSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopicToList<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#addTopicToList)</code>  <code class="language-plaintext highlighter-rouge">[</code>compareVocabMatch<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#compareVocabMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>findTopicResponse<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#findTopicResponse)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#handleTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#removeSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#removeTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeTopicFromList<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#removeTopicFromList)</code>  <code class="language-plaintext highlighter-rouge">[</code>showSuggestedTopicList<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#showSuggestedTopicList)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="getImpliedConvState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getImpliedConvState</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4753">4753</a>]</p>
+
+<div class="desc">
+
+my implied conversational state is my in-conversation state
+
+</div>
+
+<p><span id="inConvState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inConvState</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4750">4750</a>]</p>
+
+<div class="desc">
+
+The associated in-conversation state. This should be set to an
+InConversationState object that controls the actor's behavior while
+carrying on a conversation. Note that the library will automatically set
+this if the instance is nested (via its 'location' property) inside an
+InConversationState object.
+
+</div>
+
+<p><span id="stateSuggestedTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stateSuggestedTopics</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4934">4934</a>]</p>
+
+<div class="desc">
+
+Get this state's suggested topic list. ConversationReady states
+shouldn't normally have topic entries of their own, since a
+ConvversationReady state usually forwards conversation handling to its
+corresponding in-conversation state. So, simply return the suggestion
+list from our in-conversation state object.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="enterConversation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">enterConversation (actor, entry)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4899">4899</a>]</p>
+
+<div class="desc">
+
+Enter a conversation with the given actor, either explicitly (via HELLO
+or TALK TO) or implicitly (by directly asking a question, etc). 'entry'
+gives the TopicEntry that's triggering the implicit conversation entry;
+if this is nil, it means that we're being triggered explicitly.
+
+</div>
+
+<p><span id="enterFromConversation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">enterFromConversation (actor, reason, oldNode)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4815">4815</a>]</p>
+
+<div class="desc">
+
+Enter this state from a conversation. This should show any message we
+want to display when we're ending a conversation and switching from the
+conversation to this state. 'reason' is the endConvXxx enum indicating
+what triggered the termination of the conversation. 'oldNode' is the
+ConvNode we were in just before we initiated the termination - we need
+this information because we want to look in the ConvNode for a Bye topic
+message to display, but we can't just look in the actor for the node
+because it will already have been cleared out by the time we get here.
+
+Games shouldn't normally override this method. Instead, simply create a
+ByeTopic entry and put it inside the state object; we'll find the
+ByeTopic and show its message for the goodbye.
+
+If you want to distinguish between different types of goodbyes, you can
+create an ImpByeTopic for any implied goodbye (i.e., the kind where the
+other actor just walks away, or where we get bored of the other actor
+ignoring us). You can also further differentiate by creating
+BoredByeTopic and/or LeaveByeTopic objects to handle just those cases.
+The regular ByeTopic will handle explicit GOODBYE commands, and the
+others (ImpByeTopic, BoredByeTopic, LeaveByeTopic) will handle the
+implied kinds.
+
+</div>
+
+<p><span id="handleConversation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">handleConversation (otherActor, topic, convType)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4839">4839</a>]</p>
+
+<div class="desc">
+
+handle a conversational action directed to our actor
+
+</div>
+
+<p><span id="initializeActorState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeActorState ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4937">4937</a>]</p>
+
+<div class="desc">
+
+initialize the actor state object
+
+</div>
+
+<p><span id="initiateTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initiateTopic (obj)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4875">4875</a>]</p>
+
+<div class="desc">
+
+Initiate conversation based on the given simulation object. This is an
+internal method that isn't usually called directly from game code; game
+code usually calls the Actor's initiateTopic(), which calls this routine
+to check for a topic that's part of the state object.
+
+</div>
+
+<p><span id="notifyTopicResponse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notifyTopicResponse (fromActor, entry)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4886">4886</a>]</p>
+
+<div class="desc">
+
+Receive notification that a TopicEntry is being used (via its
+handleTopic method) to respond to a command. If the TopicEntry is
+conversational, automatically enter our in-conversation state.
+
+</div>
+
+<p><span id="showGreetingMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showGreetingMsg (actor, explicit)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4783">4783</a>]</p>
+
+<div class="desc">
+
+Show our greeting message. If 'explicit' is true, it means that the
+player character is greeting us through an explicit greeting command,
+such as HELLO or TALK TO. Otherwise, the greeting is implied by some
+other conversational action, such a ASK ABOUT or SHOW TO. We do nothing
+by default; this should be overridden in most cases to show some sort of
+exchange of pleasantries - something like this:
+
+  
+\&gt;bob, hello  
+"Hi, there," you say.
+
+Bob looks up over his newspaper. "Oh, hello," he says, putting down the
+paper. "What can I do for you?"
+
+Note that games shouldn't usually override this method. Instead, you
+should simply create a HelloTopic entry and put it inside the state
+object; we'll find the HelloTopic and show its message as our greeting.
+
+If you want to distinguish between explicit and implicit greetings, you
+can create an ImpHelloTopic entry for implied greetings (i.e., the kind
+of greeting that occurs automatically when the player jumps right into a
+conversation with our actor using ASK ABOUT or the like, without
+explicitly saying HELLO first). The regular HelloTopic will handle
+explicit greetings, and the ImpHelloTopic will handle the implied kind.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

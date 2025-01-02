@@ -1,3 +1,5 @@
+---
+---
 <span class="title">HintLongTopicItem</span><span class="type">class</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[491](../source/hintsys.t.html#491)\]

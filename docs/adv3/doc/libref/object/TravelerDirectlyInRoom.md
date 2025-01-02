@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TravelerDirectlyInRoom</span><span class="type">class</span>
 
 [precond.t](../file/precond.t.html)\[[277](../source/precond.t.html#277)\]

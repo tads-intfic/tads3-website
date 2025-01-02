@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -16,442 +18,442 @@
 
 <div class="toc1">
 
-<a href="begin.htm" class="toc">Part I: Opening Moves</a>
+<a href="begin.html" class="toc">Part I: Opening Moves</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="docs-intro.htm" class="toc">Introduction and Overview</a>
+<a href="docs-intro.html" class="toc">Introduction and Overview</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="modules.htm" class="toc">Core and Optional Modules</a>
+<a href="modules.html" class="toc">Core and Optional Modules</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="mingame.htm" class="toc">Starting Out — A Minimal Game
+<a href="mingame.html" class="toc">Starting Out — A Minimal Game
 Definition</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="core.htm" class="toc">Part II: The Core Library</a>
+<a href="core.html" class="toc">Part II: The Core Library</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="thing.htm" class="toc">Things</a>
+<a href="thing.html" class="toc">Things</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="room.htm" class="toc">Rooms and Regions</a>
+<a href="room.html" class="toc">Rooms and Regions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="roomdesc.htm" class="toc">Room Descriptions</a>
+<a href="roomdesc.html" class="toc">Room Descriptions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="door.htm" class="toc">Doors</a>
+<a href="door.html" class="toc">Doors</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="travel.htm" class="toc">TravelConnectors and Barriers</a>
+<a href="travel.html" class="toc">TravelConnectors and Barriers</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="key.htm" class="toc">Keys</a>
+<a href="key.html" class="toc">Keys</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="multiloc.htm" class="toc">Multilocs</a>
+<a href="multiloc.html" class="toc">Multilocs</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="topic.htm" class="toc">Topics</a>
+<a href="topic.html" class="toc">Topics</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="beginning.htm" class="toc">Beginnings</a>
+<a href="beginning.html" class="toc">Beginnings</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="ending.htm" class="toc">Endings</a>
+<a href="ending.html" class="toc">Endings</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="optional.htm" class="toc">Part III: Optional Modules</a>
+<a href="optional.html" class="toc">Part III: Optional Modules</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="attachable.htm" class="toc">Attachables</a>
+<a href="attachable.html" class="toc">Attachables</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="event.htm" class="toc">Events</a>
+<a href="event.html" class="toc">Events</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="eventlist.htm" class="toc">EventList</a>
+<a href="eventlist.html" class="toc">EventList</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="exit.htm" class="toc">Exits</a>
+<a href="exit.html" class="toc">Exits</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="extra.htm" class="toc">Extras</a>
+<a href="extra.html" class="toc">Extras</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="gadget.htm" class="toc">Gadgets</a>
+<a href="gadget.html" class="toc">Gadgets</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="menu.htm" class="toc">Menus</a>
+<a href="menu.html" class="toc">Menus</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="hint.htm" class="toc">Hints</a>
+<a href="hint.html" class="toc">Hints</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="instruct.htm" class="toc">Instructions</a>
+<a href="instruct.html" class="toc">Instructions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="newbie.htm" class="toc">New Player Help</a>
+<a href="newbie.html" class="toc">New Player Help</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="pathfind.htm" class="toc">Path Finding</a>
+<a href="pathfind.html" class="toc">Path Finding</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="scene.htm" class="toc">Scenes</a>
+<a href="scene.html" class="toc">Scenes</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="score.htm" class="toc">Scoring</a>
+<a href="score.html" class="toc">Scoring</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="senseregion.htm" class="toc">SenseRegion</a>
+<a href="senseregion.html" class="toc">SenseRegion</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="topicentry.htm" class="toc">Topic Entries</a>
+<a href="topicentry.html" class="toc">Topic Entries</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="thought.htm" class="toc">Thoughts</a>
+<a href="thought.html" class="toc">Thoughts</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="action.htm" class="toc">Part IV: Actions</a>
+<a href="action.html" class="toc">Part IV: Actions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="actionoverview.htm" class="toc">Overview</a>
+<a href="actionoverview.html" class="toc">Overview</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="actres.htm" class="toc">Action Results</a>
+<a href="actres.html" class="toc">Action Results</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="message.htm" class="toc">Messages</a>
+<a href="message.html" class="toc">Messages</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="doer.htm" class="toc">Doers</a>
+<a href="doer.html" class="toc">Doers</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="implicit.htm" class="toc">Implicit Actions</a>
+<a href="implicit.html" class="toc">Implicit Actions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="react.htm" class="toc">Reacting to Actions</a>
+<a href="react.html" class="toc">Reacting to Actions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="define.htm" class="toc">Defining New Actions</a>
+<a href="define.html" class="toc">Defining New Actions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="literalact.htm" class="toc">Literal and Numeric Actions</a>
+<a href="literalact.html" class="toc">Literal and Numeric Actions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="topicact.htm" class="toc">Topic Actions</a>
+<a href="topicact.html" class="toc">Topic Actions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="query.htm" class="toc">Querying the World Model</a>
+<a href="query.html" class="toc">Querying the World Model</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="scope.htm" class="toc">Scope</a>
+<a href="scope.html" class="toc">Scope</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="debug.htm" class="toc">Debugging Commands</a>
+<a href="debug.html" class="toc">Debugging Commands</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="actionref.htm" class="toc">Action Reference</a>
+<a href="actionref.html" class="toc">Action Reference</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="actor.htm" class="toc">Part V: Actors</a>
+<a href="actor.html" class="toc">Part V: Actors</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="actoroverview.htm" class="toc">NPC Overview</a>
+<a href="actoroverview.html" class="toc">NPC Overview</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="actorobj.htm" class="toc">The Actor Object</a>
+<a href="actorobj.html" class="toc">The Actor Object</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="actorstate.htm" class="toc">Actor States</a>
+<a href="actorstate.html" class="toc">Actor States</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="agenda.htm" class="toc">Agenda Items</a>
+<a href="agenda.html" class="toc">Agenda Items</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="asktell.htm" class="toc">Basic Ask/Tell</a>
+<a href="asktell.html" class="toc">Basic Ask/Tell</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="actortopicentry.htm" class="toc">ActorTopicEntry</a>
+<a href="actortopicentry.html" class="toc">ActorTopicEntry</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="suggest.htm" class="toc">Suggesting Conversational Topics</a>
+<a href="suggest.html" class="toc">Suggesting Conversational Topics</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="specialtopic.htm" class="toc">Special Topics</a>
+<a href="specialtopic.html" class="toc">Special Topics</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="topicgroup.htm" class="toc">Topic Groups</a>
+<a href="topicgroup.html" class="toc">Topic Groups</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="convnode.htm" class="toc">Conversation Nodes</a>
+<a href="convnode.html" class="toc">Conversation Nodes</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="hello.htm" class="toc">Hello and Goodbye</a>
+<a href="hello.html" class="toc">Hello and Goodbye</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="knowledge.htm" class="toc">Player Character and NPC
+<a href="knowledge.html" class="toc">Player Character and NPC
 Knowledge</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="orders.htm" class="toc">Giving Orders to NPCs</a>
+<a href="orders.html" class="toc">Giving Orders to NPCs</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="tags.htm" class="toc">String Tags and Object Tags</a>
+<a href="tags.html" class="toc">String Tags and Object Tags</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="initiate.htm" class="toc">NPC-Initiated Conversation</a>
+<a href="initiate.html" class="toc">NPC-Initiated Conversation</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="changepc.htm" class="toc">Changing the Player Character</a>
+<a href="changepc.html" class="toc">Changing the Player Character</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="final.htm" class="toc">Part VI: Final Moves</a>
+<a href="final.html" class="toc">Part VI: Final Moves</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="output.htm" class="toc">Some Output and Input Issues</a>
+<a href="output.html" class="toc">Some Output and Input Issues</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="utility.htm" class="toc">Utility Functions</a>
+<a href="utility.html" class="toc">Utility Functions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="lister.htm" class="toc">Lists and Listers</a>
+<a href="lister.html" class="toc">Lists and Listers</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="webui.htm" class="toc">The Web UI</a>
+<a href="webui.html" class="toc">The Web UI</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="extensions.htm" class="toc">Extensions</a>
+<a href="extensions.html" class="toc">Extensions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="../learning/exercises.htm" class="toc">Exercises &amp;
+<a href="../learning/exercises.html" class="toc">Exercises &amp;
 Samples</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="feedback.htm" class="toc">Feedback</a>
+<a href="feedback.html" class="toc">Feedback</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="conclusion.htm" class="toc">Conclusion</a>
+<a href="conclusion.html" class="toc">Conclusion</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="changelog.htm" class="toc">Change Log</a>
+<a href="changelog.html" class="toc">Change Log</a>
 
 </div>
 
@@ -463,13 +465,13 @@ Samples</a>
 
 <div class="toc1">
 
-<a href="finish.htm" class="toc">External Links</a>
+<a href="finish.html" class="toc">External Links</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="../tutorial/index.htm" class="toc">Adv3Lite Tutorial</a>
+<a href="../tutorial/index.html" class="toc">Adv3Lite Tutorial</a>
 
 </div>
 
@@ -481,7 +483,7 @@ Samples</a>
 
 <div class="toc2">
 
-<a href="../sysman.htm" class="toc">TADS 3 System Manual</a>
+<a href="../sysman.html" class="toc">TADS 3 System Manual</a>
 
 </div>
 

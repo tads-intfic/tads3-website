@@ -1,0 +1,345 @@
+<p><span class="title">conversationManager</span><span class="type">object</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#163">163</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Conversation manager output filter. We look for special tags in the
+output stream:
+
+\&lt;.reveal key\&gt; - add 'key' to the knowledge token lookup table. The
+'key' is an arbitrary string, which we can look up in the table to
+determine if the key has even been revealed. This can be used to make a
+response conditional on another response having been displayed, because
+the key will only be added to the table when the text containing the
+\&lt;.reveal key\&gt; sequence is displayed.
+
+\&lt;.convnode name\&gt; - switch the current responding actor to conversation
+node 'name'.
+
+\&lt;.convstay\&gt; - keep the responding actor in the same conversation node
+as it was in at the start of the current response
+
+\&lt;.topics\&gt; - schedule a topic inventory for the end of the turn (just
+before the next command prompt)
+
+**`conversationManager`**` :   `[`OutputFilter`](../object/OutputFilter.html)`   `[`PreinitObject`](../object/PreinitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">conversationManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputFilter.html)  
+</code>                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>customTags<code class="language-plaintext highlighter-rouge">](#customTags)</code>  <code class="language-plaintext highlighter-rouge">[</code>idToActor<code class="language-plaintext highlighter-rouge">](#idToActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>pendingTopicInventory<code class="language-plaintext highlighter-rouge">](#pendingTopicInventory)</code>  <code class="language-plaintext highlighter-rouge">[</code>respondingActor<code class="language-plaintext highlighter-rouge">](#respondingActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>revealedNameTab<code class="language-plaintext highlighter-rouge">](#revealedNameTab)</code>  <code class="language-plaintext highlighter-rouge">[</code>tagPat<code class="language-plaintext highlighter-rouge">](#tagPat)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>beginResponse<code class="language-plaintext highlighter-rouge">](#beginResponse)</code>  <code class="language-plaintext highlighter-rouge">[</code>doCustomTag<code class="language-plaintext highlighter-rouge">](#doCustomTag)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterText<code class="language-plaintext highlighter-rouge">](#filterText)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishResponse<code class="language-plaintext highlighter-rouge">](#finishResponse)</code>  <code class="language-plaintext highlighter-rouge">[</code>scheduleTopicInventory<code class="language-plaintext highlighter-rouge">](#scheduleTopicInventory)</code>  <code class="language-plaintext highlighter-rouge">[</code>setRevealed<code class="language-plaintext highlighter-rouge">](#setRevealed)</code>  <code class="language-plaintext highlighter-rouge">[</code>showOrScheduleTopicInventory<code class="language-plaintext highlighter-rouge">](#showOrScheduleTopicInventory)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicInventoryDaemon<code class="language-plaintext highlighter-rouge">](#topicInventoryDaemon)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="customTags"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">customTags</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#181">181</a>]</p>
+
+<div class="desc">
+
+Custom extended tags. Games and library extensions can add their own tag
+processing as needed, by using 'modify' to extend this object. There are
+two things you have to do to add your own tags:
+
+First, add a 'customTags' property that defines a regular expression for
+your added tags. This will be incorporated into the main pattern we use
+to look for tags. Simply specify a string that lists your tags separated
+by "\|" characters, like this:
+
+customTags = 'foo\|bar'
+
+Second, define a doCustomTag() method to process the tags. The filter
+routine will call your doCustomTag() method whenever it finds one of
+your custom tags in the output stream.
+
+</div>
+
+<p><span id="idToActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">idToActor</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#495">495</a>]</p>
+
+<div class="desc">
+
+a vector of actors, indexed by their convMgrID values
+
+</div>
+
+<p><span id="pendingTopicInventory"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pendingTopicInventory</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#536">536</a>]</p>
+
+<div class="desc">
+
+flag: we have a pending prompt-time topic inventory request
+
+</div>
+
+<p><span id="respondingActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">respondingActor</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#466">466</a>]</p>
+
+<div class="desc">
+
+The current responding actor. Actors should set this when they're about
+to show a response to an ASK, TELL, etc.
+
+</div>
+
+<p><span id="revealedNameTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">revealedNameTab</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#492">492</a>]</p>
+
+<div class="desc">
+
+The global lookup table of all revealed keys. This table is keyed by the
+string naming the revelation; the value associated with each key is not
+used (we always just set it to true).
+
+</div>
+
+<p><span id="tagPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tagPat</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#342">342</a>]</p>
+
+<div class="desc">
+
+regular expression pattern for our tags
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="beginResponse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beginResponse (actor)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#395">395</a>]</p>
+
+<div class="desc">
+
+Note that an actor is about to give a response through a TopicEntry
+object. We'll remember the actor so that we'll know which actor is
+involved in a \&lt;.convnode\&gt; operation.
+
+</div>
+
+<p><span id="doCustomTag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doCustomTag (tag, arg)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#182">182</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#498">498</a>]</p>
+
+<div class="desc">
+
+preinitialize
+
+</div>
+
+<p><span id="filterText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterText (ostr, txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#185">185</a>]</p>
+
+<div class="desc">
+
+filter text written to the output stream
+
+</div>
+
+<p><span id="finishResponse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishResponse (actor, node)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#421">421</a>]</p>
+
+<div class="desc">
+
+Finish the response - call this after we finish handling the response.
+There must be a subsequent matching call to this routine whenever
+beginResponse() is called.
+
+'node' is the default new ConvNode the actor for the responding actor.
+If another ConvNode was explicitly set in the course of handling the
+response, this is ignored, since the explicit setting overrides this
+default.
+
+</div>
+
+<p><span id="scheduleTopicInventory"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scheduleTopicInventory ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#357">357</a>]</p>
+
+<div class="desc">
+
+Schedule a topic inventory request. Game code can call this at any time
+to request that the player character's topic inventory be shown
+automatically just before the next command prompt. In most cases, game
+code won't call this directly, but will request the same effect using
+the \&lt;.topics\&gt; tag in topic response text.
+
+</div>
+
+<p><span id="setRevealed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setRevealed (tag)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#482">482</a>]</p>
+
+<div class="desc">
+
+Mark a tag as revealed. This adds an entry for the tag to the
+revealedNameTab table. We simply set the table entry to 'true'; the
+presence of the tag in the table constitutes the indication that the tag
+has been revealed.
+
+(Games and library extensions can use 'modify' to override this and
+store more information in the table entry. For example, you could store
+the time when the information was first revealed, or the location where
+it was learned. If you do override this, just be sure to set the
+revealedNameTab entry for the tag to a non-nil and non-zero value, so
+that any code testing the presence of the table entry will see that the
+slot is indeed set.)
+
+</div>
+
+<p><span id="showOrScheduleTopicInventory"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showOrScheduleTopicInventory (actor, otherActor)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#374">374</a>]</p>
+
+<div class="desc">
+
+Show or schedule a topic inventory request. If the current action has a
+non-default command report, schedule it; otherwise, show it now.
+
+If there's a non-default report, don't suggest the topics now; instead,
+schedule a topic inventory for the end of the turn. When we have a
+non-default report, the report could change the ConvNode for the actor,
+so we don't want to show the topic inventory until we've had a chance to
+process all of the reports.
+
+</div>
+
+<p><span id="topicInventoryDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicInventoryDaemon ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#518">518</a>]</p>
+
+<div class="desc">
+
+Prompt daemon: show topic inventory when appropriate. When a response
+explicitly asks us to show a topic inventory using the \&lt;.topics\&gt; tag,
+or when other game code asks us to show topic inventory by calling
+scheduleTopicInventory(), we'll show the inventory just before the
+command input prompt.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

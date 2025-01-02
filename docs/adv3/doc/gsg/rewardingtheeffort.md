@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](makinglifemoreproblematic.htm)
-  [\[Next\]](controllingtheaction.htm)*
+*[\[Previous\]](makinglifemoreproblematic.html)
+  [\[Next\]](controllingtheaction.html)*
 
 ## Rewarding the Effort
 
@@ -664,7 +666,7 @@ are replaced with the appropriate text. So, for example, if the player
 issues the command move nest with stick '`{you/he} {is}`' becomes 'you
 are', but if an NPC called Fred attempted the action it would become
 'Fred is'. For the full story on parameter substitution strings, read
-the [Message Parameter Substitutions](../techman/t3msg.htm) article in
+the [Message Parameter Substitutions](../techman/t3msg.html) article in
 the Technical Manual.
 
 The next job is to make the stick handle its part of the action. You'll
@@ -958,7 +960,7 @@ topOfTree : FloorlessRoom 'At the top of the tree'
 |-----|-----|
 |     |     |
 
-In the [next chapter](settingthescene.htm) we shall learn how the ring
+In the [next chapter](settingthescene.html) we shall learn how the ring
 came to be in the nest, who it belongs to, and how to win the game. To
 do that we shall need to create a Non Player Character (NPC), and that
 will be our central task.  
@@ -968,6 +970,6 @@ will be our central task.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](makinglifemoreproblematic.htm)  [\[Next\]](controllingtheaction.htm)*
+*[\[Previous\]](makinglifemoreproblematic.html)  [\[Next\]](controllingtheaction.html)*
 
 </div>

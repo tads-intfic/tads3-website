@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebBannerWin</span><span class="type">class</span>
 
 [browser.t](../file/browser.t.html)\[[737](../source/browser.t.html#737)\]

@@ -1,0 +1,139 @@
+<p><span class="title">TourGuide</span><span class="type">class</span></p>
+
+<p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#2319">2319</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+"Tour Guide" is a mix-in class for Actors. This class can be multiply
+inherited by objects along with Actor or a subclass of Actor. This
+mix-in makes the Follow action, when applied to the tour guide, initiate
+travel according to where the tour guide wants to go next. So, if the
+tour guide is here and is waving us through the door, FOLLOW GUIDE will
+initiate travel through the door.
+
+This class should appear in the superclass list ahead of Actor or the
+Actor subclass.
+
+`class `**`TourGuide`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TourGuide</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Follow)<code class="language-plaintext highlighter-rouge">](#dobjFor(Follow))</code>  <code class="language-plaintext highlighter-rouge">[</code>getTourDest<code class="language-plaintext highlighter-rouge">](#getTourDest)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="dobjFor(Follow)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Follow)</code></p>
+
+<p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#2320">2320</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="getTourDest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTourDest ( )</code></p>
+
+<p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#2376">2376</a>]</p>
+
+<div class="desc">
+
+Get the travel connector that takes us to our next guided tour
+destination. By default, this returns the escortDest from our current
+actor state if our state is a guided tour state, or nil if our state is
+any other kind of state. Subclasses must override this if they use other
+kinds of states to represent guided tours, since we'll only detect that
+we're in a guided tour state if our current actor state object is of
+class GuidedTourState (or any subclass).
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

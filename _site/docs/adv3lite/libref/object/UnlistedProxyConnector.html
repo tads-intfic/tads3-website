@@ -1,0 +1,237 @@
+<p><span class="title">UnlistedProxyConnector</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1533">1533</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+An UnlistedProxyConnector is a special kind of TravelConnector created
+by the asExit macro to make one exit do duty for another. There is
+probably never any need for this class to be used explicitly in game
+code, since game authors will always use the asExit macro instead.
+
+`class `**`UnlistedProxyConnector`**` :   `[`TravelConnector`](../object/TravelConnector.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">UnlistedProxyConnector</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TravelConnector<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isConnectorListed<code class="language-plaintext highlighter-rouge">](#isConnectorListed)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorVisible<code class="language-plaintext highlighter-rouge">](#isConnectorVisible)</code>  <code class="language-plaintext highlighter-rouge">[</code>proxyForProp<code class="language-plaintext highlighter-rouge">](#proxyForProp)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelConnector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>destination<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#destination)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorApparent<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isConnectorApparent)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>PushTravelVia<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#PushTravelVia)</code>  <code class="language-plaintext highlighter-rouge">[</code>suppressTravelDescForPushTravel<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#suppressTravelDescForPushTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>transmitsLight<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#transmitsLight)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelBarriers<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#travelBarriers)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalTime<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversalTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversed<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversed)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversedBy<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversedBy)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>afterTravelNotifications<code class="language-plaintext highlighter-rouge">](#afterTravelNotifications)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeTravelNotifications<code class="language-plaintext highlighter-rouge">](#beforeTravelNotifications)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(GoThrough)<code class="language-plaintext highlighter-rouge">](#dobjFor(GoThrough))</code>  <code class="language-plaintext highlighter-rouge">[</code>getDestination<code class="language-plaintext highlighter-rouge">](#getDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>proxyForConnector<code class="language-plaintext highlighter-rouge">](#proxyForConnector)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelVia<code class="language-plaintext highlighter-rouge">](#travelVia)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelConnector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>canTravelerPass<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#canTravelerPass)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkPushTravel<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#checkPushTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkTravelBarriers<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#checkTravelBarriers)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(TravelVia)<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#dobjFor(TravelVia))</code>  <code class="language-plaintext highlighter-rouge">[</code>execTravel<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#execTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>explainTravelBarrier<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#explainTravelBarrier)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDepartingDirection<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#getDepartingDirection)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTraveler<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#getTraveler)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasBeenTraversedBy<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#hasBeenTraversedBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjFor(PushTravelThrough)<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#iobjFor(PushTravelThrough))</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorVisible<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isConnectorVisible)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDestinationKnown<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isDestinationKnown)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteTraversal<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#noteTraversal)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayActorFollowing<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#sayActorFollowing)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#sayDeparting)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayNoDestination<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#sayNoDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelDesc<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#travelDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalMsg<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversalMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalTimeFrom<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversalTimeFrom)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="isConnectorListed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConnectorListed</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1552">1552</a>]</p>
+
+<div class="desc">
+
+An UnlistedProxyConnector is never listed as an exit in its own right.
+
+</div>
+
+<p><span id="isConnectorVisible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConnectorVisible</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1559">1559</a>]</p>
+
+<div class="desc">
+
+We'll assume an UnlistedProxyListedConnector is always 'visible', since
+it's a proxy for some other connector which will handle the actual
+visibility conditions.
+
+</div>
+
+<p><span id="proxyForProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">proxyForProp</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1536">1536</a>]</p>
+
+<div class="desc">
+
+The direction property for which we're a proxy.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="afterTravelNotifications"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterTravelNotifications (actor)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1600">1600</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="beforeTravelNotifications"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beforeTravelNotifications (actor)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1599">1599</a>]</p>
+
+<div class="desc">
+
+We don't want an UnlistedProxyConnector to trigger any travel
+notifications since these will be triggered - if appropriate - on the
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (dir_)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1586">1586</a>]</p>
+
+<div class="desc">
+
+Construct a new UnlistedProxyConnector.
+
+</div>
+
+<p><span id="dobjFor(GoThrough)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(GoThrough)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1617">1617</a>]</p>
+
+<div class="desc">
+
+Handle going through this connector by calling our travelVia() method to
+execute travel via the connector for which we're a proxy.
+
+</div>
+
+<p><span id="getDestination"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getDestination (origin)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1606">1606</a>]</p>
+
+<div class="desc">
+
+Return the actual destination, if any, an actor will arrive at by
+traversing the connector we're a proxy for from origin.
+
+</div>
+
+<p><span id="proxyForConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">proxyForConnector (loc)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1542">1542</a>]</p>
+
+<div class="desc">
+
+The loc parameter should contain the room in which this
+UnlistedProxyConnector is used, but calling code will need to supply it.
+
+</div>
+
+<p><span id="travelVia"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelVia (traveler)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1563">1563</a>]</p>
+
+<div class="desc">
+
+Carry out travel via this connector.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

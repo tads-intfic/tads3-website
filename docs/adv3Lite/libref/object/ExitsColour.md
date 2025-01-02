@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ExitsColour</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[163](../source/actions.t.html#163)\]

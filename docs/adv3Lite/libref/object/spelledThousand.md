@@ -1,3 +1,5 @@
+---
+---
 <span class="title">spelledThousand</span><span class="type">GrammarProd</span>
 
 `grammar `**[`spelledThousand(aThousand)`](../object/spelledThousand(aThousand).html)**` :   `[`Production`](../object/Production.html)

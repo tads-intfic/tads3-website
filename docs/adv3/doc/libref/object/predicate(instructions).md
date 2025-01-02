@@ -1,3 +1,5 @@
+---
+---
 <span class="title">predicate(instructions)</span><span class="type">grammar</span>
 
 [instruct.t](../file/instruct.t.html)\[[1000](../source/instruct.t.html#1000)\]

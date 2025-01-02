@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Extending
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Extending
 Intrinsic Classes  
-<span class="navnp"><a href="reflect.htm" class="nav"><em>Prev:</em> Reflection</a>
+<span class="navnp"><a href="reflect.html" class="nav"><em>Prev:</em> Reflection</a>
    
-<a href="export.htm" class="nav"><em>Next:</em> Exporting Symbols</a>
+<a href="export.html" class="nav"><em>Next:</em> Exporting Symbols</a>
     </span>
 
 </div>
@@ -176,7 +178,7 @@ aggregated two BigNumber values into this new class that we call
 Complex.
 
 Starting in TADS 3.1, you can use take this idea further using [operator
-overloading](opoverload.htm), which lets you define mathematical
+overloading](opoverload.html), which lets you define mathematical
 operators (such as <span class="code">+</span> and
 <span class="code">\*</span>) on a custom class. This makes it possible
 to define a Complex class that you can use as though it were a built-in
@@ -213,12 +215,12 @@ that it'll only work with other Complex values.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Extending
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Extending
 Intrinsic Classes  
-<span class="navnp"><a href="reflect.htm" class="nav"><em>Prev:</em> Reflection</a>
+<span class="navnp"><a href="reflect.html" class="nav"><em>Prev:</em> Reflection</a>
    
-<a href="export.htm" class="nav"><em>Next:</em> Exporting Symbols</a>
+<a href="export.html" class="nav"><em>Next:</em> Exporting Symbols</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> TadsObject  
-<span class="navnp"><a href="strcomp.htm" class="nav"><em>Prev:</em> StringComparator</a>
-    <a href="tempfile.htm" class="nav"><em>Next:</em> TemporaryFile</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> TadsObject  
+<span class="navnp"><a href="strcomp.html" class="nav"><em>Prev:</em> StringComparator</a>
+    <a href="tempfile.html" class="nav"><em>Next:</em> TemporaryFile</a>
     </span>
 
 </div>
@@ -280,14 +282,14 @@ data value for this property will be replaced with the new function.
 - A regular (named) function pointer, which becomes a method with the
   same arguments as the function. The function itself isn't changed by
   this; you can also still call it directly as an ordinary function.
-- A [floating method](proccode.htm#floatingMethods) pointer, which
+- A [floating method](proccode.html#floatingMethods) pointer, which
   becomes a method with the same arguments.
 - An anonymous function, which becomes a method with the same arguments
   as the anonymous function. The anonymous function itself isn't changed
   in any way by this; you can still call it directly, too.
 - An anonymous method, which becomes a method with the same arguments as
   the anonymous method.
-- A [DynamicFunc](dynfunc.htm), which becomes a method with the same
+- A [DynamicFunc](dynfunc.html), which becomes a method with the same
   arguments as the dynamically compiled code.
 - A single-quoted string value, which will be displayed on evaluating
   the property, as though it had been initially defined as a
@@ -355,7 +357,7 @@ this:
   the same method functionality in an ordinary object anyway, since you
   can simply copy it as needed to new objects.
 - Second, you can use the <span class="code">method</span> syntax to
-  define a [floating method](proccode.htm#floatingMethods), which is
+  define a [floating method](proccode.html#floatingMethods), which is
   really just an ordinary function that *does* have access to
   <span class="code">self</span>, <span class="code">targetprop</span>,
   and the others, and that can use <span class="code">inherited</span>
@@ -441,7 +443,7 @@ With this change, running the program will indeed set
 <div class="fdef">
 
 Sets the object's superclasses to the values in *lst*, which must be a
-list (or [list-like object](opoverload.htm#listlike)) containing
+list (or [list-like object](opoverload.html#listlike)) containing
 objects. The object's superclass list is replaced with the given
 superclass list. The objects in *lst* must all be TadsObject objects,
 with one exception: lst is allowed to be
@@ -458,10 +460,10 @@ becomes a root TadsObject object.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> TadsObject  
-<span class="navnp"><a href="strcomp.htm" class="nav"><em>Prev:</em> StringComparator</a>
-    <a href="tempfile.htm" class="nav"><em>Next:</em> TemporaryFile</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> TadsObject  
+<span class="navnp"><a href="strcomp.html" class="nav"><em>Prev:</em> StringComparator</a>
+    <a href="tempfile.html" class="nav"><em>Next:</em> TemporaryFile</a>
     </span>
 
 </div>

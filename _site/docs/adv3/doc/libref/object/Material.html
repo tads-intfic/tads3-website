@@ -1,0 +1,168 @@
+<p><span class="title">Material</span><span class="type">class</span></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#21">21</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Material: the base class for library objects that specify the way senses
+pass through objects.
+
+`class `**`Material`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Material</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>adventium<code class="language-plaintext highlighter-rouge">](../object/adventium.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>coarseMesh<code class="language-plaintext highlighter-rouge">](../object/coarseMesh.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>fineMesh<code class="language-plaintext highlighter-rouge">](../object/fineMesh.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>glass<code class="language-plaintext highlighter-rouge">](../object/glass.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>paper<code class="language-plaintext highlighter-rouge">](../object/paper.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>hearThru<code class="language-plaintext highlighter-rouge">](#hearThru)</code>  <code class="language-plaintext highlighter-rouge">[</code>seeThru<code class="language-plaintext highlighter-rouge">](#seeThru)</code>  <code class="language-plaintext highlighter-rouge">[</code>smellThru<code class="language-plaintext highlighter-rouge">](#smellThru)</code>  <code class="language-plaintext highlighter-rouge">[</code>touchThru<code class="language-plaintext highlighter-rouge">](#touchThru)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>senseThru<code class="language-plaintext highlighter-rouge">](#senseThru)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="hearThru"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hearThru</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#41">41</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="seeThru"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">seeThru</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#40">40</a>]</p>
+
+<div class="desc">
+
+For each sense, each material must define an appropriate xxxThru
+property that returns the transparency level for that sense through the
+material. Any xxxThru property not defined in an individual material
+defaults to opaque.
+
+</div>
+
+<p><span id="smellThru"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">smellThru</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#42">42</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="touchThru"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">touchThru</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#43">43</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="senseThru"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">senseThru (sense)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#28">28</a>]</p>
+
+<div class="desc">
+
+Determine how a sense passes through the material. We'll return a
+transparency level. (Individual materials should not need to override
+this method, since it simply dispatches to the various xxxThru methods.)
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

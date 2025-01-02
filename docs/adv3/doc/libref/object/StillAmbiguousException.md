@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StillAmbiguousException</span><span class="type">class</span>
 
 [disambig.t](../file/disambig.t.html)\[[479](../source/disambig.t.html#479)\]

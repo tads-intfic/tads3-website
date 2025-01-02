@@ -1,0 +1,120 @@
+<p><span class="title">statusLeftOutputStream</span><span class="type">object</span></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#63">63</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A special OutputStream for the left half of the status line (the short
+description area) in text mode. We use a separate stream for this
+because we must write the text using the output mode switching for the
+status line.
+
+We only use this stream when we use the old-style text-mode status line
+interface, which explicitly separates the status line into a left part
+and a right part. When we have the banner API available in the
+interpreter, we'll use banners instead, since banners give us much more
+flexibility.
+
+`transient `**`statusLeftOutputStream`**` :   `[`OutputStream`](../object/OutputStream.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">statusLeftOutputStream</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OutputStream<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStream</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>filterList_<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#filterList_)</code>  <code class="language-plaintext highlighter-rouge">[</code>justDidPara<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#justDidPara)</code>  <code class="language-plaintext highlighter-rouge">[</code>justDidParaSuppressor<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#justDidParaSuppressor)</code>  <code class="language-plaintext highlighter-rouge">[</code>myInputManager<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#myInputManager)</code>  <code class="language-plaintext highlighter-rouge">[</code>prefix<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#prefix)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>writeFromStream<code class="language-plaintext highlighter-rouge">](#writeFromStream)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStream</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addOutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#addOutputFilter)</code>  <code class="language-plaintext highlighter-rouge">[</code>addOutputFilterBelow<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#addOutputFilterBelow)</code>  <code class="language-plaintext highlighter-rouge">[</code>applyFilters<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#applyFilters)</code>  <code class="language-plaintext highlighter-rouge">[</code>applyTextFilters<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#applyTextFilters)</code>  <code class="language-plaintext highlighter-rouge">[</code>captureOutput<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#captureOutput)</code>  <code class="language-plaintext highlighter-rouge">[</code>captureOutputIgnoreExit<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#captureOutputIgnoreExit)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputLineEnd<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#inputLineEnd)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeOutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#removeOutputFilter)</code>  <code class="language-plaintext highlighter-rouge">[</code>setPrefix<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#setPrefix)</code>  <code class="language-plaintext highlighter-rouge">[</code>watchForOutput<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#watchForOutput)</code>  <code class="language-plaintext highlighter-rouge">[</code>writeToStream<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html#writeToStream)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="writeFromStream"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeFromStream (txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#65">65</a>]</p>
+
+<div class="desc">
+
+we sit atop the system-level main console output stream
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

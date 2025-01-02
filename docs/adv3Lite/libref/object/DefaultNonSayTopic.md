@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultNonSayTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4178](../source/actor.t.html#4178)\]

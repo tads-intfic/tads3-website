@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Pathfinder</span><span class="type">class</span>
 
 [pathfind.t](../file/pathfind.t.html)\[[5](../source/pathfind.t.html#5)\]

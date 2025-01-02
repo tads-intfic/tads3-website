@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FailCommandReport</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[240](../source/report.t.html#240)\]

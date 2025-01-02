@@ -1,3 +1,5 @@
+---
+---
 <span class="title">disambigList(list)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[1050](../source/grammar.t.html#1050)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="lib.htm" class="nav">The System Library</a> \> Program
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="lib.html" class="nav">The System Library</a> \> Program
 Initialization  
-<span class="navnp"><a href="lib.htm" class="nav"><em>Prev:</em> The System Library</a>
-    <a href="tok.htm" class="nav"><em>Next:</em> Basic Tokenizer</a>    
+<span class="navnp"><a href="lib.html" class="nav"><em>Prev:</em> The System Library</a>
+    <a href="tok.html" class="nav"><em>Next:</em> Basic Tokenizer</a>    
 </span>
 
 </div>
@@ -422,11 +424,11 @@ modular run-time initialization code.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="lib.htm" class="nav">The System Library</a> \> Program
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="lib.html" class="nav">The System Library</a> \> Program
 Initialization  
-<span class="navnp"><a href="lib.htm" class="nav"><em>Prev:</em> The System Library</a>
-    <a href="tok.htm" class="nav"><em>Next:</em> Basic Tokenizer</a>    
+<span class="navnp"><a href="lib.html" class="nav"><em>Prev:</em> The System Library</a>
+    <a href="tok.html" class="nav"><em>Next:</em> Basic Tokenizer</a>    
 </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="tools.htm" class="nav">The Tools</a> \> Compiling and Linking  
-<span class="navnp"><a href="tools.htm" class="nav"><em>Prev:</em> The Tools</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="tools.html" class="nav">The Tools</a> \> Compiling and Linking  
+<span class="navnp"><a href="tools.html" class="nav"><em>Prev:</em> The Tools</a>
    
-<a href="univpath.htm" class="nav"><em>Next:</em> Universal Paths</a>
+<a href="univpath.html" class="nav"><em>Next:</em> Universal Paths</a>
     </span>
 
 </div>
@@ -124,7 +126,7 @@ separating path elements. This applies to the names of source files, and
 also to option arguments that specify files or directories, such as -I,
 -Fs, -Fy, etc.
 
-See [Universal Paths](univpath.htm) for more details.
+See [Universal Paths](univpath.html) for more details.
 
 This will look a little weird if you're using Windows and you're
 accustomed to "\\ as the path separator, or you're used to ":"
@@ -259,7 +261,7 @@ Here's a list of the compiler options that you can specify:
   usual. This option ensures that t3make rebuilds the image file whether
   or not any source files need to be compiled.
 - -c - compile the source files, but do not link the image file.
-- -cs *name* - set the default [source file character set](charmap.htm)
+- -cs *name* - set the default [source file character set](charmap.html)
   to *name*. If you don't specify this option, the compiler will use the
   local operating system settings; you might need to override the local
   default if the source file was originally created on a different type
@@ -281,7 +283,7 @@ Here's a list of the compiler options that you can specify:
 - -f file - read additional command-line options from the given [project
   file](#projects). The options from the file are appended after the
   options on the command line.
-- -Gstg - generate [sourceTextGroup](objdef.htm#sourceTextGroup)
+- -Gstg - generate [sourceTextGroup](objdef.html#sourceTextGroup)
   property values for objects defined in the source files being
   compiled. By default, this information is not generated, because it
   takes additional space in the .t3 file and isn't required for most
@@ -1051,11 +1053,11 @@ compiler).
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="tools.htm" class="nav">The Tools</a> \> Compiling and Linking  
-<span class="navnp"><a href="tools.htm" class="nav"><em>Prev:</em> The Tools</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="tools.html" class="nav">The Tools</a> \> Compiling and Linking  
+<span class="navnp"><a href="tools.html" class="nav"><em>Prev:</em> The Tools</a>
    
-<a href="univpath.htm" class="nav"><em>Next:</em> Universal Paths</a>
+<a href="univpath.html" class="nav"><em>Next:</em> Universal Paths</a>
     </span>
 
 </div>

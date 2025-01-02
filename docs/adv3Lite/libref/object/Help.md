@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Help</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[576](../source/newbie.t.html#576)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CantOopsError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5119](../source/parser.t.html#5119)\]

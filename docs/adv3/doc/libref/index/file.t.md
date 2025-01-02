@@ -1,3 +1,5 @@
+---
+---
 ## Classes
 
 <a href="../object/FileClosedException.html#FileClosedException"

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NoAntecedentError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5365](../source/parser.t.html#5365)\]

@@ -1,3 +1,5 @@
+---
+---
 # S
 
 [**`sameLocationAsDobj`**](../object/sameLocationAsDobj.html) - object

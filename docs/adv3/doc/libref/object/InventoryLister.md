@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InventoryLister</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[1547](../source/lister.t.html#1547)\]

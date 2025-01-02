@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Tips: A
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Tips: A
 Context-Sensitive Help System  
-<span class="navnp"><a href="t3lister.htm" class="nav"><em>Prev:</em> Lists and Listers</a>
-    <a href="t3actor.htm" class="nav"><em>Next:</em> Creating Dynamic
+<span class="navnp"><a href="t3lister.html" class="nav"><em>Prev:</em> Lists and Listers</a>
+    <a href="t3actor.html" class="nav"><em>Next:</em> Creating Dynamic
 Characters</a>     </span>
 
 </div>
@@ -211,11 +213,11 @@ showTipDesc() property, perhaps to something like this:
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Tips: A
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Tips: A
 Context-Sensitive Help System  
-<span class="navnp"><a href="t3lister.htm" class="nav"><em>Prev:</em> Lists and Listers</a>
-    <a href="t3actor.htm" class="nav"><em>Next:</em> Creating Dynamic
+<span class="navnp"><a href="t3lister.html" class="nav"><em>Prev:</em> Lists and Listers</a>
+    <a href="t3actor.html" class="nav"><em>Next:</em> Creating Dynamic
 Characters</a>     </span>
 
 </div>

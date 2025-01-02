@@ -1,0 +1,243 @@
+<p><span class="title">DefaultTopic</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3601">3601</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A default topic entry. This is an easy way to create an entry that will
+be used as a last resort, if no other entry is found. This kind of entry
+will match \*any\* topic, but with the lowest possible score, so it will
+only be used if there's no other match for the topic.
+
+It's a good idea to provide some variety in a character's default
+responses, because it seems that in every real game session, the player
+will at some point spend a while peppering an NPC with questions on
+every topic that comes to mind. Usually, the player will think of many
+things that the author didn't anticipate. The more things the author
+covers, the better, but it's unrealistic to think that an author can
+reasonably anticipate every topic, or even most topics, that players
+will think of. So, we'll have a whole bunch of ASK, ASK, ASK commands
+all at once, and much of the time we'll get a bunch of default responses
+in a row. It gets tedious in these cases when the NPC repeats the same
+default response over and over.
+
+A simple but effective trick is to provide three or four random
+variations on "I don't know that," customized for the character. This
+makes the NPC seem less like a totally predictable robot, and it can
+also be a convenient place to flesh out the character a bit. An easy way
+to do this is to add ShuffledEventList to the superclass list of the
+default topic entry, and provide a eventList list with the various
+random responses. For example:
+
+\+ DefaultAskTellTopic, ShuffledEventList  
+\['Bob mutters something unintelligible and keeps fiddling with  
+the radio. ',  
+'Bob looks up from the radio for a second, but then goes back  
+to adjusting the knobs. ',  
+'Bob just keeps adjusting the radio, completely ignoring you. '\]  
+;
+
+It's important to be rather generic in default responses; in particular,
+it's a bad idea to suggest that the NPC doesn't know about the topic.
+From the author's perspective, it's easy to make the mistake of thinking
+"this is a default response, so it'll only be used for topics that are
+completely off in left field." Wrong! Sometimes the player will indeed
+ask about completely random stuff, but in \*most\* cases, the player is
+only asking because they think it's a reasonable thing to ask about.
+Defaults that say things like "I don't know anything about that" or
+"What a crazy thing to ask about" or "You must be stupid if you think I
+know about that!" can make a game look poorly implemented, because these
+will inevitably be shown in response to questions that the NPC really
+ought to know about:
+
+  
+\&gt;ask bob about his mother  
+"I don't know anything about that!" \*.  
+\&gt;ask bob about his father  
+"You'd have to be a moron to think I'd know about that!"
+
+It's better to use responses that suggest that the NPC is uninterested,
+or is hostile, or is preoccupied with something else, or doesn't
+understand the question, or something else appropriate to the character.
+If you can manage to make the response about the \*character\*, rather
+than the topic, it'll reduce the chances that the response is jarringly
+illogical.
+
+`class `**`DefaultTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DefaultTopic</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DefaultTopic</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>DefaultAnyTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAnyTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultAskForTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskForTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultAskTellTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskTellTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultAskTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultCommandTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultCommandTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultConsultTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultConsultTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultGiveShowTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultGiveShowTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultGiveTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultGiveTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultInitiateTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultInitiateTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultShowTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultShowTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultTellTopic`](../object/DefaultTellTopic.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>excludeMatch<code class="language-plaintext highlighter-rouge">](#excludeMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchScore<code class="language-plaintext highlighter-rouge">](#matchScore)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>altTalkCount<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#altTalkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>altTopicList<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#altTopicList)</code>  <code class="language-plaintext highlighter-rouge">[</code>impliesGreeting<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#impliesGreeting)</code>  <code class="language-plaintext highlighter-rouge">[</code>includeInList<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#includeInList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConversational<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#isConversational)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>talkCount<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#talkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicGroupActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupScoreAdjustment<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicGroupScoreAdjustment)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicResponse<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicResponse)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isMatchPossible<code class="language-plaintext highlighter-rouge">](#isMatchPossible)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchTopic<code class="language-plaintext highlighter-rouge">](#matchTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>setTopicPronouns<code class="language-plaintext highlighter-rouge">](#setTopicPronouns)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addAltTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addAltTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>adjustScore<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#adjustScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>anyAltIsActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#anyAltIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>breakTopicTie<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#breakTopicTie)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkIsActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#checkIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>deferToEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#deferToEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicOwner<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#getTopicOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#handleTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeTopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#initializeTopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteAltInvocation<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#noteAltInvocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteInvocation<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#noteInvocation)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="excludeMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">excludeMatch</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3612">3612</a>]</p>
+
+<div class="desc">
+
+A list of objects to exclude from the default match. This can be used to
+create a default topic that matches everything EXCEPT a few specific
+topics that are handled in enclosing topic databases. For example, if
+you want to create a catch-all in a ConvNode's list of topics, but you
+want a particular topic to escape the catch-all and be sent instead to
+the Actor's topic database, you can put that topic in the exclude list
+for the catch-all, making it a catch-almost-all.
+
+</div>
+
+<p><span id="matchScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchScore</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3638">3638</a>]</p>
+
+<div class="desc">
+
+use a low default matching score
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="isMatchPossible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isMatchPossible (actor, scopeList)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3641">3641</a>]</p>
+
+<div class="desc">
+
+a match is always possible for a default topic
+
+</div>
+
+<p><span id="matchTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchTopic (fromActor, topic)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3615">3615</a>]</p>
+
+<div class="desc">
+
+match anything except topics in our exclude list
+
+</div>
+
+<p><span id="setTopicPronouns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setTopicPronouns (fromActor, topic)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3644">3644</a>]</p>
+
+<div class="desc">
+
+set the topic pronoun
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BasicProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[500](../source/parser.t.html#500)\]

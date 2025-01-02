@@ -1,3 +1,5 @@
+---
+---
 HTML TADS deviations from standard HTML specifications
 
 # HTML TADS Deviations from Standard HTML Specifications
@@ -130,7 +132,7 @@ implement the "status line" that traditional text adventure games
 display across the top of the screen to show, for example, the current
 location and score.
 
-Refer the to [full description of the BANNER tag](banners.htm) for
+Refer the to [full description of the BANNER tag](banners.html) for
 details on how to use this feature. <span id="Achanges"></span>
 
 #### \<A HREF\>
@@ -242,7 +244,7 @@ different than WIDTH with a percentage value, which bases an embedded
 table's width on the width of the column containing it.
 
 For details on how the system lays out tables, see [Table Layout
-Rules](tables.htm).
+Rules](tables.html).
 
 The CAPTION tag takes both ALIGN and VALIGN attributes. If ALIGN is set
 to TOP or BOTTOM, CAPTION behaves as it does in HTML 3.2. However, ALIGN
@@ -281,7 +283,7 @@ table's closing \</TABLE\> tag.
 
 HTML TADS provides support for sound and music through the \<SOUND\>
 tag, which is an extension to HTML. Refer to [HTML TADS Sounds and
-Music](sound.htm) for details on how to use this extension.
+Music](sound.html) for details on how to use this extension.
 
 #### ABOUTBOX
 
@@ -336,7 +338,7 @@ box, HTML TADS opens a dialog box showing the ABOUTBOX information.
 
 The \<WRAP\> tag is a TADS extension that lets the game switch between
 word-wrapping and character-wrapping display modes. This is discussed in
-detail in [Word Wrapping and Line Breaking](linebrk.htm).
+detail in [Word Wrapping and Line Breaking](linebrk.html).
 
 #### Additional Character Markups
 
@@ -388,7 +390,7 @@ HTML TADS also supports the ISO Latin-2 named entities. ISO Latin-2 is a
 character set designed for Eastern and Central European languages. The
 Latin-2 named entities are not part of the standard HTML specification,
 but some provide this set of entities as an extension. Refer to the
-[HTML TADS Latin-2](latin2.htm) table for the complete list.
+[HTML TADS Latin-2](latin2.html) table for the complete list.
 
 #### Typographical Spaces
 
@@ -697,7 +699,7 @@ Although the HTML 3.0 BANNER tag has a somewhat different purpose, its
 behavior is essentially the same as is needed to implement adventure
 game status lines, so I've used this tag rather than creating a new tag.
 However, HTML TADS's BANNER tag has some new attributes; refer to the
-[full description](banners.htm) for more information.
+[full description](banners.html) for more information.
 <span id="TABadditions"></span>
 
 #### TAB
@@ -975,5 +977,5 @@ TADS. (These are not actually HTML 3.2 tags, but they're worth
 mentioning here because some of the browsers that use HTML 3.2 as a
 baseline support frames, hence many HTML authors think of frames as an
 HTML 3.2 feature.) However, HTML TADS has a separate tag,
-[BANNER](banners.htm), that provides substantially the same
+[BANNER](banners.html), that provides substantially the same
 functionality as frames.

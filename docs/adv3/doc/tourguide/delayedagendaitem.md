@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,20 +9,20 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>DelayedAgendaItem : <a
-href="agendaitem.htm">AgendaItem</a><br />
+href="agendaitem.html">AgendaItem</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="convagendaitem.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="moreagendaitemexamples.htm">[Next]</a></td>
+href="convagendaitem.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="moreagendaitemexamples.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 A DelayedAgendaItem, as its name suggests, is an
-[AgendaItem](agendaitem.htm) that becomes active at some point in the
-future. As with [ConvAgendaItem](convagendaitem.htm) this relies on an
+[AgendaItem](agendaitem.html) that becomes active at some point in the
+future. As with [ConvAgendaItem](convagendaitem.html) this relies on an
 overridden **isReady** method, so that if you want to add your own
 isReady condition this needs to be combined with the inherited
 behaviour.  

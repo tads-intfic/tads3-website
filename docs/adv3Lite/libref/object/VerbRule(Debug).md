@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Debug)</span><span class="type">grammar</span>
 
 [debug.t](../file/debug.t.html)\[[52](../source/debug.t.html#52)\]

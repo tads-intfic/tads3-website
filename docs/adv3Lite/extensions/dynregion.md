@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Dynamic Region  
-<span class="navnp"><a href="cmdhelp.htm" class="nav"><em>Prev:</em> Command Help</a>
+<span class="navnp"><a href="cmdhelp.html" class="nav"><em>Prev:</em> Command Help</a>
     <a href="eventlistitem.html" class="nav"><em>Next:</em>
 EventListItem</a>     </span>
 
@@ -22,7 +24,7 @@ EventListItem</a>     </span>
 ## Overview
 
 The purpose of the [dynamicRegion.t](../dynamicRegion.t) extension is to
-enable the definition of [Regions](../../docs/manual/room.htm#regions)
+enable the definition of [Regions](../../docs/manual/room.html#regions)
 (of the <span class="code">DynamicRegion</span> class) that can be
 expanded or contracted during the course of a game (a normal Region is
 fixed and can't be changed). This ability comes with certain
@@ -248,10 +250,10 @@ possibilities that game authors might want.
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Dynamic Region  
-<span class="navnp"><a href="cmdhelp.htm" class="nav"><em>Prev:</em> Command Help</a>
+<span class="navnp"><a href="cmdhelp.html" class="nav"><em>Prev:</em> Command Help</a>
     <a href="eventlistitem.html" class="nav"><em>Next:</em>
 EventListItem</a>     </span>
 

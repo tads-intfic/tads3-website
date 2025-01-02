@@ -1,3 +1,5 @@
+---
+---
 <span class="title">possessiveAdjPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`possessiveAdjPhrase(her)`](../object/possessiveAdjPhrase(her).html)</span>` :   `[`HerAdjProd`](../object/HerAdjProd.html)

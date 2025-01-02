@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Creating Your First
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Creating Your First
 Project  
-<span class="navnp"><a href="fund.htm" class="nav"><em>Prev:</em> Fundamentals</a>
+<span class="navnp"><a href="fund.html" class="nav"><em>Prev:</em> Fundamentals</a>
    
-<a href="t3design.htm" class="nav"><em>Next:</em> Tips on Designing your
+<a href="t3design.html" class="nav"><em>Next:</em> Tips on Designing your
 Game</a>     </span>
 
 </div>
@@ -255,15 +257,15 @@ That's all you have to do. When you add code to your new file, be sure
 to add it *after* the \#include lines you copied into the file.
 
 For the full details on how this works, see the article on [separate
-compilation](t3inc.htm).
+compilation](t3inc.html).
 
 ## What next?
 
 Now the only thing remaining to do is to go take a look at the [TADS 3
-Bookshelf](http://www.tads.org/t3doc/doc/index.htm), which has the full
+Bookshelf](http://www.tads.org/t3doc/doc/index.html), which has the full
 set of manuals for the system on-line and lets you search their
 contents. If you'd prefer to download off-line copies, visit the [TADS 3
-home page](http://www.tads.org/tads3.htm) for download links. Note that
+home page](http://www.tads.org/tads3.html) for download links. Note that
 if you installed the "Full Documentation" version of TADS Workbench on
 Windows, the manuals are all included, and you can search them using
 Workbench.
@@ -407,12 +409,12 @@ adv3 but before your own source files.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Creating Your First
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Creating Your First
 Project  
-<span class="navnp"><a href="fund.htm" class="nav"><em>Prev:</em> Fundamentals</a>
+<span class="navnp"><a href="fund.html" class="nav"><em>Prev:</em> Fundamentals</a>
    
-<a href="t3design.htm" class="nav"><em>Next:</em> Tips on Designing your
+<a href="t3design.html" class="nav"><em>Next:</em> Tips on Designing your
 Game</a>     </span>
 
 </div>

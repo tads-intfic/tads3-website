@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EndOfFileException</span><span class="type">class</span>
 
 [input.t](../file/input.t.html)\[[822](../source/input.t.html#822)\]

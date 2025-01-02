@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Angela Wants Answers  
-<span class="navnp"><a href="hello.htm" class="nav"><em>Prev:</em> Hello and Goodbye</a>
+<span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello and Goodbye</a>
    
-<a href="defaults.htm" class="nav"><em>Next:</em> Diverse Defaults</a>
+<a href="defaults.html" class="nav"><em>Next:</em> Diverse Defaults</a>
     </span>
 
 </div>
@@ -221,7 +223,7 @@ don't need the qtype (who/what/where/why/when) part. We can define a
 SayTopic either using a separate Topic object, or by defining the Topic
 to be matched in-line on the SayTopic (just as we can for a QueryTopic).
 For the full story, see the section on [Special
-Topics](../manual/specialtopic.htm) in the *adv3Lite Library Manual*.
+Topics](../manual/specialtopic.html) in the *adv3Lite Library Manual*.
 Note that a SayTopic is included in topic suggestion lists automatically
 (like a QueryTopic), that is, its autoName property is true by default.
 If you don't want the suggestion to begin with 'say' you can define
@@ -604,7 +606,7 @@ illustrated here, although the three shown above are likely to be the
 most common ones. The adv3Lite library aims to allow as much flexibility
 as possible in how you use Conversation Nodes in your own game. For a
 complete account, see the section on [Conversation
-Nodes](../manual/convnode.htm) in the *adv3Lite Library Manual*.
+Nodes](../manual/convnode.html) in the *adv3Lite Library Manual*.
 
 </div>
 
@@ -613,12 +615,12 @@ Nodes](../manual/convnode.htm) in the *adv3Lite Library Manual*.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Angela Wants Answers  
-<span class="navnp"><a href="hello.htm" class="nav"><em>Prev:</em> Hello and Goodbye</a>
+<span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello and Goodbye</a>
    
-<a href="defaults.htm" class="nav"><em>Next:</em> Diverse Defaults</a>
+<a href="defaults.html" class="nav"><em>Next:</em> Diverse Defaults</a>
     </span>
 
 </div>

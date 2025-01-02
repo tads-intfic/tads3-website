@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OneTimePromptDaemon</span><span class="type">class</span>
 
 [events.t](../file/events.t.html)\[[853](../source/events.t.html#853)\]

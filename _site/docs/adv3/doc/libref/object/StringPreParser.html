@@ -1,0 +1,231 @@
+<p><span class="title">StringPreParser</span><span class="type">class</span></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#844">844</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Base class for command input string preparsers.
+
+Preparsers must be registered in order to run. During preinitialization,
+we will automatically register any existing preparser objects;
+preparsers that are created dynamically during execution must be
+registered explicitly, which can be accomplished by inheriting the
+default constructor from this class.
+
+`class `**`StringPreParser`**` :   `[`PreinitObject`](../object/PreinitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">StringPreParser</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>commentPreParser<code class="language-plaintext highlighter-rouge">](../object/commentPreParser.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>specialTopicPreParser<code class="language-plaintext highlighter-rouge">](../object/specialTopicPreParser.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>regList<code class="language-plaintext highlighter-rouge">](#regList)</code>  <code class="language-plaintext highlighter-rouge">[</code>regListSorted<code class="language-plaintext highlighter-rouge">](#regListSorted)</code>  <code class="language-plaintext highlighter-rouge">[</code>runOrder<code class="language-plaintext highlighter-rouge">](#runOrder)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>doParsing<code class="language-plaintext highlighter-rouge">](#doParsing)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>registerPreParser<code class="language-plaintext highlighter-rouge">](#registerPreParser)</code>  <code class="language-plaintext highlighter-rouge">[</code>runAll<code class="language-plaintext highlighter-rouge">](#runAll)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="regList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">regList</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#941">941</a>]</p>
+
+<div class="desc">
+
+class property containing the list of registered parsers
+
+</div>
+
+<p><span id="regListSorted"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">regListSorted</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#944">944</a>]</p>
+
+<div class="desc">
+
+class property - the registration list has been sorted
+
+</div>
+
+<p><span id="runOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">runOrder</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#850">850</a>]</p>
+
+<div class="desc">
+
+My execution order number. When multiple preparsers are registered,
+we'll run the preparsers in ascending order of this value (i.e.,
+smallest runOrder goes first).
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ( )</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#876">876</a>]</p>
+
+<div class="desc">
+
+construction - when we dynamically create a preparser, register it by
+default
+
+</div>
+
+<p><span id="doParsing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doParsing (str, which)</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#866">866</a>]</p>
+
+<div class="desc">
+
+Do our parsing. Each instance should override this method to define the
+parsing that it does.
+
+'str' is the string to parse, and 'which' is the rmcXxx enum giving the
+type of command we're working with.
+
+This method returns a string or nil. If the method returns a string, the
+caller will forget the original string and work from here on out with
+the new version returned; this allows the method to rewrite the original
+input as desired. If the method returns nil, it means that the string
+has been fully handled and that further parsing of the same string is
+not desired.
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#883">883</a>]</p>
+
+<div class="desc">
+
+run pre-initialization
+
+</div>
+
+<p><span id="registerPreParser"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">registerPreParser (pp)</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#890">890</a>]</p>
+
+<div class="desc">
+
+register a preparser
+
+</div>
+
+<p><span id="runAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">runAll (str, which)</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#907">907</a>]</p>
+
+<div class="desc">
+
+Class method - Run all preparsers. Returns the result of successively
+calling each preparser on the given string.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

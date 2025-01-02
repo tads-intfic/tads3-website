@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Queries and Suggestions  
-<span class="navnp"><a href="asktell.htm" class="nav"><em>Prev:</em> Ask, Tell, Give,
+<span class="navnp"><a href="asktell.html" class="nav"><em>Prev:</em> Ask, Tell, Give,
 Show</a>    
-<a href="hello.htm" class="nav"><em>Next:</em> Hello and Goodbye</a>    
+<a href="hello.html" class="nav"><em>Next:</em> Hello and Goodbye</a>    
 </span>
 
 </div>
@@ -174,7 +176,7 @@ the player has already tried.
 
 For the full story on suggesting topics of conversation to the player,
 see the section on [Suggesting Conversational
-Topics](../manual/suggest.htm) in the Adv3Lite Library Manual.
+Topics](../manual/suggest.html) in the Adv3Lite Library Manual.
 
   
 
@@ -640,7 +642,7 @@ TopicGroup and defining the convKeys property on the TopicGroup:
 
 If after all this you're beginning to lose track of what TopicEntry
 should go where, you can take a look at the
-[listing](convsumm.htm#listing) at the end of the chapter. If you're
+[listing](convsumm.html#listing) at the end of the chapter. If you're
 starting to feel that what we've just covered seems a bit elaborate and
 complicated, don't worry: no one could expect you take it all in after
 this rather brief introduction, and you don't have to use any of these
@@ -651,9 +653,9 @@ conversation system. If you want to learn more about what we've just
 covered, or when you need to refresh your own memory to apply similar
 techniques in your own work, you can always consult the *adv3Lite
 Library Manual*, particularly the sections on [Suggesting Conversational
-Topics](../manual/suggest.htm), [Special
-Topics](../manual/specialtopic.htm) and [Topic
-Groups](../manual/topicgroup.htm). We shall in any case be meeting many
+Topics](../manual/suggest.html), [Special
+Topics](../manual/specialtopic.html) and [Topic
+Groups](../manual/topicgroup.html). We shall in any case be meeting many
 of these concepts again in the remainder of this chapter.
 
 </div>
@@ -663,12 +665,12 @@ of these concepts again in the remainder of this chapter.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Queries and Suggestions  
-<span class="navnp"><a href="asktell.htm" class="nav"><em>Prev:</em> Ask, Tell, Give,
+<span class="navnp"><a href="asktell.html" class="nav"><em>Prev:</em> Ask, Tell, Give,
 Show</a>    
-<a href="hello.htm" class="nav"><em>Next:</em> Hello and Goodbye</a>    
+<a href="hello.html" class="nav"><em>Next:</em> Hello and Goodbye</a>    
 </span>
 
 </div>

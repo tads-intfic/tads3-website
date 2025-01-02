@@ -1,0 +1,694 @@
+<p><span class="title">List</span><span class="type">class</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#932">932</a>],
+<a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1918">1918</a>],
+<a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#373">373</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The native list type
+
+*Modified in
+[misc.t](../file/misc.t.html)\[[1918](../source/misc.t.html#1918)\]:*  
+Add some utility methods to List.
+
+*Modified in
+[reflect.t](../file/reflect.t.html)\[[373](../source/reflect.t.html#373)\]:*  
+Modify the List intrinsic class to provide a to-symbol mapping
+
+`intrinsic class `**`List`**` :   `[`Collection`](../object/Collection.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">List</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Collection<code class="language-plaintext highlighter-rouge">](../object/Collection.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Object`](../object/Object.html)<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>append<code class="language-plaintext highlighter-rouge">](#append)</code>  <code class="language-plaintext highlighter-rouge">[</code>appendUnique<code class="language-plaintext highlighter-rouge">](#appendUnique)</code>  <code class="language-plaintext highlighter-rouge">[</code>car<code class="language-plaintext highlighter-rouge">](#car)</code>  <code class="language-plaintext highlighter-rouge">[</code>cdr<code class="language-plaintext highlighter-rouge">](#cdr)</code>  <code class="language-plaintext highlighter-rouge">[</code>countOf<code class="language-plaintext highlighter-rouge">](#countOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>countWhich<code class="language-plaintext highlighter-rouge">](#countWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>element<code class="language-plaintext highlighter-rouge">](#element)</code>  <code class="language-plaintext highlighter-rouge">[</code>find<code class="language-plaintext highlighter-rouge">](#find)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEach<code class="language-plaintext highlighter-rouge">](#forEach)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEachAssoc<code class="language-plaintext highlighter-rouge">](#forEachAssoc)</code>  <code class="language-plaintext highlighter-rouge">[</code>getUnique<code class="language-plaintext highlighter-rouge">](#getUnique)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexOf<code class="language-plaintext highlighter-rouge">](#indexOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexOfMax<code class="language-plaintext highlighter-rouge">](#indexOfMax)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexOfMin<code class="language-plaintext highlighter-rouge">](#indexOfMin)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexWhich<code class="language-plaintext highlighter-rouge">](#indexWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>insertAt<code class="language-plaintext highlighter-rouge">](#insertAt)</code>  <code class="language-plaintext highlighter-rouge">[</code>intersect<code class="language-plaintext highlighter-rouge">](#intersect)</code>  <code class="language-plaintext highlighter-rouge">[</code>join<code class="language-plaintext highlighter-rouge">](#join)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastIndexOf<code class="language-plaintext highlighter-rouge">](#lastIndexOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastIndexWhich<code class="language-plaintext highlighter-rouge">](#lastIndexWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastValWhich<code class="language-plaintext highlighter-rouge">](#lastValWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>length<code class="language-plaintext highlighter-rouge">](#length)</code>  <code class="language-plaintext highlighter-rouge">[</code>mapAll<code class="language-plaintext highlighter-rouge">](#mapAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchProto<code class="language-plaintext highlighter-rouge">](#matchProto)</code>  <code class="language-plaintext highlighter-rouge">[</code>maxVal<code class="language-plaintext highlighter-rouge">](#maxVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>minVal<code class="language-plaintext highlighter-rouge">](#minVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>overlapsWith<code class="language-plaintext highlighter-rouge">](#overlapsWith)</code>  <code class="language-plaintext highlighter-rouge">[</code>prepend<code class="language-plaintext highlighter-rouge">](#prepend)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeElementAt<code class="language-plaintext highlighter-rouge">](#removeElementAt)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeRange<code class="language-plaintext highlighter-rouge">](#removeRange)</code>  <code class="language-plaintext highlighter-rouge">[</code>shuffle<code class="language-plaintext highlighter-rouge">](#shuffle)</code>  <code class="language-plaintext highlighter-rouge">[</code>sort<code class="language-plaintext highlighter-rouge">](#sort)</code>  <code class="language-plaintext highlighter-rouge">[</code>splice<code class="language-plaintext highlighter-rouge">](#splice)</code>  <code class="language-plaintext highlighter-rouge">[</code>strComp<code class="language-plaintext highlighter-rouge">](#strComp)</code>  <code class="language-plaintext highlighter-rouge">[</code>sublist<code class="language-plaintext highlighter-rouge">](#sublist)</code>  <code class="language-plaintext highlighter-rouge">[</code>subset<code class="language-plaintext highlighter-rouge">](#subset)</code>  <code class="language-plaintext highlighter-rouge">[</code>toList<code class="language-plaintext highlighter-rouge">](#toList)</code>  <code class="language-plaintext highlighter-rouge">[</code>valToSymbol<code class="language-plaintext highlighter-rouge">](#valToSymbol)</code>  <code class="language-plaintext highlighter-rouge">[</code>valWhich<code class="language-plaintext highlighter-rouge">](#valWhich)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Collection</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>createIterator<code class="language-plaintext highlighter-rouge">](../object/Collection.html#createIterator)</code>  <code class="language-plaintext highlighter-rouge">[</code>createLiveIterator<code class="language-plaintext highlighter-rouge">](../object/Collection.html#createLiveIterator)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>callInherited<code class="language-plaintext highlighter-rouge">](../object/Object.html#callInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropParams<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSuperclassList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getSuperclassList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isClass<code class="language-plaintext highlighter-rouge">](../object/Object.html#isClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTransient<code class="language-plaintext highlighter-rouge">](../object/Object.html#isTransient)</code>  <code class="language-plaintext highlighter-rouge">[</code>ofKind<code class="language-plaintext highlighter-rouge">](../object/Object.html#ofKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>propDefined<code class="language-plaintext highlighter-rouge">](../object/Object.html#propDefined)</code>  <code class="language-plaintext highlighter-rouge">[</code>propInherited<code class="language-plaintext highlighter-rouge">](../object/Object.html#propInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>propType<code class="language-plaintext highlighter-rouge">](../object/Object.html#propType)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="append"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">append (val)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1037">1037</a>]</p>
+
+<div class="desc">
+
+append an element - this works almost exactly like the concatation
+operator ('+'), but if the argument is a list, this simply adds the list
+as a new element, rather than adding each element of the list as a
+separate element
+
+</div>
+
+<p><span id="appendUnique"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">appendUnique (lst)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1029">1029</a>]</p>
+
+<div class="desc">
+
+append the elements of the list 'lst' to the elements of this list, then
+remove repeated elements in the result; returns a new list with the
+unique elements of the combination of the two lists
+
+</div>
+
+<p><span id="car"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">car ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#968">968</a>]</p>
+
+<div class="desc">
+
+car/cdr - head/tail of list
+
+</div>
+
+<p><span id="cdr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cdr ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#969">969</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="countOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countOf (val)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1016">1016</a>]</p>
+
+<div class="desc">
+
+count the number of elements with the given value
+
+</div>
+
+<p><span id="countWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countWhich (cond)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1019">1019</a>]</p>
+
+<div class="desc">
+
+count the number of elements for which the callback returns true
+
+</div>
+
+<p><span id="element"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">element (i)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2013">2013</a>]</p>
+
+<div class="desc">
+
+Returns the ith member of the list if there is one, or nil otherwise
+
+</div>
+
+<p><span id="find"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">find (ele)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1982">1982</a>]</p>
+
+<div class="desc">
+
+find a list element - synonym for indexOf
+
+</div>
+
+<p><span id="forEach"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEach (func)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#986">986</a>]</p>
+
+<div class="desc">
+
+Invoke the callback func(val) on each element, in order from first to
+last. No return value.
+
+</div>
+
+<p><span id="forEachAssoc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEachAssoc (func)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1101">1101</a>]</p>
+
+<div class="desc">
+
+Invoke the callback func(index, val) on each element, in order from
+first to last. No return value.
+
+</div>
+
+<p><span id="getUnique"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getUnique ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1022">1022</a>]</p>
+
+<div class="desc">
+
+get a new list consisting of the unique elements of this list
+
+</div>
+
+<p><span id="indexOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexOf (val)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#965">965</a>]</p>
+
+<div class="desc">
+
+get the index of the first match for the given value
+
+</div>
+
+<p><span id="indexOfMax"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexOfMax (func?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1169">1169</a>]</p>
+
+<div class="desc">
+
+Get the index of the list item with the maximum value. If 'func' is
+missing, this simply returns the index of the list element with the
+largest value, comparing the element values as though using the '\&gt;' and
+'\&lt;' operators. If 'func' is specified, it must be a function; it's
+called as func(x) for each value in the list, and the result of the
+overall call is the index of the element for which func(x) returns the
+greatest value. For example, if you have a list of strings l,
+l.indexOfMax({x: x.length()}) returns the index of the longest string in
+the list.
+
+</div>
+
+<p><span id="indexOfMin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexOfMin (func?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1146">1146</a>]</p>
+
+<div class="desc">
+
+Get the index of the list item with the minimum value. If 'func' is
+missing, this simply returns the index of the list element with the
+smallest value, comparing the element values as though using the '\&gt;'
+and '\&lt;' operators. If 'func' is specified, it must be a function; it's
+called as func(x) for each value in the list, and the result of the
+overall call is the index of the element for which func(x) returns the
+smallest value. For example, if you have a list of strings l,
+l.indexOfMin({x: x.length()}) returns the index of the shortest string
+in the list.
+
+</div>
+
+<p><span id="indexWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexWhich (cond)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#980">980</a>]</p>
+
+<div class="desc">
+
+Find the first element for which the given condition is true, and return
+the index of the element. Applies the callback function (which encodes
+the condition to evaluate) to each element in turn, starting with the
+first. For each element, if the callback returns nil, proceeds to the
+next element; otherwise, stops and returns the index of the element. If
+the callback never returns true for any element, we'll return nil.
+
+</div>
+
+<p><span id="insertAt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">insertAt (startingIndex, val, ...)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1077">1077</a>]</p>
+
+<div class="desc">
+
+Insert one or more elements at the given index. If the starting index is
+1, the elements will be inserted before the first existing element. If
+the index is one higher than the number of elements, the elements will
+be inserted after all existing elements. If the index is negative, it
+counts backwards from the end of the list: -1 inserts before the last
+element, -2 inserts before the second to last, and so on. If the index
+is zero, the new elements are inserted after the last element.
+
+Note that a list value argument will simply be inserted as a single
+element.
+
+Returns a new list with the value(s) inserted.
+
+</div>
+
+<p><span id="intersect"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">intersect (other)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#962">962</a>]</p>
+
+<div class="desc">
+
+intersect with another list
+
+</div>
+
+<p><span id="join"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">join (sep?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1133">1133</a>]</p>
+
+<div class="desc">
+
+Combine the list elements into a string. This converts each element into
+a string value using the usual default conversions (or throws an error
+if string conversion isn't possible), then concatenates the values
+together and returns the result. If 'separator' is provided, it's a
+string that's interposed between elements; if this is omitted, the
+elements are concatenated together with no extra characters in between.
+
+</div>
+
+<p><span id="lastIndexOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastIndexOf (val)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#996">996</a>]</p>
+
+<div class="desc">
+
+find the last element with the given value, and return its index
+
+</div>
+
+<p><span id="lastIndexWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastIndexWhich (cond)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1007">1007</a>]</p>
+
+<div class="desc">
+
+Find the last element for which the condition is true, and return the
+index of the element. Applies the callback to each element in turn,
+starting with the last element and working backwards. For each element,
+if the callback returns nil, proceeds to the previous element;
+otherwise, stops and returns the index of the element. If the callback
+never returns true for any element, we'll return nil.
+
+</div>
+
+<p><span id="lastValWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastValWhich (cond)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1013">1013</a>]</p>
+
+<div class="desc">
+
+Find the last element for which the condition is true, and return the
+value of the element
+
+</div>
+
+<p><span id="length"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">length ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#956">956</a>]</p>
+
+<div class="desc">
+
+get the number of elements in the list
+
+</div>
+
+<p><span id="mapAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mapAll (func)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#953">953</a>]</p>
+
+<div class="desc">
+
+Apply the callback function to each element of this list, and return a
+new list consisting of the results. Effectively maps the list to a new
+list using the given function. Suppose the original list is
+
+\[x, y, z\]
+
+Then the result list is
+
+\[func(x), func(y), func(z)\]
+
+</div>
+
+<p><span id="matchProto"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchProto (proto)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1929">1929</a>]</p>
+
+<div class="desc">
+
+Check the list against a prototype (a list of data types). This is
+useful for checking a varargs list to see if it matches a given
+prototype. Each prototype element can be a TypeXxx type code, to match a
+value of the given native type; an object class, to match an instance of
+that class; 'any', to match a value of any type; or the special value
+'...', to match zero or more additional arguments. If '...' is present,
+it must be the last prototype element.
+
+</div>
+
+<p><span id="maxVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">maxVal (func?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1179">1179</a>]</p>
+
+<div class="desc">
+
+Get the maximum value in the list. If 'func' is missing, this returns
+the largest element value. If 'func' is specified, it must be a
+function; it's called as func(x) for each value in the list, and the
+result of the overall method call is the element value x that maximizes
+func(x). For example, if l is a list of strings, l.maxVal({x:
+x.length()}) returns the longest string.
+
+</div>
+
+<p><span id="minVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">minVal (func?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1156">1156</a>]</p>
+
+<div class="desc">
+
+Get the minimum value in the list. If 'func' is missing, this returns
+the minimum element value. If 'func' is specified, it must be a
+function; it's called as func(x) for each value in the list, and the
+result of the overall method call is the element value x that minimizes
+func(x). For example, if l is a list of strings, l.minVal({x:
+x.length()}) returns the shortest string.
+
+</div>
+
+<p><span id="overlapsWith"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">overlapsWith (lst)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2007">2007</a>]</p>
+
+<div class="desc">
+
+Determine whether this list has any elements in common with lst
+
+</div>
+
+<p><span id="prepend"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">prepend (val)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1060">1060</a>]</p>
+
+<div class="desc">
+
+Prepend an element - this inserts the value before the first existing
+element.
+
+</div>
+
+<p><span id="removeElementAt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeElementAt (index)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1085">1085</a>]</p>
+
+<div class="desc">
+
+Delete the element at the given index, reducing the length of the list
+by one element. If the index is negative, it counts from the end of the
+list: -1 is the last element, -2 is the second to last, etc. Returns a
+new list with the given element removed.
+
+</div>
+
+<p><span id="removeRange"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeRange (startingIndex, endingIndex)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1095">1095</a>]</p>
+
+<div class="desc">
+
+Delete the range of elements starting at startingIndex and ending at
+endingIndex. The elements at the ends of the range are included in the
+deletion. If startingIndex == endingIndex, only one element is removed.
+If either index is negative, it counts from the end of the list: -1 is
+the last element, -2 is the second to last, etc. Returns a new list with
+the given element range removed.
+
+</div>
+
+<p><span id="shuffle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shuffle ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1988">1988</a>]</p>
+
+<div class="desc">
+
+shuffle the list: return a new list with the elements of this list
+rearranged into a random order
+
+</div>
+
+<p><span id="sort"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sort (descending?, comparisonFunction?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1054">1054</a>]</p>
+
+<div class="desc">
+
+Sort the list, returning a new list. If the 'descending' flag is
+provided and is not nil, we'll sort the list in descending order rather
+than ascending order.
+
+If the 'comparisonFunction' argument is provided, it must be a callback
+function; the callback takes two arguments, and returns an integer less
+than zero if the first argument value is less than the second, zero if
+they're equal, and an integer greater than zero if the first is greater
+than the second. If no 'comparisonFunction' argument is provided, or
+it's provided and its value is nil, we'll simply compare the list
+elements as ordinary values. The comparison function can be provided for
+caller-defined orderings, such as ordering a set of objects.
+
+</div>
+
+<p><span id="splice"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">splice (idx, del, ...)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1122">1122</a>]</p>
+
+<div class="desc">
+
+Splice new values into the list. Deletes the 'del' list items starting
+at 'idx', then inserts the extra arguments in their place. Returns a new
+list reflecting the spliced values. To insert items without deleting
+anything, pass 0 for 'del'. To delete items without inserting anything,
+omit any additional arguments.
+
+</div>
+
+<p><span id="strComp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">strComp (lst, cmp)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2023">2023</a>]</p>
+
+<div class="desc">
+
+Compare two lists of strings using the cmp StringComparator; return true
+if all the corresponding strings in the two lists are the same
+(according to cmp) and nil otherwise.
+
+</div>
+
+<p><span id="sublist"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sublist (start, len?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#959">959</a>]</p>
+
+<div class="desc">
+
+extract a sublist
+
+</div>
+
+<p><span id="subset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">subset (func)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#939">939</a>]</p>
+
+<div class="desc">
+
+Select a subset of the list: returns a new list consisting only of the
+elements for which the callback function 'func' returns true.
+
+</div>
+
+<p><span id="toList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toList ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1979">1979</a>]</p>
+
+<div class="desc">
+
+toList() on a list simply returns the same list
+
+</div>
+
+<p><span id="valToSymbol"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valToSymbol ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#374">374</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="valWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valWhich (cond)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#993">993</a>]</p>
+
+<div class="desc">
+
+Find the first element for which the given condition is true, and return
+the value of the element. Returns nil if no item satisfies the
+condition.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

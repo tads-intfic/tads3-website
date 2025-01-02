@@ -1,3 +1,5 @@
+---
+---
 <span class="title">terminalNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`terminalNounPhrase(allBut)`](../object/terminalNounPhrase(allBut).html)</span>` :   `[`EverythingButProd`](../object/EverythingButProd.html)

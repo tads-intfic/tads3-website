@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MultiLoc</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[9647](../source/thing.t.html#9647)\]

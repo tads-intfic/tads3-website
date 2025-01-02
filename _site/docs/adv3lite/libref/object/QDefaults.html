@@ -1,0 +1,355 @@
+<p><span class="title">QDefaults</span><span class="type">object</span></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#170">170</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Query Defaults. This provides the default handlers for all query
+methods. These are the results that you get using the basic adventure
+game "physics" model to answer the questions, ignoring any special
+exceptions defined by the game.
+
+This is the lowest-ranking Special object, and is always active.
+
+**`QDefaults`**` :   `[`Special`](../object/Special.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">QDefaults</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Special<code class="language-plaintext highlighter-rouge">](../object/Special.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>active<code class="language-plaintext highlighter-rouge">](#active)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Special</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>all<code class="language-plaintext highlighter-rouge">](../object/Special.html#all)</code>  <code class="language-plaintext highlighter-rouge">[</code>allActive_<code class="language-plaintext highlighter-rouge">](../object/Special.html#allActive_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canHear<code class="language-plaintext highlighter-rouge">](#canHear)</code>  <code class="language-plaintext highlighter-rouge">[</code>canReach<code class="language-plaintext highlighter-rouge">](#canReach)</code>  <code class="language-plaintext highlighter-rouge">[</code>canSee<code class="language-plaintext highlighter-rouge">](#canSee)</code>  <code class="language-plaintext highlighter-rouge">[</code>canSmell<code class="language-plaintext highlighter-rouge">](#canSmell)</code>  <code class="language-plaintext highlighter-rouge">[</code>canTalkTo<code class="language-plaintext highlighter-rouge">](#canTalkTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>canThrowTo<code class="language-plaintext highlighter-rouge">](#canThrowTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>inLight<code class="language-plaintext highlighter-rouge">](#inLight)</code>  <code class="language-plaintext highlighter-rouge">[</code>knownScopeList<code class="language-plaintext highlighter-rouge">](#knownScopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>reachBlocker<code class="language-plaintext highlighter-rouge">](#reachBlocker)</code>  <code class="language-plaintext highlighter-rouge">[</code>reachProblem<code class="language-plaintext highlighter-rouge">](#reachProblem)</code>  <code class="language-plaintext highlighter-rouge">[</code>reachProblemCheck<code class="language-plaintext highlighter-rouge">](#reachProblemCheck)</code>  <code class="language-plaintext highlighter-rouge">[</code>reachProblemVerify<code class="language-plaintext highlighter-rouge">](#reachProblemVerify)</code>  <code class="language-plaintext highlighter-rouge">[</code>scentBlocker<code class="language-plaintext highlighter-rouge">](#scentBlocker)</code>  <code class="language-plaintext highlighter-rouge">[</code>scopeList<code class="language-plaintext highlighter-rouge">](#scopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>sightBlocker<code class="language-plaintext highlighter-rouge">](#sightBlocker)</code>  <code class="language-plaintext highlighter-rouge">[</code>soundBlocker<code class="language-plaintext highlighter-rouge">](#soundBlocker)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicScopeList<code class="language-plaintext highlighter-rouge">](#topicScopeList)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Special</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allActive<code class="language-plaintext highlighter-rouge">](../object/Special.html#allActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>classInit<code class="language-plaintext highlighter-rouge">](../object/Special.html#classInit)</code>  <code class="language-plaintext highlighter-rouge">[</code>first<code class="language-plaintext highlighter-rouge">](../object/Special.html#first)</code>  <code class="language-plaintext highlighter-rouge">[</code>next<code class="language-plaintext highlighter-rouge">](../object/Special.html#next)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="active"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">active</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#175">175</a>]</p>
+
+<div class="desc">
+
+this is the defaults object, so it's always active
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#172">172</a>]</p>
+
+<div class="desc">
+
+this is the defaults object, so it has the lower priority
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="canHear"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canHear (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#492">492</a>]</p>
+
+<div class="desc">
+
+Can A hear B? We return true if there's a clear sound path from A to B.
+
+</div>
+
+<p><span id="canReach"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canReach (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#299">299</a>]</p>
+
+<div class="desc">
+
+Can we reach from A to B? We return true if there's a clear reach path
+from A to B, which we take to be the case if we can't find any problems
+in reaching from A to B.
+
+</div>
+
+<p><span id="canSee"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canSee (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#268">268</a>]</p>
+
+<div class="desc">
+
+Can A see B? We return true if and only if B is in light and there's a
+clear sight path from A to B. Also A can't see B is B is explicitly
+hidden.
+
+</div>
+
+<p><span id="canSmell"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canSmell (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#516">516</a>]</p>
+
+<div class="desc">
+
+Can A smell B? We return true if there's a clear scent path from A to B.
+
+</div>
+
+<p><span id="canTalkTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canTalkTo (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#541">541</a>]</p>
+
+<div class="desc">
+
+Determine if A can talk to B. In the base situation A can talk to B if A
+can hear B.
+
+</div>
+
+<p><span id="canThrowTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canThrowTo (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#551">551</a>]</p>
+
+<div class="desc">
+
+Determine if A can throw something to B. In the base situation A can
+throw to B if A can reach B.
+
+</div>
+
+<p><span id="inLight"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inLight (a)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#248">248</a>]</p>
+
+<div class="desc">
+
+Is A in the light? This determines if there's light shining on the
+exterior surface of A.
+
+</div>
+
+<p><span id="knownScopeList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">knownScopeList ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#224">224</a>]</p>
+
+<div class="desc">
+
+Get a list of all objects that are known to the player char
+
+</div>
+
+<p><span id="reachBlocker"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reachBlocker (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#483">483</a>]</p>
+
+<div class="desc">
+
+Determine if A can reach B, and if not, what stands in the way. Returns
+a list of containers along the path between A and B that obstruct the
+reach. If the two objects are in separate rooms, the top-level room
+containing A is in the list to represent the room separation. If there's
+no obstruction, we return an empty list.
+
+</div>
+
+<p><span id="reachProblem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reachProblem (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#319">319</a>]</p>
+
+<div class="desc">
+
+Determine if there is anything preventing or hindering A from reaching
+B; if so return a ReachProblem object describing the problem in a way
+that a check or verify routine can act on (possibly with an implicit
+action to remove the problem). If not, return an empty list.
+
+NOTE: if you provide your own version of this method on a Special it
+must return either an empty list (to indicate that there are no problems
+with reaching from A to B) or a list of one or more ReachProblem objects
+describing what is preventing A from reaching B.
+
+Your own Special should normally leave reachProblem() alone and override
+reachProblemVerify() and/or reachProblemCheck().
+
+</div>
+
+<p><span id="reachProblemCheck"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reachProblemCheck (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#394">394</a>]</p>
+
+<div class="desc">
+
+Return our list of issues.
+
+</div>
+
+<p><span id="reachProblemVerify"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reachProblemVerify (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#335">335</a>]</p>
+
+<div class="desc">
+
+Return a list of reach issues that might occur at the verify stage.
+
+</div>
+
+<p><span id="scentBlocker"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scentBlocker (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#531">531</a>]</p>
+
+<div class="desc">
+
+Determine if A can smell B, and if not, what stands in the way. Returns
+a list of obstructions to scent between A and B. If the two objects are
+in separate rooms, the outermost room containing A represents the room
+separation. If there are no obstructions, returns an empty list.
+
+</div>
+
+<p><span id="scopeList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scopeList (actor)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#182">182</a>]</p>
+
+<div class="desc">
+
+Get the list of objects that are in scope for the given actor. Returns a
+ScopeList object containing the scope. You can convert the ScopeList to
+an ordinary list of objects via toList().
+
+</div>
+
+<p><span id="sightBlocker"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sightBlocker (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#288">288</a>]</p>
+
+<div class="desc">
+
+Determine if there's anything blocking the sight path from A to B.
+Returns a list of objects blocking sight; if there's no obstruction,
+returns an empty list. If the two objects are in separate rooms, the
+outermost room containing 'a' represents the room separation. If there's
+no obstruction, returns an empty list.
+
+</div>
+
+<p><span id="soundBlocker"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">soundBlocker (a, b)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#507">507</a>]</p>
+
+<div class="desc">
+
+Determine if A can hear B, and if not, what stands in the way. We return
+a list of the obstructions to sound between A and B. If the two objects
+are in separate rooms, the top level room containing A represents the
+room separation. If there are no sound obstructions, returns an empty
+list.
+
+</div>
+
+<p><span id="topicScopeList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicScopeList ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#240">240</a>]</p>
+
+<div class="desc">
+
+Get a list of all known mentionable objects, which we assume will
+include both known Things and known Topics
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

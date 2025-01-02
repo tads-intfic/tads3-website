@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Understanding the Source File  
-<span class="navnp"><a href="basicsource.htm" class="nav"><em>Prev:</em> Creating the Basic
+<span class="navnp"><a href="basicsource.html" class="nav"><em>Prev:</em> Creating the Basic
 Source File</a>    
-<a href="locations.htm" class="nav"><em>Next:</em> Defining the Game's
+<a href="locations.html" class="nav"><em>Next:</em> Defining the Game's
 Locations</a>     </span>
 
 </div>
@@ -211,7 +213,7 @@ The purpose of the versionInfo object is clearly to provide some basic
 information about the game we're about to write, such as its name, who
 it's by, a brief blurb, and its version number. Most of this should be
 reasonably self-explanatory (for a fuller explanation consult the
-[adv3Lite Library Manual](../manual/beginning.htm#versioninfo)), but the
+[adv3Lite Library Manual](../manual/beginning.html#versioninfo)), but the
 IFID may be worth a brief word or two. This is a unique 32-digit
 hexadecimal number used to identify your game on certain databases such
 as the IFDB. Since you won't be submitting the Adventures of Heidi to
@@ -235,7 +237,7 @@ The next object in our source file is:
 This is where you can define certain other basic information about your
 game, such as certain options and what it does on start-up. For the full
 story on gameMain you can once again consult the [adv3Lite
-manual](../manual/beginning.htm#gamemain), though once again there's no
+manual](../manual/beginning.html#gamemain), though once again there's no
 great need to do so right away. The one thing to note is that this
 object must be defined somewhere in your game source files, and it must
 define the initialPlayerChar property (meaning the object that will
@@ -289,12 +291,12 @@ in what follows.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Understanding the Source File  
-<span class="navnp"><a href="basicsource.htm" class="nav"><em>Prev:</em> Creating the Basic
+<span class="navnp"><a href="basicsource.html" class="nav"><em>Prev:</em> Creating the Basic
 Source File</a>    
-<a href="locations.htm" class="nav"><em>Next:</em> Defining the Game's
+<a href="locations.html" class="nav"><em>Next:</em> Defining the Game's
 Locations</a>     </span>
 
 </div>

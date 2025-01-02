@@ -1,3 +1,5 @@
+---
+---
 <span class="title">fromSingleNoun</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`fromSingleNoun(main)`](../object/fromSingleNoun(main).html)</span>` :   `[`PrepSingleNounProd`](../object/PrepSingleNounProd.html)

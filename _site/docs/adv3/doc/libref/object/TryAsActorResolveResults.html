@@ -1,0 +1,617 @@
+<p><span class="title">TryAsActorResolveResults</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5753">5753</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A results object for resolving an actor in a command with an unknown
+word or invalid phrasing in the predicate. For this type of resolution,
+we're trying to interpret the actor portion of the command as a noun
+phrase referring to an actor, but it could also just be another command.
+E.g., we could have "bob, asdf" or "east, asdf". Since we're only
+tentatively interpreting the phrase as a noun phrase, to see if that
+interpretation goes anywhere, we don't want to throw any errors on
+failures; instead we simply allow empty match lists.
+
+`class `**`TryAsActorResolveResults`**` :   `[`ResolveResults`](../object/ResolveResults.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TryAsActorResolveResults</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ResolveResults<code class="language-plaintext highlighter-rouge">](../object/ResolveResults.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>allowActionRemapping<code class="language-plaintext highlighter-rouge">](#allowActionRemapping)</code>  <code class="language-plaintext highlighter-rouge">[</code>allowEquivalentFiltering<code class="language-plaintext highlighter-rouge">](#allowEquivalentFiltering)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>allNotAllowed<code class="language-plaintext highlighter-rouge">](#allNotAllowed)</code>  <code class="language-plaintext highlighter-rouge">[</code>ambiguousNounPhrase<code class="language-plaintext highlighter-rouge">](#ambiguousNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>askMissingLiteral<code class="language-plaintext highlighter-rouge">](#askMissingLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>askMissingObject<code class="language-plaintext highlighter-rouge">](#askMissingObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>beginSingleObjSlot<code class="language-plaintext highlighter-rouge">](#beginSingleObjSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>beginTopicSlot<code class="language-plaintext highlighter-rouge">](#beginTopicSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>emptyNounPhrase<code class="language-plaintext highlighter-rouge">](#emptyNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>endSingleObjSlot<code class="language-plaintext highlighter-rouge">](#endSingleObjSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>endTopicSlot<code class="language-plaintext highlighter-rouge">](#endTopicSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>getImpliedObject<code class="language-plaintext highlighter-rouge">](#getImpliedObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>incCommandCount<code class="language-plaintext highlighter-rouge">](#incCommandCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>insufficientQuantity<code class="language-plaintext highlighter-rouge">](#insufficientQuantity)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatch<code class="language-plaintext highlighter-rouge">](#noMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForAll<code class="language-plaintext highlighter-rouge">](#noMatchForAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForAllBut<code class="language-plaintext highlighter-rouge">](#noMatchForAllBut)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForListBut<code class="language-plaintext highlighter-rouge">](#noMatchForListBut)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForLocation<code class="language-plaintext highlighter-rouge">](#noMatchForLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForPossessive<code class="language-plaintext highlighter-rouge">](#noMatchForPossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForPronoun<code class="language-plaintext highlighter-rouge">](#noMatchForPronoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchPossessive<code class="language-plaintext highlighter-rouge">](#noMatchPossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteActorSpecified<code class="language-plaintext highlighter-rouge">](#noteActorSpecified)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteAdjEnding<code class="language-plaintext highlighter-rouge">](#noteAdjEnding)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteBadPrep<code class="language-plaintext highlighter-rouge">](#noteBadPrep)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteEmptyBut<code class="language-plaintext highlighter-rouge">](#noteEmptyBut)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteIndefinite<code class="language-plaintext highlighter-rouge">](#noteIndefinite)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteLiteral<code class="language-plaintext highlighter-rouge">](#noteLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteMatches<code class="language-plaintext highlighter-rouge">](#noteMatches)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteMiscWord<code class="language-plaintext highlighter-rouge">](#noteMiscWord)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteNounSlots<code class="language-plaintext highlighter-rouge">](#noteNounSlots)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePlural<code class="language-plaintext highlighter-rouge">](#notePlural)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePronoun<code class="language-plaintext highlighter-rouge">](#notePronoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteWeakPhrasing<code class="language-plaintext highlighter-rouge">](#noteWeakPhrasing)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingInLocation<code class="language-plaintext highlighter-rouge">](#nothingInLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noVocabMatch<code class="language-plaintext highlighter-rouge">](#noVocabMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>reflexiveNotAllowed<code class="language-plaintext highlighter-rouge">](#reflexiveNotAllowed)</code>  <code class="language-plaintext highlighter-rouge">[</code>singleObjectRequired<code class="language-plaintext highlighter-rouge">](#singleObjectRequired)</code>  <code class="language-plaintext highlighter-rouge">[</code>uniqueObjectRequired<code class="language-plaintext highlighter-rouge">](#uniqueObjectRequired)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownNounPhrase<code class="language-plaintext highlighter-rouge">](#unknownNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>wrongReflexive<code class="language-plaintext highlighter-rouge">](#wrongReflexive)</code>  <code class="language-plaintext highlighter-rouge">[</code>zeroQuantity<code class="language-plaintext highlighter-rouge">](#zeroQuantity)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="allowActionRemapping"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowActionRemapping</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5795">5795</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="allowEquivalentFiltering"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowEquivalentFiltering</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5796">5796</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="allNotAllowed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allNotAllowed ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5762">5762</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="ambiguousNounPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ambiguousNounPhrase (keeper, askwer, txt, matchLst, fullMatchLst, scopeList, requiredNum, resolver)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5769">5769</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="askMissingLiteral"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingLiteral (action, which)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5775">5775</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="askMissingObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingObject (asker, resolver, responseProd)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5773">5773</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="beginSingleObjSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beginSingleObjSlot ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5787">5787</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="beginTopicSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beginTopicSlot ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5789">5789</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="emptyNounPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">emptyNounPhrase (resolver)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5776">5776</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="endSingleObjSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endSingleObjSlot ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5788">5788</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="endTopicSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endTopicSlot ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5790">5790</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="getImpliedObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getImpliedObject (np, resolver)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5772">5772</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="incCommandCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">incCommandCount ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5791">5791</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="insufficientQuantity"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">insufficientQuantity (txt, matchList, requiredNum)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5778">5778</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatch (action, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5755">5755</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noMatchForAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForAll ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5757">5757</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noMatchForAllBut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForAllBut ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5758">5758</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noMatchForListBut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForListBut ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5759">5759</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noMatchForLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForLocation (loc, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5766">5766</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noMatchForPossessive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForPossessive (owner, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5765">5765</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noMatchForPronoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForPronoun ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5761">5761</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noMatchPossessive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchPossessive (action, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5756">5756</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteActorSpecified"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteActorSpecified ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5792">5792</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteAdjEnding"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteAdjEnding ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5781">5781</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteBadPrep"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteBadPrep ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5767">5767</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteEmptyBut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteEmptyBut ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5760">5760</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteIndefinite"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteIndefinite ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5782">5782</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteLiteral"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteLiteral (txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5774">5774</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteMatches"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteMatches (matchList)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5783">5783</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteMiscWord"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteMiscWord (txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5784">5784</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteNounSlots"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteNounSlots (cnt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5793">5793</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="notePlural"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePlural ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5786">5786</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="notePronoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePronoun ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5785">5785</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteWeakPhrasing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteWeakPhrasing ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5794">5794</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="nothingInLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingInLocation (loc)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5768">5768</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noVocabMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noVocabMatch (action, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5754">5754</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="reflexiveNotAllowed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reflexiveNotAllowed ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5763">5763</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="singleObjectRequired"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleObjectRequired (txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5780">5780</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="uniqueObjectRequired"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">uniqueObjectRequired (txt, matchList)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5779">5779</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="unknownNounPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unknownNounPhrase (match, resolver)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5771">5771</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="wrongReflexive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">wrongReflexive (typ, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5764">5764</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="zeroQuantity"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">zeroQuantity (txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5777">5777</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

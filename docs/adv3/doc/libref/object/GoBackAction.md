@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GoBackAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2878](../source/actions.t.html#2878)\]

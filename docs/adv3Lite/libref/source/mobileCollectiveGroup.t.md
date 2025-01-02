@@ -1,3 +1,5 @@
+---
+---
 # mobileCollectiveGroup.t
 
 [documentation](../file/mobileCollectiveGroup.t.html)

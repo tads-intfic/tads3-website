@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(WhatsThePoint)</span><span class="type">grammar</span>
 
 [newbie.t](../file/newbie.t.html)\[[724](../source/newbie.t.html#724)\]

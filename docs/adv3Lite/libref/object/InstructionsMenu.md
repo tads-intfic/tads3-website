@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InstructionsMenu</span><span class="type">class</span>
 
 [instruct.t](../file/instruct.t.html)\[[1023](../source/instruct.t.html#1023)\]

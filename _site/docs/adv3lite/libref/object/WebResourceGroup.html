@@ -1,0 +1,186 @@
+<p><span class="title">WebResourceGroup</span><span class="type">class</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1228">1228</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A WebResourceGroup is a container for WebResource objects. When a server
+receives a request, it looks in its group list to find the resource
+object that will handle the request.
+
+`class `**`WebResourceGroup`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WebResourceGroup</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>mainWebGroup<code class="language-plaintext highlighter-rouge">](../object/mainWebGroup.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>all<code class="language-plaintext highlighter-rouge">](#all)</code>  <code class="language-plaintext highlighter-rouge">[</code>contents<code class="language-plaintext highlighter-rouge">](#contents)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  <code class="language-plaintext highlighter-rouge">[</code>server<code class="language-plaintext highlighter-rouge">](#server)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isGroupFor<code class="language-plaintext highlighter-rouge">](#isGroupFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>processRequest<code class="language-plaintext highlighter-rouge">](#processRequest)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="all"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">all</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1305">1305</a>]</p>
+
+<div class="desc">
+
+class property: list of all WebResourceGroup objects
+
+</div>
+
+<p><span id="contents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contents</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1267">1267</a>]</p>
+
+<div class="desc">
+
+the WebResource objects in the group
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1254">1254</a>]</p>
+
+<div class="desc">
+
+The priority of the group, relative to other groups. If the same server
+matches multiple groups, this allows you to designate which group has
+precedence. A higher value means higher priority.
+
+</div>
+
+<p><span id="server"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">server</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1264">1264</a>]</p>
+
+<div class="desc">
+
+The HTTPServer object or objects this group is associated with. The
+general event processor uses this to route a request to the appropriate
+resource group, by finding the group that's associated with the server
+that received the request.
+
+To associate a group with multiple servers, make this a list.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="isGroupFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isGroupFor (req)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1234">1234</a>]</p>
+
+<div class="desc">
+
+Should this group handle the given request? By default, we say yes if
+the server that received the request is associated with this group via
+the group's 'server' property.
+
+</div>
+
+<p><span id="processRequest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processRequest (req)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1274">1274</a>]</p>
+
+<div class="desc">
+
+Process a request. This looks for the highest priority matching resource
+in the group, then hands the request to that resource for processing.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

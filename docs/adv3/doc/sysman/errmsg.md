@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> VM Run-Time Error
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> VM Run-Time Error
 Codes  
-<span class="navnp"><a href="export.htm" class="nav"><em>Prev:</em> Exporting Symbols</a>
-    <a href="builtins.htm" class="nav"><em>Next:</em> The Intrinsics</a>
+<span class="navnp"><a href="export.html" class="nav"><em>Prev:</em> Exporting Symbols</a>
+    <a href="builtins.html" class="nav"><em>Next:</em> The Intrinsics</a>
     </span>
 
 </div>
@@ -1409,11 +1411,11 @@ This value cannot be converted to a BigNumber.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> VM Run-Time Error
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> VM Run-Time Error
 Codes  
-<span class="navnp"><a href="export.htm" class="nav"><em>Prev:</em> Exporting Symbols</a>
-    <a href="builtins.htm" class="nav"><em>Next:</em> The Intrinsics</a>
+<span class="navnp"><a href="export.html" class="nav"><em>Prev:</em> Exporting Symbols</a>
+    <a href="builtins.html" class="nav"><em>Next:</em> The Intrinsics</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> The Command
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> The Command
 Execution Cycle  
-<span class="navnp"><a href="t3banish.htm" class="nav"><em>Prev:</em> Banishing (and
+<span class="navnp"><a href="t3banish.html" class="nav"><em>Prev:</em> Banishing (and
 Changing) Awkward Messages</a>    
-<a href="t3transcript.htm" class="nav"><em>Next:</em> Manipulating the
+<a href="t3transcript.html" class="nav"><em>Next:</em> Manipulating the
 Transcript</a>     </span>
 
 </div>
@@ -254,7 +256,7 @@ places where it is useful to intervene, apart, perhaps, from customizing
 some of the error messages. The normal method by which game authors
 influence this part of the parsing process is by defining, modifying or
 replacing VerbRules (for further details of these, see the article on
-[How to Create Verbs](t3verb.htm)). Note that game authors have some
+[How to Create Verbs](t3verb.html)). Note that game authors have some
 control on how these are matched by attaching a 'badness' value to
 VerbRules which should be given a lower priority. For example the
 standard library defines:
@@ -305,7 +307,7 @@ to execute the command. The first thing this does is to check for Global
 Remapping, which in the standard library is used only for the purpose of
 turning commands of the form BOB, GIVE ME THE BALL into ASK BOB FOR THE
 BALL; for further details see the article on [Global Command
-Remapping](t3globalremap.htm) elsewhere in the *Technical Manual*.
+Remapping](t3globalremap.html) elsewhere in the *Technical Manual*.
 
   
 
@@ -353,9 +355,9 @@ resolution of the other object involved in the command (e.g. if we're
 trying to resolve the direct object of a TIAction we first construct a
 list of ResolveInfo objects encapsulating the tentative indirect objects
 and assign it to the tentativeIobj\_ property of the action). It next
-calls the appropriate [verify](t3res.htm#verify) method on the object
+calls the appropriate [verify](t3res.html#verify) method on the object
 (e.g. verifyDobjTake) and then the verifyPreCondition method on each of
-the appropriate [PreConditions](t3res.htm#precond) (e.g. all the
+the appropriate [PreConditions](t3res.html#precond) (e.g. all the
 preconditions listed in preCondDobjTake if we're resolving a TAKE
 command). (Actually, this is a slight oversimplification; before looking
 at the action-specific verify routines, we first check to see if a
@@ -910,12 +912,12 @@ how you want to prioritize it.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> The Command
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> The Command
 Execution Cycle  
-<span class="navnp"><a href="t3banish.htm" class="nav"><em>Prev:</em> Banishing (and
+<span class="navnp"><a href="t3banish.html" class="nav"><em>Prev:</em> Banishing (and
 Changing) Awkward Messages</a>    
-<a href="t3transcript.htm" class="nav"><em>Next:</em> Manipulating the
+<a href="t3transcript.html" class="nav"><em>Next:</em> Manipulating the
 Transcript</a>     </span>
 
 </div>

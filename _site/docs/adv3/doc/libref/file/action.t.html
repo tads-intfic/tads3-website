@@ -1,0 +1,106 @@
+<p><span class="title">action.t</span><span class="type">file</span></p>
+
+<p><a href="../source/action.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library: Actions.
+
+This module defines the Action classes. An Action is an abstract object
+representing a command to be performed.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>Action<code class="language-plaintext highlighter-rouge">](../object/Action.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ActionRemappingTooComplexError<code class="language-plaintext highlighter-rouge">](../object/ActionRemappingTooComplexError.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>AllAction<code class="language-plaintext highlighter-rouge">](../object/AllAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ConvIAction<code class="language-plaintext highlighter-rouge">](../object/ConvIAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ConvTopicResolver<code class="language-plaintext highlighter-rouge">](../object/ConvTopicResolver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ConvTopicTAction<code class="language-plaintext highlighter-rouge">](../object/ConvTopicTAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefaultAction<code class="language-plaintext highlighter-rouge">](../object/DefaultAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>IAction<code class="language-plaintext highlighter-rouge">](../object/IAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LiteralAction<code class="language-plaintext highlighter-rouge">](../object/LiteralAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LiteralActionBase<code class="language-plaintext highlighter-rouge">](../object/LiteralActionBase.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LiteralTAction<code class="language-plaintext highlighter-rouge">](../object/LiteralTAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PreCondDesc<code class="language-plaintext highlighter-rouge">](../object/PreCondDesc.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ResolvedTopic<code class="language-plaintext highlighter-rouge">](../object/ResolvedTopic.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SystemAction<code class="language-plaintext highlighter-rouge">](../object/SystemAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TAction<code class="language-plaintext highlighter-rouge">](../object/TAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TActionTopicResolver<code class="language-plaintext highlighter-rouge">](../object/TActionTopicResolver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TentativeResolveResults<code class="language-plaintext highlighter-rouge">](../object/TentativeResolveResults.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TIAction<code class="language-plaintext highlighter-rouge">](../object/TIAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicAction<code class="language-plaintext highlighter-rouge">](../object/TopicAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicActionBase<code class="language-plaintext highlighter-rouge">](../object/TopicActionBase.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicResolver<code class="language-plaintext highlighter-rouge">](../object/TopicResolver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicTAction<code class="language-plaintext highlighter-rouge">](../object/TopicTAction.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>dummyTentativeInfo<code class="language-plaintext highlighter-rouge">](../object/dummyTentativeInfo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>dummyTentativeObject<code class="language-plaintext highlighter-rouge">](../object/dummyTentativeObject.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>objectRelations<code class="language-plaintext highlighter-rouge">](../object/objectRelations.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolvedTopicNothing<code class="language-plaintext highlighter-rouge">](../object/resolvedTopicNothing.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>callRoomAfterAction<code class="language-plaintext highlighter-rouge">](#callRoomAfterAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>callRoomBeforeAction<code class="language-plaintext highlighter-rouge">](#callRoomBeforeAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>withParserGlobals<code class="language-plaintext highlighter-rouge">](#withParserGlobals)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="callRoomAfterAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">callRoomAfterAction (room)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2995">2995</a>]</p>
+
+<div class="desc">
+
+Call the roomAfterAction method on a given room, then on the room's
+containing rooms.
+
+</div>
+
+<p><span id="callRoomBeforeAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">callRoomBeforeAction (room)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2982">2982</a>]</p>
+
+<div class="desc">
+
+Call the roomBeforeAction method on a given room's containing rooms,
+then on the room itself.
+
+</div>
+
+<p><span id="withParserGlobals"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">withParserGlobals (issuer, actor, action, func)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#89">89</a>]</p>
+
+<div class="desc">
+
+Invoke the given function with the given values for the parser global
+variables gActor and gAction.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

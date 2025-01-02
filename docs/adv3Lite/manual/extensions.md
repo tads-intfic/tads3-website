@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Extensions  
-<span class="navnp"><a href="webui.htm" class="nav"><em>Prev:</em> The Web UI</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Extensions  
+<span class="navnp"><a href="webui.html" class="nav"><em>Prev:</em> The Web UI</a>
    
-<a href="../learning/exercises.htm" class="nav"><em>Next:</em> Exercises
+<a href="../learning/exercises.html" class="nav"><em>Next:</em> Exercises
 &amp; Samples</a>     </span>
 
 </div>
@@ -91,7 +93,7 @@ lighting levels via the ability to assign different brightnesses to
 different light sources and different degrees of opacity to
 (semi-)transparent containers as well as basic modelling of transmission
 of light from a remote location across a SenseRegion. For details, see
-the documentation on the [Brightness](../extensions/brightness.htm)
+the documentation on the [Brightness](../extensions/brightness.html)
 extension.
 
 <span id="collective"></span>
@@ -111,7 +113,7 @@ issue individual items on demand (e.g. TAKE GRAPE or TAKE GRAPE FROM
 BUNCH) can be made to move an individual grape into the player
 character's inventory even when no individual grape is yet in scope).
 For details, see the documentation on the
-[Collective](../extensions/collective.htm) extension.
+[Collective](../extensions/collective.html) extension.
 
 <span id="cmdhelp"></span>
 
@@ -121,7 +123,7 @@ The cmdhelp extension offers the player a list of commands to try out if
 he or she enters an empty command (i.e. just presses ENTER at the
 command prompt). This may be particularly helpful for newcomers to IF.
 For details, see the documentation on the [Command
-Help](../extensions/cmdhelp.htm) extension.
+Help](../extensions/cmdhelp.html) extension.
 
 <span id="dynregion"></span>
 
@@ -131,7 +133,7 @@ The DynamicRegion class defined in this extension allows the definition
 of Regions that can grow or shrink during the course of play (a regular
 Region being fixed and unalterable); this comes with certain
 restrictions, however. For details see
-[dynamicRegion.t](../extensions/dynregion.htm)
+[dynamicRegion.t](../extensions/dynregion.html)
 
 <span id="eventlistitem" <="" a=""></span>
 
@@ -154,7 +156,7 @@ The Footnotes module is basically the same as its adv3 equivalent. Its
 function is to allow the display of footnotes in your game; these can
 provide additional information which players can view if they wish using
 the FOOTNOTES command, but which are not essential to playing the game.
-For details see [footnote.t](../extensions/footnotes.htm)
+For details see [footnote.t](../extensions/footnotes.html)
 
 ## Fueled Light Source
 
@@ -164,20 +166,20 @@ kind of fuel every turn that they're lit. Most games are unlikely to
 make use of fueled light sources, but for those that do, it may be
 convenient not to have to reinvent this particular wheel. For more
 information see the documentation on
-[fueled.t](../extensions/fueled.htm).
+[fueled.t](../extensions/fueled.html).
 
 <span id="mobile"></span>
 
 ## MobileCollectiveGroup
 
 The MobileCollectiveGroup class is a subclass of
-[CollectiveGroup](extra.htm#collective) that can be used for objects
+[CollectiveGroup](extra.html#collective) that can be used for objects
 that may move around in the course of the game (whereas CollectiveGroup
 should be used for fixtures). Its function is to provide a summary
 description of a number of similar objects in currently in scope (such
 as differently coloured cables that are otherwise identical, for
 example. For more For more information see the documentation on
-[mobilecollectivegroup.t](../extensions/mobilecollectivegroup.htm).
+[mobilecollectivegroup.t](../extensions/mobilecollectivegroup.html).
 
 <span id="objtime"></span>
 
@@ -190,14 +192,14 @@ amount each turn (by default this is one minute, but this can be
 customised by game authors in as fine-grained a manner as they wish, so
 that, in principle, every action could consume a different ammount of
 time). For more information see the documentation on
-[objtime.t](../extensions/objtime.htm)
+[objtime.t](../extensions/objtime.html)
 
 ## Postures
 
 The postures extension allows you to keep track of actor posture
 (standing, sitting or lying) and adds **Bed** and **Chair** classes that
 relate to these postures in particular ways. For more information see
-the documentation on [postures.t](../extensions/postures.htm)
+the documentation on [postures.t](../extensions/postures.html)
 
 <span id="relations"></span>
 
@@ -206,7 +208,7 @@ the documentation on [postures.t](../extensions/postures.htm)
 The relations extension allows you to define various kinds of relations
 between objects (or between other items), rather in the style of Inform
 7 relations. For more information see the documentation on
-[relations.t](../extensions/relations.htm)
+[relations.t](../extensions/relations.html)
 
 ## Room Parts
 
@@ -216,7 +218,7 @@ The roomparts extension adds <span id="wall_idx">walls</span> and a
 a ceiling. It also allows certain items in a room to be associated with
 particular room parts so that, for example, examining a wall might
 mention a picture that's notionally hanging there. For more details see
-the documentation on [roomparts.t.](../extensions/roomparts.htm)
+the documentation on [roomparts.t.](../extensions/roomparts.html)
 
 <span id="rules"></span>
 
@@ -224,14 +226,14 @@ the documentation on [roomparts.t.](../extensions/roomparts.htm)
 
 The rules extensions allows you to define Rules and RuleBooks (which
 work similarly to their Inform 7 equivalents). For more details see the
-documentation on [rules.t.](../extensions/rules.htm)
+documentation on [rules.t.](../extensions/rules.html)
 
 ## SceneTopic
 
 The SceneTopic extension implements the SceneTopic class (and its two
 subclasses) that can be used to define ActorTopicEntries that are
-triggered when a [Scene](scene.htm) starts or ends. For more details see
-the documentation on [scenetopic.t.](../extensions/scenetopic.htm)
+triggered when a [Scene](scene.html) starts or ends. For more details see
+the documentation on [scenetopic.t.](../extensions/scenetopic.html)
 
 <span id="sensory"></span>
 
@@ -240,7 +242,7 @@ the documentation on [scenetopic.t.](../extensions/scenetopic.htm)
 The Sensory extension provides fuller handling of Noises and Odors, and
 adds SensoryEvents, which are sudden sounds, smells or visible
 happenings to which nearby actors or objects can react. For more details
-see the documentation on [sensory.t.](../extensions/sensory.htm)
+see the documentation on [sensory.t.](../extensions/sensory.html)
 
 ## Signals
 
@@ -248,7 +250,7 @@ The Signals extension (which requires the Relations extension) provides
 a means for otherwise unrelated objects to communicate, that is for one
 object (the sender) to send specific signals to other objects which can
 then handle them in whatever way they wish. For more details see the
-documentation on [signals.t.](../extensions/signals.htm)
+documentation on [signals.t.](../extensions/signals.html)
 
 <span id="subtime"></span>
 
@@ -260,7 +262,7 @@ extension modified to work with adv3Lite. It allows game authors to
 define certain events within their story as occurring at particular
 times, and then provides a means of reporting the time as it appears to
 the player character when the player queries the time in between those
-events. For details see [subtime.t](../extensions/subtime.htm)
+events. For details see [subtime.t](../extensions/subtime.html)
 
 <span id="symconn"></span>
 
@@ -278,7 +280,7 @@ will automatically be set to <span class="code">hall</span>). It also
 defines a number of two-way connector classes so that, for example, a
 simple door between two rooms can be specified with one object instead
 of the normal two. For details see
-[symconn.t](../extensions/symconn.htm)
+[symconn.t](../extensions/symconn.html)
 
 <span id="sysrules"></span>
 
@@ -288,16 +290,16 @@ The sysrules extension requires the rules extension to be present also.
 It defines a number of rules and rulebooks that replace various methods
 in some library classes, allowing greater tailoring of certain aspects
 of the turn cycle and of action handling using rules. For details see
-[sysrules.t](../extensions/sysrules.htm)
+[sysrules.t](../extensions/sysrules.html)
 
 ## TIAAction
 
 The TIAAction extension allows you to define actions involving three
 objects, such as PUT COIN IN SLOT WITH TWEEZERS. For more details see
-the documentation on [tiaaction.t.](../extensions/tiaaction.htm) Note
+the documentation on [tiaaction.t.](../extensions/tiaaction.html) Note
 that it's possible to define actions involving two objects and a literal
 or a topic without this extension by using techniques outlined in the
-chapter on [Defining New Actions](define.htm#threeobjects).
+chapter on [Defining New Actions](define.html#threeobjects).
 
 ## Viewport
 
@@ -308,14 +310,14 @@ listing of the remote locations in question appearing in the room
 listing of the current room. This can be useful for implementing objects
 such as windows and CCTV screens where the player only becomes aware of
 what they show when s/he uses them. For more details see the
-documentation on [viewport.t](../extensions/viewport.htm).
+documentation on [viewport.t](../extensions/viewport.html).
 
 ## Weight
 
 The Weight extension allows you to track the weight of objects in your
 game and control for the weight capacity of actors and other objects in
 much the same way as the standard library handles bulk. For more details
-see the documentation on [weight.t](../extensions/weight.htm).
+see the documentation on [weight.t](../extensions/weight.html).
 
 </div>
 
@@ -324,11 +326,11 @@ see the documentation on [weight.t](../extensions/weight.htm).
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Extensions  
-<span class="navnp"><a href="webui.htm" class="nav"><em>Prev:</em> The Web UI</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Extensions  
+<span class="navnp"><a href="webui.html" class="nav"><em>Prev:</em> The Web UI</a>
    
-<a href="../learning/exercises.htm" class="nav"><em>Next:</em> Exercises
+<a href="../learning/exercises.html" class="nav"><em>Next:</em> Exercises
 &amp; Samples</a>     </span>
 
 </div>

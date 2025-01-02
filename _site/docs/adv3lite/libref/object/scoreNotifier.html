@@ -1,0 +1,154 @@
+<p><span class="title">scoreNotifier</span><span class="type">object</span></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#234">234</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Score notification daemon handler. We'll receive a checkNotification()
+call each turn; we'll display a notification message each time the score
+has changed since the last time we ran.
+
+**`scoreNotifier`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">scoreNotifier</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>everNotified<code class="language-plaintext highlighter-rouge">](#everNotified)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastScore<code class="language-plaintext highlighter-rouge">](#lastScore)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>basicScoreChange<code class="language-plaintext highlighter-rouge">](#basicScoreChange)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkNotification<code class="language-plaintext highlighter-rouge">](#checkNotification)</code>  <code class="language-plaintext highlighter-rouge">[</code>firstScoreChange<code class="language-plaintext highlighter-rouge">](#firstScoreChange)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreChange<code class="language-plaintext highlighter-rouge">](#scoreChange)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="everNotified"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">everNotified</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#239">239</a>]</p>
+
+<div class="desc">
+
+we've never generated a notification about the score before
+
+</div>
+
+<p><span id="lastScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastScore</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#236">236</a>]</p>
+
+<div class="desc">
+
+the score as it was the last time we displayed a notification
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="basicScoreChange"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">basicScoreChange (delta)</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#306">306</a>]</p>
+
+<div class="desc">
+
+basic score change notification message - this is an internal service
+routine for scoreChange and firstScoreChange
+
+</div>
+
+<p><span id="checkNotification"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkNotification ( )</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#242">242</a>]</p>
+
+<div class="desc">
+
+daemon entrypoint
+
+</div>
+
+<p><span id="firstScoreChange"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">firstScoreChange (delta)</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#290">290</a>]</p>
+
+<div class="desc">
+
+score change - first notification
+
+</div>
+
+<p><span id="scoreChange"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scoreChange (delta)</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#296">296</a>]</p>
+
+<div class="desc">
+
+score change - notification other than the first time
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

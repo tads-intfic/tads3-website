@@ -1,0 +1,35 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ExitPortal : <a href="shipboardroom.html#leaveship">Exitable</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="entryportal.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="travelbarrier.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>An ExitPortal is just like an <a href="shipboardroom.html#leaveship">Exitable</a>,
+except that you can go through it as well as exit it. For example:</p>
+
+<p>squareCave : DarkRoom ’Square Cave’ ’the square cave’<br />
+   ”This capacious cave is unnaturally square, suggesting that it has been<br />
+    artificially hewn out of the rock, an impression further enhanced by<br />
+    the carefully-constructed ashlar archway to the west. ”<br />
+   west = mainCave<br />
+   out asExit(west)      <br />
+;</p>
+
+<p>+ ExitPortal -&gt; mainCave ’ashlar arch/archway’ ’archway’<br />
+  ”The archway is beautifully constructed from dressed stones. “<br />
+;</p>
+
+<p>Note that ExitPortal is <em>not</em> a travel connector; -&gt; mainCave makes
+mainCave its connector property, not its masterObject property. For the
+distinction, see further on the <a href="enterable.html">Enterable</a> class. The
+template used here is the <a href="exitabletemplate.html">Exitable template</a>.</p>
+

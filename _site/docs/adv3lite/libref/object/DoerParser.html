@@ -1,0 +1,183 @@
+<p><span class="title">DoerParser</span><span class="type">class</span></p>
+
+<p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#827">827</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A DoerParser is a helper object we use during initialization for parsing
+Doer 'cmd' strings and turning them into action description lists. The
+language-specific library creates these for us based on the language
+grammar.
+
+These objects are only used during initialization, since they're only
+needed to set up the internal representation of a Doer command template
+string. During normal play we only need that internal representation.
+
+`class `**`DoerParser`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DoerParser</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>action_<code class="language-plaintext highlighter-rouge">](#action_)</code>  <code class="language-plaintext highlighter-rouge">[</code>pat_<code class="language-plaintext highlighter-rouge">](#pat_)</code>  <code class="language-plaintext highlighter-rouge">[</code>roles_<code class="language-plaintext highlighter-rouge">](#roles_)</code>  <code class="language-plaintext highlighter-rouge">[</code>verb_<code class="language-plaintext highlighter-rouge">](#verb_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="action_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">action_</code></p>
+
+<p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#842">842</a>]</p>
+
+<div class="desc">
+
+The Action object for the verb.
+
+</div>
+
+<p><span id="pat_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pat_</code></p>
+
+<p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#862">862</a>]</p>
+
+<div class="desc">
+
+The regular expression for the verb rule. The verb initializer sets this
+up to contain the literal text of the verb rule's literal tokens, and to
+substitute a parenthesized group wildcard pattern for each noun slot.
+For example, for English, a Give To rule might look like 'give (.+) to
+(.+)'.
+
+</div>
+
+<p><span id="roles_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roles_</code></p>
+
+<p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#871">871</a>]</p>
+
+<div class="desc">
+
+The list of object roles. This is a list of NounRole objects. The list
+entries correspond positionally to the parenthesized groups in the
+regular expression string, so roles\_\[1\] is the noun role for the
+first parenthesized group, roles\_\[2\] is the noun role for the second
+group, and so on.
+
+</div>
+
+<p><span id="verb_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verb_</code></p>
+
+<p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#853">853</a>]</p>
+
+<div class="desc">
+
+The main verb word. This is simply the first word of the verb's token
+list. This is essentially a hash, to reduce the number of regular
+expressions we have to test individually. This saves us a lot of compute
+time, since it's very quick to pull out the first word and get a list of
+the small set of rules with the same first word. We then test each of
+those potential matches by doing the full regular expression comparison.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (action, v, pat, roles)</code></p>
+
+<p><a href="../file/doer.t.html">doer.t</a>[<a href="../source/doer.t.html#833">833</a>]</p>
+
+<div class="desc">
+
+Construction. The language library should create one of these objects
+for each verb phrasing it wants to define for use in writing Doer 'cmd'
+strings.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

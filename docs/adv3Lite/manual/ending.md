@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Endings  
-<span class="navnp"><a href="beginning.htm" class="nav"><em>Prev:</em> Beginnings</a>
-    <a href="optional.htm" class="nav"><em>Next:</em> Part III: Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Endings  
+<span class="navnp"><a href="beginning.html" class="nav"><em>Prev:</em> Beginnings</a>
+    <a href="optional.html" class="nav"><em>Next:</em> Part III: Optional
 Modules</a>     </span>
 
 </div>
@@ -86,7 +88,7 @@ more work to define what it actually does. This can be as basic as
 offering a few suggestions like "Have you tried feeding the chile soup
 to the pet tiger, or asking Mavis about her underwear, or turning the
 blender to 'superspin' when the chocolate sponge is in it?" to
-displaying a full-blown [menu](menu.htm) with a whole range of options.
+displaying a full-blown [menu](menu.html) with a whole range of options.
 Whatever you want to do you do it by modifying the finishOptionAmusing
 object to defining a doOption() method which should normally finish by
 returning true (to tell the library that the option has successfully
@@ -131,10 +133,10 @@ Or:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Endings  
-<span class="navnp"><a href="Beginning.htm" class="nav"><em>Prev:</em> Beginnings</a>
-    <a href="optional.htm" class="nav"><em>Next:</em>Part III: Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Endings  
+<span class="navnp"><a href="Beginning.html" class="nav"><em>Prev:</em> Beginnings</a>
+    <a href="optional.html" class="nav"><em>Next:</em>Part III: Optional
 Modules</a>     </span>
 
 </div>

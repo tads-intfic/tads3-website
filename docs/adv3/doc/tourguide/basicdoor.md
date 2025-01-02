@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,19 +9,19 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>BasicDoor: <a
-href="basicopenable.htm">BasicOpenable</a>, <a
-href="throughpassage.htm">ThroughPassage</a><br />
+href="basicopenable.html">BasicOpenable</a>, <a
+href="throughpassage.html">ThroughPassage</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="door.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="notravelmessage.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="door.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="notravelmessage.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-A BasicDoor encapsulates the behaviour common to both [Door](door.htm)
-and [SecretDoor](secretdoor.htm) and their descendents, and is thus
+A BasicDoor encapsulates the behaviour common to both [Door](door.html)
+and [SecretDoor](secretdoor.html) and their descendents, and is thus
 intended as an abstract class containing the common behaviour of
 door-like objects, rather than as a class that a game author would use
 directly in a game. If you wanted to a special kind of door that didn't

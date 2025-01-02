@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Past Tense<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="mainoutputstream.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="achievementtemplate.htm">[Next]</a></td>
+href="mainoutputstream.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="achievementtemplate.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -38,6 +40,6 @@ to write messages that switch between present and past tense depending
 on the setting of gameMain.usePastTense. The comments in en_us.t give
 some details of how to do that, but for more reader-friendly
 documentation take a look at the section on
-<a href="../techman/t3past.htm" target="_top">Writing a Game in the Past
+<a href="../techman/t3past.html" target="_top">Writing a Game in the Past
 Tense</a> in the *Technical Manual.*  
   

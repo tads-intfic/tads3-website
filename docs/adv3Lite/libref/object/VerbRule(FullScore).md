@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(FullScore)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2292](../source/grammar.t.html#2292)\]

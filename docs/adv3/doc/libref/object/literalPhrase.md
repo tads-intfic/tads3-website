@@ -1,3 +1,5 @@
+---
+---
 <span class="title">literalPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`literalPhrase(empty)`](../object/literalPhrase(empty).html)</span>` :   `[`EmptyLiteralPhraseProd`](../object/EmptyLiteralPhraseProd.html)

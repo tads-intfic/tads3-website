@@ -1,16 +1,18 @@
+---
+---
 ## Game <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/averysimplegame.htm"
+- *<a href="doc/gsg/averysimplegame.html"
   target="classes">A very simple game</a>*
-- *<a href="doc/gsg/startinganewgame.htm"
+- *<a href="doc/gsg/startinganewgame.html"
   target="classes">Starting a new game</a>*
-- *<a href="doc/gsg/rewardingtheeffort.htm"
+- *<a href="doc/gsg/rewardingtheeffort.html"
   target="classes">Rewarding the effort</a>*
-- *<a href="doc/gsg/endingthegame.htm"
+- *<a href="doc/gsg/endingthegame.html"
   target="classes">Ending the game</a>*
 - *<a href="https://www.tads.org/ifidgen/ifidgen" target="classes">IFID
   generator</a>*
-- *<a href="https://www.tads.org/howto/gameinfo.htm"
+- *<a href="https://www.tads.org/howto/gameinfo.html"
   target="classes">GameInfo.txt &amp; cover art</a>*
 - *<a href="https://babel.ifarchive.org" target="classes">Treaty of
   Babel</a>*
@@ -33,7 +35,7 @@
 
 ## Tangibles <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/addingitemstothegame.htm"
+- *<a href="doc/gsg/addingitemstothegame.html"
   target="classes">Adding items to the game</a>*
 
 <!-- -->
@@ -74,11 +76,11 @@
 
 ## Locations & travel <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/definingourfirstroom.htm"
+- *<a href="doc/gsg/definingourfirstroom.html"
   target="classes">Defining our first room</a>*
-- *<a href="doc/gsg/basictravel.htm"
+- *<a href="doc/gsg/basictravel.html"
   target="classes">Basic travel</a>*
-- *<a href="doc/gsg/doorsandwindows.htm"
+- *<a href="doc/gsg/doorsandwindows.html"
   target="classes">Doors and windows</a>*
 
 <!-- -->
@@ -184,21 +186,21 @@
 
 ## Text, HTML, & multimedia <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/sysman/strlit.htm#specials"
+- *<a href="doc/sysman/strlit.html#specials"
   target="classes">Escaped characters (backslash codes)</a>*
-- *<a href="doc/sysman/strlit.htm#embeddings"
+- *<a href="doc/sysman/strlit.html#embeddings"
   target="classes">Embedded expressions</a>*
-- *<a href="doc/sysman/strlit.htm#strtpl"
+- *<a href="doc/sysman/strlit.html#strtpl"
   target="classes">Embedded string templates</a>*
-  - *<a href="doc/sysman/strlit.htm#oneof"
+  - *<a href="doc/sysman/strlit.html#oneof"
     target="classes">&lt;&lt;one of&gt;&gt;</a>*
-  - *<a href="doc/sysman/strlit.htm#firstTimeOnly"
+  - *<a href="doc/sysman/strlit.html#firstTimeOnly"
     target="classes">&lt;&lt;first time&gt;&gt;</a>*
-- *<a href="doc/htmltads/intro.htm"
+- *<a href="doc/htmltads/intro.html"
   target="classes">Introduction to HTML TADS</a>*
-- *<a href="doc/sysman/regex.htm"
+- *<a href="doc/sysman/regex.html"
   target="classes">Regular expressions</a>*
-- *<a href="doc/sysman/string.htm"
+- *<a href="doc/sysman/string.html"
   target="classes">String methods</a>*
 - *<a
   href="doc/libref/file/console.t.html#aHref"
@@ -322,7 +324,7 @@
 
 ## Actions & verbs <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/controllingtheaction.htm"
+- *<a href="doc/gsg/controllingtheaction.html"
   target="classes">Controlling the action</a>*
 
 <!-- -->
@@ -338,9 +340,9 @@
 
 ## Actors, NPCs, & conversations <a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/abasicburner.htm"
+- *<a href="doc/gsg/abasicburner.html"
   target="classes">A basic burner</a>*
-- *<a href="doc/gsg/theartofconversation.htm"
+- *<a href="doc/gsg/theartofconversation.html"
   target="classes">The art of conversation</a>*
 
 <!-- -->
@@ -554,7 +556,7 @@
   target="classes">General functions</a>*
 - *<a href="doc/libref/file/misc.t.html"
   target="classes">Misc. functions</a>*
-- *<a href="doc/sysman/list.htm"
+- *<a href="doc/sysman/list.html"
   target="classes">List methods</a>*
 - *<a href="doc/libref/file/tadsio.h.html"
   target="classes">I/O &amp; banner API</a>*

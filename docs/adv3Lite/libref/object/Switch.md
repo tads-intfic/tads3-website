@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Switch</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[962](../source/extras.t.html#962)\]

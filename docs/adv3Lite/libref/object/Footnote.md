@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Footnote</span><span class="type">class</span>
 
 [footnote.t](../file/footnote.t.html)\[[44](../source/footnote.t.html#44)\]

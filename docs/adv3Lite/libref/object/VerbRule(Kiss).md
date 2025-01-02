@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Kiss)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[1757](../source/grammar.t.html#1757)\]

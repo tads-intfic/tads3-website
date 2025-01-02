@@ -1,0 +1,472 @@
+<p><span class="title">ActorState</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2512">2512</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+An ActorState represents a state (possibly one of many) an actor can be
+in or get into. This can control how the actor is described and the
+actor's response to certain conversational commands and other actions.
+
+ActorStates should always be located directly in the Actor to which they
+belong.
+
+`class `**`ActorState`**` :   `[`EndConvBlocker`](../object/EndConvBlocker.html)`   `[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorState</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>EndConvBlocker<code class="language-plaintext highlighter-rouge">](../object/EndConvBlocker.html)  
+</code>                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ActorTopicDatabase<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TopicDatabase<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>active<code class="language-plaintext highlighter-rouge">](#active)</code>  <code class="language-plaintext highlighter-rouge">[</code>attentionSpan<code class="language-plaintext highlighter-rouge">](#attentionSpan)</code>  <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>informOverheard<code class="language-plaintext highlighter-rouge">](#informOverheard)</code>  <code class="language-plaintext highlighter-rouge">[</code>isInitState<code class="language-plaintext highlighter-rouge">](#isInitState)</code>  <code class="language-plaintext highlighter-rouge">[</code>noResponse<code class="language-plaintext highlighter-rouge">](#noResponse)</code>  <code class="language-plaintext highlighter-rouge">[</code>pcJustArrived<code class="language-plaintext highlighter-rouge">](#pcJustArrived)</code>  <code class="language-plaintext highlighter-rouge">[</code>specialDesc<code class="language-plaintext highlighter-rouge">](#specialDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>stateDesc<code class="language-plaintext highlighter-rouge">](#stateDesc)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>askForTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#askForTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>askTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#askTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#commandTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>defaultAgendaTopic<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#defaultAgendaTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>giveTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#giveTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiateTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#initiateTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>miscTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#miscTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>queryTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#queryTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#sayTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>sceneEndTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#sceneEndTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>sceneStartTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#sceneStartTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#showTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>talkTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#talkTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>tellTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#tellTopics)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>activateState<code class="language-plaintext highlighter-rouge">](#activateState)</code>  <code class="language-plaintext highlighter-rouge">[</code>addToActor<code class="language-plaintext highlighter-rouge">](#addToActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>afterAction<code class="language-plaintext highlighter-rouge">](#afterAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>afterTravel<code class="language-plaintext highlighter-rouge">](#afterTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>arrivingTurn<code class="language-plaintext highlighter-rouge">](#arrivingTurn)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeAction<code class="language-plaintext highlighter-rouge">](#beforeAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeTravel<code class="language-plaintext highlighter-rouge">](#beforeTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>canEndConversation<code class="language-plaintext highlighter-rouge">](#canEndConversation)</code>  <code class="language-plaintext highlighter-rouge">[</code>deactivateState<code class="language-plaintext highlighter-rouge">](#deactivateState)</code>  <code class="language-plaintext highlighter-rouge">[</code>getBestMatch<code class="language-plaintext highlighter-rouge">](#getBestMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeActorState<code class="language-plaintext highlighter-rouge">](#initializeActorState)</code>  <code class="language-plaintext highlighter-rouge">[</code>remoteSpecialDesc<code class="language-plaintext highlighter-rouge">](#remoteSpecialDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArriving<code class="language-plaintext highlighter-rouge">](#sayArriving)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](#sayDeparting)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayFollowing<code class="language-plaintext highlighter-rouge">](#sayFollowing)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">EndConvBlocker</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>blockEndConv<code class="language-plaintext highlighter-rouge">](../object/EndConvBlocker.html#blockEndConv)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>initiateTopic<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#initiateTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>listableTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicDatabase.html#listableTopics)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#addTopic)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="active"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">active</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2701">2701</a>]</p>
+
+<div class="desc">
+
+The active property is used by any TopicGroups and TopicEntries located
+directly within us to determine whether they in turn are active.
+Normally there is no reason for game code to override this on an
+ActorState; the property is simply provided so that TopicGroups and
+TopicEntries can call location.active regardless of whether they're
+located in TopicGroups, ActorStates or Actors.
+
+</div>
+
+<p><span id="attentionSpan"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">attentionSpan</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2642">2642</a>]</p>
+
+<div class="desc">
+
+Our actor's attention span while our actor is in this ActorState. This
+is the number of turns the actor will wait for the player character to
+say something when a our actor is the player character's current
+conversation partner, before our actor gives up on the conversation and
+terminates it through 'boredom'. A value of nil (the default) means our
+actor is infinitely patient and will never terminate a conversation for
+this reason.
+
+</div>
+
+<p><span id="getActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getActor</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2630">2630</a>]</p>
+
+<div class="desc">
+
+Our associated actor. This is set to our location at preinit by our
+initializeActorState method.
+
+</div>
+
+<p><span id="informOverheard"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">informOverheard</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2832">2832</a>]</p>
+
+<div class="desc">
+
+Should other actors who can notionally hear the PC talking to us
+overhear when information is imparted to us and we're in this
+ActorState? I.e. should their setInform() methods be called too? By
+default they should.
+
+</div>
+
+<p><span id="isInitState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isInitState</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2539">2539</a>]</p>
+
+<div class="desc">
+
+Set isInitState to true if you want this ActorState to be the one the
+associated Actor starts out in.
+
+</div>
+
+<p><span id="noResponse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noResponse</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2715">2715</a>]</p>
+
+<div class="desc">
+
+If the noResponse method is defined (i.e. non-nil) then this ActorState
+will behave like a TADS 3 HermitActorState, i.e. the noResponse message
+will be displayed in response to any conversational command
+
+noResponse can be either a single-quoted string, a double-quoted string
+or a method. If it's a string then it will be displayed instead of any
+TopicEntry. It it's a method it will be executed; if it then displays
+anything no attempt will be made to match a TopicEntry, but it if
+doesn't display anything the conversational command will go on to be
+handled as normal.
+
+</div>
+
+<p><span id="pcJustArrived"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pcJustArrived</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2681">2681</a>]</p>
+
+<div class="desc">
+
+Flag -- has the player character just arrived?
+
+</div>
+
+<p><span id="specialDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">specialDesc</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2525">2525</a>]</p>
+
+<div class="desc">
+
+The specialDesc from the actor's current ActorState is used as the
+specialDesc for that actor in a room listing.
+
+</div>
+
+<p><span id="stateDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stateDesc</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2519">2519</a>]</p>
+
+<div class="desc">
+
+The stateDesc from the actor's current ActorState is appended to the
+desc defined on the actor when the actor is described via an EXAMINE
+command.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="activateState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">activateState (actor, oldState)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2656">2656</a>]</p>
+
+<div class="desc">
+
+Activate the state - this is called when we're about to become the
+active state for an actor. We do nothing by default.
+
+</div>
+
+<p><span id="addToActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToActor ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2567">2567</a>]</p>
+
+<div class="desc">
+
+Add this ActorState to our actor's list of ActorStates
+
+</div>
+
+<p><span id="afterAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterAction ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2585">2585</a>]</p>
+
+<div class="desc">
+
+The afterAction() method is called on an actor's current ActorState when
+the actor is in scope for the action that's just taken place. This
+allows game code to define state-specific reactions.
+
+</div>
+
+<p><span id="afterTravel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterTravel (traveler, connector)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2678">2678</a>]</p>
+
+<div class="desc">
+
+The afterTravel notification triggered when the Actor is in this
+ActorState and traveler has just traveled via connector. By default we
+do nothing.
+
+</div>
+
+<p><span id="arrivingTurn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">arrivingTurn ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2648">2648</a>]</p>
+
+<div class="desc">
+
+the arrivingTurn method is executed when an actor in this state has just
+followed the player char to a new location.
+
+</div>
+
+<p><span id="beforeAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beforeAction ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2593">2593</a>]</p>
+
+<div class="desc">
+
+The beforeAction() method is called on an actor's current ActorState
+when the actor is in scope for the action that's just about to take
+place. This allows game code to define state-specific reactions.
+
+</div>
+
+<p><span id="beforeTravel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beforeTravel (traveler, connector)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2671">2671</a>]</p>
+
+<div class="desc">
+
+The beforeTravel notification triggered when the Actor is in this
+ActorState and traveler is just about to travel via connector. By
+default we do nothing.
+
+</div>
+
+<p><span id="canEndConversation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canEndConversation (reason)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2691">2691</a>]</p>
+
+<div class="desc">
+
+Determine whether our actor will allow a current conversation to be
+terminated for reason when in this ActorState. Return true to allow the
+conversation to be terminated and nil otherwise. By default we simply
+return true. If we return nil we should also display a message
+explaining why we're not allowing the conversation to end.
+
+</div>
+
+<p><span id="deactivateState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">deactivateState (actor, newState)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2663">2663</a>]</p>
+
+<div class="desc">
+
+Deactivate the state - this is called when we're the active state for an
+actor, and the actor is about to switch to a new state. We do nothing by
+default.
+
+</div>
+
+<p><span id="getBestMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getBestMatch (prop, requestedList)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2725">2725</a>]</p>
+
+<div class="desc">
+
+The getBestMatch() method is already defined on TopicDatabase, from
+which ActorState inherits via ActorTopicDatabase. ActorState overrides
+it to allow certain modifications particular to ActorState, such as the
+possibility that the prop parameter might be passed as either a list or
+a property pointer to a list property, and the need to take into account
+the actor's activeKeys list.
+
+</div>
+
+<p><span id="initializeActorState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeActorState ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2543">2543</a>]</p>
+
+<div class="desc">
+
+Initialize this ActorState (this is actually called at preinit).
+
+</div>
+
+<p><span id="remoteSpecialDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">remoteSpecialDesc (pov)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2532">2532</a>]</p>
+
+<div class="desc">
+
+If our associated actor is viewed from a remote location, use the
+ActorState's remoteSpecialDesc to describe the actor in a room listing.
+By default we just use the specialDesc.
+
+</div>
+
+<p><span id="sayArriving"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArriving (fromLoc)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2623">2623</a>]</p>
+
+<div class="desc">
+
+The message to display when the player char sees this actor arriving
+after traveling from loc. By default we simply use our actor's
+sayActorArriving(fromLoc) method.
+
+</div>
+
+<p><span id="sayDeparting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDeparting (conn)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2616">2616</a>]</p>
+
+<div class="desc">
+
+Display a message saying that our associated actor (typically an NPC
+whose departure is being viewed by the player character) is departing
+via conn. By default we simply use our actor's sayActorDeparting(conn)
+method.
+
+</div>
+
+<p><span id="sayFollowing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayFollowing (oldLoc, conn)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2600">2600</a>]</p>
+
+<div class="desc">
+
+Display a message saying that we're following the player character from
+oldLoc when our actor is in this ActorState (and the actor is following
+the player character)
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

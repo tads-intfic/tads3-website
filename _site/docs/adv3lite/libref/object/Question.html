@@ -1,0 +1,185 @@
+<p><span class="title">Question</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1029">1029</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Question is an interactive question we ask the player via the regular
+command line. The player then has the option to answer the question, or
+to ignore the question and enter a new command.
+
+The parser uses Question objects internally to handle certain errors
+that the player can fix by entering additional information, such as
+disambiguation queries and missing noun phrase queries. Games can use
+Question objects for other, custom interactions.
+
+The basic Question object is incomplete - you have to subclass it to get
+a functional question handler. In particular, you must provide a
+parseAnswer() routine that parses the reply and creates a Command to
+carry out the action of answering the question.
+
+`class `**`Question`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Question</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Question</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>GramQuestion<code class="language-plaintext highlighter-rouge">](../object/GramQuestion.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>YesNoQuestion<code class="language-plaintext highlighter-rouge">](../object/YesNoQuestion.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ParseErrorQuestion<code class="language-plaintext highlighter-rouge">](../object/ParseErrorQuestion.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RexQuestion`](../object/RexQuestion.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>answerTemplate<code class="language-plaintext highlighter-rouge">](#answerTemplate)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>parseAnswer<code class="language-plaintext highlighter-rouge">](#parseAnswer)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="answerTemplate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">answerTemplate</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1074">1074</a>]</p>
+
+<div class="desc">
+
+the answer template
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1057">1057</a>]</p>
+
+<div class="desc">
+
+Priority: Should the answer be parsed before checking for a regular
+command entry? If this is true, the parser will try parsing the player's
+input as an answer to this question BEFORE it tries parsing the input as
+a regular command. If the answer parses, we'll assume it really is an
+answer to the question, and we won't even try parsing it as a new
+command.
+
+For disambiguation and missing noun queries, the parser only parses
+question replies AFTER parsing regular commands. Replies to these
+questions are frequently very short, abbreviated noun phrases - maybe
+just a single adjective or noun. It's fairly common for there be at
+least a few nouns that are the same as verbs in the game, so the input
+after a disambiguation or missing noun reply can often be interpreted
+equally well as a new verb or as a reply to the question. There's
+probably no theoretical basis for choosing one over the other when this
+happens, but in practice it seems that it's usually better to treat the
+reply as a new command. So, by default we set this property to nil, to
+give priority to a new command.
+
+Custom questions posed by the game might want to give higher priority to
+the answer interpretation, though. Yes/No questions in particular will
+probably want to do this, because otherwise the parser would take the
+answer as a conversational overture to any nearby NPC.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="parseAnswer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parseAnswer (toks, dict)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1071">1071</a>]</p>
+
+<div class="desc">
+
+Parse the answer. 'toks' is the token list of the user's input, and
+'dict' is the main parser Dictionary object.
+
+If the input does look like a valid answer to the question, returns a
+CommandList with the parsed reply. If not, returns nil, in which case
+the parser will continue trying to parse the input as a whole new
+command.
+
+By default, we simply return nil. Subclasses/instances must override
+this to provide the custom answer parsing.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

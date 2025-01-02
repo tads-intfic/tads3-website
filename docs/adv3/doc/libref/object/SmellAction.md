@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SmellAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[1809](../source/actions.t.html#1809)\]

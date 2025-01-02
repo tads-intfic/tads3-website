@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FileModeException</span><span class="type">class</span>
 
 [file.t](../file/file.t.html)\[[166](../source/file.t.html#166)\]

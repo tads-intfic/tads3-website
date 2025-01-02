@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rankByDisambigOrdinals</span><span class="type">object</span>
 
 [disambig.t](../file/disambig.t.html)\[[273](../source/disambig.t.html#273)\]

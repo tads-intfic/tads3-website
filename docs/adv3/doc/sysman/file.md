@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> File  
-<span class="navnp"><a href="dynfunc.htm" class="nav"><em>Prev:</em> DynamicFunc</a>
-    <a href="filename.htm" class="nav"><em>Next:</em> FileName</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> File  
+<span class="navnp"><a href="dynfunc.html" class="nav"><em>Prev:</em> DynamicFunc</a>
+    <a href="filename.html" class="nav"><em>Next:</em> FileName</a>    
 </span>
 
 </div>
@@ -27,7 +29,7 @@ created, the user who created it, and who else has permission to access
 it.
 
 In addition to reading and writing ordinary operating system files, the
-File class can be used to read TADS "[resources](build.htm#resources)."
+File class can be used to read TADS "[resources](build.html#resources)."
 Resources are most often used for multimedia objects, such as JPEG
 images or Ogg audio tracks, but you can also use them as ordinary
 external data files. A TADS resource is similar to a file in most
@@ -80,10 +82,10 @@ useful in different situations. The basic formats are:
   you total flexibility to read and write file formats defined by other
   applications or Internet standards, such as JPEG images or word
   processing documents. The easiest way to work with a raw file is via
-  the [byte packing](pack.htm) methods, [packBytes](#packBytes) and
+  the [byte packing](pack.html) methods, [packBytes](#packBytes) and
   [unpackBytes](#unpackBytes). You can also use the
   [readBytes](readBytes) and [writeBytes](writeBytes) methods to work
-  directly at the byte level, via [ByteArray](bytearr.htm) objects.
+  directly at the byte level, via [ByteArray](bytearr.html) objects.
 
 Resources can be read using the Text and Raw formats.
 
@@ -109,12 +111,12 @@ differentiate which type of format you're using to access the file.
 
 The *filename* argument is one of the following:
 
-- A [FileName](filename.htm) object naming the file to open.
+- A [FileName](filename.html) object naming the file to open.
 - A string giving the name of the file to open. This must be a valid
   filename in the local file system, conforming to local file [naming
   rules](#namingRules).
 - A [special file ID](#specialFile).
-- A [TemporaryFile](tempfile.htm) object, specifying a local temporary
+- A [TemporaryFile](tempfile.html) object, specifying a local temporary
   file to open. Pass the TemporaryFile object itself, **not** the string
   name of the file.
 - An object with a [File Spec](#filespec) interface.
@@ -152,7 +154,7 @@ the file's character set and the internal TADS Unicode character set,
 *or* a string giving the name of a character set. If this argument is
 missing or <span class="code">nil</span>, the system's default character
 set for file contents is used; this is the character set that
-[<span class="code">getLocalCharSet</span>](tadsio.htm#getLocalCharSet)<span class="code">(CharsetFileCont)</span>
+[<span class="code">getLocalCharSet</span>](tadsio.html#getLocalCharSet)<span class="code">(CharsetFileCont)</span>
 returns.
 
 <span class="code">File.openDataFile(*filename*, *access*)</span> opens
@@ -161,7 +163,7 @@ a file in "data" format. Any access mode may be used with this method.
 <span class="code">File.openRawFile(*filename*, *access*)</span> opens a
 file in "raw" format. Any access mode may be used with this method.
 
-All of the "open" methods check the [file safety](terp.htm#file-safety)
+All of the "open" methods check the [file safety](terp.html#file-safety)
 level settings to ensure that the file access is allowed. If the file
 safety level is too restrictive for a requested operation, the method
 throws a <span class="code">FileSafetyException</span>. The file safety
@@ -210,7 +212,7 @@ relative to the working directory. (This is normally the directory
 containing the image file, but some tools override this; for example,
 when running inside Workbench for Windows, this is the project
 directory. The user can also override it with the [-R
-option](terp.htm#-R-option) when starting the interpreter.) Note that
+option](terp.html#-R-option) when starting the interpreter.) Note that
 the URL notation is universal: you must always use the same "/" path
 separator notation, regardless of the operating system. The File object
 automatically converts the URL-style path to the correct local
@@ -229,7 +231,7 @@ mode other than <span class="code">FileAccessRead</span>, there's no
 need for a separate access mode argument.
 
 You can open bundled resources even when the [file
-safety](terp.htm#file-safety) level prohibits access to external disk
+safety](terp.html#file-safety) level prohibits access to external disk
 files. Resource are read-only, so you can't use resource access to do
 any damage to the local system. Reading a resource is considered
 inherently safe because these objects are explicitly bundled into the
@@ -238,7 +240,7 @@ the local system.
 
 The file safety level does have one effect on resource files, though. If
 you attempt to open a resource file, and the resource isn't found among
-the [bundled resources](build.htm#resources), **and** the file safety
+the [bundled resources](build.html#resources), **and** the file safety
 level is 3 or lower (i.e., local read access is allowed), TADS attempts
 to interpret the resource name as a local file path within the image
 file's directory. If the file safety level is 4 or higher (no local read
@@ -264,9 +266,9 @@ work on your own operating system.
 One way to be sure that a filename is valid locally is to let the user
 specify the name, rather than hard-coding it as a string within your
 program. You can let the user specify a name by asking them to type it
-in via [inputLine()](tadsio.htm#inputLine), or better still, by
+in via [inputLine()](tadsio.html#inputLine), or better still, by
 presenting a local system file dialog using
-[inputFile()](tadsio.htm#inputFile) function.
+[inputFile()](tadsio.html#inputFile) function.
 
 For files that you create and manage for your program's own internal
 use, you probably won't want to ask the user to name them. For these
@@ -302,7 +304,7 @@ maximize portability is to use a least common denominator approach:
   It's not okay! That backslash won't work on Unix or Mac systems.
 
   Fortunately, there's a way around this problem: use
-  [FileName.fromUniversal()](filename.htm#fromUniversal) to create local
+  [FileName.fromUniversal()](filename.html#fromUniversal) to create local
   paths based on a portable "universal" syntax.
 
 ## <span id="specialFiles"></span>Special Files
@@ -334,7 +336,7 @@ files currently defined:
   starting a new game. This file is stored in the same location as the
   library defaults file.
 
-Special files aren't subject to [file safety](terp.htm#file-safety)
+Special files aren't subject to [file safety](terp.html#file-safety)
 restrictions. These files are limited to the specific names and
 locations designated by the interpreter, so it's not possible for a T3
 program to use a special file to access arbitrary file system data. Each
@@ -351,7 +353,7 @@ large that it can be taxing on system performance to keep them in
 memory. Temporary files are the usual answer to such situations.
 
 TADS lets you generate names for temporary files using the
-[TemporaryFile](tempfile.htm) class. A TemporaryFile object represents
+[TemporaryFile](tempfile.html) class. A TemporaryFile object represents
 the name of a temporary file, and automatically keeps track of the file
 to ensure that it's deleted when the program exits or no longer needs
 access to the file. Once you've created a TemporaryFile object
@@ -369,7 +371,7 @@ Temporary files have two major benefits. First, the system automatically
 ensures that they're deleted by the time the program exits, so you don't
 have to worry about explicitly cleaning up the disk space you use for
 these files. Second, temporary files bypass the [file
-safety](terp.htm#file-safety) settings, so you can use them even when
+safety](terp.html#file-safety) settings, so you can use them even when
 the file safety settings would prohibit the same access to ordinary
 files. Temporary files are an exception to the usual safety rules
 because they're already protected from misuse by their design: the
@@ -397,7 +399,7 @@ are more ways of storing external data:
   them.
 - Remote "cloud" files. When running in a client/server configuration,
   TADS can store files on a remote machine, known as a [storage
-  server](webdeploy.htm#storageServer), rather than on a local disk.
+  server](webdeploy.html#storageServer), rather than on a local disk.
   Some people call this "cloud" storage, since from the user's
   perspective they're stored out in some nebulous location on the
   network, and the user doesn't need to know the details of exactly
@@ -423,7 +425,7 @@ has built-in handling for ordinary local files, temporary files, and
 types.
 
 In concrete terms, a File Spec is really pretty simple. It's just a
-[TadsObject](tadsobj.htm) object that has one required method and one
+[TadsObject](tadsobj.html) object that has one required method and one
 optional method:
 
 - <span class="code">getFilename()</span> returns a system file
@@ -533,7 +535,7 @@ call directly on the File object:
 </div>
 
 The function will succeed only if the [file
-safety](terp.htm#file-safety) level would allow you to open the file
+safety](terp.html#file-safety) level would allow you to open the file
 with write access. If not, the method throws a file safety exception. In
 addition, the function will fail if the file can't be deleted at the
 operating system level. There are numerous reasons that the deletion can
@@ -541,7 +543,7 @@ fail at the OS level: insufficient privileges or access rights,
 read-only protection on the file, physical media failures, and
 concurrent access by other programs, to name a few.
 
-See the [FileName](filename.htm) class for a more comprehensive set of
+See the [FileName](filename.html) class for a more comprehensive set of
 file manipulation functions.
 
 </div>
@@ -619,7 +621,7 @@ file, which is at offset zero.
 <div class="fdef">
 
 Note: we recommended using the newer
-[FileName.getBaseName()](filename.htm#getBaseName) instead of this
+[FileName.getBaseName()](filename.html#getBaseName) instead of this
 method; the FileName class provides a more comprehensive set of file
 name functions.
 
@@ -676,7 +678,7 @@ method. If you use a positioning code like X or @, you can move the file
 position backwards, in which case the return value might be smaller than
 the number of bytes actually written.)
 
-See [Byte Packing](pack.htm) for full details.
+See [Byte Packing](pack.html) for full details.
 
 </div>
 
@@ -760,7 +762,7 @@ Note that if the file is open for write-only access, a
 Sets the character mapping that the file uses for its character
 translations. *charset* can be one of the following:
 
-- A [CharacterSet](charset.htm) object.
+- A [CharacterSet](charset.html) object.
 - A string giving a character mapping name. A CharacterSet object is
   automatically created for the mapping name.
 - <span class="code">nil</span>. This selects the local system's default
@@ -782,7 +784,7 @@ specifies the character set for the file's contents. Any text you write
 to the file will be mapped to this character set, and any text you read
 from the file will be converted from this character set. The character
 set can be specified as a
-[<span class="code">CharacterSet</span>](charset.htm) object, or as a
+[<span class="code">CharacterSet</span>](charset.html) object, or as a
 string giving the name of a character set. If *charset* is
 <span class="code">nil</span> or the argument is omitted entirely, the
 local system's default character set for file contents is used.
@@ -871,7 +873,7 @@ method reads just enough bytes to provide a value for each item in the
 format string. An error is thrown if the file doesn't have enough data
 to satisfy the format string.
 
-See [Byte Packing](pack.htm) for full details.
+See [Byte Packing](pack.html) for full details.
 
 </div>
 
@@ -985,10 +987,10 @@ are attempted on an unsynchronized file.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> File  
-<span class="navnp"><a href="dynfunc.htm" class="nav"><em>Prev:</em> DynamicFunc</a>
-    <a href="filename.htm" class="nav"><em>Next:</em> FileName</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> File  
+<span class="navnp"><a href="dynfunc.html" class="nav"><em>Prev:</em> DynamicFunc</a>
+    <a href="filename.html" class="nav"><em>Next:</em> FileName</a>    
 </span>
 
 </div>

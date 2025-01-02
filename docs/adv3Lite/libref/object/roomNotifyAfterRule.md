@@ -1,3 +1,5 @@
+---
+---
 <span class="title">roomNotifyAfterRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[196](../source/sysrules.t.html#196)\]

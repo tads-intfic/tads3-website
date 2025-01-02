@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Some Output and Input
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Some Output and Input
 Issues  
-<span class="navnp"><a href="final.htm" class="nav"><em>Prev:</em> Final Moves</a>
+<span class="navnp"><a href="final.html" class="nav"><em>Prev:</em> Final Moves</a>
    
-<a href="utility.htm" class="nav"><em>Next:</em> Utility Functions</a>
+<a href="utility.html" class="nav"><em>Next:</em> Utility Functions</a>
     </span>
 
 </div>
@@ -96,7 +98,7 @@ When we don't know in advance what output doSomething() will produce.
 
 ## inputManager
 
-You may want to look at the [inputManager](webui.htm#inputmanager)
+You may want to look at the [inputManager](webui.html#inputmanager)
 methods for ways of pausing output and requesting input.
 
   
@@ -341,12 +343,12 @@ like WHERE IS THE SALT, that the parser can more easily understand):
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Some Output and Input
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Some Output and Input
 Issues  
-<span class="navnp"><a href="final.htm" class="nav"><em>Prev:</em> Final Moves</a>
+<span class="navnp"><a href="final.html" class="nav"><em>Prev:</em> Final Moves</a>
    
-<a href="utility.htm" class="nav"><em>Next:</em> Utility Functions</a>
+<a href="utility.html" class="nav"><em>Next:</em> Utility Functions</a>
     </span>
 
 </div>

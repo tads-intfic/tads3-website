@@ -1,3 +1,5 @@
+---
+---
 <span class="title">KeepGoing</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[481](../source/newbie.t.html#481)\]

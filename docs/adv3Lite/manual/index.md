@@ -1,3 +1,5 @@
+---
+---
 adv3Lite Library Manual
 
 # adv3Lite Library Manual
@@ -13,9 +15,9 @@ adv3Lite Library Manual
   
   
   
-[Table of Contents](toc.htm)  
+[Table of Contents](toc.html)  
   
-[Introduction](docs-intro.htm)  
+[Introduction](docs-intro.html)  
   
   
   

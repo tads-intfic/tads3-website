@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NounWordProd</span><span class="type">class</span>
 
 [en_us.t](../file/en_us.t.html)\[[6586](../source/en_us.t.html#6586)\]

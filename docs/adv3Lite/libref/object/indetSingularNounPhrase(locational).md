@@ -1,3 +1,5 @@
+---
+---
 <span class="title">indetSingularNounPhrase(locational)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[487](../source/grammar.t.html#487)\]

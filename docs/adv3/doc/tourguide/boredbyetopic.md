@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,20 +9,20 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>BoredByeTopic: <a
-href="misctopic.htm">MiscTopic</a><br />
+href="misctopic.html">MiscTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="leavebyetopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="actorbyetopic.htm">[Next]</a></td>
+href="leavebyetopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="actorbyetopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 The BoredByeTopic is the second special case of
-[ImpByeTopic](impbyetopic.htm), and complements
-[LeaveByeTopic](leavebyetopic.htm). It is triggered whenever a
+[ImpByeTopic](impbyetopic.html), and complements
+[LeaveByeTopic](leavebyetopic.html). It is triggered whenever a
 conversation is terminated because an NPC gives up waiting for the PC to
 speak.  
   

@@ -1,0 +1,64 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Underside : <a href="spaceoverlay.html">SpaceOverlay</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="spaceoverlay.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="rearcontainer.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>*An “underside” is a special type of container that describes its
+contents as being under the object. This is appropriate for objects that
+have a space underneath, such as a bed or a table.</p>
+<ul>
+  <li>Usually, an Underside is not much use by itself (since it would be the
+Underside of something), and one would normally use it as part of a
+<a href="complexcontainer.html">ComplexContainer</a>. It is, however, possible
+(though more laborious) to link an Underside to another object using
+remapTo commands. Just to show how it could be done, we’ll give the desk
+in the cabin an Underside by this means, and then hide the button under
+it, so that the player can only find it by explicitly looking under the
+desk:</li>
+</ul>
+
+<p>cabinDesk : Heavy, Surface ’large solid oak desk’ ’desk’ @greatCabin<br />
+  ”It’s a large, solid oak desk, with a single drawer. ”<br />
+  <strong>initSpecialDesc</strong> = ”A large oak desk sits in the middle of the cabin. ”<br />
+  <strong>specialDescOrder = 50</strong><br />
+  **dobjFor(LookUnder) remapTo(LookUnder, underDesk)<br />
+  iobjFor(PutUnder) remapTo(PutUnder, DirectObject, underDesk)<br />
+**;</p>
+
+<p>+ underDesk : NameAsOther, Underside, Component<br />
+  targetObj = cabinDesk<br />
+;</p>
+
+<p>++ <strong>Hidden</strong>, Button, <strong>Component</strong> ’small brown button’ ’small brown button’<br />
+  ”The small brown button is fixed to the underside of the desk. ”<br />
+  dobjFor(Push)<br />
+  {<br />
+    action()<br />
+    {<br />
+      ”There’s a sharp &lt;i&gt;click&lt;/i&gt;, and a section of the foreward bulkhead slides<br />
+      &lt;&lt;bulkheadDoor.isOpen ? ’closed’ : ’open’&gt;&gt;. ”;<br />
+      bulkheadDoor.makeOpen(!bulkheadDoor.isOpen);<br />
+    }<br />
+  }  <br />
+  **isListedInContents = (discovered)<br />
+**;</p>
+
+<p>Note that this anticipates the use of the <a href="hidden.html">Hidden</a> class,
+which we’ll be looking at in more detail later.</p>
+
+<p>Apart from a number of message properties, the main new property of
+interest defined on Underside is <strong>allowPutUnder</strong>; if this is set to
+true, actors (including the player character) may place objects in (i.e.
+under) this Underside; otherwise they may not. allowPutUnder is true by
+default.</p>
+

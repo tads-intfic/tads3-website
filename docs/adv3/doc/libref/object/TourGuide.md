@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TourGuide</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[2319](../source/extras.t.html#2319)\]

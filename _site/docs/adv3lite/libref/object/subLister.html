@@ -1,0 +1,203 @@
+<p><span class="title">subLister</span><span class="type">object</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3105">3105</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The subLister is used by other listers such as inventoryLister and
+wornLister to show the contents of listed items in parentheses (e.g.
+'(in which is a pen, a pencil and a piece of paper). The depth of
+nesting is limited by the maxNestingDepth property.
+
+**`subLister`**` :   `[`ItemLister`](../object/ItemLister.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">subLister</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ItemLister<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Lister<code class="language-plaintext highlighter-rouge">](../object/Lister.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>maxNestingDepth<code class="language-plaintext highlighter-rouge">](#maxNestingDepth)</code>  <code class="language-plaintext highlighter-rouge">[</code>nestingDepth<code class="language-plaintext highlighter-rouge">](#nestingDepth)</code>  <code class="language-plaintext highlighter-rouge">[</code>showSubListing<code class="language-plaintext highlighter-rouge">](#showSubListing)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ItemLister</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>contentsListedProp<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#contentsListedProp)</code>  <code class="language-plaintext highlighter-rouge">[</code>listRecursively<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#listRecursively)</code>  <code class="language-plaintext highlighter-rouge">[</code>showAdditionalInfo<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#showAdditionalInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>showWornInfo<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#showWornInfo)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>buildList<code class="language-plaintext highlighter-rouge">](#buildList)</code>  <code class="language-plaintext highlighter-rouge">[</code>listed<code class="language-plaintext highlighter-rouge">](#listed)</code>  <code class="language-plaintext highlighter-rouge">[</code>showList<code class="language-plaintext highlighter-rouge">](#showList)</code>  <code class="language-plaintext highlighter-rouge">[</code>showListEmpty<code class="language-plaintext highlighter-rouge">](#showListEmpty)</code>  <code class="language-plaintext highlighter-rouge">[</code>showListPrefix<code class="language-plaintext highlighter-rouge">](#showListPrefix)</code>  <code class="language-plaintext highlighter-rouge">[</code>showListSuffix<code class="language-plaintext highlighter-rouge">](#showListSuffix)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ItemLister</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>listName<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#listName)</code>  <code class="language-plaintext highlighter-rouge">[</code>show<code class="language-plaintext highlighter-rouge">](../object/ItemLister.html#show)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Lister</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>listOrder<code class="language-plaintext highlighter-rouge">](../object/Lister.html#listOrder)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="maxNestingDepth"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">maxNestingDepth</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3154">3154</a>]</p>
+
+<div class="desc">
+
+The maximum nesting depth this subLister is allowed to reach
+
+</div>
+
+<p><span id="nestingDepth"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nestingDepth</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3157">3157</a>]</p>
+
+<div class="desc">
+
+The current nesting depth of this subLister
+
+</div>
+
+<p><span id="showSubListing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showSubListing</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3160">3160</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="buildList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildList (lst)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3117">3117</a>]</p>
+
+<div class="desc">
+
+Construct the list contents from lst to a maximum nesting depth
+
+</div>
+
+<p><span id="listed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listed (o)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3162">3162</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="showList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showList (lst, pl, paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3148">3148</a>]</p>
+
+<div class="desc">
+
+Return the result
+
+</div>
+
+<p><span id="showListEmpty"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListEmpty (paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3114">3114</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="showListPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListPrefix (lst, pl, paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3106">3106</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="showListSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListSuffix (lst, pl, paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#3112">3112</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

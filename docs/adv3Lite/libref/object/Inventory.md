@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Inventory</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[451](../source/actions.t.html#451)\]

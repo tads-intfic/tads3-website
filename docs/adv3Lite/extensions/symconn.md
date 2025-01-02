@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Symconn  
-<span class="navnp"><a href="subtime.htm" class="nav"><em>Prev:</em> Subtime</a>
-    <a href="sysrules.htm" class="nav"><em>Next:</em> Sysrules</a>    
+<span class="navnp"><a href="subtime.html" class="nav"><em>Prev:</em> Subtime</a>
+    <a href="sysrules.html" class="nav"><em>Next:</em> Sysrules</a>    
 </span>
 
 </div>
@@ -126,7 +128,7 @@ subclasses, [SymPassage](#sympassage), [SymDoor](#symdoor) and
 [SymStairway](#symstair).
 
 SymConnector is a type of
-[TravelConnector](../../docs/manual/travel.htm) (from which it descends
+[TravelConnector](../../docs/manual/travel.html) (from which it descends
 by inheritance). A SymConnector can be traversed in both directions, and
 defining a SymConnector on a direction property of one room
 automatically attaches it to the reverse direction property of the room
@@ -200,14 +202,14 @@ SymConnector, this extension won't then attempt to make room2's
 <span class="code">east</span> property do so. If you don't want there
 to be any way back from room2 to room1 then there's little point using a
 SymConnector at all; you'd be better off using an ordinary
-[TravelConnector](../../docs/manual/travel.htm) to set up the one-way
+[TravelConnector](../../docs/manual/travel.html) to set up the one-way
 connection.  
   
 <span id="sympassage"></span>
 
 A **SymPassage** is a kind of [SymConnector](#symcons) representing a
 physical object that's present in both the locations it connects. A
-SymPassage is also a [MultiLoc](../../docs/manual/multiloc.htm), which
+SymPassage is also a [MultiLoc](../../docs/manual/multiloc.html), which
 the symconn extension automatically places in its two locations at
 preinit. It is very like a [SymDoor](#symdoor), except that it can't be
 opened or closed (at least, not via player commands). The
@@ -216,7 +218,7 @@ passage-like objects such as passageways and archways that connect one
 location to another. A <span class="code">SymPassage</span> is otherwise
 defined in exactly the same way as a <span class="code">SymDoor</span>;
 from a player's perspective it is functionally equivalent to a
-[Passage](../../docs/manual/extra.htm#travelconn), the differences from
+[Passage](../../docs/manual/extra.html#travelconn), the differences from
 the game author's point of view being that it can be defined using one
 game object instead of two and that this extension automatically takes
 care of setting up the connection in the reverse direction.
@@ -377,10 +379,10 @@ Note, however, that all these techniques assume that the player
 character is either in room1 or room2 when viewiing the SymConnector in
 question. This may mot be the case if the SymCommector is visible from a
 remote location that's part of a
-[SenseRegion](../../docs/manual/senseregion.htm) also containing the
+[SenseRegion](../../docs/manual/senseregion.html) also containing the
 player character. This shouldn't matter too much provided suitable care
 is taken in defining the SymConnector's
-[remoteDesc(pov)](../../docs/manual/senseregion.htm#remoteprops)
+[remoteDesc(pov)](../../docs/manual/senseregion.html#remoteprops)
 appropriately.
 
 The <span class="code">SymPassage</span> class also defines the
@@ -430,7 +432,7 @@ the SymPathPassage.
 
 The **SymDoor** class lets you define a door using one object instead of
 the usual two. Using the standard adv3Lite library you'd typically set
-up a [door](../../docs/manual/door.htm) between two rooms like this:
+up a [door](../../docs/manual/door.html) between two rooms like this:
 
 <div class="code">
 
@@ -492,13 +494,13 @@ in just the same way. In particular you can use the
 [room1Desc](#roomdesc), room2Desc, room1Vocab and room2Vocab properties
 just as you would on a SymPassage. In addition, on a SymDoor you can
 define **room1Lockability** and **room1Lockability** properties to make
-the [lockability](../../docs/manual/thing.htm#behaviour) work in
+the [lockability](../../docs/manual/thing.html#behaviour) work in
 different ways on each side of the door (although if you want the same
 lockability on both sides of the door you can just override its
 lockability property). The one thing you can't do is define different
 keys to work on the different sides of the door. If you really wanted to
 do that you'd be better off using the regular
-[Door](../../docs/manual/door.htm) class to define the door as two
+[Door](../../docs/manual/door.html) class to define the door as two
 different objects.
 
 <span id="attachdir"></span>
@@ -515,7 +517,7 @@ SymDoor, you can do so simply by overriding its **attachDir** property
 to <span class="code">nil</span> (<span class="code">attachDir</span> is
 a method that works out which direction property a SymDoor is attached
 to in the player character's location, which is used by the **DirState**
-[State](../../docs/manual/thing.htm#manipulatevocab) object to add the
+[State](../../docs/manual/thing.html#manipulatevocab) object to add the
 appropriate direction name adjectives, such as 'north', to the SymDoor's
 vocab).
 
@@ -780,11 +782,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Symconn  
-<span class="navnp"><a href="subtime.htm" class="nav"><em>Prev:</em> Subtime</a>
-    <a href="sysrules.htm" class="nav"><em>Next:</em> Sysrules</a>    
+<span class="navnp"><a href="subtime.html" class="nav"><em>Prev:</em> Subtime</a>
+    <a href="sysrules.html" class="nav"><em>Next:</em> Sysrules</a>    
 </span>
 
 </div>

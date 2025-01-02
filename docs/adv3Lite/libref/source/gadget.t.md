@@ -1,3 +1,5 @@
+---
+---
 # gadget.t
 
 [documentation](../file/gadget.t.html)

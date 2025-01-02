@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ButProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1667](../source/parser.t.html#1667)\]

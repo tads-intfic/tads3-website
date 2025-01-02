@@ -1,3 +1,5 @@
+---
+---
 <span class="title">roomPartDescContentsLister</span><span class="type">object</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4927](../source/msg_neu.t.html#4927)\]

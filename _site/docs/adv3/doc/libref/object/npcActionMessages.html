@@ -1,0 +1,755 @@
+<p><span class="title">npcActionMessages</span><span class="type">object</span></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4152">4152</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Non-player character verb messages. By default, we inherit all of the
+messages defined for the player character, but we override some that
+must be rephrased slightly to make sense for NPC's.
+
+**`npcActionMessages`**` :   `[`playerActionMessages`](../object/playerActionMessages.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">npcActionMessages</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>playerActionMessages<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MessageHelper<code class="language-plaintext highlighter-rouge">](../object/MessageHelper.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>alreadyFollowModeMsg<code class="language-plaintext highlighter-rouge">](#alreadyFollowModeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAskSelfForMsg<code class="language-plaintext highlighter-rouge">](#cannotAskSelfForMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAskSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotAskSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGiveToSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotGiveToSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotJumpOffHereMsg<code class="language-plaintext highlighter-rouge">](#cannotJumpOffHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveFixtureMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveFixtureMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveHeavyMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveHeavyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveImmovableMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveImmovableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutHeavyMsg<code class="language-plaintext highlighter-rouge">](#cannotPutHeavyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotShowToSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotShowToSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeHeavyMsg<code class="language-plaintext highlighter-rouge">](#cannotTakeHeavyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTalkToSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotTalkToSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTellSelfMsg<code class="language-plaintext highlighter-rouge">](#cannotTellSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyDoesNotFitLockMsg<code class="language-plaintext highlighter-rouge">](#keyDoesNotFitLockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>moveNoEffectMsg<code class="language-plaintext highlighter-rouge">](#moveNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>moveToNoEffectMsg<code class="language-plaintext highlighter-rouge">](#moveToNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>objNotForKeyringMsg<code class="language-plaintext highlighter-rouge">](#objNotForKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayAttachToMsg<code class="language-plaintext highlighter-rouge">](#okayAttachToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayCloseMsg<code class="language-plaintext highlighter-rouge">](#okayCloseMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayDetachFromMsg<code class="language-plaintext highlighter-rouge">](#okayDetachFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayDoffMsg<code class="language-plaintext highlighter-rouge">](#okayDoffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayDropMsg<code class="language-plaintext highlighter-rouge">](#okayDropMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayExtinguishCandleMsg<code class="language-plaintext highlighter-rouge">](#okayExtinguishCandleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayFollowModeMsg<code class="language-plaintext highlighter-rouge">](#okayFollowModeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayLockMsg<code class="language-plaintext highlighter-rouge">](#okayLockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayNotStandingOnMsg<code class="language-plaintext highlighter-rouge">](#okayNotStandingOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayOpenMsg<code class="language-plaintext highlighter-rouge">](#okayOpenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPushButtonMsg<code class="language-plaintext highlighter-rouge">](#okayPushButtonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPutBehindMsg<code class="language-plaintext highlighter-rouge">](#okayPutBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPutInMsg<code class="language-plaintext highlighter-rouge">](#okayPutInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPutOnMsg<code class="language-plaintext highlighter-rouge">](#okayPutOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPutUnderMsg<code class="language-plaintext highlighter-rouge">](#okayPutUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayTakeMsg<code class="language-plaintext highlighter-rouge">](#okayTakeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayTurnOffMsg<code class="language-plaintext highlighter-rouge">](#okayTurnOffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayTurnOnMsg<code class="language-plaintext highlighter-rouge">](#okayTurnOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayUnlockMsg<code class="language-plaintext highlighter-rouge">](#okayUnlockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayWearMsg<code class="language-plaintext highlighter-rouge">](#okayWearMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>pullNoEffectMsg<code class="language-plaintext highlighter-rouge">](#pullNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>pushNoEffectMsg<code class="language-plaintext highlighter-rouge">](#pushNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>shouldNotBreakMsg<code class="language-plaintext highlighter-rouge">](#shouldNotBreakMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotBehindMsg<code class="language-plaintext highlighter-rouge">](#takeFromNotBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotInMsg<code class="language-plaintext highlighter-rouge">](#takeFromNotInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotOnMsg<code class="language-plaintext highlighter-rouge">](#takeFromNotOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotUnderMsg<code class="language-plaintext highlighter-rouge">](#takeFromNotUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>timePassesMsg<code class="language-plaintext highlighter-rouge">](#timePassesMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>whereToGoMsg<code class="language-plaintext highlighter-rouge">](#whereToGoMsg)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">playerActionMessages</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>alreadyAttachedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyAttachedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyBurningMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyBurningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyClosedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyHoldingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyHoldingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyInLocMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyInLocMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyLockedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyLockedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyLyingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyLyingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyLyingOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyLyingOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyOpenMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyOpenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPulledMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyPulledMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPushedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyPushedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPutBehindMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyPutBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPutInMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyPutInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPutOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyPutOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyPutUnderMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyPutUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadySittingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadySittingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadySittingOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadySittingOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyStandingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyStandingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyStandingOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyStandingOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadySwitchedOffMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadySwitchedOffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadySwitchedOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadySwitchedOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyUnlockedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyUnlockedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>alreadyWearingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#alreadyWearingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>askVagueMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#askVagueMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>candleNotLitMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#candleNotLitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>candleOutOfFuelMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#candleOutOfFuelMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAttachKeyToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotAttachKeyToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAttachMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotAttachMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAttachToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotAttachToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotAttachToSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotAttachToSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBoardMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotBoardMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBurnDobjWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotBurnDobjWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBurnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotBurnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBurnWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotBurnWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotCleanMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotCleanMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotCleanWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotCleanWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotClimbMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotClimbMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotCloseMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotCloseMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotConsultMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotConsultMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotCutWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotCutWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDetachFromMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotDetachFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDetachMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotDetachMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDetachPermanentMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotDetachPermanentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDigMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotDigMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDigWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotDigWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDoFromHereMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotDoFromHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDoThatMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotDoThatMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDrinkMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotDrinkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEatMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotEatMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEnterHeldMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotEnterHeldMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEnterMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotEnterMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEnterOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotEnterOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotExtinguishMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotExtinguishMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFastenMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotFastenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFastenToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotFastenToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFindTopicMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotFindTopicMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFlipMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotFlipMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFollowSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotFollowSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGetOffOfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGetOffOfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGetOutMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGetOutMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGiveToItselfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGiveToItselfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGiveToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGiveToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoBackMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGoBackMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThatWayInDarkMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGoThatWayInDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThatWayMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGoThatWayMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThroughMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGoThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotJumpOffMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotJumpOffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotJumpOverMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotJumpOverMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotKissMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotKissMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotKissSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotKissSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLieOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotLieOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLightMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotLightMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLockMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotLockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLockWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotLockWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLookBehindMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotLookBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLookInClosedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotLookInClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLookThroughMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotLookThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotLookUnderMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotLookUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotMoveActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMovePersonMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotMovePersonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMovePushableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotMovePushableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotMoveWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotOpenLockedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotOpenLockedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotOpenMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotOpenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPlugInMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPlugInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPlugInToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPlugInToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPourIntoMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPourIntoMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPourMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPourMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPourOntoMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPourOntoMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPushTravelMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPushTravelMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutBehindMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutBehindRestrictedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutBehindRestrictedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutBehindSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutBehindSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutFixtureMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutFixtureMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutImmovableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutImmovableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutInDispenserMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutInDispenserMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutInRestrictedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutInRestrictedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutInSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutInSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutOnRestrictedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutOnRestrictedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutOnSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutOnSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutPersonMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutPersonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutPushableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutPushableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutUnderMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutUnderRestrictedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutUnderRestrictedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutUnderSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutUnderSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotRemoveHeldMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotRemoveHeldMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReturnToDispenserMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotReturnToDispenserMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotScrewMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotScrewMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotScrewWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotScrewWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSetToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotSetToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotShowToItselfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotShowToItselfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotShowToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotShowToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSitOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotSitOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSleepMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotSleepMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotStandOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotStandOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotStandOnPathMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotStandOnPathMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSwitchMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotSwitchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTakeActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeFixtureMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTakeFixtureMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeImmovableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTakeImmovableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeLocationMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTakeLocationMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakePersonMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTakePersonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakePushableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTakePushableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTasteActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTasteActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTastePersonMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTastePersonMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotThrowAtContentsMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotThrowAtContentsMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotThrowAtSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotThrowAtSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotThrowToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotThrowToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTurnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTurnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTurnOffMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTurnOffMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTurnOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTurnOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTurnWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTurnWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTypeOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTypeOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnboardMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotUnboardMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnfastenFromMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotUnfastenFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnfastenMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotUnfastenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnlockMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotUnlockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnlockWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotUnlockWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnplugFromMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotUnplugFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnplugMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotUnplugMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnscrewMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotUnscrewMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotUnscrewWithMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotUnscrewWithMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cutNoEffectMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cutNoEffectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>dontThrowDirMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#dontThrowDirMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>droppingSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#droppingSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>flashlightOnButDarkMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#flashlightOnButDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>followAlreadyHereInDarkMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#followAlreadyHereInDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>followAlreadyHereMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#followAlreadyHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>followUnknownMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#followUnknownMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>giveAlreadyHasMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#giveAlreadyHasMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyNotDetachableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#keyNotDetachableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyNotOnKeyringMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#keyNotOnKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchNotLitMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#matchNotLitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeStandingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeStandingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustSpecifyTurnToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustSpecifyTurnToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>newlyDarkMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#newlyDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noKeyNeededMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#noKeyNeededMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noRoomToLieMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#noRoomToLieMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noRoomToSitMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#noRoomToSitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noRoomToStandMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#noRoomToStandMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notAContainerMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notAContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notASurfaceMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notASurfaceMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notAttachedToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notAttachedToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notAWeaponMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notAWeaponMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notCarryingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notCarryingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notDoffableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notDoffableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notFollowableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notFollowableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingBehindMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nothingBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingBeyondDoorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nothingBeyondDoorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingInsideMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nothingInsideMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingThroughMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nothingThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingThroughPassageMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nothingThroughPassageMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingToHearMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nothingToHearMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingToSmellMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nothingToSmellMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingUnderMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nothingUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notOnPlatformMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notOnPlatformMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notWearableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notWearableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notWearingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notWearingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayBurnCandleMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayBurnCandleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayBurnMatchMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayBurnMatchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayEatMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayEatMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayExtinguishMatchMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayExtinguishMatchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayJumpMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayJumpMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPullLeverMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayPullLeverMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPullSpringLeverMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayPullSpringLeverMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPushLeverMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayPushLeverMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayYellMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayYellMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>puttingSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#puttingSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayGoodbyeMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#sayGoodbyeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayHelloMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#sayHelloMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayNoMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#sayNoMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayYesMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#sayYesMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>setToInvalidMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#setToInvalidMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>shouldNotThrowAtFloorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#shouldNotThrowAtFloorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>stairwayNotDownMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#stairwayNotDownMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>stairwayNotUpMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#stairwayNotUpMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takeFromNotInActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#takeFromNotInActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takingSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#takingSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tellVagueMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#tellVagueMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwingSelfMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#throwingSelfMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooDarkMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#tooDarkMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>turnToInvalidMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#turnToInvalidMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownHowToLockMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#unknownHowToLockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownHowToUnlockMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#unknownHowToUnlockMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>unlockRequiresKeyMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#unlockRequiresKeyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>uselessToAttackMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#uselessToAttackMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>wrongAttachmentMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#wrongAttachmentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>wrongDetachmentMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#wrongDetachmentMsg)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>cannotMoveComponentMsg<code class="language-plaintext highlighter-rouge">](#cannotMoveComponentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>containerTooFullMsg<code class="language-plaintext highlighter-rouge">](#containerTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPostureChangeMsg<code class="language-plaintext highlighter-rouge">](#okayPostureChangeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayTurnToMsg<code class="language-plaintext highlighter-rouge">](#okayTurnToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomOkayPostureChangeMsg<code class="language-plaintext highlighter-rouge">](#roomOkayPostureChangeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>surfaceTooFullMsg<code class="language-plaintext highlighter-rouge">](#surfaceTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooLargeForContainerMsg<code class="language-plaintext highlighter-rouge">](#tooLargeForContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooLargeForRearMsg<code class="language-plaintext highlighter-rouge">](#tooLargeForRearMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooLargeForUndersideMsg<code class="language-plaintext highlighter-rouge">](#tooLargeForUndersideMsg)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">playerActionMessages</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>actorCannotSeeMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#actorCannotSeeMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>becomingTooLargeForActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#becomingTooLargeForActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>becomingTooLargeForContainerMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#becomingTooLargeForContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotBeWearingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotBeWearingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotDoFromMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotDoFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotEnterExitOnlyMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotEnterExitOnlyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFitIntoOpeningMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotFitIntoOpeningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFitOutOfOpeningMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotFitOutOfOpeningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotFollowFromHereMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotFollowFromHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThatWayInVehicleMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGoThatWayInVehicleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotGoThroughClosedDoorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotGoThroughClosedDoorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotHearMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotHearMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveThroughClosedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotMoveThroughClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveThroughContainerMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotMoveThroughContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotMoveThroughMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotMoveThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPushObjectNestedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPushObjectNestedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPushObjectThatWayMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPushObjectThatWayMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotPutComponentMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotPutComponentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReachIntoOpeningMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotReachIntoOpeningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReachObjectMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotReachObjectMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReachOutOfOpeningMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotReachOutOfOpeningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotReachThroughMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotReachThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotSmellMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotSmellMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTakeComponentMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTakeComponentMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTasteMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTasteMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotThrowThroughMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotThrowThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTouchThroughClosedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTouchThroughClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTouchThroughContainerMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#cannotTouchThroughContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>circularlyBehindMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#circularlyBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>circularlyInMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#circularlyInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>circularlyOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#circularlyOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>circularlyUnderMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#circularlyUnderMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>containerBecomingTooFullMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#containerBecomingTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>decorationNotImportantMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#decorationNotImportantMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>doorClosesBehindMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#doorClosesBehindMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>droppingObjMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#droppingObjMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>floorlessDropMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#floorlessDropMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>foundKeyOnKeyringMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#foundKeyOnKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>foundNoKeyOnKeyringMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#foundNoKeyOnKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>handsBecomingTooFullForMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#handsBecomingTooFullForMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>handsTooFullForMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#handsTooFullForMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>heardButNotSeenMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#heardButNotSeenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>invalidStagingContainerActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#invalidStagingContainerActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>invalidStagingContainerMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#invalidStagingContainerMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>invalidStagingLocationMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#invalidStagingLocationMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>lookInVaporousMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#lookInVaporousMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>movedKeysToKeyringMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#movedKeysToKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>movedKeyToKeyringMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#movedKeyToKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeBurningMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeBurningMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeCarryingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeCarryingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeClosedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeClosedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeEmptyMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeEmptyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeHoldingMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeHoldingMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeInMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeInMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeOpenMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeOpenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeUnlockedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeUnlockedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustBeVisibleMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustBeVisibleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustDetachMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustDetachMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustGetOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustGetOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustLieOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustLieOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustOpenDoorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustOpenDoorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>mustSitOnMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#mustSitOnMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nestedRoomTooHighMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nestedRoomTooHighMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>nestedRoomTooHighToExitMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#nestedRoomTooHighToExitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noiseSourceMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#noiseSourceMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>noResponseFromMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#noResponseFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notAddressableMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notAddressableMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notInterestedMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notInterestedMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notWithIntangibleMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notWithIntangibleMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>notWithVaporousMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#notWithVaporousMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>npcDescMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#npcDescMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>objCannotHearActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#objCannotHearActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>odorSourceMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#odorSourceMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayFollowInSightMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayFollowInSightMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okayPushTravelMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okayPushTravelMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>okaySetToMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#okaySetToMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>rearTooFullMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#rearTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>refuseCommand<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#refuseCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>smelledButNotSeenMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#smelledButNotSeenMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>takenAndMovedToKeyringMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#takenAndMovedToKeyringMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>thingDescMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#thingDescMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>thingSmellDescMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#thingSmellDescMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>thingSoundDescMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#thingSoundDescMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwCatchMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#throwCatchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwFallMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#throwFallMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwFallShortMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#throwFallShortMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwHitFallMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#throwHitFallMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwHitMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#throwHitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwShortMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#throwShortMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooDistantMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#tooDistantMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooHeavyForActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#tooHeavyForActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooLargeForActorMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#tooLargeForActorMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>totalTooHeavyForMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#totalTooHeavyForMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>undersideTooFullMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#undersideTooFullMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>unthingNotHereMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#unthingNotHereMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>vehicleCannotDoFromMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#vehicleCannotDoFromMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>willNotCatchMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#willNotCatchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>willNotLetGoMsg<code class="language-plaintext highlighter-rouge">](../object/playerActionMessages.html#willNotLetGoMsg)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageHelper</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>askDisambigList<code class="language-plaintext highlighter-rouge">](../object/MessageHelper.html#askDisambigList)</code>  <code class="language-plaintext highlighter-rouge">[</code>shortTIMsg<code class="language-plaintext highlighter-rouge">](../object/MessageHelper.html#shortTIMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>shortTMsg<code class="language-plaintext highlighter-rouge">](../object/MessageHelper.html#shortTMsg)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="alreadyFollowModeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyFollowModeMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4323">4323</a>]</p>
+
+<div class="desc">
+
+note that we're already in "follow" mode
+
+</div>
+
+<p><span id="cannotAskSelfForMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotAskSelfForMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4344">4344</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotAskSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotAskSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4342">4342</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotGiveToSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotGiveToSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4348">4348</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotJumpOffHereMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotJumpOffHereMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4283">4283</a>]</p>
+
+<div class="desc">
+
+cannot jump off (with no direct object) from here
+
+</div>
+
+<p><span id="cannotMoveFixtureMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveFixtureMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4157">4157</a>]</p>
+
+<div class="desc">
+
+trying to move a Fixture/Immovable
+
+</div>
+
+<p><span id="cannotMoveHeavyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveHeavyMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4163">4163</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotMoveImmovableMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveImmovableMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4158">4158</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotPutHeavyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotPutHeavyMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4165">4165</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotShowToSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotShowToSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4350">4350</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="cannotTakeHeavyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTakeHeavyMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4161">4161</a>]</p>
+
+<div class="desc">
+
+trying to take/move/put a Heavy object
+
+</div>
+
+<p><span id="cannotTalkToSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTalkToSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4340">4340</a>]</p>
+
+<div class="desc">
+
+the PC's responses to conversational actions applied to oneself need
+some reworking for NPC's
+
+</div>
+
+<p><span id="cannotTellSelfMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTellSelfMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4346">4346</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="keyDoesNotFitLockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">keyDoesNotFitLockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4316">4316</a>]</p>
+
+<div class="desc">
+
+the key (iobj) does not fit the lock (dobj)
+
+</div>
+
+<p><span id="moveNoEffectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveNoEffectMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4215">4215</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="moveToNoEffectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveToNoEffectMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4217">4217</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="objNotForKeyringMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objNotForKeyringMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4263">4263</a>]</p>
+
+<div class="desc">
+
+the dobj doesn't fit on this keyring
+
+</div>
+
+<p><span id="okayAttachToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayAttachToMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4329">4329</a>]</p>
+
+<div class="desc">
+
+acknowledge attachment
+
+</div>
+
+<p><span id="okayCloseMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayCloseMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4204">4204</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="okayDetachFromMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayDetachFromMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4333">4333</a>]</p>
+
+<div class="desc">
+
+acknowledge detachment
+
+</div>
+
+<p><span id="okayDoffMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayDoffMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4200">4200</a>]</p>
+
+<div class="desc">
+
+default successful response to 'doff obj'
+
+</div>
+
+<p><span id="okayDropMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayDropMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4179">4179</a>]</p>
+
+<div class="desc">
+
+default successful 'drop' response
+
+</div>
+
+<p><span id="okayExtinguishCandleMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayExtinguishCandleMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4326">4326</a>]</p>
+
+<div class="desc">
+
+extinguishing a candle
+
+</div>
+
+<p><span id="okayFollowModeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayFollowModeMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4320">4320</a>]</p>
+
+<div class="desc">
+
+acknowledge entering "follow" mode
+
+</div>
+
+<p><span id="okayLockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayLockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4207">4207</a>]</p>
+
+<div class="desc">
+
+default successful responses to lock/unlock
+
+</div>
+
+<p><span id="okayNotStandingOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayNotStandingOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4302">4302</a>]</p>
+
+<div class="desc">
+
+report for getting off a platform
+
+</div>
+
+<p><span id="okayOpenMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayOpenMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4203">4203</a>]</p>
+
+<div class="desc">
+
+default successful responses to open/close
+
+</div>
+
+<p><span id="okayPushButtonMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPushButtonMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4309">4309</a>]</p>
+
+<div class="desc">
+
+default 'push button' acknowledgment
+
+</div>
+
+<p><span id="okayPutBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPutBehindMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4192">4192</a>]</p>
+
+<div class="desc">
+
+default successful 'put behind' response
+
+</div>
+
+<p><span id="okayPutInMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPutInMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4182">4182</a>]</p>
+
+<div class="desc">
+
+default successful 'put in' response
+
+</div>
+
+<p><span id="okayPutOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPutOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4185">4185</a>]</p>
+
+<div class="desc">
+
+default successful 'put on' response
+
+</div>
+
+<p><span id="okayPutUnderMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPutUnderMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4188">4188</a>]</p>
+
+<div class="desc">
+
+default successful 'put under' response
+
+</div>
+
+<p><span id="okayTakeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayTakeMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4176">4176</a>]</p>
+
+<div class="desc">
+
+default successful 'take' response
+
+</div>
+
+<p><span id="okayTurnOffMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayTurnOffMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4313">4313</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="okayTurnOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayTurnOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4312">4312</a>]</p>
+
+<div class="desc">
+
+default acknowledgment for switching on/off
+
+</div>
+
+<p><span id="okayUnlockMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayUnlockMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4208">4208</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="okayWearMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayWearMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4196">4196</a>]</p>
+
+<div class="desc">
+
+default succesful response to 'wear obj'
+
+</div>
+
+<p><span id="pullNoEffectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pullNoEffectMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4213">4213</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="pushNoEffectMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pushNoEffectMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4211">4211</a>]</p>
+
+<div class="desc">
+
+push/pull/move with no effect
+
+</div>
+
+<p><span id="shouldNotBreakMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shouldNotBreakMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4287">4287</a>]</p>
+
+<div class="desc">
+
+should not break object
+
+</div>
+
+<p><span id="takeFromNotBehindMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeFromNotBehindMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4279">4279</a>]</p>
+
+<div class="desc">
+
+taking dobj from behind something, but dobj isn't behind iobj
+
+</div>
+
+<p><span id="takeFromNotInMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeFromNotInMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4267">4267</a>]</p>
+
+<div class="desc">
+
+taking dobj from iobj, but dobj isn't in iobj
+
+</div>
+
+<p><span id="takeFromNotOnMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeFromNotOnMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4271">4271</a>]</p>
+
+<div class="desc">
+
+taking dobj from surface, but dobj isn't on iobj
+
+</div>
+
+<p><span id="takeFromNotUnderMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">takeFromNotUnderMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4275">4275</a>]</p>
+
+<div class="desc">
+
+taking dobj under something, but dobj isn't under iobj
+
+</div>
+
+<p><span id="timePassesMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timePassesMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4154">4154</a>]</p>
+
+<div class="desc">
+
+"wait"
+
+</div>
+
+<p><span id="whereToGoMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">whereToGoMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4219">4219</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="cannotMoveComponentMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotMoveComponentMsg (loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4169">4169</a>]</p>
+
+<div class="desc">
+
+trying to move a component object
+
+</div>
+
+<p><span id="containerTooFullMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">containerTooFullMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4247">4247</a>]</p>
+
+<div class="desc">
+
+container doesn't have room for object
+
+</div>
+
+<p><span id="okayPostureChangeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayPostureChangeMsg (posture)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4291">4291</a>]</p>
+
+<div class="desc">
+
+report for standing up/sitting down/lying down
+
+</div>
+
+<p><span id="okayTurnToMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayTurnToMsg (val)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4305">4305</a>]</p>
+
+<div class="desc">
+
+default 'turn to' acknowledgment
+
+</div>
+
+<p><span id="roomOkayPostureChangeMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roomOkayPostureChangeMsg (posture, obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4295">4295</a>]</p>
+
+<div class="desc">
+
+report for standing/sitting/lying in/on something
+
+</div>
+
+<p><span id="surfaceTooFullMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">surfaceTooFullMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4255">4255</a>]</p>
+
+<div class="desc">
+
+surface doesn't have room for object
+
+</div>
+
+<p><span id="tooLargeForContainerMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooLargeForContainerMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4223">4223</a>]</p>
+
+<div class="desc">
+
+object is too large for container
+
+</div>
+
+<p><span id="tooLargeForRearMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooLargeForRearMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4239">4239</a>]</p>
+
+<div class="desc">
+
+object is too large to fit behind something
+
+</div>
+
+<p><span id="tooLargeForUndersideMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooLargeForUndersideMsg (obj, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#4231">4231</a>]</p>
+
+<div class="desc">
+
+object is too large for underside
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

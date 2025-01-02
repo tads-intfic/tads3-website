@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ParseErrorQuestion</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1202](../source/parser.t.html#1202)\]

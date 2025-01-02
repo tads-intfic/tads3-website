@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>roomParts<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="roomxxxxaction.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="cannotgothatway.htm">[Next]</a></td>
+href="roomxxxxaction.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="cannotgothatway.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -47,7 +49,7 @@ represents the floor of the room, which must be of class Floor; the main
 exception here is any room that is *meant* to be floorless, such as a
 FloorlessRoom or a room defined with the Floorless mix-in class. Since
 we have made the top of the mast a Floorless, Deck, changing the room
-parts of [Deck](floorlessroom.htm) leaves the top of the mast with
+parts of [Deck](floorlessroom.html) leaves the top of the mast with
 caveSky as its only roomPart, which is, in fact, just what we want. We
 could have achieved precisely the same result by defining:  
   
@@ -215,7 +217,7 @@ advantage of the library's specialized handling of room parts. For
 example, if you define a custom ceiling for one location, and then find
 it would suit another just as well, it's probably easier to add it to
 the roomParts list of both locations than to make into a
-[MultiInstance](multiinstance.htm) object.  
+[MultiInstance](multiinstance.html) object.  
   
   
   

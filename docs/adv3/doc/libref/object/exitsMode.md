@@ -1,3 +1,5 @@
+---
+---
 <span class="title">exitsMode</span><span class="type">object</span>
 
 [exits.t](../file/exits.t.html)\[[405](../source/exits.t.html#405)\]

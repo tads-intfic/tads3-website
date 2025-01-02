@@ -1,0 +1,123 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>AccompanyingState : <a href="overview-actorstates.html">ActorState</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="hermitactorstate.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="accompanyingintravelstate.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>If you want an NPC to follow your player character around, you need to
+put that NPC into an AccompanyingState, when by default he or she will
+then follow any actor wherever that actor goes. In practice you may want
+to limit this over-eager behaviour, which you can do by overriding the
+<strong>accompanyTravel(leadActor, conn)</strong> method to return true only for the
+combinations of leadActor and connector that you want the NPC to follow;
+typically, for an NPC who’s following the PC around, you might override
+this method to { return leadActor==gPlayerChar; } but you could apply
+further qualifications if, for example, there were certain connectors
+you didn’t want this NPC to follow your PC through. The other method
+distinctive to AccompanyState is <strong>getAccompanyingTravelState(leadActor,
+conn)</strong>, which returns the associated
+<a href="accompanyingintravelstate.html">AccompanyingInTravelState</a> (which we’ll
+explain shortly). AccompanyingState also inherits all the
+<a href="overview-actorstates.html">ActorState</a> methods we’ve already seen, not
+least <strong>arrivingTurn()</strong>.</p>
+
+<p>The NPC who’s been elected to follow the PC on his travels in this game
+is the young woman Sarah. She’s lost her diamond ring and won’t follow
+the PC around until he’s given it to her, so we’ll put temporary
+handling on the sarah object to switch her into her AccompanyingState
+when she’s given the ring (note that this isn’t how we’d normally do it;
+here it’s a temporary expedient until we come to GiveTopic).</p>
+
+<p>sarah : Person ’attractive young woman/brunette’ ’young woman’ @lakeRoom<br />
+  ”She’s an attractive brunette, somewhere in her mid-twenties. ”<br />
+  isHer = true<br />
+  properName = ’Sarah’<br />
+  globalParamName = ’sarah’<br />
+  <br />
+  /* The next section of code is NOT how we’d do it for real - <br />
+   * As we’ll see this is MUCH better handled using a GiveTopic,<br />
+   * but since we haven’t got to GiveTopic yet we have to use<br />
+   * the bad old way.<br />
+   */<br />
+  iobjFor(GiveTo)  <br />
+  {<br />
+    verify() { }<br />
+    check() <br />
+    {<br />
+      if(gDobj != diamondRing) inherited;<br />
+    }<br />
+    action()<br />
+    {<br />
+     if(gDobj == diamondRing)<br />
+     {<br />
+      ”&lt;q&gt;Great! I\ve been looking for that!&lt;/q&gt; she declares, &lt;q&gt;Since<br />
+       you seem to know what you\re doing, I think I\ll stick with you<br />
+       from now on.&lt;/q&gt;&lt;.p&gt;”;<br />
+       gDobj.moveInto(sarah);<br />
+       setCurState(sarahFollowing);<br />
+     }<br />
+    } <br />
+  }<br />
+;</p>
+
+<p>+ sarahFollowing : AccompanyingState<br />
+  specialDesc = ”{The sarah/she} is standing beside you. ”<br />
+  stateDesc = ”She’s standing beside you. ”<br />
+  accompanyTravel(leadActor, conn) <br />
+    { return leadActor == gPlayerChar; }<br />
+;</p>
+
+<p>If you try this out you’ll find it works - after a fashion. Sarah will
+follow you around (in a strangely silent kind of way) so long as you’re
+moving from room to room, but won’t follow you into a nestedRoom. This
+may be fine, but does mean that, for example, if you get on the
+snowMobile and ride off, Sarah won’t follow you. Even, if Sarah <em>had</em>
+followed the PC onto the snowmobile, she’d still be described as
+“standing beside you”, whereas at that point we need her to be described
+as “sitting behind you.” To fix the first set of problems we need a
+different ActorState for Sarah when she’s on the snowmobile, and an
+appropriate test for making Sarah get on and off the snowmobile and
+change states. Here’s how we might do it with the tools we’ve seen so
+far:</p>
+
+<p>+ sarahFollowing : AccompanyingState<br />
+  specialDesc = ”{The sarah/she} is standing beside you. ”<br />
+  stateDesc = ”She’s standing beside you. ”<br />
+  accompanyTravel(leadActor, conn) <br />
+    { return leadActor == gPlayerChar; }<br />
+  afterAction()<br />
+    {<br />
+      if(gPlayerChar.isIn(snowMobile))<br />
+      {<br />
+        getActor.setCurState(sarahOnSnowMobile);<br />
+        nestedActorAction(getActor, SitOn, snowMobile);<br />
+        ”{The sarah/she} gets on the snowmobile behind you. ”;<br />
+      }<br />
+    }<br />
+;</p>
+
+<p>+ sarahOnSnowMobile : HermitActorState<br />
+  specialDesc = ”{The sarah/she} is sitting behind you. ”  <br />
+  afterAction()<br />
+  {<br />
+    if(!gPlayerChar.isIn(snowMobile))<br />
+    {<br />
+      getActor.setCurState(sarahFollowing);<br />
+      nestedActorAction(getActor, GetOutOf, snowMobile);<br />
+      ”{The sarah/she} climbs off the snowmobile after you. ”;<br />
+    }<br />
+  }<br />
+  noResponse = ”&lt;q&gt;Let’s just get moving, shall we?&lt;/q&gt; she suggests.&lt;.p&gt;”<br />
+;</p>
+
+<p>Strictly speaking this isn’t how we’d normally use a HermitActorState,
+since the noResponse message actually is a response; in this case it’s a
+convenient shortcut, and we haven’t encountered DefaultAnyTopic yet.</p>

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -10,9 +12,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 Introduction<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="bagofaffinity.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="lockable.htm">[Next]</a></td>
+href="bagofaffinity.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="lockable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -22,13 +24,13 @@ We have already met the LockableContainer class. We shall now go on to
 look at other types of Lockable objects, including those that use keys.
 The relevant classes are:  
   
-[Lockable](lockable.htm)  
-   [IndirectLockable](indirectlockable.htm)  
-   [LockableContainer](lockablecontainer.htm)  
-   [LockableWithKey](lockablewithkey.htm)  
-      [KeyedContainer](keyedcontainer.htm)  
+[Lockable](lockable.html)  
+   [IndirectLockable](indirectlockable.html)  
+   [LockableContainer](lockablecontainer.html)  
+   [LockableWithKey](lockablewithkey.html)  
+      [KeyedContainer](keyedcontainer.html)  
   
-[Key](keyedcontainer.htm)  
-[KeyRing](keyring.htm)  
+[Key](keyedcontainer.html)  
+[KeyRing](keyring.html)  
   
   

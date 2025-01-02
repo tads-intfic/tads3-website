@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rankByListForSingle</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[5920](../source/parser.t.html#5920)\]

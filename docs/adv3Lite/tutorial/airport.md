@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,9 +8,9 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Airport  
-<span class="navnp"><a href="retro.htm" class="nav"><em>Prev:</em> Retrospective</a>
-   <a href="describing.htm" class="nav"><em>Next:</em> Describing the
+<a href="toc.html" class="nav">Table of Contents</a> \| Airport  
+<span class="navnp"><a href="retro.html" class="nav"><em>Prev:</em> Retrospective</a>
+   <a href="describing.html" class="nav"><em>Next:</em> Describing the
 game</a>     </span>
 
 </div>
@@ -22,11 +24,11 @@ the remainder of this tutorial.
 
 <div class="sectoc">
 
-[Describing the game](describing.htm)  
-[Starting the Map](airmap1.htm)  
-[Extending the Map](airmap2.htm)  
-[Aboard the Plane](airmap3.htm)  
-[Doors and Locks](doors.htm)  
+[Describing the game](describing.html)  
+[Starting the Map](airmap1.html)  
+[Extending the Map](airmap2.html)  
+[Aboard the Plane](airmap3.html)  
+[Doors and Locks](doors.html)  
 
 </div>
 
@@ -37,9 +39,9 @@ the remainder of this tutorial.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Airport  
-<span class="navnp"><a href="retro.htm" class="nav"><em>Prev:</em> Retrospective</a>
-   <a href="describing.htm" class="nav"><em>Next:</em> Describing the
+<a href="toc.html" class="nav">Table of Contents</a> \| Airport  
+<span class="navnp"><a href="retro.html" class="nav"><em>Prev:</em> Retrospective</a>
+   <a href="describing.html" class="nav"><em>Next:</em> Describing the
 game</a>     </span>
 
 </div>

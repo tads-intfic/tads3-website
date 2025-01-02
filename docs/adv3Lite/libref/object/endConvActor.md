@@ -1,3 +1,5 @@
+---
+---
 <span class="title">endConvActor</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[4023](../source/actor.t.html#4023)\]

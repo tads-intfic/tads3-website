@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Credits)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2370](../source/grammar.t.html#2370)\]

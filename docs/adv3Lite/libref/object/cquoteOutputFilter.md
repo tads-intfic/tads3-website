@@ -1,3 +1,5 @@
+---
+---
 <span class="title">cquoteOutputFilter</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[1955](../source/output.t.html#1955)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">tadsio.h</span><span class="type">file</span>
 
 [source file](../source/tadsio.h.html)

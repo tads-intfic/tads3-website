@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DisambigResults</span><span class="type">class</span>
 
 [disambig.t](../file/disambig.t.html)\[[534](../source/disambig.t.html#534)\]

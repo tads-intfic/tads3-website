@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Scene</span><span class="type">class</span>
 
 [scene.t](../file/scene.t.html)\[[98](../source/scene.t.html#98)\],

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FueledLightSource</span><span class="type">class</span>
 
 [fueled.t](../file/fueled.t.html)\[[35](../source/fueled.t.html#35)\]

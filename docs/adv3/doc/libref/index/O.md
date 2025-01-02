@@ -1,3 +1,5 @@
+---
+---
 # O
 
 [**`obeyCommand`**](../object/ActorState.html#obeyCommand) - method of

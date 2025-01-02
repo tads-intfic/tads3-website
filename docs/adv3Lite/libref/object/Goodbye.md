@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Goodbye</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1797](../source/actions.t.html#1797)\]

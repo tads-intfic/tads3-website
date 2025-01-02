@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Ask, Tell, Give, Show  
-<span class="navnp"><a href="conversation.htm" class="nav"><em>Prev:</em> The Art of
+<span class="navnp"><a href="conversation.html" class="nav"><em>Prev:</em> The Art of
 Conversation</a>    
-<a href="query.htm" class="nav"><em>Next:</em> Queries and
+<a href="query.html" class="nav"><em>Next:</em> Queries and
 Suggestions</a>     </span>
 
 </div>
@@ -30,7 +32,7 @@ or SHOW THE TICKET TO THE FLIGHT ATTENDANT.
 
 In adv3Lite, the responses to commands of this sort can be defined using
 TopicEntries, just like the ConsultTopics we used when constructing the
-computer in the [Security Centre](security.htm#consult). There are
+computer in the [Security Centre](security.html#consult). There are
 various kinds of TopicEntry corresponding to the various kinds of
 conversational commands we have just listed:
 
@@ -50,7 +52,7 @@ X. For all the rest Y is a topic, which may be any game object the
 player character knows about or any abstract topic defined in the game,
 like the <span class="code">tFrenchRevolution</span> and
 <span class="code">tFlightDepartures</span> topics we defined for the
-security centre [computer](security.htm#consult).
+security centre [computer](security.html#consult).
 
 Note also that once a conversation with a particular NPC is underway,
 the player can enter abbreviated forms of all the above commands without
@@ -103,7 +105,7 @@ TO X).
 
 The above list of TopicEntry and DefaultTopic types is not exhaustive.
 For the complete list consult the
-[ActorTopicEntry](../manual/actortopicentry.htm#types) section of the
+[ActorTopicEntry](../manual/actortopicentry.html#types) section of the
 *adv3Lite Library Manual*. But the list shown above is sufficient for
 now; we'll come to some of the other types in later sections when we
 discuss various ways in which adv3Lite can go beyond the basic ask/tell
@@ -469,11 +471,11 @@ conversation we'll implement for Angela. In the sections that follow
 we'll explore what adv3Lite has to offer beyond the basic ask/tell
 paradigm we've illustrated here. In the meantime, for more information
 about implementing basic ask/tell conversation in adv3Lite, see the
-section on [Basic Ask/Tell](../manual/asktell.htm) in the *adv3Lite
+section on [Basic Ask/Tell](../manual/asktell.html) in the *adv3Lite
 Library Manual*, while for more on how knowledge of objects and
 <span class="code">\<.reveal\></span> tags can impact on conversation,
 see the section on [Player Character and NPC
-Knowledge](../manual/knowledge.htm).
+Knowledge](../manual/knowledge.html).
 
 </div>
 
@@ -482,12 +484,12 @@ Knowledge](../manual/knowledge.htm).
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Ask, Tell, Give, Show  
-<span class="navnp"><a href="conversation.htm" class="nav"><em>Prev:</em> The Art of
+<span class="navnp"><a href="conversation.html" class="nav"><em>Prev:</em> The Art of
 Conversation</a>    
-<a href="query.htm" class="nav"><em>Next:</em> Queries and
+<a href="query.html" class="nav"><em>Next:</em> Queries and
 Suggestions</a>     </span>
 
 </div>

@@ -1,0 +1,155 @@
+<p><span class="title">RestrictedHolder</span><span class="type">class</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#5018">5018</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A "restricted holder" is a generic mix-in class for various container
+types (Containers, Surfaces, Undersides, RearContainers, RearSurfaces)
+that adds a restriction to what can be contained.
+
+`class `**`RestrictedHolder`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">RestrictedHolder</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">RestrictedHolder</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>RestrictedContainer<code class="language-plaintext highlighter-rouge">](../object/RestrictedContainer.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RestrictedRearContainer<code class="language-plaintext highlighter-rouge">](../object/RestrictedRearContainer.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RestrictedRearSurface<code class="language-plaintext highlighter-rouge">](../object/RestrictedRearSurface.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RestrictedSurface<code class="language-plaintext highlighter-rouge">](../object/RestrictedSurface.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RestrictedUnderside`](../object/RestrictedUnderside.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>validContents<code class="language-plaintext highlighter-rouge">](#validContents)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canPutIn<code class="language-plaintext highlighter-rouge">](#canPutIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkPutDobj<code class="language-plaintext highlighter-rouge">](#checkPutDobj)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="validContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">validContents</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#5025">5025</a>]</p>
+
+<div class="desc">
+
+A list of acceptable items for the container. This list can be used to
+identify the objects that can be put in the container (or on the
+surface, under the underside, or behind the rear container or surface).
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="canPutIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canPutIn (obj)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#5037">5037</a>]</p>
+
+<div class="desc">
+
+Is the given object allowed to go in this container (or on/under/behind
+it, as appropriate for the type)? Returns true if so, nil if not. By
+default, we'll return true if the object is found in our validContents
+list, nil if not. This can be overridden if a subclass wants to
+determine which objects are acceptable with some other kind of
+per-object test; for example, a subclass might accept only objects of a
+given class as contents, or might accept only contents with some
+particular attribute.
+
+</div>
+
+<p><span id="checkPutDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkPutDobj (msgProp)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#5043">5043</a>]</p>
+
+<div class="desc">
+
+Check a PUT IN/ON/UNDER/BEHIND action to ensure that the direct object
+is in our approved-contents list.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

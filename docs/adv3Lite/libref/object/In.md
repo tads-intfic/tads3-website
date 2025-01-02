@@ -1,3 +1,5 @@
+---
+---
 <span class="title">In</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[10057](../source/thing.t.html#10057)\]

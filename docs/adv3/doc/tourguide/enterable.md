@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,18 +9,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Enterable : <a
-href="fixture.htm">Fixture</a><br />
+href="fixture.html">Fixture</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="asexit.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="room.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="asexit.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="room.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-The room definition for [outsideCave](asexit.htm) will work fine (once
-we have defined the [entranceCave](room.htm) Room) if the player types
+The room definition for [outsideCave](asexit.html) will work fine (once
+we have defined the [entranceCave](room.html) Room) if the player types
 IN or SOUTH or even ENTER, but since the room description mentions a
 cave, the player may try to ENTER CAVE or EXAMINE CAVE. To cover this
 possibility we should define a cave object and make it enterable:  
@@ -28,7 +30,7 @@ possibility we should define a cave object and make it enterable:
    side by side without stooping. "  
 ;  
   
-This definition uses the [Enterable template](enterabletemplate.htm).  
+This definition uses the [Enterable template](enterabletemplate.html).  
   
 We use the + syntax to locate this Enterable in outsideCave (so make
 sure its definition comes after that of outsideCave and before anything
@@ -41,10 +43,10 @@ preceding colon).
   
 **<u>Important Note</u>**.  
   
-Enterable, in common with [EntryPortal](entryportal.htm),
-[Exitable](shipboardroom.htm) and [ExitPortal](exitportal.htm),
+Enterable, in common with [EntryPortal](entryportal.html),
+[Exitable](shipboardroom.html) and [ExitPortal](exitportal.html),
 superficially resembles Passage-type objects like
-[ThroughPassage](throughpassage.htm) in that it represents a game object
+[ThroughPassage](throughpassage.html) in that it represents a game object
 which one can go through and end up in a different location. Unlike the
 various Passage objects (ThroughPassage, Door) etc., Enterable,
 Exitable, EntryPortal and ExitPortal are *not* TravelConnectors and have

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Giving Orders to NPCs  
-<span class="navnp"><a href="knowledge.htm" class="nav"><em>Prev:</em> Player Character and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Giving Orders to NPCs  
+<span class="navnp"><a href="knowledge.html" class="nav"><em>Prev:</em> Player Character and
 NPC Knowledge</a>    
-<a href="tags.htm" class="nav"><em>Next:</em> String Tags and Object
+<a href="tags.html" class="nav"><em>Next:</em> String Tags and Object
 Tags</a>     </span>
 
 </div>
@@ -248,11 +250,11 @@ of TopicEntry to make an actor react, you need to use
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Giving Orders to NPCs  
-<span class="navnp"><a href="knowledge.htm" class="nav"><em>Prev:</em> Player Character and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Giving Orders to NPCs  
+<span class="navnp"><a href="knowledge.html" class="nav"><em>Prev:</em> Player Character and
 NPC Knowledge</a>    
-<a href="tags.htm" class="nav"><em>Next:</em> String Tags and Object
+<a href="tags.html" class="nav"><em>Next:</em> String Tags and Object
 Tags</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MetadataModuleID</span><span class="type">class</span>
 
 [modid.t](../file/modid.t.html)\[[189](../source/modid.t.html#189)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TopicGroup</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[2587](../source/actor.t.html#2587)\]

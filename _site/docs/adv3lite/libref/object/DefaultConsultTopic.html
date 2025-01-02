@@ -1,0 +1,152 @@
+<p><span class="title">DefaultConsultTopic</span><span class="type">class</span></p>
+
+<p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#361">361</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A DefaultConsultTopic is used to provide a response when a Consultable
+is consulted about something not otherwise provided for.
+
+`class `**`DefaultConsultTopic`**` :   `[`ConsultTopic`](../object/ConsultTopic.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DefaultConsultTopic</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ConsultTopic<code class="language-plaintext highlighter-rouge">](../object/ConsultTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchScore<code class="language-plaintext highlighter-rouge">](#matchScore)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ConsultTopic</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>includeInList<code class="language-plaintext highlighter-rouge">](../object/ConsultTopic.html#includeInList)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>active<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#active)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchExactCase<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchExactCase)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchPattern<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchPattern)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreBoost<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#scoreBoost)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicMatched<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicMatched)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>matchTopic<code class="language-plaintext highlighter-rouge">](#matchTopic)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeTopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#initializeTopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreBooster<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#scoreBooster)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicResponse<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicResponse)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="isActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActive</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#383">383</a>]</p>
+
+<div class="desc">
+
+A DefaultConsultTopic is normally active
+
+</div>
+
+<p><span id="matchScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchScore</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#380">380</a>]</p>
+
+<div class="desc">
+
+A DefaultConsultTopic has the lowest possible matchScore so that any
+matching ConsultTopic will always take precedence.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="matchTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchTopic (top)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/topicEntry.t.html">topicEntry.t</a>[<a href="../source/topicEntry.t.html#364">364</a>]</p>
+
+<div class="desc">
+
+A DefaultConsultTopic matches anything, so just return our matchScore
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

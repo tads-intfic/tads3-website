@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BeforeRule</span><span class="type">class</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[234](../source/sysrules.t.html#234)\]

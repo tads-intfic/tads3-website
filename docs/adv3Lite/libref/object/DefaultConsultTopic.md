@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultConsultTopic</span><span class="type">class</span>
 
 [topicEntry.t](../file/topicEntry.t.html)\[[361](../source/topicEntry.t.html#361)\]

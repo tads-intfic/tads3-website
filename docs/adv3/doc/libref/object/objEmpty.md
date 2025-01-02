@@ -1,3 +1,5 @@
+---
+---
 <span class="title">objEmpty</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[1134](../source/precond.t.html#1134)\]

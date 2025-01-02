@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SymPathPassage</span><span class="type">class</span>
 
 [symconn.t](../file/symconn.t.html)\[[873](../source/symconn.t.html#873)\]

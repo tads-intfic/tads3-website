@@ -1,3 +1,5 @@
+---
+---
 <span class="title">travelPermitted</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[894](../source/precond.t.html#894)\]

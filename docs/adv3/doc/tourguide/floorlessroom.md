@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>FloorlessRoom : <a
-href="floorless.htm">Floorless</a>, <a href="room.htm">Room</a><br />
+href="floorless.html">Floorless</a>, <a href="room.html">Room</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="shipboardroom.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="floorless.htm">[Next]</a></td>
+href="shipboardroom.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="floorless.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -30,14 +32,14 @@ location (such as the bottom of the vertical shaft, tree or mast).
 Before we can define the top of the mast we need to define its bottom.
 We'll assume the mast is located in the centre of main deck, i.e.
 between portDeck and starboardDeck. It thus exists in both locations,
-which makes it an ideal example of a [MultiLoc](multiloc.htm):  
+which makes it an ideal example of a [MultiLoc](multiloc.html):  
   
 mast : MultiLoc, StairwayUp 'tall thick wooden mast' 'tall mast'  
   "The thick wooden mast towers up at least a hundred feet. "  
   locationList = \[portDeck, starboardDeck\]  
 ;  
   
-We also make the mast a [StairwayUp](stairwayup.htm), since although it
+We also make the mast a [StairwayUp](stairwayup.html), since although it
 does not look much like a flight of stairs, it is something we can climb
 to reach another location, and so it behaves like a StairwayUp. Note
 that the MultiLoc mix-in class must be specified before the
@@ -69,7 +71,7 @@ out by picking up the boulder on the way to the ship and dropping it
 from the top of the mast. But first we have one more task to complete,
 and that is to provide a mast object for the PC to climb down from at
 the top of the mast. This should clearly by a
-[StairwayDown](stairwaydown.htm), but the problem is that its
+[StairwayDown](stairwaydown.html), but the problem is that its
 masterObject will be the MultiLoc mast object, so it won't be able to
 handle climbing down properly - indeed, unless we do something about it
 we'll get a runtime error before we even try. The solution is to remap

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(BurnWith)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2838](../source/grammar.t.html#2838)\]

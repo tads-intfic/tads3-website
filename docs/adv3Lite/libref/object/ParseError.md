@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ParseError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[4939](../source/parser.t.html#4939)\]

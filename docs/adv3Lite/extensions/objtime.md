@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Objtime  
-<span class="navnp"><a href="mobilecollectivegroup.htm" class="nav"><em>Prev:</em>
+<span class="navnp"><a href="mobilecollectivegroup.html" class="nav"><em>Prev:</em>
 MobileCollectiveGroup</a>    
-<a href="postures.htm" class="nav"><em>Next:</em> Postures</a>    
+<a href="postures.html" class="nav"><em>Next:</em> Postures</a>    
 </span>
 
 </div>
@@ -155,7 +157,7 @@ wherever you like in your game code, not just in the status line.
 
 ### Scheduling Events — TimeFuse and SenseTimeFuse
 
-We can use the standard [Fuse](../../docs/manual/event.htm) class to
+We can use the standard [Fuse](../../docs/manual/event.html) class to
 make something happen so many turns in the future. But what if we want
 something to occur not after so many turns, but after a certain amount
 of time (or indeed, at a certain time)? Since the objtime extension
@@ -635,7 +637,7 @@ really need it? After all, most Interactive Fiction gets by perfectly
 well without giving players any explicit notification of the passage of
 time, and if all you need is a few vague indications of time, to mark
 the occurrence of major plot events, say, you're probably better off
-using the Subjective Time extension ([subtime](subtime.htm)), which will
+using the Subjective Time extension ([subtime](subtime.html)), which will
 cause you a lot less work. So why might you need to use objtime at all?
 
 The kind of circumstance in which objtime might be useful are when:
@@ -655,7 +657,7 @@ The kind of circumstance in which objtime might be useful are when:
 The objective time module is used, as we have seen, to keep track of
 time based on the player's actions, either at a constant rate per turn,
 or at a number of seconds per turn determined by the game author as
-described above. The [subjective time](subtime.htm) module, on the other
+described above. The [subjective time](subtime.html) module, on the other
 hand can be used to assign times to particular events in the game (e.g.
 once the player enters the throne room, it's three o'clock in the
 afternoon; when he first meets the princess it's half past four) and
@@ -667,7 +669,7 @@ room and wanders around for a while, the time will never reach half past
 four until he meets the princess; if necessary the subjective time
 module will slow down the passage of time to ensure that four thirty is
 not reached prematurely (for a fuller explanation, see the explanation
-of the [Rationale](subtime.htm#rationale) of the Subjective Time
+of the [Rationale](subtime.html#rationale) of the Subjective Time
 module). This should work reasonably well so long as the player doesn't
 try to check the time too often, since it relies on the player not being
 fully aware of how much time ought to have passed.
@@ -727,12 +729,12 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Objtime  
-<span class="navnp"><a href="mobilecollectivegroup.htm" class="nav"><em>Prev:</em>
+<span class="navnp"><a href="mobilecollectivegroup.html" class="nav"><em>Prev:</em>
 MobileCollectiveGroup</a>    
-<a href="postures.htm" class="nav"><em>Next:</em> Postures</a>    
+<a href="postures.html" class="nav"><em>Next:</em> Postures</a>    
 </span>
 
 </div>

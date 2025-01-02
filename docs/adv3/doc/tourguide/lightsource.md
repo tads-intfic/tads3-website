@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>LightSource : <a
-href="thing-introduction.htm">Thing</a><br />
+href="thing-introduction.html">Thing</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="brightness.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="flashlight.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="brightness.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="flashlight.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -25,7 +27,7 @@ brightness between the values of its **brightnessOn** and
 by default, a LightSource starts out lit (i.e. with its **isLit**
 property set to true). It also describes itself as providing light when
 lit. It may sometimes be useful to use this class for lightsources other
-than the [Flashlight](flashlight.htm) and [Candle](candle.htm) types
+than the [Flashlight](flashlight.html) and [Candle](candle.html) types
 provided by the library. As an illustration, we can convert the brass
 lantern of the previous section into a curious device that is lit only
 when the player character is holding it.  

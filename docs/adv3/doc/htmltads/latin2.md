@@ -1,3 +1,5 @@
+---
+---
 HTML TADS Latin-2 Character Entities
 
 # HTML TADS Latin-2 Character Entities

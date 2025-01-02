@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Basic Ask/Tell  
-<span class="navnp"><a href="agenda.htm" class="nav"><em>Prev:</em> AgendaItems</a>
-    <a href="actortopicentry.htm" class="nav"><em>Next:</em>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Basic Ask/Tell  
+<span class="navnp"><a href="agenda.html" class="nav"><em>Prev:</em> AgendaItems</a>
+    <a href="actortopicentry.html" class="nav"><em>Next:</em>
 ActorTopicEntry</a>     </span>
 
 </div>
@@ -34,7 +36,7 @@ it; it's simply driven by what the player chooses to talk about at any
 particular moment in time).
 
 Implementing a basic ask/tell conversation system in adv3Lite is quite
-similar to the way one defines a [Consultable](topicentry.htm), namely
+similar to the way one defines a [Consultable](topicentry.html), namely
 by defining the conversational responses on the apprpropriate kinds of
 TopicEntry, either an **AskTopic** (to respond to ASK X ABOUT Y) or a
 **TellTopic** (to respond to TELL X ABOUT Y). There's also an
@@ -290,10 +292,10 @@ If it isn't, don't put any DefaultTopics in the ActorState.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Basic Ask/Tell  
-<span class="navnp"><a href="agenda.htm" class="nav"><em>Prev:</em> AgendaItems</a>
-    <a href="actortopicentry.htm" class="nav"><em>Next:</em>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Basic Ask/Tell  
+<span class="navnp"><a href="agenda.html" class="nav"><em>Prev:</em> AgendaItems</a>
+    <a href="actortopicentry.html" class="nav"><em>Next:</em>
 ActorTopicEntry</a>     </span>
 
 </div>

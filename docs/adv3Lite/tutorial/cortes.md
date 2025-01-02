@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="character.htm" class="nav">Character Building</a> \> Pablo
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="character.html" class="nav">Character Building</a> \> Pablo
 Cortez  
-<span class="navnp"><a href="guard.htm" class="nav"><em>Prev:</em> The Security Guard</a>
-    <a href="attendant.htm" class="nav"><em>Next:</em> The Flight
+<span class="navnp"><a href="guard.html" class="nav"><em>Prev:</em> The Security Guard</a>
+    <a href="attendant.html" class="nav"><em>Next:</em> The Flight
 Attendant</a>     </span>
 
 </div>
@@ -325,7 +327,7 @@ specified in its setDelay() method has passed.
 
 We'll see some more examples of AgendaItems in our implementation of the
 flight attendant. In the meantime if you want the full story about
-[AgendaItems](../manual/agenda.htm), you can read about them in the
+[AgendaItems](../manual/agenda.html), you can read about them in the
 *adv3Lite Library Manual*.
 
 </div>
@@ -335,11 +337,11 @@ flight attendant. In the meantime if you want the full story about
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="character.htm" class="nav">Character Building</a> \> Pablo
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="character.html" class="nav">Character Building</a> \> Pablo
 Cortez  
-<span class="navnp"><a href="guard.htm" class="nav"><em>Prev:</em> The Security Guard</a>
-    <a href="attendant.htm" class="nav"><em>Next:</em> The Flight
+<span class="navnp"><a href="guard.html" class="nav"><em>Prev:</em> The Security Guard</a>
+    <a href="attendant.html" class="nav"><em>Next:</em> The Flight
 Attendant</a>     </span>
 
 </div>

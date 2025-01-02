@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Querying the World
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Querying the World
 Model  
-<span class="navnp"><a href="topicact.htm" class="nav"><em>Prev:</em> Topic Actions</a>
-    <a href="scope.htm" class="nav"><em>Next:</em> Scope</a>     </span>
+<span class="navnp"><a href="topicact.html" class="nav"><em>Prev:</em> Topic Actions</a>
+    <a href="scope.html" class="nav"><em>Next:</em> Scope</a>     </span>
 
 </div>
 
@@ -24,7 +26,7 @@ Model
 
 Just about every action (apart from SystemActions like SAVE, QUIT and
 UNDO) needs to query the world model, in any case to check what objects
-are in [scope](scope.htm), and often to check whether a given object can
+are in [scope](scope.html), and often to check whether a given object can
 be seen, heard, touched or smelled. In the adv3Lite library such queries
 are made via a special query object called Q (which in this instance has
 nothing to do with either Star Trek or the Synoptic Problem). The Q
@@ -95,7 +97,7 @@ the game can model.
 The standard physics-based answer (provided by the QDefaults object) is
 the default. It provides the answer if there are no (other) active
 Special objects that provide custom answers. The
-[senseRegion](senseregion.htm) module defines its own Special object
+[senseRegion](senseregion.html) module defines its own Special object
 called **QSenseRegion** which modifies the basic physics of QDefaults to
 allow sensory connections between rooms in the same SenserRegion. Again
 this is not normally something you will need to worry about as a game
@@ -161,7 +163,7 @@ list isn't rebuilt.
 One place in the library where the workings of Specials becomes
 particularly complicated is where they are used in conjunction with the
 **touchObj** PreCondition. The touchObj
-[PreCondition](actres.htm#precond) is used to enforce the need to be
+[PreCondition](actres.html#precond) is used to enforce the need to be
 able to touch an object before physically manipulating it (e.g. by
 feeling it, picking it up, or hitting it with something). This is needed
 to prevent players from physically manipulating objects they shouldn't
@@ -302,7 +304,7 @@ Note that this mechanism allows the player character to be in remote
 communications with several actors at once and in audio communication
 with some and audiovisual communication with others.
 
-Further considerations may apply if the [SenseRegion](senseregion.htm)
+Further considerations may apply if the [SenseRegion](senseregion.html)
 module is present and you establish a remote audiovisual link. Since the
 other actor will normally be in a remote location, the default response
 to trying to examine him/her will be that s/he's too far away to make
@@ -311,7 +313,7 @@ audiovisual link. To fix that you'd either need to set
 <span class="code">sightSize = large</span> on the remote actor or
 define its <span class="code">remoteDesc(pov)</span> method. For further
 details see the discussion of [Remote
-Communications](senseregion.htm#remotecomm) in the SenseRegion chapter.
+Communications](senseregion.html#remotecomm) in the SenseRegion chapter.
 
 As an example, suppose we want to define a Phone command that can be
 used to phone other actors. We need to ensure that potential callees are
@@ -405,10 +407,10 @@ work.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Querying the World
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Querying the World
 Model  
-<span class="navnp"><a href="topicact.htm" class="nav"><em>Prev:</em> Topic Actions</a>
-    <a href="scope.htm" class="nav"><em>Next:</em> Scope</a>     </span>
+<span class="navnp"><a href="topicact.html" class="nav"><em>Prev:</em> Topic Actions</a>
+    <a href="scope.html" class="nav"><em>Next:</em> Scope</a>     </span>
 
 </div>

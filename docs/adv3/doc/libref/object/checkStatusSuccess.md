@@ -1,3 +1,5 @@
+---
+---
 <span class="title">checkStatusSuccess</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[202](../source/thing.t.html#202)\]

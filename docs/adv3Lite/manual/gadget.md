@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Extras  
-<span class="navnp"><a href="extra.htm" class="nav"><em>Prev:</em> Extras</a>
-    <a href="menu.htm" class="nav"><em>Next:</em> Menus</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Extras  
+<span class="navnp"><a href="extra.html" class="nav"><em>Prev:</em> Extras</a>
+    <a href="menu.html" class="nav"><em>Next:</em> Menus</a>     </span>
 
 </div>
 
@@ -184,9 +186,9 @@ light sources zero, for example:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Gadgets  
-<span class="navnp"><a href="extra.htm" class="nav"><em>Prev:</em> Extras</a>
-    <a href="menu.htm" class="nav"><em>Next:</em> Menus</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Gadgets  
+<span class="navnp"><a href="extra.html" class="nav"><em>Prev:</em> Extras</a>
+    <a href="menu.html" class="nav"><em>Next:</em> Menus</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(TellAboutWhat)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[1931](../source/grammar.t.html#1931)\]

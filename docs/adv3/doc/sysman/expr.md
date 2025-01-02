@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Expressions and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Expressions and
 Operators  
-<span class="navnp"><a href="gc.htm" class="nav"><em>Prev:</em> Garbage Collection and
+<span class="navnp"><a href="gc.html" class="nav"><em>Prev:</em> Garbage Collection and
 Finalization</a>    
-<a href="proccode.htm" class="nav"><em>Next:</em> Procedural Code</a>
+<a href="proccode.html" class="nav"><em>Next:</em> Procedural Code</a>
     </span>
 
 </div>
@@ -349,7 +351,7 @@ Example:
 
 </div>
 
-Refer to the [inheritance model](inherit.htm) section for information on
+Refer to the [inheritance model](inherit.html) section for information on
 inheritance order.
 
 ### <span id="delegated"></span>delegated
@@ -1933,7 +1935,7 @@ precision. Specifically:
 - If one operand is a BigNumber and the other is an integer, the result
   is a BigNumber. The precision of the result is the greater of the
   BigNumber operand's precision, or the [default
-  precision](bignum.htm#intconv) for converting an integer a BigNumber.
+  precision](bignum.html#intconv) for converting an integer a BigNumber.
 - If both operands are BigNumbers, the result is a BigNumber with the
   same precision as the operand with the higher precision.
 
@@ -1956,7 +1958,7 @@ represented with the integer type. For example, adding 1,000,000,000 to
 an integer.
 
 When an integer overflow occurs with one of the basic operators, TADS
-automatically changes the result to a [BigNumber](bignum.htm). This is
+automatically changes the result to a [BigNumber](bignum.html). This is
 called a "promotion", because BigNumber is a superior type in the sense
 that it's capable of storing a wider range of values than the integer
 type. (Superior in this case just means bigger, not better. BigNumbers
@@ -2228,10 +2230,10 @@ would call the method code with a nil value for
 method tries to evaluate a property of <span class="code">self</span>,
 inherit, or otherwise reference <span class="code">self</span>. The main
 way to use this kind of function pointer is with
-[<span class="code">setMethod</span>](tadsobj.htm).
+[<span class="code">setMethod</span>](tadsobj.html).
 
 For a dynamic method defined with
-[<span class="code">setMethod</span>](tadsobj.htm),
+[<span class="code">setMethod</span>](tadsobj.html),
 <span class="code">invokee</span> yields the original value passed to
 <span class="code">setMethod</span> when the method was created. As with
 oridinary method pointers, it's not always safe to invoke this value
@@ -2300,12 +2302,12 @@ just leave it out.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Expressions and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Expressions and
 Operators  
-<span class="navnp"><a href="gc.htm" class="nav"><em>Prev:</em> Garbage Collection and
+<span class="navnp"><a href="gc.html" class="nav"><em>Prev:</em> Garbage Collection and
 Finalization</a>    
-<a href="proccode.htm" class="nav"><em>Next:</em> Procedural Code</a>
+<a href="proccode.html" class="nav"><em>Next:</em> Procedural Code</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PreCondDesc</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[126](../source/action.t.html#126)\]

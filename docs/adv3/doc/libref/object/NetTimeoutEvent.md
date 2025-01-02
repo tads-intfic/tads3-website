@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NetTimeoutEvent</span><span class="type">class</span>
 
 [tadsnet.t](../file/tadsnet.t.html)\[[104](../source/tadsnet.t.html#104)\]

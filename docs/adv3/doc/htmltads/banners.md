@@ -1,3 +1,5 @@
+---
+---
 Using the BANNER Feature in HTML TADS Games
 
 # Using the BANNER Feature in HTML TADS Games
@@ -294,7 +296,7 @@ unique name relative to the other banners in your game.)
 
 The second line uses the BODY tag to set the banner's background and
 text color. These use the appropriate [parameterized color
-settings](deviate.htm#colors) for the status line.
+settings](deviate.html#colors) for the status line.
 
 The next line calls the `statusRoot` method to display the room's name
 (usually via its `sdesc` property, although some rooms override this to

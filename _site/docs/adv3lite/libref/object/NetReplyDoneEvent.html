@@ -1,0 +1,185 @@
+<p><span class="title">NetReplyDoneEvent</span><span class="type">class</span></p>
+
+<p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#242">242</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Network Reply Done event. This type of event occurs when an asynchronous
+network reply (such as HTTPRequest.sendReplyAsync()) completes.
+
+`class `**`NetReplyDoneEvent`**` :   `[`NetEvent`](../object/NetEvent.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NetReplyDoneEvent</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>NetEvent<code class="language-plaintext highlighter-rouge">](../object/NetEvent.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>errMsg<code class="language-plaintext highlighter-rouge">](#errMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>evType<code class="language-plaintext highlighter-rouge">](#evType)</code>  <code class="language-plaintext highlighter-rouge">[</code>requestObj<code class="language-plaintext highlighter-rouge">](#requestObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>socketErr<code class="language-plaintext highlighter-rouge">](#socketErr)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NetEvent</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>evArgs<code class="language-plaintext highlighter-rouge">](../object/NetEvent.html#evArgs)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSuccessful<code class="language-plaintext highlighter-rouge">](#isSuccessful)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="errMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errMsg</code></p>
+
+<p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#276">276</a>]</p>
+
+<div class="desc">
+
+Error message, if any. If the reply failed, this contains a string with
+a description of the error that occurred. If the reply was sent
+successfully, this is nil.
+
+</div>
+
+<p><span id="evType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">evType</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#253">253</a>]</p>
+
+<div class="desc">
+
+our default event type is NetEvReplyDone
+
+</div>
+
+<p><span id="requestObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">requestObj</code></p>
+
+<p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#259">259</a>]</p>
+
+<div class="desc">
+
+The object representing the request we replied to. For HTTP requests,
+this is an HTTPRequest object.
+
+</div>
+
+<p><span id="socketErr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">socketErr</code></p>
+
+<p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#269">269</a>]</p>
+
+<div class="desc">
+
+The socket error, if any. If the reply failed due to a network error,
+this contains the error number. If no network error occurred, this is
+zero.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (t, req, err, msg)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#244">244</a>]</p>
+
+<div class="desc">
+
+construction
+
+</div>
+
+<p><span id="isSuccessful"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isSuccessful ( )</code></p>
+
+<p><a href="../file/tadsnet.t.html">tadsnet.t</a>[<a href="../source/tadsnet.t.html#262">262</a>]</p>
+
+<div class="desc">
+
+was the reply successfully sent?
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

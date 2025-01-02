@@ -1,3 +1,5 @@
+---
+---
 <span class="title">singleNoun</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`singleNoun(empty)`](../object/singleNoun(empty).html)</span>` :   `[`EmptyNounPhraseProd`](../object/EmptyNounPhraseProd.html)

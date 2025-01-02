@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CommandReport</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[55](../source/report.t.html#55)\]

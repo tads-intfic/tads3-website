@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Creating Dynamic
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Creating Dynamic
 Characters  
-<span class="navnp"><a href="t3tips.htm" class="nav"><em>Prev:</em> Tips: A
+<span class="navnp"><a href="t3tips.html" class="nav"><em>Prev:</em> Tips: A
 Context-Sensitive Help System</a>    
-<a href="convbkg.htm" class="nav"><em>Next:</em> Choosing a Conversation
+<a href="convbkg.html" class="nav"><em>Next:</em> Choosing a Conversation
 System</a>     </span>
 
 </div>
@@ -620,7 +622,7 @@ posing its question.
       ;
 
 (We'll see more on "conversation nodes" and other aspects of the
-library's conversation system features in [part three](t3conv.htm) of
+library's conversation system features in [part three](t3conv.html) of
 this article.)
 
 Note that the agenda item doesn't come into play automatically. You have
@@ -822,12 +824,12 @@ creating a series of custom state objects, one for each travel action.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Creating Dynamic
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Creating Dynamic
 Characters  
-<span class="navnp"><a href="t3tips.htm" class="nav"><em>Prev:</em> Tips: A
+<span class="navnp"><a href="t3tips.html" class="nav"><em>Prev:</em> Tips: A
 Context-Sensitive Help System</a>    
-<a href="convbkg.htm" class="nav"><em>Next:</em> Choosing a Conversation
+<a href="convbkg.html" class="nav"><em>Next:</em> Choosing a Conversation
 System</a>     </span>
 
 </div>

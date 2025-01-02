@@ -1,3 +1,5 @@
+---
+---
 <span class="title">longTopicBanner</span><span class="type">object</span>
 
 [menucon.t](../file/menucon.t.html)\[[36](../source/menucon.t.html#36)\]

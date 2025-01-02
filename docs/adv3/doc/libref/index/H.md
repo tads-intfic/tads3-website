@@ -1,3 +1,5 @@
+---
+---
 # H
 
 [**`handle_`**](../object/BannerWindow.html#handle_) - property of

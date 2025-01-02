@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Shipboard : object<br />
 </strong></td>
-<td style="text-align: right;"><a href="pathpassage.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="floorlessroom.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="pathpassage.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="floorlessroom.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -89,7 +91,7 @@ circumstances:
 Note that (ship.location) needs to be enclosed in parentheses when using
 the template -\>connector syntax here, since it is an expression.
 Otherwise, the Exitable behaves pretty much the same way as the</span>
-[Enterable](enterable.htm) we encountered before (except that it handles
+[Enterable](enterable.html) we encountered before (except that it handles
 EXIT so-and-so instead of ENTER so-and-so). The main point to note here
 is the use of the **getFacets** method. The point of this is that
 although they are separate programming objects, both *ship* and

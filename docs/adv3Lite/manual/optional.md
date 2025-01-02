@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Optional
+<a href="toc.html" class="nav">Table of Contents</a> \| Optional
 Modules  
-<span class="navnp"><a href="topic.htm" class="nav"><em>Prev:</em> Topics</a>
-    <a href="attachable.htm" class="nav"><em>Next:</em> Attachables</a>
+<span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em> Topics</a>
+    <a href="attachable.html" class="nav"><em>Next:</em> Attachables</a>
     </span>
 
 </div>
@@ -24,27 +26,27 @@ them (you don't normally have to opt in to them if you want to use them,
 since they're defined as being part of the adv3Lite library as
 standard).
 
-One of the optional modules, [Actors](actor.htm) will be left until
+One of the optional modules, [Actors](actor.html) will be left until
 later, when it will get a whole part to itself.
 
 <div class="sectoc">
 
-[Attachables](attachable.htm)  
-[Events](event.htm)  
-[EventList](eventlist.htm)  
-[Exits](exit.htm)  
-[Extras](extra.htm)  
-[Gadgets](gadget.htm)  
-[Menus](menu.htm)  
-[Hints](hint.htm)  
-[Instructions](instruct.htm)  
-[New Player Help](newbie.htm)  
-[Path Finding](pathfind.htm)  
-[Scenes](scene.htm)  
-[Scoring](score.htm)  
-[SenseRegion](senseregion.htm)  
-[Topic Entries](topicentry.htm)  
-[Thoughts](thought.htm)  
+[Attachables](attachable.html)  
+[Events](event.html)  
+[EventList](eventlist.html)  
+[Exits](exit.html)  
+[Extras](extra.html)  
+[Gadgets](gadget.html)  
+[Menus](menu.html)  
+[Hints](hint.html)  
+[Instructions](instruct.html)  
+[New Player Help](newbie.html)  
+[Path Finding](pathfind.html)  
+[Scenes](scene.html)  
+[Scoring](score.html)  
+[SenseRegion](senseregion.html)  
+[Topic Entries](topicentry.html)  
+[Thoughts](thought.html)  
 
 </div>
 
@@ -55,10 +57,10 @@ later, when it will get a whole part to itself.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Optional
+<a href="toc.html" class="nav">Table of Contents</a> \| Optional
 Modules  
-<span class="navnp"><a href="topic.htm" class="nav"><em>Prev:</em> Topics</a>
-    <a href="attachable.htm" class="nav"><em>Next:</em> Attachables</a>
+<span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em> Topics</a>
+    <a href="attachable.html" class="nav"><em>Next:</em> Attachables</a>
     </span>
 
 </div>

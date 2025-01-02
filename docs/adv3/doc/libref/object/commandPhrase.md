@@ -1,3 +1,5 @@
+---
+---
 <span class="title">commandPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`commandPhrase(ambiguousConj)`](../object/commandPhrase(ambiguousConj).html)</span>` :   `[`CommandProdWithAmbiguousConj`](../object/CommandProdWithAmbiguousConj.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">conversationManager</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[5007](../source/actor.t.html#5007)\]

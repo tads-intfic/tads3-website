@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Multiple
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Multiple
 Inheritance  
-<span class="navnp"><a href="t3scope.htm" class="nav"><em>Prev:</em> Redefining Scope</a>
+<span class="navnp"><a href="t3scope.html" class="nav"><em>Prev:</em> Redefining Scope</a>
    
-<a href="t3staging.htm" class="nav"><em>Next:</em> Using Nested Rooms as
+<a href="t3staging.html" class="nav"><em>Next:</em> Using Nested Rooms as
 Staging Locations</a>     </span>
 
 </div>
@@ -23,7 +25,7 @@ Staging Locations</a>     </span>
 *by Eric Eve*
 
 The inheritance mechanism in TADS 3 (also described in the [System
-Manual](../sysman/inherit.htm)) is not only extremely useful, but
+Manual](../sysman/inherit.html)) is not only extremely useful, but
 essential to how the library works, and it's impossible to get very far
 writing a game in TADS 3 without making use of it, not only through
 defining objects belonging to classes that rely on the inheritance
@@ -836,7 +838,7 @@ things are not working as you expected them to and you need to work out
 why.
 
 If this isn't all entirely clear yet, you might like to check out the
-article on the [Object Inheritance Model](../sysman/inherit.htm) in the
+article on the [Object Inheritance Model](../sysman/inherit.html) in the
 *System Manual*, which takes a complementary approach to explaining it
 all.
 
@@ -847,12 +849,12 @@ all.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Multiple
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Multiple
 Inheritance  
-<span class="navnp"><a href="t3scope.htm" class="nav"><em>Prev:</em> Redefining Scope</a>
+<span class="navnp"><a href="t3scope.html" class="nav"><em>Prev:</em> Redefining Scope</a>
    
-<a href="t3staging.htm" class="nav"><em>Next:</em> Using Nested Rooms as
+<a href="t3staging.html" class="nav"><em>Next:</em> Using Nested Rooms as
 Staging Locations</a>     </span>
 
 </div>

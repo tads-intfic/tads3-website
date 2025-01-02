@@ -1,0 +1,1234 @@
+<p><span class="title">Command</span><span class="type">class</span></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#15">15</a>],
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2109">2109</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Command describes the results of parsing one player predicate - that
+is, a single verb phrase, with all its parts. This includes the action
+to be performed and the objects to perform it on. It also includes
+information on the text of the player's input, and how it maps onto the
+grammar structures defined by the language module.
+
+The Command object is built in several steps, so its contents aren't
+complete until all of the steps are completed.
+
+*Modified in
+[english.t](../file/english.t.html)\[[2109](../source/english.t.html#2109)\]:*  
+Modification to the Command class so that when reconstructing a command
+string from its tokens a separate apostrophe-S token is concatenated
+with the previous word when storing the name (which undoes the effect on
+building the name of what the English-language tokenizer does with
+apostrophe-S).
+
+`class `**`Command`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Command</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Command</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>FuncCommand`](../object/FuncCommand.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>acc<code class="language-plaintext highlighter-rouge">](#acc)</code>  <code class="language-plaintext highlighter-rouge">[</code>accInfo<code class="language-plaintext highlighter-rouge">](#accInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>accNPs<code class="language-plaintext highlighter-rouge">](#accNPs)</code>  <code class="language-plaintext highlighter-rouge">[</code>accs<code class="language-plaintext highlighter-rouge">](#accs)</code>  <code class="language-plaintext highlighter-rouge">[</code>action<code class="language-plaintext highlighter-rouge">](#action)</code>  <code class="language-plaintext highlighter-rouge">[</code>actions<code class="language-plaintext highlighter-rouge">](#actions)</code>  <code class="language-plaintext highlighter-rouge">[</code>actor<code class="language-plaintext highlighter-rouge">](#actor)</code>  <code class="language-plaintext highlighter-rouge">[</code>actorNPs<code class="language-plaintext highlighter-rouge">](#actorNPs)</code>  <code class="language-plaintext highlighter-rouge">[</code>actorPerson<code class="language-plaintext highlighter-rouge">](#actorPerson)</code>  <code class="language-plaintext highlighter-rouge">[</code>actors<code class="language-plaintext highlighter-rouge">](#actors)</code>  <code class="language-plaintext highlighter-rouge">[</code>afterReports<code class="language-plaintext highlighter-rouge">](#afterReports)</code>  <code class="language-plaintext highlighter-rouge">[</code>aobj<code class="language-plaintext highlighter-rouge">](#aobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>badMulti<code class="language-plaintext highlighter-rouge">](#badMulti)</code>  <code class="language-plaintext highlighter-rouge">[</code>cmdErr<code class="language-plaintext highlighter-rouge">](#cmdErr)</code>  <code class="language-plaintext highlighter-rouge">[</code>disambig<code class="language-plaintext highlighter-rouge">](#disambig)</code>  <code class="language-plaintext highlighter-rouge">[</code>disambigIdx<code class="language-plaintext highlighter-rouge">](#disambigIdx)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobj<code class="language-plaintext highlighter-rouge">](#dobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjInfo<code class="language-plaintext highlighter-rouge">](#dobjInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjNPs<code class="language-plaintext highlighter-rouge">](#dobjNPs)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjs<code class="language-plaintext highlighter-rouge">](#dobjs)</code>  <code class="language-plaintext highlighter-rouge">[</code>endOfSentence<code class="language-plaintext highlighter-rouge">](#endOfSentence)</code>  <code class="language-plaintext highlighter-rouge">[</code>implicitActionReports<code class="language-plaintext highlighter-rouge">](#implicitActionReports)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobj<code class="language-plaintext highlighter-rouge">](#iobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjInfo<code class="language-plaintext highlighter-rouge">](#iobjInfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjNPs<code class="language-plaintext highlighter-rouge">](#iobjNPs)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjs<code class="language-plaintext highlighter-rouge">](#iobjs)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastAction<code class="language-plaintext highlighter-rouge">](#lastAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>madeTopic<code class="language-plaintext highlighter-rouge">](#madeTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchedAll<code class="language-plaintext highlighter-rouge">](#matchedAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchedMulti<code class="language-plaintext highlighter-rouge">](#matchedMulti)</code>  <code class="language-plaintext highlighter-rouge">[</code>miscWordLists<code class="language-plaintext highlighter-rouge">](#miscWordLists)</code>  <code class="language-plaintext highlighter-rouge">[</code>missingNouns<code class="language-plaintext highlighter-rouge">](#missingNouns)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextTokens<code class="language-plaintext highlighter-rouge">](#nextTokens)</code>  <code class="language-plaintext highlighter-rouge">[</code>npList<code class="language-plaintext highlighter-rouge">](#npList)</code>  <code class="language-plaintext highlighter-rouge">[</code>npListSorted<code class="language-plaintext highlighter-rouge">](#npListSorted)</code>  <code class="language-plaintext highlighter-rouge">[</code>npToResolve<code class="language-plaintext highlighter-rouge">](#npToResolve)</code>  <code class="language-plaintext highlighter-rouge">[</code>originalAction<code class="language-plaintext highlighter-rouge">](#originalAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>parseTree<code class="language-plaintext highlighter-rouge">](#parseTree)</code>  <code class="language-plaintext highlighter-rouge">[</code>predActive<code class="language-plaintext highlighter-rouge">](#predActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>predPriority<code class="language-plaintext highlighter-rouge">](#predPriority)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  <code class="language-plaintext highlighter-rouge">[</code>reflexiveAnte<code class="language-plaintext highlighter-rouge">](#reflexiveAnte)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokenLen<code class="language-plaintext highlighter-rouge">](#tokenLen)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbProd<code class="language-plaintext highlighter-rouge">](#verbProd)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addDisambigNP<code class="language-plaintext highlighter-rouge">](#addDisambigNP)</code>  <code class="language-plaintext highlighter-rouge">[</code>addNounListItem<code class="language-plaintext highlighter-rouge">](#addNounListItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>addNounProd<code class="language-plaintext highlighter-rouge">](#addNounProd)</code>  <code class="language-plaintext highlighter-rouge">[</code>afterReport<code class="language-plaintext highlighter-rouge">](#afterReport)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildCommandString<code class="language-plaintext highlighter-rouge">](#buildCommandString)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildObjLists<code class="language-plaintext highlighter-rouge">](#buildObjLists)</code>  <code class="language-plaintext highlighter-rouge">[</code>calcPriority<code class="language-plaintext highlighter-rouge">](#calcPriority)</code>  <code class="language-plaintext highlighter-rouge">[</code>changeAction<code class="language-plaintext highlighter-rouge">](#changeAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>clone<code class="language-plaintext highlighter-rouge">](#clone)</code>  <code class="language-plaintext highlighter-rouge">[</code>cloneNP<code class="language-plaintext highlighter-rouge">](#cloneNP)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>emptyNounRole<code class="language-plaintext highlighter-rouge">](#emptyNounRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>exec<code class="language-plaintext highlighter-rouge">](#exec)</code>  <code class="language-plaintext highlighter-rouge">[</code>execCombos<code class="language-plaintext highlighter-rouge">](#execCombos)</code>  <code class="language-plaintext highlighter-rouge">[</code>execDoer<code class="language-plaintext highlighter-rouge">](#execDoer)</code>  <code class="language-plaintext highlighter-rouge">[</code>execIter<code class="language-plaintext highlighter-rouge">](#execIter)</code>  <code class="language-plaintext highlighter-rouge">[</code>fetchDisambigReply<code class="language-plaintext highlighter-rouge">](#fetchDisambigReply)</code>  <code class="language-plaintext highlighter-rouge">[</code>fixPriority<code class="language-plaintext highlighter-rouge">](#fixPriority)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEachNP<code class="language-plaintext highlighter-rouge">](#forEachNP)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEachObj<code class="language-plaintext highlighter-rouge">](#forEachObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>getCommandPhrase<code class="language-plaintext highlighter-rouge">](#getCommandPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteMiscWords<code class="language-plaintext highlighter-rouge">](#noteMiscWords)</code>  <code class="language-plaintext highlighter-rouge">[</code>npTokenLen<code class="language-plaintext highlighter-rouge">](#npTokenLen)</code>  <code class="language-plaintext highlighter-rouge">[</code>numNounSlots<code class="language-plaintext highlighter-rouge">](#numNounSlots)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveNouns<code class="language-plaintext highlighter-rouge">](#resolveNouns)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveReflexive<code class="language-plaintext highlighter-rouge">](#resolveReflexive)</code>  <code class="language-plaintext highlighter-rouge">[</code>saveReflexiveAnte<code class="language-plaintext highlighter-rouge">](#saveReflexiveAnte)</code>  <code class="language-plaintext highlighter-rouge">[</code>sortList<code class="language-plaintext highlighter-rouge">](#sortList)</code>  <code class="language-plaintext highlighter-rouge">[</code>startDisambigReply<code class="language-plaintext highlighter-rouge">](#startDisambigReply)</code>  <code class="language-plaintext highlighter-rouge">[</code>terseOK<code class="language-plaintext highlighter-rouge">](#terseOK)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="acc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acc</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1244">1244</a>]</p>
+
+<div class="desc">
+
+the accessory object for the current iteration
+
+</div>
+
+<p><span id="accInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">accInfo</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1250">1250</a>]</p>
+
+<div class="desc">
+
+the NPMatch object for the current accessory
+
+</div>
+
+<p><span id="accNPs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">accNPs</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1238">1238</a>]</p>
+
+<div class="desc">
+
+the accessory phrases, as a list of NounPhrase objects
+
+</div>
+
+<p><span id="accs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">accs</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1241">1241</a>]</p>
+
+<div class="desc">
+
+the list of resolved accessory objects, as NPMatch objects
+
+</div>
+
+<p><span id="action"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">action</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1185">1185</a>]</p>
+
+<div class="desc">
+
+the Action object giving the action to be performed
+
+</div>
+
+<p><span id="actions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actions</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#341">341</a>]</p>
+
+<div class="desc">
+
+A list of actions executed directly by this command or via a Doer
+
+</div>
+
+<p><span id="actor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actor</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1194">1194</a>]</p>
+
+<div class="desc">
+
+the resolved actor; we determine this before disambiguation
+
+</div>
+
+<p><span id="actorNPs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorNPs</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1197">1197</a>]</p>
+
+<div class="desc">
+
+the actor(s) to whom the command is addressed, as a NounPhrase list
+
+</div>
+
+<p><span id="actorPerson"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorPerson</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1211">1211</a>]</p>
+
+<div class="desc">
+
+The grammatical person in which we're addressing the actor. This is 2
+for a second-person address, 3 for third-person orders. (It's hard to
+think of a case for first-person orders, but
+
+The conventional IF syntax for giving orders is ACTOR, DO SOMETHING,
+which addresses ACTOR in the second person (as YOU). This means that
+second-person pronouns
+
+</div>
+
+<p><span id="actors"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actors</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1200">1200</a>]</p>
+
+<div class="desc">
+
+the actor(s), as NPMatch objects
+
+</div>
+
+<p><span id="afterReports"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterReports</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#354">354</a>]</p>
+
+<div class="desc">
+
+A list of strings containing reports to be displayed at the end of the
+command execution cycle for this command.
+
+</div>
+
+<p><span id="aobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aobj</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1247">1247</a>]</p>
+
+<div class="desc">
+
+synonym for the accessory object
+
+</div>
+
+<p><span id="badMulti"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">badMulti</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1300">1300</a>]</p>
+
+<div class="desc">
+
+Error flag: we have a noun list (grammatically) where a single noun is
+required. When this occurs, this will be set to the role where the error
+was noted.
+
+</div>
+
+<p><span id="cmdErr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmdErr</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1317">1317</a>]</p>
+
+<div class="desc">
+
+The error we encountered building the command, if any. This is usually a
+noun resolution error.
+
+</div>
+
+<p><span id="disambig"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">disambig</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1262">1262</a>]</p>
+
+<div class="desc">
+
+Disambiguation replies. Each time the player answers a disambiguation
+question, we add the reply to this list. We then go back and re-resolve
+the noun phrases, fetching replies from the list as we encounter the
+ambiguous objects again.
+
+Note that this is a list of list. Each reply is a list of NounPhrase
+objects, and we might have a series of replies, so one list represents
+one reply.
+
+</div>
+
+<p><span id="disambigIdx"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">disambigIdx</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1265">1265</a>]</p>
+
+<div class="desc">
+
+the next available disambiguation reply
+
+</div>
+
+<p><span id="dobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobj</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1220">1220</a>]</p>
+
+<div class="desc">
+
+the current direct object for the current action iteration
+
+</div>
+
+<p><span id="dobjInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjInfo</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1223">1223</a>]</p>
+
+<div class="desc">
+
+the NPMatch object for the current iteration's direct object
+
+</div>
+
+<p><span id="dobjNPs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjNPs</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1214">1214</a>]</p>
+
+<div class="desc">
+
+the direct object phrases, as a list of NounPhrase objects
+
+</div>
+
+<p><span id="dobjs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjs</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1217">1217</a>]</p>
+
+<div class="desc">
+
+the list of resolved direct objects, as NPMatch objects
+
+</div>
+
+<p><span id="endOfSentence"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endOfSentence</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1275">1275</a>]</p>
+
+<div class="desc">
+
+Is this command at the end of a sentence? The grammar match sets this to
+true if the input syntax puts this predicate at the end of a sentence.
+For example, in the English grammar, this is set if there's a period
+after this predicate. This tells the parser that the next predicate in
+the same line is the start of a new sentence, so sentence-opening syntax
+is allowed.
+
+</div>
+
+<p><span id="implicitActionReports"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">implicitActionReports</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#383">383</a>]</p>
+
+<div class="desc">
+
+A list of reports of previous implicit actions performed in the course
+of executing this command which can be used if we need to collate a
+report of a stack of implicit actions.
+
+</div>
+
+<p><span id="iobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobj</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1232">1232</a>]</p>
+
+<div class="desc">
+
+the indirect object for the current iteration
+
+</div>
+
+<p><span id="iobjInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjInfo</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1235">1235</a>]</p>
+
+<div class="desc">
+
+the NPMatch object for the current indirect object
+
+</div>
+
+<p><span id="iobjNPs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjNPs</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1226">1226</a>]</p>
+
+<div class="desc">
+
+the indirect object phrases, as a list of NounPhrase objects
+
+</div>
+
+<p><span id="iobjs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjs</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1229">1229</a>]</p>
+
+<div class="desc">
+
+the list of resolved indirect objects, as NPMatch objects
+
+</div>
+
+<p><span id="lastAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastAction</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1188">1188</a>]</p>
+
+<div class="desc">
+
+the Previous action performed by this command
+
+</div>
+
+<p><span id="madeTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">madeTopic</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1327">1327</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="matchedAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchedAll</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1322">1322</a>]</p>
+
+<div class="desc">
+
+Does this command apply to objects matched to ALL?
+
+</div>
+
+<p><span id="matchedMulti"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchedMulti</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1325">1325</a>]</p>
+
+<div class="desc">
+
+Does this command apply to objects matched to multiple objects?
+
+</div>
+
+<p><span id="miscWordLists"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">miscWordLists</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1126">1126</a>]</p>
+
+<div class="desc">
+
+List of noun phrases containing misc word phrases. The misc word phrase
+grammar rules will notify us when they're visited in the build process,
+and we'll note them here.
+
+</div>
+
+<p><span id="missingNouns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">missingNouns</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1132">1132</a>]</p>
+
+<div class="desc">
+
+Do we have any missing or empty noun phrases in the match? The verb and
+noun phrases will fill this in.
+
+</div>
+
+<p><span id="nextTokens"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextTokens</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1311">1311</a>]</p>
+
+<div class="desc">
+
+The token list for the next predicate. The first predicate production
+fills this in during the build process with the token list for the next
+predicate on the same command line, based on the location of the
+conjunction or punctuation that ends the first predicate. This is just
+what's left of the token list after the tokens used for our own
+predicate and after any conjunctions or punctuation marks that separate
+our predicate from the next one.
+
+</div>
+
+<p><span id="npList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">npList</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1285">1285</a>]</p>
+
+<div class="desc">
+
+The noun phrase roles (as NounRole objects), in the order they actually
+appear in the user input. We build this list as the VerbProduction adds
+our noun phrases. The phrase order is important when there are reflexive
+pronouns, because a reflexive pronoun generally refers back to the
+nearest preceding phrase of the same number and gender.
+
+</div>
+
+<p><span id="npListSorted"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">npListSorted</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1293">1293</a>]</p>
+
+<div class="desc">
+
+A copy of the npList sorted to ensure that the direct and indirect
+objects of a TIAction are verified in the order specified on that
+action.
+
+</div>
+
+<p><span id="npToResolve"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">npToResolve</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#895">895</a>]</p>
+
+<div class="desc">
+
+If the parser has just asked the player to supply a missing object via
+the askMissingObject() function, we don't want to resolve the nouns for
+every object role, but only for the role with which askMissingObject()
+is currently concerned; askMissingObject() stores that role here so that
+our resolvedNouns() method knows to resolve only the noun for this role
+rather than for all the roles in the command. If npToResolve is nil (as
+it normally will be) then it will be ignored, and all noun roles will be
+resolved.
+
+</div>
+
+<p><span id="originalAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">originalAction</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#347">347</a>]</p>
+
+<div class="desc">
+
+The originalAction this Command started out with, which may be changed
+by a Doer (or some other mechanism)
+
+</div>
+
+<p><span id="parseTree"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parseTree</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1182">1182</a>]</p>
+
+<div class="desc">
+
+The parse tree (the root of the grammar match), if applicable. Commands
+built from user input have a parse tree; those built internally don't.
+Note that the parse tree doesn't necessarily include \*all\* of the user
+input, since we could have asked questions (disambiguation, missing noun
+phrases) before the command was completed. The question replies will be
+represented in noun phrases or other data added to the command after the
+initial parse.
+
+</div>
+
+<p><span id="predActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">predActive</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1170">1170</a>]</p>
+
+<div class="desc">
+
+is our predicate currently active (see VerbProduction.isActive)
+
+</div>
+
+<p><span id="predPriority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">predPriority</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1167">1167</a>]</p>
+
+<div class="desc">
+
+the predicate priority (see VerbProduction.priority)
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1119">1119</a>]</p>
+
+<div class="desc">
+
+the calculated priority
+
+</div>
+
+<p><span id="reflexiveAnte"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reflexiveAnte</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#986">986</a>]</p>
+
+<div class="desc">
+
+table of reflexive pronoun antecedents
+
+</div>
+
+<p><span id="tokenLen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokenLen</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1150">1150</a>]</p>
+
+<div class="desc">
+
+The number of tokens from the command line that we matched for the
+command. The CommandProduction object sets this for us as it builds the
+command from the parse tree. We use this to determine the priority order
+of the syntax matches, when there are multiple matches: other things
+being equal, we'll take the longest match. Longer matches are better
+because they come closer to using everything the user typed, which is
+our eventual goal.
+
+This reflects the number of tokens used in the first predicate phrase;
+it omits any additional predicates or conjunctions. We only count the
+first predicate because we always go back and re-parse any additional
+text on the line from scratch after executing the first predicate, in
+case the execution changes the game state in such a way that the parsing
+changes.
+
+</div>
+
+<p><span id="verbProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbProd</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1191">1191</a>]</p>
+
+<div class="desc">
+
+the VerbProduction object for the command
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addDisambigNP"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addDisambigNP (prod)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#705">705</a>]</p>
+
+<div class="desc">
+
+Add a disambiguation list item. This adds a NounPhrase item to the
+current reply list.
+
+</div>
+
+<p><span id="addNounListItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addNounListItem (role, prod)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#633">633</a>]</p>
+
+<div class="desc">
+
+add a noun phrase to the given role (a NounRole)
+
+</div>
+
+<p><span id="addNounProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addNounProd (role, prod)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#615">615</a>]</p>
+
+<div class="desc">
+
+Add a noun production, building it out as though it had been part of the
+original parse tree. This can be used to add a noun phrase after the
+initial parsing, such as when the player supplies a missing object.
+
+</div>
+
+<p><span id="afterReport"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterReport ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#365">365</a>]</p>
+
+<div class="desc">
+
+Run through our list of afterReports displaying each in turn. We do this
+on the Command rather than on any of the Actions since actions may
+invoke other actions (implicit, remapped, nested or replaced), while the
+afterReports pertain to the command as a whole.
+
+</div>
+
+<p><span id="buildCommandString"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildCommandString ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#334">334</a>],
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2110">2110</a>]</p>
+
+<div class="desc">
+
+Rebuild the original command string from the tokens. We call this out as
+a separate method so language-specific code can override it.
+
+</div>
+
+<p><span id="buildObjLists"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildObjLists ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#902">902</a>]</p>
+
+<div class="desc">
+
+Build the object lists. This runs through each NounPhrase in the command
+to build its 'objs' list, then builds the corresponding master list in
+the Command object.
+
+</div>
+
+<p><span id="calcPriority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">calcPriority ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1091">1091</a>]</p>
+
+<div class="desc">
+
+Calculate the parsing priority.
+
+When the parser looks for grammar rule matches to the input, it
+considers \*all\* of the possible matches. Natural language is full of
+syntactic ambiguity, so a given input string can often be parsed into
+several different, but equally valid, syntax trees. It's often
+impossible to tell which parsing is correct based on syntax alone - you
+often have to look at the overall meaning of the sentence. For example,
+GIVE BOOK TO BOB could be interpreted as having a direct object (BOOK)
+and an indirect object (BOB), or it could be seen as having only a
+direct object (BOOK TO BOB, treating the TO as a prepositional phrase
+modifying BOOK rather than as a part of the verb phrase structure). The
+initial parsing phase only looks at the syntax, so it has to consider
+all of the valid phrase structures, even though a human speaker would
+immediately dismiss many of them as nonsensical. Once we find all of the
+syntax matches, the parser puts them into priority order, and then goes
+down the list looking for the first one that makes sense semantically
+(which is defined roughly as having noun phrases that refer to actual
+objects).
+
+The priority, then, represents our guess at the likelihood that the
+grammar structure matches the user's intentions, based on the syntax.
+Our fundamental assumption is that the command is valid: that is, it's
+well-formed grammatically, AND it expresses something that's possible,
+or at least logical to try, within the game-world context. Given this,
+our strategy is to find a grammar structure that gives us a command that
+we can actually carry out.
+
+The priority is a composite value, made up of weighted component values.
+We combine the components into a single scalar value simply by adding up
+the parts multiplied by their weights. (Or, looked at another way, we
+combine the values using a high-radix numbering system.) The components
+are, from most significant to least significant:
+
+\- Grammatically correct commands sort ahead of commands with structural
+errors.
+
+\- The predicate priority, from the VerbProduction. (This tells us how
+"complete" the predicate structure is: a predicate with missing
+information has a lower priority. This is in keeping with our assumption
+that the user's input is well-formed - we'll try the most complete
+structures first before falling back on the possibility that the user
+left out some information.)
+
+\- Filled noun slots ahead of missing noun slots. A missing noun slot
+occurs when the player leaves one of the noun roles empty (PUT BOX,
+TAKE). We can fill in this information with automatic defaults, so it's
+not necessarily a reason to reject the parsing, but if there's another
+interpretation that has fully occupied noun slots, try the occupied one
+first.
+
+\- More noun phrase slots first. For example, sort a command with a
+direct and indirect object (two slots) ahead of one with only a direct
+object. More slots means that we found more "structure" in the command;
+we can sometimes interpret the same command with less structure by
+subsuming more words into a long noun phrase.
+
+\- Longest noun phrases, in aggregate, first. This is in terms of tokens
+matched from the user input. (We want to consider longer noun phrases
+first because it's more likely that they'll match exact objects, so
+there's less chance of ambiguity, \*and\* it's more likely that if we're
+wrong about the structure, we'll simply fail to find a matching object
+and move on to other parse trees. Longer noun phrases are less likely to
+yield spurious matches simply because they have more words that have to
+match.)
+
+\- Grammatical noun phrases take priority over misc word phrases (a misc
+word phrase is text in a noun phrase slot that doesn't match any of the
+defined patterns in the grammar rules).
+
+\- Longest command first, in terms of tokens matched from the user
+input. (The more user input we use the better, since that gives us more
+confidence that we're correctly interpreting what the user said. When we
+leave extra tokens for later, we can't be sure that we'll be able to
+make any sense of what's left over, whereas tokens in the current match
+are known to fit a grammar rule.)
+
+</div>
+
+<p><span id="changeAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">changeAction (newAct, newDo, newIo, newAo)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#497">497</a>]</p>
+
+<div class="desc">
+
+Change the action to a new action with a new set of objects
+
+</div>
+
+<p><span id="clone"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clone ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#129">129</a>]</p>
+
+<div class="desc">
+
+clone - create a new Command based on this Command
+
+</div>
+
+<p><span id="cloneNP"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cloneNP (np)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#154">154</a>]</p>
+
+<div class="desc">
+
+clone a noun phrase that's part of this command
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ([args])</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#41">41</a>]</p>
+
+<div class="desc">
+
+Create the command object. There are several ways to create a command:
+
+new Command(parseTree) - create from a parsed command syntax tree.
+
+new Command(action, dobjProd...) - create from a given Action and a set
+of parsed syntax trees for the noun phrases. The first noun phrase is
+the direct object, the second is the indirect object, and the third is
+the accessory.
+
+new Command(action, dobjs...) - create from a given Action and a set of
+objects or object lists for the noun slots. The first argument after the
+Action, dobjs, can be a single Mentionable object to use as the resolved
+direct object, or a list or vector of Mentionables to use as the
+multiple direct objects. The next argument is in the same format and is
+used for the indirect object. The third is the accessory.
+
+new Command(actor, action, dobjs...) - create from a given actor (as a
+Mentionable object), an Action object, and the object list.
+
+new Command() - create a blank Command, for setting up externally or in
+a subclass.
+
+</div>
+
+<p><span id="emptyNounRole"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">emptyNounRole (role)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#732">732</a>]</p>
+
+<div class="desc">
+
+mark a noun phrase role as empty
+
+</div>
+
+<p><span id="exec"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exec ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#183">183</a>]</p>
+
+<div class="desc">
+
+Execute the action. This carries out the entire command processing
+sequence for the action. If the action involves a list of objects (as in
+TAKE ALL or DROP BOOK AND CANDLE), we iterate over the listed objects,
+executing the action on each object in turn.
+
+</div>
+
+<p><span id="execCombos"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execCombos (predRoles, n, lst)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#394">394</a>]</p>
+
+<div class="desc">
+
+Execute the command for each combination of objects for noun role index
+'n' and above. 'lst' is a list containing a partial object combination
+for roles at lower indices. We iterate over each combination of the
+remaining objects. predRoles is a list containing predicate roles (such
+DirectObject, IndirectObject, AccessoryObject) relating to this action.
+Callers are responsible for sorting predRoles into the correct order
+before calling this method.
+
+</div>
+
+<p><span id="execDoer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execDoer (lst)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#474">474</a>]</p>
+
+<div class="desc">
+
+Execute the command via the Doers that match the command's action and
+objects. 'lst' is the object combination to execute: \[action, dobj,
+iobj, ...\].
+
+</div>
+
+<p><span id="execIter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execIter (lst)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#441">441</a>]</p>
+
+<div class="desc">
+
+Execute one iteration of the command for a particular combination of
+objects. 'lst' is the object combination to execute: this is an
+\[action, dobj, iobj, ...\] list.
+
+</div>
+
+<p><span id="fetchDisambigReply"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fetchDisambigReply ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#724">724</a>]</p>
+
+<div class="desc">
+
+Fetch a disambiguation reply. If we have more replies available, this
+returns the next reply's noun phrase list, otherwise nil.
+
+</div>
+
+<p><span id="fixPriority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fixPriority ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1108">1108</a>]</p>
+
+<div class="desc">
+
+Set a fixed priority. This makes the priority a fixed value rather than
+a calculated value. We call this before sorting a list of commands, so
+that we don't have to recalculate the priority value repeatedly during
+the sort.
+
+</div>
+
+<p><span id="forEachNP"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEachNP (func)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#870">870</a>]</p>
+
+<div class="desc">
+
+carry out a callback for each noun phrase in each list
+
+</div>
+
+<p><span id="forEachObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEachObj (func)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#524">524</a>]</p>
+
+<div class="desc">
+
+Invoke a callback for each object in the current command iteration. This
+invokes the callback on the direct object, indirect object, accessory,
+and any other custom roles added by the game.
+
+</div>
+
+<p><span id="getCommandPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getCommandPhrase ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1335">1335</a>]</p>
+
+<div class="desc">
+
+Get the command phrase entered by the player, with the words used to
+match the direct, indirect and accessory objects replaced by (dobj),
+(iobj) and (acc) respectively; e.g. PUT RED BALL ON TABLE becomes 'put
+(dobj) on (iobj)'
+
+</div>
+
+<p><span id="noteMiscWords"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteMiscWords (np)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1111">1111</a>]</p>
+
+<div class="desc">
+
+note a noun phrase with a miscellaneous word list
+
+</div>
+
+<p><span id="npTokenLen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">npTokenLen ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1153">1153</a>]</p>
+
+<div class="desc">
+
+Calculate the sum of the token lengths of our noun phrases
+
+</div>
+
+<p><span id="numNounSlots"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numNounSlots ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1164">1164</a>]</p>
+
+<div class="desc">
+
+Calculate the number of noun slots we have filled in
+
+</div>
+
+<p><span id="resolveNouns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveNouns ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#746">746</a>]</p>
+
+<div class="desc">
+
+resolve the noun phrases
+
+</div>
+
+<p><span id="resolveReflexive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveReflexive (pronoun)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#968">968</a>]</p>
+
+<div class="desc">
+
+Resolve a reflexive pronoun on behalf of one of the NounPhrases within
+this command.
+
+</div>
+
+<p><span id="saveReflexiveAnte"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">saveReflexiveAnte (obj)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#940">940</a>]</p>
+
+<div class="desc">
+
+Save a potential antecedent for a reflexive pronoun coming up later in
+the command. Each time we visit a noun phrase during the reflexive
+pronoun phase, we'll note its resolved objects here. Since we visit the
+noun phrases in their order of appearance in the command, we'll
+naturally always have the latest one mentioned when we come to a
+reflexive pronoun. This gives us the correct resolution, which is the
+nearest preceding noun. Note that the noun phrase shouldn't call this
+routine to note reflexive pronouns, since they don't bind to earlier
+reflexive pronouns - they only bind to regular noun phrases.
+
+</div>
+
+<p><span id="sortList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sortList (cmdLst)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#995">995</a>]</p>
+
+<div class="desc">
+
+Class method: Sort a list of Command matches, in priority order. The
+priority order is the order for processing predicate grammar matches:
+start at the highest priority, and work through the list until you find
+one where the noun phrases resolve to valid game-world objects; that's
+the one to execute.
+
+</div>
+
+<p><span id="startDisambigReply"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">startDisambigReply (parent, prod)</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#689">689</a>]</p>
+
+<div class="desc">
+
+Start processing a new disambiguation reply. This adds a reply to a
+disambiguation question.
+
+</div>
+
+<p><span id="terseOK"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">terseOK ( )</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#569">569</a>]</p>
+
+<div class="desc">
+
+Are terse messages OK for this command? A terse message is a simple
+acknowledgment of a standard command, such as "Taken", "Dropped",
+"Done", etc. The action is so ordinary that the result of a successful
+attempt should be obvious to the player; so the only reply needed is an
+acknowledgment, not an explanation.
+
+Terse replies only apply to simple actions, and only when the actor is
+the player character, AND there's no disambiguation involved. If the
+actor isn't the PC, an acknowledgment isn't sufficient; we should
+instead describe the NPC carrying out the action, since it's something
+we observe, not something we do. If any objects were disambiguated, we
+also want to describe the action fully, because the ambiguity calls for
+a description of precisely which objects were chosen. Disambiguation
+guesses are sometimes wrong, so when they're involved, it's not safe to
+assume that the player and parser must both be thinking the same thing.
+Showing a full description of the action will make it obvious to the
+player when we guessed wrong, because the description won't accord with
+what they had in mind. A terse acknowledgment would hide this
+difference, allowing the player to wrongly assume that the parser did
+what they thought it was going to do and potentially leading to
+confusion down the road.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

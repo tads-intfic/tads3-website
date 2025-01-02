@@ -1,3 +1,5 @@
+---
+---
 <span class="title">pluralPhraseWithContents</span><span class="type">GrammarProd</span>
 
 `grammar `**[`pluralPhraseWithContents(basic)`](../object/pluralPhraseWithContents(basic).html)**` :   `[`Production`](../object/Production.html)

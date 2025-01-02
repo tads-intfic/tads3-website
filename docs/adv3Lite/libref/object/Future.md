@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Future</span><span class="type">object</span>
 
 [messages.t](../file/messages.t.html)\[[79](../source/messages.t.html#79)\]

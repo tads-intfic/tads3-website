@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GetOutOf</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1137](../source/actions.t.html#1137)\]

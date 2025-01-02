@@ -1,3 +1,5 @@
+---
+---
 endConvXXX Codes:  
   
 endConvBye        player typed GOODBYE   

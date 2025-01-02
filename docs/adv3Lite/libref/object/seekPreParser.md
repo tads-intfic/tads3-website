@@ -1,3 +1,5 @@
+---
+---
 <span class="title">seekPreParser</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[896](../source/newbie.t.html#896)\]

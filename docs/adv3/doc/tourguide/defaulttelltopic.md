@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>DefaultTellTopic : <a
-href="defaulttopics-overview.htm">DefaultTopic</a><br />
+href="defaulttopics-overview.html">DefaultTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="defaultasktopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="defaultasktelltopic.htm">[Next]</a></td>
+href="defaultasktopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="defaultasktelltopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

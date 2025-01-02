@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> The Actor Object  
-<span class="navnp"><a href="actoroverview.htm" class="nav"><em>Prev:</em> NPC Overview</a>
-    <a href="actorstate.htm" class="nav"><em>Next:</em> Actor States</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> The Actor Object  
+<span class="navnp"><a href="actoroverview.html" class="nav"><em>Prev:</em> NPC Overview</a>
+    <a href="actorstate.html" class="nav"><em>Next:</em> Actor States</a>
     </span>
 
 </div>
@@ -51,7 +53,7 @@ just the same way as you'd define them on Thing are:
   to define either isHim = true or isHer = true to define the Actor's
   gender (and thus the pronouns that can be used to refer to him or
   her); note that this property can also be set via the
-  [vocab](thing.htm#vocab) property.
+  [vocab](thing.html#vocab) property.
 - **globalParamName**: this can be particularly useful on Actors whose
   names change during the course of the game (e.g. from 'the tall man'
   to 'George'), since the globalParamName can be used in message
@@ -111,7 +113,7 @@ would define them appropriately on the ActorState objects:
   **actorAfterTravel(traveler, connector)**, which you can use for after
   travel notifications that are state-independent.
 - **remoteSpecialDesc(pov)** (only relevant if you're using the
-  [SenseRegion](senseregion.htm) module). This is used instead of the
+  [SenseRegion](senseregion.html) module). This is used instead of the
   specialDesc if the actor is being viewed from a remote location. If
   the actor has a current ActorState then by default we use the
   ActorState's remoteSpecialDesc(), otherwise we use the Actor's
@@ -221,12 +223,12 @@ conversation:
   current interlocutor. Note, this is not the normal way to handle
   conversation, but is provided for use as a short-cut in certain kinds
   of circumstances. See further under [NPC-Initiated
-  Conversation](initiate.htm#actorsay_idx).
+  Conversation](initiate.html#actorsay_idx).
 
 The purpose of some of the above should become more apparent when we get
 deeper into the conversation system. There are also a number of methods
 used for manipulated the Actor's agenda, whioh will be explained in the
-section on [AgendaItems](agenda.htm). Most of the other methods and
+section on [AgendaItems](agenda.html). Most of the other methods and
 properties of Actor are intended for internal use by the library, and
 would not normally be directly employed in game code.
 
@@ -268,9 +270,9 @@ On the Actor class, however, if any of these commands reach the action
 stage they are handled quite differently, on the grounds that a person
 will react very differently to being attacked, touched or kissed than an
 inanimate object. In the first instance, the ATTACK, TOUCH or KISS
-command will be handled by a [HitTopic](actortopicentry.htm#types),
-[TouchTopic](actortopicentry.htm#types) or
-[KissTopic](actortopicentry.htm#types) if one is available; otherwise
+command will be handled by a [HitTopic](actortopicentry.html#types),
+[TouchTopic](actortopicentry.html#types) or
+[KissTopic](actortopicentry.html#types) if one is available; otherwise
 the **attackResponseMsg**, **touchResponseMsg** or **kissResponseMsg**
 (all of which should be defined as single-quoted strings) is displayed.
 
@@ -371,10 +373,10 @@ e.g.:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> The Actor Object  
-<span class="navnp"><a href="actoroverview.htm" class="nav"><em>Prev:</em> NPC Overview</a>
-    <a href="actorstate.htm" class="nav"><em>Next:</em> Actor States</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> The Actor Object  
+<span class="navnp"><a href="actoroverview.html" class="nav"><em>Prev:</em> NPC Overview</a>
+    <a href="actorstate.html" class="nav"><em>Next:</em> Actor States</a>
     </span>
 
 </div>

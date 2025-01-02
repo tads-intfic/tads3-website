@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FueledLightSource</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[2079](../source/extras.t.html#2079)\]

@@ -1,0 +1,61 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>DefaultGiveShowTopic : <a href="defaulttopics-overview.html">DefaultTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="defaultshowtopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="defaultaskfortopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A DefaultGiveShowTopic combines the functionality of a DefaultGiveTopic
+and a DefaultShowTopic by responding to any GIVE X TO Y or SHOW X TO Y
+command for which a specific GiveTopic, ShowTopic, or GiveShowTopic has
+not been provided. The further remarks relating to DefaultGiveTopic and
+DefaultShowTopic also apply here; the DefaultGiveShowTopic will be
+triggered by SHOW X TO Y provided X is in scope, but GIVE X TO Y only
+if, in addition, X is portable and the player character can take it (or
+is already holding it).</p>
+
+<p>With these factors in mind, we can define a DefaultGiveShowTopic that
+should work reasonably well for the curator (put it under the curator
+talking state). Once again we make liberal use of the rand() function to
+provide some measure of apparent variety to the curator’s response:</p>
+
+<p>++ DefaultGiveShowTopic<br />
+   ”&lt;q&gt;&lt;&lt;rand(‘I\m sorry, ‘, ’I\m afraid ‘, ’’, ’I regret
+‘)&gt;&gt;I don’t have time <br />
+   to &lt;&lt;rand (‘be bothered with’, ’look at’,’study’, ’inspect’)&gt;&gt; {that dobj/him} <br />
+   &lt;&lt;rand(‘right now’, ’at the moment’, ’today’)&gt;&gt;,&lt;/q&gt; he tells you.”<br />
+;</p>
+
+<p>An alternative way of writing a variant of this employing syntax that
+became available in TADS 3.1.0 might be;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ DefaultGiveShowTopic
+   "&lt;q&gt;&lt;&lt;one of&gt;&gt;I'm sorry, &lt;&lt;or&gt;&gt;I'm afraid &lt;&lt;or&gt;&gt;&lt;&lt;or&gt;&gt;I regret &lt;&lt;at random&gt;&gt;I don't have time 
+   to &lt;&lt;one of&gt;&gt;be bothered with&lt;&lt;or&gt;&gt;look at&lt;&lt;or&gt;&gt;study&lt;&lt;or&gt;&gt;inspect&lt;&lt;shuffled&gt;&gt; {that dobj/him} 
+   &lt;&lt;one of&gt;&gt;right now&lt;&lt;or&gt;&gt;at the moment&lt;&lt;or&gt;&gt;today&lt;&lt;cycling&gt;&gt;,&lt;/q&gt; he tells you."
+;
+</code></pre></div></div>
+
+<p>We’ll assume that Solomon, an avid collector of wisdom on all topics, is
+fascinated by anything he’s shown (put this in the solomonTalking
+state):</p>
+
+<p>++ DefaultGiveShowTopic, ShuffledEventList   <br />
+   [<br />
+     ’&lt;q&gt;Fascinating!&lt;/q&gt; {the solomon/he} declares. ’,<br />
+     ’&lt;q&gt;So that\s {a dobj/he}, how interesting!&lt;/q&gt; he remarks. ’,<br />
+     ’{The solomon/he} examines {the dobj/him} carefully, &lt;q&gt;This is<br />
+       how one\s wisdom grows.&lt;/q&gt; he tells you, &lt;q&gt;By careful<br />
+       observation of all things under the sun.&lt;/q&gt; ’,       <br />
+     ’&lt;q&gt;Thank you,&lt;/q&gt; he says, looking at {it dobj/him} carefully,<br />
+      &lt;q&gt;The more I observe, the wiser I become.&lt;/q&gt; ’<br />
+   ]<br />
+;</p>
+

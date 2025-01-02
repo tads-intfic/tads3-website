@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Command</span><span class="type">class</span>
 
 [command.t](../file/command.t.html)\[[15](../source/command.t.html#15)\],

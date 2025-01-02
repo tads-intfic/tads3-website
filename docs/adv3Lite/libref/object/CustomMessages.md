@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CustomMessages</span><span class="type">class</span>
 
 [messages.t](../file/messages.t.html)\[[817](../source/messages.t.html#817)\]

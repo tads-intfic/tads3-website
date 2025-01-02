@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebWindow</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[1667](../source/webui.t.html#1667)\]
@@ -188,7 +190,7 @@ specialsToHtml context
 
 The URL path to the window's HTML definition file, as seen by the
 browser. For the pre-defined library window types, we expose the HTML
-file in the root of the URL namespace - e.g., "/main.htm". The files are
+file in the root of the URL namespace - e.g., "/main.html". The files are
 actually stored in the /webuires folder, but we expose them to the
 browser as though they were in the root folder to make embedded object
 references on the pages simpler. The browser figures the path to an

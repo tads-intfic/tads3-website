@@ -1,3 +1,5 @@
+---
+---
 <span class="title">indetPluralNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`indetPluralNounPhrase(basic)`](../object/indetPluralNounPhrase(basic).html)**` :   `[`Production`](../object/Production.html)

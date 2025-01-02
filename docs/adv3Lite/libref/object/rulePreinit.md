@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rulePreinit</span><span class="type">object</span>
 
 [rules.t](../file/rules.t.html)\[[158](../source/rules.t.html#158)\]

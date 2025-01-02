@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Saving and Restoring State  
-<span class="navnp"><a href="metalist.htm" class="nav"><em>Prev:</em> Metaclass Identifier
+<span class="navnp"><a href="metalist.html" class="nav"><em>Prev:</em> Metaclass Identifier
 List</a>    
-<a href="tadsspch.htm" class="nav"><em>Next:</em> TADS Special
+<a href="tadsspch.html" class="nav"><em>Next:</em> TADS Special
 Characters</a>     </span>
 
 </div>
@@ -134,7 +136,7 @@ must have been corrupted and thus cannot be reliably loaded.
 #### Timestamp
 
 This is simply the timestamp information from the image file's
-[signature](format.htm#Signature) block, in the same 24-byte format used
+[signature](format.html#Signature) block, in the same 24-byte format used
 in the image file. The purpose of this information is to ensure that a
 particular saved state file is restored only with the exact image file
 that created it; saved state files are dependent upon the exact
@@ -258,7 +260,7 @@ followed by the synthetic exports. Each export is stored as follows:
 
 - A UINT2 giving the number of bytes in the name of this export.
 - The bytes of the name of the export. This is one of the [predefined
-  symbol](model.htm#predefined) names.
+  symbol](model.html#predefined) names.
 - A DATAHOLDER giving the synthesized value of the name.
 
 The VM saves the synthetic exports to ensure that, upon restoring a
@@ -382,12 +384,12 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Saving and Restoring State  
-<span class="navnp"><a href="metalist.htm" class="nav"><em>Prev:</em> Metaclass Identifier
+<span class="navnp"><a href="metalist.html" class="nav"><em>Prev:</em> Metaclass Identifier
 List</a>    
-<a href="tadsspch.htm" class="nav"><em>Next:</em> TADS Special
+<a href="tadsspch.html" class="nav"><em>Next:</em> TADS Special
 Characters</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 ## Messages
 
 <a href="message/Message.html#acknowledge%20footnote%20status"

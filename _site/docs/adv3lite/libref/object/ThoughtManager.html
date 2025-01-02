@@ -1,0 +1,172 @@
+<p><span class="title">ThoughtManager</span><span class="type">class</span></p>
+
+<p><a href="../file/thoughts.t.html">thoughts.t</a>[<a href="../source/thoughts.t.html#20">20</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The base clase for a thought manager object. To use this in a game
+create a single object of this class and locate a number of Thought
+objects in it (with the + notation) to represent responses to THINK
+ABOUT
+
+`class `**`ThoughtManager`**` :   `[`PreinitObject`](../object/PreinitObject.html)`   `[`TopicDatabase`](../object/TopicDatabase.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ThoughtManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TopicDatabase<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>noThoughtMsg<code class="language-plaintext highlighter-rouge">](#noThoughtMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>thoughtList<code class="language-plaintext highlighter-rouge">](#thoughtList)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleTopic<code class="language-plaintext highlighter-rouge">](#handleTopic)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>getBestMatch<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#getBestMatch)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="noThoughtMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noThoughtMsg</code></p>
+
+<p><a href="../file/thoughts.t.html">thoughts.t</a>[<a href="../source/thoughts.t.html#58">58</a>]</p>
+
+<div class="desc">
+
+The message to display when we don't find a matching Thought
+
+</div>
+
+<p><span id="thoughtList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thoughtList</code></p>
+
+<p><a href="../file/thoughts.t.html">thoughts.t</a>[<a href="../source/thoughts.t.html#54">54</a>]</p>
+
+<div class="desc">
+
+The list of Thoughts associated with this ThoughtManager object
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/thoughts.t.html">thoughts.t</a>[<a href="../source/thoughts.t.html#23">23</a>]</p>
+
+<div class="desc">
+
+Carry out the ThoughtManager's preinitialization
+
+</div>
+
+<p><span id="handleTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">handleTopic (top)</code></p>
+
+<p><a href="../file/thoughts.t.html">thoughts.t</a>[<a href="../source/thoughts.t.html#39">39</a>]</p>
+
+<div class="desc">
+
+Handle a THINK ABOUT command.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

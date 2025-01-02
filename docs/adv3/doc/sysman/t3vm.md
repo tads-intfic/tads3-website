@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> t3vm Function
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> t3vm Function
 Set  
-<span class="navnp"><a href="builtins.htm" class="nav"><em>Prev:</em> The Intrinsics</a>
-    <a href="tadsgen.htm" class="nav"><em>Next:</em> tads-gen Function
+<span class="navnp"><a href="builtins.html" class="nav"><em>Prev:</em> The Intrinsics</a>
+    <a href="tadsgen.html" class="nav"><em>Next:</em> tads-gen Function
 Set</a>     </span>
 
 </div>
@@ -121,7 +123,7 @@ With the code above, you can access the symbol table at any time after
 preinit, even in a regular build, using
 <span class="code">symTabSaver.symtab</span>.
 
-For more information, see the [reflection](reflect.htm) section.
+For more information, see the [reflection](reflect.html) section.
 
 </div>
 
@@ -129,7 +131,7 @@ For more information, see the [reflection](reflect.htm) section.
 
 <div class="fdef">
 
-Retrieves the value of the [named argument](namedargs.htm) with the
+Retrieves the value of the [named argument](namedargs.html) with the
 given name.
 
 *name* is a string giving the argument name. If the specified named
@@ -223,7 +225,7 @@ the basic system library. This class defines the following properties:
 - <span class="code">argList\_</span> - a list of the actual parameters
   (argument values) to the function or method. The elements of the list
   are in the same order as the arguments.
-- <span class="code">locals\_</span> - a [LookupTable](lookup.htm) of
+- <span class="code">locals\_</span> - a [LookupTable](lookup.html) of
   the local variables at the stack level. Each local variable name is a
   key in the table, and the corresponding table value is the variable's
   value. This is present only if the
@@ -234,7 +236,7 @@ the basic system library. This class defines the following properties:
   that this table is merely a copy of the locals in the frame, so
   changing a value in the table won't affect the value of the local in
   the stack frame.
-- <span class="code">namedArgs\_</span> - a [LookupTable](lookup.htm) of
+- <span class="code">namedArgs\_</span> - a [LookupTable](lookup.html) of
   the named argument values to the function or method. Each argument
   name is a key in the table, and the corresponding value in the table
   is the value of the argument. This is present only if the
@@ -245,7 +247,7 @@ the basic system library. This class defines the following properties:
   table is a copy of the actual arguments in the stack, so changing
   values in the table won't affect the argument variables.
 - <span class="code">frameDesc\_</span> - a
-  [StackFrameDesc](framedesc.htm) object for the stack level. This is
+  [StackFrameDesc](framedesc.html) object for the stack level. This is
   only present if the <span class="code">T3GetStackFrames</span> flag is
   included in the *flags* argument; if not, this property is
   <span class="code">nil</span>. It's also <span class="code">nil</span>
@@ -335,7 +337,7 @@ function,
 
 <div class="fdef">
 
-Explicitly runs the [garbage collector](gc.htm). This traces through
+Explicitly runs the [garbage collector](gc.html). This traces through
 memory to determine which objects can be referenced through local
 variables, properties of reachable objects, and any other ways that the
 program can refer to objects. Objects that aren't reachable are removed
@@ -347,8 +349,8 @@ explicitly. However, it's sometimes useful to make the collector run at
 particular times.
 
 - Before visiting all objects in memory via
-  [<span class="code">firstObj</span>](tadsgen.htm#firstObj) and
-  [<span class="code">nextObj</span>](tadsgen.htm#nextObj), you can run
+  [<span class="code">firstObj</span>](tadsgen.html#firstObj) and
+  [<span class="code">nextObj</span>](tadsgen.html#nextObj), you can run
   the collector explicitly to make sure that any currently unreachable
   objects are removed from memory and thus won't be retrieved in your
   object loop.
@@ -431,11 +433,11 @@ setting temporarily while running a particular block of code.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> t3vm Function
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> t3vm Function
 Set  
-<span class="navnp"><a href="builtins.htm" class="nav"><em>Prev:</em> The Intrinsics</a>
-    <a href="tadsgen.htm" class="nav"><em>Next:</em> tads-gen Function
+<span class="navnp"><a href="builtins.html" class="nav"><em>Prev:</em> The Intrinsics</a>
+    <a href="tadsgen.html" class="nav"><em>Next:</em> tads-gen Function
 Set</a>     </span>
 
 </div>

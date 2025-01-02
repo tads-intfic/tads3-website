@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,19 +9,19 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Dial : <a
-href="settable.htm">Settable</a><br />
+href="settable.html">Settable</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="lever.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="onoffcontrol.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="lever.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="onoffcontrol.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 The Dial class is an immediate descendant of the
-[Settable](settable.htm) class and the immediate ancestor of the
-[NumberedDial](numbereddial.htm) and [LabeledDial](labeleddial.htm)
+[Settable](settable.html) class and the immediate ancestor of the
+[NumberedDial](numbereddial.html) and [LabeledDial](labeleddial.html)
 classes. As such, it is not likely to be used much in game code, since
 if something is a dial at all, it is likely to be either numbered or
 labeled if it is to be at all useful, and if one wants something more

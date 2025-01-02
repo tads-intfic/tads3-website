@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Cockpit
+<a href="toc.html" class="nav">Table of Contents</a> \| Cockpit
 Controls  
-<span class="navnp"><a href="recap.htm" class="nav"><em>Prev:</em> Recapitulation</a>
-   <a href="furnishing.htm" class="nav"><em>Next:</em> Furnishing the
+<span class="navnp"><a href="recap.html" class="nav"><em>Prev:</em> Recapitulation</a>
+   <a href="furnishing.html" class="nav"><em>Next:</em> Furnishing the
 Cockpit</a>     </span>
 
 </div>
@@ -23,10 +25,10 @@ player to take off and win the game.
 
 <div class="sectoc">
 
-[Furnishing the Cockpit](furnishing.htm)  
-[Defining Actions](actions.htm)  
-[Responding to Actions](responding.htm)  
-[Taking Off](takeoff.htm)  
+[Furnishing the Cockpit](furnishing.html)  
+[Defining Actions](actions.html)  
+[Responding to Actions](responding.html)  
+[Taking Off](takeoff.html)  
 
 </div>
 
@@ -37,10 +39,10 @@ player to take off and win the game.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Cockpit
+<a href="toc.html" class="nav">Table of Contents</a> \| Cockpit
 Controls  
-<span class="navnp"><a href="recap.htm" class="nav"><em>Prev:</em> Recapitulation</a>
-   <a href="furnishing.htm" class="nav"><em>Next:</em> Furnishing the
+<span class="navnp"><a href="recap.html" class="nav"><em>Prev:</em> Recapitulation</a>
+   <a href="furnishing.html" class="nav"><em>Next:</em> Furnishing the
 Cockpit</a>     </span>
 
 </div>

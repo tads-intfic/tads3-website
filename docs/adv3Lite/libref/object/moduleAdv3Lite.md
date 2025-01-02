@@ -1,3 +1,5 @@
+---
+---
 <span class="title">moduleAdv3Lite</span><span class="type">object</span>
 
 [modid.t](../file/modid.t.html)\[[596](../source/modid.t.html#596)\]

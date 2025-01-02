@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>RearContainer : <a
-href="spaceoverlay.htm">SpaceOverlay</a><br />
+href="spaceoverlay.html">SpaceOverlay</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="underside.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="rearsurface.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="underside.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="rearsurface.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -23,7 +25,7 @@ objects may be placed in the RearContainer with a PUT BEHIND command; if
 it is nil, they may not.  
   
 For the most part, a RearContainer will be most useful as the
-ComplexComponent of a [ComplexContainer](complexcontainer.htm), since it
+ComplexComponent of a [ComplexContainer](complexcontainer.html), since it
 is hard to think of something that only has a rear. A RearContainer can,
 however, quite successfully be used for an object like a painting or a
 mirror hanging on a wall, for example:  
@@ -49,7 +51,7 @@ mirror : RearContainer 'large gilt-framed gilt framed mirror' 
 ;  
   
 Once again it has been necessary to anticipate the introduction of the
-[Hidden](hidden.htm) class, but it's virtually impossible to illustrate
+[Hidden](hidden.html) class, but it's virtually impossible to illustrate
 the use of a RearContainer (or other SpaceOverlay) without it, so it'll
 just have to be taken on trust for now. The effect is that the small
 hole in the wall will be revealed only when the player looks behind the
@@ -136,7 +138,7 @@ more, but you'll quickly discover that it all goes horribly wrong if you
 try to sit on the chair while it's behind the desk.  
   
 It takes quite a bit of work to fix this, which will involve classes and
-concepts we haven't met yet (particularly the [Platform](platform.htm)
+concepts we haven't met yet (particularly the [Platform](platform.html)
 class) . But to show what we need to do, here it is:  
   
 cabinDesk : Heavy, Surface 'large solid oak desk' 'desk' @greatCabin  

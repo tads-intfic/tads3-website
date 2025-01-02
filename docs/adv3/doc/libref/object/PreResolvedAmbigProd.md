@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PreResolvedAmbigProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1894](../source/parser.t.html#1894)\]

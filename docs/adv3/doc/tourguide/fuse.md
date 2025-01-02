@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Fuse : Event<br />
 </strong></td>
-<td style="text-align: right;"><a href="anotherlock.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="daemon.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="anotherlock.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="daemon.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -56,7 +58,7 @@ abort it, but it is probably more convenient. It can also be useful for
 keeping track of whether a fuse is active or not.  
   
 For our first example we'll return to the stick of
-[dynamite](dynamite.htm) we created earlier (something which quite
+[dynamite](dynamite.html) we created earlier (something which quite
 literally has a fuse) and implement it with a fuse. It's still worth
 using the Candle class to implement the stick of dynamite, since the
 Candle implements a lot of handling (not least of the BURN WITH and
@@ -129,7 +131,7 @@ before.
 For our second example we'll create a Fuse and a Daemon on the same
 object, though for the moment we'll concentrate our attention on the
 Fuse. A solid gold tablet, such as we've placed in the plinth of the
-[statue](lever(2).htm), would be pretty heavy to carry around, and
+[statue](lever(2).html), would be pretty heavy to carry around, and
 indeed it's the heaviest portable object (as defined by its weight
 property) that we've defined in the game. Rather than create an
 old-fashioned inventory puzzle by limiting the total amount of weight
@@ -138,7 +140,7 @@ character would have to drop everything else in order to carry the gold
 tablet, and arrange to distribute light sources along its path, which
 would all be pretty tedious) we'll limit the number of turns the player
 can carry the gold tablet before putting it down to take a rest. We'll
-use a [Daemon](daemon.htm) to limit how long the player character can
+use a [Daemon](daemon.html) to limit how long the player character can
 carry the gold tablet for, and a Fuse to simulate his or her recovery.
 We'll add a carried property to goldTablet which will hold the number of
 turns for which the tablet has been carried. Once this reaches 3 the
@@ -236,4 +238,4 @@ fuse() method has to do is to reset carried to zero and reset fuseID to
 nil (so we have a convenient method of telling that the fuse is no
 longer active).  
   
-We'll now go on to explore how the [Daemon](daemon.htm) works.  
+We'll now go on to explore how the [Daemon](daemon.html) works.  

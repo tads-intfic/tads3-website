@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Unthing : <a
-href="decoration.htm">Decoration</a><br />
+href="decoration.html">Decoration</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="distant.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="immovable.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="distant.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="immovable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -60,7 +62,7 @@ noTreasure object can be referred to.
   
 Note that the third property we have defined on Unthing is
 *single-quoted string*, not a double-quoted string. This is because
-there is a special [Unthing template](unthingtemplate.htm) which puts
+there is a special [Unthing template](unthingtemplate.html) which puts
 the notHereMsg instead of desc in third place. We don't want to define
 desc on an Unthing, because it's not generally useful, we just want to
 define the notHereMsg which will be used for any command that tries to

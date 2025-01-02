@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \>
 StackFrameDesc  
-<span class="navnp"><a href="rexpat.htm" class="nav"><em>Prev:</em> RexPattern</a>
-    <a href="string.htm" class="nav"><em>Next:</em> String</a>    
+<span class="navnp"><a href="rexpat.html" class="nav"><em>Prev:</em> RexPattern</a>
+    <a href="string.html" class="nav"><em>Next:</em> String</a>    
 </span>
 
 </div>
@@ -29,7 +31,7 @@ function, and to retrieve the method context information. This type of
 manipulation isn't commonly used in ordinary programming tasks, but it's
 occasionally useful for special cases, especially for utility libraries
 that implement things like extension languages or debugging facilities.
-It also lets you create [dynamically compiled functions](dynfunc.htm)
+It also lets you create [dynamically compiled functions](dynfunc.html)
 that can access the local variables in calling frames.
 
 A "stack frame" is a storage area within the TADS 3 virtual machine that
@@ -50,7 +52,7 @@ frame.
 You can't create StackFrameDesc objects using the
 <span class="code">new</span> operator. Instead, you obtain them from
 the
-[<span class="code">t3GetStackTrace()</span>](t3vm.htm#t3GetStackTrace)
+[<span class="code">t3GetStackTrace()</span>](t3vm.html#t3GetStackTrace)
 function. This function returns a trace of the active call stack, which
 contains information on each caller of the current routine. One of the
 bits of information that you can get for each caller is a StackFrameDesc
@@ -302,11 +304,11 @@ the true stack frame has been deleted.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \>
 StackFrameDesc  
-<span class="navnp"><a href="rexpat.htm" class="nav"><em>Prev:</em> RexPattern</a>
-    <a href="string.htm" class="nav"><em>Next:</em> String</a>    
+<span class="navnp"><a href="rexpat.html" class="nav"><em>Prev:</em> RexPattern</a>
+    <a href="string.html" class="nav"><em>Next:</em> String</a>    
 </span>
 
 </div>

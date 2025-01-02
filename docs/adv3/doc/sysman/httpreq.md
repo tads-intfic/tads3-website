@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> HTTPRequest  
-<span class="navnp"><a href="gramprod.htm" class="nav"><em>Prev:</em> GrammarProd</a>
-    <a href="httpsrv.htm" class="nav"><em>Next:</em> HTTPServer</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> HTTPRequest  
+<span class="navnp"><a href="gramprod.html" class="nav"><em>Prev:</em> GrammarProd</a>
+    <a href="httpsrv.html" class="nav"><em>Next:</em> HTTPServer</a>    
 </span>
 
 </div>
@@ -34,7 +36,7 @@ the response, the HTTPRequest object handles the details of transmitting
 the bytes back to the client.
 
 For more on how to create an HTTP server in a TADS program, refer to the
-[HTTPServer](httpsrv.htm) documentation.
+[HTTPServer](httpsrv.html) documentation.
 
 ## Headers and library files
 
@@ -52,7 +54,7 @@ these automatically for you. The HTTP server creates an HTTPRequest
 whenever a request arrives from the network client, and places the
 HTTPRequest in the network message queue. Your program retrieves the
 request object by calling the
-[<span class="code">getNetEvent()</span>](tadsnet.htm#getNetEvent)
+[<span class="code">getNetEvent()</span>](tadsnet.html#getNetEvent)
 function.
 
 The basic structure of a TADS program that creates an HTTP server is an
@@ -88,7 +90,7 @@ the request is completed, and no further reply can be sent.
 
 <div class="fdef">
 
-Returns the unparsed request message body as a [File](file.htm) object.
+Returns the unparsed request message body as a [File](file.html) object.
 The file is open with read-only access. The file is open in text mode if
 the Content-Type header specifies a text-oriented MIME type (this
 includes posted form data), or in "raw" mode for non-text MIME types.
@@ -99,7 +101,7 @@ necessary via the file's <span class="code">setFileMode</span> method.
 
 If the request doesn't have a message body, the method returns
 <span class="code">nil</span>. If the message body exceeds the upload
-size limit set in the [HTTPServer](httpsrv.htm) object, the method
+size limit set in the [HTTPServer](httpsrv.html) object, the method
 returns the string <span class="code">'overflow'</span>.
 
 Some HTTP requests, such as POST and PUT, can include additional data in
@@ -192,7 +194,7 @@ is the value of the field. All field values are represented as strings.
 
 If there's no message body, the method returns
 <span class="code">nil</span>. If there's a message body, but it exceeds
-the maximum upload size for the [HTTPServer](httpsrv.htm) object, the
+the maximum upload size for the [HTTPServer](httpsrv.html) object, the
 method returns the string <span class="code">'overflow'</span>.
 
 If the form includes uploaded files, via \<INPUT TYPE=FILE\> fields, the
@@ -335,7 +337,7 @@ time it's called.
 
 <div class="fdef">
 
-Returns the [HTTPServer](httpsrv.htm) object for the HTTP server that
+Returns the [HTTPServer](httpsrv.html) object for the HTTP server that
 received the network request that this HTTPRequest object represents.
 
 Note that it's *possible*, although unlikely, for the return value to be
@@ -345,7 +347,7 @@ request is pending. The server automatically shuts down if the
 HTTPServer object is deleted by the garbage collector, so no new
 requests can occur after that point; however, any requests previously
 received but not yet processed will remain in the
-[<span class="code">getNetEvent()</span>](tadsnet.htm#getNetEvent)
+[<span class="code">getNetEvent()</span>](tadsnet.html#getNetEvent)
 queue. When you read one of these pending messages in this situation,
 its <span class="code">getServer()</span> return value will be
 <span class="code">nil</span>. You can ensure this never happens simply
@@ -503,8 +505,8 @@ Sends your reply to the request.
 client Web browser. This might be an HTML page, some plain text, a JPEG
 image, a binary file, or almost any other information you wish to send.
 This argument can be represented as a string, a
-[StringBuffer](strbuf.htm), a [ByteArray](bytearr.htm), or a
-[File](file.htm).
+[StringBuffer](strbuf.html), a [ByteArray](bytearr.html), or a
+[File](file.html).
 
 The formatting of the reply depends on the type of object used for the
 *body* argument:
@@ -610,9 +612,9 @@ to be sent.
 The parameters are the same as for sendReply(). There's no return value.
 
 When the transfer completes, the system posts a network event of type
-[NetEvReplyDone](tadsnet.htm#NetEvReplyDone) to the network event queue.
+[NetEvReplyDone](tadsnet.html#NetEvReplyDone) to the network event queue.
 You can retrieve the event with
-[getNetEvent()](tadsnet.htm#getNetEvent). The event object has a
+[getNetEvent()](tadsnet.html#getNetEvent). The event object has a
 reference to the HTTPRequest object, which lets you relate the event
 back to the request that you were replying to, and information on
 whether the reply succeeded or failed. This is largely advisory, useful
@@ -754,7 +756,7 @@ you might not have generated yet.
 
 ## Save, restore, undo
 
-HTTPRequest objects are inherently [transient](objdef.htm#transient).
+HTTPRequest objects are inherently [transient](objdef.html#transient).
 This is because they're associated with live network requests; saving
 and restoring the program would resume with a new session without the
 same network client connected, so it would be impossible to continue
@@ -777,10 +779,10 @@ NetException error.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> HTTPRequest  
-<span class="navnp"><a href="gramprod.htm" class="nav"><em>Prev:</em> GrammarProd</a>
-    <a href="httpsrv.htm" class="nav"><em>Next:</em> HTTPServer</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> HTTPRequest  
+<span class="navnp"><a href="gramprod.html" class="nav"><em>Prev:</em> GrammarProd</a>
+    <a href="httpsrv.html" class="nav"><em>Next:</em> HTTPServer</a>    
 </span>
 
 </div>

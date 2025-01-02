@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultVerbPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`defaultVerbPhrase(noun)`](../object/defaultVerbPhrase(noun).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)

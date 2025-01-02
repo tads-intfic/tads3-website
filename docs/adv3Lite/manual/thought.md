@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Thoughts  
-<span class="navnp"><a href="topicentry.htm" class="nav"><em>Prev:</em> Topic Entries</a>
-    <a href="action.htm" class="nav"><em>Next:</em> Actions</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Thoughts  
+<span class="navnp"><a href="topicentry.html" class="nav"><em>Prev:</em> Topic Entries</a>
+    <a href="action.html" class="nav"><em>Next:</em> Actions</a>    
 </span>
 
 </div>
@@ -46,7 +48,7 @@ objects, like so:
 
 </div>
 
-Thought inherits from [TopicEntry](topicentry.htm), so you can use all
+Thought inherits from [TopicEntry](topicentry.html), so you can use all
 the properties and methods of TopicEntry with it; Thought and
 DefaultThought work just like ConsultTopic and DefaultConsultTopic.
 
@@ -59,10 +61,10 @@ thoughts.t you must also include topicentry.t.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Thoughts  
-<span class="navnp"><a href="topicentry.htm" class="nav"><em>Prev:</em> Topic Entries</a>
-    <a href="action.htm" class="nav"><em>Next:</em> Actions</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Thoughts  
+<span class="navnp"><a href="topicentry.html" class="nav"><em>Prev:</em> Topic Entries</a>
+    <a href="action.html" class="nav"><em>Next:</em> Actions</a>    
 </span>
 
 </div>

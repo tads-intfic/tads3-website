@@ -1,0 +1,221 @@
+<p><span class="title">action.t</span><span class="type">file</span></p>
+
+<p><a href="../source/action.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+action.t This module forms part of the adv3Lite library (c) 2012-13 Eric
+Eve
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>Action<code class="language-plaintext highlighter-rouge">](../object/Action.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>IAction<code class="language-plaintext highlighter-rouge">](../object/IAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LiteralAction<code class="language-plaintext highlighter-rouge">](../object/LiteralAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LiteralTAction<code class="language-plaintext highlighter-rouge">](../object/LiteralTAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>NumericAction<code class="language-plaintext highlighter-rouge">](../object/NumericAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>NumericTAction<code class="language-plaintext highlighter-rouge">](../object/NumericTAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PostRestoreObject<code class="language-plaintext highlighter-rouge">](../object/PostRestoreObject.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PostUndoObject<code class="language-plaintext highlighter-rouge">](../object/PostUndoObject.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PreRestartObject<code class="language-plaintext highlighter-rouge">](../object/PreRestartObject.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PreSaveObject<code class="language-plaintext highlighter-rouge">](../object/PreSaveObject.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SystemAction<code class="language-plaintext highlighter-rouge">](../object/SystemAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TAction<code class="language-plaintext highlighter-rouge">](../object/TAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TIAction<code class="language-plaintext highlighter-rouge">](../object/TIAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicAction<code class="language-plaintext highlighter-rouge">](../object/TopicAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicTAction<code class="language-plaintext highlighter-rouge">](../object/TopicTAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TravelAction<code class="language-plaintext highlighter-rouge">](../object/TravelAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>VerifyResult<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>askChooseObject<code class="language-plaintext highlighter-rouge">](#askChooseObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>askMissingObject<code class="language-plaintext highlighter-rouge">](#askMissingObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>execNestedAction<code class="language-plaintext highlighter-rouge">](#execNestedAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>nestedAction<code class="language-plaintext highlighter-rouge">](#nestedAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>nestedActorAction<code class="language-plaintext highlighter-rouge">](#nestedActorAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>noHalt<code class="language-plaintext highlighter-rouge">](#noHalt)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePronounAntecedent<code class="language-plaintext highlighter-rouge">](#notePronounAntecedent)</code>  <code class="language-plaintext highlighter-rouge">[</code>replaceAction<code class="language-plaintext highlighter-rouge">](#replaceAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>replaceActorAction<code class="language-plaintext highlighter-rouge">](#replaceActorAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryImplicitAction<code class="language-plaintext highlighter-rouge">](#tryImplicitAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryImplicitActorAction<code class="language-plaintext highlighter-rouge">](#tryImplicitActorAction)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="askChooseObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askChooseObject (action, role, msg)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3251">3251</a>]</p>
+
+<div class="desc">
+
+This function displays msg, which should be a message inviting the
+player to choose a suitable object for action in role (DirectObject,
+IndirectObject or AccessoryObject). The action will then be performed
+using the selected object in role.
+
+</div>
+
+<p><span id="askMissingObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingObject (action, role)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3093">3093</a>]</p>
+
+<div class="desc">
+
+Ask for a missing object to fulfil role in action. First see if there's
+a uniquely best match to fill the role, and if so execute the action
+with that object. Otherwise ask the player to supply an object.
+
+</div>
+
+<p><span id="execNestedAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execNestedAction (isReplacement, actor, action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2965">2965</a>]</p>
+
+<div class="desc">
+
+Execute a fully-constructed nested action.
+
+'isReplacement' indicates whether the action is a full replacement or an
+ordinary nested action. If it's a replacement, then we use the game time
+taken by the replacement, and set the enclosing action (i.e., the
+current gAction) to take zero time. If it's an ordinary nested action,
+then we consider the nested action to take zero time, using the current
+action's time as the overall command time.
+
+'isRemapping' indicates whether or not this is a remapped action. If
+we're remapping from one action to another, this will be true; for any
+other kind of nested or replacement action, this should be nil.
+
+</div>
+
+<p><span id="nestedAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nestedAction (action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2944">2944</a>]</p>
+
+<div class="desc">
+
+Run a nested action for the current actor.
+
+</div>
+
+<p><span id="nestedActorAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nestedActorAction (actor, action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2938">2938</a>]</p>
+
+<div class="desc">
+
+Run a nested action; execution of the parent action continues once the
+nested action is complete.
+
+</div>
+
+<p><span id="noHalt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noHalt ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1542">1542</a>]</p>
+
+<div class="desc">
+
+This function can be called from a check nethod to prevent the display
+of text from within the check method halting the action. Calling it from
+anywhere else will have no effect. It's use is in conjunction with the
+TAction class defined immediatelty below.
+
+</div>
+
+<p><span id="notePronounAntecedent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePronounAntecedent ([objlist])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3350">3350</a>]</p>
+
+<div class="desc">
+
+Note the objects in objlist as potential pronoun antecedents
+
+</div>
+
+<p><span id="replaceAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">replaceAction (action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2913">2913</a>]</p>
+
+<div class="desc">
+
+Run a replacement action.
+
+</div>
+
+<p><span id="replaceActorAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">replaceActorAction (actor, action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2923">2923</a>]</p>
+
+<div class="desc">
+
+Run a replacement action for another actor.
+
+</div>
+
+<p><span id="tryImplicitAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryImplicitAction (action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2798">2798</a>]</p>
+
+<div class="desc">
+
+Try action as an implicit action with \[objs\] as its objects
+
+</div>
+
+<p><span id="tryImplicitActorAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryImplicitActorAction (actor, action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2878">2878</a>]</p>
+
+<div class="desc">
+
+Have an actor other than the current gActor try an implicit action (e.g.
+if an npc moving as the result of an AgendaItem needs to implicitly open
+a door to proceed): actor is the actor performing the action, action is
+the action object to be performs, \[objs\] is the list of objects (if
+any) on which the action is to be performed.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

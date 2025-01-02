@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Literal and Numeric
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Literal and Numeric
 Actions  
-<span class="navnp"><a href="define.htm" class="nav"><em>Prev:</em> Defining New Actions</a>
-    <a href="topicact.htm" class="nav"><em>Next:</em> Topic Actions</a>
+<span class="navnp"><a href="define.html" class="nav"><em>Prev:</em> Defining New Actions</a>
+    <a href="topicact.html" class="nav"><em>Next:</em> Topic Actions</a>
     </span>
 
 </div>
@@ -280,11 +282,11 @@ physical object as the direct object, however the associated
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Literal and Nuneric
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Literal and Nuneric
 Actions  
-<span class="navnp"><a href="define.htm" class="nav"><em>Prev:</em> Defining New Actions</a>
-    <a href="topicact.htm" class="nav"><em>Next:</em> Topic Actions</a>
+<span class="navnp"><a href="define.html" class="nav"><em>Prev:</em> Defining New Actions</a>
+    <a href="topicact.html" class="nav"><em>Next:</em> Topic Actions</a>
     </span>
 
 </div>

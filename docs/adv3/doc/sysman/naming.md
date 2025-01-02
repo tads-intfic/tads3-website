@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Naming
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Naming
 Conventions  
-<span class="navnp"><a href="syntax.htm" class="nav"><em>Prev:</em> Typographical
+<span class="navnp"><a href="syntax.html" class="nav"><em>Prev:</em> Typographical
 Conventions</a>    
-<a href="hello.htm" class="nav"><em>Next:</em> Hello, World!</a>    
+<a href="hello.html" class="nav"><em>Next:</em> Hello, World!</a>    
 </span>
 
 </div>
@@ -63,12 +65,12 @@ capitalize the letters "HTML."
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Naming
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Naming
 Conventions  
-<span class="navnp"><a href="syntax.htm" class="nav"><em>Prev:</em> Typographical
+<span class="navnp"><a href="syntax.html" class="nav"><em>Prev:</em> Typographical
 Conventions</a>    
-<a href="hello.htm" class="nav"><em>Next:</em> Hello, World!</a>    
+<a href="hello.html" class="nav"><em>Next:</em> Hello, World!</a>    
 </span>
 
 </div>

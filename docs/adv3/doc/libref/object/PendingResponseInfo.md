@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PendingResponseInfo</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[10453](../source/actor.t.html#10453)\]

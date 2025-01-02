@@ -1,0 +1,243 @@
+<p><span class="title">ParseError</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4939">4939</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+ParseError is an Exception subclass for parsing errors.
+
+`class `**`ParseError`**` :   `[`Exception`](../object/Exception.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ParseError</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Exception<code class="language-plaintext highlighter-rouge">](../object/Exception.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ParseError</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BadMultiError<code class="language-plaintext highlighter-rouge">](../object/BadMultiError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>CommandError<code class="language-plaintext highlighter-rouge">](../object/CommandError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>EmptyNounError<code class="language-plaintext highlighter-rouge">](../object/EmptyNounError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>RejectParseTreeError<code class="language-plaintext highlighter-rouge">](../object/RejectParseTreeError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NotUnderstoodError<code class="language-plaintext highlighter-rouge">](../object/NotUnderstoodError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>OopsError<code class="language-plaintext highlighter-rouge">](../object/OopsError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>CantOopsError<code class="language-plaintext highlighter-rouge">](../object/CantOopsError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ResolutionError<code class="language-plaintext highlighter-rouge">](../object/ResolutionError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ActorResolutionError<code class="language-plaintext highlighter-rouge">](../object/ActorResolutionError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>InsufficientNounsError<code class="language-plaintext highlighter-rouge">](../object/InsufficientNounsError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NoneInLocationError<code class="language-plaintext highlighter-rouge">](../object/NoneInLocationError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NoneInOwnerError<code class="language-plaintext highlighter-rouge">](../object/NoneInOwnerError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NoneWithContentsError<code class="language-plaintext highlighter-rouge">](../object/NoneWithContentsError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>UnmatchedNounError<code class="language-plaintext highlighter-rouge">](../object/UnmatchedNounError.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>AmbiguousMultiDefiniteError<code class="language-plaintext highlighter-rouge">](../object/AmbiguousMultiDefiniteError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AmbiguousError<code class="language-plaintext highlighter-rouge">](../object/AmbiguousError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>OrdinalRangeError<code class="language-plaintext highlighter-rouge">](../object/OrdinalRangeError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PronounError<code class="language-plaintext highlighter-rouge">](../object/PronounError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AntecedentScopeError<code class="language-plaintext highlighter-rouge">](../object/AntecedentScopeError.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NoAntecedentError<code class="language-plaintext highlighter-rouge">](../object/NoAntecedentError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>UnmatchedActorError<code class="language-plaintext highlighter-rouge">](../object/UnmatchedActorError.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>UnknownWordError`](../object/UnknownWordError.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>allowOnRespell<code class="language-plaintext highlighter-rouge">](#allowOnRespell)</code>  <code class="language-plaintext highlighter-rouge">[</code>curable<code class="language-plaintext highlighter-rouge">](#curable)</code>  <code class="language-plaintext highlighter-rouge">[</code>errStage<code class="language-plaintext highlighter-rouge">](#errStage)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>errmsg_<code class="language-plaintext highlighter-rouge">](../object/Exception.html#errmsg_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>display<code class="language-plaintext highlighter-rouge">](#display)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankCorrection<code class="language-plaintext highlighter-rouge">](#rankCorrection)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryCuring<code class="language-plaintext highlighter-rouge">](#tryCuring)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/Exception.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>displayException<code class="language-plaintext highlighter-rouge">](../object/Exception.html#displayException)</code>  <code class="language-plaintext highlighter-rouge">[</code>getExceptionMessage<code class="language-plaintext highlighter-rouge">](../object/Exception.html#getExceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStackTrace<code class="language-plaintext highlighter-rouge">](../object/Exception.html#showStackTrace)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="allowOnRespell"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowOnRespell</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4972">4972</a>]</p>
+
+<div class="desc">
+
+Is this error allowed on a spelling correction candidate? By default,
+this is nil, meaning that this error invalidates a correction candidate.
+We mostly reject spelling "corrections" that result in errors because
+these are probably false positives: they probably replace a misspelled
+word with one that's in the dictionary but that's still wrong. However,
+there are a few curable errors where it can make sense to keep a
+correction, such as an ambiguous noun phrase: that's so close to being a
+working command that we probably have a good correction.
+
+</div>
+
+<p><span id="curable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curable</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4986">4986</a>]</p>
+
+<div class="desc">
+
+Is this a "curable" error? A curable error is one that the user can fix
+by answering a question, such as "which one do you mean?" or "what do
+you want to unlock it with?"
+
+When we find more than one grammar match to an input string, the parser
+tries resolving each one, in order of the predicate match quality. If
+one resolves without an error, the parser stops and uses that match. But
+if \*none\* of the possible matches resolve without an error, the parser
+picks a match with a curable error over one with an incurable error.
+
+</div>
+
+<p><span id="errStage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errStage</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5012">5012</a>]</p>
+
+<div class="desc">
+
+The parsing "stage" of this error. We can distinguish three levels of
+intelligibility as we work through the parsing process: (1) completely
+unintelligible, (2) valid verb structure, and (3) resolved noun phrases.
+This property tells us which stage we finish in when we encounter an
+error of this type.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="display"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">display ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4943">4943</a>]</p>
+
+<div class="desc">
+
+Display the error message
+
+</div>
+
+<p><span id="rankCorrection"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rankCorrection (toks, idx, dict)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4959">4959</a>]</p>
+
+<div class="desc">
+
+Rank a spelling correction candidate for input that triggered this error
+on parsing.
+
+'toks' is the new token list, with the spelling correction applied;
+'idx' is the index in the list of the corrected word. 'dict' is the
+Dictionary used for parsing.
+
+Returns an integer value giving the ranking. The ranking is used for
+sorting, so the scale is arbitrary - we simply take the highest ranking
+item. The value 0 is special, though: it means that we should filter out
+the candidate and not consider it at all.
+
+</div>
+
+<p><span id="tryCuring"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryCuring (toks, dict)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5003">5003</a>]</p>
+
+<div class="desc">
+
+Try curing this error with the user's answer to the error message. The
+parser calls this when (a) the PREVIOUS command resulted in this error,
+(b) this error is curable, and (c) the user typed something on the
+CURRENT command that didn't parse as a valid new command. Since the new
+input doesn't look like a valid command, the parser calls this to
+determine if the input was instead meant as an answer to the question
+posed by the last error.
+
+If this new command is indeed a valid response to the error message, we
+return a CommandList with the "cured" version of the command. This new
+command list should supplement the command with the new information
+provided by the reply. If not, we simply return nil.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

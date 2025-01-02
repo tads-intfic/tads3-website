@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Hints  
-<span class="navnp"><a href="menu.htm" class="nav"><em>Prev:</em> Menus</a>
-    <a href="instruct.htm" class="nav"><em>Next:</em> Instructions</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Hints  
+<span class="navnp"><a href="menu.html" class="nav"><em>Prev:</em> Menus</a>
+    <a href="instruct.html" class="nav"><em>Next:</em> Instructions</a>
     </span>
 
 </div>
@@ -201,7 +203,7 @@ them at all, through issuing the commands EXTRA ON and EXTRA OFF. If you
 want your game to display extra hints even though the player hasn't
 asked for them, perhaps because your game has determined that the player
 is floundering (see the discussion of the
-[playerHelper](newbie.htm#playerhelper) object for one way to determine
+[playerHelper](newbie.html#playerhelper) object for one way to determine
 that), you can call
 <span class="code">extraHintManager.activate()</span> to force the
 display of extra hints. If players don't like them, they can still
@@ -325,10 +327,10 @@ bother with modifying extraHintStyleTag at all.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Hints  
-<span class="navnp"><a href="menu.htm" class="nav"><em>Prev:</em> Menus</a>
-    <a href="instruct.htm" class="nav"><em>Next:</em> Instructions</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Hints  
+<span class="navnp"><a href="menu.html" class="nav"><em>Prev:</em> Menus</a>
+    <a href="instruct.html" class="nav"><em>Next:</em> Instructions</a>
     </span>
 
 </div>

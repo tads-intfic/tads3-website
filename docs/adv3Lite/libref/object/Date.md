@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Date</span><span class="type">class</span>
 
 [date.h](../file/date.h.html)\[[134](../source/date.h.html#134)\],

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebStatusWin</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[2575](../source/webui.t.html#2575)\]

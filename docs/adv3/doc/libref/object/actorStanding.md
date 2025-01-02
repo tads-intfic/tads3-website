@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorStanding</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[198](../source/precond.t.html#198)\]

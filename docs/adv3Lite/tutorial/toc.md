@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -16,447 +18,447 @@
 
 <div class="toc1">
 
-<a href="intro.htm" class="toc">Chapter 1: Introduction</a>
+<a href="intro.html" class="toc">Chapter 1: Introduction</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="whatis.htm" class="toc">What is adv3Lite?</a>
+<a href="whatis.html" class="toc">What is adv3Lite?</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="whoshouldread.htm" class="toc">Who Should Read This Book?</a>
+<a href="whoshouldread.html" class="toc">Who Should Read This Book?</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="howtouse.htm" class="toc">How to Use This Book</a>
+<a href="howtouse.html" class="toc">How to Use This Book</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="acknowledge.htm" class="toc">Acknowledgements and
+<a href="acknowledge.html" class="toc">Acknowledgements and
 Explanations</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="tools.htm" class="toc">Chapter 2: Tools of the Trade</a>
+<a href="tools.html" class="toc">Chapter 2: Tools of the Trade</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="getting.htm" class="toc">Getting What You Need</a>
+<a href="getting.html" class="toc">Getting What You Need</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="setting.htm" class="toc">Setting it all up</a>
+<a href="setting.html" class="toc">Setting it all up</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="using.htm" class="toc">Using the tools</a>
+<a href="using.html" class="toc">Using the tools</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="heidi.htm" class="toc">Chapter 3: Heidi: our first adv3Lite
+<a href="heidi.html" class="toc">Chapter 3: Heidi: our first adv3Lite
 game</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="basicsource.htm" class="toc">Creating the Basic Source File</a>
+<a href="basicsource.html" class="toc">Creating the Basic Source File</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="understanding.htm" class="toc">Understanding the Source
+<a href="understanding.html" class="toc">Understanding the Source
 File</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="locations.htm" class="toc">Defining the Game's Locations</a>
+<a href="locations.html" class="toc">Defining the Game's Locations</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="bird.htm" class="toc">Adding the Bird and the Nest</a>
+<a href="bird.html" class="toc">Adding the Bird and the Nest</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="tree.htm" class="toc">Adding the Tree and the Branch</a>
+<a href="tree.html" class="toc">Adding the Tree and the Branch</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="finishing.htm" class="toc">Finishing Touches</a>
+<a href="finishing.html" class="toc">Finishing Touches</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="reviewing.htm" class="toc">Chapter 4: Reviewing the Basics</a>
+<a href="reviewing.html" class="toc">Chapter 4: Reviewing the Basics</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="object.htm" class="toc">Object Definitions</a>
+<a href="object.html" class="toc">Object Definitions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="containment.htm" class="toc">Object Containment</a>
+<a href="containment.html" class="toc">Object Containment</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="methods.htm" class="toc">Methods, Functions and Statements</a>
+<a href="methods.html" class="toc">Methods, Functions and Statements</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="inherit.htm" class="toc">Inheritance, Modification and
+<a href="inherit.html" class="toc">Inheritance, Modification and
 Overriding</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="quotes.htm" class="toc">Things in Quotes</a>
+<a href="quotes.html" class="toc">Things in Quotes</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="revisit.htm" class="toc">Chapter 5: Heidi Revisited</a>
+<a href="revisit.html" class="toc">Chapter 5: Heidi Revisited</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="listening.htm" class="toc">Listening to the Bird</a>
+<a href="listening.html" class="toc">Listening to the Bird</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="cottage.htm" class="toc">Entering the Cottage</a>
+<a href="cottage.html" class="toc">Entering the Cottage</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="climbing.htm" class="toc">Climbing the tree</a>
+<a href="climbing.html" class="toc">Climbing the tree</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="dropping.htm" class="toc">Dropping objects from the tree</a>
+<a href="dropping.html" class="toc">Dropping objects from the tree</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="birdinnest.htm" class="toc">Is the bird in the nest?</a>
+<a href="birdinnest.html" class="toc">Is the bird in the nest?</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="summing.htm" class="toc">Summing Up</a>
+<a href="summing.html" class="toc">Summing Up</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="goldskull.htm" class="toc">Chapter 6: Goldskull</a>
+<a href="goldskull.html" class="toc">Chapter 6: Goldskull</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="goldmap.htm" class="toc">Laying out the map</a>
+<a href="goldmap.html" class="toc">Laying out the map</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="making.htm" class="toc">Making things happen</a>
+<a href="making.html" class="toc">Making things happen</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="improving.htm" class="toc">Improving the game</a>
+<a href="improving.html" class="toc">Improving the game</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="weightier.htm" class="toc">Weightier matters</a>
+<a href="weightier.html" class="toc">Weightier matters</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="inplace.htm" class="toc">Everything in its place</a>
+<a href="inplace.html" class="toc">Everything in its place</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="retro.htm" class="toc">Retrospect</a>
+<a href="retro.html" class="toc">Retrospect</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="airport.htm" class="toc">Chapter 7: Airport</a>
+<a href="airport.html" class="toc">Chapter 7: Airport</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="describing.htm" class="toc">Describing the Game</a>
+<a href="describing.html" class="toc">Describing the Game</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="airmap1.htm" class="toc">Starting the Map</a>
+<a href="airmap1.html" class="toc">Starting the Map</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="airmap2.htm" class="toc">Extending the Map</a>
+<a href="airmap2.html" class="toc">Extending the Map</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="airmap3.htm" class="toc">Aboard the Plane</a>
+<a href="airmap3.html" class="toc">Aboard the Plane</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="doors.htm" class="toc">Doors and Locks</a>
+<a href="doors.html" class="toc">Doors and Locks</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="schemes.htm" class="toc">Chapter 8: Schemes and Devices</a>
+<a href="schemes.html" class="toc">Chapter 8: Schemes and Devices</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="ticket.htm" class="toc">Just the Ticket</a>
+<a href="ticket.html" class="toc">Just the Ticket</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="maintenance.htm" class="toc">The Maintenance Room</a>
+<a href="maintenance.html" class="toc">The Maintenance Room</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="security.htm" class="toc">The Security Area</a>
+<a href="security.html" class="toc">The Security Area</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="scene.htm" class="toc">Making a Scene</a>
+<a href="scene.html" class="toc">Making a Scene</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="recap.htm" class="toc">Recapitulation</a>
+<a href="recap.html" class="toc">Recapitulation</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="cockpit.htm" class="toc">Chapter 9: Cockpit Controls</a>
+<a href="cockpit.html" class="toc">Chapter 9: Cockpit Controls</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="furnishing.htm" class="toc">Furnishing the Cockpit</a>
+<a href="furnishing.html" class="toc">Furnishing the Cockpit</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="actions.htm" class="toc">Defining Actions</a>
+<a href="actions.html" class="toc">Defining Actions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="responding.htm" class="toc">Responding to Actions</a>
+<a href="responding.html" class="toc">Responding to Actions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="takeoff.htm" class="toc">Taking Off</a>
+<a href="takeoff.html" class="toc">Taking Off</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="character.htm" class="toc">Chapter 10: Character Building</a>
+<a href="character.html" class="toc">Chapter 10: Character Building</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="npcoverview.htm" class="toc">Overview</a>
+<a href="npcoverview.html" class="toc">Overview</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="guard.htm" class="toc">The Security Guard — A Really Simple
+<a href="guard.html" class="toc">The Security Guard — A Really Simple
 NPC</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="cortes.htm" class="toc">Pablo Cortes — A Man with Several
+<a href="cortes.html" class="toc">Pablo Cortes — A Man with Several
 Agendas</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="attendant.htm" class="toc">The Flight Attendant — Getting in a
+<a href="attendant.html" class="toc">The Flight Attendant — Getting in a
 State</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="conversation.htm" class="toc">Chapter 11: The Art of
+<a href="conversation.html" class="toc">Chapter 11: The Art of
 Conversation</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="asktell.htm" class="toc">Ask, Tell, Give, Show</a>
+<a href="asktell.html" class="toc">Ask, Tell, Give, Show</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="query.htm" class="toc">Queries and Suggestions</a>
+<a href="query.html" class="toc">Queries and Suggestions</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="hello.htm" class="toc">Hello and Goodbye</a>
+<a href="hello.html" class="toc">Hello and Goodbye</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="convnode.htm" class="toc">Angela Wants Answers</a>
+<a href="convnode.html" class="toc">Angela Wants Answers</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="defaults.htm" class="toc">Diverse Defaults</a>
+<a href="defaults.html" class="toc">Diverse Defaults</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="convsumm.htm" class="toc">Summary</a>
+<a href="convsumm.html" class="toc">Summary</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="finish.htm" class="toc">Chapter 12: Finishing Touches</a>
+<a href="finish.html" class="toc">Chapter 12: Finishing Touches</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="starting.htm" class="toc">Starting Out Right</a>
+<a href="starting.html" class="toc">Starting Out Right</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="scoring.htm" class="toc">Scoring</a>
+<a href="scoring.html" class="toc">Scoring</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="hints.htm" class="toc">Hints</a>
+<a href="hints.html" class="toc">Hints</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="whatmore.htm" class="toc">What More?</a>
+<a href="whatmore.html" class="toc">What More?</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="conclusion.htm" class="toc">Conclusion</a>
+<a href="conclusion.html" class="toc">Conclusion</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="finish.htm" class="toc">External Links</a>
+<a href="finish.html" class="toc">External Links</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="../manual/toc.htm" class="toc">Library Manual</a>
+<a href="../manual/toc.html" class="toc">Library Manual</a>
 
 </div>
 
@@ -468,7 +470,7 @@ Conversation</a>
 
 <div class="toc2">
 
-<a href="../sysman.htm" class="toc">TADS 3 System Manual</a>
+<a href="../sysman.html" class="toc">TADS 3 System Manual</a>
 
 </div>
 

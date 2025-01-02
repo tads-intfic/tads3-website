@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SettingsNotSupportedException</span><span class="type">class</span>
 
 [settings.t](../file/settings.t.html)\[[457](../source/settings.t.html#457)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultCommandTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4288](../source/actor.t.html#4288)\]

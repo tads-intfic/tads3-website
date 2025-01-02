@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DistanceConnector</span><span class="type">class</span>
 
 [sense.t](../file/sense.t.html)\[[770](../source/sense.t.html#770)\]

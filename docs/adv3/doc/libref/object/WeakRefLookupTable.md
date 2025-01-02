@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WeakRefLookupTable</span><span class="type">class</span>
 
 [lookup.h](../file/lookup.h.html)\[[135](../source/lookup.h.html#135)\]

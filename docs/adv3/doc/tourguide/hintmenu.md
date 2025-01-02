@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>HintMenu : MenuItem,
 HintMenuObject<br />
 </strong></td>
-<td style="text-align: right;"><a href="tophintmenu.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="goal.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="tophintmenu.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="goal.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -20,7 +22,7 @@ href="goal.htm">[Next]</a></td>
 Unless your hint system is going to be very simple, you'll probably want
 to split it into submenus. To do this you use a series of HintMenu
 objects, which would be located directly in the
-[TopHintMenu](tophintmenu.htm). In the present game we might do this by
+[TopHintMenu](tophintmenu.html). In the present game we might do this by
 splitting the hints according to region:  
   
   

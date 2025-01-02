@@ -1,3 +1,5 @@
+---
+---
 <span class="title">terminalNounPhrase(anyBut)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[379](../source/grammar.t.html#379)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -10,7 +12,7 @@
 
 <div class="toc1">
 
-<a href="newchapterwithtext.htm" class="toc">Preface</a>
+<a href="newchapterwithtext.html" class="toc">Preface</a>
 
 </div>
 
@@ -22,52 +24,52 @@ Chapter 1: Introduction
 
 <div class="toc2">
 
-<a href="generalintroduction.htm" class="toc">General Introduction</a>
+<a href="generalintroduction.html" class="toc">General Introduction</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="creatingyourfirsttads3project.htm" class="toc">Creating your
+<a href="creatingyourfirsttads3project.html" class="toc">Creating your
 First TADS 3 Project</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="programmingprolegomena.htm" class="toc">Programming
+<a href="programmingprolegomena.html" class="toc">Programming
 Prolegomena</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="furtherprogramming.htm" class="toc">Further Programming</a>
+<a href="furtherprogramming.html" class="toc">Further Programming</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="chapter2.htm" class="toc">Chapter 2: A Sample Game</a>
+<a href="chapter2.html" class="toc">Chapter 2: A Sample Game</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="averysimplegame.htm" class="toc">A Very Simple Game</a>
+<a href="averysimplegame.html" class="toc">A Very Simple Game</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="addingitemstothegame.htm" class="toc">Adding Items to the
+<a href="addingitemstothegame.html" class="toc">Adding Items to the
 Game</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="makingtheitemsdosomething.htm" class="toc">Making the Items do
+<a href="makingtheitemsdosomething.html" class="toc">Making the Items do
 Something</a>
 
 </div>
@@ -80,27 +82,27 @@ Chapter 3: Starting Out Again
 
 <div class="toc2">
 
-<a href="startinganewgame.htm" class="toc">Starting a New Game</a>
+<a href="startinganewgame.html" class="toc">Starting a New Game</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="definingourfirstroom.htm" class="toc">Defining Our First
+<a href="definingourfirstroom.html" class="toc">Defining Our First
 Room</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="addinganobjecttotheroom.htm" class="toc">Adding an Object to
+<a href="addinganobjecttotheroom.html" class="toc">Adding an Object to
 the Room</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="tyingupsomeloosestrings.htm" class="toc">Tying Up Some Loose
+<a href="tyingupsomeloosestrings.html" class="toc">Tying Up Some Loose
 Strings</a>
 
 </div>
@@ -113,75 +115,75 @@ Chapter 4: Moving Around
 
 <div class="toc2">
 
-<a href="basictravel.htm" class="toc">Basic Travel</a>
+<a href="basictravel.html" class="toc">Basic Travel</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="climbingthetree.htm" class="toc">Climbing the Tree</a>
+<a href="climbingthetree.html" class="toc">Climbing the Tree</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="makinglifemoreproblematic.htm" class="toc">Making Life More
+<a href="makinglifemoreproblematic.html" class="toc">Making Life More
 Problematic</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="rewardingtheeffort.htm" class="toc">Rewarding the Effort</a>
+<a href="rewardingtheeffort.html" class="toc">Rewarding the Effort</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="controllingtheaction.htm" class="toc">Controlling the
+<a href="controllingtheaction.html" class="toc">Controlling the
 Action</a>
 
 </div>
 
 <div class="toc3">
 
-<a href="verify.htm" class="toc">Verify</a>
+<a href="verify.html" class="toc">Verify</a>
 
 </div>
 
 <div class="toc3">
 
-<a href="check.htm" class="toc">Check</a>
+<a href="check.html" class="toc">Check</a>
 
 </div>
 
 <div class="toc3">
 
-<a href="action.htm" class="toc">Action</a>
+<a href="action.html" class="toc">Action</a>
 
 </div>
 
 <div class="toc3">
 
-<a href="precond.htm" class="toc">PreCond</a>
+<a href="precond.html" class="toc">PreCond</a>
 
 </div>
 
 <div class="toc3">
 
-<a href="remap.htm" class="toc">Remap</a>
+<a href="remap.html" class="toc">Remap</a>
 
 </div>
 
 <div class="toc3">
 
-<a href="messages.htm" class="toc">Messages</a>
+<a href="messages.html" class="toc">Messages</a>
 
 </div>
 
 <div class="toc3">
 
-<a href="otherresponsestoactions.htm" class="toc">Other Responses to
+<a href="otherresponsestoactions.html" class="toc">Other Responses to
 Actions</a>
 
 </div>
@@ -194,32 +196,32 @@ Chapter 5: Character Building
 
 <div class="toc2">
 
-<a href="settingthescene.htm" class="toc">Setting the Scene</a>
+<a href="settingthescene.html" class="toc">Setting the Scene</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="abasicburner.htm" class="toc">A Basic Burner</a>
+<a href="abasicburner.html" class="toc">A Basic Burner</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="endingthegame.htm" class="toc">Ending the Game</a>
+<a href="endingthegame.html" class="toc">Ending the Game</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="theartofconversation.htm" class="toc">The Art of
+<a href="theartofconversation.html" class="toc">The Art of
 Conversation</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="whatsinaname.htm" class="toc">What's in a Name?</a>
+<a href="whatsinaname.html" class="toc">What's in a Name?</a>
 
 </div>
 
@@ -231,25 +233,25 @@ Chapter 6: Expanding the Horizons
 
 <div class="toc2">
 
-<a href="doorsandwindows.htm" class="toc">Doors and Windows</a>
+<a href="doorsandwindows.html" class="toc">Doors and Windows</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="crossingthestream.htm" class="toc">Crossing the Stream</a>
+<a href="crossingthestream.html" class="toc">Crossing the Stream</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="buryingtheboots.htm" class="toc">Burying the Boots</a>
+<a href="buryingtheboots.html" class="toc">Burying the Boots</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="callingaspadeaspade.htm" class="toc">Calling a Spade a
+<a href="callingaspadeaspade.html" class="toc">Calling a Spade a
 Spade</a>
 
 </div>
@@ -262,25 +264,25 @@ Chapter 7: Pushing the Boat Out
 
 <div class="toc2">
 
-<a href="lettherebelight.htm" class="toc">Let There be Light</a>
+<a href="lettherebelight.html" class="toc">Let There be Light</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="rowmyboat.htm" class="toc">Row My Boat</a>
+<a href="rowmyboat.html" class="toc">Row My Boat</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="goingshopping.htm" class="toc">Going Shopping</a>
+<a href="goingshopping.html" class="toc">Going Shopping</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="handlingcashtransactions.htm" class="toc">Handling Cash
+<a href="handlingcashtransactions.html" class="toc">Handling Cash
 Transactions</a>
 
 </div>
@@ -293,39 +295,39 @@ Chapter 8: Finishing Off
 
 <div class="toc2">
 
-<a href="fillinginsomegaps.htm" class="toc">Filling in Some Gaps</a>
+<a href="fillinginsomegaps.html" class="toc">Filling in Some Gaps</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="countingthecash.htm" class="toc">Counting the Cash</a>
+<a href="countingthecash.html" class="toc">Counting the Cash</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="lookingthroughthewindow.htm" class="toc">Looking Through the
+<a href="lookingthroughthewindow.html" class="toc">Looking Through the
 Window</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="easingtestinganddebugging.htm" class="toc">Easing Testing and
+<a href="easingtestinganddebugging.html" class="toc">Easing Testing and
 Debugging</a>
 
 </div>
 
 <div class="toc2">
 
-<a href="wheretogofromhere.htm" class="toc">Where to go from here</a>
+<a href="wheretogofromhere.html" class="toc">Where to go from here</a>
 
 </div>
 
 <div class="toc1">
 
-<a href="appendixa-actionmessagepropert.htm" class="toc">Appendix A:
+<a href="appendixa-actionmessagepropert.html" class="toc">Appendix A:
 Action Message Properties</a>
 
 </div>

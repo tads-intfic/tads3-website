@@ -1,3 +1,5 @@
+---
+---
 # gameinfo.t
 
 [documentation](../file/gameinfo.t.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Key</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[9259](../source/thing.t.html#9259)\]

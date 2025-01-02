@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](verify.htm)   [\[Next\]](action.htm)*
+*[\[Previous\]](verify.html)   [\[Next\]](action.html)*
 
 ### Check
 
@@ -215,7 +217,7 @@ runs before `beforeAction()` if you have set
 TADS 3 (perhaps 3.1) this may become the default, but for now you have
 to set this option if you want it (this ensures compatibility with games
 written prior to version 3.0.15.1). This is what we did when we first
-defined the [gameMain](startinganewgame.htm#gameMain) object, and we
+defined the [gameMain](startinganewgame.html#gameMain) object, and we
 suggest you always do too.
 
   
@@ -285,6 +287,6 @@ out.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](verify.htm)   [\[Next\]](action.htm)*
+*[\[Previous\]](verify.html)   [\[Next\]](action.html)*
 
 </div>

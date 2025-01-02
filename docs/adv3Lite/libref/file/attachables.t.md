@@ -1,3 +1,5 @@
+---
+---
 <span class="title">attachables.t</span><span class="type">file</span>
 
 [source file](../source/attachables.t.html)

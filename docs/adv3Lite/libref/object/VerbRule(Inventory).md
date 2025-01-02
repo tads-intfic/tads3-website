@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Inventory)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2235](../source/grammar.t.html#2235)\]

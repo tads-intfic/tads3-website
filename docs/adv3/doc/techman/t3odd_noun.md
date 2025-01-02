@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Handling Odd
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Handling Odd
 Noun Phrases  
-<span class="navnp"><a href="t3staging.htm" class="nav"><em>Prev:</em> Using Nested Rooms as
+<span class="navnp"><a href="t3staging.html" class="nav"><em>Prev:</em> Using Nested Rooms as
 Staging Locations</a>    
-<a href="t3globalremap.htm" class="nav"><em>Next:</em> Global Command
+<a href="t3globalremap.html" class="nav"><em>Next:</em> Global Command
 Remapping</a>     </span>
 
 </div>
@@ -404,12 +406,12 @@ within the execute() method.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Handling Odd
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Handling Odd
 Noun Phrases  
-<span class="navnp"><a href="t3staging.htm" class="nav"><em>Prev:</em> Using Nested Rooms as
+<span class="navnp"><a href="t3staging.html" class="nav"><em>Prev:</em> Using Nested Rooms as
 Staging Locations</a>    
-<a href="t3globalremap.htm" class="nav"><em>Next:</em> Global Command
+<a href="t3globalremap.html" class="nav"><em>Next:</em> Global Command
 Remapping</a>     </span>
 
 </div>

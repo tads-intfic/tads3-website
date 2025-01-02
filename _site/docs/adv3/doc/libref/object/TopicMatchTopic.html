@@ -1,0 +1,236 @@
+<p><span class="title">TopicMatchTopic</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2783">2783</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A "topic match" topic entry. This is a topic entry that matches topic
+phrases in the grammar.
+
+Handling topic phrases is a bit tricky, because they can't be resolved
+to definitive game-world objects the way ordinary noun phrases can.
+Topic phrases can refer to things that aren't physically present, but
+which are known to the actor performing the command; they can refer to
+abstract Topic objects, that have no physical existence in the game
+world at all; and they can ever be arbitrary text that doesn't match any
+vocabulary defined by the game.
+
+Our strategy in matching topics is to first narrow the list down to the
+physical and abstract game objects that both match the vocabulary used
+in the command and are part of the memory of the actor performing the
+command. That much is handled by the normal topic phrase resolution
+rules, and gives us a list of possible matches. Then, given this
+narrowed list of possibilities, we look through the list of objects that
+we're associated with; we effectively intersect the two lists, and if
+the result is non-empty, we consider it a match. Finally, we also
+consider any regular expression that we're associated with; if we have
+one, and the topic phrase text in the command matches the input, we'll
+consider it a match.
+
+`class `**`TopicMatchTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TopicMatchTopic</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TopicMatchTopic</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>AskTellTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskAboutForTopic<code class="language-plaintext highlighter-rouge">](../object/AskAboutForTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskForTopic<code class="language-plaintext highlighter-rouge">](../object/AskForTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskTellAboutForTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellAboutForTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskTopic<code class="language-plaintext highlighter-rouge">](../object/AskTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TellTopic<code class="language-plaintext highlighter-rouge">](../object/TellTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ConsultTopic<code class="language-plaintext highlighter-rouge">](../object/ConsultTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TopicOrThingMatchTopic<code class="language-plaintext highlighter-rouge">](../object/TopicOrThingMatchTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskTellGiveShowTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellGiveShowTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskTellShowTopic`](../object/AskTellShowTopic.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>matchExactCase<code class="language-plaintext highlighter-rouge">](#matchExactCase)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchPattern<code class="language-plaintext highlighter-rouge">](#matchPattern)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>altTalkCount<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#altTalkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>altTopicList<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#altTopicList)</code>  <code class="language-plaintext highlighter-rouge">[</code>impliesGreeting<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#impliesGreeting)</code>  <code class="language-plaintext highlighter-rouge">[</code>includeInList<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#includeInList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConversational<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#isConversational)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchScore<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>talkCount<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#talkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicGroupActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupScoreAdjustment<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicGroupScoreAdjustment)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicResponse<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicResponse)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>findMatchObj<code class="language-plaintext highlighter-rouge">](#findMatchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>isMatchPossible<code class="language-plaintext highlighter-rouge">](#isMatchPossible)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchTopic<code class="language-plaintext highlighter-rouge">](#matchTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>setTopicPronouns<code class="language-plaintext highlighter-rouge">](#setTopicPronouns)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addAltTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addAltTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>adjustScore<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#adjustScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>anyAltIsActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#anyAltIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>breakTopicTie<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#breakTopicTie)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkIsActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#checkIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>deferToEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#deferToEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicOwner<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#getTopicOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#handleTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeTopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#initializeTopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteAltInvocation<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#noteAltInvocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteInvocation<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#noteInvocation)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="matchExactCase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchExactCase</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2800">2800</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="matchPattern"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchPattern</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2799">2799</a>]</p>
+
+<div class="desc">
+
+A regular expression pattern that we'll match to the actual topic text
+as entered in the command. If 'matchExactCase' is true, we'll match the
+exact text in its original upper/lower case rendering; otherwise, we'll
+convert the player input to lower-case before matching it against the
+pattern. In most cases, we'll want to match the input no matter what
+combination of upper and lower case the player entered, so
+matchExactCase is nil by default.
+
+Note that both the object (or object list) and the regular expression
+pattern can be included for a single topic entry object. This allows a
+topic entry to match several different ways of entering the topic name,
+or to match several different topics with the same response.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="findMatchObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findMatchObj (obj, rt)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2876">2876</a>]</p>
+
+<div class="desc">
+
+Match an individual item from our match list to the given ResolvedTopic
+object. We'll check each object in the resolved topic's "in scope" and
+"likely" lists.
+
+</div>
+
+<p><span id="isMatchPossible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isMatchPossible (actor, scopeList)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2893">2893</a>]</p>
+
+<div class="desc">
+
+It's possible for us to match if any of our matchObj objects are known
+to the actor. If we have no matchObj objects, we must be matching on a
+regular expression or on a custom condition, so we can't speculate on
+matchability; we'll simply return true in those cases.
+
+</div>
+
+<p><span id="matchTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchTopic (fromActor, topic)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2814">2814</a>]</p>
+
+<div class="desc">
+
+Match the topic. By default, we'll match to either the simulation object
+or objects in matchObj, or the pattern in matchPattern. Note that we
+always try both ways of matching, so a single AskTellTopic can define
+both a pattern and an object list.
+
+'topic' is a ResolvedTopic object describing the player's text input and
+the list of objects that the parser matched to the text.
+
+Subclasses can override this as desired to use other ways of matching.
+
+</div>
+
+<p><span id="setTopicPronouns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setTopicPronouns (fromActor, topic)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2926">2926</a>]</p>
+
+<div class="desc">
+
+set the topic pronouns
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

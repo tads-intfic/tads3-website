@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Internet Media
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Internet Media
 Types for TADS  
-<span class="navnp"><a href="t3past.htm" class="nav"><em>Prev:</em> Writing a Game in the
+<span class="navnp"><a href="t3past.html" class="nav"><em>Prev:</em> Writing a Game in the
 Past Tense</a>    
-<a href="t3projectStarters.htm" class="nav"><em>Next:</em> Workbench
+<a href="t3projectStarters.html" class="nav"><em>Next:</em> Workbench
 Project Starter Templates</a>     </span>
 
 </div>
@@ -137,7 +139,7 @@ Authority.
 
 The rationale behind the naming of these experimental subtypes, as used
 by TADS, is best illustrated by the following quote from [The T3 Virtual
-Machine Specification](http://www.tads.org/t3spec/format.htm):
+Machine Specification](http://www.tads.org/t3spec/format.html):
 
 > The structure of the name has some significance: the `x-` prefix
 > conforms to the MIME standard for indicating an unregistered ad hoc
@@ -547,7 +549,7 @@ This media type is defined for resource files as used by TADS 3
 interpreters and development tools. Due to the fact that resource files
 are merely a variation of TADS 3 executables, no new media has been
 defined. According to [The T3 Virtual Machine
-Specification](http://www.tads.org/t3spec/format.htm):
+Specification](http://www.tads.org/t3spec/format.html):
 
 > This variation of the T3 image format allows for one or more separate
 > resource files to accompany an image file; this is a resource-only
@@ -891,12 +893,12 @@ directive—*should not* be edited directly.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Internet Media
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Internet Media
 Types for TADS  
-<span class="navnp"><a href="t3past.htm" class="nav"><em>Prev:</em> Writing a Game in the
+<span class="navnp"><a href="t3past.html" class="nav"><em>Prev:</em> Writing a Game in the
 Past Tense</a>    
-<a href="t3projectStarters.htm" class="nav"><em>Next:</em> Workbench
+<a href="t3projectStarters.html" class="nav"><em>Next:</em> Workbench
 Project Starter Templates</a>     </span>
 
 </div>

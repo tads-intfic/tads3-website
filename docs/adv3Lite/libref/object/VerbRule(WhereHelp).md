@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(WhereHelp)</span><span class="type">grammar</span>
 
 [newbie.t](../file/newbie.t.html)\[[557](../source/newbie.t.html#557)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Overview  
-<span class="navnp"><a href="actor.htm" class="nav"><em>Prev:</em> Actors</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Overview  
+<span class="navnp"><a href="actor.html" class="nav"><em>Prev:</em> Actors</a>
    
-<a href="actorobj.htm" class="nav"><em>Next:</em> The Actor Object</a>
+<a href="actorobj.html" class="nav"><em>Next:</em> The Actor Object</a>
     </span>
 
 </div>
@@ -43,11 +45,11 @@ programming in creating dynamic characters by allowing as much as
 possible of an NPC's behaviour to be defined declaratively on a number
 of associated objects.
 
-First of all, the [Actor object](actorobj.htm) is used to define the
+First of all, the [Actor object](actorobj.html) is used to define the
 basic properties of the NPC (name, description and so forth) as well as
 its response to most of the non-conversational actions (e.g. FEEL FRED)
 and one or two other things that we'll come to in due course. One or
-more [ActorState](actorstate.htm) objects are then used to define
+more [ActorState](actorstate.html) objects are then used to define
 various forms of state-specific behaviour. For example at one point in
 the game Fred might be involved in polishing the silver, at another he
 might be lounging in a chair, and at another he might be deep in
@@ -59,24 +61,24 @@ defines only the Actor and ActorState classes, though you're welcome to
 define your own subclasses in game code if you need them).
 
 Things that the NPC may wish to do or talk about can be defined in a
-number of [AgendaItem](agenda.htm) objects associated with the actor.
+number of [AgendaItem](agenda.html) objects associated with the actor.
 These can define things the actor does or says when certain conditions
 are met.
 
 A very complex NPC may require very many ActorState, AgendaItem and
 TopicEntry objects, in which case the point may come when you want to
 split the definition of the NPC over more than one source file. To
-facilitate this you can use a [ProxyActor](actorobj.htm#proxy) object to
+facilitate this you can use a [ProxyActor](actorobj.html#proxy) object to
 stand in for the original Actor object in the second and subsequent
 source files relating to the same NPC.
 
 <span id="conversational"></span>
 
-Conversational responses are defined using [TopicEntry](topicentry.htm)
+Conversational responses are defined using [TopicEntry](topicentry.html)
 objects a bit like the ConsultTopics used on a Consultable. The
 TopicEntries used for conversation are a bit more elaborate than this,
 however, and descend from a special
-[ActorTopicEntry](actortopicentry.htm) class. Most of the TopicEntry
+[ActorTopicEntry](actortopicentry.html) class. Most of the TopicEntry
 classes available in the adv3 library are available in adv3Lite, along
 with a number of additional ones (such as TalkTopic, SayTopic and
 QueryTopic) that will be described more fully when we come to them. In
@@ -91,7 +93,7 @@ by the player) is a conversational one, for example when testing whether
 to intercept an action in a beforeAction() method.
 
 If you want to use the adv3Lite library for a [basic
-ask/tell](asktell.htm) conversation system you can, but it's capable of
+ask/tell](asktell.html) conversation system you can, but it's capable of
 quite a bit more. Just as in the adv3 library, so in adv3Lite you can
 suggest topics for the player character to talk about, but in adv3Lite
 you don't need to use one of the SuggestedTopic subclasses to do so;
@@ -162,7 +164,7 @@ they're intended to be used. In the meantime it may be helpful to know
 that in the above list *tag* is an arbitrary single-quoted string used
 to denote a piece of information (e.g. 'brian-robbed'), *key* is a
 single-quoted string defined on the convKeys property of an
-[ActorTopicEntry](actortopicentry.htm), *item* is the programmatic name
+[ActorTopicEntry](actortopicentry.html), *item* is the programmatic name
 of an AgendaItem and *actorstate* the programmatic name of an ActorState
 (where the 'programmatic name' means the name you give the object in
 your source code). When defining conversation tags that make use of
@@ -172,7 +174,7 @@ quotation-marks in the conversation tag (e.g. you would write
 <span class="code">\<.reveal 'brian robbed'\></span>). *Note that there
 are necessary restrictions on where most of these tags can be safely
 used*; these will be explained in the section on [actor-specific
-tags](tags.htm) below.
+tags](tags.html) below.
 
 </div>
 
@@ -181,11 +183,11 @@ tags](tags.htm) below.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Overview  
-<span class="navnp"><a href="actor.htm" class="nav"><em>Prev:</em> Actors</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Overview  
+<span class="navnp"><a href="actor.html" class="nav"><em>Prev:</em> Actors</a>
    
-<a href="actorobj.htm" class="nav"><em>Next:</em> The Actor Object</a>
+<a href="actorobj.html" class="nav"><em>Next:</em> The Actor Object</a>
     </span>
 
 </div>

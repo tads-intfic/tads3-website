@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Wearable</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5726](../source/objects.t.html#5726)\]

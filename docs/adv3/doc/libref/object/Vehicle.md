@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Vehicle</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[6818](../source/travel.t.html#6818)\],

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Booth</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[6754](../source/travel.t.html#6754)\],

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](rowmyboat.htm)
-  [\[Next\]](handlingcashtransactions.htm)*
+*[\[Previous\]](rowmyboat.html)
+  [\[Next\]](handlingcashtransactions.html)*
 
 ## Going Shopping
 
@@ -1008,7 +1010,7 @@ the gSetKnown(tMurder) macro to set tMurder.isKnown = true.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](rowmyboat.htm)
-  [\[Next\]](handlingcashtransactions.htm)*
+*[\[Previous\]](rowmyboat.html)
+  [\[Next\]](handlingcashtransactions.html)*
 
 </div>

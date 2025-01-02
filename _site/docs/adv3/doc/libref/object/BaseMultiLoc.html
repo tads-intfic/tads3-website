@@ -1,0 +1,253 @@
+<p><span class="title">BaseMultiLoc</span><span class="type">class</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2436">2436</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Base multi-location item with automatic initialization. This is the base
+class for various multi-located object classes.
+
+We provide four ways of initializing a multi-located object's set of
+locations.
+
+First, the object can simply enumerate the locations explicitly, by
+setting the 'locationList' property to the list of locations.
+
+Second, the object can indicate that it's located in every object of a
+given class, by setting the 'initialLocationClass' property to the
+desired class.
+
+Third, the object can define a rule that specifies which objects are its
+initial locations, by defining the 'isInitiallyIn(obj)' method to return
+true if 'obj' is an initial location, nil if not. This can be combined
+with the 'initialLocationClass' mechanism: if 'initialLocationClass' is
+non-nil, then only objects of the given class will be tested with
+'isInitiallyIn()'; if 'initialLocationClass' is nil, then every object
+in the entire game will be tested.
+
+Fourth, you can override the method buildLocationList() to build an
+return the initial list of locations. You can use this approach if you
+have a complex set of rules for determining the initial location list,
+and none of the above approaches are flexible enough to implement it. If
+you override buildLocationList(), simply compute and return the list of
+initial locations; the library will automatically call the method during
+pre-initialization.
+
+If you don't define any of these, then the object simply has no initial
+locations by default.
+
+`class `**`BaseMultiLoc`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BaseMultiLoc</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BaseMultiLoc</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MultiInstance<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MultiFaceted<code class="language-plaintext highlighter-rouge">](../object/MultiFaceted.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>MultiLoc<code class="language-plaintext highlighter-rouge">](../object/MultiLoc.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SenseConnector<code class="language-plaintext highlighter-rouge">](../object/SenseConnector.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DistanceConnector`](../object/DistanceConnector.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>initialLocationClass<code class="language-plaintext highlighter-rouge">](#initialLocationClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>locationList<code class="language-plaintext highlighter-rouge">](#locationList)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>buildLocationList<code class="language-plaintext highlighter-rouge">](#buildLocationList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDirectlyIn<code class="language-plaintext highlighter-rouge">](#isDirectlyIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>isIn<code class="language-plaintext highlighter-rouge">](#isIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>isInitiallyIn<code class="language-plaintext highlighter-rouge">](#isInitiallyIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>isListedInContents<code class="language-plaintext highlighter-rouge">](#isListedInContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOrIsIn<code class="language-plaintext highlighter-rouge">](#isOrIsIn)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="initialLocationClass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initialLocationClass</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2451">2451</a>]</p>
+
+<div class="desc">
+
+The class of our initial locations. If this is nil, then our default
+buildLocationList() method will test every object in the entire game
+with our isInitiallyIn() method; otherwise, we'll test only objects of
+the given class.
+
+</div>
+
+<p><span id="locationList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">locationList</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2443">2443</a>]</p>
+
+<div class="desc">
+
+The location list. Instances can override this to manually enumerate our
+initial locations. By default, we'll call buildLocationList() the first
+time this is invoked, and store the result.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="buildLocationList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildLocationList ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2471">2471</a>]</p>
+
+<div class="desc">
+
+Build my list of locations, and return the list. This default
+implementation looks for an 'initialLocationClass' property value, and
+if one is found, looks at every object of that class; otherwise, it
+looks at every object in the entire game. In either case, each object is
+then passed to our isInitiallyIn() method, and is included in our result
+list if isInitiallyIn() returns true.
+
+</div>
+
+<p><span id="isDirectlyIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isDirectlyIn (obj)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2533">2533</a>]</p>
+
+<div class="desc">
+
+determine if I'm directly in the given object
+
+</div>
+
+<p><span id="isIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isIn (obj)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2518">2518</a>]</p>
+
+<div class="desc">
+
+determine if I'm in a given object, directly or indirectly
+
+</div>
+
+<p><span id="isInitiallyIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isInitiallyIn (obj)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2460">2460</a>]</p>
+
+<div class="desc">
+
+Test an object for inclusion in our initial location list. By default,
+we'll simply return true to include every object. We return true by
+default so that an instance can merely specify a value for
+initialLocationClass in order to place this object in every instance of
+the given class.
+
+</div>
+
+<p><span id="isListedInContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isListedInContents (examinee, :?)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2551">2551</a>]</p>
+
+<div class="desc">
+
+Determine if I'm to be listed within my immediate container. As a
+multi-location object, we have multiple immediate containers, so we need
+to know which direct container we're talking about.
+Thing.examineListContents() passes this down via "cont:", a named
+parameter. Other callers might not always provide this argument, though,
+so if it's not present simply base this on whether we have a special
+description in any context.
+
+</div>
+
+<p><span id="isOrIsIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isOrIsIn (obj)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2559">2559</a>]</p>
+
+<div class="desc">
+
+Am I either inside 'obj', or equal to 'obj'?
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

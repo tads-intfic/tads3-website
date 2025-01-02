@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AskTellShowTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4310](../source/actor.t.html#4310)\]

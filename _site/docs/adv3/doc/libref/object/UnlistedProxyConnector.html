@@ -1,0 +1,191 @@
+<p><span class="title">UnlistedProxyConnector</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1688">1688</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+An "unlisted proxy" connector acts as a proxy for another connector. We
+act exactly like the underlying connector, except that we suppress the
+connector from automatic exit lists. This can be used for cases where an
+otherwise normal connector is needed but the connector is not to appear
+in automatic exit lists (such as the status line).
+
+The most common situation where this kind of connector is useful is
+where multiple directions in a given room all go to the same
+destination. In these cases, it's often desirable for some of the
+directions to be unlisted alternatives. The asExit() macro can be used
+for convenience to set up these direction synonyms.
+
+`class `**`UnlistedProxyConnector`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">UnlistedProxyConnector</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isConnectorListed<code class="language-plaintext highlighter-rouge">](#isConnectorListed)</code>  <code class="language-plaintext highlighter-rouge">[</code>primaryConn<code class="language-plaintext highlighter-rouge">](#primaryConn)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(TravelVia)<code class="language-plaintext highlighter-rouge">](#dobjFor(TravelVia))</code>  <code class="language-plaintext highlighter-rouge">[</code>ofKind<code class="language-plaintext highlighter-rouge">](#ofKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>propNotDefined<code class="language-plaintext highlighter-rouge">](#propNotDefined)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="isConnectorListed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConnectorListed</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1705">1705</a>]</p>
+
+<div class="desc">
+
+we're not listed
+
+</div>
+
+<p><span id="primaryConn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">primaryConn</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1702">1702</a>]</p>
+
+<div class="desc">
+
+Our underlying connector. Start out with a default TadsObject rather
+than nil in case anyone wants to call a property or test inheritance
+before we're finished with our constructor - this will produce
+reasonable default behavior without having to test for nil everywhere.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (pri)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1689">1689</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="dobjFor(TravelVia)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(TravelVia)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1708">1708</a>]</p>
+
+<div class="desc">
+
+map any TravelVia action to our underlying connector
+
+</div>
+
+<p><span id="ofKind"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ofKind (cls)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1721">1721</a>]</p>
+
+<div class="desc">
+
+As a proxy, we don't want to disguise the fact that we're a proxy, if
+someone specifically asks, so admist to being of our own true kind; but
+we also act mostly like our underlying connector, so if someone wants to
+know if we're one of those, say yes to that as well. So, return true if
+the inherited version returns true, and also return true if our primary
+connector would return true.
+
+</div>
+
+<p><span id="propNotDefined"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">propNotDefined (prop, [args])</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1711">1711</a>]</p>
+
+<div class="desc">
+
+redirect everything we don't handle to the underlying connector
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

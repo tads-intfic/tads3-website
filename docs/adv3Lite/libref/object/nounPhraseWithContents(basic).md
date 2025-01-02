@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nounPhraseWithContents(basic)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[496](../source/grammar.t.html#496)\]

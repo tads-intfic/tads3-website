@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`qualifiedNounPhrase(main)`](../object/qualifiedNounPhrase(main).html)**` :   `[`Production`](../object/Production.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorSchedule</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[4937](../source/actor.t.html#4937)\]

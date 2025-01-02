@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PlugAttachable</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[3514](../source/extras.t.html#3514)\]

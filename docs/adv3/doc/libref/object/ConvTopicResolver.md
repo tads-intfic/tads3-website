@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ConvTopicResolver</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[6553](../source/action.t.html#6553)\]

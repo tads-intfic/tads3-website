@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Doers  
-<span class="navnp"><a href="message.htm" class="nav"><em>Prev:</em> Messages</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Doers  
+<span class="navnp"><a href="message.html" class="nav"><em>Prev:</em> Messages</a>
    
-<a href="implicit.htm" class="nav"><em>Next:</em> Implicit Actions</a>
+<a href="implicit.html" class="nav"><em>Next:</em> Implicit Actions</a>
     </span>
 
 </div>
@@ -33,7 +35,7 @@ specific actions on specific objects under specific circumstances, and
 only take effect then. Its use is thus similar to that of an instead
 rule, except that adv3Lite authors are likely to use Doers rather less
 frequently than Inform 7 authors use instead rules, since the methods
-for customizing [action results](actres.htm) can often achieve the same
+for customizing [action results](actres.html) can often achieve the same
 results and will often be a better way of doing things. But there are
 cases where defining a custom Doer may be the better or simpler
 approach.
@@ -100,7 +102,7 @@ verb. You can follow the "\*" with any number of objects; the first is
 the direct object, the second is the indirect, and the third is the
 accessory (note, the adv3Lite library does not currently make any use of
 the third, accessory, object, unless you include the
-[TIAAction](../../extensions/docs/tiaaction.htm) extension). This
+[TIAAction](../../extensions/docs/tiaaction.html) extension). This
 phrasing will match any verb that matches the given objects AND the
 given number of objects. For example, '\* Thing' will match any verb
 with a direct object that's of class Thing, but it won't match verbs
@@ -315,7 +317,7 @@ can specify on a Doer are:
 - **who**: The actor performing the command (or a list of actors, one of
   whom must be the actor performing this command). Use this condition
   with care, since you could end up bypassing the normal
-  [command-handling](orders.htm) process (for when the player character
+  [command-handling](orders.html) process (for when the player character
   gives an order to an actor) in ways you may not intend.
 
 If you specify more than one of these conditions, then all the
@@ -591,7 +593,7 @@ of the new action (and so skip part of the action cycle).
 
 Under what other circumstances is it better to define a Doer rather than
 override the various methods described in the [Action
-Results](actres.htm) section above? The kinds of situation where it
+Results](actres.html) section above? The kinds of situation where it
 seems likely that a Doer may be the better choice include:
 
 <span id="handling"></span>
@@ -607,7 +609,7 @@ seems likely that a Doer may be the better choice include:
     depends on the particular objects involved, particularly when it
     depends on particular pairings of direct and indirect objects, which
     can become quite awkward to deal with using the methods described
-    under [Action Results](actres.htm) (but remember to set
+    under [Action Results](actres.html) (but remember to set
     <span class="code">handleAction</span> to true).
 
 Of these, 1 and 2 are the safest. In cases 3 and 4 you need to remember
@@ -618,7 +620,7 @@ in mind that if you effectively bypass the normal action handling in
 that way, you may have to handle a lot of complexity that would
 otherwise be handled for you in the library. Sometimes, a better
 alternative to using a Doer in cases 3 and 4 may be to make use of the
-[Rules](..\..\extensions\docs\rules.htm) extension and, say, calling a
+[Rules](..\..\extensions\docs\rules.html) extension and, say, calling a
 RuleBook from within the appropriate action() method. Doers can be
 useful, but they are not a magic bullet for every kind of complex
 problem. Rules are also smarter about sorting themselves in order of
@@ -807,11 +809,11 @@ Doers defined in the game take priority over library definitions.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Doers  
-<span class="navnp"><a href="message.htm" class="nav"><em>Prev:</em> Messages</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Doers  
+<span class="navnp"><a href="message.html" class="nav"><em>Prev:</em> Messages</a>
    
-<a href="implicit.htm" class="nav"><em>Next:</em> Implicit Actions</a>
+<a href="implicit.html" class="nav"><em>Next:</em> Implicit Actions</a>
     </span>
 
 </div>

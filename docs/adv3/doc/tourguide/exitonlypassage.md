@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ExitOnlyPassage : <a
-href="throughpassage.htm">ThroughPassage</a><br />
+href="throughpassage.html">ThroughPassage</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="notravelmessage.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="autoclosingdoor.htm">[Next]</a></td>
+href="notravelmessage.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="autoclosingdoor.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -67,13 +69,13 @@ to mainCave.
   
 Note that we don't need to give the ExitOnlyPassage a name; we simply
 point it to the squareHole with the -\> symbol in the [Passage
-template](passagetemplate.htm) to connect the two halves of the chute
-together; in the [Passage template](passagetemplate.htm) the -\>
+template](passagetemplate.html) to connect the two halves of the chute
+together; in the [Passage template](passagetemplate.html) the -\>
 references the masterObject property. Note also the use of a
-[NoTravelMessage](notravelmessage.htm) to explain why we can't climb
+[NoTravelMessage](notravelmessage.html) to explain why we can't climb
 back up the chute if we try to go west, and of the
-[TravelWithMessage](travelwithmessage.htm) mix-in class used with the
-[ThroughPassage](throughpassage.htm) to provide a description of the
+[TravelWithMessage](travelwithmessage.html) mix-in class used with the
+[ThroughPassage](throughpassage.html) to provide a description of the
 descent via the chute.  
   
 You can compile and run this, but you'll need to use MEGA or FIAT LUX to

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RemappedActionAnnouncement</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[466](../source/report.t.html#466)\]

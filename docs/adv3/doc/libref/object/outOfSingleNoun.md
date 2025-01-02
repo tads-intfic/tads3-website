@@ -1,3 +1,5 @@
+---
+---
 <span class="title">outOfSingleNoun</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`outOfSingleNoun(main)`](../object/outOfSingleNoun(main).html)</span>` :   `[`PrepSingleNounProd`](../object/PrepSingleNounProd.html)

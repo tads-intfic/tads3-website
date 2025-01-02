@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ConvBeginReport</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[281](../source/report.t.html#281)\]

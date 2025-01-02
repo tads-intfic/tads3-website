@@ -1,0 +1,151 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Dial : <a href="settable.html">Settable</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="lever.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="onoffcontrol.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The Dial class is an immediate descendant of the
+<a href="settable.html">Settable</a> class and the immediate ancestor of the
+<a href="numbereddial.html">NumberedDial</a> and <a href="labeleddial.html">LabeledDial</a>
+classes. As such, it is not likely to be used much in game code, since
+if something is a dial at all, it is likely to be either numbered or
+labeled if it is to be at all useful, and if one wants something more
+general that a NumberedDial or a LabeledDial the chances are it’ll be a
+Settable, like the slider we implemented before.</p>
+
+<p>There may be one or two niches Dial can fill in game code, however. The
+most obvious might be a Dial with case-sensitive labels (since the
+LabeledDial assumes that its labels are not case sensitive). Although
+there may not be much call for case-sensitive labels, it could be
+possible to construct a minor puzzle of sorts out of a Dial with such
+labels, and it’s probably easier (or at least, no harder) to do so
+starting from the Dial class than the LabeledDial class. Basically, all
+one need do to make it work is to define one’s own validSettings list
+and override the <strong>isValidSettings</strong> method on such a dial thus:</p>
+
+<p>   isValidSetting(val) { return validSettings.indexOf(val) != nil; }</p>
+
+<p>To show how this might work in practice, we’ll add one of these in the
+secret chamber behind the stone altar, which we’ll transmogrify into a
+lift in the process. The dial will be the lift control, which can be
+turned to thinly-disguised versions of the words UP and DOWN; no other
+setting has any effect. If the handle is turned to DOWN (disguised as
+Dupe OWN) the lift descends (unless it’s already at the bottom). If it’s
+turned to UP (disguised as dUPe own) the lift ascends again (unless it’s
+already at the top):</p>
+
+<p>templeChamber : DarkRoom ’Small Square Chamber’ ’the small square chamber’<br />
+  ”The most noticeable feature of this otherwise featureless chamber is the<br />
+   way out to the east<strong>, ”</strong><br />
+  out = temple<br />
+  <strong>east = (out)</strong><br />
+  <strong>moveInto(newDest)<br />
+  {<br />
+    if(out == newDest)<br />
+      ”and nothing happens. ”;<br />
+    else <br />
+      ”and with a shudder, the small chamber &lt;&lt;newDest==temple ? ’ascends’ :<br />
+       ’descends’&gt;&gt; a long shaft, and finally comes to a halt. ”;<br />
+    out = newDest;<br />
+  }</strong><br />
+;</p>
+
+<p>+ Dial, Fixture ’curious (wall) dial/handle’ ’dial’<br />
+  ”The dial comprises a handle set into the stone work that can be turned to<br />
+   point to any of the eight phrases carved round its circumference: &lt;&lt;listSettings&gt;&gt;.<br />
+  It currently points to &lt;i&gt;&lt;&lt;curSetting&gt;&gt;&lt;/i&gt;. ”<br />
+  inRoomDesc = ”but there is also a curious dial set into one wall. ”<br />
+  disambigName = ’curious wall dial’<br />
+  curSetting = ’DUPE OWN’<br />
+  listSettings()<br />
+  {<br />
+    stringLister.showSimpleList(validSettings);<br />
+  }<br />
+  validSettings = [‘dupe own’, ’dupE own’, ’dUPe own’, ’DUPe own’,<br />
+                 ’Dupe OWN’, ’DUPE oWn’, ’DUPE oWN’, ’DUPE OWN’]<br />
+  isValidSetting(val) { return validSettings.indexOf(val) != nil; }  <br />
+  makeSetting(val)<br />
+  {<br />
+    if(val == curSetting)<br />
+    {<br />
+      ”The dial already points to &lt;i&gt;&lt;&lt;val&gt;&gt;&lt;/i&gt;. ”;<br />
+      return;<br />
+    }<br />
+    ”You turn the dial to &lt;i&gt;&lt;&lt;val&gt;&gt;&lt;/i&gt;, ”;<br />
+    switch(val)<br />
+    {<br />
+      case ’dUPe own’: templeChamber.moveInto(temple); break;<br />
+      case ’Dupe OWN’: templeChamber.moveInto(templeCellar); break;<br />
+      default: ”but nothing happens. ”;    <br />
+    }<br />
+    inherited(val);    <br />
+  }<br />
+;</p>
+
+<p>Note that we have to change the definition of templeChamber.east, since
+the asExit macro won’t do what we want if it refers to a directional
+property we subsequently change. Note also that we have overridden
+templeChamber.moveInto to something quite different from what moveInto
+normally does; we could have used any method name we liked for this, but
+moveInto is quite descriptive here, and we have no use for the</p>
+
+<p>standard Thing.moveInto handling here, so we might as well replace it.
+Finally, note that we define a listSettings method to avoid (the tedious
+and possibly error-prone process of) writing out the possible settings
+of the dial twice. This calls the convenient
+stringLister.showSimpleList() method to format the list in the form “a,
+b, c and d”.</p>
+
+<p>Finally, we need to define the location the list/chamber arrives at if
+the dial is turned to the <em>Dupe OWN</em> position. As an attempt at brevity
+we might write:</p>
+
+<p>templeCellar : DarkRoom ’Cellar beneath Temple’ ’the cellar beneath the Temple’<br />
+  ”This long, damp cellar probably hasn’t been visited in years. ”<br />
+  lift = templeChamber<br />
+  west = (lift.out == self ? lift : nil)  <br />
+;</p>
+
+<p>The west property shows a possible but not very sanitary method of
+checking that the lift is in place before allowing entry to it. It works
+after a fashion, but will cause an immediate runtime error if you then
+added, for example:</p>
+
+<p>in asExit(west)</p>
+
+<p>Although we probably won’t be implementing any other way into the temple
+cellar than via the lift, so the lift will always be available to the
+west when the player character is in the cellar, if we want to make this
+kind of test at all, it would be far better to use the recommended
+method we have already seen (using a nested TravelConnector), even
+though it is a bit more long-winded:</p>
+
+<p>templeCellar : DarkRoom ’Cellar beneath Temple’ ’the cellar beneath the Temple’<br />
+  ”This long, damp cellar probably hasn’t been visited in years. ”<br />
+  lift = templeChamber<br />
+  west: OneWayRoomConnector <br />
+  {<br />
+    destination = (lexicalParent.lift)<br />
+    canTravelerPass(traveler)<br />
+    {<br />
+      return lexicalParent.lift.out == lexicalParent;<br />
+    }<br />
+    explainTravelBarrier(traveler)<br />
+    {  <br />
+      ”There’s nothing that way but an empty shaft. ”;<br />
+    }<br />
+  }  <br />
+;</p>
+
+<p>The above definition could be made a bit less verbose if we dispensed
+with the lift property and replaced each instance of lexicalParent.lift
+with templeChamber.</p>
+

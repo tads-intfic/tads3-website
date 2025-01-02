@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,19 +9,19 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ConsultTopic : <a
-href="topicentry.htm">TopicMatchTopic</a><br />
+href="topicentry.html">TopicMatchTopic</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="consultable.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="defaultconsulttopic.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="consultable.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="defaultconsulttopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-A ConsultTopic is the class of [TopicEntry](topicentry.htm) that is used
-with a [Consultable](consultable.htm). Just as an
-[AskTopic](asktopic.htm), for example, provides a response to commands
+A ConsultTopic is the class of [TopicEntry](topicentry.html) that is used
+with a [Consultable](consultable.html). Just as an
+[AskTopic](asktopic.html), for example, provides a response to commands
 such as ASK CURATOR ABOUT MUSEUM, so a ConsultTopic would provide a
 response to CONSULT HISTORY BOOK ABOUT MUSEUM or LOOK UP MUSUEM IN
 BOOK.  
@@ -29,7 +31,7 @@ TopicEntry, there is usually less reason to override any of them. A
 typical Consultable, such as a book, is a fairly static object that will
 always provide the same information on any given topic, regardless of
 the state of the game. You could, perhaps, combine a TopicEntry with an
-[EventList](eventlist.htm) class to provide a series of responses,
+[EventList](eventlist.html) class to provide a series of responses,
 perhaps representing the player character reading further on the same
 topic, particularly if you want your Consultable to provide a large
 amount of information on the topic and it is better broken up into
@@ -39,7 +41,7 @@ player to guess. Again, you could have a more complex Consultable, such
 a computer, where the information displayed might change with
 circumstances, in which case you might want to use some of the
 techniques we have already seen in connection with TopicEntries on
-actors (such as [AltTopics](alttopic.htm) and the use of isActive).  
+actors (such as [AltTopics](alttopic.html) and the use of isActive).  
   
 In the present game, however, we'll keep things at their simplest and
 just add a number of basic ConsultTopics to our history book:  
@@ -103,7 +105,7 @@ available in the book, it might be simpler to list them in the readDesc
 (e.g. ""It's too long to read from cover to cover right now, but you
 could consult it on specific topics, such as Benedict, the Golden Banana
 of Discord, the museum and Hell Fire Cavern "), or else perhaps in the
-[DefaultConsultTopic](defaultconsulttopic.htm), (e.g. "The book doesn't
+[DefaultConsultTopic](defaultconsulttopic.html), (e.g. "The book doesn't
 seem to have anything useful to say in that, but a quick check in the
 index suggests you could look up...). We'll return to the second
 possibility shortly.  

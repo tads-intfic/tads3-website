@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DropTypeShortThrow</span><span class="type">class</span>
 
 [sense.t](../file/sense.t.html)\[[843](../source/sense.t.html#843)\]

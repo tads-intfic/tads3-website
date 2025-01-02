@@ -1,3 +1,5 @@
+---
+---
 <span class="title">objClosed</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[966](../source/precond.t.html#966)\]

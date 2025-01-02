@@ -1,3 +1,5 @@
+---
+---
 # footnote.t
 
 [documentation](../file/footnote.t.html)

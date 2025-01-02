@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(NotifyOff)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2313](../source/grammar.t.html#2313)\]

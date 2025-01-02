@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Goal</span><span class="type">class</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[255](../source/hintsys.t.html#255)\]

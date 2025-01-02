@@ -1,3 +1,5 @@
+---
+---
 <span class="title">disambigPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`disambigPhrase(all)`](../object/disambigPhrase(all).html)</span>` :   `[`DisambigProd`](../object/DisambigProd.html)

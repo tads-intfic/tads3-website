@@ -1,3 +1,5 @@
+---
+---
 <span class="title">roomcontentsStyleTag</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[977](../source/output.t.html#977)\]

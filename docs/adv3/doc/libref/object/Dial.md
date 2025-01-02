@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Dial</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5463](../source/objects.t.html#5463)\]

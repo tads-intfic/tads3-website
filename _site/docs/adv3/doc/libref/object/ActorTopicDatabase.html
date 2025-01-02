@@ -1,0 +1,274 @@
+<p><span class="title">ActorTopicDatabase</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1004">1004</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A TopicDatabase for an Actor. This is used not only directly for an
+Actor but also for an actor's sub-databases, in ActorState and ConvNode.
+
+Actor topic databases field queries for the various types of topic-based
+interactions an actor can participate in: ASK, TELL, SHOW, GIVE, and so
+on.
+
+Each actor has its own topic database, which means each actor can have
+its own set of responses. Actor states can also have their own separate
+topic databases; this makes it easy to make an actor's response to a
+particular question vary according to the actor's state. Conversation
+nodes can also have their own separate databases, which allows for
+things like threaded conversations.
+
+`class `**`ActorTopicDatabase`**` :   `[`TopicDatabase`](../object/TopicDatabase.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TopicDatabase<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Actor<code class="language-plaintext highlighter-rouge">](../object/Actor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>UntakeableActor<code class="language-plaintext highlighter-rouge">](../object/UntakeableActor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Person<code class="language-plaintext highlighter-rouge">](../object/Person.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ActorState<code class="language-plaintext highlighter-rouge">](../object/ActorState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AccompanyingInTravelState<code class="language-plaintext highlighter-rouge">](../object/AccompanyingInTravelState.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>GuidedInTravelState<code class="language-plaintext highlighter-rouge">](../object/GuidedInTravelState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AccompanyingState<code class="language-plaintext highlighter-rouge">](../object/AccompanyingState.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>GuidedTourState<code class="language-plaintext highlighter-rouge">](../object/GuidedTourState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ConversationReadyState<code class="language-plaintext highlighter-rouge">](../object/ConversationReadyState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>HermitActorState<code class="language-plaintext highlighter-rouge">](../object/HermitActorState.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>InConversationState<code class="language-plaintext highlighter-rouge">](../object/InConversationState.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ConvNode`](../object/ConvNode.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>askForTopics<code class="language-plaintext highlighter-rouge">](#askForTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>askTopics<code class="language-plaintext highlighter-rouge">](#askTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandTopics<code class="language-plaintext highlighter-rouge">](#commandTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>giveTopics<code class="language-plaintext highlighter-rouge">](#giveTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiateTopics<code class="language-plaintext highlighter-rouge">](#initiateTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>miscTopics<code class="language-plaintext highlighter-rouge">](#miscTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTopics<code class="language-plaintext highlighter-rouge">](#showTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>specialTopics<code class="language-plaintext highlighter-rouge">](#specialTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>tellTopics<code class="language-plaintext highlighter-rouge">](#tellTopics)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>limitSuggestions<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#limitSuggestions)</code>  <code class="language-plaintext highlighter-rouge">[</code>suggestedTopics<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#suggestedTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupActive<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#topicGroupActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupScoreAdjustment<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#topicGroupScoreAdjustment)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>initiateTopic<code class="language-plaintext highlighter-rouge">](#initiateTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTopicResponse<code class="language-plaintext highlighter-rouge">](#showTopicResponse)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicDatabase</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#addSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopicToList<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#addTopicToList)</code>  <code class="language-plaintext highlighter-rouge">[</code>compareVocabMatch<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#compareVocabMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>findTopicResponse<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#findTopicResponse)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicOwner<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#getTopicOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#handleTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeSuggestedTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#removeSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeTopic<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#removeTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeTopicFromList<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#removeTopicFromList)</code>  <code class="language-plaintext highlighter-rouge">[</code>showSuggestedTopicList<code class="language-plaintext highlighter-rouge">](../object/TopicDatabase.html#showSuggestedTopicList)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="askForTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1077">1077</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="askTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1076">1076</a>]</p>
+
+<div class="desc">
+
+Our 'ask about', 'ask for', 'tell about', 'give', 'show', miscellaneous,
+command, and self-initiated topic databases - these are vectors we
+initialize as needed. Since every actor and every actor state has its
+own separate topic database, it's likely that the bulk of these
+databases will be empty, so we don't bother even creating a vector for a
+topic list until the first topic is added. This means we have to be able
+to cope with these being nil anywhere we use them.
+
+</div>
+
+<p><span id="commandTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1082">1082</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="giveTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">giveTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1080">1080</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="initiateTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initiateTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1083">1083</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="miscTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">miscTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1081">1081</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="showTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1079">1079</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="specialTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">specialTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1086">1086</a>]</p>
+
+<div class="desc">
+
+our special command database
+
+</div>
+
+<p><span id="tellTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tellTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1078">1078</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="initiateTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initiateTopic (obj)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1011">1011</a>]</p>
+
+<div class="desc">
+
+Initiate conversation on the given simulation object. If we can find an
+InitiateTopic matching the given object, we'll show its topic response
+and return true; if we can't find a topic to initiate, we'll simply
+return nil.
+
+</div>
+
+<p><span id="showTopicResponse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showTopicResponse (fromActor, topic, resp)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1031">1031</a>]</p>
+
+<div class="desc">
+
+show a topic response
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

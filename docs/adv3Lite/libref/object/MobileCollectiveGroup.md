@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MobileCollectiveGroup</span><span class="type">class</span>
 
 [mobileCollectiveGroup.t](../file/mobileCollectiveGroup.t.html)\[[20](../source/mobileCollectiveGroup.t.html#20)\]

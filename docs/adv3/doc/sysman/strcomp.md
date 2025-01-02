@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \>
 StringComparator  
-<span class="navnp"><a href="strbuf.htm" class="nav"><em>Prev:</em> StringBuffer</a>
-    <a href="tadsobj.htm" class="nav"><em>Next:</em> TadsObject</a>    
+<span class="navnp"><a href="strbuf.html" class="nav"><em>Prev:</em> StringBuffer</a>
+    <a href="tadsobj.html" class="nav"><em>Next:</em> TadsObject</a>    
 </span>
 
 </div>
@@ -19,7 +21,7 @@ StringComparator
 
 # StringComparator
 
-The [Dictionary](dict.htm) intrinsic class allows the program to
+The [Dictionary](dict.html) intrinsic class allows the program to
 customize how strings in the dictionary are compared to input strings
 using a "comparator" object. StringComparator provides an implementation
 of the comparator interface that's fast and efficient, since it's
@@ -192,7 +194,7 @@ The parameters are:
   then matches are insensitive to case, which means that an upper-case
   letter in one string matches the corresponding lower-case letter in
   the other.
-- *mappings* is a list (or [list-like object](opoverload.htm#listlike))
+- *mappings* is a list (or [list-like object](opoverload.html#listlike))
   giving the equivalence mappings. This is an empty list, or simply
   <span class="code">nil</span>, if there are no mappings. Each mapping
   is a sublist, with elements as follows: \[*refChar*, *inputStr*,
@@ -216,7 +218,7 @@ The parameters are:
 ## StringComparator Methods
 
 For more information on how the Dictionary class uses comparators, refer
-to the [Dictionary](dict.htm) section.
+to the [Dictionary](dict.html) section.
 
 In addition to the standard Object methods, StringComparator provides
 the following methods:
@@ -284,11 +286,11 @@ allow for future expansion; equivalence mappings should use flag values
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \>
 StringComparator  
-<span class="navnp"><a href="strbuf.htm" class="nav"><em>Prev:</em> StringBuffer</a>
-    <a href="tadsobj.htm" class="nav"><em>Next:</em> TadsObject</a>    
+<span class="navnp"><a href="strbuf.html" class="nav"><em>Prev:</em> StringBuffer</a>
+    <a href="tadsobj.html" class="nav"><em>Next:</em> TadsObject</a>    
 </span>
 
 </div>

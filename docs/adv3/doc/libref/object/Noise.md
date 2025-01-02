@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Noise</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[655](../source/objects.t.html#655)\]

@@ -1,0 +1,274 @@
+<p><span class="title">T3StackInfo</span><span class="type">class</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1003">1003</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The stack information object. The intrinsic function t3GetStackTrace()
+in the 't3vm' function set returns a list of these objects; each object
+represents a level in the stack trace.
+
+`class `**`T3StackInfo`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">T3StackInfo</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>argList_<code class="language-plaintext highlighter-rouge">](#argList_)</code>  <code class="language-plaintext highlighter-rouge">[</code>frameDesc_<code class="language-plaintext highlighter-rouge">](#frameDesc_)</code>  <code class="language-plaintext highlighter-rouge">[</code>func_<code class="language-plaintext highlighter-rouge">](#func_)</code>  <code class="language-plaintext highlighter-rouge">[</code>locals_<code class="language-plaintext highlighter-rouge">](#locals_)</code>  <code class="language-plaintext highlighter-rouge">[</code>namedArgs_<code class="language-plaintext highlighter-rouge">](#namedArgs_)</code>  <code class="language-plaintext highlighter-rouge">[</code>obj_<code class="language-plaintext highlighter-rouge">](#obj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>prop_<code class="language-plaintext highlighter-rouge">](#prop_)</code>  <code class="language-plaintext highlighter-rouge">[</code>self_<code class="language-plaintext highlighter-rouge">](#self_)</code>  <code class="language-plaintext highlighter-rouge">[</code>srcInfo_<code class="language-plaintext highlighter-rouge">](#srcInfo_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSystem<code class="language-plaintext highlighter-rouge">](#isSystem)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="argList_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">argList_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1072">1072</a>]</p>
+
+<div class="desc">
+
+The list of positional arguments to the function or method. Each element
+is the value of an argument; the list is arranged in the same order as
+the arguments.
+
+</div>
+
+<p><span id="frameDesc_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">frameDesc_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1122">1122</a>]</p>
+
+<div class="desc">
+
+A StackFrameDesc object that can be used to get information from the
+frame and change local variables in the frame.
+
+</div>
+
+<p><span id="func_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">func_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1049">1049</a>]</p>
+
+<div class="desc">
+
+the function running at this stack level - this is nil if an object
+property is running instead of a function
+
+</div>
+
+<p><span id="locals_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">locals_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1085">1085</a>]</p>
+
+<div class="desc">
+
+Local variables. This is a LookupTable containing the local variables
+currently in scope at this stack level. Each element in the table has a
+string key (index) giving the name of the local variable, and each
+corresponding value is the local's current value. The table is only
+included when the stack listing was produced by a call to
+t3GetStackTrace() with the T3GetStackLocals flag set; otherwise it's
+nil. If the locals were requested, and the stack level has no local
+variables, this will be an empty lookup table.
+
+</div>
+
+<p><span id="namedArgs_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">namedArgs_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1094">1094</a>]</p>
+
+<div class="desc">
+
+Named arguments. This is a LookupTable containing the named arguments
+passed in from this stack level. Each element in the table has a string
+key (index) giving the name of the argument, and each corresponding
+value is the value of that argument. If there are no named arguments,
+this value is nil.
+
+</div>
+
+<p><span id="obj_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obj_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1058">1058</a>]</p>
+
+<div class="desc">
+
+The object and property running at this stack level - these are nil if a
+function is running instead of an object method. The object is the
+object where the method is actually defined - this might not be the same
+as self, because the object might have inherited the method from a base
+class.
+
+</div>
+
+<p><span id="prop_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">prop_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1059">1059</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="self_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">self_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1065">1065</a>]</p>
+
+<div class="desc">
+
+the 'self' object at this level - this is nil if a function is running
+at this level instead of an object method
+
+</div>
+
+<p><span id="srcInfo_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">srcInfo_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1116">1116</a>]</p>
+
+<div class="desc">
+
+The source location of the next code to be executed in the function or
+method in this frame. If source-level debugging information is available
+for the current execution point in this frame, this will contain a list
+of two values:
+
+srcInfo\_\[1\] = string giving the name of the source file  
+srcInfo\_\[2\] = integer giving the line number in the source file
+
+If the program wasn't compiled with source-level debugging information,
+or the current code location in the frame doesn't have any source
+information, this will be set to nil.
+
+Note that the location reflected here is the \*return address\* in this
+frame - that is, the code location that will be executed when control
+returns to the frame. This means that the source location will
+frequently appear as the next executable line after the one that called
+the next inner frame, because this is where execution will resume when
+control returns to the frame.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (func, obj, prop, selfObj, argList, srcInfo, locals, namedArgs, frameDesc)</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1008">1008</a>]</p>
+
+<div class="desc">
+
+Construct a stack level object. The system invokes this constructor with
+information on the stack level.
+
+</div>
+
+<p><span id="isSystem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isSystem ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1027">1027</a>]</p>
+
+<div class="desc">
+
+Is this a system routine? This returns true if an intrinsic function or
+an intrinsic class method is running at this level.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 Resources in HTML TADS
 
 # Resources in HTML TADS
@@ -29,7 +31,7 @@ data, such as JPEG, PNG, and MNG images, into a game. With normal HTML
 in a normal Web browser, these objects are referenced using URL's
 ("Uniform Resource Locators," the filename-like strings that identify
 web pages and graphics; URL's usually look something like
-"http://www.somewhere.com/dir/whatever.htm").
+"http://www.somewhere.com/dir/whatever.html").
 
 HTML TADS is not a normal browser, and it doesn't interpret object
 references as URL's. Instead, it uses resources.
@@ -163,7 +165,7 @@ site](http://www.libpng.org/pub/mng/).
 
 HTML TADS supports four sound formats: MIDI, WAV, MPEG Audio 2.0 (layers
 I, II, and III, also known as MP1, MP2, and MP3, respectively), and Ogg
-Vorbis digital audio. Refer to [HTML TADS Sounds and Music](sound.htm)
+Vorbis digital audio. Refer to [HTML TADS Sounds and Music](sound.html)
 for information on the sound features in HTML TADS.
 
 We recommend using Ogg Vorbis over MP3. Ogg is generally considered a

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Sysrules  
-<span class="navnp"><a href="symconn.htm" class="nav"><em>Prev:</em> Symconn</a>
-    <a href="tiaaction.htm" class="nav"><em>Next:</em> TIAAction</a>    
+<span class="navnp"><a href="symconn.html" class="nav"><em>Prev:</em> Symconn</a>
+    <a href="tiaaction.html" class="nav"><em>Next:</em> TIAAction</a>    
 </span>
 
 </div>
@@ -56,7 +58,7 @@ location property as <span class="code">initRules</span>).
 Include the rules.t and sysrules.t files after the library files but
 before your game source files (the rules extension is required for this
 one to work). If you are not already familiar with the workings of the
-rules extension you should first read its [documentation](rules.htm)
+rules extension you should first read its [documentation](rules.html)
 before attempting to use this one.
 
 None of the rulebooks defined in this extension expects any parameters
@@ -181,8 +183,8 @@ Rule template, e.g.:
 If the verify(), check() or action() stages of an action would benefit
 from rule-like behaviour, you can define a custom RuleBook to handle
 this and call it from within the appropriate verify(), check() or
-action() method, as in the [Jump](rules.htm#jump) and
-[DigWith](rules.htm#digwith) examples given in the documentation for the
+action() method, as in the [Jump](rules.html#jump) and
+[DigWith](rules.html#digwith) examples given in the documentation for the
 Rules extension.
 
 The description of the individual rulebooks below will list the rules
@@ -275,7 +277,7 @@ the check phase will depend on the value of
 ### Report Rules
 
 The ReportRules perform the same function as the
-[report](../../docs/manual/actres.htm#report) phase of a TAction or
+[report](../../docs/manual/actres.html#report) phase of a TAction or
 TIAction, namely to summarize the action across all the direct objects
 it applied to in the course of executing a single command (e.g. "You
 take the bath bun, the red brick, and the jar of olive oil."). By
@@ -380,7 +382,7 @@ convenient places to define <span class="code">TurnStartRules</span> or
 <span class="code">TurnEndRules</span> to be executed on every turn,
 either near the start or near the end of the turn, depending on which of
 the two rulebooks you use. In some respects this duplicates the function
-of a [Daemon](../../docs/manual/event.htm#daemon-idx), but at the same
+of a [Daemon](../../docs/manual/event.html#daemon-idx), but at the same
 time it gives you more control over precisely where in the turn cycle
 and under what conditions your code is run.
 
@@ -395,7 +397,7 @@ The turnStartRules rulebook starts out containing the following rules:
 2.  **scoreNotificationRule** (priority 9000): displays any applicable
     score notification.
 3.  **promptDaemonRule** (priority 8000): runs any
-    [PromptDaemons](../../docs/manual/event.htm#promptdaemon) that are
+    [PromptDaemons](../../docs/manual/event.html#promptdaemon) that are
     due to fire.
 4.  **commandSpacingRule** (priority 20): displays a blank line,
     preparatory to displaying the next command prompt.
@@ -479,7 +481,7 @@ work for nothing. It may also be overkill to use this extension to
 achieve something that could be achieved more simply (or just as simply)
 by some other means (such as defining an
 <span class="code">InitObject</span> or using a
-[CustomMessages](../../docs/manual/message.htm#custmessage_idx) object
+[CustomMessages](../../docs/manual/message.html#custmessage_idx) object
 to change the prompt). On the other hand there is no reason why you
 should not use this extension if you think it may prove useful or if you
 want to experiment with it; in practice any slowdown in performance is
@@ -498,11 +500,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Sysrules  
-<span class="navnp"><a href="symconn.htm" class="nav"><em>Prev:</em> Symconn</a>
-    <a href="tiaaction.htm" class="nav"><em>Next:</em> TIAAction</a>    
+<span class="navnp"><a href="symconn.html" class="nav"><em>Prev:</em> Symconn</a>
+    <a href="tiaaction.html" class="nav"><em>Next:</em> TIAAction</a>    
 </span>
 
 </div>

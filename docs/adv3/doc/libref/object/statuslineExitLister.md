@@ -1,3 +1,5 @@
+---
+---
 <span class="title">statuslineExitLister</span><span class="type">object</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5431](../source/msg_neu.t.html#5431)\]

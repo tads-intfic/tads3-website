@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,20 +9,20 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>MiscTopic : <a
-href="topicentry.htm">TopicEntry</a><br />
+href="topicentry.html">TopicEntry</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="hellogoodbyetopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="topicgroup.htm">[Next]</a></td>
+href="hellogoodbyetopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="topicgroup.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 MiscTopic is the parent class of TopicEntry types such as
-[ByeTopic](byetopic.htm), [HelloTopic](hellotopic.htm),
-[YesTopic](yestopic.htm) and [NoTopic](notopic.htm) that respond to
+[ByeTopic](byetopic.html), [HelloTopic](hellotopic.html),
+[YesTopic](yestopic.html) and [NoTopic](notopic.html) that respond to
 simple command such as HELLO, BYE, YES and NO without referring to any
 further object or topic (you don't HELLO SARAH ABOUT FISH as you might
 ASK SARAH ABOUT FISH, for example).  
@@ -192,6 +194,6 @@ Obviously, this could be taken a lot further, but enough has been said
 to demonstrate the principle of creating a new kind of MiscTopic. One
 problem remains: how is the player to know that a new kind of
 conversational command (PRAISE X) is available? We'll solve this problem
-shortly by defining a new kind of [SuggestedTopic](suggestedtopic.htm)
+shortly by defining a new kind of [SuggestedTopic](suggestedtopic.html)
 to match.  
   

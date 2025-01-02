@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Listening to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Listening to
 the Bird  
-<span class="navnp"><a href="revisit.htm" class="nav"><em>Prev:</em> Heidi Revisited</a>
-    <a href="cottage.htm" class="nav"><em>Next:</em> Entering the
+<span class="navnp"><a href="revisit.html" class="nav"><em>Prev:</em> Heidi Revisited</a>
+    <a href="cottage.html" class="nav"><em>Next:</em> Entering the
 Cottage</a>     </span>
 
 </div>
@@ -100,11 +102,11 @@ commands FEEL and TASTE wouldn't make much sense.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Listening to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Listening to
 the Bird  
-<span class="navnp"><a href="revisit.htm" class="nav"><em>Prev:</em> Heidi Revisited</a>
-    <a href="cottage.htm" class="nav"><em>Next:</em> Entering the
+<span class="navnp"><a href="revisit.html" class="nav"><em>Prev:</em> Heidi Revisited</a>
+    <a href="cottage.html" class="nav"><em>Next:</em> Entering the
 Cottage</a>     </span>
 
 </div>

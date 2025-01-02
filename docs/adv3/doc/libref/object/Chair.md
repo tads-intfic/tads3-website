@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Chair</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[6571](../source/travel.t.html#6571)\]

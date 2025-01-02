@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RexPattern</span><span class="type">class</span>
 
 [systype.h](../file/systype.h.html)\[[1208](../source/systype.h.html#1208)\]

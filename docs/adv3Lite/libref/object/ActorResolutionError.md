@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ActorResolutionError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5300](../source/parser.t.html#5300)\]

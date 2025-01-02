@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MessageResult</span><span class="type">class</span>
 
 [exec.t](../file/exec.t.html)\[[1577](../source/exec.t.html#1577)\]

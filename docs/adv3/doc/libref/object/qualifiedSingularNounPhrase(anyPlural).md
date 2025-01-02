@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedSingularNounPhrase(anyPlural)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[5772](../source/en_us.t.html#5772)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Weightier Matters  
-<span class="navnp"><a href="improving.htm" class="nav"><em>Prev:</em> Improving the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Weightier Matters  
+<span class="navnp"><a href="improving.html" class="nav"><em>Prev:</em> Improving the
 Game</a>    
-<a href="inplace.htm" class="nav"><em>Next:</em> Everything in its
+<a href="inplace.html" class="nav"><em>Next:</em> Everything in its
 place</a>     </span>
 
 </div>
@@ -87,7 +89,7 @@ arithmetic). For the sake of this exercise we'll leave the weight of the
 pebble as 1 (which it now inherits from the modified Thing, so we don't
 need to state it explicitly) and make the weight of both the rock and
 the skull 10. (Note: adv3Lite in fact comes with a
-[Weight](../../extensions/docs/weight.htm) extension which we could use
+[Weight](../../extensions/docs/weight.html) extension which we could use
 to implement this, but it will be more instructive for the sake of this
 tutorial to do it from scratch; besides adv3Lite extensions are beyond
 the scope of this tutorial).
@@ -508,11 +510,11 @@ confidence with it.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Weightier Matters  
-<span class="navnp"><a href="improving.htm" class="nav"><em>Prev:</em> Improving the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Weightier Matters  
+<span class="navnp"><a href="improving.html" class="nav"><em>Prev:</em> Improving the
 Game</a>    
-<a href="inplace.htm" class="nav"><em>Next:</em> Everything in its
+<a href="inplace.html" class="nav"><em>Next:</em> Everything in its
 place</a>     </span>
 
 </div>

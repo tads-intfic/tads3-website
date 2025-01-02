@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultCommandReport</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[190](../source/report.t.html#190)\]

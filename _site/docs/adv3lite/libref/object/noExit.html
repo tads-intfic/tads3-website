@@ -1,0 +1,136 @@
+<p><span class="title">noExit</span><span class="type">object</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#906">906</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The noExit object can be used to block an exit that would otherwise be
+set as a reciprocal exit by Room.preinitThing(). This can be used to
+prevent this extension from creating symmetrical exits in cases where
+you don't want them. E.g. if north from the smallCave leads to
+largeCave, but south from largeCave doesn't lead anywhere (because the
+notional passage between the caves curves round, say), then you can set
+largeCave.south to noExit to prevent this extension from setting it to
+smallCave.
+
+The noExit object is thus a TravelConnector that simulates the effect of
+a nil exit in situations where a nil value might get overwritten by this
+extension. \[SYMCOMM EXTENSION\]
+
+**`noExit`**` :   `[`TravelConnector`](../object/TravelConnector.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">noExit</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TravelConnector<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isConnectorListed<code class="language-plaintext highlighter-rouge">](#isConnectorListed)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelConnector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>destination<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#destination)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorApparent<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isConnectorApparent)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>PushTravelVia<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#PushTravelVia)</code>  <code class="language-plaintext highlighter-rouge">[</code>suppressTravelDescForPushTravel<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#suppressTravelDescForPushTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>transmitsLight<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#transmitsLight)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelBarriers<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#travelBarriers)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalTime<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversalTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversed<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversed)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversedBy<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversedBy)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canTravelerPass<code class="language-plaintext highlighter-rouge">](#canTravelerPass)</code>  <code class="language-plaintext highlighter-rouge">[</code>explainTravelBarrier<code class="language-plaintext highlighter-rouge">](#explainTravelBarrier)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelConnector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>afterTravelNotifications<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#afterTravelNotifications)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeTravelNotifications<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#beforeTravelNotifications)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkPushTravel<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#checkPushTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkTravelBarriers<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#checkTravelBarriers)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(GoThrough)<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#dobjFor(GoThrough))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(TravelVia)<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#dobjFor(TravelVia))</code>  <code class="language-plaintext highlighter-rouge">[</code>execTravel<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#execTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDepartingDirection<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#getDepartingDirection)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDestination<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#getDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTraveler<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#getTraveler)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasBeenTraversedBy<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#hasBeenTraversedBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjFor(PushTravelThrough)<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#iobjFor(PushTravelThrough))</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorVisible<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isConnectorVisible)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDestinationKnown<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isDestinationKnown)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteTraversal<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#noteTraversal)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayActorFollowing<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#sayActorFollowing)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#sayDeparting)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayNoDestination<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#sayNoDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelDesc<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#travelDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelVia<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#travelVia)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalMsg<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversalMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalTimeFrom<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversalTimeFrom)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="isConnectorListed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConnectorListed</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#911">911</a>]</p>
+
+<div class="desc">
+
+Since we're mimicking the absence of an exit, we don't want to be listed
+as one.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="canTravelerPass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canTravelerPass (actor)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#914">914</a>]</p>
+
+<div class="desc">
+
+We're not a real exit, so no actor can pass through us.
+
+</div>
+
+<p><span id="explainTravelBarrier"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">explainTravelBarrier (actor)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#921">921</a>]</p>
+
+<div class="desc">
+
+In order to behave just as a nil exit would, we call the actor's
+location's cannotGoThatWay() method to explain why travel isn't
+possible.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

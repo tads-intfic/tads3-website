@@ -1,0 +1,46 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>DefaultAskTopic : <a href="defaulttopics-overview.html">DefaultTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="defaulttopics-overview.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="defaulttelltopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A DefaultAskTopic responds to any ASK X ABOUT Y command when no specific
+response (AskTopic or AskTellTopic) has been provided for Y.</p>
+
+<p>The trick with a DefaultAskTopic is to provide a series of responses
+that won’t jar too much no matter what’s asked. That means it’s no good
+having NPCs claiming they don’t know the answer to the question, since
+the player could ask something they plainly do know about (e.g. ASK
+SARAH ABOUT HER MOTHER). Instead, one must have the NPC ignore the
+question, refuse to answer (graciously, politely, rudely, indignantly or
+however else you want the NPC portrayed) or give some completely neutral
+and uninformative reply (however wrapped up). Thus, for Sarah, we could
+define a DefaultAskTopic (on the sarah object) thus:</p>
+
+<p>+ DefaultAskTopic, ShuffledEventList  <br />
+  [<br />
+    ’&lt;q&gt;Can we talk about something else?&lt;/q&gt; she suggests. ’,<br />
+    ’{The sarah/she} mutters something you don\t quite catch. ’,<br />
+    ’In reply she merely cocks one eyebrow and gives an enigmatic smile. ’,<br />
+    ’&lt;q&gt;I\m sorry,&lt;/q&gt; she says, &lt;q&gt;my mind was elsewhere. Did you say something?&lt;/q&gt; ’,<br />
+    ’&lt;q&gt;Let\s discuss that some other time.&lt;/q&gt; she replies. ’,<br />
+    ’Just at that moment, {the sarah/she} appears to be overcome by a <br />
+     fit of coughing. ’,<br />
+    ’She appears not to hear you. ’,<br />
+    ’&lt;q&gt;Well,&lt;/q&gt; she says, proceeding to give a brief reply. ’<br />
+  ] <br />
+;  </p>
+
+<p>Ideally, it would be good to extend the list, since the player is likely
+to see its members a good number of times, though it becomes difficult
+to think of many new ways of not saying anything. In this kind of case,
+nevertheless, you almost certainly want to use a ShuffledEventList to
+vary the responses.</p>

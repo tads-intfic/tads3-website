@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,24 +9,24 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SuggestedTopicTree : <a
-href="suggestedtopic.htm">SuggestedTopic</a><br />
+href="suggestedtopic.html">SuggestedTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="suggestednotopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="limitsuggestions.htm">[Next]</a></td>
+href="suggestednotopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="limitsuggestions.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-As we have seen, a [SuggestedTopic](suggestedtopic.htm) class is
-included in the class list of a single [TopicEntry](topicentry.htm) to
+As we have seen, a [SuggestedTopic](suggestedtopic.html) class is
+included in the class list of a single [TopicEntry](topicentry.html) to
 add that TopicEntry to the topic inventory, that is the list of topics
 that can be suggested to players. One limitation of a SuggestedTopic is
 that is applies only to the TopicEntry on which it is defined. This may
 sounds like it's obviously the right behaviour, until one stops to
-consider what happens with [AltTopics](alttopic.htm). By default, if a
+consider what happens with [AltTopics](alttopic.html). By default, if a
 TopicEntry which is also a SuggestedTopic has an active AltTopic, the
 suggestion will not be offered. This is because it is the AltTopic that
 it is now active. You can, of course, define the AltTopic to be a
@@ -57,7 +59,7 @@ the game state.
   
 For example, consider the GiveShowTopics we defined for giving or
 showing Sarah the ring and the diamond while they are still separated,
-together with the [AltTopics](alttopic.htm) that make Sarah's response
+together with the [AltTopics](alttopic.html) that make Sarah's response
 appropriate whichever order she's shown these objects in. In this case,
 if we wanted to make them SuggestedTopics, we'd also want to use
 SuggestedTopicTree:  

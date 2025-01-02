@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GrammarProd</span><span class="type">class</span>
 
 [gramprod.h](../file/gramprod.h.html)\[[44](../source/gramprod.h.html#44)\]

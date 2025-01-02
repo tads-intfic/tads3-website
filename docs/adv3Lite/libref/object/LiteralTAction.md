@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LiteralTAction</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[2552](../source/action.t.html#2552)\]

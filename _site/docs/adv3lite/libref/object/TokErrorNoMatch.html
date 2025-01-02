@@ -1,0 +1,163 @@
+<p><span class="title">TokErrorNoMatch</span><span class="type">class</span></p>
+
+<p><a href="../file/tok.t.html">tok.t</a>[<a href="../source/tok.t.html#35">35</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+no match for token
+
+`class `**`TokErrorNoMatch`**` :   `[`TokenizerError`](../object/TokenizerError.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TokErrorNoMatch</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TokenizerError<code class="language-plaintext highlighter-rouge">](../object/TokenizerError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Exception<code class="language-plaintext highlighter-rouge">](../object/Exception.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>curChar_<code class="language-plaintext highlighter-rouge">](#curChar_)</code>  <code class="language-plaintext highlighter-rouge">[</code>remainingStr_<code class="language-plaintext highlighter-rouge">](#remainingStr_)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>errmsg_<code class="language-plaintext highlighter-rouge">](../object/Exception.html#errmsg_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>displayException<code class="language-plaintext highlighter-rouge">](#displayException)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getExceptionMessage<code class="language-plaintext highlighter-rouge">](../object/Exception.html#getExceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStackTrace<code class="language-plaintext highlighter-rouge">](../object/Exception.html#showStackTrace)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="curChar_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curChar_</code></p>
+
+<p><a href="../file/tok.t.html">tok.t</a>[<a href="../source/tok.t.html#59">59</a>]</p>
+
+<div class="desc">
+
+current character (first character of remainingStr\_)
+
+</div>
+
+<p><span id="remainingStr_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">remainingStr_</code></p>
+
+<p><a href="../file/tok.t.html">tok.t</a>[<a href="../source/tok.t.html#56">56</a>]</p>
+
+<div class="desc">
+
+The remainder of the string. This is the part that couldn't be matched;
+we were successful in matching up to this point.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (str)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/tok.t.html">tok.t</a>[<a href="../source/tok.t.html#36">36</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="displayException"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">displayException ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/tok.t.html">tok.t</a>[<a href="../source/tok.t.html#49">49</a>]</p>
+
+<div class="desc">
+
+for convenience, separately remember the single character that we don't
+recognize - this is simply the first character of the rest of the line
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

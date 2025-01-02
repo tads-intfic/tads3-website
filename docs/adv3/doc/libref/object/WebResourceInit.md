@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebResourceInit</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[1145](../source/webui.t.html#1145)\]

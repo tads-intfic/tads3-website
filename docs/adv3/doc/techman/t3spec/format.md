@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Image File Format  
-<span class="navnp"><a href="opcode.htm" class="nav"><em>Prev:</em> Byte-Code Instruction
+<span class="navnp"><a href="opcode.html" class="nav"><em>Prev:</em> Byte-Code Instruction
 Set</a>    
-<a href="bincode.htm" class="nav"><em>Next:</em> Portable Binary
+<a href="bincode.html" class="nav"><em>Next:</em> Portable Binary
 Encoding</a>     </span>
 
 </div>
@@ -148,7 +150,7 @@ block follows.
 
 Within the file, all data are stored without any padding or alignment,
 except where otherwise specified. Primitive types are stored using the
-[TADS Portable Binary Encoding](bincode.htm) formats.
+[TADS Portable Binary Encoding](bincode.html) formats.
 
 The file format is entirely self-relative: all file seek locations
 stored within the file are given as offsets from another position in the
@@ -645,10 +647,10 @@ program's main entrypoint.
 
 - The original debug version number was 0x0001.
 - Version 0x0002 introduced a new format for the [frame
-  record](debug.htm#frameRecord), adding two UINT2 values to give the
+  record](debug.html#frameRecord), adding two UINT2 values to give the
   byte-code range covered by the frame. This version also added a new
   storage format for the [local variable
-  record](debug.htm#frameLocalVar), which allows the name of the local
+  record](debug.html#frameLocalVar), which allows the name of the local
   to be stored in the constant pool as a string value.
 
 ------------------------------------------------------------------------
@@ -1253,8 +1255,8 @@ uses. By providing this mapping, the compiler can let the program invoke
 metaclass functions using the identical mechanism that the program uses
 to invoke object properties.
 
-Refer to the [metaclass identifier list](model.htm#metaclass_id) in the
-[Machine Model section](model.htm) for more information on metaclass
+Refer to the [metaclass identifier list](model.html#metaclass_id) in the
+[Machine Model section](model.html) for more information on metaclass
 dependencies.
 
 ------------------------------------------------------------------------
@@ -1306,8 +1308,8 @@ An image file must have exactly one FNSD block. The VM should throw an
 error if it finds more than one FNSD block in an image file, or if an
 image file does not have an FNSD block at all.
 
-Refer to the [intrinsic function documentation](model.htm#intrinsics) in
-the [Machine Model section](model.htm) for more information on function
+Refer to the [intrinsic function documentation](model.html#intrinsics) in
+the [Machine Model section](model.html) for more information on function
 sets and intrinsic functions.
 
 ------------------------------------------------------------------------
@@ -1321,8 +1323,8 @@ sets and intrinsic functions.
 The Symbolic Names block allows the VM to determine the values to use
 for user-defined objects, properties, and any other values that must be
 used directly by the VM. Refer to [Pre-defined Objects and
-Properites](model.htm#predefined) in the [Machine Model
-section](model.htm) for information on the purpose of this block.
+Properites](model.html#predefined) in the [Machine Model
+section](model.html) for information on the purpose of this block.
 
 The Symbolic Names block starts with a count of the number of entries.
 Following the count is the list of entries. Each entry contains the
@@ -1959,12 +1961,12 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Image File Format  
-<span class="navnp"><a href="opcode.htm" class="nav"><em>Prev:</em> Byte-Code Instruction
+<span class="navnp"><a href="opcode.html" class="nav"><em>Prev:</em> Byte-Code Instruction
 Set</a>    
-<a href="bincode.htm" class="nav"><em>Next:</em> Portable Binary
+<a href="bincode.html" class="nav"><em>Next:</em> Portable Binary
 Encoding</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LiteralPhrase</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[3125](../source/parser.t.html#3125)\]

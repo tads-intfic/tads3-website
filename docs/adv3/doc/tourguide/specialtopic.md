@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SpecialTopic : <a
-href="topicentry.htm">TopicEntry</a>, <a
-href="suggestedtopictree.htm">SuggestedTopicTree</a><br />
+href="topicentry.html">TopicEntry</a>, <a
+href="suggestedtopictree.html">SuggestedTopicTree</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="notopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="initiateconversation.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="notopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="initiateconversation.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -155,7 +157,7 @@ to the microphone. The idea is that, if it is, it will stop the
 microphone picking up the sound of the glass being cut, which will
 otherwise sound the alarm and bring the curator running in to
 investigate, which is why we set the objects up the way we did when [we
-first created the Benefactors' Room](collectivegroup.htm).  
+first created the Benefactors' Room](collectivegroup.html).  
   
 One point that may occur to you (or that you may in time discover) about
 SpecialTopics is that at least some players will be tempted to use them

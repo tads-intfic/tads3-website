@@ -1,3 +1,5 @@
+---
+---
 # debug_dynfunc.t
 
 [documentation](../file/debug_dynfunc.t.html)

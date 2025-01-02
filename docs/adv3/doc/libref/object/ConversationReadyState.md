@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ConversationReadyState</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4742](../source/actor.t.html#4742)\]

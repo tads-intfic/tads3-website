@@ -1,0 +1,153 @@
+<p><span class="title">NonObviousVerifyResult</span><span class="type">class</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#381">381</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Verification result - command is logical and allowed, but is non-obvious
+on this object. This should be used when the command is logical, but
+should not be obvious to the player. When this verification result is
+present, the command is allowed when performed explicitly but will never
+be taken as a default.
+
+In cases of ambiguity, a non-obvious object is equivalent to an
+always-illogical object. A non-obvious object \*appears\* to be
+illogical at first glance, so we want to treat it the same as an
+ordinarily illogical object if we're trying to choose among ambiguous
+objects.
+
+`class `**`NonObviousVerifyResult`**` :   `[`VerifyResult`](../object/VerifyResult.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NonObviousVerifyResult</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>VerifyResult<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MessageResult<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>allowImplicit<code class="language-plaintext highlighter-rouge">](#allowImplicit)</code>  <code class="language-plaintext highlighter-rouge">[</code>resultRank<code class="language-plaintext highlighter-rouge">](#resultRank)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">VerifyResult</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allowAction<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html#allowAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>excludePluralMatches<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html#excludePluralMatches)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>messageProp_<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#messageProp_)</code>  <code class="language-plaintext highlighter-rouge">[</code>messageText_<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#messageText_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">VerifyResult</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>compareTo<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html#compareTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>identicalTo<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html#identicalTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>isWorseThan<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html#isWorseThan)</code>  <code class="language-plaintext highlighter-rouge">[</code>shouldInsertBefore<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html#shouldInsertBefore)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveMessageText<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#resolveMessageText)</code>  <code class="language-plaintext highlighter-rouge">[</code>setMessage<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#setMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMessage<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#showMessage)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="allowImplicit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowImplicit</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#386">386</a>]</p>
+
+<div class="desc">
+
+don't allow non-obvious actions to be undertaken implicitly - we allow
+these actions, but only when explicitly requested
+
+</div>
+
+<p><span id="resultRank"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resultRank</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#392">392</a>]</p>
+
+<div class="desc">
+
+non-obvious objects are illogical at first glance, so rank them the same
+as objects that are actually illogical
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,0 +1,4027 @@
+<p><span class="title">advlite.h</span><span class="type">file</span></p>
+
+<p><a href="../source/advlite.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library - main header
+
+This file provides definitions of macros, properties, and other
+identifiers used throughout the library and in game source.
+
+Each source code file in the library and in a game should generally
+\#include this header near the top of the source file.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_MacroSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Macros</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>_STRINGIZE<code class="language-plaintext highlighter-rouge">](#_STRINGIZE)</code>  <code class="language-plaintext highlighter-rouge">[</code>_STRINGIZE<code class="language-plaintext highlighter-rouge">](#_STRINGIZE)</code>  <code class="language-plaintext highlighter-rouge">[</code>abort<code class="language-plaintext highlighter-rouge">](#abort)</code>  <code class="language-plaintext highlighter-rouge">[</code>abortImplicit<code class="language-plaintext highlighter-rouge">](#abortImplicit)</code>  <code class="language-plaintext highlighter-rouge">[</code>accFor<code class="language-plaintext highlighter-rouge">](#accFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>accList<code class="language-plaintext highlighter-rouge">](#accList)</code>  <code class="language-plaintext highlighter-rouge">[</code>ADV3LITE_H<code class="language-plaintext highlighter-rouge">](#ADV3LITE_H)</code>  <code class="language-plaintext highlighter-rouge">[</code>AHREF_Plain<code class="language-plaintext highlighter-rouge">](#AHREF_Plain)</code>  <code class="language-plaintext highlighter-rouge">[</code>aobjFor<code class="language-plaintext highlighter-rouge">](#aobjFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>aobjList<code class="language-plaintext highlighter-rouge">](#aobjList)</code>  <code class="language-plaintext highlighter-rouge">[</code>asAccFor<code class="language-plaintext highlighter-rouge">](#asAccFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>asAobjFor<code class="language-plaintext highlighter-rouge">](#asAobjFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>asDobjFor<code class="language-plaintext highlighter-rouge">](#asDobjFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>asDobjWithoutActionFor<code class="language-plaintext highlighter-rouge">](#asDobjWithoutActionFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>asDobjWithoutVerifyFor<code class="language-plaintext highlighter-rouge">](#asDobjWithoutVerifyFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>asExit<code class="language-plaintext highlighter-rouge">](#asExit)</code>  <code class="language-plaintext highlighter-rouge">[</code>asIobjFor<code class="language-plaintext highlighter-rouge">](#asIobjFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>asIobjWithoutActionFor<code class="language-plaintext highlighter-rouge">](#asIobjWithoutActionFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>asIobjWithoutVerifyFor<code class="language-plaintext highlighter-rouge">](#asIobjWithoutVerifyFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>askForAcc<code class="language-plaintext highlighter-rouge">](#askForAcc)</code>  <code class="language-plaintext highlighter-rouge">[</code>askForAobj<code class="language-plaintext highlighter-rouge">](#askForAobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>askForDobj<code class="language-plaintext highlighter-rouge">](#askForDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>askForIobj<code class="language-plaintext highlighter-rouge">](#askForIobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>asObjFor<code class="language-plaintext highlighter-rouge">](#asObjFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>asObjWithoutActionFor<code class="language-plaintext highlighter-rouge">](#asObjWithoutActionFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>asObjWithoutVerifyFor<code class="language-plaintext highlighter-rouge">](#asObjWithoutVerifyFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>AudioLink<code class="language-plaintext highlighter-rouge">](#AudioLink)</code>  <code class="language-plaintext highlighter-rouge">[</code>BMsg<code class="language-plaintext highlighter-rouge">](#BMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>BMsg<code class="language-plaintext highlighter-rouge">](#BMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTouchMsg<code class="language-plaintext highlighter-rouge">](#cannotTouchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkHitMsg<code class="language-plaintext highlighter-rouge">](#checkHitMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkTouchMsg<code class="language-plaintext highlighter-rouge">](#checkTouchMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>ConversationLullReason<code class="language-plaintext highlighter-rouge">](#ConversationLullReason)</code>  <code class="language-plaintext highlighter-rouge">[</code>dangerous<code class="language-plaintext highlighter-rouge">](#dangerous)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefaultTopicReason<code class="language-plaintext highlighter-rouge">](#DefaultTopicReason)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineAction<code class="language-plaintext highlighter-rouge">](#DefineAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineIAction<code class="language-plaintext highlighter-rouge">](#DefineIAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineLiteralAction<code class="language-plaintext highlighter-rouge">](#DefineLiteralAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineLiteralTAction<code class="language-plaintext highlighter-rouge">](#DefineLiteralTAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineNumericAction<code class="language-plaintext highlighter-rouge">](#DefineNumericAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineNumericTAction<code class="language-plaintext highlighter-rouge">](#DefineNumericTAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineSystemAction<code class="language-plaintext highlighter-rouge">](#DefineSystemAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineTAction<code class="language-plaintext highlighter-rouge">](#DefineTAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineTActionSub<code class="language-plaintext highlighter-rouge">](#DefineTActionSub)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineTIAAction<code class="language-plaintext highlighter-rouge">](#DefineTIAAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineTIAActionSub<code class="language-plaintext highlighter-rouge">](#DefineTIAActionSub)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineTIAction<code class="language-plaintext highlighter-rouge">](#DefineTIAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineTIActionSub<code class="language-plaintext highlighter-rouge">](#DefineTIActionSub)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineTopicAction<code class="language-plaintext highlighter-rouge">](#DefineTopicAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefineTopicTAction<code class="language-plaintext highlighter-rouge">](#DefineTopicTAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefSignal<code class="language-plaintext highlighter-rouge">](#DefSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>DMsg<code class="language-plaintext highlighter-rouge">](#DMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>DMsg<code class="language-plaintext highlighter-rouge">](#DMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor<code class="language-plaintext highlighter-rouge">](#dobjFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjList<code class="language-plaintext highlighter-rouge">](#dobjList)</code>  <code class="language-plaintext highlighter-rouge">[</code>exit<code class="language-plaintext highlighter-rouge">](#exit)</code>  <code class="language-plaintext highlighter-rouge">[</code>exitAction<code class="language-plaintext highlighter-rouge">](#exitAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>exitCommandLine<code class="language-plaintext highlighter-rouge">](#exitCommandLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>feelResponseMsg<code class="language-plaintext highlighter-rouge">](#feelResponseMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>gAcc<code class="language-plaintext highlighter-rouge">](#gAcc)</code>  <code class="language-plaintext highlighter-rouge">[</code>gAction<code class="language-plaintext highlighter-rouge">](#gAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>gActionIn<code class="language-plaintext highlighter-rouge">](#gActionIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>gActionIs<code class="language-plaintext highlighter-rouge">](#gActionIs)</code>  <code class="language-plaintext highlighter-rouge">[</code>gActionList<code class="language-plaintext highlighter-rouge">](#gActionList)</code>  <code class="language-plaintext highlighter-rouge">[</code>gActionListObj<code class="language-plaintext highlighter-rouge">](#gActionListObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>gActionListStr<code class="language-plaintext highlighter-rouge">](#gActionListStr)</code>  <code class="language-plaintext highlighter-rouge">[</code>gActor<code class="language-plaintext highlighter-rouge">](#gActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>gAobj<code class="language-plaintext highlighter-rouge">](#gAobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>gCommand<code class="language-plaintext highlighter-rouge">](#gCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>gCommandToks<code class="language-plaintext highlighter-rouge">](#gCommandToks)</code>  <code class="language-plaintext highlighter-rouge">[</code>gDobj<code class="language-plaintext highlighter-rouge">](#gDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>gExitLister<code class="language-plaintext highlighter-rouge">](#gExitLister)</code>  <code class="language-plaintext highlighter-rouge">[</code>gExtraHintManager<code class="language-plaintext highlighter-rouge">](#gExtraHintManager)</code>  <code class="language-plaintext highlighter-rouge">[</code>gHintManager<code class="language-plaintext highlighter-rouge">](#gHintManager)</code>  <code class="language-plaintext highlighter-rouge">[</code>gInformed<code class="language-plaintext highlighter-rouge">](#gInformed)</code>  <code class="language-plaintext highlighter-rouge">[</code>gIobj<code class="language-plaintext highlighter-rouge">](#gIobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>gLastAction<code class="language-plaintext highlighter-rouge">](#gLastAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>gLastCommand<code class="language-plaintext highlighter-rouge">](#gLastCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>gLibMessages<code class="language-plaintext highlighter-rouge">](#gLibMessages)</code>  <code class="language-plaintext highlighter-rouge">[</code>gLiteral<code class="language-plaintext highlighter-rouge">](#gLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>gLocation<code class="language-plaintext highlighter-rouge">](#gLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>gMessageParams<code class="language-plaintext highlighter-rouge">](#gMessageParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>gNumber<code class="language-plaintext highlighter-rouge">](#gNumber)</code>  <code class="language-plaintext highlighter-rouge">[</code>goInstead<code class="language-plaintext highlighter-rouge">](#goInstead)</code>  <code class="language-plaintext highlighter-rouge">[</code>goNested<code class="language-plaintext highlighter-rouge">](#goNested)</code>  <code class="language-plaintext highlighter-rouge">[</code>gOutStream<code class="language-plaintext highlighter-rouge">](#gOutStream)</code>  <code class="language-plaintext highlighter-rouge">[</code>gPlayerChar<code class="language-plaintext highlighter-rouge">](#gPlayerChar)</code>  <code class="language-plaintext highlighter-rouge">[</code>gReveal<code class="language-plaintext highlighter-rouge">](#gReveal)</code>  <code class="language-plaintext highlighter-rouge">[</code>gRevealed<code class="language-plaintext highlighter-rouge">](#gRevealed)</code>  <code class="language-plaintext highlighter-rouge">[</code>gRoom<code class="language-plaintext highlighter-rouge">](#gRoom)</code>  <code class="language-plaintext highlighter-rouge">[</code>gSetKnown<code class="language-plaintext highlighter-rouge">](#gSetKnown)</code>  <code class="language-plaintext highlighter-rouge">[</code>gSetSeen<code class="language-plaintext highlighter-rouge">](#gSetSeen)</code>  <code class="language-plaintext highlighter-rouge">[</code>gTentativeDobj<code class="language-plaintext highlighter-rouge">](#gTentativeDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>gTentativeDobjIn<code class="language-plaintext highlighter-rouge">](#gTentativeDobjIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>gTentativeIobj<code class="language-plaintext highlighter-rouge">](#gTentativeIobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>gTentativeIobjIn<code class="language-plaintext highlighter-rouge">](#gTentativeIobjIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>gTopic<code class="language-plaintext highlighter-rouge">](#gTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>gTopicMatch<code class="language-plaintext highlighter-rouge">](#gTopicMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>gTopicText<code class="language-plaintext highlighter-rouge">](#gTopicText)</code>  <code class="language-plaintext highlighter-rouge">[</code>gTravelActionIs<code class="language-plaintext highlighter-rouge">](#gTravelActionIs)</code>  <code class="language-plaintext highlighter-rouge">[</code>gTurns<code class="language-plaintext highlighter-rouge">](#gTurns)</code>  <code class="language-plaintext highlighter-rouge">[</code>gUnreveal<code class="language-plaintext highlighter-rouge">](#gUnreveal)</code>  <code class="language-plaintext highlighter-rouge">[</code>gVerbPhrase<code class="language-plaintext highlighter-rouge">](#gVerbPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>gVerbWord<code class="language-plaintext highlighter-rouge">](#gVerbWord)</code>  <code class="language-plaintext highlighter-rouge">[</code>gVerifyDobj<code class="language-plaintext highlighter-rouge">](#gVerifyDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>gVerifyIobj<code class="language-plaintext highlighter-rouge">](#gVerifyIobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>gVerifyList<code class="language-plaintext highlighter-rouge">](#gVerifyList)</code>  <code class="language-plaintext highlighter-rouge">[</code>hitResponseMsg<code class="language-plaintext highlighter-rouge">](#hitResponseMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>IfDebug<code class="language-plaintext highlighter-rouge">](#IfDebug)</code>  <code class="language-plaintext highlighter-rouge">[</code>IfDebug<code class="language-plaintext highlighter-rouge">](#IfDebug)</code>  <code class="language-plaintext highlighter-rouge">[</code>illogical<code class="language-plaintext highlighter-rouge">](#illogical)</code>  <code class="language-plaintext highlighter-rouge">[</code>illogicalAlready<code class="language-plaintext highlighter-rouge">](#illogicalAlready)</code>  <code class="language-plaintext highlighter-rouge">[</code>illogicalNow<code class="language-plaintext highlighter-rouge">](#illogicalNow)</code>  <code class="language-plaintext highlighter-rouge">[</code>illogicalSelf<code class="language-plaintext highlighter-rouge">](#illogicalSelf)</code>  <code class="language-plaintext highlighter-rouge">[</code>implausible<code class="language-plaintext highlighter-rouge">](#implausible)</code>  <code class="language-plaintext highlighter-rouge">[</code>inaccessible<code class="language-plaintext highlighter-rouge">](#inaccessible)</code>  <code class="language-plaintext highlighter-rouge">[</code>InitiateConversationReason<code class="language-plaintext highlighter-rouge">](#InitiateConversationReason)</code>  <code class="language-plaintext highlighter-rouge">[</code>input<code class="language-plaintext highlighter-rouge">](#input)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjFor<code class="language-plaintext highlighter-rouge">](#iobjFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjList<code class="language-plaintext highlighter-rouge">](#iobjList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isEatable<code class="language-plaintext highlighter-rouge">](#isEatable)</code>  <code class="language-plaintext highlighter-rouge">[</code>isPotable<code class="language-plaintext highlighter-rouge">](#isPotable)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTouchable<code class="language-plaintext highlighter-rouge">](#isTouchable)</code>  <code class="language-plaintext highlighter-rouge">[</code>literalAcc<code class="language-plaintext highlighter-rouge">](#literalAcc)</code>  <code class="language-plaintext highlighter-rouge">[</code>literalAobj<code class="language-plaintext highlighter-rouge">](#literalAobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>literalDobj<code class="language-plaintext highlighter-rouge">](#literalDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>literalIobj<code class="language-plaintext highlighter-rouge">](#literalIobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>logical<code class="language-plaintext highlighter-rouge">](#logical)</code>  <code class="language-plaintext highlighter-rouge">[</code>logicalRank<code class="language-plaintext highlighter-rouge">](#logicalRank)</code>  <code class="language-plaintext highlighter-rouge">[</code>M_DOWN<code class="language-plaintext highlighter-rouge">](#M_DOWN)</code>  <code class="language-plaintext highlighter-rouge">[</code>M_PREV<code class="language-plaintext highlighter-rouge">](#M_PREV)</code>  <code class="language-plaintext highlighter-rouge">[</code>M_QUIT<code class="language-plaintext highlighter-rouge">](#M_QUIT)</code>  <code class="language-plaintext highlighter-rouge">[</code>M_SEL<code class="language-plaintext highlighter-rouge">](#M_SEL)</code>  <code class="language-plaintext highlighter-rouge">[</code>M_UP<code class="language-plaintext highlighter-rouge">](#M_UP)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchAdj<code class="language-plaintext highlighter-rouge">](#MatchAdj)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchNoApprox<code class="language-plaintext highlighter-rouge">](#MatchNoApprox)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchNoTrunc<code class="language-plaintext highlighter-rouge">](#MatchNoTrunc)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchNoun<code class="language-plaintext highlighter-rouge">](#MatchNoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchPartMask<code class="language-plaintext highlighter-rouge">](#MatchPartMask)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchPhrase<code class="language-plaintext highlighter-rouge">](#MatchPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchPlural<code class="language-plaintext highlighter-rouge">](#MatchPlural)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchPrep<code class="language-plaintext highlighter-rouge">](#MatchPrep)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchStrengthMask<code class="language-plaintext highlighter-rouge">](#MatchStrengthMask)</code>  <code class="language-plaintext highlighter-rouge">[</code>MatchWeak<code class="language-plaintext highlighter-rouge">](#MatchWeak)</code>  <code class="language-plaintext highlighter-rouge">[</code>more<code class="language-plaintext highlighter-rouge">](#more)</code>  <code class="language-plaintext highlighter-rouge">[</code>Msg<code class="language-plaintext highlighter-rouge">](#Msg)</code>  <code class="language-plaintext highlighter-rouge">[</code>multiAcc<code class="language-plaintext highlighter-rouge">](#multiAcc)</code>  <code class="language-plaintext highlighter-rouge">[</code>multiAobj<code class="language-plaintext highlighter-rouge">](#multiAobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>multiDobj<code class="language-plaintext highlighter-rouge">](#multiDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>multiIobj<code class="language-plaintext highlighter-rouge">](#multiIobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextrule<code class="language-plaintext highlighter-rouge">](#nextrule)</code>  <code class="language-plaintext highlighter-rouge">[</code>nonObvious<code class="language-plaintext highlighter-rouge">](#nonObvious)</code>  <code class="language-plaintext highlighter-rouge">[</code>nostop<code class="language-plaintext highlighter-rouge">](#nostop)</code>  <code class="language-plaintext highlighter-rouge">[</code>numberDobj<code class="language-plaintext highlighter-rouge">](#numberDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>numericAcc<code class="language-plaintext highlighter-rouge">](#numericAcc)</code>  <code class="language-plaintext highlighter-rouge">[</code>numericAobj<code class="language-plaintext highlighter-rouge">](#numericAobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>numericDobj<code class="language-plaintext highlighter-rouge">](#numericDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>numericIobj<code class="language-plaintext highlighter-rouge">](#numericIobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>objFor<code class="language-plaintext highlighter-rouge">](#objFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>reportAfter<code class="language-plaintext highlighter-rouge">](#reportAfter)</code>  <code class="language-plaintext highlighter-rouge">[</code>rnull<code class="language-plaintext highlighter-rouge">](#rnull)</code>  <code class="language-plaintext highlighter-rouge">[</code>SelArbitrary<code class="language-plaintext highlighter-rouge">](#SelArbitrary)</code>  <code class="language-plaintext highlighter-rouge">[</code>SelDefault<code class="language-plaintext highlighter-rouge">](#SelDefault)</code>  <code class="language-plaintext highlighter-rouge">[</code>SelDisambig<code class="language-plaintext highlighter-rouge">](#SelDisambig)</code>  <code class="language-plaintext highlighter-rouge">[</code>SelPlural<code class="language-plaintext highlighter-rouge">](#SelPlural)</code>  <code class="language-plaintext highlighter-rouge">[</code>SelProg<code class="language-plaintext highlighter-rouge">](#SelProg)</code>  <code class="language-plaintext highlighter-rouge">[</code>setPastTense<code class="language-plaintext highlighter-rouge">](#setPastTense)</code>  <code class="language-plaintext highlighter-rouge">[</code>singleAcc<code class="language-plaintext highlighter-rouge">](#singleAcc)</code>  <code class="language-plaintext highlighter-rouge">[</code>singleAobj<code class="language-plaintext highlighter-rouge">](#singleAobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>singleDir<code class="language-plaintext highlighter-rouge">](#singleDir)</code>  <code class="language-plaintext highlighter-rouge">[</code>singleDobj<code class="language-plaintext highlighter-rouge">](#singleDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>singleIobj<code class="language-plaintext highlighter-rouge">](#singleIobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>stop<code class="language-plaintext highlighter-rouge">](#stop)</code>  <code class="language-plaintext highlighter-rouge">[</code>STRINGIZE<code class="language-plaintext highlighter-rouge">](#STRINGIZE)</code>  <code class="language-plaintext highlighter-rouge">[</code>STRINGIZE<code class="language-plaintext highlighter-rouge">](#STRINGIZE)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicAcc<code class="language-plaintext highlighter-rouge">](#topicAcc)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicAobj<code class="language-plaintext highlighter-rouge">](#topicAobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicDobj<code class="language-plaintext highlighter-rouge">](#topicDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicIobj<code class="language-plaintext highlighter-rouge">](#topicIobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>touchDesc<code class="language-plaintext highlighter-rouge">](#touchDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>tSel<code class="language-plaintext highlighter-rouge">](#tSel)</code>  <code class="language-plaintext highlighter-rouge">[</code>VerbRule<code class="language-plaintext highlighter-rouge">](#VerbRule)</code>  <code class="language-plaintext highlighter-rouge">[</code>VideoLink<code class="language-plaintext highlighter-rouge">](#VideoLink)</code>  <code class="language-plaintext highlighter-rouge">[</code>waitKey<code class="language-plaintext highlighter-rouge">](#waitKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>withPast<code class="language-plaintext highlighter-rouge">](#withPast)</code>  <code class="language-plaintext highlighter-rouge">[</code>withPresent<code class="language-plaintext highlighter-rouge">](#withPresent)</code>  `</p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Enums</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>ClosedGoal<code class="language-plaintext highlighter-rouge">](#ClosedGoal)</code>  <code class="language-plaintext highlighter-rouge">[</code>feminine<code class="language-plaintext highlighter-rouge">](#feminine)</code>  <code class="language-plaintext highlighter-rouge">[</code>FootnotesFull<code class="language-plaintext highlighter-rouge">](#FootnotesFull)</code>  <code class="language-plaintext highlighter-rouge">[</code>FootnotesMedium<code class="language-plaintext highlighter-rouge">](#FootnotesMedium)</code>  <code class="language-plaintext highlighter-rouge">[</code>FootnotesOff<code class="language-plaintext highlighter-rouge">](#FootnotesOff)</code>  <code class="language-plaintext highlighter-rouge">[</code>indirectLockable<code class="language-plaintext highlighter-rouge">](#indirectLockable)</code>  <code class="language-plaintext highlighter-rouge">[</code>large<code class="language-plaintext highlighter-rouge">](#large)</code>  <code class="language-plaintext highlighter-rouge">[</code>lockableWithKey<code class="language-plaintext highlighter-rouge">](#lockableWithKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>lockableWithoutKey<code class="language-plaintext highlighter-rouge">](#lockableWithoutKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>manyToMany<code class="language-plaintext highlighter-rouge">](#manyToMany)</code>  <code class="language-plaintext highlighter-rouge">[</code>manyToOne<code class="language-plaintext highlighter-rouge">](#manyToOne)</code>  <code class="language-plaintext highlighter-rouge">[</code>masculine<code class="language-plaintext highlighter-rouge">](#masculine)</code>  <code class="language-plaintext highlighter-rouge">[</code>medium<code class="language-plaintext highlighter-rouge">](#medium)</code>  <code class="language-plaintext highlighter-rouge">[</code>neuter<code class="language-plaintext highlighter-rouge">](#neuter)</code>  <code class="language-plaintext highlighter-rouge">[</code>normalRelation<code class="language-plaintext highlighter-rouge">](#normalRelation)</code>  <code class="language-plaintext highlighter-rouge">[</code>notLockable<code class="language-plaintext highlighter-rouge">](#notLockable)</code>  <code class="language-plaintext highlighter-rouge">[</code>null<code class="language-plaintext highlighter-rouge">](#null)</code>  <code class="language-plaintext highlighter-rouge">[</code>oneToMany<code class="language-plaintext highlighter-rouge">](#oneToMany)</code>  <code class="language-plaintext highlighter-rouge">[</code>oneToOne<code class="language-plaintext highlighter-rouge">](#oneToOne)</code>  <code class="language-plaintext highlighter-rouge">[</code>OpenGoal<code class="language-plaintext highlighter-rouge">](#OpenGoal)</code>  <code class="language-plaintext highlighter-rouge">[</code>OtherObject<code class="language-plaintext highlighter-rouge">](#OtherObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseRelation<code class="language-plaintext highlighter-rouge">](#reverseRelation)</code>  <code class="language-plaintext highlighter-rouge">[</code>rmcAskLiteral<code class="language-plaintext highlighter-rouge">](#rmcAskLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>rmcAskObject<code class="language-plaintext highlighter-rouge">](#rmcAskObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>rmcCommand<code class="language-plaintext highlighter-rouge">](#rmcCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>rmcDisambig<code class="language-plaintext highlighter-rouge">](#rmcDisambig)</code>  <code class="language-plaintext highlighter-rouge">[</code>rmcOops<code class="language-plaintext highlighter-rouge">](#rmcOops)</code>  <code class="language-plaintext highlighter-rouge">[</code>small<code class="language-plaintext highlighter-rouge">](#small)</code>  <code class="language-plaintext highlighter-rouge">[</code>UndiscoveredGoal<code class="language-plaintext highlighter-rouge">](#UndiscoveredGoal)</code>  `</p>
+
+<p><span id="_TemplateSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Templates</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>Achievement<code class="language-plaintext highlighter-rouge">](#Achievement)</code>  <code class="language-plaintext highlighter-rouge">[</code>ActorState<code class="language-plaintext highlighter-rouge">](#ActorState)</code>  <code class="language-plaintext highlighter-rouge">[</code>AltTopic<code class="language-plaintext highlighter-rouge">](#AltTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>AltTopic<code class="language-plaintext highlighter-rouge">](#AltTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>ClockEvent<code class="language-plaintext highlighter-rouge">](#ClockEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefaultConsultTopic<code class="language-plaintext highlighter-rouge">](#DefaultConsultTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefaultThought<code class="language-plaintext highlighter-rouge">](#DefaultThought)</code>  <code class="language-plaintext highlighter-rouge">[</code>DefaultTopic<code class="language-plaintext highlighter-rouge">](#DefaultTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>Doer<code class="language-plaintext highlighter-rouge">](#Doer)</code>  <code class="language-plaintext highlighter-rouge">[</code>Door<code class="language-plaintext highlighter-rouge">](#Door)</code>  <code class="language-plaintext highlighter-rouge">[</code>Door<code class="language-plaintext highlighter-rouge">](#Door)</code>  <code class="language-plaintext highlighter-rouge">[</code>Enterable<code class="language-plaintext highlighter-rouge">](#Enterable)</code>  <code class="language-plaintext highlighter-rouge">[</code>Enterable<code class="language-plaintext highlighter-rouge">](#Enterable)</code>  <code class="language-plaintext highlighter-rouge">[</code>EventList<code class="language-plaintext highlighter-rouge">](#EventList)</code>  <code class="language-plaintext highlighter-rouge">[</code>EventListItem<code class="language-plaintext highlighter-rouge">](#EventListItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExtraHint<code class="language-plaintext highlighter-rouge">](#ExtraHint)</code>  <code class="language-plaintext highlighter-rouge">[</code>Footnote<code class="language-plaintext highlighter-rouge">](#Footnote)</code>  <code class="language-plaintext highlighter-rouge">[</code>Goal<code class="language-plaintext highlighter-rouge">](#Goal)</code>  <code class="language-plaintext highlighter-rouge">[</code>Hint<code class="language-plaintext highlighter-rouge">](#Hint)</code>  <code class="language-plaintext highlighter-rouge">[</code>MenuItem<code class="language-plaintext highlighter-rouge">](#MenuItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>MenuLongTopicItem<code class="language-plaintext highlighter-rouge">](#MenuLongTopicItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>MenuTopicItem<code class="language-plaintext highlighter-rouge">](#MenuTopicItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>MiscTopic<code class="language-plaintext highlighter-rouge">](#MiscTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>MiscTopic<code class="language-plaintext highlighter-rouge">](#MiscTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>NodeContinuationTopic<code class="language-plaintext highlighter-rouge">](#NodeContinuationTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>NodeContinuationTopic<code class="language-plaintext highlighter-rouge">](#NodeContinuationTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>ProxyActor<code class="language-plaintext highlighter-rouge">](#ProxyActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>QueryTopic<code class="language-plaintext highlighter-rouge">](#QueryTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>QueryTopic<code class="language-plaintext highlighter-rouge">](#QueryTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>QueryTopic<code class="language-plaintext highlighter-rouge">](#QueryTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>QueryTopic<code class="language-plaintext highlighter-rouge">](#QueryTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>QueryTopic<code class="language-plaintext highlighter-rouge">](#QueryTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>QueryTopic<code class="language-plaintext highlighter-rouge">](#QueryTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>Region<code class="language-plaintext highlighter-rouge">](#Region)</code>  <code class="language-plaintext highlighter-rouge">[</code>Relation<code class="language-plaintext highlighter-rouge">](#Relation)</code>  <code class="language-plaintext highlighter-rouge">[</code>Room<code class="language-plaintext highlighter-rouge">](#Room)</code>  <code class="language-plaintext highlighter-rouge">[</code>Room<code class="language-plaintext highlighter-rouge">](#Room)</code>  <code class="language-plaintext highlighter-rouge">[</code>Rule<code class="language-plaintext highlighter-rouge">](#Rule)</code>  <code class="language-plaintext highlighter-rouge">[</code>SensoryEmanation<code class="language-plaintext highlighter-rouge">](#SensoryEmanation)</code>  <code class="language-plaintext highlighter-rouge">[</code>ShuffledEventList<code class="language-plaintext highlighter-rouge">](#ShuffledEventList)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>string<code class="language-plaintext highlighter-rouge">](#string)</code>  <code class="language-plaintext highlighter-rouge">[</code>StyleTag<code class="language-plaintext highlighter-rouge">](#StyleTag)</code>  <code class="language-plaintext highlighter-rouge">[</code>SymConnector<code class="language-plaintext highlighter-rouge">](#SymConnector)</code>  <code class="language-plaintext highlighter-rouge">[</code>SymConnector<code class="language-plaintext highlighter-rouge">](#SymConnector)</code>  <code class="language-plaintext highlighter-rouge">[</code>SymPassage<code class="language-plaintext highlighter-rouge">](#SymPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>SymPassage<code class="language-plaintext highlighter-rouge">](#SymPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>SymPassage<code class="language-plaintext highlighter-rouge">](#SymPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>SymPassage<code class="language-plaintext highlighter-rouge">](#SymPassage)</code>  <code class="language-plaintext highlighter-rouge">[</code>Test<code class="language-plaintext highlighter-rouge">](#Test)</code>  <code class="language-plaintext highlighter-rouge">[</code>Test<code class="language-plaintext highlighter-rouge">](#Test)</code>  <code class="language-plaintext highlighter-rouge">[</code>Thing<code class="language-plaintext highlighter-rouge">](#Thing)</code>  <code class="language-plaintext highlighter-rouge">[</code>Topic<code class="language-plaintext highlighter-rouge">](#Topic)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](#TopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](#TopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](#TopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](#TopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>TopicGroup<code class="language-plaintext highlighter-rouge">](#TopicGroup)</code>  <code class="language-plaintext highlighter-rouge">[</code>TravelConnector<code class="language-plaintext highlighter-rouge">](#TravelConnector)</code>  <code class="language-plaintext highlighter-rouge">[</code>TravelConnector<code class="language-plaintext highlighter-rouge">](#TravelConnector)</code>  <code class="language-plaintext highlighter-rouge">[</code>Unthing<code class="language-plaintext highlighter-rouge">](#Unthing)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Macros_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Macros</span>  
+
+</div>
+
+<p><span id="_STRINGIZE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_STRINGIZE (x)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#265">265</a>]</p>
+
+<div class="desc">
+
+`#@x`  
+A couple of utility macros we use internally for turning macro values
+into strings. STRINGIZE(x) expands any macros in its argument and then
+turns the result into a single-quoted string, which can then be used in
+regular program text or in directives that evaluate constant
+expressions, such as \#if. (STRINGIZE is the real macro; \_STRINGIZE is
+needed to force expansion of any macros in the argument, which is
+required because of the weird ANSI C expansion-order rules, and which
+works because of same.)
+
+</div>
+
+<p><span id="_STRINGIZE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_STRINGIZE (x)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#970">970</a>]</p>
+
+<div class="desc">
+
+`#@x`  
+A couple of utility macros we use internally for turning macro values
+into strings. STRINGIZE(x) expands any macros in its argument and then
+turns the result into a single-quoted string, which can then be used in
+regular program text or in directives that evaluate constant
+expressions, such as \#if. (STRINGIZE is the real macro; \_STRINGIZE is
+needed to force expansion of any macros in the argument, which is
+required because of the weird ANSI C expansion-order rules, and which
+works because of same.)
+
+</div>
+
+<p><span id="abort"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">abort</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#706">706</a>]</p>
+
+<div class="desc">
+
+`throw new AbortActionSignal()`  
+a concise macro to throw an Abort signal
+
+</div>
+
+<p><span id="abortImplicit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">abortImplicit</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#703">703</a>]</p>
+
+<div class="desc">
+
+`throw new AbortImplicitSignal()`  
+a concise macro to throw an AbortImplicitSignal
+
+</div>
+
+<p><span id="accFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">accFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#640">640</a>]</p>
+
+<div class="desc">
+
+`objFor(Aobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="accList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">accList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#74">74</a>]</p>
+
+<div class="desc">
+
+`nounList-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="ADV3LITE_H"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ADV3LITE_H</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#16">16</a>]</p>
+
+<div class="desc">
+
+  
+*no description available*
+
+</div>
+
+<p><span id="AHREF_Plain"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">AHREF_Plain</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#714">714</a>]</p>
+
+<div class="desc">
+
+`0x0001 /* plain text hyperlink (no underline/color) */`  
+aHref() flags
+
+</div>
+
+<p><span id="aobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#638">638</a>]</p>
+
+<div class="desc">
+
+`objFor(Aobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="aobjList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aobjList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#75">75</a>]</p>
+
+<div class="desc">
+
+`nounList-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="asAccFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asAccFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#641">641</a>]</p>
+
+<div class="desc">
+
+`asObjFor(Aobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="asAobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asAobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#639">639</a>]</p>
+
+<div class="desc">
+
+`asObjFor(Aobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="asDobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asDobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#444">444</a>]</p>
+
+<div class="desc">
+
+`asObjFor(Dobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="asDobjWithoutActionFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asDobjWithoutActionFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#464">464</a>]</p>
+
+<div class="desc">
+
+`asObjWithoutActionFor(Dobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="asDobjWithoutVerifyFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asDobjWithoutVerifyFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#476">476</a>]</p>
+
+<div class="desc">
+
+`asObjWithoutVerifyFor(Dobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="asExit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asExit (dir)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#492">492</a>]</p>
+
+<div class="desc">
+
+`: UnlistedProxyConnector { direction = dir##Dir }`  
+*no description available*
+
+</div>
+
+<p><span id="asIobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asIobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#445">445</a>]</p>
+
+<div class="desc">
+
+`asObjFor(Iobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="asIobjWithoutActionFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asIobjWithoutActionFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#465">465</a>]</p>
+
+<div class="desc">
+
+`asObjWithoutActionFor(Iobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="asIobjWithoutVerifyFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asIobjWithoutVerifyFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#477">477</a>]</p>
+
+<div class="desc">
+
+`asObjWithoutVerifyFor(Iobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="askForAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForAcc (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#482">482</a>]</p>
+
+<div class="desc">
+
+`askMissingObject(action, AccessoryObject)`  
+*no description available*
+
+</div>
+
+<p><span id="askForAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForAobj (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#481">481</a>]</p>
+
+<div class="desc">
+
+`askMissingObject(action, AccessoryObject)`  
+*no description available*
+
+</div>
+
+<p><span id="askForDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForDobj (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#479">479</a>]</p>
+
+<div class="desc">
+
+`askMissingObject(action, DirectObject)`  
+*no description available*
+
+</div>
+
+<p><span id="askForIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForIobj (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#480">480</a>]</p>
+
+<div class="desc">
+
+`askMissingObject(action, IndirectObject)`  
+*no description available*
+
+</div>
+
+<p><span id="asObjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjFor (obj, Action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#434">434</a>]</p>
+
+<div class="desc">
+
+`{ \`  
+`preCond { return preCond##obj##Action; } \`  
+`verify() { verify##obj##Action; } \`  
+`remap() { return remap##obj##Action; } \`  
+`check() { check##obj##Action; } \`  
+`action() { action##obj##Action; } \`  
+`report() { report##obj##Action; } \`  
+`}`  
+Treat an object definition as equivalent to another object definition.
+These can be used immediately after a dobjFor() or iobjFor() to treat
+the first action as though it were the second. So, if the player types
+"search box", and we want to treat the direct object the same as for
+"look in box", we could make this definition for the box:
+
+dobjFor(Search) asDobjFor(LookIn)
+
+Note that no semicolon is needed after this definition, and that this
+definition is completely in lieu of a regular property set for the
+object action.
+
+In general, a mapping should NOT change the role of an object:
+dobjFor(X) should not usually be mapped using asIobjFor(Y), and
+iobjFor(X) shouldn't be mapped using asDobjFor(Y). The problem with
+changing the role is that the handler routines often assume that the
+object is actually in the role for which the handler was written; a
+verify handler might refer to '{dobj}' in generating a message, for
+example, so reversing the roles would give the wrong object in the role.
+
+Role reversals should always be avoided, but can be used if necessary
+under conditions where all of the code involved in the TARGET of the
+mapping can be carefully controlled to ensure that it doesn't make
+assumptions about object roles, but only references 'self'. Reversing
+roles in a mapping should never be attempted in general-purpose library
+code, because code based on the library could override the target of the
+role-reversing mapping, and the override could fail to observe the
+restrictions on object role references.
+
+Note that role reversals can almost always be handled with other
+mechanisms that handle reversals cleanly. Always consider
+Doer.doInstead() first when confronted with a situation that seems to
+call for a role-reversing asObjFor() mapping, as doInstead()
+specifically allows for object role changes.
+
+</div>
+
+<p><span id="asObjWithoutActionFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjWithoutActionFor (obj, Action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#455">455</a>]</p>
+
+<div class="desc">
+
+`{ \`  
+`preCond { return preCond##obj##Action; } \`  
+`verify() { verify##obj##Action; } \`  
+`remap() { return remap##obj##Action(); } \`  
+`check() { check##obj##Action; } \`  
+`action() { } \`  
+`}`  
+Define mappings of everything except the action. This can be used in
+cases where we want to pick up the verification, preconditions, and
+check routines from another handler, but not the action. This is often
+useful for two-object verbs where the action processing is entirely
+provided by one or the other object, so applying it to both would be
+redundant.
+
+</div>
+
+<p><span id="asObjWithoutVerifyFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjWithoutVerifyFor (obj, Action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#467">467</a>]</p>
+
+<div class="desc">
+
+`{ \`  
+`preCond { return preCond##obj##Action; } \`  
+`remap() { return remap##obj##Action(); } \`  
+`check() { check##obj##Action; } \`  
+`action() { action##obj##Action(); } \`  
+`report() { report##obj##Action(); } \`  
+`}`  
+*no description available*
+
+</div>
+
+<p><span id="AudioLink"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">AudioLink</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1232">1232</a>]</p>
+
+<div class="desc">
+
+`1`  
+Communication Link Types
+
+AudioLink means audio communication only is available VideoLink means
+both audio and visual links are available.
+
+</div>
+
+<p><span id="BMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BMsg (id, txt, args, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1039">1039</a>]</p>
+
+<div class="desc">
+
+`buildMessage(#@id, txt, ##args)`  
+*no description available*
+
+</div>
+
+<p><span id="BMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BMsg (id, txt, args, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1042">1042</a>]</p>
+
+<div class="desc">
+
+`buildMessage(#@id, nil, ##args)`  
+*no description available*
+
+</div>
+
+<p><span id="cannotTouchMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTouchMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1266">1266</a>]</p>
+
+<div class="desc">
+
+`cannotFeelMsg`  
+*no description available*
+
+</div>
+
+<p><span id="checkHitMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkHitMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1268">1268</a>]</p>
+
+<div class="desc">
+
+`checkAttackMsg`  
+*no description available*
+
+</div>
+
+<p><span id="checkTouchMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkTouchMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1263">1263</a>]</p>
+
+<div class="desc">
+
+`checkFeelMsg`  
+Define some synonyms for potentially confusing property names
+
+</div>
+
+<p><span id="ConversationLullReason"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ConversationLullReason</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#848">848</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="dangerous"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dangerous</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#687">687</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult(new VerifyResult(90, '', true, self, nil))`  
+*no description available*
+
+</div>
+
+<p><span id="DefaultTopicReason"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefaultTopicReason</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#849">849</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="DefineAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction (name, baseClass, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#511">511</a>]</p>
+
+<div class="desc">
+
+`name: ##baseClass \`  
+`baseActionClass = name`  
+Define an action OBJECT with the given name inheriting from the given
+base class, for use with the Mercury parser.
+
+</div>
+
+<p><span id="DefineIAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineIAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#527">527</a>]</p>
+
+<div class="desc">
+
+`DefineAction(name, IAction)`  
+Define a concrete IAction, given the root name for the action. We'll
+automatically generate a class with name XxxAction.
+
+</div>
+
+<p><span id="DefineLiteralAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineLiteralAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#554">554</a>]</p>
+
+<div class="desc">
+
+`DefineAction(name, LiteralAction)`  
+*no description available*
+
+</div>
+
+<p><span id="DefineLiteralTAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineLiteralTAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#551">551</a>]</p>
+
+<div class="desc">
+
+`DefineTActionSub(name, LiteralTAction)`  
+*no description available*
+
+</div>
+
+<p><span id="DefineNumericAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineNumericAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#566">566</a>]</p>
+
+<div class="desc">
+
+`DefineAction(name, NumericAction)`  
+*no description available*
+
+</div>
+
+<p><span id="DefineNumericTAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineNumericTAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#563">563</a>]</p>
+
+<div class="desc">
+
+`DefineTActionSub(name, NumericTAction)`  
+*no description available*
+
+</div>
+
+<p><span id="DefineSystemAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineSystemAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#520">520</a>]</p>
+
+<div class="desc">
+
+`DefineAction(name, SystemAction)`  
+Define a "system" action. System actions are meta-game commands, such as
+SAVE and QUIT, that generally operate the user interface and are not
+part of the game world.
+
+</div>
+
+<p><span id="DefineTAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#536">536</a>]</p>
+
+<div class="desc">
+
+`DefineTActionSub(name, TAction)`  
+Define a concrete TAction, given the root name for the action. We'll
+automatically generate a class with name XxxAction, a verProp with name
+verXxx, a checkProp with name checkXxx, and an actionProp with name
+actionDobjXxx.
+
+</div>
+
+<p><span id="DefineTActionSub"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTActionSub (name, cls)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#542">542</a>]</p>
+
+<div class="desc">
+
+`DefineAction(name, cls) \`  
+`verDobjProp = &amp;verifyDobj##name \`  
+`remapDobjProp = &amp;remapDobj##name \`  
+`preCondDobjProp = &amp;preCondDobj##name \`  
+`checkDobjProp = &amp;checkDobj##name \`  
+`actionDobjProp = &amp;actionDobj##name \`  
+`reportDobjProp = &amp;reportDobj##name \`  
+  
+Define a concrete TAction with a specific base class.
+
+</div>
+
+<p><span id="DefineTIAAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIAAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#610">610</a>]</p>
+
+<div class="desc">
+
+`DefineTIAActionSub(name, TIAAction)`  
+The following macros relating to the TIAAction class are only relevant
+when the TIAAction extension is used. The macros are nevertheless
+included here for convenience when using the TIAAction extension.
+
+Define a concrete TIAAction, given the root name for the action. We'll
+automatically generate a class with name XxxAction, a verDobjProp with
+name verDobjXxx, a verIobjProp with name verIobjxxx, a checkDobjProp
+with name checkDobjXxx, a checkIobjProp with name checkIobjXxx, an
+actionDobjProp with name actionDobjXxx, and an actionIobjProp with name
+actionIobjXxx.
+
+</div>
+
+<p><span id="DefineTIAActionSub"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIAActionSub (name, cls)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#616">616</a>]</p>
+
+<div class="desc">
+
+`DefineAction(name, cls) \`  
+`verDobjProp = &amp;verifyDobj##name \`  
+`verIobjProp = &amp;verifyIobj##name \`  
+`verAobjProp = &amp;verifyAobj##name \`  
+`remapDobjProp = &amp;remapDobj##name \`  
+`remapIobjProp = &amp;remapIobj##name \`  
+`remapAobjProp = &amp;remapAobj##name \`  
+`preCondDobjProp = &amp;preCondDobj##name \`  
+`preCondIobjProp = &amp;preCondIobj##name \`  
+`preCondAobjProp = &amp;preCondAobj##name \`  
+`checkDobjProp = &amp;checkDobj##name \`  
+`checkIobjProp = &amp;checkIobj##name \`  
+`checkAobjProp = &amp;checkAobj##name \`  
+`actionDobjProp = &amp;actionDobj##name \`  
+`actionIobjProp = &amp;actionIobj##name \`  
+`actionAobjProp = &amp;actionAobj##name \`  
+`reportDobjProp = &amp;reportDobj##name \`  
+`reportIobjProp = &amp;reportIobj##name \`  
+`reportAobjProp = &amp;reportAobj##name \`  
+  
+Define a concrete TIAction with a specific base class.
+
+</div>
+
+<p><span id="DefineTIAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#578">578</a>]</p>
+
+<div class="desc">
+
+`DefineTIActionSub(name, TIAction)`  
+Define a concrete TIAction, given the root name for the action. We'll
+automatically generate a class with name XxxAction, a verDobjProp with
+name verDobjXxx, a verIobjProp with name verIobjxxx, a checkDobjProp
+with name checkDobjXxx, a checkIobjProp with name checkIobjXxx, an
+actionDobjProp with name actionDobjXxx, and an actionIobjProp with name
+actionIobjXxx.
+
+</div>
+
+<p><span id="DefineTIActionSub"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIActionSub (name, cls)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#584">584</a>]</p>
+
+<div class="desc">
+
+`DefineAction(name, cls) \`  
+`verDobjProp = &amp;verifyDobj##name \`  
+`verIobjProp = &amp;verifyIobj##name \`  
+`remapDobjProp = &amp;remapDobj##name \`  
+`remapIobjProp = &amp;remapIobj##name \`  
+`preCondDobjProp = &amp;preCondDobj##name \`  
+`preCondIobjProp = &amp;preCondIobj##name \`  
+`checkDobjProp = &amp;checkDobj##name \`  
+`checkIobjProp = &amp;checkIobj##name \`  
+`actionDobjProp = &amp;actionDobj##name \`  
+`actionIobjProp = &amp;actionIobj##name \`  
+`reportDobjProp = &amp;reportDobj##name \`  
+`reportIobjProp = &amp;reportIobj##name \`  
+  
+Define a concrete TIAction with a specific base class.
+
+</div>
+
+<p><span id="DefineTopicAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTopicAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#560">560</a>]</p>
+
+<div class="desc">
+
+`DefineAction(name, TopicAction)`  
+*no description available*
+
+</div>
+
+<p><span id="DefineTopicTAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTopicTAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#557">557</a>]</p>
+
+<div class="desc">
+
+`DefineTActionSub(name, TopicTAction)`  
+*no description available*
+
+</div>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (sig, nam)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1318">1318</a>]</p>
+
+<div class="desc">
+
+`sig##Signal: Signal \`  
+`name = #@nam\`  
+`handleProp = &amp;handle_##sig`  
+Definitions for the Signals Extension
+
+</div>
+
+<p><span id="DMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DMsg (id, txt, args, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1038">1038</a>]</p>
+
+<div class="desc">
+
+`message(#@id, txt, ##args)`  
+DMsg() - default English library message cover macro.
+
+Whenever the library displays a message, it uses the DMsg() macro. The
+arguments are a message ID, and the default English message text to
+display. The message ID is a string that identifies the message; this is
+used to look for overriding customizations of the message. Refer to the
+CustomMessages class for information on customizing the standard library
+messages.
+
+In our approach, the library defines the default English text of the
+messages in-line, directly in the code. On the surface, this is contrary
+to standard practices in most modern programming projects, which strive
+to make translations easier by separating the message text from the
+program code, gathering all of the text into a central message file that
+can be replaced for each language. Despite appearances, we're
+accomplishing the same thing - but in our system, we have the advantage
+that we \*also\* define the default English message text in-line as part
+of the code it applies to. This makes it easier to read the code by
+keeping a message and its full context in one place; this way you don't
+have to shuttle between the code and message file.
+
+Here's how we accomplish the message separation required for
+translations, and also for games that wish to customize the library
+defaults. The DMsg() macro requires both the default English message
+text \*and\* an ID key for the message. The message display function
+receives both. The display function proceeds to look up the ID key in a
+translation table; if it finds an entry, it uses the version of the
+message in the translation table instead of the English default passed
+in via DMsg(). A language module can provide a message table that
+defines the language translations, and a game can provide a table that
+further customizes the library messages to fit its narrative style.
+
+There's one additional element. Translators and game authors need to be
+able to see all of the messages in one place, so they can create their
+tables. We would seem to lack that central list of English messages.
+Fortunately, by using a standard macro for each message, we can extract
+a comprehensive English message list automatically via a special tool.
+We use this as part of the library release process to create the English
+message file for reference.
+
+Note that the macro expansion includes the default English text only in
+English builds. It omits the text in non-English builds. This is to save
+space - we assume that the English messages will all be overridden
+anyway by each translated library version, so there's no point in
+including their text in the final compiled program.
+
+</div>
+
+<p><span id="DMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DMsg (id, txt, args, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1041">1041</a>]</p>
+
+<div class="desc">
+
+`message(#@id, nil, ##args)`  
+*no description available*
+
+</div>
+
+<p><span id="dobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#390">390</a>]</p>
+
+<div class="desc">
+
+`objFor(Dobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="dobjList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#94">94</a>]</p>
+
+<div class="desc">
+
+`nounList-&gt;dobjMatch`  
+Also add a couple of synonyms familiar froma adv3
+
+</div>
+
+<p><span id="exit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exit</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#697">697</a>]</p>
+
+<div class="desc">
+
+`throw new ExitSignal()`  
+a concise macro to throw an ExitSignal
+
+</div>
+
+<p><span id="exitAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exitAction</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#700">700</a>]</p>
+
+<div class="desc">
+
+`throw new ExitActionSignal()`  
+a concise macro to throw an ExitActionSignal
+
+</div>
+
+<p><span id="exitCommandLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exitCommandLine</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#863">863</a>]</p>
+
+<div class="desc">
+
+`throw new ExitCommandLineSignal()`  
+Terminate execution of the command line. This aborts the current
+command, including any remaining object iterations for the current
+action, and discards anything else on the command line.
+
+</div>
+
+<p><span id="feelResponseMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">feelResponseMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1264">1264</a>]</p>
+
+<div class="desc">
+
+`touchResponseMsg`  
+*no description available*
+
+</div>
+
+<p><span id="gAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#643">643</a>]</p>
+
+<div class="desc">
+
+`gAction.curAobj`  
+*no description available*
+
+</div>
+
+<p><span id="gAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#294">294</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.curAction)`  
+the Action object of the command being executed
+
+</div>
+
+<p><span id="gActionIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionIn (action, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#333">333</a>]</p>
+
+<div class="desc">
+
+`(gAction != nil \`  
+`&amp;&amp; (action#foreach/gAction.ofKind(action)/||/))`  
+is the current global action ANY of the specified actions?
+
+</div>
+
+<p><span id="gActionIs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionIs (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#329">329</a>]</p>
+
+<div class="desc">
+
+`(gAction != nil &amp;&amp; gAction.ofKind(action))`  
+Determine if the current global action is the specified action. Only the
+action prefix is needed - so use "Take" rather than "TakeAction" here.
+
+This tests to see if the current global action is an instance of the
+given action class - we test that it's an instance rather than the
+action class itself because the parser creates an instance of the action
+when it matches the action's syntax.
+
+</div>
+
+<p><span id="gActionList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#342">342</a>]</p>
+
+<div class="desc">
+
+`(nilToList(gCommand.action.actionList))`  
+the list of objects involved in the action just completed
+
+</div>
+
+<p><span id="gActionListObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionListObj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#353">353</a>]</p>
+
+<div class="desc">
+
+`(object: Thing \`  
+`{ \`  
+`plural = (gAction.reportList.length &gt; 1 || \`  
+`gAction.reportList[1].plural); \`  
+`isIt = (gAction.reportList.length == 1 ? \`  
+`gAction.reportList[1].isIt : nil);\`  
+`isHim = (gAction.reportList.length == 1 ? \`  
+`gAction.reportList[1].isHim : nil);\`  
+`isHer = (gAction.reportList.length == 1 ? \`  
+`gAction.reportList[1].isHer : nil);\`  
+`name = gActionListStr; \`  
+`qualified = true; \`  
+`} )`  
+an object that is singular or plural according to whether gActionList
+represents a single object of a plurality of objects, and which picks up
+the correct gender if there is only a single object.
+
+</div>
+
+<p><span id="gActionListStr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionListStr</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#345">345</a>]</p>
+
+<div class="desc">
+
+`makeListStr(gCommand.action.reportList, &amp;theName)`  
+a displaying string version of the above
+
+</div>
+
+<p><span id="gActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActor</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#279">279</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.curActor)`  
+the actor performing the current command
+
+</div>
+
+<p><span id="gAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#642">642</a>]</p>
+
+<div class="desc">
+
+`gAction.curAobj`  
+*no description available*
+
+</div>
+
+<p><span id="gCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gCommand</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#295">295</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.curCommand)`  
+*no description available*
+
+</div>
+
+<p><span id="gCommandToks"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gCommandToks</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1165">1165</a>]</p>
+
+<div class="desc">
+
+`(gCommand == nil || gCommand.verbProd == nil ? [] \`  
+`: gCommand.verbProd.tokenList.mapAll({t: getTokVal(t)}))`  
+Get the command tokens for the current command.
+
+</div>
+
+<p><span id="gDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#287">287</a>]</p>
+
+<div class="desc">
+
+`(gAction.curDobj)`  
+For convenience, define some macros that return the current direct and
+indirect objects from the current action. The library only uses direct
+and indirect objects, so games that define additional command objects
+will have to add their own similar macros for those.
+
+</div>
+
+<p><span id="gExitLister"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gExitLister</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#898">898</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.exitListerObj)`  
+the exit lister object - if the exits module isn't included in the game,
+this will be nil
+
+</div>
+
+<p><span id="gExtraHintManager"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gExtraHintManager</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#911">911</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.extraHintManagerObj)`  
+the extra hint manager object - if the hints module isn't included in
+the game, this will be nil
+
+</div>
+
+<p><span id="gHintManager"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gHintManager</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#904">904</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.hintManagerObj)`  
+the hint manager object - if the hints module isn't included in the
+game, this will be nil
+
+</div>
+
+<p><span id="gInformed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gInformed (key)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1255">1255</a>]</p>
+
+<div class="desc">
+
+`(getActor.informedAbout(key))`  
+has a topic key been revealed to an NPC through \&lt;.inform\&gt;?
+
+</div>
+
+<p><span id="gIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#288">288</a>]</p>
+
+<div class="desc">
+
+`(gAction.curIobj)`  
+*no description available*
+
+</div>
+
+<p><span id="gLastAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLastAction</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#316">316</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.lastAction)`  
+The previous action and command
+
+</div>
+
+<p><span id="gLastCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLastCommand</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#317">317</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.lastCommand)`  
+*no description available*
+
+</div>
+
+<p><span id="gLibMessages"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLibMessages</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#892">892</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.libMessageObj)`  
+The current library messages object. This is the source object for
+messages that don't logically relate to the actor carrying out the
+comamand. It's mostly used for meta-command replies, and for text
+fragments that are used to construct descriptions.
+
+This message object isn't generally used for parser messages or action
+replies - most of those come from the objects given by the current
+actor's getParserMessageObj() or getActionMessageObj(), respectively.
+
+By default, this is set to libMessages. The library never changes this
+itself, but a game can change this if it wants to switch to a new set of
+messages during a game. (If you don't need to change messages during a
+game, but simply want to customize some of the default messages, you
+don't need to set this variable - you can simply use 'modify
+libMessages' instead. This variable is designed for cases where you want
+to \*dynamically\* change the standard messages during the game.)
+
+</div>
+
+<p><span id="gLiteral"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLiteral</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#289">289</a>]</p>
+
+<div class="desc">
+
+`(gAction.literal)`  
+*no description available*
+
+</div>
+
+<p><span id="gLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLocation</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#377">377</a>]</p>
+
+<div class="desc">
+
+`(gPlayerChar.location)`  
+get the player character's location
+
+</div>
+
+<p><span id="gMessageParams"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gMessageParams (var, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1082">1082</a>]</p>
+
+<div class="desc">
+
+`(gAction.setMessageParams(var#foreach/#@var, var/,/))`  
+Some message processors add their own special parameters to messages,
+because they want to use expansion parameters (in the "{the dobj/him}"
+format) outside of the set of objects directly involved in the command.
+
+The Action method setMessageParam() lets you define such a parameter,
+but for convenience, we define this macro for setting one or more
+parameters whose names exactly match their local variable names. In
+other words, if you call this macro like this:
+
+gMessageParams(obj, cont)
+
+then you'll get one parameter with the text name 'obj' whose expansion
+will be the value of the local variable obj, and another with text name
+'cont' whose expansion is the value of the local variable cont.
+
+</div>
+
+<p><span id="gNumber"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gNumber</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#290">290</a>]</p>
+
+<div class="desc">
+
+`(gAction.num)`  
+*no description available*
+
+</div>
+
+<p><span id="goInstead"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">goInstead (dirn)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#486">486</a>]</p>
+
+<div class="desc">
+
+`doInstead(Go, dirn##Dir)`  
+Convenience macros for synthesizing travel in a given compass direction
+
+</div>
+
+<p><span id="goNested"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">goNested (dirn)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#487">487</a>]</p>
+
+<div class="desc">
+
+`doNested(Go, dirn##Dir)`  
+*no description available*
+
+</div>
+
+<p><span id="gOutStream"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gOutStream</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1060">1060</a>]</p>
+
+<div class="desc">
+
+`(outputManager.curOutputStream)`  
+*no description available*
+
+</div>
+
+<p><span id="gPlayerChar"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gPlayerChar</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#374">374</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.playerChar)`  
+get the current player character Actor object
+
+</div>
+
+<p><span id="gReveal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gReveal (key)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1245">1245</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.setRevealed(key))`  
+reveal a topic key, as though through \&lt;.reveal\&gt;
+
+</div>
+
+<p><span id="gRevealed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gRevealed (key)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1242">1242</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.revealedNameTab[key] != nil)`  
+has a topic key been revealed through \&lt;.reveal\&gt;?
+
+</div>
+
+<p><span id="gRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gRoom</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#386">386</a>]</p>
+
+<div class="desc">
+
+`(gPlayerChar.getOutermostRoom)`  
+get the player character's current room (which may or may not be the
+same as his/her location)
+
+</div>
+
+<p><span id="gSetKnown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gSetKnown (obj)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1251">1251</a>]</p>
+
+<div class="desc">
+
+`(gPlayerChar.setKnowsAbout(obj))`  
+mark a Topic/Thing as known/seen by the player character
+
+</div>
+
+<p><span id="gSetSeen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gSetSeen (obj)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1252">1252</a>]</p>
+
+<div class="desc">
+
+`(gPlayerChar.setHasSeen(obj))`  
+*no description available*
+
+</div>
+
+<p><span id="gTentativeDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTentativeDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#297">297</a>]</p>
+
+<div class="desc">
+
+`(gCommand.dobjs.mapAll({x: x.obj}).toList)`  
+*no description available*
+
+</div>
+
+<p><span id="gTentativeDobjIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTentativeDobjIn (lst)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#312">312</a>]</p>
+
+<div class="desc">
+
+`(gTentativeDobj.overlapsWith(lst))`  
+An alternative way of dealing with the potential object not yet resolved
+problem, by testing whether any of the objects in lst are in the
+Tentative Object List.
+
+</div>
+
+<p><span id="gTentativeIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTentativeIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#298">298</a>]</p>
+
+<div class="desc">
+
+`(gCommand.iobjs.mapAll({x: x.obj}).toList)`  
+*no description available*
+
+</div>
+
+<p><span id="gTentativeIobjIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTentativeIobjIn (lst)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#313">313</a>]</p>
+
+<div class="desc">
+
+`(gTentativeIobj.overlapsWith(lst))`  
+*no description available*
+
+</div>
+
+<p><span id="gTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#392">392</a>]</p>
+
+<div class="desc">
+
+`(gAction.curTopic)`  
+*no description available*
+
+</div>
+
+<p><span id="gTopicMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTopicMatch</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#394">394</a>]</p>
+
+<div class="desc">
+
+`(gTopic.getBestMatch)`  
+*no description available*
+
+</div>
+
+<p><span id="gTopicText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTopicText</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#393">393</a>]</p>
+
+<div class="desc">
+
+`(gTopic.getTopicText)`  
+*no description available*
+
+</div>
+
+<p><span id="gTravelActionIs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTravelActionIs (dirn)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#338">338</a>]</p>
+
+<div class="desc">
+
+`(gAction != nil &amp;&amp; gAction.ofKind(Travel) &amp;&amp; gAction.direction == dirn ## Dir)`  
+is the current action a Travel action going dirn
+
+</div>
+
+<p><span id="gTurns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTurns</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#380">380</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.totalTurns)`  
+get the current turn count
+
+</div>
+
+<p><span id="gUnreveal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gUnreveal (key)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1248">1248</a>]</p>
+
+<div class="desc">
+
+`(libGlobal.setUnrevealed(key))`  
+remove a topic key, as though through \&lt;.unreveal\&gt;
+
+</div>
+
+<p><span id="gVerbPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerbPhrase</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1169">1169</a>]</p>
+
+<div class="desc">
+
+`(gCommand.getCommandPhrase())`  
+Get the command phrase for the current command.
+
+</div>
+
+<p><span id="gVerbWord"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerbWord</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1161">1161</a>]</p>
+
+<div class="desc">
+
+`(gCommand == nil || gCommand.verbProd == nil ? '' \`  
+`: getTokVal(gCommand.verbProd.tokenList[1]))`  
+Get the first word the player entered for the current command.
+
+</div>
+
+<p><span id="gVerifyDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerifyDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#305">305</a>]</p>
+
+<div class="desc">
+
+`(gDobj ?? gTentativeDobj[1])`  
+the probable Action objects of the command being executed for use in
+verify routines when resolution of both objects may not be complete. If
+the gDobj or gIobj is non-nil, use that, otherwise use the first object
+in the tentative resolution list.
+
+</div>
+
+<p><span id="gVerifyIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerifyIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#306">306</a>]</p>
+
+<div class="desc">
+
+`(gIobj ?? gTentativeIobj[1])`  
+*no description available*
+
+</div>
+
+<p><span id="gVerifyList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerifyList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#651">651</a>]</p>
+
+<div class="desc">
+
+`gAction.verifyList`  
+Macros for use in verify routines, returning various kinds of verify
+results
+
+</div>
+
+<p><span id="hitResponseMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hitResponseMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1269">1269</a>]</p>
+
+<div class="desc">
+
+`attackResponseMsg`  
+*no description available*
+
+</div>
+
+<p><span id="IfDebug"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">IfDebug (key, code)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1054">1054</a>]</p>
+
+<div class="desc">
+
+`if (DebugCtl.enabled[#@key]) { code; } else { }`  
+Debugging. When we compile in development mode, we'll include a number
+of functions and methods that display information for debugging
+purposes. We omit these in release builds to keep the compiled file size
+smaller, and to avoid making it too easy for end users to snoop around
+in the program internals.
+
+</div>
+
+<p><span id="IfDebug"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">IfDebug (key, code)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1057">1057</a>]</p>
+
+<div class="desc">
+
+  
+*no description available*
+
+</div>
+
+<p><span id="illogical"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">illogical (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#655">655</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult(new VerifyResult(30, msg, nil, self))`  
+*no description available*
+
+</div>
+
+<p><span id="illogicalAlready"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">illogicalAlready (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#669">669</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult(new VerifyResult(40, msg, nil, self))`  
+IllogicalAlready doesn't do anything different from IllogicalNow in
+adv3Lite, but is supplied so that game authors familiar with adv3 can
+use it without getting a compilation error. It may also be slightly
+useful for documentary purposes to clarify why a verify routine in game
+code is ruling out an action.
+
+</div>
+
+<p><span id="illogicalNow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">illogicalNow (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#658">658</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult(new VerifyResult(40, msg, nil, self))`  
+*no description available*
+
+</div>
+
+<p><span id="illogicalSelf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">illogicalSelf (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#672">672</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult(new VerifyResult(20, msg, nil, self))`  
+*no description available*
+
+</div>
+
+<p><span id="implausible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">implausible (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#681">681</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult(new VerifyResult(35, msg, nil, self))`  
+*no description available*
+
+</div>
+
+<p><span id="inaccessible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inaccessible (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#678">678</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult(new VerifyResult(10, msg, nil, self))`  
+*no description available*
+
+</div>
+
+<p><span id="InitiateConversationReason"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InitiateConversationReason</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#847">847</a>]</p>
+
+<div class="desc">
+
+`1`  
+Define convenient named constants for use with ConvAgendaItem
+
+</div>
+
+<p><span id="input"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">input (x, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1277">1277</a>]</p>
+
+<div class="desc">
+
+`inputManager.getInputLine(x)`  
+*no description available*
+
+</div>
+
+<p><span id="iobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#391">391</a>]</p>
+
+<div class="desc">
+
+`objFor(Iobj, action)`  
+*no description available*
+
+</div>
+
+<p><span id="iobjList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#95">95</a>]</p>
+
+<div class="desc">
+
+`nounList-&gt;iobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="isEatable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isEatable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1133">1133</a>]</p>
+
+<div class="desc">
+
+`isEdible`  
+The library uses isEdible rather than isEatable, since edible is the
+more natural word to use, but strict consistency might have dictated
+isEatable, so we make it an effective synonym in case some game authors
+use it.
+
+</div>
+
+<p><span id="isPotable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isPotable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1140">1140</a>]</p>
+
+<div class="desc">
+
+`isDrinkable`  
+Conversely, authors alive to the Latin root of edible might try the
+latinate isPotable instead of isDrinable.
+
+</div>
+
+<p><span id="isTouchable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isTouchable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1265">1265</a>]</p>
+
+<div class="desc">
+
+`isFeelable`  
+*no description available*
+
+</div>
+
+<p><span id="literalAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">literalAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#85">85</a>]</p>
+
+<div class="desc">
+
+`literalPhrase-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="literalAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">literalAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#86">86</a>]</p>
+
+<div class="desc">
+
+`literalPhrase-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="literalDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">literalDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#83">83</a>]</p>
+
+<div class="desc">
+
+`literalPhrase-&gt;dobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="literalIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">literalIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#84">84</a>]</p>
+
+<div class="desc">
+
+`literalPhrase-&gt;iobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="logical"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">logical</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#653">653</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult (new VerifyResult(100, '', true, self))`  
+*no description available*
+
+</div>
+
+<p><span id="logicalRank"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">logicalRank (score)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#675">675</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult(new VerifyResult(score, '', true, self))`  
+*no description available*
+
+</div>
+
+<p><span id="M_DOWN"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_DOWN</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1097">1097</a>]</p>
+
+<div class="desc">
+
+`4`  
+*no description available*
+
+</div>
+
+<p><span id="M_PREV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_PREV</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1095">1095</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="M_QUIT"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_QUIT</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1094">1094</a>]</p>
+
+<div class="desc">
+
+`1`  
+The indices for the key values used to navigate menus, which are held in
+the keyList array of MenuItems.
+
+</div>
+
+<p><span id="M_SEL"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_SEL</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1098">1098</a>]</p>
+
+<div class="desc">
+
+`5`  
+*no description available*
+
+</div>
+
+<p><span id="M_UP"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_UP</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1096">1096</a>]</p>
+
+<div class="desc">
+
+`3`  
+*no description available*
+
+</div>
+
+<p><span id="MatchAdj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchAdj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#134">134</a>]</p>
+
+<div class="desc">
+
+`0x0002`  
+matched an adjective (the phrase contains at least one adjective)
+
+</div>
+
+<p><span id="MatchNoApprox"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchNoApprox</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#153">153</a>]</p>
+
+<div class="desc">
+
+`0x1000`  
+all words were matched WITHOUT character approximations (such as
+matching 'a' to 'a-umlaut')
+
+</div>
+
+<p><span id="MatchNoTrunc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchNoTrunc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#156">156</a>]</p>
+
+<div class="desc">
+
+`0x2000`  
+all words were matched WITHOUT truncation
+
+</div>
+
+<p><span id="MatchNoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchNoun</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#137">137</a>]</p>
+
+<div class="desc">
+
+`0x0004`  
+matched a noun (the phrase contains at least one noun word)
+
+</div>
+
+<p><span id="MatchPartMask"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchPartMask</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#146">146</a>]</p>
+
+<div class="desc">
+
+`0x0FFF`  
+mask to select only the part-of-speech flags
+
+</div>
+
+<p><span id="MatchPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchPhrase</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#143">143</a>]</p>
+
+<div class="desc">
+
+`0x0010`  
+matched a phrase
+
+</div>
+
+<p><span id="MatchPlural"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchPlural</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#140">140</a>]</p>
+
+<div class="desc">
+
+`0x0008`  
+matched a plural (the phrase contains at least one plural word)
+
+</div>
+
+<p><span id="MatchPrep"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchPrep</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#125">125</a>]</p>
+
+<div class="desc">
+
+`0x0001`  
+matched a preposition (the phrase contains at least one preposition)
+
+</div>
+
+<p><span id="MatchStrengthMask"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchStrengthMask</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#159">159</a>]</p>
+
+<div class="desc">
+
+`0xF000`  
+mask to select only the match-strength flags
+
+</div>
+
+<p><span id="MatchWeak"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchWeak</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#131">131</a>]</p>
+
+<div class="desc">
+
+`0x0001`  
+matched a weak token (which we'll treat as equivalent to matchimg a
+preposition).
+
+</div>
+
+<p><span id="more"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">more</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1276">1276</a>]</p>
+
+<div class="desc">
+
+`inputManager.pauseForMore()`  
+Define some macros to give abbreviated synonyms to inputManager method
+
+</div>
+
+<p><span id="Msg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Msg (id, txt)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#985">985</a>]</p>
+
+<div class="desc">
+
+`#@id, txt`  
+Msg() - define a custom message to override a library message. 'id' is
+the message ID, which is the same ID used for the DMsg() message that
+you wish to override. Do NOT use quotes around the ID - just enter it as
+though it were a variable name. 'txt' is the message text, as a
+single-quoted string.
+
+This is used in CustomMessages objects to define message overrides. See
+CustomMessages for full details.
+
+</div>
+
+<p><span id="multiAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">multiAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#76">76</a>]</p>
+
+<div class="desc">
+
+`nounList-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="multiAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">multiAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#77">77</a>]</p>
+
+<div class="desc">
+
+`nounList-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="multiDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">multiDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#72">72</a>]</p>
+
+<div class="desc">
+
+`nounList-&gt;dobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="multiIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">multiIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#73">73</a>]</p>
+
+<div class="desc">
+
+`nounList-&gt;iobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="nextrule"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextrule</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1298">1298</a>]</p>
+
+<div class="desc">
+
+`return (rulebook.contValue)`  
+*no description available*
+
+</div>
+
+<p><span id="nonObvious"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nonObvious</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#684">684</a>]</p>
+
+<div class="desc">
+
+`gAction.addVerifyResult(new VerifyResult(30, '', true, self, nil))`  
+*no description available*
+
+</div>
+
+<p><span id="nostop"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nostop</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1299">1299</a>]</p>
+
+<div class="desc">
+
+`return (rulebook.contValue)`  
+*no description available*
+
+</div>
+
+<p><span id="numberDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numberDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#78">78</a>]</p>
+
+<div class="desc">
+
+`numberPhrase-&gt;dobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="numericAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numericAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#90">90</a>]</p>
+
+<div class="desc">
+
+`numberPhrase -&gt; accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="numericAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numericAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#91">91</a>]</p>
+
+<div class="desc">
+
+`numberPhrase -&gt; accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="numericDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numericDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#88">88</a>]</p>
+
+<div class="desc">
+
+`numberPhrase -&gt; dobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="numericIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numericIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#89">89</a>]</p>
+
+<div class="desc">
+
+`numberPhrase -&gt; iobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="objFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objFor (which, action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#388">388</a>]</p>
+
+<div class="desc">
+
+`propertyset '*' ## #@which ## #@action`  
+*no description available*
+
+</div>
+
+<p><span id="reportAfter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reportAfter (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#396">396</a>]</p>
+
+<div class="desc">
+
+`gCommand.afterReports += msg`  
+*no description available*
+
+</div>
+
+<p><span id="rnull"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rnull</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1297">1297</a>]</p>
+
+<div class="desc">
+
+`return null`  
+Convenient abbreviations for rules that want to allow their RuleBook to
+continue processing more rules.
+
+</div>
+
+<p><span id="SelArbitrary"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelArbitrary</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#196">196</a>]</p>
+
+<div class="desc">
+
+`0x0002`  
+This object was chosen arbitrarily from a larger set, because the noun
+phrase construction says we should do so. This flag is set when the noun
+phrase is something TAKE A BOOK or TAKE ANY OF THE BOOKS.
+
+</div>
+
+<p><span id="SelDefault"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelDefault</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#210">210</a>]</p>
+
+<div class="desc">
+
+`0x0008`  
+We selected an object as a default. This is set when the player leaves
+out a noun phrase, but we can guess what was probably meant based on
+context: e.g., ASK ABOUT THE HOUSE is probably directed to Bob if Bob is
+the only person nearby.
+
+</div>
+
+<p><span id="SelDisambig"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelDisambig</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#189">189</a>]</p>
+
+<div class="desc">
+
+`0x0001`  
+The noun phrase required disambiguation, because more than one object
+was in scope that matched the noun phrase. We were able to figure out
+which one(s) the player meant from context, without having to ask the
+player for help.
+
+For example, there are two doors in the room, one open and one closed.
+The player types OPEN DOOR. It's fairly obvious that they must be
+talking about the closed door. So, we choose that object and set the
+Disambig flag.
+
+(Note that this flag specifically does NOT mean that we had to ask the
+user for help with the dreaded "Which do you mean..." question. It's
+kind of the opposite: it means that we had a noun phrase that was
+initially ambiguous, but that we managed to disambiguate it on our own.
+When we get the user involved, there's ambiguity \*before\* we ask the
+question, but the user's response removes the ambiguity by telling us
+exactly which alternative they intended. This flag indicates that we
+made an educated guess about what the user must have intended, without
+asking. The flag lets the parser tell the player about the guess, which
+is desirable because the guess is sometimes wrong.
+
+</div>
+
+<p><span id="SelPlural"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelPlural</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#202">202</a>]</p>
+
+<div class="desc">
+
+`0x0004`  
+The noun phrase that we matched was a manifestly plural construction,
+such as TAKE ALL or TAKE THE BOOKS.
+
+</div>
+
+<p><span id="SelProg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelProg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#218">218</a>]</p>
+
+<div class="desc">
+
+`0x1000`  
+This object was set internally by the program; it did not come from
+parsing any player input. This generally means that the whole command
+was constructed by the program, to handle an event or other internal
+processing, rather than by parsing player input.
+
+</div>
+
+<p><span id="setPastTense"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setPastTense (val)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#923">923</a>]</p>
+
+<div class="desc">
+
+`(gameMain.usePastTense = (val))`  
+Set the current narrative tense. Use val = true for past and val = nil
+for present.
+
+</div>
+
+<p><span id="singleAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#70">70</a>]</p>
+
+<div class="desc">
+
+`singleNoun-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="singleAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#71">71</a>]</p>
+
+<div class="desc">
+
+`singleNoun-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="singleDir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleDir</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#87">87</a>]</p>
+
+<div class="desc">
+
+`directionName-&gt;dirMatch`  
+*no description available*
+
+</div>
+
+<p><span id="singleDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#68">68</a>]</p>
+
+<div class="desc">
+
+`singleNoun-&gt;dobjMatch`  
+Verb rule noun phrase macros. These are convenience macros for
+specifying the most common noun phrase slots in the grammar templates
+for verb rules.
+
+</div>
+
+<p><span id="singleIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#69">69</a>]</p>
+
+<div class="desc">
+
+`singleNoun-&gt;iobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="stop"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stop</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1285">1285</a>]</p>
+
+<div class="desc">
+
+`return stopValue;`  
+Definitions for the rules.t extension
+
+</div>
+
+<p><span id="STRINGIZE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">STRINGIZE (x)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#266">266</a>]</p>
+
+<div class="desc">
+
+`_STRINGIZE(x)`  
+*no description available*
+
+</div>
+
+<p><span id="STRINGIZE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">STRINGIZE (x)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#971">971</a>]</p>
+
+<div class="desc">
+
+`_STRINGIZE(x)`  
+*no description available*
+
+</div>
+
+<p><span id="topicAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#81">81</a>]</p>
+
+<div class="desc">
+
+`topicPhrase-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="topicAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#82">82</a>]</p>
+
+<div class="desc">
+
+`topicPhrase-&gt;accMatch`  
+*no description available*
+
+</div>
+
+<p><span id="topicDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#79">79</a>]</p>
+
+<div class="desc">
+
+`topicPhrase-&gt;dobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="topicIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#80">80</a>]</p>
+
+<div class="desc">
+
+`topicPhrase-&gt;iobjMatch`  
+*no description available*
+
+</div>
+
+<p><span id="touchDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">touchDesc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1267">1267</a>]</p>
+
+<div class="desc">
+
+`feelDesc`  
+*no description available*
+
+</div>
+
+<p><span id="tSel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tSel (presVal, pastVal)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#929">929</a>]</p>
+
+<div class="desc">
+
+`(gameMain.usePastTense ? (pastVal) : (presVal))`  
+Shorthand macro for selecting one of two values depending on the current
+narrative tense.
+
+</div>
+
+<p><span id="VerbRule"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">VerbRule (tag)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#61">61</a>]</p>
+
+<div class="desc">
+
+`grammar predicate(tag):`  
+The VerbRule macro starts the definition of a verb grammar rule. The tag
+is just an identifying name for the rule, so that you can refer to it
+with 'replace' or 'modify'.
+
+</div>
+
+<p><span id="VideoLink"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">VideoLink</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1233">1233</a>]</p>
+
+<div class="desc">
+
+`2`  
+*no description available*
+
+</div>
+
+<p><span id="waitKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">waitKey (x, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1278">1278</a>]</p>
+
+<div class="desc">
+
+`inputManager.getKey(x)`  
+*no description available*
+
+</div>
+
+<p><span id="withPast"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">withPast (callback)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#937">937</a>]</p>
+
+<div class="desc">
+
+`(withTense(true, (callback)))`  
+*no description available*
+
+</div>
+
+<p><span id="withPresent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">withPresent (callback)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#936">936</a>]</p>
+
+<div class="desc">
+
+`(withTense(nil, (callback)))`  
+Temporarily override the current narrative tense and invoke a callback
+function.
+
+</div>
+
+<p><span id="_Enums_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Enums</span>  
+
+</div>
+
+<p><span id="ClosedGoal"></span> <span id="OpenGoal"></span>
+<span id="UndiscoveredGoal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ClosedGoal   OpenGoal   UndiscoveredGoal   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1202"><code class="language-plaintext highlighter-rouge">1202</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+Enums for Goals in the Hint system
+
+</div>
+
+<p><span id="feminine"></span> <span id="masculine"></span>
+<span id="neuter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">feminine   masculine   neuter   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#871"><code class="language-plaintext highlighter-rouge">871</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="FootnotesFull"></span> <span id="FootnotesMedium"></span>
+<span id="FootnotesOff"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FootnotesFull   FootnotesMedium   FootnotesOff   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1205"><code class="language-plaintext highlighter-rouge">1205</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+Enums for Footnotes
+
+</div>
+
+<p><span id="indirectLockable"></span> <span id="lockableWithKey"></span>
+<span id="lockableWithoutKey"></span> <span id="notLockable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indirectLockable   lockableWithKey   lockableWithoutKey   notLockable   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#869"><code class="language-plaintext highlighter-rouge">869</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+enums for different types of lock:
+
+</div>
+
+<p><span id="large"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">large   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1186"><code class="language-plaintext highlighter-rouge">1186</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+Large - the object is large enough that its details can be sensed from a
+distance or through an obscuring medium.
+
+</div>
+
+<p><span id="manyToMany"></span> <span id="manyToOne"></span>
+<span id="oneToMany"></span> <span id="oneToOne"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">manyToMany   manyToOne   oneToMany   oneToOne   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1308"><code class="language-plaintext highlighter-rouge">1308</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+Definitions for the relations.t extension
+
+</div>
+
+<p><span id="medium"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">medium   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1193"><code class="language-plaintext highlighter-rouge">1193</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+Medium - the object can be sensed at a distance or when obscured, but
+not in any detail. Most objects fall into this category. Note that
+things that are parts of large objects should normally be medium.
+
+</div>
+
+<p><span id="normalRelation"></span> <span id="reverseRelation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">normalRelation   reverseRelation   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1311"><code class="language-plaintext highlighter-rouge">1311</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="null"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">null   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1291"><code class="language-plaintext highlighter-rouge">1291</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+Null value to return from Rules that don't stop a RuleBook from
+continuing to consider rules.
+
+</div>
+
+<p><span id="OtherObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">OtherObject   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#956"><code class="language-plaintext highlighter-rouge">956</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+A special role for the "other" object of a two-object command. This can
+be used in certain contexts (such as remapTo) where a particular object
+role is implied by the context, and where the action involved has
+exactly two objects; OtherObject in such contexts means DirectObject
+when the implied role is IndirectObject, and vice versa.
+
+</div>
+
+<p><span id="rmcAskLiteral"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcAskLiteral   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#248"><code class="language-plaintext highlighter-rouge">248</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+reading a response to a prompt for a missing literal phrase
+
+</div>
+
+<p><span id="rmcAskObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcAskObject   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#245"><code class="language-plaintext highlighter-rouge">245</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+reading a response to a prompt for a missing object phrase
+
+</div>
+
+<p><span id="rmcCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcCommand   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#239"><code class="language-plaintext highlighter-rouge">239</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+reading a normal command line
+
+</div>
+
+<p><span id="rmcDisambig"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcDisambig   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#251"><code class="language-plaintext highlighter-rouge">251</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+reading a response to an interactive disambiguation prompt
+
+</div>
+
+<p><span id="rmcOops"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcOops   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#242"><code class="language-plaintext highlighter-rouge">242</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+reading an unknown word response, to check for an "oops" command
+
+</div>
+
+<p><span id="small"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">small   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1199"><code class="language-plaintext highlighter-rouge">1199</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="desc">
+
+Small - the object cannot be sensed at a distance at all. This is
+appropriate for detailed parts of medium-class objects.
+
+</div>
+
+<p><span id="_Templates_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Templates</span>  
+
+</div>
+
+<p><span id="Achievement"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Achievement</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#723">723</a>]</p>
+
+<div class="desc">
+
+`+points? "desc";`  
+An achievement defines its descriptive text. It can also optionally
+define the number of points it awards.
+
+</div>
+
+<p><span id="ActorState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ActorState</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#759">759</a>]</p>
+
+<div class="desc">
+
+`"specialDesc" 'stateDesc' | "stateDesc" ?;`  
+*no description available*
+
+</div>
+
+<p><span id="AltTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">AltTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#834">834</a>]</p>
+
+<div class="desc">
+
+`"topicResponse" | [eventList];`  
+AltTopics just specify the response text or list
+
+</div>
+
+<p><span id="AltTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">AltTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#835">835</a>]</p>
+
+<div class="desc">
+
+`[firstEvents] [eventList];`  
+*no description available*
+
+</div>
+
+<p><span id="ClockEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ClockEvent</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1211">1211</a>]</p>
+
+<div class="desc">
+
+`[eventTime];`  
+Template for ClockEvent
+
+</div>
+
+<p><span id="DefaultConsultTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefaultConsultTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#824">824</a>]</p>
+
+<div class="desc">
+
+`"topicResponse" | [eventList];`  
+*no description available*
+
+</div>
+
+<p><span id="DefaultThought"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefaultThought</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#825">825</a>]</p>
+
+<div class="desc">
+
+`"topicResponse" | [eventList];`  
+*no description available*
+
+</div>
+
+<p><span id="DefaultTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefaultTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#823">823</a>]</p>
+
+<div class="desc">
+
+`"topicResponse" | [eventList];`  
+*no description available*
+
+</div>
+
+<p><span id="Doer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Doer</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#840">840</a>]</p>
+
+<div class="desc">
+
+`'cmd';`  
+*no description available*
+
+</div>
+
+<p><span id="Door"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Door</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#746">746</a>]</p>
+
+<div class="desc">
+
+`'vocab' @location? "desc"? -&gt;otherSide;`  
+*no description available*
+
+</div>
+
+<p><span id="Door"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Door</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#747">747</a>]</p>
+
+<div class="desc">
+
+`-&gt;otherSide 'vocab' @location? "desc"?;`  
+*no description available*
+
+</div>
+
+<p><span id="Enterable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Enterable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#752">752</a>]</p>
+
+<div class="desc">
+
+`inherited -&gt;connector;`  
+*no description available*
+
+</div>
+
+<p><span id="Enterable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Enterable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#753">753</a>]</p>
+
+<div class="desc">
+
+`-&gt;connector inherited;`  
+*no description available*
+
+</div>
+
+<p><span id="EventList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">EventList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1119">1119</a>]</p>
+
+<div class="desc">
+
+`[eventList];`  
+templates for EventLists
+
+</div>
+
+<p><span id="EventListItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">EventListItem</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1340">1340</a>]</p>
+
+<div class="desc">
+
+`@myListObj? ~isReady? +minInterval? *maxFireCt? "invokeItem"? ;`  
+Definitions for the eventListItem Extension
+
+</div>
+
+<p><span id="ExtraHint"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ExtraHint</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1114">1114</a>]</p>
+
+<div class="desc">
+
+`+hintDelay? "hintText" | [eventList];`  
+A Template to facilitate the definition of ExtraHints. We can define it
+here and not in a header file since ExtraHints are only defined in this
+
+</div>
+
+<p><span id="Footnote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Footnote</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1208">1208</a>]</p>
+
+<div class="desc">
+
+`"desc";`  
+Template for Footnotes
+
+</div>
+
+<p><span id="Goal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Goal</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1106">1106</a>]</p>
+
+<div class="desc">
+
+`-&gt;closeWhenAchieved? 'title' 'heading'? [menuContents];`  
+templates for hint system objects
+
+</div>
+
+<p><span id="Hint"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Hint</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1107">1107</a>]</p>
+
+<div class="desc">
+
+`'hintText' [referencedGoals]?;`  
+*no description available*
+
+</div>
+
+<p><span id="MenuItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuItem</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1101">1101</a>]</p>
+
+<div class="desc">
+
+`'title' 'heading'?;`  
+some templates for defining menu items
+
+</div>
+
+<p><span id="MenuLongTopicItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuLongTopicItem</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1103">1103</a>]</p>
+
+<div class="desc">
+
+`'title' 'heading'? 'menuContents';`  
+*no description available*
+
+</div>
+
+<p><span id="MenuTopicItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuTopicItem</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1102">1102</a>]</p>
+
+<div class="desc">
+
+`'title' 'heading'? [menuContents];`  
+*no description available*
+
+</div>
+
+<p><span id="MiscTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MiscTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#828">828</a>]</p>
+
+<div class="desc">
+
+`"topicResponse" | [eventList];`  
+miscellanous topics just specify the response text or list
+
+</div>
+
+<p><span id="MiscTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MiscTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#829">829</a>]</p>
+
+<div class="desc">
+
+`[firstEvents] [eventList];`  
+*no description available*
+
+</div>
+
+<p><span id="NodeContinuationTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NodeContinuationTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#830">830</a>]</p>
+
+<div class="desc">
+
+`"topicResponse" | [eventList];`  
+*no description available*
+
+</div>
+
+<p><span id="NodeContinuationTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NodeContinuationTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#831">831</a>]</p>
+
+<div class="desc">
+
+`[firstEvents] [eventList];`  
+*no description available*
+
+</div>
+
+<p><span id="ProxyActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ProxyActor</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#838">838</a>]</p>
+
+<div class="desc">
+
+`@location;`  
+The ProxyActor template just specifies the location (i.e. the base
+Actor)
+
+</div>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#789">789</a>]</p>
+
+<div class="desc">
+
+` +matchScore? 'matchPattern' "topicResponse" | [eventList] ?;`  
+*no description available*
+
+</div>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#793">793</a>]</p>
+
+<div class="desc">
+
+` +matchScore? 'matchPattern' [firstEvents] [eventList];`  
+*no description available*
+
+</div>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#797">797</a>]</p>
+
+<div class="desc">
+
+` +matchScore? 'qtype' @matchObj | [matchObj] | 'matchPattern' "topicResponse" | [eventList] ?;`  
+*no description available*
+
+</div>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#803">803</a>]</p>
+
+<div class="desc">
+
+` +matchScore? 'qtype' @matchObj | [matchObj] | 'matchPattern' [firstEvents] [eventList];`  
+a ShuffledEventList version of the above
+
+</div>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#809">809</a>]</p>
+
+<div class="desc">
+
+` +matchScore? 'qtype' @matchObj | [matchObj] 'matchPattern' "topicResponse" | [eventList] ?;`  
+we can also include \*both\* the match object/list \*and\* pattern
+
+</div>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#816">816</a>]</p>
+
+<div class="desc">
+
+` +matchScore? 'qtype' @matchObj | [matchObj] 'matchPattern' [firstEvents] [eventList];`  
+a ShuffledEventList version of the above
+
+</div>
+
+<p><span id="Region"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Region</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#744">744</a>]</p>
+
+<div class="desc">
+
+`[rooms];`  
+*no description available*
+
+</div>
+
+<p><span id="Relation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Relation</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1309">1309</a>]</p>
+
+<div class="desc">
+
+`'name' 'reverseName'? @relationType? +reciprocal?;`  
+*no description available*
+
+</div>
+
+<p><span id="Room"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Room</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#741">741</a>]</p>
+
+<div class="desc">
+
+`'roomTitle' 'vocab' "desc"?;`  
+*no description available*
+
+</div>
+
+<p><span id="Room"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Room</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#742">742</a>]</p>
+
+<div class="desc">
+
+`'roomTitle' "desc"?;`  
+*no description available*
+
+</div>
+
+<p><span id="Rule"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Rule</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1301">1301</a>]</p>
+
+<div class="desc">
+
+`@location? &amp;action | [action]?;`  
+*no description available*
+
+</div>
+
+<p><span id="SensoryEmanation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SensoryEmanation</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#757">757</a>]</p>
+
+<div class="desc">
+
+`inherited [eventList]?;`  
+*no description available*
+
+</div>
+
+<p><span id="ShuffledEventList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ShuffledEventList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1120">1120</a>]</p>
+
+<div class="desc">
+
+`[firstEvents] [eventList];`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1147">1147</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; mentionA;`  
+String templates for room descriptions etc.
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1148">1148</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; mentionA;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1149">1149</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; mentionThe;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1150">1150</a>]</p>
+
+<div class="desc">
+
+`&lt;&lt; list of * is &gt;&gt; listStrIs;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1151">1151</a>]</p>
+
+<div class="desc">
+
+`&lt;&lt; list of * &gt;&gt; makeListInStr;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1152">1152</a>]</p>
+
+<div class="desc">
+
+`&lt;&lt; is list of * &gt;&gt; isListStr;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1153">1153</a>]</p>
+
+<div class="desc">
+
+`&lt;&lt; exclude * &gt;&gt; makeMentioned;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1214">1214</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; takeTime;`  
+String Templates for Objective Time module
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1215">1215</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; takeTime;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1216">1216</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; takeTime;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1217">1217</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; takeTime;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1219">1219</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; addTime;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1220">1220</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; addTime;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1221">1221</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; addTime;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1222">1222</a>]</p>
+
+<div class="desc">
+
+`&lt;&gt; addTime;`  
+*no description available*
+
+</div>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1334">1334</a>]</p>
+
+<div class="desc">
+
+`&lt;&lt;* by room&gt;&gt; byRoomFunc;`  
+*no description available*
+
+</div>
+
+<p><span id="StyleTag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">StyleTag</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#731">731</a>]</p>
+
+<div class="desc">
+
+`'tagName' 'openText'? 'closeText'?;`  
+Templates for style tags
+
+</div>
+
+<p><span id="SymConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymConnector</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1326">1326</a>]</p>
+
+<div class="desc">
+
+`-&gt;destination;`  
+Definitions for the SymConn Extension
+
+</div>
+
+<p><span id="SymConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymConnector</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1327">1327</a>]</p>
+
+<div class="desc">
+
+`@room1 @room2;`  
+*no description available*
+
+</div>
+
+<p><span id="SymPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymPassage</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1329">1329</a>]</p>
+
+<div class="desc">
+
+`-&gt;destination 'vocab' "desc"?;`  
+*no description available*
+
+</div>
+
+<p><span id="SymPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymPassage</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1330">1330</a>]</p>
+
+<div class="desc">
+
+`'vocab' -&gt;destination "desc"?;`  
+*no description available*
+
+</div>
+
+<p><span id="SymPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymPassage</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1331">1331</a>]</p>
+
+<div class="desc">
+
+`'vocab' @room1 @room2 "desc"?;`  
+*no description available*
+
+</div>
+
+<p><span id="SymPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymPassage</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1332">1332</a>]</p>
+
+<div class="desc">
+
+`'vocab' [rooms] "desc"?;`  
+*no description available*
+
+</div>
+
+<p><span id="Test"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Test</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#843">843</a>]</p>
+
+<div class="desc">
+
+`'testName' [testList] @location? [testHolding]?;`  
+Templates for use with test sequences
+
+</div>
+
+<p><span id="Test"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Test</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#844">844</a>]</p>
+
+<div class="desc">
+
+`'testName' [testList] [testHolding]? @location?;`  
+*no description available*
+
+</div>
+
+<p><span id="Thing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Thing</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#738">738</a>]</p>
+
+<div class="desc">
+
+`'vocab' @location? "desc"?;`  
+Object definition templates
+
+</div>
+
+<p><span id="Topic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Topic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#739">739</a>]</p>
+
+<div class="desc">
+
+`'vocab' @familiar?;`  
+*no description available*
+
+</div>
+
+<p><span id="TopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicEntry</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#764">764</a>]</p>
+
+<div class="desc">
+
+` +matchScore? @matchObj | [matchObj] | 'matchPattern' "topicResponse" | [eventList] ?;`  
+*no description available*
+
+</div>
+
+<p><span id="TopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicEntry</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#770">770</a>]</p>
+
+<div class="desc">
+
+` +matchScore? @matchObj | [matchObj] | 'matchPattern' [firstEvents] [eventList];`  
+a ShuffledEventList version of the above
+
+</div>
+
+<p><span id="TopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicEntry</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#776">776</a>]</p>
+
+<div class="desc">
+
+` +matchScore? @matchObj | [matchObj] 'matchPattern' "topicResponse" | [eventList] ?;`  
+we can also include \*both\* the match object/list \*and\* pattern
+
+</div>
+
+<p><span id="TopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicEntry</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#783">783</a>]</p>
+
+<div class="desc">
+
+` +matchScore? @matchObj | [matchObj] 'matchPattern' [firstEvents] [eventList];`  
+a ShuffledEventList version of the above
+
+</div>
+
+<p><span id="TopicGroup"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicGroup</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#761">761</a>]</p>
+
+<div class="desc">
+
+`+scoreBoost? 'convKeys' | [convKeys] ? ;`  
+*no description available*
+
+</div>
+
+<p><span id="TravelConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TravelConnector</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#749">749</a>]</p>
+
+<div class="desc">
+
+`'vocab'? @location? "desc"? -&gt;destination;`  
+*no description available*
+
+</div>
+
+<p><span id="TravelConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TravelConnector</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#750">750</a>]</p>
+
+<div class="desc">
+
+`-&gt;destination "travelDesc";`  
+*no description available*
+
+</div>
+
+<p><span id="Unthing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Unthing</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#755">755</a>]</p>
+
+<div class="desc">
+
+`'vocab' @location? 'notHereMsg'?;`  
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Rule</span><span class="type">class</span>
 
 [rules.t](../file/rules.t.html)\[[177](../source/rules.t.html#177)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ReplayString</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[2630](../source/actions.t.html#2630)\]

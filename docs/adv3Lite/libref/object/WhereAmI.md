@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WhereAmI</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[798](../source/newbie.t.html#798)\]

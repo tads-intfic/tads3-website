@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Button : <a
-href="thing-introduction.htm">Thing</a><br />
+href="thing-introduction.html">Thing</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="gadgets-introduction.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="labeleddial.htm">[Next]</a></td>
+href="gadgets-introduction.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="labeleddial.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -45,10 +47,10 @@ myButton : Button 'button' 'button' 
 ;  
   
 This is so simple that we have already used a couple of buttons: the
-first to open the [HiddenDoor](hiddendoor.htm#smallbrownbutton) in the
+first to open the [HiddenDoor](hiddendoor.html#smallbrownbutton) in the
 main cabin, and the second in the implementation of the
-[Autorectifying](keyedcontainer.htm#orangebutton) device. We'll continue
+[Autorectifying](keyedcontainer.html#orangebutton) device. We'll continue
 to use buttons on our various contraptions, notably on the
-[Tardis](dynamiclocations.htm) control console, but there's no need to
+[Tardis](dynamiclocations.html) control console, but there's no need to
 give another specific example here.  
   

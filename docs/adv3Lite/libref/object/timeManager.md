@@ -1,3 +1,5 @@
+---
+---
 <span class="title">timeManager</span><span class="type">object</span>
 
 [objtime.t](../file/objtime.t.html)\[[15](../source/objtime.t.html#15)\]

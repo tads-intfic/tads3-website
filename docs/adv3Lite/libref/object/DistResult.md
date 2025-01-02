@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DistResult</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1497](../source/parser.t.html#1497)\]

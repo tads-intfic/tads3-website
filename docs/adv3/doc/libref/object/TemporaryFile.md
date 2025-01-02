@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TemporaryFile</span><span class="type">class</span>
 
 [file.h](../file/file.h.html)\[[598](../source/file.h.html#598)\]

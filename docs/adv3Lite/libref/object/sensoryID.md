@@ -1,3 +1,5 @@
+---
+---
 <span class="title">sensoryID</span><span class="type">object</span>
 
 [sensory.t](../file/sensory.t.html)\[[23](../source/sensory.t.html#23)\]

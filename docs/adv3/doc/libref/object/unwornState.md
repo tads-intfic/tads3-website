@@ -1,3 +1,5 @@
+---
+---
 <span class="title">unwornState</span><span class="type">object</span>
 
 [en_us.t](../file/en_us.t.html)\[[3642](../source/en_us.t.html#3642)\]

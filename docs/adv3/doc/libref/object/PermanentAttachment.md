@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PermanentAttachment</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[3574](../source/extras.t.html#3574)\]

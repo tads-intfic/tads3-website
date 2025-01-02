@@ -1,0 +1,322 @@
+<p><span class="title">Openable</span><span class="type">class</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3484">3484</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Openable: a mix-in class that can be combined with an object's other
+superclasses to make the object respond to the verbs "open" and "close."
+We also add some extra features for other related verbs, such as a
+must-be-open precondition "look in" and "board".
+
+`class `**`Openable`**` :   `[`BasicOpenable`](../object/BasicOpenable.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Openable</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BasicOpenable<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Linkable<code class="language-plaintext highlighter-rouge">](../object/Linkable.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Openable</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Door<code class="language-plaintext highlighter-rouge">](../object/Door.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AutoClosingDoor<code class="language-plaintext highlighter-rouge">](../object/AutoClosingDoor.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Matchbook<code class="language-plaintext highlighter-rouge">](../object/Matchbook.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>OpenableContainer<code class="language-plaintext highlighter-rouge">](../object/OpenableContainer.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>KeyedContainer<code class="language-plaintext highlighter-rouge">](../object/KeyedContainer.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>LockableContainer`](../object/LockableContainer.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>descContentsLister<code class="language-plaintext highlighter-rouge">](#descContentsLister)</code>  <code class="language-plaintext highlighter-rouge">[</code>lockStatusReportable<code class="language-plaintext highlighter-rouge">](#lockStatusReportable)</code>  <code class="language-plaintext highlighter-rouge">[</code>openingLister<code class="language-plaintext highlighter-rouge">](#openingLister)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicOpenable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>cannotMoveThroughMsg<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html#cannotMoveThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>cannotTouchThroughMsg<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html#cannotTouchThroughMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiallyOpen<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html#initiallyOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen_<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html#isOpen_)</code>  <code class="language-plaintext highlighter-rouge">[</code>openDesc<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html#openDesc)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addInteriorReachableCond<code class="language-plaintext highlighter-rouge">](#addInteriorReachableCond)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Board)<code class="language-plaintext highlighter-rouge">](#dobjFor(Board))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Close)<code class="language-plaintext highlighter-rouge">](#dobjFor(Close))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(GetOutOf)<code class="language-plaintext highlighter-rouge">](#dobjFor(GetOutOf))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Lock)<code class="language-plaintext highlighter-rouge">](#dobjFor(Lock))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(LockWith)<code class="language-plaintext highlighter-rouge">](#dobjFor(LockWith))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(LookIn)<code class="language-plaintext highlighter-rouge">](#dobjFor(LookIn))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Open)<code class="language-plaintext highlighter-rouge">](#dobjFor(Open))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(Search)<code class="language-plaintext highlighter-rouge">](#dobjFor(Search))</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjFor(PourInto)<code class="language-plaintext highlighter-rouge">](#iobjFor(PourInto))</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjFor(PutIn)<code class="language-plaintext highlighter-rouge">](#iobjFor(PutIn))</code>  <code class="language-plaintext highlighter-rouge">[</code>openStatus<code class="language-plaintext highlighter-rouge">](#openStatus)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicOpenable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>initializeThing<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html#initializeThing)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html#isOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>makeOpen<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html#makeOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryImplicitRemoveObstructor<code class="language-plaintext highlighter-rouge">](../object/BasicOpenable.html#tryImplicitRemoveObstructor)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Linkable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>masterObject<code class="language-plaintext highlighter-rouge">](../object/Linkable.html#masterObject)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="descContentsLister"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">descContentsLister</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3492">3492</a>]</p>
+
+<div class="desc">
+
+Describe our contents using a special version of the contents lister, so
+that we add our open/closed status to the listing. The message we add is
+given by our openStatus method, so if all you want to change is the
+"it's open" status message, you can just override openStatus rather than
+providing a whole new lister.
+
+</div>
+
+<p><span id="lockStatusReportable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lockStatusReportable</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3519">3519</a>]</p>
+
+<div class="desc">
+
+By default, an Openable that's also a Lockable must be closed to be
+locked. This means that when it's open, the object is implicitly
+unlocked, in which case "It's unlocked" isn't worth mentioning when the
+description says "It's open."
+
+</div>
+
+<p><span id="openingLister"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openingLister</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3499">3499</a>]</p>
+
+<div class="desc">
+
+Contents lister to use when we're opening the object. This lister shows
+the items that are newly revealed when the object is opened.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addInteriorReachableCond"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addInteriorReachableCond (lst)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3668">3668</a>]</p>
+
+<div class="desc">
+
+Generate a precondition to make sure gActor can reach the interior of
+the container. We consider the inside reachable if either the actor is
+located inside the container, or the actor is outside and the container
+is open.
+
+</div>
+
+<p><span id="dobjFor(Board)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Board)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3716">3716</a>]</p>
+
+<div class="desc">
+
+must be open to get into a nested room
+
+</div>
+
+<p><span id="dobjFor(Close)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Close)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3590">3590</a>]</p>
+
+<div class="desc">
+
+show any special contents as well
+
+</div>
+
+<p><span id="dobjFor(GetOutOf)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(GetOutOf)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3706">3706</a>]</p>
+
+<div class="desc">
+
+must be open to get out of a nested room
+
+</div>
+
+<p><span id="dobjFor(Lock)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Lock)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3696">3696</a>]</p>
+
+<div class="desc">
+
+can't lock an openable that isn't closed
+
+</div>
+
+<p><span id="dobjFor(LockWith)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(LockWith)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3700">3700</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="dobjFor(LookIn)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(LookIn)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3608">3608</a>]</p>
+
+<div class="desc">
+
+show the default report
+
+</div>
+
+<p><span id="dobjFor(Open)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Open)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3524">3524</a>]</p>
+
+<div class="desc">
+
+Action handlers
+
+</div>
+
+<p><span id="dobjFor(Search)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Search)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3633">3633</a>]</p>
+
+<div class="desc">
+
+return the result
+
+</div>
+
+<p><span id="iobjFor(PourInto)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjFor(PourInto)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3689">3689</a>]</p>
+
+<div class="desc">
+
+make sure that our interior is reachable
+
+</div>
+
+<p><span id="iobjFor(PutIn)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjFor(PutIn)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3683">3683</a>]</p>
+
+<div class="desc">
+
+return the result
+
+</div>
+
+<p><span id="openStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openStatus ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3511">3511</a>]</p>
+
+<div class="desc">
+
+Get our "open status" message - this is a complete sentence saying that
+we're open or closed. By default, in English, we just say "it's open"
+(adjusted for number and gender, of course).
+
+Note that this message has to be a stand-alone independent clause. In
+particular note that we don't put any spacing after it, since we need to
+be able to add sentence-ending or clause-ending punctuation immediately
+after it.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

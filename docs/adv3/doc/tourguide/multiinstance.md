@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>MultiInstance : BaseMultiLoc<br />
 </strong></td>
-<td style="text-align: right;"><a href="multiloc.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="multifaceted.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="multiloc.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="multifaceted.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -18,7 +20,7 @@ href="multifaceted.htm">[Next]</a></td>
   
 The MultiInstance class is used for creating copies of objects,
 typically Decorations, in multiple locations. This can often be
-preferable to using [MultiLoc](multiloc.htm) for this purpose, since a
+preferable to using [MultiLoc](multiloc.html) for this purpose, since a
 MultiLoc is a single object, and thus (for example) will be lit for all
 locations even if it's lit only in one.  
   

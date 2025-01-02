@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ThrowDir</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1403](../source/actions.t.html#1403)\]

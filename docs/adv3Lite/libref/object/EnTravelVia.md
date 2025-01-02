@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EnTravelVia</span><span class="type">class</span>
 
 [grammar.t](../file/grammar.t.html)\[[2502](../source/grammar.t.html#2502)\]

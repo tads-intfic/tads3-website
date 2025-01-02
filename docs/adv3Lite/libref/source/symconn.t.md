@@ -1,3 +1,5 @@
+---
+---
 # symconn.t
 
 [documentation](../file/symconn.t.html)

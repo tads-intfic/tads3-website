@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> The Main Program
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> The Main Program
 Entrypoint  
-<span class="navnp"><a href="enum.htm" class="nav"><em>Prev:</em> Enumerators</a>
+<span class="navnp"><a href="enum.html" class="nav"><em>Prev:</em> Enumerators</a>
    
-<a href="inherit.htm" class="nav"><em>Next:</em> The Object Inheritance
+<a href="inherit.html" class="nav"><em>Next:</em> The Object Inheritance
 Model</a>     </span>
 
 </div>
@@ -150,7 +152,7 @@ This function is similar to main(), but takes an extra argument, which
 is a string giving the name of the saved-state file to be restored. The
 program is responsible for restoring the saved state, which it can do
 with the <span class="code">restoreGame()</span> function (see the
-[tads-gen](tadsgen.htm) function set).
+[tads-gen](tadsgen.html) function set).
 
 If the program doesn't define a mainRestore() function, the system
 simply displays an error message indicating that the program doesn't
@@ -159,7 +161,7 @@ support this option, and terminates the program.
 ## Low-level start-up
 
 The <span class="code">main()</span> function is actually defined in the
-[system library](lib.htm), not by the T3 VM itself. You'll almost always
+[system library](lib.html), not by the T3 VM itself. You'll almost always
 use the system library when working with TADS 3, so what's going on
 under the covers will probably be of no more than academic interest.
 Nonetheless, we'll now go into the low-level details of how the VM
@@ -179,7 +181,7 @@ At startup, the VM calls one of two functions:
 The standard system library includes definitions for \_main() and
 \_mainRestore(). The implementation of \_main() carries out the standard
 pre-initialization and run-time initialization processes (see the
-[initialization](init.htm) section for details), then invokes main().
+[initialization](init.html) section for details), then invokes main().
 \_mainRestore() does the same work, but invokes mainRestore() if it's
 defined, otherwise displays an error and aborts.
 
@@ -229,7 +231,7 @@ gives you the ability to customize as much of the library
 implementations as you need to, or even replace them completely.
 
 TADS 3 doesn't use TADS 2's <span class="code">init()</span> function,
-but it has a similar feature. Refer to [initialization](init.htm) for
+but it has a similar feature. Refer to [initialization](init.html) for
 information on how pre-initialization and run-time initialization work
 in TADS 3.
 
@@ -240,12 +242,12 @@ in TADS 3.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> The Main Program
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> The Main Program
 Entrypoint  
-<span class="navnp"><a href="enum.htm" class="nav"><em>Prev:</em> Enumerators</a>
+<span class="navnp"><a href="enum.html" class="nav"><em>Prev:</em> Enumerators</a>
    
-<a href="inherit.htm" class="nav"><em>Next:</em> The Object Inheritance
+<a href="inherit.html" class="nav"><em>Next:</em> The Object Inheritance
 Model</a>     </span>
 
 </div>

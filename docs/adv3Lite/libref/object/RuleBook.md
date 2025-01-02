@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RuleBook</span><span class="type">class</span>
 
 [rules.t](../file/rules.t.html)\[[20](../source/rules.t.html#20)\]

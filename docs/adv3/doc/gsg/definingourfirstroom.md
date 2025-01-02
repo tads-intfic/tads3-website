@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](startinganewgame.htm)
-  [\[Next\]](addinganobjecttotheroom.htm)*
+*[\[Previous\]](startinganewgame.html)
+  [\[Next\]](addinganobjecttotheroom.html)*
 
 ## Defining Our First Room
 
@@ -400,7 +402,7 @@ object on a single line.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](startinganewgame.htm)
-  [\[Next\]](addinganobjecttotheroom.htm)*
+*[\[Previous\]](startinganewgame.html)
+  [\[Next\]](addinganobjecttotheroom.html)*
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Exception</span><span class="type">class</span>
 
 [\_main.t](../file/_main.t.html)\[[657](../source/_main.t.html#657)\]

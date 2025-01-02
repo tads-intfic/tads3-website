@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AfterCommandReport</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[256](../source/report.t.html#256)\]

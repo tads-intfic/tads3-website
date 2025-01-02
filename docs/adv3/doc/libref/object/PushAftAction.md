@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PushAftAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[3000](../source/actions.t.html#3000)\]

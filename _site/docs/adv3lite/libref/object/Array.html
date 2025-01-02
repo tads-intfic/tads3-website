@@ -1,0 +1,387 @@
+<p><span class="title">Array</span><span class="type">class</span></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#15">15</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+'Array' intrinsic class
+
+`intrinsic class `**`Array`**` : `
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Array</code></strong><br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>append<code class="language-plaintext highlighter-rouge">](#append)</code>  <code class="language-plaintext highlighter-rouge">[</code>appendUnique<code class="language-plaintext highlighter-rouge">](#appendUnique)</code>  <code class="language-plaintext highlighter-rouge">[</code>applyAll<code class="language-plaintext highlighter-rouge">](#applyAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>copyFrom<code class="language-plaintext highlighter-rouge">](#copyFrom)</code>  <code class="language-plaintext highlighter-rouge">[</code>countOf<code class="language-plaintext highlighter-rouge">](#countOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>countWhich<code class="language-plaintext highlighter-rouge">](#countWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>fillValue<code class="language-plaintext highlighter-rouge">](#fillValue)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEach<code class="language-plaintext highlighter-rouge">](#forEach)</code>  <code class="language-plaintext highlighter-rouge">[</code>getUnique<code class="language-plaintext highlighter-rouge">](#getUnique)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexOf<code class="language-plaintext highlighter-rouge">](#indexOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>indexWhich<code class="language-plaintext highlighter-rouge">](#indexWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastIndexOf<code class="language-plaintext highlighter-rouge">](#lastIndexOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastIndexWhich<code class="language-plaintext highlighter-rouge">](#lastIndexWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastValWhich<code class="language-plaintext highlighter-rouge">](#lastValWhich)</code>  <code class="language-plaintext highlighter-rouge">[</code>length<code class="language-plaintext highlighter-rouge">](#length)</code>  <code class="language-plaintext highlighter-rouge">[</code>mapAll<code class="language-plaintext highlighter-rouge">](#mapAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>sort<code class="language-plaintext highlighter-rouge">](#sort)</code>  <code class="language-plaintext highlighter-rouge">[</code>subset<code class="language-plaintext highlighter-rouge">](#subset)</code>  <code class="language-plaintext highlighter-rouge">[</code>toList<code class="language-plaintext highlighter-rouge">](#toList)</code>  <code class="language-plaintext highlighter-rouge">[</code>valWhich<code class="language-plaintext highlighter-rouge">](#valWhich)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="append"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">append (val)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#158">158</a>]</p>
+
+<div class="desc">
+
+Append an element to the vector. This works just like insertAt() with a
+starting index one higher than the length of the vector. This has almost
+the same effect as the '+' operator, but treats a list value like any
+other value by simply inserting the list as a single new element (rather
+than appending each item in the list individually, as the '+' operator
+would).
+
+</div>
+
+<p><span id="appendUnique"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">appendUnique (val)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#131">131</a>]</p>
+
+<div class="desc">
+
+append the elements of the list or array 'val' to the elements of this
+array, then remove repeated elements in the result; returns a new array
+with the unique elements of the combination
+
+</div>
+
+<p><span id="applyAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">applyAll (func)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#61">61</a>]</p>
+
+<div class="desc">
+
+Apply a callback function to each element of the array. For each element
+of the array, invokes the callback, and replaces the element with the
+return value of the callback. Modifies the array in-place, and returns
+'self'.
+
+</div>
+
+<p><span id="copyFrom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">copyFrom (src, src_start, dst_start, cnt)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#38">38</a>]</p>
+
+<div class="desc">
+
+Copy from another array or list. Elements are copied from the source
+array or list starting at the element given by 'src_start', and are
+copied into 'self' starting at the index given by 'dst_start'. At most
+'cnt' values are copied, but we stop when we reach the last element of
+either the source or destination values.
+
+</div>
+
+<p><span id="countOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countOf (val)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#118">118</a>]</p>
+
+<div class="desc">
+
+count the number of elements with the given value
+
+</div>
+
+<p><span id="countWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countWhich (cond)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#121">121</a>]</p>
+
+<div class="desc">
+
+count the number of elements for which the callback returns true
+
+</div>
+
+<p><span id="fillValue"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fillValue (val, start?, cnt?)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#46">46</a>]</p>
+
+<div class="desc">
+
+fill with a given value, starting at the given element (the first
+element if not specified), and running for the given number of elements
+(the remaining elements of the array, if not not specified)
+
+</div>
+
+<p><span id="forEach"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEach (func)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#78">78</a>]</p>
+
+<div class="desc">
+
+Invoke the callback on each element, in order from first to last. No
+return value.
+
+</div>
+
+<p><span id="getUnique"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getUnique ( )</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#124">124</a>]</p>
+
+<div class="desc">
+
+create a new array consisting of the unique elements of this array
+
+</div>
+
+<p><span id="indexOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexOf (val)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#89">89</a>]</p>
+
+<div class="desc">
+
+get the index of the first match for the given value
+
+</div>
+
+<p><span id="indexWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indexWhich (cond)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#72">72</a>]</p>
+
+<div class="desc">
+
+Find the first element for which the given condition is true. Apply the
+callback function (which encodes the condition to evaluate) to each
+element in turn, starting with the first. For each element, if the
+callback returns nil, proceed to the next element; otherwise, stop and
+return the index of the element. If the callback never returns true for
+any element, we'll return nil.
+
+</div>
+
+<p><span id="lastIndexOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastIndexOf (val)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#98">98</a>]</p>
+
+<div class="desc">
+
+find the last element with the given value, and return its index
+
+</div>
+
+<p><span id="lastIndexWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastIndexWhich (cond)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#109">109</a>]</p>
+
+<div class="desc">
+
+Find the last element for which the condition is true, and return the
+index of the element. Applies the callback to each element in turn,
+starting with the last element and working backwards. For each element,
+if the callback returns nil, proceeds to the previous element;
+otherwise, stops and returns the index of the element. If the callback
+never returns true for any element, we'll return nil.
+
+</div>
+
+<p><span id="lastValWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastValWhich (cond)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#115">115</a>]</p>
+
+<div class="desc">
+
+Find the last element for which the condition is true, and return the
+value of the element
+
+</div>
+
+<p><span id="length"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">length ( )</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#28">28</a>]</p>
+
+<div class="desc">
+
+get the number of elements in the array
+
+</div>
+
+<p><span id="mapAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mapAll (func)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#86">86</a>]</p>
+
+<div class="desc">
+
+Apply the callback function to each element of this array, and return a
+new array consisting of the results. Effectively maps the array to a new
+array using the given function, leaving the original array unchanged.
+
+</div>
+
+<p><span id="sort"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sort (descending?, comparisonFunction?)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#148">148</a>]</p>
+
+<div class="desc">
+
+Sort the array in place; returns 'self'. If the 'descending' flag is
+provided and is not nil, we'll sort the array in descending order rather
+than ascending order.
+
+If the 'comparisonFunction' argument is provided, it must be a callback
+function; the callback takes two arguments, and returns an integer less
+than zero if the first argument value is less than the second, zero if
+they're equal, and an integer greater than zero if the first is greater
+than the second. If no 'comparisonFunction' argument is provided, or
+it's provided and its value is nil, we'll simply compare the array
+elements as ordinary values. The comparison function can be provided for
+caller-defined orderings, such as ordering a set of objects.
+
+</div>
+
+<p><span id="subset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">subset (func)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#53">53</a>]</p>
+
+<div class="desc">
+
+Select a subset of the array. Returns a new array consisting only of the
+elements of this array for which the callback function returns true.
+
+</div>
+
+<p><span id="toList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toList (start?, cnt?)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#25">25</a>]</p>
+
+<div class="desc">
+
+Create a list with the same elements as the array. If 'start' is
+specified, it's the index of the first element we store; we'll store
+elements starting at index 'start'. If 'cnt' is specified, it gives the
+maximum number of elements for the new list; by default, we'll store all
+of the elements from 'start' to the last element.
+
+</div>
+
+<p><span id="valWhich"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valWhich (cond)</code></p>
+
+<p><a href="../file/array.h.html">array.h</a>[<a href="../source/array.h.html#95">95</a>]</p>
+
+<div class="desc">
+
+Find the first element for which the given condition is true, and return
+the value of the element.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

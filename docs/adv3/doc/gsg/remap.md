@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](precond.htm)   [\[Next\]](messages.htm)*
+*[\[Previous\]](precond.html)   [\[Next\]](messages.html)*
 
 ### Remap
 
@@ -443,4 +445,4 @@ use remap to for that purpose (instead you'd have to write appropriate
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](precond.htm)   [\[Next\]](messages.htm)*
+*[\[Previous\]](precond.html)   [\[Next\]](messages.html)*

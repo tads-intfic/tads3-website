@@ -1,3 +1,5 @@
+---
+---
 <span class="title">displayCommandPromptRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[641](../source/sysrules.t.html#641)\]

@@ -1,3 +1,5 @@
+---
+---
 # E
 
 [**`eachTurn`**](../object/Scene.html#eachTurn) - method of

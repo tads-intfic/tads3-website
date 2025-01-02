@@ -1,0 +1,177 @@
+<p><span class="title">ConvType</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1950">1950</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A conversational action type descriptor. This descriptor is used in
+handleConversation() in Actor and ActorState to describe the type of
+conversational action we're performing. The type descriptor object
+encapsulates a set of information that tells us how to handle the
+action.
+
+`class `**`ConvType`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ConvType</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>askAboutConvType<code class="language-plaintext highlighter-rouge">](../object/askAboutConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>askForConvType<code class="language-plaintext highlighter-rouge">](../object/askForConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>byeConvType<code class="language-plaintext highlighter-rouge">](../object/byeConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandConvType<code class="language-plaintext highlighter-rouge">](../object/commandConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>consultConvType<code class="language-plaintext highlighter-rouge">](../object/consultConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>giveConvType<code class="language-plaintext highlighter-rouge">](../object/giveConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>helloConvType<code class="language-plaintext highlighter-rouge">](../object/helloConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiateConvType<code class="language-plaintext highlighter-rouge">](../object/initiateConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>noConvType<code class="language-plaintext highlighter-rouge">](../object/noConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>showConvType<code class="language-plaintext highlighter-rouge">](../object/showConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>tellAboutConvType<code class="language-plaintext highlighter-rouge">](../object/tellAboutConvType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>yesConvType<code class="language-plaintext highlighter-rouge">](../object/yesConvType.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>defaultResponseProp<code class="language-plaintext highlighter-rouge">](#defaultResponseProp)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicListProp<code class="language-plaintext highlighter-rouge">](#topicListProp)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownMsg<code class="language-plaintext highlighter-rouge">](#unknownMsg)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>afterResponse<code class="language-plaintext highlighter-rouge">](#afterResponse)</code>  <code class="language-plaintext highlighter-rouge">[</code>defaultResponse<code class="language-plaintext highlighter-rouge">](#defaultResponse)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="defaultResponseProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">defaultResponseProp</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1969">1969</a>]</p>
+
+<div class="desc">
+
+the default response property for this action
+
+</div>
+
+<p><span id="topicListProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicListProp</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1966">1966</a>]</p>
+
+<div class="desc">
+
+The TopicDatabase topic-list property. This is the property of the
+TopicDatabase object that we evaluate to get this list of topic entries
+to search for a match to the topic.
+
+</div>
+
+<p><span id="unknownMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unknownMsg</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1959">1959</a>]</p>
+
+<div class="desc">
+
+The unknown interlocutor message property. This is used when we try this
+conversational action without knowing whom we're talking to. For
+example, if we just say HELLO, and there's no one around to talk to,
+we'll use this as the default response. This can be a library message
+property, or simply a single-quoted string to display.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="afterResponse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterResponse (actor, otherActor)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1984">1984</a>]</p>
+
+<div class="desc">
+
+Perform any special follow-up action for this type of conversational
+action.
+
+</div>
+
+<p><span id="defaultResponse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">defaultResponse (db, otherActor, topic)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1978">1978</a>]</p>
+
+<div class="desc">
+
+Call the default response property on the given topic database. This
+invokes the property given by defaultResponseProp(). We have both the
+property and the method to call the property because this allows us to
+test for the existence of the property and to call it with the
+appropriate argument list.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

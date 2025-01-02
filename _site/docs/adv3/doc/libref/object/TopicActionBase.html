@@ -1,0 +1,277 @@
+<p><span class="title">TopicActionBase</span><span class="type">class</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5517">5517</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Base class for actions that include a "topic" phrase. This is a mix-in
+class that can be used in different types of topic actions. In all
+cases, the topic phrase must be assigned to the 'topicMatch' property in
+grammar rules based on this class.
+
+`class `**`TopicActionBase`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TopicActionBase</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TopicActionBase</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TopicAction<code class="language-plaintext highlighter-rouge">](../object/TopicAction.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TopicTAction<code class="language-plaintext highlighter-rouge">](../object/TopicTAction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskVagueAction<code class="language-plaintext highlighter-rouge">](../object/AskVagueAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>predicate(AskVague)<code class="language-plaintext highlighter-rouge">](../object/predicate(AskVague).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>predicate(TellVague)<code class="language-plaintext highlighter-rouge">](../object/predicate(TellVague).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ConsultAboutAction<code class="language-plaintext highlighter-rouge">](../object/ConsultAboutAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>predicate(ConsultAbout)<code class="language-plaintext highlighter-rouge">](../object/predicate(ConsultAbout).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>predicate(ConsultWhatAbout)<code class="language-plaintext highlighter-rouge">](../object/predicate(ConsultWhatAbout).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ConvTopicTAction<code class="language-plaintext highlighter-rouge">](../object/ConvTopicTAction.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskAboutAction<code class="language-plaintext highlighter-rouge">](../object/AskAboutAction.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>predicate(AskAbout)<code class="language-plaintext highlighter-rouge">](../object/predicate(AskAbout).html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>predicate(AskAboutImplicit)<code class="language-plaintext highlighter-rouge">](../object/predicate(AskAboutImplicit).html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>predicate(AskAboutWhat)<code class="language-plaintext highlighter-rouge">](../object/predicate(AskAboutWhat).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskForAction<code class="language-plaintext highlighter-rouge">](../object/AskForAction.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>predicate(AskFor)<code class="language-plaintext highlighter-rouge">](../object/predicate(AskFor).html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>predicate(AskWhomFor)<code class="language-plaintext highlighter-rouge">](../object/predicate(AskWhomFor).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TellAboutAction<code class="language-plaintext highlighter-rouge">](../object/TellAboutAction.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>predicate(TellAbout)<code class="language-plaintext highlighter-rouge">](../object/predicate(TellAbout).html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>predicate(TellAboutImplicit)<code class="language-plaintext highlighter-rouge">](../object/predicate(TellAboutImplicit).html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>predicate(TellAboutWhat)<code class="language-plaintext highlighter-rouge">](../object/predicate(TellAboutWhat).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TellVagueAction`](../object/TellVagueAction.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>topicList_<code class="language-plaintext highlighter-rouge">](#topicList_)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicQualResolver_<code class="language-plaintext highlighter-rouge">](#topicQualResolver_)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicResolver_<code class="language-plaintext highlighter-rouge">](#topicResolver_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>createTopicResolver<code class="language-plaintext highlighter-rouge">](#createTopicResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>getMessageParam<code class="language-plaintext highlighter-rouge">](#getMessageParam)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopic<code class="language-plaintext highlighter-rouge">](#getTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicQualifierResolver<code class="language-plaintext highlighter-rouge">](#getTopicQualifierResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicResolver<code class="language-plaintext highlighter-rouge">](#getTopicResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>reparseMatchAsTopic<code class="language-plaintext highlighter-rouge">](#reparseMatchAsTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveTopic<code class="language-plaintext highlighter-rouge">](#resolveTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>setResolvedTopic<code class="language-plaintext highlighter-rouge">](#setResolvedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>setTopicMatch<code class="language-plaintext highlighter-rouge">](#setTopicMatch)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="topicList_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicList_</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5708">5708</a>]</p>
+
+<div class="desc">
+
+the resolved topic object list
+
+</div>
+
+<p><span id="topicQualResolver_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicQualResolver_</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5705">5705</a>]</p>
+
+<div class="desc">
+
+the topic qualifier resolver
+
+</div>
+
+<p><span id="topicResolver_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicResolver_</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5711">5711</a>]</p>
+
+<div class="desc">
+
+my cached topic resolver
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="createTopicResolver"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createTopicResolver (issuingActor, targetActor)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5645">5645</a>]</p>
+
+<div class="desc">
+
+Create the topic resolver.
+
+</div>
+
+<p><span id="getMessageParam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getMessageParam (objName)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5657">5657</a>]</p>
+
+<div class="desc">
+
+Get a message parameter by name. We'll return the topic for the keyword
+'topic', and inherit the default handling for anything else.
+
+</div>
+
+<p><span id="getTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTopic ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5672">5672</a>]</p>
+
+<div class="desc">
+
+get the current topic
+
+</div>
+
+<p><span id="getTopicQualifierResolver"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTopicQualifierResolver (issuingActor, targetActor, reset)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5689">5689</a>]</p>
+
+<div class="desc">
+
+Get the resolver for qualifiers we find in the topic phrase (qualifiers
+that might need resolution include things like possessive adjectives and
+locational phrases).
+
+</div>
+
+<p><span id="getTopicResolver"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTopicResolver (issuingActor, targetActor, reset)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5628">5628</a>]</p>
+
+<div class="desc">
+
+get the topic resolver
+
+</div>
+
+<p><span id="reparseMatchAsTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reparseMatchAsTopic (topic, issuingActor, targetActor)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5588">5588</a>]</p>
+
+<div class="desc">
+
+Re-parse a match tree as a topic phrase. Returns a TopicProd match tree,
+if possible.
+
+</div>
+
+<p><span id="resolveTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveTopic (issuingActor, targetActor, results)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5523">5523</a>]</p>
+
+<div class="desc">
+
+Resolve the topic phrase. This resolves the match tree in out
+'topicMatch' property, and stores the result in topicList\_. This is for
+use in resolveNouns().
+
+</div>
+
+<p><span id="setResolvedTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setResolvedTopic (topic)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5539">5539</a>]</p>
+
+<div class="desc">
+
+Set the resolved topic to the given object list. This is for use in
+setResolvedObjects().
+
+</div>
+
+<p><span id="setTopicMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setTopicMatch (topic)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#5555">5555</a>]</p>
+
+<div class="desc">
+
+Set the topic match tree. This is for use in setObjectMatches().
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

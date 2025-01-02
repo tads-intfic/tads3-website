@@ -1,3 +1,5 @@
+---
+---
 <span class="title">advlite.h</span><span class="type">file</span>
 
 [source file](../source/advlite.h.html)

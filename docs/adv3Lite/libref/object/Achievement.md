@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Achievement</span><span class="type">class</span>
 
 [score.t](../file/score.t.html)\[[59](../source/score.t.html#59)\]

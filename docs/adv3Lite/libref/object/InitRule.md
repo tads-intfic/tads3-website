@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InitRule</span><span class="type">class</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[59](../source/sysrules.t.html#59)\]

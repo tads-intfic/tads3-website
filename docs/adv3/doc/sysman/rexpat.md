@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> RexPattern  
-<span class="navnp"><a href="objic.htm" class="nav"><em>Prev:</em> Object</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> RexPattern  
+<span class="navnp"><a href="objic.html" class="nav"><em>Prev:</em> Object</a>
    
-<a href="framedesc.htm" class="nav"><em>Next:</em> StackFrameDesc</a>
+<a href="framedesc.html" class="nav"><em>Next:</em> StackFrameDesc</a>
     </span>
 
 </div>
@@ -28,7 +30,7 @@ Every time the program performs a search involving a regular expression
 (using the [<span class="code">rexMatch()</span>,
 <span class="code">rexSearch()</span>, or
 <span class="code">rexReplace()</span>
-functions](tadsgen.htm#rexmatch)), the system must work with the
+functions](tadsgen.html#rexmatch)), the system must work with the
 compiled form of the search pattern. The simplest way to call these
 functions is to pass them a string giving the search pattern, but when
 the program does this, the system must compile the string, which
@@ -119,11 +121,11 @@ passed as the argument in the "new" expression that created the object).
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> RexPattern  
-<span class="navnp"><a href="objic.htm" class="nav"><em>Prev:</em> Object</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> RexPattern  
+<span class="navnp"><a href="objic.html" class="nav"><em>Prev:</em> Object</a>
    
-<a href="framedesc.htm" class="nav"><em>Next:</em> StackFrameDesc</a>
+<a href="framedesc.html" class="nav"><em>Next:</em> StackFrameDesc</a>
     </span>
 
 </div>

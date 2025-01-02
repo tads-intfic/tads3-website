@@ -1,3 +1,5 @@
+---
+---
 <span class="title">inputFilePage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[3471](../source/webui.t.html#3471)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(TypeLiteralOn)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2696](../source/grammar.t.html#2696)\]

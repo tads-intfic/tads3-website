@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PushTravelBarrier</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[3430](../source/travel.t.html#3430)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(FootnotesMedium)</span><span class="type">grammar</span>
 
 [footnote.t](../file/footnote.t.html)\[[322](../source/footnote.t.html#322)\]

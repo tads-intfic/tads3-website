@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="reviewing.htm" class="nav">Reviewing the Basics</a> \> Things
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> \> Things
 in Quotes  
-<span class="navnp"><a href="inherit.htm" class="nav"><em>Prev:</em> Inheritance,
+<span class="navnp"><a href="inherit.html" class="nav"><em>Prev:</em> Inheritance,
 Modification and Overriding</a>    
-<a href="revisit.htm" class="nav"><em>Next:</em> Heidi Revisited</a>    
+<a href="revisit.html" class="nav"><em>Next:</em> Heidi Revisited</a>    
 </span>
 
 </div>
@@ -48,7 +50,7 @@ parts of the string, or changing parts of it, or changing its case, or
 searching it for the presence of a sub-string), whereas a double-quoted
 string is simply an instruction to the game to display the text it
 contains (as we saw in the discussion of the [double-quoted string
-statement](methods.htm#dquote) above).
+statement](methods.html#dquote) above).
 
 This apparently simple distinction is, however, apparently blurred by
 the fact that some object properties are defined as single-quoted
@@ -264,7 +266,7 @@ data that can be manipulated, but beyond mentioning string concatenation
 (with the + operator) in a previous part of this chapter, we haven't
 gone into any detail how. When you're ready to find out, you'll find
 most of the answers in the section on "String" in Part IV of the [TADS 3
-System Manual](../sysman.htm), but that's something you can well afford
+System Manual](../sysman.html), but that's something you can well afford
 to leave for now.
 
   
@@ -291,12 +293,12 @@ make some improvements.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="reviewing.htm" class="nav">Reviewing the Basics</a> \> Things
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> \> Things
 in Quotes  
-<span class="navnp"><a href="inherit.htm" class="nav"><em>Prev:</em> Inheritance,
+<span class="navnp"><a href="inherit.html" class="nav"><em>Prev:</em> Inheritance,
 Modification and Overriding</a>    
-<a href="revisit.htm" class="nav"><em>Next:</em> Heidi Revisited</a>    
+<a href="revisit.html" class="nav"><em>Next:</em> Heidi Revisited</a>    
 </span>
 
 </div>

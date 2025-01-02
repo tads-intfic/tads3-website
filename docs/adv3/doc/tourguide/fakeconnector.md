@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,17 +9,17 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>FakeConnector : <a
-href="notravelmessage.htm">NoTravelMessage</a><br />
+href="notravelmessage.html">NoTravelMessage</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="outdoorroom.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="deadendconnector.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="outdoorroom.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="deadendconnector.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-The room [outsideCave](outdoorroom.htm) was defined previously. Its
+The room [outsideCave](outdoorroom.html) was defined previously. Its
 description refers to a valley to the north and a car park to the east.
 We do not want the Player Character to go wandering off in those
 directions, but there should be a reasonable response to any attempts to
@@ -57,18 +59,18 @@ Note that we once again use a template to abbreviate the business of
 writing the FakeConnector definition. The property in double quotes that
 we are defining for each FakeConnector here is in fact its travelDesc
 property (defined by the [NoTravelMessage
-template](notravelmessagetemplate.htm), which FakeConnector inherits).
+template](notravelmessagetemplate.html), which FakeConnector inherits).
 This is called by the connector's showTravelDesc() method only for the
 Player Character (so that, for example, the message will not be shown
 repeatedly if the PC is being accompanied by one or more NPCs), while
 showTravelDesc() is in turn invoked by noteTraversal(traveler). The last
 of these methods - noteTraversal - is defined for all TravelConnectors,
 whereas the other two - travelDesc and showTravelDesc - are defined on
-[TravelWithMessage](travelwithmessage.htm) and classes that descend from
+[TravelWithMessage](travelwithmessage.html) and classes that descend from
 it.  
   
 The FakeConnector works very like the
-[NoTravelMessage](notravelmessage.htm). The only difference is that a
+[NoTravelMessage](notravelmessage.html). The only difference is that a
 direction attached to a NoTravelMessage won't be included in a list of
 exits (e.g. in response to an EXITS command, or in the status line),
 whereas that attached to a FakeConnector will. A NoTravelMessage should

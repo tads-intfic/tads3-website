@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ScriptString</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[2384](../source/actions.t.html#2384)\]

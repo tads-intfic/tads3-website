@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SwitchableViewport</span><span class="type">class</span>
 
 [viewport.t](../file/viewport.t.html)\[[137](../source/viewport.t.html#137)\]

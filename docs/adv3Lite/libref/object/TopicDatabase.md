@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TopicDatabase</span><span class="type">class</span>
 
 [topicEntry.t](../file/topicEntry.t.html)\[[186](../source/topicEntry.t.html#186)\]

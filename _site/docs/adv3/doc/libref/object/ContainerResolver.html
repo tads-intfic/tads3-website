@@ -1,0 +1,164 @@
+<p><span class="title">ContainerResolver</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3288">3288</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Container Resolver. This is a proxy for the main qualifier resolver that
+prefers to match objects that are plausible in the sense that they
+contain something in the tentative resolution of the main list.
+
+`class `**`ContainerResolver`**` :   `[`BasicContainerResolver`](../object/BasicContainerResolver.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ContainerResolver</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BasicContainerResolver<code class="language-plaintext highlighter-rouge">](../object/BasicContainerResolver.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ProxyResolver<code class="language-plaintext highlighter-rouge">](../object/ProxyResolver.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>mainList<code class="language-plaintext highlighter-rouge">](#mainList)</code>  <code class="language-plaintext highlighter-rouge">[</code>mainListText<code class="language-plaintext highlighter-rouge">](#mainListText)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicContainerResolver</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isSubResolver<code class="language-plaintext highlighter-rouge">](../object/BasicContainerResolver.html#isSubResolver)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterAmbiguousEquivalents<code class="language-plaintext highlighter-rouge">](#filterAmbiguousEquivalents)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicContainerResolver</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>filterAmbiguousNounPhrase<code class="language-plaintext highlighter-rouge">](../object/BasicContainerResolver.html#filterAmbiguousNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>getQualifierResolver<code class="language-plaintext highlighter-rouge">](../object/BasicContainerResolver.html#getQualifierResolver)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ProxyResolver</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getPossessiveResolver<code class="language-plaintext highlighter-rouge">](../object/ProxyResolver.html#getPossessiveResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>propNotDefined<code class="language-plaintext highlighter-rouge">](../object/ProxyResolver.html#propNotDefined)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="mainList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mainList</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3330">3330</a>]</p>
+
+<div class="desc">
+
+the tentative match list for the main phrase we're qualifying
+
+</div>
+
+<p><span id="mainListText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mainListText</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3333">3333</a>]</p>
+
+<div class="desc">
+
+the text of the main phrase we're qualifying
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (mainList, mainText, origResolver)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3289">3289</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="filterAmbiguousEquivalents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterAmbiguousEquivalents (lst, np)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3300">3300</a>]</p>
+
+<div class="desc">
+
+filter ambiguous equivalents
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

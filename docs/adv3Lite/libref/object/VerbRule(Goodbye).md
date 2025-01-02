@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Goodbye)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2015](../source/grammar.t.html#2015)\]

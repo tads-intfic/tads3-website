@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VagueTravel</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[755](../source/actions.t.html#755)\]

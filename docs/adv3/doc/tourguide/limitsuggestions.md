@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>limitSuggestions<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="suggestedtopictree.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="conversationnodes-overview.htm">[Next]</a></td>
+href="suggestedtopictree.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="conversationnodes-overview.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -55,7 +57,7 @@ TopicEntries directly belonging to that ActorState will be suggested. In
 the above example we could add the line limitSuggestions = true to the
 bobChattingState, and the Mavis topic would not then be suggested when
 bob is in that state. Similarly, you can set limitSuggestions to true on
-a [ConvNode](convnode.htm) to ensure that only the TopicEntries within
+a [ConvNode](convnode.html) to ensure that only the TopicEntries within
 that ConvNode are suggested (we'll be coming to ConvNodes next).  
   
 The full explanation of limitSuggestions given in the library source

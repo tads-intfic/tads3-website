@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TurnStartRule</span><span class="type">class</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[544](../source/sysrules.t.html#544)\]

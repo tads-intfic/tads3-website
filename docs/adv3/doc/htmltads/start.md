@@ -1,3 +1,5 @@
+---
+---
 Getting Started with HTML in TADS
 
 # Getting Started with HTML in TADS
@@ -17,7 +19,7 @@ TADS features with HTML formatting.
 
 We also won't attempt to provide a detailed manual on HTML itself. The
 HTML that TADS uses is based on standard HTML (version 3.2, to be
-precise), with a few [deviations from standard HTML](deviate.htm), so
+precise), with a few [deviations from standard HTML](deviate.html), so
 you can learn the HTML that TADS uses from any of the numerous books or
 web pages that describe standard HTML 3.2.
 
@@ -348,7 +350,7 @@ have the suffix ".png", and MNG animated image files, which have the
 suffix ".mng").
 
 **\<SOUND SRC='file.wav'\>** - play a sound. The [sound system
-documentation](sound.htm) describes the details of this TADS extension
+documentation](sound.html) describes the details of this TADS extension
 to standard HTML. HTML TADS can play "WAV" files (an uncompressed
 digitized audio format), MIDI files, MP3's, and Ogg Vorbis compressed
 digitized audio files.

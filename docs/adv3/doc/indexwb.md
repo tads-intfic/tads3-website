@@ -1,3 +1,5 @@
+---
+---
 TADS 3 Bookshelf
 
 <div class="title">
@@ -12,9 +14,9 @@ TADS 3 Bookshelf
 
 ------------------------------------------------------------------------
 
-[<img src="qstart_cover.jpg" class="book" />](T3QuickStart.htm)
+[<img src="qstart_cover.jpg" class="book" />](T3QuickStart.html)
 
-<a href="T3QuickStart.htm" class="title" data-"="">TADS 3 Quick Start
+<a href="T3QuickStart.html" class="title" data-"="">TADS 3 Quick Start
 Guide</a>  
 by Eric Eve
 
@@ -66,7 +68,7 @@ to review the details of particular TADS features.
 
 *This book refers to a collection of sample games, which are available
 as a separate download -
-<a href="http://www.tads.org/learning_tads3_sample_games.htm"
+<a href="http://www.tads.org/learning_tads3_sample_games.html"
 class="visible">click here</a> to download.*
 
 ------------------------------------------------------------------------
@@ -86,9 +88,9 @@ want to make a printed copy.*
 
 ------------------------------------------------------------------------
 
-[<img src="syscover.jpg" class="book" />](sysman/cover.htm)
+[<img src="syscover.jpg" class="book" />](sysman/cover.html)
 
-<a href="sysman/cover.htm" class="title">TADS 3 System Manual</a>  
+<a href="sysman/cover.html" class="title">TADS 3 System Manual</a>  
 by Michael Roberts
 
 This book is a reference to the TADS 3 language and the T3 VM, including
@@ -98,9 +100,9 @@ details on the system.
 
 ------------------------------------------------------------------------
 
-[<img src="techcover.jpg" class="book" />](techman/cover.htm)
+[<img src="techcover.jpg" class="book" />](techman/cover.html)
 
-<a href="techman/cover.htm" class="title">TADS 3 Technical Manual</a>  
+<a href="techman/cover.html" class="title">TADS 3 Technical Manual</a>  
 edited by Michael Roberts
 
 This is a collection of technical articles about key aspects of the TADS
@@ -121,9 +123,9 @@ library source code.
 
 ------------------------------------------------------------------------
 
-[<img src="htads_cover.jpg" class="book" />](htmltads/intro.htm)
+[<img src="htads_cover.jpg" class="book" />](htmltads/intro.html)
 
-<a href="htmltads/intro.htm" class="title">Introduction to HTML TADS</a>  
+<a href="htmltads/intro.html" class="title">Introduction to HTML TADS</a>  
 by Michael Roberts
 
 TADS 3 uses a variant of HTML as its formatting language. These notes
@@ -142,15 +144,15 @@ HTML.)
 
 <div class="indent">
 
-[**TADS 3 System Change History**](t3changes.htm). This is a
+[**TADS 3 System Change History**](t3changes.html). This is a
 chronological log of changes to the TADS 3 language, tools, and Virtual
 Machine.
 
-[**Adv3 Library Change History**](../lib/adv3/changes.htm). A
+[**Adv3 Library Change History**](../lib/adv3/changes.html). A
 chronological log of changes to Adv3, the standard TADS 3 Adventure
 Framework Library.
 
-[**HTML TADS Interpreter and Workbench Change History**](changes.htm).
+[**HTML TADS Interpreter and Workbench Change History**](changes.html).
 This is a log of changes to the HTML TADS user interface, which includes
 the HTML TADS Interpreter and the Workbench development environment on
 Windows.

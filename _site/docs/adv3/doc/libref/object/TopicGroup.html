@@ -1,0 +1,207 @@
+<p><span class="title">TopicGroup</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2587">2587</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A TopicGroup is an abstract container for a set of TopicEntry objects.
+The purpose of the group object is to apply a common "is active"
+condition to all of the topics within the group.
+
+The isActive condition of the TopicGroup is effectively AND'ed with any
+other conditions on the nested TopicEntry's. In other words, a
+TopicEntry within the TopicGroup is active if the TopicEntry would
+otherwise be acive AND the TopicGroup is active.
+
+TopicEntry objects are associated with the group via the 'location'
+property - set the location of the TopicEntry to point to the containing
+TopicGroup.
+
+You can put a TopicGroup anywhere a TopicEntry could go - directly
+inside an Actor, inside an ActorState, or within another TopicGroup. The
+topic entries within a topic group act as though they were directly in
+the topic group's container.
+
+`class `**`TopicGroup`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TopicGroup</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchScoreAdjustment<code class="language-plaintext highlighter-rouge">](#matchScoreAdjustment)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupScoreAdjustment<code class="language-plaintext highlighter-rouge">](#topicGroupScoreAdjustment)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addSuggestedTopic<code class="language-plaintext highlighter-rouge">](#addSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicOwner<code class="language-plaintext highlighter-rouge">](#getTopicOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupActive<code class="language-plaintext highlighter-rouge">](#topicGroupActive)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="isActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActive</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2593">2593</a>]</p>
+
+<div class="desc">
+
+The group "active" condition - each instance should override this to
+specify the condition that applies to all of the TopicEntry objects
+within the group.
+
+</div>
+
+<p><span id="matchScoreAdjustment"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchScoreAdjustment</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2600">2600</a>]</p>
+
+<div class="desc">
+
+The \*adjustment\* to the match score for topic entries contained within
+this group. This is usually a positive number, so that it boosts the
+match strength of the child topics.
+
+</div>
+
+<p><span id="topicGroupScoreAdjustment"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicGroupScoreAdjustment</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2622">2622</a>]</p>
+
+<div class="desc">
+
+Get my score adjustment. We'll return our own basic score adjustment
+plus the cumulative adjustment for our containers.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addSuggestedTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addSuggestedTopic (topic)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2629">2629</a>]</p>
+
+<div class="desc">
+
+add a suggested topic - we'll pass this up to our container
+
+</div>
+
+<p><span id="addTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addTopic (topic)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2626">2626</a>]</p>
+
+<div class="desc">
+
+add a topic - we'll simply add the topic directly to our container
+
+</div>
+
+<p><span id="getTopicOwner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTopicOwner ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2606">2606</a>]</p>
+
+<div class="desc">
+
+the topic owner for any topic entries within the group is the topic
+owner taken from the group's own location
+
+</div>
+
+<p><span id="topicGroupActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicGroupActive ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2609">2609</a>]</p>
+
+<div class="desc">
+
+are TopicEntry objects within the group active?
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

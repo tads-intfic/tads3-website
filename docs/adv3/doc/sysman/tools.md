@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| The Tools  
-<span class="navnp"><a href="hello.htm" class="nav"><em>Prev:</em> Hello, World!</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| The Tools  
+<span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello, World!</a>
    
-<a href="build.htm" class="nav"><em>Next:</em> Compiling and Linking</a>
+<a href="build.html" class="nav"><em>Next:</em> Compiling and Linking</a>
     </span>
 
 </div>
@@ -23,10 +25,10 @@ TADS 3 programs: the compiler and the interpreter.
 
 <div class="sectoc">
 
-[Compiling and Linking](build.htm)  
-[Universal Paths](univpath.htm)  
-[Stand-Alone Executables](aloneexe.htm)  
-[Running Programs: The Interpreter](terp.htm)  
+[Compiling and Linking](build.html)  
+[Universal Paths](univpath.html)  
+[Stand-Alone Executables](aloneexe.html)  
+[Running Programs: The Interpreter](terp.html)  
 
 </div>
 
@@ -37,10 +39,10 @@ TADS 3 programs: the compiler and the interpreter.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| The Tools  
-<span class="navnp"><a href="hello.htm" class="nav"><em>Prev:</em> Hello, World!</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| The Tools  
+<span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello, World!</a>
    
-<a href="build.htm" class="nav"><em>Next:</em> Compiling and Linking</a>
+<a href="build.html" class="nav"><em>Next:</em> Compiling and Linking</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">mainDisambigPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`mainDisambigPhrase(main)`](../object/mainDisambigPhrase(main).html)**` :   `[`DisambigProduction`](../object/DisambigProduction.html)

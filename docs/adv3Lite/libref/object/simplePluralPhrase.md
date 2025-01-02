@@ -1,3 +1,5 @@
+---
+---
 <span class="title">simplePluralPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`simplePluralPhrase(adjAndOnes)`](../object/simplePluralPhrase(adjAndOnes).html)**` :   `[`Production`](../object/Production.html)

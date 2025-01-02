@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DynamicProd</span><span class="type">class</span>
 
 [gramprod.t](../file/gramprod.t.html)\[[156](../source/gramprod.t.html#156)\]

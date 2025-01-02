@@ -1,3 +1,5 @@
+---
+---
 <span class="title">footnote.t</span><span class="type">file</span>
 
 [source file](../source/footnote.t.html)

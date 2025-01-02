@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Regular
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Regular
 Expressions  
-<span class="navnp"><a href="tadsgen.htm" class="nav"><em>Prev:</em> tads-gen Function
+<span class="navnp"><a href="tadsgen.html" class="nav"><em>Prev:</em> tads-gen Function
 Set</a>    
-<a href="tadsio.htm" class="nav"><em>Next:</em> tads-io Function Set</a>
+<a href="tadsio.html" class="nav"><em>Next:</em> tads-io Function Set</a>
     </span>
 
 </div>
@@ -46,9 +48,9 @@ regular expression novices. For more experienced users, you'll also find
 details of the TADS implementation and syntax idiosyncrasies.
 
 For more information on the specific functions and objects where regular
-expressions are used, refer to [RexPattern](rexpat.htm) intrinsic class,
+expressions are used, refer to [RexPattern](rexpat.html) intrinsic class,
 which stores compiled patterns, and the specific [regular expression
-functions](tadsgen.htm), <span class="code">rexMatch()</span>,
+functions](tadsgen.html), <span class="code">rexMatch()</span>,
 <span class="code">rexSearch()</span>,
 <span class="code">rexReplace()</span>, and
 <span class="code">rexGroup()</span>.
@@ -62,7 +64,7 @@ literal syntax:
 
 </div>
 
-See [regular expression literals](rexpat.htm#rexlit) in the RexPattern
+See [regular expression literals](rexpat.html#rexlit) in the RexPattern
 section for details.
 
 ## TADS Regular Expression Quick Reference
@@ -1957,12 +1959,12 @@ or more digits on one side or the other of the decimal.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Regular
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Regular
 Expressions  
-<span class="navnp"><a href="tadsgen.htm" class="nav"><em>Prev:</em> tads-gen Function
+<span class="navnp"><a href="tadsgen.html" class="nav"><em>Prev:</em> tads-gen Function
 Set</a>    
-<a href="tadsio.htm" class="nav"><em>Next:</em> tads-io Function Set</a>
+<a href="tadsio.html" class="nav"><em>Next:</em> tads-io Function Set</a>
     </span>
 
 </div>

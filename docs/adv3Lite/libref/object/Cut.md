@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Cut</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1342](../source/actions.t.html#1342)\]

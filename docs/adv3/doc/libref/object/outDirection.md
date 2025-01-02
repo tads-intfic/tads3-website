@@ -1,3 +1,5 @@
+---
+---
 <span class="title">outDirection</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[182](../source/travel.t.html#182)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Collection  
-<span class="navnp"><a href="charset.htm" class="nav"><em>Prev:</em> CharacterSet</a>
-    <a href="date.htm" class="nav"><em>Next:</em> Date</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Collection  
+<span class="navnp"><a href="charset.html" class="nav"><em>Prev:</em> CharacterSet</a>
+    <a href="date.html" class="nav"><em>Next:</em> Date</a>     </span>
 
 </div>
 
@@ -25,9 +27,9 @@ certain other intrinsic classes are derived. Because Collection is an
 abstract base class, you cannot create a Collection directly; you can
 only create its concrete subclasses. The Collection subclasses are:
 
-- [List](list.htm)
-- [LookupTable](lookup.htm)
-- [Vector](vector.htm)
+- [List](list.html)
+- [LookupTable](lookup.html)
+- [Vector](vector.html)
 
 The Collection base class provides a set of operations that is common to
 all of its derived classes, so that all of these classes can be treated
@@ -94,9 +96,9 @@ these methods.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Collection  
-<span class="navnp"><a href="charset.htm" class="nav"><em>Prev:</em> CharacterSet</a>
-    <a href="date.htm" class="nav"><em>Next:</em> Date</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Collection  
+<span class="navnp"><a href="charset.html" class="nav"><em>Prev:</em> CharacterSet</a>
+    <a href="date.html" class="nav"><em>Next:</em> Date</a>     </span>
 
 </div>

@@ -1,0 +1,260 @@
+<p><span class="title">String</span><span class="type">class</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#307">307</a>],
+<a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#236">236</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The native string type.
+
+*Modified in
+[reflect.t](../file/reflect.t.html)\[[236](../source/reflect.t.html#236)\]:*  
+Modify the String intrinsic class to provide a to-symbol mapping
+
+`intrinsic class `**`String`**` :   `[`Object`](../object/Object1.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">String</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Object`](../object/Object1.html)<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>endsWith<code class="language-plaintext highlighter-rouge">](#endsWith)</code>  <code class="language-plaintext highlighter-rouge">[</code>find<code class="language-plaintext highlighter-rouge">](#find)</code>  <code class="language-plaintext highlighter-rouge">[</code>findReplace<code class="language-plaintext highlighter-rouge">](#findReplace)</code>  <code class="language-plaintext highlighter-rouge">[</code>htmlify<code class="language-plaintext highlighter-rouge">](#htmlify)</code>  <code class="language-plaintext highlighter-rouge">[</code>length<code class="language-plaintext highlighter-rouge">](#length)</code>  <code class="language-plaintext highlighter-rouge">[</code>mapToByteArray<code class="language-plaintext highlighter-rouge">](#mapToByteArray)</code>  <code class="language-plaintext highlighter-rouge">[</code>startsWith<code class="language-plaintext highlighter-rouge">](#startsWith)</code>  <code class="language-plaintext highlighter-rouge">[</code>substr<code class="language-plaintext highlighter-rouge">](#substr)</code>  <code class="language-plaintext highlighter-rouge">[</code>toLower<code class="language-plaintext highlighter-rouge">](#toLower)</code>  <code class="language-plaintext highlighter-rouge">[</code>toUnicode<code class="language-plaintext highlighter-rouge">](#toUnicode)</code>  <code class="language-plaintext highlighter-rouge">[</code>toUpper<code class="language-plaintext highlighter-rouge">](#toUpper)</code>  <code class="language-plaintext highlighter-rouge">[</code>valToSymbol<code class="language-plaintext highlighter-rouge">](#valToSymbol)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getPropList<code class="language-plaintext highlighter-rouge">](../object/Object1.html#getPropList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropParams<code class="language-plaintext highlighter-rouge">](../object/Object1.html#getPropParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSuperclassList<code class="language-plaintext highlighter-rouge">](../object/Object1.html#getSuperclassList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isClass<code class="language-plaintext highlighter-rouge">](../object/Object1.html#isClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTransient<code class="language-plaintext highlighter-rouge">](../object/Object1.html#isTransient)</code>  <code class="language-plaintext highlighter-rouge">[</code>ofKind<code class="language-plaintext highlighter-rouge">](../object/Object1.html#ofKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>propDefined<code class="language-plaintext highlighter-rouge">](../object/Object1.html#propDefined)</code>  <code class="language-plaintext highlighter-rouge">[</code>propInherited<code class="language-plaintext highlighter-rouge">](../object/Object1.html#propInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>propType<code class="language-plaintext highlighter-rouge">](../object/Object1.html#propType)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="endsWith"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endsWith (str)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#337">337</a>]</p>
+
+<div class="desc">
+
+determine if we end with the given string
+
+</div>
+
+<p><span id="find"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">find (str, index, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#322">322</a>]</p>
+
+<div class="desc">
+
+find a substring
+
+</div>
+
+<p><span id="findReplace"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findReplace (origStr, newStr, flags, index, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#352">352</a>]</p>
+
+<div class="desc">
+
+Replace one occurrence or all occurrences of the given substring with
+the given new string.
+
+</div>
+
+<p><span id="htmlify"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">htmlify (flags, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#331">331</a>]</p>
+
+<div class="desc">
+
+htmlify a string
+
+</div>
+
+<p><span id="length"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">length ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#310">310</a>]</p>
+
+<div class="desc">
+
+get the length of the string
+
+</div>
+
+<p><span id="mapToByteArray"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mapToByteArray (charset)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#346">346</a>]</p>
+
+<div class="desc">
+
+Map to a byte array, converting to the given character set. 'charset'
+must be an object of intrinsic class CharacterSet; the characters in the
+string will be mapped from the internal Unicode representation to the
+appropriate byte representation in the given character set.
+
+</div>
+
+<p><span id="startsWith"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">startsWith (str)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#334">334</a>]</p>
+
+<div class="desc">
+
+determine if we start with the given string
+
+</div>
+
+<p><span id="substr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">substr (start, len, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#313">313</a>]</p>
+
+<div class="desc">
+
+extract a substring
+
+</div>
+
+<p><span id="toLower"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toLower ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#319">319</a>]</p>
+
+<div class="desc">
+
+convert to lower case
+
+</div>
+
+<p><span id="toUnicode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toUnicode (idx, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#328">328</a>]</p>
+
+<div class="desc">
+
+convert to a list of Unicode character codes, or get the Unicode
+character code for the single character at the given index
+
+</div>
+
+<p><span id="toUpper"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toUpper ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#316">316</a>]</p>
+
+<div class="desc">
+
+convert to upper case
+
+</div>
+
+<p><span id="valToSymbol"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valToSymbol ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#237">237</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 9/13/2007 from TADS version 3.0.15.2
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Character
+<a href="toc.html" class="nav">Table of Contents</a> \| Character
 Building  
-<span class="navnp"><a href="takeoff.htm" class="nav"><em>Prev:</em> Taking Off</a>
-   <a href="npcoverview.htm" class="nav"><em>Next:</em> Overview</a>    
+<span class="navnp"><a href="takeoff.html" class="nav"><em>Prev:</em> Taking Off</a>
+   <a href="npcoverview.html" class="nav"><em>Next:</em> Overview</a>    
 </span>
 
 </div>
@@ -22,10 +24,10 @@ In this chapter we start implementing some Non-Player Characters.
 
 <div class="sectoc">
 
-[Overview](npcoverview.htm)  
-[The Security Guard — A Really Simple NPC](guard.htm)  
-[Pablo Cortes — A Man with Several Agendas](cortes.htm)  
-[The Flight Attendant — Getting in a State](attendant.htm)  
+[Overview](npcoverview.html)  
+[The Security Guard — A Really Simple NPC](guard.html)  
+[Pablo Cortes — A Man with Several Agendas](cortes.html)  
+[The Flight Attendant — Getting in a State](attendant.html)  
 
 </div>
 
@@ -36,10 +38,10 @@ In this chapter we start implementing some Non-Player Characters.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Character
+<a href="toc.html" class="nav">Table of Contents</a> \| Character
 Building  
-<span class="navnp"><a href="takeoff.htm" class="nav"><em>Prev:</em> Taking Off</a>
-   <a href="npcoverview.htm" class="nav"><em>Next:</em> Overview</a>    
+<span class="navnp"><a href="takeoff.html" class="nav"><em>Prev:</em> Taking Off</a>
+   <a href="npcoverview.html" class="nav"><em>Next:</em> Overview</a>    
 </span>
 
 </div>

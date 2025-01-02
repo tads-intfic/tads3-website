@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,17 +11,17 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>awardPoints<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="simpleachievement.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="awardpointsonce.htm">[Next]</a></td>
+href="simpleachievement.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="awardpointsonce.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-As an alternative to calling [addToScore](addtoscore.htm) or
-[addToScoreOnce](achievement.htm), you can call awardPoints or
-[awardPointsOnce](awardpointsonce.htm) on an Achievement object. This
+As an alternative to calling [addToScore](addtoscore.html) or
+[addToScoreOnce](achievement.html), you can call awardPoints or
+[awardPointsOnce](awardpointsonce.html) on an Achievement object. This
 then automatically awards the number of points associated with the
 Achievement (i.e. defined in the points property of the Achievement
 object). For example, to have the player awarded 2 points for disposing
@@ -47,8 +49,8 @@ of the demons, we might change the appropriate ShowTopic thus:
 Note that since the demons can only ever be exorcized once, we don't
 need any checks to prevent the points being awarded several times over.
 Otherwise, it would be more convenient to use
-[awardPointsOnce](awardpointsonce.htm). Note also the use of the
-[Achievement template](achievementtemplate.htm).  
+[awardPointsOnce](awardpointsonce.html). Note also the use of the
+[Achievement template](achievementtemplate.html).  
   
 So why do we need awardPoints and awardPointsOnce in addition to
 addToScore and addToScoreOnce? There are two implications here:  
@@ -84,7 +86,7 @@ awarded.  <br />
 <td width="6"></td>
 <td width="45">2.</td>
 <td>Which set of methods you use can have implications for the
-calculation of the <a href="maxscore.htm">maximum score</a>.  <br />
+calculation of the <a href="maxscore.html">maximum score</a>.  <br />
 </td>
 </tr>
 </tbody>

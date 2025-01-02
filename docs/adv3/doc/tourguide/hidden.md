@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Hidden : <a
-href="thing-introduction.htm">Thing</a><br />
+href="thing-introduction.html">Thing</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="sightpresence+islisted.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="presentlater.htm">[Next]</a></td>
+href="sightpresence+islisted.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="presentlater.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -82,11 +84,11 @@ can only be called once if you only want the score to be increased once
 (or use the addToScoreOnce method instead). Since in this case we can be
 sure that the else clause will only be executed once, it's safe to use
 addToScore here. We'll come to a full discussion of
-[scoring](scoring-overview.htm) later.  
+[scoring](scoring-overview.html) later.  
   
 Another (and in this case, simpler and easier) way of hiding something
-under something else is to put it in an [Underside](underside.htm),
-normally the subUnderside of a [ComplexContainer](complexcontainer.htm).
+under something else is to put it in an [Underside](underside.html),
+normally the subUnderside of a [ComplexContainer](complexcontainer.html).
 We could so this with the book of matches we defined earlier, then they
 won't be revealed until the player specifically orders LOOK UNDER
 DRESSING TABLE, at which point they'll automatically be revealed. To do

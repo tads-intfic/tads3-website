@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \>
 Instructions  
-<span class="navnp"><a href="hint.htm" class="nav"><em>Prev:</em> Hints</a>
-    <a href="newbie.htm" class="nav"><em>Next:</em> Newbie Help</a>    
+<span class="navnp"><a href="hint.html" class="nav"><em>Prev:</em> Hints</a>
+    <a href="newbie.html" class="nav"><em>Next:</em> Newbie Help</a>    
 </span>
 
 </div>
@@ -123,11 +125,11 @@ customize what is shown to the player:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \>
 Instructions  
-<span class="navnp"><a href="hint.htm" class="nav"><em>Prev:</em> Hints</a>
-    <a href="newbie.htm" class="nav"><em>Next:</em> Newbie Help</a>    
+<span class="navnp"><a href="hint.html" class="nav"><em>Prev:</em> Hints</a>
+    <a href="newbie.html" class="nav"><em>Next:</em> Newbie Help</a>    
 </span>
 
 </div>

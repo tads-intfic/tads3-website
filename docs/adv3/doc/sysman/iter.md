@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Iterator  
-<span class="navnp"><a href="icic.htm" class="nav"><em>Prev:</em> IntrinsicClass</a>
-    <a href="list.htm" class="nav"><em>Next:</em> List</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Iterator  
+<span class="navnp"><a href="icic.html" class="nav"><em>Prev:</em> IntrinsicClass</a>
+    <a href="list.html" class="nav"><em>Next:</em> List</a>     </span>
 
 </div>
 
@@ -120,9 +122,9 @@ first element of the collection.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> Iterator  
-<span class="navnp"><a href="icic.htm" class="nav"><em>Prev:</em> IntrinsicClass</a>
-    <a href="list.htm" class="nav"><em>Next:</em> List</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> Iterator  
+<span class="navnp"><a href="icic.html" class="nav"><em>Prev:</em> IntrinsicClass</a>
+    <a href="list.html" class="nav"><em>Next:</em> List</a>     </span>
 
 </div>

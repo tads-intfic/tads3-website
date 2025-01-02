@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> The Preprocessor  
-<span class="navnp"><a href="charmap.htm" class="nav"><em>Prev:</em> Source File Character
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> The Preprocessor  
+<span class="navnp"><a href="charmap.html" class="nav"><em>Prev:</em> Source File Character
 Sets</a>    
-<a href="types.htm" class="nav"><em>Next:</em> Fundamental Datatypes</a>
+<a href="types.html" class="nav"><em>Next:</em> Fundamental Datatypes</a>
     </span>
 
 </div>
@@ -493,7 +495,7 @@ will revert back once the compiler finishes with the included file.
 ### \#pragma sourceTextGroup
 
 This directive lets you control the generation of
-[sourceTextGroup](objdef.htm#sourceTextGroup) property values. You can
+[sourceTextGroup](objdef.html#sourceTextGroup) property values. You can
 also control this with the compiler's "-Gstg" command-line option, but
 the \#pragma gives you finer-grained control, since it lets you turn
 generation on and off within particular modules, or even within sections
@@ -1306,11 +1308,11 @@ of the macro.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> The Preprocessor  
-<span class="navnp"><a href="charmap.htm" class="nav"><em>Prev:</em> Source File Character
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> The Preprocessor  
+<span class="navnp"><a href="charmap.html" class="nav"><em>Prev:</em> Source File Character
 Sets</a>    
-<a href="types.htm" class="nav"><em>Next:</em> Fundamental Datatypes</a>
+<a href="types.html" class="nav"><em>Next:</em> Fundamental Datatypes</a>
     </span>
 
 </div>

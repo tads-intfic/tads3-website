@@ -1,3 +1,5 @@
+---
+---
 <span class="title">hitTopicObj</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[3683](../source/actor.t.html#3683)\]

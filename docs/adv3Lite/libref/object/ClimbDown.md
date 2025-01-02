@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ClimbDown</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1098](../source/actions.t.html#1098)\]

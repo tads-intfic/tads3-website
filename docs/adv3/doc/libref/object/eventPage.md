@@ -1,3 +1,5 @@
+---
+---
 <span class="title">eventPage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[1397](../source/webui.t.html#1397)\]

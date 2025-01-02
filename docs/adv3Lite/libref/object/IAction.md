@@ -1,3 +1,5 @@
+---
+---
 <span class="title">IAction</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[1090](../source/action.t.html#1090)\]

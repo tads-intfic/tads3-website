@@ -1,3 +1,5 @@
+---
+---
 <span class="title">westDirection</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[169](../source/travel.t.html#169)\]

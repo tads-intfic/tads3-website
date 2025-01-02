@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> What is adv3Lite?  
-<span class="navnp"><a href="intro.htm" class="nav"><em>Prev:</em>Introduction</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> What is adv3Lite?  
+<span class="navnp"><a href="intro.html" class="nav"><em>Prev:</em>Introduction</a>
    
-<a href="whoshouldread.htm" class="nav"><em>Next:</em> Who Should Read
+<a href="whoshouldread.html" class="nav"><em>Next:</em> Who Should Read
 This Book</a>     </span>
 
 </div>
@@ -109,11 +111,11 @@ all, then adv3Lite might be just what you're looking for.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> What is adv3Lite?  
-<span class="navnp"><a href="intro.htm" class="nav"><em>Prev:</em> Introduction</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> What is adv3Lite?  
+<span class="navnp"><a href="intro.html" class="nav"><em>Prev:</em> Introduction</a>
    
-<a href="whoshouldread.htm" class="nav"><em>Next:</em> Who Should Read
+<a href="whoshouldread.html" class="nav"><em>Next:</em> Who Should Read
 This Book</a>     </span>
 
 </div>

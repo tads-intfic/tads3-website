@@ -1,3 +1,5 @@
+---
+---
 <span class="title">adventium</span><span class="type">object</span>
 
 [sense.t](../file/sense.t.html)\[[51](../source/sense.t.html#51)\]

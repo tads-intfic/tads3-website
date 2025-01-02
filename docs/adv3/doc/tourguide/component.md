@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Component : <a
-href="fixture.htm">Fixture</a><br />
+href="fixture.html">Fixture</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="heavy.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="thing-introduction.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="heavy.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="thing-introduction.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -24,7 +26,7 @@ example, but it cannot be detached from its immediate parent, and
 wherever its parent goes, it goes with it. A button on a stationery
 device equally qualifies, however, so we can now move the button that
 was defined in greatCabin to a more appropriate location (just after the
-[desk](heavy.htm) defined above), and change it from a Fixture to a
+[desk](heavy.html) defined above), and change it from a Fixture to a
 Component:  
   
 + Button, **Component** 'small brown button' 'small brown button'  

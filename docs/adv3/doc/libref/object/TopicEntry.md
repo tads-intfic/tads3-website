@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TopicEntry</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[2133](../source/actor.t.html#2133)\]

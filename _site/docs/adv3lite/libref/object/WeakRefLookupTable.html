@@ -1,0 +1,129 @@
+<p><span class="title">WeakRefLookupTable</span><span class="type">class</span></p>
+
+<p><a href="../file/lookup.h.html">lookup.h</a>[<a href="../source/lookup.h.html#135">135</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+WeakRefLookupTable is a "weak reference" version of the basic lookup
+table. This is similar to the regular LookupTable, and has the same
+methods; the only difference is that this type of table references its
+values "weakly." A value that is reachable only through weak references
+is subject to deletion by the garbage collector. A weak-reference lookup
+table is useful when you don't want a value's presence in the table to
+force the value to stay active, such as when the lookup table is merely
+a fast index to a set of values that must be otherwise reachable to be
+useful. When the garbage collector deletes one of our values, the
+key/value pair for the value is automatically deleted from the table.
+
+`intrinsic class `**`WeakRefLookupTable`**` :   `[`LookupTable`](../object/LookupTable.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WeakRefLookupTable</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>LookupTable<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Collection<code class="language-plaintext highlighter-rouge">](../object/Collection.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Object`](../object/Object.html)<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">LookupTable</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>applyAll<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#applyAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEach<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#forEach)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEachAssoc<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#forEachAssoc)</code>  <code class="language-plaintext highlighter-rouge">[</code>getBucketCount<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#getBucketCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDefaultValue<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#getDefaultValue)</code>  <code class="language-plaintext highlighter-rouge">[</code>getEntryCount<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#getEntryCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>isKeyPresent<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#isKeyPresent)</code>  <code class="language-plaintext highlighter-rouge">[</code>keysToList<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#keysToList)</code>  <code class="language-plaintext highlighter-rouge">[</code>nthKey<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#nthKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>nthVal<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#nthVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeElement<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#removeElement)</code>  <code class="language-plaintext highlighter-rouge">[</code>setDefaultValue<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#setDefaultValue)</code>  <code class="language-plaintext highlighter-rouge">[</code>valsToList<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html#valsToList)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Collection</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>createIterator<code class="language-plaintext highlighter-rouge">](../object/Collection.html#createIterator)</code>  <code class="language-plaintext highlighter-rouge">[</code>createLiveIterator<code class="language-plaintext highlighter-rouge">](../object/Collection.html#createLiveIterator)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>callInherited<code class="language-plaintext highlighter-rouge">](../object/Object.html#callInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropParams<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSuperclassList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getSuperclassList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isClass<code class="language-plaintext highlighter-rouge">](../object/Object.html#isClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTransient<code class="language-plaintext highlighter-rouge">](../object/Object.html#isTransient)</code>  <code class="language-plaintext highlighter-rouge">[</code>mapAll<code class="language-plaintext highlighter-rouge">](../object/Object.html#mapAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>ofKind<code class="language-plaintext highlighter-rouge">](../object/Object.html#ofKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>propDefined<code class="language-plaintext highlighter-rouge">](../object/Object.html#propDefined)</code>  <code class="language-plaintext highlighter-rouge">[</code>propInherited<code class="language-plaintext highlighter-rouge">](../object/Object.html#propInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>propType<code class="language-plaintext highlighter-rouge">](../object/Object.html#propType)</code>  <code class="language-plaintext highlighter-rouge">[</code>valToSymbol<code class="language-plaintext highlighter-rouge">](../object/Object.html#valToSymbol)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

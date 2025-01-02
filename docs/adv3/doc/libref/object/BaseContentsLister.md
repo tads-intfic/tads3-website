@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BaseContentsLister</span><span class="type">class</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4863](../source/msg_neu.t.html#4863)\]

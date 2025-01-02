@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GroupSeparatorMessage</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[128](../source/report.t.html#128)\]

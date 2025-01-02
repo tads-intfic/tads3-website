@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GoNear</span><span class="type">object</span>
 
 [debug.t](../file/debug.t.html)\[[171](../source/debug.t.html#171)\]

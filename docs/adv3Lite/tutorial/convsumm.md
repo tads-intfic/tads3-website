@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Summary  
-<span class="navnp"><a href="defaults.htm" class="nav"><em>Prev:</em> Diverse Defaults</a>
+<span class="navnp"><a href="defaults.html" class="nav"><em>Prev:</em> Diverse Defaults</a>
    
-<a href="finish.htm" class="nav"><em>Next:</em> Finishing Touches</a>
+<a href="finish.html" class="nav"><em>Next:</em> Finishing Touches</a>
     </span>
 
 </div>
@@ -58,7 +60,7 @@ patterns illustrated in this chapter, although they'll often prove
 useful.
 
 Probably the next step is for you to read through the entire
-[Actors](../manual/actor.htm) part of the *adv3Lite Library Manual* to
+[Actors](../manual/actor.html) part of the *adv3Lite Library Manual* to
 refresh your memory and see what else is there, and then perhaps (or in
 parallel, perhaps) try increasing Angela's conversational range a bit
 more. In the meantime, here's a brief summary of what we've covered (and
@@ -66,34 +68,34 @@ what we've missed) in this chapter, with links to the relevant sections
 of the *adv3Lite Library Manual*.
 
 At its simplest, conversation in adv3Lite can be implemented as a [Basic
-Ask/Tell system](../manual/asktell.htm) using various kinds of
-[TopicEntry](../manual/actortopicentry.htm) objects (such as AskTopic
-and TellTopic). If you like, you can [suggest](../manual/suggest.htm)
+Ask/Tell system](../manual/asktell.html) using various kinds of
+[TopicEntry](../manual/actortopicentry.html) objects (such as AskTopic
+and TellTopic). If you like, you can [suggest](../manual/suggest.html)
 certain topics of conversation to the player by giving your TopicEntries
 a <span class="code">name</span> property. The availability of
 TopicEntries to respond to the player's conversation commands depends on
 a number of factors, including which
-[ActorState](../manual/actorstate.htm) the NPC is in, the
+[ActorState](../manual/actorstate.html) the NPC is in, the
 <span class="code">isActive</span> property of the TopicEntry and the
 <span class="code">convKeys</span> property, which can be used for a
 variety of purposes. Where several TopicEntries share the same values of
 these properties it can be useful to group them under a common
-[TopicGroup](../manual/topicgroup.htm).
+[TopicGroup](../manual/topicgroup.html).
 
 There are various ways you can make things more elaborate. A
-[SayTopic](../manual/specialtopic.htm#saytopic) allows the player
+[SayTopic](../manual/specialtopic.html#saytopic) allows the player
 character to say just about anything to an NPC (within reason!), while a
-[QueryTopic](../manual/specialtopic.htm#querytopic) allows the player
+[QueryTopic](../manual/specialtopic.html#querytopic) allows the player
 character to ask a wide range of much more specific questions than is
 possible with an AskTopic (users familiar with adv3 might like to know
 that there is no restriction on where these two types of TopicEntry may
 be used, unlike an adv3 SpecialTopic). A particular point in the
 conversation at which particular responses or questions become
 momentarily appropriate is called a [Conversation
-Node](../manual/convnode.htm) and can be most conveniently implemented
+Node](../manual/convnode.html) and can be most conveniently implemented
 using a combination of a <span class="code">ConvNode</span> object and a
 <span class="code">\<.convnode\></span> tag. In many situations it is
-also appropriate to implement [Greeting Protocols](../manual/hello.htm),
+also appropriate to implement [Greeting Protocols](../manual/hello.html),
 whereby conversations are properly begun and ended with some equivalent
 of "hello" and "goodbye" and the NPC can optionally change between
 conversational and non-conversational ActorStates.
@@ -101,7 +103,7 @@ conversational and non-conversational ActorStates.
 In order to ensure that a conversational exchange remains sensible and
 appropriate, it's often necessary to keep track of what both the player
 character and the NPC s/he's talking to currently know. Player Character
-and NPC [Knowledge](../manual/knowledge.htm) can be tracked using
+and NPC [Knowledge](../manual/knowledge.html) can be tracked using
 <span class="code">\<.reveal key\></span> and
 <span class="code">\<.inform key\></span> tags, and tested with
 <span class="code">gRevealed(key)</span> and
@@ -109,18 +111,18 @@ and NPC [Knowledge](../manual/knowledge.htm) can be tracked using
 property of a TopicEntry (or perhaps a TopicGroup).
 
 A couple of topics we only touched on were [Giving Orders to
-NPCs](../manual/orders.htm) (e.g. BOB, PUT THE BALL IN THE BOX) and
-[NPC-Initiated Conversation](../manual/initiate.htm). Orders given to
+NPCs](../manual/orders.html) (e.g. BOB, PUT THE BALL IN THE BOX) and
+[NPC-Initiated Conversation](../manual/initiate.html). Orders given to
 NPCs are typically handled by <span class="code">CommandTopics</span>
 and <span class="code">DefaultCommandTopics</span>, which are similar in
 principle to other TopicEntries but can be a little more complex to
 specify. One way we've seen for an NPC to initiate a conversation is via
-a [ConvAgendaItem](../manual/initiate.htm#convagendaitem). Another,
+a [ConvAgendaItem](../manual/initiate.html#convagendaitem). Another,
 which we didn't cover, might be through an
-[InitiateTopic](../manual/initiate.htm#initiatetopic). A particularly
+[InitiateTopic](../manual/initiate.html#initiatetopic). A particularly
 sophisticated technique (which again we haven't covered in this
 tutorial) is to combine a <span class="code">ConvAgendaItem</span> with
-a [DefaultAgendaTopic](../manual/initiate.htm#defaultagenda), which
+a [DefaultAgendaTopic](../manual/initiate.html#defaultagenda), which
 allows an NPC to pursue his or her own conversational agenda instead of
 giving a canned default response when the player tries a conversational
 command that hasn't otherwise been specifically catered for; instead of
@@ -131,7 +133,7 @@ initiative.
 Finally, we have met a number of tags that can be used in conversation,
 such as \<.reveal\>, but there are several more that we haven't covered
 in this tutorial that can be used for a variety of purposes. A full list
-is provided in the [NPC Overview](../manual/actoroverview.htm) section
+is provided in the [NPC Overview](../manual/actoroverview.html) section
 of the manual.
 
   
@@ -780,12 +782,12 @@ related to the Angela NPC as far as we have reached:
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Summary  
-<span class="navnp"><a href="defaults.htm" class="nav"><em>Prev:</em> Diverse Defaults</a>
+<span class="navnp"><a href="defaults.html" class="nav"><em>Prev:</em> Diverse Defaults</a>
    
-<a href="finish.htm" class="nav"><em>Next:</em> Finishing Touches</a>
+<a href="finish.html" class="nav"><em>Next:</em> Finishing Touches</a>
     </span>
 
 </div>

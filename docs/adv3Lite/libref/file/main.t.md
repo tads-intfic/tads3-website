@@ -1,3 +1,5 @@
+---
+---
 <span class="title">main.t</span><span class="type">file</span>
 
 [source file](../source/main.t.html)

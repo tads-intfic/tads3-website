@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RoomPart</span><span class="type">class</span>
 
 [roomparts.t](../file/roomparts.t.html)\[[32](../source/roomparts.t.html#32)\]

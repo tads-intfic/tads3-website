@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ResolvedTopic</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[3094](../source/parser.t.html#3094)\],

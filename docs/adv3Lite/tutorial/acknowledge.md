@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> Acknowledgements and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> Acknowledgements and
 Explanations  
-<span class="navnp"><a href="howtouse.htm" class="nav"><em>Prev:</em> How to Use This
+<span class="navnp"><a href="howtouse.html" class="nav"><em>Prev:</em> How to Use This
 Book</a>    
-<a href="tools.htm" class="nav"><em>Next:</em> Tools of the Trade</a>
+<a href="tools.html" class="nav"><em>Next:</em> Tools of the Trade</a>
     </span>
 
 </div>
@@ -81,12 +83,12 @@ instructions on using it on non-Windows systems.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> Acknowledgements and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> Acknowledgements and
 Explanations  
-<span class="navnp"><a href="howtouse.htm" class="nav"><em>Prev:</em> How to Use This
+<span class="navnp"><a href="howtouse.html" class="nav"><em>Prev:</em> How to Use This
 Book</a>    
-<a href="tools.htm" class="nav"><em>Next:</em> Tools of the Trade</a>
+<a href="tools.html" class="nav"><em>Next:</em> Tools of the Trade</a>
     </span>
 
 </div>

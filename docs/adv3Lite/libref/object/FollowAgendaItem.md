@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FollowAgendaItem</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[6112](../source/actor.t.html#6112)\]

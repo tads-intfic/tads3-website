@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ReportRule</span><span class="type">class</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[436](../source/sysrules.t.html#436)\]

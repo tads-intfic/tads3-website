@@ -1,3 +1,5 @@
+---
+---
 <span class="title">HelloGoodbyeTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3971](../source/actor.t.html#3971)\]

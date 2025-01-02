@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ListGroupEquivalent</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[2225](../source/lister.t.html#2225)\]

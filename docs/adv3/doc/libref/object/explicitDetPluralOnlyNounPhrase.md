@@ -1,3 +1,5 @@
+---
+---
 <span class="title">explicitDetPluralOnlyNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`explicitDetPluralOnlyNounPhrase(definite)`](../object/explicitDetPluralOnlyNounPhrase(definite).html)</span>` :   `[`AllPluralProd`](../object/AllPluralProd.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">mainAtExit</span><span class="type">object</span>
 
 [\_main.t](../file/_main.t.html)\[[1220](../source/_main.t.html#1220)\]

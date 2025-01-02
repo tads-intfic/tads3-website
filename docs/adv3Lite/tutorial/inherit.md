@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="reviewing.htm" class="nav">Reviewing the Basics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> \>
 Inheritance, Modification and Overriding  
-<span class="navnp"><a href="methods.htm" class="nav"><em>Prev:</em> Methods, Functions and
+<span class="navnp"><a href="methods.html" class="nav"><em>Prev:</em> Methods, Functions and
 Statements</a>    
-<a href="quotes.htm" class="nav"><em>Next:</em> Things in Quotes</a>    
+<a href="quotes.html" class="nav"><em>Next:</em> Things in Quotes</a>    
 </span>
 
 </div>
@@ -342,12 +344,12 @@ old one.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="reviewing.htm" class="nav">Reviewing the Basics</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="reviewing.html" class="nav">Reviewing the Basics</a> \>
 Inheritance, Modification and Overriding  
-<span class="navnp"><a href="methods.htm" class="nav"><em>Prev:</em> Methods, Functions and
+<span class="navnp"><a href="methods.html" class="nav"><em>Prev:</em> Methods, Functions and
 Statements</a>    
-<a href="quotes.htm" class="nav"><em>Next:</em> Things in Quotes</a>    
+<a href="quotes.html" class="nav"><em>Next:</em> Things in Quotes</a>    
 </span>
 
 </div>

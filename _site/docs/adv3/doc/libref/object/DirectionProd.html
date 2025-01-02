@@ -1,0 +1,147 @@
+<p><span class="title">DirectionProd</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#640">640</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Base class for "direction" productions. Each direction (the compass
+directions, the vertical directions, the shipboard directions, and so
+on) must have an associated grammar rule, which must produce one of
+these. This should be subclassed with grammar rules like this:
+
+grammar directionName: 'north' \| 'n' : DirectionProd  
+dir = northDirection  
+;
+
+`class `**`DirectionProd`**` :   `[`BasicProd`](../object/BasicProd.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DirectionProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BasicProd<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DirectionProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>directionName(aft)<code class="language-plaintext highlighter-rouge">](../object/directionName(aft).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(down)<code class="language-plaintext highlighter-rouge">](../object/directionName(down).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(east)<code class="language-plaintext highlighter-rouge">](../object/directionName(east).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(fore)<code class="language-plaintext highlighter-rouge">](../object/directionName(fore).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(in)<code class="language-plaintext highlighter-rouge">](../object/directionName(in).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(north)<code class="language-plaintext highlighter-rouge">](../object/directionName(north).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(northeast)<code class="language-plaintext highlighter-rouge">](../object/directionName(northeast).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(northwest)<code class="language-plaintext highlighter-rouge">](../object/directionName(northwest).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(out)<code class="language-plaintext highlighter-rouge">](../object/directionName(out).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(port)<code class="language-plaintext highlighter-rouge">](../object/directionName(port).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(south)<code class="language-plaintext highlighter-rouge">](../object/directionName(south).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(southeast)<code class="language-plaintext highlighter-rouge">](../object/directionName(southeast).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(southwest)<code class="language-plaintext highlighter-rouge">](../object/directionName(southwest).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(starboard)<code class="language-plaintext highlighter-rouge">](../object/directionName(starboard).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(up)<code class="language-plaintext highlighter-rouge">](../object/directionName(up).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>directionName(west)`](../object/directionName(west).html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>dir<code class="language-plaintext highlighter-rouge">](#dir)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>firstTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#firstTokenIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSpecialResponseMatch<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#isSpecialResponseMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#lastTokenIndex)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>canResolveTo<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#canResolveTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigText<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigText)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigTokenList)</code>  <code class="language-plaintext highlighter-rouge">[</code>setOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#setOrigTokenList)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="dir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dir</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#646">646</a>]</p>
+
+<div class="desc">
+
+Each direction-specific grammar rule subclass must set this property to
+the associated direction object (northDirection, etc).
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

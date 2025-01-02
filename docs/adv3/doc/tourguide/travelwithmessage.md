@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>TravelWithMessage : object<br />
 </strong></td>
-<td style="text-align: right;"><a href="stairwayup.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="secretdoor.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="stairwayup.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="secretdoor.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -18,9 +20,9 @@ href="secretdoor.htm">[Next]</a></td>
   
 TravelWithMessage is a mix-in class for use with TravelConnectors (note
 that some descendents of TravelConnector -
-[TravelMessage](travelmessage.htm),
-[NoTravelMessage](notravelmessage.htm) and
-[FakeConnector](fakeconnector.htm) - include TravelWithMessage in their
+[TravelMessage](travelmessage.html),
+[NoTravelMessage](notravelmessage.html) and
+[FakeConnector](fakeconnector.html) - include TravelWithMessage in their
 definition in any case). TravelConnector overrides
 noteTraversal(traveler) to call showTravelDesc(), which in turn calls
 either travelDesc (if the Player Character is doing the traveling) or
@@ -29,12 +31,12 @@ npcTravelDesc (if an NPC is doing the traveling).
 Firstly, we'll add TravelWithMessage to the upLadder's class list so
 that we can use its travelDesc property. We take advantage of the fact
 that this will call upLadder's doScript method provided that it also
-inherits from the [Script](script.htm) class or one of its descendents.
-In this case we'll use the [StopEventList](stopeventlist.htm) class with
+inherits from the [Script](script.html) class or one of its descendents.
+In this case we'll use the [StopEventList](stopeventlist.html) class with
 two items in its eventList. The first time the PC traverses the upLadder
 the first event in the eventList will be fired, and thereafter the
 second one will (defining with the [Passage
-template](passagetemplate.htm)):  
+template](passagetemplate.html)):  
   
   
 + upLadder : TravelWithMessage, StairwayUp, StopEventList  -\>downLadder   
@@ -67,7 +69,7 @@ new function
 }  
   
 In this case the function simply prints an appropriate message about the
-rockfall and sets [entranceTunnel](roomconnector.htm)'s blocked property
+rockfall and sets [entranceTunnel](roomconnector.html)'s blocked property
 to true.  
   
 You can now recompile and test the game so far.  

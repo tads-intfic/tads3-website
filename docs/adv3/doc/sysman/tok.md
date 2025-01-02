@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="lib.htm" class="nav">The System Library</a> \> Basic
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="lib.html" class="nav">The System Library</a> \> Basic
 Tokenizer  
-<span class="navnp"><a href="init.htm" class="nav"><em>Prev:</em> Program Initialization</a>
+<span class="navnp"><a href="init.html" class="nav"><em>Prev:</em> Program Initialization</a>
    
-<a href="libmisc.htm" class="nav"><em>Next:</em> Miscellaneous Library
+<a href="libmisc.html" class="nav"><em>Next:</em> Miscellaneous Library
 Definitions</a>     </span>
 
 </div>
@@ -247,12 +249,12 @@ tokenizer rather than the default tokenizer:
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="lib.htm" class="nav">The System Library</a> \> Basic
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="lib.html" class="nav">The System Library</a> \> Basic
 Tokenizer  
-<span class="navnp"><a href="init.htm" class="nav"><em>Prev:</em> Program Initialization</a>
+<span class="navnp"><a href="init.html" class="nav"><em>Prev:</em> Program Initialization</a>
    
-<a href="libmisc.htm" class="nav"><em>Next:</em> Miscellaneous Library
+<a href="libmisc.html" class="nav"><em>Next:</em> Miscellaneous Library
 Definitions</a>     </span>
 
 </div>

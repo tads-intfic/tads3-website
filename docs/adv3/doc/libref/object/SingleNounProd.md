@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SingleNounProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[1309](../source/parser.t.html#1309)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Diverse Defaults  
-<span class="navnp"><a href="convnode.htm" class="nav"><em>Prev:</em> Angela Wants
+<span class="navnp"><a href="convnode.html" class="nav"><em>Prev:</em> Angela Wants
 Answers</a>    
-<a href="convsumm.htm" class="nav"><em>Next:</em> Summary</a>    
+<a href="convsumm.html" class="nav"><em>Next:</em> Summary</a>    
 </span>
 
 </div>
@@ -47,7 +49,7 @@ SUCH-AND-SUCH:
 </div>
 
 Commands issued to an NPC can be handled by CommandTopics (for details,
-see the section on [Giving Orders to NPCs](../manual/orders.htm) in the
+see the section on [Giving Orders to NPCs](../manual/orders.html) in the
 *adv3Lite Library Manual*). For our purposes, though, we only need a
 single **DefaultCommandTopic** to handle all attempts by the player to
 give orders to Angela. Within a CommandTopic or DefaultCommandTopic we
@@ -135,7 +137,7 @@ you can't carry something that's fixed).
 
 We've now dealt with several of the common kinds of DefaultTopic, but
 there are many others. For a complete list see the section on
-[ActorTopicEntry](../manual/actortopicentry.htm#default) in the
+[ActorTopicEntry](../manual/actortopicentry.html#default) in the
 *adv3Lite Library Manual*. Fortunately for our purposes (and probably
 for those of many other games) we don't need to worry about all of these
 types, many of which overlap with one another in any case. For our
@@ -324,12 +326,12 @@ overhear the conversation:
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Diverse Defaults  
-<span class="navnp"><a href="convnode.htm" class="nav"><em>Prev:</em> Angela Wants
+<span class="navnp"><a href="convnode.html" class="nav"><em>Prev:</em> Angela Wants
 Answers</a>    
-<a href="convsumm.htm" class="nav"><em>Next:</em> Summary</a>    
+<a href="convsumm.html" class="nav"><em>Next:</em> Summary</a>    
 </span>
 
 </div>

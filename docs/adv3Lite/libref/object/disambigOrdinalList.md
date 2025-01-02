@@ -1,3 +1,5 @@
+---
+---
 <span class="title">disambigOrdinalList</span><span class="type">GrammarProd</span>
 
 `grammar `**[`disambigOrdinalList(head)`](../object/disambigOrdinalList(head).html)**` :   `[`NounListProduction`](../object/NounListProduction.html)

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Keys  
-<span class="navnp"><a href="travel.htm" class="nav"><em>Prev:</em>TravelConnectors and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Keys  
+<span class="navnp"><a href="travel.html" class="nav"><em>Prev:</em>TravelConnectors and
 Barriers</a>    
-<a href="multiloc.htm" class="nav"><em>Next:</em> MultiLocs</a>    
+<a href="multiloc.html" class="nav"><em>Next:</em> MultiLocs</a>    
 </span>
 
 </div>
@@ -131,11 +133,11 @@ the actualLockLists of Keys.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Keys  
-<span class="navnp"><a href="travel.htm" class="nav"><em>Prev:</em> TravelConnectors and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Keys  
+<span class="navnp"><a href="travel.html" class="nav"><em>Prev:</em> TravelConnectors and
 Barriers</a>    
-<a href="multiloc.htm" class="nav"><em>Next:</em> MultiLocs</a>    
+<a href="multiloc.html" class="nav"><em>Next:</em> MultiLocs</a>    
 </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">score.t</span><span class="type">file</span>
 
 [source file](../source/score.t.html)

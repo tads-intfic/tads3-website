@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> MultiLocs  
-<span class="navnp"><a href="key.htm" class="nav"><em>Prev:</em>Keys</a>
-    <a href="topic.htm" class="nav"><em>Next:</em> Topics</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> MultiLocs  
+<span class="navnp"><a href="key.html" class="nav"><em>Prev:</em>Keys</a>
+    <a href="topic.html" class="nav"><em>Next:</em> Topics</a>    
 </span>
 
 </div>
@@ -128,7 +130,7 @@ responds to *everything* except EXAMINE with "The floor is not
 important" players will pretty quickly realize it's simply a decoration
 object they don't need to interact with. In fact, though, you'll hardly
 ever need to define a MultiLoc to represent the floor or ground in your
-own code, since adv3Lite already provides a [Floor](room.htm#roomfloor)
+own code, since adv3Lite already provides a [Floor](room.html#roomfloor)
 class which takes care of it for you. You'd only need to define your own
 if you wanted to replace the library's default implementation with
 something different.
@@ -264,7 +266,7 @@ instance of that class will be added to the MultiLoc's
 <span class="code">isInitiallyIn(obj)</span> returns true for that
 instance (where *obj* is the instance in question). One reason for this
 feature is to facilitate the implementation of the
-[Floor](room.htm#roomfloor) class, but you may find other uses for it in
+[Floor](room.html#roomfloor) class, but you may find other uses for it in
 your own code.
 
 Note that any locations added to the location list via
@@ -300,9 +302,9 @@ be ignored.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> MultiLocs  
-<span class="navnp"><a href="key.htm" class="nav"><em>Prev:</em> Keys</a>
-    <a href="topic.htm" class="nav"><em>Next:</em>Topics</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> MultiLocs  
+<span class="navnp"><a href="key.html" class="nav"><em>Prev:</em> Keys</a>
+    <a href="topic.html" class="nav"><em>Next:</em>Topics</a>     </span>
 
 </div>

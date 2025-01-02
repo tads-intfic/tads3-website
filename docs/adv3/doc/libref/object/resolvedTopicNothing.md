@@ -1,3 +1,5 @@
+---
+---
 <span class="title">resolvedTopicNothing</span><span class="type">object</span>
 
 [action.t](../file/action.t.html)\[[6319](../source/action.t.html#6319)\]

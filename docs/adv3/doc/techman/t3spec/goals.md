@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Design Goals  
-<span class="navnp"><a href="philos.htm" class="nav"><em>Prev:</em> Design Philosophy</a>
-    <a href="notation.htm" class="nav"><em>Next:</em> Notation and
+<span class="navnp"><a href="philos.html" class="nav"><em>Prev:</em> Design Philosophy</a>
+    <a href="notation.html" class="nav"><em>Next:</em> Notation and
 Conventions</a>     </span>
 
 </div>
@@ -24,7 +26,7 @@ Conventions</a>     </span>
 
 ## T3 Virtual Machine Design Goals
 
-This section builds on our [design philosophy](philos.htm) with some
+This section builds on our [design philosophy](philos.html) with some
 specific goals for the T3 VM.
 
 ### What a Virtual Machine is and isn't
@@ -243,11 +245,11 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Design Goals  
-<span class="navnp"><a href="philos.htm" class="nav"><em>Prev:</em> Design Philosophy</a>
-    <a href="notation.htm" class="nav"><em>Next:</em> Notation and
+<span class="navnp"><a href="philos.html" class="nav"><em>Prev:</em> Design Philosophy</a>
+    <a href="notation.html" class="nav"><em>Next:</em> Notation and
 Conventions</a>     </span>
 
 </div>

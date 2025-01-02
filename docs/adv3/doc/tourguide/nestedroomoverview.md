@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>NestedRoom Overview<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="permanentattachment.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="nestedroom.htm">[Next]</a></td>
+href="permanentattachment.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="nestedroom.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -22,21 +24,21 @@ fully-fledged Room. A NestedRoom is typically an object an actor can
 stand, sit or lie on within a room, such as a bed or chair.  
   
   
-[NestedRoom](nestedroom.htm)  
-   [BasicChair](basicchair.htm)  
+[NestedRoom](nestedroom.html)  
+   [BasicChair](basicchair.html)  
       BasicBed  
          BasicPlatform  
-            [Booth](booth.htm)  
-            [Platform](platform.htm)  
-               [NominalPlatform](nominalplatform.htm)  
-         [Bed](bed.htm)  
-      [Chair](chair.htm)  
-   [HighNestedRoom](highnestedroom.htm)  
-   [Vehicle](vehicle.htm)  
+            [Booth](booth.html)  
+            [Platform](platform.html)  
+               [NominalPlatform](nominalplatform.html)  
+         [Bed](bed.html)  
+      [Chair](chair.html)  
+   [HighNestedRoom](highnestedroom.html)  
+   [Vehicle](vehicle.html)  
   
   
 Although it doesn't strictly belong in the NestedRoom category, we'll
-also look at the [OutOfReach](outofreach.htm) class here, since it
+also look at the [OutOfReach](outofreach.html) class here, since it
 doesn't fit in any other obvious grouping, and it will be convenient to
 consider it alongside HighNestedRoom.  
   

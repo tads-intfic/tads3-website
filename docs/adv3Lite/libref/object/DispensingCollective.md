@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DispensingCollective</span><span class="type">class</span>
 
 [collective.t](../file/collective.t.html)\[[160](../source/collective.t.html#160)\]

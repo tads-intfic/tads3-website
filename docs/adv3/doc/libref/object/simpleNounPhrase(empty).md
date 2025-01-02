@@ -1,3 +1,5 @@
+---
+---
 <span class="title">simpleNounPhrase(empty)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[6439](../source/en_us.t.html#6439)\]

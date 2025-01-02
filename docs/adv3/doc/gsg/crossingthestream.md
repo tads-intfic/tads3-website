@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](doorsandwindows.htm)   [\[Next\]](buryingtheboots.htm)*
+*[\[Previous\]](doorsandwindows.html)   [\[Next\]](buryingtheboots.html)*
 
 ## Crossing the Stream
 
@@ -294,7 +296,7 @@ In the meantime, there's another little matter we need to attend to.
 Unlike the other verbs we've used so far, there's no definition of Cross
 anywhere in the TADS 3 library, so we have to create our own. For
 details of how to do this in general, see the
-*<a href="../techman/t3verb.htm" target="_top">Technical Manual</a> (but
+*<a href="../techman/t3verb.html" target="_top">Technical Manual</a> (but
 there's no need to consult it right now - you can finish this guide
 first). Here we'll just list the steps for this simple case.  
   
@@ -553,6 +555,6 @@ boots. The next job is to hide the boots in a less obvious place.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](doorsandwindows.htm)   [\[Next\]](buryingtheboots.htm)*
+*[\[Previous\]](doorsandwindows.html)   [\[Next\]](buryingtheboots.html)*
 
 </div>

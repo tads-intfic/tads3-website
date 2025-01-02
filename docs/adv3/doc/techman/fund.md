@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,9 +8,9 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Fundamentals  
-<span class="navnp"><a href="intro.htm" class="nav"><em>Prev:</em> Introduction</a>
-    <a href="t3start.htm" class="nav"><em>Next:</em> Creating Your First
+<a href="toc.html" class="nav">Table of Contents</a> \| Fundamentals  
+<span class="navnp"><a href="intro.html" class="nav"><em>Prev:</em> Introduction</a>
+    <a href="t3start.html" class="nav"><em>Next:</em> Creating Your First
 Project</a>     </span>
 
 </div>
@@ -23,14 +25,14 @@ in everyday use of the system.
 
 <div class="sectoc">
 
-[Creating Your First Project](t3start.htm)  
-[Tips on Designing your Game](t3design.htm)  
-[Object-Oriented Programming Overview](t3oop.htm)  
-[Some Common Input/Output Issues](t3inout.htm)  
-[Using Build Configurations](t3build_config.htm)  
-[Understanding Separate Compilation](t3inc.htm)  
-[Using AutoHotKey with the Workbench Editor (Windows)](t3iautohot.htm)  
-[Bibliographic Metadata - the GameInfo Format](gameinfo.htm)  
+[Creating Your First Project](t3start.html)  
+[Tips on Designing your Game](t3design.html)  
+[Object-Oriented Programming Overview](t3oop.html)  
+[Some Common Input/Output Issues](t3inout.html)  
+[Using Build Configurations](t3build_config.html)  
+[Understanding Separate Compilation](t3inc.html)  
+[Using AutoHotKey with the Workbench Editor (Windows)](t3iautohot.html)  
+[Bibliographic Metadata - the GameInfo Format](gameinfo.html)  
 
 </div>
 
@@ -41,9 +43,9 @@ in everyday use of the system.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Fundamentals  
-<span class="navnp"><a href="intro.htm" class="nav"><em>Prev:</em> Introduction</a>
-    <a href="t3start.htm" class="nav"><em>Next:</em> Creating Your First
+<a href="toc.html" class="nav">Table of Contents</a> \| Fundamentals  
+<span class="navnp"><a href="intro.html" class="nav"><em>Prev:</em> Introduction</a>
+    <a href="t3start.html" class="nav"><em>Next:</em> Creating Your First
 Project</a>     </span>
 
 </div>

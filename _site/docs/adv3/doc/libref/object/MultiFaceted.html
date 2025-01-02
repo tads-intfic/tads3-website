@@ -1,0 +1,165 @@
+<p><span class="title">MultiFaceted</span><span class="type">class</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3264">3264</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A "multi-faceted" object is similar to a MultiInstance object, with the
+addition that the instance objects are "facets" of one another. This
+means that they have the same identity, from the perspective of a
+character in the scenario: all of the instance objects are part of the
+same conceptual object, not separate objects.
+
+This is especially useful for large objects that span multiple
+locations, such as a river or a long rope.
+
+You define a multi-faceted object the same way you set up a
+MultiInstance: definfe a MultiFaceted shell object, and as part of the
+shell, define the facet object using the instanceObject property. Here's
+an example:
+
+river: MultiFaceted  
+locationList = \[riverBank, meadow, canyon\]  
+instanceObject: Fixture { 'river' 'river'  
+"The river meanders by. "  
+}  
+;
+
+The main difference between MultiInstance and MultiFaceted is that the
+"facet" objects of a MultiFaceted are related as facets of a common
+object from the parser's perspective. For example, if a player refers to
+one facet, then travels to another location that contains a different
+facet, then refers to "it", the parser will realize that the pronoun
+refers to the new facet in the new location.
+
+`class `**`MultiFaceted`**` :   `[`MultiInstance`](../object/MultiInstance.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MultiFaceted</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MultiInstance<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BaseMultiLoc<code class="language-plaintext highlighter-rouge">](../object/BaseMultiLoc.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>instanceMixIn<code class="language-plaintext highlighter-rouge">](#instanceMixIn)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MultiInstance</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>instanceList<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#instanceList)</code>  <code class="language-plaintext highlighter-rouge">[</code>instanceObject<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#instanceObject)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BaseMultiLoc</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>initialLocationClass<code class="language-plaintext highlighter-rouge">](../object/BaseMultiLoc.html#initialLocationClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>locationList<code class="language-plaintext highlighter-rouge">](../object/BaseMultiLoc.html#locationList)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getFacets<code class="language-plaintext highlighter-rouge">](#getFacets)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MultiInstance</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addInstance<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#addInstance)</code>  <code class="language-plaintext highlighter-rouge">[</code>addToContents<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#addToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>getInstanceIn<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#getInstanceIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeLocation<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#initializeLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>moveInto<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#moveInto)</code>  <code class="language-plaintext highlighter-rouge">[</code>moveIntoAdd<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#moveIntoAdd)</code>  <code class="language-plaintext highlighter-rouge">[</code>moveOutOf<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#moveOutOf)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeFromContents<code class="language-plaintext highlighter-rouge">](../object/MultiInstance.html#removeFromContents)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BaseMultiLoc</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>buildLocationList<code class="language-plaintext highlighter-rouge">](../object/BaseMultiLoc.html#buildLocationList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDirectlyIn<code class="language-plaintext highlighter-rouge">](../object/BaseMultiLoc.html#isDirectlyIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>isIn<code class="language-plaintext highlighter-rouge">](../object/BaseMultiLoc.html#isIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>isInitiallyIn<code class="language-plaintext highlighter-rouge">](../object/BaseMultiLoc.html#isInitiallyIn)</code>  <code class="language-plaintext highlighter-rouge">[</code>isListedInContents<code class="language-plaintext highlighter-rouge">](../object/BaseMultiLoc.html#isListedInContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOrIsIn<code class="language-plaintext highlighter-rouge">](../object/BaseMultiLoc.html#isOrIsIn)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="instanceMixIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">instanceMixIn</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3269">3269</a>]</p>
+
+<div class="desc">
+
+the mix-in superclass for our instance objects
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="getFacets"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getFacets ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3266">3266</a>]</p>
+
+<div class="desc">
+
+our instance objects represent our facets for parsing purposes
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ActorResolver</span><span class="type">class</span>
 
 [resolver.t](../file/resolver.t.html)\[[882](../source/resolver.t.html#882)\]

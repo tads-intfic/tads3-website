@@ -1,3 +1,5 @@
+---
+---
 <span class="title">\_MultiMethodInheritCtx</span><span class="type">class</span>
 
 [multmeth.t](../file/multmeth.t.html)\[[297](../source/multmeth.t.html#297)\]

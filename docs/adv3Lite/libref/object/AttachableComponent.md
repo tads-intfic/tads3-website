@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AttachableComponent</span><span class="type">class</span>
 
 [attachables.t](../file/attachables.t.html)\[[439](../source/attachables.t.html#439)\]

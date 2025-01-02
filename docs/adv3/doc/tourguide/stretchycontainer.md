@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>StretchyContainer : <a
-href="container.htm">Container</a><br />
+href="container.html">Container</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="dispenser.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="spaceoverlay.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="dispenser.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="spaceoverlay.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

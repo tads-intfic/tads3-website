@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Hello and Goodbye  
-<span class="navnp"><a href="convnode.htm" class="nav"><em>Prev:</em> Conversation Nodes</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Hello and Goodbye  
+<span class="navnp"><a href="convnode.html" class="nav"><em>Prev:</em> Conversation Nodes</a>
    
-<a href="knowledge.htm" class="nav"><em>Next:</em> Player Character and
+<a href="knowledge.html" class="nav"><em>Next:</em> Player Character and
 NPC Knowledge</a>     </span>
 
 </div>
@@ -166,7 +168,7 @@ nothing, so that, for example, it's safe to call it from a
 ConvAgendaItem when we don't know in advance whether the ConvAgendaItem
 will be triggered before or during a conversation between the player
 character and the NPC. We'll say a bit more about this in the section on
-[NPC-initiated conversation](initiate.htm).
+[NPC-initiated conversation](initiate.html).
 
   
 <span id="sayingbye"></span>
@@ -262,11 +264,11 @@ override a method to prevent (or conditionally prevent) a conversation
 being terminated:
 
 1.  On the canEndConversation(reason) method of a
-    [NodeEndCheck](convnode.htm#nodecheck) object.
+    [NodeEndCheck](convnode.html#nodecheck) object.
 2.  On the canEndConversation(reason) method of an
-    [ActorState](actorstate.htm) object.
+    [ActorState](actorstate.html) object.
 3.  On the actorCanEndConversation(reason) method of an
-    [Actor](actorobj.htm) object.
+    [Actor](actorobj.html) object.
 
 </div>
 
@@ -275,11 +277,11 @@ being terminated:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Hello and Goodbye  
-<span class="navnp"><a href="convnode.htm" class="nav"><em>Prev:</em> Conversation Nodes</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Hello and Goodbye  
+<span class="navnp"><a href="convnode.html" class="nav"><em>Prev:</em> Conversation Nodes</a>
    
-<a href="knowledge.htm" class="nav"><em>Next:</em> Player Character and
+<a href="knowledge.html" class="nav"><em>Next:</em> Player Character and
 NPC Knowledge</a>     </span>
 
 </div>

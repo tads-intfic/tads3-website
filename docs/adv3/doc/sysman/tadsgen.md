@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> tads-gen
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> tads-gen
 Function Set  
-<span class="navnp"><a href="t3vm.htm" class="nav"><em>Prev:</em> t3vm Function Set</a>
+<span class="navnp"><a href="t3vm.html" class="nav"><em>Prev:</em> t3vm Function Set</a>
    
-<a href="regex.htm" class="nav"><em>Next:</em> Regular Expressions</a>
+<a href="regex.html" class="nav"><em>Next:</em> Regular Expressions</a>
     </span>
 
 </div>
@@ -82,7 +84,7 @@ string once.
 
 Returns the datatype of the given value. The return value is one of the
 <span class="code">TypeXxx</span> values (see the section on
-[reflection](reflect.htm)).
+[reflection](reflect.html)).
 
 </div>
 
@@ -121,7 +123,7 @@ though <span class="code">ObjInstances</span> had been specified.
 effect of "resurrecting" objects that aren't reachable in any other way.
 Normally, when the last reference to an object is removed, there's no
 way for your program to ever reach that object again, so in effect the
-object is dead - ready to be deleted by the [garbage collector](gc.htm).
+object is dead - ready to be deleted by the [garbage collector](gc.html).
 However, the collection process only happens intermittently; between
 passes, dead objects linger in memory, waiting for the collector to
 remove them. Between garbage collection passes, TADS doesn't know
@@ -132,7 +134,7 @@ does when it runs. As a result, <span class="code">firstObj()</span> and
 in memory, without trying to determine which are still reachable. If
 it's important to your program's logic that you visit only reachable
 objects, you can call
-[<span class="code">t3RunGC()</span>](t3vm.htm#t3RunGC) just before
+[<span class="code">t3RunGC()</span>](t3vm.html#t3RunGC) just before
 starting your
 <span class="code">firstObj()</span>-<span class="code">nextObj()</span>
 loop, to ensure that objects that are unreachable at the start of the
@@ -242,7 +244,7 @@ default. The valid *timeType* values are:
   2,147,483,647 seconds from January 1, 1970.
 
   For much more comprehensive and convenient date and time handling, see
-  the [Date](date.htm) class.
+  the [Date](date.html) class.
 
 - <span class="code">GetTimeTicks</span> - returns the number of
   milliseconds since some arbitrary zero point on the local system. The
@@ -268,7 +270,7 @@ Constructs a list by repeating the given value the given number of
 times. Returns the new list.
 
 (For a more flexible way of constructing a list that allows for varying
-element values, see the [List.generate](list.htm#generate) method.)
+element values, see the [List.generate](list.html#generate) method.)
 
 </div>
 
@@ -283,7 +285,7 @@ times. The result of the function depends on the data type of *val*:
   of the string appended one after the other. For example,
   <span class="code">makeString('abc', 3)</span> yields
   <span class="code">'abcabcabc'</span>.
-- If *val* is a list (or a [list-like object](opoverload.htm#listlike)),
+- If *val* is a list (or a [list-like object](opoverload.html#listlike)),
   the list must contain integers. Each integer in the list gives a
   Unicode character value. The function constructs a string with the
   same number of characters as the list has elements, and with each
@@ -368,7 +370,7 @@ selects a value from a set of values.
   functions f(), g(), or h() at random and calls only that selected
   function.
 - With a single argument that's a list, Vector, or [list-like
-  object](opoverload.htm#listlike), <span class="code">rand()</span>
+  object](opoverload.html#listlike), <span class="code">rand()</span>
   randomly selects one of the elements of the list and returns it. For
   example, <span class="code">rand(\['red', 'green', 'blue'\])</span>
   will pick one of the color names at random and return it.
@@ -679,8 +681,8 @@ transient objects.
 
 Restore the saved state from a file. *filename* is the name of the file
 to restore; this can be a string with the name of a file in the local
-file system, a [FileName](filename.htm) object, or a
-[TemporaryFile](tempfile.htm) object.
+file system, a [FileName](filename.html) object, or a
+[TemporaryFile](tempfile.html) object.
 
 All objects, except transient objects, are restored to the state they
 had when the state was saved to the given file.
@@ -695,9 +697,9 @@ describing the problem; the possible errors are:
   version of the same program
 - 1207 - the file is corrupted
 
-Starting in 3.1.1, the [file safety](terp.htm#file-safety) settings must
-allow read access to the target file. [FileName](filename.htm) objects
-obtained from [inputFile()](tadsio.htm#inputFile) "open" dialogs are
+Starting in 3.1.1, the [file safety](terp.html#file-safety) settings must
+allow read access to the target file. [FileName](filename.html) objects
+obtained from [inputFile()](tadsio.html#inputFile) "open" dialogs are
 always accessible.
 
 </div>
@@ -753,7 +755,7 @@ of the string (-1 for the last character, -2 for the second to last,
 etc). This can be used to match a substring of str to the pattern
 without actually creating a separate substring value.
 
-Refer to the [regular expressions](regex.htm) section for details on how
+Refer to the [regular expressions](regex.html) section for details on how
 to construct a pattern string.
 
 </div>
@@ -773,17 +775,17 @@ to be invoked for each match to compute the replacement text.
 
 The return value is the resulting string with the substitutions applied.
 
-*pat* can a string that uses the [regular expression](regex.htm) syntax
+*pat* can a string that uses the [regular expression](regex.html) syntax
 to specify the search pattern, or it can be a
-[<span class="code">RexPattern</span>](rexpat.htm) object. (The latter
+[<span class="code">RexPattern</span>](rexpat.html) object. (The latter
 is more efficient if you'll be performing the same search repeatedly,
 since it saves the work of re-parsing the regular expression each time.)
 *pat* can also be a list (or a Vector or other [list-like
-object](opoverload.htm#listlike)) containing multiple search patterns;
+object](opoverload.html#listlike)) containing multiple search patterns;
 if it is, *replacement* can similarly be a list of replacements. More on
 this shortly.
 
-Refer to the [regular expressions](regex.htm) section for details on how
+Refer to the [regular expressions](regex.html) section for details on how
 to construct a pattern string.
 
 The *flags* value is optional. It controls variations on the replacement
@@ -1059,7 +1061,7 @@ in characters of the matching substring; and a string giving the
 matching substring. If there's no match, the function returns
 <span class="code">nil</span>.
 
-Refer to the [regular expressions](regex.htm) section for details on how
+Refer to the [regular expressions](regex.html) section for details on how
 to construct a pattern string.
 
 </div>
@@ -1091,7 +1093,7 @@ since the match can't include the starting character.
 
 The <span class="code">\<FirstBegin\></span> and
 <span class="code">\<FirstEnd\></span> modes (see [regular
-expressions](regex.htm)) work in mirror image compared to ordinary
+expressions](regex.html)) work in mirror image compared to ordinary
 forward searches. The easiest way to think about this is to picture the
 reverse search as a forward search viewed in a mirror. For a reverse
 search, <span class="code">\<FirstBegin\></span> means that the match
@@ -1120,8 +1122,8 @@ characters or anything else.
 Saves the state of all objects (except transient objects) to a file.
 
 *filename* specifies the file to save to; this can be a string giving
-the name of a file in the local file system, a [FileName](filename.htm)
-object, or a [TemporaryFile](tempfile.htm) object.
+the name of a file in the local file system, a [FileName](filename.html)
+object, or a [TemporaryFile](tempfile.html) object.
 
 If an error occurs, the function throws a run-time error to indicate the
 problem. The saved state can later be restored using
@@ -1141,9 +1143,9 @@ or non-string values found in the table. Both the keys and the values
 are meant to be displayed to the user, so the keys should be descriptive
 titles for their respective values.
 
-Starting in 3.1.1, the [file safety](terp.htm#file-safety) settings must
-allow write access to the target file. [FileName](filename.htm) objects
-obtained from [inputFile()](tadsio.htm#inputFile) "save" dialogs are
+Starting in 3.1.1, the [file safety](terp.html#file-safety) settings must
+allow write access to the target file. [FileName](filename.html) objects
+obtained from [inputFile()](tadsio.html#inputFile) "save" dialogs are
 always accessible.
 
 </div>
@@ -1678,7 +1680,7 @@ numbers), whereas toInteger can only handle ordinary integers.
   <span class="code">'true'</span> or the string
   <span class="code">'nil'</span>, respectively.
 
-- If *val* is a [list](list.htm) or [Vector](vector.htm), the return
+- If *val* is a [list](list.html) or [Vector](vector.html), the return
   value is a string containing the elements of *val* concatenated
   together, with commas separating elements. Each element is itself
   first converted to a string via toString(), using the given *radix*
@@ -1693,11 +1695,11 @@ numbers), whereas toInteger can only handle ordinary integers.
   interpreted as "unsigned". See below for more details on the radix and
   signed/unsigned treatment.
 
-- If *val* is a [BigNumber](bignum.htm), and the *radix* value is 10 (or
+- If *val* is a [BigNumber](bignum.html), and the *radix* value is 10 (or
   omitted) **or** the number has a fractional component, it's converted
   to a decimal (base 10) floating point representation, using the
   default BigNumber formatting. This is the same as calling the
-  [<span class="code">formatString()</span>](bignum.htm#formatString)
+  [<span class="code">formatString()</span>](bignum.html#formatString)
   method on the value with all of the options set to defaults.
 
   If *radix* is value other than 10, **and** the value is a whole number
@@ -1709,30 +1711,30 @@ numbers), whereas toInteger can only handle ordinary integers.
 
   The *isSigned* value is ignored for BigNumbers.
 
-- If *val* is a [ByteArray](bytearr.htm) object, it's converted to a
+- If *val* is a [ByteArray](bytearr.html) object, it's converted to a
   string by treating each byte as a Unicode character value.
 
-- If *val* is a [StringBuffer](strbuf.htm), the buffer's current
+- If *val* is a [StringBuffer](strbuf.html), the buffer's current
   contents are returned as a string.
 
-- If *val* is a [Date](date.htm), the date value is converted to a
+- If *val* is a [Date](date.html), the date value is converted to a
   string using a default format.
 
-- If *val* is a [TimeZone](timezone.htm), the name of the timezone is
+- If *val* is a [TimeZone](timezone.html), the name of the timezone is
   returned as a string.
 
-- If *val* is a [FileName](filename.htm), the filename path (represented
+- If *val* is a [FileName](filename.html), the filename path (represented
   using the host operating system's native syntax) is returned as a
   string.
 
-- If *val* is a [RexPattern](rexpat.htm), the original regular
+- If *val* is a [RexPattern](rexpat.html), the original regular
   expression pattern string is returned.
 
 - If *val* is any other object type, and the object defines the property
   <span class="code">objToString</span>, the function calls that method,
   and returns the result if it's a string. Otherwise, the function calls
   to <span class="code">reflectionServices.valToSymbol(val)</span> if
-  it's defined (see [reflection services](reflect.htm)), and returns the
+  it's defined (see [reflection services](reflect.html)), and returns the
   result if it's a string. If all else fails, the function returns a
   generic "object#nn" string showing an internal numeric identifier for
   the object.
@@ -1830,12 +1832,12 @@ of the most recent undo information.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> tads-gen
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> tads-gen
 Function Set  
-<span class="navnp"><a href="t3vm.htm" class="nav"><em>Prev:</em> t3vm Function Set</a>
+<span class="navnp"><a href="t3vm.html" class="nav"><em>Prev:</em> t3vm Function Set</a>
    
-<a href="regex.htm" class="nav"><em>Next:</em> Regular Expressions</a>
+<a href="regex.html" class="nav"><em>Next:</em> Regular Expressions</a>
     </span>
 
 </div>

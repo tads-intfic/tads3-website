@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> TemporaryFile  
-<span class="navnp"><a href="tadsobj.htm" class="nav"><em>Prev:</em> TadsObject</a>
-    <a href="timezone.htm" class="nav"><em>Next:</em> TimeZone</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> TemporaryFile  
+<span class="navnp"><a href="tadsobj.html" class="nav"><em>Prev:</em> TadsObject</a>
+    <a href="timezone.html" class="nav"><em>Next:</em> TimeZone</a>    
 </span>
 
 </div>
@@ -21,7 +23,7 @@
 A TemporaryFile object represents the name of a temporary file in the
 local file system. Since it represents a filename, you can use a
 TemporaryFile object in place of a filename string when calling the
-"open" methods of the [File](file.htm) object.
+"open" methods of the [File](file.html) object.
 
 A temporary file is a file that only exists for as long as the program
 is running. This is useful for things like storing data too large to fit
@@ -77,7 +79,7 @@ this will usually be the /tmp directory.
 Creating a TemporaryFile object **doesn't** actually create a file on
 disk. It merely assigns a unique name that you can use to create a file.
 To create the file itself, you can use any of the "open" methods of the
-[File](file.htm) object, passing the TemporaryFile in place of the
+[File](file.html) object, passing the TemporaryFile in place of the
 filename:
 
 <div class="code">
@@ -92,15 +94,15 @@ file.
 You can also pass a TemporaryFile object in place of a filename string
 to the following built-in functions:
 
-- [logConsoleCreate()](tadsio.htm#logConsoleCreate) (create a log file
+- [logConsoleCreate()](tadsio.html#logConsoleCreate) (create a log file
   console)
-- [setLogFile()](tadsio.htm#setLogFile) (set a transcript or command log
+- [setLogFile()](tadsio.html#setLogFile) (set a transcript or command log
   file)
-- [setScriptFile()](tadsio.htm#setScriptFile) (read commands from a
+- [setScriptFile()](tadsio.html#setScriptFile) (read commands from a
   command transcript)
-- [restoreGame()](tadsgen.htm#restoreGame) (restore the game state from
+- [restoreGame()](tadsgen.html#restoreGame) (restore the game state from
   a file)
-- [saveGame()](tadsgen.htm#saveGame) (save the game state to a file)
+- [saveGame()](tadsgen.html#saveGame) (save the game state to a file)
 
 ## Methods
 
@@ -219,10 +221,10 @@ itself, not to the underlying filename.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> TemporaryFile  
-<span class="navnp"><a href="tadsobj.htm" class="nav"><em>Prev:</em> TadsObject</a>
-    <a href="timezone.htm" class="nav"><em>Next:</em> TimeZone</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> TemporaryFile  
+<span class="navnp"><a href="tadsobj.html" class="nav"><em>Prev:</em> TadsObject</a>
+    <a href="timezone.html" class="nav"><em>Next:</em> TimeZone</a>    
 </span>
 
 </div>

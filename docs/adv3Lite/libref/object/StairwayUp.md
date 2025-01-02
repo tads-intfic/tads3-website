@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StairwayUp</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[602](../source/extras.t.html#602)\]

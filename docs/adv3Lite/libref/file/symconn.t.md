@@ -1,3 +1,5 @@
+---
+---
 <span class="title">symconn.t</span><span class="type">file</span>
 
 [source file](../source/symconn.t.html)

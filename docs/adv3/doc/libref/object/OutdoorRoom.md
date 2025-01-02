@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OutdoorRoom</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[4750](../source/travel.t.html#4750)\]

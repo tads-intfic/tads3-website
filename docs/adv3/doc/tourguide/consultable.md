@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Consultable : <a
-href="thing-introduction.htm">Thing</a>, TopicDatabase<br />
+href="thing-introduction.html">Thing</a>, TopicDatabase<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="amodifieddefaultcommandtopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="consulttopic.htm">[Next]</a></td>
+href="amodifieddefaultcommandtopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="consulttopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -22,8 +24,8 @@ A Consultable is something you can look things up in, in response to
 commands like LOOK BANANA UP IN BOOK or CONSULT BOOK ABOUT MEANING OF
 LIFE. It follows that a Consultable will normally be something like a
 book, or maybe a computer. The advantage of a Consultable is that it can
-contain [ConsultTopics](consulttopic.htm), which work in much the way as
-other [TopicEntries](topicentry.htm) work for an actor.  
+contain [ConsultTopics](consulttopic.html), which work in much the way as
+other [TopicEntries](topicentry.html) work for an actor.  
   
 We'll define just one Consultable in this game: a book, which we'll also
 make a Readable:  

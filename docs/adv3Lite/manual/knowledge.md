@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Player Character and NPC
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Player Character and NPC
 Knowledge  
-<span class="navnp"><a href="hello.htm" class="nav"><em>Prev:</em> Hello and Goodbye</a>
-    <a href="orders.htm" class="nav"><em>Next:</em> Giving Orders to
+<span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello and Goodbye</a>
+    <a href="orders.html" class="nav"><em>Next:</em> Giving Orders to
 NPCs</a>     </span>
 
 </div>
@@ -180,8 +182,8 @@ hard-to-find bugs later.
 ## Knowledge of Existence in Conversation
 
 We have already seen that the library keeps basic track of the player
-character's knowledge of the existence of [things](thing.htm) and
-[topics](topic.htm). As stated aboved, we can test whether the player
+character's knowledge of the existence of [things](thing.html) and
+[topics](topic.html). As stated aboved, we can test whether the player
 character knows of the existence of some object *obj* by testing the
 value of <span class="code">gPlayerChar.knowsAbout(obj)</span> or,
 equivalently, <span class="code">obj.known</span>. If obj is a Thing
@@ -376,11 +378,11 @@ confusion).
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Player Character and NPC
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Player Character and NPC
 Knowledge  
-<span class="navnp"><a href="hello.htm" class="nav"><em>Prev:</em> Hello and Goodbye</a>
-    <a href="orders.htm" class="nav"><em>Next:</em> Giving Orders to
+<span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello and Goodbye</a>
+    <a href="orders.html" class="nav"><em>Next:</em> Giving Orders to
 NPCs</a>     </span>
 
 </div>

@@ -1,0 +1,863 @@
+<p><span class="title">VocabObject</span><span class="type">class</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#532">532</a>],
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#332">332</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Object with vocabulary. This is the base class for any object that can
+define vocabulary words.
+
+*Modified in
+[en_us.t](../file/en_us.t.html)\[[332](../source/en_us.t.html#332)\]:*  
+Language-specific modifications for VocabObject.
+
+`class `**`VocabObject`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">VocabObject</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">VocabObject</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Thing<code class="language-plaintext highlighter-rouge">](../object/Thing.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Actor<code class="language-plaintext highlighter-rouge">](../object/Actor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>UntakeableActor<code class="language-plaintext highlighter-rouge">](../object/UntakeableActor.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Person<code class="language-plaintext highlighter-rouge">](../object/Person.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BasicLocation<code class="language-plaintext highlighter-rouge">](../object/BasicLocation.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NestedRoom<code class="language-plaintext highlighter-rouge">](../object/NestedRoom.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>BasicChair<code class="language-plaintext highlighter-rouge">](../object/BasicChair.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>BasicBed<code class="language-plaintext highlighter-rouge">](../object/BasicBed.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>BasicPlatform<code class="language-plaintext highlighter-rouge">](../object/BasicPlatform.html)  
+</code>                                                         <code class="language-plaintext highlighter-rouge">[</code>Booth<code class="language-plaintext highlighter-rouge">](../object/Booth.html)  
+</code>                                                         <code class="language-plaintext highlighter-rouge">[</code>Platform<code class="language-plaintext highlighter-rouge">](../object/Platform.html)  
+</code>                                                                 <code class="language-plaintext highlighter-rouge">[</code>NominalPlatform<code class="language-plaintext highlighter-rouge">](../object/NominalPlatform.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>Bed<code class="language-plaintext highlighter-rouge">](../object/Bed.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Chair<code class="language-plaintext highlighter-rouge">](../object/Chair.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>HighNestedRoom<code class="language-plaintext highlighter-rouge">](../object/HighNestedRoom.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Vehicle<code class="language-plaintext highlighter-rouge">](../object/Vehicle.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Room<code class="language-plaintext highlighter-rouge">](../object/Room.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>DarkRoom<code class="language-plaintext highlighter-rouge">](../object/DarkRoom.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>FloorlessRoom<code class="language-plaintext highlighter-rouge">](../object/FloorlessRoom.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>OutdoorRoom<code class="language-plaintext highlighter-rouge">](../object/OutdoorRoom.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>ShipboardRoom<code class="language-plaintext highlighter-rouge">](../object/ShipboardRoom.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BulkLimiter<code class="language-plaintext highlighter-rouge">](../object/BulkLimiter.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>BasicContainer<code class="language-plaintext highlighter-rouge">](../object/BasicContainer.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Container<code class="language-plaintext highlighter-rouge">](../object/Container.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Booth<code class="language-plaintext highlighter-rouge">](../object/Booth.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Dispenser<code class="language-plaintext highlighter-rouge">](../object/Dispenser.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>Matchbook<code class="language-plaintext highlighter-rouge">](../object/Matchbook.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>OpenableContainer<code class="language-plaintext highlighter-rouge">](../object/OpenableContainer.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>KeyedContainer<code class="language-plaintext highlighter-rouge">](../object/KeyedContainer.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>LockableContainer<code class="language-plaintext highlighter-rouge">](../object/LockableContainer.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>RestrictedContainer<code class="language-plaintext highlighter-rouge">](../object/RestrictedContainer.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>SingleContainer<code class="language-plaintext highlighter-rouge">](../object/SingleContainer.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>StretchyContainer<code class="language-plaintext highlighter-rouge">](../object/StretchyContainer.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SpaceOverlay<code class="language-plaintext highlighter-rouge">](../object/SpaceOverlay.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>RearContainer<code class="language-plaintext highlighter-rouge">](../object/RearContainer.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>RearSurface<code class="language-plaintext highlighter-rouge">](../object/RearSurface.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>RestrictedRearSurface<code class="language-plaintext highlighter-rouge">](../object/RestrictedRearSurface.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>RestrictedRearContainer<code class="language-plaintext highlighter-rouge">](../object/RestrictedRearContainer.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Underside<code class="language-plaintext highlighter-rouge">](../object/Underside.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>RestrictedUnderside<code class="language-plaintext highlighter-rouge">](../object/RestrictedUnderside.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Surface<code class="language-plaintext highlighter-rouge">](../object/Surface.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Bed<code class="language-plaintext highlighter-rouge">](../object/Bed.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Chair<code class="language-plaintext highlighter-rouge">](../object/Chair.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Platform<code class="language-plaintext highlighter-rouge">](../object/Platform.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>NominalPlatform<code class="language-plaintext highlighter-rouge">](../object/NominalPlatform.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>RestrictedSurface<code class="language-plaintext highlighter-rouge">](../object/RestrictedSurface.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Button<code class="language-plaintext highlighter-rouge">](../object/Button.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>CollectiveGroup<code class="language-plaintext highlighter-rouge">](../object/CollectiveGroup.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ItemizingCollectiveGroup<code class="language-plaintext highlighter-rouge">](../object/ItemizingCollectiveGroup.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ComplexContainer<code class="language-plaintext highlighter-rouge">](../object/ComplexContainer.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Consultable<code class="language-plaintext highlighter-rouge">](../object/Consultable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Dispensable<code class="language-plaintext highlighter-rouge">](../object/Dispensable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>FillMedium<code class="language-plaintext highlighter-rouge">](../object/FillMedium.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Food<code class="language-plaintext highlighter-rouge">](../object/Food.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Hidden<code class="language-plaintext highlighter-rouge">](../object/Hidden.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Intangible<code class="language-plaintext highlighter-rouge">](../object/Intangible.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DistanceConnector<code class="language-plaintext highlighter-rouge">](../object/DistanceConnector.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SensoryEmanation<code class="language-plaintext highlighter-rouge">](../object/SensoryEmanation.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Noise<code class="language-plaintext highlighter-rouge">](../object/Noise.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>SimpleNoise<code class="language-plaintext highlighter-rouge">](../object/SimpleNoise.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Odor<code class="language-plaintext highlighter-rouge">](../object/Odor.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>SimpleOdor<code class="language-plaintext highlighter-rouge">](../object/SimpleOdor.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Vaporous<code class="language-plaintext highlighter-rouge">](../object/Vaporous.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Key<code class="language-plaintext highlighter-rouge">](../object/Key.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Keyring<code class="language-plaintext highlighter-rouge">](../object/Keyring.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Lever<code class="language-plaintext highlighter-rouge">](../object/Lever.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>SpringLever<code class="language-plaintext highlighter-rouge">](../object/SpringLever.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>LightSource<code class="language-plaintext highlighter-rouge">](../object/LightSource.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Flashlight<code class="language-plaintext highlighter-rouge">](../object/Flashlight.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>FueledLightSource<code class="language-plaintext highlighter-rouge">](../object/FueledLightSource.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Candle<code class="language-plaintext highlighter-rouge">](../object/Candle.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Matchstick<code class="language-plaintext highlighter-rouge">](../object/Matchstick.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>NonPortable<code class="language-plaintext highlighter-rouge">](../object/NonPortable.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Fixture<code class="language-plaintext highlighter-rouge">](../object/Fixture.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Component<code class="language-plaintext highlighter-rouge">](../object/Component.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>ComplexComponent<code class="language-plaintext highlighter-rouge">](../object/ComplexComponent.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>ContainerDoor<code class="language-plaintext highlighter-rouge">](../object/ContainerDoor.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>CustomFixture<code class="language-plaintext highlighter-rouge">](../object/CustomFixture.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Decoration<code class="language-plaintext highlighter-rouge">](../object/Decoration.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Unthing<code class="language-plaintext highlighter-rouge">](../object/Unthing.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Distant<code class="language-plaintext highlighter-rouge">](../object/Distant.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Enterable<code class="language-plaintext highlighter-rouge">](../object/Enterable.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>EntryPortal<code class="language-plaintext highlighter-rouge">](../object/EntryPortal.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Exitable<code class="language-plaintext highlighter-rouge">](../object/Exitable.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>ExitPortal<code class="language-plaintext highlighter-rouge">](../object/ExitPortal.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>NestedRoomFloor<code class="language-plaintext highlighter-rouge">](../object/NestedRoomFloor.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>NominalPlatform<code class="language-plaintext highlighter-rouge">](../object/NominalPlatform.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Passage<code class="language-plaintext highlighter-rouge">](../object/Passage.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Stairway<code class="language-plaintext highlighter-rouge">](../object/Stairway.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>StairwayDown<code class="language-plaintext highlighter-rouge">](../object/StairwayDown.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>StairwayUp<code class="language-plaintext highlighter-rouge">](../object/StairwayUp.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>ThroughPassage<code class="language-plaintext highlighter-rouge">](../object/ThroughPassage.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>BasicDoor<code class="language-plaintext highlighter-rouge">](../object/BasicDoor.html)  
+</code>                                                         <code class="language-plaintext highlighter-rouge">[</code>Door<code class="language-plaintext highlighter-rouge">](../object/Door.html)  
+</code>                                                                 <code class="language-plaintext highlighter-rouge">[</code>AutoClosingDoor<code class="language-plaintext highlighter-rouge">](../object/AutoClosingDoor.html)  
+</code>                                                         <code class="language-plaintext highlighter-rouge">[</code>SecretDoor<code class="language-plaintext highlighter-rouge">](../object/SecretDoor.html)  
+</code>                                                                 <code class="language-plaintext highlighter-rouge">[</code>HiddenDoor<code class="language-plaintext highlighter-rouge">](../object/HiddenDoor.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>ExitOnlyPassage<code class="language-plaintext highlighter-rouge">](../object/ExitOnlyPassage.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>PathPassage<code class="language-plaintext highlighter-rouge">](../object/PathPassage.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Room<code class="language-plaintext highlighter-rouge">](../object/Room.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>DarkRoom<code class="language-plaintext highlighter-rouge">](../object/DarkRoom.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>FloorlessRoom<code class="language-plaintext highlighter-rouge">](../object/FloorlessRoom.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>OutdoorRoom<code class="language-plaintext highlighter-rouge">](../object/OutdoorRoom.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>ShipboardRoom<code class="language-plaintext highlighter-rouge">](../object/ShipboardRoom.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>RoomPart<code class="language-plaintext highlighter-rouge">](../object/RoomPart.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>DefaultWall<code class="language-plaintext highlighter-rouge">](../object/DefaultWall.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Floor<code class="language-plaintext highlighter-rouge">](../object/Floor.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>SecretFixture<code class="language-plaintext highlighter-rouge">](../object/SecretFixture.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Immovable<code class="language-plaintext highlighter-rouge">](../object/Immovable.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>CustomImmovable<code class="language-plaintext highlighter-rouge">](../object/CustomImmovable.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Heavy<code class="language-plaintext highlighter-rouge">](../object/Heavy.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>TravelPushable<code class="language-plaintext highlighter-rouge">](../object/TravelPushable.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>UntakeableActor<code class="language-plaintext highlighter-rouge">](../object/UntakeableActor.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Person<code class="language-plaintext highlighter-rouge">](../object/Person.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>OnOffControl<code class="language-plaintext highlighter-rouge">](../object/OnOffControl.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Switch<code class="language-plaintext highlighter-rouge">](../object/Switch.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Flashlight<code class="language-plaintext highlighter-rouge">](../object/Flashlight.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Readable<code class="language-plaintext highlighter-rouge">](../object/Readable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Settable<code class="language-plaintext highlighter-rouge">](../object/Settable.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Dial<code class="language-plaintext highlighter-rouge">](../object/Dial.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>LabeledDial<code class="language-plaintext highlighter-rouge">](../object/LabeledDial.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>NumberedDial<code class="language-plaintext highlighter-rouge">](../object/NumberedDial.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TravelConnector<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskConnector<code class="language-plaintext highlighter-rouge">](../object/AskConnector.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>DefaultAskConnector<code class="language-plaintext highlighter-rouge">](../object/DefaultAskConnector.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Passage<code class="language-plaintext highlighter-rouge">](../object/Passage.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Stairway<code class="language-plaintext highlighter-rouge">](../object/Stairway.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>StairwayDown<code class="language-plaintext highlighter-rouge">](../object/StairwayDown.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>StairwayUp<code class="language-plaintext highlighter-rouge">](../object/StairwayUp.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>ThroughPassage<code class="language-plaintext highlighter-rouge">](../object/ThroughPassage.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>BasicDoor<code class="language-plaintext highlighter-rouge">](../object/BasicDoor.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>Door<code class="language-plaintext highlighter-rouge">](../object/Door.html)  
+</code>                                                         <code class="language-plaintext highlighter-rouge">[</code>AutoClosingDoor<code class="language-plaintext highlighter-rouge">](../object/AutoClosingDoor.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>SecretDoor<code class="language-plaintext highlighter-rouge">](../object/SecretDoor.html)  
+</code>                                                         <code class="language-plaintext highlighter-rouge">[</code>HiddenDoor<code class="language-plaintext highlighter-rouge">](../object/HiddenDoor.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>ExitOnlyPassage<code class="language-plaintext highlighter-rouge">](../object/ExitOnlyPassage.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>PathPassage<code class="language-plaintext highlighter-rouge">](../object/PathPassage.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>RoomConnector<code class="language-plaintext highlighter-rouge">](../object/RoomConnector.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>OneWayRoomConnector<code class="language-plaintext highlighter-rouge">](../object/OneWayRoomConnector.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>RoomAutoConnector<code class="language-plaintext highlighter-rouge">](../object/RoomAutoConnector.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>Room<code class="language-plaintext highlighter-rouge">](../object/Room.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>DarkRoom<code class="language-plaintext highlighter-rouge">](../object/DarkRoom.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>FloorlessRoom<code class="language-plaintext highlighter-rouge">](../object/FloorlessRoom.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>OutdoorRoom<code class="language-plaintext highlighter-rouge">](../object/OutdoorRoom.html)  
+</code>                                                 <code class="language-plaintext highlighter-rouge">[</code>ShipboardRoom<code class="language-plaintext highlighter-rouge">](../object/ShipboardRoom.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TravelMessage<code class="language-plaintext highlighter-rouge">](../object/TravelMessage.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>DeadEndConnector<code class="language-plaintext highlighter-rouge">](../object/DeadEndConnector.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>NoTravelMessage<code class="language-plaintext highlighter-rouge">](../object/NoTravelMessage.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>FakeConnector<code class="language-plaintext highlighter-rouge">](../object/FakeConnector.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Wearable<code class="language-plaintext highlighter-rouge">](../object/Wearable.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Topic`](../object/Topic.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canResolvePossessive<code class="language-plaintext highlighter-rouge">](#canResolvePossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>disambigPromptOrder<code class="language-plaintext highlighter-rouge">](#disambigPromptOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>owner<code class="language-plaintext highlighter-rouge">](#owner)</code>  <code class="language-plaintext highlighter-rouge">[</code>pluralOrder<code class="language-plaintext highlighter-rouge">](#pluralOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>vocabLikelihood<code class="language-plaintext highlighter-rouge">](#vocabLikelihood)</code>  <code class="language-plaintext highlighter-rouge">[</code>vocabWords<code class="language-plaintext highlighter-rouge">](#vocabWords)</code>  <code class="language-plaintext highlighter-rouge">[</code>weakTokens<code class="language-plaintext highlighter-rouge">](#weakTokens)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addToDictionary<code class="language-plaintext highlighter-rouge">](#addToDictionary)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>expandPronounList<code class="language-plaintext highlighter-rouge">](#expandPronounList)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterResolveList<code class="language-plaintext highlighter-rouge">](#filterResolveList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getFacets<code class="language-plaintext highlighter-rouge">](#getFacets)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNominalOwner<code class="language-plaintext highlighter-rouge">](#getNominalOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>inheritVocab<code class="language-plaintext highlighter-rouge">](#inheritVocab)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeVocab<code class="language-plaintext highlighter-rouge">](#initializeVocab)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeVocabWith<code class="language-plaintext highlighter-rouge">](#initializeVocabWith)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOwnedBy<code class="language-plaintext highlighter-rouge">](#isOwnedBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchName<code class="language-plaintext highlighter-rouge">](#matchName)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchNameCommon<code class="language-plaintext highlighter-rouge">](#matchNameCommon)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchNameDisambig<code class="language-plaintext highlighter-rouge">](#matchNameDisambig)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwNoMatchForLocation<code class="language-plaintext highlighter-rouge">](#throwNoMatchForLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwNoMatchForPossessive<code class="language-plaintext highlighter-rouge">](#throwNoMatchForPossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>throwNothingInLocation<code class="language-plaintext highlighter-rouge">](#throwNothingInLocation)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="canResolvePossessive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canResolvePossessive</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#893">893</a>]</p>
+
+<div class="desc">
+
+By default, every object can be used as the resolution of a possessive
+qualifier phrase (e.g., "bob" in "bob's book"). If this property is set
+to nil for an object, that object can never be used as a possessive.
+Note that has nothing to do with establishing ownership relationships
+between objects; it controls only the resolution of possessive phrases
+during parsing to concrete game objects.
+
+</div>
+
+<p><span id="disambigPromptOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">disambigPromptOrder</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#777">777</a>]</p>
+
+<div class="desc">
+
+Disambiguation prompt order. When we interactively prompt for help
+resolving an ambiguous noun phrase, we'll put the list of ambiguous
+matches in ascending order of this property value.
+
+In most cases, the prompt order doesn't matter, so most objects won't
+have to override the default setting. Sometimes, though, a set of
+objects will be identified in the game as "first", "second", "third",
+etc., and in these cases it's desirable to have the objects presented in
+the same order as the names indicate:
+
+Which door do you mean, the first door, the second door, or the third
+door?
+
+By default, we use the same value as our pluralOrder, since the plural
+order has essentially the same purpose.
+
+</div>
+
+<p><span id="owner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">owner</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#977">977</a>]</p>
+
+<div class="desc">
+
+our explicit owner, if any
+
+</div>
+
+<p><span id="pluralOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pluralOrder</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#758">758</a>]</p>
+
+<div class="desc">
+
+Plural resolution order. When a command contains a plural noun phrase,
+we'll sort the items that match the plural phrase in ascending order of
+this property value.
+
+In most cases, the plural resolution order doesn't matter. Once in a
+while, though, a set of objects will be named as "first," "second,"
+"third," and so on; in these cases, it's nice to have the order of
+resolution match the nominal ordering.
+
+Note that the sorting order only applies within the matches for a
+particular plural phrase, not globally throughout the entire list of
+objects in a command. For example, if the player types TAKE BOXES AND
+BOOKS, we'll sort the boxes in one group, and then we'll sort the books
+as a separate group - but all of the boxes will come before any of the
+books, regardless of the plural orders.
+
+\&gt;take books and boxes  
+first book: Taken.  
+second book: Taken.  
+third book: Taken.  
+left box: Taken.  
+middle box: Taken.  
+right box: Taken.
+
+</div>
+
+<p><span id="vocabLikelihood"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vocabLikelihood</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#788">788</a>]</p>
+
+<div class="desc">
+
+Intrinsic parsing likelihood. During disambiguation, if the parser finds
+two objects with equivalent logicalness (as determined by the 'verify'
+process for the particular Action being performed), it will pick the one
+with the higher intrinsic likelihood value. The default value is zero,
+which makes all objects equivalent by default. Set a higher value to
+make the parser prefer this object in cases of ambiguity.
+
+</div>
+
+<p><span id="vocabWords"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vocabWords</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#373">373</a>]</p>
+
+<div class="desc">
+
+The vocabulary initializer string for the object - this string can be
+initialized (most conveniently via a template) to a string of this
+format:
+
+'adj adj adj noun/noun/noun\*plural plural plural'
+
+The noun part of the string can be a hyphen, '-', in which case it means
+that the string doesn't specify a noun or plural at all. This can be
+useful when nouns and plurals are all inherited from base classes, and
+only adjectives are to be specified. (In fact, any word that consists of
+a single hyphen will be ignored, but this is generally only useful for
+the adjective-only case.)
+
+During preinitialization, we'll parse this string and generate
+dictionary entries and individual vocabulary properties for the parts of
+speech we find.
+
+Note that the format described above is specific to the English version
+of the library. Non-English versions will probably want to use different
+formats to conveniently encode appropriate language-specific information
+in the initializer string. See the comments for initializeVocabWith()
+for more details.
+
+You can use the special wildcard \# to match any numeric adjective. This
+only works as a wildcard when it stands alone, so a string like "7#" is
+matched as that literal string, not as a wildcard. If you want to use a
+pound sign as a literal adjective, just put it in double quotes.
+
+You can use the special wildcard "\u0001" (include the double quotes
+within the string) to match any literal adjective. This is the literal
+adjective equivalent of the pound sign. We use this funny character
+value because it is unlikely ever to be interesting in user input.
+
+If you want to match any string for a noun and/or adjective, you can't
+do it with this property. Instead, just add the property value noun='\*'
+to the object.
+
+</div>
+
+<p><span id="weakTokens"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">weakTokens</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#882">882</a>]</p>
+
+<div class="desc">
+
+Our list of "weak" tokens. This is a token that is acceptable in our
+vocabulary, but which we can only use in combination with one or more
+"strong" tokens. (A token is strong if it's not weak, so we need only
+keep track of one or the other kind. Weak tokens are much less common
+than strong tokens, so it takes a lot less space if we store the weak
+ones instead of the strong ones.)
+
+The purpose of weak tokens is to allow players to use more words to
+refer to some objects without creating ambiguity. For example, if we
+have a house, and a front door of the house, we might want to allow the
+player to call the front door "front door of house." If we just defined
+the door's vocabulary thus, though, we'd create ambiguity if the player
+tried to refer to "house," even though this obviously doesn't create any
+ambiguity to a human reader. Weak tokens fix the problem: we define
+"house" as a weak token for the front door, which allows the player to
+refer to the front door as "front door of house", but prevents the front
+door from matching just "house".
+
+By default, this is nil to indicate that we don't have any weak tokens
+to check. If the object has weak tokens, this should be set to a list of
+strings giving the weak tokens.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addToDictionary"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToDictionary (prop)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#393">393</a>]</p>
+
+<div class="desc">
+
+add the words from a dictionary property to the global dictionary
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ( )</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#379">379</a>]</p>
+
+<div class="desc">
+
+On dynamic construction, initialize our vocabulary words and add them to
+the dictionary.
+
+</div>
+
+<p><span id="expandPronounList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">expandPronounList (typ, lst)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#856">856</a>]</p>
+
+<div class="desc">
+
+Expand a pronoun list. This is essentially complementary to
+filterResolveList: the function is to "unfilter" a pronoun binding that
+contains this object so that it restores any objects that would have
+been filtered out by filterResolveList from the original noun phrase
+binding.
+
+This routine is called whenever the parser is called upon to resolve a
+pronoun ("TAKE THEM"). This routine is called for each object in the
+"raw" pronoun binding, which is simply the list of objects that was
+stored by the previous command as the antecedent for the pronoun. After
+this routine has been called for each object in the raw pronoun binding,
+the final list will be passed through filterResolveList().
+
+'lst' is the raw pronoun binding so far, which might reflect changes
+made by this method called on previous objects in the list. 'typ' is the
+pronoun type (PronounIt, PronounThem, etc) describing the pronoun phrase
+being resolved. The return value is the new pronoun binding list; if
+this routine doesn't need to make any changes, it should simply return
+'lst'.
+
+In some cases, filterResolveList chooses which of two or more possible
+ways to bind a noun phrase, with the binding dependent upon other
+conditions, such as the current action. In these cases, it's often
+desirable for a subsequent pronoun reference to make the same decision
+again, choosing from the full set of possible bindings. This routine
+facilitates that by letting the object put back objects that were
+filtered out, so that the filtering can once again run on the full set
+of possible bindings for the pronoun reference.
+
+This base implementation just returns the original list unchanged. See
+CollectiveGroup for an override that uses this.
+
+</div>
+
+<p><span id="filterResolveList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterResolveList (lst, action, whichObj, np, requiredNum)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#815">815</a>]</p>
+
+<div class="desc">
+
+Filter an ambiguous noun phrase resolution list. The parser calls this
+method for each object that matches an ambiguous noun phrase or an ALL
+phrase, to allow the object to modify the resolution list. This method
+allows the object to act globally on the entire list, so that the
+filtering can be sensitive to the presence or absence in the list of
+other objects, and can affect the presence of other objects.
+
+'lst' is a list of ResolveInfo objects describing the tentative
+resolution of the noun phrase. 'action' is the Action object
+representing the command. 'whichObj' is the object role identifier of
+the object being resolved (DirectObject, IndirectObject, etc). 'np' is
+the noun phrase production that we're resolving; this is usually a
+subclass of NounPhraseProd. 'requiredNum' is the number of objects
+required, when an exact quantity is specified; this is nil in cases
+where the quantity is unspecified, as in 'all' or an unquantified plural
+("take coins").
+
+The result is a new list of ResolveInfo objects, which need not contain
+any of the objects of the original list, and can add new objects not in
+the original list, as desired.
+
+By default, we simply return the original list.
+
+</div>
+
+<p><span id="getFacets"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getFacets ( )</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#942">942</a>]</p>
+
+<div class="desc">
+
+Get a list of the other "facets" of this object. A facet is another
+program object that to the player looks like the same or part of the
+same physical object. For example, it's often convenient to represent a
+door using two game objects - one for each side - but the two really
+represent the same door from the player's perspective.
+
+The parser uses an object's facets to resolve a pronoun when the
+original antecedent goes out of scope. In our door example, if we refer
+to the door, then walk through it to the other side, then refer to 'it',
+the parser will realize from the facet relationship that 'it' now refers
+to the other side of the door.
+
+</div>
+
+<p><span id="getNominalOwner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNominalOwner ( )</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#974">974</a>]</p>
+
+<div class="desc">
+
+Get our nominal owner. This is the owner that we report for this object
+if we're asked to distinguish this object from another object in a
+disambiguation prompt. The nominal owner isn't necessarily the only
+owner. Note that if getNominalOwner() returns a non-nil value,
+isOwnedBy(getNominalOwner()) should always return true.
+
+By default, we'll simply return our 'owner' property.
+
+</div>
+
+<p><span id="inheritVocab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inheritVocab (target, done)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#421">421</a>]</p>
+
+<div class="desc">
+
+Inherit vocabulary from this class and its superclasses, adding the
+words to the given target object. 'target' is the object to which we add
+our vocabulary words, and 'done' is a vector of classes that have been
+visited so far.
+
+Since a class can be inherited more than once in an inheritance tree
+(for example, a class can have multiple superclasses, each of which have
+a common base class), we keep a vector of all of the classes we've
+visited. If we're already in the vector, we'll skip adding vocabulary
+for this class or its superclasses, since we must have already traversed
+this branch of the tree from another subclass.
+
+</div>
+
+<p><span id="initializeVocab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeVocab ( )</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#401">401</a>]</p>
+
+<div class="desc">
+
+initialize the vocabulary from vocabWords
+
+</div>
+
+<p><span id="initializeVocabWith"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeVocabWith (str)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#464">464</a>]</p>
+
+<div class="desc">
+
+Initialize our vocabulary from the given string. This parses the given
+vocabulary initializer string and adds the words defined in the string
+to the dictionary.
+
+Note that this parsing is intentionally located in the English-specific
+part of the library, because it is expected that other languages will
+want to define their own vocabulary initialization string formats. For
+example, a language with gendered nouns might want to use gendered
+articles in the initializer string as an author-friendly way of defining
+noun gender; languages with inflected (declined) nouns and/or adjectives
+might want to encode inflected forms in the initializer. Non-English
+language implementations are free to completely redefine the format -
+there's no need to follow the conventions of the English format in other
+languages where different formats would be more convenient.
+
+</div>
+
+<p><span id="isOwnedBy"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isOwnedBy (obj)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#962">962</a>]</p>
+
+<div class="desc">
+
+Ownership: a vocab-object can be marked as owned by a given Thing. This
+allows command input to refer to the owned object using possessive
+syntax (such as, in English, "x's y").
+
+This method returns true if 'self' is owned by 'obj'. The parser
+generally tests for ownership in this direction, as opposed to asking
+for obj's owner, because a given object might have multiple owners, and
+might not be able to enumerate them all (or, at least, might not be able
+to enumerate them efficiently). It's usually efficient to determine
+whether a given object qualifies as an owner, and from the parser's
+persepctive that's the question anyway, since it wants to determine if
+the "x" in "x's y" qualifies as my owner.
+
+By default, we simply return true if 'obj' matches our 'owner' property
+(and is not nil).
+
+</div>
+
+<p><span id="matchName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchName (origTokens, adjustedTokens)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#597">597</a>]</p>
+
+<div class="desc">
+
+Match a name as used in a noun phrase in a player's command to this
+object. The parser calls this routine to test this object for a match to
+a noun phrase when all of the following conditions are true:
+
+\- this object is in scope;
+
+\- our vocabulary matches the noun phrase, which means that ALL of the
+words in the player's noun phrase are associated with this object with
+the corresponding parts of speech. Note the special wildcard vocabulary
+words: '#' as an adjective matches any number used as an adjective; '\*'
+as a noun matches any word used as any part of speech.
+
+'origTokens' is the list of the original input words making up the noun
+phrase, in canonical tokenizer format. Each element of this list is a
+sublist representing one token.
+
+'adjustedTokens' is the "adjusted" token list, which provides more
+information on how the parser is analyzing the phrase but may not
+contain the exact original tokens of the command. In the adjusted list,
+the tokens are represented by pairs of values in the list: the first
+value of each pair is a string giving the adjusted token text, and the
+second value of the pair is a property ID giving the part of speech of
+the parser's interpretation of the phrase. For example, if the noun
+phrase is "red book", the list might look like \['red', &amp;adjective,
+'book', &amp;noun\].
+
+The adjusted token list in some cases contains different tokens than the
+original input. For example, when the command contains a spelled-out
+number, the parser will translate the spelled-out number to a numeral
+format and provide the numeral string in the adjusted token list: 'a
+hundred and thirty-four' will become '134' in the adjusted token list.
+
+If this object does not match the noun phrase, this routine returns nil.
+If the object is a match, the routine returns 'self'. The routine can
+also return a different object, or even a list of objects - in this
+case, the parser will consider the noun phrase to have matched the
+returned object or objects rather than this original match.
+
+Note that it isn't necessary to check that the input tokens match our
+defined vocabulary words, because the parser will already have done that
+for us. This routine is only called after the parser has already
+determined that all of the noun phrase's words match ours.
+
+By default, we do two things. First, we check to see if ALL of our
+tokens are "weak" tokens, and if they are, we indicate that we do NOT
+match the phrase. Second, if we pass the "weak token" test, we'll invoke
+the common handling in matchNameCommon(), and return the result.
+
+In most cases, games will want to override matchNameCommon() instead of
+this routine. matchNameCommon() is the common handler for both normal
+and disambiguation-reply matching, so overriding that one routine will
+take care of both kinds of matching. Games will only need to override
+matchName() separately in cases where they need to differentiate normal
+matching and disambiguation matching.
+
+</div>
+
+<p><span id="matchNameCommon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchNameCommon (origTokens, adjustedTokens)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#718">718</a>]</p>
+
+<div class="desc">
+
+Common handling for the main matchName() and the disambiguation handler
+matchNameDisambig(). By default, we'll check with our state object if we
+have a state object; if not, we'll simply return 'self' to indicate that
+we do indeed match the given tokens.
+
+In most cases, when a game wishes to customize name matching for an
+object, it can simply override this routine. This routine provides
+common handling for matchName() and matchNameDisambig(), so overriding
+this routine will take care of both the normal and disambiguation
+matching cases. In cases where a game needs to customize only normal
+matching or only disambiguation matching, it can override one of those
+other routines instead.
+
+</div>
+
+<p><span id="matchNameDisambig"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchNameDisambig (origTokens, adjustedTokens)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#697">697</a>]</p>
+
+<div class="desc">
+
+Match a name in a disambiguation response. This is similar to
+matchName(), but is called for each object in an ambiguous object list
+for which a disambiguation response was provided. As with matchName(),
+we only call this routine for objects that match the dictionary
+vocabulary.
+
+This routine is separate from matchName() because a disambiguation
+response usually only contains a partial name. For example, the exchange
+might go something like this:
+
+\&gt;take box  
+Which box do you mean, the cardboard box, or the wood box? \&gt;cardboard
+
+Note that it is not safe to assume that the disambiguation response can
+be prepended to the original noun phrase to make a complete noun phrase;
+if this were safe, we'd simply concatenate the two strings and call
+matchName(). This would work for the example above, since we'd get
+"cardboard box" as the new noun phrase, but it wouldn't work in general.
+Consider these examples:
+
+\&gt;open post office box  
+Which post office box do you mean, box 100, box 101, or box 102?
+
+\&gt;take jewel  
+Which jewel do you mean, the emerald, or the diamond?
+
+There's no general way of assembling the disambiguation response and the
+original noun phrase together into a new noun phrase, so rather than
+trying to use matchName() for both purposes, we simply use a separate
+routine to match the disambiguation name.
+
+Note that, when this routine is called, this object will have been
+previously matched with matchName(), so there is no question that this
+object matches the original noun phrase. The only question is whether or
+not this object matches the response to the "which one do you mean"
+question.
+
+The return value has the same meaning as for matchName().
+
+By default, we simply invoke the common handler. Note that games will
+usually want to override matchNameCommon() instead of this routine,
+since matchNameCommon() provides common handling for the main match and
+disambiguation match cases. Games should only override this routine when
+they need to do something different for normal vs disambiguation
+matching.
+
+</div>
+
+<p><span id="throwNoMatchForLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwNoMatchForLocation (txt)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#915">915</a>]</p>
+
+<div class="desc">
+
+Throw an appropriate parser error when this object is used in a player
+command to locationally qualify another object (such as when we're the
+box in "examine the key in the box"), and there's no object among our
+contents with the given name. By default, we throw the standard parser
+error ("You see no key in the box").
+
+</div>
+
+<p><span id="throwNoMatchForPossessive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwNoMatchForPossessive (txt)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#905">905</a>]</p>
+
+<div class="desc">
+
+Throw an appropriate parser error when this object is used in a player
+command as a possessive qualifier (such as when 'self' is the "bob" in
+"take bob's key"), and we don't own anything matching the object name
+that we qualify. This is only called when 'self' is in scope. By
+default, we throw the standard parser error ("Bob doesn't appear to have
+any such thing"). 'txt' is the lower-cased, HTMLified text that of the
+qualified object name ("key" in "bob's key").
+
+</div>
+
+<p><span id="throwNothingInLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">throwNothingInLocation ( )</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#925">925</a>]</p>
+
+<div class="desc">
+
+Throw an appropriate parser error when this object is used in a player
+command to locationally qualify "all" (such as when we're the box in
+"examine everything in the box"), and we have no contents. By default,
+we throw the standard parser error ("You see nothing unusual in the
+box").
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

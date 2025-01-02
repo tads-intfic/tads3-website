@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> FileName  
-<span class="navnp"><a href="file.htm" class="nav"><em>Prev:</em> File</a>
-    <a href="gramprod.htm" class="nav"><em>Next:</em> GrammarProd</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> FileName  
+<span class="navnp"><a href="file.html" class="nav"><em>Prev:</em> File</a>
+    <a href="gramprod.html" class="nav"><em>Next:</em> GrammarProd</a>
     </span>
 
 </div>
@@ -62,9 +64,9 @@ it knows the local rules for constructing and parsing those names on
 each operating system where TADS runs.
 
 You can use a FileName object as the file name argument in any of the
-"open" routines in the [File](file.htm) class. You can also use a
+"open" routines in the [File](file.html) class. You can also use a
 FileName in most other system functions and methods where file names are
-required, such as [saveGame()](tadsgen.htm#saveGame)
+required, such as [saveGame()](tadsgen.html#saveGame)
 
 FileName objects are like ordinary strings in one important respect:
 they merely represent *names*, not actual objects in the host file
@@ -159,7 +161,7 @@ on Windows, but not on Unix).
 ## Save and restore
 
 When a FileName object is saved to a file via
-[saveGame()](tadsgen.htm#saveGame), it's converted to the "universal"
+[saveGame()](tadsgen.html#saveGame), it's converted to the "universal"
 syntax (see [fromUniversal()](#fromUniversal)) for storage. When that
 file is later restored, the universal syntax is automatically converted
 back to the correct local syntax. This means that if a player saves a
@@ -169,8 +171,8 @@ machine.
 
 ## Network storage server
 
-When a game runs in [Web UI](webui.htm) mode, with files stored on the
-[network storage server](webdeploy.htm#storageServer), the FileName
+When a game runs in [Web UI](webui.html) mode, with files stored on the
+[network storage server](webdeploy.html#storageServer), the FileName
 class uses storage server rules for building and parsing filenames.
 Storage server filenames are syntactically similar to Unix filenames,
 but there's no concept of a root directory; all files are within the
@@ -465,13 +467,13 @@ if you use this function. FileInfo has the following properties:
   The size is usually meaningful only for ordinary files (those with
   type <span class="code">FileTypeFile</span>).
 - <span class="code">fileCreateTime</span> - the file's creation time,
-  as a [Date](date.htm) object. If the operating system doesn't record a
+  as a [Date](date.html) object. If the operating system doesn't record a
   file's creation time, this is <span class="code">nil</span>.
 - <span class="code">fileModifyTime</span> - the time of the file's last
-  modification, as a [Date](date.htm) object. If the OS doesn't record
+  modification, as a [Date](date.html) object. If the OS doesn't record
   the modification time, this is <span class="code">nil</span>.
 - <span class="code">fileAccessTime</span> - the time of the last access
-  to the file, as a [Date](date.htm) object. (The access time records
+  to the file, as a [Date](date.html) object. (The access time records
   when the file was last accessed, whether or not it was modified at
   that time, whereas the modification time is only updated when the
   contents of the file are changed.) If the OS doesn't record the access
@@ -691,7 +693,7 @@ exception is thrown. For the purposes of directory listings, the sandbox
 folder itself is considered within the sandbox.
 
 The list of files is returned in an order that's determined by the
-operating system. You can use the [sort()](list.htm#sort) method on the
+operating system. You can use the [sort()](list.html#sort) method on the
 returned list if you want to sort the entries in a particular order.
 
 Some operating systems, including Windows and Unix-like systems, include
@@ -830,10 +832,10 @@ operating system, using [fromUniversal()](#fromUniversal).
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> FileName  
-<span class="navnp"><a href="file.htm" class="nav"><em>Prev:</em> File</a>
-    <a href="gramprod.htm" class="nav"><em>Next:</em> GrammarProd</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> FileName  
+<span class="navnp"><a href="file.html" class="nav"><em>Prev:</em> File</a>
+    <a href="gramprod.html" class="nav"><em>Next:</em> GrammarProd</a>
     </span>
 
 </div>

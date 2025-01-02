@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>TravelBarrier : object<br />
 </strong></td>
-<td style="text-align: right;"><a href="exitportal.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="askconnector.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="exitportal.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="askconnector.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -30,7 +32,7 @@ TravelBarriers, can be attached to a TravelConnector via its
 travelBarrier property. This can be useful in a number of cases.  
   
 The first case is when a specialized type of TravelBarrier, such as the
-[PushTravelBarrier](pushtravelbarrier.htm), is required.  
+[PushTravelBarrier](pushtravelbarrier.html), is required.  
   
 The second case is where you want to enforce the same barrier conditions
 on a number of different TravelConnectors. Rather that write the same

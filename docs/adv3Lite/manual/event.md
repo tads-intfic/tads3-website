@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Events  
-<span class="navnp"><a href="attachable.htm" class="nav"><em>Prev:</em> Attachables</a>
-    <a href="eventlist.htm" class="nav"><em>Next:</em> EventList</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Events  
+<span class="navnp"><a href="attachable.html" class="nav"><em>Prev:</em> Attachables</a>
+    <a href="eventlist.html" class="nav"><em>Next:</em> EventList</a>    
 </span>
 
 </div>
@@ -186,10 +188,10 @@ are always executed.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Events  
-<span class="navnp"><a href="attachable.htm" class="nav"><em>Prev:</em> Attachables</a>
-    <a href="eventlist.htm" class="nav"><em>Next:</em>EventList</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Events  
+<span class="navnp"><a href="attachable.html" class="nav"><em>Prev:</em> Attachables</a>
+    <a href="eventlist.html" class="nav"><em>Next:</em>EventList</a>    
 </span>
 
 </div>

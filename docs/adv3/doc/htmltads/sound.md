@@ -1,3 +1,5 @@
+---
+---
 HTML TADS Sounds and Music
 
 # HTML TADS Sounds and Music
@@ -249,7 +251,7 @@ The SRC attribute specifies the name of the resource containing the
 sound data. The resource name must end in `.WAV` for a wave file; `.MID`
 or `.MIDI` for a MIDI file; `.MPG`, `.MP2`, or `.MP3` for an MPEG audio
 file; and `.OGG` for an Ogg Vorbis file. Refer to [Using Resources in
-HTML TADS](res.htm) for information on how to include resource files in
+HTML TADS](res.html) for information on how to include resource files in
 your game.
 
 The LAYER attribute specifies the layer containing the sound. The value
@@ -600,7 +602,7 @@ you clear the screen using the `clearscreen()` function.
 
 If you want to perform full-screen animation or other effects that
 require erasing the display, but you want your sounds to continue
-playing, you must use a [banner](banners.htm) for the animation. A
+playing, you must use a [banner](banners.html) for the animation. A
 banner lets you replace the information displayed on part of the screen
 without clearing the entire window. Note that you can use a banner that
 covers the entire display window (by using the HEIGHT=100% attribute) if

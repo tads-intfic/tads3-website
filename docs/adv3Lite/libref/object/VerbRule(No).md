@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(No)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2031](../source/grammar.t.html#2031)\]

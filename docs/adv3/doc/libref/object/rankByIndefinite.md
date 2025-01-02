@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rankByIndefinite</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[5927](../source/parser.t.html#5927)\]

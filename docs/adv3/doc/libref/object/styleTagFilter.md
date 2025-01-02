@@ -1,3 +1,5 @@
+---
+---
 <span class="title">styleTagFilter</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[925](../source/output.t.html#925)\]

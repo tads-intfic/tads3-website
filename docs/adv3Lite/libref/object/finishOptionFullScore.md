@@ -1,3 +1,5 @@
+---
+---
 <span class="title">finishOptionFullScore</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[1250](../source/misc.t.html#1250)\]

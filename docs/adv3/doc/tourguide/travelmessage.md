@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>TravelMessage :<a
-href="travelwithmessage.htm">TravelWithMessage</a>, <a
-href="travelconnector.htm">TravelConnector</a><br />
+href="travelwithmessage.html">TravelWithMessage</a>, <a
+href="travelconnector.html">TravelConnector</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="darkroom.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="roomautoconnector.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="darkroom.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="roomautoconnector.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -38,7 +40,7 @@ smallCave : DarkRoom 'Small Cave' 'the small cave'
 **;   
   
 This time, we have used the [TravelMessage
-template](travelmessagetemplate.htm) to simplify the definition here.
+template](travelmessagetemplate.html) to simplify the definition here.
 The first template property here, -\> secretPassage, is in fact the
 **destination** property of the TravelMessage, while the second, the
 double-quoted string, is its **travelDesc** property (defined on

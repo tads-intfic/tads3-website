@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Core and Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Core and Optional
 Modules  
-<span class="navnp"><a href="docs-intro.htm" class="nav"><em>Prev:</em> Introduction and
+<span class="navnp"><a href="docs-intro.html" class="nav"><em>Prev:</em> Introduction and
 Overview</a>    
-<a href="mingame.htm" class="nav"><em>Next:</em> Minimal Game
+<a href="mingame.html" class="nav"><em>Next:</em> Minimal Game
 Definition</a>     </span>
 
 </div>
@@ -77,7 +79,7 @@ TADS 3 complilation), any TADS 3 game built with the adv3Lite library
 \* console.t and banner.t are required for traditional TADS 3 games
 played on an interpreter. These files are not included in the
 adv3LiteWeb library used for games to be played via the [Web
-UI](webui.htm); for web-based games browser.t is used in place of
+UI](webui.html); for web-based games browser.t is used in place of
 console.t, and banner.t is not used at all.
 
 \*\* The debug.t and debug_dynfunct.t files are only included in debug
@@ -142,7 +144,7 @@ the presence of other modules:
   Requires topicEntry.t.
 
 Note that in addition to the optional modules listed above, there are a
-number of [extensions](extensions.htm), which can further extend the
+number of [extensions](extensions.html), which can further extend the
 functionality of adv3Lite. The difference between an optional module and
 an extension is that you have to choose to opt out of using an optional
 module (by deliberately excluding it from your game), whereas you have
@@ -259,11 +261,11 @@ guidance on this), but specify the adv3Liter library instead
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Core and Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Core and Optional
 Modules  
-<span class="navnp"><a href="docs-intro.htm" class="nav"><em>Prev:</em> Introduction</a>
-    <a href="mingame.htm" class="nav"><em>Next:</em> Minimal Game
+<span class="navnp"><a href="docs-intro.html" class="nav"><em>Prev:</em> Introduction</a>
+    <a href="mingame.html" class="nav"><em>Next:</em> Minimal Game
 Definition</a>     </span>
 
 </div>

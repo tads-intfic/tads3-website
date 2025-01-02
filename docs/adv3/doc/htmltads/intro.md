@@ -1,3 +1,5 @@
+---
+---
 <div>
 
 [TADS 3](../../../index.html)
@@ -6,9 +8,9 @@
 
 </div>
 
-<a href="../../adv3lite/index.htm" class="nav-element">Adv3Lite
+<a href="../../adv3lite/index.html" class="nav-element">Adv3Lite
 Bookshelf</a>
-<a href="../index.htm" class="nav-element">Adv3 Bookshelf</a>
+<a href="../index.html" class="nav-element">Adv3 Bookshelf</a>
 <a href="#" class="nav-element">Cheat Sheets</a>
 
 <div id="spacer">
@@ -33,18 +35,18 @@ Bookshelf</a>
   - <a href="#whither" class="toc">Whither the standard TADS?</a>
   - <a href="#why" class="toc">Why HTML?</a>
   - <a href="#acks" class="toc">Acknowledgments</a>
-- <a href="start.htm" class="toc">Getting Started with HTML TADS</a>
-- <a href="../changes.htm" class="toc">Recent changes to HTML TADS</a>
-- <a href="deviate.htm" class="toc">HTML TADS additions to and deviations
+- <a href="start.html" class="toc">Getting Started with HTML TADS</a>
+- <a href="../changes.html" class="toc">Recent changes to HTML TADS</a>
+- <a href="deviate.html" class="toc">HTML TADS additions to and deviations
   from standard HTML</a>
-- <a href="linebrk.htm" class="toc">Word Wrapping and Line Breaking</a>
-- <a href="tables.htm" class="toc">Table Layout Rules</a>
-- <a href="convert.htm" class="toc">Converting a regular TADS 2 game to
+- <a href="linebrk.html" class="toc">Word Wrapping and Line Breaking</a>
+- <a href="tables.html" class="toc">Table Layout Rules</a>
+- <a href="convert.html" class="toc">Converting a regular TADS 2 game to
   HTML TADS</a>
-- <a href="res.htm" class="toc">Using Resources in HTML TADS</a>
-- <a href="sound.htm" class="toc">Using Sound in HTML TADS</a>
-- <a href="dist.htm" class="toc">Distributing your game</a>
-- <a href="charmode.htm" class="toc">Playing HTML TADS games with the
+- <a href="res.html" class="toc">Using Resources in HTML TADS</a>
+- <a href="sound.html" class="toc">Using Sound in HTML TADS</a>
+- <a href="dist.html" class="toc">Distributing your game</a>
+- <a href="charmode.html" class="toc">Playing HTML TADS games with the
   standard TADS Interpreter</a>
 - <a href="../../license.txt" class="toc">Copyright and License
   information</a>
@@ -59,7 +61,7 @@ For your browsing convenience, here's a list of the documentation
 included with HTML TADS.
 
 If you're interested in porting HTML TADS to a new operating system, you
-can refer to the [porting notes](porting.htm) (which you need not
+can refer to the [porting notes](porting.html) (which you need not
 consult to write or play games with HTML TADS).
 
 <span id="contact"></span>
@@ -158,12 +160,12 @@ at the [IF Archive](http://www.ifarchive.org/) or through the
 [tads.org](http://www.tads.org/) site.
 
 Once you have the software and manuals you need, refer to [Getting
-Started with HTML TADS](start.htm) for an introduction to using the HTML
+Started with HTML TADS](start.html) for an introduction to using the HTML
 features in HTML TADS.
 
 Since HTML TADS is an extension to the normal TADS, you can use what you
 already know about TADS to write a HTML TADS game -- refer to
-[Converting a Game to HTML TADS](convert.htm) for information about how
+[Converting a Game to HTML TADS](convert.html) for information about how
 to put HTML features in your existing TADS games.
 
 ------------------------------------------------------------------------
@@ -188,7 +190,7 @@ version of the interpreter.
 **Playing HTML-enabled games with the standard interpreter:** Recent
 versions (2.2.4 or higher) of the standard TADS interpreter also provide
 a degree of compatibility with games written for HTML TADS. Refer to
-[this document](charmode.htm) for details.
+[this document](charmode.html) for details.
 
 <span id="whither"></span>
 

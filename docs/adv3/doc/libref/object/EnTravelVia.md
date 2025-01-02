@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EnTravelVia</span><span class="type">class</span>
 
 [en_us.t](../file/en_us.t.html)\[[10009](../source/en_us.t.html#10009)\]

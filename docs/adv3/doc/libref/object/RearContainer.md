@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RearContainer</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[927](../source/extras.t.html#927)\],

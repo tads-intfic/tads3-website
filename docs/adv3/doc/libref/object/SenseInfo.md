@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SenseInfo</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[31](../source/thing.t.html#31)\]

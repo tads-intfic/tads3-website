@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](goingshopping.htm)   [\[Next\]](fillinginsomegaps.htm)*
+*[\[Previous\]](goingshopping.html)   [\[Next\]](fillinginsomegaps.html)*
 
 ## Handling Cash Transactions
 
@@ -1172,6 +1174,6 @@ again be left as an exercise for the reader.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](goingshopping.htm)   [\[Next\]](fillinginsomegaps.htm)*
+*[\[Previous\]](goingshopping.html)   [\[Next\]](fillinginsomegaps.html)*
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">strcomp.h</span><span class="type">file</span>
 
 [source file](../source/strcomp.h.html)

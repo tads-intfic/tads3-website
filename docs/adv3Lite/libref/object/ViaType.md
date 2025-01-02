@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ViaType</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[10137](../source/thing.t.html#10137)\]

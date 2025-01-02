@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultNorthWall</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[5484](../source/travel.t.html#5484)\]

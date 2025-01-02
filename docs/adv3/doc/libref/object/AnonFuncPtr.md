@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AnonFuncPtr</span><span class="type">class</span>
 
 [systype.h](../file/systype.h.html)\[[231](../source/systype.h.html#231)\]

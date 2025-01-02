@@ -1,0 +1,296 @@
+<p><span class="title">exec.t</span><span class="type">file</span></p>
+
+<p><a href="../source/exec.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library: command execution
+
+This module defines functions that perform command execution.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>AbortImplicitSignal<code class="language-plaintext highlighter-rouge">](../object/AbortImplicitSignal.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExitActionSignal<code class="language-plaintext highlighter-rouge">](../object/ExitActionSignal.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExitSignal<code class="language-plaintext highlighter-rouge">](../object/ExitSignal.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GlobalRemapping<code class="language-plaintext highlighter-rouge">](../object/GlobalRemapping.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>MessageResult<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RemapActionSignal<code class="language-plaintext highlighter-rouge">](../object/RemapActionSignal.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>_nestedAction<code class="language-plaintext highlighter-rouge">](#_nestedAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>_newAction<code class="language-plaintext highlighter-rouge">](#_newAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>_replaceAction<code class="language-plaintext highlighter-rouge">](#_replaceAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>_tryImplicitAction<code class="language-plaintext highlighter-rouge">](#_tryImplicitAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>execNestedAction<code class="language-plaintext highlighter-rouge">](#execNestedAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>executeAction<code class="language-plaintext highlighter-rouge">](#executeAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>executeCommand<code class="language-plaintext highlighter-rouge">](#executeCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>nestedActionAgain<code class="language-plaintext highlighter-rouge">](#nestedActionAgain)</code>  <code class="language-plaintext highlighter-rouge">[</code>newActionObj<code class="language-plaintext highlighter-rouge">](#newActionObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>prepareNestedAction<code class="language-plaintext highlighter-rouge">](#prepareNestedAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>remapAction<code class="language-plaintext highlighter-rouge">](#remapAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>remapActionCreate<code class="language-plaintext highlighter-rouge">](#remapActionCreate)</code>  <code class="language-plaintext highlighter-rouge">[</code>remapVerify<code class="language-plaintext highlighter-rouge">](#remapVerify)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveAndReplaceAction<code class="language-plaintext highlighter-rouge">](#resolveAndReplaceAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>withActionEnv<code class="language-plaintext highlighter-rouge">](#withActionEnv)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="_nestedAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_nestedAction (isReplacement, actor, actionClass, [objs])</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1134">1134</a>]</p>
+
+<div class="desc">
+
+Run a nested action. 'isReplacement' has the same meaning as in
+execNestedAction().
+
+</div>
+
+<p><span id="_newAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_newAction (transcriptClass, issuingActor, targetActor, actionClass, [objs])</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1076">1076</a>]</p>
+
+<div class="desc">
+
+Run an action as a new turn. Returns the CommandTranscript describing
+the action's results.
+
+</div>
+
+<p><span id="_replaceAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_replaceAction (actor, actionClass, [objs])</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1041">1041</a>]</p>
+
+<div class="desc">
+
+Run a replacement action.
+
+</div>
+
+<p><span id="_tryImplicitAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_tryImplicitAction (issuingActor, targetActor, msgProp, actionClass, [objs])</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#936">936</a>]</p>
+
+<div class="desc">
+
+Try an implicit action.
+
+Returns true if the action was attempted, whether or not it succeeded,
+nil if the command was not even attempted. We will not attempt an
+implied command that verifies as "dangerous," since this means that it
+should be obvious to the player character that such a command should not
+be performed lightly.
+
+</div>
+
+<p><span id="execNestedAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execNestedAction (isReplacement, isRemapping, actor, action)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1162">1162</a>]</p>
+
+<div class="desc">
+
+Execute a fully-constructed nested action.
+
+'isReplacement' indicates whether the action is a full replacement or an
+ordinary nested action. If it's a replacement, then we use the game time
+taken by the replacement, and set the enclosing action (i.e., the
+current gAction) to take zero time. If it's an ordinary nested action,
+then we consider the nested action to take zero time, using the current
+action's time as the overall command time.
+
+'isRemapping' indicates whether or not this is a remapped action. If
+we're remapping from one action to another, this will be true; for any
+other kind of nested or replacement action, this should be nil.
+
+</div>
+
+<p><span id="executeAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeAction (targetActor, targetActorPhrase, issuingActor, countsAsIssuerTurn, action)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#788">788</a>]</p>
+
+<div class="desc">
+
+Execute an action, as specified by an Action object. We'll resolve the
+nouns in the action, then perform the action.
+
+</div>
+
+<p><span id="executeCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeCommand (targetActor, issuingActor, toks, firstInSentence)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#33">33</a>]</p>
+
+<div class="desc">
+
+Execute a command line, as issued by the given actor and as given as a
+list of tokens.
+
+If 'firstInSentence' is true, we're at the start of a "sentence." The
+meaning and effect of this may vary by language. In English, a sentence
+ends with certain punctuation marks (a period, semicolon, exclamation
+mark, or question mark), so anything after one of these punctuation
+marks is the start of a new sentence. Also in English, we can address a
+command to an explicit target actor using the "actor," prefix syntax,
+which we can't use except at the start of a sentence.
+
+If the command line consists of multiple commands, we will only actually
+execute the first command before returning. We'll schedule any
+additional commands for later execution by putting them into the target
+actor's pending command queue before we return, but we won't actually
+execute them.
+
+</div>
+
+<p><span id="nestedActionAgain"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nestedActionAgain (action)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1232">1232</a>]</p>
+
+<div class="desc">
+
+Run a previously-executed command as a nested action, re-resolving all
+of its objects to ensure they are still valid.
+
+</div>
+
+<p><span id="newActionObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">newActionObj (transcriptClass, issuingActor, targetActor, actionObj, [objs])</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1099">1099</a>]</p>
+
+<div class="desc">
+
+Run an action as a new turn. This is almost the same as \_newAction, but
+should be used when the caller has already explicitly created an
+instance of the Action to be performed.
+
+If issuingActor is nil, we'll use the current global issuing actor; if
+that's also nil, we'll use the target actor.
+
+Returns a CommandTranscript object describing the result of the action.
+
+</div>
+
+<p><span id="prepareNestedAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">prepareNestedAction (isReplacement, isRemapping, action)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1176">1176</a>]</p>
+
+<div class="desc">
+
+Prepare a nested or replacement action for execution.
+
+</div>
+
+<p><span id="remapAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">remapAction (inResolve, oldRole, remapInfo)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1448">1448</a>]</p>
+
+<div class="desc">
+
+Perform a remapping to a new action. This is normally invoked through
+the remapTo() macro.
+
+</div>
+
+<p><span id="remapActionCreate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">remapActionCreate (inResolve, oldRole, remapInfo)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1486">1486</a>]</p>
+
+<div class="desc">
+
+Create a new action object for the given remapped action.
+
+</div>
+
+<p><span id="remapVerify"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">remapVerify (oldRole, resultSoFar, remapInfo)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1368">1368</a>]</p>
+
+<div class="desc">
+
+Remap a 'verify' method for a remapped action. This is normally invoked
+through the remapTo() macro.
+
+</div>
+
+<p><span id="resolveAndReplaceAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveAndReplaceAction (newAction)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1056">1056</a>]</p>
+
+<div class="desc">
+
+Resolve and execute a replacement action. This differs from the normal
+replacement action execution in that the action we execute requires
+resolution before execution.
+
+</div>
+
+<p><span id="withActionEnv"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">withActionEnv (actionClass, actor, func)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1261">1261</a>]</p>
+
+<div class="desc">
+
+Run some code in a simulated Action environment. We'll create a dummy
+instance of the given Action class, and set up a command transcript,
+then invoke the function. This is useful for writing daemon code that
+needs to invoke other code that's set up to expect a normal action
+processing environment.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,0 +1,212 @@
+<p><span class="title">GameID</span><span class="type">class</span></p>
+
+<p><a href="../file/modid.t.html">modid.t</a>[<a href="../source/modid.t.html#558">558</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Base class for the game's module ID. This merely sets the listing order
+to 1 so that the game's credit is listed first. Normally, exactly one
+GameID object, called 'versionInfo', is defined in a game, to provide
+the game's identifying information.
+
+Note that this class is based on GameInfoModuleID, so the library will
+automatically write out a gameinfo.txt file based on this object's
+settings. For full GameInfo data, the game should minimally define the
+following properties (see GameInfoModuleID and ModuleID for details on
+these properties):
+
+  
+IFID - a random 32-digit hex number to uniquely identify the game;  
+you can generate one at http://www.tads.org/ifidgen/ifidgen  
+name - the name of the game  
+byline - the main author credit: "by so and so"  
+htmlByline - the main author credit as an HTML fragment  
+authorEmail - the authors' names and email addresses (in GameInfo
+format)  
+desc - a short blurb describing the game, in plain text format  
+htmlDesc - the descriptive blurb as an HTML ragment  
+version - the game's version string
+
+In addition, you can override the following settings if you don't like
+the defaults inherited from GameInfoModuleID:
+
+  
+releaseDate - the release date string (YYYY-MM-DD)  
+licenseType - freeware, shareware, etc.  
+copyingRules - summary rules on copying  
+presentationProfile - Multimedia, Plain Text
+
+`class `**`GameID`**` :   `[`GameInfoModuleID`](../object/GameInfoModuleID.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">GameID</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>GameInfoModuleID<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MetadataModuleID<code class="language-plaintext highlighter-rouge">](../object/MetadataModuleID.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ModuleID<code class="language-plaintext highlighter-rouge">](../object/ModuleID.html)  
+</code>                                 object<code class="language-plaintext highlighter-rouge">  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>listingOrder<code class="language-plaintext highlighter-rouge">](#listingOrder)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">GameInfoModuleID</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>authorEmail<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#authorEmail)</code>  <code class="language-plaintext highlighter-rouge">[</code>copyingRules<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#copyingRules)</code>  <code class="language-plaintext highlighter-rouge">[</code>desc<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#desc)</code>  <code class="language-plaintext highlighter-rouge">[</code>firstPublished<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#firstPublished)</code>  <code class="language-plaintext highlighter-rouge">[</code>forgivenessLevel<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#forgivenessLevel)</code>  <code class="language-plaintext highlighter-rouge">[</code>gameInfoFilename<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#gameInfoFilename)</code>  <code class="language-plaintext highlighter-rouge">[</code>gameUrl<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#gameUrl)</code>  <code class="language-plaintext highlighter-rouge">[</code>genreName<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#genreName)</code>  <code class="language-plaintext highlighter-rouge">[</code>headline<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#headline)</code>  <code class="language-plaintext highlighter-rouge">[</code>htmlDesc<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#htmlDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>IFID<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#IFID)</code>  <code class="language-plaintext highlighter-rouge">[</code>languageCode<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#languageCode)</code>  <code class="language-plaintext highlighter-rouge">[</code>licenseType<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#licenseType)</code>  <code class="language-plaintext highlighter-rouge">[</code>metadataKeys<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#metadataKeys)</code>  <code class="language-plaintext highlighter-rouge">[</code>presentationProfile<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#presentationProfile)</code>  <code class="language-plaintext highlighter-rouge">[</code>releaseDate<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#releaseDate)</code>  <code class="language-plaintext highlighter-rouge">[</code>seriesName<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#seriesName)</code>  <code class="language-plaintext highlighter-rouge">[</code>seriesNumber<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#seriesNumber)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleID</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>byline<code class="language-plaintext highlighter-rouge">](../object/ModuleID.html#byline)</code>  <code class="language-plaintext highlighter-rouge">[</code>htmlByline<code class="language-plaintext highlighter-rouge">](../object/ModuleID.html#htmlByline)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](../object/ModuleID.html#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>version<code class="language-plaintext highlighter-rouge">](../object/ModuleID.html#version)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>showCredit<code class="language-plaintext highlighter-rouge">](#showCredit)</code>  <code class="language-plaintext highlighter-rouge">[</code>showVersion<code class="language-plaintext highlighter-rouge">](#showVersion)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">GameInfoModuleID</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getGameInfoToday<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#getGameInfoToday)</code>  <code class="language-plaintext highlighter-rouge">[</code>writeMetadataFile<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html#writeMetadataFile)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MetadataModuleID</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/MetadataModuleID.html#execute)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleID</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getModuleList<code class="language-plaintext highlighter-rouge">](../object/ModuleID.html#getModuleList)</code>  <code class="language-plaintext highlighter-rouge">[</code>showAbout<code class="language-plaintext highlighter-rouge">](../object/ModuleID.html#showAbout)</code>  <code class="language-plaintext highlighter-rouge">[</code>showVersionMsg<code class="language-plaintext highlighter-rouge">](../object/ModuleID.html#showVersionMsg)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="listingOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listingOrder</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/modid.t.html">modid.t</a>[<a href="../source/modid.t.html#560">560</a>]</p>
+
+<div class="desc">
+
+always list the game's credits before any library credits
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="showCredit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showCredit ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/modid.t.html">modid.t</a>[<a href="../source/modid.t.html#575">575</a>]</p>
+
+<div class="desc">
+
+Show the game's credits. By default, we'll just show our name and
+by-line.
+
+Typically, authors will want to override this to display the full
+credits for the game. Most authors like to show the author or authors,
+along with notes of thanks to important contributors.
+
+Note that libraries generally will not show anything automatically in
+the credits, to allow the author full control over the formatting of the
+credits. Authors are encouraged to give credit where it's due for any
+libraries they use.
+
+</div>
+
+<p><span id="showVersion"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showVersion ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/modid.t.html">modid.t</a>[<a href="../source/modid.t.html#585">585</a>]</p>
+
+<div class="desc">
+
+show a blank line after the game's version information, to make it stand
+apart from the list of library and VM version numbers
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

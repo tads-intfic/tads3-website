@@ -1,3 +1,5 @@
+---
+---
 <span class="title">yesOrNoPhrase(yes)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[1399](../source/grammar.t.html#1399)\]

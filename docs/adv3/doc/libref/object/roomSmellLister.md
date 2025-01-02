@@ -1,3 +1,5 @@
+---
+---
 <span class="title">roomSmellLister</span><span class="type">object</span>
 
 [lister.t](../file/lister.t.html)\[[1820](../source/lister.t.html#1820)\]

@@ -1,0 +1,152 @@
+<p><span class="title">DropType</span><span class="type">class</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#270">270</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Drop Descriptor. This is passed to the receiveDrop() method of a "drop
+destination" when an object is discarded via commands such as DROP or
+THROW. The purpose of the descriptor is to identify the type of command
+being performed, so that the receiveDrop() method can generate an
+appropriate report message.
+
+`class `**`DropType`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DropType</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DropType</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>DropTypeThrow<code class="language-plaintext highlighter-rouge">](../object/DropTypeThrow.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DropTypeShortThrow`](../object/DropTypeShortThrow.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>dropTypeDrop<code class="language-plaintext highlighter-rouge">](../object/dropTypeDrop.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getReportPrefix<code class="language-plaintext highlighter-rouge">](#getReportPrefix)</code>  <code class="language-plaintext highlighter-rouge">[</code>standardReport<code class="language-plaintext highlighter-rouge">](#standardReport)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="getReportPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// getReportPrefix (obj, dest)</code><span class="rem">Interface description
+only</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#299">299</a>]</p>
+
+<div class="desc">
+
+Get a short report describing the action without saying where the object
+ended up. This is roughly the same as the standard report, but omits any
+information on where the object lands, so that the caller can show a
+separate message explaining that part.
+
+The report must be worded such that the object being dropped is the
+logical antecedent for any subsequent text. This means that callers can
+use a pronoun to refer back to the object dropped, allowing for more
+natural sequences to be constructed. (It usually sounds stilted to
+repeat the full name: "You drop the box. The box falls into the chasm."
+It's better if we can use a pronoun in the second sentence: "You drop
+the box. It falls into the chasm.")
+
+'obj' is the object being dropped, and 'dest' is the drop destination.
+
+</div>
+
+<p><span id="standardReport"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// standardReport (obj, dest)</code><span class="rem">Interface description
+only</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#279">279</a>]</p>
+
+<div class="desc">
+
+Generate the standard report message for the action. The drop
+destination's receiveDrop() method can call this if the standard message
+is adequate to describe the result of the action.
+
+'obj' is the object being dropped, and 'dest' is the drop destination.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

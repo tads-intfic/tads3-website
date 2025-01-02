@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Attack)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2215](../source/grammar.t.html#2215)\]

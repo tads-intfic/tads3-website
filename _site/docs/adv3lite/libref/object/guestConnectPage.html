@@ -1,0 +1,127 @@
+<p><span class="title">guestConnectPage</span><span class="type">object</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1379">1379</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Guest connection request. This enables "switchboard" applications on
+remote servers that keep track of multi-user game sessions, to show
+users available sessions and connect new users to those sessions.
+
+The first step in setting up a switchboard is for the game server to
+register itself with the switchboard by sending a request on startup.
+That part is external to us - that's not handled within the game program
+but rather within the web server script that launches the game. Here,
+then, we simply assume that this work is already done.
+
+The second step is that the switchboard needs to check back with the
+game server from time to time to see if it's still alive - essentially a
+"ping" operation. We handle that here: if we respond to the request,
+we're obviously still alive.
+
+The third step is that we need to send the switchboard a URL that lets
+secondary users ("guests") connect to the game session. We handle that
+here as well: our reply body is the client connection URL.
+
+**`guestConnectPage`**` :   `[`WebResource`](../object/WebResource.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">guestConnectPage</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>WebResource<code class="language-plaintext highlighter-rouge">](../object/WebResource.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>vpath<code class="language-plaintext highlighter-rouge">](#vpath)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>group<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#group)</code>  <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#priority)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>processRequest<code class="language-plaintext highlighter-rouge">](#processRequest)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>matchRequest<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#matchRequest)</code>  <code class="language-plaintext highlighter-rouge">[</code>sendAck<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#sendAck)</code>  <code class="language-plaintext highlighter-rouge">[</code>sendXML<code class="language-plaintext highlighter-rouge">](../object/WebResource.html#sendXML)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="vpath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vpath</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1380">1380</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="processRequest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processRequest (req, query)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1381">1381</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

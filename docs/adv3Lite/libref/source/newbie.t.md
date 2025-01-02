@@ -1,3 +1,5 @@
+---
+---
 # newbie.t
 
 [documentation](../file/newbie.t.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ItemizingCollectiveGroup</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[1360](../source/objects.t.html#1360)\]

@@ -1,0 +1,104 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>DefaultConsultTopic : <a href="defaulttopics-overview.html">DefaultTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="consulttopic.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="scoring-overview.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>If the player tries to consult our History Book about something for
+which we’ve defined no response, we need an appropriate message to be
+displayed. We use a DefaultConsultTopic for this purpose (just as we use
+other <a href="defaulttopics-overview.html">DefaultTopic</a> types in
+conversation).</p>
+
+<p>An appropriate DefaultConsultTopic is not hard to define. Since a book
+is an inanimate object, we don’t need to vary its behaviour, and
+something simple like the following should suffice:</p>
+
+<p>+ DefaultConsultTopic<br />
+  ”The book doesn’t seem to have anything useful to say on that subject. ”<br />
+;</p>
+
+<p>If you wanted to make this a bit more sophisticated by suggesting to the
+player the topics that are available to be listed in the book, you could
+add a name property to each ConsultTopic you want suggested (e.g. name =
+‘Benedict’ or name=’the museum’) and then expand the DefaultConsultTopic
+thus:</p>
+
+<p>+ DefaultConsultTopic<br />
+  ”The book doesn’t seem to have anything useful to say on that subject,<br />
+   but a quick look in the index suggests that you could consult it <br />
+   about &lt;&lt;suggestionList&gt;&gt;. ”<br />
+   suggestionList()<br />
+   {<br />
+     local lst = [];<br />
+     foreach(local cur in location.consultTopics)<br />
+      if(cur.name != nil)<br />
+        lst += cur.name;<br />
+     stringLister.showSimpleList(lst);<br />
+   }<br />
+;</p>
+
+<p>There are both advantages and disadvantages to this approach. On the one
+hand the player is not left to guess which topics the book implements;
+on the other, the message is a bit directive and may make consulting the
+book feel like working through the list of topics suggested.</p>
+
+<p>A less directive approach, which may provide the best compromise, could
+be to provide the book with an index topic and drop a broad hint in the
+DefaultConsultTopic that there is an index to be consulted:</p>
+
+<p>+ ConsultTopic @tIndex<br />
+  ”A quick look in the index suggests that you could consult it <br />
+   about &lt;&lt;suggestionList&gt;&gt;. ”<br />
+  suggestionList()<br />
+   {<br />
+     local lst = [];<br />
+     foreach(local cur in location.consultTopics)<br />
+      if(cur.name != nil)<br />
+        lst += cur.name;<br />
+     stringLister.showSimpleList(lst);<br />
+   }<br />
+;</p>
+
+<p>+ DefaultConsultTopic<br />
+  ”So far as you can tell from the index, the book doesn’t seem to <br />
+   have anything useful to say on that subject. ”   <br />
+;</p>
+
+<p>tIndex : Topic ’index/contents’;</p>
+
+<p>If you had several books in your game that you wanted to provide with an
+index you could avoid repetitive coding by defining an IndexTopic
+class:</p>
+
+<p>class IndexTopic : ConsultTopic<br />
+  suggestionList()<br />
+   {<br />
+     local lst = [];<br />
+     foreach(local cur in location.consultTopics)<br />
+      if(cur.name != nil)<br />
+        lst += cur.name;<br />
+     stringLister.showSimpleList(lst);<br />
+   }<br />
+;</p>
+
+<p>Note that the IndexTopic only responds to commands like LOOK UP INDEX IN
+BOOK. If you want it to respond to commands like X INDEX, LOOK INDEX and
+CONSULT INDEX you’ll need to add a physical index object to the book to
+handle such commands, for example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ Component 'index' 'index'
+    dobjFor(Examine) remapTo(ConsultAbout, location, tIndex)
+    dobjFor(LookIn) remapTo(ConsultAbout, location, tIndex)
+    dobjFor(Consult) remapTo(ConsultAbout, location, tIndex)
+;
+</code></pre></div></div>

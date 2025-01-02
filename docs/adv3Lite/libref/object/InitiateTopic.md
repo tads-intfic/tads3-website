@@ -1,3 +1,5 @@
+---
+---
 <span class="title">InitiateTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4730](../source/actor.t.html#4730)\]

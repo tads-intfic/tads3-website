@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GoOut</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[670](../source/actions.t.html#670)\]

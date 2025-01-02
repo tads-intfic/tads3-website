@@ -1,0 +1,313 @@
+<p><span class="title">playerHelper</span><span class="type">object</span></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#151">151</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The playerHelper is an object that starts a daemon at start of play.
+This daemon checks whether the player is making any progress at all, and
+also watches the ratio of commands the parser rejects to the number of
+turns. If this ratio becomes too high (as defined by the errorThreshold
+property) we offer the player a HELP command. If it becomes very low (as
+defined by the ceaseCheckingErrorLevel property) we cease checking (i.e.
+stop the daemon) on the grounds that the player doesn't appear to need
+the kind of help we want to offer. We first perform a check after
+firstCheckAfter turns to see if the player is making any progress, and
+then after each errorCheckInterval turns to see if the player is having
+difficulty entering valid commands.
+
+The idea is to keep offering HELP to an inexperienced player who clearly
+needs it, even if the player declined to read any help text at the start
+of the game.
+
+**`playerHelper`**` :   `[`InitObject`](../object/InitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">playerHelper</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>InitObject<code class="language-plaintext highlighter-rouge">](../object/InitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>ceaseCheckingErrorLevel<code class="language-plaintext highlighter-rouge">](#ceaseCheckingErrorLevel)</code>  <code class="language-plaintext highlighter-rouge">[</code>errorCheckInterval<code class="language-plaintext highlighter-rouge">](#errorCheckInterval)</code>  <code class="language-plaintext highlighter-rouge">[</code>errorCount<code class="language-plaintext highlighter-rouge">](#errorCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>errorDaemonID<code class="language-plaintext highlighter-rouge">](#errorDaemonID)</code>  <code class="language-plaintext highlighter-rouge">[</code>errorThreshold<code class="language-plaintext highlighter-rouge">](#errorThreshold)</code>  <code class="language-plaintext highlighter-rouge">[</code>firstCheckAfter<code class="language-plaintext highlighter-rouge">](#firstCheckAfter)</code>  <code class="language-plaintext highlighter-rouge">[</code>firstCheckMsg<code class="language-plaintext highlighter-rouge">](#firstCheckMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>startLocation<code class="language-plaintext highlighter-rouge">](#startLocation)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>errorCheck<code class="language-plaintext highlighter-rouge">](#errorCheck)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>firstCheck<code class="language-plaintext highlighter-rouge">](#firstCheck)</code>  <code class="language-plaintext highlighter-rouge">[</code>firstCheckCriterion<code class="language-plaintext highlighter-rouge">](#firstCheckCriterion)</code>  <code class="language-plaintext highlighter-rouge">[</code>offerHelp<code class="language-plaintext highlighter-rouge">](#offerHelp)</code>  <code class="language-plaintext highlighter-rouge">[</code>startErrorDaemon<code class="language-plaintext highlighter-rouge">](#startErrorDaemon)</code>  <code class="language-plaintext highlighter-rouge">[</code>stopErrorDaemon<code class="language-plaintext highlighter-rouge">](#stopErrorDaemon)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="ceaseCheckingErrorLevel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ceaseCheckingErrorLevel</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#204">204</a>]</p>
+
+<div class="desc">
+
+The proportion of rejected commands to turns, expressed as a percentage,
+below which we stop checking for errors. The default is 5 (in other
+words if less than 5 per cent of the player's commands are being
+rejected, the player presumably knows what s/he's doing, so we don't
+need to keep checking)
+
+</div>
+
+<p><span id="errorCheckInterval"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errorCheckInterval</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#188">188</a>]</p>
+
+<div class="desc">
+
+The number of turns between each check on whether the player is entering
+too many erroneous commands.
+
+</div>
+
+<p><span id="errorCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errorCount</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#317">317</a>]</p>
+
+<div class="desc">
+
+For internal use only: the number of badly formed commands the player
+has entered.
+
+</div>
+
+<p><span id="errorDaemonID"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errorDaemonID</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#311">311</a>]</p>
+
+<div class="desc">
+
+For internal use only: the ID of the currently running error check
+Daemon (if there is one)
+
+</div>
+
+<p><span id="errorThreshold"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errorThreshold</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#195">195</a>]</p>
+
+<div class="desc">
+
+The proportion of rejected commands to turns (i.e. accepted commands)
+that will trigger an offer of help. We express this number as a
+percentage.
+
+</div>
+
+<p><span id="firstCheckAfter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">firstCheckAfter</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#174">174</a>]</p>
+
+<div class="desc">
+
+The number of turns that must elapse before we test the
+firstCheckCriterion to see if the player appears to be stuck.
+
+</div>
+
+<p><span id="firstCheckMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">firstCheckMsg</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#180">180</a>]</p>
+
+<div class="desc">
+
+The message to display if the player seems to be stuck at the start of
+the game.
+
+</div>
+
+<p><span id="startLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">startLocation</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#168">168</a>]</p>
+
+<div class="desc">
+
+The location the playerCharacter starts out in at the beginning of the
+game. It may be useful to know this in the firstCheckCriterion method.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="errorCheck"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errorCheck ( )</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#251">251</a>]</p>
+
+<div class="desc">
+
+Watch for a high percentage of errors in user input
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#157">157</a>]</p>
+
+<div class="desc">
+
+Set up the firstCheck() Fuse and note the player character's starting
+location.
+
+</div>
+
+<p><span id="firstCheck"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">firstCheck ( )</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#225">225</a>]</p>
+
+<div class="desc">
+
+Check whether the player appears to be making any progress at the start
+of the game. If not, display a message offering help and start the error
+checking daemon.
+
+</div>
+
+<p><span id="firstCheckCriterion"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">firstCheckCriterion ( )</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#215">215</a>]</p>
+
+<div class="desc">
+
+The criterion to apply to see whether the player is making any progress
+at the start of the game. This method should return true if the player
+seems to be stuck. By default we simply return nil as there's no way of
+knowing how to measure 'stuckness' for games in general, so specific
+games will need to override this method. A game involved exploration
+might set the condition to gLocation == startLocation (meaning the
+player character hasn't moved) for example.
+
+</div>
+
+<p><span id="offerHelp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">offerHelp ( )</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#296">296</a>]</p>
+
+<div class="desc">
+
+The offerHelp() method asks whether the player has played this kind of
+game before and accepts a Y or N answer. if the answer is NO then it
+goes on to display a message suggesting sources of help.
+
+This method can usefully be called at the end of the
+gameMain.showIntro() method, but it's up to game authors to incluse it
+there if they want it/
+
+</div>
+
+<p><span id="startErrorDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">startErrorDaemon ( )</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#248">248</a>]</p>
+
+<div class="desc">
+
+We've just offered help, so we'll wait another errorCheckInterval turns
+before seeing whether to offer it again.
+
+</div>
+
+<p><span id="stopErrorDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stopErrorDaemon ( )</code></p>
+
+<p><a href="../file/newbie.t.html">newbie.t</a>[<a href="../source/newbie.t.html#279">279</a>]</p>
+
+<div class="desc">
+
+Stop the error check daemon from running
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

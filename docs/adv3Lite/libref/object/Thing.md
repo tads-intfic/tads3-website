@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Thing</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[979](../source/thing.t.html#979)\],

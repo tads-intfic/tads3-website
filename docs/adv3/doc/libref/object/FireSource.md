@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FireSource</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[1895](../source/extras.t.html#1895)\]

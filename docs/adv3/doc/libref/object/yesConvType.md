@@ -1,3 +1,5 @@
+---
+---
 <span class="title">yesConvType</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[2010](../source/actor.t.html#2010)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Flashlight</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5998](../source/objects.t.html#5998)\]

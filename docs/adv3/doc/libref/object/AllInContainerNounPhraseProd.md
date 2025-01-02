@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AllInContainerNounPhraseProd</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[3427](../source/parser.t.html#3427)\]

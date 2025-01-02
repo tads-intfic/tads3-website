@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Room
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Room
 Descriptions  
-<span class="navnp"><a href="room.htm" class="nav"><em>Prev:</em>Rooms</a>
-    <a href="door.htm" class="nav"><em>Next:</em> Doors</a>     </span>
+<span class="navnp"><a href="room.html" class="nav"><em>Prev:</em>Rooms</a>
+    <a href="door.html" class="nav"><em>Next:</em> Doors</a>     </span>
 
 </div>
 
@@ -32,7 +34,7 @@ room listing):
 3.  Lists of the visible contents of any objects in the room.
 4.  A paragraph for each NPC (non-player character) present in the room.
 
-(If the room belongs to a [SenseRegion](senseregion.htm), then this list
+(If the room belongs to a [SenseRegion](senseregion.html), then this list
 will be complicated by the listing of items in other rooms in the
 SenseRegion, but we'll ignore that complication for now).
 
@@ -360,7 +362,7 @@ plural either if there's more than one item in the list or if the first
 item in the list is itself plural). The *irName* parameter is the
 'inRoomName' of the room whose contents we're listing, and is only
 really relevant if we're listing the contents of a [remote
-location](senseregion.htm#descriptions).
+location](senseregion.html#descriptions).
 
 To define a prefix or suffix method on a CustomRoomLister we therefore
 need to name the parameter, use the **method** keyword to define a
@@ -536,7 +538,7 @@ might look like:
 </div>
 
 For further information on listing options, see the chapter on [Lists
-and Listers](lister.htm).
+and Listers](lister.html).
 
 ## <span id="whatlisted">Determining What's Listed</span>
 
@@ -577,10 +579,10 @@ takes its default value from <span class="code">isListed</span>.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Room
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Room
 Descriptions  
-<span class="navnp"><a href="thing.htm" class="nav"><em>Prev:</em> Rooms</a>
-    <a href="door.htm" class="nav"><em>Next:</em> Doors</a>     </span>
+<span class="navnp"><a href="thing.html" class="nav"><em>Prev:</em> Rooms</a>
+    <a href="door.html" class="nav"><em>Next:</em> Doors</a>     </span>
 
 </div>

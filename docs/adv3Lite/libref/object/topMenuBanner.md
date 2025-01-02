@@ -1,3 +1,5 @@
+---
+---
 <span class="title">topMenuBanner</span><span class="type">object</span>
 
 [menucon.t](../file/menucon.t.html)\[[22](../source/menucon.t.html#22)\]

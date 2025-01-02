@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DropTypeThrow</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[327](../source/thing.t.html#327)\]

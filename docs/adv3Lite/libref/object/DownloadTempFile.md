@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DownloadTempFile</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[3369](../source/webui.t.html#3369)\]

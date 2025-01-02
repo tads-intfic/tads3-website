@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Actor</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[26](../source/actor.t.html#26)\]

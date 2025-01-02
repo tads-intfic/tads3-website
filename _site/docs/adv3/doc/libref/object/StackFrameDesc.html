@@ -1,0 +1,230 @@
+<p><span class="title">StackFrameDesc</span><span class="type">class</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1248">1248</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+StackFrameDesc intrinsic class. This class provides access to a stack
+frame. It lets us retrieve the values of local variables and method
+context variables (self, definingobj, targetobj, targetprop). It also
+allows us to assign new values to local variables.
+
+To get the value of a local variable in the frame, simply use
+frame\[name\], where 'frame' is the StackFrameDesc object for the frame,
+and 'name' is a string giving the name of the local variable to
+retrieve. If the frame is active, this retrieves the live value of the
+variable from the frame; otherwise it retrieves the value from a
+snapshot containing the last value before the routine returned to its
+caller.
+
+To assign a new value to a local in the frame, assign a value to
+frame\[name\] for the desired variable name. If the frame is active,
+this updates the live variable in the stack frame, so when execution
+returns to the caller the variable will have the new value. If the frame
+is inactive, it updates the snapshot we made when the routine returned
+to its caller.
+
+This object can't be created with 'new'. Instead, you obtain these
+objects via the t3GetStackTrace() function. That function retrieves
+information on an active stack frame in the current call stack,
+including the frame object.
+
+`intrinsic class `**`StackFrameDesc`**` : `
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">StackFrameDesc</code></strong><br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getDefiningObj<code class="language-plaintext highlighter-rouge">](#getDefiningObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>getInvokee<code class="language-plaintext highlighter-rouge">](#getInvokee)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSelf<code class="language-plaintext highlighter-rouge">](#getSelf)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTargetObj<code class="language-plaintext highlighter-rouge">](#getTargetObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTargetProp<code class="language-plaintext highlighter-rouge">](#getTargetProp)</code>  <code class="language-plaintext highlighter-rouge">[</code>getVars<code class="language-plaintext highlighter-rouge">](#getVars)</code>  <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](#isActive)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="getDefiningObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getDefiningObj ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1293">1293</a>]</p>
+
+<div class="desc">
+
+Get the value of 'definingobj' in this frame.
+
+</div>
+
+<p><span id="getInvokee"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getInvokee ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1308">1308</a>]</p>
+
+<div class="desc">
+
+Get the value of 'invokee' in this frame.
+
+</div>
+
+<p><span id="getSelf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getSelf ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1288">1288</a>]</p>
+
+<div class="desc">
+
+Get the value of 'self' in this frame.
+
+</div>
+
+<p><span id="getTargetObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTargetObj ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1298">1298</a>]</p>
+
+<div class="desc">
+
+Get the value of 'targetobj' in this frame.
+
+</div>
+
+<p><span id="getTargetProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTargetProp ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1303">1303</a>]</p>
+
+<div class="desc">
+
+Get the value of 'targetprop' in this frame.
+
+</div>
+
+<p><span id="getVars"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getVars ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1283">1283</a>]</p>
+
+<div class="desc">
+
+Get a LookupTable consisting of all of the variables (local variables
+and parameters) in the frame. Each element in the table is keyed by the
+name of a variable, and contains the current value of the variable.
+
+The returned lookup table is a snapshot copy of the current values of
+the variables. If the underlying variable values in the frame change,
+the lookup table won't be affected, since it's just a separate copy made
+at the moment this routine is called. Similarly, changing the value of
+an entry in the returned lookup table won't affect the actual variable
+in the stack frame.
+
+To retrieve the current live value of a variable in the actual stack
+frame, use frame\[name\], where 'frame' is the StackFrameDesc object for
+the frame, and 'name' is a string giving the variable name.
+
+</div>
+
+<p><span id="isActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActive ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#1264">1264</a>]</p>
+
+<div class="desc">
+
+Is the stack frame active? A stack frame is active until the function or
+method it represents returns to its caller. When the routine returns,
+the frame becomes inactive.
+
+When the routine is about to return (so the frame is about to become
+inacive), the StackFrameDesc object makes a private snapshot of the
+variables in the frame. Subsequent access to the locals will
+automatically use the snapshot copy, so you can continue to access the
+locals as normal without worrying about whether or not the actual stack
+frame still exists. This allows you to continue to access and modify the
+values of the variables after the routine has exited.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerifyResult</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[3314](../source/action.t.html#3314)\]

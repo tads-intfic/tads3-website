@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ShuffledEventList</span><span class="type">class</span>
 
 [misc.t](../file/misc.t.html)\[[1268](../source/misc.t.html#1268)\]

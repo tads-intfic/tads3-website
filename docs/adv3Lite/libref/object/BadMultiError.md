@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BadMultiError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5718](../source/parser.t.html#5718)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">literalAdjPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`literalAdjPhrase(literalAdj)`](../object/literalAdjPhrase(literalAdj).html)</span>` :   `[`AdjPhraseWithVocab`](../object/AdjPhraseWithVocab.html)

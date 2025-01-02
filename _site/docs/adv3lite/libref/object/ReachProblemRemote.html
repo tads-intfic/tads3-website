@@ -1,0 +1,202 @@
+<p><span class="title">ReachProblemRemote</span><span class="type">class</span></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1647">1647</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The ReachProblemRemote should only be brought into play when an actor in
+one room in a SenseRegion tries to touch an object in another room in
+the SenseRegion when the SenseRegion defines autoGoTo as true. The
+ReachProblemRemote will then be responsible for trying to move the actor
+into the room containing the target object.
+
+`class `**`ReachProblemRemote`**` :   `[`ReachProblem`](../object/ReachProblem.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ReachProblemRemote</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ReachProblem<code class="language-plaintext highlighter-rouge">](../object/ReachProblem.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>destRoom<code class="language-plaintext highlighter-rouge">](#destRoom)</code>  <code class="language-plaintext highlighter-rouge">[</code>origRoom<code class="language-plaintext highlighter-rouge">](#origRoom)</code>  <code class="language-plaintext highlighter-rouge">[</code>target<code class="language-plaintext highlighter-rouge">](#target)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ReachProblem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>target_<code class="language-plaintext highlighter-rouge">](../object/ReachProblem.html#target_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>check<code class="language-plaintext highlighter-rouge">](#check)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayGoTo<code class="language-plaintext highlighter-rouge">](#sayGoTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>tooFarAwayMsg<code class="language-plaintext highlighter-rouge">](#tooFarAwayMsg)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ReachProblem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>verify<code class="language-plaintext highlighter-rouge">](../object/ReachProblem.html#verify)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="destRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">destRoom</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1656">1656</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="origRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">origRoom</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1655">1655</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="target"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">target</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1657">1657</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="check"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">check (allowImplicit)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1664">1664</a>]</p>
+
+<div class="desc">
+
+This check method may be called by the checkPreCondition method of the
+touchObj PreCondition. Its effect is to try to move the actor into the
+location of the object the actor is trying to touch.
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (a, b)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1648">1648</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayGoTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayGoTo (destRoom)</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1727">1727</a>]</p>
+
+<div class="desc">
+
+Report that we are trying to head to destRoom via an implicit action. We
+do this separately from the normal implicit action report mechanism so
+that this report is display before travel begins, not at the end of it
+as it otherwise would be.
+
+</div>
+
+<p><span id="tooFarAwayMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tooFarAwayMsg ( )</code></p>
+
+<p><a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1715">1715</a>]</p>
+
+<div class="desc">
+
+The failure message to display if we can't attempt an implicit GoTo
+action to move the actor.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

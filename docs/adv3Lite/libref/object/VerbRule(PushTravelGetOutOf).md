@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(PushTravelGetOutOf)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[3360](../source/grammar.t.html#3360)\]

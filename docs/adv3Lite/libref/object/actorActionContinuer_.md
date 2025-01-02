@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorActionContinuer\_</span><span class="type">object</span>
 
 [english.t](../file/english.t.html)\[[4160](../source/english.t.html#4160)\]

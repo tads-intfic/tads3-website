@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Dynamic Locations<br />
 </strong></td>
-<td style="text-align: right;"><a href="numbereddial.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="lever.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="numbereddial.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="lever.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

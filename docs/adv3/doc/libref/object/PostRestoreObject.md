@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PostRestoreObject</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[194](../source/actions.t.html#194)\]

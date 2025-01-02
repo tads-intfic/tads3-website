@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>StairwayUp : Stairway<br />
 </strong></td>
-<td style="text-align: right;"><a href="stairwaydown.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="travelwithmessage.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="stairwaydown.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="travelwithmessage.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -33,7 +35,7 @@ The main thing to note here is that we point the up property of the room
 to the upLadder object we're about to define, so that in can be
 traversed either in response to an UP command, or in response to a CLIMB
 (UP) LADDER command. We next define the basic upLadder object (using the
-[Passage template](passagetemplate.htm)):  
+[Passage template](passagetemplate.html)):  
   
 + upLadder : StairwayUp  -\>downLadder   
   'sturdy steel ladder' 'sturdy steel ladder'  
@@ -42,7 +44,7 @@ traversed either in response to an UP command, or in response to a CLIMB
   
 The one thing to note here is the use of the -\> in the template syntax
 to link the upLadder to its masterObject, the corresponding
-[StairwayDown](stairwaydown.htm), downLadder. The two Stairway objects
+[StairwayDown](stairwaydown.html), downLadder. The two Stairway objects
 are now linked so that traversing one will take us to the location of
 the other (we could equally well have done this the other way round by
 having downLadder point to upLadder as its master object, although we
@@ -50,7 +52,7 @@ would *not* want both of them pointing to each other).
   
 Either way, our ladder will work fine, but now we want to add a
 refinement. Remember when we defined the entranceTunnel
-[RoomConnector](roomconnector.htm) we gave it a **blocked** property to
+[RoomConnector](roomconnector.html) we gave it a **blocked** property to
 simulate the effect of a rockfall? Well, now we want to trigger the
 rockfall the first time the PC climbs the ladder back to the
 entranceCave. We could do this by overriding the stairwayUp's
@@ -77,4 +79,4 @@ occurs only once):
 There is no reason why we should not do it this way, but since we want
 to explore as much of the library as possible, we'll next look at
 another way of doing it using
-[TravelWithMessage](travelwithmessage.htm).  
+[TravelWithMessage](travelwithmessage.html).  

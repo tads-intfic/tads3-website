@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TokenizerError</span><span class="type">class</span>
 
 [tok.t](../file/tok.t.html)\[[28](../source/tok.t.html#28)\]

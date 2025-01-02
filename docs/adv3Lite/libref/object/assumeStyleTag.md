@@ -1,3 +1,5 @@
+---
+---
 <span class="title">assumeStyleTag</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[1060](../source/output.t.html#1060)\]

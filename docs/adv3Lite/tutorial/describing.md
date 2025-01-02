@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Describing the game  
-<span class="navnp"><a href="airport.htm" class="nav"><em>Prev:</em> Airport</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Describing the game  
+<span class="navnp"><a href="airport.html" class="nav"><em>Prev:</em> Airport</a>
    
-<a href="airmap1.htm" class="nav"><em>Next:</em> Starting the Map</a>
+<a href="airmap1.html" class="nav"><em>Next:</em> Starting the Map</a>
     </span>
 
 </div>
@@ -167,11 +169,11 @@ of the adv3Lite library.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Describing the game  
-<span class="navnp"><a href="airport.htm" class="nav"><em>Prev:</em> Airport</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Describing the game  
+<span class="navnp"><a href="airport.html" class="nav"><em>Prev:</em> Airport</a>
    
-<a href="airmap1.htm" class="nav"><em>Next:</em> Starting the Map</a>
+<a href="airmap1.html" class="nav"><em>Next:</em> Starting the Map</a>
     </span>
 
 </div>

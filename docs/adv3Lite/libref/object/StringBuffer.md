@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StringBuffer</span><span class="type">class</span>
 
 [strbuf.h](../file/strbuf.h.html)\[[44](../source/strbuf.h.html#44)\]

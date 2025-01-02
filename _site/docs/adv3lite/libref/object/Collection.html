@@ -1,0 +1,146 @@
+<p><span class="title">Collection</span><span class="type">class</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#142">142</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The native collection type - this is the base class for lists, vectors,
+and other objects that represent collections of values.
+
+`intrinsic class `**`Collection`**` :   `[`Object`](../object/Object.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Collection</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Object`](../object/Object.html)<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Collection</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>List<code class="language-plaintext highlighter-rouge">](../object/List.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LookupTable<code class="language-plaintext highlighter-rouge">](../object/LookupTable.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>WeakRefLookupTable<code class="language-plaintext highlighter-rouge">](../object/WeakRefLookupTable.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Vector<code class="language-plaintext highlighter-rouge">](../object/Vector.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AnonFuncPtr`](../object/AnonFuncPtr.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>createIterator<code class="language-plaintext highlighter-rouge">](#createIterator)</code>  <code class="language-plaintext highlighter-rouge">[</code>createLiveIterator<code class="language-plaintext highlighter-rouge">](#createLiveIterator)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>callInherited<code class="language-plaintext highlighter-rouge">](../object/Object.html#callInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>forEach<code class="language-plaintext highlighter-rouge">](../object/Object.html#forEach)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropParams<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSuperclassList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getSuperclassList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isClass<code class="language-plaintext highlighter-rouge">](../object/Object.html#isClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTransient<code class="language-plaintext highlighter-rouge">](../object/Object.html#isTransient)</code>  <code class="language-plaintext highlighter-rouge">[</code>mapAll<code class="language-plaintext highlighter-rouge">](../object/Object.html#mapAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>ofKind<code class="language-plaintext highlighter-rouge">](../object/Object.html#ofKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>propDefined<code class="language-plaintext highlighter-rouge">](../object/Object.html#propDefined)</code>  <code class="language-plaintext highlighter-rouge">[</code>propInherited<code class="language-plaintext highlighter-rouge">](../object/Object.html#propInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>propType<code class="language-plaintext highlighter-rouge">](../object/Object.html#propType)</code>  <code class="language-plaintext highlighter-rouge">[</code>valToSymbol<code class="language-plaintext highlighter-rouge">](../object/Object.html#valToSymbol)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="createIterator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createIterator ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#151">151</a>]</p>
+
+<div class="desc">
+
+Create an iterator for the collection. This returns a new Iterator
+object that can be used to iterate over the values in the collection.
+The Iterator will use a snapshot of the collection that will never
+change, even if the collection is changed after the iterator is created.
+
+</div>
+
+<p><span id="createLiveIterator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createLiveIterator ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#162">162</a>]</p>
+
+<div class="desc">
+
+Create a "live iterator" for the collection. This returns a new Iterator
+object that refers directly to the original collection; if the original
+collection changes, the iterator will reflect the changes in its
+iteration. As a result, the iterator is not guaranteed to visit all of
+the elements in the collection if the collection changes during the
+course of the iteration. If consistent results are required, use
+createIterator() instead.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

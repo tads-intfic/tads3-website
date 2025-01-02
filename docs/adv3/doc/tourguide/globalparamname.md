@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>globalParamName<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="initdesc+initspecialdesc.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="specialdesc.htm">[Next]</a></td>
+href="initdesc+initspecialdesc.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="specialdesc.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -39,7 +41,7 @@ object. This is fine, but globalParamName allows a slightly neater way
 of doing the same thing. It's really only useful on objects that change
 their name in the course of the game (which is likely to be a small
 minority), and they allow the object to be referred to in a
-<a href="%20http://www.tads.org/howto/t3msg.htm%20"
+<a href="%20http://www.tads.org/howto/t3msg.html%20"
 target="_top">parameter substitution string</a>. This works by setting
 the globalParamName property to a single-quoted string that can be
 anything we like, but which must be unique (in the realm of parameter

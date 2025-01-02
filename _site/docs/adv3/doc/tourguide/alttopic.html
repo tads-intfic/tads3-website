@@ -1,0 +1,112 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>AltTopic : <a href="topicentry.html">TopicEntry</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="giveshowtopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="initiatetopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>We use AltTopic topic to provide one or more alternative responses to
+conversational commands (ASK ABOUT, ASK FOR, TELL ABOUT, SHOW TO, GIVE
+TO) depending on some condition specified in the AltTopic’s isActive
+property. AltTopics are nested within their corresponding TopicEntry,
+and the order in which they appear is significant: the last entry for
+which isActive is true is the one that is used. For example, supposed
+one had this structure:</p>
+
+<p>bob : Person ’bob’ ’Bob’<br />
+  …<br />
+;<br />
+ <br />
++ bobTalking : InConversationState<br />
+  …<br />
+;</p>
+
+<p>++ ShowTopic @letter<br />
+    ”Bob glances at the envelope and then pushes it away, &lt;q&gt;I don’t read other people’s correspondence&lt;/q&gt;<br />
+     he says.”<br />
+;</p>
+
+<p>+++ AltTopic<br />
+    ”Bob snatches the letter from your grasp and peruses it eagerly before handing it back.<br />
+    &lt;q&gt;My goodness!&lt;/q&gt; he declares.<br />
+    isActive = (gRevealed(‘exciting-scandal’))<br />
+;</p>
+
+<p>+++ AltTopic<br />
+   ”Bob stares at the letter disdainfully. &lt;q&gt;That’s not much use now…&lt;/q&gt; he complains.”<br />
+   isActive = (letter.isTorn)<br />
+;</p>
+
+<p>If we show the letter to bob when letter.isTorn is nil and the exciting
+scandal is yet to be revealed, then we’ll see the “Bob glances at the
+envelope and pushes it away” response. If somewhere in the game
+&lt;.reveal exciting-scandal&gt; or gReveal(‘exciting-scandal’) has been
+used, but letter.isTorn is still nil, then we’ll see the “Bob snatches
+the letter from your grasp” response. If, however, letter.isTorn is
+true, we’ll see the “Bob stares at the letter disdainfully” response
+regardless of the value of gRevealed(‘exciting-scandal’).</p>
+
+<p>Let’s now put this to good use with Sarah, the ring, and the diamond:</p>
+
+<p>++ GiveShowTopic @diamond<br />
+  ”{The sarah/she} studies the gem carefully, &lt;q&gt;That certainly looks like it could<br />
+   be the diamond from my ring,&lt;/q&gt; she decides, &lt;q&gt;But where’s the ring?&lt;/q&gt;<br />
+   &lt;.reveal diamond-shown&gt;”<br />
+;</p>
+
+<p>+++ AltTopic<br />
+  ”&lt;q&gt;Yes, I think that’s the diamond.&lt;/q&gt; she nods eagerly, &lt;q&gt;Have you tried<br />
+   whether it fits the ring?&lt;/q&gt;”<br />
+   isActive = gRevealed(‘ring-shown’)<br />
+; </p>
+
+<p>++ GiveShowTopic @ring<br />
+  ”{The sarah/she} nods eagerly, &lt;q&gt;Yes, that’s my ring!&lt;/q&gt; she declares, but then<br />
+   her hand flies to her mouth, &lt;q&gt;But - oh my goodness - the diamond is missing!&lt;/q&gt;<br />
+   &lt;.reveal ring-shown&gt;”<br />
+;</p>
+
+<p>+++ AltTopic <br />
+  ”&lt;q&gt;That’s my ring, all right!&lt;/q&gt; {the sarah/she} declares, &lt;q&gt;But you haven’t<br />
+   fitted the diamond!&lt;/q&gt;”<br />
+   isActive = gRevealed(‘diamond-shown’)<br />
+;</p>
+
+<p>The sequence of responses if the player shows first the ring, then the
+diamond, and then the reassembled ring to Sarah (and then finally gives
+her the ring) may not be absolutely perfect, but it’s now starting to
+get within the bounds of the tolerable, and improving on it further can
+be left as yet another exercise for the dedicated reader: the first step
+would probably be to replace the single responses with EventLists; you
+might also want to test gRevealed(‘ring-shown’) and
+gRevealed(‘diamond-shown’) on the diamondRing GiveTopic and ShowTopic.</p>
+
+<p>A little way back we provided a slightly complex GiveTopic to allow the
+player character to hand Sarah a gas mask. We need her to accept one gas
+mask, but not both of them, so it would be good to provide an AltTopic
+that makes Sarah decline the second gas mask if she already has the
+first. We can achieve this by checking whether anything in Sarah’s
+inventory is of class GasMask, but to do that we need to make isActive a
+slightly more complex method than normal:</p>
+
+<p>++ AltTopic<br />
+  ”&lt;q&gt;No thanks,&lt;/q&gt; she declines, &lt;q&gt;I think one gas mask’s enough for anyone, <br />
+  don’t you?&lt;/q&gt; ”<br />
+  isActive<br />
+  {<br />
+    foreach(local obj in getActor.contents)<br />
+      if(obj.ofKind(GasMask))<br />
+        return true;<br />
+    return nil;<br />
+  }<br />
+;  </p>
+
+<p>Obviously, this should go straight after the relevant GiveTopic.</p>
+

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,8 +11,8 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>March/April 2004<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="changesforv3_0_6p.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a></td>
+href="changesforv3_0_6p.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a></td>
 </tr>
 </tbody>
 </table>
@@ -28,7 +30,7 @@ The following changes were made in March/April 2004
 <tr data-valign="top">
 <td width="14">·</td>
 <td>The definition of the longCaveWords in the <a
-href="decoration.htm">Decoration</a> section.  <br />
+href="decoration.html">Decoration</a> section.  <br />
 </td>
 </tr>
 </tbody>
@@ -43,7 +45,7 @@ href="decoration.htm">Decoration</a> section.  <br />
 <tr data-valign="top">
 <td width="14">·</td>
 <td>The change of property name from roomDesc to inRoomDesc in the <a
-href="specialdesc.htm">specialDesc</a> section.  <br />
+href="specialdesc.html">specialDesc</a> section.  <br />
 </td>
 </tr>
 </tbody>
@@ -58,7 +60,7 @@ href="specialdesc.htm">specialDesc</a> section.  <br />
 <tr data-valign="top">
 <td width="14">·</td>
 <td>The correction of a typo that referred to Wearable instead of Food
-in the <a href="food.htm">Food</a> section.  <br />
+in the <a href="food.html">Food</a> section.  <br />
 </td>
 </tr>
 </tbody>
@@ -73,7 +75,7 @@ in the <a href="food.htm">Food</a> section.  <br />
 <tr data-valign="top">
 <td width="14">·</td>
 <td>The addition of inherited() to TardisDestination.construct() in the
-<a href="dynamiclocations.htm">DynamicLocations</a> section.  <br />
+<a href="dynamiclocations.html">DynamicLocations</a> section.  <br />
 </td>
 </tr>
 </tbody>
@@ -88,7 +90,7 @@ in the <a href="food.htm">Food</a> section.  <br />
 <tr data-valign="top">
 <td width="14">·</td>
 <td>Substantial changes to the monolith in the <a
-href="travelpushable.htm">TravelPushable</a> section.  <br />
+href="travelpushable.html">TravelPushable</a> section.  <br />
 </td>
 </tr>
 </tbody>
@@ -103,7 +105,7 @@ href="travelpushable.htm">TravelPushable</a> section.  <br />
 <tr data-valign="top">
 <td width="14">·</td>
 <td>Some changes to the definition of redGlow in the <a
-href="vaporous.htm">Vaporous</a> section.  <br />
+href="vaporous.html">Vaporous</a> section.  <br />
 </td>
 </tr>
 </tbody>
@@ -118,7 +120,7 @@ href="vaporous.htm">Vaporous</a> section.  <br />
 <tr data-valign="top">
 <td width="14">·</td>
 <td>Some minor alterations to the vocabWords of some of the exhibits in
-the <a href="collectivegroup.htm">CollectiveGroup</a> (static) section.
+the <a href="collectivegroup.html">CollectiveGroup</a> (static) section.
  <br />
 </td>
 </tr>

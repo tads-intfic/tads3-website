@@ -1,3 +1,5 @@
+---
+---
 <span class="title">predicate(Footnote)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[9763](../source/en_us.t.html#9763)\]

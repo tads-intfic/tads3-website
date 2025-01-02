@@ -1,0 +1,272 @@
+<p><span class="title">statusLine</span><span class="type">object</span></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#173">173</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Status line - this is an abstract object that controls the status line
+display.
+
+We provide two main methods: showStatusHtml, which shows the status line
+in HTML format, and showStatusText, which shows the status line in plain
+text mode. To display the status line, we invoke one or the other of
+these methods, according to the current mode, to display the statusline.
+The default implementations of these methods generate the appropriate
+formatting codes for a statusline with a left part and a right part,
+calling showStatusLeft and showStatusRight, respectively, to display the
+text for the parts.
+
+Games can customize the statusline at two levels. At the simpler level,
+a game can modify showStatusLeft and/or showStatusRight to change the
+text displayed on the left and/or right of the statusline. Since these
+two methods are used regardless of the statusline style of the
+underlying interpreter, games don't have to worry about the different
+modes when overriding these.
+
+At the more complex level, a game can modify showStatusHtml and/or
+showStatusText. Modifying these routines provides complete control over
+the formatting of the entir status line. If a game wants to use
+something other than the traditional left/right display, it must modify
+these methods.
+
+This object is transient, because the statusline style is a function of
+the interpreter we're currently running on, and thus isn't suitable for
+saving persistently.
+
+`transient `**`statusLine`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">statusLine</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>statusDispMode<code class="language-plaintext highlighter-rouge">](#statusDispMode)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>beginStatusLine<code class="language-plaintext highlighter-rouge">](#beginStatusLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>endStatusLine<code class="language-plaintext highlighter-rouge">](#endStatusLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>getEstimatedHeightHtml<code class="language-plaintext highlighter-rouge">](#getEstimatedHeightHtml)</code>  <code class="language-plaintext highlighter-rouge">[</code>initBannerWindow<code class="language-plaintext highlighter-rouge">](#initBannerWindow)</code>  <code class="language-plaintext highlighter-rouge">[</code>setColorScheme<code class="language-plaintext highlighter-rouge">](#setColorScheme)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStatusHtml<code class="language-plaintext highlighter-rouge">](#showStatusHtml)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStatusLeft<code class="language-plaintext highlighter-rouge">](#showStatusLeft)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStatusLine<code class="language-plaintext highlighter-rouge">](#showStatusLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStatusLineDaemon<code class="language-plaintext highlighter-rouge">](#showStatusLineDaemon)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStatusRight<code class="language-plaintext highlighter-rouge">](#showStatusRight)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStatusText<code class="language-plaintext highlighter-rouge">](#showStatusText)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="statusDispMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">statusDispMode</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#566">566</a>]</p>
+
+<div class="desc">
+
+The status mode we're using. If this is nil, it means we haven't chosen
+a mode yet.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="beginStatusLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beginStatusLine ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#394">394</a>]</p>
+
+<div class="desc">
+
+Begin status-line mode. This sets up the output manager so that text
+written to the default output stream is displayed on the status line.
+Returns the original output stream.
+
+</div>
+
+<p><span id="endStatusLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endStatusLine (oldStr)</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#472">472</a>]</p>
+
+<div class="desc">
+
+end statusline display
+
+</div>
+
+<p><span id="getEstimatedHeightHtml"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getEstimatedHeightHtml ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#300">300</a>]</p>
+
+<div class="desc">
+
+Get the estimated HTML-style banner height, in lines of text. This is
+used to set the status line banner size for platforms where sizing to
+the exact height of the rendered contents isn't supported.
+
+If showStatusHtml() is overridden to display more or fewer lines of text
+than the basic implementation here, then this routine must be overridden
+as well to reflect the new height.
+
+</div>
+
+<p><span id="initBannerWindow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initBannerWindow (win)</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#515">515</a>]</p>
+
+<div class="desc">
+
+Initialize the banner window, given the BannerWindow object representing
+the status line banner API window.
+
+</div>
+
+<p><span id="setColorScheme"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setColorScheme ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#383">383</a>]</p>
+
+<div class="desc">
+
+Set up the status line's color scheme. This is called each time we
+redraw the status line to set the background and text colors. We call
+the statusline banner window to do the work, since the mechanism is
+different between the traditional and Web UIs.
+
+</div>
+
+<p><span id="showStatusHtml"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusHtml ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#259">259</a>]</p>
+
+<div class="desc">
+
+Show the status line in HTML format. Our default implementation shows
+the traditional two-part (left/right) status line, using
+showStatusLeft() and showStatusRight() to display the parts.
+
+</div>
+
+<p><span id="showStatusLeft"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusLeft ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#343">343</a>]</p>
+
+<div class="desc">
+
+Show the left part of a standard left/right statusline. By default,
+we'll show the player character's location, by calling statusName() on
+the PC's immediate container.
+
+</div>
+
+<p><span id="showStatusLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusLine ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#180">180</a>]</p>
+
+<div class="desc">
+
+Show the status line, in HTML or text mode, as appropriate. By default,
+the library sets this up as a "prompt daemon," which means that this
+will be called automatically just before each command line is read.
+
+</div>
+
+<p><span id="showStatusLineDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusLineDaemon ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#239">239</a>]</p>
+
+<div class="desc">
+
+prompt-daemon showing the status line
+
+</div>
+
+<p><span id="showStatusRight"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusRight ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#364">364</a>]</p>
+
+<div class="desc">
+
+Show the right part of a standard left/right statusline. By default,
+we'll show the current score, a slash, and the number of turns.
+
+</div>
+
+<p><span id="showStatusText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusText ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#323">323</a>]</p>
+
+<div class="desc">
+
+Show the statusline in text mode. Our default implementation shows the
+traditional two-part (left/right) status line, using showStatusLeft()
+and showStatusRight() to display the parts.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PartOf</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[10120](../source/thing.t.html#10120)\]

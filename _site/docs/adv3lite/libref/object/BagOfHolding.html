@@ -1,0 +1,163 @@
+<p><span class="title">BagOfHolding</span><span class="type">class</span></p>
+
+<p><a href="../file/gadget.t.html">gadget.t</a>[<a href="../source/gadget.t.html#292">292</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Mix-in class to help with inventory management. A BagOfHolding can be
+mixed in with a Container (or, less usually, Surface, RearContainer or
+Underside) to provide an object which, if held by the player character,
+will be used to move objects in the player character's inventory to if
+his/her hands become too full to pick up another object.
+
+`class `**`BagOfHolding`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BagOfHolding</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>affinityFor<code class="language-plaintext highlighter-rouge">](#affinityFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>moveAction<code class="language-plaintext highlighter-rouge">](#moveAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>suitabilityFor<code class="language-plaintext highlighter-rouge">](#suitabilityFor)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryHolding<code class="language-plaintext highlighter-rouge">](#tryHolding)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="affinityFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">affinityFor (obj)</code></p>
+
+<p><a href="../file/gadget.t.html">gadget.t</a>[<a href="../source/gadget.t.html#302">302</a>]</p>
+
+<div class="desc">
+
+The affinity for this BagOfHolding for obj. This can be used to
+determined how 'willing' a particular BagOfHolding is to contain obj. A
+value of less than 1 means that the BagOfHolding can't contain obj at
+all. The higher the affinity, the better the choice this BagOfHolding is
+for obj. The default value is 100, or 0 for a BagOfHolding's affinity
+for itself.
+
+</div>
+
+<p><span id="moveAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveAction ( )</code></p>
+
+<p><a href="../file/gadget.t.html">gadget.t</a>[<a href="../source/gadget.t.html#418">418</a>]</p>
+
+<div class="desc">
+
+The action needed to move an object into me.
+
+</div>
+
+<p><span id="suitabilityFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">suitabilityFor (obj)</code></p>
+
+<p><a href="../file/gadget.t.html">gadget.t</a>[<a href="../source/gadget.t.html#312">312</a>]</p>
+
+<div class="desc">
+
+To be suitable to contain obj a BagOfHolding must have enough spare
+capacity for it. If it has, its suitability is its affinity for obj;
+otherwise it's 0. A BagOfHolding is also unsuitable if it's locked.
+
+</div>
+
+<p><span id="tryHolding"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryHolding (obj)</code></p>
+
+<p><a href="../file/gadget.t.html">gadget.t</a>[<a href="../source/gadget.t.html#327">327</a>]</p>
+
+<div class="desc">
+
+Class method to determine whether the actor is carrying a suitable
+BagOfHolding that could be used to move something from his inventory
+into, and then to move items from the actor's inventory into an
+appropriate bag of holding.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

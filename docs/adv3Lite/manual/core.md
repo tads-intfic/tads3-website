@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| The Core
+<a href="toc.html" class="nav">Table of Contents</a> \| The Core
 Library  
-<span class="navnp"><a href="mingame.htm" class="nav"><em>Prev:</em> Minimal Game
+<span class="navnp"><a href="mingame.html" class="nav"><em>Prev:</em> Minimal Game
 Definition</a>    
-<a href="thing.htm" class="nav"><em>Next:</em> Things</a>     </span>
+<a href="thing.html" class="nav"><em>Next:</em> Things</a>     </span>
 
 </div>
 
@@ -30,16 +32,16 @@ code will be dealt with in later sections.
 
 <div class="sectoc">
 
-[Things](thing.htm)  
-[Rooms and Regions](room.htm)  
-[Room Descriptions](roomdesc.htm)  
-[Doors](door.htm)  
-[TravelConnectors and Barriers](travel.htm)  
-[Keys](key.htm)  
-[Multilocs](multiloc.htm)  
-[Topics](topic.htm)  
-[Beginnings](beginning.htm)  
-[Endings](ending.htm)  
+[Things](thing.html)  
+[Rooms and Regions](room.html)  
+[Room Descriptions](roomdesc.html)  
+[Doors](door.html)  
+[TravelConnectors and Barriers](travel.html)  
+[Keys](key.html)  
+[Multilocs](multiloc.html)  
+[Topics](topic.html)  
+[Beginnings](beginning.html)  
+[Endings](ending.html)  
 
 </div>
 
@@ -50,10 +52,10 @@ code will be dealt with in later sections.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| The Core
+<a href="toc.html" class="nav">Table of Contents</a> \| The Core
 Library  
-<span class="navnp"><a href="mingame.htm" class="nav"><em>Prev:</em> A Minimal Game</a>
-    <a href="thing.htm" class="nav"><em>Next:</em> Things</a>    
+<span class="navnp"><a href="mingame.html" class="nav"><em>Prev:</em> A Minimal Game</a>
+    <a href="thing.html" class="nav"><em>Next:</em> Things</a>    
 </span>
 
 </div>

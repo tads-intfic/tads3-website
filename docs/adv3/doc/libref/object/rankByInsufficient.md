@@ -1,3 +1,5 @@
+---
+---
 <span class="title">rankByInsufficient</span><span class="type">object</span>
 
 [parser.t](../file/parser.t.html)\[[5919](../source/parser.t.html#5919)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">fromSingleNoun</span><span class="type">GrammarProd</span>
 
 `grammar `**[`fromSingleNoun(main)`](../object/fromSingleNoun(main).html)**` :   `[`Production`](../object/Production.html)

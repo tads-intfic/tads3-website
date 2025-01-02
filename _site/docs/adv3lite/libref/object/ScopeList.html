@@ -1,0 +1,288 @@
+<p><span class="title">ScopeList</span><span class="type">class</span></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#923">923</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A ScopeList is a helper object used to build the list of objects in
+scope. This object provides methods for the common ways of adding
+objects to scope.
+
+The ScopeList isn't a true Collection object, but it mimics one by
+providing most of the standard methods. You can use length() and the
+\[\] operator to scan the list, perform a foreach or for..in loop with a
+ScopeList to iterate over the items in scope, you can use find() to
+check if a given object is in scope, and you can use subset() to get a
+list of in-scope objects satisfying some condition.
+
+`class `**`ScopeList`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ScopeList</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>status_<code class="language-plaintext highlighter-rouge">](#status_)</code>  <code class="language-plaintext highlighter-rouge">[</code>vec_<code class="language-plaintext highlighter-rouge">](#vec_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>add<code class="language-plaintext highlighter-rouge">](#add)</code>  <code class="language-plaintext highlighter-rouge">[</code>addAll<code class="language-plaintext highlighter-rouge">](#addAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>addOnly<code class="language-plaintext highlighter-rouge">](#addOnly)</code>  <code class="language-plaintext highlighter-rouge">[</code>addSelfIlluminatingWithin<code class="language-plaintext highlighter-rouge">](#addSelfIlluminatingWithin)</code>  <code class="language-plaintext highlighter-rouge">[</code>addWithin<code class="language-plaintext highlighter-rouge">](#addWithin)</code>  <code class="language-plaintext highlighter-rouge">[</code>close<code class="language-plaintext highlighter-rouge">](#close)</code>  <code class="language-plaintext highlighter-rouge">[</code>createIterator<code class="language-plaintext highlighter-rouge">](#createIterator)</code>  <code class="language-plaintext highlighter-rouge">[</code>createLiveIterator<code class="language-plaintext highlighter-rouge">](#createLiveIterator)</code>  <code class="language-plaintext highlighter-rouge">[</code>find<code class="language-plaintext highlighter-rouge">](#find)</code>  <code class="language-plaintext highlighter-rouge">[</code>length<code class="language-plaintext highlighter-rouge">](#length)</code>  <code class="language-plaintext highlighter-rouge">[</code>subset<code class="language-plaintext highlighter-rouge">](#subset)</code>  <code class="language-plaintext highlighter-rouge">[</code>toList<code class="language-plaintext highlighter-rouge">](#toList)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="status_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">status_</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1045">1045</a>]</p>
+
+<div class="desc">
+
+A LookupTable with the objects already added to the list. We use this to
+avoid redundantly scanning containment trees for objects that we've
+already added. For each object, we set status\_\[obj\] to a status
+indicator:
+
+  
+nil (unset) - the object has never been visited  
+1 - we've added the object only, not its contents  
+2 - we've added the object and its contents
+
+</div>
+
+<p><span id="vec_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vec_</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1033">1033</a>]</p>
+
+<div class="desc">
+
+a vector with the objects in scope
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="add"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">add (obj)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#927">927</a>]</p>
+
+<div class="desc">
+
+Add an object and its contents to the scope.
+
+</div>
+
+<p><span id="addAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addAll (lst)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#957">957</a>]</p>
+
+<div class="desc">
+
+Add all of the objects in the given list
+
+</div>
+
+<p><span id="addOnly"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addOnly (obj)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#985">985</a>]</p>
+
+<div class="desc">
+
+Add a single object to the scope. This doesn't add anything related to
+the object (such as its contents) - just the object itself.
+
+</div>
+
+<p><span id="addSelfIlluminatingWithin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addSelfIlluminatingWithin (obj)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#975">975</a>]</p>
+
+<div class="desc">
+
+add each self-illuminating object in the interior contents
+
+</div>
+
+<p><span id="addWithin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addWithin (obj)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#967">967</a>]</p>
+
+<div class="desc">
+
+Add the interior contents of an object to the scope. This adds only the
+contents, not the object itself.
+
+</div>
+
+<p><span id="close"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">close ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1005">1005</a>]</p>
+
+<div class="desc">
+
+"close" the scope list - this converts the vector to a list
+
+</div>
+
+<p><span id="createIterator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createIterator ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1027">1027</a>]</p>
+
+<div class="desc">
+
+create an iterator, for foreach()
+
+</div>
+
+<p><span id="createLiveIterator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createLiveIterator ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1030">1030</a>]</p>
+
+<div class="desc">
+
+create a live iterator
+
+</div>
+
+<p><span id="find"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">find (obj)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1018">1018</a>]</p>
+
+<div class="desc">
+
+is the given object in scope?
+
+</div>
+
+<p><span id="length"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">length ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1012">1012</a>]</p>
+
+<div class="desc">
+
+get the number of items in scope
+
+</div>
+
+<p><span id="subset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">subset (func)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1021">1021</a>]</p>
+
+<div class="desc">
+
+get the subset of the objects in scope matching the given condition
+
+</div>
+
+<p><span id="toList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toList ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1024">1024</a>]</p>
+
+<div class="desc">
+
+return the scope as a simple list of objects
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

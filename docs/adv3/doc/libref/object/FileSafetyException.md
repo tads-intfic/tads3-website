@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FileSafetyException</span><span class="type">class</span>
 
 [file.t](../file/file.t.html)\[[174](../source/file.t.html#174)\]

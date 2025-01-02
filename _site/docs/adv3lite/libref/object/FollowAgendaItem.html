@@ -1,0 +1,366 @@
+<p><span class="title">FollowAgendaItem</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6112">6112</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+An AgendaItem that can be used to trigger actor travel when the actor is
+waiting for the player character to follow him/her/it.
+
+`class `**`FollowAgendaItem`**` :   `[`AgendaItem`](../object/AgendaItem.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">FollowAgendaItem</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>AgendaItem<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>agendaOrder<code class="language-plaintext highlighter-rouge">](#agendaOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>connectorList<code class="language-plaintext highlighter-rouge">](#connectorList)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextConnector<code class="language-plaintext highlighter-rouge">](#nextConnector)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextConnNum<code class="language-plaintext highlighter-rouge">](#nextConnNum)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextDirection<code class="language-plaintext highlighter-rouge">](#nextDirection)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelBlockReported<code class="language-plaintext highlighter-rouge">](#travelBlockReported)</code>  <code class="language-plaintext highlighter-rouge">[</code>traveledThisTurn<code class="language-plaintext highlighter-rouge">](#traveledThisTurn)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>calledBy<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#calledBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiallyActive<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#initiallyActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>invokedByActor<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#invokedByActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDone<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#isDone)</code>  <code class="language-plaintext highlighter-rouge">[</code>isReady<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#isReady)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#name)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>arrivingDesc<code class="language-plaintext highlighter-rouge">](#arrivingDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeTravel<code class="language-plaintext highlighter-rouge">](#beforeTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>cancel<code class="language-plaintext highlighter-rouge">](#cancel)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>invokeItem<code class="language-plaintext highlighter-rouge">](#invokeItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteArrival<code class="language-plaintext highlighter-rouge">](#noteArrival)</code>  <code class="language-plaintext highlighter-rouge">[</code>registerItem<code class="language-plaintext highlighter-rouge">](#registerItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetItem<code class="language-plaintext highlighter-rouge">](#resetItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](#sayDeparting)</code>  <code class="language-plaintext highlighter-rouge">[</code>showSpecialDesc<code class="language-plaintext highlighter-rouge">](#showSpecialDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>specialDesc<code class="language-plaintext highlighter-rouge">](#specialDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelBlocked<code class="language-plaintext highlighter-rouge">](#travelBlocked)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>invokeItemBase<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#invokeItemBase)</code>  <code class="language-plaintext highlighter-rouge">[</code>report<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#report)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="agendaOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">agendaOrder</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6364">6364</a>]</p>
+
+<div class="desc">
+
+Give this agendaItem a high priority to make sure it is used in response
+to a FOLLOW ccmmand in preference to any other AgendaItems that may be
+pending.
+
+</div>
+
+<p><span id="connectorList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">connectorList</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6224">6224</a>]</p>
+
+<div class="desc">
+
+A list of TravelConnectors through which we want the player character to
+follow our associated actor.
+
+</div>
+
+<p><span id="nextConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextConnector</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6227">6227</a>]</p>
+
+<div class="desc">
+
+The next connector our NPC wants to lead the PC via
+
+</div>
+
+<p><span id="nextConnNum"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextConnNum</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6217">6217</a>]</p>
+
+<div class="desc">
+
+A pointer to the next connector to use
+
+</div>
+
+<p><span id="nextDirection"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextDirection</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6298">6298</a>]</p>
+
+<div class="desc">
+
+Display our default message. We make use there is a nextDirection before
+we attempt to use it in our message, otherwise we simply use a bland "X
+is here."
+
+</div>
+
+<p><span id="travelBlockReported"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelBlockReported</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6248">6248</a>]</p>
+
+<div class="desc">
+
+Flag: did the travelBlocked() method output any text? This is handled
+internally by the library and shouldn't normally be used by game author
+code.
+
+</div>
+
+<p><span id="traveledThisTurn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">traveledThisTurn</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6214">6214</a>]</p>
+
+<div class="desc">
+
+Which turn did this FollowAgendaItem last cause our NPC to travel on?
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="arrivingDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">arrivingDesc ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6306">6306</a>]</p>
+
+<div class="desc">
+
+The specialDesc to use when our NPC has just traveled as a result of
+this TravelAgendaItem. By default we just show our specialDesc, but game
+code might want to customize this to something like "Bob crosses the
+room and waits for you to follow him through the green door."
+
+</div>
+
+<p><span id="beforeTravel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beforeTravel (traveler, connector)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6340">6340</a>]</p>
+
+<div class="desc">
+
+Give this AgendaItem the opportunity to react to travel; in particular
+this might be used to allow the NPC to react to or even forbid travel in
+a direction other than the one s/he's trying to lead the PC.
+
+</div>
+
+<p><span id="cancel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cancel ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6343">6343</a>]</p>
+
+<div class="desc">
+
+Cancel this FollowAgendaItem before its normal termination.
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6379">6379</a>]</p>
+
+<div class="desc">
+
+An AgendaItem initializer. For each agenda item that's initially active,
+we'll add the item to its actor's agenda.
+
+</div>
+
+<p><span id="invokeItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invokeItem ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6114">6114</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="noteArrival"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteArrival ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6256">6256</a>]</p>
+
+<div class="desc">
+
+This method is invoked when our NPC arrives at his/her destination. By
+default we do nothing, but instances can override to provide code to
+handle the arrival, e.g. by changing the NPC's ActorState.
+
+</div>
+
+<p><span id="registerItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">registerItem ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6366">6366</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="resetItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resetItem ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6258">6258</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="sayDeparting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDeparting (conn)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6325">6325</a>]</p>
+
+<div class="desc">
+
+Display a message to say that our actor is leaving via conn. This would
+normally describe the player character following our actor via conn.
+
+</div>
+
+<p><span id="showSpecialDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showSpecialDesc ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6313">6313</a>]</p>
+
+<div class="desc">
+
+Show a specialDesc for this NPC when this TravelAgendaItem is active. If
+we've just moved this turn we display the arrivingDesc(), otherwise we
+show the specialDesc.
+
+</div>
+
+<p><span id="specialDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">specialDesc ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6274">6274</a>]</p>
+
+<div class="desc">
+
+The specialDesc to display when our actor is waiting for the PC to
+follow it. By default we just show a plain vanilla message to the
+effect, "The NPC is waiting for you to follow him/her north" or
+whatever, but game code may wish to override this to provide a more
+customized message.
+
+</div>
+
+<p><span id="travelBlocked"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelBlocked (conn)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6239">6239</a>]</p>
+
+<div class="desc">
+
+This method is called when our NPC attempts to travel via conn but the
+travel is blocked (by a locked door, for example). By default we do
+nothing here but game code can override this method to display an
+appropriate message or take any other action that might be needed in
+this situation.
+
+If this method displays anything, the default "You wait in vain for the
+traveler to go anywhere" message will be suppressed.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

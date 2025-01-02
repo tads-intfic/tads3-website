@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PromptDaemon</span><span class="type">class</span>
 
 [events.t](../file/events.t.html)\[[813](../source/events.t.html#813)\]

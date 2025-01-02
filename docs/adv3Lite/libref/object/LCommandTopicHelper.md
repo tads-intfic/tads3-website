@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LCommandTopicHelper</span><span class="type">class</span>
 
 [english.t](../file/english.t.html)\[[5758](../source/english.t.html#5758)\]

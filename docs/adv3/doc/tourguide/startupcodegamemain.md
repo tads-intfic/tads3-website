@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Startup Code : gameMain<br />
 </strong></td>
-<td style="text-align: right;"><a href="templates.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="introduction.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="templates.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="introduction.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -52,8 +54,8 @@ gameMain : GameMainDef
 ;  
   
 You can do more than this on gameMain. Later on, for example, we'll be
-discussing how you can set up the [maximum score](maxscore.htm) and a
-[score rank table](scoreranktable.htm) here. You can also set the
+discussing how you can set up the [maximum score](maxscore.html) and a
+[score rank table](scoreranktable.html) here. You can also set the
 properties **allowYouMeMixing** (true by default), and
 **allVerbsAllowAll** (also true by default) In case it isn't obvious
 what these do, here's how the comments in the library code describe
@@ -163,7 +165,7 @@ object that serves as the initial player character.  <br />
 <tr data-valign="top">
 <td width="14"><strong></strong>·<strong></strong></td>
 <td><strong>usePastTense</strong> - Flag: if true, the game will be
-narrated in the <a href="pasttense.htm">past tense</a> instead of the
+narrated in the <a href="pasttense.html">past tense</a> instead of the
 present tense (e.g. "On the table was a banana" instead of "On the table
 is a banana"). This flag can also be switched in-game to switch between
 past-tense and present-tense narration.  <br />
@@ -224,7 +226,7 @@ me: Actor
 ;  
   
 <span id="versioninfo">We'll get round to defining the</span>
-[outsideCave](outdoorroom.htm) location shortly. In the meantime there's
+[outsideCave](outdoorroom.html) location shortly. In the meantime there's
 one more job we might want to get out of the way at this stage, and that
 is to define the versionInfo object, which provides important
 information about the game:  
@@ -300,7 +302,7 @@ other games), you can use the TADS IFID generator at
 target="_top">http://www.tads.org/ifidgen/ifidgen</a>. The other
 bibliographical data (such as the name of the game and its author)
 should be fairly self-explanatory (but see the
-'<a href="../techman/gameinfo.htm" target="_top">Bibliographical
+'<a href="../techman/gameinfo.html" target="_top">Bibliographical
 Metadata</a>' article for full details). The final two methods contain
 the text that should be displayed in response to the **credits** and
 **about** command. Of course, you may prefer the latter to launch a menu

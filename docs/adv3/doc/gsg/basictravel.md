@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](tyingupsomeloosestrings.htm)
-  [\[Next\]](climbingthetree.htm)*
+*[\[Previous\]](tyingupsomeloosestrings.html)
+  [\[Next\]](climbingthetree.html)*
 
 # Chapter 4 - Moving Around
 
@@ -266,7 +268,7 @@ The game should now work as expected.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](tyingupsomeloosestrings.htm)
-  [\[Next\]](climbingthetree.htm)*
+*[\[Previous\]](tyingupsomeloosestrings.html)
+  [\[Next\]](climbingthetree.html)*
 
 </div>

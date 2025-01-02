@@ -1,0 +1,207 @@
+<p><span class="title">FinishOption</span><span class="type">class</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1058">1058</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Finish Option class. This is the base class for the abstract objects
+representing options offered by finishGame.
+
+`class `**`FinishOption`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">FinishOption</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>finishOptionAmusing<code class="language-plaintext highlighter-rouge">](../object/finishOptionAmusing.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionCredits<code class="language-plaintext highlighter-rouge">](../object/finishOptionCredits.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionFullScore<code class="language-plaintext highlighter-rouge">](../object/finishOptionFullScore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionQuit<code class="language-plaintext highlighter-rouge">](../object/finishOptionQuit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionRestart<code class="language-plaintext highlighter-rouge">](../object/finishOptionRestart.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionRestore<code class="language-plaintext highlighter-rouge">](../object/finishOptionRestore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionScore<code class="language-plaintext highlighter-rouge">](../object/finishOptionScore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionUndo<code class="language-plaintext highlighter-rouge">](../object/finishOptionUndo.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>desc<code class="language-plaintext highlighter-rouge">](#desc)</code>  <code class="language-plaintext highlighter-rouge">[</code>listed<code class="language-plaintext highlighter-rouge">](#listed)</code>  <code class="language-plaintext highlighter-rouge">[</code>responseChar<code class="language-plaintext highlighter-rouge">](#responseChar)</code>  <code class="language-plaintext highlighter-rouge">[</code>responseKeyword<code class="language-plaintext highlighter-rouge">](#responseKeyword)</code>  <code class="language-plaintext highlighter-rouge">[</code>showScoreInFinish<code class="language-plaintext highlighter-rouge">](#showScoreInFinish)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>doOption<code class="language-plaintext highlighter-rouge">](#doOption)</code>  <code class="language-plaintext highlighter-rouge">[</code>responseMatches<code class="language-plaintext highlighter-rouge">](#responseMatches)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="desc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">desc</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1066">1066</a>]</p>
+
+<div class="desc">
+
+The description, as displayed in the list of options. For the default
+English messages, this is expected to be a verb phrase in infinitive
+form, and should show the keyword accepted as a response in all
+capitals: "RESTART", "see some AMUSING things to do", "show CREDITS".
+
+</div>
+
+<p><span id="listed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listed</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1077">1077</a>]</p>
+
+<div class="desc">
+
+By default, the item is listed. If you want to create an invisible
+option that's accepted but which isn't listed in the prompt, just set
+this to nil. Invisible options are sometimes useful when the output of
+one option mentions another option; for example, the CREDITS message
+might mention a LICENSE command for displaying the license, so you want
+to make that command available without cluttering the prompt with it.
+
+</div>
+
+<p><span id="responseChar"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">responseChar</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1087">1087</a>]</p>
+
+<div class="desc">
+
+a single character we accept as an alternative to our full response
+keyword, or nil if we don't accept a single-character response
+
+</div>
+
+<p><span id="responseKeyword"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">responseKeyword</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1080">1080</a>]</p>
+
+<div class="desc">
+
+our response keyword
+
+</div>
+
+<p><span id="showScoreInFinish"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showScoreInFinish</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1130">1130</a>]</p>
+
+<div class="desc">
+
+Flag: show the score with the end-of-game announcement. If any option in
+the list of finishing options has this flag set, we'll show the score
+using the same message that the SCORE command uses.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="doOption"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doOption ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1118">1118</a>]</p>
+
+<div class="desc">
+
+Carry out the option. This is called when the player enters a response
+that matches this option. This routine must perform the action of the
+option, then return true to indicate that we should ask for another
+option, or nil to indicate that the finishGame() routine should simply
+return.
+
+</div>
+
+<p><span id="responseMatches"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">responseMatches (response)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1097">1097</a>]</p>
+
+<div class="desc">
+
+Match a response string to this option. Returns true if the string
+matches our response, nil otherwise. By default, we'll return true if
+the string exactly matches responseKeyword or exactly matches our
+responseChar (if that's non-nil), but this can be overridden to match
+other strings if desired. By default, we'll match the response without
+regard to case.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

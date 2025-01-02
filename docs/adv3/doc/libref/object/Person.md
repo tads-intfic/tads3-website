@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Person</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[10435](../source/actor.t.html#10435)\]

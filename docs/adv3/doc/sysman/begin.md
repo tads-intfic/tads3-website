@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,8 +8,8 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Opening Moves  
-<span class="navnp"><a href="intro.htm" class="nav"><em>Next:</em> Introduction</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Opening Moves  
+<span class="navnp"><a href="intro.html" class="nav"><em>Next:</em> Introduction</a>
     </span>
 
 </div>
@@ -20,10 +22,10 @@ This section introduces TADS, and provides a guide to using this manual.
 
 <div class="sectoc">
 
-[Introduction](intro.htm)  
-[Typographical Conventions](syntax.htm)  
-[Naming Conventions](naming.htm)  
-[Hello, World!](hello.htm)  
+[Introduction](intro.html)  
+[Typographical Conventions](syntax.html)  
+[Naming Conventions](naming.html)  
+[Hello, World!](hello.html)  
 
 </div>
 
@@ -34,8 +36,8 @@ This section introduces TADS, and provides a guide to using this manual.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Opening Moves  
-<span class="navnp"><a href="intro.htm" class="nav"><em>Next:</em> Introduction</a>
+<a href="toc.html" class="nav">Table of Contents</a> \| Opening Moves  
+<span class="navnp"><a href="intro.html" class="nav"><em>Next:</em> Introduction</a>
     </span>
 
 </div>

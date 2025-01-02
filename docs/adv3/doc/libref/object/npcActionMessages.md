@@ -1,3 +1,5 @@
+---
+---
 <span class="title">npcActionMessages</span><span class="type">object</span>
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4152](../source/msg_neu.t.html#4152)\]

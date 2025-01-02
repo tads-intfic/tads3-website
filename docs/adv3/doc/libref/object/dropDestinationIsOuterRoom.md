@@ -1,3 +1,5 @@
+---
+---
 <span class="title">dropDestinationIsOuterRoom</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[1056](../source/precond.t.html#1056)\]

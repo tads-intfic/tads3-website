@@ -1,3 +1,5 @@
+---
+---
 <span class="title">spelledHundred</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`spelledHundred(aHundred)`](../object/spelledHundred(aHundred).html)</span>` :   `[`NumberProd`](../object/NumberProd.html)

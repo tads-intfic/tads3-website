@@ -1,3 +1,5 @@
+---
+---
 <span class="title">firstCommandPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`firstCommandPhrase(askTellActorTo)`](../object/firstCommandPhrase(askTellActorTo).html)</span>` :   `[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)

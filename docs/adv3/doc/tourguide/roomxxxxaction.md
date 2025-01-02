@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>roomXxxxAction<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="travelconnector.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="roomparts.htm">[Next]</a></td>
+href="travelconnector.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="roomparts.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -26,7 +28,7 @@ looking at one or two of the methods and properties that can be
 overridden on them to customise their behaviour.  
   
 We have already seen how to customise the
-[atmosphereList](outdoorroom.htm) and [brightness](secretdoor.htm)
+[atmosphereList](outdoorroom.html) and [brightness](secretdoor.html)
 properties, so we shall start with the roomAfterAction and
 roomBeforeAction methods. These are called on the room object whenever
 an action is performed within that room, either after or before the

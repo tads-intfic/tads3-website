@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultSky</span><span class="type">object</span>
 
 [roomparts.t](../file/roomparts.t.html)\[[132](../source/roomparts.t.html#132)\]

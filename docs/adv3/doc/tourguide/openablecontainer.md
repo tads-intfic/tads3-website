@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>OpenableContainer :<a
-href="openable.htm">Openable</a>, <a
-href="container.htm">Container</a><br />
+href="openable.html">Openable</a>, <a
+href="container.html">Container</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="container.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="notifyinsert+notifyremove.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="container.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="notifyinsert+notifyremove.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

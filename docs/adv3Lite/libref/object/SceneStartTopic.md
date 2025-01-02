@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SceneStartTopic</span><span class="type">class</span>
 
 [scenetopic.t](../file/scenetopic.t.html)\[[121](../source/scenetopic.t.html#121)\]

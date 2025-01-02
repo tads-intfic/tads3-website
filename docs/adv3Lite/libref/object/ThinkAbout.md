@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ThinkAbout</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1985](../source/actions.t.html#1985)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CommandSepAnnouncement</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[585](../source/report.t.html#585)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">HintsOff</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[324](../source/actions.t.html#324)\]

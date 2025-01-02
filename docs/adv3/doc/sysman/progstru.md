@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Source Code
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Source Code
 Structure  
-<span class="navnp"><a href="langsec.htm" class="nav"><em>Prev:</em> The Language</a>
+<span class="navnp"><a href="langsec.html" class="nav"><em>Prev:</em> The Language</a>
    
-<a href="charmap.htm" class="nav"><em>Next:</em> Source File Character
+<a href="charmap.html" class="nav"><em>Next:</em> Source File Character
 Sets</a>     </span>
 
 </div>
@@ -34,7 +36,7 @@ languages (BASIC, for example) use newlines as statement separators.
 TADS 3 does not; you can break up a single statement over as many lines
 as you want, or you can pile a bunch of statements together on one line.
 **Note:** there is an exception, which is that the
-[preprocessor](preproc.htm) **does** use newlines to determine where "#"
+[preprocessor](preproc.html) **does** use newlines to determine where "#"
 directives end
 
 Likewise, TADS 3 **does not** use indentation to determine statement
@@ -307,12 +309,12 @@ bundling.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Source Code
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Source Code
 Structure  
-<span class="navnp"><a href="langsec.htm" class="nav"><em>Prev:</em> The Language</a>
+<span class="navnp"><a href="langsec.html" class="nav"><em>Prev:</em> The Language</a>
    
-<a href="charmap.htm" class="nav"><em>Next:</em> Source File Character
+<a href="charmap.html" class="nav"><em>Next:</em> Source File Character
 Sets</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">takePathDoer</span><span class="type">object</span>
 
 [english.t](../file/english.t.html)\[[5945](../source/english.t.html#5945)\]

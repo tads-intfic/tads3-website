@@ -1,3 +1,5 @@
+---
+---
 <span class="title">roomToHoldObj</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[808](../source/precond.t.html#808)\]

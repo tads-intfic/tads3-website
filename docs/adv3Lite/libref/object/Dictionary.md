@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Dictionary</span><span class="type">class</span>
 
 [dict.h](../file/dict.h.html)\[[27](../source/dict.h.html#27)\]

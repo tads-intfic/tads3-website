@@ -1,0 +1,128 @@
+<p><span class="title">You</span><span class="type">object</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4718">4718</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+You - the second-person singular. YOU always binds to the addressee of
+the command: either the player character, or the actor being given
+orders via a construct like ACTOR, DO THIS.
+
+Binding to the PC is grammatically correct in a first-person narration,
+because the PC is the narrator's ME and therefore the player's YOU. It's
+less so in a second-person game: the PC is the narrator's YOU, so the
+player's YOU ought to be the narrator. However, some players are
+literal-minded about second-person narration, so rather than reflecting
+the narrator's YOU into the player's ME, they simply say YOU too.
+Fortunately, there's not any serious ambiguity here. The narrator is
+typically not a game-world object, but is an entity that exists outside
+the game world, so it's off-limits for discussion in commands. So YOU
+can't mean the narrator. That means that if the player uses YOU at all,
+they must mean the PC.
+
+**`You`**` :   `[`Pronoun`](../object/Pronoun.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">You</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Pronoun<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>person<code class="language-plaintext highlighter-rouge">](#person)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Pronoun</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>all<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#all)</code>  <code class="language-plaintext highlighter-rouge">[</code>aName<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#aName)</code>  <code class="language-plaintext highlighter-rouge">[</code>ante<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#ante)</code>  <code class="language-plaintext highlighter-rouge">[</code>reflexive<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#reflexive)</code>  <code class="language-plaintext highlighter-rouge">[</code>theName<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#theName)</code>  <code class="language-plaintext highlighter-rouge">[</code>theObjName<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#theObjName)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>resolve<code class="language-plaintext highlighter-rouge">](#resolve)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Pronoun</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>setAntecedents<code class="language-plaintext highlighter-rouge">](../object/Pronoun.html#setAntecedents)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="person"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">person</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4740">4740</a>]</p>
+
+<div class="desc">
+
+this is a second-person pronoun
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="resolve"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolve ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4726">4726</a>]</p>
+
+<div class="desc">
+
+The second-person pronoun binds to information contained within the
+command itself, namely the addressee of the command, so we need to
+resolve it using the parser's "late binding" scheme. That is, we return
+'self' to tell the parser that it needs to go back and resolve this
+pronoun after resolving other phrases.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

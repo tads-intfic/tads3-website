@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 EventListIem  
-<span class="navnp"><a href="dynregion.htm" class="nav"><em>Prev:</em> Dynamic Region</a>
-    <a href="footnotes.htm" class="nav"><em>Next:</em> Footnotes</a>    
+<span class="navnp"><a href="dynregion.html" class="nav"><em>Prev:</em> Dynamic Region</a>
+    <a href="footnotes.html" class="nav"><em>Next:</em> Footnotes</a>    
 </span>
 
 </div>
@@ -246,11 +248,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 EventListItem  
-<span class="navnp"><a href="dynregion.htm" class="nav"><em>Prev:</em> Dynamic Region</a>
-    <a href="footnotes.htm" class="nav"><em>Next:</em> Footnotes</a>    
+<span class="navnp"><a href="dynregion.html" class="nav"><em>Prev:</em> Dynamic Region</a>
+    <a href="footnotes.html" class="nav"><em>Next:</em> Footnotes</a>    
 </span>
 
 </div>

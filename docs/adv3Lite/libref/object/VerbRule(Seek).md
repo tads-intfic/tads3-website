@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Seek)</span><span class="type">grammar</span>
 
 [newbie.t](../file/newbie.t.html)\[[1056](../source/newbie.t.html#1056)\]

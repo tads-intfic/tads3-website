@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Button</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5598](../source/objects.t.html#5598)\]

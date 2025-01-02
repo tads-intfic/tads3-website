@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TopicQualifierResolver</span><span class="type">class</span>
 
 [resolver.t](../file/resolver.t.html)\[[845](../source/resolver.t.html#845)\]

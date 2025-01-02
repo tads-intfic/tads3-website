@@ -1,3 +1,5 @@
+---
+---
 <span class="title">bannerInit</span><span class="type">object</span>
 
 [banner.t](../file/banner.t.html)\[[1219](../source/banner.t.html#1219)\]

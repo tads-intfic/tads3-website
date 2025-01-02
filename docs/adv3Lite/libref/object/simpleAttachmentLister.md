@@ -1,3 +1,5 @@
+---
+---
 <span class="title">simpleAttachmentLister</span><span class="type">object</span>
 
 [lister.t](../file/lister.t.html)\[[369](../source/lister.t.html#369)\]

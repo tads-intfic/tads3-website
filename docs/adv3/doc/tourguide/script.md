@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Script : object<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="collectivegroup(mobile).htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="eventlist.htm">[Next]</a></td>
+href="collectivegroup(mobile).html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="eventlist.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -19,7 +21,7 @@ href="eventlist.htm">[Next]</a></td>
   
 The basic Script class provides the skeletal framework for a simple
 state machine. You're more likely to use one of the subclasses of Script
-(namely [EventList](eventlist.htm) or one of its subclasses) than Script
+(namely [EventList](eventlist.html) or one of its subclasses) than Script
 itself, though there may be occasions when Script itself is useful.  
   
 The interface provided by the Script class is rudimentary, to say the

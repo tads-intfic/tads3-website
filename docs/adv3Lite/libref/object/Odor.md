@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Odor</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[46](../source/extras.t.html#46)\],

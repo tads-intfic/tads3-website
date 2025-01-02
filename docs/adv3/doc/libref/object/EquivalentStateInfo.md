@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EquivalentStateInfo</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[227](../source/thing.t.html#227)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> How to Create
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> How to Create
 Verbs  
-<span class="navnp"><a href="t3verchk.htm" class="nav"><em>Prev:</em> Verify, Check, and
+<span class="navnp"><a href="t3verchk.html" class="nav"><em>Prev:</em> Verify, Check, and
 When to Use Which</a>    
-<a href="t3precond.htm" class="nav"><em>Next:</em> Custom
+<a href="t3precond.html" class="nav"><em>Next:</em> Custom
 Preconditions</a>     </span>
 
 </div>
@@ -574,12 +576,12 @@ decomposition along these same lines.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> How to Create
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> How to Create
 Verbs  
-<span class="navnp"><a href="t3verchk.htm" class="nav"><em>Prev:</em> Verify, Check, and
+<span class="navnp"><a href="t3verchk.html" class="nav"><em>Prev:</em> Verify, Check, and
 When to Use Which</a>    
-<a href="t3precond.htm" class="nav"><em>Next:</em> Custom
+<a href="t3precond.html" class="nav"><em>Next:</em> Custom
 Preconditions</a>     </span>
 
 </div>

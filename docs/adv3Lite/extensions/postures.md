@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Postures  
-<span class="navnp"><a href="objtime.htm" class="nav"><em>Prev:</em> Objective Time</a>
-    <a href="relations.htm" class="nav"><em>Next:</em> Relations</a>    
+<span class="navnp"><a href="objtime.html" class="nav"><em>Prev:</em> Objective Time</a>
+    <a href="relations.html" class="nav"><em>Next:</em> Relations</a>    
 </span>
 
 </div>
@@ -100,7 +102,7 @@ You can customize this behaviour by use of the **canStandOn**,
 **canLieOn** in properties, as well as **standOnScore**, **sitOnScore**
 and **lieOnScore**, which all work as they did before (for which see the
 discussion of [Pseudo-Postural
-Properties](../../docs/manual/thing.htm#posture) on Thing). You can also
+Properties](../../docs/manual/thing.html#posture) on Thing). You can also
 give an object a **defaultPosture** property (which should be one of
 <span class="code">standing</span>, <span class="code">sitting</span> or
 <span class="code">lying</span>) to define the posture adopted by an
@@ -155,11 +157,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Postures  
-<span class="navnp"><a href="objtime.htm" class="nav"><em>Prev:</em> Objective Time</a>
-    <a href="relations.htm" class="nav"><em>Next:</em> Relations</a>    
+<span class="navnp"><a href="objtime.html" class="nav"><em>Prev:</em> Objective Time</a>
+    <a href="relations.html" class="nav"><em>Next:</em> Relations</a>    
 </span>
 
 </div>

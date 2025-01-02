@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Extras  
-<span class="navnp"><a href="eventlist.htm" class="nav"><em>Prev:</em> Exits</a>
-    <a href="gadget.htm" class="nav"><em>Next:</em> Gadgets</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Extras  
+<span class="navnp"><a href="eventlist.html" class="nav"><em>Prev:</em> Exits</a>
+    <a href="gadget.html" class="nav"><em>Next:</em> Gadgets</a>    
 </span>
 
 </div>
@@ -70,7 +72,7 @@ than that, but this will do as a first approximation):
   below on hideFromAll(action)
 - **Distant**: Subclass of Decoration with a notImportantMsg that says
   the object is too far away. The Distant class also has a destination
-  property for use with [pathfinding](pathfind.htm#distant).
+  property for use with [pathfinding](pathfind.html#distant).
 - **Component**: Subclass of Fixture with a cannotTakeMsg that says the
   object can't be taken as it's part of its location.
 - **Heavy**: Subclass of Fixture with a cannotTakeMsg that says the
@@ -83,7 +85,7 @@ than that, but this will do as a first approximation):
   destination property can be used to define the room the player
   character is taken to on entering the Enterable.To avoid certain
   problems with the GO TO pathfinding command, Enterable also descends
-  from the [ProxyDest](pathfind.htm#proxy) class.
+  from the [ProxyDest](pathfind.html#proxy) class.
 
 Remember, you can use as many or as few of these classes as you wish. In
 practice, using these clases probably makes game code more readable, as
@@ -191,7 +193,7 @@ applied to ALL that are not relevant to the SensoryEmanation in questio
 
 If your game needs a more sophisticated handling of sounds and smells
 than these rather simple classes offer, you may want to consider
-including the [Sensory](../../extensions/docs/sensory.htm) extension.
+including the [Sensory](../../extensions/docs/sensory.html) extension.
 
   
 <span id="misc"></span>
@@ -323,7 +325,7 @@ that are in scope.
 
 For some situations the <span class="code">Collective</span> class (or
 its <span class="code">DispensingCollective</span> subclass) defined in
-the [Collective](../../extensions/docs/collective.htm) extension, may be
+the [Collective](../../extensions/docs/collective.html) extension, may be
 a better bet than CollectiveGroup. The kind of situation where you'd
 want to use a Collective of DispensingCollective is where you have a
 group item (e.g. a bunch of grapes or stack of cans) from which you want
@@ -335,7 +337,7 @@ If you need a CollectiveGroup to represent items that are not fixed in
 place, but might be moved around (a collection of short portable cables,
 for example), you can instead use the
 <span class="code">MobileCollectiveGroup</span> class defined in the
-[MobileCollectiveGroup](../../extensions/docs/mobilecollectivegroup.htm)
+[MobileCollectiveGroup](../../extensions/docs/mobilecollectivegroup.html)
 extension.
 
   
@@ -345,7 +347,7 @@ like a Door when it's open. When it's closed it's either totally
 invisible, or it appears to be something else, such as a bookcase or a
 panel.
 
-To use a SecretDoor, define it just like a [Door](door.htm), but
+To use a SecretDoor, define it just like a [Door](door.html), but
 (assuming it starts out closed) define its
 <span class="code">vocab</span> property to be whatever's suitable for
 its closed state, and a separate **vocabWhenOpen** property to define
@@ -510,10 +512,10 @@ which has a door we should do this:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Extras  
-<span class="navnp"><a href="exit.htm" class="nav"><em>Prev:</em> Exits</a>
-    <a href="gadget.htm" class="nav"><em>Next:</em>Gadgets</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Extras  
+<span class="navnp"><a href="exit.html" class="nav"><em>Prev:</em> Exits</a>
+    <a href="gadget.html" class="nav"><em>Next:</em>Gadgets</a>    
 </span>
 
 </div>

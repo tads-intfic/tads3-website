@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Door : <a
-href="basicdoor.htm">BasicDoor</a><br />
+href="basicdoor.html">BasicDoor</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="roomautoconnector.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="basicdoor.htm">[Next]</a></td>
+href="roomautoconnector.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="basicdoor.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -25,8 +27,8 @@ anotherCave to one side of the door (lakeDoor), the north property of
 lakeShore to the other side of the door (lakeDoor2) and make sure that
 one side of the door (lakeDoor2) points to the other side (lakeDoor) as
 its masterObject. Door inherits from Passage and hence from Thing; we
-use the [Thing template](thingtemplate.htm) for lakeDoor and the
-[Passage template](passagetemplate.htm) for lakeDoor2:  
+use the [Thing template](thingtemplate.html) for lakeDoor and the
+[Passage template](passagetemplate.html) for lakeDoor2:  
   
 anotherCave: Room 'Another Cave'  
   "There's something artificial about this cave. It's almost as if it's trying  

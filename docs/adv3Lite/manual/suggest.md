@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Suggesting Conversational
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Suggesting Conversational
 Topics  
-<span class="navnp"><a href="actortopicentry.htm" class="nav"><em>Prev:</em>
+<span class="navnp"><a href="actortopicentry.html" class="nav"><em>Prev:</em>
 ActorTopicEntry</a>    
-<a href="specialtopic.htm" class="nav"><em>Next:</em> Special Topics</a>
+<a href="specialtopic.html" class="nav"><em>Next:</em> Special Topics</a>
     </span>
 
 </div>
@@ -42,7 +44,7 @@ The <span class="code">suggestedTopicLister</span> has a
 the player is using an HTML-capable interpreter) the list of topic
 suggestions will be hyperlinked, allowing players to select a suggested
 topic just by clicking on the link. By default this property is nil
-unless the [Command Help](../../extensions/docs/cmdhelp.htm) extension
+unless the [Command Help](../../extensions/docs/cmdhelp.html) extension
 is present.
 
 In the adv3 library you have to mix in your TopicEntry class with a
@@ -364,7 +366,7 @@ the actor's suggestionKey property, use **\<.suggest all\>**.
 
 One further way to display a restricted list of suggested topics is via
 the \<.convnode node\> tag, but we'll discuss this in more detail when
-we come to look at [Conversation Nodes](convnode.htm).
+we come to look at [Conversation Nodes](convnode.html).
 
 </div>
 
@@ -373,12 +375,12 @@ we come to look at [Conversation Nodes](convnode.htm).
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Suggesting Conversational
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Suggesting Conversational
 Topics  
-<span class="navnp"><a href="actortopicentry.htm" class="nav"><em>Prev:</em>
+<span class="navnp"><a href="actortopicentry.html" class="nav"><em>Prev:</em>
 ActorTopicEntry</a>    
-<a href="specialtopic.htm" class="nav"><em>Next:</em> Special Topics</a>
+<a href="specialtopic.html" class="nav"><em>Next:</em> Special Topics</a>
     </span>
 
 </div>

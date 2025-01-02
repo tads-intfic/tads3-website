@@ -1,3 +1,5 @@
+---
+---
 <span class="title">sceneNotifyBeforeRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[294](../source/sysrules.t.html#294)\]

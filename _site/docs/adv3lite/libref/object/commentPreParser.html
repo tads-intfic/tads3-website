@@ -1,0 +1,185 @@
+<p><span class="title">commentPreParser</span><span class="type">object</span></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#749">749</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The "comment" pre-parser. If the command line starts with a special
+prefix string (by default, "\*", but this can be changed via our
+commentPrefix property), this pre-parser intercepts the command,
+treating it as a comment from the player and otherwise ignoring the
+entire input line. The main purpose is to give players a way to put
+comments into recorded transcripts, as notes to themselves when later
+reviewing the transcripts or as notes to the author when submitting
+play-testing feedback.
+
+**`commentPreParser`**` :   `[`StringPreParser`](../object/StringPreParser.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">commentPreParser</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>StringPreParser<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>commentPrefix<code class="language-plaintext highlighter-rouge">](#commentPrefix)</code>  <code class="language-plaintext highlighter-rouge">[</code>leadPat<code class="language-plaintext highlighter-rouge">](#leadPat)</code>  <code class="language-plaintext highlighter-rouge">[</code>runOrder<code class="language-plaintext highlighter-rouge">](#runOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>warningCount<code class="language-plaintext highlighter-rouge">](#warningCount)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>regList<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#regList)</code>  <code class="language-plaintext highlighter-rouge">[</code>regListSorted<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#regListSorted)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>doParsing<code class="language-plaintext highlighter-rouge">](#doParsing)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>registerPreParser<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#registerPreParser)</code>  <code class="language-plaintext highlighter-rouge">[</code>runAll<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html#runAll)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="commentPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commentPrefix</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#796">796</a>]</p>
+
+<div class="desc">
+
+The comment prefix. You can change this to any character, or to any
+sequence of characters (longer sequences, such as '//', will work fine).
+If a command line starts with this exact string (or starts with
+whitespace followed by this string), we'll consider the line to be a
+comment.
+
+</div>
+
+<p><span id="leadPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">leadPat</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#808">808</a>]</p>
+
+<div class="desc">
+
+The leading-whitespace pattern. We skip any text that matches this
+pattern at the start of a command line before looking for the comment
+prefix.
+
+If you don't want to allow leading whitespace before the comment prefix,
+you can simply change this to '' - a pattern consisting of an empty
+string always matches zero characters, so it will prevent us from
+skipping any leading charactres in the player's input.
+
+</div>
+
+<p><span id="runOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">runOrder</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#825">825</a>]</p>
+
+<div class="desc">
+
+Use a lower execution order than the default, so that we run before most
+other pre-parsers. Most other pre-parsers are written to handle actual
+commands, so it's usually just a waste of time to have them look at
+comments at all - and can occasionally be problematic, since the
+free-form text of a comment could confuse a pre-parser that's expecting
+a more conventional command format. When the comment pre-parser detects
+a comment, it halts any further processing of the command - so by
+running ahead of other pre-parsers, we'll effectively bypass other
+pre-parsers when we detect a comment.
+
+</div>
+
+<p><span id="warningCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">warningCount</code></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#811">811</a>]</p>
+
+<div class="desc">
+
+warning count for entering comments without SCRIPT in effect
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="doParsing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doParsing (str, which)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/input.t.html">input.t</a>[<a href="../source/input.t.html#750">750</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

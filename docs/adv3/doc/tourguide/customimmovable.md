@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>CustomImmovable : <a
-href="immovable.htm">Immovable</a><br />
+href="immovable.html">Immovable</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="immovable.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="heavy.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="immovable.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="heavy.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -24,7 +26,7 @@ moving. Just override **cannotTakeMsg**, and the other messages will
 copy it.  
   
 At first sight this makes a CustomImmovable look identical in function
-to a [CustomFixture](customfixture.htm); there is, however, a subtle
+to a [CustomFixture](customfixture.html); there is, however, a subtle
 difference. This is, of course, the same as the difference between an
 Immovable and a Fixture, namely that while the library regards an
 attempt to move, push or take a Fixture as illogical (i.e. ruled out in
@@ -35,8 +37,8 @@ take or push action in disambiguation, while a CustomImmovable will.
 CustomFixture should therefore be used for things that obviously can't
 be moved around (like pillars in a temple), while CustomImmovable should
 be used for things that perhaps could be taken, but in fact cannot be
-(like the carpet in the [Immovable](immovable.htm) example, which could
+(like the carpet in the [Immovable](immovable.html) example, which could
 just as well have been a CustomImmovable). We'll give another example of
-a CustomImmovable [later](cycliceventlist.htm).  
+a CustomImmovable [later](cycliceventlist.html).  
   
   

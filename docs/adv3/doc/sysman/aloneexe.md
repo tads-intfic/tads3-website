@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="tools.htm" class="nav">The Tools</a> \> Stand-Alone
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="tools.html" class="nav">The Tools</a> \> Stand-Alone
 Executables  
-<span class="navnp"><a href="univpath.htm" class="nav"><em>Prev:</em> Universal Paths</a>
-    <a href="terp.htm" class="nav"><em>Next:</em> Running Programs: The
+<span class="navnp"><a href="univpath.html" class="nav"><em>Prev:</em> Universal Paths</a>
+    <a href="terp.html" class="nav"><em>Next:</em> Running Programs: The
 Interpreter</a>     </span>
 
 </div>
@@ -129,7 +131,7 @@ option:
 
 An important feature of TADS 3 is its ability to translate the Unicode
 characters it uses internally to any local character set. The
-interpreters accomplish this using [character mapping files](cmap.htm).
+interpreters accomplish this using [character mapping files](cmap.html).
 The TADS interpreter comes with several mapping files; because you
 normally install these files along with an interpreter, character
 mapping is usually completely transparent, and you don't have to know
@@ -160,7 +162,7 @@ that are part of the TADS 3 Author's Kit for Windows. However, you might
 wish to add one or more .tcm files of your own to the stand-alone
 executables you create. If you do, you must perform these steps:
 
-- First, [create the character map (.tcm) files](cmap.htm) you want to
+- First, [create the character map (.tcm) files](cmap.html) you want to
   add.
 - Next, create your own character map library file.
 - Finally, whenever you create a stand-alone executable, explicitly
@@ -206,11 +208,11 @@ instead of the standard one.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="tools.htm" class="nav">The Tools</a> \> Stand-Alone
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="tools.html" class="nav">The Tools</a> \> Stand-Alone
 Executables  
-<span class="navnp"><a href="univpath.htm" class="nav"><em>Prev:</em> Universal Paths</a>
-    <a href="terp.htm" class="nav"><em>Next:</em> Running Programs: The
+<span class="navnp"><a href="univpath.html" class="nav"><em>Prev:</em> Universal Paths</a>
+    <a href="terp.html" class="nav"><em>Next:</em> Running Programs: The
 Interpreter</a>     </span>
 
 </div>

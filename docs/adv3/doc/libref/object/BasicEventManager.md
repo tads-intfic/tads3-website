@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BasicEventManager</span><span class="type">class</span>
 
 [events.t](../file/events.t.html)\[[342](../source/events.t.html#342)\]

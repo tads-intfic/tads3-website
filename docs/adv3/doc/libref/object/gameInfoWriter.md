@@ -1,3 +1,5 @@
+---
+---
 <span class="title">gameInfoWriter</span><span class="type">object</span>
 
 [gameinfo.t](../file/gameinfo.t.html)\[[71](../source/gameinfo.t.html#71)\]

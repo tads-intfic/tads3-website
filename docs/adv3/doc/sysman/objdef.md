@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Object
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Object
 Definitions  
-<span class="navnp"><a href="inherit.htm" class="nav"><em>Prev:</em> The Object Inheritance
+<span class="navnp"><a href="inherit.html" class="nav"><em>Prev:</em> The Object Inheritance
 Model</a>    
-<a href="inlineobj.htm" class="nav"><em>Next:</em> Inline Objects</a>
+<a href="inlineobj.html" class="nav"><em>Next:</em> Inline Objects</a>
     </span>
 
 </div>
@@ -60,7 +62,7 @@ long as it's reachable, meaning that an active local variable or a
 property of another object contains a reference to the object. Once a
 dynamic object is no longer referenced anywhere, TADS automatically
 deletes the object (through a process called [garbage
-collection](gc.htm)).
+collection](gc.html)).
 
 Most TADS programs define lots of static objects, for things like rooms
 and the items found within the game world. An object doesn't necessarily
@@ -381,7 +383,7 @@ just before the value to be computed:
 You can place any expression after the "static" keyword.
 
 The compiler evaluates all of the static initializer expressions just
-before running [pre-initialization](libpre.htm). The compiler evaluates
+before running [pre-initialization](libpre.html). The compiler evaluates
 each static initializer just once, and stores the result value in the
 property. When the property is evaluated at run-time, the expression is
 not re-evaluated - the whole point is that the value is computed once
@@ -553,7 +555,7 @@ object for each of its instances.
 
 The static object definitions we've seen so all go outside of any
 function or method code. You can also define objects directly within
-expressions, using the [inline object](inlineobj.htm) syntax. Inline
+expressions, using the [inline object](inlineobj.html) syntax. Inline
 objects are especially useful when you need to create a small ad hoc
 object to serve as an argument to a function.
 
@@ -578,7 +580,7 @@ Classes behave very much like objects, with a few important differences:
 
 - Classes are not included by default in iterations using the firstObj()
   and nextObj() functions in the [tads-gen intrinsic function
-  set](tadsgen.htm). (You can, however, use flags to indicate that you
+  set](tadsgen.html). (You can, however, use flags to indicate that you
   want *only* classes instead of objects, or that you want *both*
   classes *and* ordinary objects.)
 - The compiler does not include classes when building dictionary entries
@@ -1128,7 +1130,7 @@ modules can include the same template definitions.
 
 ### Templates and dictionary properties
 
-You cannot use a [dictionary property](dict.htm) in an object template.
+You cannot use a [dictionary property](dict.html) in an object template.
 Dictionary properties are excluded because of the special syntax they
 use (a dictionary property can have its value set to a list of
 single-quoted strings, without any grouping brackets for the list). If
@@ -1163,7 +1165,7 @@ called the "persistence" mechanisms of the T3 VM.
 
 The persistence mechanisms are all completely automatic. To save the
 current state, for example, the program simply calls a function
-(saveGame(), in the [tads-gen function set](tadsgen.htm)), providing the
+(saveGame(), in the [tads-gen function set](tadsgen.html)), providing the
 name of a file; the VM automatically creates a file with the given name
 and writes the state of all of the objects in the system to the file. To
 restore the same state later, the program calls another function
@@ -1229,20 +1231,20 @@ Second, when you're creating an object dynamically, you can place the
 
 </div>
 
-In addition, the [TadsObject](tadsobj.htm) intrinsic class provides the
+In addition, the [TadsObject](tadsobj.html) intrinsic class provides the
 createTransientInstance() method to create a transient instance of a
 class.
 
 Note that transient objects won't be reset by the low-level
 restartGame() function, but they will be affected by the regular
-initialization steps if you're using the <span hef="startup.htm">default
+initialization steps if you're using the <span hef="startup.html">default
 startup code</span>. The startup code doesn't pay any attention to
 transient-ness when running the initialization steps - in particular, it
 will execute InitObject and (if necessary) PreinitObject instances
 regardless of whether they're persistent or transient.
 
 Some intrinsic class types are inherently transient. For example, a
-[<span class="code">StackFrameDesc</span>](framedesc.htm) object is
+[<span class="code">StackFrameDesc</span>](framedesc.html) object is
 always transient. For such objects you don't have to specify
 <span class="code">new transient</span> when you create them; they'll
 just be naturally transient because of the way they're implemented
@@ -1271,12 +1273,12 @@ transient object reference will be <span class="code">nil</span>.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Object
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Object
 Definitions  
-<span class="navnp"><a href="inherit.htm" class="nav"><em>Prev:</em> The Object Inheritance
+<span class="navnp"><a href="inherit.html" class="nav"><em>Prev:</em> The Object Inheritance
 Model</a>    
-<a href="inlineobj.htm" class="nav"><em>Next:</em> Inline Objects</a>
+<a href="inlineobj.html" class="nav"><em>Next:</em> Inline Objects</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WhereHelp</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[549](../source/newbie.t.html#549)\]

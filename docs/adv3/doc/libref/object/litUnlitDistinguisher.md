@@ -1,3 +1,5 @@
+---
+---
 <span class="title">litUnlitDistinguisher</span><span class="type">object</span>
 
 [disambig.t](../file/disambig.t.html)\[[260](../source/disambig.t.html#260)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AllAction</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[3044](../source/action.t.html#3044)\]

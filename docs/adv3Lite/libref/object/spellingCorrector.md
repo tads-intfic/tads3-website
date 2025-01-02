@@ -1,3 +1,5 @@
+---
+---
 <span class="title">spellingCorrector</span><span class="type">object</span>
 
 [spelling.t](../file/spelling.t.html)\[[9](../source/spelling.t.html#9)\]

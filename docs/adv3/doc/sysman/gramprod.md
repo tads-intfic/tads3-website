@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> GrammarProd  
-<span class="navnp"><a href="filename.htm" class="nav"><em>Prev:</em> FileName</a>
-    <a href="httpreq.htm" class="nav"><em>Next:</em> HTTPRequest</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> GrammarProd  
+<span class="navnp"><a href="filename.html" class="nav"><em>Prev:</em> FileName</a>
+    <a href="httpreq.html" class="nav"><em>Next:</em> HTTPRequest</a>    
 </span>
 
 </div>
@@ -517,7 +519,7 @@ same as in a statically defined match object. You can explicitly add a
 <span class="code">grammarTag</span> property if you wish (it can be
 useful for debugging, for example), but it's not required.
 
-*dict* is an optional [Dictionary](dict.htm) object, giving the
+*dict* is an optional [Dictionary](dict.html) object, giving the
 dictionary associated with this grammar. If this is provided, and the
 new alternatives contain literal tokens,
 <span class="code">addAlt()</span> automatically adds those literals to
@@ -529,7 +531,7 @@ symbols. If you use any symbol names in the alternative (such as
 property names or other GrammarProd object names as sub-productions),
 the symbol table is required for resolving those symbols. In most cases,
 you should simply use the same symbol table that
-[t3GetGlobalSymbols()](t3vm.htm#t3GetGlobalSymbols) returns during
+[t3GetGlobalSymbols()](t3vm.html#t3GetGlobalSymbols) returns during
 preinit, since that reflects the global symbols defined in the program's
 source code.
 
@@ -544,7 +546,7 @@ source code.
 Delete all existing alternatives (token rules) in the production. This
 is equivalent to calling deleteAlt() for each alternative.
 
-*dict* is an optional [Dictionary](dict.htm) object to be updated for
+*dict* is an optional [Dictionary](dict.html) object to be updated for
 the deletion. If this is provided and not <span class="code">nil</span>,
 the dictionary will be updated to remove literal tokens associated with
 the production that are being deleted by this method. This keeps the
@@ -576,7 +578,7 @@ specifies which alternative(s) to delete:
   <span class="code">getGrammarInfo()</span>; the first alternative's
   index is 1. This deletes one alternative.
 
-*dict* is an optional [Dictionary](dict.htm) object to be updated for
+*dict* is an optional [Dictionary](dict.html) object to be updated for
 the deletion. If this is provided and not <span class="code">nil</span>,
 the dictionary will be updated to remove any literal tokens associated
 with the production that are being deleted by this method. This keeps
@@ -770,7 +772,7 @@ This method matches input, in the form of a list of tokens, to the
 GrammarProd object's rule list.
 
 *tokenList* is a list of input tokens to match to the rule. (This can be
-a list, a vector, or a [list-like object](opoverload.htm#listlike).)
+a list, a vector, or a [list-like object](opoverload.html#listlike).)
 Each entry in the list is a token specifier, which is a sublist
 consisting of at least two elements: the first element is the value of
 the token, and the second element is the type of the token. Each token's
@@ -858,7 +860,7 @@ The <span class="code">tokenMatchList</span> information can be used to
 find out how well a particular token matched a grammar literal. For
 example, this can be used to determine if the token matched with
 truncation, or with accent substitution using an equivalence mapping
-(see the [StringComparator class](strcomp.htm) for more details on these
+(see the [StringComparator class](strcomp.html) for more details on these
 types of matches).
 
 (Note: to be precise, the parser uses the properties exported under the
@@ -1247,10 +1249,10 @@ properties, so that program code can refer to it as needed.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> GrammarProd  
-<span class="navnp"><a href="filename.htm" class="nav"><em>Prev:</em> FileName</a>
-    <a href="httpreq.htm" class="nav"><em>Next:</em> HTTPRequest</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> GrammarProd  
+<span class="navnp"><a href="filename.html" class="nav"><em>Prev:</em> FileName</a>
+    <a href="httpreq.html" class="nav"><em>Next:</em> HTTPRequest</a>    
 </span>
 
 </div>

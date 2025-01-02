@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SmellSomething</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[951](../source/actions.t.html#951)\]

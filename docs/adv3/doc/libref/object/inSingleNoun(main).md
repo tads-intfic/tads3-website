@@ -1,3 +1,5 @@
+---
+---
 <span class="title">inSingleNoun(main)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[5489](../source/en_us.t.html#5489)\]

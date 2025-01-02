@@ -1,0 +1,376 @@
+<p><span class="title">misc.t</span><span class="type">file</span></p>
+
+<p><a href="../source/misc.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+Adapted for adv3Lite by Eric Eve
+
+adv3Lite Library - miscellaneous definitions
+
+This module contains miscellaneous definitions that don't have a natural
+grouping with any larger modules, and which aren't complex enough to
+justify modules of their own.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>ArgumentMismatchError<code class="language-plaintext highlighter-rouge">](../object/ArgumentMismatchError.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FinishOption<code class="language-plaintext highlighter-rouge">](../object/FinishOption.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FinishType<code class="language-plaintext highlighter-rouge">](../object/FinishType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GameMainDef<code class="language-plaintext highlighter-rouge">](../object/GameMainDef.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LCS<code class="language-plaintext highlighter-rouge">](../object/LCS.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LibraryError<code class="language-plaintext highlighter-rouge">](../object/LibraryError.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Script<code class="language-plaintext highlighter-rouge">](../object/Script.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SingletonIterator<code class="language-plaintext highlighter-rouge">](../object/SingletonIterator.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>adv3LibInit<code class="language-plaintext highlighter-rouge">](../object/adv3LibInit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>adv3LibPreinit<code class="language-plaintext highlighter-rouge">](../object/adv3LibPreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionAmusing<code class="language-plaintext highlighter-rouge">](../object/finishOptionAmusing.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionCredits<code class="language-plaintext highlighter-rouge">](../object/finishOptionCredits.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionFullScore<code class="language-plaintext highlighter-rouge">](../object/finishOptionFullScore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionQuit<code class="language-plaintext highlighter-rouge">](../object/finishOptionQuit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionRestart<code class="language-plaintext highlighter-rouge">](../object/finishOptionRestart.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionRestore<code class="language-plaintext highlighter-rouge">](../object/finishOptionRestore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionScore<code class="language-plaintext highlighter-rouge">](../object/finishOptionScore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishOptionUndo<code class="language-plaintext highlighter-rouge">](../object/finishOptionUndo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ftDeath<code class="language-plaintext highlighter-rouge">](../object/ftDeath.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ftFailure<code class="language-plaintext highlighter-rouge">](../object/ftFailure.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ftGameOver<code class="language-plaintext highlighter-rouge">](../object/ftGameOver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ftVictory<code class="language-plaintext highlighter-rouge">](../object/ftVictory.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>libGlobal<code class="language-plaintext highlighter-rouge">](../object/libGlobal.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>libObjectInitializer<code class="language-plaintext highlighter-rouge">](../object/libObjectInitializer.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>restoreOptionRestoreAnother<code class="language-plaintext highlighter-rouge">](../object/restoreOptionRestoreAnother.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>restoreOptionStartOver<code class="language-plaintext highlighter-rouge">](../object/restoreOptionStartOver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownDest_<code class="language-plaintext highlighter-rouge">](../object/unknownDest_.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>varDest_<code class="language-plaintext highlighter-rouge">](../object/varDest_.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>cls<code class="language-plaintext highlighter-rouge">](#cls)</code>  <code class="language-plaintext highlighter-rouge">[</code>failedRestoreOptions<code class="language-plaintext highlighter-rouge">](#failedRestoreOptions)</code>  <code class="language-plaintext highlighter-rouge">[</code>findMatchingTopic<code class="language-plaintext highlighter-rouge">](#findMatchingTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishGame<code class="language-plaintext highlighter-rouge">](#finishGame)</code>  <code class="language-plaintext highlighter-rouge">[</code>finishGameMsg<code class="language-plaintext highlighter-rouge">](#finishGameMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>isEmptyStr<code class="language-plaintext highlighter-rouge">](#isEmptyStr)</code>  <code class="language-plaintext highlighter-rouge">[</code>isListSubset<code class="language-plaintext highlighter-rouge">](#isListSubset)</code>  <code class="language-plaintext highlighter-rouge">[</code>makeMentioned<code class="language-plaintext highlighter-rouge">](#makeMentioned)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchCase<code class="language-plaintext highlighter-rouge">](#matchCase)</code>  <code class="language-plaintext highlighter-rouge">[</code>nilToList<code class="language-plaintext highlighter-rouge">](#nilToList)</code>  <code class="language-plaintext highlighter-rouge">[</code>objOfKind<code class="language-plaintext highlighter-rouge">](#objOfKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>overrides<code class="language-plaintext highlighter-rouge">](#overrides)</code>  <code class="language-plaintext highlighter-rouge">[</code>partitionList<code class="language-plaintext highlighter-rouge">](#partitionList)</code>  <code class="language-plaintext highlighter-rouge">[</code>processOptions<code class="language-plaintext highlighter-rouge">](#processOptions)</code>  <code class="language-plaintext highlighter-rouge">[</code>setPlayer<code class="language-plaintext highlighter-rouge">](#setPlayer)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryInt<code class="language-plaintext highlighter-rouge">](#tryInt)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryNum<code class="language-plaintext highlighter-rouge">](#tryNum)</code>  <code class="language-plaintext highlighter-rouge">[</code>valToList<code class="language-plaintext highlighter-rouge">](#valToList)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="cls"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cls ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#420">420</a>]</p>
+
+<div class="desc">
+
+Clear the main game window. In most cases, you should call this rather
+than calling the low-level clearScreen() function directly, since this
+routine takes care of a couple of chores that should usually be done at
+the same time.
+
+First, we flush the transcript to ensure that no left-over reports that
+were displayed before we cleared the screen will show up on the new
+screen. Second, we call the low-level clearScreen() function to actually
+clear the display window. Finally, we re-display any \&lt;ABOUTBOX\&gt; tag,
+to ensure that the about-box will still be around; this is necessary
+because any existing \&lt;ABOUTBOX\&gt; tag is lost after the screen is
+cleared.
+
+</div>
+
+<p><span id="failedRestoreOptions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">failedRestoreOptions ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#981">981</a>]</p>
+
+<div class="desc">
+
+Show failed startup restore options. If a restore operation fails at
+startup, we won't just proceed with the game, but ask the user what they
+want to do; we'll offer the options of restoring another game, quitting,
+or starting the game from the beginning.
+
+</div>
+
+<p><span id="findMatchingTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findMatchingTopic (voc, cls, =, Topic)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1550">1550</a>]</p>
+
+<div class="desc">
+
+Find an existing Topic whose vocab is voc. If the cls parameter is
+supplied it can be used to find a match in some other class, such as
+Thing or Mentionable.
+
+</div>
+
+<p><span id="finishGame"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishGame (extra)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#970">970</a>]</p>
+
+<div class="desc">
+
+finish the game, offering the given extra options but no message
+
+</div>
+
+<p><span id="finishGameMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishGameMsg (msg, extra)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#912">912</a>]</p>
+
+<div class="desc">
+
+Finish the game, showing a message explaining why the game has ended.
+This can be called when an event occurs that ends the game, such as the
+player character's death, winning, or any other endpoint in the story.
+
+We'll show a message defined by 'msg', using a standard format. The
+format depends on the language, but in English, it's usually the message
+surrounded by asterisks: "\*\*\* You have won! \*\*\*". 'msg' can be:
+
+  
+- nil, in which case we display nothing  
+- a string, which we'll display as the message  
+- a FinishType object, from which we'll get the message
+
+After showing the message (if any), we'll prompt the user with options
+for how to proceed. We'll always show the QUIT, RESTART, and RESTORE
+options; other options can be offered by listing one or more
+FinishOption objects in the 'extra' parameter, which is given as a list
+of FinishOption objects. The library defines a few non-default finish
+options, such as finishOptionUndo and finishOptionCredits; in addition,
+the game can subclass FinishOption to create its own custom options, as
+desired.
+
+</div>
+
+<p><span id="isEmptyStr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isEmptyStr (str)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1736">1736</a>]</p>
+
+<div class="desc">
+
+A string is empty if it's nil or if when trimmed it's ''
+
+</div>
+
+<p><span id="isListSubset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isListSubset (a, b)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1523">1523</a>]</p>
+
+<div class="desc">
+
+Determine if list a is a subset of list b. a is a subset of b if every
+element of a is in b.
+
+</div>
+
+<p><span id="makeMentioned"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">makeMentioned (obj)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1490">1490</a>]</p>
+
+<div class="desc">
+
+Set the mentioned property of obj to true. If obj is supplied as a list,
+set every object's mentioned property in the list to true. This can be
+used in room and object descriptions to mark an object as mentioned so
+it won't be included in the listing.
+
+</div>
+
+<p><span id="matchCase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchCase (newTok, oldTok)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2215">2215</a>]</p>
+
+<div class="desc">
+
+Change the case (upper/lower) of a given new string to match the case
+pattern of the given original string.
+
+We recognize four patterns:
+
+\- If the original string has at least one capital letter and no
+minuscules, we convert the new string to all caps. For example,
+matchCase('ALPHA-1', 'omicron-7') yields 'OMICRON-7'.
+
+\- If the original string has at least one lower-case letter and no
+capitals, we convert the new string to all lower case. E.g.,
+matchCase('alpha-1', 'OMICRON-7') yields 'omicron-7'.
+
+\- If the original string starts with a capital letter, and has at least
+one lower-case letter and no other capitals, we capitalize the first
+letter of the new string and lower-case everything else. E.g.,
+matchCase('Alpha-1', 'OMICRON-7') yields 'Omicron-7'.
+
+\- Otherwise, we match the case pattern of the input string letter for
+letter: for each upper-case letter in the original, we capitalize the
+letter at the corresponding character index in the new string, and
+likewise with lower-case letters in the original. We leave other
+characters unchanged. E.g., matchCase('AlPhA-1', 'omicron-7') yields
+'OmIcRon-7'.
+
+</div>
+
+<p><span id="nilToList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nilToList (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1456">1456</a>]</p>
+
+<div class="desc">
+
+nilToList - convert a 'nil' value to an empty list. This can be useful
+for mix-in classes that will be used in different inheritance contexts,
+since the classes might or might not inherit a base class definition for
+list-valued methods such as preconditions. This provides a usable
+default for list-valued methods that return nothing from superclasses.
+
+</div>
+
+<p><span id="objOfKind"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objOfKind (obj, cls)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2467">2467</a>]</p>
+
+<div class="desc">
+
+Service function to determine whether obj is ofKind cls when obj might
+not be an object.
+
+</div>
+
+<p><span id="overrides"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">overrides (obj, base, prop)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#436">436</a>]</p>
+
+<div class="desc">
+
+Determine if the given object overrides the definition of the given
+property inherited from the given base class. Returns true if the object
+derives from the given base class, and the object's definition of the
+property comes from a different place than the base class's definition
+of the property.
+
+</div>
+
+<p><span id="partitionList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">partitionList (lst, fn)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1511">1511</a>]</p>
+
+<div class="desc">
+
+partitionList - partition a list into a pair of two lists, the first
+containing items that match the predicate 'fn', the second containing
+items that don't match 'fn'. 'fn' is a function pointer (usually an
+anonymous function) that takes a single argument - a list element - and
+returns true or nil.
+
+The return value is a list with two elements. The first element is a
+list giving the elements of the original list for which 'fn' returns
+true, the second element is a list giving the elements for which 'fn'
+returns nil.
+
+(Contributed by Tommy Nordgren.)
+
+</div>
+
+<p><span id="processOptions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processOptions (lst)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#992">992</a>]</p>
+
+<div class="desc">
+
+Process a list of finishing options. We'll loop, showing prompts and
+reading responses, until we get a response that terminates the loop.
+
+</div>
+
+<p><span id="setPlayer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setPlayer (actor, person, =, 2)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1566">1566</a>]</p>
+
+<div class="desc">
+
+Set the player character to another actor. If the optional second
+parameter is supplied, it sets the person of the player character;
+otherwise it defaults to the second person.
+
+</div>
+
+<p><span id="tryInt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryInt (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1348">1348</a>]</p>
+
+<div class="desc">
+
+Try converting val to an integer. If this results in an integer value,
+return it, otherwise return nil.
+
+</div>
+
+<p><span id="tryNum"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryNum (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1401">1401</a>]</p>
+
+<div class="desc">
+
+Try converting val to a number (integer or BigNumber); return the number
+if there is one, otherwise return nil.
+
+</div>
+
+<p><span id="valToList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valToList (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1466">1466</a>]</p>
+
+<div class="desc">
+
+val to list - convert any value to a list. If it's already a list,
+simply return it. If it's nil return an empty list. If it's a singleton
+value, return a one-element list containing it.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

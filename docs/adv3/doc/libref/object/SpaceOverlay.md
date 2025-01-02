@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SpaceOverlay</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[569](../source/extras.t.html#569)\]

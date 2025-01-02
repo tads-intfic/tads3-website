@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebLayoutWindow</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[1778](../source/webui.t.html#1778)\]
@@ -27,7 +29,7 @@ Details](#_Methods_)
 
 Layout Window. This is a specialized Web Window tracker for our layout
 page type, which is displayed using the resource file
-webuires/layout.htm. This page is designed as a container of more
+webuires/layout.html. This page is designed as a container of more
 specialized sub-window pages; its job is to divide up the window space
 into IFRAME elements that display the sub-windows, and to manage the
 geometry of the IFRAMEs.

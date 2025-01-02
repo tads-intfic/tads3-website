@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Attachables - Overview<br />
 </strong></td>
-<td style="text-align: right;"><a href="sensoryevent.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="attachable.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="sensoryevent.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="attachable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -32,12 +34,12 @@ with nothing but a few basic verb definitions, it does provide a few
 classes that at least provide a framework for attaching and detaching
 objects:  
   
-[Attachable](attachable.htm)  
-   [NearbyAttachable](nearbyattachable.htm)  
-   [Permanent Attachable](permanentattachment.htm)  
-      [PermanentAttachmentChild](permanentattachment.htm)  
+[Attachable](attachable.html)  
+   [NearbyAttachable](nearbyattachable.html)  
+   [Permanent Attachable](permanentattachment.html)  
+      [PermanentAttachmentChild](permanentattachment.html)  
   
-[PlugAttachable](plugattachable.htm)  
+[PlugAttachable](plugattachable.html)  
   
   
   

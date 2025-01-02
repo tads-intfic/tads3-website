@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LState</span><span class="type">class</span>
 
 [english.t](../file/english.t.html)\[[1919](../source/english.t.html#1919)\]

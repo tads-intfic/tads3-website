@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> CharacterSet  
-<span class="navnp"><a href="bytearr.htm" class="nav"><em>Prev:</em> ByteArray</a>
-    <a href="collect.htm" class="nav"><em>Next:</em> Collection</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> CharacterSet  
+<span class="navnp"><a href="bytearr.html" class="nav"><em>Prev:</em> ByteArray</a>
+    <a href="collect.html" class="nav"><em>Next:</em> Collection</a>    
 </span>
 
 </div>
@@ -152,7 +154,7 @@ system:
 The character sets above are available on every TADS 3 interpreter. In
 addition, TADS can load external mapping files, which makes it
 extensible to almost any character set. See the section on [character
-maps](cmap.htm) for details. You can use any character set for which an
+maps](cmap.html) for details. You can use any character set for which an
 external mapping file exists on the local system, simply by using the
 mapping name in the CharacterSet constructor. (Don't use the ".tcm" or
 other filename suffix - just use the base name of the mapping file.)
@@ -677,10 +679,10 @@ load the mapping file once.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> CharacterSet  
-<span class="navnp"><a href="bytearr.htm" class="nav"><em>Prev:</em> ByteArray</a>
-    <a href="collect.htm" class="nav"><em>Next:</em> Collection</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> CharacterSet  
+<span class="navnp"><a href="bytearr.html" class="nav"><em>Prev:</em> ByteArray</a>
+    <a href="collect.html" class="nav"><em>Next:</em> Collection</a>    
 </span>
 
 </div>

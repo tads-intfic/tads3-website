@@ -1,3 +1,5 @@
+---
+---
 <span class="title">finishOptionQuit</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[1137](../source/misc.t.html#1137)\]

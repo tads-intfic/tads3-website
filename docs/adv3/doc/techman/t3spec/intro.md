@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Introduction  
-<span class="navnp"><a href="../t3spec.htm" class="nav"><em>Prev:</em> T3 VM Technical
+<span class="navnp"><a href="../t3spec.html" class="nav"><em>Prev:</em> T3 VM Technical
 Documentation</a>    
-<a href="philos.htm" class="nav"><em>Next:</em> Design Philosophy</a>
+<a href="philos.html" class="nav"><em>Next:</em> Design Philosophy</a>
     </span>
 
 </div>
@@ -69,20 +71,20 @@ character flags embedded.
 
 ### Contents
 
-[Design Philosophy](philos.htm)  
-[Design Goals](goals.htm)  
-[Notation and Conventions](notation.htm)  
-[Machine Model](model.htm)  
-[The Metaclasses](metacl.htm)  
-[Byte-code Instruction Set](opcode.htm)  
-[Image File Format](format.htm)  
-[Portable Binary Encoding](bincode.htm)  
-[Character Mapping](charmap.htm)  
-[Debug Records](debug.htm)  
+[Design Philosophy](philos.html)  
+[Design Goals](goals.html)  
+[Notation and Conventions](notation.html)  
+[Machine Model](model.html)  
+[The Metaclasses](metacl.html)  
+[Byte-code Instruction Set](opcode.html)  
+[Image File Format](format.html)  
+[Portable Binary Encoding](bincode.html)  
+[Character Mapping](charmap.html)  
+[Debug Records](debug.html)  
   
 **Appendices**  
-[Metaclass Identifier List](metalist.htm)  
-[Saving and Restoring State](save.htm)
+[Metaclass Identifier List](metalist.html)  
+[Saving and Restoring State](save.html)
 
 <div class="t3spec_version">
 
@@ -98,12 +100,12 @@ Revision: January, 2010
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Introduction  
-<span class="navnp"><a href="../t3spec.htm" class="nav"><em>Prev:</em> T3 VM Technical
+<span class="navnp"><a href="../t3spec.html" class="nav"><em>Prev:</em> T3 VM Technical
 Documentation</a>    
-<a href="philos.htm" class="nav"><em>Next:</em> Design Philosophy</a>
+<a href="philos.html" class="nav"><em>Next:</em> Design Philosophy</a>
     </span>
 
 </div>

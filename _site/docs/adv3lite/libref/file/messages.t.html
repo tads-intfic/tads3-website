@@ -1,0 +1,161 @@
+<p><span class="title">messages.t</span><span class="type">file</span></p>
+
+<p><a href="../source/messages.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+messages.t
+
+This module forms part of the adv3Lite library (c) 2012-13 Eric Eve, but
+is based substantially on the Mercury Library (c) 2012 Michael J.
+Roberts
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>CustomMessages<code class="language-plaintext highlighter-rouge">](../object/CustomMessages.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>MessageCtx<code class="language-plaintext highlighter-rouge">](../object/MessageCtx.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>MessageParams<code class="language-plaintext highlighter-rouge">](../object/MessageParams.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>VerbTense<code class="language-plaintext highlighter-rouge">](../object/VerbTense.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>dummy_<code class="language-plaintext highlighter-rouge">](../object/dummy_.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Future<code class="language-plaintext highlighter-rouge">](../object/Future.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FuturePerfect<code class="language-plaintext highlighter-rouge">](../object/FuturePerfect.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>messageDummyCommand<code class="language-plaintext highlighter-rouge">](../object/messageDummyCommand.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Narrator<code class="language-plaintext highlighter-rouge">](../object/Narrator.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Past<code class="language-plaintext highlighter-rouge">](../object/Past.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PastPerfect<code class="language-plaintext highlighter-rouge">](../object/PastPerfect.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Perfect<code class="language-plaintext highlighter-rouge">](../object/Perfect.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>pluralDummy_<code class="language-plaintext highlighter-rouge">](../object/pluralDummy_.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Present<code class="language-plaintext highlighter-rouge">](../object/Present.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>bmsg<code class="language-plaintext highlighter-rouge">](#bmsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildMessage<code class="language-plaintext highlighter-rouge">](#buildMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>debugMessage<code class="language-plaintext highlighter-rouge">](#debugMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>dmsg<code class="language-plaintext highlighter-rouge">](#dmsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>message<code class="language-plaintext highlighter-rouge">](#message)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="bmsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bmsg (txt, [args])</code></p>
+
+<p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#799">799</a>]</p>
+
+<div class="desc">
+
+bmsg returns the text of a message formatted by the message formatter.
+
+</div>
+
+<p><span id="buildMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildMessage (id, txt, [args])</code></p>
+
+<p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#133">133</a>]</p>
+
+<div class="desc">
+
+Build a message to be shown by message()
+
+We put this in a separate function to make it easy to obtain the text of
+a message for subsequent use without first displaying it.
+
+</div>
+
+<p><span id="debugMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">debugMessage (id, txt, cm, args)</code></p>
+
+<p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#364">364</a>]</p>
+
+<div class="desc">
+
+Message debugging. This shows the message before processing: the ID, the
+default source text with the {...} parameters, the overriding custom
+source text, and the arguments.
+
+</div>
+
+<p><span id="dmsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dmsg (txt, [args])</code></p>
+
+<p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#792">792</a>]</p>
+
+<div class="desc">
+
+Use the message builder to format a message without supplying a key to
+look up at alternative message. We can use this with library messages
+that employ object properties (e.g. cannotTakeMsg) or user code.
+
+dmsg() displays the resultant message.
+
+</div>
+
+<p><span id="message"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">message (id, txt, [args])</code></p>
+
+<p><a href="../file/messages.t.html">messages.t</a>[<a href="../source/messages.t.html#114">114</a>]</p>
+
+<div class="desc">
+
+Show a message.
+
+This looks for a customized version of the message text, as defined in
+CustomMessages objects. If we don't find one, we use the provided
+default message text.
+
+Substitution parameters take the form {x y z} - curly braces with one or
+more space-delimited tokens. The first token is the parameter name, and
+any additional tokens are arguments. The parameter names and their
+arguments are up to the language module to define.
+
+In addition to the parameters, the string itself can have two sections,
+separated by a vertical bar, '\|'. The first section (before the bar) is
+the "terse" string, which is for a straightforward acknowledgment of a
+simple, ordinary action: "Taken", "Dropped", etc. The terse string is
+used only if the Command argument's actor is the player character, AND
+the command doesn't have any disambiguated objects. If these conditions
+aren't met, the second half of the string, the "verbose" version, is
+used.
+
+Once we have the message text, we perform parameter substitutions.
+Parameters can be provided as strings, which are substituted in
+literally; or as objects, whose names are inserted according to the
+grammar in the template text.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

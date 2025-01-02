@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorTravelReady</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[231](../source/precond.t.html#231)\]

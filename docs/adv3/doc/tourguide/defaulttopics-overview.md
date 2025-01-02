@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>DefaultTopics - Overview<br />
 </strong></td>
-<td style="text-align: right;"><a href="topicgroup.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="defaultasktopic.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="topicgroup.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="defaultasktopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -32,18 +34,18 @@ response has been programmed.
 Roughly speaking, there is a DefaultTopic type corresponding to each
 type of TopicEntry:  
   
-   [DefaultAnyTopic](defaultanytopic.htm)  
-   [DefaultAskForTopic](defaultaskfortopic.htm)  
-   [DefaultAskTellTopic](defaultasktelltopic.htm)  
-   [DefaultAskTopic](defaultasktopic.htm)  
-   [DefaultConsultTopic](defaultconsulttopic.htm)  
-   [DefaultGiveShowTopic](defaultgiveshowtopic.htm)  
-   [DefaultGiveTopic](defaultgivetopic.htm)  
+   [DefaultAnyTopic](defaultanytopic.html)  
+   [DefaultAskForTopic](defaultaskfortopic.html)  
+   [DefaultAskTellTopic](defaultasktelltopic.html)  
+   [DefaultAskTopic](defaultasktopic.html)  
+   [DefaultConsultTopic](defaultconsulttopic.html)  
+   [DefaultGiveShowTopic](defaultgiveshowtopic.html)  
+   [DefaultGiveTopic](defaultgivetopic.html)  
    DefaultInitiateTopic  
-   [DefaultShowTopic](defaultshowtopic.htm)  
-   [DefaultTellTopic](defaulttelltopic.htm)  
+   [DefaultShowTopic](defaultshowtopic.html)  
+   [DefaultTellTopic](defaulttelltopic.html)  
   
-Note that there is also a [DefaultAnyTopic](defaultanytopic.htm) that
+Note that there is also a [DefaultAnyTopic](defaultanytopic.html) that
 matches any conversational command for which the response is not
 specifically defined.  
   
@@ -56,7 +58,7 @@ define any common TopicEntries on the actor, you'll need to define the
 corresponding DefaultTopics there as well. As of TADS 3.0.6p, however,
 there are two ways round this. The first, introduced in TADS 3.0.6n uses
 the **excludeMatch** property of the DefaultTopic, which we'll
-demonstrate with [DefaultGiveTopic](defaultgivetopic.htm). The second,
+demonstrate with [DefaultGiveTopic](defaultgivetopic.html). The second,
 new to TADS 3.0.6p, uses the **deferToEntry(other)** method. Note that
 in any case a DefaultTopic in an ActorState will only mask the
 corresponding type of TopicEntry in the actor, so that, for example, if

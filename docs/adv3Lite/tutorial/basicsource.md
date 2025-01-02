@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Creating the Basic Source File  
-<span class="navnp"><a href="heidi.htm" class="nav"><em>Prev:</em> Heidi: our first adv3Lite
+<span class="navnp"><a href="heidi.html" class="nav"><em>Prev:</em> Heidi: our first adv3Lite
 game</a>    
-<a href="understanding.htm" class="nav"><em>Next:</em> Understanding the
+<a href="understanding.html" class="nav"><em>Next:</em> Understanding the
 Source File</a>     </span>
 
 </div>
@@ -22,7 +24,7 @@ Source File</a>     </span>
 
 If you followed the steps for creating a project in the last chapter,
 you should have a basic project already created for starting to write
-the Heidi game. If not, go [back](setting.htm) and follow them now.
+the Heidi game. If not, go [back](setting.html) and follow them now.
 
 If you're using Windows Workbench, open the heidi.t3m project in the
 Heidi folder (using File -\> Open Project from the menu), then select
@@ -184,12 +186,12 @@ far actually means; that's what we'll do next.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Creating the Basic Source File  
-<span class="navnp"><a href="heidi.htm" class="nav"><em>Prev:</em> Heidi: our first adv3Lite
+<span class="navnp"><a href="heidi.html" class="nav"><em>Prev:</em> Heidi: our first adv3Lite
 game</a>    
-<a href="understanding.htm" class="nav"><em>Next:</em> Understanding the
+<a href="understanding.html" class="nav"><em>Next:</em> Understanding the
 Source File</a>     </span>
 
 </div>

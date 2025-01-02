@@ -1,0 +1,183 @@
+<p><span class="title">Distinguisher</span><span class="type">class</span></p>
+
+<p><a href="../file/disambig.t.html">disambig.t</a>[<a href="../source/disambig.t.html#25">25</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Distinguisher. This object encapsulates logic that determines whether or
+not we can tell two objects apart.
+
+Each game object has a list of distinguishers. For most objects, the
+distinguisher list contains only BasicDistinguisher, since most game
+objects are unique and thus are inherently distinguishable from all
+other objects.
+
+`class `**`Distinguisher`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Distinguisher</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>basicDistinguisher<code class="language-plaintext highlighter-rouge">](../object/basicDistinguisher.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>litUnlitDistinguisher<code class="language-plaintext highlighter-rouge">](../object/litUnlitDistinguisher.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>locationDistinguisher<code class="language-plaintext highlighter-rouge">](../object/locationDistinguisher.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>nullDistinguisher<code class="language-plaintext highlighter-rouge">](../object/nullDistinguisher.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ownershipDistinguisher<code class="language-plaintext highlighter-rouge">](../object/ownershipDistinguisher.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>canDistinguish<code class="language-plaintext highlighter-rouge">](#canDistinguish)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchName<code class="language-plaintext highlighter-rouge">](#matchName)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePrompt<code class="language-plaintext highlighter-rouge">](#notePrompt)</code>  <code class="language-plaintext highlighter-rouge">[</code>objInScope<code class="language-plaintext highlighter-rouge">](#objInScope)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="canDistinguish"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canDistinguish (a, b)</code></p>
+
+<p><a href="../file/disambig.t.html">disambig.t</a>[<a href="../source/disambig.t.html#27">27</a>]</p>
+
+<div class="desc">
+
+can we distinguish the given two objects?
+
+</div>
+
+<p><span id="matchName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchName (obj, origTokens, adjustedTokens, matchList, fullMatchList)</code></p>
+
+<p><a href="../file/disambig.t.html">disambig.t</a>[<a href="../source/disambig.t.html#79">79</a>]</p>
+
+<div class="desc">
+
+Try matching an object to a noun phrase in a disambiguation reply from
+the player (that is, the player's response to a "Which foo did you mean"
+question). By default, we call the object's matchNameDisambig() method
+to let it try to match its disambiguation name.
+
+Subclasses can override this to check for additional phrasing specific
+to the subclass. For example, the locational distinguisher checks for a
+match to the container or owner name, so that the player can simply
+respond to the question with the location name rather than typing in a
+whole locational phrase. Note that subclasses will usually want to
+inherit the default handling if they don't find a match to their own
+special phrasing, because the player might respond with a simple
+adjective pertaining to the base object even if there's some external
+distinguishing characteristic handled by the subclass.
+
+</div>
+
+<p><span id="notePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePrompt (lst)</code></p>
+
+<p><a href="../file/disambig.t.html">disambig.t</a>[<a href="../source/disambig.t.html#42">42</a>]</p>
+
+<div class="desc">
+
+Note that we're showing a prompt to the player asking for help in
+narrowing the object list, based on this distinguisher. 'lst' is the
+list of ResolveInfo objects which we're mentioning in the prompt.
+
+By default, we do nothing. Some types of distinguishers might want to do
+something special here. For example, an ownership distinguisher might
+want to set pronoun antecedents based on the owners mentioned in the
+disambiguation prompt, so that the player's response can refer
+anaphorically to the nouns in the prompt.
+
+</div>
+
+<p><span id="objInScope"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objInScope (obj, matchList, fullMatchList)</code></p>
+
+<p><a href="../file/disambig.t.html">disambig.t</a>[<a href="../source/disambig.t.html#55">55</a>]</p>
+
+<div class="desc">
+
+Is the object in scope for the purposes of the disambiguation reply from
+the player? By default, any object in the full match list is in scope.
+
+Distinguishers that can use related objects to qualify the name should
+add those related objects to the scope by returning true here. For
+example, the locational distinguisher can use the location name as a
+qualifying phrase, so the location name is in scope.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

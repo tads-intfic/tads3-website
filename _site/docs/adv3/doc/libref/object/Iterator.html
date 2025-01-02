@@ -1,0 +1,183 @@
+<p><span class="title">Iterator</span><span class="type">class</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#174">174</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The native iterator type - this is the base class for all iterators.
+This class is abstract and is thus never directly instantiated.
+
+Note that iterators can never be created directly with the 'new'
+operator. Instead, iterators must be obtained from a collection via the
+collection's createIterator() method.
+
+`intrinsic class `**`Iterator`**` :   `[`Object`](../object/Object.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Iterator</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Object`](../object/Object.html)<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Iterator</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>IndexedIterator<code class="language-plaintext highlighter-rouge">](../object/IndexedIterator.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LookupTableIterator`](../object/LookupTableIterator.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>getCurKey<code class="language-plaintext highlighter-rouge">](#getCurKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>getCurVal<code class="language-plaintext highlighter-rouge">](#getCurVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNext<code class="language-plaintext highlighter-rouge">](#getNext)</code>  <code class="language-plaintext highlighter-rouge">[</code>isNextAvailable<code class="language-plaintext highlighter-rouge">](#isNextAvailable)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetIterator<code class="language-plaintext highlighter-rouge">](#resetIterator)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getPropList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropParams<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSuperclassList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getSuperclassList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isClass<code class="language-plaintext highlighter-rouge">](../object/Object.html#isClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTransient<code class="language-plaintext highlighter-rouge">](../object/Object.html#isTransient)</code>  <code class="language-plaintext highlighter-rouge">[</code>ofKind<code class="language-plaintext highlighter-rouge">](../object/Object.html#ofKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>propDefined<code class="language-plaintext highlighter-rouge">](../object/Object.html#propDefined)</code>  <code class="language-plaintext highlighter-rouge">[</code>propInherited<code class="language-plaintext highlighter-rouge">](../object/Object.html#propInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>propType<code class="language-plaintext highlighter-rouge">](../object/Object.html#propType)</code>  <code class="language-plaintext highlighter-rouge">[</code>valToSymbol<code class="language-plaintext highlighter-rouge">](../object/Object.html#valToSymbol)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="getCurKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getCurKey ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#204">204</a>]</p>
+
+<div class="desc">
+
+Get the current key. This returns the value of the key for the current
+item in the collection. For an indexed collection, this returns the
+index value; for a keyed collection, this returns the current key value.
+
+</div>
+
+<p><span id="getCurVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getCurVal ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#210">210</a>]</p>
+
+<div class="desc">
+
+Get the current value. This returns the value of the current item in the
+collection.
+
+</div>
+
+<p><span id="getNext"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNext ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#183">183</a>]</p>
+
+<div class="desc">
+
+Get the next item in the collection. This returns the next item's value,
+and advances the internal state in the iterator so that a subsequent
+call to getNext() returns the next item after this one. When the
+iterator is first created, or after calling resetIterator(), this
+returns the first item in the collection.
+
+</div>
+
+<p><span id="isNextAvailable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isNextAvailable ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#190">190</a>]</p>
+
+<div class="desc">
+
+Determine if the collection is out of items. Returns true if getNext()
+will return a valid item, nil if no more items are available.
+
+</div>
+
+<p><span id="resetIterator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resetIterator ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#196">196</a>]</p>
+
+<div class="desc">
+
+Reset to the first item. After calling this routine, the next call to
+getNext() will return the first item in the collection.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

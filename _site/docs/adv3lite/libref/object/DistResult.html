@@ -1,0 +1,176 @@
+<p><span class="title">DistResult</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1497">1497</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Result object from applying a Distinguisher to a set of objects.
+
+`class `**`DistResult`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DistResult</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>appliesTo<code class="language-plaintext highlighter-rouge">](#appliesTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>distinguisher<code class="language-plaintext highlighter-rouge">](#distinguisher)</code>  <code class="language-plaintext highlighter-rouge">[</code>partitioned<code class="language-plaintext highlighter-rouge">](#partitioned)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>partition<code class="language-plaintext highlighter-rouge">](#partition)</code>  <code class="language-plaintext highlighter-rouge">[</code>partSize<code class="language-plaintext highlighter-rouge">](#partSize)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="appliesTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">appliesTo</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1520">1520</a>]</p>
+
+<div class="desc">
+
+the objects that the distinguisher applies to
+
+</div>
+
+<p><span id="distinguisher"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">distinguisher</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1531">1531</a>]</p>
+
+<div class="desc">
+
+the Distinguisher that these results come from
+
+</div>
+
+<p><span id="partitioned"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">partitioned</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1528">1528</a>]</p>
+
+<div class="desc">
+
+The partitioned list of objects. This is a list of lists. Each sublist
+is a group of objects we can't distinguish from one another. Each object
+in appliesTo appears once in a sublist, and each object in a sublist
+appears in appliesTo.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (dist)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1498">1498</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="partition"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">partition (obj)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1508">1508</a>]</p>
+
+<div class="desc">
+
+get the partition in which 'obj' appears
+
+</div>
+
+<p><span id="partSize"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">partSize (obj)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1514">1514</a>]</p>
+
+<div class="desc">
+
+get the size of the partition in which 'obj' appears
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Action Reference  
-<span class="navnp"><a href="debug.htm" class="nav"><em>Prev:</em> Debugging Commands</a>
-    *Next:* <a href="actor.htm" class="nav">Actors</a>    </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Action Reference  
+<span class="navnp"><a href="debug.html" class="nav"><em>Prev:</em> Debugging Commands</a>
+    *Next:* <a href="actor.html" class="nav">Actors</a>    </span>
 
 </div>
 
@@ -771,7 +773,7 @@ versionInfo.showAbout()
 
 —
 
-[\* \* \*](source.htm#Again)
+[\* \* \*](source.html#Again)
 
 <span id="AskAbout"></span>AskAbout
 
@@ -785,7 +787,7 @@ cannotTalkToMsg
 
 —
 
-\[[ImplicitConversationAction](source.htm#ImplicitConversationAction)\]
+\[[ImplicitConversationAction](source.html#ImplicitConversationAction)\]
 
 <span id="AskFor"></span>AskFor
 
@@ -799,7 +801,7 @@ cannotTalkToMsg
 
 —
 
-\[[ImplicitConversationAction](source.htm#ImplicitConversationAction)\]
+\[[ImplicitConversationAction](source.html#ImplicitConversationAction)\]
 
 <span id="Attach"></span>Attach
 
@@ -963,11 +965,11 @@ askForDobj(ClimbUp)
 
 dobj
 
-isCloseable = isOpenable [\*\*](source.htm#Thing:Close)
+isCloseable = isOpenable [\*\*](source.html#Thing:Close)
 
 cannotCloseMsg
 
-makeOpen(nil) [\*\*](source.htm#Thing:Close)
+makeOpen(nil) [\*\*](source.html#Thing:Close)
 
 <span id="ConsultAbout"></span>ConsultAbout
 
@@ -987,7 +989,7 @@ askForDobj(ConsultAbout)
 
 —
 
-[\* \* \*](source.htm#Continue)
+[\* \* \*](source.html#Continue)
 
 <span id="Credits"></span><span class="system">Credits</span>
 
@@ -1025,7 +1027,7 @@ cannotCutWithMsg
 
 —
 
-[\* \* \*](source.htm#Debug)
+[\* \* \*](source.html#Debug)
 
 <span id="DebugI"></span><span class="debug">DebugI</span>
 
@@ -1087,7 +1089,7 @@ cannotDigWithMsg
 
 dobj
 
-isDoffable = isWearable [\*\*](source.htm#Thing:Doff)
+isDoffable = isWearable [\*\*](source.html#Thing:Doff)
 
 cannotDoffMsg
 
@@ -1161,7 +1163,7 @@ Compiler.eval(stripQuotesFrom(cmd.dobj.name))
 
 dobj
 
-desc; examineStatus(); [\*\*](source.htm#Thing:Examine)
+desc; examineStatus(); [\*\*](source.html#Thing:Examine)
 
 <span id="Exits"></span><span class="system">Exits</span>
 
@@ -1181,7 +1183,7 @@ gExitLister != nil
 
 DMsg(no exit lister)
 
-[\* \* \*](source.htm#ExitsColour)
+[\* \* \*](source.html#ExitsColour)
 
 <span id="ExitsMode"></span><span class="system">ExitsMode</span>
 
@@ -1321,7 +1323,7 @@ gPlayerChar.currentInterlocutor.handleTopic(&giveTopics, \[self\])
 
 —
 
-[\* \* \*](source.htm#GoBack)
+[\* \* \*](source.html#GoBack)
 
 <span id="Goodbye"></span>Goodbye
 
@@ -1337,15 +1339,15 @@ gPlayerChar.currentInterlocutor.endConversation(endConvBye)
 
 —
 
-[\[Travel\]](source.htm#GoIn)
+[\[Travel\]](source.html#GoIn)
 
 <span id="GoNear"></span><span class="debug">GoNear</span>
 
 dobj
 
-[\* \* \*](source.htm#Thing:GoNear)
+[\* \* \*](source.html#Thing:GoNear)
 
-getOutermostRoom.travelVia(gActor); [\*\*](source.htm#Thing:GoNear)
+getOutermostRoom.travelVia(gActor); [\*\*](source.html#Thing:GoNear)
 
 <span id="GoThrough"></span>GoThrough
 
@@ -1359,15 +1361,15 @@ cannotGoThroughMsg
 
 dobj
 
-[\* \* \*](source.htm#Thing:GoTo)
+[\* \* \*](source.html#Thing:GoTo)
 
-[\* \* \*](source.htm#Thing:GoTo)
+[\* \* \*](source.html#Thing:GoTo)
 
 <span id="GoOut"></span>GoOut
 
 —
 
-[\[Travel or GetOff\]](source.htm#GoOut)
+[\[Travel or GetOff\]](source.html#GoOut)
 
 **<span id="aH">H</span>**
 
@@ -1375,7 +1377,7 @@ dobj
 
 —
 
-[\* \* \*](source.htm#Hello)
+[\* \* \*](source.html#Hello)
 
 <span id="Hints"></span><span class="system">Hints</span>
 
@@ -1403,7 +1405,7 @@ gHintManager.disableHints()
 
 —
 
-[\* \* \*](source.htm#Inventory)
+[\* \* \*](source.html#Inventory)
 
 **<span id="aJ">J</span>**
 
@@ -1487,7 +1489,7 @@ makeLit(true)
 
 —
 
-[\* \* \*](source.htm#Listen)
+[\* \* \*](source.html#Listen)
 
 <span id="ListenTo"></span>ListenTo
 
@@ -1509,17 +1511,17 @@ list available test scripts
 
 dobj
 
-lockability = notLockable [\*\*](source.htm#Thing:Lock)
+lockability = notLockable [\*\*](source.html#Thing:Lock)
 
 notLockableMsg
 
-makeLocked(true) [\*\*](source.htm#Thing:Lock)
+makeLocked(true) [\*\*](source.html#Thing:Lock)
 
 <span id="LockWith"></span>LockWith
 
 dobj
 
-lockability = notLockable [\*\*](source.htm#Thing:LockWith)
+lockability = notLockable [\*\*](source.html#Thing:LockWith)
 
 notLockableMsg
 
@@ -1529,7 +1531,7 @@ canLockWithMe = canUnlockWithMe
 
 cannotLockWithMsg
 
-[Key](source.htm#Key:LockWith)
+[Key](source.html#Key:LockWith)
 
 <span id="LookBehind"></span>LookBehind
 
@@ -1539,7 +1541,7 @@ canLookBehindMe = true
 
 cannotLookBehindMsg
 
-[\* \* \*](source.htm#Thing:LookBehind)
+[\* \* \*](source.html#Thing:LookBehind)
 
 <span id="Look"></span>Look
 
@@ -1551,7 +1553,7 @@ gActor.outermostVisibleParent().lookAroundWithin()
 
 dobj
 
-[\* \* \*](source.htm#Thing:LookIn)
+[\* \* \*](source.html#Thing:LookIn)
 
 <span id="LookThrough"></span>LookThrough
 
@@ -1571,7 +1573,7 @@ canLookUnderMe = true
 
 cannotLookUnderMsg
 
-[\* \* \*](source.htm#Thing:LookUnder)
+[\* \* \*](source.html#Thing:LookUnder)
 
 **<span id="aM">M</span>**
 
@@ -1643,11 +1645,11 @@ libGlobal.scoreObj.scoreNotify.isOn = true
 
 dobj
 
-isOpenable = nil [\*\*](source.htm#Thing:Open)
+isOpenable = nil [\*\*](source.html#Thing:Open)
 
 cannotOpenMsg
 
-makeOpen(true) [\*\*](source.htm#Thing:Open)
+makeOpen(true) [\*\*](source.html#Thing:Open)
 
 **<span id="aP">P</span>**
 
@@ -1747,7 +1749,7 @@ canPushTravel = nil
 
 cannotPushTravelMsg
 
-doPushTravel(Down) [\*\*](source.htm#Thing:PushTravelClimbDown)
+doPushTravel(Down) [\*\*](source.html#Thing:PushTravelClimbDown)
 
 iobj
 
@@ -1781,7 +1783,7 @@ canPushTravel = nil
 
 cannotPushTravelMsg
 
-[\* \* \*](source.htm#PushTravelDir)
+[\* \* \*](source.html#PushTravelDir)
 
 <span id="PushTravelEnter"></span>PushTravelEnter
 
@@ -1839,67 +1841,67 @@ cannotPushThroughMsg
 
 dobj
 
-!isFixed [\*\*](source.htm#Thing:dobjPutBehind)
+!isFixed [\*\*](source.html#Thing:dobjPutBehind)
 
 cannotTakeMsg
 
 iobj
 
 canPutBehindMe = (contType == Behind)
-[\*\*](source.htm#Thing:iobjPutBehind)
+[\*\*](source.html#Thing:iobjPutBehind)
 
 cannotPutBehindMsg
 
-gDobj.actionMoveInto(self) [\*\*](source.htm#Thing:iobjPutBehind)
+gDobj.actionMoveInto(self) [\*\*](source.html#Thing:iobjPutBehind)
 
 <span id="PutIn"></span>PutIn
 
 dobj
 
-!isFixed [\*\*](source.htm#Thing:dobjPutIn)
+!isFixed [\*\*](source.html#Thing:dobjPutIn)
 
 cannotTakeMsg
 
 iobj
 
-canPutInMe = (contType == In) [\*\*](source.htm#Thing:iobjPutIn)
+canPutInMe = (contType == In) [\*\*](source.html#Thing:iobjPutIn)
 
 cannotPutInMsg
 
-gDobj.actionMoveInto(self) [\*\*](source.htm#Thing:iobjPutIn)
+gDobj.actionMoveInto(self) [\*\*](source.html#Thing:iobjPutIn)
 
 <span id="PutOn"></span>PutOn
 
 dobj
 
-!isFixed [\*\*](source.htm#Thing:dobjPutOn)
+!isFixed [\*\*](source.html#Thing:dobjPutOn)
 
 cannotTakeMsg
 
 iobj
 
-contType == On [\*\*](source.htm#Thing:iobjPutOn)
+contType == On [\*\*](source.html#Thing:iobjPutOn)
 
 cannotPutOnMsg
 
-gDobj.actionMoveInto(self) [\*\*](source.htm#Thing:iobjPutOn)
+gDobj.actionMoveInto(self) [\*\*](source.html#Thing:iobjPutOn)
 
 <span id="PutUnder"></span>PutUnder
 
 dobj
 
-!isFixed [\*\*](source.htm#Thing:dobjPutUnder)
+!isFixed [\*\*](source.html#Thing:dobjPutUnder)
 
 cannotTakeMsg
 
 iobj
 
 canPutUnderMe = (contType == Under)
-[\*\*](source.htm#Thing:iobjPutUnder)
+[\*\*](source.html#Thing:iobjPutUnder)
 
 cannotPutUnderMsg
 
-gDobj.actionMoveInto(self) [\*\*](source.htm#Thing:iobjPutUnder)
+gDobj.actionMoveInto(self) [\*\*](source.html#Thing:iobjPutUnder)
 
 **<span id="aQ">Q</span>**
 
@@ -1999,7 +2001,7 @@ askAndRestore()
 
 —
 
-\[[ImplicitConversationAction](source.htm#ImplicitConversationAction)\]
+\[[ImplicitConversationAction](source.html#ImplicitConversationAction)\]
 
 <span id="SayNo"></span>SayNo
 
@@ -2143,7 +2145,7 @@ DMsg(no sleeping)
 
 —
 
-[\* \* \*](source.htm#Smell)
+[\* \* \*](source.html#Smell)
 
 <span id="SmellSomething"></span>SmellSomething
 
@@ -2231,7 +2233,7 @@ cannotTalkToMsg
 
 —
 
-\[[ImplicitConversationAction](source.htm#ImplicitConversationAction)\]
+\[[ImplicitConversationAction](source.html#ImplicitConversationAction)\]
 
 <span id="TalkTo"></span>TalkTo
 
@@ -2245,17 +2247,17 @@ cannotTalkToMsg
 
 dobj
 
-isTakeable = !isFixed [\*\*](source.htm#Thing:Take)
+isTakeable = !isFixed [\*\*](source.html#Thing:Take)
 
 cannotTakeMsg
 
-actionMoveInto(gActor) [\*\*](source.htm#Thing:Take)
+actionMoveInto(gActor) [\*\*](source.html#Thing:Take)
 
 <span id="TakeFrom"></span>TakeFrom
 
 dobj
 
-isTakeable = !isFixed [\*\*](source.htm#Thing:dobjTakeFrom)
+isTakeable = !isFixed [\*\*](source.html#Thing:dobjTakeFrom)
 
 cannotTakeMsg
 
@@ -2263,7 +2265,7 @@ actionDobjTake()
 
 iobj
 
-[\* \* \*](source.htm#Thing:iobjTakeFrom)
+[\* \* \*](source.html#Thing:iobjTakeFrom)
 
 <span id="Taste"></span>Taste
 
@@ -2285,7 +2287,7 @@ cannotTalkToMsg
 
 —
 
-\[[ImplicitConversationAction](source.htm#ImplicitConversationAction)\]
+\[[ImplicitConversationAction](source.html#ImplicitConversationAction)\]
 
 <span id="TellTo"></span>TellTo
 
@@ -2361,7 +2363,7 @@ otherActor.showSuggestions(true)
 
 —
 
-[\* \* \*](source.htm#Travel)
+[\* \* \*](source.html#Travel)
 
 <span id="Turn"></span>Turn
 
@@ -2479,21 +2481,21 @@ cannotUnfastenFromMsg
 
 dobj
 
-lockability = notLockable [\*\*](source.htm#Thing:Unlock)
+lockability = notLockable [\*\*](source.html#Thing:Unlock)
 
 notLockableMsg
 
-makeLocked(nil) [\*\*](source.htm#Thing:Unlock)
+makeLocked(nil) [\*\*](source.html#Thing:Unlock)
 
 <span id="UnlockWith"></span>UnlockWith
 
 dobj
 
-lockability = notLockable [\*\*](source.htm#Thing:UnlockWith)
+lockability = notLockable [\*\*](source.html#Thing:UnlockWith)
 
 notLockableMsg
 
-[Key](source.htm#Key:UnlockWith)
+[Key](source.html#Key:UnlockWith)
 
 iobj
 
@@ -2588,9 +2590,9 @@ DMsg(yell)
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Action Reference  
-<span class="navnp"><a href="debug.htm" class="nav"><em>Prev:</em> Debugging Commands</a>
-    *Next:* <a href="actor.htm" class="nav">Actors</a>    </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Action Reference  
+<span class="navnp"><a href="debug.html" class="nav"><em>Prev:</em> Debugging Commands</a>
+    *Next:* <a href="actor.html" class="nav">Actors</a>    </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultSayQueryTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4249](../source/actor.t.html#4249)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Resolver</span><span class="type">class</span>
 
 [resolver.t](../file/resolver.t.html)\[[31](../source/resolver.t.html#31)\],

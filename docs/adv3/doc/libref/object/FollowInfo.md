@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FollowInfo</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[80](../source/actor.t.html#80)\]

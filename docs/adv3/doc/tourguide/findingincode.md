@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Finding by moving<br />
 </strong></td>
-<td style="text-align: right;"><a href="wordgames.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="sightpresence+islisted.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="wordgames.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="sightpresence+islisted.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -41,7 +43,7 @@ iobjFor(DigWith)
   
 Having defined the digging implement, we need to define a floor that can
 be dug in and will yield dynamite when dug. You will recall that we
-start the [dynamite](dynamite.htm) in limbo (i.e. location = nil). Once
+start the [dynamite](dynamite.html) in limbo (i.e. location = nil). Once
 the dynamite is discovered, we do not want the player to find another
 stick, unless the first one has been destroyed (by exploding). When it
 is destroyed, the stick of dynamite is moved back into nil, which means

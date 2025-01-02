@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CommandAnnouncement</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[307](../source/report.t.html#307)\]

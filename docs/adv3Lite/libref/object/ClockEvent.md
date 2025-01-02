@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ClockEvent</span><span class="type">class</span>
 
 [subtime.t](../file/subtime.t.html)\[[527](../source/subtime.t.html#527)\]

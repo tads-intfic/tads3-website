@@ -1,3 +1,5 @@
+---
+---
 <span class="title">guestConnectPage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[1379](../source/webui.t.html#1379)\]

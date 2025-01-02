@@ -1,0 +1,399 @@
+<p><span class="title">OutputStream</span><span class="type">class</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#176">176</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Output Stream. This class provides a stream-oriented interface to
+displaying text on the console. "Stream-oriented" means that we write
+text as a sequential string of characters.
+
+Output streams are always transient, since they track the system user
+interface in the interpreter. The interpreter does not save its UI state
+with a saved position, so objects such as output streams that track the
+UI state should not be saved either.
+
+`class `**`OutputStream`**` :   `[`PreinitObject`](../object/PreinitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">OutputStream</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">OutputStream</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BannerOutputStream<code class="language-plaintext highlighter-rouge">](../object/BannerOutputStream.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LogConsole<code class="language-plaintext highlighter-rouge">](../object/LogConsole.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>WebWinOutputStream`](../object/WebWinOutputStream.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>mainOutputStream<code class="language-plaintext highlighter-rouge">](../object/mainOutputStream.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuOutputStream<code class="language-plaintext highlighter-rouge">](../object/menuOutputStream.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>statusLeftOutputStream<code class="language-plaintext highlighter-rouge">](../object/statusLeftOutputStream.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>statusRightOutputStream<code class="language-plaintext highlighter-rouge">](../object/statusRightOutputStream.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>statusTagOutputStream<code class="language-plaintext highlighter-rouge">](../object/statusTagOutputStream.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>filterList_<code class="language-plaintext highlighter-rouge">](#filterList_)</code>  <code class="language-plaintext highlighter-rouge">[</code>justDidPara<code class="language-plaintext highlighter-rouge">](#justDidPara)</code>  <code class="language-plaintext highlighter-rouge">[</code>justDidParaSuppressor<code class="language-plaintext highlighter-rouge">](#justDidParaSuppressor)</code>  <code class="language-plaintext highlighter-rouge">[</code>myInputManager<code class="language-plaintext highlighter-rouge">](#myInputManager)</code>  <code class="language-plaintext highlighter-rouge">[</code>prefix<code class="language-plaintext highlighter-rouge">](#prefix)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addOutputFilter<code class="language-plaintext highlighter-rouge">](#addOutputFilter)</code>  <code class="language-plaintext highlighter-rouge">[</code>addOutputFilterBelow<code class="language-plaintext highlighter-rouge">](#addOutputFilterBelow)</code>  <code class="language-plaintext highlighter-rouge">[</code>applyFilters<code class="language-plaintext highlighter-rouge">](#applyFilters)</code>  <code class="language-plaintext highlighter-rouge">[</code>applyTextFilters<code class="language-plaintext highlighter-rouge">](#applyTextFilters)</code>  <code class="language-plaintext highlighter-rouge">[</code>captureOutput<code class="language-plaintext highlighter-rouge">](#captureOutput)</code>  <code class="language-plaintext highlighter-rouge">[</code>captureOutputIgnoreExit<code class="language-plaintext highlighter-rouge">](#captureOutputIgnoreExit)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputLineEnd<code class="language-plaintext highlighter-rouge">](#inputLineEnd)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeOutputFilter<code class="language-plaintext highlighter-rouge">](#removeOutputFilter)</code>  <code class="language-plaintext highlighter-rouge">[</code>setPrefix<code class="language-plaintext highlighter-rouge">](#setPrefix)</code>  <code class="language-plaintext highlighter-rouge">[</code>watchForOutput<code class="language-plaintext highlighter-rouge">](#watchForOutput)</code>  <code class="language-plaintext highlighter-rouge">[</code>writeFromStream<code class="language-plaintext highlighter-rouge">](#writeFromStream)</code>  <code class="language-plaintext highlighter-rouge">[</code>writeToStream<code class="language-plaintext highlighter-rouge">](#writeToStream)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="filterList_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterList_</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#393">393</a>]</p>
+
+<div class="desc">
+
+The list of active filters on this stream, in the order in which they
+are to be called. This should normally be initialized to a Vector in
+each instance.
+
+</div>
+
+<p><span id="justDidPara"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">justDidPara</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#513">513</a>]</p>
+
+<div class="desc">
+
+Internal state: we just wrote a paragraph break, and there has not yet
+been any intervening text. By default, we set this to true initially, so
+that we suppress any paragraph breaks at the very start of the text.
+
+</div>
+
+<p><span id="justDidParaSuppressor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">justDidParaSuppressor</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#521">521</a>]</p>
+
+<div class="desc">
+
+Internal state: we just wrote a character that suppresses paragraph
+breaks that immediately follow. In this state, we'll suppress any
+paragraph marker that immediately follows, but we won't suppress any
+other characters.
+
+</div>
+
+<p><span id="myInputManager"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">myInputManager</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#352">352</a>]</p>
+
+<div class="desc">
+
+my associated input manager, if I have one
+
+</div>
+
+<p><span id="prefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">prefix</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#524">524</a>]</p>
+
+<div class="desc">
+
+Text to be output before anything else
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addOutputFilter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addOutputFilter (filter)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#403">403</a>]</p>
+
+<div class="desc">
+
+Add an output filter. The argument is an object of class OutputFilter,
+or any object implementing the filterText() method.
+
+Filters are always arranged in a "stack": the last output filter added
+is the first one called during output. This method thus adds the new
+filter at the "top" of the stack.
+
+</div>
+
+<p><span id="addOutputFilterBelow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addOutputFilterBelow (newFilter, existingFilter)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#418">418</a>]</p>
+
+<div class="desc">
+
+Add an output filter at a given point in the filter stack: add the
+filter so that it is "below" the given existing filter in the stack.
+This means that the new filter will be called just after the existing
+filter during output.
+
+If 'existingFilter' isn't in the stack of existing filters, we'll add
+the new filter at the "top" of the stack.
+
+</div>
+
+<p><span id="applyFilters"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">applyFilters (val)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#458">458</a>]</p>
+
+<div class="desc">
+
+call the filters
+
+</div>
+
+<p><span id="applyTextFilters"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">applyTextFilters (val)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#478">478</a>]</p>
+
+<div class="desc">
+
+Apply the current set of text transformation filters to a string. This
+applies only the non-capturing filters; we skip any capture filters.
+
+</div>
+
+<p><span id="captureOutput"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">captureOutput (func, [args])</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#282">282</a>]</p>
+
+<div class="desc">
+
+Call the given function, capturing all text output to this stream in the
+course of the function call. Return a string containing the captured
+text.
+
+</div>
+
+<p><span id="captureOutputIgnoreExit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">captureOutputIgnoreExit (func, [args])</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#311">311</a>]</p>
+
+<div class="desc">
+
+A Version of captureOutput that ignores an Exit Exception. This can be
+used to attempt to retrieve the string value of an output filter that
+threw an exit exeption.
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ( )</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#355">355</a>]</p>
+
+<div class="desc">
+
+dynamic construction
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#365">365</a>]</p>
+
+<div class="desc">
+
+execute pre-initialization
+
+</div>
+
+<p><span id="inputLineEnd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputLineEnd ( )</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#501">501</a>]</p>
+
+<div class="desc">
+
+Receive notification from the input manager that we have just ended
+reading a line of input from the keyboard.
+
+</div>
+
+<p><span id="removeOutputFilter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeOutputFilter (filter)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#444">444</a>]</p>
+
+<div class="desc">
+
+Remove an output filter. Since filters are arranged in a stack, only the
+LAST output filter added may be removed. It's an error to remove a
+filter other than the last one.
+
+</div>
+
+<p><span id="setPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setPrefix (txt)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#527">527</a>]</p>
+
+<div class="desc">
+
+Set the prefix to txt
+
+</div>
+
+<p><span id="watchForOutput"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">watchForOutput (func)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#239">239</a>]</p>
+
+<div class="desc">
+
+Watch the stream for output. It's sometimes useful to be able to call
+out to some code and determine whether or not the code generated any
+text output. This routine invokes the given callback function,
+monitoring the stream for output; if any occurs, we'll return true,
+otherwise we'll return nil.
+
+</div>
+
+<p><span id="writeFromStream"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeFromStream (txt)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#386">386</a>]</p>
+
+<div class="desc">
+
+Write text out from this stream; this writes to the lower-level stream
+underlying this stream. This routine is intended to be called only from
+within this class.
+
+Each output stream is conceptually "stacked" on top of another,
+lower-level stream. At the bottom of the stack is usually some kind of
+physical device, such as the display, or a file on disk.
+
+This method must be defined in each subclass to write to the appropriate
+underlying stream. Most subclasses are specifically designed to sit atop
+a system-level stream, such as the display output stream, so most
+implementations of this method will call directly to a system-level
+output function.
+
+</div>
+
+<p><span id="writeToStream"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeToStream (val)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#183">183</a>]</p>
+
+<div class="desc">
+
+Write a value to the stream. If the value is a string, we'll display the
+text of the string; if it's nil, we'll ignore it; if it's anything else,
+we'll try to convert it to a string (with the toString() function) and
+display the resulting text.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

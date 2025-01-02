@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GiveTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3112](../source/actor.t.html#3112)\]

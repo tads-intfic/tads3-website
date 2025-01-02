@@ -1,0 +1,280 @@
+<p><span class="title">Relation</span><span class="type">class</span></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#19">19</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The Relation class is used to define any kind of binary relation you
+like between objects, or between items of any other kind, e.g. x love y,
+or a is the father of b, or c knows d.
+
+REQUIRES THE RELATIONS EXTENSION.
+
+`class `**`Relation`**` :   `[`PreinitObject`](../object/PreinitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Relation</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>DerivedRelation<code class="language-plaintext highlighter-rouge">](../object/DerivedRelation.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Signal<code class="language-plaintext highlighter-rouge">](../object/Signal.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>reciprocal<code class="language-plaintext highlighter-rouge">](#reciprocal)</code>  <code class="language-plaintext highlighter-rouge">[</code>relationType<code class="language-plaintext highlighter-rouge">](#relationType)</code>  <code class="language-plaintext highlighter-rouge">[</code>relTab<code class="language-plaintext highlighter-rouge">](#relTab)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseName<code class="language-plaintext highlighter-rouge">](#reverseName)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addRelation<code class="language-plaintext highlighter-rouge">](#addRelation)</code>  <code class="language-plaintext highlighter-rouge">[</code>inverselyRelatedTo<code class="language-plaintext highlighter-rouge">](#inverselyRelatedTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>isInverselyRelated<code class="language-plaintext highlighter-rouge">](#isInverselyRelated)</code>  <code class="language-plaintext highlighter-rouge">[</code>isRelated<code class="language-plaintext highlighter-rouge">](#isRelated)</code>  <code class="language-plaintext highlighter-rouge">[</code>makeUnique<code class="language-plaintext highlighter-rouge">](#makeUnique)</code>  <code class="language-plaintext highlighter-rouge">[</code>relatedTo<code class="language-plaintext highlighter-rouge">](#relatedTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeRelation<code class="language-plaintext highlighter-rouge">](#removeRelation)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execute)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="name"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#24">24</a>]</p>
+
+<div class="desc">
+
+A string name that can be used to refer to this relation, e.g. 'loves'
+or 'is the parent of' \[RELATIONS EXTENSION\]
+
+</div>
+
+<p><span id="reciprocal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reciprocal</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#43">43</a>]</p>
+
+<div class="desc">
+
+Flag: are we a reciprocal relation (i.e. does x relation b imply b
+relation x)? Note that only oneToOne and manyToMany relations can be
+reciprocal. \[RELATIONS EXTENSION\]
+
+</div>
+
+<p><span id="relationType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">relationType</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#36">36</a>]</p>
+
+<div class="desc">
+
+The type of relation we are; this can be one of oneToOne, oneToMany,
+manyToOne or manyToMany. \[RELATIONS EXTENSION\]
+
+</div>
+
+<p><span id="relTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">relTab</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#50">50</a>]</p>
+
+<div class="desc">
+
+A LookupTable to hold data about the items related via this relation.
+This is maintained by the library code and shouldn't normally be
+directly accessed via game code. \[RELATIONS EXTENSION\]
+
+</div>
+
+<p><span id="reverseName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reverseName</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#30">30</a>]</p>
+
+<div class="desc">
+
+A string name that can be used to refer to this relation in reverse,
+e.g. 'loved by' or 'is a child of' \[RELATIONS EXTENSION\]
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addRelation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addRelation (objs)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#119">119</a>]</p>
+
+<div class="desc">
+
+Make two objects related via this relation. The objs should be supplied
+as a two-element list (e.g. \[a, b\]) such that a will be related to b.
+\[RELATIONS EXTENSION\]
+
+</div>
+
+<p><span id="inverselyRelatedTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inverselyRelatedTo (a)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#69">69</a>]</p>
+
+<div class="desc">
+
+Return a list of items inverselty related to a via this relation (e.g.
+if this is loving relation, return a list of the people a is loved by.
+\[RELATIONS EXTENSION\]
+
+</div>
+
+<p><span id="isInverselyRelated"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isInverselyRelated (a, b)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#105">105</a>]</p>
+
+<div class="desc">
+
+Test whether a is inversely related to b via this relation. \[RELATIONS
+EXTENSION\]
+
+</div>
+
+<p><span id="isRelated"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isRelated (a, b)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#59">59</a>]</p>
+
+<div class="desc">
+
+Test whether a is related to b via this relation. \[RELATIONS
+EXTENSION\]
+
+</div>
+
+<p><span id="makeUnique"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">makeUnique (key, val)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#298">298</a>]</p>
+
+<div class="desc">
+
+Ensure that key is the only entry in relTab with a value of \[val\].
+\[RELATIONS EXTENSION\]
+
+</div>
+
+<p><span id="relatedTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">relatedTo (a)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#53">53</a>]</p>
+
+<div class="desc">
+
+Return a list of items related to a via this relation. \[RELATIONS
+EXTENSION\]
+
+</div>
+
+<p><span id="removeRelation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeRelation (objs)</code></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#320">320</a>]</p>
+
+<div class="desc">
+
+Remove this relation between the items specified in objs, which should
+be supplied as a two-element list \[a, b\], where a is the item that is
+no longer related to b. \[RELATIONS EXTENSION\]
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WebCommandWin</span><span class="type">class</span>
 
 [webui.t](../file/webui.t.html)\[[1936](../source/webui.t.html#1936)\]

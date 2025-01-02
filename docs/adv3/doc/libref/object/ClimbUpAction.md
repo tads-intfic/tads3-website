@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ClimbUpAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2490](../source/actions.t.html#2490)\]

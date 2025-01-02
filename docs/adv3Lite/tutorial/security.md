@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \> The
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \> The
 Security Area  
-<span class="navnp"><a href="maintenance.htm" class="nav"><em>Prev:</em> The Maintenance
+<span class="navnp"><a href="maintenance.html" class="nav"><em>Prev:</em> The Maintenance
 Room</a>    
-<a href="scene.htm" class="nav"><em>Next:</em> Making a Scene</a>    
+<a href="scene.html" class="nav"><em>Next:</em> Making a Scene</a>    
 </span>
 
 </div>
@@ -127,7 +129,7 @@ We still don't have a working lock, however. To do that we need a set of
 four brass wheels, each of which can be turned to any number from 0 to
 9. Much of the behaviour we need is already defined on the
 **NumberedDial** class, which you can read all about in the
-[Gadgets](../manual/gadget.htm) section of the *adv3Lite Library
+[Gadgets](../manual/gadget.html) section of the *adv3Lite Library
 Manual*. A NumberedDial can be turned to any number between its
 <span class="code">minSetting</span> and its
 <span class="code">maxSetting</span>, using the TURN TO or SET TO
@@ -421,7 +423,7 @@ Note that there's nothing magical about prefacing the object names of
 these Topics with t, that's just a convention I employ to make Topics
 easily recognizable as such when I reference them elsewhere in my code.
 For the full story on Topics see the section on
-[Topics](../manual/topic.htm) in the *adv3Lite Library Manual*.
+[Topics](../manual/topic.html) in the *adv3Lite Library Manual*.
 
 The next step is to associate these topics with appropriate responses
 from our computer. As mentioned the way to do that is to define a couple
@@ -469,7 +471,7 @@ matches what the player asked for:
 </div>
 
 For the full story on Consultables and ConsultTopics, see the section on
-[Topic Entries](../manual/topicentry.htm) in the *adv3Lite Library
+[Topic Entries](../manual/topicentry.html) in the *adv3Lite Library
 Manual*.
 
   
@@ -601,7 +603,7 @@ check routine should therefore look like this:
 </div>
 
 For further information on the check() stage in general, see the [Action
-Responses](../manual/actres.htm#check) section of the *adv3Lite Library
+Responses](../manual/actres.html#check) section of the *adv3Lite Library
 Manual*.
 
 Finally, we need to provide a way for the player to enter the password
@@ -758,12 +760,12 @@ works as expected.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="schemes.htm" class="nav">Schemes and Devices</a> \> The
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="schemes.html" class="nav">Schemes and Devices</a> \> The
 Security Area  
-<span class="navnp"><a href="maintenance.htm" class="nav"><em>Prev:</em> The Maintenance
+<span class="navnp"><a href="maintenance.html" class="nav"><em>Prev:</em> The Maintenance
 Room</a>    
-<a href="scene.htm" class="nav"><em>Next:</em> Making a Scene</a>    
+<a href="scene.html" class="nav"><em>Next:</em> Making a Scene</a>    
 </span>
 
 </div>

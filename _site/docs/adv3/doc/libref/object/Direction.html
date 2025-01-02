@@ -1,0 +1,237 @@
+<p><span class="title">Direction</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#30">30</a>],
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3053">3053</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Directions. Each direction is represented by an instance of Direction.
+
+A Direction object encapsulates information about a travel direction. By
+using an object to represent each possible travel direction, we make it
+possible for a game or library extension to add new custom directions
+without having to change the basic library.
+
+*Modified in
+[en_us.t](../file/en_us.t.html)\[[3053](../source/en_us.t.html#3053)\]:*  
+The English-specific modifications for directions.
+
+`class `**`Direction`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Direction</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Direction</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>CompassDirection<code class="language-plaintext highlighter-rouge">](../object/CompassDirection.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RelativeDirection<code class="language-plaintext highlighter-rouge">](../object/RelativeDirection.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ShipboardDirection<code class="language-plaintext highlighter-rouge">](../object/ShipboardDirection.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>VerticalDirection`](../object/VerticalDirection.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>allDirections<code class="language-plaintext highlighter-rouge">](#allDirections)</code>  <code class="language-plaintext highlighter-rouge">[</code>dirProp<code class="language-plaintext highlighter-rouge">](#dirProp)</code>  <code class="language-plaintext highlighter-rouge">[</code>sortingOrder<code class="language-plaintext highlighter-rouge">](#sortingOrder)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>defaultConnector<code class="language-plaintext highlighter-rouge">](#defaultConnector)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeDirection<code class="language-plaintext highlighter-rouge">](#initializeDirection)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeDirectionClass<code class="language-plaintext highlighter-rouge">](#initializeDirectionClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayArriving<code class="language-plaintext highlighter-rouge">](#sayArriving)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](#sayDeparting)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="allDirections"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allDirections</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#100">100</a>]</p>
+
+<div class="desc">
+
+A master list of the defined directions. We build this automatically
+during initialization to include each Direction instance. Any operation
+that wants to iterate over all possible directions can run through this
+list.
+
+By using this master list to enumerate all possible directions rather
+than a hard-coded set of pre-defined directions, we can ensure that any
+new directions that a game or library extension adds will be
+incorporated automatically into the library simply by virtue of the
+existence Direction instances to represent the new directions.
+
+</div>
+
+<p><span id="dirProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dirProp</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#36">36</a>]</p>
+
+<div class="desc">
+
+The link property for the direction. This is a property pointer that we
+use to ask an actor's location for a TravelConnector when the actor
+attempts to travel in this direction.
+
+</div>
+
+<p><span id="sortingOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sortingOrder</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#85">85</a>]</p>
+
+<div class="desc">
+
+Our sorting order in the master list. We use this to present directions
+in a consistent, aesthetically pleasing order in listings involving
+multiple directions. The sorting order is simply an integer that gives
+the relative position in the list; the list of directions is sorted from
+lowest sorting order to highest. Sorting order numbers don't have to be
+contiguous, since we simply put the directions in an order that makes
+the sortingOrder values ascend through the list.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="defaultConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">defaultConnector (loc)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#45">45</a>]</p>
+
+<div class="desc">
+
+The default TravelConnector when an actor attempts travel in this
+direction, but the actor's location does not define the dirProp property
+for this direction. This is almost always a connector that goes nowhere,
+such as noTravel, since this is used only when a location doesn't have a
+link for travel in this direction.
+
+</div>
+
+<p><span id="initializeDirection"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeDirection ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#52">52</a>]</p>
+
+<div class="desc">
+
+Initialize. We'll use this routine to add each Direction instance to the
+master direction list (Direction.allDirections) during
+pre-initialization.
+
+</div>
+
+<p><span id="initializeDirectionClass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeDirectionClass ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#63">63</a>]</p>
+
+<div class="desc">
+
+Class initialization - this is called once on the class object. We'll
+build our master list of all of the Direction objects in the game, and
+then sort the list using the sorting order.
+
+</div>
+
+<p><span id="sayArriving"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArriving (traveler)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3055">3055</a>]</p>
+
+<div class="desc">
+
+describe a traveler arriving from this direction
+
+</div>
+
+<p><span id="sayDeparting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDeparting (traveler)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3062">3062</a>]</p>
+
+<div class="desc">
+
+describe a traveler departing in this direction
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Enumerators  
-<span class="navnp"><a href="strlit.htm" class="nav"><em>Prev:</em> String Literals</a>
-    <a href="startup.htm" class="nav"><em>Next:</em> The Main Program
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Enumerators  
+<span class="navnp"><a href="strlit.html" class="nav"><em>Prev:</em> String Literals</a>
+    <a href="startup.html" class="nav"><em>Next:</em> The Main Program
 Entrypoint</a>     </span>
 
 </div>
@@ -113,10 +115,10 @@ keyword in the definition:
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Enumerators  
-<span class="navnp"><a href="strlit.htm" class="nav"><em>Prev:</em> String Literals</a>
-    <a href="startup.htm" class="nav"><em>Next:</em> The Main Program
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Enumerators  
+<span class="navnp"><a href="strlit.html" class="nav"><em>Prev:</em> String Literals</a>
+    <a href="startup.html" class="nav"><em>Next:</em> The Main Program
 Entrypoint</a>     </span>
 
 </div>

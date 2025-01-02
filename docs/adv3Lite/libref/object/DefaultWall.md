@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultWall</span><span class="type">class</span>
 
 [roomparts.t](../file/roomparts.t.html)\[[61](../source/roomparts.t.html#61)\]

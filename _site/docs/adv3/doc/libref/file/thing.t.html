@@ -1,0 +1,105 @@
+<p><span class="title">thing.t</span><span class="type">file</span></p>
+
+<p><a href="../source/thing.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library - Thing
+
+This module defines Thing, the base class for physical objects in the
+simulation. We also define some utility classes that Thing uses
+internally.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>BagAffinityInfo<code class="language-plaintext highlighter-rouge">](../object/BagAffinityInfo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CanTouchInfo<code class="language-plaintext highlighter-rouge">](../object/CanTouchInfo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CheckStatus<code class="language-plaintext highlighter-rouge">](../object/CheckStatus.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CheckStatusFailure<code class="language-plaintext highlighter-rouge">](../object/CheckStatusFailure.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DropType<code class="language-plaintext highlighter-rouge">](../object/DropType.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DropTypeThrow<code class="language-plaintext highlighter-rouge">](../object/DropTypeThrow.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>EquivalentStateInfo<code class="language-plaintext highlighter-rouge">](../object/EquivalentStateInfo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SenseInfo<code class="language-plaintext highlighter-rouge">](../object/SenseInfo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SightTouchInfo<code class="language-plaintext highlighter-rouge">](../object/SightTouchInfo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Thing<code class="language-plaintext highlighter-rouge">](../object/Thing.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ThingState<code class="language-plaintext highlighter-rouge">](../object/ThingState.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>VocabObject<code class="language-plaintext highlighter-rouge">](../object/VocabObject.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>checkStatusSuccess<code class="language-plaintext highlighter-rouge">](../object/checkStatusSuccess.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>dropTypeDrop<code class="language-plaintext highlighter-rouge">](../object/dropTypeDrop.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>senseTmp<code class="language-plaintext highlighter-rouge">](../object/senseTmp.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>findBestFacet<code class="language-plaintext highlighter-rouge">](#findBestFacet)</code>  <code class="language-plaintext highlighter-rouge">[</code>senseInfoTableSubset<code class="language-plaintext highlighter-rouge">](#senseInfoTableSubset)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="findBestFacet"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findBestFacet (actor, lst)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#986">986</a>]</p>
+
+<div class="desc">
+
+Find the best facet from the given list of facets, from the perspective
+of the given actor. We'll find the facet that has the best visibility,
+or, visibilities being equal, the best touchability.
+
+</div>
+
+<p><span id="senseInfoTableSubset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">senseInfoTableSubset (senseTab, func)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#124">124</a>]</p>
+
+<div class="desc">
+
+Given a sense information table (a LookupTable returned from
+Thing.senseInfoTable()), return a vector of only those objects in the
+table that match the given criteria.
+
+'func' is a function that takes two arguments, func(obj, info), where
+'obj' is a simulation object and 'info' is the corresponding SenseInfo
+object. This function is invoked for each object in the sense info
+table; if 'func' returns true, then 'obj' is part of the list that we
+return.
+
+The return value is a simple vector of game objects. (Note that
+SenseInfo objects are not returned - just the simulation objects.)
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

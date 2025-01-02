@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>CyclicEventList : <a
-href="eventlist.htm">EventList</a><br />
+href="eventlist.html">EventList</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="stopeventlist.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="randomeventlist.htm">[Next]</a></td>
+href="stopeventlist.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="randomeventlist.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -32,7 +34,7 @@ the volcano. We could control this by means of a CyclicEventList linked
 to a StopEventList that sets fire to the bush first time round and
 merely displays some text thereafter. The following code shows how we
 might go about this, at the same time providing several other examples
-of EventLists, an example of a [SenseDaemon](sensedaemon.htm), and a
+of EventLists, an example of a [SenseDaemon](sensedaemon.html), and a
 means of disposing of the pesky Golden Banana of Discord:  
   
   

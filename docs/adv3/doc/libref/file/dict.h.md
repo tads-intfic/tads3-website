@@ -1,3 +1,5 @@
+---
+---
 <span class="title">dict.h</span><span class="type">file</span>
 
 [source file](../source/dict.h.html)

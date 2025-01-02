@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Hello, World!  
-<span class="navnp"><a href="naming.htm" class="nav"><em>Prev:</em> Naming Conventions</a>
-    <a href="tools.htm" class="nav"><em>Next:</em> The Tools</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Hello, World!  
+<span class="navnp"><a href="naming.html" class="nav"><em>Prev:</em> Naming Conventions</a>
+    <a href="tools.html" class="nav"><em>Next:</em> The Tools</a>    
 </span>
 
 </div>
@@ -189,10 +191,10 @@ library is all written in the same language as your game program is.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Hello, World!  
-<span class="navnp"><a href="naming.htm" class="nav"><em>Prev:</em> Naming Conventions</a>
-    <a href="tools.htm" class="nav"><em>Next:</em> The Tools</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Hello, World!  
+<span class="navnp"><a href="naming.html" class="nav"><em>Prev:</em> Naming Conventions</a>
+    <a href="tools.html" class="nav"><em>Next:</em> The Tools</a>    
 </span>
 
 </div>

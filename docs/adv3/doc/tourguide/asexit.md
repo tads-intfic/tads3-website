@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>asExit<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="roomconnector.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="enterable.htm">[Next]</a></td>
+href="roomconnector.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="enterable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -56,4 +58,4 @@ random\>\> car
   
 Once again, the new properties to be added are shown in bold. Note that
 we point the south property not to another room, but to the previously
-defined [RoomConnector](roomconnector.htm), entranceTunnel.  
+defined [RoomConnector](roomconnector.html), entranceTunnel.  

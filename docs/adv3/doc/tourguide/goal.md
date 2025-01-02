@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Goal : MenuTopicItem,
 HintMenuObject<br />
 </strong></td>
-<td style="text-align: right;"><a href="hintmenu.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="hint.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="hintmenu.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="hint.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -489,7 +491,7 @@ Can be written simply as:
     \]  
 ;  
   
-(The [Goal template](goaltemplate.htm) has a couple of extra optional
+(The [Goal template](goaltemplate.html) has a couple of extra optional
 elements, but we'll try to keep things simple here).  
   
 After all these preliminaries, we can at last proceed to give a few

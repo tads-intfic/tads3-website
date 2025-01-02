@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SensoryEmanation</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[144](../source/objects.t.html#144)\]

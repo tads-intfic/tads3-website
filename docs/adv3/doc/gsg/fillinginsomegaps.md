@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](handlingcashtransactions.htm)
-  [\[Next\]](countingthecash.htm)*
+*[\[Previous\]](handlingcashtransactions.html)
+  [\[Next\]](countingthecash.html)*
 
 # Chapter 8 - Finishing Off
 
@@ -1159,7 +1161,7 @@ other will be chosen in response to an **examine** command. So in this
 case when the player types **examine tree** the parser will assume that
 it is the sycamore tree that is meant, without troubling the player with
 a disambiguation request. For a fuller discussion of 'logical rank' see
-the discussion of [verify](verify.htm) above (and the section on 'Action
+the discussion of [verify](verify.html) above (and the section on 'Action
 Results' in the *Technical Manual*).  
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
@@ -1234,7 +1236,7 @@ tells them about.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](handlingcashtransactions.htm)
-  [\[Next\]](countingthecash.htm)*
+*[\[Previous\]](handlingcashtransactions.html)
+  [\[Next\]](countingthecash.html)*
 
 </div>

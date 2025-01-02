@@ -1,0 +1,39 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>awardPointsOnce<br />
+</strong></td>
+<td style="text-align: right;"><a href="awardpoints.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="scoreranktable.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>In cases where you want to prevent points being awarded several times
+for the same feat, you could use awardPointsOnce in preference to
+<a href="awardpoints.html">awardPoints</a> and as an alternative to
+<a href="achievement.html">addToScoreOnce</a>.</p>
+
+<p>+++ bronzeBowl : Container ’bronze bowl/vessel’ ’bronze bowl’ <br />
+  ”It’s of ancient and somewhat curious design, cast with two rows of<br />
+    pomegranates all the way round the outside. ”<br />
+   bulkCapcity = 4<br />
+   bulk = 5<br />
+   weight = 5 <br />
+   **dobjFor(Take)<br />
+   {<br />
+     action()<br />
+     {<br />
+       achievement.awardPointsOnce();<br />
+       inherited;<br />
+     }<br />
+   }<br />
+   achievement : Achievement { +3 ”recovering the bronze bowl” }<br />
+**;</p>
+
+<p>Once again, note the use of the <a href="achievementtemplate.html">Achievement
+template</a> here.</p>

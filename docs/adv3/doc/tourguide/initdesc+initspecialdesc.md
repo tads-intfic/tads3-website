@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>initDesc &amp;
 initSpecialDesc<br />
 </strong></td>
-<td style="text-align: right;"><a href="vocabwords.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="globalparamname.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="vocabwords.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="globalparamname.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

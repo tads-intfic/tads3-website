@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="character.htm" class="nav">Character Building</a> \> The Flight
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="character.html" class="nav">Character Building</a> \> The Flight
 Attendant  
-<span class="navnp"><a href="cortes.htm" class="nav"><em>Prev:</em> Pablo Cortez</a>
-    <a href="conversation.htm" class="nav"><em>Next:</em> The Art of
+<span class="navnp"><a href="cortes.html" class="nav"><em>Prev:</em> Pablo Cortez</a>
+    <a href="conversation.html" class="nav"><em>Next:</em> The Art of
 Conversation</a>     </span>
 
 </div>
@@ -381,7 +383,7 @@ Angela hasn't seen the ticket:
 And that's where we'll leave Angela and her ActorStates for now,
 although we'll find further uses for them in the next chapter when we
 come to implement some conversation. In the meantime, if you'd like more
-information on [ActorStates](../manual/actorstate.htm), see the
+information on [ActorStates](../manual/actorstate.html), see the
 *adv3Lite Library Manual*.
 
 </div>
@@ -391,11 +393,11 @@ information on [ActorStates](../manual/actorstate.htm), see the
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="character.htm" class="nav">Character Building</a> \> The Flight
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="character.html" class="nav">Character Building</a> \> The Flight
 Attendant  
-<span class="navnp"><a href="cortes.htm" class="nav"><em>Prev:</em> Pablo Cortez</a>
-    <a href="conversation.htm" class="nav"><em>Next:</em> The Art of
+<span class="navnp"><a href="cortes.html" class="nav"><em>Prev:</em> Pablo Cortez</a>
+    <a href="conversation.html" class="nav"><em>Next:</em> The Art of
 Conversation</a>     </span>
 
 </div>

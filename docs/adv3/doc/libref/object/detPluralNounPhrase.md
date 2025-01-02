@@ -1,3 +1,5 @@
+---
+---
 <span class="title">detPluralNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`detPluralNounPhrase(main)`](../object/detPluralNounPhrase(main).html)</span>` :   `[`LayeredNounPhraseProd`](../object/LayeredNounPhraseProd.html)

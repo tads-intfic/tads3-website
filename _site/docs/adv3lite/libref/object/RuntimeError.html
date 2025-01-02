@@ -1,0 +1,197 @@
+<p><span class="title">RuntimeError</span><span class="type">class</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#777">777</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+RuntimeError exception class. The VM creates and throws an instance of
+this class when any run-time error occurs. The VM explicitly sets the
+exceptionMessage property to a string giving the VM error message for
+the run-time error that occurred.
+
+`class `**`RuntimeError`**` :   `[`Exception`](../object/Exception.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">RuntimeError</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Exception<code class="language-plaintext highlighter-rouge">](../object/Exception.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">RuntimeError</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>StorageServerError`](../object/StorageServerError.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>errno_<code class="language-plaintext highlighter-rouge">](#errno_)</code>  <code class="language-plaintext highlighter-rouge">[</code>exceptionMessage<code class="language-plaintext highlighter-rouge">](#exceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>stack_<code class="language-plaintext highlighter-rouge">](#stack_)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>errmsg_<code class="language-plaintext highlighter-rouge">](../object/Exception.html#errmsg_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>displayException<code class="language-plaintext highlighter-rouge">](#displayException)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDebuggerSignal<code class="language-plaintext highlighter-rouge">](#isDebuggerSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>newRuntimeError<code class="language-plaintext highlighter-rouge">](#newRuntimeError)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getExceptionMessage<code class="language-plaintext highlighter-rouge">](../object/Exception.html#getExceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStackTrace<code class="language-plaintext highlighter-rouge">](../object/Exception.html#showStackTrace)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="errno_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errno_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#828">828</a>]</p>
+
+<div class="desc">
+
+the VM error number of the exception
+
+</div>
+
+<p><span id="exceptionMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exceptionMessage</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#831">831</a>]</p>
+
+<div class="desc">
+
+the exception message, provided to us by the VM after creation
+
+</div>
+
+<p><span id="stack_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stack_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#834">834</a>]</p>
+
+<div class="desc">
+
+the stack trace, which we store at the time we're created
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (errno, ...)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#778">778</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="displayException"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">displayException ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#809">809</a>]</p>
+
+<div class="desc">
+
+display the exception
+
+</div>
+
+<p><span id="isDebuggerSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isDebuggerSignal ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#819">819</a>]</p>
+
+<div class="desc">
+
+check to see if it's a debugger signal of some kind
+
+</div>
+
+<p><span id="newRuntimeError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">newRuntimeError (errno, msg)</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#801">801</a>]</p>
+
+<div class="desc">
+
+create a runtime error with a given error message
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

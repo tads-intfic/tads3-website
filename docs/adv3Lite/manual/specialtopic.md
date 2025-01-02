@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Special Topics  
-<span class="navnp"><a href="suggest.htm" class="nav"><em>Prev:</em> Suggesting
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Special Topics  
+<span class="navnp"><a href="suggest.html" class="nav"><em>Prev:</em> Suggesting
 Conversational Topics</a>    
-<a href="topicgroup.htm" class="nav"><em>Next:</em> Topic Groups</a>    
+<a href="topicgroup.html" class="nav"><em>Next:</em> Topic Groups</a>    
 </span>
 
 </div>
@@ -231,7 +233,7 @@ You can use SayTopics wherever you like, but the best use is probably
 just after the NPC the player character is in conversation with has just
 asked a question to which they might form an appropriate reply, which
 means you'll typically use SayTopics in [Conversation
-Nodes](convnode.htm).
+Nodes](convnode.html).
 
 ### <span id="implicitsay">Controlling Implicit Say</span>
 
@@ -533,11 +535,11 @@ but your topic vocab needs to cope with the rest.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Special Topics  
-<span class="navnp"><a href="suggest.htm" class="nav"><em>Prev:</em> Suggesting
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Special Topics  
+<span class="navnp"><a href="suggest.html" class="nav"><em>Prev:</em> Suggesting
 Conversational Topics</a>    
-<a href="topicgroup.htm" class="nav"><em>Next:</em> Topic Groups</a>    
+<a href="topicgroup.html" class="nav"><em>Next:</em> Topic Groups</a>    
 </span>
 
 </div>

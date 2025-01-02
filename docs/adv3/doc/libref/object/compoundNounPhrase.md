@@ -1,3 +1,5 @@
+---
+---
 <span class="title">compoundNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`compoundNounPhrase(of)`](../object/compoundNounPhrase(of).html)</span>` :   `[`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)

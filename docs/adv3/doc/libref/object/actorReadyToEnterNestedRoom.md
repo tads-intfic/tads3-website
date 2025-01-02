@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorReadyToEnterNestedRoom</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[324](../source/precond.t.html#324)\]

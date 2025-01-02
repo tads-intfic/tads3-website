@@ -1,3 +1,5 @@
+---
+---
 <span class="title">menuOutputStream</span><span class="type">object</span>
 
 [menusys.t](../file/menusys.t.html)\[[84](../source/menusys.t.html#84)\]

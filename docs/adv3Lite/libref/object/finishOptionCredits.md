@@ -1,3 +1,5 @@
+---
+---
 <span class="title">finishOptionCredits</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[1300](../source/misc.t.html#1300)\]

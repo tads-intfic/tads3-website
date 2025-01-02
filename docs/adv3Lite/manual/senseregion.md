@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> SenseRegion  
-<span class="navnp"><a href="score.htm" class="nav"><em>Prev:</em> Scoring</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> SenseRegion  
+<span class="navnp"><a href="score.html" class="nav"><em>Prev:</em> Scoring</a>
    
-<a href="topicentry.htm" class="nav"><em>Next:</em> Topic Entries</a>
+<a href="topicentry.html" class="nav"><em>Next:</em> Topic Entries</a>
     </span>
 
 </div>
@@ -121,10 +123,10 @@ the following properties on the SenseRegion:
   the target object. Note that travel will not be attempted if the
   action that would have triggered it (e.g. trying to take a Fixture) is
   ruled out at the verify stage. Note that the default behaviour of a
-  SenseRegion is to take the value of [fastGoTo](room.htm#regionprops)
+  SenseRegion is to take the value of [fastGoTo](room.html#regionprops)
   from <span class="code">autoGoTo</span> so that any implicit GoTo
   action is not interrupted by the need to issue
-  [CONTINUE](pathfind.htm) commands.
+  [CONTINUE](pathfind.html) commands.
 - **contSpace**: flag, do we want to treat this SenseRegion as a
   continuous space (such as a relatively small room in a house)? If this
   is true (it's nil by default) then moving from one room to another
@@ -139,7 +141,7 @@ Room can be in two or more SenseRegions), but that SenseRegions cannot
 normally be changed during the course of a game, since they are
 initialized by the library at the pre-init stage. If you need a
 SenseRegion that changes during the course of play, you can try using
-the [DynamicRegion](../../extensions/docs/dynregion.htm) extension.
+the [DynamicRegion](../../extensions/docs/dynregion.html) extension.
 
 <span id="inoutprops"></span>
 
@@ -197,9 +199,9 @@ sound and smell when it was closed you might define:
 
 Note that while a SenseRegion's <span class="code">familiar</span>
 property has the same meaning as it does on an ordinary
-[Region](room.htm#regionprops), the SenseRegion class overrides the
+[Region](room.html#regionprops), the SenseRegion class overrides the
 familiar property to make it work better with
-[pathfinding](pathfind.htm#senseregion) once any of the rooms in the
+[pathfinding](pathfind.html#senseregion) once any of the rooms in the
 SenseRegion has been visited. Nonetheless, if a SenseRegion starts out
 familiar to the Player Character in any case, its
 <span class="code">familiar</span> property can simply be overridden to
@@ -414,7 +416,7 @@ This would then give us:
 
 You can gain even more control over the way in which miscellaneous
 objects are listed in a remote location by using a
-[CustomRoomLister](roomdesc.htm#customroomlister). You do this by
+[CustomRoomLister](roomdesc.html#customroomlister). You do this by
 attaching a CustomRoomLister to the remoteContentsLister property of the
 room to be viewed remotely. For example we could define:
 
@@ -613,7 +615,7 @@ In this kind of situation the following rules apply:
     player character, so the player can then refer to them even if the
     player character has yet to see them. The same applies to objects
     that announce themselves via
-    [SensoryEvents](../../extensions/docs/sensory.htm#events).
+    [SensoryEvents](../../extensions/docs/sensory.html#events).
 3.  If the player command includes a vague plural (like 'DRAWERS' in the
     above example), then if the action requires the
     <span class="code">objVisible</span> PreCondition, objects the
@@ -633,7 +635,7 @@ In this kind of situation the following rules apply:
 
 One last point to consider is the interaction between the SenseRegion
 class and any remote communications set up via the
-[commLink](query.htm#commlink) object. You can set up a commLink
+[commLink](query.html#commlink) object. You can set up a commLink
 independently of any SenseRegion, and without the SenseRegion module
 being present, but if it is present it will have some effects on the way
 the commLink works. In particular, since the commLink allows
@@ -684,11 +686,11 @@ presence at a distance.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> SenseRegion  
-<span class="navnp"><a href="score.htm" class="nav"><em>Prev:</em> Scoring</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> SenseRegion  
+<span class="navnp"><a href="score.html" class="nav"><em>Prev:</em> Scoring</a>
    
-<a href="topicentry.htm" class="nav"><em>Next:</em> Topic Entries</a>
+<a href="topicentry.html" class="nav"><em>Next:</em> Topic Entries</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">HintMenu</span><span class="type">class</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[462](../source/hintsys.t.html#462)\]

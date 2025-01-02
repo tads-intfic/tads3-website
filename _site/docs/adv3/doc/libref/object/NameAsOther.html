@@ -1,0 +1,917 @@
+<p><span class="title">NameAsOther</span><span class="type">class</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1966">1966</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+An object that uses the same name as another object. This maps all of
+the properties involved in supplying the object's name, number, and
+other usage information from this object to a given target object, so
+that all messages involving this object use the same name as the target
+object. This is a mix-in class that can be used with any other class.
+
+Note that we map only the \*reported\* name for the object. We do NOT
+give this object any vocabulary from the other object; in other words,
+we don't enter this object into the dictionary with the other object's
+vocabulary words.
+
+`class `**`NameAsOther`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NameAsOther</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NameAsOther</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>NameAsParent<code class="language-plaintext highlighter-rouge">](../object/NameAsParent.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ComplexComponent`](../object/ComplexComponent.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>aDisambigName<code class="language-plaintext highlighter-rouge">](#aDisambigName)</code>  <code class="language-plaintext highlighter-rouge">[</code>aName<code class="language-plaintext highlighter-rouge">](#aName)</code>  <code class="language-plaintext highlighter-rouge">[</code>aNameObj<code class="language-plaintext highlighter-rouge">](#aNameObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>disambigEquivName<code class="language-plaintext highlighter-rouge">](#disambigEquivName)</code>  <code class="language-plaintext highlighter-rouge">[</code>disambigName<code class="language-plaintext highlighter-rouge">](#disambigName)</code>  <code class="language-plaintext highlighter-rouge">[</code>isHer<code class="language-plaintext highlighter-rouge">](#isHer)</code>  <code class="language-plaintext highlighter-rouge">[</code>isHim<code class="language-plaintext highlighter-rouge">](#isHim)</code>  <code class="language-plaintext highlighter-rouge">[</code>isIt<code class="language-plaintext highlighter-rouge">](#isIt)</code>  <code class="language-plaintext highlighter-rouge">[</code>isMassNoun<code class="language-plaintext highlighter-rouge">](#isMassNoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>isPlural<code class="language-plaintext highlighter-rouge">](#isPlural)</code>  <code class="language-plaintext highlighter-rouge">[</code>isProperName<code class="language-plaintext highlighter-rouge">](#isProperName)</code>  <code class="language-plaintext highlighter-rouge">[</code>isQualifiedName<code class="language-plaintext highlighter-rouge">](#isQualifiedName)</code>  <code class="language-plaintext highlighter-rouge">[</code>itIs<code class="language-plaintext highlighter-rouge">](#itIs)</code>  <code class="language-plaintext highlighter-rouge">[</code>itIsContraction<code class="language-plaintext highlighter-rouge">](#itIsContraction)</code>  <code class="language-plaintext highlighter-rouge">[</code>itNom<code class="language-plaintext highlighter-rouge">](#itNom)</code>  <code class="language-plaintext highlighter-rouge">[</code>itObj<code class="language-plaintext highlighter-rouge">](#itObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>itPossAdj<code class="language-plaintext highlighter-rouge">](#itPossAdj)</code>  <code class="language-plaintext highlighter-rouge">[</code>itPossNoun<code class="language-plaintext highlighter-rouge">](#itPossNoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>itReflexive<code class="language-plaintext highlighter-rouge">](#itReflexive)</code>  <code class="language-plaintext highlighter-rouge">[</code>listName<code class="language-plaintext highlighter-rouge">](#listName)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>nameDoes<code class="language-plaintext highlighter-rouge">](#nameDoes)</code>  <code class="language-plaintext highlighter-rouge">[</code>nameIs<code class="language-plaintext highlighter-rouge">](#nameIs)</code>  <code class="language-plaintext highlighter-rouge">[</code>nameIsnt<code class="language-plaintext highlighter-rouge">](#nameIsnt)</code>  <code class="language-plaintext highlighter-rouge">[</code>nameSays<code class="language-plaintext highlighter-rouge">](#nameSays)</code>  <code class="language-plaintext highlighter-rouge">[</code>nameSees<code class="language-plaintext highlighter-rouge">](#nameSees)</code>  <code class="language-plaintext highlighter-rouge">[</code>pluralName<code class="language-plaintext highlighter-rouge">](#pluralName)</code>  <code class="language-plaintext highlighter-rouge">[</code>targetObj<code class="language-plaintext highlighter-rouge">](#targetObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>thatIsContraction<code class="language-plaintext highlighter-rouge">](#thatIsContraction)</code>  <code class="language-plaintext highlighter-rouge">[</code>thatNom<code class="language-plaintext highlighter-rouge">](#thatNom)</code>  <code class="language-plaintext highlighter-rouge">[</code>thatObj<code class="language-plaintext highlighter-rouge">](#thatObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>theDisambigName<code class="language-plaintext highlighter-rouge">](#theDisambigName)</code>  <code class="language-plaintext highlighter-rouge">[</code>theName<code class="language-plaintext highlighter-rouge">](#theName)</code>  <code class="language-plaintext highlighter-rouge">[</code>theNameObj<code class="language-plaintext highlighter-rouge">](#theNameObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>theNamePossAdj<code class="language-plaintext highlighter-rouge">](#theNamePossAdj)</code>  <code class="language-plaintext highlighter-rouge">[</code>theNamePossNoun<code class="language-plaintext highlighter-rouge">](#theNamePossNoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>theNameWithOwner<code class="language-plaintext highlighter-rouge">](#theNameWithOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbCan<code class="language-plaintext highlighter-rouge">](#verbCan)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbCannot<code class="language-plaintext highlighter-rouge">](#verbCannot)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbCant<code class="language-plaintext highlighter-rouge">](#verbCant)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbEndingEs<code class="language-plaintext highlighter-rouge">](#verbEndingEs)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbEndingIes<code class="language-plaintext highlighter-rouge">](#verbEndingIes)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbEndingS<code class="language-plaintext highlighter-rouge">](#verbEndingS)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbEndingSD<code class="language-plaintext highlighter-rouge">](#verbEndingSD)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbEndingSEd<code class="language-plaintext highlighter-rouge">](#verbEndingSEd)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbMust<code class="language-plaintext highlighter-rouge">](#verbMust)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbToBe<code class="language-plaintext highlighter-rouge">](#verbToBe)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbToCome<code class="language-plaintext highlighter-rouge">](#verbToCome)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbToDo<code class="language-plaintext highlighter-rouge">](#verbToDo)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbToGo<code class="language-plaintext highlighter-rouge">](#verbToGo)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbToHave<code class="language-plaintext highlighter-rouge">](#verbToHave)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbToLeave<code class="language-plaintext highlighter-rouge">](#verbToLeave)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbToSay<code class="language-plaintext highlighter-rouge">](#verbToSay)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbToSee<code class="language-plaintext highlighter-rouge">](#verbToSee)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbWas<code class="language-plaintext highlighter-rouge">](#verbWas)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbWill<code class="language-plaintext highlighter-rouge">](#verbWill)</code>  <code class="language-plaintext highlighter-rouge">[</code>verbWont<code class="language-plaintext highlighter-rouge">](#verbWont)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>aNameOwnerLoc<code class="language-plaintext highlighter-rouge">](#aNameOwnerLoc)</code>  <code class="language-plaintext highlighter-rouge">[</code>conjugateRegularVerb<code class="language-plaintext highlighter-rouge">](#conjugateRegularVerb)</code>  <code class="language-plaintext highlighter-rouge">[</code>countDisambigName<code class="language-plaintext highlighter-rouge">](#countDisambigName)</code>  <code class="language-plaintext highlighter-rouge">[</code>countName<code class="language-plaintext highlighter-rouge">](#countName)</code>  <code class="language-plaintext highlighter-rouge">[</code>countNameOwnerLoc<code class="language-plaintext highlighter-rouge">](#countNameOwnerLoc)</code>  <code class="language-plaintext highlighter-rouge">[</code>itVerb<code class="language-plaintext highlighter-rouge">](#itVerb)</code>  <code class="language-plaintext highlighter-rouge">[</code>nameVerb<code class="language-plaintext highlighter-rouge">](#nameVerb)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePromptByOwnerLoc<code class="language-plaintext highlighter-rouge">](#notePromptByOwnerLoc)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePromptByPossAdj<code class="language-plaintext highlighter-rouge">](#notePromptByPossAdj)</code>  <code class="language-plaintext highlighter-rouge">[</code>theNameOwnerLoc<code class="language-plaintext highlighter-rouge">](#theNameOwnerLoc)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="aDisambigName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aDisambigName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1983">1983</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="aName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2018">2018</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="aNameObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aNameObj</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2019">2019</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="disambigEquivName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">disambigEquivName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1985">1985</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="disambigName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">disambigName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1981">1981</a>]</p>
+
+<div class="desc">
+
+map the derived name properties as well, in case any are overridden
+
+</div>
+
+<p><span id="isHer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isHer</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1974">1974</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="isHim"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isHim</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1973">1973</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="isIt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isIt</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1975">1975</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="isMassNoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isMassNoun</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1972">1972</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="isPlural"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isPlural</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1971">1971</a>]</p>
+
+<div class="desc">
+
+map our naming and usage properties to the target object
+
+</div>
+
+<p><span id="isProperName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isProperName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1976">1976</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="isQualifiedName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isQualifiedName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1977">1977</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="itIs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">itIs</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1998">1998</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="itIsContraction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">itIsContraction</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1999">1999</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="itNom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">itNom</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1990">1990</a>]</p>
+
+<div class="desc">
+
+map the pronoun properites, in case any are overridden
+
+</div>
+
+<p><span id="itObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">itObj</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1991">1991</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="itPossAdj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">itPossAdj</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1992">1992</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="itPossNoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">itPossNoun</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1993">1993</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="itReflexive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">itReflexive</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1994">1994</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="listName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1986">1986</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="name"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1978">1978</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="nameDoes"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nameDoes</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2028">2028</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="nameIs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nameIs</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2021">2021</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="nameIsnt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nameIsnt</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2022">2022</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="nameSays"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nameSays</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2035">2035</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="nameSees"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nameSees</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2033">2033</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="pluralName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pluralName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2020">2020</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="targetObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">targetObj</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1968">1968</a>]</p>
+
+<div class="desc">
+
+the target object - we'll use the same name as this object
+
+</div>
+
+<p><span id="thatIsContraction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thatIsContraction</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1997">1997</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="thatNom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thatNom</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1995">1995</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="thatObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thatObj</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1996">1996</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="theDisambigName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">theDisambigName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1982">1982</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="theName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">theName</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2003">2003</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="theNameObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">theNameObj</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2004">2004</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="theNamePossAdj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">theNamePossAdj</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2005">2005</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="theNamePossNoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">theNamePossNoun</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2006">2006</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="theNameWithOwner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">theNameWithOwner</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2007">2007</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbCan"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbCan</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2037">2037</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbCannot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbCannot</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2038">2038</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbCant"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbCant</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2039">2039</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbEndingEs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbEndingEs</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2046">2046</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbEndingIes"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbEndingIes</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2047">2047</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbEndingS"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbEndingS</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2043">2043</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbEndingSD"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbEndingSD</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2044">2044</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbEndingSEd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbEndingSEd</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2045">2045</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbMust"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbMust</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2036">2036</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbToBe"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbToBe</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2024">2024</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbToCome"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbToCome</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2030">2030</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbToDo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbToDo</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2027">2027</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbToGo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbToGo</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2029">2029</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbToHave"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbToHave</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2026">2026</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbToLeave"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbToLeave</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2031">2031</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbToSay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbToSay</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2034">2034</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbToSee"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbToSee</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2032">2032</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbWas"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbWas</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2025">2025</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbWill"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbWill</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2040">2040</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verbWont"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbWont</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2041">2041</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="aNameOwnerLoc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aNameOwnerLoc (ownerPri)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2008">2008</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="conjugateRegularVerb"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">conjugateRegularVerb (verb)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2001">2001</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="countDisambigName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countDisambigName (cnt)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1984">1984</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="countName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countName (cnt)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#1987">1987</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="countNameOwnerLoc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">countNameOwnerLoc (cnt, ownerPri)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2012">2012</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="itVerb"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">itVerb (verb)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2000">2000</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="nameVerb"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nameVerb (verb)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2023">2023</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="notePromptByOwnerLoc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePromptByOwnerLoc (ownerPri)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2014">2014</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="notePromptByPossAdj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePromptByPossAdj ( )</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2016">2016</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="theNameOwnerLoc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">theNameOwnerLoc (ownerPri)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2010">2010</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

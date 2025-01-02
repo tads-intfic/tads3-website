@@ -1,3 +1,5 @@
+---
+---
 <span class="title">HTTPServer</span><span class="type">class</span>
 
 [httpsrv.h](../file/httpsrv.h.html)\[[82](../source/httpsrv.h.html#82)\]
@@ -188,7 +190,7 @@ Get the port number. This returns an integer giving the TCP/IP network
 port number on which this server is listening for incoming connections.
 Clients connect to the port by including it in the HTTP URL, after the
 host name. For example, if the server is on port 10815, the client would
-connect to a URL of the form http://myserver.com:10815/index.htm.
+connect to a URL of the form http://myserver.com:10815/index.html.
 
 </div>
 

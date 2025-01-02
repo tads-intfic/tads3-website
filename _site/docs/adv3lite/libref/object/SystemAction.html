@@ -1,0 +1,250 @@
+<p><span class="title">SystemAction</span><span class="type">class</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1009">1009</a>],
+<a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#221">221</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The SystemAction class is for actions not affecting the game world but
+rather acting on the game session, such as SAVE, RESTORE and QUIT.
+
+`class `**`SystemAction`**` :   `[`IAction`](../object/IAction.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SystemAction</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>IAction<code class="language-plaintext highlighter-rouge">](../object/IAction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Action<code class="language-plaintext highlighter-rouge">](../object/Action.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ReplaceRedirector<code class="language-plaintext highlighter-rouge">](../object/ReplaceRedirector.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Redirector<code class="language-plaintext highlighter-rouge">](../object/Redirector.html)  
+</code>                                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SystemAction</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>FileOpAction`](../object/FileOpAction.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>About<code class="language-plaintext highlighter-rouge">](../object/About.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Again<code class="language-plaintext highlighter-rouge">](../object/Again.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Brief<code class="language-plaintext highlighter-rouge">](../object/Brief.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>CmdMenu<code class="language-plaintext highlighter-rouge">](../object/CmdMenu.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Credits<code class="language-plaintext highlighter-rouge">](../object/Credits.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Debug<code class="language-plaintext highlighter-rouge">](../object/Debug.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DebugI<code class="language-plaintext highlighter-rouge">](../object/DebugI.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Exits<code class="language-plaintext highlighter-rouge">](../object/Exits.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExitsColour<code class="language-plaintext highlighter-rouge">](../object/ExitsColour.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExitsMode<code class="language-plaintext highlighter-rouge">](../object/ExitsMode.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExtraHints<code class="language-plaintext highlighter-rouge">](../object/ExtraHints.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FootnoteAction<code class="language-plaintext highlighter-rouge">](../object/FootnoteAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Footnotes<code class="language-plaintext highlighter-rouge">](../object/Footnotes.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FootnotesStatus<code class="language-plaintext highlighter-rouge">](../object/FootnotesStatus.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>FullScore<code class="language-plaintext highlighter-rouge">](../object/FullScore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Help<code class="language-plaintext highlighter-rouge">](../object/Help.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Hints<code class="language-plaintext highlighter-rouge">](../object/Hints.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HintsOff<code class="language-plaintext highlighter-rouge">](../object/HintsOff.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Instructions<code class="language-plaintext highlighter-rouge">](../object/Instructions.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Intro<code class="language-plaintext highlighter-rouge">](../object/Intro.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>InventoryTall<code class="language-plaintext highlighter-rouge">](../object/InventoryTall.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>InventoryWide<code class="language-plaintext highlighter-rouge">](../object/InventoryWide.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListRelations<code class="language-plaintext highlighter-rouge">](../object/ListRelations.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListTests<code class="language-plaintext highlighter-rouge">](../object/ListTests.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Notify<code class="language-plaintext highlighter-rouge">](../object/Notify.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>NotifyOff<code class="language-plaintext highlighter-rouge">](../object/NotifyOff.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>NotifyOn<code class="language-plaintext highlighter-rouge">](../object/NotifyOn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Quit<code class="language-plaintext highlighter-rouge">](../object/Quit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RecordOff<code class="language-plaintext highlighter-rouge">](../object/RecordOff.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RelationDetails<code class="language-plaintext highlighter-rouge">](../object/RelationDetails.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Restart<code class="language-plaintext highlighter-rouge">](../object/Restart.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Restore<code class="language-plaintext highlighter-rouge">](../object/Restore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Sample<code class="language-plaintext highlighter-rouge">](../object/Sample.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Score<code class="language-plaintext highlighter-rouge">](../object/Score.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ScriptOff<code class="language-plaintext highlighter-rouge">](../object/ScriptOff.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Topics<code class="language-plaintext highlighter-rouge">](../object/Topics.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Undo<code class="language-plaintext highlighter-rouge">](../object/Undo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Verbose<code class="language-plaintext highlighter-rouge">](../object/Verbose.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Version<code class="language-plaintext highlighter-rouge">](../object/Version.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WhereHelp<code class="language-plaintext highlighter-rouge">](../object/WhereHelp.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>includeInUndo<code class="language-plaintext highlighter-rouge">](#includeInUndo)</code>  <code class="language-plaintext highlighter-rouge">[</code>isRepeatable<code class="language-plaintext highlighter-rouge">](#isRepeatable)</code>  <code class="language-plaintext highlighter-rouge">[</code>timeTaken<code class="language-plaintext highlighter-rouge">](#timeTaken)</code>  <code class="language-plaintext highlighter-rouge">[</code>turnsTaken<code class="language-plaintext highlighter-rouge">](#turnsTaken)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">IAction</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>againRepeatsParse<code class="language-plaintext highlighter-rouge">](../object/IAction.html#againRepeatsParse)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>actionFailed<code class="language-plaintext highlighter-rouge">](../object/Action.html#actionFailed)</code>  <code class="language-plaintext highlighter-rouge">[</code>advanceOnFailure<code class="language-plaintext highlighter-rouge">](../object/Action.html#advanceOnFailure)</code>  <code class="language-plaintext highlighter-rouge">[</code>allowAll<code class="language-plaintext highlighter-rouge">](../object/Action.html#allowAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>extraMessageParams<code class="language-plaintext highlighter-rouge">](../object/Action.html#extraMessageParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>failCheckMsg<code class="language-plaintext highlighter-rouge">](../object/Action.html#failCheckMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>failedActionCountsAsTurn<code class="language-plaintext highlighter-rouge">](../object/Action.html#failedActionCountsAsTurn)</code>  <code class="language-plaintext highlighter-rouge">[</code>implicitTimeTaken<code class="language-plaintext highlighter-rouge">](../object/Action.html#implicitTimeTaken)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConversational<code class="language-plaintext highlighter-rouge">](../object/Action.html#isConversational)</code>  <code class="language-plaintext highlighter-rouge">[</code>isImplicit<code class="language-plaintext highlighter-rouge">](../object/Action.html#isImplicit)</code>  <code class="language-plaintext highlighter-rouge">[</code>oldRoom<code class="language-plaintext highlighter-rouge">](../object/Action.html#oldRoom)</code>  <code class="language-plaintext highlighter-rouge">[</code>parentAction<code class="language-plaintext highlighter-rouge">](../object/Action.html#parentAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>parentAllowAll<code class="language-plaintext highlighter-rouge">](../object/Action.html#parentAllowAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>preCond<code class="language-plaintext highlighter-rouge">](../object/Action.html#preCond)</code>  <code class="language-plaintext highlighter-rouge">[</code>redirectParent<code class="language-plaintext highlighter-rouge">](../object/Action.html#redirectParent)</code>  <code class="language-plaintext highlighter-rouge">[</code>reportImplicitActions<code class="language-plaintext highlighter-rouge">](../object/Action.html#reportImplicitActions)</code>  <code class="language-plaintext highlighter-rouge">[</code>scopeList<code class="language-plaintext highlighter-rouge">](../object/Action.html#scopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>spellingPriority<code class="language-plaintext highlighter-rouge">](../object/Action.html#spellingPriority)</code>  <code class="language-plaintext highlighter-rouge">[</code>synthParamID<code class="language-plaintext highlighter-rouge">](../object/Action.html#synthParamID)</code>  <code class="language-plaintext highlighter-rouge">[</code>unhides<code class="language-plaintext highlighter-rouge">](../object/Action.html#unhides)</code>  <code class="language-plaintext highlighter-rouge">[</code>verifyObj<code class="language-plaintext highlighter-rouge">](../object/Action.html#verifyObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>wasIlluminated<code class="language-plaintext highlighter-rouge">](../object/Action.html#wasIlluminated)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>afterAction<code class="language-plaintext highlighter-rouge">](#afterAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>exec<code class="language-plaintext highlighter-rouge">](#exec)</code>  <code class="language-plaintext highlighter-rouge">[</code>execCycle<code class="language-plaintext highlighter-rouge">](#execCycle)</code>  <code class="language-plaintext highlighter-rouge">[</code>getInputFile<code class="language-plaintext highlighter-rouge">](#getInputFile)</code>  <code class="language-plaintext highlighter-rouge">[</code>turnSequence<code class="language-plaintext highlighter-rouge">](#turnSequence)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">IAction</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execResolvedAction<code class="language-plaintext highlighter-rouge">](../object/IAction.html#execResolvedAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolvedObjectsInScope<code class="language-plaintext highlighter-rouge">](../object/IAction.html#resolvedObjectsInScope)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreObjects<code class="language-plaintext highlighter-rouge">](../object/IAction.html#scoreObjects)</code>  <code class="language-plaintext highlighter-rouge">[</code>setResolvedObjects<code class="language-plaintext highlighter-rouge">](../object/IAction.html#setResolvedObjects)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>acknowledgeNotifyStatus<code class="language-plaintext highlighter-rouge">](../object/Action.html#acknowledgeNotifyStatus)</code>  <code class="language-plaintext highlighter-rouge">[</code>addExtraScopeItems<code class="language-plaintext highlighter-rouge">](../object/Action.html#addExtraScopeItems)</code>  <code class="language-plaintext highlighter-rouge">[</code>addImplicitTime<code class="language-plaintext highlighter-rouge">](../object/Action.html#addImplicitTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>advanceTime<code class="language-plaintext highlighter-rouge">](../object/Action.html#advanceTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>announceObject<code class="language-plaintext highlighter-rouge">](../object/Action.html#announceObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeAction<code class="language-plaintext highlighter-rouge">](../object/Action.html#beforeAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildImplicitActionAnnouncement<code class="language-plaintext highlighter-rouge">](../object/Action.html#buildImplicitActionAnnouncement)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildScopeList<code class="language-plaintext highlighter-rouge">](../object/Action.html#buildScopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkAction<code class="language-plaintext highlighter-rouge">](../object/Action.html#checkAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkActionPreconditions<code class="language-plaintext highlighter-rouge">](../object/Action.html#checkActionPreconditions)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandNotPresent<code class="language-plaintext highlighter-rouge">](../object/Action.html#commandNotPresent)</code>  <code class="language-plaintext highlighter-rouge">[</code>execAction<code class="language-plaintext highlighter-rouge">](../object/Action.html#execAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>execGroup<code class="language-plaintext highlighter-rouge">](../object/Action.html#execGroup)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAll<code class="language-plaintext highlighter-rouge">](../object/Action.html#getAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAllUnhidden<code class="language-plaintext highlighter-rouge">](../object/Action.html#getAllUnhidden)</code>  <code class="language-plaintext highlighter-rouge">[</code>getMessageParam<code class="language-plaintext highlighter-rouge">](../object/Action.html#getMessageParam)</code>  <code class="language-plaintext highlighter-rouge">[</code>implicitAnnouncement<code class="language-plaintext highlighter-rouge">](../object/Action.html#implicitAnnouncement)</code>  <code class="language-plaintext highlighter-rouge">[</code>reportAction<code class="language-plaintext highlighter-rouge">](../object/Action.html#reportAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>setMessageParam<code class="language-plaintext highlighter-rouge">](../object/Action.html#setMessageParam)</code>  <code class="language-plaintext highlighter-rouge">[</code>setMessageParams<code class="language-plaintext highlighter-rouge">](../object/Action.html#setMessageParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>spPrefix<code class="language-plaintext highlighter-rouge">](../object/Action.html#spPrefix)</code>  <code class="language-plaintext highlighter-rouge">[</code>spSuffix<code class="language-plaintext highlighter-rouge">](../object/Action.html#spSuffix)</code>  <code class="language-plaintext highlighter-rouge">[</code>synthMessageParam<code class="language-plaintext highlighter-rouge">](../object/Action.html#synthMessageParam)</code>  <code class="language-plaintext highlighter-rouge">[</code>verify<code class="language-plaintext highlighter-rouge">](../object/Action.html#verify)</code>  <code class="language-plaintext highlighter-rouge">[</code>verifyObjRole<code class="language-plaintext highlighter-rouge">](../object/Action.html#verifyObjRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>wrapObjectsNP<code class="language-plaintext highlighter-rouge">](../object/Action.html#wrapObjectsNP)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ReplaceRedirector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>redirect<code class="language-plaintext highlighter-rouge">](../object/ReplaceRedirector.html#redirect)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>doInstead<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doInstead)</code>  <code class="language-plaintext highlighter-rouge">[</code>doNested<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doNested)</code>  <code class="language-plaintext highlighter-rouge">[</code>doOtherAction<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doOtherAction)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="includeInUndo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">includeInUndo</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1011">1011</a>]</p>
+
+<div class="desc">
+
+A SystemAction is not normally undo-able
+
+</div>
+
+<p><span id="isRepeatable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isRepeatable</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1014">1014</a>]</p>
+
+<div class="desc">
+
+A SystemAction is not normally repeatable
+
+</div>
+
+<p><span id="timeTaken"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timeTaken</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#226">226</a>]</p>
+
+<div class="desc">
+
+For OBJTIME extension; a SystemAction shouldn't normally take any game
+clock time.
+
+</div>
+
+<p><span id="turnsTaken"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">turnsTaken</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1033">1033</a>]</p>
+
+<div class="desc">
+
+A SystemAction doesn't take any turns (this is a bit belt-and-braces
+since turnSequence does nothing in any case).
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="afterAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterAction ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1020">1020</a>]</p>
+
+<div class="desc">
+
+Since a SystemAction isn't an action in the game world, we don't want it
+to trigger any after action notifications.
+
+</div>
+
+<p><span id="exec"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exec (cmd)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1039">1039</a>]</p>
+
+<div class="desc">
+
+Since this isn't an action within the game world we bypass all the
+normal pre-action handling and just execute a reduced cycle.
+
+</div>
+
+<p><span id="execCycle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execCycle (cmd)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1046">1046</a>]</p>
+
+<div class="desc">
+
+There's no before notifications for a SystemAction so we simply execute
+the action and, if we should define it as repeatable, make a note of it
+in case the player issues an AGAIN command on the next turn.
+
+</div>
+
+<p><span id="getInputFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getInputFile (prompt, dialogType, fileType, flags)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1080">1080</a>]</p>
+
+<div class="desc">
+
+Ask for an input file. We call the input manager, which displays the
+appropriate local file selector dialog. This is used for SystemActions
+that need a file to act on, such as SAVE, RESTORE and QUIT.
+
+</div>
+
+<p><span id="turnSequence"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">turnSequence ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1027">1027</a>]</p>
+
+<div class="desc">
+
+Since a SystemAction isn't an action in the game world, we don't want it
+to count as a turn, so we don't run any Daemons or Fuses and we don't
+advance the turn count.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

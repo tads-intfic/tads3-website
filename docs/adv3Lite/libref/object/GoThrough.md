@@ -1,3 +1,5 @@
+---
+---
 <span class="title">GoThrough</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1140](../source/actions.t.html#1140)\]

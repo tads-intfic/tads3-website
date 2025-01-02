@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ConvIAction</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[6107](../source/action.t.html#6107)\]

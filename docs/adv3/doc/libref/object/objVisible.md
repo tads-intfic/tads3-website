@@ -1,3 +1,5 @@
+---
+---
 <span class="title">objVisible</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[124](../source/precond.t.html#124)\]

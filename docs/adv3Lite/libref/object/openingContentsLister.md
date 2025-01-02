@@ -1,3 +1,5 @@
+---
+---
 <span class="title">openingContentsLister</span><span class="type">object</span>
 
 [lister.t](../file/lister.t.html)\[[342](../source/lister.t.html#342)\]

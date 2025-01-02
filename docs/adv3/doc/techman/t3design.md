@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Tips on Designing
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Tips on Designing
 your Game  
-<span class="navnp"><a href="t3start.htm" class="nav"><em>Prev:</em> Creating Your First
+<span class="navnp"><a href="t3start.html" class="nav"><em>Prev:</em> Creating Your First
 Project</a>    
-<a href="t3des1.htm" class="nav"><em>Next:</em> IF Design: In
+<a href="t3des1.html" class="nav"><em>Next:</em> IF Design: In
 Practice</a>     </span>
 
 </div>
@@ -38,8 +40,8 @@ IF: namely what makes an enjoyable adventure game.
 
 <div class="sectoc">
 
-[IF Design: In Practice](t3des1.htm)  
-[IF Design: In Theory](t3des2.htm)  
+[IF Design: In Practice](t3des1.html)  
+[IF Design: In Theory](t3des2.html)  
 
 </div>
 
@@ -50,12 +52,12 @@ IF: namely what makes an enjoyable adventure game.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Tips on Designing
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Tips on Designing
 your Game  
-<span class="navnp"><a href="t3start.htm" class="nav"><em>Prev:</em> Creating Your First
+<span class="navnp"><a href="t3start.html" class="nav"><em>Prev:</em> Creating Your First
 Project</a>    
-<a href="t3des1.htm" class="nav"><em>Next:</em> IF Design: In
+<a href="t3des1.html" class="nav"><em>Next:</em> IF Design: In
 Practice</a>     </span>
 
 </div>

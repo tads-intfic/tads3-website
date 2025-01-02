@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ModuleID</span><span class="type">class</span>
 
 [modid.t](../file/modid.t.html)\[[37](../source/modid.t.html#37)\]

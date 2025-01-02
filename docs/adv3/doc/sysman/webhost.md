@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="web.htm" class="nav">Playing on the Web</a> \> Setting up a
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="web.html" class="nav">Playing on the Web</a> \> Setting up a
 custom TADS Web server  
-<span class="navnp"><a href="webdeploy.htm" class="nav"><em>Prev:</em> Deploying your Web UI
+<span class="navnp"><a href="webdeploy.html" class="nav"><em>Prev:</em> Deploying your Web UI
 game</a>    
-<a href="local.htm" class="nav"><em>Next:</em> Translating and
+<a href="local.html" class="nav"><em>Next:</em> Translating and
 Localizing TADS</a>     </span>
 
 </div>
@@ -29,7 +31,7 @@ Note that you **don't** need to set up a TADS server if all you want to
 do is deploy your TADS Web UI game. There's an existing public cloud of
 servers for any player running any game. To deploy your game, you merely
 have to upload it to the IF Archive and create an IFDB page for it. The
-[Web deployment chapter](webdeploy.htm) has the details.
+[Web deployment chapter](webdeploy.html) has the details.
 
 The TADS Web Play system is designed to work as a flexible "cloud"
 utility service where any number of servers can be added to the network.
@@ -507,12 +509,12 @@ step 4, where Apache launches it.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="web.htm" class="nav">Playing on the Web</a> \> Setting up a
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="web.html" class="nav">Playing on the Web</a> \> Setting up a
 custom TADS Web server  
-<span class="navnp"><a href="webdeploy.htm" class="nav"><em>Prev:</em> Deploying your Web UI
+<span class="navnp"><a href="webdeploy.html" class="nav"><em>Prev:</em> Deploying your Web UI
 game</a>    
-<a href="local.htm" class="nav"><em>Next:</em> Translating and
+<a href="local.html" class="nav"><em>Next:</em> Translating and
 Localizing TADS</a>     </span>
 
 </div>

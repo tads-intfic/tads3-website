@@ -1,3 +1,5 @@
+---
+---
 <span class="title">statusscoreStyleTag</span><span class="type">object</span>
 
 [output.t](../file/output.t.html)\[[858](../source/output.t.html#858)\]

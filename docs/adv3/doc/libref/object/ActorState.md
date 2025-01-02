@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ActorState</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4116](../source/actor.t.html#4116)\]

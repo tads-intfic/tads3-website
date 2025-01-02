@@ -1,0 +1,220 @@
+<p><span class="title">Posture</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#103">103</a>],
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2596">2596</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Postures. A posture describes how an actor is internally positioned:
+standing, lying, sitting. We represent postures with objects of class
+Posture to make it easier to add new game-specific postures.
+
+*Modified in
+[en_us.t](../file/en_us.t.html)\[[2596](../source/en_us.t.html#2596)\]:*  
+Give the postures some additional attributes
+
+`class `**`Posture`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Posture</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>lying<code class="language-plaintext highlighter-rouge">](../object/lying.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>sitting<code class="language-plaintext highlighter-rouge">](../object/sitting.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>standing<code class="language-plaintext highlighter-rouge">](../object/standing.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>msgVerbI<code class="language-plaintext highlighter-rouge">](#msgVerbI)</code>  <code class="language-plaintext highlighter-rouge">[</code>msgVerbIPast<code class="language-plaintext highlighter-rouge">](#msgVerbIPast)</code>  <code class="language-plaintext highlighter-rouge">[</code>msgVerbIPresent<code class="language-plaintext highlighter-rouge">](#msgVerbIPresent)</code>  <code class="language-plaintext highlighter-rouge">[</code>msgVerbT<code class="language-plaintext highlighter-rouge">](#msgVerbT)</code>  <code class="language-plaintext highlighter-rouge">[</code>msgVerbTPast<code class="language-plaintext highlighter-rouge">](#msgVerbTPast)</code>  <code class="language-plaintext highlighter-rouge">[</code>msgVerbTPresent<code class="language-plaintext highlighter-rouge">](#msgVerbTPresent)</code>  <code class="language-plaintext highlighter-rouge">[</code>participle<code class="language-plaintext highlighter-rouge">](#participle)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>setActorToPosture<code class="language-plaintext highlighter-rouge">](#setActorToPosture)</code>  <code class="language-plaintext highlighter-rouge">[</code>tryMakingPosture<code class="language-plaintext highlighter-rouge">](#tryMakingPosture)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="msgVerbI"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">msgVerbI</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2604">2604</a>]</p>
+
+<div class="desc">
+
+Intransitive and transitive forms of the verb, for use in library
+messages. Each of these methods simply calls one of the two
+corresponding fixed-tense properties, depending on the current tense.
+
+</div>
+
+<p><span id="msgVerbIPast"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// msgVerbIPast</code><span class="rem">Interface description only</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2616">2616</a>]</p>
+
+<div class="desc">
+
+our past-tense intransitive form ("he stood up")
+
+</div>
+
+<p><span id="msgVerbIPresent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// msgVerbIPresent</code><span class="rem">Interface description only</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2613">2613</a>]</p>
+
+<div class="desc">
+
+our present-tense intransitive form ("he stands up")
+
+</div>
+
+<p><span id="msgVerbT"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">msgVerbT</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2605">2605</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="msgVerbTPast"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// msgVerbTPast</code><span class="rem">Interface description only</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2622">2622</a>]</p>
+
+<div class="desc">
+
+our past-tense transitive form ("he stood on the chair")
+
+</div>
+
+<p><span id="msgVerbTPresent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// msgVerbTPresent</code><span class="rem">Interface description only</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2619">2619</a>]</p>
+
+<div class="desc">
+
+our present-tense transitive form ("he stands on the chair")
+
+</div>
+
+<p><span id="participle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// participle</code><span class="rem">Interface description only</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2625">2625</a>]</p>
+
+<div class="desc">
+
+our participle form
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="setActorToPosture"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setActorToPosture (actor, loc)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#111">111</a>]</p>
+
+<div class="desc">
+
+put the actor into our posture via a nested action
+
+</div>
+
+<p><span id="tryMakingPosture"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryMakingPosture (loc)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#108">108</a>]</p>
+
+<div class="desc">
+
+Try getting the current actor into this posture within the given
+location, by running an appropriate implied command.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

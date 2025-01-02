@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Thing - The Basics<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="thing-introduction.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="vocabwords.htm">[Next]</a></td>
+href="thing-introduction.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="vocabwords.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -20,7 +22,7 @@ href="vocabwords.htm">[Next]</a></td>
 The basic properties that apply to almost all Thing objects (and objects
 using many of the classes inheriting from Thing) are vocabWords, name,
 location, and desc. These are so common the standard [Thing
-template](thingtemplate.htm) allows them to be defined without naming
+template](thingtemplate.html) allows them to be defined without naming
 them, thus:  
   
 myObject : Thing 'vocabWords\_' 'name' @location  
@@ -30,7 +32,7 @@ myObject : Thing 'vocabWords\_' 'name' @location
 And for the most basic portable objects, this type of definition will
 often suffice without the need to define any other properties or
 methods. For example, we shall leave a coin for the player to find in
-the longCave room (using the [Thing template](thingtemplate.htm)):  
+the longCave room (using the [Thing template](thingtemplate.html)):  
   
 brassCoin : Thing '(small) brass coin/groat\*coins' 'small brass coin' @longCave  
   "On the obverse is the head of King Freddie the Fat, and on the reverse  
@@ -81,7 +83,7 @@ Note also that if location is an expression or method, it must be
 explicitly defined as a named property outside the template, e.g.
 location = (ship.location)  
   
-The [vocabWords](vocabwords.htm) property is perhaps the most complex of
+The [vocabWords](vocabwords.html) property is perhaps the most complex of
 the four, so we shall discuss it in a separate section.  
   
   

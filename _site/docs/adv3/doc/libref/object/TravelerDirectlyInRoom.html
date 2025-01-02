@@ -1,0 +1,180 @@
+<p><span class="title">TravelerDirectlyInRoom</span><span class="type">class</span></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#277">277</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Pre-condition: the traveler is directly in the given room. This will
+attempt to remove the traveler from any nested rooms within the given
+room, but cannot perform travel between rooms not related by
+containment.
+
+Note that the traveler is not necessarily the actor, because the actor
+could be in a vehicle.
+
+This is a class, because it has to be instantiated with more parameters
+than just a single 'obj' passed by default when evaluating
+preconditions. In particular, we need to know the actor performing the
+travel, the connector being traversed, and the room we need to be
+directly in.
+
+`class `**`TravelerDirectlyInRoom`**` :   `[`PreCondition`](../object/PreCondition.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TravelerDirectlyInRoom</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PreCondition<code class="language-plaintext highlighter-rouge">](../object/PreCondition.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>actor_<code class="language-plaintext highlighter-rouge">](#actor_)</code>  <code class="language-plaintext highlighter-rouge">[</code>conn_<code class="language-plaintext highlighter-rouge">](#conn_)</code>  <code class="language-plaintext highlighter-rouge">[</code>loc_<code class="language-plaintext highlighter-rouge">](#loc_)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreCondition</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>preCondOrder<code class="language-plaintext highlighter-rouge">](../object/PreCondition.html#preCondOrder)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>checkPreCondition<code class="language-plaintext highlighter-rouge">](#checkPreCondition)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreCondition</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>verifyPreCondition<code class="language-plaintext highlighter-rouge">](../object/PreCondition.html#verifyPreCondition)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="actor_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actor_</code></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#294">294</a>]</p>
+
+<div class="desc">
+
+the actor doing the travel
+
+</div>
+
+<p><span id="conn_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">conn_</code></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#297">297</a>]</p>
+
+<div class="desc">
+
+the connector being traversed
+
+</div>
+
+<p><span id="loc_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">loc_</code></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#300">300</a>]</p>
+
+<div class="desc">
+
+the room we need to be directly in
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="checkPreCondition"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkPreCondition (obj, allowImplicit)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#286">286</a>]</p>
+
+<div class="desc">
+
+remember the actor, connector, and room
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (actor, conn, loc)</code></p>
+
+<p><a href="../file/precond.t.html">precond.t</a>[<a href="../source/precond.t.html#278">278</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

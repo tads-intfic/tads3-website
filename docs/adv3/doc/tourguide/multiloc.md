@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>MultiLoc : BaseMultiLoc<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="vehiclebarrier.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="multiinstance.htm">[Next]</a></td>
+href="vehiclebarrier.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="multiinstance.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -20,11 +22,11 @@ href="multiinstance.htm">[Next]</a></td>
 A MultiLoc is an object that exists (or, at least, can exist) in several
 locations at once. We have already used several MultiLocs in the course
 of developing the game without much comment, examples including the mast
-in the [FloorlessRoom](floorlessroom.htm) example, the lake in the
-[Decoration](decoration.htm#lakedecoration) example, and of course the
+in the [FloorlessRoom](floorlessroom.html) example, the lake in the
+[Decoration](decoration.html#lakedecoration) example, and of course the
 specialized subclasses of MultiLoc, the
-[DistanceConnector](distanceconnector.htm) and the
-[SenseConnector](senseconnector.htm).  
+[DistanceConnector](distanceconnector.html) and the
+[SenseConnector](senseconnector.html).  
   
 Strictly speaking, a MultiLoc (as opposed to its specialized subclasses)
 represents a single object that exists in several locations by virtue of
@@ -41,10 +43,10 @@ moon.
   
 Although under some circumstances you can get away with using MultiLoc
 for other purposes (as we have up to now), for a large object that spans
-many locations you should normally use [MultiFaceted](multifaceted.htm),
-and for a [Decoration](decoration.htm) or [Fixture](fixture.htm) you
+many locations you should normally use [MultiFaceted](multifaceted.html),
+and for a [Decoration](decoration.html) or [Fixture](fixture.html) you
 want cloned in many locations you should normally use
-[MultiInstance](multiinstance.htm). There are two main reasons for this.
+[MultiInstance](multiinstance.html). There are two main reasons for this.
 The first is sensory - if a MultiLoc is visible in one location it is
 visible in all. Suppose, for example, that your player character is
 wandering around a forest at night, carrying a torch. If you created a
@@ -90,7 +92,7 @@ to retrieve it again while standing in swSquare.
 Note that we don't set the location property of a MultiLoc; instead we
 provide a list of locations in its **locationList** property, or else
 use one of the other methods to initialize its locations that are
-described in connexion with [MultiInstance](multiinstance.htm) below.
+described in connexion with [MultiInstance](multiinstance.html) below.
 Again, note that locationList is used only to *initialize* the list of
 locations a MultiLoc starts in at the beginning of the game. You cannot
 subsequently move a MultiLoc around by directly manipulating this list

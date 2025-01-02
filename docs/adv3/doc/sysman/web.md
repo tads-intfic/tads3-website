@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Playing on the
+<a href="toc.html" class="nav">Table of Contents</a> \| Playing on the
 Web  
-<span class="navnp"><a href="banners.htm" class="nav"><em>Prev:</em> The Banner Window
+<span class="navnp"><a href="banners.html" class="nav"><em>Prev:</em> The Banner Window
 Display Model</a>    
-<a href="webui.htm" class="nav"><em>Next:</em> The Web UI</a>    
+<a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
 </span>
 
 </div>
@@ -61,9 +63,9 @@ on Web Server Setup explains how to set this up.
 
 <div class="sectoc">
 
-[The Web UI](webui.htm)  
-[Deploying your Web UI game](webdeploy.htm)  
-[Setting up a custom TADS Web server](webhost.htm)  
+[The Web UI](webui.html)  
+[Deploying your Web UI game](webdeploy.html)  
+[Setting up a custom TADS Web server](webhost.html)  
 
 </div>
 
@@ -74,11 +76,11 @@ on Web Server Setup explains how to set this up.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Playing on the
+<a href="toc.html" class="nav">Table of Contents</a> \| Playing on the
 Web  
-<span class="navnp"><a href="banners.htm" class="nav"><em>Prev:</em> The Banner Window
+<span class="navnp"><a href="banners.html" class="nav"><em>Prev:</em> The Banner Window
 Display Model</a>    
-<a href="webui.htm" class="nav"><em>Next:</em> The Web UI</a>    
+<a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
 </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">pathfind.t</span><span class="type">file</span>
 
 [source file](../source/pathfind.t.html)

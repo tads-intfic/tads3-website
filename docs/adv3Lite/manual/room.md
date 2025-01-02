@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Rooms and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Rooms and
 Regions  
-<span class="navnp"><a href="thing.htm" class="nav"><em>Prev:</em>Things</a>
+<span class="navnp"><a href="thing.html" class="nav"><em>Prev:</em>Things</a>
    
-<a href="roomdesc.htm" class="nav"><em>Next:</em> Room Descriptions</a>
+<a href="roomdesc.html" class="nav"><em>Next:</em> Room Descriptions</a>
     </span>
 
 </div>
@@ -184,10 +186,10 @@ you do define any of these properties they can be defined as one of:
 
 - Another Room, in which case the player character would be moved to
   that room.
-- A [Door](door.htm), in which case the player would attempt to go
+- A [Door](door.html), in which case the player would attempt to go
   through that door (but may be prevented from doing so if the door is
   locked).
-- A [TravelConnector](travel.htm) (or any object subclassed from
+- A [TravelConnector](travel.html) (or any object subclassed from
   TravelConnector), in which case that TravelConnector's
   travelVia(actor) method will be triggered.
 - A single- or double-quoted string, in which case the string will
@@ -275,7 +277,7 @@ is actually defined (because the only way out is UP, say) but the
 shipboard directions are still notionally meaningful; on such a room you
 could simply define <span class="code">allowShipboardDirections =
 true</span>. (The enforcement of these conditions is carried out by the
-[Doer](doer.htm) method <span class="code">checkDirection()</span> which
+[Doer](doer.html) method <span class="code">checkDirection()</span> which
 is called from <span class="code">Doer.exec()</span> for any command
 involving a direction).
 
@@ -290,7 +292,7 @@ be an advantage (a) because it may help to make your code clearer and
 (b) you may not always want a connection back in the reverse direction,
 or you may want it to behave differently. On the other hand, if you
 would prefer the reverse connections to be automatically set up for you,
-you could try using the [symconn](../../extensions/docs/symconn.htm)
+you could try using the [symconn](../../extensions/docs/symconn.html)
 extension, which does just that.
 
   
@@ -394,7 +396,7 @@ Some other properties and methods of Room you may find useful include:
   location (the room s/he's in) each turn towards the end of the action
   processing cycle. It can be used, for example, to display a series of
   atmpospheric message string (by defining the Room as also being a
-  [EventList](eventList.htm) in which case
+  [EventList](eventList.html) in which case
   <span class="code">roomDaemon()</span> would automatically call its
   <span class="code">doScript()</span> method to cycle through its
   eventList, unless <span class="code">roomDaemon</span> had been
@@ -466,7 +468,7 @@ The ground (or floor) is present virtually everywhere (except for rooms
 representing odd locations like the tops of trees or masts). The library
 defines a **Floor** class, and one instance of it, **defaultGround**, to
 represent the presence of the floor/ground in every room. A Floor is a
-combination of [MultiLoc](multiloc.htm) and Decoration that (by default)
+combination of [MultiLoc](multiloc.html) and Decoration that (by default)
 is added into every Room. Its main purpose is to facilitate the parser's
 ability to disambiguate items by their locations. Without it, if, say,
 there were two identical coins, one on a table and one directly in the
@@ -608,7 +610,7 @@ The properties and methods of Region you may find useful include:
   travel notifications (to allow more specific ones to react first).
 - **fastGoTo**: if <span class="code">gameMain.fastGoTo</span> is true,
   the setting of <span class="code">fastGoTo</span> on individual
-  regions will have no effect, since [fast GoTo](pathfind.htm#fastgo)
+  regions will have no effect, since [fast GoTo](pathfind.html#fastgo)
   (GoTo without stopping for CONTINUE commands) will then be in effect
   globally. If <span class="code">gameMain.fastGoTo</span> is nil,
   however, setting it to true on an individual region will allow fast
@@ -630,9 +632,9 @@ them, but in summary the main uses to which Regions can be put include:
   a question depends on the region where the conversation takes place,
   or the effect of waving a magic wand varies from region to region
   or... well, you probably get the picture).
-- Specifying the location of a [MultiLoc](multiloc.htm) (an object that
+- Specifying the location of a [MultiLoc](multiloc.html) (an object that
   can be in several rooms at once).
-- Specifying the where condition of a [Doer](doer.htm).
+- Specifying the where condition of a [Doer](doer.html).
 - Designating a region as familiar at the start of a game so that the
   player character can navigate it with the pcRouteFinder (i.e. using
   the GO TO command) without having to explore it first.
@@ -678,7 +680,7 @@ stage. In particular the roomList property of a Region is built at
 PreInit stage. This means that the layout of regions *cannot* be changed
 during the course of a game. If you need a Region that changes during
 the course of your game you could try the
-[DynamicRegion](../../extensions/docs/dynregion.htm) extension.
+[DynamicRegion](../../extensions/docs/dynregion.html) extension.
 
 If a Region is defined with a <span class="code">rooms</span> property
 containing a list of rooms, each of these rooms will have that Region
@@ -728,12 +730,12 @@ defining the same relationship.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Rooms and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Rooms and
 Regions  
-<span class="navnp"><a href="thing.htm" class="nav"><em>Prev:</em> Things</a>
+<span class="navnp"><a href="thing.html" class="nav"><em>Prev:</em> Things</a>
    
-<a href="roomdesc.htm" class="nav"><em>Next:</em> Room Descriptions</a>
+<a href="roomdesc.html" class="nav"><em>Next:</em> Room Descriptions</a>
     </span>
 
 </div>

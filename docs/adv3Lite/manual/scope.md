@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Scope  
-<span class="navnp"><a href="query.htm" class="nav"><em>Prev:</em> Querying the World
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Scope  
+<span class="navnp"><a href="query.html" class="nav"><em>Prev:</em> Querying the World
 Model</a>    
-<a href="debug.htm" class="nav"><em>Next:</em> Debugging Commands</a>
+<a href="debug.html" class="nav"><em>Next:</em> Debugging Commands</a>
     </span>
 
 </div>
@@ -51,7 +53,7 @@ true). The list of objects in topic scope for the player character can
 be obtained by calling the method Q.topicScope().
 
 A third type of scope, universal scope, can sometimes be useful for
-[debugging commands](debug.htm) that need to be able to refer to any
+[debugging commands](debug.html) that need to be able to refer to any
 object in the game world regardless of whether the normal world model
 would allow the player character to interact with them. If you need to
 add debugging commands in your own game you can get a universal scope
@@ -78,7 +80,7 @@ or to allow objects to be viewed or listened to when they're in a remote
 location), there are several techniques available.
 
 First, you could amend the library's default definition of Scope by
-defining a [Special](query.htm#special) object that's active when you
+defining a [Special](query.html#special) object that's active when you
 need it. This allows you to change what is returned by
 Q.scopeList(actor) or Q.topicScope.
 
@@ -116,11 +118,11 @@ different way of defining scope for that particular action.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Scope  
-<span class="navnp"><a href="query.htm" class="nav"><em>Prev:</em> Querying the World
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Scope  
+<span class="navnp"><a href="query.html" class="nav"><em>Prev:</em> Querying the World
 Model</a>    
-<a href="debug.htm" class="nav"><em>Next:</em> Debugging Commands</a>
+<a href="debug.html" class="nav"><em>Next:</em> Debugging Commands</a>
     </span>
 
 </div>

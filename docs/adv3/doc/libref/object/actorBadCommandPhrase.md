@@ -1,3 +1,5 @@
+---
+---
 <span class="title">actorBadCommandPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)</span>` :   `[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)

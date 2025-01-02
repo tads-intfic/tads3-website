@@ -1,0 +1,184 @@
+<p><span class="title">SayTopic</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4659">4659</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A SayTopic is a kind of SpecialTopic that allows the player (character)
+to say virtually anything (within reason) to an NPC; a SayTopic may be
+triggered by a command that explicitly begins with SAY, but it may also
+be triggered by any combination of words that matches its matchObj and
+doesn't correspond to any other recognizable command. This allows the
+player to respond, for example, with either SAY YOU DON'T KNOW or just I
+DON'T KNOW, to trigger an appropriately defined SayTopic.
+
+`class `**`SayTopic`**` :   `[`SpecialTopic`](../object/SpecialTopic.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SayTopic</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>SpecialTopic<code class="language-plaintext highlighter-rouge">](../object/SpecialTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ActorTopicEntry<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ReplaceRedirector<code class="language-plaintext highlighter-rouge">](../object/ReplaceRedirector.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>Redirector<code class="language-plaintext highlighter-rouge">](../object/Redirector.html)  
+</code>                                         object<code class="language-plaintext highlighter-rouge">  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html)  
+</code>                                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>includeInList<code class="language-plaintext highlighter-rouge">](#includeInList)</code>  <code class="language-plaintext highlighter-rouge">[</code>includeSayInName<code class="language-plaintext highlighter-rouge">](#includeSayInName)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">SpecialTopic</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>askMatchObj<code class="language-plaintext highlighter-rouge">](../object/SpecialTopic.html#askMatchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>autoName<code class="language-plaintext highlighter-rouge">](../object/SpecialTopic.html#autoName)</code>  <code class="language-plaintext highlighter-rouge">[</code>rex<code class="language-plaintext highlighter-rouge">](../object/SpecialTopic.html#rex)</code>  <code class="language-plaintext highlighter-rouge">[</code>tellMatchObj<code class="language-plaintext highlighter-rouge">](../object/SpecialTopic.html#tellMatchObj)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>activated<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#activated)</code>  <code class="language-plaintext highlighter-rouge">[</code>active<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#active)</code>  <code class="language-plaintext highlighter-rouge">[</code>convKeys<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#convKeys)</code>  <code class="language-plaintext highlighter-rouge">[</code>curiosityAroused<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#curiosityAroused)</code>  <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>impliesGreeting<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#impliesGreeting)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConversational<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#isConversational)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#keyTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>listOrder<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#listOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#name)</code>  <code class="language-plaintext highlighter-rouge">[</code>suggestAs<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#suggestAs)</code>  <code class="language-plaintext highlighter-rouge">[</code>timesInvoked<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#timesInvoked)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchExactCase<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchExactCase)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchPattern<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchPattern)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchScore<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreBoost<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#scoreBoost)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicMatched<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicMatched)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>buildName<code class="language-plaintext highlighter-rouge">](#buildName)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">SpecialTopic</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>initializeTopicEntry<code class="language-plaintext highlighter-rouge">](../object/SpecialTopic.html#initializeTopicEntry)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ActorTopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>activate<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#activate)</code>  <code class="language-plaintext highlighter-rouge">[</code>addToConvKeyTable<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#addToConvKeyTable)</code>  <code class="language-plaintext highlighter-rouge">[</code>curiositySatisfied<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#curiositySatisfied)</code>  <code class="language-plaintext highlighter-rouge">[</code>deactivate<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#deactivate)</code>  <code class="language-plaintext highlighter-rouge">[</code>getKeyTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#getKeyTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleTopic<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#handleTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>isReachable<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#isReachable)</code>  <code class="language-plaintext highlighter-rouge">[</code>nodeActive<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#nodeActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>showKeyTopics<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#showKeyTopics)</code>  <code class="language-plaintext highlighter-rouge">[</code>timesToSuggest<code class="language-plaintext highlighter-rouge">](../object/ActorTopicEntry.html#timesToSuggest)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ReplaceRedirector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>redirect<code class="language-plaintext highlighter-rouge">](../object/ReplaceRedirector.html#redirect)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>doInstead<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doInstead)</code>  <code class="language-plaintext highlighter-rouge">[</code>doNested<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doNested)</code>  <code class="language-plaintext highlighter-rouge">[</code>doOtherAction<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doOtherAction)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchTopic<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#matchTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreBooster<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#scoreBooster)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicResponse<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html#topicResponse)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="includeInList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">includeInList</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4683">4683</a>]</p>
+
+<div class="desc">
+
+SayTopics belong in the sayTopics list of their TopicDatabase
+
+</div>
+
+<p><span id="includeSayInName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">includeSayInName</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4693">4693</a>]</p>
+
+<div class="desc">
+
+When a SayTopic is suggested we normally precede its name by 'say', e.g.
+'say you are happy'. In some cases an author might want to use a
+SayTopic to match input that's better without the initial 'say', e.g.
+'tell a lie', in which case set includeSayInName to nil to suppress the
+initial 'say' in topic inventory listings.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="buildName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildName ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#4667">4667</a>]</p>
+
+<div class="desc">
+
+When we construct the name of a SayTopic we use the name property of its
+matchObj rather that theName property, since it won't normally make
+sense to include the definite article at the beginning of suggestions of
+things that can be said.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

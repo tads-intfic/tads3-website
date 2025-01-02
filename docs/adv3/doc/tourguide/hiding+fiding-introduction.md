@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Hiding &amp; Finding -
 Introduction<br />
 </strong></td>
-<td style="text-align: right;"><a href="dynamite.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="wordgames.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="dynamite.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="wordgames.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -33,5 +35,5 @@ them (hopefully with more success than the disciples in Mark).
 There are various ways objects can be hidden and made to appear in
 response to a player action. We'll first explore how this can be done
 using Classes and concepts we've already met, and show how the library
-classes [Hidden](hidden.htm) and [PresentLater](presentlater.htm) can
+classes [Hidden](hidden.html) and [PresentLater](presentlater.html) can
 help with the task.  

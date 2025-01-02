@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ImpByeTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3399](../source/actor.t.html#3399)\]

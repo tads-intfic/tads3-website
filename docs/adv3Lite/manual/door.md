@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Doors  
-<span class="navnp"><a href="roomdesc.htm" class="nav"><em>Prev:</em>Room Descriptions</a>
-    <a href="travel.htm" class="nav"><em>Next:</em> TravelConnectors and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Doors  
+<span class="navnp"><a href="roomdesc.html" class="nav"><em>Prev:</em>Room Descriptions</a>
+    <a href="travel.html" class="nav"><em>Next:</em> TravelConnectors and
 Barriers</a>     </span>
 
 </div>
@@ -129,8 +131,8 @@ to define two objects, <span class="code">frontDoor</span> and
 of the door. This is nearly always the case when using the Door class
 (unless you're using it to define a dummy door that can never be
 opened). For doors that are the same both sides you may find it easier
-to use the [SymDoor](../../extensions/docs/symconn.htm#symdoor) class
-defined in the [symconn](../../extensions/docs/symconn.htm) extension,
+to use the [SymDoor](../../extensions/docs/symconn.html#symdoor) class
+defined in the [symconn](../../extensions/docs/symconn.html) extension,
 since this allows you to define a door using only one game object
 instead of two. To take advantage of this class you would need to
 explicitly include the symconn extension in your build.
@@ -142,10 +144,10 @@ explicitly include the symconn extension in your build.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Doors  
-<span class="navnp"><a href="roomdesc.htm" class="nav"><em>Prev:</em> Room Descriptions</a>
-    <a href="travel.htm" class="nav"><em>Next:</em> TravelConnectors and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Doors  
+<span class="navnp"><a href="roomdesc.html" class="nav"><em>Prev:</em> Room Descriptions</a>
+    <a href="travel.html" class="nav"><em>Next:</em> TravelConnectors and
 Barriers</a>     </span>
 
 </div>

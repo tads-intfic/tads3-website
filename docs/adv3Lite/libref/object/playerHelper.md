@@ -1,3 +1,5 @@
+---
+---
 <span class="title">playerHelper</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[151](../source/newbie.t.html#151)\]

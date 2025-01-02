@@ -1,0 +1,326 @@
+<p><span class="title">SymConnector</span><span class="type">class</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#259">259</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Symmetrical Connector is a special type of TravelConnector between
+rooms that can be traversed in either direction and that, optionally,
+can largely set itself up so that if the dir property of room1 points to
+this SymConnector, the reverse dir property of room2 also points to this
+SymConnector. \[SYMCOMM EXTENSION\]
+
+SymConnector is a type of TravelConnector (from which it descends by
+inheritance). A SymConnector can be traversed in both directions, and
+defining a SymConnector on a direction property of one room
+automatically attaches it to the reverse direction property of the room
+to which it leads. Otherwise, a SymConnector behaves much like any other
+TravelConnector, and can be used to define travel barriers or the
+side-effects of travel in much the same way.
+
+Internally a SymConnector defines a room1 property and a room2 property,
+room1 and room2 being the two rooms reciprocally connected by the
+SymConnector. The room1 and room2 can be set by the extension at preinit
+if the connector's destination is specified, but it's probably clearer
+and safer to explictly set the room1 and room2 properties.
+
+`class `**`SymConnector`**` :   `[`TravelConnector`](../object/TravelConnector.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SymConnector</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>TravelConnector<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SymConnector</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>SymPassage<code class="language-plaintext highlighter-rouge">](../object/SymPassage.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SymDoor<code class="language-plaintext highlighter-rouge">](../object/SymDoor.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SymPathPassage<code class="language-plaintext highlighter-rouge">](../object/SymPathPassage.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>SymStairway`](../object/SymStairway.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>destination<code class="language-plaintext highlighter-rouge">](#destination)</code>  <code class="language-plaintext highlighter-rouge">[</code>dirName<code class="language-plaintext highlighter-rouge">](#dirName)</code>  <code class="language-plaintext highlighter-rouge">[</code>inRoom1<code class="language-plaintext highlighter-rouge">](#inRoom1)</code>  <code class="language-plaintext highlighter-rouge">[</code>inRoom2<code class="language-plaintext highlighter-rouge">](#inRoom2)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDestinationKnown<code class="language-plaintext highlighter-rouge">](#isDestinationKnown)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen<code class="language-plaintext highlighter-rouge">](#isOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>room1<code class="language-plaintext highlighter-rouge">](#room1)</code>  <code class="language-plaintext highlighter-rouge">[</code>room1Dir<code class="language-plaintext highlighter-rouge">](#room1Dir)</code>  <code class="language-plaintext highlighter-rouge">[</code>room2<code class="language-plaintext highlighter-rouge">](#room2)</code>  <code class="language-plaintext highlighter-rouge">[</code>room2Dir<code class="language-plaintext highlighter-rouge">](#room2Dir)</code>  <code class="language-plaintext highlighter-rouge">[</code>rooms<code class="language-plaintext highlighter-rouge">](#rooms)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelConnector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isConnectorApparent<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isConnectorApparent)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorListed<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isConnectorListed)</code>  <code class="language-plaintext highlighter-rouge">[</code>PushTravelVia<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#PushTravelVia)</code>  <code class="language-plaintext highlighter-rouge">[</code>suppressTravelDescForPushTravel<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#suppressTravelDescForPushTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>transmitsLight<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#transmitsLight)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelBarriers<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#travelBarriers)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalTime<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversalTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversed<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversed)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversedBy<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversedBy)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>byRoom<code class="language-plaintext highlighter-rouge">](#byRoom)</code>  <code class="language-plaintext highlighter-rouge">[</code>execTravel<code class="language-plaintext highlighter-rouge">](#execTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDestination<code class="language-plaintext highlighter-rouge">](#getDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>initConnector<code class="language-plaintext highlighter-rouge">](#initConnector)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelConnector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>afterTravelNotifications<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#afterTravelNotifications)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeTravelNotifications<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#beforeTravelNotifications)</code>  <code class="language-plaintext highlighter-rouge">[</code>canTravelerPass<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#canTravelerPass)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkPushTravel<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#checkPushTravel)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkTravelBarriers<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#checkTravelBarriers)</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(GoThrough)<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#dobjFor(GoThrough))</code>  <code class="language-plaintext highlighter-rouge">[</code>dobjFor(TravelVia)<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#dobjFor(TravelVia))</code>  <code class="language-plaintext highlighter-rouge">[</code>explainTravelBarrier<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#explainTravelBarrier)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDepartingDirection<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#getDepartingDirection)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTraveler<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#getTraveler)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasBeenTraversedBy<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#hasBeenTraversedBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>iobjFor(PushTravelThrough)<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#iobjFor(PushTravelThrough))</code>  <code class="language-plaintext highlighter-rouge">[</code>isConnectorVisible<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isConnectorVisible)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDestinationKnown<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#isDestinationKnown)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteTraversal<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#noteTraversal)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayActorFollowing<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#sayActorFollowing)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayDeparting<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#sayDeparting)</code>  <code class="language-plaintext highlighter-rouge">[</code>sayNoDestination<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#sayNoDestination)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelDesc<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#travelDesc)</code>  <code class="language-plaintext highlighter-rouge">[</code>travelVia<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#travelVia)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalMsg<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversalMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>traversalTimeFrom<code class="language-plaintext highlighter-rouge">](../object/TravelConnector.html#traversalTimeFrom)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="destination"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">destination</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#311">311</a>]</p>
+
+<div class="desc">
+
+Our notional destination (if this is defined it will be copied to room2
+at preinit). \[SYMCOMM EXTENSION\]
+
+</div>
+
+<p><span id="dirName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dirName</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#288">288</a>]</p>
+
+<div class="desc">
+
+The name of our direction of travel from the point of view of the player
+character depending on whether the pc is in room1 or room2.
+
+</div>
+
+<p><span id="inRoom1"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inRoom1</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#410">410</a>]</p>
+
+<div class="desc">
+
+Test whether the player character is in our room1
+
+</div>
+
+<p><span id="inRoom2"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inRoom2</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#413">413</a>]</p>
+
+<div class="desc">
+
+Test whether the player character is in our room2
+
+</div>
+
+<p><span id="isDestinationKnown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isDestinationKnown</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#347">347</a>]</p>
+
+<div class="desc">
+
+By default the player character doesn't start off knowing where this
+connector leads. Once the pc has been through the connector in either
+direction this becomes true on both sides of the connector. \[SYMCOMM
+EXTENSION\]
+
+</div>
+
+<p><span id="isOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isOpen</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#350">350</a>]</p>
+
+<div class="desc">
+
+A SymConnector is usually open. \[SYMCOMM EXTENSION\]
+
+</div>
+
+<p><span id="room1"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">room1</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#265">265</a>]</p>
+
+<div class="desc">
+
+The room from/to which this SymConnector leads. Note we can leave this
+to be set up by our initConnector() method. \[SYMCOMM EXTENSION\]
+
+</div>
+
+<p><span id="room1Dir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">room1Dir</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#276">276</a>]</p>
+
+<div class="desc">
+
+The direction an actor needs to travel in to travel via us from room1.
+This is set up in Room initObj();
+
+</div>
+
+<p><span id="room2"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">room2</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#270">270</a>]</p>
+
+<div class="desc">
+
+The room to/from which this SymConnector leads. \[SYMCOMM EXTENSION\]
+
+</div>
+
+<p><span id="room2Dir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">room2Dir</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#282">282</a>]</p>
+
+<div class="desc">
+
+The direction an actor needs to travel in to travel via us from room2.
+This is set up in Room initObj();
+
+</div>
+
+<p><span id="rooms"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rooms</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#356">356</a>]</p>
+
+<div class="desc">
+
+The rooms property provides an alternative and slightly shorthand way of
+defining our two rooms. If defined, it must contain exactlty two rooms
+in the order \[room1, room2\].
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="byRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">byRoom (args)</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#416">416</a>]</p>
+
+<div class="desc">
+
+return a or b depending on which room the player char is in
+
+</div>
+
+<p><span id="execTravel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execTravel (actor, traveler, conn)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#318">318</a>]</p>
+
+<div class="desc">
+
+Execute travel through this connector. The difference for the SYMCOMM
+EXTENSION is that an actor travelling through this connector ends up
+knowing where both sides lead to.
+
+</div>
+
+<p><span id="getDestination"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getDestination (origin)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#293">293</a>]</p>
+
+<div class="desc">
+
+Our destination depends on our origin. \[SYMCOMM EXTENSION\]
+
+</div>
+
+<p><span id="initConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initConnector (loc, dir)</code></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#363">363</a>]</p>
+
+<div class="desc">
+
+Initialize this SymConnector by setting up its room1 and room2
+properties if they are not already defined. This method is normally
+called from the preinitThing() method of the room that first defines
+this connector. \[SYMCOMM EXTENSION\]
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

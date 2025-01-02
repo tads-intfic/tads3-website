@@ -1,0 +1,68 @@
+<p><span class="title">lister.t</span><span class="type">file</span></p>
+
+<p><a href="../source/lister.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library - Lister class
+
+This module defines the "Lister" class, which generates formatted lists
+of objects, and several subclasses of Lister that generate special kinds
+of lists.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>ContentsLister<code class="language-plaintext highlighter-rouge">](../object/ContentsLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DescContentsLister<code class="language-plaintext highlighter-rouge">](../object/DescContentsLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>DividedInventoryLister<code class="language-plaintext highlighter-rouge">](../object/DividedInventoryLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GroupSublister<code class="language-plaintext highlighter-rouge">](../object/GroupSublister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>InventoryLister<code class="language-plaintext highlighter-rouge">](../object/InventoryLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>InventorySublister<code class="language-plaintext highlighter-rouge">](../object/InventorySublister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Lister<code class="language-plaintext highlighter-rouge">](../object/Lister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListGroup<code class="language-plaintext highlighter-rouge">](../object/ListGroup.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListGroupCustom<code class="language-plaintext highlighter-rouge">](../object/ListGroupCustom.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListGroupEquivalent<code class="language-plaintext highlighter-rouge">](../object/ListGroupEquivalent.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListGroupParen<code class="language-plaintext highlighter-rouge">](../object/ListGroupParen.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListGroupPrefixSuffix<code class="language-plaintext highlighter-rouge">](../object/ListGroupPrefixSuffix.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListGroupSorted<code class="language-plaintext highlighter-rouge">](../object/ListGroupSorted.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ParagraphLister<code class="language-plaintext highlighter-rouge">](../object/ParagraphLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RoomActorGrouper<code class="language-plaintext highlighter-rouge">](../object/RoomActorGrouper.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SenseLister<code class="language-plaintext highlighter-rouge">](../object/SenseLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SimpleLister<code class="language-plaintext highlighter-rouge">](../object/SimpleLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SpecialDescContentsLister<code class="language-plaintext highlighter-rouge">](../object/SpecialDescContentsLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WearingLister<code class="language-plaintext highlighter-rouge">](../object/WearingLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>WearingSublister<code class="language-plaintext highlighter-rouge">](../object/WearingSublister.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>actorCarryingSublister<code class="language-plaintext highlighter-rouge">](../object/actorCarryingSublister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>actorWearingSublister<code class="language-plaintext highlighter-rouge">](../object/actorWearingSublister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>inventoryListenLister<code class="language-plaintext highlighter-rouge">](../object/inventoryListenLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>inventorySmellLister<code class="language-plaintext highlighter-rouge">](../object/inventorySmellLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>listenActionLister<code class="language-plaintext highlighter-rouge">](../object/listenActionLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>objectLister<code class="language-plaintext highlighter-rouge">](../object/objectLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>plainActorLister<code class="language-plaintext highlighter-rouge">](../object/plainActorLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>plainLister<code class="language-plaintext highlighter-rouge">](../object/plainLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomListenLister<code class="language-plaintext highlighter-rouge">](../object/roomListenLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomSmellLister<code class="language-plaintext highlighter-rouge">](../object/roomSmellLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>smellActionLister<code class="language-plaintext highlighter-rouge">](../object/smellActionLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>specialDescLister<code class="language-plaintext highlighter-rouge">](../object/specialDescLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>stringLister<code class="language-plaintext highlighter-rouge">](../object/stringLister.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

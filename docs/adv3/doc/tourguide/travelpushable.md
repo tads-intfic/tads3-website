@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>TravelPushable : <a
-href="immovable.htm">Immovable</a><br />
+href="immovable.html">Immovable</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="prerestartobject.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="pushtravelbarrier.htm">[Next]</a></td>
+href="prerestartobject.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="pushtravelbarrier.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -71,7 +73,7 @@ chasm or it is in the process of being pushed into the chasm:
 southShore : Room 'Rocky shore' 'the rocky shore'  
    "The rocky shore looks so barren here as to be scarcely worth visiting, apart  
     from a narrow tunnel leading off to the south**"  
-   finalDesc = ". " // for the custom finalDesc property see our [inRoomDesc modification](specialdesc.htm#roomdesc)  
+   finalDesc = ". " // for the custom finalDesc property see our [inRoomDesc modification](specialdesc.html#roomdesc)  
    south = narrowTunnel**     
 ;  
   
@@ -206,7 +208,7 @@ The other trick here is to make the monolith transform itself into a
 Floor and add itself to the chasm's roomParts once it arrives in the
 chasm, so that we get the right responses if the player SITS or LIES
 there. Also, since the defaultFloors of the adjacent rooms will also be
-in scope thanks to the [DistanceConnector](distanceconnector.htm) we'll
+in scope thanks to the [DistanceConnector](distanceconnector.html) we'll
 be adding later, we need to make the monolith the most likely item to
 sit or lie on when we're directly on top of it, but not when we're in
 one of the adjacent locations. Conversely, we add actorDirectlyInRoom to

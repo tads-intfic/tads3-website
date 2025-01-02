@@ -1,0 +1,80 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>AskTellTopic : <a href="topicentry.html">TopicMatchTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="telltopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="askfortopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>An AskTellTopic is effectively a combination AskTopic and TellTopic; in
+other words it responds to both ASK X ABOUT Y and TELL X ABOUT Y,
+treating the two just the same. It is thus useful when you want players
+to be able to talk about a topic, but feel it doesn’t make much
+difference whether they do so by telling or asking.</p>
+
+<p>Let’s suppose that this is how we want to handle conversing with the
+demons about the golden banana. We could put the following into the
+demonsChattering state:</p>
+
+<p>++ AskTellTopic, StopEventList @goldenBanana<br />
+  [<br />
+    ’&lt;q&gt;Say, do you little devils know anything about a Golden Banana?&lt;/q&gt; you enquire.\b<br />
+     &lt;q&gt;The Golden Banana!&lt;/q&gt; one of them exclaims, &lt;q&gt;He knows of the Banana! <br />
+      We wants it! We wants it!&lt;/q&gt; ’,<br />
+    ’&lt;q&gt;You seem interested in this Banana.&lt;/q&gt; you remark.\b<br />
+     The chief demon draws himself up to his full height and stares straight<br />
+     at your navel. &lt;q&gt;Know that I am Princifax, leader of demons, Lord High<br />
+      Big Stink, and recipient of three Rotten Tomato awards for Ham Actor of <br />
+      the Underworld. Fear me! Fear me!&lt;/q&gt;\b<br />
+     &lt;q&gt;All hail Lord High Big Stink Princifax of the Rotten Tomato!&lt;/q&gt; chorus<br />
+      the other demons.\b<br />
+     &lt;q&gt;Know too, feeble mortal, that the banana of which you speak is OURS! <br />
+      We &lt;i&gt;demand&lt;/i&gt; that if you know anything of it, you bring it to us.<br />
+      Otherwise…&lt;/q&gt; Princifax shakes his head, as if contemplating a fate worse<br />
+      than death for you. ’,<br />
+     ’&lt;q&gt;Why\s this banana so important to you?&lt;/q&gt; you wonder.\b<br />
+      &lt;q&gt;It was stolen from us,&lt;/q&gt; the demons reply indignantly, &lt;q&gt;By one of<br />
+      your kind - so that makes &lt;i&gt;you&lt;/i&gt; responsible for bringing it back to<br />
+      us.&lt;/q&gt;’,<br />
+     ’&lt;q&gt;So you\d like me to bring you back this banana?&lt;/q&gt; you surmise.\b<br />
+      &lt;q&gt;For a human you\re almost quick on the uptake.&lt;/q&gt; one of them<br />
+      replies.’    <br />
+  ]<br />
+;</p>
+
+<p>Another reason for using a combination AskTellTopic might be when the
+command the player is most likely to use might alternate over the course
+of the topic as the situation changes. For example, depending on whether
+the player character has yet purchased a museum ticket or shown it to
+the curator, he might ask where to purchase a ticket, tell the curator
+that he’s already purchased one, or ask whether he needs to buy another
+if he wants to return. We could handle this with the following group of
+TopicEntries, which should go in the curatorTalking
+InConversationState:</p>
+
+<p>++ AskTellTopic @museumTicket<br />
+   ”&lt;q&gt;How do I get a museum ticket?&lt;/q&gt; you want to know.\b<br />
+    &lt;q&gt;There’s a vending machine down the hall.&lt;/q&gt; he tells you,<br />
+    &lt;q&gt;You can get one there.&lt;/q&gt;”<br />
+;</p>
+
+<p>+++ AltTopic<br />
+   ”&lt;q&gt;I have bought a ticket.&lt;/q&gt; you assure him.\b<br />
+    &lt;q&gt;Let’s see it, then.&lt;/q&gt; {the curator/he} insists.”<br />
+    isActive = (museumTicket.moved)<br />
+;</p>
+
+<p>+++ AltTopic<br />
+   ”&lt;q&gt;Do I need another ticket if I want to come in again?&lt;/q&gt;<br />
+    you ask.\b<br />
+    &lt;q&gt;No,&lt;/q&gt; he assures you, &lt;q&gt;the ticket you showed me is<br />
+     good for multiple entry.&lt;/q&gt; ”<br />
+   isActive = gRevealed(‘ticket-shown’)  <br />
+;</p>
+

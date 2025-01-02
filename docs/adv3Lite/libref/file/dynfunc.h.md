@@ -1,3 +1,5 @@
+---
+---
 <span class="title">dynfunc.h</span><span class="type">file</span>
 
 [source file](../source/dynfunc.h.html)

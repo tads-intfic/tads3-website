@@ -1,3 +1,5 @@
+---
+---
 <span class="title">lightProbe\_</span><span class="type">object</span>
 
 [brightness.t](../file/brightness.t.html)\[[402](../source/brightness.t.html#402)\]

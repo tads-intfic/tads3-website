@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PushTravelEnterAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[3042](../source/actions.t.html#3042)\]

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,13 +8,13 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \>
-<a href="t3design.htm" class="nav">Tips on Designing your Game</a> \> IF
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \>
+<a href="t3design.html" class="nav">Tips on Designing your Game</a> \> IF
 Design: In Practice  
-<span class="navnp"><a href="t3design.htm" class="nav"><em>Prev:</em> Tips on Designing your
+<span class="navnp"><a href="t3design.html" class="nav"><em>Prev:</em> Tips on Designing your
 Game</a>    
-<a href="t3des2.htm" class="nav"><em>Next:</em> IF Design: In Theory</a>
+<a href="t3des2.html" class="nav"><em>Next:</em> IF Design: In Theory</a>
     </span>
 
 </div>
@@ -812,13 +814,13 @@ in the *TADS 3 Tour Guide* should be helpful.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \>
-<a href="t3design.htm" class="nav">Tips on Designing your Game</a> \> IF
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \>
+<a href="t3design.html" class="nav">Tips on Designing your Game</a> \> IF
 Design: In Practice  
-<span class="navnp"><a href="t3design.htm" class="nav"><em>Prev:</em> Tips on Designing your
+<span class="navnp"><a href="t3design.html" class="nav"><em>Prev:</em> Tips on Designing your
 Game</a>    
-<a href="t3des2.htm" class="nav"><em>Next:</em> IF Design: In Theory</a>
+<a href="t3des2.html" class="nav"><em>Next:</em> IF Design: In Theory</a>
     </span>
 
 </div>

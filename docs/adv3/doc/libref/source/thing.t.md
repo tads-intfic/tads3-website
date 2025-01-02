@@ -1,3 +1,5 @@
+---
+---
 # thing.t
 
 [documentation](../file/thing.t.html)

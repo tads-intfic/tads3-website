@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Surface : <a
-href="bulklimiter.htm">BulkLimiter</a><br />
+href="bulklimiter.html">BulkLimiter</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="bulklimiter.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="basiccontainer.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="bulklimiter.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="basiccontainer.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -52,10 +54,10 @@ cabinDesk : Heavy, **Surface** 'large solid oak desk' 'desk' @greatCabi
   
 Note the use of the + location here; anything located *in* a Surface is
 considered to be *on* it. Technically this should cause a problem for
-our previously defined [Button](hiddendoor.htm) object (used to unlock
+our previously defined [Button](hiddendoor.html) object (used to unlock
 the hidden door in the bulkhead), but the way we've described the desk
 and the button, together with the fact that the button is a
-[Component](component.htm) means that we can in fact get away with it,
+[Component](component.html) means that we can in fact get away with it,
 although later we'll look at a way of tying up this potential loose
 end.  
   

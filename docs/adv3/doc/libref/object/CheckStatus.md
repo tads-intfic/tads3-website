@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CheckStatus</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[185](../source/thing.t.html#185)\]

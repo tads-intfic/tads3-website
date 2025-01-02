@@ -1,3 +1,5 @@
+---
+---
 <span class="title">mainGlobal</span><span class="type">object</span>
 
 [\_main.t](../file/_main.t.html)\[[1182](../source/_main.t.html#1182)\]

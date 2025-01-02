@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ExitCommandLineSignal</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[814](../source/parser.t.html#814)\]

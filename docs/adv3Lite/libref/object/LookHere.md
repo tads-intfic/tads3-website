@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LookHere</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[416](../source/newbie.t.html#416)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>NominalPlatform : <a
-href="fixture.htm">Fixture</a>, <a
-href="platform.htm">Platform</a><br />
+href="fixture.html">Fixture</a>, <a
+href="platform.html">Platform</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="platform.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="bed.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="platform.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="bed.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>

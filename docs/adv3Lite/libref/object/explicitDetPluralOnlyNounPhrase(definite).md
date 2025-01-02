@@ -1,3 +1,5 @@
+---
+---
 <span class="title">explicitDetPluralOnlyNounPhrase(definite)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[638](../source/grammar.t.html#638)\]

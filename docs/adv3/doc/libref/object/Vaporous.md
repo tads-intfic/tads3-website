@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Vaporous</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[90](../source/objects.t.html#90)\]

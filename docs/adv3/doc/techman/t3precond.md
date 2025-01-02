@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Custom
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Custom
 Preconditions  
-<span class="navnp"><a href="t3verb.htm" class="nav"><em>Prev:</em> How to Create Verbs</a>
-    <a href="t3msg.htm" class="nav"><em>Next:</em> Message Parameter
+<span class="navnp"><a href="t3verb.html" class="nav"><em>Prev:</em> How to Create Verbs</a>
+    <a href="t3msg.html" class="nav"><em>Next:</em> Message Parameter
 Substitutions</a>     </span>
 
 </div>
@@ -37,7 +39,7 @@ pick up the key automatically so that the unlocking can proceed.
 The standard library already defines many commonly useful preconditions,
 and applies them appropriately to a large range of actions (for further
 details, see the Preconditions section of the Technical Manual Article
-on [Action Results](t3res.htm#precond)). Sometimes, though, it can be
+on [Action Results](t3res.html#precond)). Sometimes, though, it can be
 useful to define preconditions of your own in your own game. This
 article will show you how.
 
@@ -457,11 +459,11 @@ With these changes, our new `objNotHeld` precondition becomes:
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Custom
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Custom
 Preconditions  
-<span class="navnp"><a href="t3verb.htm" class="nav"><em>Prev:</em> How to Create Verbs</a>
-    <a href="t3msg.htm" class="nav"><em>Next:</em> Message Parameter
+<span class="navnp"><a href="t3verb.html" class="nav"><em>Prev:</em> How to Create Verbs</a>
+    <a href="t3msg.html" class="nav"><em>Next:</em> Message Parameter
 Substitutions</a>     </span>
 
 </div>

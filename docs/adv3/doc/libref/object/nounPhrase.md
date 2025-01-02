@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `<span class="classExtLink">[`nounPhrase(main)`](../object/nounPhrase(main).html)</span>` :   `[`LayeredNounPhraseProd`](../object/LayeredNounPhraseProd.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">\_multiMethodNonObjectBindings</span><span class="type">object</span>
 
 [multmeth.t](../file/multmeth.t.html)\[[464](../source/multmeth.t.html#464)\]

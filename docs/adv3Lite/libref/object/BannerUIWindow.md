@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BannerUIWindow</span><span class="type">class</span>
 
 [banner.t](../file/banner.t.html)\[[754](../source/banner.t.html#754)\]

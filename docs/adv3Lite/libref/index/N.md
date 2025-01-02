@@ -1,3 +1,5 @@
+---
+---
 # N
 
 [**`name`**](../object/ActorTopicEntry.html#name) - property of

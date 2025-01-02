@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](newchapterwithtext.htm)
-  [\[Next\]](creatingyourfirsttads3project.htm)*
+*[\[Previous\]](newchapterwithtext.html)
+  [\[Next\]](creatingyourfirsttads3project.html)*
 
 |     |
 |:----|
@@ -30,7 +32,7 @@ and may perhaps have some familiarity with another IF language such as
 TADS 2 or Inform. If you are still trying to work out how to install the
 TADS 3 compiler or do anything with it, the instructions in the section
 on "[Creating your First TADS 3
-Project](creatingyourfirsttads3project.htm)" below should get you
+Project](creatingyourfirsttads3project.html)" below should get you
 started. On the other hand, if you have already got going in TADS 3 you
 can skip the remaining sections of this chapter and maybe the next
 chapter as well. I shall not in any case spend a great deal of time
@@ -38,7 +40,7 @@ explaining programming concepts such as functions, operators,
 statements, classes and objects, but the final two sections of this
 chapter provide a basic introduction to the way these are implemented in
 TADS 3 and to the programming concepts needed to follow this guide
-[Chapter Two](chapter2.htm) then shows you how to implement a very short
+[Chapter Two](chapter2.html) then shows you how to implement a very short
 sample game; for some readers this may be the best place to start.
 
 The approach taken in the remainder of this guide will be to introduce
@@ -53,24 +55,24 @@ from chapter to chapter. The complete source code of the finished game,
 heidi.t, should be packaged in the zip file with this guide (if you
 downloaded it separately) or with the TADS 3 documentation set.
 
-[Chapter Three](startinganewgame.htm) will explain in some detail how to
+[Chapter Three](startinganewgame.html) will explain in some detail how to
 define a room and a single object within that room for the game we'll be
 developing together throughout the remainder of the guide. Things will
-become rather more complicated in [Chapter Four](basictravel.htm) when
+become rather more complicated in [Chapter Four](basictravel.html) when
 we look at the use of various kinds of connector to move between rooms,
 and at the same time introduce a number of other features of the TADS 3
 library and language so we can program a couple of basic puzzles (how to
 get to the top of a tree and find a diamond ring in a bird's nest). The
-main focus of [Chapter Five](settingthescene.htm) will be the
+main focus of [Chapter Five](settingthescene.html) will be the
 programming of an NPC (non-player character), in this case a friendly
 charcoal-burner who turns out to be the owner of the missing ring.
 Subsequent chapters will place a further series of obstacles between
 Heidi and the ring so that we can sample the excitements of lockable
 doors, dark caves, and a pair of conveniently buried Wellington boots
 (to mention a few) and thereby introduce a number of other features. By
-[Chapter Seven](lettherebelight.htm) we shall be sending Heidi on a boat
+[Chapter Seven](lettherebelight.html) we shall be sending Heidi on a boat
 trip down to the shops (well, a shop), and trying to figure out how to
-handle buying and selling. [Chapter Eight](fillinginsomegaps.htm) will
+handle buying and selling. [Chapter Eight](fillinginsomegaps.html) will
 wrap things up with some suggestions on how to put some finishing
 touches to the game, a look at a different ways we could have tackled a
 couple of the problems we encountered, some suggestions on how to make
@@ -123,9 +125,9 @@ written, you might prefer to skip straight to Chapter Two and only
 return to the last two sections of this chapter if and when you feel the
 need to clarify the programming concepts employed in the course of this
 guide. If you'd prefer a compromise solution, you could read the
-"[Programming Prolegomena](programmingprolegomena.htm)" section below,
+"[Programming Prolegomena](programmingprolegomena.html)" section below,
 but leave the final "[Further Programming Concepts and
-Constructs](furtherprogramming.htm)" section till later. But whatever
+Constructs](furtherprogramming.html)" section till later. But whatever
 you do, please try to master the basics fully before trying to do
 something more complex; some new users of TADS 3 become frustrated
 because they try to run before they have learned how to walk.
@@ -143,7 +145,7 @@ confusion you may want to postpone them for a while.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](newchapterwithtext.htm)
-  [\[Next\]](creatingyourfirsttads3project.htm)*
+*[\[Previous\]](newchapterwithtext.html)
+  [\[Next\]](creatingyourfirsttads3project.html)*
 
 </div>

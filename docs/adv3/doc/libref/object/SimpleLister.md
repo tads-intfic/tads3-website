@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SimpleLister</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[1267](../source/lister.t.html#1267)\]

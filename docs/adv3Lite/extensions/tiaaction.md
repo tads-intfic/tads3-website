@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 TIAAction  
-<span class="navnp"><a href="sysrules.htm" class="nav"><em>Prev:</em> Sysrules</a>
-    <a href="viewport.htm" class="nav"><em>Next:</em> Viewport</a>    
+<span class="navnp"><a href="sysrules.html" class="nav"><em>Prev:</em> Sysrules</a>
+    <a href="viewport.html" class="nav"><em>Next:</em> Viewport</a>    
 </span>
 
 </div>
@@ -26,7 +28,7 @@ game authors to define actions involving three objects, such as PUT COIN
 IN SLOT WITH TWEEZERS. Note that you only need this extension if you
 want to define an action involving three physical objects. Actions
 involving two objects and a literal or topic, say, can be defined using
-[other techniques](../../docs/manual/define.htm#threeobjects).
+[other techniques](../../docs/manual/define.html#threeobjects).
 
   
 <span id="classes"></span>
@@ -46,7 +48,7 @@ properties:
 Include the tiaaction.t file after the library files but before your
 game source files. This will allow you to define actions involving three
 objects. The macros needed to support this are already defined in
-advLite.htm for your convenience.
+advLite.html for your convenience.
 
 The third object involved in a three-object command is the **Accessory
 Object**, normally abbreviated to **aobj** (although in many contexts
@@ -176,11 +178,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 TIAAction  
-<span class="navnp"><a href="sysrules.htm" class="nav"><em>Prev:</em> Sysrules</a>
-    <a href="viewport.htm" class="nav"><em>Next:</em> Viewport</a>    
+<span class="navnp"><a href="sysrules.html" class="nav"><em>Prev:</em> Sysrules</a>
+    <a href="viewport.html" class="nav"><em>Next:</em> Viewport</a>    
 </span>
 
 </div>

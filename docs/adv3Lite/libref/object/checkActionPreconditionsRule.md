@@ -1,3 +1,5 @@
+---
+---
 <span class="title">checkActionPreconditionsRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[259](../source/sysrules.t.html#259)\]

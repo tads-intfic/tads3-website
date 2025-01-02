@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](action.htm)   [\[Next\]](remap.htm)*
+*[\[Previous\]](action.html)   [\[Next\]](remap.html)*
 
 ### PreCond
 
@@ -263,7 +265,7 @@ action if the object can't be seen by the actor.
 The library defines several preconditions, including objOpen, objClosed,
 objUnlocked, touchObj, actorStanding, objAudible. For a complete list,
 see the pre-conditions section of the
-"<a href="../techman/t3res.htm#precond" target="_top">TADS 3 Action
+"<a href="../techman/t3res.html#precond" target="_top">TADS 3 Action
 Results</a>" section of the *Technical Manual*. It is also perfectly
 possible (and often useful) to define your own, although that is beyond
 the scope of this guide. The best way to get a full understanding of
@@ -274,6 +276,6 @@ preconditions is to study the library file precond.t.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](action.htm)   [\[Next\]](remap.htm)*
+*[\[Previous\]](action.html)   [\[Next\]](remap.html)*
 
 </div>

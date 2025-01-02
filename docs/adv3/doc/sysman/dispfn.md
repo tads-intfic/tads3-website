@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="ui.htm" class="nav">The User Interface</a> \> The Default
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="ui.html" class="nav">The User Interface</a> \> The Default
 Display Function  
-<span class="navnp"><a href="fmt.htm" class="nav"><em>Prev:</em> The Output Formatter</a>
-    <a href="banners.htm" class="nav"><em>Next:</em> The Banner Window
+<span class="navnp"><a href="fmt.html" class="nav"><em>Prev:</em> The Output Formatter</a>
+    <a href="banners.html" class="nav"><em>Next:</em> The Banner Window
 Display Model</a>     </span>
 
 </div>
@@ -57,7 +59,7 @@ function on a case-by-case basis, each time a value is to be displayed:
   error.
 
 To set the default display function, call the
-<span class="code">t3SetSay()</span> function in the [t3vm](t3vm.htm)
+<span class="code">t3SetSay()</span> function in the [t3vm](t3vm.html)
 function set, passing a function pointer argument (this must be a
 program-defined function, not an intrinsic function). To set the default
 display method, call <span class="code">t3SetSay()</span> with a
@@ -76,7 +78,7 @@ output.
 A default display function takes a single argument, which is the value
 to be displayed, and returns no value. The simplest implementation is to
 simply pass the value to the <span class="code">tadsSay()</span>
-function (in the [tads-io](tadsio.htm) function set) to display the
+function (in the [tads-io](tadsio.html) function set) to display the
 value on the console:
 
 <div class="code">
@@ -352,11 +354,11 @@ displaying strings and expressions. The effect, however, is the same.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="ui.htm" class="nav">The User Interface</a> \> The Default
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="ui.html" class="nav">The User Interface</a> \> The Default
 Display Function  
-<span class="navnp"><a href="fmt.htm" class="nav"><em>Prev:</em> The Output Formatter</a>
-    <a href="banners.htm" class="nav"><em>Next:</em> The Banner Window
+<span class="navnp"><a href="fmt.html" class="nav"><em>Prev:</em> The Output Formatter</a>
+    <a href="banners.html" class="nav"><em>Next:</em> The Banner Window
 Display Model</a>     </span>
 
 </div>

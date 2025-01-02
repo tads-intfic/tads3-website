@@ -1,0 +1,143 @@
+<p><span class="title">YesNoQuestion</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1127">1127</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A YesNoQuestion is a simple subclass of Question for asking interactive
+questions with Yes or No answers.
+
+`class `**`YesNoQuestion`**` :   `[`GramQuestion`](../object/GramQuestion.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">YesNoQuestion</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>GramQuestion<code class="language-plaintext highlighter-rouge">](../object/GramQuestion.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Question<code class="language-plaintext highlighter-rouge">](../object/Question.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>priority<code class="language-plaintext highlighter-rouge">](#priority)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">GramQuestion</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>answerFunc<code class="language-plaintext highlighter-rouge">](../object/GramQuestion.html#answerFunc)</code>  <code class="language-plaintext highlighter-rouge">[</code>answerProd<code class="language-plaintext highlighter-rouge">](../object/GramQuestion.html#answerProd)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Question</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>answerTemplate<code class="language-plaintext highlighter-rouge">](../object/Question.html#answerTemplate)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">GramQuestion</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>makeCommand<code class="language-plaintext highlighter-rouge">](../object/GramQuestion.html#makeCommand)</code>  <code class="language-plaintext highlighter-rouge">[</code>parseAnswer<code class="language-plaintext highlighter-rouge">](../object/GramQuestion.html#parseAnswer)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1150">1150</a>]</p>
+
+<div class="desc">
+
+parse Yes/No replies ahead of new commands, since we'd otherwise never
+get an answer - the parser would always match the reply to a
+conversational verb instead
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (func)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1133">1133</a>]</p>
+
+<div class="desc">
+
+Create - 'func' is the callback function to invoke on answering the
+question. This is invoked with one argument, true if the answer was Yes,
+nil if the answer was No.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

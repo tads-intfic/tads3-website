@@ -1,3 +1,5 @@
+---
+---
 <span class="title">startInputLineRule</span><span class="type">object</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[632](../source/sysrules.t.html#632)\]

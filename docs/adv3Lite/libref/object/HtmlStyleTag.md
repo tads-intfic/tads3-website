@@ -1,3 +1,5 @@
+---
+---
 <span class="title">HtmlStyleTag</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[944](../source/output.t.html#944)\]

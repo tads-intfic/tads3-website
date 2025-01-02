@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Seek</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[937](../source/newbie.t.html#937)\]

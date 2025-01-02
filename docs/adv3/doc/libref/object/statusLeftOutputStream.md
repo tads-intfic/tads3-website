@@ -1,3 +1,5 @@
+---
+---
 <span class="title">statusLeftOutputStream</span><span class="type">object</span>
 
 [status.t](../file/status.t.html)\[[63](../source/status.t.html#63)\]

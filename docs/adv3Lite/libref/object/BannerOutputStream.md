@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BannerOutputStream</span><span class="type">class</span>
 
 [banner.t](../file/banner.t.html)\[[461](../source/banner.t.html#461)\]

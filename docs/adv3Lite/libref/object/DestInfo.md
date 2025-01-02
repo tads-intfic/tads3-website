@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DestInfo</span><span class="type">class</span>
 
 [exits.t](../file/exits.t.html)\[[488](../source/exits.t.html#488)\]

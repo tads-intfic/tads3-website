@@ -1,0 +1,316 @@
+<p><span class="title">webSession</span><span class="type">object</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#145">145</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Web UI Session object. This keeps track of miscellaneous items
+associated with the game session.
+
+`transient `**`webSession`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">webSession</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>clientSessions<code class="language-plaintext highlighter-rouge">](#clientSessions)</code>  <code class="language-plaintext highlighter-rouge">[</code>collabKey<code class="language-plaintext highlighter-rouge">](#collabKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>everHadClient<code class="language-plaintext highlighter-rouge">](#everHadClient)</code>  <code class="language-plaintext highlighter-rouge">[</code>hkTime<code class="language-plaintext highlighter-rouge">](#hkTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastClientTime<code class="language-plaintext highlighter-rouge">](#lastClientTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>launcherGameID<code class="language-plaintext highlighter-rouge">](#launcherGameID)</code>  <code class="language-plaintext highlighter-rouge">[</code>launcherUsername<code class="language-plaintext highlighter-rouge">](#launcherUsername)</code>  <code class="language-plaintext highlighter-rouge">[</code>server<code class="language-plaintext highlighter-rouge">](#server)</code>  <code class="language-plaintext highlighter-rouge">[</code>sessionKey<code class="language-plaintext highlighter-rouge">](#sessionKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>storageSID<code class="language-plaintext highlighter-rouge">](#storageSID)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addClient<code class="language-plaintext highlighter-rouge">](#addClient)</code>  <code class="language-plaintext highlighter-rouge">[</code>connectUI<code class="language-plaintext highlighter-rouge">](#connectUI)</code>  <code class="language-plaintext highlighter-rouge">[</code>getCollabUrl<code class="language-plaintext highlighter-rouge">](#getCollabUrl)</code>  <code class="language-plaintext highlighter-rouge">[</code>getFullUrl<code class="language-plaintext highlighter-rouge">](#getFullUrl)</code>  <code class="language-plaintext highlighter-rouge">[</code>housekeeping<code class="language-plaintext highlighter-rouge">](#housekeeping)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeClient<code class="language-plaintext highlighter-rouge">](#removeClient)</code>  <code class="language-plaintext highlighter-rouge">[</code>validateKey<code class="language-plaintext highlighter-rouge">](#validateKey)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="clientSessions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clientSessions</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#272">272</a>]</p>
+
+<div class="desc">
+
+list of active client sessions (ClientSession objects)
+
+</div>
+
+<p><span id="collabKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">collabKey</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#199">199</a>]</p>
+
+<div class="desc">
+
+The collaborative session key. This is a secondary session key that
+allows additional users to connect to the session for collaborative
+play.
+
+</div>
+
+<p><span id="everHadClient"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">everHadClient</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#352">352</a>]</p>
+
+<div class="desc">
+
+have we ever had a client connection?
+
+</div>
+
+<p><span id="hkTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hkTime</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#346">346</a>]</p>
+
+<div class="desc">
+
+system time (ms ticks) of next scheduled housekeeping pass
+
+</div>
+
+<p><span id="lastClientTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastClientTime</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#349">349</a>]</p>
+
+<div class="desc">
+
+the last time we noticed that we had a client connected
+
+</div>
+
+<p><span id="launcherGameID"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">launcherGameID</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#236">236</a>]</p>
+
+<div class="desc">
+
+The launcher's game ID. This is the ID passed from the web server that
+launched the game, to let us know how the game is identified in the
+launcher database. This is typically an IFDB TUID string.
+
+</div>
+
+<p><span id="launcherUsername"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">launcherUsername</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#243">243</a>]</p>
+
+<div class="desc">
+
+The launcher's user name. This is passed from the web server that
+launched the game, to let us know the host user's screen name. We use
+this as the user's default screen name in multi-user games.
+
+</div>
+
+<p><span id="server"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">server</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#290">290</a>]</p>
+
+<div class="desc">
+
+the HTTPServer object running our web session
+
+</div>
+
+<p><span id="sessionKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sessionKey</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#192">192</a>]</p>
+
+<div class="desc">
+
+The session key. This identifies the server as a whole, and is
+essentially an authentication mechanism that lets clients prove they got
+our address from an authorized source (rather than just stumbling across
+it via a port scan, say). Clients must hand this to us on each request,
+either via a URL query parameter or via a cookie. The normal setup (via
+WebResourceInit) is for the client to send us the key as a URL parameter
+on the initial request, at which point we'll pass it back as a
+set-cookie, removing the need for the client to include the key in
+subsequent URLs.
+
+The key is just a random number that's long enough that an interloper
+couldn't hope to guess it. We generate this on the first evaluation, and
+it remains fixed at that point for as long as we're running.
+
+</div>
+
+<p><span id="storageSID"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">storageSID</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#257">257</a>]</p>
+
+<div class="desc">
+
+The primary storage server session ID, for the user who launched the
+server. If the user who launched the game logged in to a cloud storage
+server, this is the session ID that we use to transact business with the
+server on behalf of this logged-in user. This token identifies and
+authenticates the user, but it's ephemeral and it's only valid for the
+current game server session, so it's not quite like a password. This is
+the session for the launch user only; if other collaborative users join,
+they can get their own session IDs that will allow them to store files
+under their own private user folders on the server.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addClient"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addClient (s)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#275">275</a>]</p>
+
+<div class="desc">
+
+add a client session
+
+</div>
+
+<p><span id="connectUI"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">connectUI (srv)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#160">160</a>]</p>
+
+<div class="desc">
+
+Connect to the UI. By default, we ask the webMainWin object to establish
+a connection, and we save the server object internally for future
+reference.
+
+</div>
+
+<p><span id="getCollabUrl"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getCollabUrl ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#264">264</a>]</p>
+
+<div class="desc">
+
+Get the collaborative player launch URL. This is a URL that the host can
+send to other players who wish to join the session as collaborative
+users.
+
+</div>
+
+<p><span id="getFullUrl"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getFullUrl (resname)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#149">149</a>]</p>
+
+<div class="desc">
+
+Get the full URL to the given resource.
+
+</div>
+
+<p><span id="housekeeping"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">housekeeping ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#297">297</a>]</p>
+
+<div class="desc">
+
+Run housekeeping tasks. The network event processor calls this
+periodically to let us perform background cleanup tasks. Returns the
+system tick time of the next housekeeping run.
+
+</div>
+
+<p><span id="removeClient"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeClient (s)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#283">283</a>]</p>
+
+<div class="desc">
+
+remove a client session
+
+</div>
+
+<p><span id="validateKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">validateKey (req, query)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#204">204</a>]</p>
+
+<div class="desc">
+
+Validate a session key sent from the client
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

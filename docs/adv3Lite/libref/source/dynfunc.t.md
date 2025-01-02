@@ -1,3 +1,5 @@
+---
+---
 # dynfunc.t
 
 [documentation](../file/dynfunc.t.html)

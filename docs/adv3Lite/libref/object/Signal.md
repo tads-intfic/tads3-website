@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Signal</span><span class="type">object</span>
 
 [signals.t](../file/signals.t.html)\[[29](../source/signals.t.html#29)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MonitorFilter</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[791](../source/output.t.html#791)\]

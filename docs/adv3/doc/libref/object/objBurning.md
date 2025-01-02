@@ -1,3 +1,5 @@
+---
+---
 <span class="title">objBurning</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[1084](../source/precond.t.html#1084)\]

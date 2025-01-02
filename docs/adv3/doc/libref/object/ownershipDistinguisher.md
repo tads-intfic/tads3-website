@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ownershipDistinguisher</span><span class="type">object</span>
 
 [disambig.t](../file/disambig.t.html)\[[129](../source/disambig.t.html#129)\]

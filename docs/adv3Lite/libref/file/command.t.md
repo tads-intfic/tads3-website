@@ -1,3 +1,5 @@
+---
+---
 <span class="title">command.t</span><span class="type">file</span>
 
 [source file](../source/command.t.html)

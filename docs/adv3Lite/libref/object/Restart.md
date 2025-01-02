@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Restart</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[55](../source/actions.t.html#55)\]

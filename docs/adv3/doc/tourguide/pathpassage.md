@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>PathPassage : <a
-href="throughpassage.htm">ThroughPassage</a><br />
+href="throughpassage.html">ThroughPassage</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="onewayroomconnector.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="shipboardroom.htm">[Next]</a></td>
+href="onewayroomconnector.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="shipboardroom.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -20,7 +22,7 @@ href="shipboardroom.htm">[Next]</a></td>
   
 A PathPassage is intended for use as an outdoor passage such as a road
 or path that is not enclosed. It is basically the same as a
-[ThroughPassage](throughpassage.htm) apart from the way that travel via
+[ThroughPassage](throughpassage.html) apart from the way that travel via
 it is described (when an actor other than the PC goes along it).
 Another, and perhaps more interesting, feature of the PathPassage is
 that the English Language extensions to the library understand the
@@ -61,7 +63,7 @@ there you can type TAKE PATH to travel to pathEnd. Typing TAKE PATH a
 second time will return you to lakeRoom.  
   
 Note that PathPassage uses the same [templates as
-Passage](passagetemplate.htm).  
+Passage](passagetemplate.html).  
   
 The PathPassage class provides a convenient opportunity to introduce
 another library feature, albeit one that's only tangentially related. In

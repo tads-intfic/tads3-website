@@ -1,0 +1,432 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Templates<br />
+</strong></td>
+<td style="text-align: right;"><a href="thesamplegame.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="startupcodegamemain.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Since we shall be using templates extensively to define objects
+throughout this Guide, we had better start by explaining what they are
+and how they work.</p>
+
+<p>If you have worked through <em>Getting Started in TADS 3</em> or some similar
+introductory guide, you’ll already have encountered templates. Templates
+are built into the TADS 3 language (in the sense that the language
+provides the facility to define and use them) and into the adv3 library
+(in the sense that the library defines a number of standard templates).
+This Tour Guide accordingly assumes that the use of templates is the
+standard TADS 3 coding style, and is to be encouraged. But first, what
+exactly is a template?</p>
+
+<p>Put simply, a template is a means of defining an object in a more
+succinct form in order to save typing effort and produce less verbose
+code. On the principle that a couple of examples are a good deal easier
+to follow than several paragraphs of abstract, theoretical discussion,
+we’ll explain this by showing how templates work with the most common
+kind of objects you’re likely to define in a TADS 3 game: Rooms and
+Things.</p>
+
+<p>We’ll start with a room. If we defined a Room without using a template,
+we should have to assign every property we wanted assigned explicitly.
+Such a definition might look like:</p>
+
+<p>entranceCave : Room <br />
+   roomName = ’Entrance Cave’ <br />
+   destName = ’the entrance cave’<br />
+   desc = <br />
+    ”Compared with the narrow tunnel leading out to the north, this <br />
+   rough-walled cave seems positively spacious. A red sign fixed to <br />
+   one wall suggests that the narrow tunnel is the only way back out to<br />
+   the valley, while a blue sign next to it welcomes you to the cave.<br />
+   Directly under the signs a narrow ledge has been carved into the<br />
+   wall. There appear to be no other caves at this level, but a sturdy <br />
+   steel ladder leads down through a large round hole in the floor. ”</p>
+
+<p>   north = entranceTunnel   <br />
+   out asExit(north)<br />
+;</p>
+
+<p>Taking advantage of the Room template, the same definition could be
+coded as:</p>
+
+<p>entranceCave : Room ’Entrance Cave’ ’the entrance cave’<br />
+  ”Compared with the narrow tunnel leading out to the north, this <br />
+   rough-walled cave seems positively spacious. A red sign fixed to <br />
+   one wall suggests that the narrow tunnel is the only way back out to<br />
+   the valley, while a blue sign next to it welcomes you to the cave.<br />
+   Directly under the signs a narrow ledge has been carved into the<br />
+   wall. There appear to be no other caves at this level, but a sturdy <br />
+   steel ladder leads down through a large round hole in the floor. ”</p>
+
+<p>   north = entranceTunnel   <br />
+   out asExit(north)<br />
+;</p>
+
+<p>These two definitions are entirely equivalent; both assign exactly the
+same values to the same properties.</p>
+
+<p>So how does this work? The Room template is defined in the library as
+follows:</p>
+
+<p>Room template ’roomName’ ’destName’? ’name’? ”desc”?;</p>
+
+<p>This definition means that when defining an object of class Room (or one
+of its subclasses), if the class name is immediately followed by a
+single-quoted string, that string will be assigned to the <strong>roomName</strong>
+property; the next single-quoted string, if present, will be assigned to
+the <strong>destName</strong> property, the next to the <strong>name</strong> property, and a
+double-quoted string that comes at the end of this list will be assigned
+to the <strong>desc</strong> property. The question mark after an item in a template
+definition means that this element is optional and may be omitted.</p>
+
+<p>Accordingly, the following definitions using the Room template are all
+legal:</p>
+
+<p>entranceCave : Room ’Entrance Cave’<br />
+;</p>
+
+<p><em>Which is equivalent to:</em></p>
+
+<p>entranceCave : Room<br />
+   roomName = ’Entrance Cave’<br />
+;</p>
+
+<p>Or</p>
+
+<p>entranceCave : Room ’Entrance Cave’<br />
+  ”Compared with the narrow tunnel…”<br />
+;</p>
+
+<p><em>Which is equivalent to:</em></p>
+
+<p>entranceCave : Room<br />
+   roomName = ’Entrance Cave’<br />
+   desc =  ”Compared with the narrow tunnel…”<br />
+;</p>
+
+<p>Or</p>
+
+<p>entranceCave : Room ’Entrance Cave’ ’the entrance cave’<br />
+;</p>
+
+<p><em>Which is equivalent to:</em></p>
+
+<p>entranceCave : Room<br />
+   roomName = ’Entrance Cave’<br />
+   destName = ’the entrance cave’<br />
+;</p>
+
+<p>Or</p>
+
+<p>entranceCave : Room ’Entrance Cave’ ’the entrance cave’ ’entrance cave’<br />
+;</p>
+
+<p><em>Which is equivalent to:</em></p>
+
+<p>entranceCave : Room<br />
+   roomName = ’Entrance Cave’<br />
+   destName = ’the entrance cave’<br />
+   name = ’entrance cave’<br />
+;</p>
+
+<p>Note, however, that properties defined in the template must appear in
+the order shown, so that the following would <em>not</em> match the template:</p>
+
+<p>entranceRoom ”Compared with the narrow tunnel…“ ’Entrance Cave”;</p>
+
+<p>entranceRoom ’Entrance Cave’ ”Compared with the narrow tunnel…“ ’the entrance cave’;</p>
+
+<p>In practice, virtually all rooms will need to define a roomName and a
+description (and this is the point of the template, to allow the common
+properties of all rooms to be defined with the minimum of effort). So
+you will normally define rooms in one of two forms:</p>
+
+<p>myRoom : Room ’My Room Name’<br />
+  ”My room desc ”<br />
+  /* other properties/methods */<br />
+;</p>
+
+<p><em>or</em></p>
+
+<p>myRoom : Room ’My Room Name’ ’my room destName’<br />
+  ”My room desc ”<br />
+  /* other properties/methods */<br />
+;</p>
+
+<p>Not only does this make defining rooms <em>briefer,</em> it also makes your
+code more readable, since the key properties (roomName, destName if
+defined, and desc) will always appear in the same relative location in
+the definition of a room, rather than at some possibly random location
+in a list of properties (for these key properties will seldom be the
+<em>only</em> properties you’ll need to define on a room). Once you get used to
+the template, you can look at a room definition and see its roomName and
+description at once.</p>
+
+<p>Note that a template defined for a class is also valid for all its
+subclasses. So the <a href="room.html">Room</a> template we have just described can
+(and should) also be used for <a href="outdoorroom.html">OutdoorRoom</a>,
+<a href="darkroom.html">DarkRoom</a> and <a href="floorlessroom.html">FloorlessRoom</a> (and,
+indeed, for any specialized subclasses of Room you may define in your
+own game).</p>
+
+<p>Now let’s look at the definition of the Thing template (which also
+applies to all the subclasses of Thing, i.e. virtually every game object
+that represents a physical object in the game world, unless there’s a
+more specific template applying to the subclass).</p>
+
+<p>The Thing template is defined like this:</p>
+
+<p>Thing template ’vocabWords’ ’name’ @location? ”desc”?;</p>
+
+<p>This means that typical Thing definitions will tend to look like this:</p>
+
+<p>brassCoin : Thing ’(small) brass coin/groat*coins’ ’small brass coin’ @longCave<br />
+  ”On the obverse is the head of King Freddie the Fat, and on the reverse<br />
+   is stamped ONE GROAT. ”<br />
+;</p>
+
+<p>*Which is exactly equivalent to:</p>
+<ul>
+  <li>brassCoin : Thing <br />
+  vocabWords = ’(small) brass coin/groat*coins’ <br />
+  name = ’small brass coin’ <br />
+  location = longCave<br />
+  desc =  ”On the obverse is the head of King Freddie the Fat, and on the reverse<br />
+          is stamped ONE GROAT. ”<br />
+;</li>
+</ul>
+
+<p>Or this:</p>
+
+<p>++ fluidLink : Thing ’fluid link’ ’fluid link’<br />
+   ”It’s a long transparent tube. Both ends are capped with some kind of shiny <br />
+    metal, and at one end is a tiny hole. ”    <br />
+;</p>
+
+<p><em>Which is exactly equivalent to:</em></p>
+
+<p>++ fluidLink : Thing <br />
+     vocabWords = ’fluid link’ <br />
+     name =  ’fluid link’<br />
+     desc =  ”It’s a long transparent tube. Both ends are capped with some kind of shiny <br />
+        metal, and at one end is a tiny hole. ”    <br />
+;</p>
+
+<p>The main difference is that the second example, the fluidLink, uses the
+++ notation to specify its location relative to some previously defined
+object, so that it does not need to set its location property by any
+other means. Since @location? in the Thing template includes a
+question-mark to show that this element is optional, it can be omitted
+from the object definition and the template will still match. The
+brassCoin, however, does not use the + syntax to determine its location,
+so this needs to be done some other way; hence we specify its location
+using @longCave.</p>
+
+<p>You may define the occasional Thing that is so insignificant that it
+does not merit a description, in which case you can simply omit the
+double-quoted string from the definition, making for extremely concise
+code, e.g.:</p>
+
+<p>+ peanut: Food ’peanut/nut’ ’peanut’;</p>
+
+<p>or</p>
+
+<p>peanut : Food ’peanut/nut’ ’peanut’ @kitchenTable;</p>
+
+<p>This also illustrates how subclasses of Thing (of which Food is one) can
+use the same template as Thing.</p>
+
+<p>There’s two further types of template we ought to consider; the first is
+one that can match <em>alternatives</em> at the same location within the
+sequence of properties. Here’s a simple example from the library:</p>
+
+<p>DefaultTopic template ”topicResponse” | [eventList];</p>
+
+<p>This template means that you can define <em>either</em></p>
+
+<p>DefaultTopic ”Bob looks bored with your question”;</p>
+
+<p><em>Meaning</em></p>
+
+<p>Default Topic<br />
+  topicResponse = ”Bob looks bored with your question”<br />
+;</p>
+
+<p><em>Or</em></p>
+
+<p>DefaultTopic   [ ’Bob looks bored’, ’Bob yawns’, ’Bob is so bored he falls asleep’];</p>
+
+<p>*Meaning</p>
+
+<p>*DefaultTopic   <br />
+   eventList = [ ’Bob looks bored’, ’Bob yawns’, ’Bob is so bored he falls asleep’]<br />
+;</p>
+
+<p>(Which isn’t actually very useful unless your DefaultTopic also inherits
+from an EventList class, but that’s another matter).</p>
+
+<p>A more complex example is provided by:</p>
+
+<p>TopicEntry template +matchScore? <br />
+   @matchObj | [matchObj] | ’matchPattern’ <br />
+   ”topicResponse” | [eventList] ?; </p>
+
+<p>Which can be matched by something as simple as</p>
+
+<p>TopicEntry @bob<br />
+  ”&lt;q&gt;That’s none of your business!&lt;/q&gt; he declares. ”<br />
+;</p>
+
+<p>Or something as complex as:</p>
+
+<p>TopicEntry + 110 [silverCoin, goldCoin, brassCoin]<br />
+  [ <br />
+    ’ &lt;q&gt;I\ve never been interested in coins.&lt;/q&gt; he growls. ’,<br />
+    ’&lt;q&gt;Don\t try to tempt me with money - I can\t stand the stuff.’ he complains. ’,<br />
+    ’&lt;q&gt;Filthy lucre! Take it away!&lt;/q&gt; he demands. ’,<br />
+    ’&lt;q&gt;The root of all evil.&lt;/q&gt; he opines ’<br />
+  ]<br />
+;</p>
+
+<p>Although we shan’t try to run through all the possible permutations
+here.</p>
+
+<p>The remaining type of template we need to consider is that which uses
+the <em>inherited</em> keyword in its definition. In fact, the library defines
+very few of these; one (fairly important) example is:</p>
+
+<p>Passage template -&gt;masterObject inherited;</p>
+
+<p>In this context the <em>inherited</em> keyword refers to the templates of <em>all</em>
+Passage’s superclasses, so this template could potentially represent a
+series of templates, in which <em>inherited</em> is replaced with the template
+of each of Passage’s superclass in turn (and also with nothing). Passage
+inherits from Linkable, Fixture and TravelConnector, none of which
+defines a template. Linkable inherits from object (so there’s no
+template there). Fixture inherits from NonPortable which inherits from
+Thing which inherits from VocabObject; TravelConnector also inherits
+from Thing. The possible templates Passage can inherit from are
+therefore those for <a href="thingtemplate.html">Thing</a> and for
+<a href="vocabobjecttemplate.html">VocabObject</a>. This foregoing definition is
+thus equivalent to the following:</p>
+
+<p>Passage template -&gt; masterObject;<br />
+Passage template -&gt; masterObject ’vocabWords’;<br />
+Passage template -&gt; masterObject ’vocabWords’ ’name’ @location? ”desc”?;</p>
+
+<p>Note that this is almost but not quite equivalent to:</p>
+
+<p>Passage template -&gt; masterObject ’vocabWords’? ’name’? @location? ”desc”?;</p>
+
+<p>The reason it is <em>not</em> equivalent is that this template would allow the
+location or desc properties to be specified in the template without the
+name property, which the real Passage template will not.</p>
+
+<p>Note that since Passage inherits from Thing and VocabObject, it is
+<em>also</em> perfectly legal to use the Thing and VocabObject templates with a
+Passage, e.g.:</p>
+
+<p>Passage ’passage’;<br />
+Passage ’long passage’ ’long passage’ @diningRoom ”The long passage leads into the hall. ”;</p>
+
+<p>All this actually looks a good deal more complicated than it will ever
+work out in practice, for in practice, if you want to use a Passage (or
+one of its subclasses) you will <em>either</em> use the Thing template to
+define it, or the form of the Passage template in which <em>inherited</em>
+picks up the Passage template. Thus, although you can use other template
+combinations with Passage, in practice most of the time (perhaps 99% of
+the time), you will use Passage and its subclasses <em>as if</em> its template
+were defined:</p>
+
+<p>Passage -&gt;masterObject? ’vocabWords_‘ ’name’ @location? ”desc”?;</p>
+
+<p>This applies equally to the other classes for which the library defines
+templates including the inherited keyword, namely
+<a href="enterabletemplate.html">Enterable</a> and
+<a href="exitabletemplate.html">Exitable</a>.</p>
+
+<p>Finally, to see how templates work with multiple inheritance, consider
+the following:</p>
+
+<p>class TestA : object<br />
+  weight = 0<br />
+  colour = nil<br />
+  mydesc = nil<br />
+;</p>
+
+<p>class TestB : object<br />
+  bulk = 0<br />
+  texture = nil<br />
+;</p>
+
+<p>class TestC :  TestB, TestA;<br />
+;</p>
+
+<p>TestA template +weight ’colour’ ’mydesc’?;<br />
+TestB template +bulk ’texture’;</p>
+
+<p>testMe : TestC +20 ’rough’ ;</p>
+
+<p>testMeAgain : TestC +30 ’red’ ’wooden’;</p>
+
+<p><em>Results in</em></p>
+
+<p>testMe : TestC<br />
+    weight = 0<br />
+    colour = nil<br />
+    myDesc = nil<br />
+    bulk = 20<br />
+    texture = ’rough’<br />
+;</p>
+
+<p>testMeAgain: TestC<br />
+    weight = 30<br />
+    colour = ’red’<br />
+    myDesc = ’wooden’<br />
+    bulk = 0<br />
+    texture = nil<br />
+;</p>
+
+<p>The testMe object has a definition that in principle could match either
+the TestA template or the TestB template. It is the TestB template that
+is actually matched because TestB comes earlier in the class list of
+TestC. On the other hand testMeAgain has a definition that can only
+match the TestA template, so it is the TestA template that is matched.</p>
+
+<p>Finally, we should consider how the <em>inherited</em> keyword works in the
+context of multiple inheritance. If we now go on to define:</p>
+
+<p>TestC template inherited ’shape’;</p>
+
+<p>The ‘inherited’ keyword can inherit <em>any</em> of the templates from any of
+TestC’s superclasses, or else nothing at all. The definition is thus
+equivalent to defining the following three templates:</p>
+
+<p>TestC template ’shape’;<br />
+TestC template +bulk ’texture’ ’shape’;<br />
+TestC template +weight ’colour’ ’mydesc’? ’shape’;</p>
+
+<p>Note also that objects of class C (such as testMe and testMeAgain) will
+also continue to match templates defined on its superclasses (in this
+case, the templates for ClassA and ClassB).</p>
+
+<p>Suppose we also define an object:</p>
+
+<p>testMeShape : TestC +10 ’blue’ ’large’ ’square’;</p>
+
+<p>Now, this can <em>only</em> match the last form of the template, so it will
+mean weight=10, colour=’blue’, mydesc=’large’ and shape=’square’. But
+what of our previous two objects?</p>
+
+<p>As before, testMe has bulk=20, texture=’rough’, while testMeAgain has
+bulk=30, shape=’wooden’, texture=’red’. Since the TestC template is
+defined later in the file than the other two, the other two still match
+first.</p>
+

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Starting the Map  
-<span class="navnp"><a href="describing.htm" class="nav"><em>Prev:</em> Describing the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Starting the Map  
+<span class="navnp"><a href="describing.html" class="nav"><em>Prev:</em> Describing the
 game</a>    
-<a href="airmap2.htm" class="nav"><em>Next:</em> Extending the Map</a>
+<a href="airmap2.html" class="nav"><em>Next:</em> Extending the Map</a>
     </span>
 
 </div>
@@ -20,7 +22,7 @@ game</a>    
 # Starting the Map
 
 The first step is to create a new project. Follow the steps in [Chapter
-Two](setting.htm) above, but this time create a new folder/directory
+Two](setting.html) above, but this time create a new folder/directory
 called 'aiport' to hold contain this new project, and when you've copied
 the template files to it rename the relevant template files to
 airport.t3m. Or, if you're using Workbench, use the New Project wizard
@@ -473,11 +475,11 @@ next section, we'll sketch in the rest of the airport map.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="airport.htm" class="nav">Airport</a> \> Starting the Map  
-<span class="navnp"><a href="describing.htm" class="nav"><em>Prev:</em> Describing the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="airport.html" class="nav">Airport</a> \> Starting the Map  
+<span class="navnp"><a href="describing.html" class="nav"><em>Prev:</em> Describing the
 game</a>    
-<a href="airmap2.htm" class="nav"><em>Next:</em> Extending the Map</a>
+<a href="airmap2.html" class="nav"><em>Next:</em> Extending the Map</a>
     </span>
 
 </div>

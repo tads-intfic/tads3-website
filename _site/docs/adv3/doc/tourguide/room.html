@@ -1,0 +1,51 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Room : <a href="fixture.html">Fixture</a>, BasicLocation, <a href="roomautoconnector.html">RoomAutoConnector</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="enterable.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="stairwaydown.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>We can now define the second room in the game. Since this will be an
+interior room (albeit inside a cave rather than a building) we’ll make
+it of the Room class:</p>
+
+<p>entranceCave : Room ’Entrance Cave’ ’the entrance cave’<br />
+  ”Compared with the narrow tunnel leading out to the north, this <br />
+   rough-walled cave seems positively spacious. A red sign fixed to <br />
+   one wall suggests that the narrow tunnel is the only way back out to<br />
+   the valley, while a blue sign next to it welcomes you to the cave.<br />
+   Directly under the signs a narrow ledge has been carved into the<br />
+   wall. There appear to be no other caves at this level, but a sturdy <br />
+   steel ladder leads down through a large round hole in the floor. ”</p>
+
+<p>   north = entranceTunnel   <br />
+   out asExit(north)<br />
+;</p>
+
+<p>Note that the cave’s north property points to the previously defined
+<a href="roomconnector.html">RoomConnector</a>, and that we use the
+<a href="asexit.html">asExit</a> macro to allow OUT as a synonym for NORTH.</p>
+
+<p>Once again, note the use of the <a href="roomtemplate.html">Room template</a> to
+define the common properties of this Room. The first single-quoted
+string, ‘Entrance Cave’ is the name of the Room. The second ‘the
+entrance cave’ (which is optional - we could just leave it out) is its
+destName (the name that will appear in exit listings). The double quoted
+string that follows, “Compared with the narrow… “, is the room
+description.</p>
+
+<p>Although this is an underground cave, we assume it will be permanently
+lit by some means or other. In more complex situations you might want to
+override the brightness property to vary according to circumstance (as
+is exemplified in the definition of the <a href="secretdoor.html">secretPassage</a>,
+which comes later).</p>
+
+<p>At this point it should be possible to compile and test the game once
+more.</p>

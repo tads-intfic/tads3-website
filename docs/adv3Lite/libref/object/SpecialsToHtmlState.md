@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SpecialsToHtmlState</span><span class="type">class</span>
 
 [\_main.t](../file/_main.t.html)\[[1133](../source/_main.t.html#1133)\]

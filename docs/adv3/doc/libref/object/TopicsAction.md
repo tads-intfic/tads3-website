@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TopicsAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2139](../source/actions.t.html#2139)\]

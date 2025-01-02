@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Openable: <a
-href="basicopenable.htm">BasicOpenable</a><br />
+href="basicopenable.html">BasicOpenable</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="keyring.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="basicopenable.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="keyring.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="basicopenable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -21,19 +23,19 @@ Most objects that are lockable are also likely to be openable - after
 all, there's not a lot of point in locking or unlocking an object that
 can't be open or closed. However, since most of the objects that are
 openable and closable tend to be container-like objects or door-like
-objects, in practice one tends to use classes like [Door](door.htm) and
-[OpenableContainer](openablecontainer.htm) rather more than a bare
+objects, in practice one tends to use classes like [Door](door.html) and
+[OpenableContainer](openablecontainer.html) rather more than a bare
 Openable. We are not yet ready to introduce an example of a bare
 Openable in our test game, but there is one later, the
-[tardisPanel](presentlater.htm) object.  
+[tardisPanel](presentlater.html) object.  
   
 The Openable class inherits all the behaviour of
-[BasicOpenable](basicopenable.htm) and the mainly adds handling (or at
+[BasicOpenable](basicopenable.html) and the mainly adds handling (or at
 least additional preconditions) for a number of common verbs (OPEN,
 CLOSE, PUT IN, POUR INTO, LOCK, LOCK WITH, GET OUT OF, and BOARD).  
   
 Openable also defines **lockStatusReportable** to be (!isOpen); for a
-fuller explanation see [Lockable](lockable.htm). Finally it defines an
+fuller explanation see [Lockable](lockable.html). Finally it defines an
 **openStatus**() method which returns a sentence like "it's open" or
 "it's closed" (without punctuation) which can be added to the
 description of an object to indicate whether it's open or closed. The

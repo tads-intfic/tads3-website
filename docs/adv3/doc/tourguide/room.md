@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Room : <a
-href="fixture.htm">Fixture</a>, BasicLocation, <a
-href="roomautoconnector.htm">RoomAutoConnector</a><br />
+href="fixture.html">Fixture</a>, BasicLocation, <a
+href="roomautoconnector.html">RoomAutoConnector</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="enterable.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="stairwaydown.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="enterable.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="stairwaydown.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -37,10 +39,10 @@ entranceCave : Room 'Entrance Cave' 'the entrance cave'
   
   
 Note that the cave's north property points to the previously defined
-[RoomConnector](roomconnector.htm), and that we use the
-[asExit](asexit.htm) macro to allow OUT as a synonym for NORTH.  
+[RoomConnector](roomconnector.html), and that we use the
+[asExit](asexit.html) macro to allow OUT as a synonym for NORTH.  
   
-Once again, note the use of the [Room template](roomtemplate.htm) to
+Once again, note the use of the [Room template](roomtemplate.html) to
 define the common properties of this Room. The first single-quoted
 string, 'Entrance Cave' is the name of the Room. The second 'the
 entrance cave' (which is optional - we could just leave it out) is its
@@ -51,7 +53,7 @@ description.
 Although this is an underground cave, we assume it will be permanently
 lit by some means or other. In more complex situations you might want to
 override the brightness property to vary according to circumstance (as
-is exemplified in the definition of the [secretPassage](secretdoor.htm),
+is exemplified in the definition of the [secretPassage](secretdoor.html),
 which comes later).  
   
 At this point it should be possible to compile and test the game once

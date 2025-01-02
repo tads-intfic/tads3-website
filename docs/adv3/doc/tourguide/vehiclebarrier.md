@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,17 +9,17 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>VehicleBarrier : <a
-href="travelbarrier.htm">TravelBarrier</a><br />
+href="travelbarrier.html">TravelBarrier</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="vehicle.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="multiloc.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="vehicle.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="multiloc.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-A VehicleBarrier is a special kind of [TravelBarrier](travelbarrier.htm)
+A VehicleBarrier is a special kind of [TravelBarrier](travelbarrier.html)
 that allows actors to pass (effectively on foot) but (at least by
 default) prevents the passage of Vehicles, though this behaviour can be
 overridden (by overriding its **canTravelerPass(traveler)** method) to

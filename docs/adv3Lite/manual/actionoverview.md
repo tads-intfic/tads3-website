@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Overview  
-<span class="navnp"><a href="action.htm" class="nav"><em>Prev:</em> Actions</a>
-    <a href="actres.htm" class="nav"><em>Next:</em> Action Results</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Overview  
+<span class="navnp"><a href="action.html" class="nav"><em>Prev:</em> Actions</a>
+    <a href="actres.html" class="nav"><em>Next:</em> Action Results</a>
     </span>
 
 </div>
@@ -45,7 +47,7 @@ current action). (Note, the Mercury parser also provides support for
 three-object commands like PUT THE PIN IN THE SLOT WITH THE TWEEZERS,
 but few games are likely to need this, so it is not fully supported in
 the standard adv3Lite library; however, it can be supported if you
-include the [TIAAction](../../extensions/docs/tiaaction.htm) extension).
+include the [TIAAction](../../extensions/docs/tiaaction.html) extension).
 
 The grammatical form of a command can, however, sometimes be a bit
 misleading when it comes to identifying the kind of action. A command
@@ -112,7 +114,7 @@ simplifications the cycle goes like this:
     Command object which handles the execution of the command.
 6.  The Command object starts by noting some initial values (such as
     installing itself in the gCommand pseudo-variable).
-7.  The Command object selects the [Doer](doer.htm) that's the best
+7.  The Command object selects the [Doer](doer.html) that's the best
     match to the command and calls its exec(curCmd) method once for each
     set of objects involved in the command (if the command involves
     multiple direct objects, a Doer's exec() method will be called once
@@ -177,7 +179,7 @@ temporarily (as a nested or implicit action) or permanently (as a
 remapped or replacement action). The Command object thus serves to
 co-ordinate the entire command over what may be a number of actions.
 
-Secondly, at first sight the [Doer](doer.htm) may not seem to do very
+Secondly, at first sight the [Doer](doer.html) may not seem to do very
 much in this scheme of things. By default it does very little except
 decide whether the command is to be handled by the appropriate Action
 (if the actor is the player character) or some other object (in the case
@@ -215,7 +217,7 @@ The main ones are:
   LiteralAction or LiteralTAction, gNumber gives the numeric equivalent
   of gLiteral (if there is one) or nil if the gLiteral string cannot be
   interpreted as a number.
-- **gTopic**: the current [ResolvedTopic](topicact.htm#resolvedtopic)
+- **gTopic**: the current [ResolvedTopic](topicact.html#resolvedtopic)
   (if there is one, i.e. if the current action is a TopicAction or a
   TopicTAction).
 - **gLocation**: the player character's current location.
@@ -291,17 +293,17 @@ command; i.e. WHATEVER is treated as SAY WHATEVER if WHATEVER doesn't
 make sense as an ordinary command. This takes place regardless of the
 value of <span class="code">Parser.defaultActions</span>, since it's
 vital to the conversation system. (For further details about what this
-means, see under [SayTopic](specialtopic.htm#saytopic) below).
+means, see under [SayTopic](specialtopic.html#saytopic) below).
 
 ------------------------------------------------------------------------
 
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Overview  
-<span class="navnp"><a href="action.htm" class="nav"><em>Prev:</em> Actions</a>
-    <a href="actres.htm" class="nav"><em>Next:</em> Action Results</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Overview  
+<span class="navnp"><a href="action.html" class="nav"><em>Prev:</em> Actions</a>
+    <a href="actres.html" class="nav"><em>Next:</em> Action Results</a>
     </span>
 
 </div>

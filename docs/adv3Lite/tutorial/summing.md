@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Summing Up  
-<span class="navnp"><a href="birdinnest.htm" class="nav"><em>Prev:</em> Is the bird in the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Summing Up  
+<span class="navnp"><a href="birdinnest.html" class="nav"><em>Prev:</em> Is the bird in the
 nest?</a>    
-<a href="goldskull.htm" class="nav"><em>Next:</em> Goldskull</a>    
+<a href="goldskull.html" class="nav"><em>Next:</em> Goldskull</a>    
 </span>
 
 </div>
@@ -247,11 +249,11 @@ we've now left it:
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Summing Up  
-<span class="navnp"><a href="birdinnest.htm" class="nav"><em>Prev:</em> Is the bird in the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Summing Up  
+<span class="navnp"><a href="birdinnest.html" class="nav"><em>Prev:</em> Is the bird in the
 nest?</a>    
-<a href="goldskull.htm" class="nav"><em>Next:</em> Goldskull</a>    
+<a href="goldskull.html" class="nav"><em>Next:</em> Goldskull</a>    
 </span>
 
 </div>

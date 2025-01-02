@@ -1,3 +1,5 @@
+---
+---
 <span class="title">helpMessage</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[28](../source/newbie.t.html#28)\]

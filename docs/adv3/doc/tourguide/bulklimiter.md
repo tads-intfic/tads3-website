@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>BulkLimiter : <a
-href="thing-thebasics.htm">Thing</a><br />
+href="thing-thebasics.html">Thing</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="containers-introduction.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="surface.htm">[Next]</a></td>
+href="containers-introduction.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="surface.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -21,7 +23,7 @@ href="surface.htm">[Next]</a></td>
 BulkLimiter is the common base class for containers and surfaces: things
 that have limited bulk capacities. You probably won't have cause to use
 this class directly; you'll usually use subclasses such as
-[Surface](surface.htm) and [Container](container.htm) instead.  
+[Surface](surface.html) and [Container](container.html) instead.  
   
 BulkLimiter defines the following properties that are inherited by its
 subclasses:  
@@ -69,11 +71,11 @@ individual item inserted into the BulkLimiter may have (by default 10).
 <td><strong>revealHiddenItems</strong> - a flag that determines whether
 any Hidden items will be revealed when this BulkLimiter's interior is
 examined (i.e. when look in, under, or behind will cause the discover
-method of any item of class <a href="hidden.htm">Hidden</a> to be
+method of any item of class <a href="hidden.html">Hidden</a> to be
 called). By default this is true, representing the fact that when we
 look in, under or behind something we normally see what was there even
 if we didn't before we looked; if desired this can be set to nil so that
-<a href="hidden.htm">Hidden</a> items remain hidden.  <br />
+<a href="hidden.html">Hidden</a> items remain hidden.  <br />
 </td>
 </tr>
 </tbody>
@@ -134,7 +136,7 @@ object's bulk to exceed our maxSingleBulk).  <br />
 
   
 BulkLimiter also overrides the
-[notifyInsert()](notifyinsert+notifyremove.htm) method to check whether
+[notifyInsert()](notifyinsert+notifyremove.html) method to check whether
 an object will fit into BulkContainer (which it won't if either the
 aggregate bulkCapacity or the individual maxSingleBulk would be exceeded
 by the insertion).  

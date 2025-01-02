@@ -1,3 +1,5 @@
+---
+---
 <span class="title">messages.t</span><span class="type">file</span>
 
 [source file](../source/messages.t.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ReachProblemDistance</span><span class="type">class</span>
 
 [query.t](../file/query.t.html)\[[1090](../source/query.t.html#1090)\]

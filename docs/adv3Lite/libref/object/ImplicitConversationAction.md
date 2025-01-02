@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ImplicitConversationAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2005](../source/actions.t.html#2005)\]

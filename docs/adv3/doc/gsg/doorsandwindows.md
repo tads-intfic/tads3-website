@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](whatsinaname.htm)   [\[Next\]](crossingthestream.htm)*
+*[\[Previous\]](whatsinaname.html)   [\[Next\]](crossingthestream.html)*
 
 # Chapter 6 - Expanding the Horizons
 
@@ -630,6 +632,6 @@ till later.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](whatsinaname.htm)   [\[Next\]](crossingthestream.htm)*
+*[\[Previous\]](whatsinaname.html)   [\[Next\]](crossingthestream.html)*
 
 </div>

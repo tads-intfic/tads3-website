@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DynamicFunc</span><span class="type">class</span>
 
 [dynfunc.h](../file/dynfunc.h.html)\[[75](../source/dynfunc.h.html#75)\]

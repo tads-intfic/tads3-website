@@ -1,3 +1,5 @@
+---
+---
 <span class="title">QuittingException</span><span class="type">class</span>
 
 [input.t](../file/input.t.html)\[[831](../source/input.t.html#831)\]

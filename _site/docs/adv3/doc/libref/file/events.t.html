@@ -1,0 +1,84 @@
+<p><span class="title">events.t</span><span class="type">file</span></p>
+
+<p><a href="../source/events.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library: events
+
+This module defines the event framework. An event is a programmed
+operation that occurs at a particular point in the game; an event can be
+turn-based, in which case it occurs after a given number of turns has
+elapsed, or it can occur in real time, which means that it occurs after
+a particular interval of time has elapsed.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>BasicEvent<code class="language-plaintext highlighter-rouge">](../object/BasicEvent.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>BasicEventManager<code class="language-plaintext highlighter-rouge">](../object/BasicEventManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Daemon<code class="language-plaintext highlighter-rouge">](../object/Daemon.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Event<code class="language-plaintext highlighter-rouge">](../object/Event.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>EventAction<code class="language-plaintext highlighter-rouge">](../object/EventAction.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Fuse<code class="language-plaintext highlighter-rouge">](../object/Fuse.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>OneTimePromptDaemon<code class="language-plaintext highlighter-rouge">](../object/OneTimePromptDaemon.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PromptDaemon<code class="language-plaintext highlighter-rouge">](../object/PromptDaemon.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RealTimeDaemon<code class="language-plaintext highlighter-rouge">](../object/RealTimeDaemon.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RealTimeEvent<code class="language-plaintext highlighter-rouge">](../object/RealTimeEvent.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RealTimeFuse<code class="language-plaintext highlighter-rouge">](../object/RealTimeFuse.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RealTimeSenseDaemon<code class="language-plaintext highlighter-rouge">](../object/RealTimeSenseDaemon.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>RealTimeSenseFuse<code class="language-plaintext highlighter-rouge">](../object/RealTimeSenseFuse.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Schedulable<code class="language-plaintext highlighter-rouge">](../object/Schedulable.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SenseDaemon<code class="language-plaintext highlighter-rouge">](../object/SenseDaemon.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SenseFuse<code class="language-plaintext highlighter-rouge">](../object/SenseFuse.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>eventManager<code class="language-plaintext highlighter-rouge">](../object/eventManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>realTimeManager<code class="language-plaintext highlighter-rouge">](../object/realTimeManager.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>runScheduler<code class="language-plaintext highlighter-rouge">](#runScheduler)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="runScheduler"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">runScheduler ( )</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#26">26</a>]</p>
+
+<div class="desc">
+
+Run the main scheduling loop. This continues until we encounter an
+end-of-file error reading from the console, or a QuitException is thrown
+to terminate the game.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

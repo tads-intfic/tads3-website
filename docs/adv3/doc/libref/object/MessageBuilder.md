@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MessageBuilder</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[1070](../source/output.t.html#1070)\]

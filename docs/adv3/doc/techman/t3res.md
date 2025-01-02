@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Action Results  
-<span class="navnp"><a href="t3messages.htm" class="nav"><em>Prev:</em> Where Messages Come
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Action Results  
+<span class="navnp"><a href="t3messages.html" class="nav"><em>Prev:</em> Where Messages Come
 From</a>    
-<a href="t3verchk.htm" class="nav"><em>Next:</em> Verify, Check, and
+<a href="t3verchk.html" class="nav"><em>Next:</em> Verify, Check, and
 When to Use Which</a>     </span>
 
 </div>
@@ -392,7 +394,7 @@ a simple single-quoted string here - something like this:
 
 Note that you can use "{xxx}" substitutions here. For an overview of how
 those work, see the article on [message substitution
-parameters](t3msg.htm). Note also that when you give the message as a
+parameters](t3msg.html). Note also that when you give the message as a
 string, there are no additional parameters (so the *params* list is left
 empty).
 
@@ -676,7 +678,7 @@ You can extend the list above by defining your own PreCondition objects.
 If you want to enforce some set of conditions that's beyond the
 capabilities of the library PreCondition objects listed above, you can
 usually do so by creating a custom PreCondition. For details on how, see
-the separate article on [Custom Preconditions](t3precond.htm).
+the separate article on [Custom Preconditions](t3precond.html).
 
 ## <span id="check">Check</span>
 
@@ -1048,11 +1050,11 @@ getParserMessageObj() when isPlayerChar() returns nil.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Action Results  
-<span class="navnp"><a href="t3messages.htm" class="nav"><em>Prev:</em> Where Messages Come
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Action Results  
+<span class="navnp"><a href="t3messages.html" class="nav"><em>Prev:</em> Where Messages Come
 From</a>    
-<a href="t3verchk.htm" class="nav"><em>Next:</em> Verify, Check, and
+<a href="t3verchk.html" class="nav"><em>Next:</em> Verify, Check, and
 When to Use Which</a>     </span>
 
 </div>

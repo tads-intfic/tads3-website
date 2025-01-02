@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LieAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2578](../source/actions.t.html#2578)\]

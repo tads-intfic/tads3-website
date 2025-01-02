@@ -1,3 +1,5 @@
+---
+---
 # Notes on porting HTML TADS
 
 ## Recent Changes Affecting Porting
@@ -34,7 +36,7 @@
 - The os_banner API introduces the new concept of a "parent" window.
   Each banner window can now optionally have a parent banner specified.
   Refer to the TADS 2 porting notes (portnote.txt in the TADS 2
-  distribution), and the os_banner API documentation (os_banner.htm) for
+  distribution), and the os_banner API documentation (os_banner.html) for
   details. This change requires a change to the interface ot the frame
   window method CHtmlSysFrame::create_banner_subwin(), and also will
   require changes to the banner window layout algorithm on all

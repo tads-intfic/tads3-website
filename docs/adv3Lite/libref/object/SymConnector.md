@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SymConnector</span><span class="type">class</span>
 
 [symconn.t](../file/symconn.t.html)\[[259](../source/symconn.t.html#259)\]

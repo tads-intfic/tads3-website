@@ -1,0 +1,690 @@
+<p><span class="title">TopicEntry</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2133">2133</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A topic database entry. Actors and actor state objects store topic
+databases; a topic database is essentially a set of these entries.
+
+A TopicEntry can go directly inside an Actor, in which case it's part of
+the actor's global set of topics; or, it can go inside an ActorState, in
+which case it's part of the state's database and is only active when the
+state is active; or, it can go inside a TopicGroup, which is a set of
+topics with a common controlling condition; or, it can go inside a
+ConvNode, in which case it's in effect only when the conversation node
+is active.
+
+Each entry is a relationship between a topic, which is something that
+can come up in an ASK or TELL action, and a handling for the topic. In
+addition, each entry determines what kind or kinds of actions it
+responds to.
+
+Note that TopicEntry objects are \*not\* simulation objects. Rather,
+these are abstract objects; they can be associated with simulation
+objects via the matching mechanism, but these are separate from the
+actual simulation objects. The reason for this separation is that a
+given simulation object might have many different response - the
+response could vary according to who's being asked the question, who's
+asking, and what else is happening in the game.
+
+An entry decides for itself if it matches a topic. By default, an entry
+can match based on either a simulation object, which we'll match to
+anything in the topic's "in scope" or "likely" match lists, or based on
+a regular expression string, which we'll match to the actual topic text
+entered in the player's command.
+
+An entry can decide how strongly it matches a topic. The database will
+choose the strongest match when multiple entries match the same topic.
+The strength of the match is given by a numeric score; the higher the
+score, the stronger the match. The match strength makes it easy to
+specify a hierarchy of topics from specific to general, so that we
+provide general responses to general topic areas, but can still respond
+to particular topics areas more specifically. For example, we might want
+to provide a specific match to the FROBNOZ SPELL object, talking about
+that particular magic spell, but provide a generic '.\* spell' pattern
+to response to questions about any old spell. We'd give the generic
+pattern a lower score, so that the specific FROBNOZ SPELL response would
+win when it matches, but we'd fall back on the generic pattern in other
+cases.
+
+`class `**`TopicEntry`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TopicEntry</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TopicEntry</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>AltTopic<code class="language-plaintext highlighter-rouge">](../object/AltTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>CommandTopic<code class="language-plaintext highlighter-rouge">](../object/CommandTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefaultTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultAnyTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAnyTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultAskForTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskForTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultAskTellTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskTellTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultAskTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultAskTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultCommandTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultCommandTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultConsultTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultConsultTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultGiveShowTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultGiveShowTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultGiveTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultGiveTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultInitiateTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultInitiateTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultShowTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultShowTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefaultTellTopic<code class="language-plaintext highlighter-rouge">](../object/DefaultTellTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>MiscTopic<code class="language-plaintext highlighter-rouge">](../object/MiscTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ActorByeTopic<code class="language-plaintext highlighter-rouge">](../object/ActorByeTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ActorHelloTopic<code class="language-plaintext highlighter-rouge">](../object/ActorHelloTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BoredByeTopic<code class="language-plaintext highlighter-rouge">](../object/BoredByeTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ByeTopic<code class="language-plaintext highlighter-rouge">](../object/ByeTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>HelloGoodbyeTopic<code class="language-plaintext highlighter-rouge">](../object/HelloGoodbyeTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>HelloTopic<code class="language-plaintext highlighter-rouge">](../object/HelloTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ImpByeTopic<code class="language-plaintext highlighter-rouge">](../object/ImpByeTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ImpHelloTopic<code class="language-plaintext highlighter-rouge">](../object/ImpHelloTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>LeaveByeTopic<code class="language-plaintext highlighter-rouge">](../object/LeaveByeTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>YesNoTopic<code class="language-plaintext highlighter-rouge">](../object/YesNoTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>NoTopic<code class="language-plaintext highlighter-rouge">](../object/NoTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>YesTopic<code class="language-plaintext highlighter-rouge">](../object/YesTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>SpecialTopic<code class="language-plaintext highlighter-rouge">](../object/SpecialTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ThingMatchTopic<code class="language-plaintext highlighter-rouge">](../object/ThingMatchTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>GiveShowTopic<code class="language-plaintext highlighter-rouge">](../object/GiveShowTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>GiveTopic<code class="language-plaintext highlighter-rouge">](../object/GiveTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ShowTopic<code class="language-plaintext highlighter-rouge">](../object/ShowTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>InitiateTopic<code class="language-plaintext highlighter-rouge">](../object/InitiateTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TopicOrThingMatchTopic<code class="language-plaintext highlighter-rouge">](../object/TopicOrThingMatchTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskTellGiveShowTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellGiveShowTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskTellShowTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellShowTopic.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TopicMatchTopic<code class="language-plaintext highlighter-rouge">](../object/TopicMatchTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AskTellTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskAboutForTopic<code class="language-plaintext highlighter-rouge">](../object/AskAboutForTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskForTopic<code class="language-plaintext highlighter-rouge">](../object/AskForTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskTellAboutForTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellAboutForTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskTopic<code class="language-plaintext highlighter-rouge">](../object/AskTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TellTopic<code class="language-plaintext highlighter-rouge">](../object/TellTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ConsultTopic<code class="language-plaintext highlighter-rouge">](../object/ConsultTopic.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TopicOrThingMatchTopic<code class="language-plaintext highlighter-rouge">](../object/TopicOrThingMatchTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskTellGiveShowTopic<code class="language-plaintext highlighter-rouge">](../object/AskTellGiveShowTopic.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AskTellShowTopic`](../object/AskTellShowTopic.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>altTalkCount<code class="language-plaintext highlighter-rouge">](#altTalkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>altTopicList<code class="language-plaintext highlighter-rouge">](#altTopicList)</code>  <code class="language-plaintext highlighter-rouge">[</code>impliesGreeting<code class="language-plaintext highlighter-rouge">](#impliesGreeting)</code>  <code class="language-plaintext highlighter-rouge">[</code>includeInList<code class="language-plaintext highlighter-rouge">](#includeInList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isActive<code class="language-plaintext highlighter-rouge">](#isActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConversational<code class="language-plaintext highlighter-rouge">](#isConversational)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchObj<code class="language-plaintext highlighter-rouge">](#matchObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchScore<code class="language-plaintext highlighter-rouge">](#matchScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>talkCount<code class="language-plaintext highlighter-rouge">](#talkCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupActive<code class="language-plaintext highlighter-rouge">](#topicGroupActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicGroupScoreAdjustment<code class="language-plaintext highlighter-rouge">](#topicGroupScoreAdjustment)</code>  <code class="language-plaintext highlighter-rouge">[</code>topicResponse<code class="language-plaintext highlighter-rouge">](#topicResponse)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addAltTopic<code class="language-plaintext highlighter-rouge">](#addAltTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addSuggestedTopic<code class="language-plaintext highlighter-rouge">](#addSuggestedTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>addTopic<code class="language-plaintext highlighter-rouge">](#addTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>adjustScore<code class="language-plaintext highlighter-rouge">](#adjustScore)</code>  <code class="language-plaintext highlighter-rouge">[</code>anyAltIsActive<code class="language-plaintext highlighter-rouge">](#anyAltIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>breakTopicTie<code class="language-plaintext highlighter-rouge">](#breakTopicTie)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkIsActive<code class="language-plaintext highlighter-rouge">](#checkIsActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>deferToEntry<code class="language-plaintext highlighter-rouge">](#deferToEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicOwner<code class="language-plaintext highlighter-rouge">](#getTopicOwner)</code>  <code class="language-plaintext highlighter-rouge">[</code>handleTopic<code class="language-plaintext highlighter-rouge">](#handleTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeTopicEntry<code class="language-plaintext highlighter-rouge">](#initializeTopicEntry)</code>  <code class="language-plaintext highlighter-rouge">[</code>isMatchPossible<code class="language-plaintext highlighter-rouge">](#isMatchPossible)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchTopic<code class="language-plaintext highlighter-rouge">](#matchTopic)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteAltInvocation<code class="language-plaintext highlighter-rouge">](#noteAltInvocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteInvocation<code class="language-plaintext highlighter-rouge">](#noteInvocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>setTopicPronouns<code class="language-plaintext highlighter-rouge">](#setTopicPronouns)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="altTalkCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">altTalkCount</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2317">2317</a>]</p>
+
+<div class="desc">
+
+The number of times this topic or any nested AltTopic has been invoked
+by the player. Each time the player asks/tells/etc about this topic OR
+any of its AltTopic children, we'll increment this count.
+
+</div>
+
+<p><span id="altTopicList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">altTopicList</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2373">2373</a>]</p>
+
+<div class="desc">
+
+our list of AltTopic children
+
+</div>
+
+<p><span id="impliesGreeting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">impliesGreeting</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2175">2175</a>]</p>
+
+<div class="desc">
+
+Do we imply a greeting? By default, all conversational topics imply a
+greeting. We separate this out so that the implied greeting can be
+controlled independently of whether or not we're actually
+conversational, if desired.
+
+</div>
+
+<p><span id="includeInList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">includeInList</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2294">2294</a>]</p>
+
+<div class="desc">
+
+The set of database lists we're part of. This is a list of property
+pointers, giving the TopicDatabase properties of the lists we
+participate in.
+
+</div>
+
+<p><span id="isActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActive</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2152">2152</a>]</p>
+
+<div class="desc">
+
+Is this topic active? This can be used to control how an actor can
+respond without have to worry about adding and removing topics manually
+at key events, or storing the topics in state objects. Sometimes, it's
+easier to just put a topic entry in the actor's database from the start,
+and test some condition dynamically when the topic is actually queried.
+To do this, override this method to test the condition that determines
+when the topic entry should become active. We'll never show the topic's
+response when isActive returns nil. By default, we simply return true to
+indicate that the topic entry is active.
+
+</div>
+
+<p><span id="isConversational"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConversational</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2167">2167</a>]</p>
+
+<div class="desc">
+
+Flag: we are a "conversational" topic. This is true by default. When
+this is set to nil, a ConversationReadyState will NOT show its greeting
+and will not enter its InConversationState to show this topic entry's
+response.
+
+This should be set to nil when the topic entry's response is
+non-conversational, in which case a greeting would be undesirable. This
+is appropriate for responses like "You don't think he'd want to talk
+about that", where the response indicates that the player character
+didn't even ask a question (or whatever).
+
+</div>
+
+<p><span id="matchObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchObj</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2138">2138</a>]</p>
+
+<div class="desc">
+
+My matching simulation object or objects. This can be either a single
+object or a list of objects.
+
+</div>
+
+<p><span id="matchScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchScore</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2287">2287</a>]</p>
+
+<div class="desc">
+
+Our match strength score. By default, we'll use a score of 100, which is
+just an arbitrary base score.
+
+</div>
+
+<p><span id="talkCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">talkCount</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2309">2309</a>]</p>
+
+<div class="desc">
+
+The number of times this topic has invoked by the player. Each time the
+player asks/tells/etc about this topic, we'll increment this count.
+
+</div>
+
+<p><span id="topicGroupActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicGroupActive</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2370">2370</a>]</p>
+
+<div class="desc">
+
+check the group isActive status (for AltTopics nested within)
+
+</div>
+
+<p><span id="topicGroupScoreAdjustment"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicGroupScoreAdjustment</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2367">2367</a>]</p>
+
+<div class="desc">
+
+get the topic group score adjustment (for AltTopics nested within)
+
+</div>
+
+<p><span id="topicResponse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicResponse</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2302">2302</a>]</p>
+
+<div class="desc">
+
+Our response. This is displayed when we're the topic entry selected to
+handle an ASK or TELL. Each topic entry must override this to show our
+response text (or, alternatively, an entry can override handleTopic so
+that it doesn't call this property).
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addAltTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addAltTopic (entry)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2360">2360</a>]</p>
+
+<div class="desc">
+
+Add an AltTopic entry. This is called by our AltTopic children during
+initialization; we'll simply add the entry to our list of AltTopic
+children.
+
+</div>
+
+<p><span id="addSuggestedTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addSuggestedTopic (t)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2550">2550</a>]</p>
+
+<div class="desc">
+
+Add a suggested topic. A suggested topic can be nested within a topic
+entry; doing this associates the suggested topic with the topic entry,
+and automatically associates the suggested topic with the entry's actor
+or actor state.
+
+</div>
+
+<p><span id="addTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addTopic (entry)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2348">2348</a>]</p>
+
+<div class="desc">
+
+add a topic nested within us
+
+</div>
+
+<p><span id="adjustScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">adjustScore (score)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2252">2252</a>]</p>
+
+<div class="desc">
+
+Adjust my score value for any hierarchical adjustments. We'll add the
+score adjustment for each enclosing object.
+
+</div>
+
+<p><span id="anyAltIsActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">anyAltIsActive ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2228">2228</a>]</p>
+
+<div class="desc">
+
+Check to see if any alternative in the alternative group is active. This
+returns true if we're active or if any of our nested AltTopics is
+active.
+
+</div>
+
+<p><span id="breakTopicTie"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">breakTopicTie (matchList, topic, fromActor, toks)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2443">2443</a>]</p>
+
+<div class="desc">
+
+Break a tie among matching topics entries. The topic database searcher
+calls this on each matching topic entry when it finds multiple entries
+tied for first place, based on their match scores. This gives the
+entries a chance to figure out which one is actually the best match for
+the input, given the other entries that also matched.
+
+This method returns a TopicEntry object - one of the objects from the
+match list - if it has an opinion as to which one should take
+precedence. It returns nil if it doesn't know or doesn't care. Returning
+nil gives the other topics in the match list a chance to make the
+selection. If all of the objects in the list return nil, the topic
+database searcher simply picks one of the topic matches arbitrarily.
+
+'matchList' is the list of tied TopicEntry objects. 'topic' is the
+ResolvedTopic object from the parser, representing the player's input
+phrase that we're matching. 'fromActor' is the actor performing the
+command. 'toks' is a list of strings giving the word tokens of the noun
+phrase.
+
+The topic database searcher calls this method for each matching topic
+entry in the case of a tie, and simply accepts the opinion of the first
+one that expresses an opinion by returning a non-nil value. There's no
+voting; whoever happens to get \*and use\* the first say also gets the
+last word. We expect that this won't be a problem in practice: when this
+comes up at all, it's because there are a couple of closely related
+topic entries that are active in a particular context, and you need a
+special bit of tweaking to pick the right one for a given input phrase.
+Simply pick one of the involved entries and define this method there.
+
+</div>
+
+<p><span id="checkIsActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkIsActive ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2205">2205</a>]</p>
+
+<div class="desc">
+
+Determine if this topic is active. This checks the isActive property,
+and also takes into account our relationship to alternative entries for
+the topic. Generally, you should \*define\* (override) isActive, and
+\*call\* this method.
+
+</div>
+
+<p><span id="deferToEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// deferToEntry (other)</code><span class="rem">Interface description
+only</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2281">2281</a>]</p>
+
+<div class="desc">
+
+Check to see if we want to defer to the given topic from an inferior
+topic database. By default, we never defer to a topic from an inferior
+database: we choose a matching topic from the top database in the
+hierarchy where we find a match.
+
+The database hierarchy, for most purposes, starts with the ConvNode at
+the highest level, then the ActorState, then the Actor. We search those
+databases, in that order, and we take the first match we find. By
+default, if there's another match in a lower-level database, it doesn't
+matter what its matchScore is: we always pick the one from the
+highest-level database where we find a match. You can override this
+method to change this behavior.
+
+We don't actually define this method here, because the presence of the
+method is significant. If the method isn't defined at all, we won't
+bother looking for a possible deferral, saving the trouble of searching
+the other databases in the hierarchy.
+
+</div>
+
+<p><span id="getActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getActor ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2184">2184</a>]</p>
+
+<div class="desc">
+
+Get the actor associated with the topic, if any. By default, we'll
+return our enclosing database's topic owner, if it's an actor - in
+almost all cases, if there's any actor associated with a topic, it's
+simply the owner of the database containing the topic.
+
+</div>
+
+<p><span id="getTopicOwner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTopicOwner ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2323">2323</a>]</p>
+
+<div class="desc">
+
+the owner of any AltTopic nested within me is the same as my own topic
+owner, which we take from our location
+
+</div>
+
+<p><span id="handleTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">handleTopic (fromActor, topic)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2492">2492</a>]</p>
+
+<div class="desc">
+
+Handle the topic. This is called when we find that this is the best
+topic entry for the current topic.
+
+By default, we'll do one of two things:
+
+\- If 'self' inherits from Script, then we'll simply invoke our
+doScript() method. This makes it especially easy to set up a topic entry
+that shows a series of responses: just add EventList or one of its
+subclasses to the base class list when defining the topic, and define
+the eventList property as a list of string responses. For example:
+
+  
++ TopicEntry, StopEventList @blackBook  
+\['\&lt;q\&gt;What makes you think I know anything about it?\&lt;/q\&gt;  
+he says, his voice shaking. ',  
+'\&lt;q\&gt;No! You can\\t make me tell you!\&lt;/q\&gt; he wails. ',  
+'\&lt;q\&gt;All right, fine! I\\ll tell you, but I warn you,  
+this is knowledge mortal men were never meant to know.\&lt;/q\&gt; ',  
+// and so on  
+\]  
+;
+
+\- Otherwise, we'll call our topicResponse property, which should simply
+be a double-quoted string to display. This is the simplest way to define
+a topic with just one response.
+
+Note that 'topic' will vary by subclass, depending on the type of
+command used with the topic type. For example, for ASK and TELL
+commands, 'topic' is a ResolvedTopic object; for GIVE and SHOW, it's a
+simulation object (i.e., generally a Thing subclass).
+
+</div>
+
+<p><span id="initializeTopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeTopicEntry ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2336">2336</a>]</p>
+
+<div class="desc">
+
+Initialize. If we have a location property, we'll assume that the
+location is a topic database object, and we'll add ourselves to that
+database.
+
+</div>
+
+<p><span id="isMatchPossible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// isMatchPossible (actor, scopeList)</code><span class="rem">Interface
+description only</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2408">2408</a>]</p>
+
+<div class="desc">
+
+Check to see if a match to this topic entry is \*possible\* right now
+for the given actor. For most subclasses, this is inherently imprecise,
+because the 'match' function simply isn't reversible in general: to know
+if we can be matched, we'd have to determine if there's a non-empty set
+of possible inputs that can match us. This method is complementary to
+matchTopic(), so subclasses must override with a corresponding
+implementation.
+
+'actor' is the actor to whom we're making the suggestion. 'scopeList' is
+the list of objects that are in scope for the actor.
+
+The library only uses this to determine if a suggestion should be
+offered. So, specialized topic instances with non-standard match rules
+don't have to worry about this unless they're used as suggestions, or
+unless the game itself needs this information for some other reason.
+
+</div>
+
+<p><span id="matchTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">// matchTopic (fromActor, topic)</code><span class="rem">Interface
+description only</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2387">2387</a>]</p>
+
+<div class="desc">
+
+Match a topic. This is abstract in this base class; it must be defined
+by each concrete subclass. This returns nil if there's no match, or an
+integer value if there's a match. The higher the number's value, the
+stronger the match.
+
+This is abstract in the base class because the meaning of 'topic' varies
+by subclass, according to which type of command it's used with. For
+example, in ASK and TELL commands, 'topic' is a ResolvedTopic describing
+the topic in the player's command; for GIVE and SHOW commands, it's the
+resolved simulation object.
+
+</div>
+
+<p><span id="noteAltInvocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteAltInvocation (fromActor, alt)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2532">2532</a>]</p>
+
+<div class="desc">
+
+Note that something in our entire alternative group has been invoked. We
+count as a member of our own group, so this is invoked when we're
+invoked; this is also invoked when any AltTopic child of ours is
+invoked.
+
+</div>
+
+<p><span id="noteInvocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteInvocation (fromActor)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2514">2514</a>]</p>
+
+<div class="desc">
+
+note that we've been invoked
+
+</div>
+
+<p><span id="setTopicPronouns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setTopicPronouns (fromActor, topic)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#2458">2458</a>]</p>
+
+<div class="desc">
+
+Set pronouns for the topic, if possible. If the topic corresponds to a
+game-world object, then we should set the pronoun antecedent to the game
+object. This must be handled per subclass because of the range of
+possible meanings of 'topic'.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

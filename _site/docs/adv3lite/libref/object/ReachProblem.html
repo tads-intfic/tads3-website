@@ -1,0 +1,171 @@
+<p><span class="title">ReachProblem</span><span class="type">class</span></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1055">1055</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+An object describing a reach problem; such objects are used by the Query
+object to communicate problems with one object touching another to the
+touchObj PreCondition (see also precond.t). ReachProblem objects are
+normally created dynamicallty as required, although it is usually one of
+the subclasses of ReachProblem that it used.
+
+`class `**`ReachProblem`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ReachProblem</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ReachProblem</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ReachProblemBlocker<code class="language-plaintext highlighter-rouge">](../object/ReachProblemBlocker.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ReachProblemCheckReach<code class="language-plaintext highlighter-rouge">](../object/ReachProblemCheckReach.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ReachProblemDistance<code class="language-plaintext highlighter-rouge">](../object/ReachProblemDistance.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ReachProblemReachOut<code class="language-plaintext highlighter-rouge">](../object/ReachProblemReachOut.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ReachProblemRemote<code class="language-plaintext highlighter-rouge">](../object/ReachProblemRemote.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ReachProblemVerifyReach`](../object/ReachProblemVerifyReach.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>target_<code class="language-plaintext highlighter-rouge">](#target_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>check<code class="language-plaintext highlighter-rouge">](#check)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>verify<code class="language-plaintext highlighter-rouge">](#verify)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="target_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">target_</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1083">1083</a>]</p>
+
+<div class="desc">
+
+The object we're trying to reach
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="check"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">check (allowImplicit)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1075">1075</a>]</p>
+
+<div class="desc">
+
+The check() method of a ReachProblem should check whether the target
+object can be reached by the source object. If allowImplicit is true the
+check method may attempt an implicit action to bring the target object
+within reach.
+
+Return true if the target object is within reach, and nil otherwise.
+
+Note that the check() method of a ReachProblem will normally be called
+from the checkPreCondition() method of touchObj.
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (target)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1077">1077</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="verify"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verify ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1062">1062</a>]</p>
+
+<div class="desc">
+
+Problems which reaching an object that occur at the verify stage and
+which might affect the choice of object. If the verify() method of a
+ReachProblem object wishes to rule out an action it should do so using
+illogical(), inaccessible() or other such verification macros.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

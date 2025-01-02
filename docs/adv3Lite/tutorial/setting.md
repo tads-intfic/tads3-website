@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> Setting it all up  
-<span class="navnp"><a href="getting.htm" class="nav"><em>Prev:</em> Getting What You
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> Setting it all up  
+<span class="navnp"><a href="getting.html" class="nav"><em>Prev:</em> Getting What You
 Need</a>    
-<a href="using.htm" class="nav"><em>Next:</em> Using the Tools</a>    
+<a href="using.html" class="nav"><em>Next:</em> Using the Tools</a>    
 </span>
 
 </div>
@@ -183,13 +185,13 @@ whatever you're calling it) carry out the following steps:
 
 There are one or two places where both this Tutorial and other parts of
 the adv3Lite documentation attempt to link to the [TADS 3 System
-Manual](../sysman.htm). By default this links to the online version of
+Manual](../sysman.html). By default this links to the online version of
 the System Manual at www.tads.org. If you have a fast and reliable
 internet connection you may be perfectly happy with this, but if you'd
 rather link to the local copy of the System Manual on your own machine
-you can do so by editing the file **sysman.htm** in your adv3Lite
+you can do so by editing the file **sysman.html** in your adv3Lite
 directory. For instructions on how to go about it, see the section on
-the [System Manual](../manual/mingame.htm#sysman) in the *Adv3Lite
+the [System Manual](../manual/mingame.html#sysman) in the *Adv3Lite
 Library Manual*.
 
 </div>
@@ -199,12 +201,12 @@ Library Manual*.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Tools of the Trade</a> \> Setting it all
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Tools of the Trade</a> \> Setting it all
 up  
-<span class="navnp"><a href="getting.htm" class="nav"><em>Prev:</em> Getting What You
+<span class="navnp"><a href="getting.html" class="nav"><em>Prev:</em> Getting What You
 Need</a>    
-<a href="using.htm" class="nav"><em>Next:</em> Using the Tools</a>    
+<a href="using.html" class="nav"><em>Next:</em> Using the Tools</a>    
 </span>
 
 </div>

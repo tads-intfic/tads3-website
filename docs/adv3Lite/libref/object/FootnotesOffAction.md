@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FootnotesOffAction</span><span class="type">object</span>
 
 [footnote.t](../file/footnote.t.html)\[[418](../source/footnote.t.html#418)\]

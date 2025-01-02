@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Actor States  
-<span class="navnp"><a href="actorobj.htm" class="nav"><em>Prev:</em> The Actor Object</a>
-    <a href="agenda.htm" class="nav"><em>Next:</em> AgendaItems</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Actor States  
+<span class="navnp"><a href="actorobj.html" class="nav"><em>Prev:</em> The Actor Object</a>
+    <a href="agenda.html" class="nav"><em>Next:</em> AgendaItems</a>    
 </span>
 
 </div>
@@ -152,7 +154,7 @@ ActorState, so you can write state-specific responses:
 - sayArriving(fromLoc)
 
 In addition, the following methods/properties defined on
-[Actor](actorobj.htm) may also be defined on ActorState; if the Actor
+[Actor](actorobj.html) may also be defined on ActorState; if the Actor
 has a current ActorState the version defined on the current ActorState
 is the one that will be used:
 
@@ -318,7 +320,7 @@ This code will cause the clerk to switch to her clerkTalkingState when
 she's first addressed, and back to her clerkWorkingState when the
 conversation ends. The use of HelloTopics and ByeTopics will be
 discussed in more detail when we come to look at [Greeting
-Protocols](hello.htm) below.
+Protocols](hello.html) below.
 
 </div>
 
@@ -327,10 +329,10 @@ Protocols](hello.htm) below.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="actor.htm" class="nav">Actors</a> \> Actor States  
-<span class="navnp"><a href="actorobj.htm" class="nav"><em>Prev:</em> The Actor Object</a>
-    <a href="agenda.htm" class="nav"><em>Next:</em> AgendaItems</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="actor.html" class="nav">Actors</a> \> Actor States  
+<span class="navnp"><a href="actorobj.html" class="nav"><em>Prev:</em> The Actor Object</a>
+    <a href="agenda.html" class="nav"><em>Next:</em> AgendaItems</a>    
 </span>
 
 </div>

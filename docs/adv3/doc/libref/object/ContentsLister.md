@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ContentsLister</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[1750](../source/lister.t.html#1750)\]

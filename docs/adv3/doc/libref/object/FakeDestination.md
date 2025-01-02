@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FakeDestination</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[2266](../source/travel.t.html#2266)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FileInfo</span><span class="type">class</span>
 
 [file.t](../file/file.t.html)\[[21](../source/file.t.html#21)\]

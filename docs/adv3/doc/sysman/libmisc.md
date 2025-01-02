@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="lib.htm" class="nav">The System Library</a> \> Miscellaneous
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="lib.html" class="nav">The System Library</a> \> Miscellaneous
 Library Definitions  
-<span class="navnp"><a href="tok.htm" class="nav"><em>Prev:</em> Basic Tokenizer</a>
-    <a href="nodef.htm" class="nav"><em>Next:</em> Replacing the System
+<span class="navnp"><a href="tok.html" class="nav"><em>Prev:</em> Basic Tokenizer</a>
+    <a href="nodef.html" class="nav"><em>Next:</em> Replacing the System
 Library</a>     </span>
 
 </div>
@@ -51,7 +53,7 @@ of Actor:
 <div class="fdef">
 
 This function simply calls the function
-<span class="code">tadsSay(val)</span> from the [tads-io](tadsio.htm)
+<span class="code">tadsSay(val)</span> from the [tads-io](tadsio.html)
 intrinsic function set. It's defined as a function here simply so that
 the library can register it with the VM as the default display function.
 
@@ -85,7 +87,7 @@ itself throws.
 <div class="fdef">
 
 This is the base class for PreinitObject and InitObject. (See the
-section on [initialization](init.htm) for full details on these
+section on [initialization](init.html) for full details on these
 objects.)
 
 </div>
@@ -110,11 +112,11 @@ the process won't have to be repeated when the program is started.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="lib.htm" class="nav">The System Library</a> \> Miscellaneous
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="lib.html" class="nav">The System Library</a> \> Miscellaneous
 Library Definitions  
-<span class="navnp"><a href="tok.htm" class="nav"><em>Prev:</em> Basic Tokenizer</a>
-    <a href="nodef.htm" class="nav"><em>Next:</em> Replacing the System
+<span class="navnp"><a href="tok.html" class="nav"><em>Prev:</em> Basic Tokenizer</a>
+    <a href="nodef.html" class="nav"><em>Next:</em> Replacing the System
 Library</a>     </span>
 
 </div>

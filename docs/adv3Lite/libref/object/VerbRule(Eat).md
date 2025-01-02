@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Eat)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2884](../source/grammar.t.html#2884)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Decoration : <a
-href="fixture.htm">Fixture</a><br />
+href="fixture.html">Fixture</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="customfixture.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="distant.htm">[Next]</a></td>
+href="customfixture.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="distant.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -156,7 +158,7 @@ MultiLoc, Decoration 'great (giant) underground lake/water' 'lake'
   locationList = \[lakeRoom, pathEnd\]  
 ;  
   
-The point to bear in mind here is that a</span> [MultiLoc](multiloc.htm)
+The point to bear in mind here is that a</span> [MultiLoc](multiloc.html)
 represents a single physical object present in more than one location,
 and one that is sufficiently small that, for example, if it is lit in
 one location it is lit in all and if something is put in it in one
@@ -174,5 +176,5 @@ MultiLoc if and only if the lighting conditions are always the same in
 all the locations where the Decoration exists (it's fine if all the
 lighting conditions change simultaneously, but they must always be the
 same in each location at any one time). If this condition is not met,
-use a [MultiInstance](multiinstance.htm) instead.  
+use a [MultiInstance](multiinstance.html) instead.  
   

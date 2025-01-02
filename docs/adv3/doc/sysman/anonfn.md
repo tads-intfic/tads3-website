@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Anonymous
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Anonymous
 Functions  
-<span class="navnp"><a href="except.htm" class="nav"><em>Prev:</em> Exceptions and Error
+<span class="navnp"><a href="except.html" class="nav"><em>Prev:</em> Exceptions and Error
 Handling</a>    
-<a href="undef.htm" class="nav"><em>Next:</em> Capturing Calls to
+<a href="undef.html" class="nav"><em>Next:</em> Capturing Calls to
 Undefined Methods</a>     </span>
 
 </div>
@@ -431,7 +433,7 @@ List.mapAll():
 </div>
 
 The solution is to use the
-[<span class="code">invokee</span>](expr.htm#invokee) pseudo-variable.
+[<span class="code">invokee</span>](expr.html#invokee) pseudo-variable.
 <span class="code">invokee</span> contains a pointer to the function
 that's currently executing at any given time. So within an anonymous
 function, this provides a pointer to the anonymous function, without any
@@ -486,7 +488,7 @@ Note how the anonymous method refers to the local variable "val", which
 is part of the enclosing function.
 
 The main use of anonymous methods is to add new methods to objects using
-[<span class="code">setMethod()</span>](tadsobj.htm#setMethod). The
+[<span class="code">setMethod()</span>](tadsobj.html#setMethod). The
 section on <span class="code">setMethod()</span> has more details on how
 anonymous functions and methods differ in practice when creating new
 object methods.
@@ -559,12 +561,12 @@ the balance in favor of removing <span class="code">new</span>.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Anonymous
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Anonymous
 Functions  
-<span class="navnp"><a href="except.htm" class="nav"><em>Prev:</em> Exceptions and Error
+<span class="navnp"><a href="except.html" class="nav"><em>Prev:</em> Exceptions and Error
 Handling</a>    
-<a href="undef.htm" class="nav"><em>Next:</em> Capturing Calls to
+<a href="undef.html" class="nav"><em>Next:</em> Capturing Calls to
 Undefined Methods</a>     </span>
 
 </div>

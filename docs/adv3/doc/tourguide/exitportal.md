@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,17 +9,17 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ExitPortal : <a
-href="shipboardroom.htm#leaveship">Exitable</a><br />
+href="shipboardroom.html#leaveship">Exitable</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="entryportal.htm">[Previous]</a>
-<a href="generalintroduction.htm">[Main]</a> <a
-href="travelbarrier.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="entryportal.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a
+href="travelbarrier.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-An ExitPortal is just like an [Exitable](shipboardroom.htm#leaveship),
+An ExitPortal is just like an [Exitable](shipboardroom.html#leaveship),
 except that you can go through it as well as exit it. For example:  
   
 squareCave : DarkRoom 'Square Cave' 'the square cave'  
@@ -34,7 +36,7 @@ squareCave : DarkRoom 'Square Cave' 'the square cave'
   
 Note that ExitPortal is *not* a travel connector; -\> mainCave makes
 mainCave its connector property, not its masterObject property. For the
-distinction, see further on the [Enterable](enterable.htm) class. The
-template used here is the [Exitable template](exitabletemplate.htm).  
+distinction, see further on the [Enterable](enterable.html) class. The
+template used here is the [Exitable template](exitabletemplate.html).  
   
   

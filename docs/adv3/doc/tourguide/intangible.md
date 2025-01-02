@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Intangible : <a
-href="thing-introduction.htm">Thing</a><br />
+href="thing-introduction.html">Thing</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="intangibles-overview.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="distanceconnector.htm">[Next]</a></td>
+href="intangibles-overview.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="distanceconnector.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -24,8 +26,8 @@ which means that the player can never refer to it, even with a bare
 EXAMINE command. That means it is really only useful for abstract
 objects that the player will never interact with directly (as a mix-in
 class with a SenseConnector, perhaps, as in the
-[DistanceConnector](distanceconnector.htm)). To represent intangible but
+[DistanceConnector](distanceconnector.html)). To represent intangible but
 sensible objects such a ray of light, you are better off using the
-[Vaporous](vaporous.htm) class than trying to tweak Intangible.  
+[Vaporous](vaporous.html) class than trying to tweak Intangible.  
   
   

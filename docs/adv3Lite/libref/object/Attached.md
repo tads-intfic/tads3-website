@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Attached</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[10113](../source/thing.t.html#10113)\]

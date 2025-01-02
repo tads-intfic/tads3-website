@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,18 +9,18 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>PostRestoreObject: <a
-href="moduleexecobject.htm">ModuleExecObject</a><br />
+href="moduleexecobject.html">ModuleExecObject</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="presaveobject.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="postundoobject.htm">[Next]</a></td>
+href="presaveobject.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="postundoobject.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
-A PostRestoreObject is similar to a [PreSaveObject](presaveobject.htm),
+A PostRestoreObject is similar to a [PreSaveObject](presaveobject.html),
 except that instead of its execute method being invoked just before
 saving, it is invoked just after restoring.  
   

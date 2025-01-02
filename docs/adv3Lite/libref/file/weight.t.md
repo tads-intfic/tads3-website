@@ -1,3 +1,5 @@
+---
+---
 <span class="title">weight.t</span><span class="type">file</span>
 
 [source file](../source/weight.t.html)

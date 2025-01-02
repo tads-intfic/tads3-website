@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ProxyDest</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[777](../source/extras.t.html#777)\]

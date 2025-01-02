@@ -1,3 +1,5 @@
+---
+---
 Inline Objects
 
 <div class="topbar">
@@ -8,10 +10,10 @@ Inline Objects
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Inline Objects  
-<span class="navnp"><a href="objdef.htm" class="nav"><em>Prev:</em> Object Definitions</a>
-    <a href="opoverload.htm" class="nav"><em>Next:</em> Operator
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Inline Objects  
+<span class="navnp"><a href="objdef.html" class="nav"><em>Prev:</em> Object Definitions</a>
+    <a href="opoverload.html" class="nav"><em>Next:</em> Operator
 Overloading</a>     </span>
 
 </div>
@@ -20,7 +22,7 @@ Overloading</a>     </span>
 
 # Inline Objects
 
-Most [object definitions](objdef.htm) in a TADS game are at the "top
+Most [object definitions](objdef.html) in a TADS game are at the "top
 level" of the program's source code, outside of any functions or other
 object definitions. Sometimes, though, it's convenient to be able to
 define an object right in the middle of some other program code. For
@@ -35,7 +37,7 @@ This is where inline objects come into play. An inline object is similar
 to an ordinary top-level object, but you can define it in the middle of
 a function or method.
 
-Inline objects are analogous to [anonymous functions](anonfn.htm). An
+Inline objects are analogous to [anonymous functions](anonfn.html). An
 anonymous function lets you define a snippet of executable code right
 where you need it; an inline object lets you define a whole object right
 where you need it. Like anonymous functions, methods within an inline
@@ -264,10 +266,10 @@ call.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Inline Objects  
-<span class="navnp"><a href="objdef.htm" class="nav"><em>Prev:</em> Object Definitions</a>
-    <a href="opoverload.htm" class="nav"><em>Next:</em> Operator
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Inline Objects  
+<span class="navnp"><a href="objdef.html" class="nav"><em>Prev:</em> Object Definitions</a>
+    <a href="opoverload.html" class="nav"><em>Next:</em> Operator
 Overloading</a>     </span>
 
 </div>

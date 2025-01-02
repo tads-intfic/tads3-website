@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PostUndoObject</span><span class="type">class</span>
 
 [action.t](../file/action.t.html)\[[3480](../source/action.t.html#3480)\]

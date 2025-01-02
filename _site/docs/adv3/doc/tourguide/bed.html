@@ -1,0 +1,50 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bed : BasicBed, <a href="surface.html">Surface</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="nominalplatform.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="chair.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A Bed is simply a NestedRoom an actor can lie on (or sit on). The likely
+place for a bed is in a bedroom, and as we’ll need to pay King Solomon a
+visit sometime to collect his legendary purple carbuncle (no you won’t
+find it mentioned in the Bible, but we can always imagine that it’s one
+of the precious stones the Queen of Sheba gave him at 1 Kings 10.10) it
+may as well be his bedroom.</p>
+
+<p>solomonBedroom : Room ’Bedroom’ ’the bedroom’<br />
+  ”This large, square bedchamber is panelled in cedar, with a non-glazed window<br />
+   looking out to the north, and a large bed against the east wall. A door leads<br />
+   out to the west. ”<br />
+  west = solBedroomDoor<br />
+  out asExit(west)<br />
+;</p>
+
+<p>+ solBedroomDoor : Door ’bedroom cedar door’ ’bedroom door’<br />
+  ”It’s made of cedar. ”<br />
+;</p>
+
+<p>+ Bed, Heavy ’large bed’ ’large bed’<br />
+  ”It has a cedar frame and an unsprung mattress. ”<br />
+;</p>
+
+<p>+ Fixture ’window’ ’window’<br />
+  ”The window is basically an opening in the north wall, comprising<br />
+   two rectangular sections each with curved tops. It is unglazed. ”<br />
+  dobjFor(LookThrough)<br />
+  {<br />
+    action()<br />
+    {<br />
+     ”The window overlooks a building site where a large team of workers<br />
+      are constructing a small temple. ”;<br />
+    }<br />
+  }<br />
+;</p>
+

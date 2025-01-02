@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ThroughPassage</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[2601](../source/travel.t.html#2601)\]

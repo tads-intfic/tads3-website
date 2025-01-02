@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SenseConnector</span><span class="type">class</span>
 
 [sense.t](../file/sense.t.html)\[[431](../source/sense.t.html#431)\]

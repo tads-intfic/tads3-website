@@ -1,0 +1,618 @@
+<p><span class="title">TAction</span><span class="type">class</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1559">1559</a>],
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5497">5497</a>],
+<a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#336">336</a>],
+<a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#476">476</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A TAction is an action that applies to a single direct object. Other
+action classes that apply to more than one object, such as TIAction,
+inherit from this class so some of the code needs to take that into
+account.
+
+`class `**`TAction`**` :   `[`Action`](../object/Action.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TAction</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Action<code class="language-plaintext highlighter-rouge">](../object/Action.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ReplaceRedirector<code class="language-plaintext highlighter-rouge">](../object/ReplaceRedirector.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Redirector<code class="language-plaintext highlighter-rouge">](../object/Redirector.html)  
+</code>                                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TAction</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>LiteralTAction<code class="language-plaintext highlighter-rouge">](../object/LiteralTAction.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NumericTAction<code class="language-plaintext highlighter-rouge">](../object/NumericTAction.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TIAction<code class="language-plaintext highlighter-rouge">](../object/TIAction.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TIAAction<code class="language-plaintext highlighter-rouge">](../object/TIAAction.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TopicTAction`](../object/TopicTAction.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>Attach<code class="language-plaintext highlighter-rouge">](../object/Attach.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Attack<code class="language-plaintext highlighter-rouge">](../object/Attack.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Board<code class="language-plaintext highlighter-rouge">](../object/Board.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Break<code class="language-plaintext highlighter-rouge">](../object/Break.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Burn<code class="language-plaintext highlighter-rouge">](../object/Burn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Clean<code class="language-plaintext highlighter-rouge">](../object/Clean.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Climb<code class="language-plaintext highlighter-rouge">](../object/Climb.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ClimbDown<code class="language-plaintext highlighter-rouge">](../object/ClimbDown.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ClimbUp<code class="language-plaintext highlighter-rouge">](../object/ClimbUp.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Close<code class="language-plaintext highlighter-rouge">](../object/Close.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Cut<code class="language-plaintext highlighter-rouge">](../object/Cut.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Detach<code class="language-plaintext highlighter-rouge">](../object/Detach.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Dig<code class="language-plaintext highlighter-rouge">](../object/Dig.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Doff<code class="language-plaintext highlighter-rouge">](../object/Doff.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Drink<code class="language-plaintext highlighter-rouge">](../object/Drink.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Drop<code class="language-plaintext highlighter-rouge">](../object/Drop.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Eat<code class="language-plaintext highlighter-rouge">](../object/Eat.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Enter<code class="language-plaintext highlighter-rouge">](../object/Enter.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Examine<code class="language-plaintext highlighter-rouge">](../object/Examine.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ExamineOrGoTo<code class="language-plaintext highlighter-rouge">](../object/ExamineOrGoTo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Extinguish<code class="language-plaintext highlighter-rouge">](../object/Extinguish.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Fasten<code class="language-plaintext highlighter-rouge">](../object/Fasten.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Feel<code class="language-plaintext highlighter-rouge">](../object/Feel.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Flip<code class="language-plaintext highlighter-rouge">](../object/Flip.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Follow<code class="language-plaintext highlighter-rouge">](../object/Follow.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GetOff<code class="language-plaintext highlighter-rouge">](../object/GetOff.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GetOutOf<code class="language-plaintext highlighter-rouge">](../object/GetOutOf.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GiveToImplicit<code class="language-plaintext highlighter-rouge">](../object/GiveToImplicit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GoAlong<code class="language-plaintext highlighter-rouge">](../object/GoAlong.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GoNear<code class="language-plaintext highlighter-rouge">](../object/GoNear.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GoThrough<code class="language-plaintext highlighter-rouge">](../object/GoThrough.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>GoTo<code class="language-plaintext highlighter-rouge">](../object/GoTo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>JumpOff<code class="language-plaintext highlighter-rouge">](../object/JumpOff.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>JumpOver<code class="language-plaintext highlighter-rouge">](../object/JumpOver.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Kiss<code class="language-plaintext highlighter-rouge">](../object/Kiss.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LieIn<code class="language-plaintext highlighter-rouge">](../object/LieIn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LieOn<code class="language-plaintext highlighter-rouge">](../object/LieOn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Light<code class="language-plaintext highlighter-rouge">](../object/Light.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ListenTo<code class="language-plaintext highlighter-rouge">](../object/ListenTo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Lock<code class="language-plaintext highlighter-rouge">](../object/Lock.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LookBehind<code class="language-plaintext highlighter-rouge">](../object/LookBehind.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LookIn<code class="language-plaintext highlighter-rouge">](../object/LookIn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LookThrough<code class="language-plaintext highlighter-rouge">](../object/LookThrough.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LookUnder<code class="language-plaintext highlighter-rouge">](../object/LookUnder.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Move<code class="language-plaintext highlighter-rouge">](../object/Move.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Open<code class="language-plaintext highlighter-rouge">](../object/Open.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PlugIn<code class="language-plaintext highlighter-rouge">](../object/PlugIn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Pour<code class="language-plaintext highlighter-rouge">](../object/Pour.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Pull<code class="language-plaintext highlighter-rouge">](../object/Pull.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Purloin<code class="language-plaintext highlighter-rouge">](../object/Purloin.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Push<code class="language-plaintext highlighter-rouge">](../object/Push.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>PushTravelDir<code class="language-plaintext highlighter-rouge">](../object/PushTravelDir.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Read<code class="language-plaintext highlighter-rouge">](../object/Read.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Remove<code class="language-plaintext highlighter-rouge">](../object/Remove.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Screw<code class="language-plaintext highlighter-rouge">](../object/Screw.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Search<code class="language-plaintext highlighter-rouge">](../object/Search.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Set<code class="language-plaintext highlighter-rouge">](../object/Set.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ShowToImplicit<code class="language-plaintext highlighter-rouge">](../object/ShowToImplicit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SitIn<code class="language-plaintext highlighter-rouge">](../object/SitIn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SitOn<code class="language-plaintext highlighter-rouge">](../object/SitOn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SmellSomething<code class="language-plaintext highlighter-rouge">](../object/SmellSomething.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>StandIn<code class="language-plaintext highlighter-rouge">](../object/StandIn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>StandOn<code class="language-plaintext highlighter-rouge">](../object/StandOn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Strike<code class="language-plaintext highlighter-rouge">](../object/Strike.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SwitchOff<code class="language-plaintext highlighter-rouge">](../object/SwitchOff.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SwitchOn<code class="language-plaintext highlighter-rouge">](../object/SwitchOn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SwitchVague<code class="language-plaintext highlighter-rouge">](../object/SwitchVague.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Take<code class="language-plaintext highlighter-rouge">](../object/Take.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TalkTo<code class="language-plaintext highlighter-rouge">](../object/TalkTo.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Taste<code class="language-plaintext highlighter-rouge">](../object/Taste.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Throw<code class="language-plaintext highlighter-rouge">](../object/Throw.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ThrowDir<code class="language-plaintext highlighter-rouge">](../object/ThrowDir.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TravelVia<code class="language-plaintext highlighter-rouge">](../object/TravelVia.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Turn<code class="language-plaintext highlighter-rouge">](../object/Turn.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>TypeOnVague<code class="language-plaintext highlighter-rouge">](../object/TypeOnVague.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Unfasten<code class="language-plaintext highlighter-rouge">](../object/Unfasten.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Unlock<code class="language-plaintext highlighter-rouge">](../object/Unlock.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Unplug<code class="language-plaintext highlighter-rouge">](../object/Unplug.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Unscrew<code class="language-plaintext highlighter-rouge">](../object/Unscrew.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Wear<code class="language-plaintext highlighter-rouge">](../object/Wear.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>actionList<code class="language-plaintext highlighter-rouge">](#actionList)</code>  <code class="language-plaintext highlighter-rouge">[</code>announceMultiAction<code class="language-plaintext highlighter-rouge">](#announceMultiAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>announceMultiCheck<code class="language-plaintext highlighter-rouge">](#announceMultiCheck)</code>  <code class="language-plaintext highlighter-rouge">[</code>announceMultiVerify<code class="language-plaintext highlighter-rouge">](#announceMultiVerify)</code>  <code class="language-plaintext highlighter-rouge">[</code>aqinfo<code class="language-plaintext highlighter-rouge">](#aqinfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>curDobj<code class="language-plaintext highlighter-rouge">](#curDobj)</code>  <code class="language-plaintext highlighter-rouge">[</code>curObj<code class="language-plaintext highlighter-rouge">](#curObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>dqinfo<code class="language-plaintext highlighter-rouge">](#dqinfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>gActor<code class="language-plaintext highlighter-rouge">](#gActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>haltOnMessageInCheck<code class="language-plaintext highlighter-rouge">](#haltOnMessageInCheck)</code>  <code class="language-plaintext highlighter-rouge">[</code>iqinfo<code class="language-plaintext highlighter-rouge">](#iqinfo)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastVerifyMsg<code class="language-plaintext highlighter-rouge">](#lastVerifyMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>reportFailureAfterSuccess<code class="language-plaintext highlighter-rouge">](#reportFailureAfterSuccess)</code>  <code class="language-plaintext highlighter-rouge">[</code>reportList<code class="language-plaintext highlighter-rouge">](#reportList)</code>  <code class="language-plaintext highlighter-rouge">[</code>signal<code class="language-plaintext highlighter-rouge">](#signal)</code>  <code class="language-plaintext highlighter-rouge">[</code>verifyTab<code class="language-plaintext highlighter-rouge">](#verifyTab)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>actionFailed<code class="language-plaintext highlighter-rouge">](../object/Action.html#actionFailed)</code>  <code class="language-plaintext highlighter-rouge">[</code>advanceOnFailure<code class="language-plaintext highlighter-rouge">](../object/Action.html#advanceOnFailure)</code>  <code class="language-plaintext highlighter-rouge">[</code>againRepeatsParse<code class="language-plaintext highlighter-rouge">](../object/Action.html#againRepeatsParse)</code>  <code class="language-plaintext highlighter-rouge">[</code>allowAll<code class="language-plaintext highlighter-rouge">](../object/Action.html#allowAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>extraMessageParams<code class="language-plaintext highlighter-rouge">](../object/Action.html#extraMessageParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>failCheckMsg<code class="language-plaintext highlighter-rouge">](../object/Action.html#failCheckMsg)</code>  <code class="language-plaintext highlighter-rouge">[</code>failedActionCountsAsTurn<code class="language-plaintext highlighter-rouge">](../object/Action.html#failedActionCountsAsTurn)</code>  <code class="language-plaintext highlighter-rouge">[</code>implicitTimeTaken<code class="language-plaintext highlighter-rouge">](../object/Action.html#implicitTimeTaken)</code>  <code class="language-plaintext highlighter-rouge">[</code>includeInUndo<code class="language-plaintext highlighter-rouge">](../object/Action.html#includeInUndo)</code>  <code class="language-plaintext highlighter-rouge">[</code>isConversational<code class="language-plaintext highlighter-rouge">](../object/Action.html#isConversational)</code>  <code class="language-plaintext highlighter-rouge">[</code>isImplicit<code class="language-plaintext highlighter-rouge">](../object/Action.html#isImplicit)</code>  <code class="language-plaintext highlighter-rouge">[</code>isRepeatable<code class="language-plaintext highlighter-rouge">](../object/Action.html#isRepeatable)</code>  <code class="language-plaintext highlighter-rouge">[</code>oldRoom<code class="language-plaintext highlighter-rouge">](../object/Action.html#oldRoom)</code>  <code class="language-plaintext highlighter-rouge">[</code>parentAction<code class="language-plaintext highlighter-rouge">](../object/Action.html#parentAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>parentAllowAll<code class="language-plaintext highlighter-rouge">](../object/Action.html#parentAllowAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>preCond<code class="language-plaintext highlighter-rouge">](../object/Action.html#preCond)</code>  <code class="language-plaintext highlighter-rouge">[</code>redirectParent<code class="language-plaintext highlighter-rouge">](../object/Action.html#redirectParent)</code>  <code class="language-plaintext highlighter-rouge">[</code>reportImplicitActions<code class="language-plaintext highlighter-rouge">](../object/Action.html#reportImplicitActions)</code>  <code class="language-plaintext highlighter-rouge">[</code>scopeList<code class="language-plaintext highlighter-rouge">](../object/Action.html#scopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>spellingPriority<code class="language-plaintext highlighter-rouge">](../object/Action.html#spellingPriority)</code>  <code class="language-plaintext highlighter-rouge">[</code>synthParamID<code class="language-plaintext highlighter-rouge">](../object/Action.html#synthParamID)</code>  <code class="language-plaintext highlighter-rouge">[</code>timeTaken<code class="language-plaintext highlighter-rouge">](../object/Action.html#timeTaken)</code>  <code class="language-plaintext highlighter-rouge">[</code>turnsTaken<code class="language-plaintext highlighter-rouge">](../object/Action.html#turnsTaken)</code>  <code class="language-plaintext highlighter-rouge">[</code>unhides<code class="language-plaintext highlighter-rouge">](../object/Action.html#unhides)</code>  <code class="language-plaintext highlighter-rouge">[</code>verifyObj<code class="language-plaintext highlighter-rouge">](../object/Action.html#verifyObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>wasIlluminated<code class="language-plaintext highlighter-rouge">](../object/Action.html#wasIlluminated)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addVerifyResult<code class="language-plaintext highlighter-rouge">](#addVerifyResult)</code>  <code class="language-plaintext highlighter-rouge">[</code>check<code class="language-plaintext highlighter-rouge">](#check)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkAction<code class="language-plaintext highlighter-rouge">](#checkAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkPreCond<code class="language-plaintext highlighter-rouge">](#checkPreCond)</code>  <code class="language-plaintext highlighter-rouge">[</code>doAction<code class="language-plaintext highlighter-rouge">](#doAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>doActionOnce<code class="language-plaintext highlighter-rouge">](#doActionOnce)</code>  <code class="language-plaintext highlighter-rouge">[</code>execAction<code class="language-plaintext highlighter-rouge">](#execAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>execCycle<code class="language-plaintext highlighter-rouge">](#execCycle)</code>  <code class="language-plaintext highlighter-rouge">[</code>execResolvedAction<code class="language-plaintext highlighter-rouge">](#execResolvedAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAll<code class="language-plaintext highlighter-rouge">](#getAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>getMessageParam<code class="language-plaintext highlighter-rouge">](#getMessageParam)</code>  <code class="language-plaintext highlighter-rouge">[</code>getVerbPhrase<code class="language-plaintext highlighter-rouge">](#getVerbPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>getVerbPhrase1<code class="language-plaintext highlighter-rouge">](#getVerbPhrase1)</code>  <code class="language-plaintext highlighter-rouge">[</code>makeScopeUniversal<code class="language-plaintext highlighter-rouge">](#makeScopeUniversal)</code>  <code class="language-plaintext highlighter-rouge">[</code>reportAction<code class="language-plaintext highlighter-rouge">](#reportAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>reset<code class="language-plaintext highlighter-rouge">](#reset)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolvedObjectsInScope<code class="language-plaintext highlighter-rouge">](#resolvedObjectsInScope)</code>  <code class="language-plaintext highlighter-rouge">[</code>setResolvedObjects<code class="language-plaintext highlighter-rouge">](#setResolvedObjects)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>acknowledgeNotifyStatus<code class="language-plaintext highlighter-rouge">](../object/Action.html#acknowledgeNotifyStatus)</code>  <code class="language-plaintext highlighter-rouge">[</code>addExtraScopeItems<code class="language-plaintext highlighter-rouge">](../object/Action.html#addExtraScopeItems)</code>  <code class="language-plaintext highlighter-rouge">[</code>addImplicitTime<code class="language-plaintext highlighter-rouge">](../object/Action.html#addImplicitTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>advanceTime<code class="language-plaintext highlighter-rouge">](../object/Action.html#advanceTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>afterAction<code class="language-plaintext highlighter-rouge">](../object/Action.html#afterAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>announceObject<code class="language-plaintext highlighter-rouge">](../object/Action.html#announceObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeAction<code class="language-plaintext highlighter-rouge">](../object/Action.html#beforeAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildImplicitActionAnnouncement<code class="language-plaintext highlighter-rouge">](../object/Action.html#buildImplicitActionAnnouncement)</code>  <code class="language-plaintext highlighter-rouge">[</code>buildScopeList<code class="language-plaintext highlighter-rouge">](../object/Action.html#buildScopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkActionPreconditions<code class="language-plaintext highlighter-rouge">](../object/Action.html#checkActionPreconditions)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandNotPresent<code class="language-plaintext highlighter-rouge">](../object/Action.html#commandNotPresent)</code>  <code class="language-plaintext highlighter-rouge">[</code>exec<code class="language-plaintext highlighter-rouge">](../object/Action.html#exec)</code>  <code class="language-plaintext highlighter-rouge">[</code>execGroup<code class="language-plaintext highlighter-rouge">](../object/Action.html#execGroup)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAllUnhidden<code class="language-plaintext highlighter-rouge">](../object/Action.html#getAllUnhidden)</code>  <code class="language-plaintext highlighter-rouge">[</code>implicitAnnouncement<code class="language-plaintext highlighter-rouge">](../object/Action.html#implicitAnnouncement)</code>  <code class="language-plaintext highlighter-rouge">[</code>scoreObjects<code class="language-plaintext highlighter-rouge">](../object/Action.html#scoreObjects)</code>  <code class="language-plaintext highlighter-rouge">[</code>setMessageParam<code class="language-plaintext highlighter-rouge">](../object/Action.html#setMessageParam)</code>  <code class="language-plaintext highlighter-rouge">[</code>setMessageParams<code class="language-plaintext highlighter-rouge">](../object/Action.html#setMessageParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>spPrefix<code class="language-plaintext highlighter-rouge">](../object/Action.html#spPrefix)</code>  <code class="language-plaintext highlighter-rouge">[</code>spSuffix<code class="language-plaintext highlighter-rouge">](../object/Action.html#spSuffix)</code>  <code class="language-plaintext highlighter-rouge">[</code>synthMessageParam<code class="language-plaintext highlighter-rouge">](../object/Action.html#synthMessageParam)</code>  <code class="language-plaintext highlighter-rouge">[</code>turnSequence<code class="language-plaintext highlighter-rouge">](../object/Action.html#turnSequence)</code>  <code class="language-plaintext highlighter-rouge">[</code>verify<code class="language-plaintext highlighter-rouge">](../object/Action.html#verify)</code>  <code class="language-plaintext highlighter-rouge">[</code>verifyObjRole<code class="language-plaintext highlighter-rouge">](../object/Action.html#verifyObjRole)</code>  <code class="language-plaintext highlighter-rouge">[</code>wrapObjectsNP<code class="language-plaintext highlighter-rouge">](../object/Action.html#wrapObjectsNP)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ReplaceRedirector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>redirect<code class="language-plaintext highlighter-rouge">](../object/ReplaceRedirector.html#redirect)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>doInstead<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doInstead)</code>  <code class="language-plaintext highlighter-rouge">[</code>doNested<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doNested)</code>  <code class="language-plaintext highlighter-rouge">[</code>doOtherAction<code class="language-plaintext highlighter-rouge">](../object/Redirector.html#doOtherAction)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="actionList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actionList</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1571">1571</a>]</p>
+
+<div class="desc">
+
+A list of the direct objects of this action that make it to the action
+stage.
+
+</div>
+
+<p><span id="announceMultiAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceMultiAction</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1593">1593</a>]</p>
+
+<div class="desc">
+
+set this property to true if you want to announce the object before the
+action result when there's more than one object. If the action routine
+summarizes the result at the end you don't want to do this so you should
+then set this to nil.
+
+</div>
+
+<p><span id="announceMultiCheck"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceMultiCheck</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1774">1774</a>]</p>
+
+<div class="desc">
+
+Flag: do we want the object name to appear before a check stage failure
+message if multiple objects are involved in the action. By default we
+do, otherwise it might not be clear which object the message referes to.
+
+</div>
+
+<p><span id="announceMultiVerify"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceMultiVerify</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2059">2059</a>]</p>
+
+<div class="desc">
+
+Flag, do we want to announce the object name before the verify message
+in cases where there's more direct object in the command? By default we
+don't since verify messages generally make it clear enough which objects
+they refer to.
+
+</div>
+
+<p><span id="aqinfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aqinfo</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1630">1630</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="curDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curDobj</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1596">1596</a>]</p>
+
+<div class="desc">
+
+The current direct object of this action
+
+</div>
+
+<p><span id="curObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curObj</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1603">1603</a>]</p>
+
+<div class="desc">
+
+The current object being processed (in a TAction, always the curDObj; in
+a TI Action either the curDobj or the curIOoj).
+
+</div>
+
+<p><span id="dqinfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dqinfo</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1628">1628</a>]</p>
+
+<div class="desc">
+
+Information to allow the DEBUG ACTIONS command to express a complete
+topic phrase
+
+</div>
+
+<p><span id="gActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActor</code></p>
+
+<p><a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#527">527</a>]</p>
+
+<div class="desc">
+
+Set the current actor to the player character at the start of the game
+(to ensure we have a current actor defined).
+
+</div>
+
+<p><span id="haltOnMessageInCheck"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">haltOnMessageInCheck</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1806">1806</a>]</p>
+
+<div class="desc">
+
+This flag is used internally by the library to track whether the output
+of any text from a check() should stop the action, which it normally
+should. Game code should not directly override this property or change
+its value, other than indrectly via the noHalt() function.
+
+</div>
+
+<p><span id="iqinfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iqinfo</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1629">1629</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="lastVerifyMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastVerifyMsg</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1585">1585</a>]</p>
+
+<div class="desc">
+
+Store the last verify failure message so that if we get several
+identical ones in a row, we don't keep repeating them
+
+</div>
+
+<p><span id="reportFailureAfterSuccess"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reportFailureAfterSuccess</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1913">1913</a>]</p>
+
+<div class="desc">
+
+Flag: when a command processes multiple direct objects, do we want any
+failed attempts to be reported after successful ones?
+
+</div>
+
+<p><span id="reportList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reportList</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1565">1565</a>]</p>
+
+<div class="desc">
+
+A list of the direct objects of this action that make it to the report
+stage.
+
+</div>
+
+<p><span id="signal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">signal</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#341">341</a>]</p>
+
+<div class="desc">
+
+The signal (if any) )o be emitted by the direct object of this action.
+\[SIGNALS EXTENSION\]
+
+</div>
+
+<p><span id="verifyTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verifyTab</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1578">1578</a>]</p>
+
+<div class="desc">
+
+A LookupTable containing the verify results for this action. This is
+keyes on the object being verified, with the value being the worst
+verify result encountered for that object so far.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addVerifyResult"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addVerifyResult (verRes)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2077">2077</a>]</p>
+
+<div class="desc">
+
+Add a verify result to this action's verify table. This method is
+normally called by one of the macros (logical, illogical, logicalRank,
+etc.) use in an object's verify routine.
+
+</div>
+
+<p><span id="check"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">check (obj, checkProp)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1812">1812</a>]</p>
+
+<div class="desc">
+
+Call the check method (checkProp) on the appropriate object (obj).
+Return true to indicate that the action succeeds or nil otherwise
+
+</div>
+
+<p><span id="checkAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkAction (cmd)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1782">1782</a>]</p>
+
+<div class="desc">
+
+Run the check phase of the action, both on the direct object and on any
+preconditions.
+
+</div>
+
+<p><span id="checkPreCond"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkPreCond (obj, preCondProp)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1916">1916</a>]</p>
+
+<div class="desc">
+
+Run the check stage on the preCondProp of obj
+
+</div>
+
+<p><span id="doAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doAction ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2040">2040</a>],
+<a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#347">347</a>]</p>
+
+<div class="desc">
+
+Return true to tell our caller we succesfully completed the action.
+
+*Modified in
+[signals.t](../file/signals.t.html)\[[347](../source/signals.t.html#347)\]:*  
+If this action defines an associated signal, then have the direct object
+emit the signal after carrrying out out inherited handling. \[SIGNALS
+EXTENSION\]
+
+</div>
+
+<p><span id="doActionOnce"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doActionOnce ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1971">1971</a>]</p>
+
+<div class="desc">
+
+Carry out the action phase on the direct object
+
+</div>
+
+<p><span id="execAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execAction (cmd)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1684">1684</a>]</p>
+
+<div class="desc">
+
+Execute this action
+
+</div>
+
+<p><span id="execCycle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execCycle (cmd)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1639">1639</a>]</p>
+
+<div class="desc">
+
+Execute the command cycle for this action. This differs from the base
+Action class in not calling beforeAction directly, since the
+beforeAction() notifications occur within the execResolvedAction method.
+
+</div>
+
+<p><span id="execResolvedAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execResolvedAction ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1708">1708</a>]</p>
+
+<div class="desc">
+
+Execute this action with a known direct object or objects. Call this
+method when there's no need to resolve the objects used in the command
+but we still want it to pass through every stage
+
+</div>
+
+<p><span id="getAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getAll (cmd, role)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2067">2067</a>]</p>
+
+<div class="desc">
+
+Return a list of direct objects corresponding to the word ALL in the
+player's command. By default we return everything in scope that isn't a
+a Room.
+
+</div>
+
+<p><span id="getMessageParam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getMessageParam (objName)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2156">2156</a>]</p>
+
+<div class="desc">
+
+Get a message parameter object for the action. We define 'dobj' as the
+direct object, in addition to any inherited targets.
+
+</div>
+
+<p><span id="getVerbPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getVerbPhrase (inf, ctx)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5499">5499</a>]</p>
+
+<div class="desc">
+
+get the verb phrase in infinitive or participle form
+
+</div>
+
+<p><span id="getVerbPhrase1"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getVerbPhrase1 (inf, vp, dobjText, dobjIsPronoun)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5534">5534</a>]</p>
+
+<div class="desc">
+
+Given the text of the direct object phrase, build the verb phrase for a
+one-object verb. This is a class method that can be used by other kinds
+of verbs (i.e., non-TActions) that use phrasing like a single object.
+
+'inf' is a flag indicating whether to use the infinitive form (true) or
+the present participle form (nil); 'vp' is the verbPhrase string;
+'dobjText' is the direct object phrase's text; and 'dobjIsPronoun' is
+true if the dobj text is rendered as a pronoun.
+
+</div>
+
+<p><span id="makeScopeUniversal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">makeScopeUniversal ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2180">2180</a>]</p>
+
+<div class="desc">
+
+A convenience method for putting every game object in scope, which may
+be appropriate for certain commands (not least, certain debugging
+commands). It's intended to be called from addExtraScopeItems when
+
+</div>
+
+<p><span id="reportAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reportAction ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2122">2122</a>],
+<a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#494">494</a>]</p>
+
+<div class="desc">
+
+reportAction() is called only after all the action routines have been
+run and the list of dobjs acted on is known. It only does anything if
+the action is not implicit. It can thus be used to summarize a list of
+identical actions carried out on every object in reportList or to print
+a report that is not wanted if the action is implicit. By default we
+call the dobj's reportDobjProp to handle the report.
+
+Note that this method is usually called from the current Command object
+after its finished iterated over all the direct objects involved in the
+command.
+
+*Modified in
+[sysrules.t](../file/sysrules.t.html)\[[494](../source/sysrules.t.html#494)\]:*  
+MODIFIED FOR SYSRULES EXTENSION
+
+reportAction() is called only after all the action routines have been
+run and the list of dobjs acted on is known. It only does anything if
+the action is not implicit. It can thus be used to summarize a list of
+identical actions carried out on every object in reportList or to print
+a report that is not wanted if the action is implicit. By default we
+call the dobj's reportDobjProp to handle the report.
+
+Note that this method is usually called from the current Command object
+after its finished iterated over all the direct objects involved in the
+command.
+
+This modified version uses the reportRules rulebook to make it easy to
+insert differently worded summary reports.
+
+</div>
+
+<p><span id="reset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reset ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1609">1609</a>]</p>
+
+<div class="desc">
+
+Reset values to their starting state when an action is used to execute a
+new command.
+
+</div>
+
+<p><span id="resolvedObjectsInScope"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolvedObjectsInScope ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2146">2146</a>]</p>
+
+<div class="desc">
+
+Check whether the resolved objects for this action are in scope
+
+</div>
+
+<p><span id="setResolvedObjects"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setResolvedObjects (dobj)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2140">2140</a>]</p>
+
+<div class="desc">
+
+install the resolved objects in the action
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

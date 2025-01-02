@@ -1,3 +1,5 @@
+---
+---
 <span class="title">implicitDetPluralOnlyNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`implicitDetPluralOnlyNounPhrase(main)`](../object/implicitDetPluralOnlyNounPhrase(main).html)**` :   `[`Production`](../object/Production.html)

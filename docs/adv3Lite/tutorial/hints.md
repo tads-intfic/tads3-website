@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> Hints  
-<span class="navnp"><a href="scoring.htm" class="nav"><em>Prev:</em> Scoring</a>
-    <a href="whatmore.htm" class="nav"><em>Next:</em> What More?</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> Hints  
+<span class="navnp"><a href="scoring.html" class="nav"><em>Prev:</em> Scoring</a>
+    <a href="whatmore.html" class="nav"><em>Next:</em> What More?</a>    
 </span>
 
 </div>
@@ -27,7 +29,7 @@ hints should generally start as vague nudges and become increasingly
 specific, so that on the one hand the player doesn't get stuck but on
 the other s/he's given every opportunity to solve the problem for
 him/herself. How this hint system is implemented is described in the
-section on [Hints](../manual/hint.htm) in the *adv3Lite Library Manual*.
+section on [Hints](../manual/hint.html) in the *adv3Lite Library Manual*.
 
 For the Airport game we'll illustrate this with the beginnings of a
 fairly simple (one-level) hints system. For this purpose we need to
@@ -100,7 +102,7 @@ list of hints), but we need to define its
 (actually you could define the second of these through the template too,
 but let's ignore that for now). For a complete list of the properties
 that can be used to open and close goals consult the section on
-[Hints](../manual/hint.htm) in the *adv3Lite Library Manual*.
+[Hints](../manual/hint.html) in the *adv3Lite Library Manual*.
 
 Another problem the player might encounter quite early on is trying to
 take the ID card through the metal detector. We've already used the tag
@@ -261,10 +263,10 @@ reader.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> Hints  
-<span class="navnp"><a href="scoring.htm" class="nav"><em>Prev:</em> Scoring</a>
-    <a href="whatmore.htm" class="nav"><em>Next:</em> What More?</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> Hints  
+<span class="navnp"><a href="scoring.html" class="nav"><em>Prev:</em> Scoring</a>
+    <a href="whatmore.html" class="nav"><em>Next:</em> What More?</a>    
 </span>
 
 </div>

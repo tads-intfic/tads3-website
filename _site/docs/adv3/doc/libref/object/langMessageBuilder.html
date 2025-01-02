@@ -1,0 +1,387 @@
+<p><span class="title">langMessageBuilder</span><span class="type">object</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3758">3758</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The English-specific message builder.
+
+**`langMessageBuilder`**` :   `[`MessageBuilder`](../object/MessageBuilder.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">langMessageBuilder</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MessageBuilder<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>OutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputFilter.html)  
+</code>                         object<code class="language-plaintext highlighter-rouge">  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>fixedTenseProp_<code class="language-plaintext highlighter-rouge">](#fixedTenseProp_)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastSubject_<code class="language-plaintext highlighter-rouge">](#lastSubject_)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastSubjectName_<code class="language-plaintext highlighter-rouge">](#lastSubjectName_)</code>  <code class="language-plaintext highlighter-rouge">[</code>paramList_<code class="language-plaintext highlighter-rouge">](#paramList_)</code>  <code class="language-plaintext highlighter-rouge">[</code>pastEnding_<code class="language-plaintext highlighter-rouge">](#pastEnding_)</code>  <code class="language-plaintext highlighter-rouge">[</code>patEndOfSentence<code class="language-plaintext highlighter-rouge">](#patEndOfSentence)</code>  <code class="language-plaintext highlighter-rouge">[</code>patIdObjApostS<code class="language-plaintext highlighter-rouge">](#patIdObjApostS)</code>  <code class="language-plaintext highlighter-rouge">[</code>patIdObjSlashIdApostS<code class="language-plaintext highlighter-rouge">](#patIdObjSlashIdApostS)</code>  <code class="language-plaintext highlighter-rouge">[</code>patParamWithExclam<code class="language-plaintext highlighter-rouge">](#patParamWithExclam)</code>  <code class="language-plaintext highlighter-rouge">[</code>patSpecial<code class="language-plaintext highlighter-rouge">](#patSpecial)</code>  <code class="language-plaintext highlighter-rouge">[</code>patSSlashLetterEd<code class="language-plaintext highlighter-rouge">](#patSSlashLetterEd)</code>  <code class="language-plaintext highlighter-rouge">[</code>patTenseSwitching<code class="language-plaintext highlighter-rouge">](#patTenseSwitching)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageBuilder</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>lastParamObj_<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#lastParamObj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastTargetObj_<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#lastTargetObj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>nameTable_<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#nameTable_)</code>  <code class="language-plaintext highlighter-rouge">[</code>paramTable_<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#paramTable_)</code>  <code class="language-plaintext highlighter-rouge">[</code>patAllCaps<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#patAllCaps)</code>  <code class="language-plaintext highlighter-rouge">[</code>patIdObj<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#patIdObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>patIdObjSlashId<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#patIdObjSlashId)</code>  <code class="language-plaintext highlighter-rouge">[</code>patIdSlash<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#patIdSlash)</code>  <code class="language-plaintext highlighter-rouge">[</code>patUpper<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#patUpper)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>generateMessage<code class="language-plaintext highlighter-rouge">](#generateMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTargetProp<code class="language-plaintext highlighter-rouge">](#getTargetProp)</code>  <code class="language-plaintext highlighter-rouge">[</code>langRewriteParam<code class="language-plaintext highlighter-rouge">](#langRewriteParam)</code>  <code class="language-plaintext highlighter-rouge">[</code>processOrig<code class="language-plaintext highlighter-rouge">](#processOrig)</code>  <code class="language-plaintext highlighter-rouge">[</code>processResult<code class="language-plaintext highlighter-rouge">](#processResult)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageBuilder</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterText<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#filterText)</code>  <code class="language-plaintext highlighter-rouge">[</code>genLiteral<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#genLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>quoteMessage<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html#quoteMessage)</code>  `</p>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="fixedTenseProp_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fixedTenseProp_</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4249">4249</a>]</p>
+
+<div class="desc">
+
+This property is used to temporarily store either a boolean value
+indicating whether the last encountered parameter string had an
+exclamation mark at the end of any word, or a property to be invoked by
+Thing.propWithPresentMessageBuilder\_. This field is for internal use
+only; authors shouldn't have any reason to access it directly.
+
+</div>
+
+<p><span id="lastSubject_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastSubject_</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4053">4053</a>]</p>
+
+<div class="desc">
+
+The most recent target object used in the nominative case. We note this
+so that we can supply reflexive mappings when the same object is re-used
+in the objective case. This allows us to map things like "you can't take
+you" to the better-sounding "you can't take yourself".
+
+</div>
+
+<p><span id="lastSubjectName_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastSubjectName_</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4056">4056</a>]</p>
+
+<div class="desc">
+
+the parameter name of the last subject ('dobj', 'actor', etc)
+
+</div>
+
+<p><span id="paramList_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">paramList_</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3777">3777</a>]</p>
+
+<div class="desc">
+
+The English message substitution parameter table.
+
+Note that we specify two additional elements for each table entry beyond
+the standard language-independent complement:
+
+info\[4\] = reflexive property - this is the property to invoke when the
+parameter is used reflexively (in other words, its target object is the
+same as the most recent target object used in the nominative case). If
+this is nil, the parameter has no reflexive form.
+
+info\[5\] = true if this is a nominative usage, nil if not. We use this
+to determine which target objects are used in the nominative case, so
+that we can remember those objects for subsequent reflexive usages.
+
+</div>
+
+<p><span id="pastEnding_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pastEnding_</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4239">4239</a>]</p>
+
+<div class="desc">
+
+This property is used to temporarily store the past-tense ending of a
+verb to be displayed by Thing.verbEndingSMessageBuilder\_. It's for
+internal use only; game authors shouldn't have any reason to access it
+directly.
+
+</div>
+
+<p><span id="patEndOfSentence"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patEndOfSentence</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4125">4125</a>]</p>
+
+<div class="desc">
+
+end-of-sentence match pattern
+
+</div>
+
+<p><span id="patIdObjApostS"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patIdObjApostS</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4159">4159</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="patIdObjSlashIdApostS"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patIdObjSlashIdApostS</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4157">4157</a>]</p>
+
+<div class="desc">
+
+some pre-compiled search patterns we use a lot
+
+</div>
+
+<p><span id="patParamWithExclam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patParamWithExclam</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4161">4161</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="patSpecial"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patSpecial</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4027">4027</a>]</p>
+
+<div class="desc">
+
+Pre-compiled regular expression pattern matching any sequence with a
+special meaning in a message string.
+
+We match either a stuttered opening brace, or a single opening brace
+followed by any sequence of characters that doesn't contain a closing
+brace followed by a closing brace.
+
+</div>
+
+<p><span id="patSSlashLetterEd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patSSlashLetterEd</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4162">4162</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="patTenseSwitching"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patTenseSwitching</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4040">4040</a>]</p>
+
+<div class="desc">
+
+Pre-compiled regular expression pattern matching our special
+tense-switching syntax.
+
+We match a single opening brace, followed by any sequence of characters
+that doesn't contain a closing brace or a vertical bar, followed by a
+vertical bar, followed by any sequence of characters that doesn't
+contain a closing brace or a vertical bar, followed by a closing brace.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="generateMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">generateMessage (orig)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3912">3912</a>]</p>
+
+<div class="desc">
+
+Add a hook to the generateMessage method, which we use to pre-process
+the source string before expanding the substitution parameters.
+
+</div>
+
+<p><span id="getTargetProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTargetProp (targetObj, paramObj, info)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4069">4069</a>]</p>
+
+<div class="desc">
+
+Get the target object property mapping. If the target object is the same
+as the most recent subject object (i.e., the last object used in the
+nominative case), and this parameter has a reflexive form property,
+we'll return the reflexive form property. Otherwise, we'll return the
+standard property mapping.
+
+Also, if there was an exclamation mark at the end of any word in the
+tag, we'll return a property returning a fixed-tense form of the
+property for the tag.
+
+</div>
+
+<p><span id="langRewriteParam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">langRewriteParam (paramStr)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4184">4184</a>]</p>
+
+<div class="desc">
+
+Rewrite a parameter string for a language-specific syntax extension.
+
+For English, we'll handle the possessive apostrophe-s suffix specially,
+by allowing the apostrophe-s to be appended to the target object name.
+If we find an apostrophe-s on the target object name, we'll move it to
+the preceding identifier name:
+
+the dobj's -\&gt; the's dobj  
+the dobj's/he -\&gt; the's dobj/he  
+he/the dobj's -\&gt; he/the's dobj
+
+We also use this method to check for the presence of an exclamation mark
+at the end of any word in the parameter string (triggering the
+fixed-tense handling), and to detect a parameter string matching the
+{s/?ed} syntax, where ? is any letter, and rewrite it literally as
+'s/?ed' literally.
+
+</div>
+
+<p><span id="processOrig"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processOrig (str)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3941">3941</a>]</p>
+
+<div class="desc">
+
+Pre-process a source string containing substitution parameters, before
+generating the expanded message from it.
+
+We use this hook to implement the special tense-switching syntax
+{\&lt;present\&gt;\|\&lt;past\&gt;}. Although it superficially looks like an
+ordinary substitution parameter, we actually can't use the normal
+parameter substitution framework for that, because we want to allow the
+\&lt;present\&gt; and \&lt;past\&gt; substrings themselves to contain substitution
+parameters, and the normal framework doesn't allow for recursive
+substitution.
+
+We simply replace every sequence of the form {\&lt;present\&gt;\|\&lt;past\&gt;}
+with either \&lt;present\&gt; or \&lt;past\&gt;, depending on the current narrative
+tense. We then substitute braces for square brackets in the resulting
+string. This allows treating every bracketed tag inside the
+tense-switching sequence as a regular substitution parameter.
+
+For example, the sequence "{take\[s\]\|took}" appearing in the message
+string would be replaced with "take{s}" if the current narrative tense
+is present, and would be replaced with "took" if the current narrative
+tense is past. The string "take{s}", if selected, would in turn be
+expanded to either "take" or "takes", depending on the grammatical
+person of the subject, as per the regular substitution mechanism.
+
+</div>
+
+<p><span id="processResult"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processResult (txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#4130">4130</a>]</p>
+
+<div class="desc">
+
+Process result text.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

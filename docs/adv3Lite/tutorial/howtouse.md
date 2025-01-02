@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> How to Use This
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> How to Use This
 Book  
-<span class="navnp"><a href="whoshouldread.htm" class="nav"><em>Prev:</em> Who Should Read
+<span class="navnp"><a href="whoshouldread.html" class="nav"><em>Prev:</em> Who Should Read
 This Book?</a>    
-<a href="acknowledge.htm" class="nav"><em>Next:</em> Acknowledgements
+<a href="acknowledge.html" class="nav"><em>Next:</em> Acknowledgements
 and Explanations</a>     </span>
 
 </div>
@@ -136,12 +138,12 @@ to get the most out of this book.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="intro.htm" class="nav">Introduction</a> \> How to Use This
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="intro.html" class="nav">Introduction</a> \> How to Use This
 Book  
-<span class="navnp"><a href="whoshouldread.htm" class="nav"><em>Prev:</em> Who Should Read
+<span class="navnp"><a href="whoshouldread.html" class="nav"><em>Prev:</em> Who Should Read
 This Book?</a>    
-<a href="acknowledge.htm" class="nav"><em>Next:</em> Acknowledgements
+<a href="acknowledge.html" class="nav"><em>Next:</em> Acknowledgements
 and Explanations</a>     </span>
 
 </div>

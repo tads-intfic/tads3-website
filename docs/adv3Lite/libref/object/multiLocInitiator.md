@@ -1,3 +1,5 @@
+---
+---
 <span class="title">multiLocInitiator</span><span class="type">object</span>
 
 [thing.t](../file/thing.t.html)\[[9965](../source/thing.t.html#9965)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">scriptStatus</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[2172](../source/actions.t.html#2172)\]

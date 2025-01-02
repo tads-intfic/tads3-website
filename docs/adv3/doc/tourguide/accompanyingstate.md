@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>AccompanyingState : <a
-href="overview-actorstates.htm">ActorState</a><br />
+href="overview-actorstates.html">ActorState</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="hermitactorstate.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="accompanyingintravelstate.htm">[Next]</a></td>
+href="hermitactorstate.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="accompanyingintravelstate.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -30,9 +32,9 @@ further qualifications if, for example, there were certain connectors
 you didn't want this NPC to follow your PC through. The other method
 distinctive to AccompanyState is **getAccompanyingTravelState(leadActor,
 conn)**, which returns the associated
-[AccompanyingInTravelState](accompanyingintravelstate.htm) (which we'll
+[AccompanyingInTravelState](accompanyingintravelstate.html) (which we'll
 explain shortly). AccompanyingState also inherits all the
-[ActorState](overview-actorstates.htm) methods we've already seen, not
+[ActorState](overview-actorstates.html) methods we've already seen, not
 least **arrivingTurn()**.  
   
 The NPC who's been elected to follow the PC on his travels in this game

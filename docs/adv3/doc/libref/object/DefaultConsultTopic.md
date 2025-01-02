@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DefaultConsultTopic</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[1683](../source/objects.t.html#1683)\]

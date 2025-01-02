@@ -1,0 +1,201 @@
+<p><span class="title">SingletonIterator</span><span class="type">class</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1668">1668</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A SingletonIterator is an implementation of the Iterator interface for
+singleton values. This allows 'foreach' to be used with arbitrary
+objects, or even primitive values. The effect of iterating over a
+singleton value with 'foreach' using this iterator is simply to invoke
+the loop once with the loop variable set to the singleton value.
+
+`class `**`SingletonIterator`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SingletonIterator</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>more_<code class="language-plaintext highlighter-rouge">](#more_)</code>  <code class="language-plaintext highlighter-rouge">[</code>val_<code class="language-plaintext highlighter-rouge">](#val_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>getCurVal<code class="language-plaintext highlighter-rouge">](#getCurVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>getKey<code class="language-plaintext highlighter-rouge">](#getKey)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNext<code class="language-plaintext highlighter-rouge">](#getNext)</code>  <code class="language-plaintext highlighter-rouge">[</code>isNextAvailable<code class="language-plaintext highlighter-rouge">](#isNextAvailable)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetIterator<code class="language-plaintext highlighter-rouge">](#resetIterator)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="more_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">more_</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1698">1698</a>]</p>
+
+<div class="desc">
+
+do we have any more values to fetch?
+
+</div>
+
+<p><span id="val_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">val_</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1695">1695</a>]</p>
+
+<div class="desc">
+
+the singleton value we're "iterating" over
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1670">1670</a>]</p>
+
+<div class="desc">
+
+construction: save the singleton value that we're "iterating" over
+
+</div>
+
+<p><span id="getCurVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getCurVal ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1692">1692</a>]</p>
+
+<div class="desc">
+
+get the current value
+
+</div>
+
+<p><span id="getKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getKey ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1689">1689</a>]</p>
+
+<div class="desc">
+
+get the current key; we have no keys, so use a fake key of nil
+
+</div>
+
+<p><span id="getNext"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNext ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1673">1673</a>]</p>
+
+<div class="desc">
+
+get the next value
+
+</div>
+
+<p><span id="isNextAvailable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isNextAvailable ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1683">1683</a>]</p>
+
+<div class="desc">
+
+is another item available?
+
+</div>
+
+<p><span id="resetIterator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resetIterator ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1686">1686</a>]</p>
+
+<div class="desc">
+
+reset: restore the flag that says the value is available
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

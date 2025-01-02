@@ -1,0 +1,75 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Greeting Protocols<br />
+</strong></td>
+<td style="text-align: right;"><a href="conversationreadystate.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="topicentry.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>To walk up to an NPC and start a conversation with an ASK ABOUT, and
+then, after a few more conversational commands, to terminate the
+conversation by simply walking away or ceasing to converse can make the
+game transcript seem a bit abrupt and not very life-like. In real life
+one normally starts a conversation with “Hello” or “Excuse me” or
+something else designed to open the channel of communication, and then
+concludes it with a similar winding-up exchange to signal that it’s now
+over.</p>
+
+<p>In order to handle the beginning and end of conversations, you put a
+<a href="hellotopic.html">HelloTopic</a> and a <a href="byetopic.html">ByeTopic</a> in the
+<a href="conversationreadystate.html">ConversationReadyState</a>, for example:</p>
+
+<p>++ sarahLooking : ConversationReadyState<br />
+  isInitState = true<br />
+  specialDesc = ”{A sarah/she} is standing by the shore, apparently<br />
+   looking at something, though she occasionally throws a curious<br />
+   glance your way. ”<br />
+  stateDesc = ”She seems to be looking for something. ”<br />
+;</p>
+
+<p>+++ HelloTopic, ShuffledEventList<br />
+  [ <br />
+     ’&lt;q&gt;Hello there,&lt;/q&gt; you say.\b<br />
+      &lt;q&gt;Hello.&lt;/q&gt; she smiles at you, slightly quizzically.’<br />
+  ]<br />
+  [<br />
+     ’&lt;q&gt;Hello again.&lt;/q&gt; you greet her.\b<br />
+      &lt;q&gt;Hi!&lt;/q&gt; she replies. ’,<br />
+     ’&lt;q&gt;It\s me again.&lt;/q&gt; you tell her.\b<br />
+      &lt;q&gt;So I noticed.&lt;/q&gt; she answers.’,<br />
+     ’&lt;q&gt;Er…&lt;/q&gt; you start.\b<br />
+      &lt;q&gt;Yes?&lt;/q&gt; she asks. ’  <br />
+  ]<br />
+;</p>
+
+<p>+++ ByeTopic<br />
+  ”&lt;q&gt;Cheerio, then!&lt;/q&gt; you say.\b<br />
+   &lt;q&gt;See you!&lt;/q&gt; she replies. ”<br />
+;</p>
+
+<p>+++ ImpByeTopic<br />
+  ”{The sarah/she} gives a little shrug and goes back to<br />
+    searching her surroundings. ”<br />
+;</p>
+
+<p>The effect of this is that when the player character strikes up a
+conversation with Sarah, either explicitly through a GREET SARAH, TALK
+TO SARAH or SARAH, HELLO command, or implicitly by addressing a
+conversational command to her like ASK SARAH ABOUT HERSELF or TELL SARAH
+ABOUT BANANA, the greeting message from the <a href="hellotopic.html">HelloTopic</a>
+will be displayed, and then Sarah will switch into the associated
+InConversationState. Conversely, once the conversation is over, Sarah
+will switch back into the ConversationReadyState and either the
+<a href="byetopic.html">ByeTopic</a> or the <a href="impbyetopic.html">ImpByeTopic</a> will be
+displayed, depending on whether the player ended the conversation
+explicitly with a BYE command, or implicitly by either leaving the
+location or failing to address a conversational command to Sarah for the
+number of turns needed to exhaust her attention span.</p>
+
+<p>We’ll be giving more examples of this later.</p>

@@ -1,0 +1,350 @@
+<p><span class="title">Scene</span><span class="type">class</span></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#98">98</a>],
+<a href="../file/scenetopic.t.html">scenetopic.t</a>[<a href="../source/scenetopic.t.html#7">7</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Scene is an object that represents a slice of time that starts and
+ends according to specified conditions, and which can define what
+happens when it starts and ends and also what happens each turn when it
+is happening.
+
+*Modified in
+[scenetopic.t](../file/scenetopic.t.html)\[[7](../source/scenetopic.t.html#7)\]:*  
+Modifications to Scene for the SCENETOPIC EXTENSION
+
+`class `**`Scene`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Scene</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>endedAt<code class="language-plaintext highlighter-rouge">](#endedAt)</code>  <code class="language-plaintext highlighter-rouge">[</code>endsWhen<code class="language-plaintext highlighter-rouge">](#endsWhen)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasHappened<code class="language-plaintext highlighter-rouge">](#hasHappened)</code>  <code class="language-plaintext highlighter-rouge">[</code>howEnded<code class="language-plaintext highlighter-rouge">](#howEnded)</code>  <code class="language-plaintext highlighter-rouge">[</code>isHappening<code class="language-plaintext highlighter-rouge">](#isHappening)</code>  <code class="language-plaintext highlighter-rouge">[</code>notifySingleActor<code class="language-plaintext highlighter-rouge">](#notifySingleActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>recurring<code class="language-plaintext highlighter-rouge">](#recurring)</code>  <code class="language-plaintext highlighter-rouge">[</code>startedAt<code class="language-plaintext highlighter-rouge">](#startedAt)</code>  <code class="language-plaintext highlighter-rouge">[</code>startsWhen<code class="language-plaintext highlighter-rouge">](#startsWhen)</code>  <code class="language-plaintext highlighter-rouge">[</code>timesHappened<code class="language-plaintext highlighter-rouge">](#timesHappened)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>afterAction<code class="language-plaintext highlighter-rouge">](#afterAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>beforeAction<code class="language-plaintext highlighter-rouge">](#beforeAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>eachTurn<code class="language-plaintext highlighter-rouge">](#eachTurn)</code>  <code class="language-plaintext highlighter-rouge">[</code>end<code class="language-plaintext highlighter-rouge">](#end)</code>  <code class="language-plaintext highlighter-rouge">[</code>notifyActors<code class="language-plaintext highlighter-rouge">](#notifyActors)</code>  <code class="language-plaintext highlighter-rouge">[</code>start<code class="language-plaintext highlighter-rouge">](#start)</code>  <code class="language-plaintext highlighter-rouge">[</code>whenEnding<code class="language-plaintext highlighter-rouge">](#whenEnding)</code>  <code class="language-plaintext highlighter-rouge">[</code>whenStarting<code class="language-plaintext highlighter-rouge">](#whenStarting)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="endedAt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endedAt</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#129">129</a>]</p>
+
+<div class="desc">
+
+The turn this scene ended at
+
+</div>
+
+<p><span id="endsWhen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endsWhen</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#110">110</a>]</p>
+
+<div class="desc">
+
+an expression or method that evaluates to something other than nil when
+you want the scene to end
+
+</div>
+
+<p><span id="hasHappened"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hasHappened</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#185">185</a>]</p>
+
+<div class="desc">
+
+Flag to show whether this scene has ever happened.
+
+</div>
+
+<p><span id="howEnded"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">howEnded</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#191">191</a>]</p>
+
+<div class="desc">
+
+A user defined flag showing how the scene ended
+
+</div>
+
+<p><span id="isHappening"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isHappening</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#123">123</a>]</p>
+
+<div class="desc">
+
+Is this scene currently taking place? (Game code should treat this as
+read-only)
+
+</div>
+
+<p><span id="notifySingleActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notifySingleActor</code></p>
+
+<p><a href="../file/scenetopic.t.html">scenetopic.t</a>[<a href="../source/scenetopic.t.html#73">73</a>]</p>
+
+<div class="desc">
+
+Flag (for use with SceneTopic extension): do we want to trigger a
+SceneTopic response from every actor the player char can talk to, or
+only the first one we find? By default we assume we want a response from
+only one actor. Note that the Actor notificationOrder property can be
+defined so that we can select which Actor this will be (the one with the
+lowest notificationOrder). \[SCENETOPIC EXTENSION\]
+
+</div>
+
+<p><span id="recurring"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">recurring</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#117">117</a>]</p>
+
+<div class="desc">
+
+Normally a scene will only occur once. Set recurring to true if you want
+the scene to start again every time its startsWhen condition is true.
+
+</div>
+
+<p><span id="startedAt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">startedAt</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#126">126</a>]</p>
+
+<div class="desc">
+
+The turn this scene started at
+
+</div>
+
+<p><span id="startsWhen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">startsWhen</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#104">104</a>]</p>
+
+<div class="desc">
+
+An expression or method that evaluates to true when you want the scene
+to start
+
+</div>
+
+<p><span id="timesHappened"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timesHappened</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#188">188</a>]</p>
+
+<div class="desc">
+
+The numbter of times this scene has happened.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="afterAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterAction ( )</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#203">203</a>]</p>
+
+<div class="desc">
+
+This method is called on every active Scene just after an action has
+taken place. By default we do nothing here.
+
+</div>
+
+<p><span id="beforeAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beforeAction ( )</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#197">197</a>]</p>
+
+<div class="desc">
+
+This method is called on every active Scene just before an action is
+about to take place. By default we do nothing here.
+
+</div>
+
+<p><span id="eachTurn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eachTurn ( )</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#182">182</a>]</p>
+
+<div class="desc">
+
+Routine to execute every turn this scene is in progress.
+
+</div>
+
+<p><span id="end"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">end ( )</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#154">154</a>],
+<a href="../file/scenetopic.t.html">scenetopic.t</a>[<a href="../source/scenetopic.t.html#11">11</a>]</p>
+
+<div class="desc">
+
+The method executed when this Scene ends. Game code should normally
+override whenStarting() rather than this method.
+
+*Modified in
+[scenetopic.t](../file/scenetopic.t.html)\[[11](../source/scenetopic.t.html#11)\]:*  
+Modified for SceneTopic Extension to notify any actor that we can talk
+to that this scene has ended.
+
+</div>
+
+<p><span id="notifyActors"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notifyActors (prop)</code></p>
+
+<p><a href="../file/scenetopic.t.html">scenetopic.t</a>[<a href="../source/scenetopic.t.html#32">32</a>]</p>
+
+<div class="desc">
+
+Notify any actor that we can talk to that this scene has started
+
+</div>
+
+<p><span id="start"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">start ( )</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#135">135</a>],
+<a href="../file/scenetopic.t.html">scenetopic.t</a>[<a href="../source/scenetopic.t.html#23">23</a>]</p>
+
+<div class="desc">
+
+The method executed when this Scene starts. Game code should normally
+override whenStarting() rather than this method.
+
+*Modified in
+[scenetopic.t](../file/scenetopic.t.html)\[[23](../source/scenetopic.t.html#23)\]:*  
+Modified for SceneTopic Extension to notify any actor that we can talk
+to that this scene has started.
+
+</div>
+
+<p><span id="whenEnding"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">whenEnding ( )</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#179">179</a>]</p>
+
+<div class="desc">
+
+Routine to execute when this scene ends
+
+</div>
+
+<p><span id="whenStarting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">whenStarting ( )</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#176">176</a>]</p>
+
+<div class="desc">
+
+Routine to execute when this scene starts
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

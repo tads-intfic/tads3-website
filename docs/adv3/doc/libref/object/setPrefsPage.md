@@ -1,3 +1,5 @@
+---
+---
 <span class="title">setPrefsPage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[2270](../source/webui.t.html#2270)\]

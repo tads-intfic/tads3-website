@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SymStairway</span><span class="type">class</span>
 
 [symconn.t](../file/symconn.t.html)\[[723](../source/symconn.t.html#723)\]

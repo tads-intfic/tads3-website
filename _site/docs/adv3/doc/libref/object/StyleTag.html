@@ -1,0 +1,156 @@
+<p><span class="title">StyleTag</span><span class="type">class</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#765">765</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Style tag. This defines an HTML-like tag that can be used in output text
+to display an author-customizable substitution string.
+
+Each StyleTag object defines the name of the tag, which can be invoked
+in output text using the syntax "\&lt;.name\&gt;" - we require the period
+after the opening angle-bracket to plainly distinguish the sequence as a
+style tag, not a regular HTML tag.
+
+Each StyleTag also defines the text string that should be substituted
+for each occurrence of the "\&lt;.name\&gt;" sequence in output text, and,
+optionally, another string that is substituted for occurrences of the
+"closing" version of the tag, invoked with the syntax "\&lt;./name\&gt;".
+
+`class `**`StyleTag`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">StyleTag</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">StyleTag</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>HtmlStyleTag`](../object/HtmlStyleTag.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>announceObjStyleTag<code class="language-plaintext highlighter-rouge">](../object/announceObjStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>assumeStyleTag<code class="language-plaintext highlighter-rouge">](../object/assumeStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>notificationStyleTag<code class="language-plaintext highlighter-rouge">](../object/notificationStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>parserStyleTag<code class="language-plaintext highlighter-rouge">](../object/parserStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomdescStyleTag<code class="language-plaintext highlighter-rouge">](../object/roomdescStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomnameStyleTag<code class="language-plaintext highlighter-rouge">](../object/roomnameStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomparaStyleTag<code class="language-plaintext highlighter-rouge">](../object/roomparaStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>tipStyleTag<code class="language-plaintext highlighter-rouge">](../object/tipStyleTag.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>closeText<code class="language-plaintext highlighter-rouge">](#closeText)</code>  <code class="language-plaintext highlighter-rouge">[</code>openText<code class="language-plaintext highlighter-rouge">](#openText)</code>  <code class="language-plaintext highlighter-rouge">[</code>tagName<code class="language-plaintext highlighter-rouge">](#tagName)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="closeText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeText</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#780">780</a>]</p>
+
+<div class="desc">
+
+Closing text - this is substituted for each instance of the tag with a
+'/' prefix (\&lt;./xxx\&gt;). Note that non-container tags don't have closing
+text at all.
+
+</div>
+
+<p><span id="openText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openText</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#773">773</a>]</p>
+
+<div class="desc">
+
+opening text - this is substituted for each instance of the tag without
+a '/' prefix
+
+</div>
+
+<p><span id="tagName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tagName</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#767">767</a>]</p>
+
+<div class="desc">
+
+name of the tag - the tag appears in source text in \&lt;.xxx\&gt; notation
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

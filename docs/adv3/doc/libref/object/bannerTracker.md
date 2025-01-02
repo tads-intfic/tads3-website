@@ -1,3 +1,5 @@
+---
+---
 <span class="title">bannerTracker</span><span class="type">object</span>
 
 [banner.t](../file/banner.t.html)\[[811](../source/banner.t.html#811)\]

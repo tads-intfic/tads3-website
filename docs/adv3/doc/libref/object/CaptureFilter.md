@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CaptureFilter</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[690](../source/output.t.html#690)\]

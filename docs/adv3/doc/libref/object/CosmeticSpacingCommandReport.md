@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CosmeticSpacingCommandReport</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[208](../source/report.t.html#208)\]

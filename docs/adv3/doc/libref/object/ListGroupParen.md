@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ListGroupParen</span><span class="type">class</span>
 
 [lister.t](../file/lister.t.html)\[[2116](../source/lister.t.html#2116)\]

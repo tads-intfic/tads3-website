@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Exits  
-<span class="navnp"><a href="eventlist.htm" class="nav"><em>Prev:</em> EventLists</a>
-    <a href="extra.htm" class="nav"><em>Next:</em> Extras</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Exits  
+<span class="navnp"><a href="eventlist.html" class="nav"><em>Prev:</em> EventLists</a>
+    <a href="extra.html" class="nav"><em>Next:</em> Extras</a>    
 </span>
 
 </div>
@@ -81,9 +83,9 @@ visited location.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Exits  
-<span class="navnp"><a href="eventlist.htm" class="nav"><em>Prev:</em> EventLists</a>
-    <a href="extra.htm" class="nav"><em>Next:</em>Extras</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Exits  
+<span class="navnp"><a href="eventlist.html" class="nav"><em>Prev:</em> EventLists</a>
+    <a href="extra.html" class="nav"><em>Next:</em>Extras</a>     </span>
 
 </div>

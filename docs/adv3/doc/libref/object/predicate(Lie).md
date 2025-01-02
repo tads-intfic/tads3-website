@@ -1,3 +1,5 @@
+---
+---
 <span class="title">predicate(Lie)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[10579](../source/en_us.t.html#10579)\]

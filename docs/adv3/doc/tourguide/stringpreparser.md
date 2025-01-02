@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>StringPreParser<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="amodifieddefaultcommandtopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="telltoaction.htm">[Next]</a></td>
+href="amodifieddefaultcommandtopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="telltoaction.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -69,7 +71,7 @@ StringPreParser
 One weakness of this is that it will not work with TELL HER TO OPEN THE
 DOOR even in contexts where it is obvious what HER refers to. A rather
 more robust way of handling this is to define a
-[TellToAction](telltoaction.htm) which does the job, which we'll look at
+[TellToAction](telltoaction.html) which does the job, which we'll look at
 in the next section.  
   
 On the other hand, a StringPreParser may be the only way you could

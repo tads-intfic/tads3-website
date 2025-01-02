@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Message Parameter
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Message Parameter
 Substitutions  
-<span class="navnp"><a href="t3precond.htm" class="nav"><em>Prev:</em> Custom
+<span class="navnp"><a href="t3precond.html" class="nav"><em>Prev:</em> Custom
 Preconditions</a>    
-<a href="t3imp_action.htm" class="nav"><em>Next:</em> Implied Action
+<a href="t3imp_action.html" class="nav"><em>Next:</em> Implied Action
 Reports</a>     </span>
 
 </div>
@@ -1291,12 +1293,12 @@ will be processed before actually being written to the display.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Message Parameter
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Message Parameter
 Substitutions  
-<span class="navnp"><a href="t3precond.htm" class="nav"><em>Prev:</em> Custom
+<span class="navnp"><a href="t3precond.html" class="nav"><em>Prev:</em> Custom
 Preconditions</a>    
-<a href="t3imp_action.htm" class="nav"><em>Next:</em> Implied Action
+<a href="t3imp_action.html" class="nav"><em>Next:</em> Implied Action
 Reports</a>     </span>
 
 </div>

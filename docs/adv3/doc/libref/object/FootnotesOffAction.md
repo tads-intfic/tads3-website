@@ -1,3 +1,5 @@
+---
+---
 <span class="title">FootnotesOffAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[1621](../source/actions.t.html#1621)\]

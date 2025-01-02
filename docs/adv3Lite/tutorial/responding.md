@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="cockpit.htm" class="nav">Cockpit Controls</a> \> Responding to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="cockpit.html" class="nav">Cockpit Controls</a> \> Responding to
 Actions  
-<span class="navnp"><a href="actions.htm" class="nav"><em>Prev:</em> Defining Actions</a>
-    <a href="takeoff.htm" class="nav"><em>Next:</em> Taking Off</a>    
+<span class="navnp"><a href="actions.html" class="nav"><em>Prev:</em> Defining Actions</a>
+    <a href="takeoff.html" class="nav"><em>Next:</em> Taking Off</a>    
 </span>
 
 </div>
@@ -476,11 +478,11 @@ it possible for the plane to take off.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="cockpit.htm" class="nav">Cockpit Controls</a> \> Responding to
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="cockpit.html" class="nav">Cockpit Controls</a> \> Responding to
 Actions  
-<span class="navnp"><a href="actions.htm" class="nav"><em>Prev:</em> Defining Actions</a>
-    <a href="takeoff.htm" class="nav"><em>Next:</em> Taking Off</a>    
+<span class="navnp"><a href="actions.html" class="nav"><em>Prev:</em> Defining Actions</a>
+    <a href="takeoff.html" class="nav"><em>Next:</em> Taking Off</a>    
 </span>
 
 </div>

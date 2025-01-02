@@ -1,3 +1,5 @@
+---
+---
 <span class="title">cmdTokenizer</span><span class="type">object</span>
 
 [en_us.t](../file/en_us.t.html)\[[4763](../source/en_us.t.html#4763)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,13 +9,13 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>RandomEventList : <a
-href="randomfiringscript.htm">RandomFiringScript</a>, <a
-href="eventlist.htm">EventList</a><br />
+href="randomfiringscript.html">RandomFiringScript</a>, <a
+href="eventlist.html">EventList</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="cycliceventlist.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="shuffledeventlist.htm">[Next]</a></td>
+href="cycliceventlist.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="shuffledeventlist.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -21,11 +23,11 @@ href="shuffledeventlist.htm">[Next]</a></td>
   
 A RandomEventList is an EventList that randomly selects one of its items
 each turn its doScript method is run. In practice, the
-[ShuffledEventList](shuffledeventlist.htm), which inherits from
+[ShuffledEventList](shuffledeventlist.html), which inherits from
 RandomEventList, may be more useful, since it ensures that the same
 event will not be chosen twice in succession. The typical use of a
-RandomEventList might be in the atmosphereList of a [Room](room.htm) or
-combined with a [TopicEntry](topicentry.htm) to provide a series of
+RandomEventList might be in the atmosphereList of a [Room](room.html) or
+combined with a [TopicEntry](topicentry.html) to provide a series of
 random conversational responses.  
   
 RandomEventList defines, (and hence ShufffledEventList inherits) three
@@ -44,5 +46,5 @@ Additionally, if you wish, you can have this percentage fall (or even
 rise!) to a new value, **eventReduceTo** after **eventReduceAfter**
 turns. If **eventReduceAfter** is nil (as it is by default) then the
 eventPercent never changes. This behaviour is in fact provided by
-[RandomFiringScript](randomfiringscript.htm).  
+[RandomFiringScript](randomfiringscript.html).  
   

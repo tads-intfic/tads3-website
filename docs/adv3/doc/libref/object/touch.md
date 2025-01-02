@@ -1,3 +1,5 @@
+---
+---
 <span class="title">touch</span><span class="type">object</span>
 
 [sense.t](../file/sense.t.html)\[[271](../source/sense.t.html#271)\]

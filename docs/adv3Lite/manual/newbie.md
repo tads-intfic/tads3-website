@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Newbie Help  
-<span class="navnp"><a href="instruct.htm" class="nav"><em>Prev:</em> Instructions</a>
-    <a href="pathfind.htm" class="nav"><em>Next:</em> Path Finding</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Newbie Help  
+<span class="navnp"><a href="instruct.html" class="nav"><em>Prev:</em> Instructions</a>
+    <a href="pathfind.html" class="nav"><em>Next:</em> Path Finding</a>
     </span>
 
 </div>
@@ -29,8 +31,8 @@ you". This situation can be at least alleviated somewhat by providing
 aids to new players.
 
 One such aid is the instructions for playing IF that can be displayed in
-response to an [INSTRUCTIONS](instruct.htm) command. Another is the
-[ExtraHint](hint.htm#extra) mechanism that can provide hints to players
+response to an [INSTRUCTIONS](instruct.html) command. Another is the
+[ExtraHint](hint.html#extra) mechanism that can provide hints to players
 who seem to be getting stuck. The trouble is that many people aren't all
 that good at reading instructions (or at least, all that eager to do so)
 and many new players may not be aware that such facilities even exist,
@@ -137,8 +139,8 @@ Body Parts with commands like WEAR SHOES ON FEET or OPEN DOOR WITH RIGHT
 HAND. To field commands of this sort the newbie.t provides a
 **bodyParts** object that matches the vocab of most common body parts
 (e.g. 'your feet' or 'my right hand'). This object is a
-[MultiLoc](multiloc.htm) that's defined to be everywhere by default, and
-an [Unthing](extra.htm#unthing) so that if your game actually does
+[MultiLoc](multiloc.html) that's defined to be everywhere by default, and
+an [Unthing](extra.html#unthing) so that if your game actually does
 contain any body parts the parser will prefer them to the bodyParts
 Unthing. If you find the bodyParts object a nuisance (perhaps because
 your game actually uses a lot of body parts) you can banish it
@@ -273,7 +275,7 @@ firstCheckCriterion thus:
 </div>
 
 One other thing we can do if the player appears to be getting stuck is
-to start the [ExtraHints](hint.htm#extra) mechanism, if we are using it
+to start the [ExtraHints](hint.html#extra) mechanism, if we are using it
 in our game, by calling extraHintManager.startDaemon(). We could, for
 example, override firstCheckMsg to do this rather than displaying a
 message telling players that they're not making much progress:
@@ -293,7 +295,7 @@ Some game authors may prefer this as a less intrusive (or less
 belittling) approach.
 
 Further help for new players can be provided by using the [Command
-Help](../../extensions/docs/cmdhelp.htm) extension, which offers a
+Help](../../extensions/docs/cmdhelp.html) extension, which offers a
 number of suggestions for a player to try if he or she enters an empty
 command.
 
@@ -302,10 +304,10 @@ command.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Newbie Help  
-<span class="navnp"><a href="instruct.htm" class="nav"><em>Prev:</em> Instuctions</a>
-    <a href="pathfind.htm" class="nav"><em>Next:</em> Path Finding</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Newbie Help  
+<span class="navnp"><a href="instruct.html" class="nav"><em>Prev:</em> Instuctions</a>
+    <a href="pathfind.html" class="nav"><em>Next:</em> Path Finding</a>
     </span>
 
 </div>

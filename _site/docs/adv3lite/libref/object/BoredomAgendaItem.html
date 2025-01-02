@@ -1,0 +1,163 @@
+<p><span class="title">BoredomAgendaItem</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6057">6057</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A special kind of agenda item for monitoring "boredom" during a
+conversation. We check to see if our actor is in a conversation, and the
+PC has been ignoring the conversation for too long; if so, our actor
+initiates the end of the conversation, since the PC apparently isn't
+paying any attention to us.
+
+`class `**`BoredomAgendaItem`**` :   `[`AgendaItem`](../object/AgendaItem.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BoredomAgendaItem</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>AgendaItem<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>agendaOrder<code class="language-plaintext highlighter-rouge">](#agendaOrder)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>calledBy<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#calledBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiallyActive<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#initiallyActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>invokedByActor<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#invokedByActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDone<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#isDone)</code>  <code class="language-plaintext highlighter-rouge">[</code>isReady<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#isReady)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#name)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>invokeItem<code class="language-plaintext highlighter-rouge">](#invokeItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>isReady<code class="language-plaintext highlighter-rouge">](#isReady)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>invokeItemBase<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#invokeItemBase)</code>  <code class="language-plaintext highlighter-rouge">[</code>registerItem<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#registerItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>report<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#report)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetItem<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#resetItem)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="agendaOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">agendaOrder</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6105">6105</a>]</p>
+
+<div class="desc">
+
+by default, handle boredom before other agenda items - we do this
+because an ongoing conversation will be the first thing on the NPC's
+mind
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (actor)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6059">6059</a>]</p>
+
+<div class="desc">
+
+we construct these dynamically during actor initialization
+
+</div>
+
+<p><span id="invokeItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invokeItem ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6083">6083</a>]</p>
+
+<div class="desc">
+
+on invocation, end the conversation
+
+</div>
+
+<p><span id="isReady"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isReady ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6069">6069</a>]</p>
+
+<div class="desc">
+
+we're ready to run if our actor is in an InConversationState and its
+boredom count has reached the limit for the state
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](theartofconversation.htm)
-  [\[Next\]](doorsandwindows.htm)*
+*[\[Previous\]](theartofconversation.html)
+  [\[Next\]](doorsandwindows.html)*
 
 ## What's in a Name?
 
@@ -402,7 +404,7 @@ introducing some further features of TADS 3.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](theartofconversation.htm)
-  [\[Next\]](doorsandwindows.htm)*
+*[\[Previous\]](theartofconversation.html)
+  [\[Next\]](doorsandwindows.html)*
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](easingtestinganddebugging.htm)
-  [\[Next\]](appendixa-actionmessagepropert.htm)*
+*[\[Previous\]](easingtestinganddebugging.html)
+  [\[Next\]](appendixa-actionmessagepropert.html)*
 
 ## Where to go from here
 
@@ -31,7 +33,7 @@ there?
   
 As an alternative, you might like to turn to the *Technical Manual* and
 read the article on
-<a href="../techman/t3design.htm" target="_top">Designing Your Game</a>.
+<a href="../techman/t3design.html" target="_top">Designing Your Game</a>.
 This discusses the design of a game based at an airport, and shows how
 to implement the first few steps; as an exercise you could try
 implementing the rest of the game.  
@@ -56,12 +58,12 @@ deepening your knowledge of TADS 3 (but then I would say, since I wrote
 it!). The *TADS 3 Tour Guide* should have come with the documentation
 included with the TADS Author's Kit, but it can be found on line at (and
 various formats downloaded from)
-<a href="%20http://users.ox.ac.uk/~manc0049/TADSGuide/intro.htm%20"
-target="_top">http://users.ox.ac.uk/~manc0049/TADSGuide/intro.htm</a>.
+<a href="%20http://users.ox.ac.uk/~manc0049/TADSGuide/intro.html%20"
+target="_top">http://users.ox.ac.uk/~manc0049/TADSGuide/intro.html</a>.
 It is also available from the IF-Archive.  
   
 Another place to look is is the
-<a href="../techman/cover.htm" target="_top">TADS 3 <em>Technical
+<a href="../techman/cover.html" target="_top">TADS 3 <em>Technical
 Manual</em></a>, which again should be included with the documentation
 that comes with the TADS 3 author's kit, or should otherwise be
 downloadable from <a href="%20http://www.tads.org%20"
@@ -69,7 +71,7 @@ target="_top">http://www.tads.org</a>. This contains a variety of
 sections, some of which cover in greater detail material introduced in
 this guide, and some of which which take you into new areas (such as
 writing a TADS 3 game in the past tense). A third resource is the
-<a href="../sysman/toc.htm" target="_top">TADS 3 <em>System
+<a href="../sysman/toc.html" target="_top">TADS 3 <em>System
 Manual</em></a>, also included with the standard documentation (or
 downloadable from
 <a href="http://www.tads.org" target="_top">http://www.tads.org</a>).
@@ -150,7 +152,7 @@ rest is up to you.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](easingtestinganddebugging.htm)
-  [\[Next\]](appendixa-actionmessagepropert.htm)*
+*[\[Previous\]](easingtestinganddebugging.html)
+  [\[Next\]](appendixa-actionmessagepropert.html)*
 
 </div>

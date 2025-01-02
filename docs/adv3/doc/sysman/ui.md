@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| The User
+<a href="toc.html" class="nav">Table of Contents</a> \| The User
 Interface  
-<span class="navnp"><a href="nodef.htm" class="nav"><em>Prev:</em> Replacing the System
+<span class="navnp"><a href="nodef.html" class="nav"><em>Prev:</em> Replacing the System
 Library</a>    
-<a href="fmt.htm" class="nav"><em>Next:</em> The Output Formatter</a>
+<a href="fmt.html" class="nav"><em>Next:</em> The Output Formatter</a>
     </span>
 
 </div>
@@ -27,9 +29,9 @@ GUI-style interaction on platforms that support these features.
 
 <div class="sectoc">
 
-[The Output Formatter](fmt.htm)  
-[The Default Display Function](dispfn.htm)  
-[The Banner Window Display Model](banners.htm)  
+[The Output Formatter](fmt.html)  
+[The Default Display Function](dispfn.html)  
+[The Banner Window Display Model](banners.html)  
 
 </div>
 
@@ -40,11 +42,11 @@ GUI-style interaction on platforms that support these features.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| The User
+<a href="toc.html" class="nav">Table of Contents</a> \| The User
 Interface  
-<span class="navnp"><a href="nodef.htm" class="nav"><em>Prev:</em> Replacing the System
+<span class="navnp"><a href="nodef.html" class="nav"><em>Prev:</em> Replacing the System
 Library</a>    
-<a href="fmt.htm" class="nav"><em>Next:</em> The Output Formatter</a>
+<a href="fmt.html" class="nav"><em>Next:</em> The Output Formatter</a>
     </span>
 
 </div>

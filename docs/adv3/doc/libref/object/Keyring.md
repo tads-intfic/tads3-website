@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Keyring</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[1277](../source/extras.t.html#1277)\]

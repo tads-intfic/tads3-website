@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,11 +9,11 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>InitiateTopic : <a
-href="topicentry.htm">ThingMatchTopic</a><br />
+href="topicentry.html">ThingMatchTopic</a><br />
 </strong></td>
-<td style="text-align: right;"><a href="alttopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="asktopic.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="alttopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="asktopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -276,7 +278,7 @@ Note that we have located the last set of InitiateTopics directly in the
 actor object; you can also locate InitiateTopics in ActorStates, just
 like any other TopicEntry. Unlike other kinds of TopicEntry, however,
 you cannot put an InitiateTopic inside a [Conversation
-Node](conversationnodes-overview.htm)(which would not be useful in any
+Node](conversationnodes-overview.html)(which would not be useful in any
 case).  
   
 Note too that in the last of these we call getActor.setHasSeen(ghost) to

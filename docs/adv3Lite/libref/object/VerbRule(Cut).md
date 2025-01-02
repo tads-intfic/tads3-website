@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Cut)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2866](../source/grammar.t.html#2866)\]

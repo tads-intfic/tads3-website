@@ -1,0 +1,348 @@
+<p><span class="title">ByteArray</span><span class="type">class</span></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#26">26</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+'ByteArray' intrinsic class. This class provides a fixed-size array of
+unsigned 8-bit byte values; each array element is an integer in the
+range 0-255.
+
+ByteArray is particularly useful for reading and writing binary files,
+since it lets you manipulate the raw bytes in a file directly.
+
+`intrinsic class `**`ByteArray`**` :   `[`Object`](../object/Object.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ByteArray</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Object`](../object/Object.html)<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>` `</p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>copyFrom<code class="language-plaintext highlighter-rouge">](#copyFrom)</code>  <code class="language-plaintext highlighter-rouge">[</code>digestMD5<code class="language-plaintext highlighter-rouge">](#digestMD5)</code>  <code class="language-plaintext highlighter-rouge">[</code>fillValue<code class="language-plaintext highlighter-rouge">](#fillValue)</code>  <code class="language-plaintext highlighter-rouge">[</code>length<code class="language-plaintext highlighter-rouge">](#length)</code>  <code class="language-plaintext highlighter-rouge">[</code>mapToString<code class="language-plaintext highlighter-rouge">](#mapToString)</code>  <code class="language-plaintext highlighter-rouge">[</code>packBytes<code class="language-plaintext highlighter-rouge">](#packBytes)</code>  <code class="language-plaintext highlighter-rouge">[</code>readInt<code class="language-plaintext highlighter-rouge">](#readInt)</code>  <code class="language-plaintext highlighter-rouge">[</code>sha256<code class="language-plaintext highlighter-rouge">](#sha256)</code>  <code class="language-plaintext highlighter-rouge">[</code>subarray<code class="language-plaintext highlighter-rouge">](#subarray)</code>  <code class="language-plaintext highlighter-rouge">[</code>unpackBytes<code class="language-plaintext highlighter-rouge">](#unpackBytes)</code>  <code class="language-plaintext highlighter-rouge">[</code>writeInt<code class="language-plaintext highlighter-rouge">](#writeInt)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getPropList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPropParams<code class="language-plaintext highlighter-rouge">](../object/Object.html#getPropParams)</code>  <code class="language-plaintext highlighter-rouge">[</code>getSuperclassList<code class="language-plaintext highlighter-rouge">](../object/Object.html#getSuperclassList)</code>  <code class="language-plaintext highlighter-rouge">[</code>isClass<code class="language-plaintext highlighter-rouge">](../object/Object.html#isClass)</code>  <code class="language-plaintext highlighter-rouge">[</code>isTransient<code class="language-plaintext highlighter-rouge">](../object/Object.html#isTransient)</code>  <code class="language-plaintext highlighter-rouge">[</code>ofKind<code class="language-plaintext highlighter-rouge">](../object/Object.html#ofKind)</code>  <code class="language-plaintext highlighter-rouge">[</code>propDefined<code class="language-plaintext highlighter-rouge">](../object/Object.html#propDefined)</code>  <code class="language-plaintext highlighter-rouge">[</code>propInherited<code class="language-plaintext highlighter-rouge">](../object/Object.html#propInherited)</code>  <code class="language-plaintext highlighter-rouge">[</code>propType<code class="language-plaintext highlighter-rouge">](../object/Object.html#propType)</code>  <code class="language-plaintext highlighter-rouge">[</code>valToSymbol<code class="language-plaintext highlighter-rouge">](../object/Object.html#valToSymbol)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="copyFrom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">copyFrom (src, srcStartIndex, dstStartIndex, length)</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#70">70</a>]</p>
+
+<div class="desc">
+
+Copy bytes from the source array into this array. Bytes are copied into
+this array starting at the given index. The specified number of bytes
+are copied from the source array starting at the given index.
+
+</div>
+
+<p><span id="digestMD5"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">digestMD5 ( )</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#213">213</a>]</p>
+
+<div class="desc">
+
+Get the MD5 digest of the string. This calculates the 128-bit RSA MD5
+digest value, returning the digest as a 32-character string of hex
+digits. The hash value is computed on the UTF-8 representation of the
+string. If 'idx' and 'len' are specified, the give the range of bytes to
+include in the hash; the default is to hash the whole array.
+
+</div>
+
+<p><span id="fillValue"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fillValue (val, startIndex?, length?)</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#78">78</a>]</p>
+
+<div class="desc">
+
+Fill bytes in this array with the given value. If no starting index or
+length values are given, the entire array is filled with the given byte
+value. The byte value must be an integer in the range 0 to 255.
+
+</div>
+
+<p><span id="length"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">length ( )</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#55">55</a>]</p>
+
+<div class="desc">
+
+Get the number of bytes in the array. The length is fixed at creation
+time.
+
+</div>
+
+<p><span id="mapToString"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mapToString (charset, startIndex?, length?)</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#88">88</a>]</p>
+
+<div class="desc">
+
+Convert a range of bytes in the array to a string, interpreting the
+bytes in the array as characters in the given character set.
+
+If the starting index and length are not given, the entire byte array is
+converted to a string. 'charset' must be an object of intrinsic class
+CharacterSet.
+
+</div>
+
+<p><span id="packBytes"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">packBytes (idx, format, ...)</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#180">180</a>]</p>
+
+<div class="desc">
+
+Pack data values into bytes according to a format definition string, and
+store the packed bytes in the byte array starting at the given index.
+
+'idx' is the starting index in the array for the packed bytes. 'format'
+is the format string, which specifies the binary representations to use
+for the argument values. The remaining arguments after 'format' are the
+data values to pack.
+
+Returns the number of bytes written to the array. (More precisely,
+returns the final write pointer as a byte offset from 'idx'. If a
+positioning code like @ or X is used in the string, it's possible that
+more bytes were actually written.)
+
+You can also call packBytes a static method, on the ByteArray class
+itself:
+
+  
+ByteArray.packBytes(format, ...)
+
+The static version of the method packs the data into bytes the same way
+the regular method does, but returns a new ByteArray object containing
+the packed bytes. Note that there's no index argument with the static
+version.
+
+Refer to Byte Packing in the System Manual for details.
+
+</div>
+
+<p><span id="readInt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">readInt (startIndex, format)</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#127">127</a>]</p>
+
+<div class="desc">
+
+Read an integer value from the byte array. Reads bytes from the starting
+index; the number of bytes read depends on the format. Returns an
+integer giving the value read.
+
+'format' gives the format of the integer to be read. This is a
+combination (using '\|' operators) of three constants, giving the size,
+byte order, and signedness of the value.
+
+First, choose the SIZE of the value: FmtSize8, FmtSize16, FmtSize32, for
+8-bit, 16-bit, and 32-bit integers, respectively.
+
+Second, choose the BYTE ORDER of the value, as represented in the byte
+array: FmtLittleEndian or FmtBigEndian. The standard T3 portable data
+interchange format uses little-endian values; this is a format in which
+the least-significant byte of a value comes first, followed by the
+remaining bytes in ascending order of significance. The big-endian
+format uses the opposite order. The byte order obviously is irrelevant
+for 8-bit values.
+
+Third, choose the SIGNEDNESS of the value: FmtSigned or FmtUnsigned.
+Note that FmtUnsigned cannot be used with FmtSize32, because T3 itself
+doesn't have an unsigned 32-bit integer type.
+
+For example, to read a 16-bit unsigned integer in the standard T3
+portable interchange format, you'd use
+
+  
+FmtUnsigned \| FmtSize16 \| FmtLittleEndian
+
+For convenience, individual macros are also defined that pre-compose all
+of the meaningful combinations; see below.
+
+The byte array must be large enough to read the required number of bytes
+starting at the given index. An "index out of range" exception is thrown
+if there aren't enough bytes in the array to satisfy the request.
+
+</div>
+
+<p><span id="sha256"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sha256 (idx?, len?)</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#203">203</a>]</p>
+
+<div class="desc">
+
+Get the SHA-256 hash of the bytes in the array. This calculates the
+256-bit Secure Hash Algorithm 2 hash value, returning the hash as a
+64-character string of hex digits. The hash value is computed on the
+UTF-8 representation of the string. If 'idx' and 'len' are specified,
+they give the range of bytes to include in the hash; the default is to
+hash the whole array.
+
+</div>
+
+<p><span id="subarray"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">subarray (startIndex, length?)</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#62">62</a>]</p>
+
+<div class="desc">
+
+create a new ByteArray as a copy of the given range of this array; if
+the length is not given, bytes from the starting index to the end of
+this array are included in the new array
+
+</div>
+
+<p><span id="unpackBytes"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unpackBytes (idx, format)</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#193">193</a>]</p>
+
+<div class="desc">
+
+Unpack bytes from the byte array starting at the given index, and
+translate the bytes into data values according to the given format
+string.
+
+'idx' is the starting index in the array for the unpacking, and 'format'
+is the format string. Returns a list of the unpacked values.
+
+Refer to Byte Packing in the System Manual for details.
+
+</div>
+
+<p><span id="writeInt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeInt (startIndex, format, val)</code></p>
+
+<p><a href="../file/bytearr.h.html">bytearr.h</a>[<a href="../source/bytearr.h.html#151">151</a>]</p>
+
+<div class="desc">
+
+Write an integer value to the byte array. Writes bytes starting at the
+given index; the number of bytes written depends on the format. The
+'format' parameter gives the format, using the same codes as in
+readInt(). 'val' is the integer value to be written. If 'val' is outside
+of the bounds of the format to be written, the written value is
+truncated.
+
+The byte array must be large enough to hold the number of bytes required
+by the format starting at the starting index. An "index out of range"
+exception is thrown if the byte array doesn't have enough space to store
+the value.
+
+The value is not checked for range. If the value is outside of the range
+that the format is capable of storing, the value stored will be
+truncated to its least significant bits that fit the format. For
+example, attempting to store 0xABCD in an 8-bit format will store only
+0xCD.
+
+Note that the signedness doesn't matter when writing a value. The
+signedness is important only when reading the value back in.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

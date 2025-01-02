@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>RoomConnector : <a
-href="travelconnector.htm">TravelConnector</a><br />
+href="travelconnector.html">TravelConnector</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="deadendconnector.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="asexit.htm">[Next]</a></td>
+href="deadendconnector.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="asexit.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -43,7 +45,7 @@ entranceTunnel : RoomConnector
 ;  
   
 The properties room1 and room2 define the two rooms that will be linked
-by this connector (note that we haven't defined [entranceCave](room.htm)
+by this connector (note that we haven't defined [entranceCave](room.html)
 as yet, so the game won't compile till we do). We define a custom
 blocked property to determine whether or not the tunnel has been blocked
 by the rockfall. The **canTravelerPass** method (defined on all
@@ -60,6 +62,6 @@ linking the two rooms (although in a sense it does duty for a
 representation of a tunnel that can be blocked).  
   
 Note also that it will be necessary to make the appropriate direction
-properties of both [outsideCave](roomconnector.htm) and
-[entranceCave](room.htm) point to this RoomConnector. We'll do that
+properties of both [outsideCave](roomconnector.html) and
+[entranceCave](room.html) point to this RoomConnector. We'll do that
 next.  

@@ -1,0 +1,161 @@
+<p><span class="title">PreinitObject</span><span class="type">class</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#471">471</a>],
+<a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2429">2429</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Pre-Initialization object. During pre-initialization, we'll invoke the
+execute() method on each instance of this class.
+
+*Modified in
+[misc.t](../file/misc.t.html)\[[2429](../source/misc.t.html#2429)\]:*  
+Our static object and class initializer should generally run before any
+other initializers.
+
+`class `**`PreinitObject`**` :   `[`ModuleExecObject`](../object/ModuleExecObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">PreinitObject</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">PreinitObject</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>EventListItem<code class="language-plaintext highlighter-rouge">](../object/EventListItem.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ELI<code class="language-plaintext highlighter-rouge">](../object/ELI.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ELI1<code class="language-plaintext highlighter-rouge">](../object/ELI1.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>MetadataModuleID<code class="language-plaintext highlighter-rouge">](../object/MetadataModuleID.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>GameInfoModuleID<code class="language-plaintext highlighter-rouge">](../object/GameInfoModuleID.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>GameID<code class="language-plaintext highlighter-rouge">](../object/GameID.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>MobileCollectiveGroup<code class="language-plaintext highlighter-rouge">](../object/MobileCollectiveGroup.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>OutputStream<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BannerOutputStream<code class="language-plaintext highlighter-rouge">](../object/BannerOutputStream.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>LogConsole<code class="language-plaintext highlighter-rouge">](../object/LogConsole.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>WebWinOutputStream<code class="language-plaintext highlighter-rouge">](../object/WebWinOutputStream.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Relation<code class="language-plaintext highlighter-rouge">](../object/Relation.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RuleBook<code class="language-plaintext highlighter-rouge">](../object/RuleBook.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>StringPreParser<code class="language-plaintext highlighter-rouge">](../object/StringPreParser.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ThoughtManager<code class="language-plaintext highlighter-rouge">](../object/ThoughtManager.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>TopHintMenu`](../object/TopHintMenu.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>actionDictionary<code class="language-plaintext highlighter-rouge">](../object/actionDictionary.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>actionTab<code class="language-plaintext highlighter-rouge">](../object/actionTab.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>actorPreinit<code class="language-plaintext highlighter-rouge">](../object/actorPreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>adv3LibPreinit<code class="language-plaintext highlighter-rouge">](../object/adv3LibPreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>clockManager<code class="language-plaintext highlighter-rouge">](../object/clockManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>Compiler<code class="language-plaintext highlighter-rouge">](../object/Compiler.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>consultablePreinit<code class="language-plaintext highlighter-rouge">](../object/consultablePreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>conversationManager<code class="language-plaintext highlighter-rouge">](../object/conversationManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>convNodePreinit<code class="language-plaintext highlighter-rouge">](../object/convNodePreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>doerPreinit<code class="language-plaintext highlighter-rouge">](../object/doerPreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>exitLister<code class="language-plaintext highlighter-rouge">](../object/exitLister.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>extraHintManager<code class="language-plaintext highlighter-rouge">](../object/extraHintManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>footnotePreinit<code class="language-plaintext highlighter-rouge">](../object/footnotePreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>hintManager<code class="language-plaintext highlighter-rouge">](../object/hintManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>libObjectInitializer<code class="language-plaintext highlighter-rouge">](../object/libObjectInitializer.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>libScore<code class="language-plaintext highlighter-rouge">](../object/libScore.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>multiLocInitiator<code class="language-plaintext highlighter-rouge">](../object/multiLocInitiator.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>objTablePreinit<code class="language-plaintext highlighter-rouge">](../object/objTablePreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>preinitRulesRunner<code class="language-plaintext highlighter-rouge">](../object/preinitRulesRunner.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>pronounPreinit<code class="language-plaintext highlighter-rouge">](../object/pronounPreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>reflectionServices<code class="language-plaintext highlighter-rouge">](../object/reflectionServices.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>regionPreinit<code class="language-plaintext highlighter-rouge">](../object/regionPreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>relationTable<code class="language-plaintext highlighter-rouge">](../object/relationTable.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>rulePreinit<code class="language-plaintext highlighter-rouge">](../object/rulePreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>styleTagFilter<code class="language-plaintext highlighter-rouge">](../object/styleTagFilter.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>symTab<code class="language-plaintext highlighter-rouge">](../object/symTab.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>symVocabPreinit<code class="language-plaintext highlighter-rouge">](../object/symVocabPreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>thingPreinit<code class="language-plaintext highlighter-rouge">](../object/thingPreinit.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>World<code class="language-plaintext highlighter-rouge">](../object/World.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execute)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="execBeforeMe"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execBeforeMe</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2431">2431</a>]</p>
+
+<div class="desc">
+
+execute the basic library initializer before any other initializers
+
+</div>
+
+<p><span id="reverseGlobalSymbols"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2438">2438</a>]</p>
+
+<div class="desc">
+
+class property: reverse lookup symbol table (a version of the global
+symbol table keyed by value, yielding the name of each global object,
+function, etc)
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

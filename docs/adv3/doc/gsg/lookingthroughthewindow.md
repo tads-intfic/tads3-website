@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,13 +9,13 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](countingthecash.htm)
-  [\[Next\]](easingtestinganddebugging.htm)*
+*[\[Previous\]](countingthecash.html)
+  [\[Next\]](easingtestinganddebugging.html)*
 
 ## Looking Through the Window
 
 You'll recall that some time back we fitted a
-[window](doorsandwindows.htm) to the cottage that allowed Heidi to see
+[window](doorsandwindows.html) to the cottage that allowed Heidi to see
 what's inside when she's outside and *vice versa*. As implemented, this
 is a rather 'passive' window that simply makes whatever's inside the
 cottage visible on the outside (and *vice versa*). Since a window is
@@ -552,7 +554,7 @@ it.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](countingthecash.htm)
-  [\[Next\]](easingtestinganddebugging.htm)*
+*[\[Previous\]](countingthecash.html)
+  [\[Next\]](easingtestinganddebugging.html)*
 
 </div>

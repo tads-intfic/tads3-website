@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -10,9 +12,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 ResolveAsker<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="travelbarrier.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="travelconnector.htm">[Next]</a></td>
+href="travelbarrier.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="travelconnector.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -146,4 +148,4 @@ parser will respond with "There are two doors you could go through to
 the south. Which of them do you mean, the right hand door, or the left
 hand door?" Of course, right now there's no way of reaching this
 location; we'll eventually provide it when we come to look at
-[Consultable](consultable.htm).  
+[Consultable](consultable.html).  

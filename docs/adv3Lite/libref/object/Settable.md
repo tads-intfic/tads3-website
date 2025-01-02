@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Settable</span><span class="type">class</span>
 
 [gadget.t](../file/gadget.t.html)\[[132](../source/gadget.t.html#132)\]

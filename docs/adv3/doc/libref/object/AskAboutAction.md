@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AskAboutAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[1951](../source/actions.t.html#1951)\]

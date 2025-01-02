@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nodeObj</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[4897](../source/actor.t.html#4897)\]

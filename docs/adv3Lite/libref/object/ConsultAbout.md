@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ConsultAbout</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1480](../source/actions.t.html#1480)\]

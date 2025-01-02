@@ -1,3 +1,5 @@
+---
+---
 <span class="title">PathPassage</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[756](../source/extras.t.html#756)\]

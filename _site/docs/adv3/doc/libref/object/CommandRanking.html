@@ -1,0 +1,1080 @@
+<p><span class="title">CommandRanking</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6099">6099</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Production match ranking object. We create one of these objects for each
+match tree that we wish to rank.
+
+This class is generally not instantiated by client code - instead,
+clients use the sortByRanking() class method to rank a list of
+production matches.
+
+`class `**`CommandRanking`**` :   `[`ResolveResults`](../object/ResolveResults.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">CommandRanking</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ResolveResults<code class="language-plaintext highlighter-rouge">](../object/ResolveResults.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">CommandRanking</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>DisambigRanking<code class="language-plaintext highlighter-rouge">](../object/DisambigRanking.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>MissingObjectRanking<code class="language-plaintext highlighter-rouge">](../object/MissingObjectRanking.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>OopsResults`](../object/OopsResults.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>actorSpecifiedCount<code class="language-plaintext highlighter-rouge">](#actorSpecifiedCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>allExcludedCount<code class="language-plaintext highlighter-rouge">](#allExcludedCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>allowActionRemapping<code class="language-plaintext highlighter-rouge">](#allowActionRemapping)</code>  <code class="language-plaintext highlighter-rouge">[</code>ambigCount<code class="language-plaintext highlighter-rouge">](#ambigCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandCount<code class="language-plaintext highlighter-rouge">](#commandCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>emptyButCount<code class="language-plaintext highlighter-rouge">](#emptyButCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>endAdjCount<code class="language-plaintext highlighter-rouge">](#endAdjCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>indefiniteCount<code class="language-plaintext highlighter-rouge">](#indefiniteCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>inSingleObjSlot<code class="language-plaintext highlighter-rouge">](#inSingleObjSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>insufficientCount<code class="language-plaintext highlighter-rouge">](#insufficientCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>inTopicSlot<code class="language-plaintext highlighter-rouge">](#inTopicSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>listForSingle<code class="language-plaintext highlighter-rouge">](#listForSingle)</code>  <code class="language-plaintext highlighter-rouge">[</code>literalLength<code class="language-plaintext highlighter-rouge">](#literalLength)</code>  <code class="language-plaintext highlighter-rouge">[</code>match<code class="language-plaintext highlighter-rouge">](#match)</code>  <code class="language-plaintext highlighter-rouge">[</code>miscWordListCount<code class="language-plaintext highlighter-rouge">](#miscWordListCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>missingCount<code class="language-plaintext highlighter-rouge">](#missingCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>nonMatchCount<code class="language-plaintext highlighter-rouge">](#nonMatchCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>nonMatchPossCount<code class="language-plaintext highlighter-rouge">](#nonMatchPossCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>nounSlotCount<code class="language-plaintext highlighter-rouge">](#nounSlotCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>pluralTruncCount<code class="language-plaintext highlighter-rouge">](#pluralTruncCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>pronounCount<code class="language-plaintext highlighter-rouge">](#pronounCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>rankingCriteria<code class="language-plaintext highlighter-rouge">](#rankingCriteria)</code>  <code class="language-plaintext highlighter-rouge">[</code>tokCount<code class="language-plaintext highlighter-rouge">](#tokCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>truncCount<code class="language-plaintext highlighter-rouge">](#truncCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownWordCount<code class="language-plaintext highlighter-rouge">](#unknownWordCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>unwantedPluralCount<code class="language-plaintext highlighter-rouge">](#unwantedPluralCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>vocabNonMatchCount<code class="language-plaintext highlighter-rouge">](#vocabNonMatchCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>weaknessLevel<code class="language-plaintext highlighter-rouge">](#weaknessLevel)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>allNotAllowed<code class="language-plaintext highlighter-rouge">](#allNotAllowed)</code>  <code class="language-plaintext highlighter-rouge">[</code>ambiguousNounPhrase<code class="language-plaintext highlighter-rouge">](#ambiguousNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>askMissingObject<code class="language-plaintext highlighter-rouge">](#askMissingObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>beginSingleObjSlot<code class="language-plaintext highlighter-rouge">](#beginSingleObjSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>beginTopicSlot<code class="language-plaintext highlighter-rouge">](#beginTopicSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>calcRanking<code class="language-plaintext highlighter-rouge">](#calcRanking)</code>  <code class="language-plaintext highlighter-rouge">[</code>compareRanking<code class="language-plaintext highlighter-rouge">](#compareRanking)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>emptyNounPhrase<code class="language-plaintext highlighter-rouge">](#emptyNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>endSingleObjSlot<code class="language-plaintext highlighter-rouge">](#endSingleObjSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>endTopicSlot<code class="language-plaintext highlighter-rouge">](#endTopicSlot)</code>  <code class="language-plaintext highlighter-rouge">[</code>getImpliedObject<code class="language-plaintext highlighter-rouge">](#getImpliedObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>incCommandCount<code class="language-plaintext highlighter-rouge">](#incCommandCount)</code>  <code class="language-plaintext highlighter-rouge">[</code>insufficientQuantity<code class="language-plaintext highlighter-rouge">](#insufficientQuantity)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatch<code class="language-plaintext highlighter-rouge">](#noMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForAll<code class="language-plaintext highlighter-rouge">](#noMatchForAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForAllBut<code class="language-plaintext highlighter-rouge">](#noMatchForAllBut)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForListBut<code class="language-plaintext highlighter-rouge">](#noMatchForListBut)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForLocation<code class="language-plaintext highlighter-rouge">](#noMatchForLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForPossessive<code class="language-plaintext highlighter-rouge">](#noMatchForPossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchForPronoun<code class="language-plaintext highlighter-rouge">](#noMatchForPronoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>noMatchPossessive<code class="language-plaintext highlighter-rouge">](#noMatchPossessive)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteActorSpecified<code class="language-plaintext highlighter-rouge">](#noteActorSpecified)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteAdjEnding<code class="language-plaintext highlighter-rouge">](#noteAdjEnding)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteBadPrep<code class="language-plaintext highlighter-rouge">](#noteBadPrep)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteEmptyBut<code class="language-plaintext highlighter-rouge">](#noteEmptyBut)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteIndefinite<code class="language-plaintext highlighter-rouge">](#noteIndefinite)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteLiteral<code class="language-plaintext highlighter-rouge">](#noteLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteMatches<code class="language-plaintext highlighter-rouge">](#noteMatches)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteMiscWordList<code class="language-plaintext highlighter-rouge">](#noteMiscWordList)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteNounSlots<code class="language-plaintext highlighter-rouge">](#noteNounSlots)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePlural<code class="language-plaintext highlighter-rouge">](#notePlural)</code>  <code class="language-plaintext highlighter-rouge">[</code>notePronoun<code class="language-plaintext highlighter-rouge">](#notePronoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>noteWeakPhrasing<code class="language-plaintext highlighter-rouge">](#noteWeakPhrasing)</code>  <code class="language-plaintext highlighter-rouge">[</code>nothingInLocation<code class="language-plaintext highlighter-rouge">](#nothingInLocation)</code>  <code class="language-plaintext highlighter-rouge">[</code>noVocabMatch<code class="language-plaintext highlighter-rouge">](#noVocabMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>reflexiveNotAllowed<code class="language-plaintext highlighter-rouge">](#reflexiveNotAllowed)</code>  <code class="language-plaintext highlighter-rouge">[</code>singleObjectRequired<code class="language-plaintext highlighter-rouge">](#singleObjectRequired)</code>  <code class="language-plaintext highlighter-rouge">[</code>sortByRanking<code class="language-plaintext highlighter-rouge">](#sortByRanking)</code>  <code class="language-plaintext highlighter-rouge">[</code>uniqueObjectRequired<code class="language-plaintext highlighter-rouge">](#uniqueObjectRequired)</code>  <code class="language-plaintext highlighter-rouge">[</code>unknownNounPhrase<code class="language-plaintext highlighter-rouge">](#unknownNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>wrongReflexive<code class="language-plaintext highlighter-rouge">](#wrongReflexive)</code>  <code class="language-plaintext highlighter-rouge">[</code>zeroQuantity<code class="language-plaintext highlighter-rouge">](#zeroQuantity)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="actorSpecifiedCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorSpecifiedCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6384">6384</a>]</p>
+
+<div class="desc">
+
+an actor is specified
+
+</div>
+
+<p><span id="allExcludedCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allExcludedCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6357">6357</a>]</p>
+
+<div class="desc">
+
+number of "all" or "any" lists totally excluded by "but"
+
+</div>
+
+<p><span id="allowActionRemapping"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowActionRemapping</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6714">6714</a>]</p>
+
+<div class="desc">
+
+don't allow action remapping while ranking
+
+</div>
+
+<p><span id="ambigCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ambigCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6378">6378</a>]</p>
+
+<div class="desc">
+
+number of ambiguous noun phrases
+
+</div>
+
+<p><span id="commandCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6381">6381</a>]</p>
+
+<div class="desc">
+
+number of subcommands in the command
+
+</div>
+
+<p><span id="emptyButCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">emptyButCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6354">6354</a>]</p>
+
+<div class="desc">
+
+number of empty "but" lists
+
+</div>
+
+<p><span id="endAdjCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endAdjCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6366">6366</a>]</p>
+
+<div class="desc">
+
+number of phrases ending in adjectives
+
+</div>
+
+<p><span id="indefiniteCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indefiniteCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6369">6369</a>]</p>
+
+<div class="desc">
+
+number of phrases with indefinite noun phrase structure
+
+</div>
+
+<p><span id="inSingleObjSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inSingleObjSlot</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6663">6663</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="insufficientCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">insufficientCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6348">6348</a>]</p>
+
+<div class="desc">
+
+number of phrases requiring quantity higher than can be fulfilled
+
+</div>
+
+<p><span id="inTopicSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inTopicSlot</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6667">6667</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="listForSingle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listForSingle</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6351">6351</a>]</p>
+
+<div class="desc">
+
+number of noun lists in single-noun slots
+
+</div>
+
+<p><span id="literalLength"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">literalLength</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6390">6390</a>]</p>
+
+<div class="desc">
+
+total character length of literal text phrases
+
+</div>
+
+<p><span id="match"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">match</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6316">6316</a>]</p>
+
+<div class="desc">
+
+the match tree I'm ranking
+
+</div>
+
+<p><span id="miscWordListCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">miscWordListCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6372">6372</a>]</p>
+
+<div class="desc">
+
+number of miscellaneous word lists as noun phrases
+
+</div>
+
+<p><span id="missingCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">missingCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6360">6360</a>]</p>
+
+<div class="desc">
+
+missing phrases (structurally omitted, as in "put book")
+
+</div>
+
+<p><span id="nonMatchCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nonMatchCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6338">6338</a>]</p>
+
+<div class="desc">
+
+number of noun phrases matching nothing in scope
+
+</div>
+
+<p><span id="nonMatchPossCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nonMatchPossCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6345">6345</a>]</p>
+
+<div class="desc">
+
+Number of possessive-qualified noun phrases matching nothing in scope.
+For example, "bob's desk" when there's no desk in scope (Bob's or
+otherwise).
+
+</div>
+
+<p><span id="nounSlotCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nounSlotCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6332">6332</a>]</p>
+
+<div class="desc">
+
+The number of structural "noun phrase slots" in the verb. An
+intransitive verb has no noun phrase slots; a transitive verb with a
+direct object has one; a verb with a direct and indirect object has two
+slots.
+
+</div>
+
+<p><span id="pluralTruncCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pluralTruncCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6363">6363</a>]</p>
+
+<div class="desc">
+
+number of truncated plurals
+
+</div>
+
+<p><span id="pronounCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pronounCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6393">6393</a>]</p>
+
+<div class="desc">
+
+number of pronoun phrases
+
+</div>
+
+<p><span id="rankingCriteria"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rankingCriteria</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6292">6292</a>]</p>
+
+<div class="desc">
+
+Our list of ranking criteria. This is a list of CommandRankingCriterion
+objects. The list is given in order of importance: the first criterion
+is the most important, so if it can discriminate the two match trees, we
+use its result; if the first criterion can't tell any difference, then
+we move on to the second criterion; and so on through the list.
+
+The most important thing is whether or not we have irresolvable noun
+phrases (vocabNonMatchCount). If one of us has a noun phrase that refers
+to nothing anywhere in the game, it's not as good as a phrase that at
+least matches something somewhere.
+
+Next, if one of us has noun phrases that cannot be resolved to something
+in scope (nonMatchCount), and the other can successfully resolve its
+noun phrases, the one that can resolve the phrases is preferred.
+
+Next, check for insufficient numbers of matches to counted phrases
+(insufficientCount).
+
+Next, check for noun lists in single-noun-only slots (listForSingle).
+
+Next, if we have an empty "but" list in one but not the other, take the
+one with the non-empty "but" list (emptyButCount). We prefer a non-empty
+"but" list with an empty "all" even to a non-empty "all" list with an
+empty "but", because in the latter case we probably failed to exclude
+anything because we misinterpreted the noun phrase to be excluded.
+
+Next, if we have an empty "all" or "any" phrase due to "but" exclusion,
+take the one that's not empty (allExcludedCount).
+
+Next, prefer a command that addresses an actor (actorSpecifiedCount) -
+if the actor name looks like a command (we have someone named "Open
+Bob," maybe?), we'd prefer to interpret the name appearing as a command
+prefix as an actor name.
+
+Next, prefer no unstructured word lists as noun phrases (miscWordList
+phrases) (miscWordListCount).
+
+Next, prefer interpretations that treat less text as uninterpreted
+literal text. By "less text," we simply mean that one has a shorter
+string treated as a literal than the other.
+
+Prefer no indefinite noun phrases (indefiniteCount).
+
+Prefer no truncated plurals (pluralTruncCount).
+
+Prefer no noun phrases ending in adjectives (endAdjCount).
+
+Prefer no truncated words of any kind (truncCount).
+
+Prefer fewer pronouns. If we have an interpretation that matches a word
+to explicit vocabulary, take it over matching a word as a pronoun: if a
+word is given explicitly as vocabulary for an object, use it if
+possible.
+
+Prefer no missing phrases (missingCount).
+
+Prefer the one with fewer subcommands - if one has fewer subcommands
+than the other, it means that we were able to interpret ambiguous
+conjunctions (such as "and") as noun phrase conjunctions rather than as
+command conjunctions; since we know by now that we both either have or
+don't have unresolved noun phrases, we'd rather take the interpretation
+that gives us noun phrases than the one that involves more separate
+commands.
+
+Prefer the tree that matches more tokens.
+
+Prefer the one with more structural noun phrases in the verb. For
+example, if we have one interpretation that's DETACH (X FROM Y) (where X
+FROM Y is a 'locational' phrase that we treat as the direct object), and
+one that's DETACH X FROM Y (where X is the direct object and Y is in the
+indirect object), prefer the latter, because it has both direct and
+indirect object phrases, whereas the former has only a direct object
+phrase. English speakers almost always try to put prepositions into a
+structural role in the verb phrase like this when they could be either
+in the verb phrase or part of a noun phrase.
+
+If all else fails, prefer the one that is initially less ambiguous.
+Ambiguity is a weak test at this point, since we might end up narrowing
+things down through automatic "logicalness" tests later, but it's
+slightly better to have the match be less ambiguous now, all other
+things being equal.
+
+</div>
+
+<p><span id="tokCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6319">6319</a>]</p>
+
+<div class="desc">
+
+the number of tokens my match tree consumes
+
+</div>
+
+<p><span id="truncCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">truncCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6375">6375</a>]</p>
+
+<div class="desc">
+
+number of truncated words overall
+
+</div>
+
+<p><span id="unknownWordCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unknownWordCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6387">6387</a>]</p>
+
+<div class="desc">
+
+unknown words
+
+</div>
+
+<p><span id="unwantedPluralCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unwantedPluralCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6399">6399</a>]</p>
+
+<div class="desc">
+
+number of plural phrases encountered in single-object slots
+
+</div>
+
+<p><span id="vocabNonMatchCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vocabNonMatchCount</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6335">6335</a>]</p>
+
+<div class="desc">
+
+number of noun phrases matching nothing anywhere in the game
+
+</div>
+
+<p><span id="weaknessLevel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">weaknessLevel</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6396">6396</a>]</p>
+
+<div class="desc">
+
+weakness level (for noteWeakPhrasing)
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="allNotAllowed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allNotAllowed ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6432">6432</a>]</p>
+
+<div class="desc">
+
+note that we have an unmatched possessive-qualified noun phrase
+
+</div>
+
+<p><span id="ambiguousNounPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ambiguousNounPhrase (keeper, asker, txt, matchList, fullMatchList, scopeList, requiredNum, resolver)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6503">6503</a>]</p>
+
+<div class="desc">
+
+treat this as any other noun phrase that matches nothing
+
+</div>
+
+<p><span id="askMissingObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingObject (asker, resolver, responseProd)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6566">6566</a>]</p>
+
+<div class="desc">
+
+count the missing object phrase
+
+</div>
+
+<p><span id="beginSingleObjSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beginSingleObjSlot ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6661">6661</a>]</p>
+
+<div class="desc">
+
+if this object was matched with a truncated plural, note it
+
+</div>
+
+<p><span id="beginTopicSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beginTopicSlot ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6665">6665</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="calcRanking"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">calcRanking (resolveArguments)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6146">6146</a>]</p>
+
+<div class="desc">
+
+calculate my ranking
+
+</div>
+
+<p><span id="compareRanking"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compareRanking (other)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6173">6173</a>]</p>
+
+<div class="desc">
+
+Compare two production list entries for ranking purposes. Returns a
+negative number if this one ranks worse than the other, 0 if they have
+the same ranking, or a positive number if this one ranks better than the
+other one.
+
+This routine is designed to run entirely off of our rankingCriteria
+property. In most cases, subclasses should be able to customize the
+ranking system simply by overriding the rankingCriteria property to
+provide a customized list of criteria objects.
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (match)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6136">6136</a>]</p>
+
+<div class="desc">
+
+create a new entry
+
+</div>
+
+<p><span id="emptyNounPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">emptyNounPhrase (resolver)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6582">6582</a>]</p>
+
+<div class="desc">
+
+add the length of this literal to the total literal length
+
+</div>
+
+<p><span id="endSingleObjSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endSingleObjSlot ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6662">6662</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="endTopicSlot"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endTopicSlot ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6666">6666</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="getImpliedObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getImpliedObject (np, resolver)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6559">6559</a>]</p>
+
+<div class="desc">
+
+return the results
+
+</div>
+
+<p><span id="incCommandCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">incCommandCount ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6682">6682</a>]</p>
+
+<div class="desc">
+
+If we're resolving a single-object slot, we want to avoid plurals, since
+they could resolve to multiple objects as though we'd typed a list of
+objects here. This isn't a problem for topics, though, since a topic
+slot isn't iterated for execution.
+
+</div>
+
+<p><span id="insufficientQuantity"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">insufficientQuantity (txt, matchList, requiredNum)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6595">6595</a>]</p>
+
+<div class="desc">
+
+treat this as a non-matching noun phrase
+
+</div>
+
+<p><span id="noMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatch (action, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6419">6419</a>]</p>
+
+<div class="desc">
+
+note the unknown phrase
+
+</div>
+
+<p><span id="noMatchForAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForAll ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6438">6438</a>]</p>
+
+<div class="desc">
+
+treat this as a non-matching noun phrase
+
+</div>
+
+<p><span id="noMatchForAllBut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForAllBut ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6450">6450</a>]</p>
+
+<div class="desc">
+
+note it
+
+</div>
+
+<p><span id="noMatchForListBut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForListBut ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6456">6456</a>]</p>
+
+<div class="desc">
+
+count the total exclusion
+
+</div>
+
+<p><span id="noMatchForLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForLocation (loc, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6486">6486</a>]</p>
+
+<div class="desc">
+
+treat this as any other noun phrase that matches nothing
+
+</div>
+
+<p><span id="noMatchForPossessive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForPossessive (owner, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6480">6480</a>]</p>
+
+<div class="desc">
+
+treat this as any other noun phrase that matches nothing
+
+</div>
+
+<p><span id="noMatchForPronoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForPronoun (typ, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6462">6462</a>]</p>
+
+<div class="desc">
+
+treat this as any other noun phrase that matches nothing
+
+</div>
+
+<p><span id="noMatchPossessive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchPossessive (action, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6425">6425</a>]</p>
+
+<div class="desc">
+
+note that we have a noun phrase that matches nothing
+
+</div>
+
+<p><span id="noteActorSpecified"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteActorSpecified ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6688">6688</a>]</p>
+
+<div class="desc">
+
+increase our subcommand counter
+
+</div>
+
+<p><span id="noteAdjEnding"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteAdjEnding ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6615">6615</a>]</p>
+
+<div class="desc">
+
+ignore this for now - we might get a unique object via disambiguation
+during the execution phase
+
+</div>
+
+<p><span id="noteBadPrep"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteBadPrep ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6492">6492</a>]</p>
+
+<div class="desc">
+
+treat this as any other noun phrase that matches nothing
+
+</div>
+
+<p><span id="noteEmptyBut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteEmptyBut ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6444">6444</a>]</p>
+
+<div class="desc">
+
+treat this as any other noun phrase that matches nothing
+
+</div>
+
+<p><span id="noteIndefinite"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteIndefinite ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6621">6621</a>]</p>
+
+<div class="desc">
+
+count it
+
+</div>
+
+<p><span id="noteLiteral"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteLiteral (txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6576">6576</a>]</p>
+
+<div class="desc">
+
+no need to do anything here - we'll count the missing object in
+getImpliedObject, and we don't want to ask for anything interactively at
+this point
+
+</div>
+
+<p><span id="noteMatches"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteMatches (matchList)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6642">6642</a>]</p>
+
+<div class="desc">
+
+note the presence of a pronoun
+
+</div>
+
+<p><span id="noteMiscWordList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteMiscWordList (txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6627">6627</a>]</p>
+
+<div class="desc">
+
+count it
+
+</div>
+
+<p><span id="noteNounSlots"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteNounSlots (cnt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6694">6694</a>]</p>
+
+<div class="desc">
+
+note it
+
+</div>
+
+<p><span id="notePlural"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePlural ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6669">6669</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="notePronoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePronoun ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6636">6636</a>]</p>
+
+<div class="desc">
+
+count this as a literal as well
+
+</div>
+
+<p><span id="noteWeakPhrasing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteWeakPhrasing (level)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6707">6707</a>]</p>
+
+<div class="desc">
+
+If this is the first noun slot count we've received, remember it. If we
+already have a count, ignore the new one - we only want to consider the
+first verb phrase if there are multiple verb phrases, since we'll
+reconsider the next verb phrase when we're ready to execute it.
+
+</div>
+
+<p><span id="nothingInLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nothingInLocation (txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6497">6497</a>]</p>
+
+<div class="desc">
+
+don't do anything at this point
+
+</div>
+
+<p><span id="noVocabMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noVocabMatch (action, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6413">6413</a>]</p>
+
+<div class="desc">
+
+ResolveResults implementation. We use this results receiver when we're
+comparing the semantic strengths of multiple structural matches, so we
+merely note each error condition without showing any message to the user
+or asking the user for any input. Once we've ranked all of the matches,
+we'll choose the one with the best attributes and then resolve it for
+real, at which point if we chose one with any errors, we'll finally get
+around to showing the errors to the user.
+
+</div>
+
+<p><span id="reflexiveNotAllowed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reflexiveNotAllowed (typ, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6468">6468</a>]</p>
+
+<div class="desc">
+
+treat this as any other noun phrase that matches nothing
+
+</div>
+
+<p><span id="singleObjectRequired"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleObjectRequired (txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6601">6601</a>]</p>
+
+<div class="desc">
+
+treat this as a non-matching noun phrase
+
+</div>
+
+<p><span id="sortByRanking"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sortByRanking (lst, [resolveArguments])</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6108">6108</a>]</p>
+
+<div class="desc">
+
+Sort a list of productions, as returned from GrammarProd.parseTokens(),
+in descending order of command strength. We return a list of
+CommandRanking objects whose first element is the best command
+interpretation.
+
+Note that this can be used as a class-level method.
+
+</div>
+
+<p><span id="uniqueObjectRequired"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">uniqueObjectRequired (txt, matchList)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6607">6607</a>]</p>
+
+<div class="desc">
+
+treat this as a non-matching noun phrase
+
+</div>
+
+<p><span id="unknownNounPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unknownNounPhrase (match, resolver)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6529">6529</a>]</p>
+
+<div class="desc">
+
+return the abbreviated list
+
+</div>
+
+<p><span id="wrongReflexive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">wrongReflexive (typ, txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6474">6474</a>]</p>
+
+<div class="desc">
+
+treat this as any other noun phrase that matches nothing
+
+</div>
+
+<p><span id="zeroQuantity"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">zeroQuantity (txt)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#6589">6589</a>]</p>
+
+<div class="desc">
+
+treat this as a non-matching noun phrase
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

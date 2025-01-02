@@ -1,3 +1,5 @@
+---
+---
 <span class="title">statuslineBanner</span><span class="type">object</span>
 
 [console.t](../file/console.t.html)\[[273](../source/console.t.html#273)\]

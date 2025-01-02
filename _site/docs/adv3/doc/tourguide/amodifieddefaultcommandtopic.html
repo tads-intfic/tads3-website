@@ -1,0 +1,76 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>A Modified
+DefaultCommandTopic<br />
+</strong></td>
+<td style="text-align: right;"><a href="tcommandtopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="consultable.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Some way back, we promised to give a modified form of the
+<a href="defaultcommandtopic.html">DefaultCommandTopic</a> that would generate a
+more satisfactory transcript when a command is issued to Sarah before
+she’s in her InConversationState (so that the greeting protocols
+intervene between the issuing of the command and Sarah’s response to
+it). In the light of the changes made up to this point, we should now
+modify DefaultCommandTopic thus:</p>
+
+<p>modify DefaultCommandTopic<br />
+handleTopic(fromActor, action)<br />
+  {<br />
+    actionPhrase = action.getInfPhrase;<br />
+    <br />
+    /* <br />
+     * if the player types a command like X ME, getInfPhrase will<br />
+     * return ’examine you’. In such a case we want to replace ’you’<br />
+     * with ’me’.<br />
+     */<br />
+    actionPhrase = actionPhrase.findReplace(‘ you ’, ’ me ’, ReplaceAll);<br />
+    if(actionPhrase.endsWith(‘ you’))<br />
+      actionPhrase = actionPhrase.findReplace(‘ you’, ’ me’, ReplaceOnce,<br />
+        actionPhrase.length-5);<br />
+    currentAction = action;<br />
+    inherited(fromActor, action);<br />
+  }  <br />
+  actionPhrase = nil<br />
+  currentAction = nil<br />
+;</p>
+
+<p>We can then redefine Sarah’s DefaultCommandTopic thus:</p>
+
+<p>+ DefaultCommandTopic<br />
+  topicResponse()<br />
+  {<br />
+    ”&lt;q&gt;\&lt;&lt;getActor.name&gt;&gt;,  please <br />
+    &lt;&lt;actionPhrase&gt;&gt;,&lt;/q&gt; you request.&lt;.p&gt;”;<br />
+    responseList.doScript();<br />
+  }<br />
+  responseList : ShuffledEventList<br />
+  {<br />
+   [<br />
+    ’&lt;q&gt;No, I\d really rather not!&lt;/q&gt; she tells you.&lt;.p&gt;’,<br />
+    ’&lt;q&gt;I don\t think so.&lt;/q&gt; she declines.&lt;.p&gt;’,<br />
+    ’&lt;q&gt;Since when did you have the right to boss me around?&lt;/q&gt;<br />
+      she demands.&lt;.p&gt;’,<br />
+    ’{The sarah/she} merely shakes her head.&lt;.p&gt;’,<br />
+    ’&lt;q&gt;Do it yourself!&lt;/q&gt; she tells you.&lt;.p&gt;‘  <br />
+   ]<br />
+  }  <br />
+;</p>
+
+<p>And we now can indeed get transcripts like the following:</p>
+
+<p>&gt;<strong>woman, x ship</strong><br />
+“Hello there,” you say.</p>
+
+<p>“Hello.” she smiles at you, slightly quizzically.</p>
+
+<p>“Young woman, please examine the ship,” you request.</p>
+
+<p>“Do it yourself!” she tells you.</p>

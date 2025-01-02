@@ -1,0 +1,333 @@
+<p><span class="title">NounPhraseProd</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1205">1205</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Basic noun phrase production class.
+
+`class `**`NounPhraseProd`**` :   `[`BasicProd`](../object/BasicProd.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NounPhraseProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BasicProd<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NounPhraseProd</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ButProd<code class="language-plaintext highlighter-rouge">](../object/ButProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>EverythingButProd<code class="language-plaintext highlighter-rouge">](../object/EverythingButProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>terminalNounPhrase(allBut)<code class="language-plaintext highlighter-rouge">](../object/terminalNounPhrase(allBut).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>IndefiniteNounButProd<code class="language-plaintext highlighter-rouge">](../object/IndefiniteNounButProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>terminalNounPhrase(anyBut)<code class="language-plaintext highlighter-rouge">](../object/terminalNounPhrase(anyBut).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ListButProd<code class="language-plaintext highlighter-rouge">](../object/ListButProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>terminalNounPhrase(pluralExcept)<code class="language-plaintext highlighter-rouge">](../object/terminalNounPhrase(pluralExcept).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhrase(miscPrep)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhrase(miscPrep).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>DefiniteNounProd<code class="language-plaintext highlighter-rouge">](../object/DefiniteNounProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>BasicPossessiveProd<code class="language-plaintext highlighter-rouge">](../object/BasicPossessiveProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ButPossessiveProd<code class="language-plaintext highlighter-rouge">](../object/ButPossessiveProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>exceptNounPhrase(singlePossessive)<code class="language-plaintext highlighter-rouge">](../object/exceptNounPhrase(singlePossessive).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>DisambigPossessiveProd<code class="language-plaintext highlighter-rouge">](../object/DisambigPossessiveProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>disambigListItem(possessive)<code class="language-plaintext highlighter-rouge">](../object/disambigListItem(possessive).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>PossessiveNounProd<code class="language-plaintext highlighter-rouge">](../object/PossessiveNounProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(possessive)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(possessive).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>PossessivePluralProd<code class="language-plaintext highlighter-rouge">](../object/PossessivePluralProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(possessive)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(possessive).html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralOnlyNounPhrase(possessive)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ContainerNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/ContainerNounPhraseProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>indetPluralNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetPluralNounPhrase(locational).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>indetPluralOnlyNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetPluralOnlyNounPhrase(locational).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>indetSingularNounPhrase(locational)<code class="language-plaintext highlighter-rouge">](../object/indetSingularNounPhrase(locational).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PreResolvedAmbigProd<code class="language-plaintext highlighter-rouge">](../object/PreResolvedAmbigProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(definite)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(definite).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>VagueContainerNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/VagueContainerNounPhraseProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>AllInContainerNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/AllInContainerNounPhraseProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(theOnesIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(theOnesIn).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>VagueContainerDefiniteNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/VagueContainerDefiniteNounPhraseProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(theOneIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(theOneIn).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>VagueContainerIndefiniteNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/VagueContainerIndefiniteNounPhraseProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(anyOneIn)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(anyOneIn).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>EmptyNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/EmptyNounPhraseProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ImpliedActorNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/ImpliedActorNounPhraseProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>nounList(empty)<code class="language-plaintext highlighter-rouge">](../object/nounList(empty).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>singleNoun(empty)<code class="language-plaintext highlighter-rouge">](../object/singleNoun(empty).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>IndefiniteNounProd<code class="language-plaintext highlighter-rouge">](../object/IndefiniteNounProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ArbitraryNounProd<code class="language-plaintext highlighter-rouge">](../object/ArbitraryNounProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(anyPlural)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(anyPlural).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(arbitrary)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(arbitrary).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedSingularNounPhrase(indefinite)<code class="language-plaintext highlighter-rouge">](../object/qualifiedSingularNounPhrase(indefinite).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>LayeredNounPhraseProd<code class="language-plaintext highlighter-rouge">](../object/LayeredNounPhraseProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>completeNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(qualified)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(qualified).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>detPluralNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/detPluralNounPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>detPluralOnlyNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/detPluralOnlyNounPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>indetPluralNounPhrase(basic)<code class="language-plaintext highlighter-rouge">](../object/indetPluralNounPhrase(basic).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>indetPluralOnlyNounPhrase(basic)<code class="language-plaintext highlighter-rouge">](../object/indetPluralOnlyNounPhrase(basic).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>indetSingularNounPhrase(basic)<code class="language-plaintext highlighter-rouge">](../object/indetSingularNounPhrase(basic).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>nounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/nounPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>pluralPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/pluralPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(npApostropheS)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(npApostropheS).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(ppApostropheS)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(ppApostropheS).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(npApostropheS)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(npApostropheS).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/qualifiedNounPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(determiner)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(determiner).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>singleNoun(normal)<code class="language-plaintext highlighter-rouge">](../object/singleNoun(normal).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>NounPhraseWithVocab<code class="language-plaintext highlighter-rouge">](../object/NounPhraseWithVocab.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>adjPhrase(adjAdj)<code class="language-plaintext highlighter-rouge">](../object/adjPhrase(adjAdj).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AdjPhraseWithVocab<code class="language-plaintext highlighter-rouge">](../object/AdjPhraseWithVocab.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>adjPhrase(adj)<code class="language-plaintext highlighter-rouge">](../object/adjPhrase(adj).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>adjWord(adj)<code class="language-plaintext highlighter-rouge">](../object/adjWord(adj).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>adjWord(adjAbbr)<code class="language-plaintext highlighter-rouge">](../object/adjWord(adjAbbr).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>adjWord(adjApostS)<code class="language-plaintext highlighter-rouge">](../object/adjWord(adjApostS).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>literalAdjPhrase(literalAdj)<code class="language-plaintext highlighter-rouge">](../object/literalAdjPhrase(literalAdj).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>literalAdjPhrase(number)<code class="language-plaintext highlighter-rouge">](../object/literalAdjPhrase(number).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>literalAdjPhrase(string)<code class="language-plaintext highlighter-rouge">](../object/literalAdjPhrase(string).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>compoundNounPhrase(of)<code class="language-plaintext highlighter-rouge">](../object/compoundNounPhrase(of).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>compoundNounPhrase(simple)<code class="language-plaintext highlighter-rouge">](../object/compoundNounPhrase(simple).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>compoundPluralPhrase(of)<code class="language-plaintext highlighter-rouge">](../object/compoundPluralPhrase(of).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>compoundPluralPhrase(simple)<code class="language-plaintext highlighter-rouge">](../object/compoundPluralPhrase(simple).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>miscWordList(list)<code class="language-plaintext highlighter-rouge">](../object/miscWordList(list).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>miscWordList(wordOrNumber)<code class="language-plaintext highlighter-rouge">](../object/miscWordList(wordOrNumber).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>NounWordProd<code class="language-plaintext highlighter-rouge">](../object/NounWordProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>nounWord(noun)<code class="language-plaintext highlighter-rouge">](../object/nounWord(noun).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>nounWord(nounAbbr)<code class="language-plaintext highlighter-rouge">](../object/nounWord(nounAbbr).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(adj)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(adj).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(adjAndOne)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(adjAndOne).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(adjNP)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(adjNP).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(empty)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(empty).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(misc)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(misc).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(noun)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(noun).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(nounAndNumber)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(nounAndNumber).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(number)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(number).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simpleNounPhrase(numberAndNoun)<code class="language-plaintext highlighter-rouge">](../object/simpleNounPhrase(numberAndNoun).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simplePluralPhrase(adjAndOnes)<code class="language-plaintext highlighter-rouge">](../object/simplePluralPhrase(adjAndOnes).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simplePluralPhrase(empty)<code class="language-plaintext highlighter-rouge">](../object/simplePluralPhrase(empty).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simplePluralPhrase(misc)<code class="language-plaintext highlighter-rouge">](../object/simplePluralPhrase(misc).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simplePluralPhrase(plural)<code class="language-plaintext highlighter-rouge">](../object/simplePluralPhrase(plural).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>simplePluralPhrase(poundNum)<code class="language-plaintext highlighter-rouge">](../object/simplePluralPhrase(poundNum).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>PluralProd<code class="language-plaintext highlighter-rouge">](../object/PluralProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>AllPluralProd<code class="language-plaintext highlighter-rouge">](../object/AllPluralProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralOnlyNounPhrase(definite)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralOnlyNounPhrase(definite).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(all)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(all).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>DefinitePluralProd<code class="language-plaintext highlighter-rouge">](../object/DefinitePluralProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(definite)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(definite).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>implicitDetPluralOnlyNounPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/implicitDetPluralOnlyNounPhrase(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>QuantifiedPluralProd<code class="language-plaintext highlighter-rouge">](../object/QuantifiedPluralProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ExactQuantifiedPluralProd<code class="language-plaintext highlighter-rouge">](../object/ExactQuantifiedPluralProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>BothPluralProd<code class="language-plaintext highlighter-rouge">](../object/BothPluralProd.html)  
+</code>                                         <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(both)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(both).html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralNounPhrase(definiteNumber)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralNounPhrase(definiteNumber).html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>explicitDetPluralOnlyNounPhrase(definiteNumber)<code class="language-plaintext highlighter-rouge">](../object/explicitDetPluralOnlyNounPhrase(definiteNumber).html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(allNum)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(allNum).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>qualifiedPluralNounPhrase(anyNum)<code class="language-plaintext highlighter-rouge">](../object/qualifiedPluralNounPhrase(anyNum).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>PronounProd<code class="language-plaintext highlighter-rouge">](../object/PronounProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>HerProd<code class="language-plaintext highlighter-rouge">](../object/HerProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(her)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(her).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>HimProd<code class="language-plaintext highlighter-rouge">](../object/HimProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(him)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(him).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ItProd<code class="language-plaintext highlighter-rouge">](../object/ItProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(it)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(it).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MeProd<code class="language-plaintext highlighter-rouge">](../object/MeProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(me)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(me).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PossessivePronounAdjProd<code class="language-plaintext highlighter-rouge">](../object/PossessivePronounAdjProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>HerAdjProd<code class="language-plaintext highlighter-rouge">](../object/HerAdjProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(her)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(her).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>HisAdjProd<code class="language-plaintext highlighter-rouge">](../object/HisAdjProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(his)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(his).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ItsAdjProd<code class="language-plaintext highlighter-rouge">](../object/ItsAdjProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(its)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(its).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>MyAdjProd<code class="language-plaintext highlighter-rouge">](../object/MyAdjProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(my)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(my).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TheirAdjProd<code class="language-plaintext highlighter-rouge">](../object/TheirAdjProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(their)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(their).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>YourAdjProd<code class="language-plaintext highlighter-rouge">](../object/YourAdjProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveAdjPhrase(your)<code class="language-plaintext highlighter-rouge">](../object/possessiveAdjPhrase(your).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PossessivePronounNounProd<code class="language-plaintext highlighter-rouge">](../object/PossessivePronounNounProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>HersNounProd<code class="language-plaintext highlighter-rouge">](../object/HersNounProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(hers)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(hers).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>HisNounProd<code class="language-plaintext highlighter-rouge">](../object/HisNounProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(his)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(his).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ItsNounProd<code class="language-plaintext highlighter-rouge">](../object/ItsNounProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(its)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(its).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>MineNounProd<code class="language-plaintext highlighter-rouge">](../object/MineNounProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(mine)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(mine).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TheirsNounProd<code class="language-plaintext highlighter-rouge">](../object/TheirsNounProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(theirs)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(theirs).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>YoursNounProd<code class="language-plaintext highlighter-rouge">](../object/YoursNounProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>possessiveNounPhrase(yours)<code class="language-plaintext highlighter-rouge">](../object/possessiveNounPhrase(yours).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ReflexivePronounProd<code class="language-plaintext highlighter-rouge">](../object/ReflexivePronounProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>HerselfProd<code class="language-plaintext highlighter-rouge">](../object/HerselfProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(herself)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(herself).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>HimselfProd<code class="language-plaintext highlighter-rouge">](../object/HimselfProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(himself)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(himself).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ItselfProd<code class="language-plaintext highlighter-rouge">](../object/ItselfProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(itself)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(itself).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>ThemselvesProd<code class="language-plaintext highlighter-rouge">](../object/ThemselvesProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(themselves)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(themselves).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ThemProd<code class="language-plaintext highlighter-rouge">](../object/ThemProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(them)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(them).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>YouProd<code class="language-plaintext highlighter-rouge">](../object/YouProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>completeNounPhraseWithoutAll(yourself)<code class="language-plaintext highlighter-rouge">](../object/completeNounPhraseWithoutAll(yourself).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>SingleNounProd<code class="language-plaintext highlighter-rouge">](../object/SingleNounProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>PrepSingleNounProd<code class="language-plaintext highlighter-rouge">](../object/PrepSingleNounProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>atSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/atSingleNoun(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>forSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/forSingleNoun(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>fromSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/fromSingleNoun(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>inSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/inSingleNoun(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>onSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/onSingleNoun(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>outOfSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/outOfSingleNoun(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>throughSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/throughSingleNoun(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>toSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/toSingleNoun(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>withSingleNoun(main)<code class="language-plaintext highlighter-rouge">](../object/withSingleNoun(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>singleNounOnly(main)<code class="language-plaintext highlighter-rouge">](../object/singleNounOnly(main).html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>TopicProd<code class="language-plaintext highlighter-rouge">](../object/TopicProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>EmptyTopicPhraseProd<code class="language-plaintext highlighter-rouge">](../object/EmptyTopicPhraseProd.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>PrepSingleTopicProd<code class="language-plaintext highlighter-rouge">](../object/PrepSingleTopicProd.html)  
+</code>                                 <code class="language-plaintext highlighter-rouge">[</code>aboutTopicPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/aboutTopicPhrase(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>topicPhrase(main)<code class="language-plaintext highlighter-rouge">](../object/topicPhrase(main).html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>topicPhrase(misc)<code class="language-plaintext highlighter-rouge">](../object/topicPhrase(misc).html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>SingleNounWithListProd<code class="language-plaintext highlighter-rouge">](../object/SingleNounWithListProd.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>singleNoun(multiple)`](../object/singleNoun(multiple).html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>filterForCollectives<code class="language-plaintext highlighter-rouge">](#filterForCollectives)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>firstTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#firstTokenIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSpecialResponseMatch<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#isSpecialResponseMatch)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastTokenIndex<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#lastTokenIndex)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>filterTruncations<code class="language-plaintext highlighter-rouge">](#filterTruncations)</code>  <code class="language-plaintext highlighter-rouge">[</code>getVerifyKeepers<code class="language-plaintext highlighter-rouge">](#getVerifyKeepers)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>canResolveTo<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#canResolveTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigText<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigText)</code>  <code class="language-plaintext highlighter-rouge">[</code>getOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#getOrigTokenList)</code>  <code class="language-plaintext highlighter-rouge">[</code>setOrigTokenList<code class="language-plaintext highlighter-rouge">](../object/BasicProd.html#setOrigTokenList)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="filterForCollectives"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterForCollectives</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1213">1213</a>]</p>
+
+<div class="desc">
+
+Determine whether this kind of noun phrase prefers to keep a collective
+or the collective's individuals when filtering. If this is true, we'll
+keep a collective and discard its individuals when filtering a
+resolution list; otherwise, we'll drop the collective and keep the
+individuals.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="filterTruncations"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterTruncations (lst, resolver)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1248">1248</a>]</p>
+
+<div class="desc">
+
+Filter a match list of results for truncated matches. If we have a mix
+of truncated matches and exact matches, we'll keep only the exact
+matches. If we have only truncated matches, though, we'll return the
+list unchanged, as we don't have a better offer going.
+
+</div>
+
+<p><span id="getVerifyKeepers"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getVerifyKeepers (results)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1227">1227</a>]</p>
+
+<div class="desc">
+
+Filter a "verify" result list for the results we'd like to keep in the
+final resolution of the noun phrase. This is called after we've run
+through the verification process on the list of candidate matches, so
+'lst' is a list of ResolveInfo objects, sorted in descending order of
+logicalness.
+
+By default, we keep only the items that are equally as logical as the
+best item in the results. Since the items are sorted in descending order
+of goodness, the best item is always the first item.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

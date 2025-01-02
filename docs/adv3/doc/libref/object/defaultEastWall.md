@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultEastWall</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[5490](../source/travel.t.html#5490)\]

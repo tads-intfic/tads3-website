@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Scenes  
-<span class="navnp"><a href="hint.htm" class="nav"><em>Prev:</em> Pathfinding</a>
-    <a href="score.htm" class="nav"><em>Next:</em> Scoring</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Scenes  
+<span class="navnp"><a href="hint.html" class="nav"><em>Prev:</em> Pathfinding</a>
+    <a href="score.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
 
 </div>
@@ -144,8 +146,8 @@ its whenStarting method to display some text, e.g.:
 This is normally what you would want, but note that this means that you
 can't use a Scene to display any text prior to the first room
 description. For that purpose you need to use an
-[InitObject](beginning.htm#tenses) or the showIntro() method of
-[gameMain](beginning.htm#gamemain).
+[InitObject](beginning.html#tenses) or the showIntro() method of
+[gameMain](beginning.html#gamemain).
 
   
 
@@ -155,8 +157,8 @@ In a sense, Scenes can be said to divide your game into different times
 just as Rooms and Regions divide it into different places, but Scenes
 don't actually keep track of time (in the sense of the date or the time
 of day). If your game needs to do this you may want to look at either
-the [Subjective Time](../../extensions/docs/subtime.htm) extensions or
-the [Objective Time](../../extensions/docs/objtime.htm) extension. The
+the [Subjective Time](../../extensions/docs/subtime.html) extensions or
+the [Objective Time](../../extensions/docs/objtime.html) extension. The
 first of these allows you to define the time at which certain events
 (which could well include the beginning and end of certain Scenes)
 occur. If the player character then occasionally consults a clock or
@@ -175,10 +177,10 @@ different actions).
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Scenes  
-<span class="navnp"><a href="pathfind.htm" class="nav"><em>Prev:</em> Pathfinding</a>
-    <a href="score.htm" class="nav"><em>Next:</em> Scoring</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Scenes  
+<span class="navnp"><a href="pathfind.html" class="nav"><em>Prev:</em> Pathfinding</a>
+    <a href="score.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
 
 </div>

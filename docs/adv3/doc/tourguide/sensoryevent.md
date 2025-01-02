@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>SensoryEvent : object<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="senseconnector.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="attachables-overview.htm">[Next]</a></td>
+href="senseconnector.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="attachables-overview.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -252,8 +254,8 @@ class GasMask : Wearable, Hidden 'gas mask/respirator/gas-mask/gasmask
 ;  
   
 We set the **isEquivalent** property to true to indicate that all
-members of the class are interchangeable (like the [candles](candle.htm)
-and [matchsticks](matchstick+matchbook.htm) we implemented earlier), and
+members of the class are interchangeable (like the [candles](candle.html)
+and [matchsticks](matchstick+matchbook.html) we implemented earlier), and
 override the verifyDobjWear method to allow only one gas mask to be worn
 by any one Actor at a time. The definition of the gas mask found in the
 respiratorBag then becomes simply:  

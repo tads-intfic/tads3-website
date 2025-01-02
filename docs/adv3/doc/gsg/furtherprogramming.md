@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](programmingprolegomena.htm)   [\[Next\]](chapter2.htm)*
+*[\[Previous\]](programmingprolegomena.html)   [\[Next\]](chapter2.html)*
 
 Further Programming Concepts and Constructs
 
@@ -123,7 +125,7 @@ The identifiers defined in this fashion are visible only inside the
 function or method in which the local statement appears (actually, the
 situation can be slightly more complex than this when anonymous
 functions are involved - see the section on [Anonymous
-Functions](../sysman/anonfn.htm) in the System Manual for the full
+Functions](../sysman/anonfn.html) in the System Manual for the full
 story). Furthermore, the local statement supersedes any global meaning
 of the identifiers within the function or method.  
   
@@ -972,7 +974,7 @@ and that there are also other varieties of for..in loop that we needn't
 worry about here.)  
   
 The *expression* is any expression that evaluates to a Collection object
-(for which see the [*System Manual*](../sysman/collect.htm)), such as a
+(for which see the [*System Manual*](../sysman/collect.html)), such as a
 List or Vector value.  
   
 The statement loops over the elements of the collection. For each
@@ -1382,8 +1384,8 @@ that go some way beyond the introductory. At this point it must suffice
 to call your attention to the possibility of this kind of construct,
 which can be extremely powerful once mastered. To find out more (when
 you feel ready), read the sections on [Anonymous
-Functions](../sysman/anonfn.htm), [List](../sysman/list.htm) and
-[Vector](../sysman/vector.htm) in the *System Manual*.  
+Functions](../sysman/anonfn.html), [List](../sysman/list.html) and
+[Vector](../sysman/vector.html) in the *System Manual*.  
   
   
 
@@ -2496,9 +2498,9 @@ while myDoor: Door, Lockable doesn't).
 
 (When you're ready for fuller explanations of the mysteries of multiple
 inheritance, these are available both in the
-*<a href="../sysman/inherit.htm" target="_top">System Manual</a>* and in
+*<a href="../sysman/inherit.html" target="_top">System Manual</a>* and in
 the
-*<a href="../techman/t3mi.htm" target="_top">Technical Manual</a>).  
+*<a href="../techman/t3mi.html" target="_top">Technical Manual</a>).  
 *
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
@@ -3078,7 +3080,7 @@ There is more to the TADS 3 language than has been described here, but
 hopefully we have now covered the basics, and once you have mastered
 those you will be able to glean the rest from the
 
-<a href="../sysman/langsec.htm" target="_top">System Manual</a>. There's
+<a href="../sysman/langsec.html" target="_top">System Manual</a>. There's
 no need to do that until you've worked your way through this guide,
 although of course if you're burning with curiosity to find out what
 else is there, there's nothing to stop you!
@@ -3089,6 +3091,6 @@ else is there, there's nothing to stop you!
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](programmingprolegomena.htm)   [\[Next\]](chapter2.htm)*
+*[\[Previous\]](programmingprolegomena.html)   [\[Next\]](chapter2.html)*
 
 </div>

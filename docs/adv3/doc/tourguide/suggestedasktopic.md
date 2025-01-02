@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,19 +9,19 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SuggestedAskTopic : <a
-href="suggestedtopic.htm">SuggestedTopic</a><br />
+href="suggestedtopic.html">SuggestedTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="suggestedtopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="suggestedtelltopic.htm">[Next]</a></td>
+href="suggestedtopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="suggestedtelltopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 A SuggestedAskTopic is the particular type of
-[SuggestedTopic](suggestedtopic.htm) that prompts the player to Ask
+[SuggestedTopic](suggestedtopic.html) that prompts the player to Ask
 About such-and-such a thing.  
   
 For example, in addition to making the diamond ring a suggested topic
@@ -47,7 +49,7 @@ for Sarah, we could do the same for asking about herself:
 ;  
   
 (I'm assuming here that we've adopted my suggested modification to
-[SuggestedTopic](suggestedtopic.htm), so that we don't need to set
+[SuggestedTopic](suggestedtopic.html), so that we don't need to set
 timesToSuggest by hand).  
   
 When the player character is conversing with Solomon, there's a couple

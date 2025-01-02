@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DownAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2831](../source/actions.t.html#2831)\]

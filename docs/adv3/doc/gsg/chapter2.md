@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,8 +9,8 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](furtherprogramming.htm)
-  [\[Next\]](averysimplegame.htm)*
+*[\[Previous\]](furtherprogramming.html)
+  [\[Next\]](averysimplegame.html)*
 
 # Chapter 2 - A Sample Game
 
@@ -41,7 +43,7 @@ target="_top">http://www.firthworks.com/roger/editors/index.html</a>.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](furtherprogramming.htm)
-  [\[Next\]](averysimplegame.htm)*
+*[\[Previous\]](furtherprogramming.html)
+  [\[Next\]](averysimplegame.html)*
 
 </div>

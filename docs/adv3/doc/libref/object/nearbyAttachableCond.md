@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nearbyAttachableCond</span><span class="type">object</span>
 
 [extras.t](../file/extras.t.html)\[[3422](../source/extras.t.html#3422)\]

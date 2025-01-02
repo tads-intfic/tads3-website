@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CmdMenu</span><span class="type">object</span>
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[41](../source/cmdhelp.t.html#41)\]

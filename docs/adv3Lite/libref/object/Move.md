@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Move</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1165](../source/actions.t.html#1165)\]

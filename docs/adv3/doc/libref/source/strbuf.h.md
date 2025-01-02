@@ -1,3 +1,5 @@
+---
+---
 # strbuf.h
 
 [documentation](../file/strbuf.h.html)

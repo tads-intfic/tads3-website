@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Restore)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2334](../source/grammar.t.html#2334)\]

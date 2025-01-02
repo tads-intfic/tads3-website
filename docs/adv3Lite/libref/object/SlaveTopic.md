@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SlaveTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[4478](../source/actor.t.html#4478)\]

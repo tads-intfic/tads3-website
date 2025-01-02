@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 TADS Special Characters  
-<span class="navnp"><a href="save.htm" class="nav"><em>Prev:</em> Saving and Restoring
+<span class="navnp"><a href="save.html" class="nav"><em>Prev:</em> Saving and Restoring
 State</a>     </span>
 
 </div>
@@ -97,10 +99,10 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 TADS Special Characters  
-<span class="navnp"><a href="save.htm" class="nav"><em>Prev:</em> Saving and Restoring
+<span class="navnp"><a href="save.html" class="nav"><em>Prev:</em> Saving and Restoring
 State</a>     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Collective</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[983](../source/objects.t.html#983)\]

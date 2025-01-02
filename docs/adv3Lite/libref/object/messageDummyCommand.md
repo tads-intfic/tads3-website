@@ -1,3 +1,5 @@
+---
+---
 <span class="title">messageDummyCommand</span><span class="type">object</span>
 
 [messages.t](../file/messages.t.html)\[[778](../source/messages.t.html#778)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ShipboardDirection</span><span class="type">class</span>
 
 [travel.t](../file/travel.t.html)\[[116](../source/travel.t.html#116)\]

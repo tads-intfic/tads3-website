@@ -1,3 +1,5 @@
+---
+---
 # webui.t
 
 [documentation](../file/webui.t.html)
@@ -1672,7 +1674,7 @@
         /*
          *   The URL path to the window's HTML definition file, as seen by the
          *   browser.  For the pre-defined library window types, we expose the
-         *   HTML file in the root of the URL namespace - e.g., "/main.htm".
+         *   HTML file in the root of the URL namespace - e.g., "/main.html".
          *   The files are actually stored in the /webuires folder, but we
          *   expose them to the browser as though they were in the root folder
          *   to make embedded object references on the pages simpler.  The
@@ -1761,7 +1763,7 @@
     /*
      *   Layout Window.  This is a specialized Web Window tracker for our
      *   layout page type, which is displayed using the resource file
-     *   webuires/layout.htm.  This page is designed as a container of more
+     *   webuires/layout.html.  This page is designed as a container of more
      *   specialized sub-window pages; its job is to divide up the window space
      *   into IFRAME elements that display the sub-windows, and to manage the
      *   geometry of the IFRAMEs.
@@ -1928,8 +1930,8 @@
         frames = perInstance(new LookupTable(16, 32))
 
         /* my virtual path and the actual resource file location */
-        vpath = '/layoutwin.htm'
-        src = 'webuires/layoutwin.htm'
+        vpath = '/layoutwin.html'
+        src = 'webuires/layoutwin.html'
     ;
 
     /* ------------------------------------------------------------------------ */
@@ -2216,8 +2218,8 @@
         mode = 'working'
 
         /* my virtual path, and the actual resource file location */
-        vpath = '/cmdwin.htm'
-        src = 'webuires/cmdwin.htm'
+        vpath = '/cmdwin.html'
+        src = 'webuires/cmdwin.html'
     ;
 
     /* 
@@ -2578,8 +2580,8 @@
      */
     class WebStatusWin: WebWindow
         /* my request path and actual resource path */
-        vpath = '/statwin.htm'
-        src = 'webuires/statwin.htm'
+        vpath = '/statwin.html'
+        src = 'webuires/statwin.html'
 
         /* 
          *   Set the room and score/turns portions of the status line.  This
@@ -2711,17 +2713,17 @@
      *   
      *   Games can customize the front page in any way they like.  If you want
      *   to customize the HTML of the main page, you can substitute a different
-     *   HTML (.htm) file, and change the processName() method to return the
+     *   HTML (.html) file, and change the processName() method to return the
      *   name of that file.  If you want to use something other than a layout
      *   window as the front page, you can simply replace this whole class.  
      */
     transient webMainWin: WebResourceInit, WebLayoutWindow, WebResourceResFile
         /* 
          *   match the webuires directory path as the URL path, but map this to
-         *   main.htm as the underlying resource name 
+         *   main.html as the underlying resource name 
          */
         vpath = '/'
-        processName(n) { return 'webuires/main.htm'; }
+        processName(n) { return 'webuires/main.html'; }
 
         /* the top window is always called "main" */
         name = 'main'

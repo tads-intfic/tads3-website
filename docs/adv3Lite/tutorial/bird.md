@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Adding the Bird and the Nest  
-<span class="navnp"><a href="locations.htm" class="nav"><em>Prev:</em> Defining the Game's
+<span class="navnp"><a href="locations.html" class="nav"><em>Prev:</em> Defining the Game's
 Locations</a>    
-<a href="tree.htm" class="nav"><em>Next:</em> Adding the Tree and the
+<a href="tree.html" class="nav"><em>Next:</em> Adding the Tree and the
 Branch</a>     </span>
 
 </div>
@@ -218,7 +220,7 @@ the appropriate properties would be set for us.
 If you want the full story on the <span class="code">vocab</span>
 property, which looks pretty complex at first, but which can save you a
 lot of time in the long run, you can find it in the [adv3Lite library
-manual](../manual/thing.htm#vocab).
+manual](../manual/thing.html#vocab).
 
 Now let's define the nest. This starts out in the clearing, so you
 should type the following immediately after the definition of the
@@ -287,12 +289,12 @@ predefined for you on the <span class="code">Thing</span> class.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="heidi.htm" class="nav">Heidi: our first adv3Lite game</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Adding the Bird and the Nest  
-<span class="navnp"><a href="locations.htm" class="nav"><em>Prev:</em> Defining the Game's
+<span class="navnp"><a href="locations.html" class="nav"><em>Prev:</em> Defining the Game's
 Locations</a>    
-<a href="tree.htm" class="nav"><em>Next:</em> Adding the Tree and the
+<a href="tree.html" class="nav"><em>Next:</em> Adding the Tree and the
 Branch</a>     </span>
 
 </div>

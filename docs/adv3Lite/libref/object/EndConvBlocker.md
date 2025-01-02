@@ -1,3 +1,5 @@
+---
+---
 <span class="title">EndConvBlocker</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[4873](../source/actor.t.html#4873)\]

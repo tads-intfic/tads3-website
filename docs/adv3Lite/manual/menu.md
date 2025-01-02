@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">Optional Modules</a> \> Menus  
-<span class="navnp"><a href="gadget.htm" class="nav"><em>Prev:</em> Gadgets</a>
-    <a href="hint.htm" class="nav"><em>Next:</em> Hints</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">Optional Modules</a> \> Menus  
+<span class="navnp"><a href="gadget.html" class="nav"><em>Prev:</em> Gadgets</a>
+    <a href="hint.html" class="nav"><em>Next:</em> Hints</a>     </span>
 
 </div>
 
@@ -124,9 +126,9 @@ the versionInfo.showAbout() method.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="optional.htm" class="nav">Optional Modules</a> \> Menus  
-<span class="navnp"><a href="gadget.htm" class="nav"><em>Prev:</em> Gadgets</a>
-    <a href="hint.htm" class="nav"><em>Next:</em> Hints</a>     </span>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="optional.html" class="nav">Optional Modules</a> \> Menus  
+<span class="navnp"><a href="gadget.html" class="nav"><em>Prev:</em> Gadgets</a>
+    <a href="hint.html" class="nav"><em>Next:</em> Hints</a>     </span>
 
 </div>

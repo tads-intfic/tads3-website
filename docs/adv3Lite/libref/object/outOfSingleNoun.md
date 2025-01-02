@@ -1,3 +1,5 @@
+---
+---
 <span class="title">outOfSingleNoun</span><span class="type">GrammarProd</span>
 
 `grammar `**[`outOfSingleNoun(main)`](../object/outOfSingleNoun(main).html)**` :   `[`Production`](../object/Production.html)

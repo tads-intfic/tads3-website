@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SenseRegion</span><span class="type">class</span>
 
 [senseRegion.t](../file/senseRegion.t.html)\[[21](../source/senseRegion.t.html#21)\]

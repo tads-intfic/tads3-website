@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="ui.htm" class="nav">The User Interface</a> \> The Output
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="ui.html" class="nav">The User Interface</a> \> The Output
 Formatter  
-<span class="navnp"><a href="ui.htm" class="nav"><em>Prev:</em> The User Interface</a>
-    <a href="dispfn.htm" class="nav"><em>Next:</em> The Default Display
+<span class="navnp"><a href="ui.html" class="nav"><em>Prev:</em> The User Interface</a>
+    <a href="dispfn.html" class="nav"><em>Next:</em> The Default Display
 Function</a>     </span>
 
 </div>
@@ -584,7 +586,7 @@ To determine the interpreter class, a game can call
 <span class="code">SysInfoIClassText</span> for a character-mode
 text-only system, <span class="code">SysInfoIClassTextGUI</span> for a
 GUI text-only system, and <span class="code">SysInfoIClassHTML</span>
-for a full multimedia interpreter. (See the [tads-io](tadsio.htm)
+for a full multimedia interpreter. (See the [tads-io](tadsio.html)
 function set for details.)
 
 ## Caps/no-caps flags
@@ -672,11 +674,11 @@ To summarize the differences from TADS 2:
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="ui.htm" class="nav">The User Interface</a> \> The Output
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="ui.html" class="nav">The User Interface</a> \> The Output
 Formatter  
-<span class="navnp"><a href="ui.htm" class="nav"><em>Prev:</em> The User Interface</a>
-    <a href="dispfn.htm" class="nav"><em>Next:</em> The Default Display
+<span class="navnp"><a href="ui.html" class="nav"><em>Prev:</em> The User Interface</a>
+    <a href="dispfn.html" class="nav"><em>Next:</em> The Default Display
 Function</a>     </span>
 
 </div>

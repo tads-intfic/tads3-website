@@ -1,3 +1,5 @@
+---
+---
 <span class="title">JumpAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2321](../source/actions.t.html#2321)\]

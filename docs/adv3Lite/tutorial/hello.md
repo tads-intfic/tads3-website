@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Hello and Goodbye  
-<span class="navnp"><a href="query.htm" class="nav"><em>Prev:</em> Queries and
+<span class="navnp"><a href="query.html" class="nav"><em>Prev:</em> Queries and
 Suggestions</a>    
-<a href="convnode.htm" class="nav"><em>Next:</em> Angela Wants
+<a href="convnode.html" class="nav"><em>Next:</em> Angela Wants
 Answers</a>     </span>
 
 </div>
@@ -149,7 +151,7 @@ define a separate LeaveByeTopic to handle it:
 
 That covers most of what you need to know about Greeting Protocols in
 adv3Lite, but for the full story you can consult the section on [Hello
-and Goodbye](../manual/hello.htm) in the *adv3Lite Library Manual*.
+and Goodbye](../manual/hello.html) in the *adv3Lite Library Manual*.
 
 </div>
 
@@ -158,12 +160,12 @@ and Goodbye](../manual/hello.htm) in the *adv3Lite Library Manual*.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="conversation.htm" class="nav">The Art of Conversation</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Hello and Goodbye  
-<span class="navnp"><a href="query.htm" class="nav"><em>Prev:</em> Queries and
+<span class="navnp"><a href="query.html" class="nav"><em>Prev:</em> Queries and
 Suggestions</a>    
-<a href="convnode.htm" class="nav"><em>Next:</em> Angela Wants
+<a href="convnode.html" class="nav"><em>Next:</em> Angela Wants
 Answers</a>     </span>
 
 </div>

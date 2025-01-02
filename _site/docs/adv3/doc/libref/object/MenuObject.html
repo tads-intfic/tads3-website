@@ -1,0 +1,215 @@
+<p><span class="title">MenuObject</span><span class="type">class</span></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#141">141</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A basic menu object. This is an abstract base class that encapsulates
+some behavior common to different menu classes, and allows the use of
+the + syntax (like "+ MenuItem") to define containment.
+
+`class `**`MenuObject`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MenuObject</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MenuObject</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MenuItem<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>HintMenu<code class="language-plaintext highlighter-rouge">](../object/HintMenu.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>TopHintMenu<code class="language-plaintext highlighter-rouge">](../object/TopHintMenu.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MenuLongTopicItem<code class="language-plaintext highlighter-rouge">](../object/MenuLongTopicItem.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>HintLongTopicItem<code class="language-plaintext highlighter-rouge">](../object/HintLongTopicItem.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MenuTopicItem<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>Goal`](../object/Goal.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>contents<code class="language-plaintext highlighter-rouge">](#contents)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuOrder<code class="language-plaintext highlighter-rouge">](#menuOrder)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>addToContents<code class="language-plaintext highlighter-rouge">](#addToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>compareForMenuSort<code class="language-plaintext highlighter-rouge">](#compareForMenuSort)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeContents<code class="language-plaintext highlighter-rouge">](#initializeContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeLocation<code class="language-plaintext highlighter-rouge">](#initializeLocation)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="contents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contents</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#143">143</a>]</p>
+
+<div class="desc">
+
+our contents list
+
+</div>
+
+<p><span id="menuOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuOrder</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#204">204</a>]</p>
+
+<div class="desc">
+
+The menu order. When we're about to show a list of menu items, we'll
+sort the list in ascending order of this property, then in ascending
+order of title. By default, we set this order value to be equal to the
+menu item's sourceTextOrder. This makes the menu order default to the
+order of objects as defined in the source. If some other basis is
+desired, override topicOrder.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="addToContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToContents (obj)</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#156">156</a>]</p>
+
+<div class="desc">
+
+add a menu item
+
+</div>
+
+<p><span id="compareForMenuSort"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compareForMenuSort (other)</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#215">215</a>]</p>
+
+<div class="desc">
+
+Compare this menu object to another, for the purposes of sorting a list
+of menu items. Returns a positive number if this menu item sorts after
+the other one, a negative number if this menu item sorts before the
+other one, 0 if the relative order is arbitrary.
+
+By default, we'll sort by menuOrder if the menuOrder values are
+different, otherwise arbitrarily.
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#255">255</a>]</p>
+
+<div class="desc">
+
+This preinit object makes sure the MenuObjects all have their contents
+initialized properly.
+
+</div>
+
+<p><span id="initializeContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeContents ( )</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#242">242</a>]</p>
+
+<div class="desc">
+
+Finish initializing our contents list. This will be called on each
+MenuObject \*after\* we've called initializeLocation() on every object.
+In other words, every menu will already have been added to its parent's
+contents; this can do anything else that's needed to initialize the
+contents list. For example, some subclasses might want to sort their
+contents here, so that they list their menus in a defined order. By
+default, we sort the menu items by menuOrder; subclasses can override
+this as needed.
+
+</div>
+
+<p><span id="initializeLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeLocation ( )</code></p>
+
+<p><a href="../file/menusys.t.html">menusys.t</a>[<a href="../source/menusys.t.html#149">149</a>]</p>
+
+<div class="desc">
+
+Since we're inheriting from object, but need to use the "+" syntax, we
+need to set up the contents appropriately
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

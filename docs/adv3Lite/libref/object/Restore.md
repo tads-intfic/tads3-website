@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Restore</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[2742](../source/actions.t.html#2742)\]

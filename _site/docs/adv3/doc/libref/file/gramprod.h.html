@@ -1,0 +1,194 @@
+<p><span class="title">gramprod.h</span><span class="type">file</span></p>
+
+<p><a href="../source/gramprod.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<div class="fdesc">
+
+The header defines the GrammarProd intrinsic class and some associated
+properties and constants.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>GrammarProd<code class="language-plaintext highlighter-rouge">](../object/GrammarProd.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_MacroSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Macros</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>GramTokTypeLiteral<code class="language-plaintext highlighter-rouge">](#GramTokTypeLiteral)</code>  <code class="language-plaintext highlighter-rouge">[</code>GramTokTypeNSpeech<code class="language-plaintext highlighter-rouge">](#GramTokTypeNSpeech)</code>  <code class="language-plaintext highlighter-rouge">[</code>GramTokTypeProd<code class="language-plaintext highlighter-rouge">](#GramTokTypeProd)</code>  <code class="language-plaintext highlighter-rouge">[</code>GramTokTypeSpeech<code class="language-plaintext highlighter-rouge">](#GramTokTypeSpeech)</code>  <code class="language-plaintext highlighter-rouge">[</code>GramTokTypeStar<code class="language-plaintext highlighter-rouge">](#GramTokTypeStar)</code>  <code class="language-plaintext highlighter-rouge">[</code>GramTokTypeTokEnum<code class="language-plaintext highlighter-rouge">](#GramTokTypeTokEnum)</code>  `</p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_TemplateSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Templates</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Macros_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Macros</span>  
+
+</div>
+
+<p><span id="GramTokTypeLiteral"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">GramTokTypeLiteral</code></p>
+
+<p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#134">134</a>]</p>
+
+<div class="desc">
+
+`3 /* token matches a literal string */`  
+*no description available*
+
+</div>
+
+<p><span id="GramTokTypeNSpeech"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">GramTokTypeNSpeech</code></p>
+
+<p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#137">137</a>]</p>
+
+<div class="desc">
+
+`6 /* matches any of several parts of speech */`  
+*no description available*
+
+</div>
+
+<p><span id="GramTokTypeProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">GramTokTypeProd</code></p>
+
+<p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#132">132</a>]</p>
+
+<div class="desc">
+
+`1 /* token matches a sub-production */`  
+Token slot types. Each token slot in an alternative has a type, which
+determines what it matches in an input token list. getGrammarInfo()
+returns these type codes in the GrammarAltTokInfo objects.
+
+</div>
+
+<p><span id="GramTokTypeSpeech"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">GramTokTypeSpeech</code></p>
+
+<p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#133">133</a>]</p>
+
+<div class="desc">
+
+`2 /* token matches a specific part of speech */`  
+*no description available*
+
+</div>
+
+<p><span id="GramTokTypeStar"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">GramTokTypeStar</code></p>
+
+<p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#136">136</a>]</p>
+
+<div class="desc">
+
+`5 /* token matches all remaining input tokens */`  
+*no description available*
+
+</div>
+
+<p><span id="GramTokTypeTokEnum"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">GramTokTypeTokEnum</code></p>
+
+<p><a href="../file/gramprod.h.html">gramprod.h</a>[<a href="../source/gramprod.h.html#135">135</a>]</p>
+
+<div class="desc">
+
+`4 /* token matches a token class enum */`  
+*no description available*
+
+</div>
+
+<p><span id="_Enums_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Enums</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Templates_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Templates</span>  
+
+</div>
+
+<p><em>(none)</em></p>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

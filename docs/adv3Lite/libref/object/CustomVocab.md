@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CustomVocab</span><span class="type">class</span>
 
 [english.t](../file/english.t.html)\[[2348](../source/english.t.html#2348)\]

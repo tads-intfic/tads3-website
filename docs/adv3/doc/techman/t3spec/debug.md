@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Debug Records  
-<span class="navnp"><a href="charmap.htm" class="nav"><em>Prev:</em> Character Mapping</a>
+<span class="navnp"><a href="charmap.html" class="nav"><em>Prev:</em> Character Mapping</a>
    
-<a href="fnset_t3.htm" class="nav"><em>Next:</em> t3vm Function Set</a>
+<a href="fnset_t3.html" class="nav"><em>Next:</em> t3vm Function Set</a>
     </span>
 
 </div>
@@ -48,7 +50,7 @@ information local to the method:
 - Local variables in scope at particular byte-code instructions
 
 If a method has a debug record, the debugger records field in the
-[method header](model.htm#methods) must give the non-zero offset of the
+[method header](model.html#methods) must give the non-zero offset of the
 record. If the method has no debugger records, this field must be set to
 zero.
 
@@ -95,7 +97,7 @@ Frame N
 UINT4 0 (constant zero value)
 
 Note that the size of the debug table header is given by the "debug
-table header size" field from the [ENTP block](format.htm#BlockENTP) in
+table header size" field from the [ENTP block](format.html#BlockENTP) in
 the image file; this information is parameterized in the image file to
 allow for changes to be made in future versions without affecting
 compatibility.
@@ -213,7 +215,7 @@ The symbol header is arranged as follows. Note that the record might
 contain additional entries in future versions; when parsing these
 records, debuggers and other tools should always use the "debug local
 symbol header size" from the [entrypoint (ENTP)
-record](format.htm#BlockENTP) in the image file to determine the
+record](format.html#BlockENTP) in the image file to determine the
 record's actual size.
 
 UINT2 local variable or parameter number, with the same meaning as the
@@ -276,12 +278,12 @@ Revision: September, 2006
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="../toc.htm" class="nav">Table of Contents</a> \|
-<a href="../t3spec.htm" class="nav">T3 VM Technical Documentation</a> \>
+<a href="../toc.html" class="nav">Table of Contents</a> \|
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Debug Records  
-<span class="navnp"><a href="charmap.htm" class="nav"><em>Prev:</em> Character Mapping</a>
+<span class="navnp"><a href="charmap.html" class="nav"><em>Prev:</em> Character Mapping</a>
    
-<a href="fnset_t3.htm" class="nav"><em>Next:</em> t3vm Function Set</a>
+<a href="fnset_t3.html" class="nav"><em>Next:</em> t3vm Function Set</a>
     </span>
 
 </div>

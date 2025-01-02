@@ -1,0 +1,43 @@
+<p><span class="title">terminalNounPhrase</span><span class="type">GrammarProd</span></p>
+
+<p><code class="language-plaintext highlighter-rouge">grammar </code><span class="classExtLink"><a href="../object/terminalNounPhrase(allBut).html"><code class="language-plaintext highlighter-rouge">terminalNounPhrase(allBut)</code></a></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/EverythingButProd.html"><code class="language-plaintext highlighter-rouge">EverythingButProd</code></a></p>
+
+<p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5675"><code class="language-plaintext highlighter-rouge">5675</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="gramrule">
+
+('all' \| 'everything') ('but' \| 'except' \| 'except' 'for')  
+exceptList-\&gt;except\_  
+
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">grammar </code><span class="classExtLink"><a href="../object/terminalNounPhrase(anyBut).html"><code class="language-plaintext highlighter-rouge">terminalNounPhrase(anyBut)</code></a></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/IndefiniteNounButProd.html"><code class="language-plaintext highlighter-rouge">IndefiniteNounButProd</code></a></p>
+
+<p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5694"><code class="language-plaintext highlighter-rouge">5694</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="gramrule">
+
+'any' nounPhrase-\&gt;np\_  
+('but' \| 'except' \| 'except' 'for' \| 'but' 'not')
+exceptList-\&gt;except\_  
+
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">grammar </code><span class="classExtLink"><a href="../object/terminalNounPhrase(pluralExcept).html"><code class="language-plaintext highlighter-rouge">terminalNounPhrase(pluralExcept)</code></a></span><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ListButProd.html"><code class="language-plaintext highlighter-rouge">ListButProd</code></a></p>
+
+<p><a href="../file/en_us.t.html"><code class="language-plaintext highlighter-rouge">en_us.t</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/en_us.t.html#5685"><code class="language-plaintext highlighter-rouge">5685</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<div class="gramrule">
+
+(qualifiedPluralNounPhrase-\&gt;np\_ \| detPluralNounPhrase-\&gt;np\_)  
+('except' \| 'except' 'for' \| 'but' \| 'but' 'not')
+exceptList-\&gt;except\_  
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

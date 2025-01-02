@@ -1,0 +1,84 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>DelayedAgendaItem : <a href="agendaitem.html">AgendaItem</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="convagendaitem.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="moreagendaitemexamples.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A DelayedAgendaItem, as its name suggests, is an
+<a href="agendaitem.html">AgendaItem</a> that becomes active at some point in the
+future. As with <a href="convagendaitem.html">ConvAgendaItem</a> this relies on an
+overridden <strong>isReady</strong> method, so that if you want to add your own
+isReady condition this needs to be combined with the inherited
+behaviour.</p>
+
+<p>In addition to the properties it inherits from AgendaItem,
+DelayedAgendaItem has a <strong>readyTime</strong> property which is used to
+determine when it will become active, and a <strong>setDelay(turns)</strong> method
+which is used to set readyTime the desired number of turns in the
+future; the setDelay method returns self (for reasons that will shortly
+become apparent).</p>
+
+<p>For example, suppose we want a pair of demons to make a threatening
+advance on the player character (PC) two turns <em>after</em> the PC arrives in
+their vicinity (assuming that the PC remains in their vicinity). The
+usefulness of the delay in this case is that the demons’ sudden outburst
+is rather less predictable to the player if it doesn’t come on the same
+turn that the player first encounters the demons. First we can define an
+appropriate DelayedAgendaItem, which should be located in the demons
+object:</p>
+
+<p>+ demonsHissing : DelayedAgendaItem<br />
+  isReady = (inherited &amp;&amp; getActor.canSee(gPlayerChar))<br />
+  invokeItem<br />
+  {<br />
+    ”Two of the demons suddenly spring towards you, hissing wildly and<br />
+     pawing at you with their claws. &lt;q&gt;Despair, human, despair!&lt;/q&gt; they<br />
+     shriek, &lt;q&gt;Your time is running out!&lt;/q&gt; ”;<br />
+     isDone = true;<br />
+  }<br />
+;</p>
+
+<p>Next we want some means of setting this to run two turns after the PC
+encounters the demons. The best way to do this is probably to add
+demonsHissing to the demonic agenda in demonsPrancing.afterTravel:</p>
+
+<p>++ demonsPrancing : ConversationReadyState<br />
+  specialDesc = ”A gaggle of demons is prancing around on the rocks near the steps down<br />
+   towards the basalt plain, pretending to ignore you, but keeping a careful watch on<br />
+   you just the same. ”<br />
+  stateDesc = ”They’re prancing around near the steps down to the plain. ”<br />
+  isInitState = true<br />
+  beforeTravel(traveler, connector)<br />
+  {<br />
+    if(connector == hellPathDown)<br />
+    {<br />
+      ”The demons bunch together and shriek at you, driving you back from the steps. ”;<br />
+      exit;<br />
+    }<br />
+    inherited(traveler, connector); <br />
+  }<br />
+  <strong>afterTravel(traveler, connector)<br />
+  {<br />
+    getActor.addToAgenda(demonsHissing.setDelay(2));<br />
+  }</strong><br />
+;</p>
+
+<p>Now we can see the advantage of having setDelay() return self. This
+allows us to do in one statement what we should otherwise have to do in
+two, since</p>
+
+<p>getActor.addToAgenda(demonsHissing.setDelay(2));**<br />
+**<br />
+is equivalent to</p>
+
+<p>  demonsHissing.setDelay(2);<br />
+  getActor.addToAgenda(demonsHissing);</p>
+

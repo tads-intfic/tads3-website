@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultGetVerbPhraseContext</span><span class="type">object</span>
 
 [en_us.t](../file/en_us.t.html)\[[7996](../source/en_us.t.html#7996)\]

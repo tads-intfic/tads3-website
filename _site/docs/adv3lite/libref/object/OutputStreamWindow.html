@@ -1,0 +1,181 @@
+<p><span class="title">OutputStreamWindow</span><span class="type">class</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1772">1772</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Output stream window.
+
+This is an abstract base class for UI widgets that have output streams,
+such as Banner Windows and Web UI windows. This base class essentially
+handles the interior of the window, and leaves the details of the
+window's layout in the broader UI to subclasses.
+
+`class `**`OutputStreamWindow`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>BannerWindow<code class="language-plaintext highlighter-rouge">](../object/BannerWindow.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>WebBannerWin`](../object/WebBannerWin.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>outputStream_<code class="language-plaintext highlighter-rouge">](#outputStream_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>captureOutput<code class="language-plaintext highlighter-rouge">](#captureOutput)</code>  <code class="language-plaintext highlighter-rouge">[</code>createOutputStream<code class="language-plaintext highlighter-rouge">](#createOutputStream)</code>  <code class="language-plaintext highlighter-rouge">[</code>createOutputStreamObj<code class="language-plaintext highlighter-rouge">](#createOutputStreamObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>setOutputStream<code class="language-plaintext highlighter-rouge">](#setOutputStream)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="outputStream_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">outputStream_</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1838">1838</a>]</p>
+
+<div class="desc">
+
+My output stream - this is a transient OutputStream instance. Subclasses
+must create this explicitly by calling createOutputStream() when the
+underlying UI window is first created.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="captureOutput"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">captureOutput (func)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1779">1779</a>]</p>
+
+<div class="desc">
+
+Invoke the given callback function, setting the default output stream to
+the window's output stream for the duration of the call. This allows
+invoking any code that writes to the current default output stream and
+displaying the result in the window.
+
+</div>
+
+<p><span id="createOutputStream"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createOutputStream ( )</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1814">1814</a>]</p>
+
+<div class="desc">
+
+Create our output stream. We'll create the appropriate output stream
+subclass and set it up with our default output filters. Subclasses can
+override this as needed to customize the filters.
+
+</div>
+
+<p><span id="createOutputStreamObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createOutputStreamObj ( )</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1830">1830</a>]</p>
+
+<div class="desc">
+
+Create the output stream object. Subclasses can override this to create
+the appropriate stream subclass. Note that the stream should always be
+created as a transient object.
+
+</div>
+
+<p><span id="setOutputStream"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setOutputStream ( )</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1803">1803</a>]</p>
+
+<div class="desc">
+
+Make my output stream the default in the output manager. Returns the
+previous default output stream; the caller can note the return value and
+use it later to restore the original output stream via a call to
+outputManager.setOutputStream(), if desired.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">finishOptionRestore</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[1153](../source/misc.t.html#1153)\]

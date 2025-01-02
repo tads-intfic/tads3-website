@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Some Common
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Some Common
 Input/Output Issues  
-<span class="navnp"><a href="t3oop.htm" class="nav"><em>Prev:</em> Object-Oriented
+<span class="navnp"><a href="t3oop.html" class="nav"><em>Prev:</em> Object-Oriented
 Programming Overview</a>    
-<a href="t3build_config.htm" class="nav"><em>Next:</em> Using Build
+<a href="t3build_config.html" class="nav"><em>Next:</em> Using Build
 Configurations</a>     </span>
 
 </div>
@@ -38,11 +40,11 @@ the output for dramatic effect, clearing the screen, waiting for a
 keypress, or asking the player to input something other than a command
 at the regular command prompt. TADS 3 provides a set of i/o functions to
 handle this, which the *System Manual* documents in the section on the
-[tads-io Function Set](../sysman/tadsio.htm). If you've tried to use
+[tads-io Function Set](../sysman/tadsio.html). If you've tried to use
 some of these functions, however, you may have found that they don't
 work in quite the way you expected. In fact, they may not be the best
 tools to get the job done (and if you want to compile your game for the
-[Web UI](../sysman/webui.htm) they won't work at all). This article will
+[Web UI](../sysman/webui.html) they won't work at all). This article will
 briefly explore some of the alternatives.
 
 ## The inputManager
@@ -544,12 +546,12 @@ We could then use the following code to display our ASCII diagram:
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="fund.htm" class="nav">Fundamentals</a> \> Some Common
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="fund.html" class="nav">Fundamentals</a> \> Some Common
 Input/Output Issues  
-<span class="navnp"><a href="t3oop.htm" class="nav"><em>Prev:</em> Object-Oriented
+<span class="navnp"><a href="t3oop.html" class="nav"><em>Prev:</em> Object-Oriented
 Programming Overview</a>    
-<a href="t3build_config.htm" class="nav"><em>Next:</em> Using Build
+<a href="t3build_config.html" class="nav"><em>Next:</em> Using Build
 Configurations</a>     </span>
 
 </div>

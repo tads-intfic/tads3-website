@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Travel</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[751](../source/actions.t.html#751)\]

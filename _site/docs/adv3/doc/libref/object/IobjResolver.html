@@ -1,0 +1,194 @@
+<p><span class="title">IobjResolver</span><span class="type">class</span></p>
+
+<p><a href="../file/resolver.t.html">resolver.t</a>[<a href="../source/resolver.t.html#783">783</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Basic resolver for indirect objects
+
+`class `**`IobjResolver`**` :   `[`Resolver`](../object/Resolver.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">IobjResolver</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Resolver<code class="language-plaintext highlighter-rouge">](../object/Resolver.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>whichMessageObject<code class="language-plaintext highlighter-rouge">](#whichMessageObject)</code>  <code class="language-plaintext highlighter-rouge">[</code>whichObject<code class="language-plaintext highlighter-rouge">](#whichObject)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Resolver</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>action_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#action_)</code>  <code class="language-plaintext highlighter-rouge">[</code>actor_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#actor_)</code>  <code class="language-plaintext highlighter-rouge">[</code>equivs_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#equivs_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isGlobalScope<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#isGlobalScope)</code>  <code class="language-plaintext highlighter-rouge">[</code>isSubResolver<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#isSubResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>issuer_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#issuer_)</code>  <code class="language-plaintext highlighter-rouge">[</code>scope_<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#scope_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>filterAmbiguousNounPhrase<code class="language-plaintext highlighter-rouge">](#filterAmbiguousNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterPluralPhrase<code class="language-plaintext highlighter-rouge">](#filterPluralPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAll<code class="language-plaintext highlighter-rouge">](#getAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAllDefaults<code class="language-plaintext highlighter-rouge">](#getAllDefaults)</code>  <code class="language-plaintext highlighter-rouge">[</code>getDefaultObject<code class="language-plaintext highlighter-rouge">](#getDefaultObject)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Resolver</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allowAll<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#allowAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>cacheScopeList<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#cacheScopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterAll<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#filterAll)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterAmbiguousEquivalents<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#filterAmbiguousEquivalents)</code>  <code class="language-plaintext highlighter-rouge">[</code>filterPossRank<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#filterPossRank)</code>  <code class="language-plaintext highlighter-rouge">[</code>getAction<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPossessiveResolver<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getPossessiveResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPronounDefault<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getPronounDefault)</code>  <code class="language-plaintext highlighter-rouge">[</code>getQualifierResolver<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getQualifierResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>getRawPronounAntecedent<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getRawPronounAntecedent)</code>  <code class="language-plaintext highlighter-rouge">[</code>getReflexiveBinding<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getReflexiveBinding)</code>  <code class="language-plaintext highlighter-rouge">[</code>getScopeList<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getScopeList)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTargetActor<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#getTargetActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>matchName<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#matchName)</code>  <code class="language-plaintext highlighter-rouge">[</code>objInScope<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#objInScope)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetResolver<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#resetResolver)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolvePronounAntecedent<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#resolvePronounAntecedent)</code>  <code class="language-plaintext highlighter-rouge">[</code>resolveUnknownNounPhrase<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#resolveUnknownNounPhrase)</code>  <code class="language-plaintext highlighter-rouge">[</code>selectIndefinite<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#selectIndefinite)</code>  <code class="language-plaintext highlighter-rouge">[</code>withGlobals<code class="language-plaintext highlighter-rouge">](../object/Resolver.html#withGlobals)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="whichMessageObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">whichMessageObject</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/resolver.t.html">resolver.t</a>[<a href="../source/resolver.t.html#788">788</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="whichObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">whichObject</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/resolver.t.html">resolver.t</a>[<a href="../source/resolver.t.html#787">787</a>]</p>
+
+<div class="desc">
+
+we resolve indirect objects for message generation purposes
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="filterAmbiguousNounPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterAmbiguousNounPhrase (lst, requiredNum, np)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/resolver.t.html">resolver.t</a>[<a href="../source/resolver.t.html#812">812</a>]</p>
+
+<div class="desc">
+
+filter an ambiguous noun phrase
+
+</div>
+
+<p><span id="filterPluralPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterPluralPhrase (lst, np)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/resolver.t.html">resolver.t</a>[<a href="../source/resolver.t.html#823">823</a>]</p>
+
+<div class="desc">
+
+Filter a plural phrase to reduce the set to the logical subset, if
+possible. If there is no logical subset, simply return the original set.
+
+</div>
+
+<p><span id="getAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getAll (np)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/resolver.t.html">resolver.t</a>[<a href="../source/resolver.t.html#791">791</a>]</p>
+
+<div class="desc">
+
+resolve 'all' for the indirect object
+
+</div>
+
+<p><span id="getAllDefaults"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getAllDefaults ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/resolver.t.html">resolver.t</a>[<a href="../source/resolver.t.html#802">802</a>]</p>
+
+<div class="desc">
+
+get all possible default objects
+
+</div>
+
+<p><span id="getDefaultObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getDefaultObject (np)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/resolver.t.html">resolver.t</a>[<a href="../source/resolver.t.html#833">833</a>]</p>
+
+<div class="desc">
+
+Get the default object or objects for this phrase. Since we resolve
+indirect objects, we'll ask the action for a default indirect object.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

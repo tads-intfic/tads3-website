@@ -1,0 +1,190 @@
+<p><span class="title">ListImpCtx</span><span class="type">class</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8080">8080</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A class for messages appearing in a list. Within a list, we want to keep
+track of the last direct object, so that we can refer to it with a
+pronoun later in the list.
+
+`class `**`ListImpCtx`**` :   `[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)`   `[`GetVerbPhraseContext`](../object/GetVerbPhraseContext.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ListImpCtx</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>ImplicitAnnouncementContext<code class="language-plaintext highlighter-rouge">](../object/ImplicitAnnouncementContext.html)  
+</code>                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>GetVerbPhraseContext<code class="language-plaintext highlighter-rouge">](../object/GetVerbPhraseContext.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>baseCtx<code class="language-plaintext highlighter-rouge">](#baseCtx)</code>  <code class="language-plaintext highlighter-rouge">[</code>getVerbCtx<code class="language-plaintext highlighter-rouge">](#getVerbCtx)</code>  <code class="language-plaintext highlighter-rouge">[</code>isInList<code class="language-plaintext highlighter-rouge">](#isInList)</code>  <code class="language-plaintext highlighter-rouge">[</code>useInfPhrase<code class="language-plaintext highlighter-rouge">](#useInfPhrase)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ImplicitAnnouncementContext</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isInSublist<code class="language-plaintext highlighter-rouge">](../object/ImplicitAnnouncementContext.html#isInSublist)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">GetVerbPhraseContext</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>pronounObj<code class="language-plaintext highlighter-rouge">](../object/GetVerbPhraseContext.html#pronounObj)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>buildImplicitAnnouncement<code class="language-plaintext highlighter-rouge">](#buildImplicitAnnouncement)</code>  <code class="language-plaintext highlighter-rouge">[</code>setBaseCtx<code class="language-plaintext highlighter-rouge">](#setBaseCtx)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">GetVerbPhraseContext</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isObjPronoun<code class="language-plaintext highlighter-rouge">](../object/GetVerbPhraseContext.html#isObjPronoun)</code>  <code class="language-plaintext highlighter-rouge">[</code>objNameObj<code class="language-plaintext highlighter-rouge">](../object/GetVerbPhraseContext.html#objNameObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>setPronounObj<code class="language-plaintext highlighter-rouge">](../object/GetVerbPhraseContext.html#setPronounObj)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="baseCtx"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">baseCtx</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8112">8112</a>]</p>
+
+<div class="desc">
+
+our base context - we delegate some unoverridden behavior to this
+
+</div>
+
+<p><span id="getVerbCtx"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getVerbCtx</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8103">8103</a>]</p>
+
+<div class="desc">
+
+we are our own getVerbPhrase context
+
+</div>
+
+<p><span id="isInList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isInList</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8100">8100</a>]</p>
+
+<div class="desc">
+
+we're in a list
+
+</div>
+
+<p><span id="useInfPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">useInfPhrase</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8106">8106</a>]</p>
+
+<div class="desc">
+
+delegate the phrase format to our underlying announcement context
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="buildImplicitAnnouncement"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildImplicitAnnouncement (txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8109">8109</a>]</p>
+
+<div class="desc">
+
+build the announcement using our underlying context
+
+</div>
+
+<p><span id="setBaseCtx"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setBaseCtx (ctx)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#8085">8085</a>]</p>
+
+<div class="desc">
+
+Set the appropriate base context for the given implicit action
+announcement report (an ImplicitActionAnnouncement object).
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

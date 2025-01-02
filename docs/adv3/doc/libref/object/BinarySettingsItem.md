@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BinarySettingsItem</span><span class="type">class</span>
 
 [settings.t](../file/settings.t.html)\[[187](../source/settings.t.html#187)\]

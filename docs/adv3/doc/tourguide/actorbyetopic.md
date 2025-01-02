@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,19 +9,19 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ActorByeTopic: <a
-href="misctopic.htm">MiscTopic</a><br />
+href="misctopic.html">MiscTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="boredbyetopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="hellogoodbyetopic.htm">[Next]</a></td>
+href="boredbyetopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="hellogoodbyetopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 ActorByeTopic is the third specialization of
-[ImpByeTopic](impbyetopic.htm). It is used when the NPC terminates the
+[ImpByeTopic](impbyetopic.html). It is used when the NPC terminates the
 conversation of its own accord via npc.endConversation(). In the absence
 of an active ActorByeTopic, the active ImpByeTopic will be used
 instead.  
@@ -29,7 +31,7 @@ conversation. This is the complement to initiateConversation; it causes
 the NPC to effectively say BYE on its own, rather than waiting for the
 PC to decide to end the conversation. This call is mostly useful when
 the actor's current state is an
-[InConversationState](inconversationstate.htm), since the main function
+[InConversationState](inconversationstate.html), since the main function
 of this routine is to switch to an out-of-conversation state.  
   
 For example, if our curator was particularly cantankerous, we might, for

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Entering the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Entering the
 Cottage  
-<span class="navnp"><a href="listening.htm" class="nav"><em>Prev:</em> Listening to the
+<span class="navnp"><a href="listening.html" class="nav"><em>Prev:</em> Listening to the
 Bird</a>    
-<a href="climbing.htm" class="nav"><em>Next:</em> Climbing the tree</a>
+<a href="climbing.html" class="nav"><em>Next:</em> Climbing the tree</a>
     </span>
 
 </div>
@@ -217,12 +219,12 @@ that are mentioned in room descriptions but not actually implemented.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="revisit.htm" class="nav">Heidi Revisited</a> \> Entering the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="revisit.html" class="nav">Heidi Revisited</a> \> Entering the
 Cottage  
-<span class="navnp"><a href="listening.htm" class="nav"><em>Prev:</em> Listening to the
+<span class="navnp"><a href="listening.html" class="nav"><em>Prev:</em> Listening to the
 Bird</a>    
-<a href="climbing.htm" class="nav"><em>Next:</em> Climbing the tree</a>
+<a href="climbing.html" class="nav"><em>Next:</em> Climbing the tree</a>
     </span>
 
 </div>

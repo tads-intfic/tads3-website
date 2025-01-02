@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Lever : <a
-href="thing-thebasics.htm">Thing</a><br />
+href="thing-thebasics.html">Thing</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="dynamiclocations.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="dial.htm">[Next]</a></td>
+href="dynamiclocations.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="dial.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +150,7 @@ appropriate response than 'The word "cavity" is not necessary in this
 story' (since the word "cavity" will be added to the dictionary words
 referring to the plinth once the statue is toppled).  
   
-We'll give [yet another example of a lever](lever(2).htm) when we're
+We'll give [yet another example of a lever](lever(2).html) when we're
 ready for it. To tidy up this part of the game, we need to create the
 temple and the connections between various locations. To start with
 we'll create the routes to the grotto and the temple from the shore of

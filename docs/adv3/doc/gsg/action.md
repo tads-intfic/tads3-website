@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
@@ -7,7 +9,7 @@
 <div class="main">
 
 [\[Main\]](index.html)  
-*[\[Previous\]](check.htm)   [\[Next\]](precond.htm)*
+*[\[Previous\]](check.html)   [\[Next\]](precond.html)*
 
 ### Action
 
@@ -31,6 +33,6 @@ involved in a two-object command, but not both.
 
 *Getting Started in TADS 3*  
 [\[Main\]](index.html)  
-*[\[Previous\]](check.htm)   [\[Next\]](precond.htm)*
+*[\[Previous\]](check.html)   [\[Next\]](precond.html)*
 
 </div>

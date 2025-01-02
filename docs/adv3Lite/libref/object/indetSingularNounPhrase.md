@@ -1,3 +1,5 @@
+---
+---
 <span class="title">indetSingularNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`indetSingularNounPhrase(basic)`](../object/indetSingularNounPhrase(basic).html)**` :   `[`Production`](../object/Production.html)

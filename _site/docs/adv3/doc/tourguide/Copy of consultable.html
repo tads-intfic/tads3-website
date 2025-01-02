@@ -1,0 +1,198 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Consultable : <a href="thing-introduction.html">Thing</a>, TopicDatabase<br />
+</strong></td>
+<td style="text-align: right;"><a href="amodifieddefaultcommandtopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="consulttopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A Consultable is something you can look things up in, in response to
+commands like LOOK BANANA UP IN BOOK or CONSULT BOOK ABOUT MEANING OF
+LIFE. It follows that a Consultable will normally be something like a
+book, or maybe a computer. The advantage of a Consultable is that it can
+contain <a href="consulttopic.html">ConsultTopics</a>, which work in much the way as
+other <a href="topicentry.html">TopicEntries</a> work for an actor.</p>
+
+<p>We’ll define just one Consultable in this game: a book, which we’ll also
+make a Readable:</p>
+
+<p>historyBook : Readable, Consultable ’dark blue book’ ’dark blue book’ @glassShelf<br />
+  ”The gold-lettered title on the dark blue cover is &lt;i&gt;The Great History&lt;/i&gt;.”<br />
+  readDesc = ”It’s too long to read from cover to cover right now, but<br />
+   you could consult it on specific topics. ”    <br />
+ dobjFor(Read)<br />
+ {<br />
+   preCond = inherited + objHeld;<br />
+ }  <br />
+ dobjFor(Consult)<br />
+ {<br />
+   preCond = inherited + objHeld;<br />
+ }<br />
+;</p>
+
+<p>Just to make things a little more difficult, we’ve put the history book
+inside a glass-fronted shelf, so that it can only be read by first
+opening the front of the shelf. To enforce this we add objHeld to the
+list of preconditions for both reading and consulting the book. The
+shelf front is unlocked by pushing a button, but this will only work if
+the shelf is plugged in to the electrical supply. To do this requires
+the power cable that’s also used for the vending machine. We’ll start
+this cable off in a wall-mounted cabinet in a storeroom next to the
+library, but to reach the cabinet you need to stand on something, so
+we’ll put a convenient stool in the library for the purpose. Since the
+doors to the library and the storeroom are next to each other in the
+south wall, we’ll need to use an AskConnector.</p>
+
+<p>None of this is new, but it may refresh your memory of things we’ve used
+before:</p>
+
+<p>stoneLanding : Room ’Landing’ ’the landing’<br />
+   ”A pair of doors lead south from this narrow landing, from which<br />
+    a narrow flight of stone steps lead down to the north. ”<br />
+   down = slStairsDown<br />
+   north asExit(down)   <br />
+   south : AskConnector <br />
+    { <br />
+     promptMessage = ”There are two doors to the south. ” <br />
+     travelAction = GoThroughAction <br />
+     travelObjs = [leftDoor, rightDoor]<br />
+     travelObjsPhrase = ’of them’<br />
+    }<br />
+;</p>
+
+<p>+ slStairsDown : StairwayDown -&gt;eastShoreUp ’flight stone down stairs/steps’ <br />
+   ’stone steps down’<br />
+  isPlural = true<br />
+;</p>
+
+<p>+ leftDoor : Door ’left hand door*doors’ ’left hand door’<br />
+;</p>
+
+<p>+ rightDoor : Door ’right hand door*doors’ ’right hand door’<br />
+;</p>
+
+<p>library : Room ’Library’ ’the library’<br />
+  The library is a long rectangular room, with bookshelves all around. <br />
+  It looks, however, as if the shelves have been raided, for they are<br />
+  all bare, apart from a glass fronted-shelf at the southern end of<br />
+  the room. Not far from this shelf is an electrical socket in the wall. ”<br />
+  north = libraryDoor<br />
+  out asExit(north)<br />
+  <br />
+;</p>
+
+<p>+ libraryDoor : Door -&gt; rightDoor ’door’ ’door’<br />
+  <br />
+;</p>
+
+<p>+ Decoration ’(book) shelves/bookshelves’ ’bookshelves’<br />
+  ”The bookshelves are all bare, apart from the glass-fronted shelf<br />
+   at the end. ”<br />
+;<br />
+ <br />
++ glassShelf : IndirectLockable, OpenableContainer, Fixture <br />
+   ’glass fronted glass-fronted (book) shelf/front’ ’glass-fronted shelf’<br />
+  ”The glass-fronted shelf is effectively a container for one or two books. <br />
+  A small brown button is mounted on one side, next to an electrical inlet. ”<br />
+  material = glass  <br />
+  powerOn = (powerCable.isAttachedTo(glassSocket) &amp;&amp; powerCable.isAttachedTo(librarySocket))<br />
+  iobjFor(PutOn) asIobjFor(PutIn)<br />
+  afterAction()<br />
+  {<br />
+    if(gActionIs(AttachTo) &amp;&amp; powerOn &amp;&amp; !isLit)<br />
+    {<br />
+      ”A light comes on inside the glass-fronted shelf. ”;    <br />
+      isLit = true;<br />
+    }<br />
+    if(gActionIs(DetachFrom) &amp;&amp; !powerOn &amp;&amp; isLit)<br />
+    {<br />
+      ”The light in the glass-fronted shelf goes out. ”;<br />
+      isLit = nil;<br />
+    }<br />
+  }  <br />
+  isLit = nil<br />
+  brightness = (isLit ? 3 : 0)<br />
+;</p>
+
+<p>+ NameAsOther, SecretFixture<br />
+  targetObj = glassShelf<br />
+;</p>
+
+<p>++ Button, Component ’small brown button’ ’small brown button’<br />
+  dobjFor(Push)<br />
+  {<br />
+   action()<br />
+   {<br />
+    if(glassShelf.powerOn)<br />
+    {<br />
+      ”A small click comes from the glass-fronted shelf. ”;<br />
+      glassShelf.makeLocked(!glassShelf.isLocked);<br />
+    }<br />
+    else<br />
+      ”Nothing happens. ”;<br />
+   }<br />
+  } <br />
+;</p>
+
+<p>++ glassSocket : PlugAttachable, Attachable, Component ’electrical inlet’<br />
+   ’electrical inlet’<br />
+   ”The electrical inlet is mounted next to the brown button on the<br />
+    side of the glass-fronted shelf. ”<br />
+;</p>
+
+<p>+ librarySocket : PlugAttachable, Attachable, Fixture ’electrical (wall) socket’<br />
+   ’wall socket’<br />
+  ”The electrical socket is mounted on the wall, a couple of inches<br />
+   up from the floor. It’s just a standard socket. ”<br />
+;</p>
+
+<p>+ stool : Chair ’reading stool’ ’reading stool’<br />
+  ”It’s a plain wooden stool, without a back. ”<br />
+  initSpecialDesc = ”A plain wooden stool stands in the middle of the room. ”<br />
+;</p>
+
+<p>storeRoom : DarkRoom ’Store Room’ ’the store room’<br />
+  ”The storeroom is completely bare apart <br />
+    from a cabinet mounted on one wall. ”<br />
+  <br />
+  north = storeRoomDoor<br />
+  out asExit(north)<br />
+;</p>
+
+<p>+ storeRoomDoor : Door -&gt;leftDoor ’door’ ’door’<br />
+;</p>
+
+<p>+ storeRoomCabinet : OutOfReach, OpenableContainer, Fixture<br />
+  ’cabinet’ ’cabinet’<br />
+  ”The cabinet is mounted high up on the west wall. ”<br />
+  canObjReachContents(obj) <br />
+  { return obj.location.ofKind(Chair); }</p>
+
+<p>;</p>
+
+<p>++ powerCable : PlugAttachable, Attachable, Thing <br />
+   ’thick black power cable/cord/lead/plugs’ ’black cable’<br />
+   ”It’s a thick black power cable, about four feet long, with<br />
+    plugs both ends. ”<br />
+  bulk = 2 <br />
+  canAttachTo(obj) <br />
+   {return obj is in (socket, vendingMachine, <strong>librarySocket, glassSocket)</strong>; }<br />
+  travelWhileAttached (movedObj, traveler, connector)<br />
+  {<br />
+    if(movedObj==self)<br />
+    {<br />
+      foreach(local cur in attachedObjects)      <br />
+        tryImplicitAction(DetachFrom, self, cur);      <br />
+    }<br />
+  }<br />
+;   </p>
+
+<p>Note that this is the same power cable we defined before: we’ve simply
+moved it to a new initial location and added a couple of items to the
+list of things it can be attached to.</p>

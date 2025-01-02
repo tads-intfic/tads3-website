@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultCeiling</span><span class="type">object</span>
 
 [travel.t](../file/travel.t.html)\[[5474](../source/travel.t.html#5474)\]

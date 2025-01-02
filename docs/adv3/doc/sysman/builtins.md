@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| The Intrinsics  
-<span class="navnp"><a href="errmsg.htm" class="nav"><em>Prev:</em> VM Run-Time Error
+<a href="toc.html" class="nav">Table of Contents</a> \| The Intrinsics  
+<span class="navnp"><a href="errmsg.html" class="nav"><em>Prev:</em> VM Run-Time Error
 Codes</a>    
-<a href="t3vm.htm" class="nav"><em>Next:</em> t3vm Function Set</a>    
+<a href="t3vm.html" class="nav"><em>Next:</em> t3vm Function Set</a>    
 </span>
 
 </div>
@@ -42,41 +44,41 @@ might be justified.
 
 <div class="sectoc">
 
-[t3vm Function Set](t3vm.htm)  
-[tads-gen Function Set](tadsgen.htm)  
-[Regular Expressions](regex.htm)  
-[tads-io Function Set](tadsio.htm)  
-[tads-net Function Set](tadsnet.htm)  
-[Network Safety](netsec.htm)  
-[Input Scripts](scripts.htm)  
-[Byte Packing](pack.htm)  
-[BigNumber](bignum.htm)  
-[ByteArray](bytearr.htm)  
-[CharacterSet](charset.htm)  
-[Collection](collect.htm)  
-[Date](date.htm)  
-[Dictionary](dict.htm)  
-[DynamicFunc](dynfunc.htm)  
-[File](file.htm)  
-[FileName](filename.htm)  
-[GrammarProd](gramprod.htm)  
-[HTTPRequest](httpreq.htm)  
-[HTTPServer](httpsrv.htm)  
-[IntrinsicClass](icic.htm)  
-[Iterator](iter.htm)  
-[List](list.htm)  
-[LookupTable](lookup.htm)  
-[Object](objic.htm)  
-[RexPattern](rexpat.htm)  
-[StackFrameDesc](framedesc.htm)  
-[String](string.htm)  
-[StringBuffer](strbuf.htm)  
-[StringComparator](strcomp.htm)  
-[TadsObject](tadsobj.htm)  
-[TemporaryFile](tempfile.htm)  
-[TimeZone](timezone.htm)  
-[Vector](vector.htm)  
-[WeakRefLookupTable](wlookup.htm)  
+[t3vm Function Set](t3vm.html)  
+[tads-gen Function Set](tadsgen.html)  
+[Regular Expressions](regex.html)  
+[tads-io Function Set](tadsio.html)  
+[tads-net Function Set](tadsnet.html)  
+[Network Safety](netsec.html)  
+[Input Scripts](scripts.html)  
+[Byte Packing](pack.html)  
+[BigNumber](bignum.html)  
+[ByteArray](bytearr.html)  
+[CharacterSet](charset.html)  
+[Collection](collect.html)  
+[Date](date.html)  
+[Dictionary](dict.html)  
+[DynamicFunc](dynfunc.html)  
+[File](file.html)  
+[FileName](filename.html)  
+[GrammarProd](gramprod.html)  
+[HTTPRequest](httpreq.html)  
+[HTTPServer](httpsrv.html)  
+[IntrinsicClass](icic.html)  
+[Iterator](iter.html)  
+[List](list.html)  
+[LookupTable](lookup.html)  
+[Object](objic.html)  
+[RexPattern](rexpat.html)  
+[StackFrameDesc](framedesc.html)  
+[String](string.html)  
+[StringBuffer](strbuf.html)  
+[StringComparator](strcomp.html)  
+[TadsObject](tadsobj.html)  
+[TemporaryFile](tempfile.html)  
+[TimeZone](timezone.html)  
+[Vector](vector.html)  
+[WeakRefLookupTable](wlookup.html)  
 
 </div>
 
@@ -87,10 +89,10 @@ might be justified.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| The Intrinsics  
-<span class="navnp"><a href="errmsg.htm" class="nav"><em>Prev:</em> VM Run-Time Error
+<a href="toc.html" class="nav">Table of Contents</a> \| The Intrinsics  
+<span class="navnp"><a href="errmsg.html" class="nav"><em>Prev:</em> VM Run-Time Error
 Codes</a>    
-<a href="t3vm.htm" class="nav"><em>Next:</em> t3vm Function Set</a>    
+<a href="t3vm.html" class="nav"><em>Next:</em> t3vm Function Set</a>    
 </span>
 
 </div>

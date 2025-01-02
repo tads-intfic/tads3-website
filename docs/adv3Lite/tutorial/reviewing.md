@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \| Reviewing the
+<a href="toc.html" class="nav">Table of Contents</a> \| Reviewing the
 Basics  
-<span class="navnp"><a href="finishing.htm" class="nav"><em>Prev:</em> Finishing Touches</a>
-   <a href="object.htm" class="nav"><em>Next:</em> Object Definitions</a>
+<span class="navnp"><a href="finishing.html" class="nav"><em>Prev:</em> Finishing Touches</a>
+   <a href="object.html" class="nav"><em>Next:</em> Object Definitions</a>
     </span>
 
 </div>
@@ -25,11 +27,11 @@ review some of these features in a slightly more organized fashion.
 
 <div class="sectoc">
 
-[Object Definitions](object.htm)  
-[Object Containment](containment.htm)  
-[Methods, Functions and Statements](methods.htm)  
-[Inheritance, Modification and Overriding](inherit.htm)  
-[Things in Quotes](quotes.htm)  
+[Object Definitions](object.html)  
+[Object Containment](containment.html)  
+[Methods, Functions and Statements](methods.html)  
+[Inheritance, Modification and Overriding](inherit.html)  
+[Things in Quotes](quotes.html)  
 
 </div>
 
@@ -40,10 +42,10 @@ review some of these features in a slightly more organized fashion.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \| Reviewing the
+<a href="toc.html" class="nav">Table of Contents</a> \| Reviewing the
 Basics  
-<span class="navnp"><a href="finishing.htm" class="nav"><em>Prev:</em> Finishing Touches</a>
-   <a href="object.htm" class="nav"><em>Next:</em> Object Definitions</a>
+<span class="navnp"><a href="finishing.html" class="nav"><em>Prev:</em> Finishing Touches</a>
+   <a href="object.html" class="nav"><em>Next:</em> Object Definitions</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Redefining
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Redefining
 Scope  
-<span class="navnp"><a href="t3transcript.htm" class="nav"><em>Prev:</em> Manipulating the
+<span class="navnp"><a href="t3transcript.html" class="nav"><em>Prev:</em> Manipulating the
 Transcript</a>    
-<a href="t3mi.htm" class="nav"><em>Next:</em> Multiple Inheritance</a>
+<a href="t3mi.html" class="nav"><em>Next:</em> Multiple Inheritance</a>
     </span>
 
 </div>
@@ -54,7 +56,7 @@ can be talked about, thought about, or looked up at any time. As a
 general rule, topic scope applies to any noun corresponding to
 singleTopic in the action's VerbRule, the possible matches to any
 particular TopicAction or TopicTAction being stored in a
-[ResolvedTopic](t3cycle.htm#topic).
+[ResolvedTopic](t3cycle.html#topic).
 
 These two kinds of scope suffice for most purposes, and you could write
 quite a few TADS 3 games without ever having to worry about redefining
@@ -375,7 +377,7 @@ than a TAction. For example, you might define:
 You might want your version to be a bit more sophisticated than this,
 but this illustrates the general principle. For more details about
 gTopic.inScopeList you may want to read about
-[ResolvedTopic](t3cycle.htm#topic). Or you may feel that using a
+[ResolvedTopic](t3cycle.html#topic). Or you may feel that using a
 TopicAction for this purpose is more trouble than it's worth, and that
 you'd rather stick to extending the scope of a TAction as above!
 
@@ -575,12 +577,12 @@ the dark. We could achieve this with getExtraScopeItems:
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="advtop.htm" class="nav">Advanced Topics</a> \> Redefining
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="advtop.html" class="nav">Advanced Topics</a> \> Redefining
 Scope  
-<span class="navnp"><a href="t3transcript.htm" class="nav"><em>Prev:</em> Manipulating the
+<span class="navnp"><a href="t3transcript.html" class="nav"><em>Prev:</em> Manipulating the
 Transcript</a>    
-<a href="t3mi.htm" class="nav"><em>Next:</em> Multiple Inheritance</a>
+<a href="t3mi.html" class="nav"><em>Next:</em> Multiple Inheritance</a>
     </span>
 
 </div>

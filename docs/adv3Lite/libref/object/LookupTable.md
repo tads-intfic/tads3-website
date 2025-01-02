@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LookupTable</span><span class="type">class</span>
 
 [lookup.h](../file/lookup.h.html)\[[24](../source/lookup.h.html#24)\]

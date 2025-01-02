@@ -1,3 +1,5 @@
+---
+---
 <span class="title">DigAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2310](../source/actions.t.html#2310)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(ThinkAbout)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2141](../source/grammar.t.html#2141)\]

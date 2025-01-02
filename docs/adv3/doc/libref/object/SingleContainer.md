@@ -1,3 +1,5 @@
+---
+---
 <span class="title">SingleContainer</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5084](../source/objects.t.html#5084)\]

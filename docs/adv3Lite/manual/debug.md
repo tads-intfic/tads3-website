@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Scope  
-<span class="navnp"><a href="scope.htm" class="nav"><em>Prev:</em> Scope</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Scope  
+<span class="navnp"><a href="scope.html" class="nav"><em>Prev:</em> Scope</a>
    
-<a href="actionref.htm" class="nav"><em>Next:</em> Action Reference</a>
+<a href="actionref.html" class="nav"><em>Next:</em> Action Reference</a>
     </span>
 
 </div>
@@ -72,7 +74,7 @@ information is displayed just before Doer.exec() is called.
 **DEBUG MESSAGES**: The command DEBUG MESSAGES toggles the display of
 debugging information about messages on and off. The information
 displayed is the id and pre-processed string of any
-[messages](message.htm) output via DMsg() or BMsg() that have a
+[messages](message.html) output via DMsg() or BMsg() that have a
 non-empty id. This may be helpful in identifying where the library is
 getting many of its default messages from.
 
@@ -133,7 +135,7 @@ game state.
 
 If you want to define additional debugging commands for your particular
 game, you can do so using the same means as described in the section on
-[Defining New Actions](define.htm) above, with a couple of extra steps:
+[Defining New Actions](define.html) above, with a couple of extra steps:
 
 1.  Enclose the complete definition between <span class="code">\#ifdef
     \_\_DEBUG</span> and <span class="code">\#endif</span> preprocessor
@@ -337,7 +339,7 @@ command), in the course of which they can type comments such as:
 
 By default such comments are commands that start with an asterisk (\*).
 To change how comments should be prefixed, see the discussion of the
-[commentPreParser](output.htm#comment).
+[commentPreParser](output.html#comment).
 
 </div>
 
@@ -346,11 +348,11 @@ To change how comments should be prefixed, see the discussion of the
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="action.htm" class="nav">Actions</a> \> Debugging Commands  
-<span class="navnp"><a href="scope.htm" class="nav"><em>Prev:</em> Scope</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="action.html" class="nav">Actions</a> \> Debugging Commands  
+<span class="navnp"><a href="scope.html" class="nav"><em>Prev:</em> Scope</a>
    
-<a href="actionref.htm" class="nav"><em>Next:</em> Action Reference</a>
+<a href="actionref.html" class="nav"><em>Next:</em> Action Reference</a>
     </span>
 
 </div>

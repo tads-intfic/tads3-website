@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -10,16 +12,16 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 DefaultCommandTopic<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="tcommandtopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="consultable.htm">[Next]</a></td>
+href="tcommandtopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="consultable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 Some way back, we promised to give a modified form of the
-[DefaultCommandTopic](defaultcommandtopic.htm) that would generate a
+[DefaultCommandTopic](defaultcommandtopic.html) that would generate a
 more satisfactory transcript when a command is issued to Sarah before
 she's in her InConversationState (so that the greeting protocols
 intervene between the issuing of the command and Sarah's response to

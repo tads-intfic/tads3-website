@@ -1,3 +1,5 @@
+---
+---
 <span class="title">RestrictedHolder</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[5018](../source/objects.t.html#5018)\]

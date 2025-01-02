@@ -1,3 +1,5 @@
+---
+---
 # instruct.t
 
 [documentation](../file/instruct.t.html)

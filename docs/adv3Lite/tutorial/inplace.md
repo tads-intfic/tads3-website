@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Everything in its
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Everything in its
 place  
-<span class="navnp"><a href="weightier.htm" class="nav"><em>Prev:</em> Weightier Matters</a>
-    <a href="retro.htm" class="nav"><em>Next:</em> Retrospective</a>    
+<span class="navnp"><a href="weightier.html" class="nav"><em>Prev:</em> Weightier Matters</a>
+    <a href="retro.html" class="nav"><em>Next:</em> Retrospective</a>    
 </span>
 
 </div>
@@ -287,7 +289,7 @@ becomes:
 
 There are several other ways we can tweak how items are displayed in a
 room description listing. For the full story see the section on [Room
-Descriptions](../manual/roomdesc.htm) in the *adv3Lite Manual*.
+Descriptions](../manual/roomdesc.html) in the *adv3Lite Manual*.
 
 ## Giving Due Warning
 
@@ -429,7 +431,7 @@ something we've done before, when we made the tree object in the Heidi
 game a StairwayUp. PathPassage and StairwayUp both inherit from the
 TravelConnector class (along with the Thing class), and that's why we're
 seeing a similarity. You can read all about TravelConnectors in the
-section on [Travel Connectors and Barriers](../manual/travel.htm) in the
+section on [Travel Connectors and Barriers](../manual/travel.html) in the
 adv3Lite manual, if you like, but you can glean most of what you need to
 know about them from these two examples (the tree and the path). The
 <span class="code">canTravelerPass(traveler)</span> method determines
@@ -480,11 +482,11 @@ examples of this in due course.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Everything in its
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Everything in its
 place  
-<span class="navnp"><a href="weightier.htm" class="nav"><em>Prev:</em> Weightier Matters</a>
-    <a href="retro.htm" class="nav"><em>Next:</em> Retrospective</a>    
+<span class="navnp"><a href="weightier.html" class="nav"><em>Prev:</em> Weightier Matters</a>
+    <a href="retro.html" class="nav"><em>Next:</em> Retrospective</a>    
 </span>
 
 </div>

@@ -1,0 +1,173 @@
+<p><span class="title">sceneManager</span><span class="type">object</span></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#16">16</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The sceneManager object is used to control the scene-switching and
+execution mechanism.
+
+**`sceneManager`**` :   `[`InitObject`](../object/InitObject.html)`   `[`Event`](../object/Event.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">sceneManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>InitObject<code class="language-plaintext highlighter-rouge">](../object/InitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>Event<code class="language-plaintext highlighter-rouge">](../object/Event.html)  
+</code>                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>eventOrder<code class="language-plaintext highlighter-rouge">](#eventOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](#execBeforeMe)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>captureText<code class="language-plaintext highlighter-rouge">](../object/Event.html#captureText)</code>  <code class="language-plaintext highlighter-rouge">[</code>executed<code class="language-plaintext highlighter-rouge">](../object/Event.html#executed)</code>  <code class="language-plaintext highlighter-rouge">[</code>interval_<code class="language-plaintext highlighter-rouge">](../object/Event.html#interval_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isPromptDaemon<code class="language-plaintext highlighter-rouge">](../object/Event.html#isPromptDaemon)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextRunTime<code class="language-plaintext highlighter-rouge">](../object/Event.html#nextRunTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>obj_<code class="language-plaintext highlighter-rouge">](../object/Event.html#obj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>prop_<code class="language-plaintext highlighter-rouge">](../object/Event.html#prop_)</code>  <code class="language-plaintext highlighter-rouge">[</code>senseObj_<code class="language-plaintext highlighter-rouge">](../object/Event.html#senseObj_)</code>  <code class="language-plaintext highlighter-rouge">[</code>senseProp_<code class="language-plaintext highlighter-rouge">](../object/Event.html#senseProp_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>executeEvent<code class="language-plaintext highlighter-rouge">](#executeEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>notifyAfter<code class="language-plaintext highlighter-rouge">](#notifyAfter)</code>  <code class="language-plaintext highlighter-rouge">[</code>notifyBefore<code class="language-plaintext highlighter-rouge">](#notifyBefore)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Event</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>callMethod<code class="language-plaintext highlighter-rouge">](../object/Event.html#callMethod)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/Event.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>delayEvent<code class="language-plaintext highlighter-rouge">](../object/Event.html#delayEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventMatches<code class="language-plaintext highlighter-rouge">](../object/Event.html#eventMatches)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextRunTime<code class="language-plaintext highlighter-rouge">](../object/Event.html#getNextRunTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeEvent<code class="language-plaintext highlighter-rouge">](../object/Event.html#removeEvent)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="eventOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eventOrder</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#34">34</a>]</p>
+
+<div class="desc">
+
+Run the executeEvent() method for the first time to set up any scenes
+that should be active at the start of play.
+
+</div>
+
+<p><span id="execBeforeMe"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execBeforeMe</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#69">69</a>]</p>
+
+<div class="desc">
+
+If the scene is happening, call its eachTurn() method
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#17">17</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="executeEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeEvent ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#39">39</a>]</p>
+
+<div class="desc">
+
+The executeEvent() method is run each turn to drive the Scenes mechanism
+
+</div>
+
+<p><span id="notifyAfter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notifyAfter ( )</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#82">82</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="notifyBefore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notifyBefore ( )</code></p>
+
+<p><a href="../file/scene.t.html">scene.t</a>[<a href="../source/scene.t.html#72">72</a>]</p>
+
+<div class="desc">
+
+Run the beforeAction method on every currently active Scene
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

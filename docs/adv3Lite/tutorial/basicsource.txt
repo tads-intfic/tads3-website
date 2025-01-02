@@ -8,10 +8,10 @@
 <body>
 <div class="topbar"><img src="topbar.jpg" border=0></div>
 <div class="nav">
-<a class="nav" href="toc.htm">Table of Contents</a> | 
-<a class="nav" href="intro.htm">Introduction</a> &gt; 
+<a class="nav" href="toc.html">Table of Contents</a> | 
+<a class="nav" href="intro.html">Introduction</a> &gt; 
 Setting it all up
-<br><span class="navnp"><a class="nav" href="getting.htm"><i>Prev:</i> Getting What You Need</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="tools.htm"><i>Next:</i> Tools of the Trade</a> &nbsp;&nbsp;&nbsp; </span>
+<br><span class="navnp"><a class="nav" href="getting.html"><i>Prev:</i> Getting What You Need</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="tools.html"><i>Next:</i> Tools of the Trade</a> &nbsp;&nbsp;&nbsp; </span>
 
 </div>
 <div class="main">
@@ -80,10 +80,10 @@ Again, substitute the name of your actual .command file. The chmod instruction w
 </div>
 <hr class="navb"><div class="navb">
 <i>adv3Lite Library Tutorial</i><br>
-<a class="nav" href="toc.htm">Table of Contents</a> | 
-<a class="nav" href="intro.htm">Tools of the Trade</a> &gt; 
+<a class="nav" href="toc.html">Table of Contents</a> | 
+<a class="nav" href="intro.html">Tools of the Trade</a> &gt; 
 GSetting it all up
-<br><span class="navnp"><a class="nav" href="getting.htm"><i>Prev:</i> Getting What You Need</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="tools.htm"><i>Next:</i> Tools of the Trade</a> &nbsp;&nbsp;&nbsp; </span>
+<br><span class="navnp"><a class="nav" href="getting.html"><i>Prev:</i> Getting What You Need</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="tools.html"><i>Next:</i> Tools of the Trade</a> &nbsp;&nbsp;&nbsp; </span>
 
 </div>
 </body>

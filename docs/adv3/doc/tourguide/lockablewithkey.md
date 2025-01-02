@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,19 +9,19 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>LockableWithKey : <a
-href="lockable.htm">Lockable</a><br />
+href="lockable.html">Lockable</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="keyedcontainer.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="keyring.htm">[Next]</a></td>
+href="keyedcontainer.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="keyring.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 You may recall a little way back that we defined a
-[tardisKey](complexcontainer.htm) to be found inside the desk in the
+[tardisKey](complexcontainer.html) to be found inside the desk in the
 cabin. Where there's a key to a Tardis, there should be a Tardis
 somewhere, so we'll set about defining one and giving it a lockable
 door.  

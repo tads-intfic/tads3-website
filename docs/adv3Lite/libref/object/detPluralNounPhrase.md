@@ -1,3 +1,5 @@
+---
+---
 <span class="title">detPluralNounPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`detPluralNounPhrase(main)`](../object/detPluralNounPhrase(main).html)**` :   `[`Production`](../object/Production.html)

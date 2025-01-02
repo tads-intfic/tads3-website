@@ -1,0 +1,230 @@
+<p><span class="title">EventList</span><span class="type">class</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1017">1017</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+An "event list." This is a general-purpose type of script that lets you
+define the scripted events separately from the Script object.
+
+The script is driven by a list of values; each value represents one step
+of the script. Each value can be a single-quoted string, in which case
+the string is simply displayed; a function pointer, in which case the
+function is invoked without arguments; another Script object, in which
+case the object's doScript() method is invoked; a property pointer, in
+which case the property of 'self' (the EventList object) is invoked with
+no arguments; or nil, in which case nothing happens.
+
+This base type of event list runs through the list once, in order, and
+then simply stops doing anything once we pass the last event.
+
+`class `**`EventList`**` :   `[`Script`](../object/Script.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">EventList</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>Script<code class="language-plaintext highlighter-rouge">](../object/Script.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">EventList</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>CyclicEventList<code class="language-plaintext highlighter-rouge">](../object/CyclicEventList.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ExternalEventList<code class="language-plaintext highlighter-rouge">](../object/ExternalEventList.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>RandomEventList<code class="language-plaintext highlighter-rouge">](../object/RandomEventList.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>ShuffledEventList<code class="language-plaintext highlighter-rouge">](../object/ShuffledEventList.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>StopEventList<code class="language-plaintext highlighter-rouge">](../object/StopEventList.html)  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>SyncEventList`](../object/SyncEventList.html)<br />
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>curScriptState<code class="language-plaintext highlighter-rouge">](#curScriptState)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventList<code class="language-plaintext highlighter-rouge">](#eventList)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventListLen<code class="language-plaintext highlighter-rouge">](#eventListLen)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>advanceState<code class="language-plaintext highlighter-rouge">](#advanceState)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>doScript<code class="language-plaintext highlighter-rouge">](#doScript)</code>  <code class="language-plaintext highlighter-rouge">[</code>doScriptEvent<code class="language-plaintext highlighter-rouge">](#doScriptEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>scriptDone<code class="language-plaintext highlighter-rouge">](#scriptDone)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Script</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getScriptState<code class="language-plaintext highlighter-rouge">](../object/Script.html#getScriptState)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="curScriptState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curScriptState</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1034">1034</a>]</p>
+
+<div class="desc">
+
+by default, start at the first list element
+
+</div>
+
+<p><span id="eventList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eventList</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1021">1021</a>]</p>
+
+<div class="desc">
+
+the list of events
+
+</div>
+
+<p><span id="eventListLen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eventListLen</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1024">1024</a>]</p>
+
+<div class="desc">
+
+cached length of the event list
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="advanceState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">advanceState ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1027">1027</a>]</p>
+
+<div class="desc">
+
+advance to the next state
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (lst)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1018">1018</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="doScript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doScript ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1037">1037</a>]</p>
+
+<div class="desc">
+
+process the next step of the script
+
+</div>
+
+<p><span id="doScriptEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doScriptEvent (evt)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1060">1060</a>]</p>
+
+<div class="desc">
+
+carry out one script event
+
+</div>
+
+<p><span id="scriptDone"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scriptDone ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1103">1103</a>]</p>
+
+<div class="desc">
+
+Perform any end-of-script processing. By default, we advance the script
+to the next state.
+
+Some scripts might want to override this. For example, a script could be
+driven entirely by some external timing; the state of a script could
+vary once per turn, for example, or could change each time an actor
+pushes a button. In these cases, invoking the script wouldn't affect the
+state of the event list, so the subclass would override scriptDone() so
+that it does nothing at all.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

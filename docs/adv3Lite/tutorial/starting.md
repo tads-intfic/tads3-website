@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> Starting Out
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> Starting Out
 Right  
-<span class="navnp"><a href="finish.htm" class="nav"><em>Prev:</em> Finishing Touches</a>
-    <a href="scoring.htm" class="nav"><em>Next:</em> Scoring</a>    
+<span class="navnp"><a href="finish.html" class="nav"><em>Prev:</em> Finishing Touches</a>
+    <a href="scoring.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
 
 </div>
@@ -49,7 +51,7 @@ introduction, which we can do in the **showIntro()** method of the
 
 The <span class="code">gameMain</span> object can also be used to define
 a number of options that affect the whole game (for a complete list, see
-the section on [Beginnings](../manual/beginning.htm) in the *adv3Lite
+the section on [Beginnings](../manual/beginning.html) in the *adv3Lite
 Library Manual*). Here we've taken the opportunity to define
 <span class="code">paraBrksBtwnSubcontents = nil</span> (paragraph
 breaks between subcontents); this can make room listings more compact by
@@ -83,11 +85,11 @@ custom description on the player character object:
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> Starting Out
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> Starting Out
 Right  
-<span class="navnp"><a href="finish.htm" class="nav"><em>Prev:</em> Finishing Touches</a>
-    <a href="scoring.htm" class="nav"><em>Next:</em> Scoring</a>    
+<span class="navnp"><a href="finish.html" class="nav"><em>Prev:</em> Finishing Touches</a>
+    <a href="scoring.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
 
 </div>

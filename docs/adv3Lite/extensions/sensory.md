@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Sensory  
-<span class="navnp"><a href="scenetopic.htm" class="nav"><em>Prev:</em> SceneTopic</a>
-    <a href="signals.htm" class="nav"><em>Next:</em> Signals</a>    
+<span class="navnp"><a href="scenetopic.html" class="nav"><em>Prev:</em> SceneTopic</a>
+    <a href="signals.html" class="nav"><em>Next:</em> Signals</a>    
 </span>
 
 </div>
@@ -170,14 +172,14 @@ use the SensoryEmanation template to define the
 
 For a <span class="code">SimpleNoise</span> or
 <span class="code">SimpleOdor</span> that can be sensed from elsewhere
-in a [SenseRegion](../../docs/manual/senseregion.htm) you may also want
+in a [SenseRegion](../../docs/manual/senseregion.html) you may also want
 to define the <span class="code">remoteListenDesc(pov)</span> method or
 <span class="code">remoteSmellDesc(pov)</span> method as appropriate, to
 describe its presence at a distance.
 
 <span class="code">SimpleNoise</span> and
 <span class="code">SimpleOdor</span> can also be mixed in with
-[MultiLoc](../../docs/manual/multiloc.htm) (which must then come first
+[MultiLoc](../../docs/manual/multiloc.html) (which must then come first
 in the class list) to define an atmospheric sound or smell that's
 present in more than one location.
 
@@ -274,11 +276,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Sensory  
-<span class="navnp"><a href="scenetopic.htm" class="nav"><em>Prev:</em> SceneTopic</a>
-    <a href="signals.htm" class="nav"><em>Next:</em> Signals</a>    
+<span class="navnp"><a href="scenetopic.html" class="nav"><em>Prev:</em> SceneTopic</a>
+    <a href="signals.html" class="nav"><em>Next:</em> Signals</a>    
 </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,13 +8,13 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \>
-<a href="t3actor.htm" class="nav">Creating Dynamic Characters</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \>
+<a href="t3actor.html" class="nav">Creating Dynamic Characters</a> \>
 Choosing a Conversation System  
-<span class="navnp"><a href="t3actor.htm" class="nav"><em>Prev:</em> Creating Dynamic
+<span class="navnp"><a href="t3actor.html" class="nav"><em>Prev:</em> Creating Dynamic
 Characters</a>    
-<a href="t3conv.htm" class="nav"><em>Next:</em> Programming
+<a href="t3conv.html" class="nav"><em>Next:</em> Programming
 Conversations with NPCs</a>     </span>
 
 </div>
@@ -51,7 +53,7 @@ community, though; I think it just goes to show how hard a problem this
 is.
 
 We won't get into the actual programming details of implementing
-conversations until the [next part of the article](t3conv.htm). In this
+conversations until the [next part of the article](t3conv.html). In this
 part, we look at conversation systems at the design level. We'll start
 with a survey of the main types of systems that have been tried, with an
 eye to their strengths and weaknesses. After that, I have some
@@ -885,13 +887,13 @@ a complete waste for the player.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \>
-<a href="t3actor.htm" class="nav">Creating Dynamic Characters</a> \>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \>
+<a href="t3actor.html" class="nav">Creating Dynamic Characters</a> \>
 Choosing a Conversation System  
-<span class="navnp"><a href="t3actor.htm" class="nav"><em>Prev:</em> Creating Dynamic
+<span class="navnp"><a href="t3actor.html" class="nav"><em>Prev:</em> Creating Dynamic
 Characters</a>    
-<a href="t3conv.htm" class="nav"><em>Next:</em> Programming
+<a href="t3conv.html" class="nav"><em>Next:</em> Programming
 Conversations with NPCs</a>     </span>
 
 </div>

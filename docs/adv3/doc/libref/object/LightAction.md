@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LightAction</span><span class="type">class</span>
 
 [actions.t](../file/actions.t.html)\[[2449](../source/actions.t.html#2449)\]

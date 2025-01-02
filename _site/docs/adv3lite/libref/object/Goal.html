@@ -1,0 +1,315 @@
+<p><span class="title">Goal</span><span class="type">class</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#255">255</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A Goal represents an open task: something that the player is trying to
+achieve. A Goal is an abstract object, not part of the simulated world
+of the game.
+
+Each goal is associated with a hint topic (usually shown as a question,
+such as "How do I get past the guard?") and an ordered list of hints.
+The hints are usually ordered from most general to most specific. The
+idea is to let the player control how big a hint they get; we start with
+a small nudge and work towards giving away the puzzle completely, so the
+player can stop as soon as they see something that helps.
+
+At any given time, a goal can be in one of three states:
+
+\- Open: this means that the player is (or ought to be) aware of the
+goal, but the goal hasn't yet been achieved. Determining this awareness
+is up to the goal. In some cases, a goal is opened as soon as the player
+has seen a particular object or entered a particular area; in other
+cases, a goal might be opened by a scripted event, such as a speech by
+an NPC telling the player they have to accomplish something. A goal
+could even be opened by viewing a hint for another goal, because that
+hint could explain a gating goal that the player might not otherwise
+been able to know about.
+
+\- Undiscovered: this means that the player doesn't yet have any reason
+to know about the goal.
+
+\- Closed: this means that the player has accomplished the goal, or in
+some cases that the goal has become irrelevant.
+
+The hint system only shows goals that are Open. We don't show Closed
+goals because the player presumably has no need of them any longer; we
+don't show Undiscovered goals to avoid giving away developments later in
+the game before they become relevant.
+
+`class `**`Goal`**` :   `[`MenuTopicItem`](../object/MenuTopicItem.html)`   `[`HintMenuObject`](../object/HintMenuObject.html)`   `[`HintOpener`](../object/HintOpener.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Goal</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>MenuTopicItem<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MenuItem<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html)  
+</code>                         <code class="language-plaintext highlighter-rouge">[</code>MenuObject<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html)  
+</code>                                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>HintMenuObject<code class="language-plaintext highlighter-rouge">](../object/HintMenuObject.html)  
+</code>                 object<code class="language-plaintext highlighter-rouge">  
+</code>         <code class="language-plaintext highlighter-rouge">[</code>HintOpener<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>goalFullyDisplayed<code class="language-plaintext highlighter-rouge">](#goalFullyDisplayed)</code>  <code class="language-plaintext highlighter-rouge">[</code>goalState<code class="language-plaintext highlighter-rouge">](#goalState)</code>  <code class="language-plaintext highlighter-rouge">[</code>isActiveInMenu<code class="language-plaintext highlighter-rouge">](#isActiveInMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>location<code class="language-plaintext highlighter-rouge">](#location)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuContents<code class="language-plaintext highlighter-rouge">](#menuContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>title<code class="language-plaintext highlighter-rouge">](#title)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuTopicItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>chunkSize<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#chunkSize)</code>  <code class="language-plaintext highlighter-rouge">[</code>heading<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#heading)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastDisplayed<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#lastDisplayed)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuTopicListEnd<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#menuTopicListEnd)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextMenuTopicLink<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#nextMenuTopicLink)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>bgcolor<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#bgcolor)</code>  <code class="language-plaintext highlighter-rouge">[</code>curKeyList<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#curKeyList)</code>  <code class="language-plaintext highlighter-rouge">[</code>curMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#curMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>fgcolor<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#fgcolor)</code>  <code class="language-plaintext highlighter-rouge">[</code>fullScreenMode<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#fullScreenMode)</code>  <code class="language-plaintext highlighter-rouge">[</code>indent<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#indent)</code>  <code class="language-plaintext highlighter-rouge">[</code>isOpen<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#isOpen)</code>  <code class="language-plaintext highlighter-rouge">[</code>keyList<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#keyList)</code>  <code class="language-plaintext highlighter-rouge">[</code>prevMenuLink<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#prevMenuLink)</code>  <code class="language-plaintext highlighter-rouge">[</code>topbarbg<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#topbarbg)</code>  <code class="language-plaintext highlighter-rouge">[</code>topbarfg<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#topbarfg)</code>  <code class="language-plaintext highlighter-rouge">[</code>topMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#topMenu)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>contents<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#contents)</code>  <code class="language-plaintext highlighter-rouge">[</code>menuOrder<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#menuOrder)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">HintMenuObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>topicOrder<code class="language-plaintext highlighter-rouge">](../object/HintMenuObject.html#topicOrder)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">HintOpener</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>closeWhen<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#closeWhen)</code>  <code class="language-plaintext highlighter-rouge">[</code>closeWhenAchieved<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#closeWhenAchieved)</code>  <code class="language-plaintext highlighter-rouge">[</code>closeWhenExamined<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#closeWhenExamined)</code>  <code class="language-plaintext highlighter-rouge">[</code>closeWhenKnown<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#closeWhenKnown)</code>  <code class="language-plaintext highlighter-rouge">[</code>closeWhenMoved<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#closeWhenMoved)</code>  <code class="language-plaintext highlighter-rouge">[</code>closeWhenRevealed<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#closeWhenRevealed)</code>  <code class="language-plaintext highlighter-rouge">[</code>closeWhenSeen<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#closeWhenSeen)</code>  <code class="language-plaintext highlighter-rouge">[</code>closeWhenTrue<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#closeWhenTrue)</code>  <code class="language-plaintext highlighter-rouge">[</code>openWhen<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#openWhen)</code>  <code class="language-plaintext highlighter-rouge">[</code>openWhenAchieved<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#openWhenAchieved)</code>  <code class="language-plaintext highlighter-rouge">[</code>openWhenExamined<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#openWhenExamined)</code>  <code class="language-plaintext highlighter-rouge">[</code>openWhenKnown<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#openWhenKnown)</code>  <code class="language-plaintext highlighter-rouge">[</code>openWhenMoved<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#openWhenMoved)</code>  <code class="language-plaintext highlighter-rouge">[</code>openWhenRevealed<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#openWhenRevealed)</code>  <code class="language-plaintext highlighter-rouge">[</code>openWhenSeen<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#openWhenSeen)</code>  <code class="language-plaintext highlighter-rouge">[</code>openWhenTrue<code class="language-plaintext highlighter-rouge">](../object/HintOpener.html#openWhenTrue)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>displaySubItem<code class="language-plaintext highlighter-rouge">](#displaySubItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>updateContents<code class="language-plaintext highlighter-rouge">](#updateContents)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuTopicItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getNextTopicXML<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#getNextTopicXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getTopicXML<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#getTopicXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getXML<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#getXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>redrawWinHtml<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#redrawWinHtml)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMenuHtml<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#showMenuHtml)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMenuText<code class="language-plaintext highlighter-rouge">](../object/MenuTopicItem.html#showMenuText)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>display<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#display)</code>  <code class="language-plaintext highlighter-rouge">[</code>enterSubMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#enterSubMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>formatXML<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#formatXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getChildIndex<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#getChildIndex)</code>  <code class="language-plaintext highlighter-rouge">[</code>getKeysXML<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#getKeysXML)</code>  <code class="language-plaintext highlighter-rouge">[</code>getNextMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#getNextMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>getPrevMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#getPrevMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>refreshTopMenuBanner<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#refreshTopMenuBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeStatusLine<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#removeStatusLine)</code>  <code class="language-plaintext highlighter-rouge">[</code>removeTopMenuBanner<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#removeTopMenuBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMenu<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#showMenu)</code>  <code class="language-plaintext highlighter-rouge">[</code>showTopMenuBanner<code class="language-plaintext highlighter-rouge">](../object/MenuItem.html#showTopMenuBanner)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>addToContents<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#addToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>compareForMenuSort<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#compareForMenuSort)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeContents<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#initializeContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>initializeLocation<code class="language-plaintext highlighter-rouge">](../object/MenuObject.html#initializeLocation)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">HintMenuObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>compareForTopicSort<code class="language-plaintext highlighter-rouge">](../object/HintMenuObject.html#compareForTopicSort)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="goalFullyDisplayed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">goalFullyDisplayed</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#303">303</a>]</p>
+
+<div class="desc">
+
+Has this goal been fully displayed? The hint system automatically sets
+this to true when the last item in our hint list is displayed.
+
+You can use this, for example, to automatically remove the hint from the
+hint menu after it's been fully displayed. (You might want to do this
+with a hint for a red herring, for example. After the player has learned
+that the red herring is a red herring, they probably won't need to see
+that particular line of hints again, so you can remove the clutter in
+the menu by closing the hint after it's been fully displayed.) To do
+this, simply add this to the Goal object:
+
+  
+closeWhenTrue = (goalFullyDisplayed)
+
+</div>
+
+<p><span id="goalState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">goalState</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#380">380</a>]</p>
+
+<div class="desc">
+
+This goal's current state. We'll start off undiscovered. When a goal
+should be open from the very start of the game, this should be
+overridden and set to OpenGoal.
+
+</div>
+
+<p><span id="isActiveInMenu"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActiveInMenu</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#373">373</a>]</p>
+
+<div class="desc">
+
+we're active in our parent menu if our goal state is Open
+
+</div>
+
+<p><span id="location"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">location</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#270">270</a>]</p>
+
+<div class="desc">
+
+Our parent menu - this is usually a HintMenu object. In very simple hint
+systems, this could simply be a top-level hint menu container; more
+typically, the hint system will be structured into a menu tree that
+organizes the hint topics into several different submenus, for easier
+navigatino.
+
+</div>
+
+<p><span id="menuContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuContents</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#284">284</a>]</p>
+
+<div class="desc">
+
+The list of hints for this topic. This should be ordered from most
+general to most specific; we offer the hints in the order they appear in
+this list, so the earlier hints should give away as little as possible,
+while the later hints should get progressively closer to just outright
+giving away the answer.
+
+Each entry in the list can be a simple (single-quoted) string, or it can
+be a Hint object. In most cases, a string will do. A Hint object is only
+needed when displaying the hint has some side effect, such as opening a
+new Goal.
+
+</div>
+
+<p><span id="title"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">title</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#261">261</a>]</p>
+
+<div class="desc">
+
+The topic question associated with the goal. The hint system shows a
+list of the topics for the goals that are currently open, so that the
+player can decide what area they want help on.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="displaySubItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">displaySubItem (idx, lastBeforeInput, eol)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#362">362</a>]</p>
+
+<div class="desc">
+
+display a sub-item, keeping track of when we've shown them all
+
+</div>
+
+<p><span id="updateContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">updateContents ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#331">331</a>]</p>
+
+<div class="desc">
+
+Check our menu state and update it if necessary. Each time our parent
+menu is about to display, it'll call this on its sub-items to let them
+update their current states. This method can promote the state to Open
+or Closed if the necessary conditions for the goal have been met.
+
+Sometimes it's more convenient to set a goal's state explicitly from a
+scripted event; for example, if the goal is associated with a scored
+achievement, awarding the goal's achievement will set the goal's state
+to Closed. In these cases, there's no need to use this method, since
+you're managing the goal's state explicitly. The purpose of this method
+is to make it easy to catch goal state changes that can be reached by
+several different routes; in these cases, you can just write a single
+test for those conditions in this method rather than trying to catch
+every possible route to the new conditions and writing code in all of
+those.
+
+The default implementation looks at our openWhenSeen property. If this
+property is not nil, then we'll check the object referenced in this
+property; if our current state is Undiscovered, and the object
+referenced by openWhenSeen has been seen by the player character, then
+we'll change our state to Open. We'll make the corresponding check for
+openWhenDescribed.
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">nonTerminalNounMultiList</span><span class="type">GrammarProd</span>
 
 `grammar `**[`nonTerminalNounMultiList(multi)`](../object/nonTerminalNounMultiList(multi).html)**` :   `[`NounListProduction`](../object/NounListProduction.html)

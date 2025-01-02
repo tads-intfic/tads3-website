@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Attachable : object<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="attachables-overview.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="nearbyattachable.htm">[Next]</a></td>
+href="attachables-overview.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="nearbyattachable.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -156,7 +158,7 @@ pressing a button that's concealed behind a loose stone. The only
 problem is that the wires have been cut, so before the button will work
 it must be detached from its fitting and repairs made to the wires.
 We'll implement the button and its container as Attachables, and the
-wires as [NearbyAttachables](nearbyattachable.htm).  
+wires as [NearbyAttachables](nearbyattachable.html).  
   
 The first step is to provide the passage south from the chasm and the
 location by the steel door:  
@@ -355,4 +357,4 @@ we can see what's inside:
 ;  
   
 We'll go on to implement the wires inside the fitting as
-[NearbyAttachables](nearbyattachable.htm).  
+[NearbyAttachables](nearbyattachable.html).  

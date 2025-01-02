@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BeforeCommandReport</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[226](../source/report.t.html#226)\]

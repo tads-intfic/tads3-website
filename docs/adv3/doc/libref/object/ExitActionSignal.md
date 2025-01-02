@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ExitActionSignal</span><span class="type">class</span>
 
 [exec.t](../file/exec.t.html)\[[1326](../source/exec.t.html#1326)\]

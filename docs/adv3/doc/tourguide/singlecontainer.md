@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SingleContainer : <a
-href="container.htm">Container</a><br />
+href="container.html">Container</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="containerdoor.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="bagofaffinity.htm">[Next]</a></td>
+href="containerdoor.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="bagofaffinity.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -46,6 +48,6 @@ kit in the cylinder one at time.
   
 This gadget is clearly incomplete, but we'll add its components and make
 it functional when we come to deal with the [bent
-key](keyedcontainer.htm#bentkey) below.  
+key](keyedcontainer.html#bentkey) below.  
   
   

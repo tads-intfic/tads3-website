@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Introduction  
-<span class="navnp"><a href="begin.htm" class="nav"><em>Prev:</em> Opening Moves</a>
-    <a href="syntax.htm" class="nav"><em>Next:</em> Typographical
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Introduction  
+<span class="navnp"><a href="begin.html" class="nav"><em>Prev:</em> Opening Moves</a>
+    <a href="syntax.html" class="nav"><em>Next:</em> Typographical
 Conventions</a>     </span>
 
 </div>
@@ -151,10 +153,10 @@ you'll forgive me for the oversight, and I thank you all.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="begin.htm" class="nav">Opening Moves</a> \> Introduction  
-<span class="navnp"><a href="begin.htm" class="nav"><em>Prev:</em> Opening Moves</a>
-    <a href="syntax.htm" class="nav"><em>Next:</em> Typographical
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="begin.html" class="nav">Opening Moves</a> \> Introduction  
+<span class="navnp"><a href="begin.html" class="nav"><em>Prev:</em> Opening Moves</a>
+    <a href="syntax.html" class="nav"><em>Next:</em> Typographical
 Conventions</a>     </span>
 
 </div>

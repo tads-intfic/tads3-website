@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>AskTopic : <a
-href="asktelltopic.htm">AskTellTopic</a><br />
+href="asktelltopic.html">AskTellTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="initiatetopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="telltopic.htm">[Next]</a></td>
+href="initiatetopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="telltopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -23,8 +25,8 @@ ABOUT RING. Rather than overriding actionIobjAskAbout on the sarah
 object, we can nest a number of AskTopic objects either in Sarah or in
 one of Sarah's ActorStates. To avoid the response becoming repetitive,
 it's often a good idea to combine an AskTopic with some kind of
-[EventList](eventlist.htm) - often a
-[StopEventList](stopeventlist.htm) - which gives several different
+[EventList](eventlist.html) - often a
+[StopEventList](stopeventlist.html) - which gives several different
 responses before finally coming to one that's repeated.  
   
 One thing a player will often want to ask about an NPC is the NPC
@@ -62,7 +64,7 @@ actually seeing it, but another is through being told about it as here.
 In order to achieve this we use the gSetKnown(diamondRing) macro, which
 actually translated into gPlayerChar.setKnowsAbout(obj). Likewise,
 Sarah's second response reveals her name, so we use the custom
-[makeProper](basicactors.htm) method both to make the appropriate
+[makeProper](basicactors.html) method both to make the appropriate
 changes on the Sarah object and to return her proper name. Both methods
 can be called using the \<\<\>\> syntax within a double-quoted string,
 but we can't use a double-quoted string directly in an EventList. We
@@ -100,7 +102,7 @@ the next thing we should cater for:
 ;  
   
 Note the new function in the event list; this finally sets Sarah off on
-her brief [guided tour](guidedtourstate.htm), from which she'll arrive
+her brief [guided tour](guidedtourstate.html), from which she'll arrive
 back where she started having accomplished nothing.  
   
 The player may also ask Sarah about herself when she starts following
@@ -168,7 +170,7 @@ character).
 We might also want to cover the case in which a sceptical Sarah has been
 told about the ghost but hasn't seen it for herself (how that comes
 about will be dealt with in more detail when we come look at examples of
-[TellTopic](telltopic.htm)). In this case we can nest the AskTopic
+[TellTopic](telltopic.html)). In this case we can nest the AskTopic
 inside the sarah object instead of one of her ActorStates, since we'll
 want this group of replies to be used whichever ActorState Sarah happens
 to be in. The player character (PC) could sail off in the ship,

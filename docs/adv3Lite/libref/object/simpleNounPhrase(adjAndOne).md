@@ -1,3 +1,5 @@
+---
+---
 <span class="title">simpleNounPhrase(adjAndOne)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[763](../source/grammar.t.html#763)\]

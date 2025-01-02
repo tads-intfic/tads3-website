@@ -1,3 +1,5 @@
+---
+---
 <span class="title">defaultVerbPhrase(noun)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[103](../source/grammar.t.html#103)\]

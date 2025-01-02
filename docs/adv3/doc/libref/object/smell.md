@@ -1,3 +1,5 @@
+---
+---
 <span class="title">smell</span><span class="type">object</span>
 
 [sense.t](../file/sense.t.html)\[[265](../source/sense.t.html#265)\]

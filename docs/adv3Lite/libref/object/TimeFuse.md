@@ -1,3 +1,5 @@
+---
+---
 <span class="title">TimeFuse</span><span class="type">class</span>
 
 [objtime.t](../file/objtime.t.html)\[[260](../source/objtime.t.html#260)\]

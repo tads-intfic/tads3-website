@@ -1,3 +1,5 @@
+---
+---
 <span class="title">sceneManager</span><span class="type">object</span>
 
 [scene.t](../file/scene.t.html)\[[16](../source/scene.t.html#16)\]

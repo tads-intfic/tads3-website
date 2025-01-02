@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> What More?  
-<span class="navnp"><a href="hints.htm" class="nav"><em>Prev:</em> Hints</a>
-    <a href="conclusion.htm" class="nav"><em>Next:</em> Conclusion</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> What More?  
+<span class="navnp"><a href="hints.html" class="nav"><em>Prev:</em> Hints</a>
+    <a href="conclusion.html" class="nav"><em>Next:</em> Conclusion</a>
     </span>
 
 </div>
@@ -84,7 +86,7 @@ define its <span class="code">darkName</span> and
 description of the room that will be displayed while it is in darkness.
 There are also methods and properties you can define to determine what
 happens when the player character tries to travel around in the dark.
-For details, read the section on [Rooms and Regions](../manual/room.htm)
+For details, read the section on [Rooms and Regions](../manual/room.html)
 in the *adv3Lite Library Manual*. If you define one or more dark rooms
 your game will probably need a light source or two. The simplest way to
 make a Thing a light source is to define its
@@ -102,7 +104,7 @@ the examples we have seen in this tutorial, the only items that are in
 scope for the player character are those in his or her immediate
 location. An actor in IF can usually only sense and interact with
 objects that are in the same room. The
-[SenseRegion](../manual/senseregion.htm) class allows you to define a
+[SenseRegion](../manual/senseregion.html) class allows you to define a
 set of rooms between which sensory information can pass. This means
 that, depending on how exactly you set things up, an actor (including
 the player character) located in one room of the SenseRegion may be able
@@ -115,7 +117,7 @@ allows the player to type commands like THINK ABOUT MARTIN and get a
 sensible response). The adv3Lite library has built-in handling for this,
 which represents <span class="code">Thoughts</span> as TopicEntries
 rather in the manner of ConsultTopics used with a Consultable. You can
-read about it in the section on [Thoughts](../manual/thought.htm) in the
+read about it in the section on [Thoughts](../manual/thought.html) in the
 manual.
 
 We introduced (and employed) the concept of
@@ -124,7 +126,7 @@ tutorial, but made no mention of the **TravelBarriers**, which it is
 sometimes useful to define in conjunction with them (especially when the
 same conditions prohibiting travel potentially apply to more than one
 TravelConnector). For more details, refer to the section on [Travel
-Connectors and Barriers](../manual/travel.htm) in the manual.
+Connectors and Barriers](../manual/travel.html) in the manual.
 
 One of the trickiest things to handle in IF can be **attaching** one
 object to another. It's tricky because attachment can have so many
@@ -142,20 +144,20 @@ are so many different possibilities that it's virtually impossible for
 an IF library to cover them all, and adv3Lite doesn't even try to. It
 does, however, try to offer some support for a few simple, common cases,
 and you can read about this in the
-[Attachables](../manual/attachable.htm) section of the manual.
+[Attachables](../manual/attachable.html) section of the manual.
 
 A common feature of many IF languages is **Fuses** and **Daemons** (or
 something that provides similar functionality under a different name). A
 Fuse provides a means of making something happen after so many turns,
 while a Daemon provides a way of making something happen each turn (or
 every so many turns). For details see the section on
-[Events](../manual/event.htm) in the manual.
+[Events](../manual/event.html) in the manual.
 
 At various points in the tutorial we've made use of a
 <span class="code">StopEventList</span> or
 <span class="code">ShuffledEventList</span>, but we haven't covered
 **EventLists** in any systematic fashion. For the full story see the
-section on [EventList](../manual/eventlist.htm) in the manual.
+section on [EventList](../manual/eventlist.html) in the manual.
 
 Most of what we've covered in this tutorial has assumed that the chief
 sense being used is the sense of sight. But the adv3Lite library does
@@ -163,14 +165,14 @@ provide some support for **other senses**. You can read about the
 <span class="code">listenDesc</span>,
 <span class="code">feelDesc</span>, <span class="code">smellDesc</span>
 and other sensory properties of Things in the
-[Things](../manual/thing.htm#sensory) section of the manual. There's
+[Things](../manual/thing.html#sensory) section of the manual. There's
 also a <span class="code">Noise</span> class and an
 <span class="code">Odor</span> class you can read about in the
-[Extras](../manual/extra.htm#emanation) section.
+[Extras](../manual/extra.html#emanation) section.
 
 Finally, adv3Lite provides the facility for you to display custom
 **menus** in your game (the hint system makes use of this). For details
-consult the [Menus](../manual/menu.htm) section of the manual.
+consult the [Menus](../manual/menu.html) section of the manual.
 
   
 
@@ -188,9 +190,9 @@ WRENCH) or those that act on no object at all (e.g. THINK), or those
 that act on Topics or Literals. Before you can get very far with writing
 your own game you will need to understand the differences between these
 various kinds of action and how to deal with them. The Action
-[Overview](../manual/actionoverview.htm) section of the manual is vital
+[Overview](../manual/actionoverview.html) section of the manual is vital
 reading in this regard, but you'll really need to study the entire
-Chapter on [Actions](../manual/action.htm) sooner rather than later.
+Chapter on [Actions](../manual/action.html) sooner rather than later.
 
 Second, while this tutorial has made some attempt to introduce features
 of the TADS 3 *language*, it has only introduced some of the most common
@@ -203,7 +205,7 @@ perhaps, depending on your point of view) not all the information in the
 the TADS 3 game author, so you certainly don't need to read all of it to
 start out with.
 
-The following sections of the [TADS 3 System Manual](../sysman.htm) are
+The following sections of the [TADS 3 System Manual](../sysman.html) are
 probably the ones you'll need to become familiar with sooner rather than
 later:
 
@@ -285,10 +287,10 @@ the one you want for your particular game).
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="finish.htm" class="nav">Finishing Touches</a> \> What More?  
-<span class="navnp"><a href="hints.htm" class="nav"><em>Prev:</em> Hints</a>
-    <a href="conclusion.htm" class="nav"><em>Next:</em> Conclusion</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="finish.html" class="nav">Finishing Touches</a> \> What More?  
+<span class="navnp"><a href="hints.html" class="nav"><em>Prev:</em> Hints</a>
+    <a href="conclusion.html" class="nav"><em>Next:</em> Conclusion</a>
     </span>
 
 </div>

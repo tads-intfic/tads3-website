@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Optional
 Parameters  
-<span class="navnp"><a href="proccode.htm" class="nav"><em>Prev:</em> Procedural Code</a>
+<span class="navnp"><a href="proccode.html" class="nav"><em>Prev:</em> Procedural Code</a>
    
-<a href="namedargs.htm" class="nav"><em>Next:</em> Named Arguments</a>
+<a href="namedargs.html" class="nav"><em>Next:</em> Named Arguments</a>
     </span>
 
 </div>
@@ -95,7 +97,7 @@ values, so "a" gets the first value and "b" gets the second.
 
 The system matches up argument values to parameter names positionally,
 from left to right. (This doesn't apply to [named
-arguments](namedargs.htm) which are assigned explicitly by name; we'll
+arguments](namedargs.html) which are assigned explicitly by name; we'll
 see more about those [below](#namedargs).) When a function has multiple
 optional parameters, they're assigned in left to right order.
 
@@ -305,7 +307,7 @@ default value is actually needed.
 
 ## <span id="namedargs"></span>Declaring named parameters as optional
 
-[Named arguments](namedargs.htm) can be made optional in the same way as
+[Named arguments](namedargs.html) can be made optional in the same way as
 positional parameters. Simply put the <span class="code">?</span> suffix
 or the <span class="code">=</span>*default value* assignment after the
 colon "<span class="code">:</span>" suffix for the named argument:
@@ -401,12 +403,12 @@ and you access the unnamed parameters beyond the "..." using
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="langsec.htm" class="nav">The Language</a> \> Optional
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="langsec.html" class="nav">The Language</a> \> Optional
 Parameters  
-<span class="navnp"><a href="proccode.htm" class="nav"><em>Prev:</em> Procedural Code</a>
+<span class="navnp"><a href="proccode.html" class="nav"><em>Prev:</em> Procedural Code</a>
    
-<a href="namedargs.htm" class="nav"><em>Next:</em> Named Arguments</a>
+<a href="namedargs.html" class="nav"><em>Next:</em> Named Arguments</a>
     </span>
 
 </div>

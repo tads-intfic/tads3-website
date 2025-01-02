@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>Occluder : object<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="distanceconnector.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="vaporous.htm">[Next]</a></td>
+href="distanceconnector.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="vaporous.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -25,7 +27,7 @@ visibility (or the scope of any other sense).
 The reason you may want to do this is that what is visible can depend on
 where you're looking from. For example, suppose you have a window
 looking into a living-room. You could implement the window as a
-[SenseConnector](senseconnector.htm) to make it possible for the game to
+[SenseConnector](senseconnector.html) to make it possible for the game to
 list the contents of the room when the player character is on the
 outside looking in. But suppose there's a bookcase on the same wall as
 the window; then the player character probably ought not to be able to
@@ -61,7 +63,7 @@ Since we haven't got a convenient window and bookcase to hand in the
 recall that the description of the deepChasm room mentions a narrow
 river visible a hundred feet below at the bottom of the chasm, and that
 we added a Distant object to represent this river in case the player
-tries to refer to it (see the [TravelPushable](travelpushable.htm)
+tries to refer to it (see the [TravelPushable](travelpushable.html)
 section above). Now that we've added a DistanceConnector linking
 deepChasm to the rooms either side of it (chasmLedge and narrowTunnel),
 the inkyRiver object will be in scope from those two locations too.

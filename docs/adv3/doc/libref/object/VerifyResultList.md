@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerifyResultList</span><span class="type">class</span>
 
 [verify.t](../file/verify.t.html)\[[428](../source/verify.t.html#428)\]

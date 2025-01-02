@@ -1,3 +1,5 @@
+---
+---
 <span class="title">ExtraHints</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[335](../source/actions.t.html#335)\]

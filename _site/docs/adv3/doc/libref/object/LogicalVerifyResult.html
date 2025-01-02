@@ -1,0 +1,258 @@
+<p><span class="title">LogicalVerifyResult</span><span class="type">class</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#170">170</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Verification result - command is logical and allowed.
+
+This can provide additional information ranking the likelihood of the
+command intepretation, which can be useful to distinguish among logical
+but not equally likely possibilities. For example, if the command is
+"take book," and the actor has a book inside his or her backpack, and
+there is also a book on a table in the actor's location, it would make
+sense to take either book, but the game might prefer to take the book on
+the table because it's not already being carried. The likelihood level
+can be used to rank these alternatives: if the object is being carried
+indirectly, a lower likelihood ranking would be returned than if the
+object were not already somewhere in the actor's inventory.
+
+`class `**`LogicalVerifyResult`**` :   `[`VerifyResult`](../object/VerifyResult.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">LogicalVerifyResult</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>VerifyResult<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>MessageResult<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>defaultLogicalVerifyResult<code class="language-plaintext highlighter-rouge">](../object/defaultLogicalVerifyResult.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>keyVal<code class="language-plaintext highlighter-rouge">](#keyVal)</code>  <code class="language-plaintext highlighter-rouge">[</code>likelihood<code class="language-plaintext highlighter-rouge">](#likelihood)</code>  <code class="language-plaintext highlighter-rouge">[</code>listOrder<code class="language-plaintext highlighter-rouge">](#listOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>resultRank<code class="language-plaintext highlighter-rouge">](#resultRank)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">VerifyResult</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>allowAction<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html#allowAction)</code>  <code class="language-plaintext highlighter-rouge">[</code>excludePluralMatches<code class="language-plaintext highlighter-rouge">](../object/VerifyResult.html#excludePluralMatches)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>messageProp_<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#messageProp_)</code>  <code class="language-plaintext highlighter-rouge">[</code>messageText_<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#messageText_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>compareTo<code class="language-plaintext highlighter-rouge">](#compareTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>identicalTo<code class="language-plaintext highlighter-rouge">](#identicalTo)</code>  <code class="language-plaintext highlighter-rouge">[</code>isWorseThan<code class="language-plaintext highlighter-rouge">](#isWorseThan)</code>  <code class="language-plaintext highlighter-rouge">[</code>shouldInsertBefore<code class="language-plaintext highlighter-rouge">](#shouldInsertBefore)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageResult</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>resolveMessageText<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#resolveMessageText)</code>  <code class="language-plaintext highlighter-rouge">[</code>setMessage<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#setMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showMessage<code class="language-plaintext highlighter-rouge">](../object/MessageResult.html#showMessage)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="keyVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">keyVal</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#281">281</a>]</p>
+
+<div class="desc">
+
+my key value, to distinguish among different results with the same
+likelihood ranking
+
+</div>
+
+<p><span id="likelihood"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">likelihood</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#249">249</a>]</p>
+
+<div class="desc">
+
+The likelihood of the command - the higher the number, the more likely.
+We use 100 as the default, so that there's plenty of room for specific
+rankings above or below the default. Particular actions might want to
+rank likelihoods based on action-specific factors.
+
+</div>
+
+<p><span id="listOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listOrder</code></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#275">275</a>]</p>
+
+<div class="desc">
+
+Our list ordering. This establishes how we are entered into the master
+results list relative to other 'logical' results. Results are entered
+into the master list in ascending list order, so a lower order number
+means an earlier place in the list.
+
+The list ordering is more important than the likelihood ranking. Suppose
+we have two items: one is at list order 10 and has likelihood 100, and
+the other is at list order 20 and has likelihood 50. The order of the
+likelihoods stored in the list will be (100, 50). This is inverted from
+the normal ordering, which would put the worst item first.
+
+The point of this ordering is to allow for logical results with higher
+or lower importances in establishing the likelihood. The library uses
+the following list order values:
+
+100 - the default ranking. This is used in most cases.
+
+150 - secondary ranking. This is used for rankings that aren't of great
+importance but which can be useful to distinguish objects in cases where
+no more important rankings are present. The library uses this for
+precondition verification rankings.
+
+</div>
+
+<p><span id="resultRank"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resultRank</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#284">284</a>]</p>
+
+<div class="desc">
+
+result rank - we're the most approving kind of result
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="compareTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compareTo (other)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#198">198</a>]</p>
+
+<div class="desc">
+
+compare to another result
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (likelihoodRank, key, ord)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#171">171</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="identicalTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">identicalTo (other)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#233">233</a>]</p>
+
+<div class="desc">
+
+determine if I'm identical to another result
+
+</div>
+
+<p><span id="isWorseThan"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isWorseThan (other)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#184">184</a>]</p>
+
+<div class="desc">
+
+am I worse than the other result?
+
+</div>
+
+<p><span id="shouldInsertBefore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shouldInsertBefore (other)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/verify.t.html">verify.t</a>[<a href="../source/verify.t.html#215">215</a>]</p>
+
+<div class="desc">
+
+determine if I go in a result list before the given result
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

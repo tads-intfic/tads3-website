@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CommandRankingByWeakness</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5902](../source/parser.t.html#5902)\]

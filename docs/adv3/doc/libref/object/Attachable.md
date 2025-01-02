@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Attachable</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[2533](../source/extras.t.html#2533)\]

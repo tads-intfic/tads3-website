@@ -1,3 +1,5 @@
+---
+---
 <span class="title">canTalkToObj</span><span class="type">object</span>
 
 [precond.t](../file/precond.t.html)\[[338](../source/precond.t.html#338)\]

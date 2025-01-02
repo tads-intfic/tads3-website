@@ -1,3 +1,5 @@
+---
+---
 <span class="title">possessiveAdjPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`possessiveAdjPhrase(definiteNpApostropheS)`](../object/possessiveAdjPhrase(definiteNpApostropheS).html)**` :   `[`PossessiveProduction`](../object/PossessiveProduction.html)

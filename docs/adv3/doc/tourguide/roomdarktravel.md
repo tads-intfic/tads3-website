@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -9,9 +11,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <td style="text-align: left;"><strong>roomDarkTravel<br />
 </strong></td>
 <td style="text-align: right;"><a
-href="cannotgothatwayindark.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="travelerarriving.htm">[Next]</a></td>
+href="cannotgothatwayindark.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="travelerarriving.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -20,7 +22,7 @@ href="travelerarriving.htm">[Next]</a></td>
 BasicLocation.roomDarkTravel() defines what happens if we try to move
 from the current location when it's dark to another dark location. By
 default, it simply displays the same message as
-[cannotGoThatWayInDark](cannotgothatwayindark.htm) and then uses exit to
+[cannotGoThatWayInDark](cannotgothatwayindark.html) and then uses exit to
 cancel the movement action. In most cases you'll probably want to keep
 both methods appearing to do the same thing (unless you want to allow
 travel from one dark location to another), so that the player is given
@@ -60,4 +62,4 @@ In this case the player only gets one warning; if the PC leaves the
 crewQuarters aft to the greatCabin after making one false step in the
 dark, the next false step in crewQuarters in the dark will kill the PC
 off. This may be what you want, but we'll try changing it next using
-[enteringRoom](travelerarriving.htm).  
+[enteringRoom](travelerarriving.html).  

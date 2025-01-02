@@ -1,3 +1,5 @@
+---
+---
 Playing HTML TADS Games with the Character-Mode Interpreter
 
 # Playing HTML TADS Games with the Character-Mode Interpreter
@@ -97,7 +99,7 @@ Note that if you embed HTML resources into your .GAM file,
 character-mode interpreters older than version 2.2.3 won't be able to
 read your .GAM files. Character-mode interpreters version 2.2.4 and
 later will simply ignore embedded HTML resources. See the [resources
-documentation](res.htm#compatibility) for details.
+documentation](res.html#compatibility) for details.
 
 ### Writing for Maximum Compatibility
 

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">CanTouchInfo</span><span class="type">class</span>
 
 [thing.t](../file/thing.t.html)\[[94](../source/thing.t.html#94)\]

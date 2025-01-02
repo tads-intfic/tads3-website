@@ -1,3 +1,5 @@
+---
+---
 <span class="title">AmbigObjectAnnouncement</span><span class="type">class</span>
 
 [report.t](../file/report.t.html)\[[447](../source/report.t.html#447)\]

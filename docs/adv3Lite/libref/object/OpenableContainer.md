@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OpenableContainer</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[129](../source/extras.t.html#129)\]

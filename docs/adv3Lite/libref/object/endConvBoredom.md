@@ -1,3 +1,5 @@
+---
+---
 <span class="title">endConvBoredom</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[4015](../source/actor.t.html#4015)\]

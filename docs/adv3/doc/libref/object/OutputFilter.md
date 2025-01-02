@@ -1,3 +1,5 @@
+---
+---
 <span class="title">OutputFilter</span><span class="type">class</span>
 
 [output.t](../file/output.t.html)\[[645](../source/output.t.html#645)\]

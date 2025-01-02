@@ -1,3 +1,5 @@
+---
+---
 <span class="title">bytearr.h</span><span class="type">file</span>
 
 [source file](../source/bytearr.h.html)

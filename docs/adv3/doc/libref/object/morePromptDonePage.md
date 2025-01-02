@@ -1,3 +1,5 @@
+---
+---
 <span class="title">morePromptDonePage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[2246](../source/webui.t.html#2246)\]

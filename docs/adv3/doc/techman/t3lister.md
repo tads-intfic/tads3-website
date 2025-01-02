@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Lists and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Lists and
 Listers  
-<span class="navnp"><a href="t3imp_action.htm" class="nav"><em>Prev:</em> Implied Action
-Reports</a>     <a href="t3tips.htm" class="nav"><em>Next:</em> Tips: A
+<span class="navnp"><a href="t3imp_action.html" class="nav"><em>Prev:</em> Implied Action
+Reports</a>     <a href="t3tips.html" class="nav"><em>Next:</em> Tips: A
 Context-Sensitive Help System</a>     </span>
 
 </div>
@@ -318,7 +320,7 @@ One further technique that can be used to adjust the list of objects to
 be displayed in a room description is to override the
 adjustLookAroundTable() method of the room in question. This technique
 is illustrated in the [Looking Through the
-Window](../gsg/lookingthroughthewindow.htm) section of *Getting Started
+Window](../gsg/lookingthroughthewindow.html) section of *Getting Started
 in TADS 3*.
 
   
@@ -759,7 +761,7 @@ get the present or past tense as appropriate; if we're never going to
 change tense in our game (and in most games we probably won't) then this
 last step won't actually be necessary. (For more information on changing
 tenses in games, see the Technical Article on [Writing a Game in the
-Past Tense](t3past.htm)).
+Past Tense](t3past.html)).
 
 Had we wanted to use this "scattered" wording on more than one object in
 our game, we could instead have defined a separate custom lister object
@@ -1326,11 +1328,11 @@ a better idea where to look.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Lists and
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Lists and
 Listers  
-<span class="navnp"><a href="t3imp_action.htm" class="nav"><em>Prev:</em> Implied Action
-Reports</a>     <a href="t3tips.htm" class="nav"><em>Next:</em> Tips: A
+<span class="navnp"><a href="t3imp_action.html" class="nav"><em>Prev:</em> Implied Action
+Reports</a>     <a href="t3tips.html" class="nav"><em>Next:</em> Tips: A
 Context-Sensitive Help System</a>     </span>
 
 </div>

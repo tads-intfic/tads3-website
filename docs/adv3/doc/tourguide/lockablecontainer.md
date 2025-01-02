@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,13 +9,13 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>LockableContainer : <a
-href="lockable.htm">Lockable</a>, <a
-href="openablecontainer.htm">OpenableContainer</a><br />
+href="lockable.html">Lockable</a>, <a
+href="openablecontainer.html">OpenableContainer</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="notifyinsert+notifyremove.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="restrictedcontainer.htm">[Next]</a></td>
+href="notifyinsert+notifyremove.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="restrictedcontainer.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -41,7 +43,7 @@ locker : LockableContainer, Fixture '(crew) locker' 'locker' @crewQuarter
   
 Note that if we want a LockableContainer to start locked, we need to set
 its **initiallyLocked** property to true. The library does this for
-[Door](door.htm) and IndirectLockable, but you need to do it for
+[Door](door.html) and IndirectLockable, but you need to do it for
 anything else (except subclasses of Door, of course).  
   
 The sailor's cap would be a good thing to put in the locker, so let's
@@ -146,7 +148,7 @@ therefore not available until the locker was opened (and it's impossible
 to open the locker without access to the latch, so we'd be in a pretty
 fix!). For that reason we define another object for the latch to be a
 Component of (a better way would have been to make the locker a</span>
-[ComplexContainer](complexcontainer.htm), but we haven't come to those
+[ComplexContainer](complexcontainer.html), but we haven't come to those
 yet). The player will never interact with this object directly, so it
 needs no vocabulary. We want it to appear to be the locker when, for
 example, the player attempts to TAKE THE LATCH, so we make it a

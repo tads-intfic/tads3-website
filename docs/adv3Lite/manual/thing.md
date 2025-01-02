@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Things  
-<span class="navnp"><a href="core.htm" class="nav"><em>Prev:</em> The Core Library</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Things  
+<span class="navnp"><a href="core.html" class="nav"><em>Prev:</em> The Core Library</a>
    
-<a href="room.htm" class="nav"><em>Next:</em> Rooms &amp; Regions</a>
+<a href="room.html" class="nav"><em>Next:</em> Rooms &amp; Regions</a>
     </span>
 
 </div>
@@ -71,9 +73,9 @@ following three property definitions are anything but equivalent:
 </div>
 
 If you don't understand the distinctions being made above then you
-really should read Part III of the [TADS 3 System Manual](../sysman.htm)
+really should read Part III of the [TADS 3 System Manual](../sysman.html)
 before going any further with this manual (or else start by working
-through the [Tutorial](../tutorial/index.htm)); if you don't observe
+through the [Tutorial](../tutorial/index.html)); if you don't observe
 these distinctions in the explanations that follow, then you may
 struggle to get your own code to work.
 
@@ -291,7 +293,7 @@ The other basic properties of Thing you will commonly use are:
   a room description. By default this is true for portable objects and
   nil if isFixed = true. For a fuller account of properties that control
   what's listed when see under the section on [Room
-  Descriptions](roomdesc.htm#whatlisted).
+  Descriptions](roomdesc.html#whatlisted).
 - **specialDesc** (double-quoted string) If this property is defined
   (i.e. non-nil) then it will be shown as a separate paragraph in a room
   listing (regardless of the value of isListed). If used, this property
@@ -345,7 +347,7 @@ The other basic properties of Thing you will commonly use are:
   noteSeen() method on the object in question.
 - **globalParamName** (single-quoted string) A string tag used to refer
   to this object in a [message substitution
-  parameter](message.htm#parameter).
+  parameter](message.html#parameter).
 - **getFacets** (list of objects) A list of Things that are facets of
   this Thing, for example the object representing the other side of the
   same door (the only case handled automatically by the library). The
@@ -375,7 +377,7 @@ or become familiar (and would make them seen by or known to the player
 character). The other methods would be called on the actor who has just
 seen or learned about the object in question. For a fuller explanation
 of this and the knowledge model in general see the chapter on [Player
-Character and NPC Knowledge](knowledge.htm).
+Character and NPC Knowledge](knowledge.html).
 
   
 <span id="filterresolve"></span>
@@ -437,7 +439,7 @@ the matching Thing.
 You may wonder why we'd want an object to rule itself out like this.
 There's probably no case in which we'd want to do it unconditionally, as
 in the simple example above, but we might want to do it conditionally.
-For example, the [Unthing](extra.htm#unthing) class, which we'll meet
+For example, the [Unthing](extra.html#unthing) class, which we'll meet
 later, represents the absence of something. We only ever want to match
 an Unthing if nothing else in scope will match, so we want the
 filterResolveList() method of an Unthing to rule itself out if there are
@@ -859,7 +861,7 @@ be used to check for containment:
   contained by obj (i.e. if obj is this object's container, or this
   object's container's container, or this object's container's
   container's container and so on). This method can also be used to test
-  whether an object is in a particular [Region](region.htm).
+  whether an object is in a particular [Region](region.html).
 - **isOrIsIn(obj)** Returns true if this object either is obj or is
   directly or indirectly contained in obj.
 - **isDirectlyIn(obj)** Returns true is obj is this object's immediate
@@ -986,19 +988,19 @@ Thing). The principal ones are:
   object can be locked or unlocked via a simple LOCK or UNLOCK command),
   <span class="code">lockableWithKey</span> (which means that the object
   can be locked or unlocked with the aid of the appropriate key or keys,
-  on which see on [Key](key.htm) below) or
+  on which see on [Key](key.html) below) or
   <span class="code">indirectLockable</span>, which means that the
   object can be locked and unlocked by some other means (e.g. by
   pressing a button or pulling a lever or entering the appropriate
   combination on a keypad). Note that if you define a non-nil
-  [keyList](key.htm#keylist) property on an object, its default
+  [keyList](key.html#keylist) property on an object, its default
   lockability will be lockableWithKey and it will start out locked
 
 - **autoUnlock** (nil by default) can be used to make the actor attempt
   to unlock a locked item (door or container) before attempting to open
   it, provided unlocking is straightforwardly possible (in other words
-  it adds the [objUnlocked](actres.htm#preconds)
-  [Precondition](actres.htm#precond) to the opening action).
+  it adds the [objUnlocked](actres.html#preconds)
+  [Precondition](actres.html#precond) to the opening action).
 
 Note that since these are all defined as properties of Thing, they could
 in principle be changed at run time. There may be instances where this
@@ -1077,7 +1079,7 @@ examined:
 Note that if you need additional behavioural or state properties you can
 always modify or subclass Thing to define them (or define them on the
 specific object that needs it them). For an explanation of BMsg() see
-the section on [Messages](message.htm#dmsg).
+the section on [Messages](message.html#dmsg).
 
 The "behavioural" properties listed above are only a subset of the ones
 the adv3Lite library defines. For most (though not quite all) actions
@@ -1090,7 +1092,7 @@ which determine whether the object is a plausible indirect object of the
 command in question (e.g. something I can use to clean other things
 with, or something that can have other things thrown at it). In slightly
 more technical language, these properties define how the various
-[verify](actres.htm#verify) methods behave.
+[verify](actres.html#verify) methods behave.
 
 Note that changing these other behavioural properties to true doesn't
 necessarily make the corresponding action work, in most cases it merely
@@ -1102,7 +1104,7 @@ things to work in your game.
 ### <span id="posture">Pseudo-Postural Properties</span>
 
 The adv3Lite library makes no attempt to track any actor's posture
-(unless you use the [postures](../../extensions/docs/postures.htm)
+(unless you use the [postures](../../extensions/docs/postures.html)
 extension), so for all practical purposes it makes no difference whether
 the player character is told to SIT, STAND or LIE on something; the end
 result is simply the same as BOARDing it or getting on it. There is
@@ -1228,7 +1230,7 @@ listenDesc of every object in scope (including the Room) for which the
 smellDesc or listenDesc is not nil. For this reason it is a good idea to
 write your smellDesc and listenDesc descriptions in a manner than
 identifies which objects they refer to. It is also *not* a good idea to
-use [message substitution parameters](message.htm#parameter) like
+use [message substitution parameters](message.html#parameter) like
 <span class="code">{the subj dobj}</span> in these properties, since if
 they are being displayed in response to a intransitive SMELL or LISTEN
 command (one without any object specified),
@@ -1338,8 +1340,8 @@ If we want to prevent an object being pushed somewhere (e.g., up a
 flight of stairs), we can usually do so by testing whether it's been
 passed as the *traveler* parameter on the
 <span class="code">canTravelerPass()</span> method of a
-[TravelConnector](travel.htm) or
-[TravelBarrier](travel.htm#travelbarrier) and then returning nil from
+[TravelConnector](travel.html) or
+[TravelBarrier](travel.html#travelbarrier) and then returning nil from
 that method if it has.
 
 Normally, the library doesn't distinguish between pushing something from
@@ -1897,11 +1899,11 @@ closed) according to whether it's open or closed:
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="core.htm" class="nav">The Core Library</a> \> Things  
-<span class="navnp"><a href="core.htm" class="nav"><em>Prev:</em> The Core Library</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="core.html" class="nav">The Core Library</a> \> Things  
+<span class="navnp"><a href="core.html" class="nav"><em>Prev:</em> The Core Library</a>
    
-<a href="room.htm" class="nav"><em>Next:</em> Rooms &amp; Regions</a>
+<a href="room.html" class="nav"><em>Next:</em> Rooms &amp; Regions</a>
     </span>
 
 </div>

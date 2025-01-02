@@ -1,3 +1,5 @@
+---
+---
 <span class="title">impHelloTopicObj</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[3476](../source/actor.t.html#3476)\]

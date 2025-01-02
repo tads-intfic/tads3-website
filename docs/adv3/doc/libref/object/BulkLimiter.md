@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BulkLimiter</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[4303](../source/objects.t.html#4303)\]

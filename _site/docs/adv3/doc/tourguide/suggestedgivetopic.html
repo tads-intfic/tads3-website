@@ -1,0 +1,37 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SuggestedGiveTopic : <a href="suggestedtopic.html">SuggestedTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="suggestedtelltopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="suggestedshowtopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A SuggestedAskTopic is the particular type of
+<a href="suggestedtopic.html">SuggestedTopic</a> that suggests to the player that
+s/he could Give such-and-such to so-and-so.</p>
+
+<p>For example, if we want to suggest to the player that he might give the
+carbuncle to the curator, we could add the following to the appropriate
+GiveTopic (previously defined):</p>
+
+<p>++ GiveTopic, <strong>SuggestedGiveTopic</strong> @carbuncle<br />
+  topicResponse<br />
+  {<br />
+   ”{The curator/he} takes the carbuncle and examines it carefully, then declares,<br />
+   &lt;q&gt;Wunderbar! Ausgezeichnet! This is the famous purple carbuncle of King Solomon,<br />
+   nicht wahr? And you are giving it to the museum? How kind, how very kind!&lt;/q&gt; <br />
+   Pausing just to wipe the tears of excitement and gratitude out of his eyes, he<br />
+   continues, &lt;q&gt;I shall enroll you on our roll of honoured benefactors &lt;i&gt;at once&lt;/i&gt;!<br />
+   Please, please, do feel free to inspect the special treasures in our benefactors’<br />
+   exhibition room any time you please!&lt;/q&gt;”;<br />
+   carbuncle.moveInto(getActor);<br />
+  }<br />
+  <strong>name = ’the carbuncle’</strong><br />
+;</p>
+

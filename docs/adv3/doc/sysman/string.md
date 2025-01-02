@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,10 +8,10 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> String  
-<span class="navnp"><a href="framedesc.htm" class="nav"><em>Prev:</em> StackFrameDesc</a>
-    <a href="strbuf.htm" class="nav"><em>Next:</em> StringBuffer</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> String  
+<span class="navnp"><a href="framedesc.html" class="nav"><em>Prev:</em> StackFrameDesc</a>
+    <a href="strbuf.html" class="nav"><em>Next:</em> StringBuffer</a>    
 </span>
 
 </div>
@@ -80,7 +82,7 @@ left-hand variable with the resulting string.
 
 ## String vs StringBuffer
 
-There's a related class called [StringBuffer](strbuf.htm), that's
+There's a related class called [StringBuffer](strbuf.html), that's
 designed especially for complex string construction tasks. StringBuffer
 objects can be edited in place, meaning that you can change the text
 contained in a StringBuffer object, rather than creating a new object
@@ -179,17 +181,17 @@ where the match starts (the first character of the string is at index
 1). If the target isn't found, the method returns
 <span class="code">nil</span>. If *target* is a regular expression, the
 method has the side effect of updating the
-[rexGroup()](tadsgen.htm#rexGroup) registers to reflect the search
+[rexGroup()](tadsgen.html#rexGroup) registers to reflect the search
 results.
 
-*target* can be a string value or a [RexPattern](rexpat.htm) object. If
+*target* can be a string value or a [RexPattern](rexpat.html) object. If
 it's a string, <span class="code">find()</span> simply searches for the
 literal text of the string. If *target* is a RexPattern, the method
 searches for a match to the regular expression pattern.
 
 For regular expression searches, you can get more detailed information
-on the match result using [rexGroup()](tadsgen.htm#rexGroup). You can
-alternatively use the [rexSearch()](tadsgen.htm#rexSearch) function,
+on the match result using [rexGroup()](tadsgen.html#rexGroup). You can
+alternatively use the [rexSearch()](tadsgen.html#rexSearch) function,
 which directly returns more information on the match.
 
 If *index* is given, it sets the starting index in the subject string
@@ -234,7 +236,7 @@ omitted, each element is a string with the text of the corresponding
 match. If *func* is provided, each element is the return value of *func*
 for the corresponding match.
 
-*target* can be a string or a [RexPattern](rexpat.htm) object. If it's a
+*target* can be a string or a [RexPattern](rexpat.html) object. If it's a
 string, the function searches for exact matches to the string. If it's a
 pattern, the function searches for matches to the regular expression.
 
@@ -282,15 +284,15 @@ On success, the return value is an integer giving the character index of
 the start of the rightmost match. If no match is found, the result is
 <span class="code">nil</span>. If *target* is a regular expression, the
 method has the side effect of updating the
-[rexGroup()](tadsgen.htm#rexGroup) registers to reflect the search
+[rexGroup()](tadsgen.html#rexGroup) registers to reflect the search
 results.
 
 *target* is a string containing the substring to find, or a
-[RexPattern](rexpat.htm) object with a regular expression to match.
+[RexPattern](rexpat.html) object with a regular expression to match.
 
 For regular expression searches, you can get more detailed information
-on the match result using [rexGroup()](tadsgen.htm#rexGroup). You can
-alternatively use the [rexSearchLast()](tadsgen.htm#rexSearchLast)
+on the match result using [rexGroup()](tadsgen.html#rexGroup). You can
+alternatively use the [rexSearchLast()](tadsgen.html#rexSearchLast)
 function, which directly returns more information on the match.
 
 *index* is the optional starting position for the search. The function
@@ -322,7 +324,7 @@ Examples:
 For regular expression targets, the
 <span class="code">\<FirstBegin\></span> and
 <span class="code">\<FirstEnd\></span> modes (see [regular
-expressions](regex.htm)) work in mirror image compared to ordinary
+expressions](regex.html)) work in mirror image compared to ordinary
 forward searches. The easiest way to think about this is to picture the
 reverse search as a forward search viewed in a mirror. For a reverse
 search, <span class="code">\<FirstBegin\></span> means that the match
@@ -355,12 +357,12 @@ the new substring *newStr*.
 
 The method returns a new string with the replacements performed. If
 *target* is a regular expression, the method also has the side effect of
-updating the [rexGroup()](tadsgen.htm#rexGroup) registers to reflect the
+updating the [rexGroup()](tadsgen.html#rexGroup) registers to reflect the
 search results.
 
 *oldStr* is the search string. This can be a string value, in which case
 the method searches for the literal text of the string, or a
-[RexPattern](rexpat.htm) object, in which case the method searches for
+[RexPattern](rexpat.html) object, in which case the method searches for
 matches to the pattern.
 
 *newStr* is the replacement string. Matches to *oldStr* within the
@@ -371,7 +373,7 @@ replacement text ([see below](#findReplaceFuncs)).
 
 If *oldStr* is a RexPattern, <span class="code">%</span> characters in
 *newStr* have the same special meaning they have in the replacement text
-in the [rexReplace()](tadsgen.htm#rexReplace) function:
+in the [rexReplace()](tadsgen.html#rexReplace) function:
 <span class="code">%1</span> is replaced by the subject string text that
 matched the first parenthesized group in the regular expression,
 <span class="code">%2</span> by the text matching the second group, and
@@ -624,7 +626,7 @@ ByteArray()</span> with this string and character set as arguments.
 
 If a *charset* value is included and isn't
 <span class="code">nil</span>, it must be either a
-[CharacterSet](charset.htm) object, or a string giving the name of a
+[CharacterSet](charset.html) object, or a string giving the name of a
 character set. The method maps the string to bytes using the given
 character set, and creates a new ByteArray object with the mapped bytes
 as the contents. The usual default/missing character defined by the
@@ -634,7 +636,7 @@ If the character set represented by *charset* is unknown (i.e,. there's
 no mapping available for the character set in the run-time TADS
 installation), an <span class="code">UnknownCharSetException</span> is
 thrown. You can determine whether the the character set is known using
-the [isMappingKnown()](charset.htm#isMappingKnown) method on the
+the [isMappingKnown()](charset.html#isMappingKnown) method on the
 CharacterSet object.
 
 If *charset* is omitted or <span class="code">nil</span>, the method
@@ -655,7 +657,7 @@ Checks for a match to the given *target* value, at the given starting
 position in the subject string (self).
 
 If *target* is a string, this method tries to match the literal text of
-the string; if *target* is a [RexPattern](rexpat.htm) object, the method
+the string; if *target* is a [RexPattern](rexpat.html) object, the method
 tries to match the regular expression.
 
 If *index* is specified, it's an integer giving the starting position to
@@ -726,7 +728,7 @@ Note that the string returned might not be particularly human-readable,
 since many format codes generate binary byte values that will look like
 random gibberish if displayed.
 
-See [Byte Packing](pack.htm) for more information.
+See [Byte Packing](pack.html) for more information.
 
 </div>
 
@@ -979,7 +981,7 @@ a list of the substrings.
 - A string. <span class="code">split</span> searches for exact matches
   to this substring within the subject string, and splits the string at
   each instance.
-- A [RexPattern](rexpat.htm) object. The method searches for matches to
+- A [RexPattern](rexpat.html) object. The method searches for matches to
   the regular expression, and splits the string at each match found.
 - An integer, which must be at least 1. The method splits the string
   into substrings of exactly this length (except that the last substring
@@ -1153,7 +1155,7 @@ This function can be used to decompose a string into its individual
 characters, which is sometimes an easier or more efficient way to
 manipulate a string. You can convert a list of Unicode code point values
 back into a string using the <span class="code">makeString()</span>
-function in the [tads-gen](tadsgen.htm) function set.
+function in the [tads-gen](tadsgen.html) function set.
 
 </div>
 
@@ -1200,7 +1202,7 @@ this method to parse plain text strings that use fixed-width fields:
 
 This returns the list \['123', '456'\].
 
-See [Byte Packing](pack.htm) for more information.
+See [Byte Packing](pack.html) for more information.
 
 </div>
 
@@ -1265,10 +1267,10 @@ parameter.
 <div class="navb">
 
 *TADS 3 System Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="builtins.htm" class="nav">The Intrinsics</a> \> String  
-<span class="navnp"><a href="framedesc.htm" class="nav"><em>Prev:</em> StackFrameDesc</a>
-    <a href="strbuf.htm" class="nav"><em>Next:</em> StringBuffer</a>    
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="builtins.html" class="nav">The Intrinsics</a> \> String  
+<span class="navnp"><a href="framedesc.html" class="nav"><em>Prev:</em> StackFrameDesc</a>
+    <a href="strbuf.html" class="nav"><em>Next:</em> StringBuffer</a>    
 </span>
 
 </div>

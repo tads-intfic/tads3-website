@@ -1,3 +1,5 @@
+---
+---
 <span class="title">literalPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`literalPhrase(empty)`](../object/literalPhrase(empty).html)**` :   `[`EmptyNounProduction`](../object/EmptyNounProduction.html)

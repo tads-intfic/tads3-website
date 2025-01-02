@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Lock</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[1068](../source/actions.t.html#1068)\]

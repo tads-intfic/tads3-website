@@ -1,3 +1,5 @@
+---
+---
 <span class="title">uploadFilePage</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[3516](../source/webui.t.html#3516)\]

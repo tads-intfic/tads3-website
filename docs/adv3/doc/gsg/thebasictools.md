@@ -1,5 +1,7 @@
-[\[Previous\]](furtherprogramming.htm)
-[\[Main\]](newchapterwithtext.htm) [\[Next\]](averysimplegame.htm)  
+---
+---
+[\[Previous\]](furtherprogramming.html)
+[\[Main\]](newchapterwithtext.html) [\[Next\]](averysimplegame.html)  
   
 
 <table width="100%" data-border="0" data-cellspacing="0"
@@ -42,5 +44,5 @@ for working with a multi-source-file TADS 3 project. There is, however,
 no reason why your tastes should conform to mine, so use whatever you
 feel comfortable with.  
   
-[\[Previous\]](furtherprogramming.htm)
-[\[Main\]](newchapterwithtext.htm) [\[Next\]](averysimplegame.htm)  
+[\[Previous\]](furtherprogramming.html)
+[\[Main\]](newchapterwithtext.html) [\[Next\]](averysimplegame.html)  

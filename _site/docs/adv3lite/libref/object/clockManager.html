@@ -1,0 +1,400 @@
+<p><span class="title">clockManager</span><span class="type">object</span></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#29">29</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+The clockManager object is used to keep track of subjective time. In
+this version we store dates and times internally as Date objects,
+although we recognize date/times in the form \[d, h, m\] defined on
+ClockEvents. \[DEFINED IN SUBTIME EXTENSION\]
+
+**`clockManager`**` :   `[`PreinitObject`](../object/PreinitObject.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">clockManager</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>baseDate<code class="language-plaintext highlighter-rouge">](#baseDate)</code>  <code class="language-plaintext highlighter-rouge">[</code>baseScaleFactor<code class="language-plaintext highlighter-rouge">](#baseScaleFactor)</code>  <code class="language-plaintext highlighter-rouge">[</code>curTime<code class="language-plaintext highlighter-rouge">](#curTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventList<code class="language-plaintext highlighter-rouge">](#eventList)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastEvent<code class="language-plaintext highlighter-rouge">](#lastEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextEvent<code class="language-plaintext highlighter-rouge">](#nextEvent)</code>  <code class="language-plaintext highlighter-rouge">[</code>nextTime<code class="language-plaintext highlighter-rouge">](#nextTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>scaleFactor<code class="language-plaintext highlighter-rouge">](#scaleFactor)</code>  <code class="language-plaintext highlighter-rouge">[</code>turnLastCommitted<code class="language-plaintext highlighter-rouge">](#turnLastCommitted)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execBeforeMe<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#execBeforeMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>reverseGlobalSymbols<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html#reverseGlobalSymbols)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>execAfterMe<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#execAfterMe)</code>  <code class="language-plaintext highlighter-rouge">[</code>hasInitialized_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#hasInitialized_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDoingExec_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isDoingExec_)</code>  <code class="language-plaintext highlighter-rouge">[</code>isExecuted_<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#isExecuted_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>checkTime<code class="language-plaintext highlighter-rouge">](#checkTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>checkTimeFmt<code class="language-plaintext highlighter-rouge">](#checkTimeFmt)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventDate<code class="language-plaintext highlighter-rouge">](#eventDate)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventReached<code class="language-plaintext highlighter-rouge">](#eventReached)</code>  <code class="language-plaintext highlighter-rouge">[</code>execute<code class="language-plaintext highlighter-rouge">](#execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>formatTime<code class="language-plaintext highlighter-rouge">](#formatTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>getClockTime<code class="language-plaintext highlighter-rouge">](#getClockTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>lastEventDate<code class="language-plaintext highlighter-rouge">](#lastEventDate)</code>  <code class="language-plaintext highlighter-rouge">[</code>reachCheck<code class="language-plaintext highlighter-rouge">](#reachCheck)</code>  <code class="language-plaintext highlighter-rouge">[</code>slowDownTime<code class="language-plaintext highlighter-rouge">](#slowDownTime)</code>  <code class="language-plaintext highlighter-rouge">[</code>syncTime<code class="language-plaintext highlighter-rouge">](#syncTime)</code>  `</p>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>_execute<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#_execute)</code>  <code class="language-plaintext highlighter-rouge">[</code>classExec<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html#classExec)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="baseDate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">baseDate</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#444">444</a>]</p>
+
+<div class="desc">
+
+The base date (year, month, day) our game is meant to start on,
+expressed as a Date object. Often this doesn't matter if we're only
+interested in the time of day. By default we make it Jan 1, 2000. If
+gameMain.gameStartDate is defines it will instead be taken from there.
+\[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="baseScaleFactor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">baseScaleFactor</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#201">201</a>]</p>
+
+<div class="desc">
+
+The base scaling factor: this is the number of minutes per hundred turns
+when we have unlimited time until the next event. This number is pretty
+arbitrary, since we're depending so much on the player's uncertainty
+about just how long things take, and also because we'll adjust it anyway
+when we're running out of time before the next event. Even so, you might
+want to adjust this value up or down according to your sense of the
+pacing of your game.
+
+In Mike Roberts's implementation, the baseScaleFactor was defined as a
+constant value of 60. This is still the default value, but if there is a
+next event we take the scale factor from that event's scaleFactor so
+that we can vary the pace of time according to the spacing of events if
+we wish. \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="curTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curTime</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#416">416</a>]</p>
+
+<div class="desc">
+
+the current game clock time \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="eventList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eventList</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#413">413</a>]</p>
+
+<div class="desc">
+
+our list of clock events (we build this automatically during
+pre-initialization) \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="lastEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastEvent</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#419">419</a>]</p>
+
+<div class="desc">
+
+the most recent event that we reached \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="nextEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextEvent</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#425">425</a>]</p>
+
+<div class="desc">
+
+the next event we're due to reach \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="nextTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextTime</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#422">422</a>]</p>
+
+<div class="desc">
+
+the next event's game clock time \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="scaleFactor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scaleFactor</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#208">208</a>]</p>
+
+<div class="desc">
+
+The scaling factor to use once we have passed the last ClockEvent; this
+is the number of minutes per hundred turns once there are no more
+ClockEvents. \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="turnLastCommitted"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">turnLastCommitted</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#435">435</a>]</p>
+
+<div class="desc">
+
+The turn counter (Schedulable.gameClockTime) on the last turn where
+committed to a specific time. Each time we check the time, we look here
+to see how many turns have elapsed since the last time check, and we use
+this to choose a plausible scale for the wall-clock time change.
+\[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="checkTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkTime ( )</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#49">49</a>]</p>
+
+<div class="desc">
+
+Get the current game-clock time. This returns date/time as a Date
+object.
+
+Remember that our time-keeping scheme is a sort of "Schrodinger's clock"
+\[see footnote 1\]. Between time checks, the game time clock is in a
+vague, fuzzy state, drifting along at an indeterminate pace from the
+most recent check. When this method is called, though, the clock manager
+is forced to commit to a particular time, because we have to give a
+specific answer to the question we're being asked ("what time is it?").
+As in quantum mechanics, then, the act of observation affects the
+quantity being observed. Therefore, you should avoid calling this
+routine unnecessarily; call it only when you actually have to tell the
+player what time it is - and don't tell the player what time it is
+unless they ask, or there's some other good reason.
+
+If you want a string-formatted version of the time (as in '9:05pm'), you
+can call checkTimeFmt().
+
+</div>
+
+<p><span id="checkTimeFmt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkTimeFmt (fmt)</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#220">220</a>]</p>
+
+<div class="desc">
+
+Get the current game-clock time, formatted into a string with the given
+format mask - see formatTime() for details on how to write a mask
+string.
+
+Note that the same cautions for checkTime() apply here - calling this
+routine commits us to a particular time, so you should call this routine
+only when you're actually ready to display a time to the player.
+\[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="eventDate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eventDate (t)</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#447">447</a>]</p>
+
+<div class="desc">
+
+Return the date of t as a Date object. \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="eventReached"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eventReached (evt)</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#326">326</a>]</p>
+
+<div class="desc">
+
+Receive notification from a clock event that an event has just occurred.
+(This isn't normally called directly from game code; instead, game code
+should usually call the ClockEvent object's eventReached() method.)
+\[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#247">247</a>]</p>
+
+<div class="desc">
+
+pre-initialize the clockManager \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="formatTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">formatTime (t, fmt)</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#233">233</a>]</p>
+
+<div class="desc">
+
+Get a formatted version of the given wall-clock time. The time (t)
+parameter can be expressed as a list, in the same format as
+ClockEvent.eventTime: \[day,hour,minute\], where 'day' is 1 for the
+first day of the game, 2 for the second, and so on. Alternatively it can
+be supplied as a Date object.
+
+The format string (fmt) is specified in the same way as for the
+formatDate() method of the Date class (for which see the TADS 3 System
+Manual). \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="getClockTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getClockTime (dat)</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#479">479</a>]</p>
+
+<div class="desc">
+
+Get the time in our \[d, h, m, s\] format from a Date object. \[SUBTIME
+EXTENSION\]
+
+</div>
+
+<p><span id="lastEventDate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastEventDate ( )</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#473">473</a>]</p>
+
+<div class="desc">
+
+Retutn the date and time of the last event as a Date object. \[SUBTIME
+EXTENSION\]
+
+</div>
+
+<p><span id="reachCheck"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reachCheck ( )</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#384">384</a>]</p>
+
+<div class="desc">
+
+Check each turn whether another ClockEvent has been reached. Note that
+this requires the events.t module to be present to work. \[SUBTIME
+EXTENSION\]
+
+</div>
+
+<p><span id="slowDownTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">slowDownTime ( )</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#170">170</a>]</p>
+
+<div class="desc">
+
+Compute the time remaining until the next event at which we start to
+slow down the clock. By default we make this half the time from the
+previous event to the next. Game code can override if some other value
+is preferred. \[SUBTIME EXTENSION\]
+
+</div>
+
+<p><span id="syncTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">syncTime (t)</code></p>
+
+<p><a href="../file/subtime.t.html">subtime.t</a>[<a href="../source/subtime.t.html#497">497</a>]</p>
+
+<div class="desc">
+
+Synchronize the timeManager's time with our time, if it exists.
+\[SUBTIME EXTENSION\]
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

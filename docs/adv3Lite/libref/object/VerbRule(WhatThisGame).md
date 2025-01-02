@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(WhatThisGame)</span><span class="type">grammar</span>
 
 [newbie.t](../file/newbie.t.html)\[[741](../source/newbie.t.html#741)\]

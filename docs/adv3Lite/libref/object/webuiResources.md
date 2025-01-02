@@ -1,3 +1,5 @@
+---
+---
 <span class="title">webuiResources</span><span class="type">object</span>
 
 [webui.t](../file/webui.t.html)\[[1094](../source/webui.t.html#1094)\]

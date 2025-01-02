@@ -1,3 +1,5 @@
+---
+---
 <span class="title">aboutTopicPhrase</span><span class="type">GrammarProd</span>
 
 `grammar `**[`aboutTopicPhrase(main)`](../object/aboutTopicPhrase(main).html)**` :   `[`TopicNounProduction`](../object/TopicNounProduction.html)

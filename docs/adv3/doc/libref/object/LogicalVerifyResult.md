@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LogicalVerifyResult</span><span class="type">class</span>
 
 [verify.t](../file/verify.t.html)\[[170](../source/verify.t.html#170)\]

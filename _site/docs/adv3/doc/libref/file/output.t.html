@@ -1,0 +1,93 @@
+<p><span class="title">output.t</span><span class="type">file</span></p>
+
+<p><a href="../source/output.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<div class="fdesc">
+
+TADS 3 Library - output formatting
+
+This module defines the framework for displaying output text.
+
+</div>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Classes</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>CaptureFilter<code class="language-plaintext highlighter-rouge">](../object/CaptureFilter.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>HtmlStyleTag<code class="language-plaintext highlighter-rouge">](../object/HtmlStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>LogConsole<code class="language-plaintext highlighter-rouge">](../object/LogConsole.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>MessageBuilder<code class="language-plaintext highlighter-rouge">](../object/MessageBuilder.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>MonitorFilter<code class="language-plaintext highlighter-rouge">](../object/MonitorFilter.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>OutputFilter<code class="language-plaintext highlighter-rouge">](../object/OutputFilter.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>OutputStream<code class="language-plaintext highlighter-rouge">](../object/OutputStream.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>OutputStreamWindow<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>ParagraphManager<code class="language-plaintext highlighter-rouge">](../object/ParagraphManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>StringCaptureFilter<code class="language-plaintext highlighter-rouge">](../object/StringCaptureFilter.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>StyleTag<code class="language-plaintext highlighter-rouge">](../object/StyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>SwitchableCaptureFilter<code class="language-plaintext highlighter-rouge">](../object/SwitchableCaptureFilter.html)</code>  `
+<span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>announceObjStyleTag<code class="language-plaintext highlighter-rouge">](../object/announceObjStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>assumeStyleTag<code class="language-plaintext highlighter-rouge">](../object/assumeStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>commandSequencer<code class="language-plaintext highlighter-rouge">](../object/commandSequencer.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>hyperlinkStyleTag<code class="language-plaintext highlighter-rouge">](../object/hyperlinkStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>inputlineStyleTag<code class="language-plaintext highlighter-rouge">](../object/inputlineStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>mainOutputStream<code class="language-plaintext highlighter-rouge">](../object/mainOutputStream.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>mainParagraphManager<code class="language-plaintext highlighter-rouge">](../object/mainParagraphManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>notificationStyleTag<code class="language-plaintext highlighter-rouge">](../object/notificationStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>outputManager<code class="language-plaintext highlighter-rouge">](../object/outputManager.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>parserStyleTag<code class="language-plaintext highlighter-rouge">](../object/parserStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomdescStyleTag<code class="language-plaintext highlighter-rouge">](../object/roomdescStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomnameStyleTag<code class="language-plaintext highlighter-rouge">](../object/roomnameStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>roomparaStyleTag<code class="language-plaintext highlighter-rouge">](../object/roomparaStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>statusroomStyleTag<code class="language-plaintext highlighter-rouge">](../object/statusroomStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>statusscoreStyleTag<code class="language-plaintext highlighter-rouge">](../object/statusscoreStyleTag.html)</code>  <code class="language-plaintext highlighter-rouge">[</code>styleTagFilter<code class="language-plaintext highlighter-rouge">](../object/styleTagFilter.html)</code>  `
+<span id="FunctionSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Global Functions</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>say<code class="language-plaintext highlighter-rouge">](#say)</code>  <code class="language-plaintext highlighter-rouge">[</code>withQuotes<code class="language-plaintext highlighter-rouge">](#withQuotes)</code>  `</p>
+
+<p><span id="_Functions_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Functions</span>  
+
+</div>
+
+<p><span id="say"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">say (val)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#21">21</a>]</p>
+
+<div class="desc">
+
+The standard library output function. We set this up as the default
+display function (for double-quoted strings and for "\&lt;\&lt; \&gt;\&gt;"
+embeddings). Code can also call this directly to display items.
+
+</div>
+
+<p><span id="withQuotes"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">withQuotes (txt)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#32">32</a>]</p>
+
+<div class="desc">
+
+Generate a string for showing quoted text. We simply enclose the text in
+a \&lt;Q\&gt;...\&lt;/Q\&gt; tag sequence and return the result.
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

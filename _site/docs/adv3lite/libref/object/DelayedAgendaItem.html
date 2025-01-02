@@ -1,0 +1,150 @@
+<p><span class="title">DelayedAgendaItem</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6020">6020</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A delayed agenda item. This type of item becomes ready to execute when
+the game clock reaches a given turn counter.
+
+`class `**`DelayedAgendaItem`**` :   `[`AgendaItem`](../object/AgendaItem.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DelayedAgendaItem</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>AgendaItem<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>isReady<code class="language-plaintext highlighter-rouge">](#isReady)</code>  <code class="language-plaintext highlighter-rouge">[</code>readyTime<code class="language-plaintext highlighter-rouge">](#readyTime)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>agendaOrder<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#agendaOrder)</code>  <code class="language-plaintext highlighter-rouge">[</code>calledBy<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#calledBy)</code>  <code class="language-plaintext highlighter-rouge">[</code>initiallyActive<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#initiallyActive)</code>  <code class="language-plaintext highlighter-rouge">[</code>invokedByActor<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#invokedByActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>isDone<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#isDone)</code>  <code class="language-plaintext highlighter-rouge">[</code>name<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#name)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>setDelay<code class="language-plaintext highlighter-rouge">](#setDelay)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getActor<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#getActor)</code>  <code class="language-plaintext highlighter-rouge">[</code>invokeItem<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#invokeItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>invokeItemBase<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#invokeItemBase)</code>  <code class="language-plaintext highlighter-rouge">[</code>registerItem<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#registerItem)</code>  <code class="language-plaintext highlighter-rouge">[</code>report<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#report)</code>  <code class="language-plaintext highlighter-rouge">[</code>resetItem<code class="language-plaintext highlighter-rouge">](../object/AgendaItem.html#resetItem)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="isReady"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isReady</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6022">6022</a>]</p>
+
+<div class="desc">
+
+we're ready if the game clock time has reached our ready time
+
+</div>
+
+<p><span id="readyTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">readyTime</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6025">6025</a>]</p>
+
+<div class="desc">
+
+the turn counter on the game clock when we become ready
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="setDelay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setDelay (turns)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#6036">6036</a>]</p>
+
+<div class="desc">
+
+Set our ready time based on a delay from the current time. We'll become
+ready after the given number of turns elapses. For convenience, we
+return 'self', so a delayed agenda item can be initialized and added to
+an actor's agenda in one simple operation, like so:
+
+actor.addToAgenda(item.setDelay(1));
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

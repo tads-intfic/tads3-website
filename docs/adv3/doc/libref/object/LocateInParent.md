@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LocateInParent</span><span class="type">class</span>
 
 [objects.t](../file/objects.t.html)\[[30](../source/objects.t.html#30)\]

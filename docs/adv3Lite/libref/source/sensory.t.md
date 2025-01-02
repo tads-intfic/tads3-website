@@ -1,3 +1,5 @@
+---
+---
 # sensory.t
 
 [documentation](../file/sensory.t.html)

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">YesNoTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3513](../source/actor.t.html#3513)\]

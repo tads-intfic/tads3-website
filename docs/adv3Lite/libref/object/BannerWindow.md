@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BannerWindow</span><span class="type">class</span>
 
 [banner.t](../file/banner.t.html)\[[40](../source/banner.t.html#40)\]

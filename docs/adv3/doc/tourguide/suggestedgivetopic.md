@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,19 +9,19 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SuggestedGiveTopic : <a
-href="suggestedtopic.htm">SuggestedTopic</a><br />
+href="suggestedtopic.html">SuggestedTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="suggestedtelltopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="suggestedshowtopic.htm">[Next]</a></td>
+href="suggestedtelltopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="suggestedshowtopic.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
 
   
 A SuggestedAskTopic is the particular type of
-[SuggestedTopic](suggestedtopic.htm) that suggests to the player that
+[SuggestedTopic](suggestedtopic.html) that suggests to the player that
 s/he could Give such-and-such to so-and-so.  
   
 For example, if we want to suggest to the player that he might give the

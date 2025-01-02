@@ -1,3 +1,5 @@
+---
+---
 <span class="title">BoredByeTopic</span><span class="type">class</span>
 
 [actor.t](../file/actor.t.html)\[[3922](../source/actor.t.html#3922)\]

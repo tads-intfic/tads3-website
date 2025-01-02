@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StrikeAction</span><span class="type">class</span>
 
 [en_us.t](../file/en_us.t.html)\[[10329](../source/en_us.t.html#10329)\]

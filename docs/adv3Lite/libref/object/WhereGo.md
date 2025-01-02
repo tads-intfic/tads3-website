@@ -1,3 +1,5 @@
+---
+---
 <span class="title">WhereGo</span><span class="type">object</span>
 
 [newbie.t](../file/newbie.t.html)\[[861](../source/newbie.t.html#861)\]

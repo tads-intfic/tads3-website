@@ -1,3 +1,5 @@
+---
+---
 <span class="title">locationDistinguisher</span><span class="type">object</span>
 
 [disambig.t](../file/disambig.t.html)\[[218](../source/disambig.t.html#218)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Platform</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[216](../source/extras.t.html#216)\]

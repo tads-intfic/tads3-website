@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Vector</span><span class="type">class</span>
 
 [vector.h](../file/vector.h.html)\[[26](../source/vector.h.html#26)\],

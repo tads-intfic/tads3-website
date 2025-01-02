@@ -1,0 +1,195 @@
+<p><span class="title">WebBannerWin</span><span class="type">class</span></p>
+
+<p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#737">737</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Web Banner Window. This is designed as a \*partial\* drop-in replacement
+for the BannerWindow class, using Web UI windows as implemented in the
+core TADS javascript client.
+
+This class is designed to be mixed with a WebWindow subclass.
+
+This isn't a complete replacement for BannerWindow, because the layout
+model for the Web UI is different from the banner window model (the Web
+UI model is better and more flexible). This class implements the parts
+of the BannerWindow API related to the stream-oriented output to the
+window, so you shouldn't have to change anything that writes HTML text
+to the window. However, you will have to rework code that sets up the
+window's layout to use the Web UI model.
+
+`class `**`WebBannerWin`**` :   `[`OutputStreamWindow`](../object/OutputStreamWindow.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WebBannerWin</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>OutputStreamWindow<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>statuslineBanner<code class="language-plaintext highlighter-rouge">](../object/statuslineBanner.html)</code>  `
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStreamWindow</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>outputStream_<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html#outputStream_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>createOutputStreamObj<code class="language-plaintext highlighter-rouge">](#createOutputStreamObj)</code>  <code class="language-plaintext highlighter-rouge">[</code>flushBanner<code class="language-plaintext highlighter-rouge">](#flushBanner)</code>  <code class="language-plaintext highlighter-rouge">[</code>init<code class="language-plaintext highlighter-rouge">](#init)</code>  <code class="language-plaintext highlighter-rouge">[</code>setSize<code class="language-plaintext highlighter-rouge">](#setSize)</code>  <code class="language-plaintext highlighter-rouge">[</code>sizeToContents<code class="language-plaintext highlighter-rouge">](#sizeToContents)</code>  <code class="language-plaintext highlighter-rouge">[</code>writeToBanner<code class="language-plaintext highlighter-rouge">](#writeToBanner)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStreamWindow</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>captureOutput<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html#captureOutput)</code>  <code class="language-plaintext highlighter-rouge">[</code>createOutputStream<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html#createOutputStream)</code>  <code class="language-plaintext highlighter-rouge">[</code>setOutputStream<code class="language-plaintext highlighter-rouge">](../object/OutputStreamWindow.html#setOutputStream)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="createOutputStreamObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createOutputStreamObj ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#748">748</a>]</p>
+
+<div class="desc">
+
+create our output stream subclass
+
+</div>
+
+<p><span id="flushBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flushBanner ( )</code></p>
+
+<p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#754">754</a>]</p>
+
+<div class="desc">
+
+flush output
+
+</div>
+
+<p><span id="init"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">init ( )</code></p>
+
+<p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#741">741</a>]</p>
+
+<div class="desc">
+
+Initialize. Call this when first displaying the window in the UI.
+
+</div>
+
+<p><span id="setSize"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setSize (siz, units, advisory)</code></p>
+
+<p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#770">770</a>]</p>
+
+<div class="desc">
+
+Banner window size settings. We simply ignore these; callers must rework
+their layout logic for the Web UI, since the javascript layout system is
+so different.
+
+</div>
+
+<p><span id="sizeToContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sizeToContents ( )</code></p>
+
+<p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#771">771</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="writeToBanner"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeToBanner (txt)</code></p>
+
+<p><a href="../file/browser.t.html">browser.t</a>[<a href="../source/browser.t.html#760">760</a>]</p>
+
+<div class="desc">
+
+write text
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 adv3Lite Tutorial
 
 # adv3Lite Tutorial
@@ -13,9 +15,9 @@ adv3Lite Tutorial
   
   
   
-[Table of Contents](toc.htm)  
+[Table of Contents](toc.html)  
   
-[Introduction](intro.htm)  
+[Introduction](intro.html)  
   
   
   

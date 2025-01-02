@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Quit</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[19](../source/actions.t.html#19)\]

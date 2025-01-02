@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Using the Banner
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Using the Banner
 API  
-<span class="navnp"><a href="t3npcTravel.htm" class="nav"><em>Prev:</em> NPC Travel</a>
-    <a href="advtop.htm" class="nav"><em>Next:</em> Advanced Topics</a>
+<span class="navnp"><a href="t3npcTravel.html" class="nav"><em>Prev:</em> NPC Travel</a>
+    <a href="advtop.html" class="nav"><em>Next:</em> Advanced Topics</a>
     </span>
 
 </div>
@@ -74,13 +76,13 @@ to ensure that our code took care of issues such as the following:
   interpreter which lacks the capability to display graphics
 
 The basic banner window model is described in the *System Manual*
-article on [The Banner Window Display Model](../sysman/banners.htm). If
+article on [The Banner Window Display Model](../sysman/banners.html). If
 you are not already reasonably familiar with this, you might like to
 read it now, since the present article assumes some understanding of the
 screen layout model it describes. This might also be a good point to
 take a look at the the *System Manual*'s description of the low-level
 banner API functions in the section on the [tads-io Function
-Set](../sysman/tadsio.htm). Although these low-level functions are not
+Set](../sysman/tadsio.html). Although these low-level functions are not
 the best way to manipulate banners in a TADS 3 game, some understanding
 of what they do may nevertheless be helpful for seeing the range of
 banner functions available. In particular it is useful to refer to the
@@ -1186,11 +1188,11 @@ methods.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Using the Banner
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Using the Banner
 API  
-<span class="navnp"><a href="t3npcTravel.htm" class="nav"><em>Prev:</em> NPC Travel</a>
-    <a href="advtop.htm" class="nav"><em>Next:</em> Advanced Topics</a>
+<span class="navnp"><a href="t3npcTravel.html" class="nav"><em>Prev:</em> NPC Travel</a>
+    <a href="advtop.html" class="nav"><em>Next:</em> Advanced Topics</a>
     </span>
 
 </div>

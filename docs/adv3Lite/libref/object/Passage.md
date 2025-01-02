@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Passage</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[717](../source/extras.t.html#717)\]

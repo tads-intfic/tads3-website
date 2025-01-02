@@ -1,0 +1,229 @@
+<p><span class="title">CommandList</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#823">823</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A CommandList is a set of potential parsings for a given input with a
+given grammar.
+
+`class `**`CommandList`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">CommandList</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>cmd<code class="language-plaintext highlighter-rouge">](#cmd)</code>  <code class="language-plaintext highlighter-rouge">[</code>cmdLst<code class="language-plaintext highlighter-rouge">](#cmdLst)</code>  <code class="language-plaintext highlighter-rouge">[</code>curable<code class="language-plaintext highlighter-rouge">](#curable)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>acceptAny<code class="language-plaintext highlighter-rouge">](#acceptAny)</code>  <code class="language-plaintext highlighter-rouge">[</code>acceptCurable<code class="language-plaintext highlighter-rouge">](#acceptCurable)</code>  <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>getBestCmd<code class="language-plaintext highlighter-rouge">](#getBestCmd)</code>  <code class="language-plaintext highlighter-rouge">[</code>getResErr<code class="language-plaintext highlighter-rouge">](#getResErr)</code>  <code class="language-plaintext highlighter-rouge">[</code>length<code class="language-plaintext highlighter-rouge">](#length)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="cmd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmd</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1002">1002</a>]</p>
+
+<div class="desc">
+
+Our resolved Command. This is the first parsing in our list that (in
+priority order) we were able to resolve with no errors.
+
+</div>
+
+<p><span id="cmdLst"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmdLst</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#996">996</a>]</p>
+
+<div class="desc">
+
+our list of Command objects
+
+</div>
+
+<p><span id="curable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curable</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1009">1009</a>]</p>
+
+<div class="desc">
+
+Our semi-resolved Command. When we can't find a command that resolves
+without errors, we'll set this to the first one (in priority order) that
+resolves with a curable error.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="acceptAny"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acceptAny ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#945">945</a>]</p>
+
+<div class="desc">
+
+Accept ANY command, with or without a resolution error, curable or not.
+We'll take the error-free resolution if we have one, otherwise the
+resolution with a curable error, otherwise just the first parsing in
+priority order.
+
+</div>
+
+<p><span id="acceptCurable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acceptCurable ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#929">929</a>]</p>
+
+<div class="desc">
+
+Accept a curable resolution as the actual resolution. If we don't have
+an error-free resolution, we'll set 'cmd' to the curable resolution.
+Returns true if we have any resolution, nil if not.
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ([args])</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#834">834</a>]</p>
+
+<div class="desc">
+
+new CommandList(prod, toks, dict, wrapper) - construct a new CommandList
+object by parsing an input token list. 'prod' is the GrammarProd to
+parse against; 'toks' is the token list; 'dict' is the main parser
+dictionary; 'wrapper' is a callback function that maps a parse tree to a
+Command object.
+
+new CommandList(Command) - construct a CommandList containing a single
+pre-resolved Command object.
+
+</div>
+
+<p><span id="getBestCmd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getBestCmd ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#957">957</a>]</p>
+
+<div class="desc">
+
+Get the most promising command from the available parsings. This returns
+the first successfully resolved command in priority order, if any;
+otherwise the first command with a curable error, if any; otherwise the
+first command in priority order.
+
+</div>
+
+<p><span id="getResErr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getResErr ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#980">980</a>]</p>
+
+<div class="desc">
+
+Get the resolution error, if any. If we parsed but didn't resolve, this
+returns the error from the first parsing in priority order.
+
+</div>
+
+<p><span id="length"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">length ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#922">922</a>]</p>
+
+<div class="desc">
+
+number of parsings in the list
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

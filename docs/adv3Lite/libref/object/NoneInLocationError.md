@@ -1,3 +1,5 @@
+---
+---
 <span class="title">NoneInLocationError</span><span class="type">class</span>
 
 [parser.t](../file/parser.t.html)\[[5493](../source/parser.t.html#5493)\]

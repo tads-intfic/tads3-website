@@ -1,3 +1,5 @@
+---
+---
 <span class="title">qualifiedSingularNounPhrase(indefinite)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[400](../source/grammar.t.html#400)\]

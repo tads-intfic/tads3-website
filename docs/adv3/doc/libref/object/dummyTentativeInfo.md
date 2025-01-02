@@ -1,3 +1,5 @@
+---
+---
 <span class="title">dummyTentativeInfo</span><span class="type">object</span>
 
 [action.t](../file/action.t.html)\[[3924](../source/action.t.html#3924)\]

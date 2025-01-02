@@ -1,0 +1,32 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>StopEventList : <a href="eventlist.html">EventList</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="eventlist.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="cycliceventlist.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A StopEventList is just like an <a href="eventlist.html">EventList</a>, except that
+when the last item in the list is reached, it is then repeated
+indefinitely.</p>
+
+<p>This is probably most useful in providing sequential responses in NPC
+conversations (which we’ll be coming to in due course). For example, if
+you repeatedly ASK SARAH ABOUT HERSELF, you’d expect her not to give the
+same answer each time. Since, however, you cannot actually provide her
+with an infinite number of responses, you could use a StopEventList to
+provide, say, two or three different ones which progressively reveal
+more information, and a final one (to be then repeated indefinitely),
+which indicates that this particular topic has now been exhausted, while
+perhaps reminding the player of the essentials of what’s been said.</p>
+
+<p>We’ll be meeting plenty of examples of this in connection with the
+conversation system, for example in conjunction with
+<a href="giveshowtopic.html">GiveShowTopic</a>, <a href="asktopic.html">AskTopic</a>,
+<a href="telltopic.html">TellTopic</a>, and <a href="asktelltopic.html">AskTellTopic</a>.</p>

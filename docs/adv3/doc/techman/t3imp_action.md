@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Implied Action
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Implied Action
 Reports  
-<span class="navnp"><a href="t3msg.htm" class="nav"><em>Prev:</em> Message Parameter
+<span class="navnp"><a href="t3msg.html" class="nav"><em>Prev:</em> Message Parameter
 Substitutions</a>    
-<a href="t3lister.htm" class="nav"><em>Next:</em> Lists and Listers</a>
+<a href="t3lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
 
 </div>
@@ -61,7 +63,7 @@ Rather than the potentially frustrating:
     You need to be holding the red ball before you can put it in anything.
 
 Normally the library handles all this automatically for you, usually
-through the [preconditions](t3res.htm#precond) applied to various
+through the [preconditions](t3res.html#precond) applied to various
 actions. It is also possible to trigger an implicit action in your own
 code using the `tryImplicitAction` macro. Either way the game will take
 care of reporting the implicit action for you, so that the player is
@@ -189,7 +191,7 @@ before the standard libary code uses it to generate the implicit action
 report. In the standard library (and on custom actions you define in
 your own code), the `verbPhrase` property is generally defined in the
 appropriate `VerbRule` (if you're not familiar with this, see the
-article on [How to Create Verbs](t3verb.htm)). A `verbPhrase` typically
+article on [How to Create Verbs](t3verb.html)). A `verbPhrase` typically
 looks like:
 
     verbPhrase = 'drop/dropping (what)'
@@ -478,12 +480,12 @@ tryImplicitActionMsg may be the way to go.
 <div class="navb">
 
 *TADS 3 Technical Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="depth.htm" class="nav">TADS 3 In Depth</a> \> Implied Action
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="depth.html" class="nav">TADS 3 In Depth</a> \> Implied Action
 Reports  
-<span class="navnp"><a href="t3msg.htm" class="nav"><em>Prev:</em> Message Parameter
+<span class="navnp"><a href="t3msg.html" class="nav"><em>Prev:</em> Message Parameter
 Substitutions</a>    
-<a href="t3lister.htm" class="nav"><em>Next:</em> Lists and Listers</a>
+<a href="t3lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
 
 </div>

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -8,9 +10,9 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tr>
 <td style="text-align: left;"><strong>Hints - Overview<br />
 </strong></td>
-<td style="text-align: right;"><a href="maxscore.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="tophintmenu.htm">[Next]</a></td>
+<td style="text-align: right;"><a href="maxscore.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="tophintmenu.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -22,16 +24,16 @@ to help by providing a set of classes to ease the coding of a menu-based
 hint system. Basically, all you need to do is to set up a menu tree
 that, in outline, might look something like this:  
   
-[TopHintMenu](tophintmenu.htm) 'Hints';  
+[TopHintMenu](tophintmenu.html) 'Hints';  
   
-+ [HintMenu](hintmenu.htm) 'Cave Region';  
++ [HintMenu](hintmenu.html) 'Cave Region';  
   
-++ [Goal](goal.htm) 'How do I...?' \['Have you tried...?'\];  
-  
-++ Goal ...  
+++ [Goal](goal.html) 'How do I...?' \['Have you tried...?'\];  
   
 ++ Goal ...  
-+++ [Hint](hint.htm) ..  
+  
+++ Goal ...  
++++ [Hint](hint.html) ..  
   
 ++ Goal  
   

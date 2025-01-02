@@ -1,0 +1,411 @@
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Achievement : object<br />
+</strong></td>
+<td style="text-align: right;"><a href="addtoscore.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="simpleachievement.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Using addToScore is fine where we can easily make sure that it will be
+called only once, but in some situations this becomes harder to
+guarantee.</p>
+
+<p>For example, the player should probably be rewarded for getting the door
+into the museum corridor open, since this is a puzzle that takes several
+steps to solve, but if we just put addToScore in, say,
+blankSteelDoor.makeOpen(), then players could keep adding to their score
+by repeatedly opening the blank steel door once they’d worked out how to
+<a href="attachable.html">fix the button</a>. We <em>could</em> prevent this by adding a
+hasBeenOpened property to the blankSteelDoor, setting it to true when
+the door is opened, and only calling addToScore if hasBeenOpened is nil.
+But it would be nice if there was an addToScoreOnce function that
+effectively did this for us. Well, there’s no such <em>function</em>, but there
+is always the <strong>addToScoreOnce(points)</strong> <em>method</em> of the Achievement
+class, and we could always use that.</p>
+
+<p>This does mean, of course, that we need to set up an Achievement object
+for the purpose, but there’s no reason why this shouldn’t simply be an
+anonymous nested object, so that, for example, we could get the result
+we wanted by modifying blankSteelDoor thus:</p>
+
+<p>+ blankSteelDoor : Door ’blank steel door’ ’blank steel door’<br />
+  ”The door &lt;&lt;isOpen ? ’has slid open out of sight’ : ’is without handle, <br />
+   keyhole or any other visible mechanism’&gt;&gt;”<br />
+   openStatus {  }<br />
+   checkDobjOpen() { ”There’s nothing on the door to get a purchase on. ”; exit; }    <br />
+   checkDobjClose() { ”The door has slid out of sight. ”; exit; }   <br />
+   makeOpen(stat)<br />
+   {<br />
+     inherited(stat);<br />
+     <strong>achievement.addToScoreOnce(3);</strong><br />
+     ”The steel door slides &lt;&lt;isOpen ? ’open’ : ’shut’&gt;&gt;. ”;     <br />
+   }<br />
+   **achievement : Achievement { ”opening the blank steel door” }<br />
+**;</p>
+
+<p>This will increase the player’s score by three points the first time the
+player manages to get the blank steel door open, but not thereafter.</p>
+
+<p>At this point it may be helpful to take a closer look at the properties
+and methods the Achievement class defines:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>desc</strong> - Describe the achievement - this must display
+a string explaining the reason the points associated with this
+achievement were awarded. Note that this description can make use of the
+scoreCount information to show different descriptions depending on how
+many times the item has scored. For example, an achievement for finding
+various treasure items might want to display "finding a treasure" if
+only one treasure was found and "finding five treasures" if five were
+found. In some cases, it might be desirable to keep track of additional
+custom information, and use that information in generating the
+description. For example, the game might keep a list of treasures found
+with the achievement, adding to the list each time the achievement is
+scored, and displaying the contents of the list when the description is
+shown.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>scoreCount</strong> - The number of times the achievement
+has been awarded. Each time the achievement is passed to addToScore(),
+this is incremented. Note that this is distinct from the number of
+points.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>totalPoints</strong> - the number of points awarded for the
+achievement; if this achievement has been accomplished multiple times,
+this reflects the aggregate number of points awarded for all of the
+times it has been accomplished.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>addToScoreOnce(<em>points</em>) -</strong> Add this
+achievement to the score one time only. This can be used to score an
+achievement without separately tracking whether or not the achievement
+has been accomplished previously. If the achievement has already been
+scored before, this will do nothing at all; otherwise, it'll score the
+achievement with the given number of points.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>points</strong> - the number of points awarded for this
+Achievement if either its <a href="awardpoints.html">awardPoints</a> or
+its <a href="awardpointsonce.html">awardPointsOnce</a> method is called.
+ <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>maxPoints</strong> - the maximum number of points that can
+be awarded for this Achievement if its points can be awarded for it more
+than once. By default this is simply the same as <em>points</em>. This
+figure is used by the library routine that calculates the <a href="maxscore.html">maximum score</a>.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>awardPoints()</strong> - adds this Achievement to the list
+of Achievements accomplished, and awards the number of points contained
+in its <em>points</em> property (which <em>must</em> then be overridden
+to something other than nil).  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>awardPointsOnce()</strong> - this is the same as
+awardPoints, except that the points are awarded only the first time this
+method is called (so that you would typically use this method like
+addToScoreOnce, which it in fact calls, to ensure that the player is not
+awarded points multiple times for the same achievement).  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You’ll see from this that an Achievement object is geared up to the
+possibility of awarding points for the same achievement more than once.
+The situation where you’d mostly likely want to do this is in
+aggregating points for similar feats under a common generic description,
+such as:</p>
+
+<p>23 points for finding sundry items</p>
+
+<p>Rather than listing the twenty-three sundry items separately at one
+point each.</p>
+
+<p>In the present game, we might want to define such an aggregating
+achievement for getting past sundry minor obstacles:</p>
+
+<p>obstacleAchievement : Achievement<br />
+  desc = ”getting past &lt;&lt;scoreCount &gt; 1 ? spellInt(scoreCount) + <br />
+   ’ sundry obstacles’ : ’an obstacle’&gt;&gt;. ”<br />
+;</p>
+
+<p>Then we can employ this obstacleAchievement at each place in the code
+where we want to reward the player for getting past a minor obstacle, by
+calling addToScore(<em>points</em>, obstacleAchievement); though now we have to
+make sure that we call this only once for each obstacle; for example:</p>
+
+<p>secretPassage : Room ’Secret Passage’ ’the secret passage’<br />
+  ”This hitherto secret passage narrows to a long tunnel running north. To the<br />
+   south &lt;&lt;rock2.isOpen ? ’an opening leads out into a large, ruddy-hued cave’<br />
+    : ’a large rock blocks the way out’&gt;&gt;. ”  <br />
+  south = rock2<br />
+  north = tunnel<br />
+  brightness = (rock2.isOpen ? 3 : 0)<br />
+  <strong>enteringRoom(traveler)<br />
+  {<br />
+    if(!seen) addToScore(1, obstacleAchievement);       </strong><br />
+**  }<br />
+**;</p>
+
+<p>crewQuarters : DarkCabin ’Crew Quarters’ ’the crew quarters’<br />
+   …</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="14"></td>
+<td>enteringRoom(traveler)  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="14"></td>
+<td>  {  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="14"></td>
+<td>   darkEvents.curScriptState = 1;    <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="14"></td>
+<td>   <strong>if(!seen) addToScore(1, obstacleAchievement);</strong>
+ <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="14"></td>
+<td>  }  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>;</p>
+
+<p>hellPath : OutdoorRoom ’Path down Hell Fire Cavern’ ’the path’<br />
+   …<br />
+  <strong>enteringRoom(traveler)<br />
+   { if(!seen) addToScore(2, obstacleAchievement); }</strong><br />
+;</p>
+
+<p>chasmLedge : DarkRoom ’Ledge of Chasm’ ’the ledge of the chasm’<br />
+  ”A deep, wide chasm splits the ground immediately to the north of this<br />
+   narrow ledge, while a dark tunnel runs south. Another tunnel can be <br />
+   seen leading north from the far side of the chasm. ”<br />
+  north = deepChasm<br />
+  south = tunnelFromChasm<br />
+  inRoomName(pov) <br />
+  { <br />
+    return ’on the ’ + (pov.isIn(deepChasm) ? ’south’ : ’far’) + ’ ledge of the chasm’; <br />
+  }<br />
+  **enteringRoom(traveler)<br />
+  { if(!seen) addToScore(1, obstacleAchievement); } <br />
+**;</p>
+
+<p>museum : Room ’Museum of Curious Antiquities’ ’the main museum’<br />
+    …<br />
+   **enteringRoom(traveler)<br />
+  { if(!seen) addToScore(1, obstacleAchievement); }<br />
+**;</p>
+
+<p>templeCellar : DarkRoom ’Cellar beneath Temple’ ’the cellar beneath the Temple’<br />
+  ”This long, damp cellar probably hasn’t been visited in years. ”<br />
+   …<br />
+   **enteringRoom(traveler)<br />
+     { addToScore (1, obstacleAchievement); }<br />
+**;</p>
+
+<p>Of course some of the obstacles are more noteworthy and would definitely
+deserve their own individual achievements, along the lines we have
+already seen, such as:</p>
+
+<p>+ Lever, Component ’banana-shaped banana shaped projection’ ’banana-shaped projection’<br />
+   ”Protruding from the north side of the altar, the banana-shaped projection is<br />
+    its only decorative feature. ”<br />
+   makePulled(pulled)<br />
+   {<br />
+     if(stoneAltar.getWeight != 54)<br />
+     {<br />
+       reportFailure(‘It won\t budge. ’);       <br />
+       exit;<br />
+     }<br />
+     else if(pulled)     <br />
+       ”With a loud grating sound, the wall behind the altar grinds open. ”;     <br />
+     else<br />
+       ”When you push the lever, the wall behind the altar grinds shut. ”;<br />
+     inherited(pulled);  <br />
+     templeWestWall.makeOpen(pulled);<br />
+     <strong>achievement.addToScoreOnce(5);<br />
+**   } <br />
+   weight = 0  <br />
+   </strong>achievement : Achievement { ”opening the wall behind the altar ” }<br />
+**;</p>
+
+<p>Note that we have used the <a href="achievementtemplate.html">Achievement
+Template</a> in these definitions.</p>
+

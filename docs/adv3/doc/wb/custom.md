@@ -1,4 +1,6 @@
-Help Topics \> [Table of Contents](wbcont.htm)  
+---
+---
+Help Topics \> [Table of Contents](wbcont.html)  
   
 
   
@@ -26,7 +28,7 @@ Use the Keyboard page of the Options dialog to define custom keys. You
 can change any of the default key bindings and you can add new bindings
 of your own.
 
-Refer to [Workbench Commands](wbcmd.htm) for a complete list of the
+Refer to [Workbench Commands](wbcmd.html) for a complete list of the
 commands and their descriptions.
 
 ### Context-sensitive keys
@@ -149,6 +151,6 @@ it as it is.
 ------------------------------------------------------------------------
 
   
-Help Topics \> [Table of Contents](wbcont.htm)  
+Help Topics \> [Table of Contents](wbcont.html)  
   
 Copyright ©1999, 2007 by Michael J. Roberts.

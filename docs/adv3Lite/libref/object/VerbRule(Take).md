@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(Take)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[1503](../source/grammar.t.html#1503)\]

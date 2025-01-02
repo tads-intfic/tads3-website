@@ -1,3 +1,5 @@
+---
+---
 <span class="title">MessageCtx</span><span class="type">class</span>
 
 [messages.t](../file/messages.t.html)\[[433](../source/messages.t.html#433)\]

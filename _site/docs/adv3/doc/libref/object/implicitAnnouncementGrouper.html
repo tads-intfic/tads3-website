@@ -1,0 +1,123 @@
+<p><span class="title">implicitAnnouncementGrouper</span><span class="type">object</span></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#5465">5465</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+Implied action announcement grouper. This takes a list of
+ImplicitActionAnnouncement reports and returns a single message string
+describing the entire list of actions.
+
+**`implicitAnnouncementGrouper`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">implicitAnnouncementGrouper</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>keepAllFailures<code class="language-plaintext highlighter-rouge">](#keepAllFailures)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>compositeMessage<code class="language-plaintext highlighter-rouge">](#compositeMessage)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="keepAllFailures"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">keepAllFailures</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#5487">5487</a>]</p>
+
+<div class="desc">
+
+Configuration option: keep all failures in a list of implied
+announcements. If this is true, then we'll write things like "trying to
+unlock the door and then open it"; if nil, we'll instead write simply
+"trying to unlock the door".
+
+By default, we keep only the first of a group of failures. A group of
+failures is always recursively related, so the first announcement refers
+to the command that actually failed; the rest of the announcements are
+for the enclosing actions that triggered the first action. All of the
+enclosing actions failed as well, but only because the first action
+failed.
+
+Announcing all of the actions is too verbose for most tastes, which is
+why we set the default here to nil. The fact that the first action in
+the group failed means that we necessarily won't carry out any of the
+enclosing actions, so the enclosing announcements don't tell us much.
+All they really tell us is why we're running the action that actually
+failed, but that's almost always obvious, so suppressing them is usually
+fine.
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="compositeMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compositeMessage (lst)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#5490">5490</a>]</p>
+
+<div class="desc">
+
+build the composite message
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">restoreOptionRestoreAnother</span><span class="type">object</span>
 
 [misc.t](../file/misc.t.html)\[[2217](../source/misc.t.html#2217)\]

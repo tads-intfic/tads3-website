@@ -1,0 +1,174 @@
+<p><span class="title">StorageServerError</span><span class="type">class</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#889">889</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A StorageServerError is thrown when a file operation on a remote storage
+server fails. The storage server is used when the game runs on a Web
+game server in client/server mode. In Web mode, files are stored on a
+separate storage server rather than on the Web server itself, so that
+the files can be transparently accessed if the game is continued from
+another Web server. This exception is used when a request to the storage
+server fails, which could be due to an error on the storage server, a
+network error communicating between the game server and the storage
+server, or an invalid request (e.g., incorrect user credentials).
+
+`class `**`StorageServerError`**` :   `[`RuntimeError`](../object/RuntimeError.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">StorageServerError</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>RuntimeError<code class="language-plaintext highlighter-rouge">](../object/RuntimeError.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Exception<code class="language-plaintext highlighter-rouge">](../object/Exception.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>errCode<code class="language-plaintext highlighter-rouge">](#errCode)</code>  <code class="language-plaintext highlighter-rouge">[</code>errMsg<code class="language-plaintext highlighter-rouge">](#errMsg)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">RuntimeError</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>errno_<code class="language-plaintext highlighter-rouge">](../object/RuntimeError.html#errno_)</code>  <code class="language-plaintext highlighter-rouge">[</code>exceptionMessage<code class="language-plaintext highlighter-rouge">](../object/RuntimeError.html#exceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>stack_<code class="language-plaintext highlighter-rouge">](../object/RuntimeError.html#stack_)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>errmsg_<code class="language-plaintext highlighter-rouge">](../object/Exception.html#errmsg_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>displayException<code class="language-plaintext highlighter-rouge">](#displayException)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">RuntimeError</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>isDebuggerSignal<code class="language-plaintext highlighter-rouge">](../object/RuntimeError.html#isDebuggerSignal)</code>  <code class="language-plaintext highlighter-rouge">[</code>newRuntimeError<code class="language-plaintext highlighter-rouge">](../object/RuntimeError.html#newRuntimeError)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>getExceptionMessage<code class="language-plaintext highlighter-rouge">](../object/Exception.html#getExceptionMessage)</code>  <code class="language-plaintext highlighter-rouge">[</code>showStackTrace<code class="language-plaintext highlighter-rouge">](../object/Exception.html#showStackTrace)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="errCode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errCode</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#938">938</a>]</p>
+
+<div class="desc">
+
+the storage server error code
+
+</div>
+
+<p><span id="errMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errMsg</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#946">946</a>]</p>
+
+<div class="desc">
+
+error message - this is the message text we get back from the storage
+server for a request that's successful at the HTTP level but fails on
+the storage server, OR a message describing the HTTP error or network
+error that caused the request to fail
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (errno, msg)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#890">890</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="displayException"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">displayException ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#949">949</a>]</p>
+
+<div class="desc">
+
+display the exception
+
+</div>
+
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
+Generated on 15/03/2023 from adv3Lite version 1.6.1
+
+</div>

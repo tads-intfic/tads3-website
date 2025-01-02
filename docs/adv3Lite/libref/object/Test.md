@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Test</span><span class="type">class</span>
 
 [debug.t](../file/debug.t.html)\[[484](../source/debug.t.html#484)\]

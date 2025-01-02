@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Utility Functions  
-<span class="navnp"><a href="output.htm" class="nav"><em>Prev:</em> Some Output Issues</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Utility Functions  
+<span class="navnp"><a href="output.html" class="nav"><em>Prev:</em> Some Output Issues</a>
    
-<a href="lister.htm" class="nav"><em>Next:</em> Lists and Listers</a>
+<a href="lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
 
 </div>
@@ -133,7 +135,7 @@ decimal point and exponent notation (such as '1.2E2').
   
 
 There are also a number of list-related utility functions which are
-described in the chapter on [Lists and Listers](lister.htm#functions).
+described in the chapter on [Lists and Listers](lister.html#functions).
 
 <span id="intrinsic"></span>
 
@@ -277,11 +279,11 @@ or Vector) or a singleton value.
 <div class="navb">
 
 *adv3Lite Library Manual*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="final.htm" class="nav">Final Moves</a> \> Utility Functions  
-<span class="navnp"><a href="output.htm" class="nav"><em>Prev:</em> Some Output Issues</a>
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="final.html" class="nav">Final Moves</a> \> Utility Functions  
+<span class="navnp"><a href="output.html" class="nav"><em>Prev:</em> Some Output Issues</a>
    
-<a href="lister.htm" class="nav"><em>Next:</em> Lists and Listers</a>
+<a href="lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
 
 </div>

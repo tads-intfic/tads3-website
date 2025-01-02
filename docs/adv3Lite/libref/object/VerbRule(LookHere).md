@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(LookHere)</span><span class="type">grammar</span>
 
 [newbie.t](../file/newbie.t.html)\[[427](../source/newbie.t.html#427)\]

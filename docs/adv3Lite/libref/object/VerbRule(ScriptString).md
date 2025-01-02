@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbRule(ScriptString)</span><span class="type">grammar</span>
 
 [grammar.t](../file/grammar.t.html)\[[2391](../source/grammar.t.html#2391)\]

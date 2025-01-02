@@ -1,3 +1,5 @@
+---
+---
 <span class="title">StopEventList</span><span class="type">class</span>
 
 [eventList.t](../file/eventList.t.html)\[[299](../source/eventList.t.html#299)\]

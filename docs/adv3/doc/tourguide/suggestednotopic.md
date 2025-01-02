@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>SuggestedNoTopic : <a
-href="suggestedtopic.htm">SuggestedTopic</a><br />
+href="suggestedtopic.html">SuggestedTopic</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="suggestedyestopic.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="suggestedtopictree.htm">[Next]</a></td>
+href="suggestedyestopic.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="suggestedtopictree.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -21,5 +23,5 @@ href="suggestedtopictree.htm">[Next]</a></td>
 A SuggestedNoTopic adds 'say no' to the list of suggestions of what
 conversational commands the player can address to the currently
 conversing NPC. It would normally only be used in conjunction with a
-[NoTopic](notopic.htm).  
+[NoTopic](notopic.html).  
   

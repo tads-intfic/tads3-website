@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -6,12 +8,12 @@
 
 <div class="nav">
 
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Laying out the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Laying out the
 map  
-<span class="navnp"><a href="goldskull.htm" class="nav"><em>Prev:</em> Goldskull</a>
+<span class="navnp"><a href="goldskull.html" class="nav"><em>Prev:</em> Goldskull</a>
    
-<a href="making.htm" class="nav"><em>Next:</em> Making things happen</a>
+<a href="making.html" class="nav"><em>Next:</em> Making things happen</a>
     </span>
 
 </div>
@@ -34,7 +36,7 @@ prevents the springing of the trap. The game is won when the player
 character heads back to his camp carrying the gold skull.
 
 To start implementing this game you need to carry out the steps listed
-for creating a new adv3Lite game back in [Chapter 2](setting.htm),
+for creating a new adv3Lite game back in [Chapter 2](setting.html),
 substituting 'goldskull' for 'heidi' throughout. Create a new
 directory/folder for the goldskull project, copy the template files into
 it, and then rename those with adv3Ltemplate in their name appropriately
@@ -155,12 +157,12 @@ make sure it all works.
 <div class="navb">
 
 *adv3Lite Library Tutorial*  
-<a href="toc.htm" class="nav">Table of Contents</a> \|
-<a href="goldskull.htm" class="nav">Goldskull</a> \> Laying out the
+<a href="toc.html" class="nav">Table of Contents</a> \|
+<a href="goldskull.html" class="nav">Goldskull</a> \> Laying out the
 map  
-<span class="navnp"><a href="goldskull.htm" class="nav"><em>Prev:</em> Goldskull</a>
+<span class="navnp"><a href="goldskull.html" class="nav"><em>Prev:</em> Goldskull</a>
    
-<a href="making.htm" class="nav"><em>Next:</em> Making things happen</a>
+<a href="making.html" class="nav"><em>Next:</em> Making things happen</a>
     </span>
 
 </div>

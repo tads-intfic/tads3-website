@@ -1,3 +1,5 @@
+---
+---
 <span class="title">clockManager</span><span class="type">object</span>
 
 [subtime.t](../file/subtime.t.html)\[[29](../source/subtime.t.html#29)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">LockableContainer</span><span class="type">class</span>
 
 [extras.t](../file/extras.t.html)\[[142](../source/extras.t.html#142)\]

@@ -1,3 +1,5 @@
+---
+---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">
 <colgroup>
@@ -7,12 +9,12 @@ data-cellpadding="3" data-bgcolor="#C0C0C0">
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>InitObject: <a
-href="moduleexecobject.htm">ModuleExecObject</a><br />
+href="moduleexecobject.html">ModuleExecObject</a><br />
 </strong></td>
 <td style="text-align: right;"><a
-href="moduleexecobject.htm">[Previous]</a> <a
-href="generalintroduction.htm">[Main]</a> <a
-href="preinitobject.htm">[Next]</a></td>
+href="moduleexecobject.html">[Previous]</a> <a
+href="generalintroduction.html">[Main]</a> <a
+href="preinitobject.html">[Next]</a></td>
 </tr>
 </tbody>
 </table>
@@ -35,7 +37,7 @@ you might prefer to use InitObject for a particular task, for example:
 <td width="14">·</td>
 <td>Starting up a Daemon or Fuse, when the InitObject can conveniently
 be mixed-in with the Daemon or Fuse to form a single object (as in the
-<a href="onetimepromptdaemon.htm">OneTimePromptDaemon</a> example
+<a href="onetimepromptdaemon.html">OneTimePromptDaemon</a> example
 above).  <br />
 </td>
 </tr>
@@ -86,7 +88,7 @@ must be executed after the current one in the execAfterMe property (this
 mechanism is common to all ModuleExecObjects).  
   
 Note that in many cases, however, it may be better to use a
-[PreinitObject](preinitobject.htm) for most of these purposes. One case
+[PreinitObject](preinitobject.html) for most of these purposes. One case
 where you *must* use an InitObject rather than a PreinitObject is when
 you want the object to set up a Fuse or Daemon. Your code will probably
 compile if you do this in a PreinitObject, but you'll find that the Fuse

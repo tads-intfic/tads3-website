@@ -1,3 +1,5 @@
+---
+---
 <span class="title">Hints</span><span class="type">object</span>
 
 [actions.t](../file/actions.t.html)\[[306](../source/actions.t.html#306)\]

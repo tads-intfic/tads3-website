@@ -1,0 +1,170 @@
+<p><span class="title">SyncEventList</span><span class="type">class</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1189">1189</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A synchronized event list. This is an event list that takes its actions
+from a separate event list object. We get our current state from the
+other list, and advancing our state advances the other list's state in
+lock step. Set 'masterObject' to refer to the master list whose state we
+synchronize with.
+
+This can be useful, for example, when we have messages that reflect two
+different points of view on the same events: the messages for each point
+of view can be kept in a separate list, but the one list can be a slave
+of the other to ensure that the two lists are based on a common state.
+
+`class `**`SyncEventList`**` :   `[`EventList`](../object/EventList.html)
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SyncEventList</code></strong><br />
+`         <code class="language-plaintext highlighter-rouge">[</code>EventList<code class="language-plaintext highlighter-rouge">](../object/EventList.html)  
+</code>                 <code class="language-plaintext highlighter-rouge">[</code>Script<code class="language-plaintext highlighter-rouge">](../object/Script.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>masterObject<code class="language-plaintext highlighter-rouge">](#masterObject)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">EventList</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>curScriptState<code class="language-plaintext highlighter-rouge">](../object/EventList.html#curScriptState)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventList<code class="language-plaintext highlighter-rouge">](../object/EventList.html#eventList)</code>  <code class="language-plaintext highlighter-rouge">[</code>eventListLen<code class="language-plaintext highlighter-rouge">](../object/EventList.html#eventListLen)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>advanceState<code class="language-plaintext highlighter-rouge">](#advanceState)</code>  <code class="language-plaintext highlighter-rouge">[</code>getScriptState<code class="language-plaintext highlighter-rouge">](#getScriptState)</code>  <code class="language-plaintext highlighter-rouge">[</code>scriptDone<code class="language-plaintext highlighter-rouge">](#scriptDone)</code>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">EventList</code> :<br />
+` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](../object/EventList.html#construct)</code>  <code class="language-plaintext highlighter-rouge">[</code>doScript<code class="language-plaintext highlighter-rouge">](../object/EventList.html#doScript)</code>  <code class="language-plaintext highlighter-rouge">[</code>doScriptEvent<code class="language-plaintext highlighter-rouge">](../object/EventList.html#doScriptEvent)</code>  `</p>
+
+<p>` `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="masterObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">masterObject</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1191">1191</a>]</p>
+
+<div class="desc">
+
+my master event list object
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="advanceState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">advanceState ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1197">1197</a>]</p>
+
+<div class="desc">
+
+to advance my state, advance the master list's state
+
+</div>
+
+<p><span id="getScriptState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getScriptState ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1194">1194</a>]</p>
+
+<div class="desc">
+
+my state is simply the master list's state
+
+</div>
+
+<p><span id="scriptDone"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scriptDone ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1200">1200</a>]</p>
+
+<div class="desc">
+
+let the master list take care of finishing a script step
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">askAboutConvType</span><span class="type">object</span>
 
 [actor.t](../file/actor.t.html)\[[2026](../source/actor.t.html#2026)\]

@@ -1,3 +1,5 @@
+---
+---
 <span class="title">predicate(ShowToType2)</span><span class="type">grammar</span>
 
 [en_us.t](../file/en_us.t.html)\[[9629](../source/en_us.t.html#9629)\]

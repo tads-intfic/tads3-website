@@ -1,0 +1,216 @@
+<p><span class="title">BannerUIWindow</span><span class="type">class</span></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#754">754</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<div class="fdesc">
+
+A BannerUIWindow object. This keeps track of the transient UI state of a
+banner window while it appears on the screen. We create only transient
+instances of this class, since it tracks what's actually displayed at
+any given time.
+
+`class `**`BannerUIWindow`**` :   object`
+
+</div>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BannerUIWindow</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>align_<code class="language-plaintext highlighter-rouge">](#align_)</code>  <code class="language-plaintext highlighter-rouge">[</code>handle_<code class="language-plaintext highlighter-rouge">](#handle_)</code>  <code class="language-plaintext highlighter-rouge">[</code>id_<code class="language-plaintext highlighter-rouge">](#id_)</code>  <code class="language-plaintext highlighter-rouge">[</code>outputStream_<code class="language-plaintext highlighter-rouge">](#outputStream_)</code>  <code class="language-plaintext highlighter-rouge">[</code>parentID_<code class="language-plaintext highlighter-rouge">](#parentID_)</code>  <code class="language-plaintext highlighter-rouge">[</code>styleFlags_<code class="language-plaintext highlighter-rouge">](#styleFlags_)</code>  <code class="language-plaintext highlighter-rouge">[</code>win_<code class="language-plaintext highlighter-rouge">](#win_)</code>  <code class="language-plaintext highlighter-rouge">[</code>windowType_<code class="language-plaintext highlighter-rouge">](#windowType_)</code>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
+
+<p>` <code class="language-plaintext highlighter-rouge">[</code>construct<code class="language-plaintext highlighter-rouge">](#construct)</code>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+<p><span id="align_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">align_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#786">786</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="handle_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">handle_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#769">769</a>]</p>
+
+<div class="desc">
+
+the system-level banner handle
+
+</div>
+
+<p><span id="id_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">id_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#772">772</a>]</p>
+
+<div class="desc">
+
+the banner's ID
+
+</div>
+
+<p><span id="outputStream_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">outputStream_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#782">782</a>]</p>
+
+<div class="desc">
+
+The banner's output stream. Output streams are always transient, so hang
+on to each active banner's stream so that we can plug it back in on
+restore.
+
+</div>
+
+<p><span id="parentID_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parentID_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#775">775</a>]</p>
+
+<div class="desc">
+
+the parent banner's ID (nil if this is a top-level banner)
+
+</div>
+
+<p><span id="styleFlags_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">styleFlags_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#787">787</a>]</p>
+
+<div class="desc">
+
+*no description available*
+
+</div>
+
+<p><span id="win_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">win_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#794">794</a>]</p>
+
+<div class="desc">
+
+Scratch-pad for our association to our BannerWindow object. We only use
+this during the RESTORE process, to tie the transient object back to the
+proper persistent object.
+
+</div>
+
+<p><span id="windowType_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">windowType_</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#785">785</a>]</p>
+
+<div class="desc">
+
+creation parameters of the banner
+
+</div>
+
+<p><span id="_Methods_"></span></p>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (handle, ostr, id, parentID, windowType, align, styleFlags)</code></p>
+
+<p><a href="../file/banner.t.html">banner.t</a>[<a href="../source/banner.t.html#756">756</a>]</p>
+
+<div class="desc">
+
+construct
+
+</div>
+
+<div class="ftr">
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+</div>

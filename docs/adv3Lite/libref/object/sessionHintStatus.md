@@ -1,3 +1,5 @@
+---
+---
 <span class="title">sessionHintStatus</span><span class="type">object</span>
 
 [hintsys.t](../file/hintsys.t.html)\[[706](../source/hintsys.t.html#706)\]

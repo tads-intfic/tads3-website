@@ -1,3 +1,5 @@
+---
+---
 <span class="title">VerbTense</span><span class="type">class</span>
 
 [messages.t](../file/messages.t.html)\[[58](../source/messages.t.html#58)\]

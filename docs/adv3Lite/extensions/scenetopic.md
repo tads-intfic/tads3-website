@@ -1,3 +1,5 @@
+---
+---
 <div class="topbar">
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
@@ -6,11 +8,11 @@
 
 <div class="nav">
 
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 SceneTopic  
-<span class="navnp"><a href="rules.htm" class="nav"><em>Prev:</em> Rules</a>
-    <a href="sensory.htm" class="nav"><em>Next:</em> Sensory</a>    
+<span class="navnp"><a href="rules.html" class="nav"><em>Prev:</em> Rules</a>
+    <a href="sensory.html" class="nav"><em>Next:</em> Sensory</a>    
 </span>
 
 </div>
@@ -52,7 +54,7 @@ game source files. Your game must also contain the actor.t and scene.t
 modules.
 
 SceneTopics can be used very much like other
-[ActorTopicEntries](../../docs/manual/actortopicentry.htm). The main
+[ActorTopicEntries](../../docs/manual/actortopicentry.html). The main
 difference is that they are triggered by the start or end of a scene
 that takes place when the player character can talk to the actor for
 whom the SceneTopic is defined.
@@ -128,11 +130,11 @@ additional information see the source code and comments in the
 <div class="navb">
 
 *Adv3Lite Manual*  
-<a href="../../docs/manual/toc.htm" class="nav">Table of Contents</a> \|
-<a href="../../docs/manual/extensions.htm" class="nav">Extensions</a> \>
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Room Parts  
-<span class="navnp"><a href="rules.htm" class="nav"><em>Prev:</em> Rules</a>
-    <a href="sensory.htm" class="nav"><em>Next:</em> Sensory</a>    
+<span class="navnp"><a href="rules.html" class="nav"><em>Prev:</em> Rules</a>
+    <a href="sensory.html" class="nav"><em>Next:</em> Sensory</a>    
 </span>
 
 </div>
