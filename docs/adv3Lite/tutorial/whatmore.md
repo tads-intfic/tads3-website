@@ -81,9 +81,9 @@ puzzles are rather frowned on as being tired and hackneyed, but there's
 nothing wrong with them if they form a natural and integral part of your
 story, rather than just being thrown in for the sake of a puzzle. To
 make a room dark in adv3Lite you just define its
-<span class="code">isLit</span> property to be nil. You may then want to
-define its <span class="code">darkName</span> and
-<span class="code">darkDesc</span> properties to give the name and
+`isLit` property to be nil. You may then want to
+define its `darkName` and
+`darkDesc` properties to give the name and
 description of the room that will be displayed while it is in darkness.
 There are also methods and properties you can define to determine what
 happens when the player character tries to travel around in the dark.
@@ -91,13 +91,13 @@ For details, read the section on [Rooms and Regions](../manual/room.html)
 in the *adv3Lite Library Manual*. If you define one or more dark rooms
 your game will probably need a light source or two. The simplest way to
 make a Thing a light source is to define its
-<span class="code">isLit</span> property to be true. For a light source
+`isLit` property to be true. For a light source
 you can switch on and off you can use the
-<span class="code">Flashlight</span> class. If you want an object to be
+`Flashlight` class. If you want an object to be
 visible in the dark without illuminating anything else (the stars in the
 night sky, for example, or the shadowy outline of a staircase leading up
 out of a darkened cellar), you can set its
-<span class="code">visibleInDark</span> property to true.
+`visibleInDark` property to true.
 
 Another fairly major adv3Lite feature we haven't touched on at all in
 this tutorial is the **SenseRegion**. Traditionally in IF, and in all
@@ -116,13 +116,13 @@ It's not that uncommon to see requests on IF fora from time to time
 asking how to implement a **THINK ABOUT** command (i.e. a command that
 allows the player to type commands like THINK ABOUT MARTIN and get a
 sensible response). The adv3Lite library has built-in handling for this,
-which represents <span class="code">Thoughts</span> as TopicEntries
+which represents `Thoughts` as TopicEntries
 rather in the manner of ConsultTopics used with a Consultable. You can
 read about it in the section on [Thoughts](../manual/thought.html) in the
 manual.
 
 We introduced (and employed) the concept of
-<span class="code">TravelConnectors</span> in the course of the
+`TravelConnectors` in the course of the
 tutorial, but made no mention of the **TravelBarriers**, which it is
 sometimes useful to define in conjunction with them (especially when the
 same conditions prohibiting travel potentially apply to more than one
@@ -155,20 +155,20 @@ every so many turns). For details see the section on
 [Events](../manual/event.html) in the manual.
 
 At various points in the tutorial we've made use of a
-<span class="code">StopEventList</span> or
-<span class="code">ShuffledEventList</span>, but we haven't covered
+`StopEventList` or
+`ShuffledEventList`, but we haven't covered
 **EventLists** in any systematic fashion. For the full story see the
 section on [EventList](../manual/eventlist.html) in the manual.
 
 Most of what we've covered in this tutorial has assumed that the chief
 sense being used is the sense of sight. But the adv3Lite library does
 provide some support for **other senses**. You can read about the
-<span class="code">listenDesc</span>,
-<span class="code">feelDesc</span>, <span class="code">smellDesc</span>
+`listenDesc`,
+`feelDesc`, `smellDesc`
 and other sensory properties of Things in the
 [Things](../manual/thing.html#sensory) section of the manual. There's
-also a <span class="code">Noise</span> class and an
-<span class="code">Odor</span> class you can read about in the
+also a `Noise` class and an
+`Odor` class you can read about in the
 [Extras](../manual/extra.html#emanation) section.
 
 Finally, adv3Lite provides the facility for you to display custom
@@ -267,8 +267,8 @@ RexPattern
 StringBuffer
 
 In addition, if you want to develop games for the Web UI you'll
-obviously want to read <span class="code">Part VII: Playing on the
-Web</span>.
+obviously want to read `Part VII: Playing on the
+Web`.
 
 While none of the material in this second list is vital to writing a
 game in TADS 3 when you're starting out, it does discuss features of the

@@ -59,9 +59,9 @@ object in the game world regardless of whether the normal world model
 would allow the player character to interact with them. If you need to
 add debugging commands in your own game you can get a universal scope
 list either by calling the makeScopeUniversal() method on your action,
-or by using <span class="code">World.universalScope</span> (for all
-Things and Topics) or <span class="code">World.universalScope.subset({o:
-o.ofKind(Thing)})</span> if, as is more likely, you just want a list of
+or by using `World.universalScope` (for all
+Things and Topics) or `World.universalScope.subset({o:
+o.ofKind(Thing)})` if, as is more likely, you just want a list of
 every Thing in the game. Universal scope may also be useful for some
 non-debugging commands such as GO TO that can refer to objects that
 aren't immediately present, although such commands may prefer to use a
@@ -89,7 +89,7 @@ Second, you could override the addExtraScopeItems(role) method on the
 current action (where role is either DirectObject or IndirectObject) to
 place additional items in scope for the action in question. For a
 debugging action, for example, you might make this method call
-<span class="code">makeScopeUniversal()</span> to put every game object
+`makeScopeUniversal()` to put every game object
 in scope.
 
 Third, you could override addExtraScopeItems(action) on the current Room

@@ -44,10 +44,10 @@ properties:
 - *Objects*: defaultNorthWall, defaultEastWall, defaultSouthWall,
   defaultWestWall, defaultCeiling and defaultSky.
 - *Additional properties on Room (and OutdoorRoom)*:
-  <span class="code">ceilingObj</span> and
-  <span class="code">wallObjs</span>.
-- *Additional properties on Thing*: <span class="code">roomPart</span>
-  and <span class="code">roomPartDesc</span>.
+  `ceilingObj` and
+  `wallObjs`.
+- *Additional properties on Thing*: `roomPart`
+  and `roomPartDesc`.
 
   
 <span id="usage"></span>
@@ -67,20 +67,20 @@ already provided by adv3Lite).
 
 You can customize which room parts an individual Room has by overriding
 its **ceilingObj** and **wallsObjs** properties (as well as its floorObj
-property, of course). The <span class="code">ceilingObj</span> property
+property, of course). The `ceilingObj` property
 defines the object (defaultCeiling or defaultSky) that acts as the
-room's ceiling. The <span class="code">wallObjs</span> property contains
+room's ceiling. The `wallObjs` property contains
 a list of the rooms walls (normally \[defaultNorthWall, defaultEastWall,
 defaultSouthWall, defaultWestWall\]. These properties can be overridden
 as needed to remove unwanted room parts or substitute custom ones.
 
 The defaultSky and defaultCeiling objects all descend from the
-<span class="code">Ceiling</span> class. The four default wall objects
-are all of the <span class="code">DefaultWall</span> class. In turn the
+`Ceiling` class. The four default wall objects
+are all of the `DefaultWall` class. In turn the
 Ceiling and DefaultWall classes are both subclasses of
-<span class="code">RoomPart</span>, which itself is a subclass of
-<span class="code">MultiLoc</span> and
-<span class="code">Decoration</span>. It follows that if you want to
+`RoomPart`, which itself is a subclass of
+`MultiLoc` and
+`Decoration`. It follows that if you want to
 move any room parts around dynamically during a game (e.g. to remove a
 wall that's just been demolished) you can do so using the standard
 [MultiLoc](../../manual/multiloc#movingmulti) methods such as
@@ -93,8 +93,7 @@ examined. Note that the item should then be located directly in the
 room, not the room part. For example, to implement a portrait that
 starts out hanging on a wall you might do something like this:
 
-<div class="code">
-
+```
      hall: Room 'Grand Hall'
        "This great hall is almost so grand that it's just about over the top. "
      ;
@@ -109,8 +108,7 @@ starts out hanging on a wall you might do something like this:
          roomPartDesc = initSpecialDesc
      ; 
      
-
-</div>
+```
 
 With this definition, the command EXAMINE WEST WALL will be met with the
 response "An old portrait hangs on the west wall." Note, however, that

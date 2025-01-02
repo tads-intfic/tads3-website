@@ -29,7 +29,7 @@ When the player enters an empty command (by hitting the enter key at the
 command prompt without typing anything), the main library responds
 either by carrying out a LOOK command or by complaining that the command
 is empty (depending on the setting of
-<span class="code">Parser.autoLook</span>). This extension changes that
+`Parser.autoLook`). This extension changes that
 behaviour so that the player is instead offered a brief menu of options
 (provided the new Parser property **autoHelp** is true, as it is by
 default in this extension). Selecting one of these options will then
@@ -47,14 +47,14 @@ In addition to a number of properties/methods intended purely for
 internal use, this extension defines the following new Action object and
 properties:
 
-- *New Action*: <span class="code">CmdMenu</span>
+- *New Action*: `CmdMenu`
 - *Properties of CmdMenu*:
-  <span class="code">manipulationActions</span>,
-  <span class="code">excludeCheckFailures</span>,
-  <span class="code">maxObjs</span>.
+  `manipulationActions`,
+  `excludeCheckFailures`,
+  `maxObjs`.
 - *Additional/overridden properties/methods of Parser*:
-  <span class="code">emptyCommand()</span>,
-  <span class="code">autoHelp</span>.
+  `emptyCommand()`,
+  `autoHelp`.
 
   
 <span id="usage"></span>
@@ -122,7 +122,7 @@ out.
 If there are quite a large number of objects in scope, there is a risk
 that player could be overwhelmed by the volume of suggestions. The
 number of suggestions is therefore limited by the **maxObjs** property
-of <span class="code">CmdMenu</span> (which has a value of 10 by
+of `CmdMenu` (which has a value of 10 by
 default). This limits the number of objects (or pairs of objects) that
 will be suggested in connection with any one action. You can adjust this
 number up or down if you feel that players are getting too few or too
@@ -133,14 +133,14 @@ suggestions once some actions have been carried out.
 
 With the exception of LockWith and UnlockWith, the actions that are
 suggested in the "Manipulate something" section are those listed in the
-**manipulationActions** property of <span class="code">CmdMenu</span>.
+**manipulationActions** property of `CmdMenu`.
 The actions listed in this property must all be TActions (i.e. actions
 that take a direct object only, which direct object must be a Thing).
 This allows you to change the actions that might be suggested, and also
 to add any TActions you define in your own game. The actions listed in
-the <span class="code">manipulationActions</span> list are suggested
+the `manipulationActions` list are suggested
 only on objects for which they would pass the verify stage and, if
-<span class="code">excludeCheckFailures</span>, the check stage. In
+`excludeCheckFailures`, the check stage. In
 practice this is likely to limit the actions suggested to a manageable
 number.
 
@@ -149,8 +149,7 @@ appear, since many TIActions have TAction equivalents that then prompt
 for the indirect object. For example the library defines the following
 on the Thing class:
 
-<div class="code">
-
+```
         isDiggable = nil
 
         dobjFor(Dig)
@@ -170,11 +169,10 @@ on the Thing class:
              */
             action() { askForIobj(DigWith); }
         } 
-
-</div>
+```
 
 This means that if you defined an object, the beach, say, as being
-diggable (<span class="code">isDiggable = true</span>) and the player
+diggable (`isDiggable = true`) and the player
 subsequently tried the DIG BEACH suggestion, he or she would then be
 prompted "What do you want to dig with?" (or, if there was just one
 digging implement in scope, the parser would select it automatically).
@@ -182,7 +180,7 @@ Many of the library actions are defined in accordance with this pattern,
 and if you follow it when defining your own TIActions then this
 extension should be able to cope with them reasonably well if you just
 add the matching TAction to the
-<span class="code">manipulationActions</span> list.
+`manipulationActions` list.
 
 Finally, note that if the player selects option 5 and talks to an NPC,
 the default behaviour of this extension is to hyperlink any topic

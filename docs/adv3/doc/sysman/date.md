@@ -54,28 +54,28 @@ A Date object is immutable; it records a particular time and date that
 doesn't change. Arithmetic on a Date object, such as adding a number of
 days to the date, yields a new Date object representing the result.
 
-When using the Date class, <span class="code">\#include
-\<date.h\></span> in your source files.
+When using the Date class, `\#include
+\<date.h\>` in your source files.
 
 ## Construction
 
-<span class="code">new Date()</span>
+`new Date()`
 
 <div class="fdef">
 
 This creates a Date object representing the current date and time, as of
-the moment the <span class="code">new</span> expression is evaluated.
+the moment the `new` expression is evaluated.
 (The object created isn't a "live" current-time value that changes every
 time you look at it; it simply records the fixed moment when the
-<span class="code">new</span> expression was evaluated. Evaluating the
-same <span class="code">new</span> expression again will yield another
+`new` expression was evaluated. Evaluating the
+same `new` expression again will yield another
 Date object representing the then-current time.)
 
 </div>
 
 <span id="newDateStr"></span>
 
-<span class="code">new Date(*str*, *refTZ*?, *refDate*?)</span>
+`new Date(*str*, *refTZ*?, *refDate*?)`
 
 <div class="fdef">
 
@@ -87,7 +87,7 @@ the usual ways people (and computers) write dates. See [built-in input
 formats](#inputFormats) below for a full list.
 
 *refTZ* is the reference time zone. If this is
-<span class="code">nil</span> or is omitted, the default is the host
+`nil` or is omitted, the default is the host
 system's local time zone. *refTZ* can be given in any of the [timezone
 argument](#tzarg) formats. The parsed date is taken to be in this time
 zone unless it explicitly specifies a different time zone within the
@@ -126,7 +126,7 @@ reference date:
 
 </div>
 
-<span class="code">new Date(*number*, '*J*')</span>
+`new Date(*number*, '*J*')`
 
 <div class="fdef">
 
@@ -138,7 +138,7 @@ noon UTC, counting a day as exactly 24 hours (86,400 seconds).
 
 </div>
 
-<span class="code">new Date(*number*, '*U*')</span>
+`new Date(*number*, '*U*')`
 
 <div class="fdef">
 
@@ -176,39 +176,39 @@ UTC between 1972 and 2012).
 
 </div>
 
-<span class="code">new Date(*year*, *month*, *day*, *tz*?)</span>
+`new Date(*year*, *month*, *day*, *tz*?)`
 
 <div class="fdef">
 
 This creates a Date value representing midnight (00:00) on the given
 date. *year* is the year number (e.g., 2012), *month* is a calendar
 month (1 to 12), and *day* is a day of the month (1 to 31). For example,
-<span class="code">new Date(2012, 4, 10</span> creates a Date value for
+`new Date(2012, 4, 10` creates a Date value for
 April 10, 2012 at midnight, local time.
 
 The date is taken as midnight in the time zone specified by *tz* (using
 the usual [timezone conventions](#tzarg)), which defaults to the host
-system's local time zone if <span class="code">nil</span> or not
+system's local time zone if `nil` or not
 specified.
 
 You can also use this constructor with invalid month and day values. If
 the day is out of range for its month, it's interpreted by moving into
 the next or previous month until the day is valid. For example,
-<span class="code">new Date(2012, 11, 31)</span> is the first day of
-December; <span class="code">new Date(2012, 3, 0)</span> is the last day
+`new Date(2012, 11, 31)` is the first day of
+December; `new Date(2012, 3, 0)` is the last day
 of February 2012. You can use this feature for many simple date
-arithmetic operations; for example, <span class="code">new Date(2012, 1,
-90)</span> gives you the 90th day of the year, and
-<span class="code">new Date(2012, 4, 10 + 60)</span> is 60 days after
+arithmetic operations; for example, `new Date(2012, 1,
+90)` gives you the 90th day of the year, and
+`new Date(2012, 4, 10 + 60)` is 60 days after
 April 10. The same treatment applies to the month; if it's less than 1
 or more than 12, it's a month in the previous or following year, so
-<span class="code">new Date(2012, 14, 1)</span> is interpreted as
+`new Date(2012, 14, 1)` is interpreted as
 February 1, 2013.
 
 </div>
 
-<span class="code">new Date(*year*, *month*, *day*, *hour*, *minutes*,
-*seconds*, *ms*, *tz*?)</span>
+`new Date(*year*, *month*, *day*, *hour*, *minutes*,
+*seconds*, *ms*, *tz*?)`
 
 <div class="fdef">
 
@@ -221,7 +221,7 @@ hour (0 to 59), *seconds* is the number of seconds past the minute (0 to
 
 *tz* is the timezone in which the time is interpreted, specified with
 the usual [timezone conventions](#tzarg). If *tz* is
-<span class="code">nil</span> or missing, the system's local time zone
+`nil` or missing, the system's local time zone
 is the default.
 
 </div>
@@ -238,7 +238,7 @@ portion but also the date; it can be Monday in one time zone and Tuesday
 in another.
 
 All of the methods and constructors that take timezone arguments let you
-omit the argument or use <span class="code">nil</span>, in which case
+omit the argument or use `nil`, in which case
 the host system's local time zone will be used by default. For most
 purposes, this is the time zone you'll want. The typical situation is
 that you're simply displaying times to the user, who will want to see
@@ -260,13 +260,13 @@ formats.
 A Date value can be used in arithmetic expressions to carry out a number
 of common calendar calculations.
 
-*Date* <span class="code">+</span> *number* calculates a new Date that's
+*Date* `+` *number* calculates a new Date that's
 the given number of days after the given Date (or before, if *number* is
-negative). For example, <span class="code">new Date('2010-1-1') +
-30</span> returns a Date representing Jan 31, 2010 at midnight local
+negative). For example, `new Date('2010-1-1') +
+30` returns a Date representing Jan 31, 2010 at midnight local
 time.
 
-*Date* <span class="code">-</span> *number* calculates a Date that's the
+*Date* `-` *number* calculates a Date that's the
 given number of days before the given date (or after, if *number* is
 negative).
 
@@ -274,23 +274,23 @@ You can add or subtract time values by using fractional days, specified
 as [BigNumber](bignum.html) values. A day is defined for the purposes of
 these calculations as exactly 86,400 seconds long, so an hour is 1/24th
 of a day, a minute is 1/1440th, and a second is 1/86400th. For example,
-<span class="code">new Date('2010-1-1') + 1.0/24</span> yields 1:00 AM
+`new Date('2010-1-1') + 1.0/24` yields 1:00 AM
 on Jan 1, 2010.
 
-*Date* <span class="code">-</span> *Date* returns a BigNumber giving the
+*Date* `-` *Date* returns a BigNumber giving the
 elapsed time between the two date values, measured in days. The result
 is a BigNumber because it represents any difference in the times as a
-fraction of a day. For example, <span class="code">new Date('2010-1-1
-16:00') - new Date('2010-1-1 10:00')</span> yields 0.25, since the
+fraction of a day. For example, `new Date('2010-1-1
+16:00') - new Date('2010-1-1 10:00')` yields 0.25, since the
 difference between these two times is 6 hours, or 1/4th of a day.
-Similarly, <span class="code">new Date('2010-1-2 16:00') - new
-Date('2010-1-1 10:00')</span> yields 1.25, since the difference is 1 day
+Similarly, `new Date('2010-1-2 16:00') - new
+Date('2010-1-1 10:00')` yields 1.25, since the difference is 1 day
 6 hours.
 
-You can compare two Date values with <span class="code">\></span>,
-<span class="code">\<</span>, <span class="code">\<=</span>,
-<span class="code">\>=</span>, <span class="code">==</span>, or
-<span class="code">!=</span>. This compares the Dates based on the UTC
+You can compare two Date values with `\>`,
+`\<`, `\<=`,
+`\>=`, `==`, or
+`!=`. This compares the Dates based on the UTC
 times they represent. One Date is greater than another if it occurs
 later in time than the other; a Date is less than another if it occurs
 earlier in time. Two dates are equal if they occur at exactly the same
@@ -301,11 +301,11 @@ UTC moment.
 If a Date value is used in a context where a string is required, such as
 for displaying output, the Date is automatically formatted to a string
 using a default format. For more control over the presentation, use
-<span class="code">formatDate()</span>.
+`formatDate()`.
 
 ## Methods
 
-<span class="code">addInterval(*interval*)</span>
+`addInterval(*interval*)`
 
 <div class="fdef">
 
@@ -319,14 +319,14 @@ subtracted).
 
 You can omit trailing elements that are unneeded; this is the same as
 using 0 for the omitted elements. For example, to add one month to a
-date, you can write simply <span class="code">d = d.addInterval(\[0,
-1\])</span>.
+date, you can write simply `d = d.addInterval(\[0,
+1\])`.
 
 When months and years are added, the interval is in terms of whole
-calendar years and months. For example, if <span class="code">d</span>
-represents February 1, 2011, <span class="code">d.addInterval(\[0,
-1\]</span> yields March 1, 2011, and
-<span class="code">d.addInterval\[0, 2\]</span> represents April 1,
+calendar years and months. For example, if `d`
+represents February 1, 2011, `d.addInterval(\[0,
+1\]` yields March 1, 2011, and
+`d.addInterval\[0, 2\]` represents April 1,
 2011. The difference in the lengths of the months is irrelevant because
 the addition is in terms of whole months. The same holds for adding
 years: the difference in length between leap years and non-leap years
@@ -339,7 +339,7 @@ Any UTC [leap seconds](#leapseconds) in the added interval are ignored.
 
 <span id="compareTo"></span>
 
-<span class="code">compareTo(*date*)</span>
+`compareTo(*date*)`
 
 <div class="fdef">
 
@@ -350,9 +350,9 @@ same point in time), and greater than zero if this date is greater than
 (after) *date*.
 
 Note that the same comparison can be made using the ordinary comparison
-operators (<span class="code">\<</span>, <span class="code">\></span>,
-<span class="code">\>=</span>, <span class="code">\<=</span>,
-<span class="code">==</span>, <span class="code">!=</span>). This method
+operators (`\<`, `\>`,
+`\>=`, `\<=`,
+`==`, `!=`). This method
 is convenient for cases where you want the relative order of two dates,
 such as in sort callbacks, since it lets you get the order in one shot.
 
@@ -360,7 +360,7 @@ such as in sort callbacks, since it lets you get the order in one shot.
 
 <span id="findWeekday"></span>
 
-<span class="code">findWeekday(*weekday*, *which*, *tz*?)</span>
+`findWeekday(*weekday*, *which*, *tz*?)`
 
 <div class="fdef">
 
@@ -375,9 +375,9 @@ after the date, and so on. 0 is the first *weekday* on or before the
 date, -1 is the second *weekday* on or before the date, etc.
 
 For example, to find the first Sunday in October of this year, you could
-write <span class="code">new Date('Oct 1').findWeekday(1, 1)</span>. To
-find the last Thursday in November, <span class="code">new Date('Dec
-0').findWeekday(0, 5)</span>: "December 0" is equivalent to the last day
+write `new Date('Oct 1').findWeekday(1, 1)`. To
+find the last Thursday in November, `new Date('Dec
+0').findWeekday(0, 5)`: "December 0" is equivalent to the last day
 of November, so this starts on the last day of November, then finds the
 nearest Thursday on or before that day.
 
@@ -385,7 +385,7 @@ nearest Thursday on or before that day.
 
 <span id="formatDate"></span>
 
-<span class="code">formatDate(*format*, *tz*?)</span>
+`formatDate(*format*, *tz*?)`
 
 <div class="fdef">
 
@@ -395,215 +395,215 @@ the Gregorian calendar, in the local time zone specified by *tz* (see
 template string *format*. The format string consists of a free mixture
 of literal text, which is simply copied exactly to the result string,
 and "%" substitution codes, listed below. For example,
-<span class="code">new Date('12-3-2011 17:30').formatDate('on the %t of
-%M, %Y at %I:%M %p')</span> returns <span class="code">'on 3rd of
-December, 2011 at 5:30 pm'</span>.
+`new Date('12-3-2011 17:30').formatDate('on the %t of
+%M, %Y at %I:%M %p')` returns `'on 3rd of
+December, 2011 at 5:30 pm'`.
 
 Most of the numeric formats have a fixed number of digits, with leading
 zeros for values that don't fill all of the digit slots - e.g., the
-<span class="code">%d</span> format renders 7 as '07'. You can remove
-the leading zeros with the <span class="code">\#</span> flag - e.g.,
-<span class="code">%#d</span> shows 7 as '7'. You can alternatively
+`%d` format renders 7 as '07'. You can remove
+the leading zeros with the `\#` flag - e.g.,
+`%#d` shows 7 as '7'. You can alternatively
 replace leading zeros with leading spaces or quoted spaces by putting
-the desired space character between the <span class="code">%</span> and
-the specifier letter: <span class="code">% m</span> (*percent space*
-<span class="code">m</span>) shows the month number with a leading
-ordinary space when needed, and <span class="code">%\\ m</span> show the
+the desired space character between the `%` and
+the specifier letter: `% m` (*percent space*
+`m`) shows the month number with a leading
+ordinary space when needed, and `%\\ m` show the
 month number with a leading quoted space when needed.
 
 You can show a numeric field in Roman numerals with the
-<span class="code">&</span> flag: <span class="code">%&y</span> show the
+`&` flag: `%&y` show the
 year in Roman numerals. Leading zeros are obviously not a factor with
 this style. Roman numerals can be used for numbers from 1 to 4999; the
-<span class="code">&</span> flag is ignored if the value to be displayed
+`&` flag is ignored if the value to be displayed
 is outside this range.
 
-<span class="code">%a</span>
+`%a`
 
 the abbreviated weekday name ('Mon')
 
-<span class="code">%A</span>
+`%A`
 
 the full weekday name ('Monday')
 
-<span class="code">%u</span>
+`%u`
 
 the ISO 8601 weekday number, 1 to 7 for Monday to Sunday
 
-<span class="code">%w</span>
+`%w`
 
 the weekday number, 0 to 6 for Sunday to Saturday
 
-<span class="code">%d</span>
+`%d`
 
 the two-digit day of the month, 01 to 31
 
-<span class="code">%t</span>
+`%t`
 
 day of the month as a number with an ordinal suffix, '1st' to '31st'
 
-<span class="code">%j</span>
+`%j`
 
 the three-digit day of the year, 001 to 366 (January 1 is day 1,
 February 1 is day 32, etc)
 
-<span class="code">%J</span>
+`%J`
 
 the Julian day number (see [getJulianDay()](#getJulianDay)). The value
 uses as many digits as needed, with no leading zeros. By default, the
 full value is displayed, including the fractional portion representing
-the time of day. Use the <span class="code">\#</span> flag
-(<span class="code">%#J</span>) to show only the whole part.
+the time of day. Use the `\#` flag
+(`%#J`) to show only the whole part.
 
-<span class="code">%U</span>
+`%U`
 
 a number giving the week of the year that contains the day represented
 by the Date value, 00 to 53; week 01 is the week that starts with the
 first Sunday of the year, and week 00 is the partial week (if any) that
 precedes the first Sunday
 
-<span class="code">%W</span>
+`%W`
 
 a number giving the week of the year that contains the day represented
 by the Date value, 00 to 53; week 01 is the week that starts with the
 first Monday of the year, and week 00 is the partial week (if any) that
 precedes the first Monday
 
-<span class="code">%V</span>
+`%V`
 
 the ISO-8601 week number of the week that contains the day represented
 by the Date value, 01 to 53; if the week containing January 1 has four
 or more days in the new year, it's week 1, otherwise it's the last week
 of the previous year. There is no week 0 in this system, because days
 between January 1 and the Monday of week 1 are considered part of the
-the previous year. See also the <span class="code">%g</span>,
-<span class="code">%G</span>, and <span class="code">%u</span> formats.
+the previous year. See also the `%g`,
+`%G`, and `%u` formats.
 
-<span class="code">%b</span>
+`%b`
 
 the abbreviated name of the month ('Feb')
 
-<span class="code">%B</span>
+`%B`
 
 the full name of the month ('February')
 
-<span class="code">%m</span>
+`%m`
 
 the two-digit month number, 01 to 12
 
-<span class="code">%y</span>
+`%y`
 
 the two-digit year number (i.e., the last two digits of the year: 2005
 is formatted as '05')
 
-<span class="code">%Y</span>
+`%Y`
 
 the four-digit year number, in astronomer's notation (the year before AD
 1 is represented as year 0000, the year before that is -0001, and so on)
 
-<span class="code">%e</span>
+`%e`
 
 the year (with no leading zeros) followed by a space and the era name
 (AD or BC by default, but these can be customized with
 [setLocaleInfo](#setLocaleInfo)). With a '-' flag
-(<span class="code">%-e</span>), the era name is placed before the year.
+(`%-e`), the era name is placed before the year.
 The year before AD 1 is shown as 1 BC, the year before that 2 BC, etc.
 
-<span class="code">%E</span>
+`%E`
 
 the year (with no leading zeros) and era name; the era name is written
 before the year for AD years (e.g., 'AD 32') and after for BC ('37 BC');
-the order is reversed if the <span class="code">-</span> flag is used
-(<span class="code">%-E</span>).
+the order is reversed if the `-` flag is used
+(`%-E`).
 
-<span class="code">%C</span>
+`%C`
 
 the two-digit century prefix for the year ('19' for 1900 to 1999)
 
-<span class="code">%g</span>
+`%g`
 
 the last two digits of the ISO-8601 Week calendar year for the date;
-this is for use with the <span class="code">%V</span> format
+this is for use with the `%V` format
 
-<span class="code">%G</span>
+`%G`
 
 the four digit ISO-8601 Week calendar year for the date; for use with
-the <span class="code">%V</span> format
+the `%V` format
 
-<span class="code">%H</span>
+`%H`
 
 the two-digit hour, on the 24-hour clock, 00 to 23
 
-<span class="code">%I</span>
+`%I`
 
 the two-digit hour on the 12-hour clock, 01 to 12
 
-<span class="code">%M</span>
+`%M`
 
 the two-digit minutes after the hour, 00 to 59
 
-<span class="code">%S</span>
+`%S`
 
 the two-digit seconds after the minute, 00 to 59
 
-<span class="code">%N</span>
+`%N`
 
 the three-digit milliseconds after the second, 000 to 999
 
-<span class="code">%P</span>
+`%P`
 
 upper-case AM or PM designator for a 12-hour clock
 
-<span class="code">%p</span>
+`%p`
 
 lower-case AM or PM designator for a 12-hour clock
 
-<span class="code">%r</span>
+`%r`
 
-the full 12-hour clock time, equivalent to <span class="code">%I:%M:%S
-%P</span>
+the full 12-hour clock time, equivalent to `%I:%M:%S
+%P`
 
-<span class="code">%R</span>
+`%R`
 
 the 24-hour clock time with minutes, equivalent to
-<span class="code">%H:%M</span>
+`%H:%M`
 
-<span class="code">%T</span>
+`%T`
 
 the 24-hour clock time with seconds, equivalent to
-<span class="code">%H:%M:%S</span>
+`%H:%M:%S`
 
-<span class="code">%X</span>
+`%X`
 
 the preferred time representation according to the locale settings; the
-default is <span class="code">%H:%M:%S</span>, but this can be
+default is `%H:%M:%S`, but this can be
 overridden with [setLocaleInfo](#setLocaleInfo)
 
-<span class="code">%z</span>
+`%z`
 
 the local time zone abbreviation ('EST')
 
-<span class="code">%Z</span>
+`%Z`
 
 the local time zone offset from UTC, in hours and minutes, as four
 digits (+0500)
 
-<span class="code">%c</span>
+`%c`
 
 the preferred date and time stamp for the locale; the default is
-<span class="code">%a %b %#d %T %Y</span>, but this can be overridden
+`%a %b %#d %T %Y`, but this can be overridden
 with [setLocaleInfo](#setLocaleInfo)
 
-<span class="code">%D</span>
+`%D`
 
-the short date, equivalent to <span class="code">%m/%d/%y</span>
+the short date, equivalent to `%m/%d/%y`
 
-<span class="code">%F</span>
+`%F`
 
 the database-style date, equivalent to
-<span class="code">%Y-%m-%d</span>
+`%Y-%m-%d`
 
-<span class="code">%s</span>
+`%s`
 
 the Unix timestamp value for the Date; this is an integer giving the
 number of seconds between the Date and the Unix Epoch, 1/1/1970 00:00
@@ -611,17 +611,17 @@ UTC; it's positive for dates after the Epoch and negative for dates
 before; each day is counted as exactly 86,400 seconds, ignoring any UTC
 leap seconds
 
-<span class="code">%x</span>
+`%x`
 
 the preferred locale date representation; the default is
-<span class="code">%m/%d/%y</span>, but this can be overridden with
+`%m/%d/%y`, but this can be overridden with
 [setLocaleInfo](#setLocaleInfo)
 
-<span class="code">%%</span>
+`%%`
 
-a single <span class="code">%</span> character
+a single `%` character
 
-This method is modeled on the <span class="code">strftime()</span>
+This method is modeled on the `strftime()`
 function found in C, php, and other languages (and the related
 DATE_FORMAT function in MySQL). Most of the format codes are the same as
 in those other languages. It's not a particularly mnemonic or rational
@@ -634,7 +634,7 @@ number of the codes are unique TADS extensions.
 
 <span id="formatJulianDate"></span>
 
-<span class="code">formatJulianDate(*format*, *tz*?)</span>
+`formatJulianDate(*format*, *tz*?)`
 
 <div class="fdef">
 
@@ -646,7 +646,7 @@ for the appropriate fields.
 Many fields will show the same values as for formatDate(). The
 time-of-day fields aren't affected, since Julian days are deemed to
 start at midnight, just like Gregorian days. The Week Date fields
-(<span class="code">%V</span>, <span class="code">%G</span>) aren't
+(`%V`, `%G`) aren't
 affected because the Week Date system is effectively an independent
 calendar.
 
@@ -654,7 +654,7 @@ calendar.
 
 <span id="getClockTime"></span>
 
-<span class="code">getClockTime(*tz*?)</span>
+`getClockTime(*tz*?)`
 
 <div class="fdef">
 
@@ -670,7 +670,7 @@ milliseconds past the second (0 to 999).
 
 <span id="getDate"></span>
 
-<span class="code">getDate(*tz*?)</span>
+`getDate(*tz*?)`
 
 <div class="fdef">
 
@@ -698,7 +698,7 @@ attempt to switch to other calendars for older dates.
 
 <span id="getISOWeekDate"></span>
 
-<span class="code">getISOWeekDate(*tz*?)</span>
+`getISOWeekDate(*tz*?)`
 
 <div class="fdef">
 
@@ -727,7 +727,7 @@ the day of the week; a Monday is always a Monday on both calendars.
 
 <span id="getJulianDay"></span>
 
-<span class="code">getJulianDay()</span>
+`getJulianDay()`
 
 <div class="fdef">
 
@@ -755,7 +755,7 @@ Julian day numbers.
 
 <span id="getJulianDate"></span>
 
-<span class="code">getJulianDate(*tz*?)</span>
+`getJulianDate(*tz*?)`
 
 <div class="fdef">
 
@@ -796,23 +796,23 @@ adoption of the Gregorian calendar are usually on the Julian system.
 
 <span id="parseDate"></span>
 
-<span class="code">static parseDate(*str*, *format*?, *refDate*?
-*refTZ*?)</span>
+`static parseDate(*str*, *format*?, *refDate*?
+*refTZ*?)`
 
 <div class="fdef">
 
-Parse a date. This is similar to the <span class="code">new
-Date(*str*)</span> constructor, but lets you specify one or more custom
+Parse a date. This is similar to the `new
+Date(*str*)` constructor, but lets you specify one or more custom
 format templates, and returns detailed information on the parsing
 results.
 
 *str* is the string to parse. *format* is an optional custom format
 template string, or a list of custom template strings; if this is
-omitted or <span class="code">nil</span>, the [built-in
+omitted or `nil`, the [built-in
 formats](#inputFormats) are used by default. Specifying a
-non-<span class="code">nil</span> *format* overrides the built-in
+non-`nil` *format* overrides the built-in
 formats, but you can include them in your list by including a
-<span class="code">nil</span> element in the list; this means "include
+`nil` element in the list; this means "include
 all of the built-in templates here". The order is sometimes important;
 the template parser scans the entire template list, and if two or more
 templates match, it picks the one that matched the longest portion of
@@ -820,8 +820,8 @@ the input string. But if two templates match the same amount of input
 text, the one that's earlier in the template list takes precedence.
 *refDate* is an optional Date object giving a reference date, used to
 fill in missing date/time fields; this works the same way it does in the
-[<span class="code">new Date(*str*)</span>](#newDateStr) constructor. If
-*refDate* is omitted or <span class="code">nil</span>, the current
+[`new Date(*str*)`](#newDateStr) constructor. If
+*refDate* is omitted or `nil`, the current
 system time is used by default. *refTZ* is an optional
 [timezone](#tzarg), specifying the default timezone to use if the date
 string doesn't contain a timezone name of its own; this defaults to the
@@ -837,20 +837,20 @@ TimeZone object), the format string(s) matched, and a list of strings
 with the original source text matched for the individual date/time
 components. A TimeZone object is included only if the string contains an
 explicit time zone name; otherwise this element is
-<span class="code">nil</span> in the return list, indicating that the
+`nil` in the return list, indicating that the
 reference timezone was used (*refTZ* if supplied, otherwise the host
 system's local timezone). Source text components that aren't matched in
-the string are set to <span class="code">nil</span> in the list. The
+the string are set to `nil` in the list. The
 list elements are:
 
 \[1\] a Date object with the parsed date
 
 \[2\] a TimeZone object with the parsed timezone, or
-<span class="code">nil</span> if a timezone name wasn't matched in the
+`nil` if a timezone name wasn't matched in the
 string.
 
 \[3\] an integer giving the fixed timezone offset specified in the input
-string, in seconds, if applicable; <span class="code">nil</span> if not.
+string, in seconds, if applicable; `nil` if not.
 This is applicable only when the input string specifies a timezone name
 that carries specific a standard/daylight clock setting, such as "EST"
 or "PDT", which overrides the TimeZone object's normal automatic
@@ -863,7 +863,7 @@ list you supplied
 \[5\] a sublist with the original source text matched in each of the
 different fields making up the date time value. This is a list of
 strings; any element that wasn't matched in the input is set to
-<span class="code">nil</span>. The elements of the sublist are:
+`nil`. The elements of the sublist are:
 
 - \[1\] era - the source text matched for the AD/BC or +/- era indicator
 - \[2\] year - the source text matched for the year
@@ -883,10 +883,10 @@ strings; any element that wasn't matched in the input is set to
 - \[12\] unix - the source text matched for the Unix timestamp value
 - \[13\] tz - the source text matched for the timezone name
 
-The return value is <span class="code">nil</span> if the parsing fails.
-This is different from the <span class="code">new Date(*str*)</span>
+The return value is `nil` if the parsing fails.
+This is different from the `new Date(*str*)`
 constructor, which throws an error if the parsing fails. The
-<span class="code">nil</span> return used here is meant to make it a
+`nil` return used here is meant to make it a
 little more convenient to use this method to test a string of uncertain
 provenance to see if it looks like a date.
 
@@ -894,8 +894,8 @@ provenance to see if it looks like a date.
 
 <span id="parseJulianDate"></span>
 
-<span class="code">static parseJulianDate(*str*, *format*?, *refDate*?
-*refTZ*?)</span>
+`static parseJulianDate(*str*, *format*?, *refDate*?
+*refTZ*?)`
 
 <div class="fdef">
 
@@ -914,18 +914,16 @@ zones, so you can freely use it with Date objects parsed from Gregorian
 dates. For example, this will display the Gregorian date for a given
 Julian date string:
 
-<div class="code">
-
+```
     local str = 'October 4, 1582';
     "<<str>> Julian = <<Date.parseJulianDate(str)[1].formatDate('%B %#d, %Y')>>\n";
-
-</div>
+```
 
 </div>
 
 <span id="setLocaleInfo"></span>
 
-<span class="code">static setLocaleInfo(...)</span>
+`static setLocaleInfo(...)`
 
 <div class="fdef">
 
@@ -935,13 +933,13 @@ non-English presentation.
 
 There are two ways to call this method:
 
-- <span class="code">setLocaleInfo(\[*monthNames*, *monthAbbrs*,
-  ...\])</span> This form lets you set the whole list of custom elements
+- `setLocaleInfo(\[*monthNames*, *monthAbbrs*,
+  ...\])` This form lets you set the whole list of custom elements
   in one shot. The list consists of strings giving the elements in order
   of the index values (see below). You can stop after any number of
   elements; any missing elements at the end of the list will simply be
   left at the current or default settings.
-- <span class="code">setLocaleInfo(*index*, *value*, ...)</span> This
+- `setLocaleInfo(*index*, *value*, ...)` This
   form sets elements individually. For each element you wish to set,
   include an *index*, which is one of the DateXXX values below, followed
   by a string *value* giving the custom setting for that index. With
@@ -956,51 +954,51 @@ Value
 
 Description/Default
 
-<span class="code">DateMonthNames</span>
+`DateMonthNames`
 
 0
 
 full names of the months  
-<span class="code">'January,February,March,April,May,June,July,August,September,October,November,December'</span>
+`'January,February,March,April,May,June,July,August,September,October,November,December'`
 
-<span class="code">DateMonthAbbrs</span>
+`DateMonthAbbrs`
 
 1
 
 abbreviated names of the months  
-<span class="code">'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep=Sept,Oct,Nov,Dec'</span>
+`'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep=Sept,Oct,Nov,Dec'`
 
-<span class="code">DateWeekdayNames</span>
+`DateWeekdayNames`
 
 2
 
 full names of the weekdays  
-<span class="code">'Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday'</span>
+`'Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday'`
 
-<span class="code">DateWeekdayAbbrs</span>
+`DateWeekdayAbbrs`
 
 3
 
 abbreviated names of the weekdays  
-<span class="code">'Sun,Mon,Tue,Wed,Thu,Fri,Sat'</span>
+`'Sun,Mon,Tue,Wed,Thu,Fri,Sat'`
 
-<span class="code">DateAMPM</span>
+`DateAMPM`
 
 4
 
 AM/PM (meridian) indicator for 12-hour clock; upper case AM, upper case
 PM, lower case AM, lower case PM (the parser ignores case when matching
 input, so the lower-case versions are needed only for formatting)  
-<span class="code">'AM=A.M.,PM=P.M.,am,pm'</span>
+`'AM=A.M.,PM=P.M.,am,pm'`
 
-<span class="code">DateEra</span>
+`DateEra`
 
 5
 
 AD/BC indicators for era  
-<span class="code">'AD=A.D.=CE=C.E.,BC=B.C.=BCE=B.C.E.'</span>
+`'AD=A.D.=CE=C.E.,BC=B.C.=BCE=B.C.E.'`
 
-<span class="code">DateParseFilter</span>
+`DateParseFilter`
 
 6
 
@@ -1008,9 +1006,9 @@ a filter for the culture-specific parsing formats: currently this can be
 'us' to select the US-style formats (e.g., the numeric "month/day"
 formats), or 'eu' for the European-style formats (the "day/month"
 formats)  
-<span class="code">'m/d'</span>
+`'m/d'`
 
-<span class="code">DateOrdSuffixes</span>
+`DateOrdSuffixes`
 
 7
 
@@ -1022,68 +1020,68 @@ If all of the elements after after a given point are the same, you can
 omit the rest, and the last element will be used for all remaining
 elements; for example, French could specify simply 're,e', and German
 '.'.  
-<span class="code">'st,nd,rd,th,st,nd,rd'</span>
+`'st,nd,rd,th,st,nd,rd'`
 
-<span class="code">DateFmtTimestamp</span>
+`DateFmtTimestamp`
 
 8
 
 the default local format for the full date and time, as a format string
-for <span class="code">formatDate()</span>  
-<span class="code">'%a %b %#d %T %Y'</span>
+for `formatDate()`  
+`'%a %b %#d %T %Y'`
 
-<span class="code">DateFmtTime</span>
+`DateFmtTime`
 
 9
 
 the default local format for a time without a date, as a format string
-for <span class="code">formatDate()</span>  
-<span class="code">'%H:%M:%S'</span>
+for `formatDate()`  
+`'%H:%M:%S'`
 
-<span class="code">DateFmtDate</span>
+`DateFmtDate`
 
 10
 
 the default local format for a date without a time, as a format string
-for <span class="code">formatDate()</span>  
-<span class="code">'%m/%d/%Y'</span>
+for `formatDate()`  
+`'%m/%d/%Y'`
 
-<span class="code">DateFmtShortDate</span>
+`DateFmtShortDate`
 
 11
 
 the default short date format, as a format string for
-<span class="code">formatDate()</span>  
-<span class="code">'%m/%d/%y</span>
+`formatDate()`  
+`'%m/%d/%y`
 
-<span class="code">DateFmt12Hour</span>
+`DateFmt12Hour`
 
 12
 
 local 12-hour clock format, as a format string for
-<span class="code">formatDate()</span>  
-<span class="code">'%I:%M:%S %P'</span>
+`formatDate()`  
+`'%I:%M:%S %P'`
 
-<span class="code">DateFmt24Hour</span>
+`DateFmt24Hour`
 
 13
 
 local 24-hour clock format, as a format string for
-<span class="code">formatDate()</span>  
-<span class="code">'%H:%M'</span>
+`formatDate()`  
+`'%H:%M'`
 
-<span class="code">DateFmt24HourSec</span>
+`DateFmt24HourSec`
 
 14
 
 24-hour clock format with seconds, as a format string for
-<span class="code">formatDate()</span>  
-<span class="code">'%H:%M:%S'</span>
+`formatDate()`  
+`'%H:%M:%S'`
 
 Most elements serve as both a list of strings to match in parsed input
-(for the <span class="code">new Date('string')</span> constructor) and a
+(for the `new Date('string')` constructor) and a
 list of strings to use in formatted output (from
-<span class="code">formatDate()</span>). These value lists are encoded
+`formatDate()`). These value lists are encoded
 as strings, with commas separating elements. (Don't use spaces unless
 you want them to be literally included in the output.) For input parsing
 purposes, you can also supply synonyms for an item, using an equals sign
@@ -1277,12 +1275,12 @@ an offset from GMT, optionally starting with the literal text "GMT"
 anything else is a single literal character to match, or a series of
 single characters, *any one of which* can be matched. An underscore
 represents a space. To match an alphabetic character, start the literals
-with a backslash: e.g., <span class="code">\W</span> matches a literal
+with a backslash: e.g., `\W` matches a literal
 'W'. You can also make the literals optional, or allow them to match
 more than once: a trailing "\*" means that the template matches zero or
 more characters of input, "+" matches one or more characters, and "?"
-matches zero or one. For example, <span class="code">\_\*</span> matches
-zero or more spaces, and <span class="code">.,;+</span> matches a series
+matches zero or one. For example, `\_\*` matches
+zero or more spaces, and `.,;+` matches a series
 of one or more periods, commas, and/or semicolons.
 
 Those are the field values. A template string is constructed by
@@ -1801,8 +1799,8 @@ the astronomical notation and the AD/BC notation. In input, the parser
 determines which notation is used by analyzing the input string. For
 output via [formatDate()](#formatDate), you can choose the notation by
 selecting the appropriate format code (e.g.,
-<span class="code">%y</span> for astronomical years,
-<span class="code">%e</span> for AD/BC eras).
+`%y` for astronomical years,
+`%e` for AD/BC eras).
 
 ### <span id="leapseconds">Leap seconds</span>
 

@@ -33,13 +33,11 @@ necklace if it's simply a topic of conversation and never makes a
 physical appearance in the game. For these purposes we can define a
 Topic:
 
-<div class="code">
-
+```
     tBonaparte: Topic 'Napoleon[n] Bonaparte';
     tJupiter: Topic 'Jupiter';
     tNecklace: Topic '() Aunt Maude\'s necklace';
-
-</div>
+```
 
 Note that the property we are defining in the Topic template is the
 [vocab](thing.html#vocab) property, which works in precisely the same way
@@ -85,11 +83,9 @@ nil. The quick way to do that is through the Topic template, for which
 the second, optional, element, defined with an @ sign, defines the value
 of the familiar property:
 
-<div class="code">
-
+```
     tNecklace: Topic '() Aunt Maude\'s necklace' @nil;
-
-</div>
+```
 
 </div>
 

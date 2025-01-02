@@ -40,15 +40,14 @@ In adv3Lite a door is actually composed of two objects, each
 representing one side of the door (apart from anything else, this makes
 it easy to make one side different from the other). Each side of the
 door is placed in the room in which is located, and connected to the
-other side of the door via its <span class="code">otherSide</span>
+other side of the door via its `otherSide`
 property. Since a Door is yet another TravelConnector (albeit a slightly
 unusual one) we also follow the usual step of pointing the appropriate
 direction property of the relevant room to the door through which it
 leads. This should become clear with the particular example we're
 implemented here:
 
-<div class="code">
-
+```
     gateArea: Room 'Gate Area' 'gate area'
         "The ways to Gates 1, 2 and 3 are signposted to the northwest, north and
         northeast respectively, while a display board mounted high up on the wall
@@ -85,15 +84,14 @@ implemented here:
         
         otherSide = maintenanceRoomDoor
     ;
-
-</div>
+```
 
 Note that we handle the description of whether the doors are open or
 closed manually, via embedded expressions and the
-<span class="code">isOpen</span> property (which, as you might expect,
+`isOpen` property (which, as you might expect,
 is true if the door is open and nil if the door is closed). You *can*
 have the game do this for you automatically by overriding
-<span class="code">openStatusReportable</span> to be true (either on the
+`openStatusReportable` to be true (either on the
 Door class or on individual doors), but then it can be awkward to write
 descriptions of doors that read naturally (unless all you want the
 player to see is "The door is open/closed"), so it's generally better to
@@ -110,7 +108,7 @@ door in sync for you: when one side of the door is opened, both are
 opened, and when one is closed, both are closed.
 
 But this door is meant to be *lockable*. You might think that we could
-make it so by defining <span class="code">isLockable = true</span> on
+make it so by defining `isLockable = true` on
 it, but in fact this won't work. Lockability isn't just a binary
 true/false state, since even if something is lockable there's the
 question of the locking mechanism involved. So instead of using an
@@ -137,8 +135,7 @@ Clearly, we want the maintenance room door to be lockableWithKey. We
 also want it to start out locked. We therefore need to make the
 following changes:
 
-<div class="code">
-
+```
     + maintenanceRoomDoor: Door 'metal door'
         "It's marked <q>Personal de Mantenimiento S&oacute;lo</q>, and <<if isOpen>>
         is currently open<<else>> looks firmly closed<<end>>. "
@@ -158,8 +155,7 @@ following changes:
         lockability = lockableWithKey
         isLocked = true
     ;
-
-</div>
+```
 
 That's all very well, but we still haven't defined *which* key or keys
 can be used to unlock this door. In fact, in adv3Lite, we have to do it
@@ -167,16 +163,14 @@ the other way round: we need to tell the key which things it can lock
 and unlock. We do that by assigning anything that's going to act as a
 key to the Key class, and defining a couple of properties on it thus:
 
-<div class="code">
-
+```
     + brassKey: Key 'small brass key; yale'
         "It's just like all the other yale keys you've ever seen. "    
         
         actualLockList = [maintenanceRoomDoor, mrDoorOut]
         plausibleLockList = [maintenanceRoomDoor, mrDoorOut]
     ;
-
-</div>
+```
 
 The **actualLockList** property contains a list of the objects this key
 in fact locks and unlocks. Note that if we want it to work on both sides
@@ -221,8 +215,7 @@ result in a potentially misleading response). To save ourselves a bit of
 repetitious work we can therefore define a couple of custom classes that
 can be used to implement both pairs of doors:
 
-<div class="code">
-
+```
     class PlaneDoor: Door 
         desc = "It's <<if isOpen>>open<<else>>closed<<end>>. "
         lockability = indirectLockable
@@ -239,13 +232,12 @@ can be used to implement both pairs of doors:
         
         isLocked = nil
     ;
-
-</div>
+```
 
 Note the use of the nested \<\<if \>\> on the LockablePlaneDoor class.
 If the door is open there's not a lot of point in reporting whether it's
 locked or unlocked. Note also that we explicitly defined
-<span class="code">isLocked = nil</span> on both classes of Door; this
+`isLocked = nil` on both classes of Door; this
 is because things that are lockable start out locked by default, but we
 want the doors aboard the plane to start out unlocked, otherwise the
 game won't be winnable.
@@ -253,8 +245,7 @@ game won't be winnable.
 Armed with these class defintions we can now implement the doors aboard
 the plane as follows:
 
-<div class="code">
-
+```
     cockpit: Room 'Cockpit' 'cockpit'
         
         aft = cabinDoor
@@ -318,8 +309,7 @@ the plane as follows:
     + bathroomDoorInside: LockablePlaneDoor 'cabin door'
         otherSide = bathroomDoor
     ;
-
-</div>
+```
 
 If you compile and run the game now, after making these changes, you
 should be able to try these doors out.
@@ -333,8 +323,7 @@ other hand, it would not be unreasonable for the player to try to UNLOCK
 DOOR WITH CARD, so we shall instead make it lockableWithKey, making the
 IDCard the appropriate key:
 
-<div class="code">
-
+```
     ++ IDcard: Key 'an ID Card; identification poor; photo'     
         "According to what's on the front it apparently belongs to one Antonio
         Velaquez. Fortunately the accompanying photo is so poor it could be of
@@ -368,15 +357,13 @@ IDCard the appropriate key:
         lockability = lockableWithKey    
         isLocked = true    
     ;
-
-</div>
+```
 
 The other side of this door can just be a simple door, since we'll
 assume that no special steps ever need be taken to lock it and unlock it
 from the Security Area side:
 
-<div class="code">
-
+```
     securityArea: Room 'Security Area' 'security area'
         "This somewhat bare room seems to be lobby for other areas. There are exits
         south and west, while the way out back to the concourse lies through the
@@ -394,24 +381,21 @@ from the Security Area side:
         
         otherSide = securityDoor
     ;
-
-</div>
+```
 
 This will work well enough if the player types UNLOCK DOOR WITH CARD,
 but not so well if the equally plausible PUT CARD IN SLOT is used.
 Probably the best way to deal with that is to intercept PUT CARD IN SLOT
 and turn it into UNLOCK DOOR WITH KEY by using a Doer:
 
-<div class="code">
-
+```
     Doer 'put IDcard in cardslot'
         execAction(c)
         {
             doInstead(UnlockWith, securityDoor, IDcard);
         }
     ;
-
-</div>
+```
 
 If you recall our previous use of Doers you should probably recognize
 that this means "If the player's command matches PUT IDcard IN cardslot,
@@ -423,8 +407,7 @@ We also want to make it clear to the player that the ID Card is the only
 thing that should be put in the slot, which we can do by customizing the
 cannotPutInMsg on the cardSlot object:
 
-<div class="code">
-
+```
     + cardslot: Fixture 'card slot'  
         "The slot appears to accept special ID cards with magnetic encoding. If you
         had an appropriate ID card, you could put it in the slot to open the door. "
@@ -432,8 +415,7 @@ cannotPutInMsg on the cardSlot object:
         cannotPutInMsg = '{The subj dobj} {does}n\'t look as if {he dobj}{\'s} meant
             to fit in there. '
     ;
-
-</div>
+```
 
 If you recompile and run this game you should be able to check that it
 all works as expected; at least you could if you get the IDCard through
@@ -454,7 +436,7 @@ character, while EVAL securityDoor.makeLocked(nil) would magically
 unlock the security door (use with care!). Obviously you don't want your
 players to have access to these commands, so when you come to compile
 your game for release you should use the 'Compile for Release' option in
-Workbench, and not use the <span class="code">-d</span> option when
+Workbench, and not use the `-d` option when
 compiling from the command line. For further information on [debugging
 commands](../manual/debug.html), consult the *adv3Lite Library Manual*.
 
@@ -468,8 +450,7 @@ it, or at least make it pop open a fraction, and closing the door to
 lock it. We can implement these refinements by overriding the makeOpen()
 and makeLocked() method of the door like so:
 
-<div class="code">
-
+```
     + securityDoor: Door 'door'
         "It's clearly marked PRIVADO and is <<if isOpen>> currently open<<else>>
         firmly closed<<end>>. "
@@ -501,8 +482,7 @@ and makeLocked() method of the door like so:
             
         }
     ;
-
-</div>
+```
 
 The messages that we've just added would look a bit awkward if they
 appeared alongside the default messages we get for unlocking and closing
@@ -510,15 +490,15 @@ a door, but if you try the door out now you'll find that these are no
 longer displayed; the library assumes that since you're displaying your
 own message you don't want its default one as well. This is always the
 case when a default message is produced at the
-<span class="code">report()</span> stage of an action, a point we shall
+`report()` stage of an action, a point we shall
 return to in more detail in a later chapter. Finally, note that we've
 avoided a potential "deadly embrace" in which our overridden versions of
-<span class="code">makeOpen(stat)</span> and
-<span class="code">makeLocked(stat)</span> keep on calling each other
+`makeOpen(stat)` and
+`makeLocked(stat)` keep on calling each other
 for all eternity, since one only calls the other when
-<span class="code">stat</span> is nil, and then always passes the value
-true to the <span class="code">stat</span> parameter of the other. Note
-also that our custom code on <span class="code">makeOpen(stat)</span>
+`stat` is nil, and then always passes the value
+true to the `stat` parameter of the other. Note
+also that our custom code on `makeOpen(stat)`
 isn't used when the current action is an implicit one; this prevents the
 mess that would otherwise result when the door was implicitly closed as
 part of a LOCK action.
@@ -527,16 +507,14 @@ We can improve our implementation of this self-locking door (one that
 locks itself when closed) by using a Doer to redirect the LOCK action to
 a CLOSE action:
 
-<div class="code">
-
+```
     Doer 'lock securityDoor; lock securityDoor with IDcard'
         execAction(c)
         {
             doInstead(Close, securityDoor);
         }    
     ;
-
-</div>
+```
 
 Note that some care is needed in choosing where to place such a
 definition in your source code. In particular, you need to avoid putting

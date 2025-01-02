@@ -35,8 +35,7 @@ you're not using Workbench, navigate to your Heidi directory and open
 start.t in your text editor. You should now see a file that looks like
 this:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -80,8 +79,7 @@ this:
         person = 2   
         contType = Carrier    
     ;
-
-</div>
+```
 
 Don't worry too much about what all that means for the moment, we'll be
 explaining it all in due course. A couple of points should be emphasized
@@ -91,9 +89,9 @@ right from the outset, however:
     the wrong place can easily result in a bunch of compilation errors.
     Watch out for this when you write your own code!
 2.  Precise spelling and the case of letters are both important. If you
-    go on to refer to <span class="code">startRoom</span> or
-    <span class="code">statroom</span>, TADS 3 won't know that you mean
-    the same thing as <span class="code">startroom</span>, so be very
+    go on to refer to `startRoom` or
+    `statroom`, TADS 3 won't know that you mean
+    the same thing as `startroom`, so be very
     careful to copy the spelling of everything, including the case of
     letters, when you go on to type in code as instructed below.
 
@@ -102,8 +100,7 @@ source file a little less generic and a little more relevant to the game
 we're about to write. Edit your copy of the file so it reads as it does
 below (to help you with this the main changes are shown in bold):
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -149,8 +146,7 @@ below (to help you with this the main changes are shown in bold):
         person = 2   
         contType = Carrier    
     ;
-
-</div>
+```
 
 If you like, you can also change the byline, htmlByline and authorEmail
 fields to reflect your own name and email address (though for this

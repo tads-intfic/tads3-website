@@ -39,7 +39,7 @@ conversation topics are available at any point in time.
 The adv3lite knowledge model starts from the premise that the player
 character knows of the existence of an object either if s/he has seen
 it, or if we declare it to be **familiar**. The
-<span class="code">familiar</span> property is a way of telling the game
+`familiar` property is a way of telling the game
 that the player character knows about (i.e. knows of the existence of)
 an object even is s/he hasn't seen it (or hasn't seen it yet). This
 allows the player to ask or tell other characters about this object.
@@ -48,67 +48,67 @@ The library attempts to keep track of what the player character has seen
 by setting the **seen** property of objects to true once the player
 character has seen them. In some cases, however, a game author may have
 to do this manually, for example when moving an object into view using
-<span class="code">moveInto()</span>. For reasons that will become more
+`moveInto()`. For reasons that will become more
 apparent below, rather than setting the value of the seen property
 manually, it's often best not to do so directly (which a statement like
-<span class="code">codebook.seen = true</span>) but either by calling
+`codebook.seen = true`) but either by calling
 the **setSeen()** method on the object that has just come into view
-(e.g. <span class="code">codebook.setSeen()</span>) or calling
-<span class="code">setHasSeen(obj)</span> on the player character (e.g.
-<span class="code">gPlayerChar.setHasSeen(codebook)</span>). The second
+(e.g. `codebook.setSeen()`) or calling
+`setHasSeen(obj)` on the player character (e.g.
+`gPlayerChar.setHasSeen(codebook)`). The second
 method can be abbreviated by using the **gSetSeen()** macro; writing
-<span class="code">gSetSeen(codebook)</span> is exactly equivalent to
-writing <span class="code">gPlayerChar.setHasSeen(codebook)</span>. To
+`gSetSeen(codebook)` is exactly equivalent to
+writing `gPlayerChar.setHasSeen(codebook)`. To
 test whether the player character has seen something we can use the
 **hasSeen()** method, e.g.
-<span class="code">gPlayerChar.hasSeen(codebook)</span> will be true if
+`gPlayerChar.hasSeen(codebook)` will be true if
 the player character has seen the codebook.
 
 In the case of Things (or Topics) the player character learns about
 other than by actually seeing them, we use the **familiar** property. If
 the player character learns of the existence of a codebook that s/he is
-yet to find, we can set <span class="code">codebook.familiar</span> to
+yet to find, we can set `codebook.familiar` to
 true to indicate that the player character now knows of the codebook's
 existence (and so can refer to it in conversation). Again it's often
 best to do this using either **setKnown()**, e.g.
-<span class="code">codeBook.setKnown()</span> or **setKnowsAbout()**,
+`codeBook.setKnown()` or **setKnowsAbout()**,
 e.g. gPlayerChar.setKnowsAbout(codebook) which can be abbreviated to
-<span class="code">gSetKnown(codebook)</span> using the **gSetKnown()**
+`gSetKnown(codebook)` using the **gSetKnown()**
 macro. Each of these methos will set
-<span class="code">codeBook.familiar</span> to true.
+`codeBook.familiar` to true.
 
 Remember, the player character knows about the codebook either if s/he
-has seen it (<span class="code">codebook.seen</span> is true) or if s/he
+has seen it (`codebook.seen` is true) or if s/he
 has learned about its existence in some other way
-(<span class="code">codebook.familiar</span> is true). To test whether
+(`codebook.familiar` is true). To test whether
 the player character knows about the codebook we use the
 **knowsAbout()** method, e.g. gPlayerChar.knowsAbout(codebook) or the
-known property, e.g. <span class="code">codebook.known</span> (which
+known property, e.g. `codebook.known` (which
 simply returns the value of
-<span class="code">gPlayerChar.knowsAbout(codebook)</span>).
+`gPlayerChar.knowsAbout(codebook)`).
 
 At first sight, this may all seem unnecessarily complex; why not just
-set and test the values of <span class="code">seen</span> and
-<span class="code">known</span> directly, and why do we need another
-property called <span class="code">familiar</span>? To answer the second
-question first we need to distinguish <span class="code">familiar</span>
+set and test the values of `seen` and
+`known` directly, and why do we need another
+property called `familiar`? To answer the second
+question first we need to distinguish `familiar`
 (known about but not necessarily seen) from
-<span class="code">known</span> (either <span class="code">seen</span>
-or <span class="code">familiar</span>). Since
-<span class="code">obj.known</span> is true either if
-<span class="code">obj.seen</span> is true or
-<span class="code">obj.familiar</span> is true, we need three property
+`known` (either `seen`
+or `familiar`). Since
+`obj.known` is true either if
+`obj.seen` is true or
+`obj.familiar` is true, we need three property
 names to keep track of the epistemological model.
 
 In games where we're only interested in what the player character has
 seen and knows about, it would be perfectly okay to set and test the
-values of <span class="code">seen</span> and
-<span class="code">familiar</span> directly. The complication comes in
+values of `seen` and
+`familiar` directly. The complication comes in
 either when we have more than one player character (because the player
 character changes during the course of play) or because we want to keep
 separate track of what non-player characters have seen and/or know
-about. By themselves the <span class="code">seen</span> and
-<span class="code">familiar</span> properties of objects don't tell us
+about. By themselves the `seen` and
+`familiar` properties of objects don't tell us
 who has seen them or is familiar with them. So if we're interested in
 tracking the knowledge of more than one actor in the game we have to do
 a bit more work.
@@ -117,25 +117,24 @@ To this end we can use the **seenProp** and **knownProp** properties.
 These are defined on the actor concerned, and should contained property
 pointers defining which properties of Thing (and Topic) to use to keep
 track of what this particular actor has seen and is familiar with. By
-default <span class="code">seenProp</span> is just
-<span class="code">&seen</span> for every actor, and
-<span class="code">knownProp</span> is
-<span class="code">&familiar</span> for every actor, meaning that
+default `seenProp` is just
+`&seen` for every actor, and
+`knownProp` is
+`&familiar` for every actor, meaning that
 calling setHasSeen(obj) on *any* actor will set
-<span class="code">obj.seen</span> to true, and calling
-<span class="code">knowsAbout(obj) </span>on any actor will set
-<span class="code">obj.familiar</span> to true. If, however, we wanted
+`obj.seen` to true, and calling
+`knowsAbout(obj) `on any actor will set
+`obj.familiar` to true. If, however, we wanted
 to keep separate track of Bob's knowledge we could define new
-<span class="code">bobSeen</span> and
-<span class="code">bobFamiliar</span> properties on Thing (and a new
-<span class="code">bobFamiliar</span> property on Topic), and then set
-<span class="code">bob.seenProp</span> to
-<span class="code">&bobSeen</span> and
-<span class="code">bob.knownProp</span> to
-<span class="code">&bobFamiliar</span>, like this:
+`bobSeen` and
+`bobFamiliar` properties on Thing (and a new
+`bobFamiliar` property on Topic), and then set
+`bob.seenProp` to
+`&bobSeen` and
+`bob.knownProp` to
+`&bobFamiliar`, like this:
 
-<div class="code">
-
+```
     modify Thing
         bobSeen = nil
         bobFamiliar = nil
@@ -151,31 +150,30 @@ to keep separate track of Bob's knowledge we could define new
        knownProp = &bobFamiliar
     ;
      
-
-</div>
+```
 
 With these definitions in place,
-<span class="code">bob.setHasSeen(obj</span>) will set
-<span class="code">obj.bobSeen</span> to true, and
-<span class="code">bob.setKnowsAbout(obj)</span> will set
-<span class="code">obj.bobFamiliar</span> to true. Likewise,
-<span class="code">bob.hasSeen(obj)</span> will return the value of
-<span class="code">obj.bobSeen</span>, and
-<span class="code">bob.knowsAbout(obj)</span> will return the value of
-<span class="code">(obj.bobSeen \|\| obj.bobFamiliar)</span>. Note,
+`bob.setHasSeen(obj`) will set
+`obj.bobSeen` to true, and
+`bob.setKnowsAbout(obj)` will set
+`obj.bobFamiliar` to true. Likewise,
+`bob.hasSeen(obj)` will return the value of
+`obj.bobSeen`, and
+`bob.knowsAbout(obj)` will return the value of
+`(obj.bobSeen \|\| obj.bobFamiliar)`. Note,
 however, that doing all this does *not* cause the library to keep
 automatic track of what Bob has seen; it is still up to the game code to
-call <span class="code">bob.setHasSeen(whatever)</span> as and when
+call `bob.setHasSeen(whatever)` as and when
 appropriate.
 
 If you are certain that your game will *never* need to keep track of
 what anyone other than its player character has seen and knows about
 (and your game will only ever have one player character), then it is
-safe to set the <span class="code">familiar</span> and
-<span class="code">seen</span> properties of Things and to query the
-<span class="code">known</span> and <span class="code">seen</span>
+safe to set the `familiar` and
+`seen` properties of Things and to query the
+`known` and `seen`
 properties of Things directly. Otherwise its better to use
-<span class="code">setSeen()</span> and the rest from the start to avoid
+`setSeen()` and the rest from the start to avoid
 hard-to-find bugs later.
 
 <span id="existence"></span>
@@ -186,8 +184,8 @@ We have already seen that the library keeps basic track of the player
 character's knowledge of the existence of [things](thing.html) and
 [topics](topic.html). As stated aboved, we can test whether the player
 character knows of the existence of some object *obj* by testing the
-value of <span class="code">gPlayerChar.knowsAbout(obj)</span> or,
-equivalently, <span class="code">obj.known</span>. If obj is a Thing
+value of `gPlayerChar.knowsAbout(obj)` or,
+equivalently, `obj.known`. If obj is a Thing
 this will be true either if the player character has seen obj or if the
 **familiar** property of obj (i.e. obj.familiar) is true. Since Topics
 can't be seen they're simply known if they're familiar. We can make an
@@ -203,8 +201,7 @@ to do anything else about it, the player character can't ask about the
 dark tower, for example, until s/he knows of the dark tower's existence.
 That means we can safely define ActorTopicEntries like this:
 
-<div class="code">
-
+```
     + AskTellTopic @tTown
        "<q>This seems a nice town,</q> you remark cheerily.\b
         <q>Yes it is -- provided you don't go anywhere the dark
@@ -216,8 +213,7 @@ That means we can safely define ActorTopicEntries like this:
       Bob rolls his eyes and looks away for a moment. <q>You don't want
       to know,</q> he mutters. <q>You really don't.</q> "
     ;
-
-</div>
+```
 
 Here, the second TopicEntry can't be reached until the player character
 knows about (i.e. knows of the existence of) the dark tower. This might
@@ -255,8 +251,7 @@ whether some item of knowledge has been revealed to the player character
 we can use the **gRevealed(tag)** macro, e.g.
 gRevealed('tower-haunted'). So, for example, we might go on to define:
 
-<div class="code">
-
+```
     + AskTellTopic +110 @darkTower
        "<q>I've heard it said that the dark tower is haunted,</q> you remark.
         <q>Do you believe that?</q>\b
@@ -265,8 +260,7 @@ gRevealed('tower-haunted'). So, for example, we might go on to define:
         
         isActive = gRevealed('tower-haunted')
     ;
-
-</div>
+```
 
 Note that we've given this AskTellTopic a matchScore of 110 (10 higher
 than the default) so that if the player character has heard about the
@@ -278,12 +272,12 @@ outside strictly conversational contexts as a convenient method to set
 and unset flags. For this purpose the library defines an
 **\<.unreveal\>** tag, which undoes the effect of \<.reveal\> and a
 **gUnreveal(*key*)** macro which undoes the effect of gReveal(*key*)
-\[Strictly speaking, <span class="code">\<.unreveal *key*\></span> does
-not undo all the effects of <span class="code"> \<.reveal key\></span>,
+\[Strictly speaking, `\<.unreveal *key*\>` does
+not undo all the effects of ` \<.reveal key\>`,
 it simply removes *key* from, the LookUpTable of stored keys; it doesn't
 undo the updating of the informed status of *key* on every NPC in
 earshot, since it is unclear that this is what should happen; game code
-can override <span class="code">Actor.setUnrevealed(tag)</span> if it
+can override `Actor.setUnrevealed(tag)` if it
 wants to handle things differently\].
 
 At this point we might also note that gReveal(), gUnreveal and
@@ -307,8 +301,7 @@ belonging to the actor. For example, if at some later point in the game
 the player character were to discuss his experiences in Bob's town with
 a friend, he might want to inform her about the haunting:
 
-<div class="code">
-
+```
     + TellTopic @darkTower
       "<q>You know, the folks in Doomsville even think their local tower is
        haunted,</q> you remark. <.inform tower-haunted>\b
@@ -318,8 +311,7 @@ a friend, he might want to inform her about the haunting:
        
       isActive = gRevealed('tower-haunted') && !gInformed('tower-haunted')
     ;
-
-</div>
+```
 
 Note how we use the gInformed() macro in the isActive property so that
 the player character won't tell Mavis the same piece of information
@@ -359,11 +351,11 @@ to ensure that no notifications take place, use gReveal(tag) instead.
 If you don't want this 'overhearing' behaviour, you can also control it
 through use of the **informOverheard** and **actorInformOverheard**
 properties. The imparting of information to other actors in earshot can
-be prevented by setting <span class="code">informOverheard = nil</span>
+be prevented by setting `informOverheard = nil`
 on the current interlocutor's current ActorState, or
-<span class="code">actorInformOverheard = nil</span> on the Actor (when
+`actorInformOverheard = nil` on the Actor (when
 the current ActorState is nil). To prevent the overhearing behaviour
-globally, set <span class="code">informOverheard = nil</span> on the
+globally, set `informOverheard = nil` on the
 actor or on the whole Actor class.
 
 The fact that an information-key revealed to the player character is

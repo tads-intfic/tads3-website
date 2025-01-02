@@ -54,15 +54,13 @@ or Return key when you're done typing a command line like this.
 
 We show example program code like this:
 
-<div class="code">
-
+```
     #include <tads.h>
     main(args)
     {
        "Hello, world!\n";
     }
-
-</div>
+```
 
 This shows a snippet of code that you'd type into a source file, exactly
 as shown. Note that most examples like this are only fragments of code -

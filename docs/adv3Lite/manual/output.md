@@ -51,13 +51,11 @@ The other, which you need to use if you want to output text using a
 double-quoted string, is to disable and enable the cquotes output filter
 before and after outputting your text, like this:
 
-<div class="code">
-
+```
     cquoteOutputFilter.deactivate();
     "<FONT name='Verdana'>No curly quotes here!</FONT>";
     cquoteOutputFilter.activate();
-
-</div>
+```
 
 The library makes use of a number of other output filters which you may
 occasionally find useful in your own game code. The most convenient way
@@ -75,21 +73,17 @@ outputManager.curOutputStream (which you can abbreviate to gOutStream):
 
 A simple example of the second of these might be:
 
-<div class="code">
-
+```
       local str = gOutStream( {: "Hello World!" } );
       
-
-</div>
+```
 
 Which would result in str containing 'Hello World!'. A more practical
 example might be:
 
-<div class="code">
-
+```
       local str = gOutStream( {: myObj.doSomething() } );
-
-</div>
+```
 
 When we don't know in advance what output doSomething() will produce.
 
@@ -144,11 +138,10 @@ GO EAST this would be taken as a command to GO EAST in any case.
 
 It is sometimes useful to alter the player's input before passing it to
 the Parser to interpret. For this purpose you can use a
-<span class="code">StringPreParser</span> and define its **doParsing()**
+`StringPreParser` and define its **doParsing()**
 method:
 
-<div class="code">
-
+```
      myPreParser: StringPreParser
         doParsing(str, which)
         {
@@ -158,8 +151,7 @@ method:
         }
      
      
-
-</div>
+```
 
 Here, *str* is the string typed by the player (possibly adjusted by one
 or more previous StringPreParsers). The *which* parameter gives some
@@ -173,15 +165,15 @@ of:
 - **rmcCommand**: the player has entered a new command at the command
   prompt.
 
-Note that even if *which* is <span class="code">rmcDisambig</span> or
-<span class="code">rmcAskObject</span> the player may have entered a
+Note that even if *which* is `rmcDisambig` or
+`rmcAskObject` the player may have entered a
 complete new command instead of responding to the request to
 disambiguate or to supply a missing noun. You code will need to check
 for this possibility.
 
 <span id="comment"></span>
 
-The <span class="code">doParsing()</span> method should then return the
+The `doParsing()` method should then return the
 (same or adjusted) string which will passed on to the Parser to
 interpret. Alternatively it can return nil to signal that the
 StringPreParser has dealt with the player's input in full, so the Parser
@@ -189,8 +181,7 @@ can ignore it. For example, the adv3Lite library defines a
 **commentPreParser** thus (in order to field play-testers' comments on
 beta versions of your game):
 
-<div class="code">
-
+```
      /* ------------------------------------------------------------------------ */
     /*
      *   The "comment" pre-parser.  If the command line starts with a special
@@ -280,33 +271,31 @@ beta versions of your game):
          */
         runOrder = 50
      
-
-</div>
+```
 
 Note the use of the **runOrder** property to determine the order in
 which this StringPreParser is consulted in relation to any other
 StringPreParsers that have been defined. StringPreParsers are run in
-ascending order of their <span class="code">runOrder</span> property
+ascending order of their `runOrder` property
 (i.e. lowest first); the default value of
-<span class="code">runOrder</span> is 100.
+`runOrder` is 100.
 
 Note that StringPreParsers also have an **isActive** property; this can
 be set to nil on individual StringPreParsers if you want to temporarily
 disable them.
 
 Finally, note how the **commentPrefix** property of the
-<span class="code">commentPreParser</span> defined above can be
+`commentPreParser` defined above can be
 overridden to change the character (or characters) used to introduce a
 play-tester's comments.
 
 As an example of a StringPreParser that (sometimes) changes the text
 passed to it into something else, here's the
-<span class="code">queryPreParser</span> defined in the adv3Lite library
+`queryPreParser` defined in the adv3Lite library
 (its function is to change commands like WHERE'S THE SALT into a form
 like WHERE IS THE SALT, that the parser can more easily understand):
 
-<div class="code">
-
+```
     /* 
      *   For queries, turn an apostrophe-s form into the underlying qtype plus is so
      *   that the grammar defined immediately above can be matched.
@@ -334,8 +323,7 @@ like WHERE IS THE SALT, that the parser can more easily understand):
     ;
      
      
-
-</div>
+```
 
 </div>
 

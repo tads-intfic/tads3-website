@@ -252,8 +252,8 @@ new project. If you're not using Workbench but you're instead compiling
 from the command line, proceed as you would for an adv3 game (see the
 section on Compiling and Linking in the TADS 3 System Manual if you need
 guidance on this), but specify the adv3Liter library instead
-(<span class="code"> -lib adv3Liter</span>) and include the option
-<span class="code"> -D LANGUAGE = english</span> on the command line.
+(` -lib adv3Liter`) and include the option
+` -D LANGUAGE = english` on the command line.
 
 </div>
 

@@ -31,10 +31,9 @@ branch Heidi must either put the bird in the nest and then carry the
 nest, or else make two trips up the tree, one with the nest and one with
 the bird. In this simple game we'll enforce this in the simplest way
 possible, by limiting the amount Heidi can carry at any one time. First
-change the definition of the <span class="code">me</span> object:
+change the definition of the `me` object:
 
-<div class="code">
-
+```
     + me: Thing 'you;;heidi'   
         isFixed = true    
         proper = true
@@ -43,11 +42,10 @@ change the definition of the <span class="code">me</span> object:
         contType = Carrier    
         bulkCapacity = 1
     ;
+```
 
-</div>
-
-Adding <span class="code">bulkCapacity = 1</span> to the definition of
-the <span class="code">me</span> object limits the total bulk Heidi can
+Adding `bulkCapacity = 1` to the definition of
+the `me` object limits the total bulk Heidi can
 carry to one unit of bulk at a time (here the 'unit' of bulk is whatever
 the game author wants it to be, that is, you define units of bulk on
 whatever scale suits the purposes of your game). It wouldn't normally be
@@ -57,10 +55,9 @@ this game that we can get away with it.
 
 For this to have any effect, we also need to give some bulk to the two
 portable objects in question, the bird and the nest, by defining
-<span class="code">bulk = 1</span> on both of them:
+`bulk = 1` on both of them:
 
-<div class="code">
-
+```
     + bird: Thing 'baby bird;;nestling'
         "Too young to fly, the nestling tweets helplessly. "
         
@@ -82,8 +79,7 @@ portable objects in question, the bird and the nest, by defining
         contType = In   
         bulk = 1
     ;
-
-</div>
+```
 
 Try making the changes indicated above and then compiling and running
 the game once more. This time you'll find that Heidi can't pick up the
@@ -96,12 +92,11 @@ QUIT command). We want the game to end victoriously when Heidi restores
 the nest to the branch (preferably with the bird inside it, but we'll
 leave that little detail till later). There are several ways we could do
 this, but the one we'll use here is to use the
-<span class="code">afterAction()</span> method of the
-<span class="code">branch</span> to test whether the nest is on the
+`afterAction()` method of the
+`branch` to test whether the nest is on the
 branch, and then end the game in victory if it is:
 
-<div class="code">
-
+```
     + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
@@ -115,14 +110,13 @@ branch, and then end the game in victory if it is:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
-
-</div>
+```
 
 This introduces several new concepts at once; we'll explain them briefly
 here and then give a slightly more systematic explanation in the next
 chapter.
 
-<span class="code">afterAction()</span> is the first example we've seen
+`afterAction()` is the first example we've seen
 of a *method*. A method is like a property in that it's associated with
 a specific object (or class of objects), but unlike a property, which
 just holds a piece of data, a method contains one or more *statements*
@@ -131,17 +125,17 @@ same thing) when the method is *called* or *invoked* (again, for our
 purposes, the two mean the same thing).
 
 As its name possibly suggests, the
-<span class="code">afterAction()</span> method is called on every object
+`afterAction()` method is called on every object
 in scope (i.e., roughly speaking, every object in the immediate vicinity
 of the actor) just after an action is performed. Since Heidi must
 perform some action (like putting the nest on the branch) in the
 immediate vicinity of the branch in order for the nest to end up on the
 branch, we can confidently use the
-<span class="code">afterAction()</span> method of the branch to test for
+`afterAction()` method of the branch to test for
 the presence of the nest on the branch. We do so by using an
-<span class="code">if</span> statement.
+`if` statement.
 
-The <span class="code">if</span> statement takes the form:
+The `if` statement takes the form:
 
     if(expression)
         statement;
@@ -160,74 +154,74 @@ In the first case, <span class="synPar">statement;</span> is executed if
 the entire block of statements between the opening and closing braces, {
 }, is executed if <span class="synPar">expression</span> evaluates to
 true. For this purpose, an expression is considered to be true if it
-evaluates to anything other than <span class="code">nil</span> or
-<span class="code">0</span>.
+evaluates to anything other than `nil` or
+`0`.
 
 In this instance, the expression being tested is
-<span class="code">nest.isIn(self)</span>.
-<span class="code">isIn(*obj*)</span> is a method of the
-<span class="code">Thing</span> class that evaluates to
-<span class="code">true</span> (or returns
-<span class="code">true</span>) if the object it's called in is either
+`nest.isIn(self)`.
+`isIn(*obj*)` is a method of the
+`Thing` class that evaluates to
+`true` (or returns
+`true`) if the object it's called in is either
 directly or indirectly in *obj*. Although we want to know whether the
 nest is *on* the branch, programmatically we just test whether the nest
 lies *in* the branch's containment tree.
 
 You might have expected that we'd test for
-<span class="code">nest.isIn(branch)</span>, and that would indeed have
-worked, but using <span class="code">self</span> here is generally
+`nest.isIn(branch)`, and that would indeed have
+worked, but using `self` here is generally
 better practice. In TADS 3 *self* means 'the current object' or 'the
 object this property or method is being defined on'. Since we're
-defining the <span class="code">afterAction()</span> method of
-<span class="code">branch</span>, <span class="code">self</span> here
-refers to <span class="code">branch</span>. The advantage of using self
+defining the `afterAction()` method of
+`branch`, `self` here
+refers to `branch`. The advantage of using self
 rather than branch in this context is that it makes our code more
 generically applicable and less error-prone. If, for example, at some
 later point we were to change our mind about calling the branch object
-<span class="code">branch</span>, and decided to call it
-<span class="code">bough</span> instead, its
-<span class="code">afterAction()</span> method would still work as
+`branch`, and decided to call it
+`bough` instead, its
+`afterAction()` method would still work as
 expected without our having to remember to change
-<span class="code">isIn(branch)</span> to
-<span class="code">isIn(bough)</span> since self would now automatically
-refer to <span class="code">bough</span>.
+`isIn(branch)` to
+`isIn(bough)` since self would now automatically
+refer to `bough`.
 
 So, if the nest is on the branch when the
-<span class="code">afterAction()</span> method of
-<span class="code">branch</span> is invoked, the statement
-<span class="code">finishGameMsg(ftVictory,
-\[finishOptionUndo\]);</span> will be executed. But what does this do?
-<span class="code">finishGameMsg()</span> is the first example we've
+`afterAction()` method of
+`branch` is invoked, the statement
+`finishGameMsg(ftVictory,
+\[finishOptionUndo\]);` will be executed. But what does this do?
+`finishGameMsg()` is the first example we've
 encountered of an adv3Lite *function*. Like a method, a function is a
 block of code that contains one or more procedural statements (i.e. code
 to be executed). Unlike a method, a function is not associated with any
-particular object. <span class="code">finishGameMsg()</span> is a
+particular object. `finishGameMsg()` is a
 function defined in the adv3Lite library for use when we want to finish
 the game. It takes two *arguments*. The first defines how we want the
 game to end. Here we want it to end with the player winning, so we use
-<span class="code">ftVictory</span> (you can think of this being short
+`ftVictory` (you can think of this being short
 for finishTypeVictory, although the library wouldn't recognize this
 longer form). Other possibilities included
-<span class="code">ftDeath</span>, <span class="code">ftFailure</span>
-and <span class="code">ftGameOver</span>. Alternatively, you could just
+`ftDeath`, `ftFailure`
+and `ftGameOver`. Alternatively, you could just
 use a single-quoted string with your own message, such as 'YOU HAVE DONE
 WELL' or 'THAT WAS DISMAL'.
 
 The second parameter we pass to the
-<span class="code">finishGameMsg()</span> function is a list of
+`finishGameMsg()` function is a list of
 finishOptions. When you call the
-<span class="code">finishGameMsg()</span> function the game displays
+`finishGameMsg()` function the game displays
 your chosen message and then offers the player a list of options. These
 always include the options to RESTART the story, RESTORE a saved game or
 QUIT, but here we also want to offer the player the option to UNDO his
 or her last turn (in case s/he wants to carry on playing the game to try
 something different, perhaps), so we include the option
-<span class="code">finishOptionUndo</span>. The square brackets round
-<span class="code">finishOptionUndo</span> indicate that we are actually
+`finishOptionUndo`. The square brackets round
+`finishOptionUndo` indicate that we are actually
 passing a list of options to the function, though a list that here
 contains only one item. There could have been more, e.g.,
-<span class="code">\[finishOptionUndo, finishOptionCredits,
-finishOptionFullScore, finishOptionAmusing\]</span>, but since we
+`\[finishOptionUndo, finishOptionCredits,
+finishOptionFullScore, finishOptionAmusing\]`, but since we
 haven't defined any credits for this game, and we haven't been keeping
 score, and we haven't defined any amusing things for the player to try
 after winning the game, we really don't need these other options here.
@@ -241,8 +235,7 @@ game we should pause and take stock, which is what we'll do in the next
 chapter. In the meantime, here's the complete listing of what the Heidi
 game should now look like:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -350,8 +343,7 @@ game should now look like:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
-
-</div>
+```
 
 </div>
 

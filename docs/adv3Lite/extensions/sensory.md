@@ -43,21 +43,21 @@ properties:
 - *Expanded Classes*: **SensoryEmanation**, **Noise** and **Odor**
 - *Objects*: emanationControl.
 - *Additional properties/methods on Thing*:
-  <span class="code">smellDescWithSource</span>,
-  <span class="code">smellDescWithoutSource</span>,
-  <span class="code">listenDescWithSource</span>,
-  <span class="code">listenDescWithoutSource</span>,
-  <span class="code">notifySoundEvent(event, source)</span>,
-  <span class="code">notifySmellEvent(event, source)</span>,
-  <span class="code">notifySightEvent(event, source)</span>,
-  <span class="code">notifyEvent(event, source)</span>.
+  `smellDescWithSource`,
+  `smellDescWithoutSource`,
+  `listenDescWithSource`,
+  `listenDescWithoutSource`,
+  `notifySoundEvent(event, source)`,
+  `notifySmellEvent(event, source)`,
+  `notifySightEvent(event, source)`,
+  `notifyEvent(event, source)`.
 - *Properties/methods on SensoryEmanation*:
-  <span class="code">descWithSource</span>,
-  <span class="code">descWithoutSource</span>,
-  <span class="code">isEmanating</span>,
-  <span class="code">emanationDesc()</span>,
-  <span class="code">schedule</span>.
-- *Methods on SensoryEvent*: <span class="code">triggerEvent(obj)</span>
+  `descWithSource`,
+  `descWithoutSource`,
+  `isEmanating`,
+  `emanationDesc()`,
+  `schedule`.
+- *Methods on SensoryEvent*: `triggerEvent(obj)`
 
 <span id="usage"></span>
 
@@ -83,8 +83,8 @@ smell or sound when it's not. Where you don't need to make this
 distinction, you can just define the **soundDesc** and/or **smellDesc**
 directly as before.
 
-You can make a similar distinction on <span class="code">Odor</span> and
-<span class="code">Noise</span> objects by using the **descWithSource**
+You can make a similar distinction on `Odor` and
+`Noise` objects by using the **descWithSource**
 and **descWithoutSource** properties. Remember these are the responses
 to examining or listening to/smelling the Noise/Odor itself, rather than
 the object that's causing the smell or sound. Here the with or without
@@ -95,7 +95,7 @@ define the **desc** property directly as before.
 
 You can control whether the Noise or Odor is effectively present at all
 through its **isEmanating** property. If
-<span class="code">isEmanating</span> is nil then the Noise or Odor
+`isEmanating` is nil then the Noise or Odor
 can't be sensed and, moreover, the object in which the Noise or Odor is
 located will be treated as no longer having a noise/smell. Note, for
 this to work, ***don't*** override the **isProminentNoise** or
@@ -115,7 +115,7 @@ smellDesc/listenDesc of the Odor's/Noise's location, or to display the
 next item in the Odor's/Noise's **eventList** if the Odor/Noise is also
 an EventList of some sort.
 
-The frequency with which the <span class="code">emanationDesc</span> is
+The frequency with which the `emanationDesc` is
 displayed is controlled by the **schedule** property. This can either be
 nil (in which case no emanation messages are displayed at all) or a list
 of numbers, which can optionally end in nil. If schedule were defined,
@@ -139,21 +139,20 @@ The **SimpleNoise** and **SimpleOdor** classes can be used for sounds
 and smells associated with a location rather than with any particular
 object within that location. These may be particularly helpful for
 defining atmospheric sounds and smells. For a
-<span class="code">SimpleNoise</span> or
-<span class="code">SimpleOdor</span> we simply define either the
-<span class="code">desc</span> property (for a noise or smell whose
-description never varies) or the <span class="code">eventList</span>
+`SimpleNoise` or
+`SimpleOdor` we simply define either the
+`desc` property (for a noise or smell whose
+description never varies) or the `eventList`
 property (for a SimpleNoise or SimpleOdor that's mixed in with an
 EventList class, to display a range of messages). The desc or messages
 in the eventList will then be displayed as atmospheric messages (in
-accordance with the <span class="code">schedule</span> property) or in
+accordance with the `schedule` property) or in
 response to a LISTEN or SMELL command as appropriate. Either way we can
 use the SensoryEmanation template to define the
-<span class="code">desc</span> property or
-<span class="code">eventList</span> property implicitly, for example:
+`desc` property or
+`eventList` property implicitly, for example:
 
-<div class="code">
-
+```
     + SimpleOdor 'smell of fresh pine needles'
        "There's a smell of fresh pine needles in the air. "
     ;
@@ -168,18 +167,17 @@ use the SensoryEmanation template to define the
       schedule = [1, 1, 2]
     ; 
      
+```
 
-</div>
-
-For a <span class="code">SimpleNoise</span> or
-<span class="code">SimpleOdor</span> that can be sensed from elsewhere
+For a `SimpleNoise` or
+`SimpleOdor` that can be sensed from elsewhere
 in a [SenseRegion](../../docs/manual/senseregion.html) you may also want
-to define the <span class="code">remoteListenDesc(pov)</span> method or
-<span class="code">remoteSmellDesc(pov)</span> method as appropriate, to
+to define the `remoteListenDesc(pov)` method or
+`remoteSmellDesc(pov)` method as appropriate, to
 describe its presence at a distance.
 
-<span class="code">SimpleNoise</span> and
-<span class="code">SimpleOdor</span> can also be mixed in with
+`SimpleNoise` and
+`SimpleOdor` can also be mixed in with
 [MultiLoc](../../docs/manual/multiloc.html) (which must then come first
 in the class list) to define an atmospheric sound or smell that's
 present in more than one location.
@@ -195,21 +193,18 @@ it. There are three kinds of SensoryEvent: **SoundEvent**,
 **SmellEvent** and **SightEvent**. To define such events we just need to
 give them a name and class, e.g.:
 
-<div class="code">
-
+```
      bangEvent: SoundEvent;
      stinkEvent: SmellEvent;
      doorOpeningEvent: SightEvent; 
      
-
-</div>
+```
 
 It's up to game code to define when SensoryEvents actually take place;
 we do this by calling their triggerEvent(obj) method, where obj is the
 physical game object with which the event is associated, for example:
 
-<div class="code">
-
+```
      bangEvent.triggerEvent(table); // the player just struck the table
      stinkEvent.triggerEvent(stinkBomb);
      doorOpeningEvent.triggerEvent(self);
@@ -225,8 +220,7 @@ physical game object with which the event is associated, for example:
         }
     ;    
      
-
-</div>
+```
 
 When any of these events is triggered, the appropriate notify routine is
 called on any object that can sense them. In particular:
@@ -246,8 +240,7 @@ notifyEvent(event, source), so, if you want, you can have a single
 handler for all of them. One pattern might be to use the event to
 trigger an InitiateTopic on the sensing actor, for example:
 
-<div class="code">
-
+```
     mavis: Actor 'Aunt Mavis; old; woman; her' @lounge
       ...
       notifyEvent(event, source)
@@ -263,8 +256,7 @@ trigger an InitiateTopic on the sensing actor, for example:
     ;
       
       
-
-</div>
+```
 
 This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the

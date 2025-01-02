@@ -43,18 +43,18 @@ In addition to a number of properties/methods and one object
 (lightProbe\_) intended purely for internal use, this extension defines
 the following new properties and methods on the Thing class:
 
-- *Properties of Thing*: <span class="code">brightness</span>,
-  <span class="code">brightnessOn</span>,
-  <span class="code">brightnessOff</span>,
-  <span class="code">brightnessForReading</span>,
-  <span class="code">illuminationThreshold</span>,
-  <span class="code">opacity</span>,
-  <span class="code">tooDarkToReadMsg</span>,
-  <span class="code">lightSources</span>.
-- *Methods of Thing*: <span class="code">brightnessWithin()</span>,
-  <span class="code">accumulatedBrightnessWithin()</span>,
-  <span class="code">accumulateBrightness()</span>,
-  <span class="code">remoteBrightness(pov)</span>.
+- *Properties of Thing*: `brightness`,
+  `brightnessOn`,
+  `brightnessOff`,
+  `brightnessForReading`,
+  `illuminationThreshold`,
+  `opacity`,
+  `tooDarkToReadMsg`,
+  `lightSources`.
+- *Methods of Thing*: `brightnessWithin()`,
+  `accumulatedBrightnessWithin()`,
+  `accumulateBrightness()`,
+  `remoteBrightness(pov)`.
 
   
 <span id="usage"></span>
@@ -138,36 +138,36 @@ of the field.
 ## Interaction with the Main Library’s Handling of Lighting
 
 The main library already contains its own handling of light and
-darkness, through such properties as <span class="code">isLit</span> and
-methods as <span class="code">isIlluminated()</span> and
-<span class="code">litWithin()</span>. The brightness extension does its
+darkness, through such properties as `isLit` and
+methods as `isIlluminated()` and
+`litWithin()`. The brightness extension does its
 best to work smoothly with these existing methods and properties.
 
-As noted above, making (or defining) <span class="code">isLit</span>
+As noted above, making (or defining) `isLit`
 true makes it take on the value of its
-<span class="code">brightnessOn</span> property, which, by default, is
+`brightnessOn` property, which, by default, is
 3. Without any further modification, an object with a
-<span class="code">brightness</span> of 3 should for all intents and
+`brightness` of 3 should for all intents and
 purposes act in the same way as a lit object in the main library.
 
-If an object is defined with <span class="code">visibleInDark</span> as
-true, then its <span class="code">brightnessOff</span> property will be
+If an object is defined with `visibleInDark` as
+true, then its `brightnessOff` property will be
 1 by default; otherwise it will be 0. This should result in
 visibleInDark working much as it does in the main library.
 
 With the brightness extension is place (and no further customization),
-<span class="code">litWithin()</span> simply returns the value of
-<span class="code">isIlluminated()</span>, while
-<span class="code">isIlluminated()</span> returns true if and only if
-<span class="code">accumulatedBrightnessWithin()</span> returns a value
+`litWithin()` simply returns the value of
+`isIlluminated()`, while
+`isIlluminated()` returns true if and only if
+`accumulatedBrightnessWithin()` returns a value
 greater than 1 (i.e. if there's an available light source providing more
 brightness than something that's merely self-illuminating), except that
-<span class="code">isIlluminated()</span> uses the version inherited
+`isIlluminated()` uses the version inherited
 from the library when called during the calculations performed by
-<span class="code">brightnessWithin()</span> (this is to avoid the
+`brightnessWithin()` (this is to avoid the
 vicious circularity that would otherwise occur with
-<span class="code">brightnessWithin()</span> relying on the value of
-<span class="code">isIlluminated()</span> to construct a list of items
+`brightnessWithin()` relying on the value of
+`isIlluminated()` to construct a list of items
 in scope, and Q.scopeList() relying on the value of isIlluminated() to
 construct the scope list, but shouldn't otherwise have any impact on
 game code).
@@ -205,7 +205,7 @@ particular:
   than 1, where illuminationThreshold is the available brightness that
   must be *exceeded* for a location or container to be considered
   sufficiently illuminated to ensure visibility (i.e. for the
-  <span class="code">objVisible</span> precondition to be satisifed).
+  `objVisible` precondition to be satisifed).
 - The value of **brightnessForReading** can be set to some value other
   than its default of 3, where brightnessForReading is the brightness
   that must be available to allow things to be read.
@@ -228,31 +228,30 @@ For this purpose, the customization provides the (Thing) method
 extension, this is called from **accumulatedBrightnessWithin()** (and
 really should not be called in any other way), which passes the value of
 a call to **brightnessWithin()** in the **maxBrightness** parameter. By
-default <span class="code">accumulatedBrightnessWithin()</span> simply
-returns the <span class="code">maxBrightness</span> value that's passed
+default `accumulatedBrightnessWithin()` simply
+returns the `maxBrightness` value that's passed
 to it, but the point of the method is that it *can* be overridden by
 game code to do something different (possibly on a Room by Room or Thing
 by Thing basis).
 
-The call to <span class="code">brightnessWithin()</span> from
-<span class="code">accumulatedBrightnessWithin()</span> populate's the
+The call to `brightnessWithin()` from
+`accumulatedBrightnessWithin()` populate's the
 Thing's **lightSources** with a list of the light sources relevant to
 the calculation of the level of illumination (i.e., all the light
 sources that might need to be taken into account when deciding what
-value <span class="code">accumulatedBrightnessWithin()</span> should
+value `accumulatedBrightnessWithin()` should
 return). Each element of the lightSources list is itself a two-item list
 of the form \[obj, adjBt\] where *obj* is the object providing light and
 *adjBt* is the brightness of the light it provides after adjustment for
 any distance or opacity between *obj* and the location whose accumulated
 interior brightness we wish to calculate. A custom
-<span class="code">accumulateBrightness()</span> method can thus iterate
+`accumulateBrightness()` method can thus iterate
 over the list of lightSources to decide how it wishes to factor them
 into the value it wants to return. For example, in a location that might
 be lit either by multiple candles or by some other more powerful light
 source one might do something like this:
 
-<div class="code">
-
+```
     accumulateBrightness(maxBrightness)
     {
         
@@ -267,8 +266,7 @@ source one might do something like this:
         /* Otherwise return our maxBrightness, which will be 2 or less */ 
         return maxBrightness; 
     }
-
-</div>
+```
 
 Of course, a real-life example may want to do something more
 sophisticated than this, and need not be restricted to integer

@@ -31,39 +31,33 @@ A ByteArray looks superficially similar to a Vector object, in that you
 can access the individual byte elements of a ByteArray using the square
 bracket indexing operator:
 
-<div class="code">
-
+```
     local arr = new ByteArray(100);
     arr[5] = 12;
-
-</div>
+```
 
 The difference is that the elements of a ByteArray can only store byte
 values, which are represented as integers in the range 0 to 255.
 
 ## Creating a ByteArray
 
-You create a ByteArray object using the <span class="code">new</span>
+You create a ByteArray object using the `new`
 operator. The constructor argument is the number of bytes to allocate in
 the array. This can be any value from 1 to about 2 billion. For example,
 to create a byte array with 1,000 elements, you would write this:
 
-<div class="code">
-
+```
     local arr = new ByteArray(1000);
-
-</div>
+```
 
 The size of a ByteArray is fixed at creation; it can't be changed after
 the object is created.
 
 A ByteArray can also be constructed from a string value:
 
-<div class="code">
-
+```
     arr = new ByteArray('the new contents go here!');
-
-</div>
+```
 
 That creates a ByteArray just large enough to hold the bytes in the
 given string. The characters in the string are converted to bytes simply
@@ -78,11 +72,9 @@ character values can't fit into a byte.
 Alternatively, you can specify a particular character set, rather than
 trying to stuff 16-bit Unicode characters into 8-bit bytes:
 
-<div class="code">
-
+```
     arr = new ByteArray('another new string!', 'latin-2');
-
-</div>
+```
 
 When you supply a character set, the new byte array is created by
 mapping the characters to bytes using the character set. The new array
@@ -93,11 +85,9 @@ by a "missing character" symbol, as usual for character mappings.
 Another way of creating a ByteArray is to create a copy of another byte
 array or a portion of another byte array:
 
-<div class="code">
-
+```
     arr = new ByteArray(otherArray, startIndex, len);
-
-</div>
+```
 
 The *startIndex* and *len* parameters are optional; if they're missing,
 the new byte array will simply be a complete copy of the existing byte
@@ -111,18 +101,18 @@ original array.
 ## Converting a ByteArray to a string
 
 You can convert a ByteArray to a string value using the
-[<span class="code">toString()</span>](tadsgen.html#toString) function.
+[`toString()`](tadsgen.html#toString) function.
 This simply treats each byte in the string as a Unicode character code,
 and creates a string with those characters.
 
 ByteArrays can also be used in contexts where values will be implicitly
 converted to strings, such as displaying them with "\<\< \>\>"
 expressions. A ByteArray in such a context is converted just as with
-<span class="code">toString()</span>.
+`toString()`.
 
 If the bytes in the array represent characters in some non-Unicode
 character set, you can map the bytes to Unicode using the
-[<span class="code">mapToString</span>](#mapToString) method. This lets
+[`mapToString`](#mapToString) method. This lets
 you specify the source character set, so that the bytes are correctly
 translated to Unicode characters.
 
@@ -141,16 +131,16 @@ process data in arbitrary binary formats.
 
 To read or write a file using ByteArray objects, you have to open the
 file in "raw" mode. Once a file is opened in raw mode, use the
-<span class="code">readBytes()</span> and
-<span class="code">writeBytes()</span> methods of the File object to
+`readBytes()` and
+`writeBytes()` methods of the File object to
 read bytes from the file into a ByteArray, and to write bytes from a
 ByteArray into the file. Refer to the [File class](file.html) for
 information on the file input/output.
 
 ## ByteArray methods
 
-<span class="code">copyFrom(*sourceArray*, *sourceStartIndex*,
-*destStartIndex*, *length*)</span>
+`copyFrom(*sourceArray*, *sourceStartIndex*,
+*destStartIndex*, *length*)`
 
 <div class="fdef">
 
@@ -167,7 +157,7 @@ been moved.
 
 </div>
 
-<span class="code">digestMD5(*startIndex*?, *length*?)</span>
+`digestMD5(*startIndex*?, *length*?)`
 
 <div class="fdef">
 
@@ -187,11 +177,11 @@ integrity checking. It's also part of several Internet standards (e.g.,
 HTTP digest authentication). In an Interactive Fiction context,
 [Babel](http://babel.ifarchive.org/) uses MD5 to generate IFIDs for
 older games. If you're looking for a secure hash, consider SHA-2 (see
-[<span class="code">sha256()</span>](#sha256)) instead of MD5.
+[`sha256()`](#sha256)) instead of MD5.
 
 </div>
 
-<span class="code">fillValue(*val*, *startIndex*?, *length*?)</span>
+`fillValue(*val*, *startIndex*?, *length*?)`
 
 <div class="fdef">
 
@@ -204,7 +194,7 @@ be an integer in the range 0 to 255.
 
 </div>
 
-<span class="code">length()</span>
+`length()`
 
 <div class="fdef">
 
@@ -215,14 +205,14 @@ size specified when the object was created.
 
 <span id="mapToString"></span>
 
-<span class="code">mapToString(*charset*?, *startIndex*?,
-*length*?)</span>
+`mapToString(*charset*?, *startIndex*?,
+*length*?)`
 
 <div class="fdef">
 
 Maps the bytes in the array to a string.
 
-If *charset* is specified and isn't <span class="code">nil</span>, it
+If *charset* is specified and isn't `nil`, it
 must be either a [CharacterSet](charset.html) object, or a string giving
 the name of a character set. The method maps the bytes in the array to a
 string using the given character set mapping.
@@ -237,7 +227,7 @@ The character set given by *charset* must be known. If the character set
 is not known, an UnknownCharSetException is thrown. You can determine if
 the character set is known using the isMappingKnown() method of charset.
 
-If the *charset* argument is omitted or <span class="code">nil</span>,
+If the *charset* argument is omitted or `nil`,
 the bytes are converted to characters by treating them as Unicode
 character codes. This is effectively the same as mapping the bytes as
 Latin-1 characters, since Latin-1 and Unicode have identical character
@@ -255,8 +245,8 @@ are included in the mapping.
 
 <span id="packBytes"></span>
 
-<span class="code">packBytes(*startIndex*, *format*, ...)</span> /
-<span class="code">ByteArray.packBytes(*format*, ...)</span>
+`packBytes(*startIndex*, *format*, ...)` /
+`ByteArray.packBytes(*format*, ...)`
 
 <div class="fdef">
 
@@ -272,12 +262,10 @@ them into an existing byte array at the given starting index.
 Syntactically, you invoke this version on an existing ByteArray object,
 like this:
 
-<div class="code">
-
+```
     local arr = new ByteArray(1000);
     arr.packBytes(1, 'l5', 1, 2, 3, 4, 5);
-
-</div>
+```
 
 *startIndex* is the starting index in the byte array for the packed
 bytes. Bytes are packed starting at this position, continuing for as
@@ -295,15 +283,13 @@ than the actual number of bytes written.) You can use the returned byte
 count to keep track of the write position for each packing list if
 you're making a series of packBytes calls:
 
-<div class="code">
-
+```
     local arr = new ByteArray(1000);
     local idx = 1;
     idx += arr.packBytes(idx, 'l5', 1, 2, 3, 4, 5);
     idx += arr.packBytes(idx, 's3', 6, 7, 8);
     idx += arr.packBytes(idx, 'a10', 'done!');
-
-</div>
+```
 
 The byte array must be large enough for all of the values packed. An
 exception will be thrown ("error writing file") if the array is too
@@ -314,11 +300,9 @@ object. The new array will be exactly large enough to hold the packed
 bytes. Syntactically, you invoke this version directly on the ByteArray
 class:
 
-<div class="code">
-
+```
     local arr = ByteArray.packBytes('l5', 1, 2, 3, 4, 5);
-
-</div>
+```
 
 The static version of the method doesn't take a starting index argument,
 since it always stores the packed bytes at index 1 in the new array.
@@ -328,7 +312,7 @@ See [Byte Packing](pack.html) for more information.
 
 </div>
 
-<span class="code">readInt(*startIndex*, *format*)</span>
+`readInt(*startIndex*, *format*)`
 
 <div class="fdef">
 
@@ -347,16 +331,16 @@ The format code given by format is a bit-wise combination of three
 parts: a size, a byte order, and a signedness:
 
 - The size gives the number of bits in the integer; this can be one of
-  the values <span class="code">FmtSize8</span>,
-  <span class="code">FmtSize16</span>, or
-  <span class="code">FmtSize32</span>, indicating 8-bit, 16-bit, and
+  the values `FmtSize8`,
+  `FmtSize16`, or
+  `FmtSize32`, indicating 8-bit, 16-bit, and
   32-bit values, respectively.
-- The byte order can be <span class="code">FmtBigEndian</span> or
-  <span class="code">FmtLittleEndian</span>. A big-endian value is
+- The byte order can be `FmtBigEndian` or
+  `FmtLittleEndian`. A big-endian value is
   stored with its most significant byte first, followed by the
   second-most significant byte, and so on. A little-endian value is
   stored in the opposite order, with its least significant byte first.
-  The <span class="code">readInt()</span> method makes it possible to
+  The `readInt()` method makes it possible to
   specify the desired byte ordering because the native byte ordering of
   different hardware platforms varies, and as a result, the ordering of
   bytes in data fields in file formats specified by third-party
@@ -364,32 +348,32 @@ parts: a size, a byte order, and a signedness:
   case of 8-bit values, since an 8-bit value requires only one byte in
   the byte array.
 - The signedness indicates whether the integer is to be interpreted as
-  signed or unsigned; this can be <span class="code">FmtSigned</span> or
-  <span class="code">FmtUnsigned</span>. Note that the T3 VM doesn't
+  signed or unsigned; this can be `FmtSigned` or
+  `FmtUnsigned`. Note that the T3 VM doesn't
   have an unsigned 32-bit datatype, so
-  <span class="code">FmtUnsigned</span> isn't meaningful with
-  <span class="code">FmtSize32</span>.
+  `FmtUnsigned` isn't meaningful with
+  `FmtSize32`.
 
 So, to specify a signed 16-bit value in big-endian byte order, you'd use
-<span class="code">(FmtSize16 \| FmtSigned \| FmtBigEndian)</span>.
+`(FmtSize16 \| FmtSigned \| FmtBigEndian)`.
 
 It's a lot of typing to specify all three parts of a data format, so the
 byte array system header file defines all of the useful combinations as
 individual macros:
 
-- <span class="code">FmtInt8</span> (signed 8-bit integer)
-- <span class="code">FmtUInt8</span> (unsigned 8-bit integer)
-- <span class="code">FmtInt16LE</span> (signed 16-bit integer in
+- `FmtInt8` (signed 8-bit integer)
+- `FmtUInt8` (unsigned 8-bit integer)
+- `FmtInt16LE` (signed 16-bit integer in
   little-endian byte order)
-- <span class="code">FmtUInt16LE</span> (unsigned 16-bit integer in
+- `FmtUInt16LE` (unsigned 16-bit integer in
   little-endian byte order)
-- <span class="code">FmtInt16BE</span> (signed 16-bit integer in
+- `FmtInt16BE` (signed 16-bit integer in
   big-endian byte order)
-- <span class="code">FmtUInt16BE</span> (unsigned 16-bit integer in
+- `FmtUInt16BE` (unsigned 16-bit integer in
   big-endian byte order)
-- <span class="code">FmtInt32LE</span> (signed 32-bit integer in
+- `FmtInt32LE` (signed 32-bit integer in
   little-endian byte order)
-- <span class="code">FmtInt32BE</span> (signed 32-bit integer in
+- `FmtInt32BE` (signed 32-bit integer in
   big-endian byte order)
 
 This function simply reads the bytes out of the byte array and
@@ -404,7 +388,7 @@ used to write them.
 
 <span id="sha256"></span>
 
-<span class="code">sha256(*startIndex*?, *length*?)</span>
+`sha256(*startIndex*?, *length*?)`
 
 <div class="fdef">
 
@@ -421,7 +405,7 @@ is hashed.
 
 </div>
 
-<span class="code">subarray(*startIndex*, *length*?)</span>
+`subarray(*startIndex*, *length*?)`
 
 <div class="fdef">
 
@@ -434,7 +418,7 @@ of the bytes from *startingIndex* to the last byte of this array.
 
 <span id="unpackBytes"></span>
 
-<span class="code">unpackBytes(*startIndex*, *format*)</span>
+`unpackBytes(*startIndex*, *format*)`
 
 <div class="fdef">
 
@@ -450,15 +434,14 @@ The return value is a list containing the unpacked values.
 If you need to make a series of unpackBytes() calls, you'll probably
 need a way to keep track of the number of bytes unpacked on each call,
 to figure the starting point for the next call. The special format code
-<span class="code">@?</span> is designed for this: it returns the byte
+`@?` is designed for this: it returns the byte
 offset from the start of the current unpack list. Include
-<span class="code">@?</span> as the last value in your format string;
+`@?` as the last value in your format string;
 this will return the byte offset as the last element of the returned
 value list. Add this to the previous starting index to get the next
 starting index:
 
-<div class="code">
-
+```
     local idx = 1; // start at the first byte of the array
     local lst = arr.unpackBytes(idx, 'l5 @?'); // unpack the first batch of values
 
@@ -467,14 +450,13 @@ starting index:
 
     idx += lst[lst.length()];  // advance to the index again
     lst = arry.unpackBytes(idx, 'a10'); // unpack the last batch
-
-</div>
+```
 
 See [Byte Packing](pack.html) for more information.
 
 </div>
 
-<span class="code">writeInt(*startIndex*, *format*, *val*)</span>
+`writeInt(*startIndex*, *format*, *val*)`
 
 <div class="fdef">
 
@@ -489,7 +471,7 @@ the format code given by *format*. The *val* argument gives the integer
 value to be written.
 
 The format code in *format* has the same meaning as the format code in
-<span class="code">readInt()</span>.
+`readInt()`.
 
 Note that this method doesn't perform any range checking on *val*. If
 *val* is outside of the limits that can be represented with the

@@ -48,25 +48,25 @@ properties:
   [SymPathPassage](#sympathpassage), [SymDoor](#symdoor),
   [SymStairway](#symstair).
 - *Objects*: [noExit](#noexit).
-- *Properties/methods on SymConnector*: <span class="code">room1</span>,
-  <span class="code">room2</span>, <span class="code">byRoom()</span>,
-  <span class="code">inRoom1</span>,
-  inRoom2, <span class="code">room1Dir</span>,
-  <span class="code">room2Dir</span>, <span class="code">dirName</span>
+- *Properties/methods on SymConnector*: `room1`,
+  `room2`, `byRoom()`,
+  `inRoom1`,
+  inRoom2, `room1Dir`,
+  `room2Dir`, `dirName`
 - *Properties/methods on SymPassage*:
-  <span class="code">room1Desc</span>,
-  <span class="code">room2Desc</span>,
-  <span class="code">room1Vocab</span>,
-  <span class="code">room2Vocab</span>,
-  <span class="code">attachedDir()</span>.
+  `room1Desc`,
+  `room2Desc`,
+  `room1Vocab`,
+  `room2Vocab`,
+  `attachedDir()`.
 - *Properties/methods on SymDoor*:
-  <span class="code">room1Lockability</span>,
-  <span class="code">room2Lockability</span>.
+  `room1Lockability`,
+  `room2Lockability`.
 - *Properties/methods on SymStairway*:
-  <span class="code">upperEnd</span>,
-  <span class="code">lowerEnd</span>, <span class="code">inUpper</span>,
-  <span class="code">inLower</span>, <span class="code">upOrDown</span>,
-  <span class="code">byEnd()</span>
+  `upperEnd`,
+  `lowerEnd`, `inUpper`,
+  `inLower`, `upOrDown`,
+  `byEnd()`
 
 <span id="usage"></span>
 
@@ -77,17 +77,17 @@ source files.
 
 When the symconn extension is present, it will automatically set up
 reverse connections between rooms where game code doesn't already do so.
-In the standard library, if you set <span class="code">hall.east</span>
-to <span class="code">study</span>, say, you would also have to set
-<span class="code">study.west</span> to <span class="code">hall</span>
+In the standard library, if you set `hall.east`
+to `study`, say, you would also have to set
+`study.west` to `hall`
 if you wanted the player character to be able to move back and forth
 between the two rooms (as most of the time you probably would). The
 symconn extension looks after this for you, so that if you set
-<span class="code">hall.east</span> to <span class="code">study</span>,
+`hall.east` to `study`,
 this extension will then automatically set
-<span class="code">study.west</span> to <span class="code">hall</span>,
-*unless* you have already defined <span class="code">study.west</span>
-to be something other than <span class="code">nil</span> or you've
+`study.west` to `hall`,
+*unless* you have already defined `study.west`
+to be something other than `nil` or you've
 defined some other way back from room2 to room1.
 
 <span id="noexit"></span>
@@ -101,21 +101,21 @@ connection to be a different room (if you were trying to create a
 confusing maze, for example). If you want there to be no way from the
 second room to the first, you need to define something on the reverse
 direction of the second room (for example, on the
-<span class="code">east</span> property of a second room that's to the
+`east` property of a second room that's to the
 west of the first). You could define this to be a single-quoted or
 double-quoted string explaining why travel back that way isn't possible,
 or you could define it to be **noExit**, which then mimics there being
 no connector back in that direction. So, for example, if it was possible
 to go down from the cliff to the ravine, but not to go up from the
-ravine to the cliff, you could define <span class="code">cliff.down =
-ravine</span> and <span class="code">ravine.up = noExit</span> (or else
+ravine to the cliff, you could define `cliff.down =
+ravine` and `ravine.up = noExit` (or else
 perhaps a string explaining that the cliff was too steep to climb.)
 
 If you want to stop the symconn extension setting up reverse connections
 altogether (for example, because you want to use the classes symconn
 defines without this automatic reverse connection behaviour) you can
 override the **autoBackConnections** on the Room class to nil. Setting
-<span class="code">autoBackConnections</span> on an individual room to
+`autoBackConnections` on an individual room to
 nil will prevent symconn from automatically creating any reverese
 connections back to that room. (This is defined on the Room class, since
 it's the Room class that's responsible for setting up these automatic
@@ -133,13 +133,12 @@ SymConnector is a type of
 by inheritance). A SymConnector can be traversed in both directions, and
 defining a SymConnector on a direction property of one room
 automatically attaches it to the reverse direction property of the room
-to which it leads. Otherwise, a <span class="code">SymConnector</span>
+to which it leads. Otherwise, a `SymConnector`
 behaves much like any other TravelConnector, and can be used to define
 travel barriers or the side-effects of travel in much the same way. For
 example, we could define:
 
-<div class="code">
-
+```
      defile: Room 'Narrow Defile'
             
         east: SymConnector -> precipice
@@ -157,50 +156,49 @@ example, we could define:
             }
         }
      
+```
 
-</div>
-
-This would cause the same <span class="code">SymConnector</span> (the
+This would cause the same `SymConnector` (the
 very same object, not just a copy of it) to be attached to the west
-property of the <span class="code">precipice</span> room, so that
-travelling east from <span class="code">defile</span> or west from
-<span class="code">precipice</span> would be subject to precisely the
+property of the `precipice` room, so that
+travelling east from `defile` or west from
+`precipice` would be subject to precisely the
 same restriction on the maximum bulk carried by the traveler, and would
 result in exactly the same "You just manage to squeeze" through message
 being displayed if travel were allowed in either direction. Travelling
-west from <span class="code">precipice</span> would then take the
-<span class="code">traveler</span> back to the defile. (If you needed to
+west from `precipice` would then take the
+`traveler` back to the defile. (If you needed to
 vary the details of what happened according to the direction of travel
 you could always test the value of
-<span class="code">traveler.getOutermostRoom</span> to determine which
+`traveler.getOutermostRoom` to determine which
 end *traveler* was starting from).
 
 Internally a SymConnector defines a **room1** property and a **room2**
-property, <span class="code">room1</span> and
-<span class="code">room2</span> being the two rooms reciprocally
+property, `room1` and
+`room2` being the two rooms reciprocally
 connected by the SymConnector. At preinit the symconn extension
-automatically sets the <span class="code">room1</span> property of a
+automatically sets the `room1` property of a
 SymConnector to the room one of whose direction properties is attached
-to that SymConnector, and the <span class="code">room2</span> property
-of the SymConnector to the <span class="code">destination</span> of the
-SymConnector. In the example about the <span class="code">-\>
-precipice</span> in the template defines the
-<span class="code">destination</span> property (directly) and hence the
-<span class="code">room2</span> property (indirectly). So, to set up a
+to that SymConnector, and the `room2` property
+of the SymConnector to the `destination` of the
+SymConnector. In the example about the `-\>
+precipice` in the template defines the
+`destination` property (directly) and hence the
+`room2` property (indirectly). So, to set up a
 SymConnector you'd typically use the coding pattern illustrated above:
 attach it to the direction property of one room and leave the extension
 to set up the reverse connection from the other room.
 
-However, you can also use a <span class="code">SymConnector</span>
+However, you can also use a `SymConnector`
 (including a [SymPassage](#sympassage), [SymDoor](#symdoor) or
 [SymStairway](#symstair)., for which see below) to set up an
 *asymmetric* connection, by defining a different direction from the
 obvious reverse one on the second room to point back to the same
 SymConnector. For example, if you have room1's
-<span class="code">west</span> property and room2's
-<span class="code">southeast</span> property point to the same
+`west` property and room2's
+`southeast` property point to the same
 SymConnector, this extension won't then attempt to make room2's
-<span class="code">east</span> property do so. If you don't want there
+`east` property do so. If you don't want there
 to be any way back from room2 to room1 then there's little point using a
 SymConnector at all; you'd be better off using an ordinary
 [TravelConnector](../../docs/manual/travel.html) to set up the one-way
@@ -214,10 +212,10 @@ SymPassage is also a [MultiLoc](../../docs/manual/multiloc.html), which
 the symconn extension automatically places in its two locations at
 preinit. It is very like a [SymDoor](#symdoor), except that it can't be
 opened or closed (at least, not via player commands). The
-<span class="code">SymPassage</span> class can be used to define
+`SymPassage` class can be used to define
 passage-like objects such as passageways and archways that connect one
-location to another. A <span class="code">SymPassage</span> is otherwise
-defined in exactly the same way as a <span class="code">SymDoor</span>;
+location to another. A `SymPassage` is otherwise
+defined in exactly the same way as a `SymDoor`;
 from a player's perspective it is functionally equivalent to a
 [Passage](../../docs/manual/extra.html#travelconn), the differences from
 the game author's point of view being that it can be defined using one
@@ -230,8 +228,7 @@ objectas in the cave example below) is to set the direction property of
 the first room to point to it and then to set its own destination
 property to point to the second room, like so:
 
-<div class="code">
-
+```
     firstRoom: Room 'First Room'
         "A narrow passage leads east. " 
         east = myPassage
@@ -245,21 +242,19 @@ property to point to the second room, like so:
        "A narrow passage leads west. "
     ;
      
-
-</div>
+```
 
 This will work, since the extension will take care of locating the
 passage in both the rooms and pointing the second room's west property
 back to the same passage. But, particularly if the three object
 definitions are quite widely separated in game code, it may be less than
 obvious later what the connections are. The recommended coding pattern,
-therefore is to set the passage's <span class="code">room1</span> and
-<span class="code">room2</span> properties explicitly (which can be done
+therefore is to set the passage's `room1` and
+`room2` properties explicitly (which can be done
 via a template, as shown below) and to set the back connection on the
 second room explicitly, like this:
 
-<div class="code">
-
+```
     firstRoom: Room 'First Room'
         "A narrow passage leads east. " 
         east = myPassage
@@ -274,31 +269,29 @@ second room explicitly, like this:
        west = myPassage
     ;
      
-
-</div>
+```
 
 <span id="roomdesc"></span>
 
 It's possible that the passage looks the same from both ends, in which
-case you can just set its <span class="code">desc</span> property in the
+case you can just set its `desc` property in the
 normal way, but the two ends of passage may look different, in which
-case you can define a separate <span class="code">room1Desc</span> and
-<span class="code">room2Desc</span> to define how it looks from each end
+case you can define a separate `room1Desc` and
+`room2Desc` to define how it looks from each end
 (which is another reason you might want to define the
-<span class="code">room1</span> and <span class="code">room2</span>
+`room1` and `room2`
 properties explicitly, so you can see which is which).
 
 The change in appearance might, however, lead to a change in the way the
 passage should be referred to; for example the passage might be narrow
 at one end but broaden out at the other. To handle this you can use the
-<span class="code">room1Vocab</span> and/or
-<span class="code">room2Vocab</span> properties explicitly. You don't
+`room1Vocab` and/or
+`room2Vocab` properties explicitly. You don't
 need to define both, since if you define one, the extension will use the
-passage's initial <span class="code">vocab</span> property for the
+passage's initial `vocab` property for the
 other. For example:
 
-<div class="code">
-
+```
     firstRoom: Room 'First Room'
         "A narrow passage leads east. " 
         east = myPassage
@@ -315,8 +308,7 @@ other. For example:
         west = myPassage
     ;
      
-
-</div>
+```
 
 Having to define two description properties where the descriptions don't
 vary all that much feel like a lot of busywork. An alternative is to
@@ -332,42 +324,36 @@ direction from the perspective of the player character's current
 location (assuming this is either room1 or room2. This would enable us
 to define the myPassage object aboce as:
 
-<div class="code">
-
+```
     myPassage: SymPassage 'narrow passage; leading east' @firstRoom @secondRoom
         "The passage leading <<dirName>> is quite <<inRoom1 ? 'narrow' : 'broad'>> but looks like it <<inRoom1 ? 'broadens out' : 'narrows'>> further along. "
         
         room2Vocab = 'wide passage; broad leading west'     
     ;
      
-
-</div>
+```
 
 This can be compressed a bit further by using the **byRoom** method for
 the desc property thus:
 
-<div class="code">
-
+```
       "The passage leading <<dirName>> is quite <<byRoom(['narrow', broad'])>> but looks like it <<byRoom(['broadens out', 'narrows])'>> further along. "    
      
-
-</div>
+```
 
 Note that the byRoom() method takes a single argument that should be a
 list of two strings, the first to be displayed for room1 and the second
 for room2. This allows all alternative method of achieving the same
 result using a string template thus:
 
-<div class="code">
-
+```
      "The passage leading <<dirName>> is quite <<['narrow', broad']) by room>> but looks like it <<['broadens out', 'narrows'] by room>> further along. "   
      
-
-</div>
+```
 
 The use of these techniques is not restricted to the desc property; they
 can be employed on any property/method of a SymmConnector (such as
-<span class="code">travelDesc</span>) you may want to vary according to
+`travelDesc`) you may want to vary according to
 the room or direction of travel (travelDesc is invoked while the player
 character is still in the starting location, so if the player is in
 room1 travel is towards room2 and vice versa). Note that the byRoom()
@@ -386,14 +372,13 @@ is taken in defining the SymConnector's
 [remoteDesc(pov)](../../docs/manual/senseregion.html#remoteprops)
 appropriately.
 
-The <span class="code">SymPassage</span> class also defines the
-<span class="code">isOpen</span> property which is true by default. The
+The `SymPassage` class also defines the
+`isOpen` property which is true by default. The
 symconn extension makes no use of this property on
-<span class="code">SymPassage</span>, but a game could use it to
+`SymPassage`, but a game could use it to
 simulate a passage that starts out blocked, e.g.:
 
-<div class="code">
-
+```
      cave: Room 'Cave'
         "A passage runs off to the west. "
         west: SymPassage
@@ -411,12 +396,11 @@ simulate a passage that starts out blocked, e.g.:
            }
         } 
      
-
-</div>
+```
 
 Then at some later point in the game when the player managed to unblock
 the passage you would call
-<span class="code">cave.west.makeOpen(true);</span>
+`cave.west.makeOpen(true);`
 
   
 <span id="sympathpassage"></span>
@@ -435,8 +419,7 @@ The **SymDoor** class lets you define a door using one object instead of
 the usual two. Using the standard adv3Lite library you'd typically set
 up a [door](../../docs/manual/door.html) between two rooms like this:
 
-<div class="code">
-
+```
      redRoom: Room 'Red Room'
        "A door leads south. "
        
@@ -457,13 +440,11 @@ up a [door](../../docs/manual/door.html) between two rooms like this:
         otherSide = blackDoor1
     ;   
      
-
-</div>
+```
 
 Using the SymDoor class this could be reduced to this:
 
-<div class="code">
-
+```
      redRoom: Room 'Red Room'
        "A door leads south. "
        
@@ -481,11 +462,10 @@ Using the SymDoor class this could be reduced to this:
        north = blackDoor
      ;    
      
+```
 
-</div>
-
-You don't actually need to define <span class="code">north =
-blackDoor</span> on <span class="code">greenRoom</span> here, since the
+You don't actually need to define `north =
+blackDoor` on `greenRoom` here, since the
 symconn extension will do this for you, but, as mentioned above, you
 might find it easier to understand what's going on in your code if you
 do.
@@ -515,7 +495,7 @@ character is greenRoom and the game will know which door is meant,
 without the game author having to take any steps to make this happen.
 If, however, you want to suppress this behaviour on a particular
 SymDoor, you can do so simply by overriding its **attachDir** property
-to <span class="code">nil</span> (<span class="code">attachDir</span> is
+to `nil` (`attachDir` is
 a method that works out which direction property a SymDoor is attached
 to in the player character's location, which is used by the **DirState**
 [State](../../docs/manual/thing.html#manipulatevocab) object to add the
@@ -531,26 +511,26 @@ essence you can define a SymStairway in just the same way as a
 [SymPassage](#sympassage), using the same properties to customize its
 two ends if and as desired. In addition, however, a SymStairway needs to
 know which is its upper end and which its lower end, which it does via
-its <span class="code">upperEnd</span> and
-<span class="code">lowerEnd</span> properties (which should contain the
+its `upperEnd` and
+`lowerEnd` properties (which should contain the
 rooms at its upper and lower ends respectively). Provided the
-SymStairway is attached to the <span class="code">up</span> or
-<span class="code">down</span> property of at least one of the rooms it
+SymStairway is attached to the `up` or
+`down` property of at least one of the rooms it
 connects, the extension can work out which end is which for itself and
 there's no need for you to specify this in your game code. The extension
-can also do this if the connection to the <span class="code">up</span>
-or <span class="code">down</span> property is indirect, via an
-<span class="code">asExit()</span> macro, e.g., <span class="code">up
-asExit(west)</span> where the SymStairway is directly attached to the
-<span class="code">west</span> property. If, however, the SymStairway is
+can also do this if the connection to the `up`
+or `down` property is indirect, via an
+`asExit()` macro, e.g., `up
+asExit(west)` where the SymStairway is directly attached to the
+`west` property. If, however, the SymStairway is
 only reachable via a compass direction (or in or out) then you'll need
-to define its <span class="code">upperEnd</span> and
-<span class="code">lowerEnd</span> properties yourself.
+to define its `upperEnd` and
+`lowerEnd` properties yourself.
 
 On the subject of the asExit() macro, if you define
-<span class="code">up asExit(west)</span> on the lower room, it's
-generally a good idea to define <span class="code">down
-asExit(east)</span> (or whatever direction takes you back down) on the
+`up asExit(west)` on the lower room, it's
+generally a good idea to define `down
+asExit(east)` (or whatever direction takes you back down) on the
 upper room, since if the player reaches the upper room with the command
 UP s/he'll expect be to able to reverse that travel with the command
 DOWN. For that reason, if this extension finds an UnlistedProxyConnector
@@ -561,10 +541,10 @@ already overriden in game code or there's no other way back down defined
 on the destination room. Normally this will be what you will want, but
 if you don't (for example, because there are several ways down from the
 destination room), you can block this by defining the down direction on
-the upper room (say) as <span class="code">noExit</span> or else,
+the upper room (say) as `noExit` or else,
 perhaps, as a string explaining why DOWN is not an appropriate
-direction, for example, <span class="code">dpwn = 'From here staircases
-lead down to north, east and west; which way do you want to go?'</span>.
+direction, for example, `dpwn = 'From here staircases
+lead down to north, east and west; which way do you want to go?'`.
 
 In addition to the shortcut methods for writing descriptions on other
 kinds of SymCommector, SymStairway defines **inUpper** and **inLower**
@@ -577,28 +557,26 @@ analogously to the byRoom() method, taking as its argument a list of two
 strings, and returning the first if we're at the upper end of the
 stairway and the second otherwise. So for example one could define:
 
-<div class="code">
-
+```
     testStairs: SymStairway 'staircase; ; stairs' @startroom @orangeRoom
         "The stairs <<['climb', 'descend'] by room>> <<upOrDown>> to the <<dirName>>. "
         
         travelDesc = "{I} {run} <<upOrDown>> the stairs. "
     ;
-
-</div>
+```
 
   
 
-Note that <span class="code">SymPassage</span> is a subclass of
-<span class="code">SymConnector</span> (and
-<span class="code">MultiLoc</span>) and the superclass of
-<span class="code">SymDoor</span>, but that
-<span class="code">SymPassage</span> does not inherit from
-<span class="code">Passage</span>, or <span class="code">SymDoor</span>
-from <span class="code">Door</span>, or
-<span class="code">SymStairway</span> from
-<span class="code">StairwayUp</span> or
-<span class="code">StairwayDown</span>.
+Note that `SymPassage` is a subclass of
+`SymConnector` (and
+`MultiLoc`) and the superclass of
+`SymDoor`, but that
+`SymPassage` does not inherit from
+`Passage`, or `SymDoor`
+from `Door`, or
+`SymStairway` from
+`StairwayUp` or
+`StairwayDown`.
 
 <span id="further"></span>
 
@@ -610,21 +588,21 @@ The main upside is that it gives you a bit less typing to do; a
 corresponding potential downside is that it may make your code less
 clear, since some of the connections between rooms will be implicitly
 added by the extension rather than shown explicitly in your code (for
-example, if you define <span class="code">hall.east</span> as
-<span class="code">study</span> and leave this extension to define
-<span class="code">study.west = hall</span>, then when you come to look
+example, if you define `hall.east` as
+`study` and leave this extension to define
+`study.west = hall`, then when you come to look
 at your code later it may not be apparent that there's an exit west from
 the study to the hall (especially if the definitions of the study and
 the hall are some way apart in your code). You could, of course, add a
 comment to that effect, but then you might as well have defined
-<span class="code">study.west = hall</span> in your code. A subsidiary
+`study.west = hall` in your code. A subsidiary
 advantage of using this extension is that should you forget to define a
-connection back (e.g. you define <span class="code">hall.east</span> as
-<span class="code">study</span> but forget to define
-<span class="code">study.west</span> as <span class="code">hall</span>),
+connection back (e.g. you define `hall.east` as
+`study` but forget to define
+`study.west` as `hall`),
 this extension will take care of it for you. The corresponding
 disadvantage is that you'd have to remember to explicitly define
-<span class="code">study.west = noExit</span> if for some reason you
+`study.west = noExit` if for some reason you
 didn't want the connection back, although since this is unlikely to
 occur very often, in this instance the advantage might clearly outweigh
 the disadvantage.
@@ -641,53 +619,47 @@ Being able to define doors with one (SymDoor) object instead of two
 (Door) objects may well be a welcome saving of labour, especially if the
 majority of doors in your game are the same both sides, as may often be
 the case. To make your code clearer, you may prefer to define the
-<span class="code">room1</span> and <span class="code">room2</span>
+`room1` and `room2`
 properties on your SymDoors (and SymPassages) explicitly; for example,
 instead of:
 
-<div class="code">
-
+```
     blackDoor1: SymDoor 'black door'
         "It's black. "
         room2 = greenRoom
      ; 
      
-
-</div>
+```
 
 You could write:
 
-<div class="code">
-
+```
     blackDoor1: SymDoor 'black door'
         "It's black. "
         room1 = redRoom
         room2 = greenRoom
      ; 
      
-
-</div>
+```
 
 Or, using an alternative form of the SymPassage/SymDoor template:
 
-<div class="code">
-
+```
     blackDoor1: SymDoor 'black door' @redRoom @greenRoom
         "It's black. "    
      ; 
      
-
-</div>
+```
 
 Which may make it clearer in your code which two rooms the black door is
 connecting. Note, however, that if you do this you must also define
-<span class="code">redRoom.south = blackDoor</span> (and you could also
-optionally define <span class="code">greenRoom.north = blackDoor</span>
+`redRoom.south = blackDoor` (and you could also
+optionally define `greenRoom.north = blackDoor`
 if you wished for the sake of clarity). Or, more generally, if you
-explicitly define the <span class="code">room1</span> property on a
+explicitly define the `room1` property on a
 SymDoor or a SymPassage, you must (normally) also remember to assign the
 SymDoor or SymPassage to a direction property of
-<span class="code">room1</span>.
+`room1`.
 
 A possible exception to this, where you would have to define the room1
 and room2 properties explicitly without assigning the SymDoor to a
@@ -697,8 +669,7 @@ example, suppose there were two doors, a red door and a green door both
 leading west from the same room. One way you could model this might be
 as follows:
 
-<div class="code">
-
+```
      livingRoom: Room 'The Living Room' 
         "There are two doors on the west side of the room, one red and
          the other green. "
@@ -743,17 +714,15 @@ as follows:
     greenDoor: SymDoor 'green door' @livingRoom @greenRoom
     ;
      
-
-</div>
+```
 
 Here, most of the complication on the TravelConnector defined on
-<span class="code">livingRoom.west</span> is simply to allow the
+`livingRoom.west` is simply to allow the
 routefinder to find a route to the red room and the green room through
 the red and green doors. If you weren't concerned about that, you could
 simply define:
 
-<div class="code">
-
+```
        west()
        {
            "There are two doors to the west, a red one and a green one. ";
@@ -762,8 +731,7 @@ simply define:
        }
      
      
-
-</div>
+```
 
 But then GO TO RED ROOM and GO TO GREEN ROOM might fail to work as
 expected.

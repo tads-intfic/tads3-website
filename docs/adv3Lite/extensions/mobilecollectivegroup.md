@@ -61,18 +61,18 @@ isn't likely to occur often, but could occur, for example, if an object
 is moved by a Daemon before the MobileCollectiveGroup's Daemon is run.
 This is unlikely to happen since the Daemons used by
 MobileCollectiveGroup are given a high
-<span class="code">eventOrder</span> to prevent this, but if it does
+`eventOrder` to prevent this, but if it does
 happen you may need to call the MobileCollectiveGroup's **scopeCheck()**
 method manually in your code to force a recalculation of whether the
 MobileCollectiveGroup needs to move.
 
 The other situation that could theoretically occur is if the objects
 belonging to a MobileCollectiveGroup (those that list it in their
-<span class="code">collectiveGroups</span> property) change during the
+`collectiveGroups` property) change during the
 course of play. A MobileCollectiveGroup works out the list of objects
 that belongs to it and stores it in its **myObj** property at
 preinitialization. If this list changes during the course of your game,
-you'll need to update the <span class="code">myObj</span> property
+you'll need to update the `myObj` property
 accordingly in your own game code (again, this is unlikely to occur very
 often, so you probably won't need to worry about it).
 
@@ -85,8 +85,7 @@ different colour. You might use MobileCollectiveGroup to define them
 thus (excluding other elements of the code such as the definition of the
 Room that would be needed to contain them):
 
-<div class="code">
-
+```
      
     + redCable: Cable 'red cable'
         colour = 'red'
@@ -117,8 +116,7 @@ Room that would be needed to contain them):
         }  
     ; 
      
-
-</div>
+```
 
 With this scheme in place the command EXAMINE CABLES would generate the
 response "There's a red cable, a blue cable, and a green cable here.

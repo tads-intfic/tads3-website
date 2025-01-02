@@ -31,9 +31,9 @@ simultaneous connections.
 
 ## Headers and library files
 
-To use the HTTPServer class, you must <span class="code">\#include
-\<httpsrv.h\></span> in your program. In addition, we recommend that you
-add the library file <span class="code">tadsnet.t</span> to your build
+To use the HTTPServer class, you must `\#include
+\<httpsrv.h\>` in your program. In addition, we recommend that you
+add the library file `tadsnet.t` to your build
 (by adding it to your project .t3m file), since this file defines some
 helper classes often used with HTTPServer.
 
@@ -46,23 +46,21 @@ connections in the background while your program runs.
 
 The constructor looks like this:
 
-<div class="code">
-
+```
     local server = new HTTPServer(hostname, port, uploadLimit);
-
-</div>
+```
 
 The *hostname* argument gives the network address of the server. This is
 the address on which the server will accept incoming connections, so
 it's the address that clients will use to connect to the server. The
 *port* is an optional integer value giving the port number where the
 server will listen for connections. *port* can be omitted entirely, or
-given as <span class="code">nil</span>, which means that you want the
+given as `nil`, which means that you want the
 operating system to select a port number for you. We'll go into more
 detail on the host name and port number below.
 
 *uploadLimit* is an optional size limit, in bytes, for each uploaded
-request body. If this is <span class="code">nil</span> or is omitted,
+request body. If this is `nil` or is omitted,
 there's no size limit. Some HTTP requests can include uploaded content;
 for example, a POST request includes a message body that describes the
 HTML form data being posted, and can also include uploaded file
@@ -73,9 +71,9 @@ memory and disk space on the server, so it's a good idea to set a size
 limit when possible, to prevent errant or malicious clients from
 overwhelming the server with very large uploads.
 
-If the server is started successfully, the <span class="code">new</span>
+If the server is started successfully, the `new`
 operator returns a new HTTPServer object representing the server. If an
-error occurs, it throws a <span class="code">NetException</span> error.
+error occurs, it throws a `NetException` error.
 
 ### Selecting the address and port number
 
@@ -83,8 +81,8 @@ The host name and port number determine the network address where your
 server will accept connections.
 
 For the standard TADS Web UI setup, simply use
-[<span class="code">getLaunchHostAddr()</span>](tadsnet.html#getLaunchHostAddr)
-as the host name and <span class="code">nil</span> as the port number.
+[`getLaunchHostAddr()`](tadsnet.html#getLaunchHostAddr)
+as the host name and `nil` as the port number.
 This creates a listener on a free port on the same address that the
 client used to connect to the external Web server that launched the
 program, or simply on "localhost" if the user launched the program
@@ -127,16 +125,16 @@ There are three main ways of selecting a custom host address:
   because most computers only have one network address, meaning there's
   only the one address to choose from anyway. You can get the default
   host name with the
-  [<span class="code">getHostName()</span>](tadsnet.html#getHostName)
+  [`getHostName()`](tadsnet.html#getHostName)
   function. You can also get the default IP address with the
-  [<span class="code">getLocalIP()</span>](tadsnet.html#getHostName)
+  [`getLocalIP()`](tadsnet.html#getHostName)
   function.
 - In some cases, you'll only want the program to accept *local*
   connections - that is, clients running on the same machine. You might
   want to do this for testing purposes, or if you're setting up the
   program as a local service only and you don't want external clients to
   connect for security reasons. In this case, you can use
-  <span class="code">nil</span> or <span class="code">'localhost'</span>
+  `nil` or `'localhost'`
   as the host name. The only connections possible will be from the local
   machine, connecting to the address "http://localhost:*port*/".
 - If you're running your program on a big network server that has
@@ -145,8 +143,8 @@ There are three main ways of selecting a custom host address:
   this particular server. In this case, you'll want to manually
   configure your program. One way of doing this is to specifically write
   the program for a particular host, in which case you'd just hard-code
-  the host name right into the <span class="code">new
-  HTTPServer()</span> call. More likely, though, you'd set up the
+  the host name right into the `new
+  HTTPServer()` call. More likely, though, you'd set up the
   program to get the host name from some external source, such as the
   command-line parameters or an external configuration file. This
   scenario is only for sophisticated users, obviously, so we'll assume
@@ -179,7 +177,7 @@ and choosing an unused port - but there's still no guarantee, because
 these lists obviously only include prominent, widely-used software.
 
 The other approach is to let the operating system assign an available
-port, by specifying <span class="code">nil</span> as the *port*
+port, by specifying `nil` as the *port*
 parameter. This guarantees that you'll get a port, because the OS will
 always choose an available port. The complication is that the port
 number will be different each time you run your program, because the OS
@@ -190,7 +188,7 @@ program.
 
 ### Handling server requests
 
-The <span class="code">HTTPServer</span> object handles all of the
+The `HTTPServer` object handles all of the
 low-level networking details automatically for you, running in separate
 background threads. However, your program has full control over the
 high-level services provided by the server. This means that it's up to
@@ -200,18 +198,17 @@ HTTP is a simple protocol in which clients connect to the server and
 send requests; the server answers each request with a reply. Each
 request/reply pair is essentially a stand-alone unit of conversation.
 
-The <span class="code">HTTPServer</span> object handles each incoming
+The `HTTPServer` object handles each incoming
 request by creating an
-[<span class="code">HTTPRequest</span>](httpreq.html) object, and placing
+[`HTTPRequest`](httpreq.html) object, and placing
 this in the network event queue. Your program receives these by calling
 the [getNetEvent()](tadsnet.html#getNetEvent) function, which waits for
 and returns the next network event. The
-<span class="code">HTTPRequest</span> object provides methods that let
+`HTTPRequest` object provides methods that let
 you retrieve the request information and send the reply. The basic
 structure of a TADS program that serves HTTP requests is as follows:
 
-<div class="code">
-
+```
     #include <tads.h>
     #include <tadsnet.h>
     #include <httpsrv.h>
@@ -238,8 +235,7 @@ structure of a TADS program that serves HTTP requests is as follows:
         // shut down the server
         server.shutdown();
     }
-
-</div>
+```
 
 This is obviously missing a few things you'd want in a real server (it
 doesn't have any error handling, for example), but it will actually work
@@ -259,7 +255,7 @@ you.
 
 ## HTTPServer methods
 
-<span class="code">getAddress()</span>
+`getAddress()`
 
 <div class="fdef">
 
@@ -268,22 +264,22 @@ object was constructed. This is the address on which the server is
 listening for incoming connection requests from clients. This returns
 the same format originally specified in the constructor, which can be
 either a host name or a numeric IP address. Returns
-<span class="code">nil</span> if no address is available.
+`nil` if no address is available.
 
 </div>
 
-<span class="code">getIPAddress()</span>
+`getIPAddress()`
 
 <div class="fdef">
 
 Returns a string giving the numeric IP address on which the server is
 listening for connections. This is in the usual decimal format, as in
-'127.0.0.1'. Returns <span class="code">nil</span> if no address is
+'127.0.0.1'. Returns `nil` if no address is
 available.
 
 </div>
 
-<span class="code">getPortNum()</span>
+`getPortNum()`
 
 <div class="fdef">
 
@@ -292,7 +288,7 @@ listening.
 
 </div>
 
-<span class="code">shutdown(*wait*?)</span>
+`shutdown(*wait*?)`
 
 <div class="fdef">
 
@@ -300,15 +296,15 @@ Shuts down the server. This closes the network port on which the server
 listens for connections, terminates the listener thread, and terminates
 any session threads that the server launched.
 
-If *wait* is <span class="code">true</span>, the method doesn't return
+If *wait* is `true`, the method doesn't return
 until all of the server threads have exited. This ensures that you can
 immediately reuse the server's port number with a new server object. If
-you omit *wait* specify <span class="code">nil</span>, the method
+you omit *wait* specify `nil`, the method
 signals the server to shut down, but then returns immediately, allowing
 the the server to carry out its termination in the background. You can
 use this option if you won't need to reuse the port number.
 
-Calling the <span class="code">shutdown()</span> method is optional. If
+Calling the `shutdown()` method is optional. If
 your program simply exits, the system will automatically shut down any
 servers that are still active.
 
@@ -320,7 +316,7 @@ HTTPServer objects are inherently [transient](objdef.html#transient).
 This is because they're associated with live operating system resources
 (threads and network sockets) that can't be saved in a file. This means
 that any object properties that refer to HTTPServer objects will be
-<span class="code">nil</span> when you restore a previously saved
+`nil` when you restore a previously saved
 session. Also, HTTPServer objects are not affected by Undo operations.
 
 ## Automatic shutdown
@@ -337,11 +333,11 @@ the HTTPServer object in a named object's property, for example.
 If the server has posted any requests to the network event queue, and
 the garbage collector deletes the server object after those events have
 been posted but before you retrieve them via
-<span class="code">getNetEvent()</span>, the events will *not* be
+`getNetEvent()`, the events will *not* be
 deleted from the queue - they'll be returned as normal from
-<span class="code">getNetEvent()</span>. If you use the
-<span class="code">getServer()</span> method on one of these request
-objects, it will return <span class="code">nil</span>, since the server
+`getNetEvent()`. If you use the
+`getServer()` method on one of these request
+objects, it will return `nil`, since the server
 object no longer exists. If you send a response to the request, it will
 fail with a network exception.
 
@@ -350,13 +346,13 @@ fail with a network exception.
 The VM enforces a user-specified security setting called the "network
 safety level". The user interface for setting the level varies by
 interpreter; for command-line interpreters, for example, it's controlled
-by the <span class="code">-ns</span> option when starting the program.
+by the `-ns` option when starting the program.
 
 The HTTPServer class is subject to the "server" component of the network
 safety level. The VM enforces the safety level when you attempt to
-create an HTTPServer object with operator <span class="code">new</span>.
+create an HTTPServer object with operator `new`.
 If the safety level doesn't allow the type of server you're trying to
-create, the <span class="code">new</span> operator throws a
+create, the `new` operator throws a
 NetSafetyException instead of creating the HTTPServer object.
 
 When the server component of the net safety level is set to 0 ("minimum

@@ -29,20 +29,18 @@ notion induces a slight spinning sensation; the IntrinsicClass intrinsic
 class has only a couple of practical applications, which are pretty
 straightforward.
 
-Each time you use the <span class="code">intrinsic class</span>
+Each time you use the `intrinsic class`
 statement to define an intrinsic class, the compiler implicitly creates
 an instance of IntrinsicClass to represent the intrinsic class.
 (Actually, *you* probably won't ever use the
-<span class="code">intrinsic class</span> statement; you'll probably
-just <span class="code">\#include</span> system header files that use
+`intrinsic class` statement; you'll probably
+just `\#include` system header files that use
 it.) The compiler gives this instance the same name as the class. For
 example, consider the following statement:
 
-<div class="code">
-
+```
     intrinsic class BigNumber 'bignumber' { }
-
-</div>
+```
 
 This defines an intrinsic class called BigNumber. It also creates an
 object of intrinsic class IntrinsicClass, and calls the object
@@ -60,18 +58,16 @@ important to have this kind of identifiers:
 
 ## The ofKind() method
 
-ofKind() returns <span class="code">true</span> if the argument is the
+ofKind() returns `true` if the argument is the
 IntrinsicClass object representing the intrinsic class of the first
 argument. For example:
 
-<div class="code">
-
+```
     local x = new BigNumber('100');
       
     tadsSay(x.ofKind(BigNumber) ? 'yes' : 'no'); "; ";
     tadsSay(x.ofKind(Dictionary) ? 'yes' : 'no'); "\n";
-
-</div>
+```
 
 This will display "yes; no", because the object is an instance of the
 BigNumber intrinsic class, and is not an instance of the Dictionary
@@ -84,67 +80,63 @@ given object. If the object is an instance of an intrinsic class, the
 list will have one element, which is the IntrinsicClass object
 representing the intrinsic class. For example:
 
-<div class="code">
-
+```
     x = new BigNumber('100');
     y = x.getSuperclassList();
+```
 
-</div>
-
-The value of <span class="code">y</span> will be
-<span class="code">\[BigNumber\]</span>.
+The value of `y` will be
+`\[BigNumber\]`.
 
 Most intrinsic classes derive from an "abstract" intrinsic class called
 Object, so, for example,
-<span class="code">BigNumber.getSuperclassList()</span> will return
-<span class="code">\[Object\]</span>. Object itself has no superclass,
-so <span class="code">Object.getSuperclassList()</span> will return an
+`BigNumber.getSuperclassList()` will return
+`\[Object\]`. Object itself has no superclass,
+so `Object.getSuperclassList()` will return an
 empty list.
 
 ## IntrinsicClass methods
 
-<span class="code">isIntrinsicClass(*val*)</span>
+`isIntrinsicClass(*val*)`
 
 <div class="fdef">
 
-Returns <span class="code">true</span> if *val* is an IntrinsicClass
-object, <span class="code">nil</span> if not.
+Returns `true` if *val* is an IntrinsicClass
+object, `nil` if not.
 
 This is a class method, so you call this method directly on
 IntrinsicClass itself:
 
-<div class="code">
-
+```
     if (IntrinsicClass.isIntrinsicClass(x))
       "x is an intrinsic class instance!\n";
-
-</div>
+```
 
 At first glance, this method might seem redundant with
-<span class="code">ofKind()</span> and
-<span class="code">getSuperclassList()</span>. It's not, though: those
+`ofKind()` and
+`getSuperclassList()`. It's not, though: those
 methods don't let you determine if you're dealing with an IntrinsicClass
 object, because they instead yield information about the *inheritance*
 structure for the intrinsic types. IntrinsicClass is used only for the
 *representation* of these objects, and isn't involved in the inheritance
 structure.
 
-For example, <span class="code">\[1,2,3\].getSuperclassList()</span>
-yields <span class="code">\[List\]</span>, and
-<span class="code">List.getSuperclassList()</span> yields
-<span class="code">\[Object\]</span>. Since
-<span class="code">Object</span> is the root object,
-<span class="code">Object.getSuperclassList()</span> yields an empty
+For example, `\[1,2,3\].getSuperclassList()`
+yields `\[List\]`, and
+`List.getSuperclassList()` yields
+`\[Object\]`. Since
+`Object` is the root object,
+`Object.getSuperclassList()` yields an empty
 list. In order for the type system to be internally consistent,
-<span class="code">ofKind()</span> must report information that's
-consistent with <span class="code">getSuperclassList()</span>, so
-<span class="code">List.ofKind(IntrinsicClass)</span> must return
-<span class="code">nil</span>: IntrinsicClass isn't anywhere in
-<span class="code">List</span>'s superclass tree, so
-<span class="code">List</span> must not be of kind
-<span class="code">IntrinsicClass</span>.
+`ofKind()` must report information that's
+consistent with `getSuperclassList()`, so
+`List.ofKind(IntrinsicClass)` must return
+`nil`: IntrinsicClass isn't anywhere in
+`List`'s superclass tree, so
+`List` must not be of kind
+`IntrinsicClass`.
 
-That's why <span class="code">isIntrinsicClass()</span> is needed. It's
+That's why `isIntrinsicClass()` is needed. It's
 occasionally useful to know when you're dealing with an intrinsic class
 representation object, and the normal means of class relationship
 testing don't work for this test.

@@ -44,28 +44,28 @@ game is concerned, the user is typing the commands.
 ## Replaying a script
 
 There are two way to replay a script: via the interpreter command line,
-or through a call to the <span class="code">setScriptFile()</span>
+or through a call to the `setScriptFile()`
 function.
 
 ### Replaying via the interpreter command line
 
 You can start reading a script immediately when you start the game by
-using the Interpreter's <span class="code">-i</span> option. Refer to
+using the Interpreter's `-i` option. Refer to
 [Running Programs](terp.html) for information on this option.
 
-The Interpreter <span class="code">-i</span> option causes the game to
+The Interpreter `-i` option causes the game to
 read from the script starting with the very first command line. On
 operating systems with "batch" or "command script" features, this lets
 you create automated processes, such as test suites, that run without
 any user intervention.
 
-### Replaying via <span class="code">setScriptFile()</span>
+### Replaying via `setScriptFile()`
 
-The intrinsic function <span class="code">setScriptFile()</span> lets
+The intrinsic function `setScriptFile()` lets
 you start reading from a script under program control. Refer to [the
 tads-io Function Set](tadsio.html) for details on this function.
 
-The adv3 library uses <span class="code">setScriptFile()</span> to
+The adv3 library uses `setScriptFile()` to
 implement the REPLAY command, which you can use to invoke a script from
 the game's command prompt.
 
@@ -76,7 +76,7 @@ as you play through a game manually. The interpreter creates a file
 containing the commands and events you enter as you play.
 
 To create a script from an entire session, use the Interpreter's
-<span class="code">-o</span> option. This causes the Interpreter to
+`-o` option. This causes the Interpreter to
 write events throughout the session to the file. See [Running
 Programs](terp.html) for details on Interpreter options.
 
@@ -85,18 +85,18 @@ command to record a script. This command starts recording events
 starting with the next command line.
 
 You can also start recording a script under program control, using the
-<span class="code">setLogFile()</span> function with the
-<span class="code">LogTypeCommand</span> or
-<span class="code">LogTypeEvent</span> type codes.
-<span class="code">LogTypeCommand</span> creates a Command-line script,
-and <span class="code">LogTypeEvent</span> creates an Event script (see
+`setLogFile()` function with the
+`LogTypeCommand` or
+`LogTypeEvent` type codes.
+`LogTypeCommand` creates a Command-line script,
+and `LogTypeEvent` creates an Event script (see
 below). The adv3 RECORD command uses this function internally.
 
 ## Script file structure
 
 This section explains how to create a script file manually. In most
 cases, you'll probably want to create your script files using one of the
-"recording" features (such as the <span class="code">-o</span>
+"recording" features (such as the `-o`
 Interpreter option, or the adv3 RECORD command), but you might sometimes
 want to create a script file on your own, or edit a script you recorded.
 
@@ -110,9 +110,9 @@ A command-line script contains regular input lines. This means that when
 the Interpreter is reading from a command-line script, it must still
 pause for user input, directly from the keyboard or mouse, whenever the
 game attempts to read any other kind of input event -
-<span class="code">inputEvent()</span>,
-<span class="code">inputDialog()</span>,
-<span class="code">inputFile()</span>, and so on.
+`inputEvent()`,
+`inputDialog()`,
+`inputFile()`, and so on.
 
 Each line of a command-line script is either a comment or an input line.
 
@@ -126,16 +126,14 @@ simply ignores these lines.
 
 Here's a sample Command-line script.
 
-<div class="code">
-
+```
     This is a comment, since it doesn't start with ">"
 
     >look
     >inventory
     >quit
     >yes
-
-</div>
+```
 
 ### Event script
 
@@ -148,72 +146,70 @@ Interpreter.
 
 An event script is identified with this text as its very first line:
 
-<div class="code">
-
+```
     <eventscript>
-
-</div>
+```
 
 When the Interpreter starts reading a script, it checks the first line
 to see if it contains this text. If so, it treats it as an Event script;
 if not, it treats the script as a regular Command-line script.
 
-After the initial <span class="code">\<eventscript\></span> line, the
+After the initial `\<eventscript\>` line, the
 rest of the file contains event lines and comment lines. An event line
 starts with an event type tag; everything else is a comment line. The
 Interpreter ignores comment lines.
 
 An "event tag" is one of the following:
 
-- <span class="code">\<line\></span> - a command line input event. The
+- `\<line\>` - a command line input event. The
   rest of the line is the text of the line input. This type of event is
-  returned by <span class="code">inputLine()</span> and
-  <span class="code">inputLineTimeout()</span>; all other input
+  returned by `inputLine()` and
+  `inputLineTimeout()`; all other input
   functions ignore (and skip) these events.
-- <span class="code">\<endqs\></span> - a quiet script ending event.
+- `\<endqs\>` - a quiet script ending event.
   This type of event is returned by
-  <span class="code">inputLine()</span> and
-  <span class="code">inputLineTimeout()</span>; other input functions
+  `inputLine()` and
+  `inputLineTimeout()`; other input functions
   ignore (and skip) these events.
-- <span class="code">\<key\></span> - a keyboard key event. The rest of
+- `\<key\>` - a keyboard key event. The rest of
   the line is the key name. The key names are exactly as returned from
-  <span class="code">inputKey()</span>, **except** that the keys that
-  <span class="code">inputKey()</span> returns as ASCII control codes
-  are represented as <span class="code">\[ctrl-x\]</span> characters:
-  '\n' (newline) represented as <span class="code">\[enter\]</span>,
-  '\t' (tab) is represented as <span class="code">\[tab\]</span>, and '
-  '(space) as <span class="code">\[space\]</span>. This type of event is
-  returned by <span class="code">inputKey()</span> and
-  <span class="code">inputEvent()</span>; all other input functions
+  `inputKey()`, **except** that the keys that
+  `inputKey()` returns as ASCII control codes
+  are represented as `\[ctrl-x\]` characters:
+  '\n' (newline) represented as `\[enter\]`,
+  '\t' (tab) is represented as `\[tab\]`, and '
+  '(space) as `\[space\]`. This type of event is
+  returned by `inputKey()` and
+  `inputEvent()`; all other input functions
   ignore (and skip) these events.
-- <span class="code">\<dialog\></span> - a dialog button event. The rest
+- `\<dialog\>` - a dialog button event. The rest
   of the line is a number giving the index of the button pressed in a
-  dialog. This is returned by <span class="code">inputDialog()</span>;
+  dialog. This is returned by `inputDialog()`;
   other input functions ignore (and skip) these events.
-- <span class="code">\<file\></span> - a file dialog event. The rest of
+- `\<file\>` - a file dialog event. The rest of
   the line is the name of the file selected, or is empty is the dialog
   was canceled. This is returned by
-  <span class="code">inputFile()</span>; other input functions ignore
+  `inputFile()`; other input functions ignore
   (and skip) these events.
-- <span class="code">\<href\></span> - a hyperlink click event. The rest
+- `\<href\>` - a hyperlink click event. The rest
   of the line is the HREF value for the hyperlink. This is returned by
-  <span class="code">inputEvent()</span> only; all other input functions
+  `inputEvent()` only; all other input functions
   ignore (and skip) these events.
-- <span class="code">\<timeout\></span> - a timeout event. This
-  indicates that a call to <span class="code">inputEvent()</span> or
-  <span class="code">inputLineTimeout()</span> terminated with a
+- `\<timeout\>` - a timeout event. This
+  indicates that a call to `inputEvent()` or
+  `inputLineTimeout()` terminated with a
   timeout. The rest of the line is the text of the partial input line
   that was entered before the timeout occurred; this is used only in
-  <span class="code">inputLineTimeout()</span>. This type of event is
-  returned by <span class="code">inputLineTimeout()</span> and
-  <span class="code">inputEvent()</span>; all other input function
+  `inputLineTimeout()`. This type of event is
+  returned by `inputLineTimeout()` and
+  `inputEvent()`; all other input function
   ignore (and skip) these events.
-- <span class="code">\<notimeout\></span> - a timeout-not-available
+- `\<notimeout\>` - a timeout-not-available
   error event. This can be returned from
-  <span class="code">inputLineTimeout()</span> and
-  <span class="code">inputEvent()</span>; other functions ignore (and
+  `inputLineTimeout()` and
+  `inputEvent()`; other functions ignore (and
   skip) these events.
-- <span class="code">\<eof\></span> - an end-of-file error event. This
+- `\<eof\>` - an end-of-file error event. This
   can be returned from most of the input functions. Note that this is
   *not* an indication that the script file has ended, so this isn't
   necessary as the last entry in a script; rather, this indicates that
@@ -224,8 +220,7 @@ An "event tag" is one of the following:
 
 Here's a sample Event script.
 
-<div class="code">
-
+```
     <eventscript>
     <line>look
     <line>inventory
@@ -237,8 +232,7 @@ Here's a sample Event script.
     <key>[esc]
     <line>quit
     <line>y
-
-</div>
+```
 
 ## Overwrite warnings in \<file\> events
 
@@ -295,11 +289,9 @@ script that the overwrite is to proceed without a prompt. To do this,
 edit the script file, and add the "overwrite" attribute to the \<file\>
 element:
 
-<div class="code">
-
+```
     <file overwrite>myfile.txt
-
-</div>
+```
 
 This tells the script reader that you explicitly intend to overwrite the
 file on each run, so no interactive prompt is necessary. Note that

@@ -56,8 +56,7 @@ define are:
 
 So, for example, a typical versionInfo definition might look like this:
 
-<div class="code">
-
+```
     versionInfo: GameID
         IFID = '0D9D2F69-90D5-4BDA-A21F-5B64C878D0AB'
         name = 'Fire!'
@@ -85,8 +84,7 @@ So, for example, a typical versionInfo definition might look like this:
             Mercury and adv3 libraries by Mike Roberts. ";               
         }
     ;
-
-</div>
+```
 
 In addition, you can override the following settings if you don't like
 the defaults inherited from GameInfoModuleID:
@@ -113,13 +111,11 @@ represent the player character at the start of the game (typically this
 is called me, though you can call it anything you like). A minimal
 gameMain definition will therefore look like this:
 
-<div class="code">
-
+```
     gameMain: GameMainDef
        initialPlayerChar = me
     ;
-
-</div>
+```
 
 In practice you'll normally want to define rather more than this on your
 gameMain object. The other properties and methods you may want to define
@@ -199,8 +195,7 @@ later version of adv3Lite).
 A fairly typical gameMain definition might thus look something like
 this:
 
-<div class="code">
-
+```
     gameMain: GameMainDef
         initialPlayerChar = me
         
@@ -225,8 +220,7 @@ this:
         }
        
     ;
-
-</div>
+```
 
   
 
@@ -238,8 +232,7 @@ you'd typically make it display a string beginning and ending wiith the
 that picks up all the relevant text from the versionInfo object might
 look like this:
 
-<div class="code">
-
+```
       setAboutBox()
         {
             "<ABOUTBOX><CENTER><FONT size=+2 color=red><b><<versionInfo.name>>
@@ -247,16 +240,15 @@ look like this:
              <<versionInfo.byline>>\b
             Version <<versionInfo.version>></CENTER></ABOUTBOX>";
         }
-
-</div>
+```
 
 For <span id="tenses">**tenses**</span> other than past or present,
-override <span class="code">Narrator.tense</span> to be one of Present
+override `Narrator.tense` to be one of Present
 ('Bob opens the box'), Past ('Bob opened the box'), Perfect ('Bob has
 opened the box'), PastPerfect ('Bob had opened the box'), Future ('Bob
 will open the box'), or FuturePefect ('Bob will have opened the box').
 By default the library defines Narrator.tense as
-<span class="code">(gameMain.usePastTense ? Past : Present)</span>.
+`(gameMain.usePastTense ? Past : Present)`.
 
 The **showIntro()** method is primarily for showing the game's
 introduction. It may also be a convenient place to put small amounts of

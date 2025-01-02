@@ -43,13 +43,13 @@ This extension defines the following RuleBooks:
   [turnEndRules](#end).
 
 Each of these RuleBooks has a similarly-named rule class associated with
-it; for example the <span class="code">BeforeRule</span> class is used
-to define rules belonging to the <span class="code">beforeRules</span>
+it; for example the `BeforeRule` class is used
+to define rules belonging to the `beforeRules`
 Rulebook. When using these specialized subclasses of Rule, there's no
 need also to specify which RuleBook they belong to, since this is taken
 care of in the class definitions (e.g. if you define something as an
-<span class="code">InitRule</span> it's redundant to go on to define its
-location property as <span class="code">initRules</span>).
+`InitRule` it's redundant to go on to define its
+location property as `initRules`).
 
   
 <span id="usage"></span>
@@ -63,12 +63,12 @@ rules extension you should first read its [documentation](rules.html)
 before attempting to use this one.
 
 None of the rulebooks defined in this extension expects any parameters
-to be passed to its <span class="code">follow()</span> method. This
+to be passed to its `follow()` method. This
 means that when you define rules belonging to any of these rulebooks,
 you do not need to worry about defining any arguments for their
-<span class="code">follow()</span> methods. With the exception of the
+`follow()` methods. With the exception of the
 reportRules, all the RuleBooks defined in this extension have a
-<span class="code">contValue</span> of nil; this means that the default
+`contValue` of nil; this means that the default
 behaviour is for these RuleBooks to execute all the matching Rules they
 find, rather than stopping at the first one.
 
@@ -93,8 +93,7 @@ define rules that run at the pre-init stage (basically as an alternative
 to definining PreInit objects). Such rules may be defined by explicitly
 locating them in the preinitRules Rulebook using either form of syntax:
 
-<div class="code">
-
+```
      preinitRule1: Rule
         location = preinitRules
         follow()
@@ -110,14 +109,12 @@ locating them in the preinitRules Rulebook using either form of syntax:
        }
     ;
      
-
-</div>
+```
 
 Or alternatively, they may simply be defined as belonging to the
 **PreinitRule** class:
 
-<div class="code">
-
+```
      preinitRule1: PreinitRule    
         follow()
         {
@@ -125,8 +122,7 @@ Or alternatively, they may simply be defined as belonging to the
         }
     ;
      
-
-</div>
+```
 
   
 <span id="init"></span>
@@ -138,7 +134,7 @@ define rules that run at start of play (at the init stage). These can
 again be defined as Rules which you explicitly locate in the initRules
 rulebook, but it is probably more convenient to define them as rules of
 the **InitRule** class (which are automatically located in the
-<span class="code">initRules</span> rulebook). InitRules are used in
+`initRules` rulebook). InitRules are used in
 very much the same way as PreinitRules, and effectively provide an
 alternative to defining InitObjects. They are thus quite closely
 equivalent to "when play begins" rules in Inform 7.
@@ -158,17 +154,16 @@ as the similarly-named rules in I7 (although the ReportRules are fairly
 analogous).
 
 Rules intended for one of these three rulebooks should be defined using
-the <span class="code">BeforeRule</span>,
-<span class="code">ReportRule</span> or
-<span class="code">AfterRule</span> class as appropriate. Each of these
+the `BeforeRule`,
+`ReportRule` or
+`AfterRule` class as appropriate. Each of these
 has a **currentAction** property which identifies the particular action
 that triggered the associated rulebook.
 
 Rules that need to match particular actions can be defined using the
 Rule template, e.g.:
 
-<div class="code">
-
+```
      BeforeRule &Jump
         // A BeforeRule that matches the Jump action
      ;
@@ -178,8 +173,7 @@ Rule template, e.g.:
      ;
      
      
-
-</div>
+```
 
 If the verify(), check() or action() stages of an action would benefit
 from rule-like behaviour, you can define a custom RuleBook to handle
@@ -205,7 +199,7 @@ own rules to make them execute when you want them to.
 ### Before Rules
 
 The main purpose of the **beforeRules** rulebook is to handle before
-action notifications. The <span class="code">beforeRules</span> rulebook
+action notifications. The `beforeRules` rulebook
 is defined in this extension with the following rules, which are
 executed in the order shown:
 
@@ -213,33 +207,32 @@ executed in the order shown:
     preconditions relating to the action (as opposed to those defined on
     its objects).
 2.  **actorActionRule**: (priority 9000). Calls the
-    <span class="code">actorAction()</span> method on
-    <span class="code">gActor</span> (the current actor).
+    `actorAction()` method on
+    `gActor` (the current actor).
 3.  **sceneNotifyBeforeRule**: (priority 8000). Calls the
-    <span class="code">beforeAction()</span> method on any current
+    `beforeAction()` method on any current
     scenes.
 4.  **roomNotifyBeforeRule**: (priority 7000). Calls the
-    <span class="code">roomBeforeAction()</span> method on the actor's
+    `roomBeforeAction()` method on the actor's
     current room (which in turn calls the
-    <span class="code">regionBeforeAction()</span> method on any regions
+    `regionBeforeAction()` method on any regions
     that room is in).
 5.  **scopeListNotifyBeforeRule**: (priority 6000). Calls the
-    <span class="code">beforeAction()</span> methods of all the objects
+    `beforeAction()` methods of all the objects
     in scope.
 
 To define additional rules for this rulebook, use the **BeforeRule**
-class. This inherits from <span class="code">ReplaceRedirector</span> as
-well as <span class="code">Rule</span> and so provides the
-<span class="code">doInstead()</span> method, should you need to use it.
+class. This inherits from `ReplaceRedirector` as
+well as `Rule` and so provides the
+`doInstead()` method, should you need to use it.
 Probably the best use for BeforeRules, however, is as an alternative
 method of handling before notifications that don't fit neatly into
-existing <span class="code">beforeAction()</span> methods, either
+existing `beforeAction()` methods, either
 because they apply to multiple objects, or because they apply
 conditionally, and it's neater to handle the conditions in a series of
 rules than via a complex if statement. For example, you might write:
 
-<div class="code">
-
+```
     BeforeRule &Take  
        during = desperateHurryScene  
        dobj = [comb, penny, paperclip]
@@ -253,24 +246,23 @@ rules than via a complex if statement. For example, you might write:
        
        priority = 8500
     ;
-
-</div>
+```
 
 Note three things here: first the use of the
-<span class="code">exit</span> macro to stop the action, and second the
+`exit` macro to stop the action, and second the
 priority given to this rule so that it comes after the
-<span class="code">actorActionRule</span> but before the notification
+`actorActionRule` but before the notification
 rules; there's no point notifying scenes, rooms and other objects of an
 action that isn't going to take place. Third and finally, there's no
 need to use the @ part of the template here to specify that your
-<span class="code">BeforeRule</span> is located in the beforeRules
+`BeforeRule` is located in the beforeRules
 RuleBook; in common with all the specialized Rule classes defined in
-this extension, a <span class="code">BeforeRule</span> is automatically
+this extension, a `BeforeRule` is automatically
 located in the appropriate RuleBook.
 
 Note finally that whether the beforeRules are executed before or after
 the check phase will depend on the value of
-<span class="code">gameMain.beforeRunsBeforeCheck.</span>
+`gameMain.beforeRunsBeforeCheck.`
 
   
 <span id="report"></span>
@@ -286,8 +278,8 @@ default, the **reportRules** rulebook contains two rules:
 
 1.  **reportImplicitActionsRule**: (priority 10000). Displays any
     pending implicit action reports (the
-    <span class="code">follow()</span> method of this rule ends with
-    <span class="code">nostop</span> to ensure that the subsequent rules
+    `follow()` method of this rule ends with
+    `nostop` to ensure that the subsequent rules
     are considered).
 2.  **standardReportRule**: (priority 0). Displays the output of the
     appropriate report() method from the final direct object in the
@@ -295,19 +287,18 @@ default, the **reportRules** rulebook contains two rules:
     this extension wasn't present).
 
 Note that unlike all the other RuleBooks defined in this extension, the
-<span class="code">reportRules</span> are defined with
-<span class="code">contVal = null</span> rather than
-<span class="code">contVal = nil</span>, which means that the rulebook
+`reportRules` are defined with
+`contVal = null` rather than
+`contVal = nil`, which means that the rulebook
 will stop after the first matching rule it finds. This enables you to
 write custom a custom **ReportRule** without needing to remember to use
-<span class="code">stop</span> to ensure that the
-<span class="code">reportRules</span> rulebook doesn't go on to display
+`stop` to ensure that the
+`reportRules` rulebook doesn't go on to display
 the standard report as well as your custom one. You'd typically write a
 ReportRule to customize the way an action is reported under specific
 circumstances, for example:
 
-<div class="code">
-
+```
     ReportRule &Take
        during = desperateHurryScene
 
@@ -317,10 +308,9 @@ circumstances, for example:
        }   
     ;
      
+```
 
-</div>
-
-Note the use of the <span class="code">gActionListStr</span> macro here
+Note the use of the `gActionListStr` macro here
 to provide a list of all the direct objects to which the current Take
 command applied; your report rules should always include this macro
 where you want to mention the direct object of the command to ensure
@@ -339,15 +329,15 @@ The **afterRules** RuleBook is used principally to perform the various
 <span id="afterac_idx">after action notifications</span>. If you are
 familiar with Inform 7, you should note that this quite different from
 an I7 after rule (which takes place between the carry out rules and the
-report rules). The <span class="code">afterRules</span> in this
+report rules). The `afterRules` in this
 extension are executed after the action is fully complete, and hence
-<span class="code">after</span> the [reportRules](#report). They cannot
+`after` the [reportRules](#report). They cannot
 be used to change the outcome of the action in any way, but only how the
 action is responded to. Moreover, if an action is considered a failure,
-the <span class="code">afterRules</span> won't be run (since you can't
+the `afterRules` won't be run (since you can't
 react to an action that didn't take place).
 
-The <span class="code">afterRules</span> Rulebook starts out containing
+The `afterRules` Rulebook starts out containing
 the following rules:
 
 1.  **checkIlluminationRule** (priority 10000): checks whether the
@@ -355,14 +345,14 @@ the following rules:
     versa* and, if so, either announces the onset of darkness (if it is
     now dark) or displays a room description (if it is now light).
 2.  **notifyScenesAfterRule** (priority 9000): calls the
-    <span class="code">afterAction()</span> method on any current
+    `afterAction()` method on any current
     scenes.
 3.  **roomNotifyAfterRule** (priority 8000): calls the
-    <span class="code">roomAfterAction()</span> method on the actor's
-    current room, and the <span class="code">regionAfterAction()</span>
+    `roomAfterAction()` method on the actor's
+    current room, and the `regionAfterAction()`
     methods of any Regions that contain that room.
 4.  **scopeListNotifyAfterRule** (priority 7000): calls the
-    <span class="code">beforeAction()</span> method on every object in
+    `beforeAction()` method on every object in
     scope.
 
 There are basically two ways in which game code can make use of this
@@ -379,8 +369,8 @@ place.
 
 The two turn sequence rulebooks contain rules governing what takes place
 at the beginning and end of each turn. In addition, they provide
-convenient places to define <span class="code">TurnStartRules</span> or
-<span class="code">TurnEndRules</span> to be executed on every turn,
+convenient places to define `TurnStartRules` or
+`TurnEndRules` to be executed on every turn,
 either near the start or near the end of the turn, depending on which of
 the two rulebooks you use. In some respects this duplicates the function
 of a [Daemon](../../docs/manual/event.html#daemon-idx), but at the same
@@ -403,25 +393,24 @@ The turnStartRules rulebook starts out containing the following rules:
 4.  **commandSpacingRule** (priority 20): displays a blank line,
     preparatory to displaying the next command prompt.
 5.  **startInputLineRule** (priority 10): outputs an
-    <span class="code">\<.inputline\></span> tag preparatory to
+    `\<.inputline\>` tag preparatory to
     displaying the next command prompt.
 6.  **displayCommandPromptRule** (priority 0): displays the command
     prompt (by default "\>").
 
 This rulebook does not go on to encompass the actual inputting and
 parsing of the command (a) because these operations are protected by a
-<span class="code">try... catch</span> block that cannot readily be
+`try... catch` block that cannot readily be
 replicated within the same rulebook and (b) because it is in any case
 probably not a good idea for game code to modify that particular part of
 the cycle.
 
 To define additional rules to be run in the turnStartRules rulebook, use
 the **TurnStartRule** class. For example, to customize the command
-prompt during the <span class="code">desparateHurryScene</span> you
+prompt during the `desparateHurryScene` you
 might write:
 
-<div class="code">
-
+```
      TurnStartRule
         during =  desperateHurryScene  
         follow()
@@ -431,15 +420,14 @@ might write:
         priority = 5
     ; 
      
-
-</div>
+```
 
 Note that with this definition the rulebook will continue to execute the
-<span class="code">displayCommandPromptRule</span> after our custom
+`displayCommandPromptRule` after our custom
 rule, so the complete command prompt will appear as **Hurry! \>**. If we
 wanted to *replace* the standard command prompt entirely we'd need to
-add a <span class="code">stop</span> statement to the end of the
-<span class="code">follow()</span> method of our custom rule.
+add a `stop` statement to the end of the
+`follow()` method of our custom rule.
 
   
 <span id="end"></span>
@@ -453,14 +441,14 @@ containing the following rules:
 1.  **turnEndSpacerRule** (priority 10000): adds a blank line to the end
     of the previous command output.
 2.  **roomDaemonRule** (priority 9000): executes the
-    <span class="code">roomDaemon()</span> method on the player
+    `roomDaemon()` method on the player
     character's current room.
 3.  **executeEventsRule** (priority 8000): executes any pending Fuses or
     Daemons.
 4.  **advanceTurnCounterRule** (priority 50): advances the turn counter.
 
 To define additional rules to go into the
-<span class="code">turnEndRules</span> rulebook, use the **TurnEndRule**
+`turnEndRules` rulebook, use the **TurnEndRule**
 class.
 
   
@@ -481,7 +469,7 @@ ones, since this would be to make the library do a whole lot of extra
 work for nothing. It may also be overkill to use this extension to
 achieve something that could be achieved more simply (or just as simply)
 by some other means (such as defining an
-<span class="code">InitObject</span> or using a
+`InitObject` or using a
 [CustomMessages](../../docs/manual/message.html#custmessage_idx) object
 to change the prompt). On the other hand there is no reason why you
 should not use this extension if you think it may prove useful or if you

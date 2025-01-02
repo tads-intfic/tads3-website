@@ -40,38 +40,34 @@ straightforward refusals implemented as DefaultTopics directly located
 in Angela. First the **DefaultAskForTopic** to field, ASK ANGELA FOR
 SUCH-AND-SUCH:
 
-<div class="code">
-
+```
     + DefaultAskForTopic
         "{The subj angela} listens to your request and shakes her head. <q>Sorry, I
         can't help you with that,</q> she says. "
     ;
-
-</div>
+```
 
 Commands issued to an NPC can be handled by CommandTopics (for details,
 see the section on [Giving Orders to NPCs](../manual/orders.html) in the
 *adv3Lite Library Manual*). For our purposes, though, we only need a
 single **DefaultCommandTopic** to handle all attempts by the player to
 give orders to Angela. Within a CommandTopic or DefaultCommandTopic we
-can use the method <span class="code">actionPhrase()</span> to give at
+can use the method `actionPhrase()` to give at
 least a reasonable approximation to the actual words that might be
 spoken to give the command. Our DefaultCommandTopic might therefore look
 like this:
 
-<div class="code">
-
+```
     + DefaultCommandTopic
         "<q><<if angela.proper>>Angela<<else>>Miss<<end>>, would you
         <<actionPhrase>>, please?</q> you request.\b
         In reply she merely cocks an eyebrow at you and looks at you as if to say,
         <q>Who do you think you're talking to?</q> "
     ;
-
-</div>
+```
 
 Note that we also make use of an embedded
-<span class="code">\<\<if\>\></span> expression so that the player
+`\<\<if\>\>` expression so that the player
 character addresses Angela as either "Angela" or "Miss" depending on
 whether or not he's learned her name.
 
@@ -79,30 +75,26 @@ It's probably also no bad idea to have a **DefaultAnyTopic** to catch
 anything that slips through all the other DefaultTopics we're about to
 go on and define:
 
-<div class="code">
-
+```
     + DefaultAnyTopic
         "{The subj angela} smiles and shrugs. "  
     ;
-
-</div>
+```
 
 We can also write a general-purpose **DefaultGiveShowTopic** to field
 attempts to GIVE or SHOW something to Angela:
 
-<div class="code">
-
+```
     + DefaultGiveShowTopic
         "You offer {the angela} {the dobj}, but she shakes her head and pushes {him
         dobj} away, saying, <q>I'm afraid I can't accept {that dobj} from you,
         sir.</q> "
     ;
-
-</div>
+```
 
 Here we take advantage of the fact that the object the player character
 is attempting to give or show will always be the direct object of the
-command. That means we can use <span class="code">dobj</span> in message
+command. That means we can use `dobj` in message
 parameter substitutions to get at the name and the correct pronoun for
 whatever the player character tried to give. There is one little problem
 with our DefaultGiveShowTopic the way we've defined it, however: the
@@ -112,8 +104,7 @@ look more than a little odd. One solution is to define a
 **DefaultShowTopic** that's active when what's being shown is fixed in
 place:
 
-<div class="code">
-
+```
     + DefaultShowTopic
         "You point towards {the dobj}.\b
         <q>Very interesting, I'm sure, sir,</q> {the subj angela} remarks without
@@ -121,8 +112,7 @@ place:
         
         isActive = gDobj.isFixed
     ;
-
-</div>
+```
 
 This works because being slightly more specific than a
 DefaultGiveShowTopic, a DefaultShowTopic has a higher matchScore, and so
@@ -159,7 +149,7 @@ put her DefaultAskQueryTopics and her DefaultSayTellTalkTopics in her
 various ActorStates; but this could be a mistake. The potential problem
 is this: if we place a DefaultTopic in an ActorState it will mask any
 TopicEntries of the same kind directly in the Actor (for example, a
-<span class="code">DefaultAskQueryTopic</span> in the current ActorState
+`DefaultAskQueryTopic` in the current ActorState
 will be used in preference to any AskTopics or TellTopics in the current
 Actor, except when some convKeys are active). Sometimes this may be what
 we want, for example, if an NPC becomes so preoccupied that he or she
@@ -193,8 +183,7 @@ takeoff. Thus, when Angela is in angelaGreetingState we actually want
 two groups of conversational DefaultTopics, which we could define like
 so:
 
-<div class="code">
-
+```
     + TopicGroup +5
         isActive = angela.curState == angelaGreetingState &&
         !angelaGreetingState.ticketSeen
@@ -229,13 +218,12 @@ so:
         you to move to the rear of your plane and take your seat now, sir?</q> she
         <<one of>>requests<<or>>repeats<<or>>insists<<stopping>>. "
     ;
-
-</div>
+```
 
 Since at this stage the flight attendant is focused almost entirely on
 seeing passengers' tickets and getting them seated, there's not much
 need to vary her default responses here; we simply use the
-<span class="code">\<\<one of\>\> ... \<\<stopping\>\></span> embedded
+`\<\<one of\>\> ... \<\<stopping\>\>` embedded
 expression to supply some minimal variation to avoid Angela appearing
 totally robotic. Note the subtle difference between the isActive
 properties of the two TopicGroups: the first has a **!** (negation
@@ -250,8 +238,7 @@ probably get away with one default response for say/tell/talk, but we
 should provide some variety of responses to asking unimplemented
 questions:
 
-<div class="code">
-
+```
     + TopicGroup +5
         isActive = angela.curState == angelaTalkingState
     ;
@@ -279,8 +266,7 @@ questions:
         "{The subj angela} listens to what you have to say without comment, but with
         the air of one who has other things on her mind. "
     ;
-
-</div>
+```
 
 The DefaultTopics for angelaSeatedState, when Angela and the player
 character are both back aboard the plane, with the likes of Pablo Cortez
@@ -288,8 +274,7 @@ occupying the passenger seats, can follow much the same pattern, except
 that here Angela's main concern will be with the type of people who may
 overhear the conversation:
 
-<div class="code">
-
+```
     + TopicGroup +5
         isActive = angela.curState == angelaSeatedState
     ;
@@ -317,8 +302,7 @@ overhear the conversation:
         "{The subj angela} merely listens, looking faintly disapproving at your
         garrulousness. "
     ;
-
-</div>
+```
 
 </div>
 

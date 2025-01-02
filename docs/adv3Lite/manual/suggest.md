@@ -40,7 +40,7 @@ SayTopics and/or QueryTopics in our game, we must do this in any case,
 since the player cannot be expected to guess the wording that would
 trigger them.
 
-The <span class="code">suggestedTopicLister</span> has a
+The `suggestedTopicLister` has a
 **hyperlinkSuggestions** property. If this is set to true then (provided
 the player is using an HTML-capable interpreter) the list of topic
 suggestions will be hyperlinked, allowing players to select a suggested
@@ -53,8 +53,8 @@ SuggestedTopic class in order for it to be suggested. In adv3Lite you
 simply define the name property of the TopicEntry in question. This can
 be done in either one of two ways:
 
-1.  Define the name property explicitly, e.g. <span class="code">name =
-    'the troubles'</span>.
+1.  Define the name property explicitly, e.g. `name =
+    'the troubles'`.
 2.  Define the name implicitly by setting the **autoName** property to
     true. This sets the name property of the TopicEntry to the theName
     property of its matchObj (or of the first object in its matchObj
@@ -65,8 +65,7 @@ be done in either one of two ways:
 The following two definitions are therefore equivalent (assuming the
 darkTower object has a name of 'dark tower'):
 
-<div class="code">
-
+```
     + AskTopic @darkTower
        "<q>Tell me about the dark tower,</q> you insist.\b
         <q>Oh no!</q> says Bob. <q>We don't talk about that -- ever!</q>"
@@ -80,8 +79,7 @@ darkTower object has a name of 'dark tower'):
         
         autoName = true
     ;
-
-</div>
+```
 
 <span id="suggestas"></span>
 
@@ -98,8 +96,7 @@ particular case you can override it by using the TopicEntry's
 For example, to make the game suggest 'You could tell Bob about your
 visit' with an AskTellTopic you could so the following:
 
-<div class="code">
-
+```
     + AskTellTopic @tVisit
        "<q>I visited the dark tower this morning,</q> you announce.\b
         <q>You shouldn't have done that, you really shouldn't,</q> Bob
@@ -112,8 +109,7 @@ visit' with an AskTellTopic you could so the following:
     ....
 
     tVisit: Topic '()your visit; my;' ;
-
-</div>
+```
 
 <span id="listorder"></span>
 
@@ -121,8 +117,8 @@ If you want to control the order in which topics are suggested, you can
 do so by using the **listOrder** property of an ActorTopicEntry; the
 higher this number, the later the topic will be placed in a list of
 suggestions relative to other topics of the same time (e.g. an AskTopic
-with a <span class="code">listOrder</span> of 110 will be suggested
-after an AskTopic of a <span class="code">listOrder</span> of 100, the
+with a `listOrder` of 110 will be suggested
+after an AskTopic of a `listOrder` of 100, the
 default value). Note that this re-ordering only takes place within each
 group (e.g. suggested topics to ask about or suggested topics to tell
 about). If you wish to change the order in which the groups (say, query,
@@ -151,8 +147,8 @@ property to allow for topics that you want the player to be able to
 refer to, but you don't want to suggest them yet (because they're not
 that important to suggest until something else happens). To make use of
 the curiosityAroused property you can either define it declaratively
-(e.g. <span class="code">curiosityAroused =
-me.hasSeen(darkTower)</span>) or set it to nil initially on one or more
+(e.g. `curiosityAroused =
+me.hasSeen(darkTower)`) or set it to nil initially on one or more
 TopicEntries and then use the **\<.arouse key\>** tag to set the
 curiosityAroused property to true for every ActorTopicEntry belonging to
 the current interlocutor whose convKeys property matches (or contains)
@@ -171,7 +167,7 @@ curiositySatisfied so that it becomes true according to some other
 condition.
 
 If, however, an ActorTopicEntry defines a non-nil keyTopics property,
-then <span class="code">curiositySatisfied</span> works a little
+then `curiositySatisfied` works a little
 differently. In this case, the function of the ActorTopicEntry is simply
 to suggest one or more further subtopics, so its curiosity is considered
 satisfied if and only if it has no subtopics to suggest (usually because
@@ -235,8 +231,7 @@ Setting this up is quite straightfoward. You just define the
 of keys (single-quoted strings) that will be matched by the convKeys
 property of the TopicEntries you want to suggest. For example:
 
-<div class="code">
-
+```
     + AskTellTalkTopic @darkTower
         keyTopics = 'dark-tower'
         autoName = true
@@ -250,8 +245,7 @@ property of the TopicEntries you want to suggest. For example:
     ;
 
     ...
-
-</div>
+```
 
 One potential problem with this is that both the AskTellTalkTopic and
 the topics it suggests would be listed in response to a TOPICS command,
@@ -266,8 +260,7 @@ To implement this scheme you would give all your top-level topics a
 common convKey (such as 'top') and then define that key on the
 **suggestionKey** property of the actor. For example:
 
-<div class="code">
-
+```
     bob: Actor 'Bob; worried; man; him' @store
       ...
       suggestionKey = 'top'
@@ -286,14 +279,13 @@ common convKey (such as 'top') and then define that key on the
         autoName = true    
     ; 
     ... 
-
-</div>
+```
 
 Note that if you do this, bob's suggestionKey isn't set in stone; it can
 be changed at run-time to anything else (including nil, which removes
 the restriction on what topics to suggest) simply by executing the
-statement <span class="code">bob.suggestionKey = 'another-key'</span> or
-<span class="code">bob.suggestionKey = nil</span>, or equivalently using
+statement `bob.suggestionKey = 'another-key'` or
+`bob.suggestionKey = nil`, or equivalently using
 the tag **\<.sugkey another-key\>** or **\<.sugkey nil\>**.
 
 It should be emphasized once again that there is absolutely no reason to
@@ -318,8 +310,7 @@ defining a top-level suggestionKey on bob, we could make the dark
 tower's subtopics initially inactive and then have the darkTower
 activate them just prior to suggesting them, like this:
 
-<div class="code">
-
+```
     bob: Actor 'Bob; worried; man; him' @store
       ...
       
@@ -339,8 +330,7 @@ activate them just prior to suggesting them, like this:
         activated = nil    
     ; 
     ... 
-
-</div>
+```
 
 This would cause all the topic entries with 'dark-tower' as one of their
 convKeys to be activated just prior to their being suggested from the

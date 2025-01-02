@@ -62,9 +62,9 @@ makes either trigger the Push action. This is what it might look like:
 
 Let's take this piece by piece. First we begin our specification of the
 new grammar for the Push action with
-<span class="code">VerbRule(PushForward)</span>.
-<span class="code">VerbRule()</span> tells the compiler we're defining
-some new grammar for an action. <span class="code">PushForward</span> is
+`VerbRule(PushForward)`.
+`VerbRule()` tells the compiler we're defining
+some new grammar for an action. `PushForward` is
 an arbitrary tag that's used to identify this VerbRule. It could have
 been anything we liked, so long as it's not something already used to
 identify another VerbRule (each VerbRule tag has to be unique), but it
@@ -72,39 +72,39 @@ helps make our game code more readable if we use something meaningful.
 
 The next part of the definition specifies the grammar that triggers this
 rule, in other words what the player has to type in order to match this
-VerbRule. Here it's specified as <span class="code">'push' multiDobj
-'forward' \| 'push' 'forward' 'on' multiDobj</span> The vertical bar is
+VerbRule. Here it's specified as `'push' multiDobj
+'forward' \| 'push' 'forward' 'on' multiDobj` The vertical bar is
 simply used to separate options, so this is equivalent to saying that
-the VerbRule will be matched either by <span class="code">'push'
-multiDobj 'forward'</span> or by <span class="code">'push' 'forward'
-'on' multiDobj</span>. In both cases <span class="code">multiDobj</span>
+the VerbRule will be matched either by `'push'
+multiDobj 'forward'` or by `'push' 'forward'
+'on' multiDobj`. In both cases `multiDobj`
 is a placeholder for the names of one or more direct objects (the thing
 or things to be pushed) in the player's command. If we wanted to
 restrict the player to pushing one thing at a time we could specify
-<span class="code">singleDobj</span> here, but since the standard
+`singleDobj` here, but since the standard
 VerbRule for Push allows multiple direct objects, we may as well do the
 same here. For the rest, the strings in single-quotes ('push', 'forward'
 and 'on') represent what the player must actually type at this point in
 the command; although we specify them in lower case, the player can use
 either upper case or lower case or a mixture of the two.
 
-The next line, <span class="code">: VerbProduction</span>, simply
+The next line, `: VerbProduction`, simply
 defines the VerbRule as being of the VerbProduction class. This will be
 true of every VerbRule you ever define.
 
-This is followed by <span class="code">action = Push</span>. This
+This is followed by `action = Push`. This
 defines which action is triggered by a command that matches this
 VerbRule. In this case we want to use the existing Push action.
 
-The next line, <span class="code">verbPhrase = 'push/pushing forward
-(what)'</span>, is used by the library to construct messages like 'first
+The next line, `verbPhrase = 'push/pushing forward
+(what)'`, is used by the library to construct messages like 'first
 pushing forward the stick' or 'first trying to push the stick'. Even if
 you don't think your game will ever use such messages, you should always
 define this property just in case, otherwise you risk getting run-time
 errors further down the line.
 
-Finally, <span class="code">missingQ = 'what do you want to push
-forward'</span> defines the text of the question the parser should ask
+Finally, `missingQ = 'what do you want to push
+forward'` defines the text of the question the parser should ask
 if the player neglects to supply a direct object when entering this
 command. (In fact, in this case, the question will never be asked, since
 if the player types PUSH FORWARD ON the parser will respond with "You
@@ -115,15 +115,13 @@ be defined).
 We'll now handle PULL BACK the easier way, by modifying an existing
 VerbRule:
 
-<div class="code">
-
+```
     modify VerbRule(Pull)
         ('pull' multiDobj ( | 'back')) |
         'pull' 'back' 'on' multiDobj    
         : 
     ;
-
-</div>
+```
 
 Note how we end this definition with a colon, and then the terminating
 semicolon. This is just a syntactic quirk of how a VerbRule is modified
@@ -131,12 +129,12 @@ in TADS 3, but in essence what we're doing is modifying an object, so we
 don't specify its class list again (VerbProduction) and we're leaving
 most of its properties (action, verbPhrase and missingQ) unchanged. What
 we are doing is replacing the existing grammar specification with one of
-our own: <span class="code">('pull' multiDobj ( \| 'back')) \| 'pull'
-'back' 'on' multiDobj</span>. This follows exactly the same principles
+our own: `('pull' multiDobj ( \| 'back')) \| 'pull'
+'back' 'on' multiDobj`. This follows exactly the same principles
 as before, except that we're using parentheses to group the various
-alternatives. The group <span class="code">( \| 'back')</span> can match
-either 'back' or nothing at all, so that <span class="code">('pull'
-multiDobj ( \| 'back'))</span> can match either PULL X or PULL X BACK.
+alternatives. The group `( \| 'back')` can match
+either 'back' or nothing at all, so that `('pull'
+multiDobj ( \| 'back'))` can match either PULL X or PULL X BACK.
 The second half of the specification matches PULL BACK ON X.
 
 Whether you prefer to define a new VerbRule or modify an existing one is
@@ -162,21 +160,18 @@ TAction class (think of TAction as meaning 'Transitive Action' — an
 action that takes an object). The library provides a DefineTAction()
 macro that makes it simple to define such objects:
 
-<div class="code">
-
+```
     DefineTAction(TurnLeft)
     ;
 
     DefineTAction(TurnRight)
     ;
-
-</div>
+```
 
 The next job is to define the grammar that will trigger these actions.
 We've already seen how to do this, using the VerbRule construct:
 
-<div class="code">
-
+```
     VerbRule(TurnLeft)
         'turn' singleDobj (| 'to' (| 'the')) ('left' | 'port')
         : VerbProduction
@@ -194,17 +189,16 @@ We've already seen how to do this, using the VerbRule construct:
         missinqQ = 'what do you want to turn right'
         priority = 60
     ;
-
-</div>
+```
 
 The one extra thing we've added here to both definitions is
-<span class="code">priority = 60</span>. This is to ensure that both
+`priority = 60`. This is to ensure that both
 these VerbRules will take priority over the VerbRule for TURN X TO
 *setting*, where *setting* is a literal value that could be anything,
 including 'left', 'right', 'port' or 'starboard'. The default priority
 for a VerbRule is 50, so by giving these two VerbRules a priority of 60
 we're ensuring that they're matched in preference to
-<span class="code">VerbRule(TurnTo)</span> for commands like TURN WHEEL
+`VerbRule(TurnTo)` for commands like TURN WHEEL
 TO PORT.
 
 If you compile and run the game now, you'll find that it now accepts
@@ -219,13 +213,12 @@ wheel) where we want the commands to do something special.
 
 To do this, we need to modify the Thing class and then specify the
 handling of the TurnLeft and TurnRight actions in blocks marked
-<span class="code">dobjFor(TurnLeft)</span> and
-<span class="code">dobjFor(TurnRight)</span>, meaning "What do I do when
+`dobjFor(TurnLeft)` and
+`dobjFor(TurnRight)`, meaning "What do I do when
 I'm the direct object of TurnLeft or TurnRight command?". All we need is
 something like this:
 
-<div class="code">
-
+```
     modify Thing
         dobjFor(TurnLeft)
         {
@@ -261,13 +254,12 @@ something like this:
             
         }
     ;
-
-</div>
+```
 
 Again, let's work through this step by step.
 
-First, we define <span class="code">preCond = \[touchObj\]</span>.
-<span class="code">preCond</span> is short for preCondition. The idea is
+First, we define `preCond = \[touchObj\]`.
+`preCond` is short for preCondition. The idea is
 that actions often require one or more preconditions to be fulfilled
 before they can be carried out. A door must be open before we can go
 through it, a book must be visible before we can read it, we must be
@@ -275,24 +267,22 @@ holding a ball before we can put it anywhere, and so on. Since such
 preconditions are so common, it would be tedious to have to code them
 every single time, so instead the library provides a number of
 ready-made preconditions prepackaged as PreCondition objects. One of
-these is <span class="code">touchObj</span>, which means the actor must
+these is `touchObj`, which means the actor must
 be able to touch the object in order to carry out the action. This is
 obviously needed here, since you clearly can't turn anything one way or
 another without touching it. We could list more than one PreCondition
 here if we needed to, but for these two actions
-<span class="code">touchObj</span> will suffice.
+`touchObj` will suffice.
 
 The next piece of code is the verify() method in each section:
 
-<div class="code">
-
+```
             verify()
             {
                 if(!isTurnable)
                     illogical(cannotTurnMsg);
             }
-
-</div>
+```
 
 As has been intimated previously, verify() methods perform two
 functions:
@@ -308,14 +298,13 @@ wheel rather than the mountain, which is what would happen if the
 wheel's verify() method allowed the Turn action to go ahead and the
 mountain's didn't.
 
-The library already defines <span class="code">isTurnable</span> and
-<span class="code">cannotTurnMsg</span> properties for use with the Turn
+The library already defines `isTurnable` and
+`cannotTurnMsg` properties for use with the Turn
 action, so we may as well use them here, but if they didn't exist it
 would be a good idea to invent them, for example if we'd implementing a
 Cross verb (as in CROSS BRIDGE or CROSS RIVER):
 
-<div class="code">
-
+```
     modify Thing
         dobjFor(Cross)
         {
@@ -330,14 +319,13 @@ Cross verb (as in CROSS BRIDGE or CROSS RIVER):
         isCrossable = nil
         cannotCrossMsg = '{The subj dobj} {is} not something {i} {can} cross. '
     ;
-
-</div>
+```
 
 The advantage of this coding pattern is that I don't then need to
 override the verify() method either to make something crossable or to
 customize the message refusing to allow it; e.g. I could just define
-<span class="code">cannotCrossMsg = 'It\\s flowing far too fast; you\\d
-drown if you tried'</span> on a river object. This becomes particularly
+`cannotCrossMsg = 'It\\s flowing far too fast; you\\d
+drown if you tried'` on a river object. This becomes particularly
 helpful for more complex verify() methods that need to check for more
 conditions, such as not allowing an object to be put inside itself or
 anything it already contains, or not allowing an actor to pick up
@@ -345,14 +333,12 @@ something he's standing on.
 
 The final section we've defined on the modified Thing for TurnLeft is:
 
-<div class="code">
-
+```
             report()
             {
                 "Turning <<gActionListStr>> to the left has no effect. ";
             }
-
-</div>
+```
 
 What this does is probably fairly obvious: it displays a message like,
 "Turning the doodah to the left has no effect." How it works is rather
@@ -369,9 +355,9 @@ TurnLeft allowed multiple direct objects, and the player typed TURN RED
 WHEEL, GREEN WHEEL AND BLUE WHEEL LEFT the response would be "Turning
 the red wheel, the green wheel and the blue wheel to the left has no
 effect." It does this by means of the special macro
-<span class="code">gActionListStr</span>.
+`gActionListStr`.
 
-Second, <span class="code">gActionListStr</span> only lists those
+Second, `gActionListStr` only lists those
 objects that (a) made it to the action stage (i.e. which passed verify()
 and check() and met any preconditions) but (b) for which the action
 stage displayed no messages at all. That means that if you want any
@@ -382,7 +368,7 @@ The message defined in a report() method is thus only used as a kind of
 fall-back default if the game doesn't supply anything more specific.
 
 Third, the report() phase won't be executed at all if either (a)
-<span class="code">gActionListStr</span> would be empty (i.e., if there
+`gActionListStr` would be empty (i.e., if there
 are no direct objects left to report on) or (b) the action is an
 implicit one (reported via a message like "(first opening the door)").
 
@@ -398,9 +384,9 @@ From this follow a number of rules about defining a report() method:
     possible, since it might apply to anything.
 3.  Any message displayed by a report() method should use the special
     pseudo-global string variable
-    <span class="code">gActionListStr</span> to list the direct objects
+    `gActionListStr` to list the direct objects
     of the action that's just been executed.
-4.  <span class="code">gActionListStr</span> is probably only useful in
+4.  `gActionListStr` is probably only useful in
     a report() method.
 
 preCond, verify() and report() are only three of the six possible phases

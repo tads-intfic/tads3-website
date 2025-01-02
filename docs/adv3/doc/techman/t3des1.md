@@ -449,24 +449,21 @@ how it feels.
 Start off by creating a source file for your game, and including the
 base definition files:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <adv3.h>
     #include <en_us.h>
-
-</div>
+```
 
 Remember, as always, to be absolutely certain that the
-<span class="code">\#include</span> command has no space characters in
-front of it. The <span class="code">\#</span> must be the first symbol
+`\#include` command has no space characters in
+front of it. The `\#` must be the first symbol
 on the line.
 
 Next, add the basic versionInfo and gameDef information:
 
-<div class="code">
-
+```
     versionInfo: GameID    
         IFID = 'bcb7d5c4-81ee-30b0-5aec-7672b10e2cd6'
         name = 'Airport'
@@ -483,21 +480,19 @@ Next, add the basic versionInfo and gameDef information:
         /* the initial player character is 'me' */
         initialPlayerChar = me
     ;
-
-</div>
+```
 
 (We got that IFID, by the way, from tads.org's [IFID
 generator](http://www.tads.org/ifidgen/ifidgen).)
 
 Now, for each room in your game, make an entry that gives the room's
-name (<span class="code">roomName</span>) and description
-(<span class="code">desc</span>), and the other rooms that are connected
+name (`roomName`) and description
+(`desc`), and the other rooms that are connected
 to this room. Here's how to implement the first few rooms from the
 sample map above. For the time being, we won't worry too much about
 making the descriptions complete; we can always flesh those out later.
 
-<div class="code">
-
+```
     terminal: Room 'Terminal'    
        "You are in the airport's main terminal. To the east,
         you see some ticket counters; to the north is the main concourse. "
@@ -536,8 +531,7 @@ making the descriptions complete; we can always flesh those out later.
         east = snackBar
         west = securityArea
     ;
-
-</div>
+```
 
 The other rooms are implemented in the same manner. For now, we're not
 worrying about the items contained in the rooms, or the other people
@@ -552,25 +546,24 @@ objects at this point; just go through and write basic object
 definitions for the main items in the game.
 
 Items have different properties than rooms. The basic properties of an
-item are its name (<span class="code">name</span>), long description
-(<span class="code">desc</span>), vocabulary words
-(<span class="code">vocabWords</span>), and container
-(<span class="code">location</span>), which may be either a room or
+item are its name (`name`), long description
+(`desc`), vocabulary words
+(`vocabWords`), and container
+(`location`), which may be either a room or
 another item). If the item can be carried by the player, the object will
-be of class <span class="code">Thing</span>; if not, it will be of class
-<span class="code">Fixture</span>. Some items may be of different
+be of class `Thing`; if not, it will be of class
+`Fixture`. Some items may be of different
 classes; for example, if you want to make an object that can contain
 other objects (such as the pail), make it a
-<span class="code">Container</span>. If you want to be able to put
+`Container`. If you want to be able to put
 objects on top of another object, use a
-<span class="code">Surface</span> object. You can make something both a
-<span class="code">Container</span> or <span class="code">Surface</span>
-and a <span class="code">Fixture</span> if you want.
+`Surface` object. You can make something both a
+`Container` or `Surface`
+and a `Fixture` if you want.
 
 Here are some of the basic object definitions for our sample game.
 
-<div class="code">
-
+```
     counter: Surface, Fixture 'ticket counter' 'ticket counter' 
         @ticketCounter    
     ;
@@ -608,13 +601,12 @@ Here are some of the basic object definitions for our sample game.
         "It's a uniform for an Untied Airlines pilot. It's
         a little large for you, but you could probably wear it. "
     ; 
-
-</div>
+```
 
 The rest of the objects are implemented in much the same way. In
 implementing the basic objects, the main properties you need to fill in
-are <span class="code">location</span>, so the object appears somewhere
-in the game; <span class="code">vocabWords</span>, so the player can
+are `location`, so the object appears somewhere
+in the game; `vocabWords`, so the player can
 refer to the object; and name, so the system knows what to call the
 object when it mentions the object in messages. It's also important to
 choose the appropriate class for each item, so that you can get the
@@ -632,13 +624,12 @@ The next step is to implement all of the special behavior that really
 makes the game work. For example, let's implement the simple mechanism
 that lets the player find the airline ticket upon picking up the
 newspaper. To do this, all we need to do is add a
-<span class="code">dobjFor(Take) action()</span> method to the
-<span class="code">newspaper</span> object (we'll just show the new
-method below, along with the <span class="code">foundTicket</span>
+`dobjFor(Take) action()` method to the
+`newspaper` object (we'll just show the new
+method below, along with the `foundTicket`
 property; the rest of the object is the same as shown above):
 
-<div class="code">
-
+```
     modify newspaper
       dobjFor(Take)
       {
@@ -657,29 +648,26 @@ property; the rest of the object is the same as shown above):
       
       foundTicket = nil
     ;
-
-</div>
+```
 
 This method runs whenever the player takes the newspaper. The first
 thing we do is check to make sure that the airline ticket hasn't already
 been found; if not, we display a message that it's been found, move the
 ticket into the game, and note that it's been found. Finally, we
-continue with the default <span class="code">actionDobjTake</span>
-action that the <span class="code">newspaper</span> object inherited
-from its superclass (in this case, <span class="code">Readable</span>)
-by using the <span class="code">inherited</span> statement.
+continue with the default `actionDobjTake`
+action that the `newspaper` object inherited
+from its superclass (in this case, `Readable`)
+by using the `inherited` statement.
 
 Note that the airline ticket itself should be defined with no location,
 because it's not anywhere at all when the game first starts:
 
-<div class="code">
-
+```
     ticket: Thing 'airline ticket' 'airline ticket'    
         "It's a one-way ticket to New York, in class C
         (the <q>C</q> probably stands for <q>Cattle</q>). "
     ;
-
-</div>
+```
 
 As another example, let's implement the puzzle the keeps the player out
 of the security area until the ID card is used to unlock the door.
@@ -687,8 +675,7 @@ First, we must prevent movement from the concourse into the security
 area. For this, we'll change the concourse room definition, and add a
 door object.
 
-<div class="code">
-
+```
     concourse: Room 'Concourse'
         "You are in a long hallway connecting the terminal
         building (which lies to the south) to the boarding gates
@@ -715,16 +702,14 @@ door object.
       
         cannotOpenLockedMsg = 'The door is securely locked. '
     ;
-
-</div>
+```
 
 So far the door is little more than a decoration item; the various
 methods we implement are just to inform the user that the door can't be
 operated directly. The real work is done by the card slot; we'll add
 some new behavior to that object now.
 
-<div class="code">
-
+```
     +  cardslot: RestrictedContainer, Fixture 'card slot' 'card slot'   
         "The slot appears to accept special ID cards with magnetic encoding.
         If you had an appropriate ID card, you could put it in the slot to
@@ -755,11 +740,10 @@ some new behavior to that object now.
           }      
         }
       ;
-
-</div>
+```
 
 The new behavior is that the player can put the ID card in the slot.
-When this is done, the <span class="code">iobjPutIn</span> method runs,
+When this is done, the `iobjPutIn` method runs,
 with the ID card as the direct object. This method opens the door, if
 it's not already open.
 

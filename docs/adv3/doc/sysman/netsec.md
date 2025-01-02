@@ -65,7 +65,7 @@ higher "safety" - i.e., more restricted access.
 The network safety level settings are controlled via interpreter
 options. The user interface varies by interpreter. In HTML TADS for
 Windows, the Options dialog controls these settings. For command-line
-interpreters, the <span class="code">-ns</span> option controls the
+interpreters, the `-ns` option controls the
 safety level. See the [interpreter
 documentation](terp.html#network-safety) for details.
 

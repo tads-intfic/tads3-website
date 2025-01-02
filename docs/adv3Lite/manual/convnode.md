@@ -84,21 +84,17 @@ set up a Conversation Node that includes all the TopicEntries whose
 convKeys contain at least one of these keys (e.g. *key1* or *key2* or
 *key3*). This would be equivalent to:
 
-<div class="code">
-
+```
       someActor.addPendingKey('key1');
       someActor.addPendingKey('key2');
       someActor.addPendingKey('key3');
-
-</div>
+```
 
 Or just:
 
-<div class="code">
-
+```
       someActor.pendingKeys = ['key1', 'key2', 'key3'];
-
-</div>
+```
 
 <span id="nodeactive"></span>
 
@@ -143,8 +139,7 @@ This should all become clearer with the aid of a few examples.
 You may recall in the previous section we gave an example of a
 QueryTopic that included a question at the end of the NPC's response:
 
-<div class="code">
-
+```
     + QueryTopic 'how' 'old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -152,8 +147,7 @@ QueryTopic that included a question at the end of the NPC's response:
           
         askMatchObj = tAge    
     ;
-
-</div>
+```
 
 Perhaps the question "Would you like someone asking you about your age?"
 is a purely rhetorical one, but it at least invites the player to
@@ -166,8 +160,7 @@ To implement the node we could simply add a \<.convnode\> tag to the end
 of Bob's response, and then a YesTopic and a NoTopic keyed to the same
 node:
 
-<div class="code">
-
+```
     + QueryTopic 'how' 'old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -188,8 +181,7 @@ node:
         <q>Well, there you are then!</q> he declares triumphantly. "
         convKeys = ['age-node']    
     ;
-
-</div>
+```
 
 There's nothing magic about the name 'age-node' by the way. We don't
 have to include 'node' in the name just because we're setting up a
@@ -205,8 +197,7 @@ they could be triggered by the player typing YES or NO at any point. To
 restrict them to this particular Conversation Node we need to set their
 isActive property to nodeActive:
 
-<div class="code">
-
+```
     + YesTopic
         "<q>Yes, sure, I wouldn't mind,</q> you reply.\b
         <q>Well, I do,</q> he grunts. "
@@ -220,8 +211,7 @@ isActive property to nodeActive:
         convKeys = ['age-node']
         isActive = nodeActive    
     ;
-
-</div>
+```
 
 Note that if we had listed several keys in the convKeys property of
 these TopicEntries, they would have been available in those other
@@ -234,20 +224,18 @@ as well. We could achieve that by defining a TellTopic that had
 'age-node' in its convKeys property but didn't set its isActive property
 to nodeActive:
 
-<div class="code">
-
+```
     + TellTopic @tYourAge
         "I'm forty-three, you tell him.\b
         Well bully for you! he declares. "
         convKeys = ['age-node']
         autoName = true
     ;
-
-</div>
+```
 
 Note also that if you do set isActive to nodeActive, there is nothing to
 stop you adding further conditions to the isActive property
-(<span class="code">isActive = nodeActive && whatever</span>) if you
+(`isActive = nodeActive && whatever`) if you
 need them.
 
 So far we have supposed that Bob intended his question rhetorically. But
@@ -256,14 +244,12 @@ about your age?" we could make him prompt the player for one until he
 receives it. For this purpose we can define a **NodeContinuationTopic**
 and set its convKeys property to the appropriate node:
 
-<div class="code">
-
+```
     + NodeContinuationTopic
         "<q>I thought I asked you a question,</q> Bob reminds you. "
         convKeys = ['age-node']
     ;
-
-</div>
+```
 
 There's no need to define the isActive property here, since
 NodeContinuationTopic defines is as nodeActive by default. Note,
@@ -284,8 +270,7 @@ way to do this is to define a DefaultTopic that's only active in the
 node in question, but which blocks attempts to leave the node until a
 satisfactory reply is given. For example:
 
-<div class="code">
-
+```
         
     + DefaultAnyTopic
         "<q>Don't try to change the subject; I want to know whether you'd like
@@ -294,13 +279,12 @@ satisfactory reply is given. For example:
         convKeys = ['age-node']
         isActive = nodeActive
     ;
-
-</div>
+```
 
 <span id="convstay"></span>
 
 It's very important that we remember to define
-<span class="code">isActive = nodeActive</span> here, otherwise this
+`isActive = nodeActive` here, otherwise this
 DefaultAnyTopic might be fired at any time. Note the use of the
 \<.convstay\> tag to keep the Conversation at the current node. The use
 of the \<.topics\> tag to remind the player of what topics are available
@@ -319,8 +303,7 @@ return nil, or blockEndConv, if we want to disallow ending the
 conversation. For example, to prevent the player character from saying
 goodbye while we're at this node we could define:
 
-<div class="code">
-
+```
     + NodeEndCheck
         canEndConversation(reason)
         {
@@ -337,8 +320,7 @@ goodbye while we're at this node we could define:
         
         convKeys = ['age-node']
     ;
-
-</div>
+```
 
 Once again we don't need to explicitly define the isActive property of
 the NodeEndCheck object since the NodeEndCheck class already defines it
@@ -373,8 +355,8 @@ An adv3Lite ConvNode is a specialization of an adv3Lite TopicGroup. This
 means that any TopicEntries located within a ConvNode have the
 ConvNode's convKeys added to any they may define individually, and that
 for them to be active both their own and the ConvNode's isActive
-properties must be true. A ConvNode defines <span class="code">isActive
-= nodeActive</span>, which means that the ConvNode becomes active when
+properties must be true. A ConvNode defines `isActive
+= nodeActive`, which means that the ConvNode becomes active when
 its convKeys are those of an active node.
 
 This may all sound a bit complicated, but the practical upshot is that
@@ -383,15 +365,14 @@ to be that corresponding to the node we want, and then locate the
 associated TopicEntries within it. The TopicGroup template, which
 ConvNode inherits, makes this even easier, since we can just put the
 relevant convKey name in single quotes after
-<span class="code">ConvNode</span>. ConvNode objects themselves should
+`ConvNode`. ConvNode objects themselves should
 be located directly in the Actors with which they are meant to be
 associated.
 
 Using a ConvNode object, the Conversation Node illustrated above could
 be defined like this:
 
-<div class="code">
-
+```
     + QueryTopic 'how' 'old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -436,8 +417,7 @@ be defined like this:
             return true;
         }    
     ;
-
-</div>
+```
 
 <span id="curnode"></span>
 

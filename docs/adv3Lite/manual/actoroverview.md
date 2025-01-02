@@ -88,7 +88,7 @@ parent Actor object or in the ActorState object to which they relate, or
 in a TopicGroup or ConvNode object (which will be explained in due
 course). You can test whether an action is conversational via its
 **isConversational** property. This might typically be used in a
-construct like <span class="code">if(gAction.isConversational))</span>
+construct like `if(gAction.isConversational))`
 to test whether the current action (typically the command just entered
 by the player) is a conversational one, for example when testing whether
 to intercept an action in a beforeAction() method.
@@ -171,8 +171,8 @@ of an AgendaItem and *actorstate* the programmatic name of an ActorState
 your source code). When defining conversation tags that make use of
 single-string properties like *tag* and *key* you do not include the
 quotation-marks in the conversation tag (e.g. you would write
-<span class="code">\<.reveal brian-robbed\></span> not
-<span class="code">\<.reveal 'brian robbed'\></span>). *Note that there
+`\<.reveal brian-robbed\>` not
+`\<.reveal 'brian robbed'\>`). *Note that there
 are necessary restrictions on where most of these tags can be safely
 used*; these will be explained in the section on [actor-specific
 tags](tags.html) below.

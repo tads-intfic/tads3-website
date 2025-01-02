@@ -142,15 +142,14 @@ Here are the key things to check in your Apache configuration file
 - Ensure that .php files are processed as php scripts. This is usually
   the default, but if it's not, you might have to add a directive like
   this to the Apache configuration:
-  <div class="code">
-
+  ```
       <FilesMatch "\.php$">
          SetHandler application/x-httpd-php
       </FilesMatch>
 
   </div>
 - Ensure that .htaccess files can override allow/deny settings. This
-  might require adding <span class="code">AllowOverride All</span> in
+  might require adding `AllowOverride All` in
   the section for the directory tree where you're placing the TADS php
   files.
 
@@ -181,13 +180,13 @@ You can use either MySQL or SQLite as the database engine.
 
 **MySQL:** Set up a t3launch database and user account on your MySQL
 database. You can do this by entering the following commands using the
-<span class="code">mysql</span> command-line tool:
+`mysql` command-line tool:
 
-- <span class="code">create user t3launch identified by
-  'password';</span>
-- <span class="code">create database t3launch;</span>
-- <span class="code">use t3launch;</span>
-- <span class="code">grant all on t3launch.\* to t3launch;</span>
+- `create user t3launch identified by
+  'password';`
+- `create database t3launch;`
+- `use t3launch;`
+- `grant all on t3launch.\* to t3launch;`
 
 You can substitute different values for the user name, password, and
 database name. Use the names you choose here for the DB_USERNAME,
@@ -203,9 +202,9 @@ The following commands (entered at the Unix command line) will configure
 the directory permissions and create an empty file for the database. Log
 in as root (or use "su root") to run these commands.
 
-- <span class="code">mkdir /home/db</span>
-- <span class="code">chown nobody.nobody /home/db</span>
-- <span class="code">touch /home/db/t3launch.db</span>
+- `mkdir /home/db`
+- `chown nobody.nobody /home/db`
+- `touch /home/db/t3launch.db`
 
 You can substitute a different directory and/or database file name of
 your choosing. Use the file name and location you choose here for the
@@ -242,7 +241,7 @@ Edit this file, and adjust the following variables as needed:
 - T3RUN_OPT_WEBHOST_NAME - the host name of the server where the game
   will be running; this is normally the same server that's running the
   launch script, which is what the default setting
-  <span class="code">\$\_SERVER\['SERVER_NAME'\]</span> yields
+  `\$\_SERVER\['SERVER_NAME'\]` yields
 - IFDB_ROOT - the default "http://ifdb.tads.org" should be appropriate
   for all installations
 - T3_CACHE_DIR - the directory where downloaded .t3 files will be
@@ -261,8 +260,7 @@ following line to the file /etc/sysctl.conf:
 <div class="code">
 
     echo "0" > /proc/sys/net/ipv4/tcp_slow_start_after_idle
-
-</div>
+```
 
 You'll need root privileges to edit that file, so use "su root", or log
 in as root to start with. Changes to /etc/sysctl.conf don't take effect
@@ -277,11 +275,9 @@ a performance optimization.
 First, check that your launch script starts up properly, by opening a
 Web browser and typing this in the address bar:
 
-<div class="code">
-
+```
     http://address/t3launch/t3launch.php?ping
-
-</div>
+```
 
 Replace *address* with your server's numeric IP address (or, if your
 server has a DNS name, you can use the domain name). If it's working
@@ -292,11 +288,9 @@ Next, check that your Apache server is correctly denying Web access to
 the supporting scripts in the "inc" directory, by trying this URL in
 your browser:
 
-<div class="code">
-
+```
     http://address/t3launch/inc/config.php
-
-</div>
+```
 
 Again, use your actual IP or domain in place of *address*. The result
 should be a "403 - Forbidden" error. If you *don't* get the 403 error,

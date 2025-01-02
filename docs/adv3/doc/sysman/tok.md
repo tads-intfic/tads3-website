@@ -42,8 +42,8 @@ parser.
 
 ## Calling the Tokenizer
 
-To use the Tokenizer class, <span class="code">\#include
-\<tok.h\></span> in your source code. (You'll also have to include the
+To use the Tokenizer class, `\#include
+\<tok.h\>` in your source code. (You'll also have to include the
 library module tok.t in your build, but you're probably already doing
 this indirectly by including the standard system library file,
 system.tl, in your build.)
@@ -51,32 +51,30 @@ system.tl, in your build.)
 To use the default rules defined in the class, simply use the class
 directly; to tokenize a string, make a call like this:
 
-<div class="code">
-
+```
     local str, tokList;
 
     str = inputLine();
     tokList = Tokenizer.tokenize(str);
+```
 
-</div>
-
-The <span class="code">tokenize()</span> method scans the string and
+The `tokenize()` method scans the string and
 converts it into a list of tokens. The return value is a list consisting
 of one element per token. Information about each token can be obtained
 using the following macros:
 
-- <span class="code">getTokVal(*tok*)</span> returns the parsed value of
+- `getTokVal(*tok*)` returns the parsed value of
   the token. This is usually a string corresponding to the text matched
   by the regular expression, but can be another type if the token rule
   generated it with some other value type.
-- <span class="code">getTokType(*tok*)</span> returns the type of the
+- `getTokType(*tok*)` returns the type of the
   token. This is a token type enumerator value assigned by the rule that
   matched the token. The default Tokenizer rules produce tokens of type
-  <span class="code">tokPunct</span> (punctuation marks),
-  <span class="code">tokWord</span> (words),
-  <span class="code">tokString</span> (strings), and
-  <span class="code">tokInt</span> (integer numbers).
-- <span class="code">getTokOrig(*tok*)</span> returns the original
+  `tokPunct` (punctuation marks),
+  `tokWord` (words),
+  `tokString` (strings), and
+  `tokInt` (integer numbers).
+- `getTokOrig(*tok*)` returns the original
   source text the token matched. This information is included because
   some token rules perform conversions on the value; for example,
   dictionary word tokens usually have their values converted to all
@@ -86,24 +84,22 @@ using the following macros:
 
 The following code displays the parsed value of each token in a string:
 
-<div class="code">
-
+```
     for (local i = 1, local cnt = tokList.length() ; i <= cnt ; ++i)
       "[<<i>>] = <<getTokVal(tokList[i])>>\n";
-
-</div>
+```
 
 (For the curious, the actual representation of a token is a list
 containing three elements: element 1 is the token value, element 2 is
 the token type, and element 3 is the original matched text. For more
 readable code and greater flexibility in case of future changes to this
-format, you should always use the <span class="code">getTokXxx()</span>
+format, you should always use the `getTokXxx()`
 macros rather than referring to the list elements directly.)
 
 ## Customizing the Tokenizer
 
 You can customize the rules the Tokenizer class uses. To do this,
-subclass Tokenizer and override the <span class="code">rules\_</span>
+subclass Tokenizer and override the `rules\_`
 property. This property's value must be a list of lists. Each sublist
 consists of five elements: a string giving the name of the rule; a
 regular expression specifying a pattern to match; a token type, which is
@@ -118,40 +114,40 @@ whatever name you like. The tokenizer class has methods that manipulate
 the rule set at run-time; rule names are used to identify which rules to
 operate on with these methods.
 
-The conversion rule can be <span class="code">nil</span>, a string, or a
+The conversion rule can be `nil`, a string, or a
 property pointer. If the conversion rule is
-<span class="code">nil</span>, then the token text stored in the result
+`nil`, then the token text stored in the result
 list will simply be the exact text of the input string that matches the
 regular expression. If the rule is a string, it specifies a replacement
-string, using the same rules as <span class="code">rexReplace()</span>,
+string, using the same rules as `rexReplace()`,
 that's applied to the matching text; the result of the replacement is
 stored in the result list. If the conversion rule is a property pointer,
-it specifies a property (of <span class="code">self</span>, which is the
+it specifies a property (of `self`, which is the
 Tokenizer object which is doing the work) to be evaluated to yield the
 value to be stored in the result list; this property is called as
 follows:
 
-<span class="code">self.(*prop*)(*txt*, *typ*, *results*)</span>
+`self.(*prop*)(*txt*, *typ*, *results*)`
 
 In this argument list, *txt* is a string giving the text that was
 matched for the token; *typ* is the token type enum value from the rule
 list; and *results* is a Vector containing the token output list under
 construction. This method simply adds any number of token entries to the
-results list by calling <span class="code">results.append()</span>. The
+results list by calling `results.append()`. The
 method need not add any tokens; the default tokenizer rule for
 whitespace, for example, uses a processor method called
-<span class="code">tokCvtSkip()</span>, which doesn't do anything at
+`tokCvtSkip()`, which doesn't do anything at
 all, which means that whitespace characters in the input result in no
 tokens in the results list.
 
-The match method can be <span class="code">nil</span> or a property
-pointer. If it's <span class="code">nil</span>, the regular expression
+The match method can be `nil` or a property
+pointer. If it's `nil`, the regular expression
 solely determines what text matches the rule. If the match method is a
 property pointer, though, the tokenizer calls the property (on
-<span class="code">self</span>, the Tokenizer object which is doing the
+`self`, the Tokenizer object which is doing the
 work) as follows:
 
-<span class="code">self.(*prop*)(*txt*)</span>
+`self.(*prop*)(*txt*)`
 
 This method can examine the text to determine if it's really a match for
 the rule; the method returns true if the text matches the rule, nil if
@@ -165,10 +161,10 @@ a rule only matches known dictionary words.
 The rules are specified in order of priority. The tokenizer starts with
 the first rule; if the first rule's regular expression matches (and the
 rule's match method, if present, returns
-<span class="code">true</span>), the tokenizer uses the match and
+`true`), the tokenizer uses the match and
 ignores all of the remaining rules. If the first rule's regular
 expression does not match (or its match method returns
-<span class="code">nil</span>), the tokenizer tries the second rule, and
+`nil`), the tokenizer tries the second rule, and
 so on until it runs out of rules.
 
 Each time the tokenizer finds a matching rule, it adds the result of
@@ -181,8 +177,8 @@ to find a match to the remainder of the string. The tokenizer repeats
 this process until the input string is empty.
 
 If the tokenizer exhausts its list of rules, it throws a
-<span class="code">TokErrorNoMatch</span> exception. This exception
-object has a property, <span class="code">remainingStr\_</span>, which
+`TokErrorNoMatch` exception. This exception
+object has a property, `remainingStr\_`, which
 gives the text of the remainder of the string at the point at which the
 tokenizer could find no matching rule.
 
@@ -195,11 +191,9 @@ operators, and numbers. There's already a tokInt type defined by the
 Tokenizer class, but we'd have to define our own token type for
 operators:
 
-<div class="code">
-
+```
     enum token tokOp;
-
-</div>
+```
 
 The default tokenizer rules won't work for the calculator because they
 don't accept all of the punctuation marks we'd need to use for operators
@@ -216,8 +210,7 @@ We'll need the following token rules:
 
 Here's how our subclass would look to implement these rules:
 
-<div class="code">
-
+```
     CalcTokenizer: Tokenizer
       rules_ =
       [
@@ -231,17 +224,14 @@ Here's how our subclass would look to implement these rules:
         ['operator', R'[()+*-/]', tokOp, nil, nil]
       ]
     ;
-
-</div>
+```
 
 To tokenize using our customized rules, we'd simply call our subclasses
 tokenizer rather than the default tokenizer:
 
-<div class="code">
-
+```
     tokList = CalcTokenizer.tokenize(str);
-
-</div>
+```
 
 </div>
 

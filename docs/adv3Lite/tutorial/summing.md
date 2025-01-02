@@ -46,16 +46,16 @@ the TADS 3 language and the adv3Lite library. In particular:
 - The use of cannotGoThatWayMsg and of the cannotGoThatWay(dir) method
   to customize the response to an attempt to travel in a direction
   that's not allowed.
-- The use of the logical operators <span class="code">&&</span>,
-  <span class="code">\|\|</span> and <span class="code">!</span>
+- The use of the logical operators `&&`,
+  `\|\|` and `!`
 - The use of Doer objects as a means of interrupting the normal course
   of a command and making it do something different.
 - A quick foretaste of the dobjFor() mechanism for customizing action
   responses.
 - The use of the roomBeforeAction() method of Rooms to intercept actions
   performed there.
-- The use of <span class="code">exit</span> and
-  <span class="code">abort</span> to stop an action in its tracks.
+- The use of `exit` and
+  `abort` to stop an action in its tracks.
 - An introduction to the use of message parameter substitutions to make
   textual output more flexible and appropriate to its context.
 
@@ -86,8 +86,7 @@ chapters that follow we'll continue to explore some of the detail.
 Finally, here's the complete listing of *The Adventures of Heidi* as
 we've now left it:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -240,8 +239,7 @@ we've now left it:
         
         direction = [portDir, starboardDir, foreDir, aftDir]
     ;
-
-</div>
+```
 
 </div>
 

@@ -61,8 +61,7 @@ define Scene-specific action responses, or else to rule our certain
 actions together during a Scene by using the exit macro in that Scene's
 beforeAction method, for example:
 
-<div class="code">
-
+```
     interviewScene: Scene
        beforeAction()
        {
@@ -74,16 +73,14 @@ beforeAction method, for example:
           }
         }
     ;    
-
-</div>
+```
 
 As illustrated in the foregoing example, if you want your code to react
 to an Action, you probably need to test what action it is. You can do
 this with the **gActionIs(*action*)** macro. For example, to prevent
 someone jumping in a room with a low ceiling you might write:
 
-<div class="code">
-
+```
         roomBeforeAction()
         {
             if(gActionIs(Jump))
@@ -92,23 +89,20 @@ someone jumping in a room with a low ceiling you might write:
                 exit;
             }
         }
-
-</div>
+```
 
 Note how we use the **exit** macro to veto the action here.
 
 Alternatively you might allow the jumping to go ahead and then report
 that the player character has banged his head on the ceiling:
 
-<div class="code">
-
+```
         roomAfterAction()
         {
             if(gActionIs(Jump))
                 "You bang your head on the ceiling. ";
         }
-
-</div>
+```
 
 If you want to test whether the current action is one among several
 actions, you can use the macro gActionIn(*action1, action2, ...*)
@@ -131,15 +125,13 @@ direct objects involved it's safer to use gActionList, which contains a
 list of all the direct objects that made it to the action stage (i.e.
 all the direct objects for which the action succeeded. For example:
 
-<div class="code">
-
+```
         afterAction()
         {
             if(gActionList.indexOf(redBall) != nil)
                 "You've just done something to the red ball. ";
         }
-
-</div>
+```
 
 The **actorAction()** method is called on the current actor (carrying
 out the action) just before any of the other before notifications. This
@@ -147,8 +139,7 @@ can be useful if you temporarily want to prevent an actor (in particular
 the player character) from carrying out certain kinds of action because
 s/he's temporarily incapacitated or tied up; for example:
 
-<div class="code">
-
+```
     actorAction()
     {
         /* Be careful not to disable the system actions! */
@@ -161,8 +152,7 @@ s/he's temporarily incapacitated or tied up; for example:
         "You can't do that while you're bound and gagged!";
            exit;   
     } 
-
-</div>
+```
 
   
 
@@ -174,20 +164,16 @@ gActionIs(Travel), but that only tells you that the player character
 went (or tried to go) somewhere. If you want to test for which way s/he
 went you can combine a test for the action and the direction like so:
 
-<div class="code">
-
+```
        if(gActionIs(Travel) && gAction.direction == eastDir)
-
-</div>
+```
 
 But to make this a little easier adv3Lite provides the
 gTravelActionIs(dir) macro, which you could use like this:
 
-<div class="code">
-
+```
        if(gTravelActionIs(east))
-
-</div>
+```
 
 But there's a problem with testing for travel actions this way.
 Consider, for example, the case where going east would take the player
@@ -195,11 +181,9 @@ character through a door. In this case the player would get the same
 result from the commands EAST and GO THROUGH DOOR, so to make sure we
 covered both eventualities we'd have to test for:
 
-<div class="code">
-
+```
        if(gTravelActionIs(east) || (gActionIs(GoThrough) && gDobj == frontDoor))
-
-</div>
+```
 
 <span id="beforetravel"></span>A better way of doing this is to test not
 for what direction an actor travelled in, but what TravelConnector was
@@ -219,15 +203,13 @@ In any case, rather than using gTravelActionIs() in a beforeAction() or
 afterAction() method, it's normally better to use the beforeTravel() and
 afterTravel() methods and test for the connector, e.g.:
 
-<div class="code">
-
+```
     beforeTravel(traveler, connector)
     {
         if(traveler == gPlayerChar && connector == frontDoor)
           ...
     }
-
-</div>
+```
 
 The limitation on this is that the notifications are only called where
 there's a TravelConnector (Room, Door or other TravelConnector object)
@@ -237,11 +219,11 @@ or afterAction() routine. The problem is that in this kind of case there
 is no connector object to pass as a parameter to the beforeTravel()
 notification methods. Instead, when you define the direction property of
 a Room as a method or double-quoted string,
-<span class="code">beforeTravel(gActor, direction)</span> will be called
+`beforeTravel(gActor, direction)` will be called
 on every object in scope (allowing any one of them to veto the proposed
 travel with an exit macro if desired). Normally before travel
-notifications are called as <span class="code">beforeTravel(traveler,
-connector)</span>, but since in this case there's no connector object to
+notifications are called as `beforeTravel(traveler,
+connector)`, but since in this case there's no connector object to
 pass as a parameter we pass the direction object (e.g. westDir if the
 actor is trying to go west) instead.
 

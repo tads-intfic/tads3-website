@@ -64,8 +64,7 @@ Help option, but first we need to write a script.
 Assuming you still have your .ahk file open in your text editor, try
 adding the following to the file and then saving it:
 
-<div class="code">
-
+```
     #ifWinActive ahk_class TADS_MDIFrame_Window
     {
     #`::Send \'
@@ -201,7 +200,6 @@ adding the following to the file and then saving it:
     Prev: Understanding Separate Compilation     Next: Bibliographic Metadata - the GameInfo Format     
 
 
-
-</div>
+```
 
 </div>

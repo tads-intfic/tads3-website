@@ -41,8 +41,7 @@ computer stands. We'll start with the combination lock.
 Here's a first initial attempt at adding a sticker and a lock to the
 suitcase:
 
-<div class="code">
-
+```
     + suitcase: OpenableContainer 'suitcase;;case' 
         "It's a black suitcase with a combination lock and a prominent sticker
         bearing a French tricolor and the slogan <q>Vive la revolution
@@ -64,8 +63,7 @@ suitcase:
         "The combination lock consists of four small brass wheels, each of which
         can be turned to any number between 0 and 9. "
     ;
-
-</div>
+```
 
 If you compile and run this, however, you'll quickly discover a problem.
 You can use the debugging command GONEAR SUITCASE to teleport straight
@@ -82,8 +80,7 @@ interior of the suitcase and attach it to the suitcase's remapIn
 property, just as we did when giving the short cabinet both an interior
 and a top:
 
-<div class="code">
-
+```
     + suitcase: Thing 'suitcase;;case' 
         "It's a black suitcase with a combination lock and a prominent sticker
         bearing a French tricolor and the slogan <q>Vive la revolution
@@ -102,20 +99,18 @@ and a top:
                 that. '
         }
     ;
-
-</div>
+```
 
 Note that in adding the remapIn SubComponent to the suitcase, we also
 need to change the superclass of the suitcase itself from
 OpenableContainer to Thing. We've also added an
-<span class="code">indirectLockableMsg</span> to the container defined
+`indirectLockableMsg` to the container defined
 on remapIn to respond to attempts to UNLOCK SUITCASE and the like. One
 other thing we have to do is to tweak the definition of the uniform so
 that it ends up back inside the suitcase, by adding
-<span class="code">subLocation = &remapIn</span>:
+`subLocation = &remapIn`:
 
-<div class="code">
-
+```
     ++ uniform: Wearable 'pilot\'s uniform; timo large'  
         "It's a uniform for a Timo Airlines pilot. It's a little large for you, but
         you could probably wear it. "
@@ -123,8 +118,7 @@ that it ends up back inside the suitcase, by adding
         bulk = 6
         subLocation = &remapIn
     ;
-
-</div>
+```
 
 We still don't have a working lock, however. To do that we need a set of
 four brass wheels, each of which can be turned to any number from 0 to
@@ -132,8 +126,8 @@ four brass wheels, each of which can be turned to any number from 0 to
 **NumberedDial** class, which you can read all about in the
 [Gadgets](../manual/gadget.html) section of the *adv3Lite Library
 Manual*. A NumberedDial can be turned to any number between its
-<span class="code">minSetting</span> and its
-<span class="code">maxSetting</span>, using the TURN TO or SET TO
+`minSetting` and its
+`maxSetting`, using the TURN TO or SET TO
 commands.
 
 This already does quite a bit of what we want our four brass combination
@@ -146,8 +140,7 @@ to check whether the combination lock is now set to the correct
 combination. We can save ourselves quite a bit of repetitive coding if
 we define this behaviour on a custom class:
 
-<div class="code">
-
+```
     class ComboWheel: NumberedDial
         desc = "It's a small brass wheel that can be turned to any number between 0
             and 9, and is currently at <<curSetting>>. "
@@ -162,19 +155,17 @@ we define this behaviour on a custom class:
             location.checkCombo();
         }
     ;
+```
 
-</div>
-
-We don't need to define <span class="code">minSetting = 0</span> on this
+We don't need to define `minSetting = 0` on this
 class since this is already the default for the NumberedDial class. The
-<span class="code">makeSetting(val)</span> is called whenever a
+`makeSetting(val)` is called whenever a
 NumberedDial is set to a new value, so it's a convenient place to call
 the method that checks whether the player now has the correct
 combination, a method we'll actually define on the comboLock object in
 which the four wheels will be located:
 
-<div class="code">
-
+```
     ++ comboLock: Fixture 'combination lock'
         "The combination lock consists of four small brass wheels, each of which
         can be turned to any number between 0 and 9. They're currently showing
@@ -219,23 +210,22 @@ which the four wheels will be located:
         curSetting = '2'
         listOrder = 4
     ;
-
-</div>
+```
 
 We've done several things to the comboLock object here. First we've
 added a sentence to its description to show the combination it's
 currently set at. Then we've defined a
-<span class="code">currentCombo</span> property which yields the current
+`currentCombo` property which yields the current
 combination by concatenating the current settings of each of the four
 individual wheels. We also define a
-<span class="code">correctCombo</span> property to hold the combination
+`correctCombo` property to hold the combination
 that will actually unlock the suitcase. Finally we define the
-<span class="code">checkCombo()</span> method that's called each time
+`checkCombo()` method that's called each time
 any wheel is turned to a new number. This first checks whether the
 currentCombo is the correctCombo; if it is it unlocks the suitcase (or
 rather the container defined on the suitcase's remapIn property) and
 displays a message hinting at success. We use
-<span class="code">reportAfter()</span> to display this message so that
+`reportAfter()` to display this message so that
 the report of the click comes *after* the standard report of the wheel
 being turned to a new number. If the currentCombo isn't the
 correctCombo, then the method locks the suitcase (even if it's already
@@ -262,8 +252,7 @@ We'll put the desk for the computer in the security centre room, which
 up to now has been left almost totally bare. We'll start by giving the
 room a description:
 
-<div class="code">
-
+```
     securityCentre: Room 'Security Centre' 'security centre'
         "Judging by the monitors on the walls, this must be some sort of security
         centre. Otherwise the room is mostly bare apart from the utilitarian desk
@@ -272,22 +261,19 @@ room a description:
         east = securityArea
         out asExit(east)
     ;
-
-</div>
+```
 
 The security monitors are merely scenery; we can implement them briskly
 as a Decoration:
 
-<div class="code">
-
+```
     + Decoration 'security monitors; blank; screens ;them'
         "They're all blank; either they're switched off or they're not working. "
         
         notImportantMsg = 'You really don\'t have time to play around with the
             monitors. '
     ;
-
-</div>
+```
 
 The desk requires a little more thought, since this is to have a drawer.
 The drawer can be implemented as a separate object, but we still want
@@ -295,8 +281,7 @@ OPEN DESK and the like to refer to the drawer. We can do that by having
 the desk's remapIn property refer to the drawer while using its remapOn
 property to provide it with a surface as a desktop:
 
-<div class="code">
-
+```
     + desk: Heavy 'desk; utilitarian metal'
         "It's a utilitarian metal desk with a single drawer. "
         
@@ -310,16 +295,14 @@ property to provide it with a surface as a desktop:
         
         cannotTakeMsg = 'The drawer is part of the desk. '
     ;
-
-</div>
+```
 
 The only thing new here is the use of the **Heavy** class to define the
 desk. This is almost the same as making it a Fixture, except that it
-provides a custom <span class="code">cannotTakeMsg</span>, 'The desk is
+provides a custom `cannotTakeMsg`, 'The desk is
 too heavy to move around'. Next we add the notebook in the drawer:
 
-<div class="code">
-
+```
     +++ notebook: Thing 'notebook; little green book; writing'
         "It's just a little green book with writing in it. "
         
@@ -331,19 +314,18 @@ too heavy to move around'. Next we add the notebook in the drawer:
         
         dobjFor(Open) asDobjFor(Read)
     ;
-
-</div>
+```
 
 There's just a couple of points to note about this object definition.
 The first, a minor one, is that we've given the notebook a
-<span class="code">password</span> property to make it easy to refer to
+`password` property to make it easy to refer to
 the password elsewhere (as we soon shall), and to ensure that everything
 still works if we decide we want to change the password (in a more
 elaborate version we might choose a new random password at the start of
 each game, for example).
 
-Of more note is the line <span class="code">dobjFor(Open)
-asDobjFor(Read)</span>, which means "treat OPEN NOTEBOOK the same as
+Of more note is the line `dobjFor(Open)
+asDobjFor(Read)`, which means "treat OPEN NOTEBOOK the same as
 READ NOTEBOOK", or to put it slightly more technically, "when this
 object is the direct object of an OPEN command, treat it as if it were
 the direct object of a READ command." OPEN NOTEBOOK is certainly a
@@ -369,15 +351,13 @@ inherit from the Heavy class (which we also used for the desk) so the
 player character can't pick it up and carry it around, and we'll give it
 a specialDesc to make sure that the player knows that it's there:
 
-<div class="code">
-
+```
     ++ computer: Heavy, Consultable 'computer;; pc keyboard screen'
         
         specialDesc = "A computer sits squarely on top of the desk. "
         subLocation = &remapOn
     ;
-
-</div>
+```
 
 That's all very well, but this definition doesn't tell the computer how
 to respond to specific requests for information. To do that we have to
@@ -391,7 +371,7 @@ the French Revolution? That's hardly a thing in the normal sense of the
 term, and it's certainly not an object implemented in our airport game,
 so how are we going to refer to it?
 
-The answer is to define it not as a <span class="code">Thing</span> but
+The answer is to define it not as a `Thing` but
 a *Topic*. A Topic is a game object that doesn't represent a physical
 object, or at least, doesn't represent a physical object implemented in
 the game, but instead represents something more abstract, such as
@@ -399,11 +379,9 @@ liberty, equality, fraternity or, as here, the French Revolution. To
 define a Topic we simply define an object of the Topic class and give it
 a vocab property:
 
-<div class="code">
-
+```
     tFrenchRevolution: Topic 'french revolution';
-
-</div>
+```
 
 A convenient place to put this definition might be right at the end of
 the start.t file, out of the way of anything else. Since the player
@@ -411,11 +389,9 @@ might reasonably use our simulated computer to look up flight
 departures, we might as well define a topic for that while we're at it
 too:
 
-<div class="code">
-
+```
     tFlightDepartures: Topic 'flight departures; plane; times';
-
-</div>
+```
 
 The vocab property of a Topic is defined just like that for a Thing, so
 here we've ensured that the tFlightDepartures Topic will match FLIGHT
@@ -431,8 +407,7 @@ from our computer. As mentioned the way to do that is to define a couple
 of ConsultTopic objects located directly in the computer. The template
 notation makes this quick and easy:
 
-<div class="code">
-
+```
     +++ ConsultTopic @tFrenchRevolution
         "According to Wikipedia, the French Revolution began in 1789. The article
         goes on to tell you quite a bit more about it, but you don't have time to
@@ -445,8 +420,7 @@ notation makes this quick and easy:
         hours, all the others being delayed for a variety of annoying reasons such
         as strikes, illness and inclement weather. "
     ;
-
-</div>
+```
 
 Here we define the topic we want the ConsultTopic to respond to after an
 @ sign as the first element of the template, and the response we get as
@@ -462,14 +436,12 @@ We can do this by means of a **DefaultConsultTopic**, which is what the
 game will resort to if it can't find a more specific ConsultTopic that
 matches what the player asked for:
 
-<div class="code">
-
+```
     +++ DefaultConsultTopic
         "That's of no immediate interest to you right now; you have more urgent
         things to attend to. "
     ;
-
-</div>
+```
 
 For the full story on Consultables and ConsultTopics, see the section on
 [Topic Entries](../manual/topicentry.html) in the *adv3Lite Library
@@ -489,22 +461,21 @@ enter a password. This will make the computer the most complex object
 we've defined so far, so we'll take it step-by-step.
 
 The first step is to define a couple of properties to keep track of the
-computer's state. We'll use the standard <span class="code">isOn</span>
+computer's state. We'll use the standard `isOn`
 property to keep track of whether it's on or off, and set
-<span class="code">isSwitchable = true</span> so that the player
+`isSwitchable = true` so that the player
 character can turn it on and off. Then we'll define a custom
-<span class="code">passwordEntered</span> property to keep track of
+`passwordEntered` property to keep track of
 whether the password has been entered since turning the computer on. We
-can use the <span class="code">makeOn(stat)</span> method to reset
-<span class="code">passwordEntered</span> to nil each time we turn the
+can use the `makeOn(stat)` method to reset
+`passwordEntered` to nil each time we turn the
 computer on, and also to display appropriate messages about the computer
 being turned on and off. We can also use the
-<span class="code">isOn</span> and
-<span class="code">passwordEntered</span> properties to change the
+`isOn` and
+`passwordEntered` properties to change the
 description of the computer according to its state:
 
-<div class="code">
-
+```
     ++ computer: Heavy, Consultable 'computer;; pc keyboard screen'
         "The computer is currently <<if isOn>>on and <<if passwordEntered>> ready
         for use<<else>> waiting for you to enter a password<<end>> <<else>>
@@ -529,18 +500,17 @@ description of the computer according to its state:
         }
         
         passwordEntered = nil
-
-</div>
+```
 
 For the next step, we need to prevent the player from looking anything
 up on the computer either if it isn't switched on or if it's still
 waiting for a password. For this we need to override its handling of the
-<span class="code">ConsultAbout</span> command, which handles commands
+`ConsultAbout` command, which handles commands
 of the form CONSULT COMPUTER ABOUT DEPARTURES or LOOK UP FRENCH
 REVOLUTION ON COMPUTER. We've already seen a couple of examples of
 customizing what commands do by using an
-<span class="code">action()</span> method within a
-<span class="code">dobjFor(SomeAction)</span> block. Actually, this is
+`action()` method within a
+`dobjFor(SomeAction)` block. Actually, this is
 just a convenient way of defining a method called
 actionDobjSomeAction(), but if you find that a little puzzling you can
 either ignore it totally for now or read about *Property Sets* in the
@@ -553,8 +523,8 @@ There are earlier stages at which we can intervene to prevent an action
 from taking place, the **verify** stage and the **check** stage. We
 don't often have to override a verify() method in adv3Lite games, since
 we can normally override properties like
-<span class="code">isEnterable</span> and
-<span class="code">canPutBehindMe</span> instead, which properties
+`isEnterable` and
+`canPutBehindMe` instead, which properties
 affect the way the verify method works. Each action has a verify method
 that is used to check for certain obvious illogicalities, such as trying
 to put an object into itself. The verify method also checks the boolean
@@ -584,12 +554,11 @@ check method will block the action, so simply override the check method
 with the tests you want to perform and the corresponding blocking
 messages you want to display. In this case we want to stop the action
 from going ahead either if the computer hasn't been turned on yet
-(<span class="code">isOn == nil</span>) or if the password hasn't been
-entered yet (<span class="code">passwordEntered == nil</span>). Our
+(`isOn == nil`) or if the password hasn't been
+entered yet (`passwordEntered == nil`). Our
 check routine should therefore look like this:
 
-<div class="code">
-
+```
         dobjFor(ConsultAbout)
         {
             check()
@@ -600,8 +569,7 @@ check routine should therefore look like this:
                     "You'll need to enter a password first. ";
             }
         }
-
-</div>
+```
 
 For further information on the check() stage in general, see the [Action
 Responses](../manual/actres.html#check) section of the *adv3Lite Library
@@ -613,19 +581,19 @@ commands of the form ENTER *someliteral* ON *someobject* (e.g. ENTER
 P345 ON COMPUTER). *Someobject* is then the direct object of the
 command, while we can get the value of *someliteral* (i.e. what the
 player wants to enter on the computer) from the pseudo-global variable
-<span class="code">gLiteral</span>.
+`gLiteral`.
 
 The library provides no default handling for the EnterOn action apart
 from ruling it out at the verify stage. To allow the action to go ahead
-at all we therefore first need to define <span class="code">canEnterOnMe
-= true</span> on the computer.
+at all we therefore first need to define `canEnterOnMe
+= true` on the computer.
 
 To make something happen when the player tries to enter something on the
 computer, we need to define what we want to happen at the action stage.
 Our routine should first check whether the password entered by the
 player matches the password in the notebook. If it does, then the
 routine should tell the player that s/he's been successful and set
-<span class="code">passwordEntered</span> to true, to signal that the
+`passwordEntered` to true, to signal that the
 correct password has now been entered. If it doesn't, then we just need
 to display a message telling the player that the password s/he just
 tried to enter is incorrect.
@@ -634,14 +602,13 @@ We probably don't want to allow the player to keep entering commands
 once the password has been accepted since we're not trying to emulate a
 complete PC here; a good solution would be a check method that doesn't
 allow the EnterOn action to go ahead once
-<span class="code">passwordEntered</span> is true.
+`passwordEntered` is true.
 
 Our handling for the EnterOn action, which allows the player character
 to enter a password on the computer (once it is switched on), thus looks
 like this:
 
-<div class="code">
-
+```
        
         canEnterOnMe = true
         
@@ -670,17 +637,15 @@ like this:
                     
             }
         }
-
-</div>
+```
 
 One additional refinement we could add is to make TYPE PASSWORD ON
 COMPUTER work the same as ENTER PASSWORD ON COMPUTER, which we can do
-easily enough by defining <span class="code">dobjFor(TypeOn)
-asDobjFor(EnterOn)</span>. The complete object definition for the
+easily enough by defining `dobjFor(TypeOn)
+asDobjFor(EnterOn)`. The complete object definition for the
 computer then looks like this:
 
-<div class="code">
-
+```
     ++ computer: Heavy, Consultable 'computer;; pc keyboard screen'
         "The computer is currently <<if isOn>>on and <<if passwordEntered>> ready
         for use<<else>> waiting for you to enter a password<<end>><<else>>
@@ -748,8 +713,7 @@ computer then looks like this:
         dobjFor(TypeOn) asDobjFor(EnterOn)
         
     ;
-
-</div>
+```
 
 You might once again like to compile and run the game to ensure that all
 works as expected.

@@ -41,7 +41,7 @@ access the elements.
 
 ## Collection methods
 
-<span class="code">createIterator()</span>
+`createIterator()`
 
 <div class="fdef">
 
@@ -53,13 +53,13 @@ with a "snapshot" of the collection's contents. This means that you can
 use the Iterator to visit each element of the collection without having
 to worry about whether the collection can change. Even if you make
 changes to the contents of the collection after calling
-<span class="code">createIterator()</span>, the Iterator object will
+`createIterator()`, the Iterator object will
 refer to a consistent, frozen snapshot of the collection as it was when
 the Iterator was created.
 
 </div>
 
-<span class="code">createLiveIterator()</span>
+`createLiveIterator()`
 
 <div class="fdef">
 
@@ -76,15 +76,15 @@ the collection while traversing the elements using the iterator object
 could affect the iteration. If the collection changes while the Iterator
 is active, the Iterator is not guaranteed to visit every item in the
 collection, nor is it guaranteed to visit each item only once.
-Therefore, you should use <span class="code">createIterator()</span>
+Therefore, you should use `createIterator()`
 whenever there's any doubt as to whether the collection could be
 modified while the Iterator is active, and use
-<span class="code">createLiveIterator()</span> only when you are certain
+`createLiveIterator()` only when you are certain
 the collection will not change.
 
 Note that, for immutable collection objects, there is no difference
-between <span class="code">createIterator()</span> and
-<span class="code">createLiveIterator()</span>. For example, because a
+between `createIterator()` and
+`createLiveIterator()`. For example, because a
 List object is immutable, a List returns identical iterators for both of
 these methods.
 

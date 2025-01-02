@@ -36,12 +36,10 @@ this". In TADS 3 (and hence in adv3Lite) the distinction between the two
 is important, and to distinguish between the two they are referred to
 respectively as single-quoted strings and double-quoted strings:
 
-<div class="code">
-
+```
     'This is a single-quoted string.';
     "This is a double-quoted string.";
-
-</div>
+```
 
 The basic distinction between the two is relatively straightforward: a
 single-quoted string is a piece of textual data that can be assigned to
@@ -56,22 +54,20 @@ statement](methods.html#dquote) above).
 This apparently simple distinction is, however, apparently blurred by
 the fact that some object properties are defined as single-quoted
 strings and others as double-quoted strings, as, for example, in the
-typical definition of a Thing where the <span class="code">vocab</span>
-property is single-quoted string and the <span class="code">desc</span>
+typical definition of a Thing where the `vocab`
+property is single-quoted string and the `desc`
 property a double-quoted string:
 
-<div class="code">
-
+```
     + bird: Thing 'baby bird;;nestling'
         "Too young to fly, the nestling tweets helplessly. "
         
         bulk = 1
     ;
-
-</div>
+```
 
 The distinction isn't too badly blurred here. The
-<span class="code">vocab</span> property ('baby bird;;nestling', via the
+`vocab` property ('baby bird;;nestling', via the
 template) is one that the library has to do quite a bit of further
 manipulation with in order to extract the name property and the nouns
 and adjectives that can be used to refer to the bird. On the other hand
@@ -83,22 +79,20 @@ to a method that displays some text. Indeed, it would have been
 perfectly legal (though in this case pointless) to define the bird
 object thus:
 
-<div class="code">
-
+```
     + bird: Thing 'baby bird;;nestling'
         desc() { "Too young to fly, the nestling tweets helplessly. "; }
         
         bulk = 1
     ;
-
-</div>
+```
 
 In fact, wherever the library requires a double-quoted string property,
 it's always legal (and sometimes useful) to supply a method that
 displays some text instead. It becomes useful when the text we want to
 display varies according to complex conditions (we'll see an example
 below) so it's convenient to write a method with lots of
-<span class="code">if</span> statements rather than trying to cram all
+`if` statements rather than trying to cram all
 the possibilities into a double-quoted string with lots of embedded
 expressions. From the point of view of the player, the two definitions
 of the bird object will appear to act exactly the same.
@@ -128,19 +122,19 @@ whereas single-quoted strings are typically shorter sentence fragments,
 or just names or adjectives or verbs that will be used to build up
 complete sentences for display and which may be manipulated further in
 different ways. But there are a whole lot of properties ending in msg
-(such as <span class="code">cannotTakeMsg</span>) which for reasons that
+(such as `cannotTakeMsg`) which for reasons that
 need not detain us right now are defined as single-quoted strings yet
 consist of complete sentences. A second rule of thumb is that properties
-whose name ends in desc (such as <span class="code">desc</span>,
-<span class="code">specialDesc</span>, and
-<span class="code">initSpecialDesc</span>) tend to be double-quoted
+whose name ends in desc (such as `desc`,
+`specialDesc`, and
+`initSpecialDesc`) tend to be double-quoted
 strings (because they contain complete descriptions, but here again
-there are some exceptions: <span class="code">stateDesc</span> is a
+there are some exceptions: `stateDesc` is a
 single-quoted string (because it's only ever meant to be part of a
 description and it can easily change), while
-<span class="code">readDesc</span>, <span class="code">smellDesc</span>,
-<span class="code">tasteDesc</span>, <span class="code">feelDesc</span>
-and <span class="code">listenDesc</span> are allowed to be either
+`readDesc`, `smellDesc`,
+`tasteDesc`, `feelDesc`
+and `listenDesc` are allowed to be either
 single-quoted or double-quoted strings (so that they'll work okay
 whichever way you define them). So although these rules of thumb may
 have some use, in the end you just have to get used to knowing which
@@ -155,21 +149,17 @@ superficially resemble an assignment statement, the two are quite
 different things. That means that while the following definition is
 legal:
 
-<div class="code">
-
+```
     + bird: Thing 'baby bird;;nestling'
         desc = "Too young to fly, the nestling tweets helplessly. "   
     ;
-
-</div>
+```
 
 The following statement is not:
 
-<div class="code">
-
+```
     bird.desc = "The nestling looks calmer now. "; // DON'T DO THIS!
-
-</div>
+```
 
 You *cannot* assign a double-quoted string directly to a property or
 variable (or pass it as a parameter), since a double-quoted string is
@@ -180,20 +170,17 @@ way to handle the kind of variation in a description (or other
 double-quoted string property) is by including conditional statements
 either in an embedded expression or a method:
 
-<div class="code">
-
+```
     + bird: Thing 'baby bird;;nestling'
         "<<if isCalm>>The nestling looks calmer now<<else>>Too young to fly, the nestling tweets helplessly<<end>>. "   
         
         isCalm = nil
     ;
-
-</div>
+```
 
 Or:
 
-<div class="code">
-
+```
     + bird: Thing 'baby bird;;nestling'
         desc()
         {
@@ -205,8 +192,7 @@ Or:
         
         isCalm = nil
     ;
-
-</div>
+```
 
 In this relatively simple case, you'd probably prefer the first way. In
 a more complex case you might well prefer the second.
@@ -214,37 +200,31 @@ a more complex case you might well prefer the second.
 There is a way of sorts of assigning a new double-quoted string value to
 a property. Just for the record, it looks like this:
 
-<div class="code">
-
+```
     bird.setMethod(&desc, 'The nestling looks calmer now. ');
-
-</div>
+```
 
 Conversely, you can get at the current single-quoted string value of a
 double-quoted string property with a statement like:
 
-<div class="code">
-
+```
     local str = bird.getMethod(&desc);
-
-</div>
+```
 
 But note that this will only work as expected (a) if desc has been
 defined as a double-quoted string and not as a method (this is one of
 the subtle differences between the two) and (b) if the double-quoted
 string contains no embedded expressions (otherwise it will be treated as
 a method). These restrictions mean you have to be very careful about
-using <span class="code">getMethod()</span> to get at the single-quoted
+using `getMethod()` to get at the single-quoted
 string equivalent of a double-quoted string value, and you should
 probably avoid it (it's not really what
-<span class="code">getMethod()</span> is for). A more reliable way of
+`getMethod()` is for). A more reliable way of
 achieving the objective would be:
 
-<div class="code">
-
+```
     local str = gOutStream.captureOutput({ : bird.desc });
-
-</div>
+```
 
 But that's using features way beyond anything we're likely to cover in
 this tutorial. For now, therefore, I suggest you stick to using the

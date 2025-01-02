@@ -708,7 +708,7 @@ ProxyDest)
 [doInstead()](actres.html#action) (Action)  
 [doInstead()](doer.html#doerdoes) (Defining What a Doer Does)  
 [Don't use
-<span class="code">\<TAB\></span>](webui.html#Adv3WebUsageTips) (The Web
+`\<TAB\>`](webui.html#Adv3WebUsageTips) (The Web
 UI)  
 [Don't use the Banner API](webui.html#nobanner) (The Web UI)  
 [doNested()](actres.html#action) (Action)  
@@ -2064,8 +2064,8 @@ the contType property)
 [unshift(val)](utility.html#vector) (Vector)  
 [Unthing](extra.html#unthing) (Other Miscellaneous Classes)  
 [unvisitedExitColour](exit.html) (Exits)  
-[Use <span class="code">cls()</span> instead of
-<span class="code">clearScreen()</span>](webui.html#cls) (The Web UI)  
+[Use `cls()` instead of
+`clearScreen()`](webui.html#cls) (The Web UI)  
 [Use aHref() for command links](webui.html#Adv3WebUsageTips) (The Web
 UI)  
 [Use inputManager methods for input](webui.html#inputmanager) (The Web

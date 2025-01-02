@@ -38,8 +38,8 @@ multiple possible routes through the game). This method consists of
 defining a number of **Achievement** objects and calling their
 **awardPointsOnce()** method when the player does something that merits
 a points increase. You can also use the
-<span class="code">awardPoints()</span> method, but the advantage of
-<span class="code">awardPointsOnce()</span> is that it ensures that
+`awardPoints()` method, but the advantage of
+`awardPointsOnce()` is that it ensures that
 players are not awarded the same points again for repeating the same
 action. Using Achievement objects in this way has a couple of other
 advantages:
@@ -73,8 +73,7 @@ it's worth and the text describing the achievement. This can be done
 very simply using the Achievement template, so that, for example, our
 achievement objects might look like this:
 
-<div class="code">
-
+```
     ticketAchievement: Achievement +10 "finding the plane ticket";
     boardingAchievement: Achievement +10 "boarding the plane";
     escapeAchievement: Achievement +10 "escaping Pablo Cortez";
@@ -84,15 +83,13 @@ achievement objects might look like this:
     uniformAchievement: Achievement +10 "putting on the pilot's uniform";
     cockpitAchievement: Achievement +10 "entering the cockpit";
     flyingAchievement: Achievement +15 "flying the plane";
-
-</div>
+```
 
 All we have to do now is to ensure that carrying out the appropriate
-action calls <span class="code">awardPointsOnce(</span>) on the
+action calls `awardPointsOnce(`) on the
 appropriate Achievement object. For example, for the first achievement:
 
-<div class="code">
-
+```
     ticket: Thing 'ticket'
         "It's a ticket for flight TI 179 to Buenos Aires. "
         
@@ -111,8 +108,7 @@ appropriate Achievement object. For example, for the first achievement:
             }   
         }
     ;
-
-</div>
+```
 
 If you compile and run the game and try this, you'll find that the
 points are awarded only the first time you pick up the ticket; the
@@ -121,8 +117,7 @@ awardPointsOnce() method makes sure the points are awarded only once.
 The second achievement is awarded when the player character shows Angela
 the ticket:
 
-<div class="code">
-
+```
     ++ GiveShowTopic @ticket
         topicResponse()
         {
@@ -136,8 +131,7 @@ the ticket:
             boardingAchievement.awardPointsOnce();
         }
     ;
-
-</div>
+```
 
 The next achievement needs just a little more thought. The points are
 awarded when the player reaches the Jetway from the plane, but only when
@@ -145,10 +139,9 @@ Pablo Cortez is threatening people at the front of the plane. There's
 more than one way we could test for this, but one that's as good as any
 other is to test for whether the takeover Scene is happening. If it is,
 we can then award the points in the
-<span class="code">travelerEntering()</span> method of the jetway Room:
+`travelerEntering()` method of the jetway Room:
 
-<div class="code">
-
+```
     jetway: Room 'Jetway' 'jetway;short enclosed; walkway'
         "This is little more than a short enclosed walkway leading west-east from
         the gate to the plane. <<if takeover.isHappening>> Right now it's thronging
@@ -175,8 +168,7 @@ we can then award the points in the
                 escapeAchievement.awardPointsOnce();
         }    
     ;
-
-</div>
+```
 
 Now that we've established the principle, implementing the scoring for
 most of the other achievements can be left as an exercise for the
@@ -186,11 +178,10 @@ addition to awarding the points we'll want to display the final score
 and give the player the option of requesting a full breakdown of the
 score. We'll probably want to offer the same option too even if the
 player character kills himself with a botched take-off attempt, so we'll
-want to tweak the <span class="code">eachTurn()</span> method of the
-<span class="code">takeOff</span> Scene thus:
+want to tweak the `eachTurn()` method of the
+`takeOff` Scene thus:
 
-<div class="code">
-
+```
     takeoff: Scene   
         ...
      
@@ -284,8 +275,7 @@ want to tweak the <span class="code">eachTurn()</span> method of the
                 "The plane is losing speed. ";
         }   
     ;
-
-</div>
+```
 
 The same option should probably be added when the player character
 manages to get himself killed in other ways (notably by provoking Cortez

@@ -89,17 +89,17 @@ of the command, each room must have its vocab property defined.
 <span id="fastgo"></span>
 
 However, if you don't want to use the GO TO/CONTINUE combination in your
-game, you can set the <span class="code">gameMain</span> property
-**fastGoTo** to true. If <span class="code">gameMain.fastGoTo</span> is
-<span class="code">true</span>, then the command GO TO X will continue
+game, you can set the `gameMain` property
+**fastGoTo** to true. If `gameMain.fastGoTo` is
+`true`, then the command GO TO X will continue
 moving the player character until either s/he reaches X or something
 (such as a locked door or an obstructive NPC) blocks his/her journey (at
 which point the CONTINUE command can still be used to attempt to resume
 the journey, although it will only proceed one step at a time). You can
-also set <span class="code">fastGoTo</span> to true within individual
+also set `fastGoTo` to true within individual
 [Regions](room.html#regions) to allow CONTINUE-less GO TO between rooms
 within a given Region, also this setting will have no effect if
-<span class="code">gameMain.fastGoTo</span> is true (since the fast GOTO
+`gameMain.fastGoTo` is true (since the fast GOTO
 option is then enabled globally).
 
 <span id="routefinder" <="" a=""></span>
@@ -137,8 +137,7 @@ to which going in that direction leads. So to find which direction an
 actor needs to move in next to continue along a previously calculated
 route, you might use code like:
 
-<div class="code">
-
+```
        local dir;
        local idx = routeFinder.cachedPath.indexWhich({x: x[2] == fred.getOutermostRoom});
        if(idx != nil && idx < routeFinder.cachedPath.length)
@@ -163,16 +162,14 @@ route, you might use code like:
              gActor = gPlayerChar; // might or might not be needed, depending on context.
           }
        }
-
-</div>
+```
 
 Alternatively you might want to bypass some of the complexities of
 travel by simply moving the NPC into the next room along the route,
 although this might have the unfortunate effect of allowing the NPC to
 move through locked doors and other such obstacles:
 
-<div class="code">
-
+```
        local dest;
        local idx = routeFinder.cachedPath.indexWhich({x: x[2] == fred.getOutermostRoom});
        if(idx != nil && idx < routeFinder.cachedPath.length)
@@ -181,8 +178,7 @@ move through locked doors and other such obstacles:
        if(dest != nil)      
             dest.travelVia(fred);     
        
-
-</div>
+```
 
 Note that the library assumes that NPCs are omniscient when it comes to
 finding their way around the map; routeFinder simply calculates the
@@ -231,11 +227,9 @@ that the exit always leads where it did last time. To prevent your
 variable exit (if you have one) causing such confusion your
 variable-exit method should somewhere include the statement:
 
-<div class="code">
-
+```
       startLoc.setDestInfo(dir, varDest_);  
-
-</div>
+```
 
 Where *startLoc* is the Room your variable destination method exit leads
 from, *dir* is the direction it leads in (e.g. northDir) and varDest\_
@@ -258,8 +252,7 @@ scope for a GO TO command, meaning that there could be a lot of objects
 to disambiguate. Normally this won't create too many problems in
 practice, but consider the following minimal game:
 
-<div class="code">
-
+```
      field: Room 'Field'
         "A solitary hut stands in the middle of the field. "
         in = hut
@@ -280,8 +273,7 @@ practice, but consider the following minimal game:
         out = field
     ; 
      
-
-</div>
+```
 
 There is a potential problem here. On the face of it, if the player
 typed IN and then OUT and then GO TO HUT, the route finder would take
@@ -299,7 +291,7 @@ character back out to the field.
 
 In fact that doesn't happen, because the **Enterable** class includes
 the **ProxyDest** mix-in class in its superclass, and the purpose of the
-<span class="code">ProxyDest</span> class is to prevent precisely this
+`ProxyDest` class is to prevent precisely this
 kind of mishap. The above mini will thus behave just as it should; i.e.
 if the command GO TO HUT is issued while the player character is inside
 the hut, the response will be to report that the player character is
@@ -310,22 +302,21 @@ The ProxyDest class works by removing any object that descends from that
 class from consideration as a possible target of a GO TO command if
 there are any other possible matches. So in this example this means that
 a GO TO HUT command issued while the player character is inside the hut
-won't consider the <span class="code">hutExterior</span> as a possible
+won't consider the `hutExterior` as a possible
 target, which is why the game will now respond with the more logical
 "You're already there" rather than by taking the player character back
 out into the field. Note that since ProxyDest is a mix-in class, it must
 come first in the class list when defining an object.
 
-In situations where you are using an <span class="code">Enterable</span>
+In situations where you are using an `Enterable`
 object to represent the outside of a location with the same name, the
 library thus takes care of this potential problem for you, but if you
 are using some other class of object (other than [Distant](#distant),
 which we'll talk about below), you may need to specify the
-<span class="code">ProxyDest</span> mix-in class yourself. Consider the
+`ProxyDest` mix-in class yourself. Consider the
 following snippet, for example:
 
-<div class="code">
-
+```
      hall: Room 'Hall'
         "The way out is to the west. The study door lies to the north. "
         west = road
@@ -345,8 +336,7 @@ following snippet, for example:
         otherSide = studyDoor
     ;
      
-
-</div>
+```
 
 In this case we will get the perverse behaviour where typing GO TO STUDY
 when the player character is in the study will take the player character
@@ -356,33 +346,30 @@ the room share the same noun in their name; if we'd called the door
 to use the ProxyDest mix-in class with the Door; because it's a mix-in
 it must come first in the class list:
 
-<div class="code">
-
+```
      + studyDoor: ProxyDest, Door 'door to study[n]'
         otherSide = sDoor
     ;
      
-
-</div>
+```
 
 <span id="distant"></span>
 
 A potentially even more troublesome case is that of the **Distant**
 class. If the player types GO TO FOO where FOO is an object of the
-<span class="code">Distant</span> class, presumably the one thing that
+`Distant` class, presumably the one thing that
 shouldn't happen is that the player character is taken to the location
 of the foo Distant object, since the whole point of a Distant object is
 that it represents an object that's somewhere else.
 
-Like <span class="code">Enterable</span>,
-<span class="code">Distant</span> multiply-inherits from the ProxyDest
+Like `Enterable`,
+`Distant` multiply-inherits from the ProxyDest
 class, which prevents a Distant object being chosen as the target of a
 GO TO command when there are other possibilities available. That still
 leaves one kind of situation to cater for, however. Consider the
 following example:
 
-<div class="code">
-
+```
      field: Room 'Field'
         "A solitary hut stands in the middle of the field. "
         // in = hut
@@ -413,8 +400,7 @@ following example:
         person = 2
     ;  
      
-
-</div>
+```
 
 If the player character starts out in the road, s/he will encounter the
 Distant hut object before anything else called 'hut'. In this instance
@@ -425,19 +411,19 @@ where the hut is located. To secure this behaviour we make use of the
 to the room the player character should head for in response to a GO TO
 command. Note that in this instance there is no way the library could
 work this out for itself; without the
-<span class="code">destination</span> property being specified there
+`destination` property being specified there
 would be nothing in the code to connect the Distant hut object in the
 road with the Enterable hut object in the field.
 
 In many cases, where a Distant object represents something clearly
 unreachable such as the sky or the sun, or something virtually
 unreachable such as a distant mountain, the
-<span class="code">destination</span> should be left at nil, resulting
+`destination` should be left at nil, resulting
 in GO TO SUN getting the perfectly reasonable response "The sun is too
 far away." When, however, a Distant object represents something not all
 that far away, such as a prominent object in a neighbouring room, which
 it would be obvious to the player character how to reach, its
-<span class="code">destination</span> property should be set to the
+`destination` property should be set to the
 neighbouring room in question so that a GO TO command can take the
 player character there. Note, incidentally, that this will work even if
 the player character hasn't visited the neighbouring location before;
@@ -458,15 +444,15 @@ other rooms in that SenseRegion even if s/he has yet to visit them.
 Accordingly the default behaviour of a SenseRegion is for its
 **familiar** property to become true when:
 
-1.  The SenseRegion's <span class="code">canSeeAcross</span> property is
+1.  The SenseRegion's `canSeeAcross` property is
     true; and
 2.  The player character's current location is a room in the
     SenseRegion; and
 3.  The player character's current location is illuminated.
 
 If a SenseRegion starts out familiar to the player character before s/he
-visits it then its <span class="code">familiar</span> property can
-simply be overridden to <span class="code">true</span> in the normal
+visits it then its `familiar` property can
+simply be overridden to `true` in the normal
 way.
 
 ------------------------------------------------------------------------

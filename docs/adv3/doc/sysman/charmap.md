@@ -126,11 +126,9 @@ precede it, and even spaces are not allowed before it. The directive
 takes the name of the character set in double quotes - the name used
 here is the same name you'd use in a -cs option:
 
-<div class="code">
-
+```
     #charset "cp1250"
-
-</div>
+```
 
 If the \#charset directive is present at the start of a file, it
 overrides any -cs option that was specified for the compilation. This

@@ -59,16 +59,14 @@ trouble to do it.
 
 Thus, for example, we might define a front door key as follows:
 
-<div class="code">
-
+```
      brassKey: Key 'brass key; medium sized'    
         "It's just a medium sized brass key, typical of the sort used to lock and
         unlock doors. "
         plausibleLockList = [frontDoor, frontDoorOutside, backDoor, backDoorOutside]
         actualLockList = [frontDoor, frontDoorOutside]
     ;
-
-</div>
+```
 
 Note that we have to specify both sides of the frontDoor in the
 actualLockList property if we want the key to work on both sides.
@@ -98,14 +96,14 @@ game; for that you need to manipulate the properties of the Key object,
 as you also need to do to define any objects a Key is known to unlock at
 the start of the game.
 
-The <span class="code">keyList</span> property (which you'd typically
+The `keyList` property (which you'd typically
 define on a Door or a KeyedContainer) is provided as a convenient
 alternative for authors who find it easier to define the lock-key
 relationship on the lockable item rather than the key. The
-<span class="code">keyList</span> property has the added advantage that
-if a non-nil <span class="code">keyList</span> property is defined on an
-object, the <span class="code">lockability</span> of that object will
-automatically be <span class="code">lockableWithKey</span> (unless
+`keyList` property has the added advantage that
+if a non-nil `keyList` property is defined on an
+object, the `lockability` of that object will
+automatically be `lockableWithKey` (unless
 explicitly overridden by the game author) and the object will
 automatically start out locked (unless this, too, is overridden by the
 game author).
@@ -113,14 +111,12 @@ game author).
 This means that, for example, to define a Door that starts out locked
 and can be unlocked with the brassKey we could just define:
 
-<div class="code">
-
+```
     + frontDoor: Door ->frontDoorOutside 'door'
        keyList = [brassKey]  
     ;
      
-
-</div>
+```
 
 This is an alternative to listing frontDoor in the actualLockList of the
 brassKey (although it wouldn't matter if you did both). If you like, you

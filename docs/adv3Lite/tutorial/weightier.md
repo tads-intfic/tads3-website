@@ -32,15 +32,13 @@ part of a rather larger game with rather more portable objects in it, it
 might not be the best way to do things.
 
 To illustrate the problem, try adding another small object to the
-<span class="code">cave</span> location:
+`cave` location:
 
-<div class="code">
-
+```
     + pebble: Thing 'tiny pebble; smooth round'
         "It's just a tiny, round pebble, almost perfectly smooth. "
     ;
-
-</div>
+```
 
 Now compile and run the game again. You'll find that putting the tiny
 pebble on the pedestal works just as well in avoiding the trap as using
@@ -48,7 +46,7 @@ the more substantial rock, but that doesn't seem to be right. Presumably
 the springing of the trap is in some way related to the weight resting
 on the pedestal, and while the rock might plausibly weigh the same as
 the skull, the pebble must be a *lot* lighter. Of course we could change
-the <span class="code">notifyRemove()</span> method on the pedestal to
+the `notifyRemove()` method on the pedestal to
 check precisely which objects are on the pedestal when the rock or the
 skull is about to be removed, but that's rather an ad hoc solution, and
 the more objects there are in the game, the more complex and messy and
@@ -64,8 +62,7 @@ weight by default, but it's easy enough to modify Thing so it does.
 Here's a first attempt (which you could add right at the end of your
 existing code):
 
-<div class="code">
-
+```
     modify Thing
         weight = 1
         
@@ -78,10 +75,9 @@ existing code):
             return totalWeight;
         }
     ;
+```
 
-</div>
-
-This adds a new <span class="code">weight</span> property to the Thing
+This adds a new `weight` property to the Thing
 class and defines the default weight of every object as 1 (the unit can
 be whatever you imagine it to be, absolute precision isn't required here
 in any case; what we're really interested in is the rough relative
@@ -95,8 +91,7 @@ to implement this, but it will be more instructive for the sake of this
 tutorial to do it from scratch; besides adv3Lite extensions are beyond
 the scope of this tutorial).
 
-<div class="code">
-
+```
     ++ goldSkull: Thing 'gold skull;; head'
         "It's the shape and size of a human skull, but made of solid gold; it must
         be worth a fortune. "
@@ -109,15 +104,13 @@ the scope of this tutorial).
         
         weight = 10
     ;
-
-</div>
+```
 
 The next step is to arrange for the trap to be sprung when the total
 weight of objects resting on the pedestal is less than the weight of the
 skull:
 
-<div class="code">
-
+```
     + pedestal: Fixture, Surface 'stone pedestal; smooth'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -136,15 +129,14 @@ skull:
             }
         }
     ;
-
-</div>
+```
 
 Note how we specify this. The total weight of objects resting on top of
 the pedestal just before *obj* is removed is given by the new
-<span class="code">getWeightWithin()</span> method we just defined on
+`getWeightWithin()` method we just defined on
 the modified Thing class. So the weight remaining on the pedestal after
 obj (i.e. the object that's being removed) is removed, is
-<span class="code">getWeightWithin() - obj.weight</span>. The trap is
+`getWeightWithin() - obj.weight`. The trap is
 sprung if this is less than the weight of the gold skull. Note that we
 haven't specified any numbers here (such as 10); we've kept the code as
 general as we can so that if, for example, we later changed our mind
@@ -152,48 +144,48 @@ about the weight of the skull and decided it should be 20, everything
 would still work in a logical manner.
 
 Another point to note is the introduction of the
-<span class="code">gMessageParams(obj)</span> construct, and the subtle
+`gMessageParams(obj)` construct, and the subtle
 change of the start of the double-quoted string to
-<span class="code">"As {the subj obj} {leaves} the pedestal..."</span>
-These two changes very much go together: <span class="code">{the subj
-obj}</span> is a *message parameter substitution*, something we'll be
+`"As {the subj obj} {leaves} the pedestal..."`
+These two changes very much go together: `{the subj
+obj}` is a *message parameter substitution*, something we'll be
 seeing quite a bit of later. What this means is that when the game sees
-<span class="code">{the subj obj}</span> (the message parameter) it
+`{the subj obj}` (the message parameter) it
 *substitutes* the name of the object *obj* that is being removed (so
 this does much the same as the previous
-<span class="code">\<\<obj.theName\>\></span> that it replaces). So
+`\<\<obj.theName\>\>` that it replaces). So
 what's the point of it? You'll note that it's now followed by
-<span class="code">{leaves}</span> rather than
-<span class="code">leaves</span>. The <span class="code">subj</span> in
-<span class="code">{the subj obj}</span> tells the game that *obj* is
+`{leaves}` rather than
+`leaves`. The `subj` in
+`{the subj obj}` tells the game that *obj* is
 the subject of the verb that follows. By marking leaves as
-<span class="code">{leaves}</span> we indicate that this is the verb
+`{leaves}` we indicate that this is the verb
 which has to agree with obj. This means that if obj were something with
 a plural name, 'the rocks', say, the game would output "As the rocks
 leave the pedestal" rather than "As the rocks leaves the pedestal", but
 if it's singular, 'the rock', say, we get "As the rock leaves the
 pedestal." This kind of subject-verb agreement is hard to achieve using
-the <span class="code">\<\<obj.theName\>\> </span>method but easy to
+the `\<\<obj.theName\>\> `method but easy to
 achieve using message parameter substitution.
 
-To make it work, we have to identify <span class="code">obj</span> as a
+To make it work, we have to identify `obj` as a
 *parameter name* as well as a *variable name*. That is what
-<span class="code">gMessageParams(obj)</span> does for us: it tells the
-game, "treat <span class="code">obj</span> as a parameter that refers to
-the same object that the <span class="code">obj</span> variable does".
+`gMessageParams(obj)` does for us: it tells the
+game, "treat `obj` as a parameter that refers to
+the same object that the `obj` variable does".
 At first this may seem very arcane, since, after all,
-<span class="code">obj</span> and <span class="code">obj</span> appear
+`obj` and `obj` appear
 identical! But in fact they are different things in different contexts.
-In <span class="code">notifyRemove(obj)</span> or
-<span class="code">obj.weight</span>, <span class="code">obj</span> is a
-variable name referencing an object; in <span class="code">{the subj
-obj}</span> obj is simply a piece of text within a string. The
+In `notifyRemove(obj)` or
+`obj.weight`, `obj` is a
+variable name referencing an object; in `{the subj
+obj}` obj is simply a piece of text within a string. The
 difference is really that between obj (a variable name) and 'obj' (a
 piece of text). We need the
-<span class="code">gMessageParams(obj)</span> statement to make the
+`gMessageParams(obj)` statement to make the
 program recognize that the string 'obj' refers to the variable
-<span class="code">obj</span> in the special context of a message
-parameter substitution like <span class="code">{the subj obj}</span>
+`obj` in the special context of a message
+parameter substitution like `{the subj obj}`
 within a string.
 
 Don't worry if this isn't all entirely clear yet, as we'll be coming
@@ -211,29 +203,27 @@ spotted. To demonstrate what it is, we'll introduce another object into
 the game, a knapsack worn by the player character. We can define it like
 this:
 
-<div class="code">
-
+```
     ++ knapsack: Wearable, Container 'knapsack; trusty old worn; bag sack'
         "Your trusty old knapsack may be getting a bit worn, but it's accompanied
         you on so many adventures you wouldn't be without it. "
         
         wornBy = me
     ;
-
-</div>
+```
 
 We could have defined the knapsack as a Thing with
-<span class="code">isWearable = true</span> and
-<span class="code">contType = In</span>, but we're sticking to our
+`isWearable = true` and
+`contType = In`, but we're sticking to our
 decision to use the library classes for this kind of thing. Here
-<span class="code">Wearable</span> contributes
-<span class="code">isWearable = true</span> and
-<span class="code">Container</span> contributes
-<span class="code">contType = In</span>. We still have to supply
-<span class="code">wornBy = me</span>, however, since a Wearable object
+`Wearable` contributes
+`isWearable = true` and
+`Container` contributes
+`contType = In`. We still have to supply
+`wornBy = me`, however, since a Wearable object
 isn't necessarily worn; it might also be carried. In his case we want it
 to start out worn by the player character, so we set
-<span class="code">wornBy = me</span>. We also need to ensure that the
+`wornBy = me`. We also need to ensure that the
 definition of the knapsack object follows directly after the definition
 of the me object in our code, so that the knapsack forms part of the
 player character's contents.
@@ -243,7 +233,7 @@ the cave, put the rock into the knapsack, and then put the knapsack onto
 the pedestal. Now take the gold skull. You'll find the trap is still
 sprung, even though the knapsack with the rock in it ought to weigh
 enough to have prevented it. You've probably already worked out what the
-problem is: <span class="code">getWeightWithin()</span> calculates the
+problem is: `getWeightWithin()` calculates the
 total weight of an object's contents by adding up the weights of each
 item in its contents list — ignoring any further items they may happen
 to contain in turn. What it should do is to add up the weight of every
@@ -251,8 +241,7 @@ items in its contents, plus the weight of the items *they* contain, and
 so on all the way down the chain, plus the weight of the original
 object. Just a couple of small changes should fix it:
 
-<div class="code">
-
+```
     modify Thing
         weight = 1
         
@@ -267,17 +256,16 @@ object. Just a couple of small changes should fix it:
         
         getWeight = weight + getWeightWithin()
     ;
-
-</div>
+```
 
 At first sight this may look a little odd, since
-<span class="code">getWeightWithin()</span> now calls itself as part of
+`getWeightWithin()` now calls itself as part of
 its calculation. In fact this *recursion*, as its called, is a perfectly
 legal and often useful programming technique, provided it's handled with
 care. For example, if there was any danger that getWeightWithin() might
 call itself on the same object that was doing the calling (for example,
-that <span class="code">knapsack.getWeightWithin()</span> might call
-<span class="code">knapsack.getWeightWithin()</span>) then we would
+that `knapsack.getWeightWithin()` might call
+`knapsack.getWeightWithin()`) then we would
 indeed be in trouble, for our code could then get itself into an
 infinite loop from which it would never emerge and our game would hang.
 The golden rule of recursion is to ensure that there's always some way
@@ -285,22 +273,21 @@ to end it, but here we're safe since each recursive call goes a step
 down the containment tree, and however far the containment tree goes, it
 can never be infinite (unless we've done something *really* weird in our
 game code) so we can be sure it'll bottom out somewhere (specifically,
-when <span class="code">getWeightWithin()</span> is called on an item
-like the rock that has no contents, the <span class="code">for</span>
+when `getWeightWithin()` is called on an item
+like the rock that has no contents, the `for`
 loop has nothing to do, so there's no further recursion). Note that
-we've also added a <span class="code">getWeight</span> property, which
+we've also added a `getWeight` property, which
 is the total weight of a Thing (the weight of the object itself plus the
 weight of everything that it contains) and that we've defined this
 property as an expression, which is perfectly legal in TADS 3.
 
 By the same token we need to ensure that the weight of any item we
 remove from the pedestal includes the weight of its contents, so we want
-to use the <span class="code">getWeight</span> property of the object
-being removed rather than just its <span class="code">weight</span>
+to use the `getWeight` property of the object
+being removed rather than just its `weight`
 property:
 
-<div class="code">
-
+```
     + pedestal: Fixture, Surface 'stone pedestal; smooth'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -319,8 +306,7 @@ property:
             }
         }
     ;
-
-</div>
+```
 
 If you compile and run the game again, you should find it runs as
 expected.
@@ -343,8 +329,7 @@ that the skull will be knocked off the pedestal if the object thrown at
 it is at least half its weight, then if we want the rock-throwing
 solution to succeed, we might write:
 
-<div class="code">
-
+```
     ++ goldSkull: Thing 'gold skull;; head'
         "It's the shape and size of a human skull, but made of solid gold; it must
         be worth a fortune. "
@@ -369,15 +354,13 @@ solution to succeed, we might write:
             }
         }
     ;
-
-</div>
+```
 
 If, on the other hand, we don't want this solution to work (perhaps the
 cave isn't big enough to allow the player character to stand far enough
 away to avoid the trap), we can use the slightly simpler:
 
-<div class="code">
-
+```
     ++ goldSkull: Thing 'gold skull;; head'
         "It's the shape and size of a human skull, but made of solid gold; it must
         be worth a fortune. "
@@ -394,8 +377,7 @@ away to avoid the trap), we can use the slightly simpler:
             }
         }
     ;
-
-</div>
+```
 
 Okay, so let's take a closer look at what's going on here. The command
 THROW ROCK AT SKULL consists of a verb (throw), two nouns (rock and
@@ -404,7 +386,7 @@ skull) and a preposition (at). This kind of action is said to have two
 preposition (in this case the rock) and the *indirect object*
 immediately following the preposition (in this case the gold skull).
 When we write a section of code that starts
-<span class="code">iobjFor(ThrowAt)</span> we're defining what happens
+`iobjFor(ThrowAt)` we're defining what happens
 to this object (in this case the gold skull) when it's the *indirect
 object* of a ThrowAt action (or, in plainer English, the target of a
 throw); remember, whenever you see 'iobj' think 'indirect object'.
@@ -422,20 +404,20 @@ case, what happens when something hits the gold skull).
 One thing we need to know in writing this action part is what's just
 been thrown at the gold skull, in other words what the direct object of
 the ThrowAt command is. This is stored in the object property
-<span class="code">libGlobal.curAction.getDobj()</span>, but since
+`libGlobal.curAction.getDobj()`, but since
 that's rather a lot of typing for something so commonly needed, the
-library lets us abbreviate it to <span class="code">gDobj</span>.
-(Technically, <span class="code">gDobj</span> is a macro masquerading as
+library lets us abbreviate it to `gDobj`.
+(Technically, `gDobj` is a macro masquerading as
 a pseudo-global variable, but you really don't need to worry about that
 right now unless you were desperately anxious about what sort of thing
-<span class="code">gDobj</span> could possibly be in a language that
+`gDobj` could possibly be in a language that
 doesn't have any global variables). You could similarly use
-<span class="code">gIobj</span> to get at the indirect object of the
+`gIobj` to get at the indirect object of the
 command if you needed it (but here we know the indirect object must be
 the gold skull, since that's where we're defining this
-<span class="code">iobjFor()</span> code).
+`iobjFor()` code).
 
-Remember that the <span class="code">inherited</span> keyword means "at
+Remember that the `inherited` keyword means "at
 this point do what the method we're inheriting from would have done"; in
 this context it thus means "carry out the default ThrowAt handling"
 (which is to report that the missile has struck the target and landed on
@@ -446,37 +428,37 @@ examine how each version of the ThrowAt handling works. In the first
 version above, which makes throwing the rock at the skull a successful
 solution to the puzzle, we first check whether it's the case either that
 the skull isn't on the pedestal any more, or that the missile being
-thrown at it (<span class="code">gDobj</span>, the direct object of the
+thrown at it (`gDobj`, the direct object of the
 command) is less than half the weight of the skull (since this is being
-defined on the goldSkull object, <span class="code">weight</span>
+defined on the goldSkull object, `weight`
 unqualified by any other object name refers to the weight of the skull).
 If either of these two conditions is met (the skull is no longer on the
 pedestal or the missile being thrown at it is too light to dislodge it),
 we carry out the inherited handling (the missile strikes the skull and
 falls to the ground). Otherwise (if the missile is heavy enough and the
 skull is on the pedestal), we move both the skull and the missile to the
-<span class="code">cave</span> room (representing the fact that they
+`cave` room (representing the fact that they
 both end up on the floor) and report what happens. Note the use of the
-message parameter substitutions <span class="code">"{The subj dobj}
-{strikes}"</span> at the begining of this report. If it's the rock
+message parameter substitutions `"{The subj dobj}
+{strikes}"` at the begining of this report. If it's the rock
 that's thrown this becomes "The small rock strikes" before it's
 displayed to the player, but because it's been written with message
 parameter substitutions it will name the correct object whatever the
 player throws at the skull.
 
 You may be wondering about the difference between
-<span class="code">gDobj</span> and <span class="code">{The subj
-dobj}</span>, both of which have been used to refer to the direct object
+`gDobj` and `{The subj
+dobj}`, both of which have been used to refer to the direct object
 of this command in this short piece of code. The difference is that
-<span class="code">{The subj dobj}</span> simply produces some text, the
+`{The subj dobj}` simply produces some text, the
 name of the direct object, and marks it as the subject of the verb
-that's about to follow (that's what the <span class="code">subj</span>
-part is for), while <span class="code">gDobj</span> provides a reference
+that's about to follow (that's what the `subj`
+part is for), while `gDobj` provides a reference
 to the object itself. We need to move the object to the floor, not it's
 name; conversely we need to display the object's name, not the object.
-More concretely, <span class="code">gDobj</span> refers to the
-<span class="code">smallRock</span> object while
-<span class="code">"{The subj dobj}"</span> expands into the string 'The
+More concretely, `gDobj` refers to the
+`smallRock` object while
+`"{The subj dobj}"` expands into the string 'The
 small rock'.
 
 The second example, where we don't allow throwing the rock as a
@@ -487,14 +469,14 @@ to the floor. Then, if it's the case that the skull is on the pedestal
 and the missile (i.e. the direct object) is at least half the weight of
 the skull, we move the goldSkull object to the cave (here representing
 the floor of the cave). Since we here do so using
-<span class="code">actionMoveInto(cave)</span> rather than just
-<span class="code">moveInto(cave)</span> as we did in the first version,
+`actionMoveInto(cave)` rather than just
+`moveInto(cave)` as we did in the first version,
 the removal of the skull from the pedestal will trigger the pedestal's
-<span class="code">notifyRemove(obj)</span> method which, you may
+`notifyRemove(obj)` method which, you may
 recall, reports the launching of the poison arrows and the death of the
 player character. Conversely, we used
-<span class="code">moveInto()</span> rather than
-<span class="code">actionMoveInto()</span> in the first version to avoid
+`moveInto()` rather than
+`actionMoveInto()` in the first version to avoid
 precisely this happening.
 
 Don't worry if you're thinking there's rather a lot to take in here, or

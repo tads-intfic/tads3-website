@@ -49,7 +49,7 @@ following properties:
   active.
 - **beforeAction**: A method that executes on every active scene just
   before an action is about to take place. This method can veto the
-  action with the <span class="code">exit</span> macro.
+  action with the `exit` macro.
 - **afterAction**: A method that executes on every active scene just
   after an action has taken place (and so can be used to provide an
   appropriate response to the action during the scene).
@@ -79,8 +79,7 @@ For example, suppose a certain scene ends tragically if Martha is dead
 but happily if you give Martha the gold ring, you might do something
 like this:
 
-<div class="code">
-
+```
     class SceneEnding: object
        whenEnding() { }
     ;
@@ -113,19 +112,17 @@ like this:
              howEnded.whenEnding();
        }
     ;
-
-</div>
+```
 
 One special point to note: if you define the startsWhen condition of a
 Scene so that it is true right at the start of play (e.g.
-<span class="code">startsWhen = true</span>), the Scene will indeed
-start out active, but its <span class="code">whenStarting()</span>
+`startsWhen = true`), the Scene will indeed
+start out active, but its `whenStarting()`
 method will execute just *after* the first room description is
 displayed. If you want it to display something just after, you can use
 its whenStarting method to display some text, e.g.:
 
-<div class="code">
-
+```
      introScene: Scene
         startsWhen = (harry.isIn(harrysBed))
         endsWhen = (!harry.isIn(harrysBed))
@@ -141,8 +138,7 @@ its whenStarting method to display some text, e.g.:
     ;
      
      
-
-</div>
+```
 
 This is normally what you would want, but note that this means that you
 can't use a Scene to display any text prior to the first room

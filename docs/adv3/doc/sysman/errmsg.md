@@ -24,10 +24,10 @@ Codes
 
 When the VM encounters an error in the user program, it throws an
 exception of class RuntimeError. This exception object always contains
-an integer value its <span class="code">errno\_</span> property giving
+an integer value its `errno\_` property giving
 the VM error code for the error condition. Programs that need to apply
 special handling for certain types of errors can determine the specific
-VM error condition via the error code <span class="code">errno\_</span>.
+VM error condition via the error code `errno\_`.
 
 <span class="errid">101: error reading file</span>
 

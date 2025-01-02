@@ -37,7 +37,7 @@ wheel can be turned to one of five positions: amidships, 30 degrees to
 port or starboard, or 60 degrees to port or starboard. We'll also assume
 that a TURN WHEEL LEFT/RIGHT command should turn it 30 degrees at a
 time. To keep track of where the wheel is currently turned to we'll
-define a custom <span class="code">angle</span> property on the wheel
+define a custom `angle` property on the wheel
 object, which will be allowed to vary from -60 (hard to port) to +60
 (hard to starboard). To help the player keep track of the wheel we'll
 also define a custom angleDesc() method that turns this angle into a
@@ -47,13 +47,13 @@ TURN WHEEL RIGHT command.
 
 To prevent the wheel from being turned too far to the right or left,
 we'll use the check() phase of
-<span class="code">dobjFor(TurnRight)</span> and
-<span class="code">dobjFor(TurnLeft)</span>. The former will stop the
+`dobjFor(TurnRight)` and
+`dobjFor(TurnLeft)`. The former will stop the
 action if angle is already greater than or equal to 60, and the latter
 will stop the action if angle is already less than or equal to -60.
 
-In the action() stages of <span class="code">dobjFor(TurnRight)</span>
-or do<span class="code">bjFor(TurnLeft)</span> we then merely need to
+In the action() stages of `dobjFor(TurnRight)`
+or do`bjFor(TurnLeft)` we then merely need to
 add or subtract 30 to or from angle and report the result. You will
 recall that displaying text at the action() stage suppresses the display
 of the default message we defined for the report() stage.
@@ -61,8 +61,7 @@ of the default message we defined for the report() stage.
 The code to do all this is quite lengthy, but basically quite
 straightforward:
 
-<div class="code">
-
+```
     +++ wheel: Fixture 'wheel'
         "The wheel can be turned to port or starboard to steer the aircraft. It's
         currently <<angleDesc>>. "
@@ -124,11 +123,10 @@ straightforward:
             }
         }
     ;
+```
 
-</div>
-
-One new feature to note here is the use of <span class="code">angle +=
-30</span> and <span class="code">angle -= 30</span> as a convenient
+One new feature to note here is the use of `angle +=
+30` and `angle -= 30` as a convenient
 shorthand way of adding 30 to angle and subtracting 30 from angle. As
 previously mentioned, all a check() method needs to do to stop an action
 is to display some text, which these check methods do if the wheel's
@@ -145,8 +143,7 @@ PULL CONTROL COLUMN. It would therefore make sense to redirect pushing
 or pulling the wheel to pushing or pulling the control column (of which
 it is in any case a part), which we can do quite simply with remap:
 
-<div class="code">
-
+```
         dobjFor(Push)
         {
             remap = controlColumn
@@ -156,10 +153,9 @@ it is in any case a part), which we can do quite simply with remap:
         {
             remap = controlColumn
         }
+```
 
-</div>
-
-What <span class="code">remap = controlColumn</span> does is simply to
+What `remap = controlColumn` does is simply to
 tell the game to use controlColumn rather than the object actually
 specified (in this case, the wheel) as the direct object of a Push or
 Pull command.
@@ -175,8 +171,7 @@ The implementation of the Push and Pull actions on the control column
 can then proceed in a very similar manner to that of the turning actions
 on the wheel:
 
-<div class="code">
-
+```
     ++ controlColumn: Fixture 'control column;;stick'
         "It's basically a stick that can be pushed forward or pulled back, with a
         wheel attached at the top. It's currently <<positionDesc>>. "
@@ -217,23 +212,22 @@ on the wheel:
             }
         }
     ;
-
-</div>
+```
 
 This shouldn't require a lot of comment. Note the use of
-<span class="code">position++</span> and
-<span class="code">position--</span> to increment and decrement the
+`position++` and
+`position--` to increment and decrement the
 value of the position property by 1. You'll probably have already
-guessed that <span class="code">position</span> is a custom property
+guessed that `position` is a custom property
 we've defined on the controlColumn object for the purpose of registering
-its position. The <span class="code">positionDesc</span> property uses a
-neat trick to turn the value of the <span class="code">position</span>
-property into a string describing it. <span class="code">\['pulled
-back', 'vertical', 'pushed forward'\]</span> is a list containing three
-elements. <span class="code">\['pulled back', 'vertical', 'pushed
-forward'\]\[*index*\]</span> returns the *index*th element from that
-list. By adding 2 to <span class="code">position</span> we get an index
-that varies from 1 to 3 as <span class="code">position</span> varies
+its position. The `positionDesc` property uses a
+neat trick to turn the value of the `position`
+property into a string describing it. `\['pulled
+back', 'vertical', 'pushed forward'\]` is a list containing three
+elements. `\['pulled back', 'vertical', 'pushed
+forward'\]\[*index*\]` returns the *index*th element from that
+list. By adding 2 to `position` we get an index
+that varies from 1 to 3 as `position` varies
 from -1 to 1. With just a little more arithmetical manipulation we could
 have used a similar device to turn the wheel angle into a description
 instead of using the switch statement on the wheel.
@@ -266,8 +260,7 @@ Settable class for a control that can be set to a number of different
 settings. Fortunately we can combine the two through multiple
 inheritance:
 
-<div class="code">
-
+```
     ++ thrustLever: Settable, Lever 'thrust lever'
         "It's a lever that can be pushed forward or pulled back. It's currently
         <<settingDesc>>. "
@@ -288,15 +281,14 @@ inheritance:
         
         curSetting = '0'
     ;
+```
 
-</div>
-
-Note that we use the <span class="code">curSetting</span> property (a
-property of <span class="code">Settable</span>) to hold the current
+Note that we use the `curSetting` property (a
+property of `Settable`) to hold the current
 setting (which Settable expects to find as a single-quoted string) and
-define a custom <span class="code">settingDesc()</span> method to use a
-<span class="code">switch</span> statement that translates the
-<span class="code">curSetting</span> value into a fuller textual
+define a custom `settingDesc()` method to use a
+`switch` statement that translates the
+`curSetting` value into a fuller textual
 description of the current position of the lever.
 
 We want to restrict the possible settings of the lever to numbers
@@ -306,17 +298,16 @@ trick TADS 3 lets us play if we want to "borrow" a method from a class
 the object we're defining doesn't inherit from. We can do so using the
 **delegated** keyword, followed by the name of the class whose method we
 want to borrow. Here we want to borrow the
-<span class="code">isValidSetting()</span> method of the NumberedDial
+`isValidSetting()` method of the NumberedDial
 class to ensure that the lever can only be moved to numbers between 0
 and 5. We don't need to use delegated with the
-<span class="code">minSetting</span> and
-<span class="code">maxSetting</span> properties we're also "borrowing"
+`minSetting` and
+`maxSetting` properties we're also "borrowing"
 from NumberedDial, since they're just straightforward numerical
 properties we can define directly on our thrustLever. The definition of
 thrustLever can thus continue like this:
 
-<div class="code">
-
+```
         minSetting = 0
         maxSetting = 5
         
@@ -324,10 +315,9 @@ thrustLever can thus continue like this:
         {
             return delegated NumberedDial(val);
         }
+```
 
-</div>
-
-For more information on the <span class="code">delegated</span> keyword,
+For more information on the `delegated` keyword,
 refer to the "Expressions and Operators" section of Part III of the
 *TADS 3 System Manual*.
 
@@ -336,8 +326,7 @@ something a little less bland than "You set the thrust lever to n",
 especially if the engine is running. We can do that by providing our
 custom message in the makeSetting() method:
 
-<div class="code">
-
+```
         makeSetting(val)
         {
             local oldVal = curSetting;
@@ -353,13 +342,12 @@ custom message in the makeSetting() method:
             }
             
         }
+```
 
-</div>
-
-Here we use the <span class="code">oldVal</span> local variable to store
+Here we use the `oldVal` local variable to store
 the previous setting so we can test which way the player has just moved
 the lever when we want to display an appropriate message. We also use
-the value of <span class="code">ignitionButton.isOn</span> to test
+the value of `ignitionButton.isOn` to test
 whether the engine is running, so that if it is we can display a
 description of the change in engine noise that results from moving the
 thrust lever. We don't need to worry about the case where the player
@@ -367,24 +355,23 @@ tries to move the lever to the same setting it's already at, since the
 verify() stage of SetTo will rule that out anyway. Also we don't need to
 worry about the default message the action would have displayed, since
 our custom message automatically suppresses anything that would have
-been displayed at the <span class="code">report</span> stage.
+been displayed at the `report` stage.
 
 The next job is to tie in the Lever's push/pull behaviour with the
 Settable behaviour we've just implemented. A Lever can be in one of two
-states, <span class="code">isPulled = nil</span> or
-<span class="code">isPulled = true</span>. For this Lever we want the
-<span class="code">isPulled = true</span> state (when the thrust lever
+states, `isPulled = nil` or
+`isPulled = true`. For this Lever we want the
+`isPulled = true` state (when the thrust lever
 is pulled all the way back) to correspond to curSetting of '0', and the
-<span class="code">isPushed = true</span> state (when the lever is
+`isPushed = true` state (when the lever is
 pushed all the way forward) to correspond to a curSetting of '5'. By
-default the Lever class assumes that <span class="code">isPushed</span>
-is true when <span class="code">isPulled</span> is nil and *vice versa*,
+default the Lever class assumes that `isPushed`
+is true when `isPulled` is nil and *vice versa*,
 so we need to override those two properties to cancel that assumption,
 and completely change what the Lever's
-<span class="code">makePulled()</span> method normally does:
+`makePulled()` method normally does:
 
-<div class="code">
-
+```
         makePulled(stat)
         {        
             makeSetting(stat ? '0' : '5');
@@ -392,13 +379,11 @@ and completely change what the Lever's
         
         isPulled = (curSetting == '0')
         isPushed = (curSetting == '5')
-
-</div>
+```
 
 The complete definition of the thrustLever object now looks as follows:
 
-<div class="code">
-
+```
     ++ thrustLever: Settable, Lever 'thrust lever'
         "It's a lever that can be pushed forward or pulled back. It's currently
         <<settingDesc>>. "
@@ -450,8 +435,7 @@ The complete definition of the thrustLever object now looks as follows:
         isPulled = (curSetting == '0')
         isPushed = (curSetting == '5')
     ;
-
-</div>
+```
 
 We still have one further job to do. At the moment the thrust lever will
 respond to commands like SET LEVER TO 3 but we'd also like to respond to
@@ -459,14 +443,12 @@ MOVE LEVER TO 3, or PUSH LEVER TO 3 or PULL LEVER TO 3. We've already
 seen how to accomplish that sort of thing in another context, namely by
 modifying the appropriate VerbRule:
 
-<div class="code">
-
+```
     modify VerbRule(SetTo)
         ('set' | 'move' | 'push' | 'pull') singleDobj 'to' literalIobj
         :
     ;
-
-</div>
+```
 
 We've now got the controls to the point where they can be operated, even
 if we can't yet fly the plane with them. In the next section we'll make

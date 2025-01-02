@@ -28,13 +28,11 @@ Angela Wants Answers
 You may recall that one of the exchanges we've defined for when the
 player character asks Angela what she's doing tonight is:
 
-<div class="code">
-
+```
            '<q>What <i>are</i> you doing tonight?</q> you insist.\b
             <q>I don\'t think that\'s any of your business,</q> she replies, with
             rather a bleak smile. <q>Do you?</q> '
-
-</div>
+```
 
 Many, if not most players will probably treat the "Do you?" at the end
 of Angela's reply as a purely rhetorical question, but a few may try
@@ -50,21 +48,20 @@ on, these particular responses (such as a YES or NO in response to
 Angela's "Do you?") cease to be appropriate once more.
 
 We can model such a Conversation Node in adv3Lite by using a
-\<.convnode\> tag, of the form <span class="code">\<.convnode
-*key*\></span>, where *key* corresponds to the convKey (or one of the
+\<.convnode\> tag, of the form `\<.convnode
+*key*\>`, where *key* corresponds to the convKey (or one of the
 convKeys) of the TopicEntries we want to be active during that
 Conversation Node. To ensure that those TopicEntries are *only*
 available during that Conversation Node, we also need to set their
-<span class="code">isActive</span> property to
-<span class="code">nodeActive</span>. A **YesTopic** responds to YES and
+`isActive` property to
+`nodeActive`. A **YesTopic** responds to YES and
 a **NoTopic** responds to NO, so we could allow the player to reply YES
 or NO to Angela's possibly rhetorical question by adding a
-<span class="code">\<.convnode\></span> tag to the question and then the
-following <span class="code">YesTopic</span> and
-<span class="code">NoTopic</span>:
+`\<.convnode\>` tag to the question and then the
+following `YesTopic` and
+`NoTopic`:
 
-<div class="code">
-
+```
     + QueryTopic, StopEventList 'what' @tDoingTonight
         [
             '<q>What are you doing tonight?</q> you ask.\b
@@ -100,21 +97,19 @@ following <span class="code">YesTopic</span> and
         convKeys = ['not-your-business']
         isActive = nodeActive    
     ;
-
-</div>
+```
 
 This works, but it may seem a little repetitive to have to repeat the
-<span class="code">convKeys</span> and
-<span class="code">isActive</span> property on each TopicEntry in the
+`convKeys` and
+`isActive` property on each TopicEntry in the
 Conversation Node. We have already seen how we can use a
-<span class="code">TopicGroup</span> to apply the same
-<span class="code">isActive</span> and
-<span class="code">convKeys</span> conditions to a group of
+`TopicGroup` to apply the same
+`isActive` and
+`convKeys` conditions to a group of
 TopicEntries, and we can use a special kind of TopicGroup, a
 **ConvNode**, to do that for us here:
 
-<div class="code">
-
+```
     + ConvNode 'not-your-business';
 
     ++ YesTopic
@@ -127,8 +122,7 @@ TopicEntries, and we can use a special kind of TopicGroup, a
         "<q>No, I suppose not,</q> you concede.\b
         <q>No; well, there you are then,</q> she remarks. "  
     ;
-
-</div>
+```
 
 In most cases, this is probably the easier way to do it; it may also
 help make it more immediately apparent which TopicEntries relate to a
@@ -156,8 +150,7 @@ Cortez, and Angela wants to know why he's so interested in the man. We
 could start by adding an AskTellTopic under angelaTalkingState that
 triggers an appropriate Conversation Node:
 
-<div class="code">
-
+```
     ++ AskTellTopic, StopEventList @cortez
         [
             '<q>Do you know who that man waving a gun around at the front of the
@@ -175,31 +168,30 @@ triggers an appropriate Conversation Node:
         convKeys = 'top'
         suggestAs = TellTopic
     ;
-
-</div>
+```
 
 There are a few points to note about the way we've defined this
 AskTellTopic. First, note that we've given it an autoName of true, so
 that it will be suggested as a topic of conversation with the name
 'Pablo Cortez'. Note too that we needed to add
-<span class="code">convKeys = 'top'</span> to make sure that it would be
+`convKeys = 'top'` to make sure that it would be
 included as a top-level suggestion in response to a TOPICS command (but
 we only have to do that because we defined
-<span class="code">suggestionKey = 'top'</span> on Angela). Next, note
-how we've defined <span class="code">suggestAs = TellTopic</span>. Left
+`suggestionKey = 'top'` on Angela). Next, note
+how we've defined `suggestAs = TellTopic`. Left
 to its own devices the library will suggest an AskTellTopic with 'ask',
 i.e. "You could ask her about Pablo Cortez". We can override that with
-the <span class="code">suggestAs</span> property to force the library to
+the `suggestAs` property to force the library to
 suggest is as something else, here as if it were a TellTopic (i.e. "You
 could tell her about Pablo Cortez"). Then note the use of the
-<span class="code">\<.inform cortez\></span> tag. This works much like a
-<span class="code">\<.reveal\></span> tag, but instead of recording the
+`\<.inform cortez\>` tag. This works much like a
+`\<.reveal\>` tag, but instead of recording the
 fact that something has just been revealed to the player character, it
 signals that something has been revealed by the player character to the
 person he's talking to (and, incidentally, to anyone else within
-earshot). Finally note that instead of <span class="code">\<.convnode
-what-to-you\></span> we wrote <span class="code">\<.convnodet
-what-to-you\></span>, with an extra t (convnodet rather than just
+earshot). Finally note that instead of `\<.convnode
+what-to-you\>` we wrote `\<.convnodet
+what-to-you\>`, with an extra t (convnodet rather than just
 convnode). The extra **t** tells the game to display a suggested list of
 **t**opics on entering the Conversation Node.
 
@@ -228,13 +220,12 @@ Topics](../manual/specialtopic.html) in the *adv3Lite Library Manual*.
 Note that a SayTopic is included in topic suggestion lists automatically
 (like a QueryTopic), that is, its autoName property is true by default.
 If you don't want the suggestion to begin with 'say' you can define
-<span class="code">includeSayInName = nil</span> on the SayTopic.
+`includeSayInName = nil` on the SayTopic.
 
 For present purposes we'll define our Conversation Node with one
 TellTopic and two SayTopics:
 
-<div class="code">
-
+```
     + ConvNode 'what-to-you';
         
     ++ TellTopic @me    
@@ -257,21 +248,19 @@ TellTopic and two SayTopics:
         <q>Airport security -- in Narcosia?</q> she asks incredulously. <q>Somehow I
         don't think that will exactly help the situation!</q> "
     ;
-
-</div>
+```
 
 What happens if the player responds with something not corresponding to
 one of these three TopicEntries? We can trap that by adding a
 DefaultAnyTopic to the Conversation Node to trap any other
 conversational commands. The first time round Angela will complain and
 repeat her question; the second time she'll complain but let the matter
-drop. To make this happen we add a <span class="code">\<.convstay\>
-</span>tag to Angela's first default conversational response to tell the
+drop. To make this happen we add a `\<.convstay\>
+`tag to Angela's first default conversational response to tell the
 game to keep the Conversation Node active for another conversational
 turn:
 
-<div class="code">
-
+```
     ++ DefaultAnyTopic, StopEventList
         [
             '<q>No, but what is it to you who this man is?</q> she interrupts you.
@@ -281,8 +270,7 @@ turn:
             she mutters. '
         ]
     ;
-
-</div>
+```
 
 The other thing the player could do to throw our Conversation Node off
 the rails, besides coming up with a response we hadn't planned for, is
@@ -294,26 +282,25 @@ object to the Conversation Node, on which we then define one method,
 player character is allowed to end the conversation while this node is
 active. The *reason* parameter can take a number of values but the two
 most common ones, and the ones that concern us here, are
-<span class="code">endConvBye</span> (meaning the player is trying to
+`endConvBye` (meaning the player is trying to
 end the conversation with a BYE command) and
-<span class="code">endConvLeave</span> (meaning the player is trying to
+`endConvLeave` (meaning the player is trying to
 end the conversation by having the player character walk away from it).
-The <span class="code">canEndConversation(reason)</span> can then return
-<span class="code">true</span> to allow the conversation to end for that
-reason, or either <span class="code">nil</span> or
-<span class="code">blockEndConv</span> to prevent the conversation from
-ending. The difference is that <span class="code">blockEndConv</span>
+The `canEndConversation(reason)` can then return
+`true` to allow the conversation to end for that
+reason, or either `nil` or
+`blockEndConv` to prevent the conversation from
+ending. The difference is that `blockEndConv`
 signals that the actor the player character is speaking with has now
 spoken on the current turn; it's therefore appropriate to return
-<span class="code">blockEndConv</span> if our
-<span class="code">canEndConversation()</span> method displays something
+`blockEndConv` if our
+`canEndConversation()` method displays something
 said by the actor to explain why she won't allow the conversation to
 end.
 
 We can add a NodeEndCheck object to our current Conversation Node thus:
 
-<div class="code">
-
+```
     ++ NodeEndCheck
         canEndConversation(reason)
         {
@@ -334,8 +321,7 @@ We can add a NodeEndCheck object to our current Conversation Node thus:
             return true;
         }
     ;
-
-</div>
+```
 
   
 
@@ -359,12 +345,11 @@ The first step is to create a new AgendaItem for Angela to ask her
 question — a ConvAgendaItem would be appropriate, since that's triggered
 as soon as conversation becomes possible — and then make sure it's added
 to Angela's agenda list at some suitable point, such as the
-<span class="code">invokeItem()</span> method of angelaReboardingAgenda,
+`invokeItem()` method of angelaReboardingAgenda,
 which causes her to reboard the plane once the player is wearing the
 pilot's uniform (and the takeover scene comes to an end):
 
-<div class="code">
-
+```
     + angelaReboardingAgenda: AgendaItem
         isReady = (takeover.hasHappened)
         
@@ -389,16 +374,14 @@ pilot's uniform (and the takeover scene comes to an end):
             
         }
     ;
-
-</div>
+```
 
 Next we can set up the corresponding Conversation Node and populate it
 with some SayTopics. Whichever response the player chooses we'll have
 Angela ask if the player character really intends to fly the plane and
 then switch to another Conversation Node for an answer to that question:
 
-<div class="code">
-
+```
     + ConvNode 'uniform';
 
     ++ SayTopic 'all British agents learn to fly'
@@ -433,20 +416,19 @@ then switch to another Conversation Node for an answer to that question:
         <q>You mean you're intending to fly this plane?</q> she demands
         incredulously. <.convnodet intend-fly> "
     ;
+```
 
-</div>
-
-Note the use of the <span class="code">isActive</span> on the first
+Note the use of the `isActive` on the first
 three SayTopics to determine whether or not they're appropriate in the
 light of what has or hasn't been said before. The
-<span class="code">gInformed(key)</span> tests whether or not the actor
+`gInformed(key)` tests whether or not the actor
 has previously been informed of *key* by the player character via an
-<span class="code">\<.inform key\></span> tag, so either the first or
+`\<.inform key\>` tag, so either the first or
 the second SayTopic will be active depending on whether or not the
 player character has already told Angela who he is. The
-<span class="code">gRevealed(key)</span> tests whether *key* has
+`gRevealed(key)` tests whether *key* has
 previously been revealed to the player character via a
-<span class="code">\<.reveal key\></span> tag, so the third SayTopic
+`\<.reveal key\>` tag, so the third SayTopic
 will be active if Angela has previously mentioned that the plane is
 waiting for its pilot. The fourth and final SayTopic will be available
 under all circumstances. The player will thus have either two or three
@@ -456,8 +438,7 @@ Next we can add a catch-all DefaultAnyTopic that won't allow the player
 to leave the Conversation Node until he's chosen one of the above
 SayTopics:
 
-<div class="code">
-
+```
     ++ DefaultAnyTopic, ShuffledEventList
         [
             '<q>No, but answer my question,</q> she interrupts you. <q>What are you
@@ -473,17 +454,15 @@ SayTopics:
             uniform,</q> she complains. <q>Why are you wearing it?</q> <.convstay> '
         ]
     ;
+```
 
-</div>
-
-Note how we add a <span class="code">\<.convstay\></span> tag to each of
+Note how we add a `\<.convstay\>` tag to each of
 the default responses to ensure that we remain in the current
 Conversation Node. The next step is to prevent the player from breaking
 off the conversation prematurely, which we can once again do with a
 NodeEndCheck object:
 
-<div class="code">
-
+```
     ++ NodeEndCheck
         canEndConversation(reason)
         {
@@ -502,8 +481,7 @@ NodeEndCheck object:
             }
         }
     ;
-
-</div>
+```
 
 The other thing the player could try to deflect Angela's question is to
 carry out a whole lot of irrelevant non-conversational commands (even
@@ -513,18 +491,16 @@ each turn we remain in the node and there hasn't been a conversational
 exchange. For that purpose we can define a **NodeContinuationTopic**
 (which we also locate in the ConvNode in question):
 
-<div class="code">
-
+```
     ++ NodeContinuationTopic
         "<q><<one of>>I asked you a question<<or>>I'm still waiting for an
         answer<<cycling>>,</q> {the subj angela} <<one of>> reminds
         you<<or>> insists<<or>> repeats<<cycling>>. <q>Why are you wearing that
         uniform?</q> "
     ;
+```
 
-</div>
-
-Note the use of the <span class="code">\<\<one of\>\></span> embedded
+Note the use of the `\<\<one of\>\>` embedded
 expression constructs to vary what's displayed slightly on each
 occasion. We could achieve greater variety by mixing in the
 NodeContinuationTopic with a ShuffledEventList, say, but what we've done
@@ -533,8 +509,7 @@ here will suffice for now.
 The final step is to define the Conversation Node the player is taken to
 next, the 'intend-fly' node:
 
-<div class="code">
-
+```
     + ConvNode 'intend-fly'
        commonResponse = "\b<q>Very well, then,</q> she sighs. <q>I suppose we don't
            have too much choice now, do we? Just as long as you know what you're
@@ -589,11 +564,10 @@ next, the 'intend-fly' node:
         "<q>I'd appreciate it if you answered my question,</q> {the subj angela}
         insists. <q>Are you really proposing to fly this aircraft?</q> "
     ;
-
-</div>
+```
 
 We've saved ourselves a bit of typing here by defining a
-<span class="code">commonResponse</span> property on the ConvNode object
+`commonResponse` property on the ConvNode object
 and then calling it from each of the TopicEntries located in it to
 provide Angela's response. Otherwise the pattern of this Conversation
 Node pretty much follows that of the previous one, although we have

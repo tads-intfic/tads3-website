@@ -36,15 +36,14 @@ Fuse(</span><span class="synPar">obj</span><span class="synLit">,
 
 <span class="synLit">)</span>
 
-This defines a Fuse that will call <span class="code">obj.(prop)</span>,
+This defines a Fuse that will call `obj.(prop)`,
 i.e. the prop method of obj, after *turns* turns. If *turns* is 0 then
 the Fuse will execute on the same turn.
 
 For example, to define an alarm clock that rings in 10 turns' time after
 you push a button on it, we could define:
 
-<div class="code">
-
+```
     alarmClock: Thing 'alarm clock'
         "It has a big red button attached. "
         
@@ -74,11 +73,10 @@ you push a button on it, we could define:
        
        isDown = nil
     ;
-
-</div>
+```
 
 Note, by the way, that the property we want to execute has to be listed
-in the arguments to <span class="code">new Fuse</span> as a property
+in the arguments to `new Fuse` as a property
 *pointer*, with an ampersand (&) immediately preceding its name.
 
 A <span id="daemon-idx">Daemon</span> is defined in exactly the same
@@ -157,11 +155,9 @@ You may wish to stop a Daemon, or prevent a Fuse from executing before
 its due to fire. If you've stored a reference to the Fuse or Daemon you
 can disable it by calling its **removeEvent()** method, e.g.:
 
-<div class="code">
-
+```
       daemonID.removeEvent();
-
-</div>
+```
 
 If you haven't stored a reference to the Fuse or Daemon you want to
 remove, you can remove it by calling:
@@ -174,12 +170,12 @@ Daemon was originally created.
 
 Finally, you can control the order in which Fuses and Daemons are
 processed by overriding their **eventOrder** property. The higher the
-<span class="code">eventOrder</span>, the later the event; the default
-value of <span class="code">eventOrder</span> is 100. This doesn't
-effect <span class="code">PromptDaemons</span> which are always
+`eventOrder`, the later the event; the default
+value of `eventOrder` is 100. This doesn't
+effect `PromptDaemons` which are always
 displayed just before the command prompt. Note that while other Fuses
 and Daemons may not be executed if the turn cycle is interrupted (by an
-<span class="code">abort</span> statement, for example), PromptDaemons
+`abort` statement, for example), PromptDaemons
 are always executed.
 
 </div>

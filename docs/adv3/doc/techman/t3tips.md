@@ -61,15 +61,13 @@ out of the bind, though, so this looks like a great place for a tip.
 To define the tip, you create a Tip object, and provide its message
 text. Defining the Tip object is pretty easy using the template:
 
-<div class="code">
-
+```
     undoTip: Tip
        "If this didn't turn out quite as intended, note that you can
        always take back one or more commands by typing
        <<aHref('undo', 'UNDO', 'Take back the most recent command')>>."
     ;
-
-</div>
+```
 
 (Remember, the library defines this object already - we're just using it
 as an example, so you don't need to add this to your own game.) The
@@ -80,11 +78,9 @@ a nice touch.
 Having defined the Tip object, we can trigger the tip message wherever
 it's appropriate simply by calling:
 
-<div class="code">
-
+```
     undoTip.showTip();
-
-</div>
+```
 
 ## Avoiding redundancy
 
@@ -102,11 +98,9 @@ the game. The player obviously must know about the command if she typed
 it in, so she presumably doesn't need to hear about it in a tip. So,
 we'd add a line like this somewhere in the Undo action handler:
 
-<div class="code">
-
+```
     undoTip.makeShown();
-
-</div>
+```
 
 The library does just this within the Undo action's execAction()
 handler, so you don't have to enter this yourself anywhere for this
@@ -116,16 +110,14 @@ example, if you were to create a tip to explain the CONSULT command when
 the player first encounters an encyclopedia within the game, you could
 do something like this:
 
-<div class="code">
-
+```
     modify ConsultAboutAction
        beforeAction()
        {
           inherited();
           consultTip.makeShown();
        }
-
-</div>
+```
 
 ## Turning tips on and off
 
@@ -151,8 +143,7 @@ uses, even an experienced player would probably want to see that one. We
 can achieve this by overriding the shouldShowTip() method of a tip
 object so that it only checks the isShown property and not the tipMode:
 
-<div class="code">
-
+```
     mySpecialTip: Tip
        "In this particular story, etc."
 
@@ -161,12 +152,11 @@ object so that it only checks the isShown property and not the tipMode:
            return (isShown == nil);
        }
     ;
-
-</div>
+```
 
 ## Tip display style
 
-The pre-defined Tips have their own <span class="code">\<.tip\></span>
+The pre-defined Tips have their own `\<.tip\>`
 style tag. The text of a tip will always be wrapped in a pair of these,
 so that we can alter the way in which tips are displayed. This can be
 done by modifying or replacing the tipStyleTag object, which by default
@@ -176,8 +166,7 @@ On HTML interpreters, some nice-looking styles can be achived, though we
 shouldn't get too carried away. The author of the Tips system is quite
 fond of the following style:
 
-<div class="code">
-
+```
     replace tipStyleTag: HtmlStyleTag 'tip'
        htmlOpenText =
            '<blockquote><font size=-1 color=WHITE
@@ -187,15 +176,13 @@ fond of the following style:
        plainOpenText = '('
        plainCloseText = ')'
     ;
-
-</div>
+```
 
 If we wanted something completely different, like showing all tips in a
 separate banner, then we could modify the Tip class and override the
 showTipDesc() property, perhaps to something like this:
 
-<div class="code">
-
+```
     modify Tip
        showTipDesc()
        {
@@ -204,8 +191,7 @@ showTipDesc() property, perhaps to something like this:
            tipBanner.captureOutput({: desc() });
        }
     ;
-
-</div>
+```
 
 </div>
 

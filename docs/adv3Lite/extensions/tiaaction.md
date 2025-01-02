@@ -58,9 +58,9 @@ the Mercury parser on which adv3Lite is based). Thus, for example, do
 refer to the accessory object of the current command you'd use
 **gAobj**. To define action handling on an object in its role as
 accessory object you'd use **aobjFor(WhateverAction)**. In a message
-parameter substitution you'd use <span class="code">aobj</span> to refer
-to the accessory object (e.g. <span class="code">{the aobj}</span> or
-<span class="code">{the subj aobj}</span>). In a VerbRule you'd use
+parameter substitution you'd use `aobj` to refer
+to the accessory object (e.g. `{the aobj}` or
+`{the subj aobj}`). In a VerbRule you'd use
 **singleAobj** or **multiAobj** (in practice nearly always the former)
 as the marker for the accessory object in the player's command, and when
 defining a TIAAction you'd use the **DefineTIAAction()** macro. You use
@@ -72,8 +72,7 @@ implement an action that could handle commands of the form PUT COIN IN
 SLOT WITH TWEEZERS. First we'd define the action and its associated
 VerbRule:
 
-<div class="code">
-
+```
     DefineTIAAction(PutInWith)
     ;
 
@@ -86,16 +85,14 @@ VerbRule:
             what do you want to put it in with'
     ;
      
-
-</div>
+```
 
 Next, we'd define the default handling for this new action on the Thing
 class, as normal. In this simple example we'll assume that PutInWith
 acts much like PutIn, except that by default we can't use a Thing to put
 other things in with:
 
-<div class="code">
-
+```
      modify Thing
         dobjFor(PutInWith) asDobjFor(PutIn)
         iobjFor(PutInWith) asIobjFor(PutIn)
@@ -110,15 +107,13 @@ other things in with:
         }
     ;
      
-
-</div>
+```
 
 Finally, we'd probably go on to define the slot, the coin and tweezers
 in such a way that the player has to use the tweezers to put the coin in
 the slot:
 
-<div class="code">
-
+```
      
     + coinSlot: Container, Fixture 'coin slot'
         bulkCapacity = 1
@@ -165,8 +160,7 @@ the slot:
     ;  
       
      
-
-</div>
+```
 
 This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the

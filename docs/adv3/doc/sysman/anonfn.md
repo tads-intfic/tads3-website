@@ -114,11 +114,9 @@ the problems we just listed:
 
 An anonymous function definition looks like this:
 
-<div class="code">
-
+```
     function(x) { "Hello from anonymous! x = <<x>>\n"; }
-
-</div>
+```
 
 This looks a lot like a regular function definition, but note that we've
 used the keyword "function" instead of giving the function a name.
@@ -144,40 +142,32 @@ iterator function called enumItems() that enumerates some set of items
 through a callback function. To display all of the items that the
 function enumerates, we can write something like this:
 
-<div class="code">
-
+```
     enumItems(function(obj) { obj.sdesc; });
-
-</div>
+```
 
 If at some other point we wanted to count all of the items the function
 enumerates, we could write this:
 
-<div class="code">
-
+```
     local cnt = 0;
     enumItems(function(obj) { ++cnt; });
-
-</div>
+```
 
 Since the value of an anonymous function is simply a pointer to the
 function, we can assign an anonymous function to a local variable or to
 a property:
 
-<div class="code">
-
+```
     local f = function(x) { "Hello from anonymous! x = <<x>>\n"; }
-
-</div>
+```
 
 We call the function to which the local variable "f" refers using the
 same syntax we'd use with an ordinary function pointer:
 
-<div class="code">
-
+```
        f(7);
-
-</div>
+```
 
 ## Referring to Local Variables
 
@@ -187,8 +177,7 @@ collection of some sort. For example, we could define an object class
 with a "contents" property, and write an enumerator that invokes a
 callback for each entry in the contents list:
 
-<div class="code">
-
+```
     class Thing: object
       contents = []
       enumContents(func)
@@ -198,18 +187,15 @@ callback for each entry in the contents list:
           func(contents[i]);
       }
     ;
-
-</div>
+```
 
 Now, suppose we wanted to count the contents of the object. We could do
 this using the enumContents() enumerator and an anonymous function:
 
-<div class="code">
-
+```
     local cnt = 0;
     myThing.enumContents(function { ++cnt; });
-
-</div>
+```
 
 Note that the anonymous function is accessing the local variable cnt
 from the enclosing function. This might seem perfectly obvious and
@@ -223,11 +209,11 @@ directly.
 
 Anonymous functions share not only the local variables of the scope in
 which they were defined, but all of the method context variables:
-<span class="code">self</span>, <span class="code">targetobj</span>,
-<span class="code">definingobj</span>, and
-<span class="code">targetprop</span>. So an anonymous function that
+`self`, `targetobj`,
+`definingobj`, and
+`targetprop`. So an anonymous function that
 appears in a method can refer to the properties of the
-<span class="code">self</span> object that was in effect at the time the
+`self` object that was in effect at the time the
 function was created.
 
 If you're familiar with a static language like C or C++, you might be
@@ -236,8 +222,7 @@ what happens to the variables referenced from the anonymous function
 *after* the routine that created the anonymous function returns to its
 caller? Consider this example:
 
-<div class="code">
-
+```
     myFunc()
     {
       f = createAnonFunc();
@@ -249,12 +234,11 @@ caller? Consider this example:
       local i = 100;
       return function() { tadsSay(i); }
     }
-
-</div>
+```
 
 If you're a C++ programmer, this probably looks like a classic newbie
 error to you. If you did something like this in C++, the local variable
-"i" would cease to exist when <span class="code">createAnonFunc</span>
+"i" would cease to exist when `createAnonFunc`
 returns. So the fact that the anonymous function continues to refer to
 "i" after that is a problem. In C++, this would cause all sorts of
 unpleasant behavior, possibly picking random values from memory, and
@@ -289,19 +273,15 @@ omit the "function" keyword, and write only the parameter list and the
 expression, enclosed in braces, with a colon (":") separating the
 expression from the parameter list. So, rather than writing this:
 
-<div class="code">
-
+```
     function(x, y) { return x + y; }
-
-</div>
+```
 
 we can write this:
 
-<div class="code">
-
+```
     { x, y: x + y }
-
-</div>
+```
 
 Note that there's no semicolon at the end of the expression. The body of
 a short-form anonymous function is simply an expression, not a
@@ -312,70 +292,62 @@ The colon that ends the argument list is always needed, whether or not
 there are any parameters. To write an anonymous function that takes no
 arguments, simply put the colon immediately after the opening brace:
 
-<div class="code">
-
+```
     { : ++cnt }
-
-</div>
+```
 
 The body of a short-form anonymous function is a single expression, and
 the function implicitly returns the value of the expression. We can,
 however, use the comma operator to evaluate a series of sub-expressions:
 
-<div class="code">
-
+```
     { x, y: tadsSay(x), tadsSay(y), x*y }
-
-</div>
+```
 
 That prints the values of x and y, then returns the product of the two
 values as the result of the function.
 
 <span id="shortFormLocals"></span> Short-form functions can define their
-own local variables. Use the <span class="code">local</span> keyword at
+own local variables. Use the `local` keyword at
 the very beginning of the function's expression. For example, this
 generates a list of the first 20 Fibonacci numbers:
 
-<div class="code">
-
+```
     local a = 0, b = 1;
     local fib = List.generate({: local f = a, a = b, b = f + a, f }, 20);
+```
 
-</div>
-
-That defines the local variable <span class="code">f</span>, assigning
-it immediately to <span class="code">a</span> (which comes from the
-enclosing scope). <span class="code">f</span> is local to the anonymous
+That defines the local variable `f`, assigning
+it immediately to `a` (which comes from the
+enclosing scope). `f` is local to the anonymous
 function. Apart from defining the local variable
-<span class="code">f</span>, that <span class="code">local</span> clause
+`f`, that `local` clause
 works just like an ordinary expression, and it combines with the rest of
 the expression using the normal behavior of the comma operator. Let's
-look at how this executes. We start by evaluting <span class="code">f =
-a</span>, which assigns the value of <span class="code">a</span> from
-the enclosing scope to <span class="code">f</span>. We then move on to
-<span class="code">a = b</span>, which simply assigns the value of
-<span class="code">b</span> to <span class="code">a</span> (both in the
+look at how this executes. We start by evaluting `f =
+a`, which assigns the value of `a` from
+the enclosing scope to `f`. We then move on to
+`a = b`, which simply assigns the value of
+`b` to `a` (both in the
 enclosing scope, since these two variables *aren't* defined as local to
-the anonymous function). Next comes <span class="code">b = f + a</span>,
-which adds <span class="code">f</span> and <span class="code">a</span>
-and assigns the sum to <span class="code">b</span>. Finally, we get to
-<span class="code">f</span>, which simply gets the current value of
-<span class="code">f</span> - and since this is the last part of the
+the anonymous function). Next comes `b = f + a`,
+which adds `f` and `a`
+and assigns the sum to `b`. Finally, we get to
+`f`, which simply gets the current value of
+`f` - and since this is the last part of the
 expression, it's the result value of the function.
 
-The <span class="code">local</span> clause in an anonymous function
+The `local` clause in an anonymous function
 defines only one local variable. The next thing after the comma is a
-separate expression, not part of the <span class="code">local</span>
+separate expression, not part of the `local`
 clause at all. If you want to define multiple locals, use a separate
-<span class="code">local</span> keyword for each one:
+`local` keyword for each one:
 
-<div class="code">
-
+```
     {: local a = 1, local b = 2, local c = 3, ... }
+```
 
-</div>
-
-All of the <span class="code">local</span> definitions must be
+All of the `local` definitions must be
 consecutive, at the start of the expression.
 
 Short-form and long-form anonymous functions behave in exactly the same
@@ -386,8 +358,7 @@ way. The only difference is the syntax used to define them.
 In an ordinary named function, recursion is easy: the function is free
 to call itself by name, the same way any other code would call it.
 
-<div class="code">
-
+```
     factorial(n)
     {
        if (n <= 0)
@@ -395,8 +366,7 @@ to call itself by name, the same way any other code would call it.
        else
           return n * factorial(n-1);
     }
-
-</div>
+```
 
 If we want to do the same thing in an anonymous function, though,
 there's a snag: the function has no name, so how does it refer to itself
@@ -408,8 +378,7 @@ anonymous function is assigned to a local variable, it can refer to
 itself via that local variable, making the syntax almost deceptively
 similar to the ordinary function version:
 
-<div class="code">
-
+```
     local f = new function(n)
     {
        if (n <= 0)
@@ -417,103 +386,92 @@ similar to the ordinary function version:
        else
           return n * f(n-1);
     }
-
-</div>
+```
 
 But that only works if the anonymous function value is indeed assigned
 to a local variable. It's not always convenient or possible to do that.
 For example, suppose we want to use our anonymous function in a call to
 List.mapAll():
 
-<div class="code">
-
+```
     lst = lst.mapAll({n: n <= 0 ? 1 : WhatDoWePutHereToCallMyself(n-1) });
-
-</div>
+```
 
 The solution is to use the
-[<span class="code">invokee</span>](expr.html#invokee) pseudo-variable.
-<span class="code">invokee</span> contains a pointer to the function
+[`invokee`](expr.html#invokee) pseudo-variable.
+`invokee` contains a pointer to the function
 that's currently executing at any given time. So within an anonymous
 function, this provides a pointer to the anonymous function, without any
 need for a name or a local variable.
 
-<div class="code">
-
+```
     lst = lst.mapAll({n: n <= 0 ? 1 : invokee(n-1)});
-
-</div>
+```
 
 ## <span id="anonMethods"></span>Anonymous Methods
 
 There's another version of the anonymous function that's known as an
 anonymous method. An anonymous method looks and acts very much like an
 anonymous function. The difference is that an anonymous method *doesn't*
-share its method context variables (<span class="code">self</span>,
-<span class="code">definingobj</span>,
-<span class="code">targetobj</span>,
-<span class="code">targetprop</span>) with the lexically enclosing code.
+share its method context variables (`self`,
+`definingobj`,
+`targetobj`,
+`targetprop`) with the lexically enclosing code.
 Instead, an anonymous method takes on the "live" values for the method
 context each time it's called.
 
 The syntax for defining an anonymous method is the same as for a
 regular, long-form anonymous function, except that you substitute the
-keyword <span class="code">method</span> in place of
-<span class="code">function</span>. For example:
+keyword `method` in place of
+`function`. For example:
 
-<div class="code">
-
+```
     local m = method(x) { self.prop = x; };
-
-</div>
+```
 
 Although an anonymous method doesn't share
-<span class="code">self</span> and the other method context variables
+`self` and the other method context variables
 with its lexically enclosing routine, it does have access to the
 ordinary local variables defined in the enclosing scope, just like an
 anonymous function does. For example:
 
-<div class="code">
-
+```
     function addSetter(obj, val)
     {
         local m = method() { self.prop = val; }
         obj.setMethod(&setter, m);
     }
-
-</div>
+```
 
 Note how the anonymous method refers to the local variable "val", which
 is part of the enclosing function.
 
 The main use of anonymous methods is to add new methods to objects using
-[<span class="code">setMethod()</span>](tadsobj.html#setMethod). The
-section on <span class="code">setMethod()</span> has more details on how
+[`setMethod()`](tadsobj.html#setMethod). The
+section on `setMethod()` has more details on how
 anonymous functions and methods differ in practice when creating new
 object methods.
 
 Note that an anonymous method is only meant to be used as a method, not
 as a function. If you try to call it as an ordinary function, it won't
 have any method context, so attempting to access
-<span class="code">self</span> or the other method context variables
+`self` or the other method context variables
 could cause run-time errors.
 
 ## "new function" syntax
 
 Prior to TADS 3.1, the syntax for anonymous functions required the
-keyword <span class="code">new</span> before
-<span class="code">function</span> or <span class="code">method</span>:
+keyword `new` before
+`function` or `method`:
 
-<div class="code">
-
+```
     local f = new function(x) { return x*2; };
-
-</div>
+```
 
 In 3.1 and later, this is exactly equivalent to the same code without
-the <span class="code">new</span>.
+the `new`.
 
-The rationale for the <span class="code">new</span> keyword was that an
+The rationale for the `new` keyword was that an
 anonymous function is actually an object. Each time you evaluate the
 definition of an anonymous function, you're creating a new object.
 
@@ -524,11 +482,11 @@ single static version at compile time, and reuses this static instance
 each time the function is referenced.)
 
 Starting in 3.1, we removed the requirement for the
-<span class="code">new</span> keyword. It's still allowed, though. Old
+`new` keyword. It's still allowed, though. Old
 code that uses it will compile without complaint, and the meaning is
-exactly the same with or without <span class="code">new</span>.
+exactly the same with or without `new`.
 
-The <span class="code">new</span> keyword wasn't there for the
+The `new` keyword wasn't there for the
 compiler's sake or the VM's sake - it was there for the programmer's
 sake, to make it explicit in the syntax that object creation was
 involved. There was no deep technical reason it had to be there; there
@@ -539,19 +497,19 @@ seen fit to make their syntax mimic object creation syntax. Apparently
 our concerns about emphasizing object creation were overblown.
 
 The main pragmatic motivation for actually removing
-<span class="code">new</span> from the TADS syntax is the Web UI. If
+`new` from the TADS syntax is the Web UI. If
 you're writing a game that uses the Web UI, you'll probably find
 yourself switching back and forth between TADS and Javascript as you
 work on your project, since the UI portion of the Web UI is written in
 Javascript. Javascript syntax is very similar to TADS syntax in many
 ways, which makes it fairly easy to work in both languages in one
 project. Javascript's anonymous function syntax is identical to the TADS
-anonymous function syntax now that <span class="code">new</span> has
-been removed, but the old syntax with <span class="code">new</span> was
+anonymous function syntax now that `new` has
+been removed, but the old syntax with `new` was
 just different enough to be a constant gotcha when switching back and
-forth. Since <span class="code">new</span> was only there in the first
+forth. Since `new` was only there in the first
 place for ease-of-use reasons, adding Javascript to the mix clearly tips
-the balance in favor of removing <span class="code">new</span>.
+the balance in favor of removing `new`.
 
 </div>
 

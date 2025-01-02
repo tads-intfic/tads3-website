@@ -116,8 +116,7 @@ ActorTopicEntries, allowing you to use these keys to group
 ActorTopicEntries in any way you like and refer to a group of topics
 with a single key. For example if we defined:
 
-<div class="code">
-
+```
     + AskTopic @darkTower
        "<q>Tell me about the dark tower,</q> you insist.\b
         <q>Oh no!</q> says Bob. <q>We don't talk about that -- ever!</q>"
@@ -131,8 +130,7 @@ with a single key. For example if we defined:
         
         convKeys = 'bob-fright'
     ;
-
-</div>
+```
 
 In this example, the first AskTopic can be referred to with either the
 'tower-node' key or the 'bob-fright' key, but using the 'bob-fright' key
@@ -155,13 +153,13 @@ TopicEntry or a group of TopicEntries unavailable until we wish them to
 become active.
 
 For an ActorTopicEntry to be active, both its
-<span class="code">isActive</span> and its
-<span class="code">activated</span> properties must be true. The
-<span class="code">activated</span> property starts out true by default,
+`isActive` and its
+`activated` properties must be true. The
+`activated` property starts out true by default,
 so if you don't want to make use of it you can simply ignore it, but you
-can define <span class="code">activated = nil</span> on selected
+can define `activated = nil` on selected
 ActorTopicEntries and then activate them later using an
-<span class="code">\<.activate key\></span> tag. When your game code
+`\<.activate key\>` tag. When your game code
 outputs '\<.activate key\>' the effect is to set the activated property
 to true on every ActorTopicEntry belonging to the player character's
 current interlocutor which has *key* among the keys on its convKeys
@@ -172,8 +170,7 @@ The main purpose of this is to allow you to activate a whole set of
 ActorTopicEntries at once, when they share a common convKey. For
 example:
 
-<div class="code">
-
+```
     + AskTopic @darkTower
        "<q>Just why is that dark tower considered so terrible?</q> you ask.\b
        <q>It all started with the troubles,</q> Bob replies darkly, <q>that and the massacre
@@ -200,8 +197,7 @@ example:
        convKeys = ['troubles', 'farm']
        activated = nil
     ;
-
-</div>
+```
 
 In this example, it doesn't make sense for the player character to be
 able to ask about the troubles, the massacre or Longacre Farm until Bob
@@ -225,24 +221,24 @@ are three reasons for making use of a separate activated property:
     which they relate it would become that much harder to see what was
     causing a TopicEntry to become active or inactive, making your code
     that much harder to understand and debug. It may seem a little more
-    effort to write <span class="code">activated = nil</span>, but you
+    effort to write `activated = nil`, but you
     can then see at a glance that the TopicEntry in question needs to be
     activated by an \<.activate\> tag somewhere.
 2.  The use of a separate activated property allows you to specify
-    additional conditions, e.g. <span class="code">isActive =
-    me.hasSeen(darkTower)</span>.
-3.  The <span class="code">activated</span> property is also useful for
+    additional conditions, e.g. `isActive =
+    me.hasSeen(darkTower)`.
+3.  The `activated` property is also useful for
     a secondary purpose: calling the **deactivate()** method from with a
-    topicResponse method sets the <span class="code">activated</span>
+    topicResponse method sets the `activated`
     property of its ActorTopicEntry method to nil, thereby deactivating
     that ActorTopicEntry. This can be useful in an ActorTopicEntry that
     you want to be available only once (the first time it is viewed), or
     in the last item in the eventList of an ActorTopicEntry that's also
     a StopEventList to disable the TopicEntry once all the items in the
     list have been viewed. There's also a
-    <span class="code">\<.deactivate key\> </span>tag that does the
-    opposite of the <span class="code">\<.activate key\></span> tag,
-    namely setting <span class="code">activated</span> to nil on every
+    `\<.deactivate key\> `tag that does the
+    opposite of the `\<.activate key\>` tag,
+    namely setting `activated` to nil on every
     ActorTopicEntry whose convKeys property matches *key*.
 
   
@@ -329,8 +325,8 @@ rely on the player specifying a topic they might match).
 conversational (that is they don't trigger greeting protocols and are
 not counted as initiating a conversation). If, however, an actor gives a
 conversational response to one of these actions (such as "Don't touch
-me!"), we can define <span class="code">isConversational = true</span>
-on the corresponding <span class="code">TouchTopic</span> (or whatever).
+me!"), we can define `isConversational = true`
+on the corresponding `TouchTopic` (or whatever).
 These three classes are provided as potentially convenient means of
 customizing an NPC's response to the common non-conversational forms of
 interaction with NPCs. They allows responses to be made dependent on the
@@ -340,7 +336,7 @@ ways of handling ATTACK, TOUCH and KISS on Actors see the discussion of
 [Attacking, Touching and Kissing](actorobj.html#hitkiss) in the chapter
 on the Actor object.
 
-An ActorState's <span class="code">noResponse</span> property is not
+An ActorState's `noResponse` property is not
 invoked in response to an ATTACK, TOUCH, or KISS command. This list of
 exclusions is controlled by the Actor's **physicalTopicObjs** property,
 which by default contains a list of the three topic objects
@@ -434,8 +430,7 @@ contain a list of the topics you don't want the DefaultTopic to handle,
 so that handling of just those topics can be handled elsewhere; for
 example:
 
-<div class="code">
-
+```
     bob: Actor 'Bob; short; man; him'
        "He's a short man. "
      ;
@@ -455,8 +450,7 @@ example:
          
         exceptions = [tTroubles]
     ;
-
-</div>
+```
 
 This would allow Bob to respond with the special response to ASK BOB
 ABOUT TROUBLES even when Bob is in the bobStacking state, even though
@@ -466,12 +460,12 @@ the bobStacking state because we want to be common to more than one
 ActorState.
 
 If we need something a bit more complex than the
-<span class="code">exceptions</span> list can provide, we can instead
+`exceptions` list can provide, we can instead
 override the DefaultTopic's **avoidMatching(top)** so that it returns
-<span class="code">true</span> for any topic *top* we don't want the
+`true` for any topic *top* we don't want the
 DefaultTopic to match. The default behaviour of avoidMatching(top) is to
 return true if and only if *top* is listed in the
-<span class="code">exceptions</span> property.
+`exceptions` property.
 
   
 <span id="alttopic"></span>
@@ -486,12 +480,12 @@ but this can quickly become cumbersome. A better alternative would be to
 define a sequence of ActorTopicEntries with increasing matchScores,
 which will work perfectly well but is perhaps just a little long-winded.
 In adv3Lite (as in adv3), the best solution is to use one or more
-<span class="code">AltTopics</span>.
+`AltTopics`.
 
 To use an AltTopic, just locate it directly (with the + notation) in
 ActorTopicEntry to which it is to provide an alternative response. Don't
 define a matchObj for it, since it will simply match whatever its
-location matches, but do define its <span class="code">isActive</span>
+location matches, but do define its `isActive`
 property to be different from that of its location, then, when its
 isActive property is true, it will be used instead of its parent
 ActorTopicEntry.
@@ -500,8 +494,7 @@ You can also define a whole series of AltTopics located in an
 ActorTopicEntry, in which case the one that will be used will be the
 last of those for which isActive is true. For example, we might define:
 
-<div class="code">
-
+```
     + AskTellTopic @lighthouse 
        "<q>What can you tell me about the lighthouse?</q> you ask.
         <q>I hear it has quite a history.</q>\b
@@ -526,8 +519,7 @@ last of those for which isActive is true. For example, we might define:
        
        isActive = gPlayerChar.hasSeen(lighthouse)
     ;
-
-</div>
+```
 
 If the player types ASK BOB ABOUT LIGHTHOUSE or TELL BOB ABOUT
 LIGHTHOUSE then the response that will be used will depend on whether
@@ -584,8 +576,7 @@ to someone, for example, suppose you had created a PieceOfSilver class
 and given the player character thirty instances of it, and had defined a
 GiveTopic like so for the priest:
 
-<div class="code">
-
+```
      + GiveTopic @PieceOfSilver
        topicResponse()
        {
@@ -594,8 +585,7 @@ GiveTopic like so for the priest:
        }
     ; 
      
-
-</div>
+```
 
 This could lead to an interchange like this:
 
@@ -649,12 +639,11 @@ In this case it would be *much* better if we could get:
 We can do this by making use of the current action's **summaryReport**
 property in our definition of the GiveTopic. Instead of directly
 outputting some text, we set the current action's
-<span class="code">summaryReport</span> property to a single-quoted
+`summaryReport` property to a single-quoted
 string to be used to generate a summary report at the action's report
 stage, like this:
 
-<div class="code">
-
+```
      + GiveTopic @PieceOfSilver
        topicResponse()
        {
@@ -663,37 +652,32 @@ stage, like this:
        }
     ; 
      
-
-</div>
+```
 
 Once the GIVE command has been executed on all thirty pieces of silver,
-this report will be displayed with <span class="code">{1}</span>
+this report will be displayed with `{1}`
 replaced by a list of the objects just affected, which will
 automatically list all identical objects together into 'thirty pieces of
 silver'. It works like this: when it comes to the report stage, we have:
 
-<div class="code">
-
+```
             report()
             {
                 if(gAction.summaryReport != nil)
                     dmsg(gAction.summaryReport, gActionListStr); 
             }
-
-</div>
+```
 
 Since summaryReport is now non-nil this becomes in effect:
 
-<div class="code">
-
+```
         dmsg(The priest takes {1} and nods in acknowledgement. ', gActionListStr);
      
+```
 
-</div>
-
-The macro <span class="code">gActionListStr</span> expands to a list of
+The macro `gActionListStr` expands to a list of
 the objects just acted on ('thirty pieces of silver') and is inserted
-into the report text in place of <span class="code">{1}</span>.
+into the report text in place of `{1}`.
 
 <span id="sumprop"></span>
 
@@ -705,8 +689,7 @@ property of the current action to define a method on the priest that
 should be executed just after the display of our summary report. We'd
 typically do it like this:
 
-<div class="code">
-
+```
      + GiveTopic @PieceOfSilver
        topicResponse()
        {
@@ -716,16 +699,14 @@ typically do it like this:
        }
     ; 
      
-
-</div>
+```
 
 We'd then need to define a suitable
-<span class="code">silverCount()</span> method on the priest, taking
-advantage of the fact that <span class="code">gAction.reportList</span>
+`silverCount()` method on the priest, taking
+advantage of the fact that `gAction.reportList`
 will contain a list of the objects that have just been reported on:
 
-<div class="code">
-
+```
      priest: Actor 'priest; tall thin ascetic; man; him'
         "He's a tall, thin ascetic-looking man. "
         
@@ -747,8 +728,7 @@ will contain a list of the objects that have just been reported on:
         }
     ;
      
-
-</div>
+```
 
 This technique can be used with GiveTopics, ShowTopics or
 GiveShowTopics, but it does come with a limitation: the system can only
@@ -757,8 +737,7 @@ for example, you *mustn't* do this if there's any possibility that the
 player character could hand over a mix of gold and silver coins on any
 one turn:
 
-<div class="code">
-
+```
      + GiveTopic @GoldCoin
        topicResponse()
        {
@@ -777,19 +756,17 @@ one turn:
        }
     ;
      
-
-</div>
+```
 
 Since if you do do something like this the value of
-<span class="code">summaryReport</span> and
-<span class="code">summaryProp</span> will be that set by the last
+`summaryReport` and
+`summaryProp` will be that set by the last
 GiveTopic to be triggered, which may not give you the result you want if
 the player types GIVE PRIEST THREE SILVER COINS AND FIVE GOLD COINS.
 Instead you need to combine both sets of coins into a single set of
 properties to ensure a predictable outcome:
 
-<div class="code">
-
+```
      + GiveTopic [GoldCoin, SilverCoin]
        topicResponse()
        {
@@ -799,11 +776,10 @@ properties to ensure a predictable outcome:
        }
     ; 
      
-
-</div>
+```
 
 This will work fine provided you define your coinCount() method to check
-<span class="code">gAction.reportList</span> for both gold and silver
+`gAction.reportList` for both gold and silver
 coins and react accordingly.
 
 One final point: it's possible that the player could include some
@@ -813,14 +789,12 @@ your code can handle the extraneous old twig gracefully. This may be as
 simple as defining a suitable DefaultGiveShowTopic that names the item
 that triggers it:
 
-<div class="code">
-
+```
      + DefaultGiveShowTopic 
        "The priest has no interest in {the dobj}. "
     ; 
      
-
-</div>
+```
 
 </div>
 

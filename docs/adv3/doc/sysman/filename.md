@@ -38,13 +38,13 @@ and that structure varies by operating system. This makes it hard to
 write portable code that builds and parses filenames. For example, if
 you want to write the name of a file in a subfolder, how do you do this
 with character strings? If you're a Windows user, the simplest approach
-is to write something like <span class="code">'images\\pic.jpg'</span>.
+is to write something like `'images\\pic.jpg'`.
 But if you're a Unix user, you'd instead write
-<span class="code">'images/pic.jpg'</span>. Okay, you say, we can solve
+`'images/pic.jpg'`. Okay, you say, we can solve
 this little snag with the old Windows hack where we take advantage of
 the bug/feature where Windows happens to accept "/" slashes in place of
 "\\ slashes - so we just write
-<span class="code">'images/pic.jpg'</span> and everyone's happy, right?
+`'images/pic.jpg'` and everyone's happy, right?
 Well, not really. For one thing, that really is a hack, not an
 officially supported feature, and it's not clear that Microsoft is
 committed to supporting it forever. (Changing it would break a lot of
@@ -53,7 +53,7 @@ past.) More importantly, this hack doesn't help at all on other
 operating systems that use yet other path separators and different path
 syntax. VMS paths are utterly different, for instance - the VMS
 equivalent of our example here would be
-<span class="code">\[.IMAGES\]PIC.JPG</span>. When you take into account
+`\[.IMAGES\]PIC.JPG`. When you take into account
 all of the OSes in use, there's simply no way to write a native filename
 path as a string that will work everywhere.
 
@@ -79,14 +79,14 @@ valid. When you use a FileName to open a file, create a directory, etc.,
 though, the name will obviously be validated at that point.
 
 When using the FileName class, you should \#include either
-<span class="code">file.h</span> or <span class="code">filename.h</span>
+`file.h` or `filename.h`
 in your source files. You should also add
-<span class="code">file.t</span> (from the system library) to your
+`file.t` (from the system library) to your
 build.
 
 ## Construction
 
-<span class="code">new FileName()</span>
+`new FileName()`
 
 <div class="fdef">
 
@@ -95,7 +95,7 @@ equivalent of "." on Unix or Windows.
 
 </div>
 
-<span class="code">new FileName(*str*)</span>
+`new FileName(*str*)`
 
 <div class="fdef">
 
@@ -112,7 +112,7 @@ conventions.
 
 </div>
 
-<span class="code">new FileName(*path*, *name*)</span>
+`new FileName(*path*, *name*)`
 
 <div class="fdef">
 
@@ -121,11 +121,11 @@ operating system's syntax, or FileName objects. This combines the two
 elements into a single filename path: *path* is treated as a directory
 path location, and *name* is a file in that location. For example, if
 you want to construct a path to a file called
-<span class="code">pic.jpg</span> in a subfolder called
-<span class="code">images</span>, you could write <span class="code">new
-FileName('images', 'pic.jpg')</span>. This solves the exact problem we
+`pic.jpg` in a subfolder called
+`images`, you could write `new
+FileName('images', 'pic.jpg')`. This solves the exact problem we
 mentioned earlier about how you write a directory-path name like
-<span class="code">'images/pic.jpg'</span> portably.
+`'images/pic.jpg'` portably.
 
 </div>
 
@@ -134,23 +134,23 @@ a FileName from a hard-coded string in universal syntax.
 
 ## Operators
 
-*FileName* <span class="code">+</span> *string* yields a new FileName
+*FileName* `+` *string* yields a new FileName
 object combining the directory path given by the FileName object with
 the file name given by the string. This uses the correct local syntax to
 combine the path elements, so this provides an easy way to build path
 names from subdirectory components.
 
-For example, <span class="code">new FileName('images') +
-'pic.jpg'</span> yields a FileName object representing
-<span class="code">images/pic.jpg</span> when running on Unix,
-<span class="code">images\\pic.jpg</span> on Windows, etc.
+For example, `new FileName('images') +
+'pic.jpg'` yields a FileName object representing
+`images/pic.jpg` when running on Unix,
+`images\\pic.jpg` on Windows, etc.
 
-*FileName* <span class="code">+</span> *FileName* yields a combined
+*FileName* `+` *FileName* yields a combined
 directory path for the two elements, just like adding a string to a
 FileName object.
 
-Comparing two FileName objects with <span class="code">==</span> or
-<span class="code">!=</span>, or comparing a FileName to a string,
+Comparing two FileName objects with `==` or
+`!=`, or comparing a FileName to a string,
 compares the names using the local file system naming rules. This is
 almost the same as comparing the name strings directly, but it ignores
 meaningless syntax differences between the two names (for example, it
@@ -191,7 +191,7 @@ the game creates for its own use.
 
 <span id="addToPath"></span>
 
-<span class="code">addToPath(*element*)</span>
+`addToPath(*element*)`
 
 <div class="fdef">
 
@@ -200,33 +200,33 @@ new FileName object with the combined path. *element* can be either
 another FileName object or a string using the local file system syntax.
 This method uses the correct local file system syntax to combine the
 path elements. Note that this has the same effect as
-<span class="code">self</span> <span class="code">+</span> *element*.
+`self` `+` *element*.
 
 </div>
 
 <span id="createDirectory"></span>
 
-<span class="code">createDirectory(*createParents*?)</span>
+`createDirectory(*createParents*?)`
 
 <div class="fdef">
 
 Creates a directory, using the name given by this object.
 
 If *createParents* is specified, it must be
-<span class="code">true</span> or <span class="code">nil</span>; this
+`true` or `nil`; this
 indicates whether or not the method should create any missing
 intermediate directories in the path, if the path has multiple elements.
 For example, suppose we're running on Unix, and the FileName object
 represents path '/a/b/c', and the directory '/a' currently exists but
 doesn't have a subdirectory 'b'; in this case, the function creates
 '/a/b' first if *createParents* is true. If *createParents* is omitted
-or <span class="code">nil</span> in this case, the function will
+or `nil` in this case, the function will
 typically fail, since most systems don't allow creating '/a/b/c' if
 '/a/b' doesn't exist. (This rule is enforced by the operating system,
 though, not by the createDirectory() method. If the underlying OS
 creates the intermediate directories automatically, then this method
 will also do so even when *createParents* is
-<span class="code">nil</span>.)
+`nil`.)
 
 This function throws an error if the directory creation fails. The file
 safety settings must allow write access to the directory containing the
@@ -236,7 +236,7 @@ new subdirectory.
 
 <span id="deleteFile"></span>
 
-<span class="code">deleteFile()</span>
+`deleteFile()`
 
 <div class="fdef">
 
@@ -251,7 +251,7 @@ file safety exception is thrown.
 
 <span id="forEachFile"></span>
 
-<span class="code">forEachFile(*func*, *recursive*?)</span>
+`forEachFile(*func*, *recursive*?)`
 
 <div class="fdef">
 
@@ -260,10 +260,10 @@ callback function *func* for each file. *func* is invoked as
 *func*(*filename*), where *filename* is a FileName object giving the
 name a file in the directory.
 
-If *recursive* is <span class="code">true</span>, the function
+If *recursive* is `true`, the function
 recursively scans the contents of each subdirectory of the original
 directory, along with any subdirectories of the subdirectories, and so
-on. If *recursive* is <span class="code">nil</span> or is omitted, only
+on. If *recursive* is `nil` or is omitted, only
 the direct contents of the named directory are scanned.
 
 This method is similar to [lisDir()](#listDir), but is more convenient
@@ -275,7 +275,7 @@ operation per file rather than compiling a list of files.
 
 <span id="fromUniversal"></span>
 
-<span class="code">fromUniversal(*path*)</span>
+`fromUniversal(*path*)`
 
 <div class="fdef">
 
@@ -287,18 +287,16 @@ representing that local path.
 
 The universal syntax is similar to Unix-style path notation, with
 forward slashes ("/") separating path elements. For example,
-<span class="code">'files/data/stats.txt'</span> refers to a file named
-<span class="code">stats.txt</span> within a folder
-<span class="code">data</span> within a parent folder
-<span class="code">files</span> within the working directory.
+`'files/data/stats.txt'` refers to a file named
+`stats.txt` within a folder
+`data` within a parent folder
+`files` within the working directory.
 
 This is a static method that you call on the FileName object itself:
 
-<div class="code">
-
+```
     local name = FileName.fromUniversal('files/data/stat.txt');
-
-</div>
+```
 
 This method doesn't open the file or check its validity, so you can use
 it with files and paths that don't exist on the local machine.
@@ -315,7 +313,7 @@ local OS syntax.
 
 <span id="getAbsolutePath"></span>
 
-<span class="code">getAbsolutePath()</span>
+`getAbsolutePath()`
 
 <div class="fdef">
 
@@ -333,13 +331,13 @@ format.
 
 On some systems, it might not be possible to convert every path to
 absolute format. If the path can't be converted, this returns
-<span class="code">nil</span>.
+`nil`.
 
 </div>
 
 <span id="getFileInfo"></span>
 
-<span class="code">getFileInfo(*asLink*?)</span>
+`getFileInfo(*asLink*?)`
 
 <div class="fdef">
 
@@ -348,7 +346,7 @@ if so retrieves its file system metadata, including its size, type, and
 timestamps. If the file exists, the function returns a FileInfo object
 with the metadata; if the file doesn't exist or can't be accessed due to
 operating system-level permissions or another OS error, the return value
-is <span class="code">nil</span>.
+is `nil`.
 
 The optional *asLink* flag specifies the behavior if the named file is a
 symbolic link, which is a special type of file supported on some
@@ -361,9 +359,9 @@ forth, so in some cases it's useful to be able to retrieve information
 on the link itself instead of the target file. For example, when listing
 a directory containing links, the unresolved links are included in the
 listing, not the target files. That's where *asLink* comes in. If it's
-<span class="code">true</span>, the return value from getFileInfo()
+`true`, the return value from getFileInfo()
 describes the link file itself; if *asLink* is omitted or
-<span class="code">nil</span>, the return value describes the target of
+`nil`, the return value describes the target of
 the link. Any additional links are resolved as well in this case: if
 this file is a link that points to another link which points to third
 link, etc., the function keeps following those links until it reaches a
@@ -375,20 +373,20 @@ ordinary files on most systems that support them, so *asLink* usually
 has no effect if the named file is a hard link.
 
 The FileInfo object is defined in the system library file
-<span class="code">file.t</span>, which you should include in your build
+`file.t`, which you should include in your build
 if you use this function. FileInfo has the following properties:
 
-- <span class="code">fileType</span> - an integer giving the type of the
-  file, as a combination of <span class="code">FileTypeXxx</span> bit
+- `fileType` - an integer giving the type of the
+  file, as a combination of `FileTypeXxx` bit
   flags. This is the same value returned by
   [getFileType()](#getFileType).
-- <span class="code">fileAttrs</span> - an integer giving the attributes
-  of the file, as a combination of <span class="code">FileAttrXxx</span>
+- `fileAttrs` - an integer giving the attributes
+  of the file, as a combination of `FileAttrXxx`
   bit flags. Test for the presence of an attribute using the
-  <span class="code">&</span> operator (e.g., <span class="code">if
-  ((info.fileAttrs & FileAttrHidden) != 0)</span>). The attribute flags
+  `&` operator (e.g., `if
+  ((info.fileAttrs & FileAttrHidden) != 0)`). The attribute flags
   are:
-  - <span class="code">FileAttrHidden</span> - the file is marked as
+  - `FileAttrHidden` - the file is marked as
     hidden. Some systems use a naming convention to indicate that a file
     is hidden (e.g., the "." prefix on Unix); others (such as Windows)
     use special attribute flags in the file system. Not all systems have
@@ -417,7 +415,7 @@ if you use this function. FileInfo has the following properties:
     not. It's up to you to filter out hidden files, if appropriate, when
     displaying the results to the user.
 
-  - <span class="code">FileAttrSystem</span> - the file is marked as a
+  - `FileAttrSystem` - the file is marked as a
     "system" file. This is primarily a DOS/Windows concept; this flag
     will never appear in a file's attributes on most other systems. The
     purpose of the "system" flag is to mark a file as belonging to the
@@ -431,7 +429,7 @@ if you use this function. FileInfo has the following properties:
     them, since users might be accustomed to seeing the two distinct
     attributes.
 
-  - <span class="code">FileAttrRead</span> - the program has read access
+  - `FileAttrRead` - the program has read access
     to the file, as determined by operating system permissions. This
     attribute only reflects the permission settings for the file; it
     doesn't guarantee that a given attempt to read the file will
@@ -439,7 +437,7 @@ if you use this function. FileInfo has the following properties:
     interfere, such as physical media errors or locking by another
     process.
 
-  - <span class="code">FileAttrWrite</span> - the program has write
+  - `FileAttrWrite` - the program has write
     access to the file, as determined by operating system permissions.
     On systems where files can be marked as read-only (e.g., DOS or
     Windows) separately from permissions settings, this attribute also
@@ -448,41 +446,41 @@ if you use this function. FileInfo has the following properties:
     will succeed, since conditions at the time of the write attempt
     could interfere, such as insufficient disk space, physical media
     errors, or locking by another process.
-- <span class="code">isDir</span> - <span class="code">true</span> if
-  this is a directory/folder, <span class="code">nil</span> if not. This
-  is the same information as the <span class="code">FileTypeDir</span>
-  bit in the <span class="code">fileType</span> property, but FileInfo
+- `isDir` - `true` if
+  this is a directory/folder, `nil` if not. This
+  is the same information as the `FileTypeDir`
+  bit in the `fileType` property, but FileInfo
   breaks it out as a separate property for convenience, since this is an
   especially common attribute to test for.
-- <span class="code">specialLink</span> - this duplicates the
-  <span class="code">FileTypeSelfLink</span> and
-  <span class="code">FileTypeParentLink</span> flags from the
-  <span class="code">fileType</span> property. This is for convenience:
+- `specialLink` - this duplicates the
+  `FileTypeSelfLink` and
+  `FileTypeParentLink` flags from the
+  `fileType` property. This is for convenience:
   you can test if a file represents "." or ".." (or the local system's
-  equivalent) simply by comparing <span class="code">specialLink</span>
-  to zero. If <span class="code">specialLink</span> is non-zero, the
+  equivalent) simply by comparing `specialLink`
+  to zero. If `specialLink` is non-zero, the
   file is one of these special links.
-- <span class="code">fileSize</span> - an integer value giving the size
+- `fileSize` - an integer value giving the size
   in bytes of the file. If the value is too big for the 32-bit integer
-  type, <span class="code">fileSize</span> will be a BigNumber value.
+  type, `fileSize` will be a BigNumber value.
   The size is usually meaningful only for ordinary files (those with
-  type <span class="code">FileTypeFile</span>).
-- <span class="code">fileCreateTime</span> - the file's creation time,
+  type `FileTypeFile`).
+- `fileCreateTime` - the file's creation time,
   as a [Date](date.html) object. If the operating system doesn't record a
-  file's creation time, this is <span class="code">nil</span>.
-- <span class="code">fileModifyTime</span> - the time of the file's last
+  file's creation time, this is `nil`.
+- `fileModifyTime` - the time of the file's last
   modification, as a [Date](date.html) object. If the OS doesn't record
-  the modification time, this is <span class="code">nil</span>.
-- <span class="code">fileAccessTime</span> - the time of the last access
+  the modification time, this is `nil`.
+- `fileAccessTime` - the time of the last access
   to the file, as a [Date](date.html) object. (The access time records
   when the file was last accessed, whether or not it was modified at
   that time, whereas the modification time is only updated when the
   contents of the file are changed.) If the OS doesn't record the access
-  time, this is <span class="code">nil</span>.
+  time, this is `nil`.
 
 Some operating systems don't record all three timestamps. If a given
 timestamp isn't available on the local system, it'll be set to
-<span class="code">nil</span>. Nearly all systems minimally keep track
+`nil`. Nearly all systems minimally keep track
 of the modification time. Unix-like and Windows systems keep all three,
 when the standard file systems are used (although the FAT32 file system
 on windows only records the access time to the nearest day, so files on
@@ -504,7 +502,7 @@ other operations, the parent folders are considered outside the sandbox.
 
 <span id="getFileType"></span>
 
-<span class="code">getFileType(*asLink*?)</span>
+`getFileType(*asLink*?)`
 
 <div class="fdef">
 
@@ -513,45 +511,45 @@ determines its type. If the file exists, the return value is an integer
 giving the file type, as a combination of the FileTypeXxx flags below.
 If the file doesn't exist, or it can't be accessed due to file system
 permissions or some other OS error, the return value is
-<span class="code">nil</span>.
+`nil`.
 
-- <span class="code">FileTypeFile</span> - an ordinary file (such as a
+- `FileTypeFile` - an ordinary file (such as a
   disk file)
-- <span class="code">FileTypeDir</span> - a directory (folder)
-- <span class="code">FileTypeChar</span> - a character-mode device,
+- `FileTypeDir` - a directory (folder)
+- `FileTypeChar` - a character-mode device,
   known as a character special file on Unix-like systms. This represents
   an input/output device that works in terms of a character stream, such
   as a console or printer.
-- <span class="code">FileTypeBlock</span> - a block-mode device, known
+- `FileTypeBlock` - a block-mode device, known
   as a block special file on Unix-like systems. This provides low-level
   access to a hard disk, CD-ROM, etc. at the sector level, bypassing any
   file system structure on the device. (Disk devices that also have file
   systems aren't normally accessible in this mode except under special
   conditions or with special privileges, since bypassing the file system
   can corrupt the file layout.)
-- <span class="code">FileTypePipe</span> - a pipe or similar
+- `FileTypePipe` - a pipe or similar
   interprocess communications channel (e.g., a Unix FIFO)
-- <span class="code">FileTypeSocket</span> - a network socket
-- <span class="code">FileTypeLink</span> - a symbolic link (a file that
+- `FileTypeSocket` - a network socket
+- `FileTypeLink` - a symbolic link (a file that
   acts as a proxy or pointer to another file or directory; when the link
   file is opened, read, written, etc., the file system normally accesses
   the target of the link, transparently to the caller)
-- <span class="code">FileTypeSelfLink</span> - a special system-defined
+- `FileTypeSelfLink` - a special system-defined
   directory link to self (e.g., "." on Unix or Windows)
-- <span class="code">FileTypeParentLink</span> - a special
+- `FileTypeParentLink` - a special
   system-defined link to the parent directory (e.g., ".." on Unix or
   Windows)
 
 The type codes are bit flags, so more than one can apply to a given
-file; use the <span class="code">&</span> operator to check if a
+file; use the `&` operator to check if a
 particular flag is set. For example, to check if a given filename refers
-to a directory, use <span class="code">(f.getFileType() & FileTypeDir)
-!= 0</span>.
+to a directory, use `(f.getFileType() & FileTypeDir)
+!= 0`.
 
 *asLink* has the same meaning as in [getFileInfo](#getFileInfo).
 
 Note that a return value of zero has a different meaning than
-<span class="code">nil</span>. <span class="code">nil</span> means that
+`nil`. `nil` means that
 the file doesn't exist; 0 means that the file exists, but that it's a
 type of object that doesn't fit any of the FileTypeXxx flags. (This
 shouldn't happen on current versions of Windows, Mac OS, or Unix-like
@@ -563,7 +561,7 @@ categories, though, and more exotic platforms might already have some.)
 
 <span id="getName"></span>
 
-<span class="code">getName()</span>
+`getName()`
 
 <div class="fdef">
 
@@ -575,16 +573,16 @@ created from a relative path, or an absolute path if the FileName was
 created from an absolute path.
 
 The result is the same string returned from
-<span class="code">toString(self)</span>, and is the same same text used
+`toString(self)`, and is the same same text used
 if the FileName is implicitly converted to a string, such as if you
-display the FileName via <span class="code">"\<\< \>\>"</span> string
+display the FileName via `"\<\< \>\>"` string
 embedding.
 
 </div>
 
 <span id="getPath"></span>
 
-<span class="code">getPath()</span>
+`getPath()`
 
 <div class="fdef">
 
@@ -593,20 +591,20 @@ represented by this FileName object. This separates the FileName into a
 directory location portion and a file name portion, and returns just the
 directory location. In a Unix-style name, this is the path with its last
 element removed - for example, for
-<span class="code">'data/images/pic.jpg'</span>, this method returns
-<span class="code">'data/images'</span>.
+`'data/images/pic.jpg'`, this method returns
+`'data/images'`.
 
 This method works purely in terms of the path string stored in the
 FileName object. It doesn't look anything up in the host file system.
 For example, if the FileName represents
-<span class="code">'pic.jpg'</span>, this method simply returns an empty
+`'pic.jpg'`, this method simply returns an empty
 string, since the stored name doesn't have a directory path portion.
 
 </div>
 
 <span id="getRootDirs"></span>
 
-<span class="code">getRootDirs()</span>
+`getRootDirs()`
 
 <div class="fdef">
 
@@ -619,11 +617,9 @@ listing the directory contents.
 
 This is a static method, so you call it on the FileName class itself:
 
-<div class="code">
-
+```
     local roots = FileName.getRootDirs();
-
-</div>
+```
 
 Most Unix-like systems only have one root directory, usually called "/".
 Many other systems have a separate root directory for each volume or
@@ -636,7 +632,7 @@ an empty list; this is the case for the network storage server.
 
 <span id="getBaseName"></span>
 
-<span class="code">getBaseName()</span>
+`getBaseName()`
 
 <div class="fdef">
 
@@ -645,8 +641,8 @@ by this FileName object. This separates the FileName into a directory
 location portion and a file name portion, and returns just the file
 name. In a Unix-style path, this is the last element of a path, giving
 the name of the file stripped of its directory location. For example,
-for <span class="code">'data/images/pic.jpg'</span>, the base name is
-<span class="code">'pic.jpg'</span>. Other systems use different syntax;
+for `'data/images/pic.jpg'`, the base name is
+`'pic.jpg'`. Other systems use different syntax;
 this method parses the name according to the local syntax on the host
 machine at run-time.
 
@@ -654,13 +650,13 @@ machine at run-time.
 
 <span id="isAbsolute"></span>
 
-<span class="code">isAbsolute()</span>
+`isAbsolute()`
 
 <div class="fdef">
 
 Determines if the filename that the object represents is an absolute
-path on the local system; returns <span class="code">true</span> if so,
-<span class="code">nil</span> if not. An absolute path is one that
+path on the local system; returns `true` if so,
+`nil` if not. An absolute path is one that
 contains a root folder specification, such as a Unix path starting with
 "/", or a Windows path starting with "C:\\. Such a path can't be added
 to another "base" path, since it already fully specifies a location. The
@@ -677,7 +673,7 @@ directory or similar context, which varies by operating system.
 
 <span id="listDir"></span>
 
-<span class="code">listDir()</span>
+`listDir()`
 
 <div class="fdef">
 
@@ -702,10 +698,10 @@ special files in the results that represent relative links to the listed
 directory and its parent. On Windows and Unix, these are called "." and
 "..", respectively - but other systems use different names, so don't
 just compare the name. Instead, use [getFileType()](#getFileInfo), and
-check the <span class="code">FileTypeSelfLink</span> and
-<span class="code">FileTypeParentLink</span> flags (or use
+check the `FileTypeSelfLink` and
+`FileTypeParentLink` flags (or use
 [getFileInfo()](#getFileInfo), and check the
-<span class="code">specialLink</span> property of the returned FileInfo
+`specialLink` property of the returned FileInfo
 object).
 
 Here's an example that lists the contents of a directory, recursively
@@ -715,8 +711,7 @@ out the special "." and ".." links to avoid infinite recursion. This
 function expects *dir* to be a FileName object naming the directory to
 list.
 
-<div class="code">
-
+```
     listDir(dir, level = 0)
     {
        for (local file in dir.listDir())
@@ -727,8 +722,7 @@ list.
              listDir(file, level + 1);
        }
     }
-
-</div>
+```
 
 This function is similar to [forEachFile()](#forEachFile), but is more
 convenient if you need a list of results, such as for sorting.
@@ -736,34 +730,34 @@ forEachFile() is better when you only need to perform an operation per
 file rather than compiling a list, and it's also more convenient for
 recursive scans since it can do those automatically.
 
-Note that <span class="code">listDir()</span> does **not** filter out
+Note that `listDir()` does **not** filter out
 files marked with the "hidden" or "system" attributes (see the
 [getFileInfo()](#getFileInfo) method and the
-<span class="code">fileAttrs</span> property of the
-<span class="code">FileInfo</span> object). Those attributes are only
+`fileAttrs` property of the
+`FileInfo` object). Those attributes are only
 meant to affect the way a directory listing is presented to a user,
 whereas listDir() is designed to be used for more general file
 management purposes where you might need the full file list including
 hidden and system files. When you use listDir() to get a list of files
 to display to the user, you should filter the list yourself to remove
 hidden and system files, if desired, by checking each file's attributes
-via <span class="code">getFileInfo()</span>.
+via `getFileInfo()`.
 
 </div>
 
 <span id="removeDirectory"></span>
 
-<span class="code">removeDirectory(*deleteContents*?)</span>
+`removeDirectory(*deleteContents*?)`
 
 <div class="fdef">
 
 Deletes the directory named by this object.
 
 If *removeContents* is specified, it must be
-<span class="code">true</span> or <span class="code">nil</span>. This
+`true` or `nil`. This
 indicates whether or not the routine should delete the contents of the
 directory before removing the directory itself. If this is
-<span class="code">true</span>, the function attempts to delete any
+`true`, the function attempts to delete any
 files and subdirectories in the directory (recursively deleting
 subdirectory contents) before deleting the directory itself. If any file
 within the directory can't be deleted, the method throws an error; if
@@ -771,9 +765,9 @@ this happens, the directory's contents might be partially deleted, since
 some files might already have been successfully deleted before the error
 was encountered.
 
-If *removeContents* is omitted or is <span class="code">nil</span>, and
+If *removeContents* is omitted or is `nil`, and
 the directory isn't already empty, the routine returns
-<span class="code">nil</span> (indicating failure) without deleting
+`nil` (indicating failure) without deleting
 anything. (Special system files that are always present in a directory,
 such as "." and ".." on Unix, don't count when determining if the
 directory is empty.) This is the default, since it helps avoid
@@ -789,7 +783,7 @@ the directory to be deleted.
 
 <span id="renameFile"></span>
 
-<span class="code">renameFile(*newname*)</span>
+`renameFile(*newname*)`
 
 <div class="fdef">
 
@@ -814,7 +808,7 @@ directory where you wouldn't have access to the relocated file).
 
 <span id="toUniversal"></span>
 
-<span class="code">toUniversal()</span>
+`toUniversal()`
 
 <div class="fdef">
 

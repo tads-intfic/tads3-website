@@ -27,12 +27,10 @@ really a subclass of intrinsic class TadsObject.
 
 For example:
 
-<div class="code">
-
+```
     class Item: object;
     myObj: object;
-
-</div>
+```
 
 Both Item and myObj are of intrinsic class TadsObject.
 
@@ -43,7 +41,7 @@ the methods that Object defines are inherited by TadsObject instances as
 well. In addition to the Object methods, TadsObject provides its own
 methods, described below.
 
-<span class="code">createClone()</span>
+`createClone()`
 
 <div class="fdef">
 
@@ -63,7 +61,7 @@ Vector.
 
 </div>
 
-<span class="code">createInstance(...)</span>
+`createInstance(...)`
 
 <div class="fdef">
 
@@ -79,11 +77,10 @@ parameterized "new" operator. For example, suppose we had a base class,
 Coin, which you subclass into several types: GoldCoin, SilverCoin,
 CopperCoin. For each of these classes, you want to provide a method that
 creates a new instance of that kind of coin. Using the
-<span class="code">new</span> operator, you'd have to write a separate
+`new` operator, you'd have to write a separate
 method in each subclass:
 
-<div class="code">
-
+```
     class Coin: object;
     class GoldCoin: Coin
       createCoin() { return new GoldCoin(); }
@@ -94,50 +91,45 @@ method in each subclass:
     class CopperCoin: Coin
       createCoin() { return new CopperCoin(); }
     ;
-
-</div>
+```
 
 This gets increasingly tedious as we add new subclasses. What we'd
 really like to do is something like this:
 
-<div class="code">
-
+```
     class Coin: object
       createCoin() { return new self(); } // illegal!
     ;
-
-</div>
+```
 
 This would let all the subclasses inherit this one implementation, which
 would create the appropriate kind of object depending on the subclass on
 which the method was invoked. We can't write exactly this code, though,
-because the <span class="code">new</span> operator doesn't allow a
-variable like <span class="code">self</span> to be used as its argument.
+because the `new` operator doesn't allow a
+variable like `self` to be used as its argument.
 
-So, it's <span class="code">createInstance()</span> to the rescue. This
+So, it's `createInstance()` to the rescue. This
 method lets us do exactly what we'd like: create an instance of the
 current class, writing the code only once in the base class. Using
-<span class="code">createInstance(),</span> we can rewrite the method to
+`createInstance(),` we can rewrite the method to
 get the effect we want:
 
-<div class="code">
-
+```
     class Coin: object
       createCoin() { return createInstance(); }
     ;
+```
 
 </div>
 
-</div>
-
-<span class="code">createInstanceOf(...)</span>
+`createInstanceOf(...)`
 
 <div class="fdef">
 
 Creates a new instance based on multiple superclasses. This is a static
 (class-level) method, so you can call it directly on TadsObject. With no
 arguments, this simply creates a basic TadsObject instance; this is
-equivalent to the <span class="code">createInstance()</span> method.
+equivalent to the `createInstance()` method.
 
 The arguments give the superclasses, in "dominance" order. The
 superclasses appear in the argument list in the same order in which
@@ -151,8 +143,7 @@ invoked at all.
 
 For example, suppose we had the following class definitions:
 
-<div class="code">
-
+```
     class A: object
       construct(a, b) { ... }
     ;
@@ -173,22 +164,19 @@ For example, suppose we had the following class definitions:
 
       }
     ;
-
-</div>
+```
 
 Now, suppose that we had never actually defined class D, but we want to
 create an instance dynamically as though it class D had been defined. We
 could obtain this effect like so:
 
-<div class="code">
-
+```
     local d = TadsObject.createInstanceOf([A, x, y], B, [C]);
-
-</div>
+```
 
 This creates a new instance with superclasses A, B, and C, in that
 dominance order. During construction of the new object, we will inherit
-A's constructor, passing <span class="code">(x,y)</span> as arguments,
+A's constructor, passing `(x,y)` as arguments,
 and we'll inherit C's constructor with no arguments. Note that we pass a
 list containing C alone; this indicates that we do want to call the
 constructor, since the argument is passed as a list rather than as
@@ -201,73 +189,73 @@ the same order in which they appear in the superclass list.
 
 </div>
 
-<span class="code">createTransientInstance(...)</span>
+`createTransientInstance(...)`
 
 <div class="fdef">
 
-This works like <span class="code">createInstance()</span>, except that
+This works like `createInstance()`, except that
 the new instance is transient.
 
 </div>
 
-<span class="code">createTransientInstanceOf(...)</span>
+`createTransientInstanceOf(...)`
 
 <div class="fdef">
 
-This works like <span class="code">createInstanceOf()</span>, except
+This works like `createInstanceOf()`, except
 that the new instance is transient.
 
 </div>
 
-<span class="code">getMethod(*prop*)</span>
+`getMethod(*prop*)`
 
 <div class="fdef">
 
 Gets a function pointer to one of the object's methods. *prop* is a
 property pointer value giving the property of the object to retrieve. If
-this property contains a method, <span class="code">getMethod()</span>
+this property contains a method, `getMethod()`
 returns a function pointer to the method's code. If the property
 contains a self-printing string, the return value is an ordinary string
 value with the text of the printed string. If the property is any other
 type of data, or is undefined, the result is
-<span class="code">nil</span>.
+`nil`.
 
 Note that a double-quoted string that contains embedded ("interpolated")
-expressions with <span class="code">\<\< \>\></span> is really a
+expressions with `\<\< \>\>` is really a
 function. This means that if you call
-<span class="code">getMethod()</span> on a property containing a string
+`getMethod()` on a property containing a string
 with embedded expressions, you'll get back a function pointer result
 rather than a string expression.
 
 When the returned value is a function, it can be called like an ordinary
 function. You wouldn't normally do this, though, because the call would
-have a <span class="code">nil</span> value for
-<span class="code">self</span>, which means that the method would
+have a `nil` value for
+`self`, which means that the method would
 trigger a run-time error if it tried to access any properties or other
-methods of <span class="code">self</span>. Instead, the main use for the
+methods of `self`. Instead, the main use for the
 returned function pointer would be to assign the function as a different
 method of the same object, or as a method of another object, using
-<span class="code">setMethod()</span>.
+`setMethod()`.
 
-Note that <span class="code">getMethod()</span> can also return an
+Note that `getMethod()` can also return an
 anonymous function object. Methods originally defined in the source code
 will always be returned as regular function pointers (of type
 TypeFuncPtr). An anonymous function will be returned only for a method
 that was explicitly set to an anonymous functions via
-<span class="code">setMethod()</span>. In this case, the same anonymous
-function object that was passed to <span class="code">setMethod()</span>
-will be returned from <span class="code">getMethod()</span>.
+`setMethod()`. In this case, the same anonymous
+function object that was passed to `setMethod()`
+will be returned from `getMethod()`.
 
 (Ordinary methods are also "anonymous" functions in that they're not
 named. But these aren't what we normally call anonymous function
 objects, which are the type of object created with the
-<span class="code">function</span> syntax.)
+`function` syntax.)
 
 </div>
 
 <span id="setMethod"></span>
 
-<span class="code">setMethod(*prop*, *func*)</span>
+`setMethod(*prop*, *func*)`
 
 <div class="fdef">
 
@@ -296,21 +284,20 @@ data value for this property will be replaced with the new function.
   the property, as though it had been initially defined as a
   double-quoted string property of the object.
 - Any value retrieved by a call to
-  <span class="code">getMethod()</span>, on this object or any other
+  `getMethod()`, on this object or any other
   object.
 
 After calling this method, invoking *prop* on this object will result in
 calling the function *func* as though it had always been a method of the
-object. <span class="code">self</span> will be set, and the method can
-use <span class="code">inherited</span> to inherit from this object's
+object. `self` will be set, and the method can
+use `inherited` to inherit from this object's
 class structure.
 
 It's important to note how the naming works. The new method is callable
 under the name *prop* - **not** under the name of the function that was
 used to create it. For example:
 
-<div class="code">
-
+```
     method foo(x) { return x*x; }
     obj: object;
 
@@ -319,37 +306,36 @@ used to create it. For example:
       obj.setMethod(&square, foo);
       local x = obj.square(10);
     }
+```
 
-</div>
-
-The name of the new method is <span class="code">square</span>, *not*
-<span class="code">foo</span>. <span class="code">foo</span> is still
+The name of the new method is `square`, *not*
+`foo`. `foo` is still
 just a floating method; the new, full-fledged method is established
 under the property name, not the function name.
 
-The method relationship created by <span class="code">setMethod()</span>
+The method relationship created by `setMethod()`
 is non-exclusive. You're free to use
-<span class="code">setMethod()</span> to assign the same function
+`setMethod()` to assign the same function
 pointer (or other value) as a method of multiple objects at once. The
 value doesn't lose its regular meaning, either: as we said above, if you
-supply a function pointer to <span class="code">setMethod()</span>, you
+supply a function pointer to `setMethod()`, you
 can still call the same function as an ordinary function, too.
 
 Note that when you define an ordinary function, the compiler doesn't let
-you refer to <span class="code">self</span> or any other method context
-variables (such as <span class="code">targetprop</span> or
-<span class="code">definingobj</span>) within the function body, since
+you refer to `self` or any other method context
+variables (such as `targetprop` or
+`definingobj`) within the function body, since
 these variables normally aren't valid in a function. This also means
 that you can't define a function that uses
-<span class="code">inherited</span> or
-<span class="code">delegated</span>. There are two ways of dealing with
+`inherited` or
+`delegated`. There are two ways of dealing with
 this:
 
 - First, you can define a method of one object, and "move" it to a
-  different object: use <span class="code">getMethod()</span> to
+  different object: use `getMethod()` to
   retrieve the method information from the original object, and pass the
-  result to <span class="code">setMethod()</span> to add the method to
-  the other object. <span class="code">self</span> and the other method
+  result to `setMethod()` to add the method to
+  the other object. `self` and the other method
   context variables are dynamic, so they'll automatically reflect the
   new object context when you call the moved version of the method.
   (This doesn't really move the method; it really just copies it. You
@@ -357,24 +343,23 @@ this:
   reflect its original context.) This is a good approach when you need
   the same method functionality in an ordinary object anyway, since you
   can simply copy it as needed to new objects.
-- Second, you can use the <span class="code">method</span> syntax to
+- Second, you can use the `method` syntax to
   define a [floating method](proccode.html#floatingMethods), which is
   really just an ordinary function that *does* have access to
-  <span class="code">self</span>, <span class="code">targetprop</span>,
-  and the others, and that can use <span class="code">inherited</span>
-  and <span class="code">delegated</span>. This is a good approach when
+  `self`, `targetprop`,
+  and the others, and that can use `inherited`
+  and `delegated`. This is a good approach when
   the function's only purpose is to be plugged into objects via
-  <span class="code">setMethod()</span>, since it avoids creating a
+  `setMethod()`, since it avoids creating a
   dummy template object just to define a method.
 
 When you use an anonymous function with
-<span class="code">setMethod()</span>, you should keep in mind that
-<span class="code">self</span> and the other method context variables
+`setMethod()`, you should keep in mind that
+`self` and the other method context variables
 are shared with the scope where the function was defined. Consider this
 example:
 
-<div class="code">
-
+```
     obj1: object
        init()
        {
@@ -390,34 +375,33 @@ example:
         obj1.init();
         obj2.a(100);
     }
+```
 
-</div>
-
-Here we've set up a new method for <span class="code">obj2</span>, named
-<span class="code">a</span>. We then invoke the new method. The question
-is: what's the value of <span class="code">obj2.prop</span> when we're
+Here we've set up a new method for `obj2`, named
+`a`. We then invoke the new method. The question
+is: what's the value of `obj2.prop` when we're
 done? At first glance you might think it should be 100, since the newly
-created method sets <span class="code">self.prop</span> to the argument
-value, and the new method is part of <span class="code">obj2</span>,
-ergo we must be setting <span class="code">obj2.prop</span> to 100. But
+created method sets `self.prop` to the argument
+value, and the new method is part of `obj2`,
+ergo we must be setting `obj2.prop` to 100. But
 that's not what happens: the value of
-<span class="code">obj2.prop</span> is <span class="code">nil</span>
+`obj2.prop` is `nil`
 when we're done.
 
 The reason is the little detail we mentioned about how an anonymous
 function shares its method context with its lexically enclosing scope.
 Because the anonymous function was created within the confines of
-<span class="code">obj1.init</span>, the <span class="code">self</span>
+`obj1.init`, the `self`
 in effect at the moment of the function's creation was
-<span class="code">obj1</span>. And this is the
-<span class="code">self</span> that the function will use forever, no
+`obj1`. And this is the
+`self` that the function will use forever, no
 matter how many times it's invoked. It's in the nature of an anonymous
 function: it shares everything with its lexically enclosing scope,
-including <span class="code">self</span>.
+including `self`.
 
 In this example, though, that's not the effect we're after. We'd like
 instead to create a method that assigns a value to the property
-<span class="code">prop</span> of whatever object we attach the method
+`prop` of whatever object we attach the method
 to. In other words, we want to create a real live method, not a function
 that's stuck to someone else's method context.
 
@@ -425,21 +409,19 @@ The way to do this is to replace the anonymous function with an
 anonymous method. An anonymous method *isn't* stuck to the method
 context that was in effect when it was created, but instead uses the
 live context whenever it's called. This is an easy change to make: we
-just need to use the <span class="code">method</span> syntax to define
+just need to use the `method` syntax to define
 the anonymous method.
 
-<div class="code">
-
+```
     obj2.setMethod(&a, method(x) { self.prop = x; });
-
-</div>
+```
 
 With this change, running the program will indeed set
-<span class="code">obj2.prop</span> to 100.
+`obj2.prop` to 100.
 
 </div>
 
-<span class="code">setSuperclassList(*lst*)</span>
+`setSuperclassList(*lst*)`
 
 <div class="fdef">
 
@@ -448,7 +430,7 @@ list (or [list-like object](opoverload.html#listlike)) containing
 objects. The object's superclass list is replaced with the given
 superclass list. The objects in *lst* must all be TadsObject objects,
 with one exception: lst is allowed to be
-<span class="code">\[TadsObject\]</span> (that is, a single-element list
+`\[TadsObject\]` (that is, a single-element list
 containing the TadsObject class itself), in which case the object
 becomes a root TadsObject object.
 

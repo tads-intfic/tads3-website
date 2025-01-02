@@ -73,12 +73,12 @@ Ask/Tell system](../manual/asktell.html) using various kinds of
 [TopicEntry](../manual/actortopicentry.html) objects (such as AskTopic
 and TellTopic). If you like, you can [suggest](../manual/suggest.html)
 certain topics of conversation to the player by giving your TopicEntries
-a <span class="code">name</span> property. The availability of
+a `name` property. The availability of
 TopicEntries to respond to the player's conversation commands depends on
 a number of factors, including which
 [ActorState](../manual/actorstate.html) the NPC is in, the
-<span class="code">isActive</span> property of the TopicEntry and the
-<span class="code">convKeys</span> property, which can be used for a
+`isActive` property of the TopicEntry and the
+`convKeys` property, which can be used for a
 variety of purposes. Where several TopicEntries share the same values of
 these properties it can be useful to group them under a common
 [TopicGroup](../manual/topicgroup.html).
@@ -94,8 +94,8 @@ be used, unlike an adv3 SpecialTopic). A particular point in the
 conversation at which particular responses or questions become
 momentarily appropriate is called a [Conversation
 Node](../manual/convnode.html) and can be most conveniently implemented
-using a combination of a <span class="code">ConvNode</span> object and a
-<span class="code">\<.convnode\></span> tag. In many situations it is
+using a combination of a `ConvNode` object and a
+`\<.convnode\>` tag. In many situations it is
 also appropriate to implement [Greeting Protocols](../manual/hello.html),
 whereby conversations are properly begun and ended with some equivalent
 of "hello" and "goodbye" and the NPC can optionally change between
@@ -105,24 +105,24 @@ In order to ensure that a conversational exchange remains sensible and
 appropriate, it's often necessary to keep track of what both the player
 character and the NPC s/he's talking to currently know. Player Character
 and NPC [Knowledge](../manual/knowledge.html) can be tracked using
-<span class="code">\<.reveal key\></span> and
-<span class="code">\<.inform key\></span> tags, and tested with
-<span class="code">gRevealed(key)</span> and
-<span class="code">gInformed(key</span>), typically used on the isActive
+`\<.reveal key\>` and
+`\<.inform key\>` tags, and tested with
+`gRevealed(key)` and
+`gInformed(key`), typically used on the isActive
 property of a TopicEntry (or perhaps a TopicGroup).
 
 A couple of topics we only touched on were [Giving Orders to
 NPCs](../manual/orders.html) (e.g. BOB, PUT THE BALL IN THE BOX) and
 [NPC-Initiated Conversation](../manual/initiate.html). Orders given to
-NPCs are typically handled by <span class="code">CommandTopics</span>
-and <span class="code">DefaultCommandTopics</span>, which are similar in
+NPCs are typically handled by `CommandTopics`
+and `DefaultCommandTopics`, which are similar in
 principle to other TopicEntries but can be a little more complex to
 specify. One way we've seen for an NPC to initiate a conversation is via
 a [ConvAgendaItem](../manual/initiate.html#convagendaitem). Another,
 which we didn't cover, might be through an
 [InitiateTopic](../manual/initiate.html#initiatetopic). A particularly
 sophisticated technique (which again we haven't covered in this
-tutorial) is to combine a <span class="code">ConvAgendaItem</span> with
+tutorial) is to combine a `ConvAgendaItem` with
 a [DefaultAgendaTopic](../manual/initiate.html#defaultagenda), which
 allows an NPC to pursue his or her own conversational agenda instead of
 giving a canned default response when the player tries a conversational
@@ -145,8 +145,7 @@ Since some readers may have found it a little hard to keep track of
 exactly what goes where, here's a complete listing of all the code
 related to the Angela NPC as far as we have reached:
 
-<div class="code">
-
+```
     angela: Actor 'flight attendant; statuesque young; woman angela; her'
         @planeFront
         "She's a statuesque and by no means unattractive young woman. "
@@ -773,8 +772,7 @@ related to the Angela NPC as far as we have reached:
             May I see your ticket please? ";        
         }
     ;
-
-</div>
+```
 
 </div>
 

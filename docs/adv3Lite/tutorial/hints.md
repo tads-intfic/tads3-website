@@ -38,10 +38,10 @@ define an object (which can be anonymous) of the **TopHintMenu** class.
 In a larger game we'd probably put the hints in a file of their own, but
 for the purposes of this tutorial we can put them at the end of the
 start.t file, so that's where we'll put the
-<span class="code">TopHintMenu</span>. Then, under the
-<span class="code">TopHintMenu</span> and located within it (with the +
+`TopHintMenu`. Then, under the
+`TopHintMenu` and located within it (with the +
 syntax) we need to define a number of **Goal** objects. Each
-<span class="code">Goal</span> object represents a problem or goal the
+`Goal` object represents a problem or goal the
 player may be currently working on. By defining the conditions under
 which the Goal is opened and closed we can ensure that when the player
 requests hints, s/he only sees a menu containing goals that are
@@ -72,8 +72,7 @@ ticketAchievement (a condition that the Goal class happens to make it
 easy to test for). We might accordingly define the start of our hint
 system thus:
 
-<div class="code">
-
+```
     TopHintMenu;
 
     + Goal 'Where can I find a plane ticket?'
@@ -91,15 +90,14 @@ system thus:
         openWhenSeen = angela
         closeWhenAchieved = ticketAchievement
     ;
-
-</div>
+```
 
 Note that we can use the Goal template to specify both its
-<span class="code">title</span> property ('Where can I find a plane
-ticket?') and its <span class="code">menuContents</span> property (the
+`title` property ('Where can I find a plane
+ticket?') and its `menuContents` property (the
 list of hints), but we need to define its
-<span class="code">openWhenSeen</span> and
-<span class="code">closeWhenAchieved</span> properties explicitly
+`openWhenSeen` and
+`closeWhenAchieved` properties explicitly
 (actually you could define the second of these through the template too,
 but let's ignore that for now). For a complete list of the properties
 that can be used to open and close goals consult the section on
@@ -107,7 +105,7 @@ that can be used to open and close goals consult the section on
 
 Another problem the player might encounter quite early on is trying to
 take the ID card through the metal detector. We've already used the tag
-<span class="code">\<.reveal card-confiscated\></span> to note when the
+`\<.reveal card-confiscated\>` to note when the
 security guard confiscates the ID card, so it's easy enough to test for
 that. The condition for closing the Goal may need a little more thought,
 though. The obvious point at which to close it might be when
@@ -126,8 +124,7 @@ through the maintenance room door. We can do that by defining a separate
 **Hint** object that opens the secondary Goal when the corresponding
 hint is displayed, like this:
 
-<div class="code">
-
+```
     + Goal 'How do I get the ID card through the metal detector?'
         [
             'Did you take a good look at the ID card? ',
@@ -199,8 +196,7 @@ hint is displayed, like this:
         
         closeWhenAchieved = powerAchievement
     ;
-
-</div>
+```
 
 There's nothing magical about locating the Hint objects within the Goal
 objects like this; it doesn't associate the Hint with the Goal, it
@@ -235,12 +231,11 @@ open the door to the Maintenance Room?' Goal, namely when the player
 character discovers the door to be locked. For this to work we need to
 arrange for the attempt to open the locked door to cause the
 'maintenance-door-locked' key to be revealed. The easiest way to do that
-is to add a <span class="code">\<.reveal
-maintenance-door-locked\></span> tag to the end of the message that says
+is to add a `\<.reveal
+maintenance-door-locked\>` tag to the end of the message that says
 the door is locked:
 
-<div class="code">
-
+```
     + maintenanceRoomDoor: Door 'metal door'
         "It's marked <q>Personal de Mantenimiento S&oacute;lo</q>, and <<if isOpen>>
         is currently open<<else>> looks firmly closed<<end>>. "
@@ -251,8 +246,7 @@ the door is locked:
         
         lockedMsg = (inherited + '<.reveal maintenance-door-locked>')
     ;
-
-</div>
+```
 
 We have gone far enough now to illustrate the main principles of
 implementing a hint system in adv3Lite; completing the hints for the

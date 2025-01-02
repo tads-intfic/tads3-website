@@ -138,8 +138,8 @@ If you want to define additional debugging commands for your particular
 game, you can do so using the same means as described in the section on
 [Defining New Actions](define.html) above, with a couple of extra steps:
 
-1.  Enclose the complete definition between <span class="code">\#ifdef
-    \_\_DEBUG</span> and <span class="code">\#endif</span> preprocessor
+1.  Enclose the complete definition between `\#ifdef
+    \_\_DEBUG` and `\#endif` preprocessor
     commands to ensure that your custom debugging commands are included
     only when you compiple for debugging.
 2.  Ensure your action definition allows for universal scope if it needs
@@ -152,8 +152,7 @@ have a SUMMON command which can summon any object into the player
 character's presence (i.e. the same room as the player character) we
 could do it like this:
 
-<div class="code">
-
+```
      
     #ifdef __DEBUG
 
@@ -193,8 +192,7 @@ could do it like this:
         }
     ;
     #endif
-
-</div>
+```
 
 Note that since we probably don't want our debugging action to count as
 normal turn we override beforeAction(), afterAction() and turnSequence()
@@ -216,26 +214,22 @@ an object of the Test class (it can be an anonymous object). Use the
 referred to with a TEST command. Then define the list of commands to be
 performed by the test script in the **testList** property. For example:
 
-<div class="code">
-
+```
      Test 
         testName = 'foo'
         testList = ['x me', 'i', 'look']
      ; 
      
-
-</div>
+```
 
 With this definition in place you can use the command TEST FOO to carry
 out X ME followed by I followed by LOOK. You can also abbreviate the
 definition of the Test object by using the built-in template, so:
 
-<div class="code">
-
+```
      
      Test 'foo' ['x me', 'i', 'look'];
-
-</div>
+```
 
 For some scripts to work as required it may be necessary for the actor
 to be in a particular location, or to have particular items in his/her
@@ -249,26 +243,22 @@ conditions by using gonear and purloin commands in the script, but we
 can also do so using the **location** and **testHolding** properties of
 our Test object, thus:
 
-<div class="code">
-
+```
     Test 
        testName = 'queen'
        testList = ['unlock golden door with diamond key', 'n', 'x queen', 'give yellow rose to queen']
        location = tulipPassage
        testHolding = [diamondKey, yellowRose]   
     ;
-
-</div>
+```
 
 Again, this may be abbreviated via use of the template to:
 
-<div class="code">
-
+```
     Test 'queen' ['unlock golden door with diamond key', 'n', 'x queen', 'give yellow rose to queen']
       @tulipPassage [diamondKey, yellowRose]
     ;
-
-</div>
+```
 
 The command TEST QUEEN will then move the player character to
 tulipPassage, move the diamondKey and the yellowRose into his inventory,
@@ -287,12 +277,11 @@ the list of commands associated with each test name.
 
 Finally, the TEST class and its associated actions are only defined in a
 debug build, so you need to make sure that you surround any TEST
-definitions with <span class="code">\#ifdef \_DEBUG</span> and
-<span class="code">\#endif</span> so that they don't cause compilation
+definitions with `\#ifdef \_DEBUG` and
+`\#endif` so that they don't cause compilation
 errors in a release build; for example:
 
-<div class="code">
-
+```
     #ifdef __DEBUG
 
     Test 'foo' ['x me', 'i', 'look'];
@@ -303,8 +292,7 @@ errors in a release build; for example:
      
     #endif 
      
-
-</div>
+```
 
   
 <span id="additional"></span>

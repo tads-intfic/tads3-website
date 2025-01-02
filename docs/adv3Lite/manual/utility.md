@@ -87,18 +87,18 @@ defined in misc.t or english.t:
 - **isEmptyStr(str)**: returns true if *str* is either nil or the empty
   string ''.
 - **yesOrNo()**: Simple yes/no confirmation. The caller must display a
-  prompt; <span class="code">yesOrNo()</span> reads a command line
+  prompt; `yesOrNo()` reads a command line
   response, then returns true if it's an affirmative response or nil if
   not.
 
-The <span class="code">tryInt(val)</span> and
-<span class="code">tryNumber(val)</span> functions can be useful when
+The `tryInt(val)` and
+`tryNumber(val)` functions can be useful when
 you want to parse user input to see whether something is a valid number
 and, if so, do something with the numerical value it returns. The
 following table further illustrate how these two functions work (with
 the output from the intrinsic functions
-<span class="code">toInteger()</span> and
-<span class="code">toNumber()</span> also supplied for comparison):
+`toInteger()` and
+`toNumber()` also supplied for comparison):
 
 |          |             |             |             |            |
 |----------|-------------|-------------|-------------|------------|
@@ -120,17 +120,17 @@ the output from the intrinsic functions
 | '-3'     | -3          | -3          | -3          | -3         |
 | '-3.2e4' | nil         | -32000      | -3          | -32000     |
 
-You can see from this that <span class="code">tryInt(val)</span> and
-<span class="code">tryNumber(val)</span> are both stricter than
-<span class="code">toInteger(val)</span> and
-<span class="code">toNumber(val)</span> (which, for example, would have
+You can see from this that `tryInt(val)` and
+`tryNumber(val)` are both stricter than
+`toInteger(val)` and
+`toNumber(val)` (which, for example, would have
 returned numeric values when val was true, '15b' or '5a5'), and that
-<span class="code">tryInt(val)</span> is 'stricter' than
-<span class="code">tryNum(val)</span>;
-<span class="code">tryInt(val)</span> only returns a non-nil value
+`tryInt(val)` is 'stricter' than
+`tryNum(val)`;
+`tryInt(val)` only returns a non-nil value
 either if it's passed a number or if it's passed a string containing
 only digits optionally preceded by + or -, whereas
-<span class="code">tryNum(val</span>) will also accept strings with
+`tryNum(val`) will also accept strings with
 decimal point and exponent notation (such as '1.2E2').
 
   
@@ -259,14 +259,12 @@ iterate over a collection degenerate to one iteration on a singleton.
 
 The createLiveIterator() method thus allows us to write code like this:
 
-<div class="code">
-
+```
       local a = 'Hello World! ';
       foreach(local cur in a)
          "<<cur>>\n"; 
      
-
-</div>
+```
 
 Executing this will then indeed result in a display of the string 'Hello
 World!'. This will principally be useful when we want to iterate over

@@ -50,12 +50,12 @@ world's timezones are always being revised. The TADS version of the
 zoneinfo database is in a separate file that can be replaced as needed
 without updating the TADS interpreter itself.
 
-When using the TimeZone class, <span class="code">\#include
-\<date.h\></span> in your source files.
+When using the TimeZone class, `\#include
+\<date.h\>` in your source files.
 
 ## Construction
 
-<span class="code">new TimeZone()</span>
+`new TimeZone()`
 
 <div class="fdef">
 
@@ -70,7 +70,7 @@ US Eastern Time, set TZ=America/New_York.)
 
 </div>
 
-<span class="code">new TimeZone(*zoneinfoName*)</span>
+`new TimeZone(*zoneinfoName*)`
 
 <div class="fdef">
 
@@ -89,8 +89,8 @@ clock actually in effect on that date in the given location.
 
 </div>
 
-<span class="code">new
-TimeZone('*STD*+*ofs*\[*DST*\[+*ofs*\],*start*,*end*\]')</span>
+`new
+TimeZone('*STD*+*ofs*\[*DST*\[+*ofs*\],*start*,*end*\]')`
 
 <div class="fdef">
 
@@ -119,8 +119,8 @@ time starts and ends in the zone. The daylight offset can be omitted, in
 which case it defaults to one hour ahead of standard time. If you do
 include it, specify the daylight offset from UTC, *not* the offset from
 standard time - so for US Eastern Time, you'd write
-<span class="code">EST-5EDT-4</span>, or equivalently just
-<span class="code">EST-5EDT</span>.
+`EST-5EDT-4`, or equivalently just
+`EST-5EDT`.
 
 The syntax for the *start* and *end* strings can be one of the
 following:
@@ -134,8 +134,8 @@ following:
   *day*; and so on up to 4 for the 4th *day*. Setting *week* to 5 is
   special: it means the last *day* of the month, no matter how many
   occurrences of that day there actually are. For example,
-  <span class="code">M4.1.0</span> is the first Sunday in April, and
-  <span class="code">M10.5.6</span> is the last Saturday in October.
+  `M4.1.0` is the first Sunday in April, and
+  `M10.5.6` is the last Saturday in October.
 - J*dayno* - a "Julian day". *dayno* is the day of the year, 1 to 365,
   never counting February 29. That is, J60 always means March 1, even in
   leap years. This is essentially an obtuse way of specifying a fixed
@@ -155,12 +155,12 @@ hour if the time is at the top of the hours, so "/3" means 3:00 AM, and
 ("/2").
 
 Example: the complete current definition of US Eastern Time is
-<span class="code">EST-5EDT-4,M3.2.0/2,M11.1.0/2</span>: standard time
+`EST-5EDT-4,M3.2.0/2,M11.1.0/2`: standard time
 is called EST, with a UTC offset of 5 hours west; daylight time is EDT
 at 4 hours west; daylight time starts at 2:00 AM on the second Sunday in
 March, and ends at 2:00 AM on the first Sunday in November. You could
 write this more compactly, relying on the defaults, as
-<span class="code">EST-5EDT,M3.2.0,M11.1.0</span>.
+`EST-5EDT,M3.2.0,M11.1.0`.
 
 If you specify both standard and daylight time in a zone, TimeZone will
 accept the string without the daylight time start/end rules, but without
@@ -170,7 +170,7 @@ standard and daylight time, you must specify the rules.
 
 </div>
 
-<span class="code">new TimeZone('*UTC*')</span>
+`new TimeZone('*UTC*')`
 
 <div class="fdef">
 
@@ -185,7 +185,7 @@ to daylight time; it's on "standard time" year round.
 
 </div>
 
-<span class="code">new TimeZone('*UTC*+*offset*')</span>
+`new TimeZone('*UTC*+*offset*')`
 
 <div class="fdef">
 
@@ -214,7 +214,7 @@ earlier than UTC for all dates and times.
 
 </div>
 
-<span class="code">new TimeZone(*offsetSecs*)</span>
+`new TimeZone(*offsetSecs*)`
 
 <div class="fdef">
 
@@ -225,8 +225,8 @@ at -25200 seconds, which is -7 hours).
 
 This type of TimeZone object is equivalent to the 'UTC+offset'
 constructor above for the corresponding offset. For example,
-<span class="code">new TimeZone(-25200)</span> yields the same type of
-time zone object as <span class="code">new TimeZone('UTC-7')</span>.
+`new TimeZone(-25200)` yields the same type of
+time zone object as `new TimeZone('UTC-7')`.
 
 </div>
 
@@ -234,7 +234,7 @@ time zone object as <span class="code">new TimeZone('UTC-7')</span>.
 
 <span id="getNames"></span>
 
-<span class="code">getNames()</span>
+`getNames()`
 
 <div class="fdef">
 
@@ -252,7 +252,7 @@ dropped if they're zero).
 
 <span id="getHistory"></span>
 
-<span class="code">getHistory(*date*?)</span>
+`getHistory(*date*?)`
 
 <div class="fdef">
 
@@ -302,7 +302,7 @@ solar time as observed from the location. This is a function of
 longitude, so it can be inferred whether or not people were actually
 conducting solar observations in the locale at the time. The *date*
 value in this special first history item is
-<span class="code">nil</span> because the item has no start date; it
+`nil` because the item has no start date; it
 applies into the indefinite past.
 
 The last item is also somewhat special. This reflects the last
@@ -333,7 +333,7 @@ ongoing rules.
 
 <span id="getLocation"></span>
 
-<span class="code">getLocation()</span>
+`getLocation()`
 
 <div class="fdef">
 
@@ -344,7 +344,7 @@ with the two-letter ISO 3166 country code for the zone's primary city,
 '+ddmmss' format - degrees, minutes, and seconds; '+' for northern
 latitudes and '-' for southern), *longitude* is a string giving the
 longitude (in '+dddmm' or '+dddmmss' format), and *desc* is a string
-with comment text describing the zone (or <span class="code">nil</span>
+with comment text describing the zone (or `nil`
 if there's no descriptive text). This information comes from the
 zoneinfo database.
 
@@ -352,7 +352,7 @@ zoneinfo database.
 
 <span id="getRules"></span>
 
-<span class="code">getRules()</span>
+`getRules()`
 
 <div class="fdef">
 

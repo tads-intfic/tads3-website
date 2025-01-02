@@ -56,8 +56,7 @@ define are:
 
 So, for example, a typical versionInfo definition might look like this:
 
-<div class="code">
-
+```
     versionInfo: GameID
         IFID = '0D9D2F69-90D5-4BDA-A21F-5B64C878D0AB'
         name = 'Fire!'
@@ -85,8 +84,7 @@ So, for example, a typical versionInfo definition might look like this:
             Mercury and adv3 libraries by Mike Roberts. ";               
         }
     ;
-
-</div>
+```
 
 In addition, you can override the following settings if you don't like
 the defaults inherited from GameInfoModuleID:
@@ -113,13 +111,11 @@ represent the player character at the start of the game (typically this
 is called me, though you can call it anything you like). A minimal
 gameMain definition will therefore look like this:
 
-<div class="code">
-
+```
     gameMain: GameMainDef
        initialPlayerChar = me
     ;
-
-</div>
+```
 
 In practice you'll normally want to define rather more than this on your
 gameMain object. The other properties and methods you may want to define
@@ -195,11 +191,11 @@ include:
   objects. If it is true, then the text of the previous command is
   reparsed, which may result in a different interpretation involving
   different objects. For example, suppose there are two coins on the
-  floor. If <span class="code">againRepeatsParse</span> is nil then TAKE
+  floor. If `againRepeatsParse` is nil then TAKE
   COIN followed by AGAIN will result in one of the coins being taken,
   followed by an attempt to take the *same coin* again (which will fail
   with a message that you're already holding the coin). If
-  <span class="code">againRepeatsParse</span> is true, however, than
+  `againRepeatsParse` is true, however, than
   TAKE COIN followed by AGAIN will result in one coin being taken, and
   then the other, just as if the player had typed TAKE COIN twice. Which
   is the better behaviour depends on context; while in the coin example
@@ -208,7 +204,7 @@ include:
   interpretation would result in the disambiguation prompt being
   repeated, which might seem perverse.
 - **autoSwitchAgain**: this tries to give the player the best of both
-  worlds by switching <span class="code">againRepeatsParse</span>
+  worlds by switching `againRepeatsParse`
   between true and nil depending on whether the command to be repeated
   is the kind of command it would make sense to repeat with the same
   objects (if it isn't, the command is reparsed in the hope of finding a
@@ -219,10 +215,10 @@ include:
 - **verbose**: flag - is this game in verbose mode (full room
   descriptions are shown every time) or in brief mode (full room
   descriptions are shown only on the first visit or in response to an
-  explicit LOOK command). By default <span class="code">verbose</span>
-  is <span class="code">true</span>, but players can change it using the
+  explicit LOOK command). By default `verbose`
+  is `true`, but players can change it using the
   commands BRIEF and VERBOSE.
-- **fastGoTo**. By default <span class="code">fastGoTo</span> is nil,
+- **fastGoTo**. By default `fastGoTo` is nil,
   but if it is set to true then the [GO TO](pathfind.html) command will
   move the player character continuously to his/her destination (unless
   some obstacle stops the journey) without the player needing to use the
@@ -241,8 +237,7 @@ later version of adv3Lite).
 A fairly typical gameMain definition might thus look something like
 this:
 
-<div class="code">
-
+```
     gameMain: GameMainDef
         initialPlayerChar = me
         
@@ -267,8 +262,7 @@ this:
         }
        
     ;
-
-</div>
+```
 
   
 <span id="notes"></span>
@@ -281,8 +275,7 @@ you'd typically make it display a string beginning and ending with the
 that picks up all the relevant text from the versionInfo object might
 look like this:
 
-<div class="code">
-
+```
       setAboutBox()
         {
             "<ABOUTBOX><CENTER><FONT size=+2 color=red><b><<versionInfo.name>>
@@ -290,16 +283,15 @@ look like this:
              <<versionInfo.byline>>\b
             Version <<versionInfo.version>></CENTER></ABOUTBOX>";
         }
-
-</div>
+```
 
 For <span id="tenses">**tenses**</span> other than past or present,
-override <span class="code">Narrator.tense</span> to be one of Present
+override `Narrator.tense` to be one of Present
 ('Bob opens the box'), Past ('Bob opened the box'), Perfect ('Bob has
 opened the box'), PastPerfect ('Bob had opened the box'), Future ('Bob
 will open the box'), or FuturePefect ('Bob will have opened the box').
 By default the library defines Narrator.tense as
-<span class="code">(gameMain.usePastTense ? Past : Present)</span>.
+`(gameMain.usePastTense ? Past : Present)`.
 
 The **showIntro()** method is primarily for showing the game's
 introduction. It may also be a convenient place to put small amounts of
@@ -323,27 +315,26 @@ the start of play, in other words, the initial player character. If you
 do plan to change the player character during the course of the game, it
 is probably best to define every object that is going to represent the
 player character at one time or another as an
-<span class="code">Actor</span>, especially if the different player
+`Actor`, especially if the different player
 characters are going to encounter each other. Otherwise, the player
 character can perfectly well be defined as a
-<span class="code">Thing</span> or as a **Player** object, although
+`Thing` or as a **Player** object, although
 provided the actor.t module is present in the build, it is always okay
 to define the player character as an Actor object. Which Actor, Thing or
 Player object represents the initial player character can be defined
-either by setting the <span class="code">initialPlayerChar</span>
-property on the <span class="code">gameMain</span> object, or by setting
-<span class="code">isInitialPlayerChar = true</span> on the object in
+either by setting the `initialPlayerChar`
+property on the `gameMain` object, or by setting
+`isInitialPlayerChar = true` on the object in
 question. If both are done, the
-<span class="code">initialPlayerChar</span> object defined on the
-<span class="code">gameMain</span> object will take precedence.
+`initialPlayerChar` object defined on the
+`gameMain` object will take precedence.
 
 To unpack that somewhat terse summary, we may begin by noting that if
 you create a new adv3Lite new game using the new Project Wizard in TADS
 3 Workbench, the Wizard will create a minimal template game that does
 all this work for you thus:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -383,8 +374,7 @@ all this work for you thus:
         person = 2  // change to 1 for a first-person game
         contType = Carrier    
     ;
-
-</div>
+```
 
 Except that the versionInfo object will be filled in with the data you
 entered in the wizard. This way of declaring the initial player
@@ -403,8 +393,7 @@ you aren't using Workbench) you can save yourself a small amount of
 typing by using the Player class instead of the Thing class to define
 the player character object:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -448,9 +437,9 @@ it does, it's effectively identical to the first way of doing things.
 Finally, as an alternative to both these ways of defining the player
 character, you can define it as an Actor (provided actor.t is present in
 your game build), and either define
-<span class="code">isInitialPlayerChar = true</span> on that player
+`isInitialPlayerChar = true` on that player
 character Actor or define
-<span class="code">gameMain.initialPlayerChar</span> to point to it.
+`gameMain.initialPlayerChar` to point to it.
 None of these ways of doing it is intrinsically better to any other
 (unless you plan to switch the player character in the course of the
 game, in which case using the Actor class may be your best choice), so
@@ -458,7 +447,7 @@ which way you do it is simply a matter of personal preference.
 
 Whichever way you choose to define your player character object, you
 will probably want to customize it at least to the extent of defining
-its <span class="code">desc</span> property so that your players see a
+its `desc` property so that your players see a
 customized response to X ME.
 
 ------------------------------------------------------------------------
@@ -471,8 +460,7 @@ customized response to X ME.
 <span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em> Topics</a>
     <a href="ending.html" class="nav"><em>Next:</em> Endings</a>    
 </span>
-
-</div>
+```
 
 </div>
 

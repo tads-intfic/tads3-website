@@ -36,13 +36,13 @@ We'll now deal with each in turn.
 The trap is sprung if the player character removes the gold skull from
 the pedestal when the rock isn't already on it. The most convenient
 place to put the code for this is probably in the
-<span class="code">notifyRemove(obj)</span> method of the pedestal
+`notifyRemove(obj)` method of the pedestal
 object, since this is called whenever the
-<span class="code">actionMoveInto()</span> method of an object being
+`actionMoveInto()` method of an object being
 moved is called. This, incidentally, is one of those notifications we
 were talking about towards the end of the last chapter, and explains why
-it's a good idea to use <span class="code">actionMoveInto()
-</span>rather than just plain <span class="code">moveInto()</span> when
+it's a good idea to use `actionMoveInto()
+`rather than just plain `moveInto()` when
 implementing the direct response to a player's command. By using
 notifyRemove() we should ensure that the trap is sprung whatever method
 the player contrives to remove the skull from the pedestal, as we shall
@@ -51,22 +51,21 @@ see.
 We'll try to make the code as general as possible, since if the player
 puts the rock on the pedestal, then removes the skull, but then goes on
 to remove the rock, the trap should still be sprung. Since
-<span class="code">notifyRemove(obj)</span> is called just *before* obj
+`notifyRemove(obj)` is called just *before* obj
 is moved, we thus want to check whether there are fewer than two objects
 on the pedestal at that point. If there are, then the object being moved
 must be the only object on the pedestal, so the trap should be sprung
 when it's moved. We can get at the number of objects on the pedestal
-with the expression <span class="code">contents.length()</span>, i.e.
+with the expression `contents.length()`, i.e.
 the number of items in the list that constitutes the
-<span class="code">contents</span> property of the
-<span class="code">pedestal</span> object. Since *obj* is the object
-being moved, we can use <span class="code">obj.theName</span> in an
+`contents` property of the
+`pedestal` object. Since *obj* is the object
+being moved, we can use `obj.theName` in an
 embedded expression to print the name of the right object, whether it's
 the skull or the rock that's just been removed from the pedestal. The
 resulting code looks like this:
 
-<div class="code">
-
+```
     + pedestal: Thing 'stone pedestal; smooth'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -85,15 +84,14 @@ resulting code looks like this:
             }
         }
     ;
-
-</div>
+```
 
 We've already encountered the use of the
-<span class="code">finishGameMsg()</span> function to end the game. The
-only difference here is the use of <span class="code">ftDeath</span> to
+`finishGameMsg()` function to end the game. The
+only difference here is the use of `ftDeath` to
 make the game end displaying the message \*\*\* YOU HAVE DIED \*\*\*
 instead of \*\*\* YOU HAVE WON \*\*\*. We once again supply the
-<span class="code">finishOptionUndo</span> option so that the player can
+`finishOptionUndo` option so that the player can
 UNDO the fatal move. If only that were possible in real life!
 
 Try compiling and running the game to ensure that everything works as
@@ -110,8 +108,7 @@ properties too!) that disallows travel if the player character isn't
 carrying the gold skull but announces victory if he is. This involves
 making a couple of additions to the startroom object:
 
-<div class="code">
-
+```
     startroom: Room 'Outside Cave'
         desc = "You're standing in the bright sunlight just outside of a large,
             dark, foreboding cave, which lies to the north. The path back to your
@@ -131,8 +128,7 @@ making a couple of additions to the startroom object:
                 ";
         }
     ;
-
-</div>
+```
 
 There really isn't anything that's new here, beyond the fact that you
 can attach a method to a direction property and that the method will be

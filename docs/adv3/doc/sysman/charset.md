@@ -45,14 +45,12 @@ between local character codes and Unicode character codes.
 ## Construction
 
 To create a CharacterSet object, you use the
-<span class="code">new</span> operator, specifying the name of the
+`new` operator, specifying the name of the
 character set you want to translate to or from:
 
-<div class="code">
-
+```
     local cs = new CharacterSet('us-ascii');
-
-</div>
+```
 
 The CharacterSet object can then be used to specify the encoding to use
 for explicit character translations. You can use a CharacterSet in these
@@ -60,19 +58,19 @@ situations:
 
 - You can specify the encoding of a text file you are reading or
   writing, by passing the CharacterSet to
-  <span class="code">File.openTextFile()</span>.
+  `File.openTextFile()`.
 - You can specify the interpretation of raw bytes in a ByteArray by
   passing the CharacterSet to the
-  <span class="code">mapToString()</span> method.
+  `mapToString()` method.
 - You can specify how to encode a string into raw bytes by passing the
-  CharacterSet to the <span class="code">mapToByteArray()</span> method
+  CharacterSet to the `mapToByteArray()` method
   of a String.
 
 In addition, CharacterSet provides a few methods that let you get
 information about the character mapping it describes.
 
 Note: when using the CharacterSet class, you should
-<span class="code">\#include \<charset.h\></span>.
+`\#include \<charset.h\>`.
 
 ## Handling unmappable characters
 
@@ -496,10 +494,10 @@ You can create a CharacterSet object that refers to a character mapping
 that doesn't exist on the local system. This is legal and won't cause
 any errors at the time you create the object; however, if you try to use
 the object to perform any character mapping, an exception -
-<span class="code">UnknownCharSetException</span> - will be thrown.
+`UnknownCharSetException` - will be thrown.
 
 You can check to see if a character mapping is known by calling the
-<span class="code">isMappingKnown()</span> method after creating the
+`isMappingKnown()` method after creating the
 CharacterSet object. If this method returns true, the character set is
 known and you can use it to perform character mapping.
 
@@ -510,7 +508,7 @@ another computer without the same character mappings.
 
 ## CharacterSet methods
 
-<span class="code">getName()</span>
+`getName()`
 
 <div class="fdef">
 
@@ -519,38 +517,38 @@ as the name that was used to create the character set object.
 
 </div>
 
-<span class="code">isMappable(*val*)</span>
+`isMappable(*val*)`
 
 <div class="fdef">
 
-Returns <span class="code">true</span> if the character or characters
+Returns `true` if the character or characters
 *val*, which can be given as an integer (giving a Unicode character
 value) or a string of characters, can be mapped to characters in the
-character set, <span class="code">nil</span> if not. If *val* is a
-string, the method returns <span class="code">true</span> only if all of
+character set, `nil` if not. If *val* is a
+string, the method returns `true` only if all of
 the characters in the string can be mapped.
 
 </div>
 
 <span id="isMappingKnown"></span>
 
-<span class="code">isMappingKnown()</span>
+`isMappingKnown()`
 
 <div class="fdef">
 
-Returns <span class="code">true</span> if the character set has a known
-mapping, <span class="code">nil</span> if not. If this returns
-<span class="code">nil</span>, any attempts to map characters using the
+Returns `true` if the character set has a known
+mapping, `nil` if not. If this returns
+`nil`, any attempts to map characters using the
 object will throw a
-<span class="code">CharacterSetUnknownException</span>.
+`CharacterSetUnknownException`.
 
 </div>
 
-<span class="code">isRoundTripMappable(*val*)</span>
+`isRoundTripMappable(*val*)`
 
 <div class="fdef">
 
-Returns <span class="code">true</span> if the character or characters
+Returns `true` if the character or characters
 *val*, which can be given as an integer (giving a Unicode character
 value) or a string of characters, can be mapped to the local character
 set and then back to Unicode again with no loss of information. In other
@@ -585,10 +583,9 @@ characters - if it weren't, the player probably wouldn't be able to read
 most of the text in your game. You can do this by creating a
 CharacterSet object for the local system's display character set, and
 then testing a string of characters for mappability with the
-<span class="code">isMappable()</span> method.
+`isMappable()` method.
 
-<div class="code">
-
+```
     #include <tads.h>
 
     #include <charset.h>
@@ -611,8 +608,7 @@ then testing a string of characters for mappability with the
         you change your localization settings, please close and
         then re-start the game to ensure the new settings are used.";
     }
-
-</div>
+```
 
 **Example 2: Translating a file from one character set to another.**
 
@@ -625,8 +621,7 @@ because this isn't one of the built-in character sets; assuming we had
 this mapping file (let's say it's called "MacRoman.tcm"), we could
 perform the translation quite easily using the text file functions.
 
-<div class="code">
-
+```
     #include <tads.h>
 
     translate(inFileName, outFileName)
@@ -665,8 +660,7 @@ perform the translation quite easily using the text file functions.
       inFile.closeFile();
       outFile.closeFile();
     }
-
-</div>
+```
 
 Note that creating CharacterSet objects isn't strictly necessary in this
 example, since we could have more simply passed the name of the

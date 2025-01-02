@@ -35,8 +35,7 @@ writing Interactive Fiction with adv3Lite.
 You may recall towards the end of the previous chapter we tested for the
 nest being placed on the branch with the following code:
 
-<div class="code">
-
+```
     + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
@@ -50,20 +49,18 @@ nest being placed on the branch with the following code:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
-
-</div>
+```
 
 But you may be wondering, where exactly did this
-<span class="code">afterAction()</span> method come from, and how does
+`afterAction()` method come from, and how does
 the Heidi game know how to use it? The answer is that
-<span class="code">afterAction()</span> is in fact defined on Thing, and
+`afterAction()` is in fact defined on Thing, and
 that the action-handling routines in the adv3Lite library know that they
-have to call the <span class="code">afterAction()</span> method on every
+have to call the `afterAction()` method on every
 Thing in scope after the performance of each successful action. On the
 Thing class, however, the afterAction() routine is defined like this:
 
-<div class="code">
-
+```
     class Thing:  Mentionable
       ...
       
@@ -71,63 +68,58 @@ Thing class, however, the afterAction() routine is defined like this:
      
       ...
     ;
+```
 
-</div>
-
-Thus the <span class="code">afterAction()</span> method on Thing is an
+Thus the `afterAction()` method on Thing is an
 empty method that does nothing at all (since in general we don't want
 most objects to react to actions, and in any case the library can't know
 how you would want particular objects to react in your particular game).
-What the <span class="code">afterAction()</span> method on the branch
-object does is to *override* the <span class="code">afterAction()</span>
+What the `afterAction()` method on the branch
+object does is to *override* the `afterAction()`
 method define on the Thing class, so that when
-<span class="code">branch.afterAction()</span> is called, it's the
+`branch.afterAction()` is called, it's the
 branch's version of afterAction that's used.
 
 This is about as simple an example of overriding as one can get. To
 understand the full implications we need a slightly more complex one.
-The Thing class defines an <span class="code">isOn</span> property to
+The Thing class defines an `isOn` property to
 determine whether a Thing is switched on or off. It also defines an
-<span class="code">isSwitchable</span> property to determine whether
+`isSwitchable` property to determine whether
 that Thing can be switched on and off (obviously most things can't). On
 the Thing class this property and this method are defined as follows:
 
-<div class="code">
-
+```
     isSwitchable = nil
 
     makeOn(stat) { isOn = stat; }
-
-</div>
+```
 
 If we want to create a Thing that can be switched on and off, we'd
-therefore need to override its <span class="code">isSwitchable</span>
+therefore need to override its `isSwitchable`
 property to true, for example:
 
-<div class="code">
-
+```
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        isSwitchable = true
        isFixed = true
     ;
-
-</div>
+```
 
 That's all we have to do in adv3Lite to create a light switch (by the
 way, I hope by now it's obvious why we also defined
-<span class="code">isFixed = true</span>; light switches aren't
+`isFixed = true`; light switches aren't
 generally the kinds of things you can pick up and carry around with you
 unless the electrician hasn't fitted them yet). In particular the
 lightSwitch object inherits from Thing the handling of the SWITCH ON and
 SWITCH OFF commands, the rule that these commands can be carried out if
-<span class="code">isSwitchable</span> is true, the
-<span class="code">isOn</span> property that determines whether or not
+`isSwitchable` is true, the
+`isOn` property that determines whether or not
 the Thing is currently switched on or off, and the
-<span class="code">makeOn(stat)</span> method that's used by the SWITCH
+`makeOn(stat)` method that's used by the SWITCH
 ON and SWITCH OFF commands; the former calls
-<span class="code">makeOn(true)</span> and the latter
-<span class="code">makeOn(nil)</span>.
+`makeOn(true)` and the latter
+`makeOn(nil)`.
 
 That's all fine as far as it goes, and thanks to inheritance we're
 getting a lot of the right kind of behaviour on our light switch simply
@@ -139,8 +131,7 @@ would be to *override* the makeOn(stat) method on the lightSwitch to
 light up or turn off a light bulb somewhere. Here's a first (but
 erroneous) attempt:
 
-<div class="code">
-
+```
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        isSwitchable = true
@@ -148,22 +139,20 @@ erroneous) attempt:
        
        makeOn(stat) { lightBulb.makeLit(stat); }
     ;
-
-</div>
+```
 
 Can you see what's wrong with this? We'll assume you've defined the
-<span class="code">lightBulb</span> object elsewhere, and I can assure
-you <span class="code">makeLit(stat)</span> is another method defined on
+`lightBulb` object elsewhere, and I can assure
+you `makeLit(stat)` is another method defined on
 Thing, so the code will make the bulb light up and go out again. The
 problem is that by overriding makeOn(stat) in this way we've removed
 what it originally did on Thing so we're no longer keeping track of
 whether the light switch is turned on and off. One way to fix it would
 be to copy the original code from
-<span class="code">Thing.makeOn(stat)</span> into
-<span class="code">lightSwitch.makeOn(stat)</span>, giving us:
+`Thing.makeOn(stat)` into
+`lightSwitch.makeOn(stat)`, giving us:
 
-<div class="code">
-
+```
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        isSwitchable = true
@@ -175,8 +164,7 @@ be to copy the original code from
          lightBulb.makeLit(stat); 
        }
     ;
-
-</div>
+```
 
 This would certainly work, and after a fashion it does solve the
 problem, but it really isn't a terribly good solution. Although in this
@@ -192,8 +180,7 @@ the code sample immediately above, we're missing out on most of the
 benefits of the inheritance model. The proper solution is to use the
 **inherited** keyword, thus:
 
-<div class="code">
-
+```
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        isSwitchable = true
@@ -205,32 +192,31 @@ benefits of the inheritance model. The proper solution is to use the
          lightBulb.makeLit(stat); 
        }
     ;
+```
 
-</div>
-
-Here, <span class="code">inherited(stat)</span> means "at this point in
+Here, `inherited(stat)` means "at this point in
 the code, do whatever the method I'm overriding would have done". In
-this case, then, <span class="code">inherited(stat)</span> effectively
-calls <span class="code">Thing.makeOn(stat)</span> to carry out the base
+this case, then, `inherited(stat)` effectively
+calls `Thing.makeOn(stat)` to carry out the base
 handling that would have been carried out on Thing. Note that the call
 to the inherited method doesn't have to be the first statement in the
 overriding method; you can put it wherever it's convenient to do so
 within the overriding method. However, you do have to call
-<span class="code">interited()</span> with the same parameter list as
+`interited()` with the same parameter list as
 the method you're overriding; since we're overriding the
-<span class="code">makeOn(stat)</span> method of Thing, we thus need to
-call <span class="code">inherited(stat)</span>.
+`makeOn(stat)` method of Thing, we thus need to
+call `inherited(stat)`.
 
 This is a *very* important technique to bear in mind when you come to
 override object and class methods in your own code, as you'll find
 yourself increasingly doing as the more adventurous you become with what
 you want your games to do. While in certain cases, like the
-<span class="code">afterAction()</span> method on the branch object in
+`afterAction()` method on the branch object in
 the first example above, we may know from experience that the base
 method on Thing doesn't do anything so there's no point in calling the
 inherited method when overriding it, if in any doubt at all, the best
 rule of thumb is to always include a call to
-<span class="code">inherited()</span> when overriding a method.
+`inherited()` when overriding a method.
 
 ## Modifying
 
@@ -244,8 +230,7 @@ code over and over again on each and every light switch. An alternative
 would be to add the desired behaviour to the Thing class by modifying
 it, perhaps like this:
 
-<div class="code">
-
+```
     modify Thing
        bulbObj = nil
        isSwitchable = (bulbObj != nil)
@@ -257,40 +242,37 @@ it, perhaps like this:
              bulbObj.makeLit(stat);
        }
     ;
-
-</div>
+```
 
 There are several things to note here. The first is that we've added a
-new property, <span class="code">bulbObj</span>, to the Thing class to
+new property, `bulbObj`, to the Thing class to
 hold a reference to the light bulb that should be lit when this Thing is
 switched on. We've then overridden the
-<span class="code">isSwitchable</span> property so that it becomes true
-if <span class="code">bulbObj</span> is not
-<span class="code">nil</span>, in other words if we have defined a bulb
+`isSwitchable` property so that it becomes true
+if `bulbObj` is not
+`nil`, in other words if we have defined a bulb
 object associated with this Thing. This means that when we come to
 define our individual light switch objects, we don't have to remember to
-define <span class="code">isSwitchable = true </span>along with setting
-the <span class="code">bulbObj</span> property to indicate the bulb
+define `isSwitchable = true `along with setting
+the `bulbObj` property to indicate the bulb
 controlled by this switch. Next note the use of the
-<span class="code">inherited()</span> keyword here to call the version
-of the <span class="code">makeOn()</span> method on the original Thing
+`inherited()` keyword here to call the version
+of the `makeOn()` method on the original Thing
 class. Finally, note the check in the if statement to make sure we don't
-accidentally try to call the <span class="code">makeLit()</span> method
-of a <span class="code">nil</span> value, which would cause a run-time
+accidentally try to call the `makeLit()` method
+of a `nil` value, which would cause a run-time
 error that could easily happen if we made a Thing switchable without
-defining an associated <span class="code">bulbObj</span>. If we modified
+defining an associated `bulbObj`. If we modified
 Thing as above we could then define an individual light switch object
 thus:
 
-<div class="code">
-
+```
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        bulbObj = lightBulb
        isFixed = true   
     ;
-
-</div>
+```
 
 This is a big improvement if we have a lot of light switches to define
 in our game. It has to be said, though, that unless virtually every
@@ -299,8 +281,7 @@ perhaps even then, this probably isn't the best way to go about
 addressing this particular issue. We'd almost certainly be better off
 defining a custom LightSwitch class along the following lines:
 
-<div class="code">
-
+```
     class LightSwitch: Thing
        bulbObj = nil
        isSwitchable = true
@@ -320,13 +301,12 @@ defining a custom LightSwitch class along the following lines:
        "It's just an ordinary light switch that can be turned on and off. "
        bulbObj = lightBulb      
     ;
-
-</div>
+```
 
 This is neater primarily because this way we can now give the light
 switch behaviour only to those objects that actually need it, and also
-because we can simply define <span class="code">isSwitchable =
-true</span> and <span class="code">isFixed = true</span> on the
+because we can simply define `isSwitchable =
+true` and `isFixed = true` on the
 LightSwitch class knowing that these will almost certainly be the
 appropriate values on every light switch we create. The example
 nevertheless serves to illustrate the principle of modifying classes,
@@ -334,7 +314,7 @@ and in future chapters we shall come across cases when this is indeed
 the best approach. In the meantime you may have noticed that the code on
 the modified Thing class and the code on the new LightSwitch class look
 very similar. This is no accident: what we are in fact doing when we use
-the <span class="code">modify</span> keyword on a class (or object) is
+the `modify` keyword on a class (or object) is
 to create a new version of that class (or object) that inherits from the
 old one.
 

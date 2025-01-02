@@ -43,16 +43,16 @@ be notified when the garbage collector is about to delete one of your
 objects. When you want such notification, you can use a "finalizer."
 
 A finalizer is a special method, whose name is always
-<span class="code">finalize()</span>; this method takes no arguments.
+`finalize()`; this method takes no arguments.
 When the garbage collector determines that an object has become
 unreachable, it checks to see if the object has a
-<span class="code">finalize()</span> method. If the object does not have
-a <span class="code">finalize()</span> method, the garbage collector can
+`finalize()` method. If the object does not have
+a `finalize()` method, the garbage collector can
 simply delete the object at any subsequent time. If the object does have
-a <span class="code">finalize()</span> method, the garbage collector
+a `finalize()` method, the garbage collector
 marks the object as "finalizable." Once an object is marked finalizable,
 the garbage collector can call the object's
-<span class="code">finalize()</span> method at any subsequent time. Once
+`finalize()` method at any subsequent time. Once
 this method returns, the garbage collector marks the object as
 "finalized." Once the object is marked as finalized, the garbage
 collector re-considers the object's reachability; at any subsequent time
@@ -60,17 +60,16 @@ that the garbage collector determines that the object is unreachable,
 the collector can delete the object.
 
 Note that the garbage collector must determine that an object with a
-<span class="code">finalize()</span> method is unreachable twice before
+`finalize()` method is unreachable twice before
 it can actually delete the object: the object must become unreachable
-once before the <span class="code">finalize()</span> method can be
+once before the `finalize()` method can be
 called, and then must either remain unreachable or once again become
 unreachable before it can be deleted. The reason for the second
-reachability check is that the <span class="code">finalize()</span>
+reachability check is that the `finalize()`
 method could potentially make the object reachable again. Consider this
 example:
 
-<div class="code">
-
+```
     MyGlobals: object
       finalizedList = []
     ;
@@ -81,21 +80,20 @@ example:
         MyGlobals.finalizedList += self;
       }
     ;
+```
 
-</div>
-
-When an instance of <span class="code">MyClass</span> becomes
+When an instance of `MyClass` becomes
 unreachable, the garbage collector will at some point call the
-instance's <span class="code">finalize()</span> method, which adds a
+instance's `finalize()` method, which adds a
 reference to the instance to
-<span class="code">MyGlobals.finalizedList</span>. Since
-<span class="code">MyGlobals</span> is a named object, it's always
+`MyGlobals.finalizedList`. Since
+`MyGlobals` is a named object, it's always
 reachable, hence anything that
-<span class="code">MyGlobals.finalizedList</span> refers to is
+`MyGlobals.finalizedList` refers to is
 reachable - this means that the instance being finalized once again
 becomes reachable. So, the garbage collector cannot actually delete this
 object until the reference is removed from
-<span class="code">MyGlobals.finalizedList</span>, at which point the
+`MyGlobals.finalizedList`, at which point the
 instance once again becomes unreachable (assuming it hasn't been
 referenced anywhere else in the meantime).
 
@@ -123,27 +121,27 @@ it becomes unreachable, or it might sit in memory for a long time before
 the garbage collector gets around to finalizing the object.
 
 Note also that you can explicitly invoke the garbage collector with the
-<span class="code">t3RunGC()</span> function in the [t3vm function
+`t3RunGC()` function in the [t3vm function
 set](t3vm.html).
 
 ## firstObj()/nextObj()
 
-The [<span class="code">firstObj()</span>](tadsgen.html#firstObj) and
-[<span class="code">nextObj()</span>](tadsgen.html#nextObj) functions let
+The [`firstObj()`](tadsgen.html#firstObj) and
+[`nextObj()`](tadsgen.html#nextObj) functions let
 you visit all of the objects currently in memory. This can have the
 sometimes surprising effect of retrieving objects that aren't currently
 reachable by any other means. Unreachable objects are only removed when
 the garbage collector runs, which only happens intermittently. Between
 runs, "dead" objects remain in memory, and TADS doesn't even know
 they're dead, because that determination is only made when the garbage
-collector runs. As a result, <span class="code">firstObj()</span> and
-<span class="code">nextObj()</span> simply visit all objects currently
+collector runs. As a result, `firstObj()` and
+`nextObj()` simply visit all objects currently
 in memory, whether they're reachable or not.
 
 If you want to ensure that existing dead objects are removed from memory
-before visiting objects with <span class="code">firstObj()</span> and
-<span class="code">nextObj()</span>, you can call
-[<span class="code">t3RunGC()</span>](t3vm.html#t3RunGC) just before your
+before visiting objects with `firstObj()` and
+`nextObj()`, you can call
+[`t3RunGC()`](t3vm.html#t3RunGC) just before your
 object loop. This will ensure that any objects that are unreachable when
 the loop is about to start will be removed from memory and thus excluded
 from the object loop. This won't absolutely guarantee that you won't

@@ -59,8 +59,7 @@ Normally, though, we don't use these names explicitly but use the
 **dobjFor** and **iobjFor** propertyset macros to write definitions that
 look like this:
 
-<div class="code">
-
+```
     dobjFor(Take)
     {
        verify() { ... }
@@ -143,8 +142,7 @@ The code to achieve this might (in outline) look something like this:
          }
       }
     ;
-
-</div>
+```
 
 Notice the use of the **illogicalNow()** macro here; this means that the
 action might be illogical under certain circumstance — it's illogical
@@ -193,7 +191,7 @@ the verify routine as the match score. Note that the Mercury parser,
 which adv3Lite uses, allows for further tweaking of the match score
 through the scoreObject() methods of both the action and the object
 concerned. At the moment the adv3Lite library uses these methods only to
-take the <span class="code">vocabLikelihood</span> into account, but in
+take the `vocabLikelihood` into account, but in
 principle game authors could make use of them to make further
 adjustments or override the outcome of the logical ranking altogether
 (although this is not recommended). It is possible that future versions
@@ -263,9 +261,9 @@ than 'The stone ball is fixed in place' you can simply override the
 cannotTakeMsg property on the stoneBall object; you don't have to
 override the entire verifyDobjTake() method. Either way, however, the
 verification macro *must* receive a single-quoted string value, and
-*never* a double-quoted string; both <span class="code">illogical("{I}
-{can\\t} wash that."} </span>and <span class="code">cannotWashMsg = "{I}
-{can\\t} wash that."</span> would be programming errors that can be
+*never* a double-quoted string; both `illogical("{I}
+{can\\t} wash that."} `and `cannotWashMsg = "{I}
+{can\\t} wash that."` would be programming errors that can be
 guaranteed to produce strange and unwanted results. (The explanation of
 the bits in curly braces like '{I} {can\\t}' will be covered later in
 the section on [messages](message.html)).
@@ -324,8 +322,7 @@ respectively (these macros evaluate to true if so or nil otherwise).
 For example, the library defines the following handling of the TakeFrom
 action on the indirect object:
 
-<div class="code">
-
+```
     iobjFor(TakeFrom)
         {
             preCond = [touchObj]
@@ -345,14 +342,12 @@ action on the indirect object:
             
             }      
         }
-
-</div>
+```
 
 This could also have been written (with exactly the same meaning and
 effect):
 
-<div class="code">
-
+```
     iobjFor(TakeFrom)
         {
             preCond = [touchObj]
@@ -372,15 +367,13 @@ effect):
             
             }      
         }
-
-</div>
+```
 
 Note that the library is set up to minimize the number of verify
 routines you need to override. For example, the action handling for Dig
 and DigWith is defined like this:
 
-<div class="code">
-
+```
      /* Most things are not suitable for digging in*/
         isDiggable = nil
         
@@ -425,13 +418,12 @@ and DigWith is defined like this:
             {that iobj}. ')
         cannotDigWithSelfMsg = BMsg(cannot dig with self, '{I} {can\'t} dig {the
             dobj} with {itself dobj}. ')
-
-</div>
+```
 
 This means that instead of having to override the verify methods of
 things you want to dig or dig with to make the commands possible, you
-can simply define <span class="code">isDiggable = true</span> or
-<span class="code">canDigWithMe = true</span> as appropriate (and
+can simply define `isDiggable = true` or
+`canDigWithMe = true` as appropriate (and
 preventing using something to dig itself is still automatically taken
 care of). The name pattern isXXXable for the direct object and
 canXXXPrepMe for the indirect object when the corresponding actions are
@@ -450,44 +442,44 @@ but the property names in fact follow a largely consistent scheme:
 
 1.  For a two-object (TIAction) action (such as FooPrep) the property
     controlling success or failure in the verify routine on the direct
-    object is always <span class="code">isFooable</span>, and on the
-    indirect object is always <span class="code">canFooPrepMe</span>
+    object is always `isFooable`, and on the
+    indirect object is always `canFooPrepMe`
     (except for PushTravel actions, which are really compound actions
     combining Pushing and Traveling, and so follow slightly different
     rules; see below).
 2.  For a single-object (TAction, TopicTAction or LiteralTAction) action
     the property controlling success of failure in the verify routine of
-    the direct object is always <span class="code">isFooable</span> if
+    the direct object is always `isFooable` if
     the action name does not contain a preposition (such as Take) or
-    <span class="code">canFooPrepMe</span> if the action name does
+    `canFooPrepMe` if the action name does
     contain a preposition (such as SitOn), provided the preposition
     would normally precede the direct object (e.g. SIT IN CHAIR). Two
-    apparent exceptions are <span class="code">canSetMeTo</span> and
-    <span class="code">canTurnMeTo</span>, but here the preposition
+    apparent exceptions are `canSetMeTo` and
+    `canTurnMeTo`, but here the preposition
     would normally come after the direct object (e.g. TURN DIAL TO 7,
     not TURN TO DIAL 7); the rule is that the Me in the property name
     comes where the direct object would come in the corresponding
     command.
 3.  There are one or two exceptions where it wouldn't make sense to
     define a whole lot of properties for similar actions. The main one
-    of these is the <span class="code">canPushTravel</span> property
+    of these is the `canPushTravel` property
     which allows or disallows the whole set of PushTravel actions on the
     direct object, and the abbreviated property names on the indirect
     objects for some PushTravel actions (such as
-    <span class="code">cannotPushDownMsg</span> rather than
-    <span class="code">cannotPushTravelClimbDownMsg</span>, which would
+    `cannotPushDownMsg` rather than
+    `cannotPushTravelClimbDownMsg`, which would
     be strictly consistent but unpleasantly cumbersome). Since the
     various PushTravel actions combine pushing with travelling, the
     verification properties on the indirect object of a PushTravel
     command are those for travelling via the object; e.g. the indirect
     object of PushTravelClimbDown checks
-    <span class="code">canClimbDownMe</span>, not
-    <span class="code">canPushTravelClimbDownMe</span>. The other
+    `canClimbDownMe`, not
+    `canPushTravelClimbDownMe`. The other
     exception is the absence of any properties like
-    <span class="code">canAskMeAbout</span> on Thing, since all
+    `canAskMeAbout` on Thing, since all
     conversational commands are ruled out unconditionally on Thing, and
     all use the common failure message
-    <span class="code">cannotTalkToMsg</span>.
+    `cannotTalkToMsg`.
 4.  Apart from the exceptions noted above, most of the message
     properties follow the scheme already described in the paragraph
     preceeding this list.
@@ -496,21 +488,21 @@ The default values of these properties in the library generally depend
 on what seems to be the most likely common case. Thus, for example, few
 things can be used to burn or cut other things with, and probably most
 game objects won't be suitable for burning or cutting, so
-<span class="code">isBurnable</span>,
-<span class="code">isCuttable</span>,
-<span class="code">canBurnWithMe</span> and
-<span class="code">canCutWithMe</span> are all nil by default.
+`isBurnable`,
+`isCuttable`,
+`canBurnWithMe` and
+`canCutWithMe` are all nil by default.
 Conversely, just about anything can be the target of a throw, so the
-default value of <span class="code">canThrowAtMe</span> is true, while
+default value of `canThrowAtMe` is true, while
 in general we can throw anything that isn't fixed in place, so that
-<span class="code">isThrowable</span> is defined as
-<span class="code">(!isFixed)</span>. This incidentally illustrates that
+`isThrowable` is defined as
+`(!isFixed)`. This incidentally illustrates that
 some properties define the default value of other properties;
-<span class="code">isFixed</span> for example is used to determine
-several such properties such as <span class="code">isTakeable</span> and
-<span class="code">isMoveable</span>. Similarly,
-<span class="code">isCloseable</span> is defined as
-<span class="code">(isOpenable)</span>, since one would normally expect
+`isFixed` for example is used to determine
+several such properties such as `isTakeable` and
+`isMoveable`. Similarly,
+`isCloseable` is defined as
+`(isOpenable)`, since one would normally expect
 something that can be opened to be also something than can be closed (a
 door or a desk drawer, say). If in doubt, consult the library code in
 Thing.t (or, for many common cases, the [Action
@@ -539,14 +531,12 @@ didn't happen). For example, to make all actions that fail at the verify
 stage not count as a turn we could include the following in our game
 code:
 
-<div class="code">
-
+```
      
      modify Action
         failedActionCountsAsTurn = nil
     ;
-
-</div>
+```
 
   
 
@@ -626,7 +616,7 @@ currently defined in the adv3Lite library are:
   (typically opening) can go ahead. This PreCondition is used in the
   library on the dobjFor(Open) of objects whose **autoUnlock** property
   is true. It is normally only meaningful to use
-  <span class="code">objUnlocked</span> in the dobjFor(Open) preCond
+  `objUnlocked` in the dobjFor(Open) preCond
   list of objects with a lockability of either lockableWithoutKey or
   lockableWithKey. In the latter case the objUnlocked PreCondition will
   only attempt to unlock the object if the actor is carrying a key that
@@ -672,8 +662,7 @@ To apply PreConditions to objects involved in particular actions we
 simply list the appropriate precondition objects in the appropriate
 **preCond** property, for example:
 
-<div class="code">
-
+```
     class Thing: Mentionable
        ...
        dobjFor(PutIn)
@@ -688,15 +677,13 @@ simply list the appropriate precondition objects in the appropriate
            ...
        }
     ;
-
-</div>
+```
 
 A further example illustrates how the touchObj precondition can be used
 in conjunction with a checkReach() method to prevent an object being
 touched when it's too hot:
 
-<div class="code">
-
+```
     + cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
@@ -747,17 +734,15 @@ touched when it's too hot:
         
         cannotBurnMsg = 'The saucepan\'s quite burnt enough already! '
     ;
-
-</div>
+```
 
 Occasionally it can be useful to list a PreCondition in the
-<span class="code">preCond</span> property of an Action object,
+`preCond` property of an Action object,
 particularly when the Action is an IAction and we want the actor to be
 in a particular state before the action can take place. For example the
 library defines the Jump action thus:
 
-<div class="code">
-
+```
      DefineIAction(Jump)
         execAction(cmd)
         {
@@ -769,12 +754,11 @@ library defines the Jump action thus:
     ;
      
      
-
-</div>
+```
 
 This ensures that the actor is removed from any nested room it's in
 before attempting to JUMP (unless it starts out in a nested room for
-which <span class="code">getOutToJump</span> is nil).
+which `getOutToJump` is nil).
 
   
 
@@ -796,8 +780,7 @@ should not use any such things here). A check routine should thus
 consist purely of statements that display failure messages to the player
 and conditional statements controlling when they are displayed, e.g.:
 
-<div class="code">
-
+```
     partyDress: Thing 'party dress; blue; frock'
       isWearable = true
       wornBy = gPlayerChar
@@ -811,8 +794,7 @@ and conditional statements controlling when they are displayed, e.g.:
                 own room. ";
          }
       }
-
-</div>
+```
 
 This incidentally illustrates that when customizing objects to respond
 to actions, there's no need to repeat the parts already defined by the
@@ -850,8 +832,7 @@ implement to hand, and announcing which writing implement the player
 character is using without halting the action in the process. This could
 be implemented thus:
 
-<div class="code">
-
+```
     + pieceOfPaper: Thing 'piece of paper'
         "On it is inscribed <q><<writtenText>></q>. "
         
@@ -900,17 +881,16 @@ be implemented thus:
     + blackPen: Thing 'black pen'
         canWriteWithMe = true   
     ;
-
-</div>
+```
 
 While we could, in principle, have delayed displaying the "(with the
 black pen)" message until the action stage, this would have been awkward
 given that's it our check routine that's just identified which writing
 implement the player character is using. Using
-<span class="code">noHalt()</span> at this point allows us to display
+`noHalt()` at this point allows us to display
 this message without preventing the action from going ahead. Another
 couple of points to note here in passing are, first, that the
-<span class="code">canWriteWithMe</span> property we're using here isn't
+`canWriteWithMe` property we're using here isn't
 one defined in the adv3Lite library, but rather a custom property we're
 using here to identify possible writing implements in a game that may
 have several; and, second, that since what Q.scopeList(actor) returns
@@ -918,8 +898,8 @@ isn't a true list, but rather a ScopeList object, we need to convert it
 to a list (by calling its toList() method) in order to be able to use
 the valWhich() method to indentify a writing implement that's in scope.
 Finally, a point to emphasize: noHalt() has to be called as
-<span class="code">noHalt()</span> (with the parentheses); trying to
-call it as <span class="code">noHalt</span> (without the parentheses)
+`noHalt()` (with the parentheses); trying to
+call it as `noHalt` (without the parentheses)
 won't work; it's a function, not a macro.
 
   
@@ -952,8 +932,7 @@ a mat reveals a note that was previously concealed beneath) you could do
 so by using the **reportAfter(*msg*)** macro, which will cause *msg* to
 be displayed after any output from the report stage. For example:
 
-<div class="code">
-
+```
     mat:Thing 'mat; white place; placemat'
       dobjFor(Take)
       {
@@ -968,8 +947,7 @@ be displayed after any output from the report stage. For example:
          }
       }
     ;
-
-</div>
+```
 
 Note that you wouldn't have to code this particular example this way,
 since in practice you'd simply define <span id="code">hiddenUnder =
@@ -984,8 +962,7 @@ parentheic information. For example it is used by the library to
 announce which key it has chosen (e.g. ("(with the brass key)") in
 response to a LOCK or UNLOCK command:
 
-<div class="code">
-
+```
       dobjFor(Lock)
       {
          ...
@@ -1004,15 +981,14 @@ response to a LOCK or UNLOCK command:
             DMsg(report lock, okayLockMsg, gActionListStr);
          }
       }
-
-</div>
+```
 
 Here the report() phase would still be suppressed, however, if the
 action() method displayed anything else (apart from its
-<span class="code">extraReport()</span> message). For example, if
-<span class="code">makeLocked()</span> were overridden to display some
+`extraReport()` message). For example, if
+`makeLocked()` were overridden to display some
 text, the report() phase would not take place. (Technical note: what
-<span class="code">extraReport()</span> if fact does is write direct to
+`extraReport()` if fact does is write direct to
 the output bypassing all filters, so its output isn't registered by the
 watchForOutput() method; it could be used elsewhere to bypass the normal
 output filtering, but this is not recommended; extraReport() does,
@@ -1026,8 +1002,7 @@ current action. These methods are called **doInstead()** and
 something under the tap to result in its being put in the sink; you
 could do it like this:
 
-<div class="code">
-
+```
     tap: Fixture 'tap; silver; faucet'
       ...
       iobjFor(PutUnder)
@@ -1039,8 +1014,7 @@ could do it like this:
          }
       }
     ;
-
-</div>
+```
 
 You could do the same with replaceAction(), but doInstead() makes it
 easier to synthesize certain kinds of action that are much harder to so
@@ -1048,8 +1022,7 @@ with replaceAction() or nestedAction(). For example if you want the
 player to ask George about the broken candlestick the first time s/he
 looks at it you could write something like:
 
-<div class="code">
-
+```
     candlestick: Thing 'silver candlestick; broken'
        "It's broken. "
        
@@ -1067,31 +1040,30 @@ looks at it you could write something like:
        }    
        georgeAsked = nil
     ;
+```
 
-</div>
-
-This wouldn't work with <span class="code">nestedAction()</span> because
+This wouldn't work with `nestedAction()` because
 the AskAbout command expects its indirect object to be a ResolvedTopic,
 not a Thing (or Topic); the doNested() method takes care of this
 complication for you by wrapping the indirect object of a TopicTCommand
 in a ResolvedTopic if it isn't one already.
 
 Note, however, that it may often be better to call
-<span class="code">doInstead()</span> on a [Doer](doer.html). See the
+`doInstead()` on a [Doer](doer.html). See the
 discussion [there](doer.html#doerdoes) for the full implications.
 
 Note also that when called elsewhere than a Doer,
-<span class="code">doInstead()</span> (or
-<span class="code">replaceAction()</span>) is rather different in effect
-from the similar seeming <span class="code">doNested()</span> (or
-<span class="code">nestedAction()</span>).
-<span class="code">doNested()</span> (or
-<span class="code">nestedAction()</span>) executes one action in the
+`doInstead()` (or
+`replaceAction()`) is rather different in effect
+from the similar seeming `doNested()` (or
+`nestedAction()`).
+`doNested()` (or
+`nestedAction()`) executes one action in the
 course of another and then resumes execution of the first (even if it's
 the last statement in an action routine), so that, for example, you get
 the afterAction() processing of the original action.
-<span class="code">doInstead()</span> (or
-<span class="code">replaceAction()</span>) completely replaces the
+`doInstead()` (or
+`replaceAction()`) completely replaces the
 original action with the new one (even if it isn't the last statement in
 the action routine), so that, for example, you get the afterAction
 processing of the new, replacement action instead of that of the
@@ -1107,13 +1079,12 @@ object or indirect object of *action* and then attempt to execute
 used to convert an IAction into a TAction or a TAction into a TIAction.
 For example if you had a patch of sand in which the player character
 could dig with a spade, you could use
-<span class="code">askForIobj()</span> to make the TAction Dig ask for
+`askForIobj()` to make the TAction Dig ask for
 an indirect object for the TIAction DigWith, and then (if the player
 responds with the name of a suitable object) execute DigWith with the
 existing direct object and newly specified indirect object:
 
-<div class="code">
-
+```
     + sand: Fixture 'patch of sand; deep'
        "It's not very big, but it looks like it could be quite deep. "
        
@@ -1128,8 +1099,7 @@ existing direct object and newly specified indirect object:
        {
          ...
     ;     
-
-</div>
+```
 
   
 
@@ -1146,8 +1116,7 @@ objects is available; the pseudo-global variable **gActionListStr** then
 contains a single-quoted string listing the items in the form 'the pen,
 the ink and the paper' which can be used in your report, e.g.:
 
-<div class="code">
-
+```
     class Thing Mentionable
       dobjFor(Take)
       {
@@ -1162,8 +1131,7 @@ the ink and the paper' which can be used in your report, e.g.:
          }
       }
     ;
-
-</div>
+```
 
 This will result in a report such as 'You take the pen, the ink and the
 paper. ' (Note that there's no need to implement this particular example
@@ -1199,15 +1167,14 @@ they land on the ground.") To deal with this situation you can use the
 macro **gActionListObj**, which evaluates to an object that agrees in
 number (i.e. is singular or plural) with the number of objects being
 reported on, and whose name property is the same as
-<span class="code">gActionListStr</span> (the object is also treated as
+`gActionListStr` (the object is also treated as
 qualified, so you won't get any additional articles if you use its
 theName property). The best way to use gActionListObj is probably to
 assign it to a variable which you can then use in a message parameter
 substitution, as in the following example from the library (for
 ThrowDir):
 
-<div class="code">
-
+```
         report()
         {
             local obj = gActionListObj;
@@ -1217,8 +1184,7 @@ ThrowDir):
             DMsg(throw dir, '{I} {throw} {the obj} {1}wards and {he obj} {lands}
                 on the ground. ', gAction.direction.name );
         }
-
-</div>
+```
 
 Finally, since the report method is designed to give a routine report on
 what may be a group of objects, there's usually little point in defining
@@ -1245,14 +1211,12 @@ The Remap stage is used to replace the current object of an action with
 another object in the same role. For example, to remap putting things in
 a desk to putting them into its drawer we could simply write:
 
-<div class="code">
-
+```
     desk: Thing 'desk'
       "It has a single drawer. "
       iobjFor(PutIn) { remap = drawer  }
     ;
-
-</div>
+```
 
 Finally, there are situations when you what you want to do is not so
 much to remap one action to another (possibly involving different
@@ -1261,23 +1225,20 @@ For this purpose you can use the macros **asDobjFor(*action*)** and
 **asIobjFor(*action*)**, just as in the adv3 library. For example if we
 wanted pulling the drawer always to equate to opening it we'd write:
 
-<div class="code">
-
+```
     drawer: Thing 'drawer'
       isOpenable = true
       contType = In
 
       dobjFor(Pull) asDobjFor(Open)  
     ;
-
-</div>
+```
 
 As a second example, the adv3Lite library defines the following on the
 SimpleAttachable class to make FASTEN and UNFASTEN behave just like
 ATTACH and DETACH:
 
-<div class="code">
-
+```
     class SimpleAttachable: Thing
       ...
        /* Treat Fasten and Unfasten as equivalent to Attach and Detach */
@@ -1287,8 +1248,7 @@ ATTACH and DETACH:
         iobjFor(UnfastenFrom) asIobjFor(DetachFrom)
         dobjFor(Unfasten) asDobjFor(Detach)  
     ;
-
-</div>
+```
 
   
 

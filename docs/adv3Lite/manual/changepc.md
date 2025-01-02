@@ -44,7 +44,7 @@ become the actor from whose perspective the game is played from then
 one, and the one referred to by the parser as 'you'. If we want our new
 player character to be referred to in the first or third person, we have
 to supply setPlayer() with a second parameter, 1 or 3 respectively, for
-example <span class="code">setPlayer(bob, 1)</span> to make bob the new
+example `setPlayer(bob, 1)` to make bob the new
 player character referred to as 'I' or 'me'.
 
 If we do this we probably also want to let the player know what's just
@@ -52,21 +52,18 @@ happened. To assist with this setPlayer() returns the previous name of
 the new player character, so when the player becomes Bob you could use
 code like this:
 
-<div class="code">
-
+```
      "You are now <<setPlayer(bob)>>. ";
      bob.getOutermostRoom.lookAroundWithin(); 
      
-
-</div>
+```
 
 Something else you can do to help players keep track of who they're now
 meant to be is to include the name of the player character in the status
 line. One way to do that might be to include it in parentheses after the
 room name, which we can do like this:
 
-<div class="code">
-
+```
      modify Room
         statusName(actor)
         {
@@ -76,13 +73,11 @@ room name, which we can do like this:
         }
     ;
      
-
-</div>
+```
 
 Or, alternatively, if we prefer it:
 
-<div class="code">
-
+```
      
     modify statusLine
         showStatusLeft()
@@ -92,14 +87,12 @@ Or, alternatively, if we prefer it:
                 " [as <<libGlobal.playerCharName>>] ";
         }
     ; 
-
-</div>
+```
 
 Or again, if we didn't want the score and turn count at the right hand
 end of the status line we could do this:
 
-<div class="code">
-
+```
     modify statusLine
         showStatusRight()
         {        
@@ -107,19 +100,18 @@ end of the status line we could do this:
                 " [as <<libGlobal.playerCharName>>] ";
         }
     ;
-
-</div>
+```
 
 You can use whichever of these you prefer, or devise your own variant.
 
 <span id="pcname"></span>
 
-Note the use of <span class="code">libGlobal.**playerCharName**</span>
-here. This is set by <span class="code">setPlayer()</span>, so that if
-we've never called <span class="code">setPlayer()</span> it will be nil
+Note the use of `libGlobal.**playerCharName**`
+here. This is set by `setPlayer()`, so that if
+we've never called `setPlayer()` it will be nil
 (unless, of course, we set it ourselves, which we might want to do at
 the start of the game). We need it because we can't just use
-<span class="code">gPlayerChar.theName</span> to get at the player
+`gPlayerChar.theName` to get at the player
 characters's name, since unless it's a third-person player character
 that would just be 'I' or 'you' (which is not very informative).
 
@@ -129,20 +121,18 @@ defined as being of class Actor; the player character can be of class
 Thing, but this wouldn't be appropriate for an NPC. Again, when you're
 defining an actual or potential player character who might also become
 an NPC at some point, you should define it more or less as if it was an
-NPC, except for the <span class="code">person</span> property which may
+NPC, except for the `person` property which may
 be 1 or 2 if this is the Actor that's starting out as the player
 character; for example:
 
-<div class="code">
-
+```
      
     + joan: Actor 'Joan; large; woman; her'
         "She's quite a large woman. "
         
         person =  2
     ;
-
-</div>
+```
 
 <span id="ispc"></span>
 
@@ -153,16 +143,14 @@ test for which is applicable using the **isPlayerChar** property of the
 Actor and write the desc property accordingly. A minimally varying one
 might look like this:
 
-<div class="code">
-
+```
      
     + joan: Actor 'Joan; large; woman; her'
         "<<if isPlayerChar>>You're<<else>>She's<<end>> quite a large woman. "
         
         person =  2
     ;
-
-</div>
+```
 
 In practice, you'd probably want to vary the two descriptions by more
 than this.

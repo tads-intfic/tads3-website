@@ -29,16 +29,14 @@ book, but Hello World is still a good place to start. So, without
 further ado, here it is. Start by creating a text file called hello.t
 and typing this into the file:
 
-<div class="code">
-
+```
     #include "tads.h"
 
     main(args)
     {
       "Hello from TADS 3!!!\b";
     }
-
-</div>
+```
 
 After you've saved the file, open a command line window and change your
 working directory to the directory containing the file - on Windows, for

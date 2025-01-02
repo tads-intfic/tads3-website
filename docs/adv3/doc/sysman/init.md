@@ -57,16 +57,14 @@ PreinitObject is a class defined in the system library. During the
 preinit phase, the system finds every object of type PreinitObject and
 calls its execute() method.
 
-<div class="code">
-
+```
     myInitObj: PreinitObject
        execute()
        {
           // do some initialization work...
        }
     ;
-
-</div>
+```
 
 You can use PreinitObject as a mix-in class, combining it with other
 classes in an object's list of superclasses. This lets you define an
@@ -89,14 +87,12 @@ For example, to define an object that cannot be initialized until after
 another object, called "myLibInit", has been initialized, we would write
 this:
 
-<div class="code">
-
+```
     myInitObj: PreinitObject
       execute() { /* my initialization code */ }
       execBeforeMe = [myLibInit]
     ;
-
-</div>
+```
 
 ### Deferred preinit in debug builds
 
@@ -177,23 +173,19 @@ location information is stored. The typical game programmer assigns a
 location to each object in the game; we might do this with a "location"
 property:
 
-<div class="code">
-
+```
     book: Item
       location = bookcase
     ;
-
-</div>
+```
 
 Clearly, if some code in your program were handed a reference to this
 "book" object, and you wanted to know the object that contained the
 book, you'd just evaluate the object's location property:
 
-<div class="code">
-
+```
     objCont = obj.location;
-
-</div>
+```
 
 Now, what if you were handed a reference to the "bookcase" object, and
 you wanted to find out what objects the bookcase contains?
@@ -201,13 +193,11 @@ you wanted to find out what objects the bookcase contains?
 One solution would be to check each object that you think might appear
 in the bookcase:
 
-<div class="code">
-
+```
     booklist = [];
     if (book.location == bookcase) booklist += book;
     if (bookEnd.location == bookcase) booklist += bookEnd;
-
-</div>
+```
 
 Apart from being incredibly tedious, this is a terribly inflexible way
 to program. If you added one more object to your game, you'd have to add
@@ -219,16 +209,14 @@ A more flexible, and less tedious, solution would be to use the
 firstObj() and nextObj() functions to iterate over all of the objects in
 the game:
 
-<div class="code">
-
+```
     booklist = [];
     for (local obj = firstObj() ; obj != nil ; obj = nextObj(obj))
     {
        if (obj.location == bookcase)
        booklist += obj.location;
     }
-
-</div>
+```
 
 You clearly wouldn't want to write that too many times, but it's not so
 bad to write it once and put it in a function. Better yet, you could
@@ -265,8 +253,7 @@ One problem with this approach is that it would make a lot of extra work
 if we had to type in both the "location" and the "contents" properties
 for every object:
 
-<div class="code">
-
+```
     book: Item
       location = bookcase
     ;
@@ -275,8 +262,7 @@ for every object:
       location = library
       contents = [book, bookEnd]
     ;
-
-</div>
+```
 
 Not only would it be tedious to type in a "contents" list for every
 object, but it would be prone to errors, especially as we added objects
@@ -309,8 +295,7 @@ way to do this is to define a method that moves an object to a new
 container, and updates all of the necessary properties. We could call
 this method "moveInto":
 
-<div class="code">
-
+```
     moveInto(newLocation)
     {
        /* remove myself from the old location's contents */
@@ -324,8 +309,7 @@ this method "moveInto":
        /* update my location property */
        location = newLocation;
     }
-
-</div>
+```
 
 As long as we're always careful to move objects by calling their
 moveInto() method, and we never update any object's "location" or
@@ -403,18 +387,18 @@ same: compile, pre-initialize, run.
 ## Notes for TADS 2 Users
 
 With TADS 2, pre-initialization was accomplished via a user-defined
-function called <span class="code">preinit()</span>. The TADS 2 compiler
+function called `preinit()`. The TADS 2 compiler
 called this after completing compilation to give the game a chance to do
 its compile-time setup work.
 
-TADS 3 doesn't use the <span class="code">preinit()</span> function, but
+TADS 3 doesn't use the `preinit()` function, but
 it has a corresponding mechanism. Instead of putting all of your your
 pre-initialization code in a single function, you can create any number
 of PreinitObject objects, each with its own bit of code. This lets you
 create nicely modular initialization code, with each initializer grouped
 with the object definitions it pertains to.
 
-Similarly, the TADS 2 <span class="code">init()</span> function is
+Similarly, the TADS 2 `init()` function is
 replaced in TADS 3 with InitObject objects, which make it easy to write
 modular run-time initialization code.
 

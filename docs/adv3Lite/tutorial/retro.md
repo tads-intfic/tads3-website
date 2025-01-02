@@ -47,14 +47,14 @@ common problems.
 
 Let's now quickly review the specifics of what we've just covered.
 
-First, there was the use of the <span class="code">notifyRemove()</span>
+First, there was the use of the `notifyRemove()`
 method to respond to one object being removed from being contained by
 another.
 
-Second, there was the use of <span class="code">asExit(*dir*)</span> to
+Second, there was the use of `asExit(*dir*)` to
 make one exit synonymous with another, without both showing up in the
-exit lister. If you remember, it's used like this: <span class="code">in
-asExit(north)</span> (note, there's no = sign here).
+exit lister. If you remember, it's used like this: `in
+asExit(north)` (note, there's no = sign here).
 
 Third, there was the use of various library-defined classes beyond Thing
 and Room, sometimes to save us the work of reinventing wheels that the
@@ -62,10 +62,10 @@ library already provided (like Enterable, StairwayUp and PathPassage),
 and sometimes mainly to make our code a bit clearer (such as Fixture,
 Decoration, Surface and Container). We could get the same effect as the
 second type of class just by defining the corresponding property on
-Thing (<span class="code">isFixed = true</span>,
-<span class="code">isDecoration = true</span>,
-<span class="code">contType = On</span>, <span class="code">contType =
-In</span>), which is more or less all these library classes do, but
+Thing (`isFixed = true`,
+`isDecoration = true`,
+`contType = On`, `contType =
+In`), which is more or less all these library classes do, but
 remembering the name of the classes is probably no harder than
 remembering the name of the properties we'd otherwise have to override,
 and using the classes probably makes our code that much easier to read
@@ -111,21 +111,21 @@ with simple true/nil choices) rather than having to override a vast
 array of action-processing methods. So the way we handled throwing
 things at the gold skull should be fairly representative of quite a lot
 of the action handling you'll be doing in your own game, namely
-overriding an <span class="code">action()</span> method to handle
-special cases and perhaps calling <span class="code">inherited</span>
+overriding an `action()` method to handle
+special cases and perhaps calling `inherited`
 for other cases.
 
 In any case, don't worry if you're still feeling a bit hazy on how
 actions should be handled. There's a lot more to be said on the subject,
 and you'll get a lot more practice at it before this tutorial is done.
 
-Sixth, we looked at the use of the <span class="code">specialDesc</span>
-and <span class="code">initSpecialDesc</span> for displaying separate
+Sixth, we looked at the use of the `specialDesc`
+and `initSpecialDesc` for displaying separate
 paragraphs about particular objects in a room description listing.
-<span class="code">initSpecialDesc</span> is typically used to give a
+`initSpecialDesc` is typically used to give a
 customized initial description of something (e.g. "A red jumper has been
 tossed carelessly on the floor" rather than the blander "You see a red
-jumper here"), while <span class="code">specialDesc</span> is typically
+jumper here"), while `specialDesc` is typically
 used to display a paragraph about something that otherwise wouldn't be
 listed at all, like a fixture not mentioned in the main body of the room
 description. We also illustrated the use of constructs like \<\<mention
@@ -137,7 +137,7 @@ Descriptions](../manual/roomdesc.html) in the manual when you need it.
 
 Seventh, we showed how the definition of the player character object can
 be made a little more compact by using the
-<span class="code">Player</span> class, although we may still want to
+`Player` class, although we may still want to
 define other properties of this object, such as its description.
 
 Finally, we demonstrated the use of PathPassage as another kind of
@@ -158,8 +158,7 @@ Goldskull with a complete listing of the game as it ended up.
 
 ## Complete Goldskull Listing
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -357,8 +356,7 @@ Goldskull with a complete listing of the game as it ended up.
         
         getWeight = weight + getWeightWithin()
     ;
-
-</div>
+```
 
 </div>
 

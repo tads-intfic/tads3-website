@@ -30,14 +30,12 @@ the command-line arguments that the user entered to start the program.
 
 Your definition of main() should look something like this:
 
-<div class="code">
-
+```
     main(args)
     {
        // do something
     }
-
-</div>
+```
 
 This function is important because it is, conceptually, your entire
 program. This function is the first and only function the interpreter
@@ -99,11 +97,9 @@ syntax you like for that part of the command line.
 
 In the example above, the argument list will look like this:
 
-<div class="code">
-
+```
     ['mygame.t3', 'hello', 'world!']
-
-</div>
+```
 
 Note that the first element of the list is the name of the .t3 file, as
 the user typed it. The second list element is the first command-line
@@ -141,18 +137,16 @@ file (for example) to launch it.
 In any case, when the user launches the interpreter using this option,
 the system *attempts* to call a program function named mainRestore():
 
-<div class="code">
-
+```
     mainRestore(args, restoreFile)
     {
     }
-
-</div>
+```
 
 This function is similar to main(), but takes an extra argument, which
 is a string giving the name of the saved-state file to be restored. The
 program is responsible for restoring the saved state, which it can do
-with the <span class="code">restoreGame()</span> function (see the
+with the `restoreGame()` function (see the
 [tads-gen](tadsgen.html) function set).
 
 If the program doesn't define a mainRestore() function, the system
@@ -161,7 +155,7 @@ support this option, and terminates the program.
 
 ## Low-level start-up
 
-The <span class="code">main()</span> function is actually defined in the
+The `main()` function is actually defined in the
 [system library](lib.html), not by the T3 VM itself. You'll almost always
 use the system library when working with TADS 3, so what's going on
 under the covers will probably be of no more than academic interest.
@@ -188,26 +182,26 @@ defined, otherwise displays an error and aborts.
 
 Both \_main() and \_mainRestore() perform the following steps before
 calling the appropriate program entrypoint (i.e.,
-<span class="code">main()</span> or
-<span class="code">mainRestore()</span>):
+`main()` or
+`mainRestore()`):
 
 - Establish a default display function
-  (<span class="code">\_default_display_fn()</span>, also implemented in
+  (`\_default_display_fn()`, also implemented in
   the system library)
 - Run pre-initialization if necessary by invoking each PreinitObject's
-  <span class="code">execute()</span> method. During the special
+  `execute()` method. During the special
   post-compilation pre-initialization step, the default start-up code
   stops here. If this is a normal execution, though, the library checks
   to see if pre-initialization has already been completed by checking
-  the <span class="code">mainGlobal.preinited\_</span> flag, and skips
+  the `mainGlobal.preinited\_` flag, and skips
   this step if this flag is set to true, which indicates that
   pre-initialization has already been performed.
 - Runs initialization if by invoking each InitObject's
-  <span class="code">execute()</span> method.
+  `execute()` method.
 
 All of this, along with the call to the program's main entrypoint, is
-done within a <span class="code">try</span> block. If any exceptions are
-caught at this level, the <span class="code">catch</span> block displays
+done within a `try` block. If any exceptions are
+caught at this level, the `catch` block displays
 the exception's error message and terminates the program.
 
 ## Notes for TADS 2 Users
@@ -216,7 +210,7 @@ In previous versions of TADS, there wasn't any such thing as a "main"
 entrypoint to the game. The interpreter's built-in parser took control
 from the start, and only called the game program to notify it of events.
 When the program started running, TADS called the game's
-<span class="code">init()</span> function to let the game carry out any
+`init()` function to let the game carry out any
 desired start-up processing. This function performed any needed
 initialization, then returned. At that point the system entered the main
 command loop, in which the interpreter prompted the user, read a command
@@ -231,7 +225,7 @@ That's better than having them built into the interpreter, since it
 gives you the ability to customize as much of the library
 implementations as you need to, or even replace them completely.
 
-TADS 3 doesn't use TADS 2's <span class="code">init()</span> function,
+TADS 3 doesn't use TADS 2's `init()` function,
 but it has a similar feature. Refer to [initialization](init.html) for
 information on how pre-initialization and run-time initialization work
 in TADS 3.

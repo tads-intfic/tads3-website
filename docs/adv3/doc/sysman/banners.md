@@ -367,8 +367,8 @@ a left- or right-aligned banner, the size is the width.
 **Percentage sizing:** The first method is to size a banner in
 proportion to the available parent area, by specifying the size as a
 percentage when creating the banner (with
-<span class="code">bannerCreate()</span>) or changing its size (with
-<span class="code">bannerSetSize()</span>). The size of the banner will
+`bannerCreate()`) or changing its size (with
+`bannerSetSize()`). The size of the banner will
 always be the given percentage of the available parent space; see the
 screen layout overview above for details of how this is determined. When
 you set a percentage size, the banner specifically remembers the
@@ -477,25 +477,25 @@ interface. The banner functions all have names of the form bannerXxx.
 ## Notes for TADS 2 users
 
 The banner API **replaces** the TADS 2
-<span class="code">\<BANNER\></span> tag. The
-<span class="code">\<BANNER\></span> tag is not supported at all in TADS
+`\<BANNER\>` tag. The
+`\<BANNER\>` tag is not supported at all in TADS
 3; interpreters will ignore it.
 
 The Banner API provides the same functionality that was available in
-HTML TADS 2 interpreters via the <span class="code">\<BANNER\></span>
+HTML TADS 2 interpreters via the `\<BANNER\>`
 tag, but with many improvements. The new API goes beyond the
-<span class="code">\<BANNER\></span> tag from TADS 2 in several
+`\<BANNER\>` tag from TADS 2 in several
 important ways:
 
-- The <span class="code">\<BANNER\></span> tag in TADS 2 was available
+- The `\<BANNER\>` tag in TADS 2 was available
   only in full HTML interpreters. The TADS 3 banner window API works on
   many different interpreters, including text-only interpreters. (It
   isn't *guaranteed* to work on all interpreters, but the range of
   compatible interpreters is greatly expanded compared with the
-  HTML-only <span class="code">\<BANNER\></span> tag. The interpreters
+  HTML-only `\<BANNER\>` tag. The interpreters
   that omit support for the Banner API are mostly older versions, which,
   hopefully, will eventually be updated to the new API.)
-- The <span class="code">\<BANNER\></span> tag was sent to the main
+- The `\<BANNER\>` tag was sent to the main
   output stream, so updating a banner had the side effect of updating
   the main output window; this made it impossible to update a banner
   window without canceling command-line editing in progress, such as
@@ -503,22 +503,22 @@ important ways:
   output stream truly independent, so banners can be freely updated
   during timed events without interfering with operations in progress in
   other windows, including input editing in the main window.
-- The <span class="code">\<BANNER\></span> tag was tied to the
+- The `\<BANNER\>` tag was tied to the
   hierarchical structure of HTML, which meant that the entire contents
   of a banner had to be enclosed within the
-  <span class="code">\<BANNER\>...\</BANNER\></span> sequence; this made
+  `\<BANNER\>...\</BANNER\>` sequence; this made
   it impossible to add new text to a banner later, after the
-  <span class="code">\</BANNER\></span> close tag, and in particular
+  `\</BANNER\>` close tag, and in particular
   made it impossible to add to a banner in response to a new command.
   The banner window API treats each window's output stream as
   independent, so the program is free to add to an existing banner at
   any time.
 - The banner window API adds several new features to banners that were
-  not present in the <span class="code">\<BANNER\></span> tag, including
+  not present in the `\<BANNER\>` tag, including
   optional scrollbars, and optional automatic scrolling into view as new
   text is added.
 - Banner windows can be split from the main text window, as the
-  <span class="code">\<BANNER\></span> tag did in TADS 2, but they can
+  `\<BANNER\>` tag did in TADS 2, but they can
   also be split from other banner windows. This provides much more
   powerful layout capabilities.
 - The banner window API introduces the new "text grid" window type,

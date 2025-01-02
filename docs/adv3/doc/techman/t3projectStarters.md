@@ -52,38 +52,34 @@ The template file contains text in a special format, with instructions
 for Workbench on how to create the project. The file uses a simple
 name/value pair format, with one item per line. An item looks like this:
 
-<div class="code">
-
+```
     name: value
+```
 
-</div>
-
-The <span class="code">name</span> must be at the very start of the
+The `name` must be at the very start of the
 line, with no leading spaces. If a line starts with one or more spaces,
 it's read as a continuation of the previous line. This allows you to
 break up long values over several lines if needed for readability:
 
-<div class="code">
-
+```
     name: This is a value that goes on for
       quite a while, requiring several lines
       to make it all fit neatly.
-
-</div>
+```
 
 When Workbench reads the file, it joins these lines together as though
 the value had appeared all on the same line. Workbench replaces each
 line break, along with all of the leading spaces on the following line,
 with a single space.
 
-Here's a list of the <span class="code">name</span> elements and what
+Here's a list of the `name` elements and what
 they mean:
 
-- <span class="code">name</span>: The title of the project
+- `name`: The title of the project
   configuration. This is displayed in the New Project dialog in the list
   of available project types. You should use something short and
   descriptive; it doesn't have to be an exhaustive description, because
-  the <span class="code">desc</span> value is also displayed in the same
+  the `desc` value is also displayed in the same
   list. The standard project starters included with Workbench use these
   names:
   - Adv3 - Introductory
@@ -92,13 +88,13 @@ they mean:
   - Adv3 - Advanced - Web UI
   - Plain T3
 
-- <span class="code">desc</span>: A detailed description of the project.
+- `desc`: A detailed description of the project.
   This is displayed in the New Project dialog, under the
-  <span class="code">name</span>. This should be a couple of sentences
+  `name`. This should be a couple of sentences
   describing your library and the type of project this template would
   create.
 
-- <span class="code">source</span>: The name of a source (.t) file that
+- `source`: The name of a source (.t) file that
   you provide as part of your library folder, that's meant to be
   **copied** into the user's new project folder. The value for this item
   is the name of the file that you provide, optionally followed by a
@@ -108,54 +104,54 @@ they mean:
   (\$) as a substitution parameter: this is replaced with the project
   name that the New Project dialog asks the user to choose. For example,
   suppose that the user enters "test one" as the project name. If you
-  enter this <span class="code">source</span> item:
+  enter this `source` item:
 
   ` source: start.t $.t `
 
-  then the file <span class="code">start.t</span> that you provide in
+  then the file `start.t` that you provide in
   your library folder will be copied into the new project folder with
-  the name <span class="code">test one.t</span>.
+  the name `test one.t`.
 
-  Note that the <span class="code">\$</span> can be used anywhere in the
+  Note that the `\$` can be used anywhere in the
   target file name; it doesn't have to be the entire name. For example,
-  if you write <span class="code">\$-actors.t</span> in the example
-  above, the user's copy of the file would be <span class="code">test
-  one-actors.t</span>.
+  if you write `\$-actors.t` in the example
+  above, the user's copy of the file would be `test
+  one-actors.t`.
 
-  You can use the <span class="code">source</span> item repeatedly, if
+  You can use the `source` item repeatedly, if
   you wish, to copy multiple source files to the new project folder.
-  Simply give each file a separate <span class="code">source</span>
+  Simply give each file a separate `source`
   line.
 
   You can place the source files to be copied into a subfolder of your
   library folder. If you do, simply use a relative Windows-style path in
-  the <span class="code">source</span> line:
+  the `source` line:
 
   ` source: samples\start.t $.t `
 
-  Workbench adds the <span class="code">source</span> items to the new
+  Workbench adds the `source` items to the new
   project's .t3m file in the same order in which they appear in the
   template file.
 
-- <span class="code">lib</span>: The name of a source (.t) or library
+- `lib`: The name of a source (.t) or library
   (.tl) file to include in the project's build list, but **without**
   copying it to the user's project folder. This is for files that will
   be included in the project directly from your library. As with
-  <span class="code">source</span>, you can include as many
-  <span class="code">lib</span> items as you like.
-  Workbench adds the files named in <span class="code">lib</span> items
+  `source`, you can include as many
+  `lib` items as you like.
+  Workbench adds the files named in `lib` items
   to the new project's .t3m in the same order in which they appear in
   the template file.
 
-- <span class="code">sysfile</span>: The name of a **system** source
+- `sysfile`: The name of a **system** source
   (.t) or library (.tl) file to include in the project's build list.
-  This works just like <span class="code">lib</span>, except that these
+  This works just like `lib`, except that these
   files are taken from the Workbench standard library folder rather than
   from your library folder. Use this for files like
-  <span class="code">tok.t</span> or <span class="code">tadsnet.t</span>
+  `tok.t` or `tadsnet.t`
   that come with the standard Workbench distribution.
 
-- <span class="code">define</span>: A preprocessor symbol to define. The
+- `define`: A preprocessor symbol to define. The
   value is a symbol, optionally followed by an equals sign (=) and the
   text to define for the symbol:
 
@@ -163,18 +159,18 @@ they mean:
 
   Workbench will generate the appropriate compiler option to define the
   symbol in the macro preprocessor when the user builds the project. You
-  can use as many <span class="code">define</span> options as you need;
-  simply use a separate <span class="code">define</span> item for each
+  can use as many `define` options as you need;
+  simply use a separate `define` item for each
   symbol you wish to define.
 
-- <span class="code">sequence</span>: A number giving the sorting order
+- `sequence`: A number giving the sorting order
   for this item. This is intended for use by the standard templates
   included with Workbench; replacement libraries should generally omit
   this. When displaying the list of available project types, Workbench
-  puts items with <span class="code">sequence</span> items at the top of
-  the list, in order of their <span class="code">sequence</span> values,
+  puts items with `sequence` items at the top of
+  the list, in order of their `sequence` values,
   followed by the remaining items sorted in alphabetic order of their
-  <span class="code">name</span> strings. The intention is that standard
+  `name` strings. The intention is that standard
   system items are displayed first, followed by third-party libraries.
 
 ## Example
@@ -182,8 +178,7 @@ they mean:
 Here's the template included with the standard Workbench installation
 for the Introductory Adv3 Web UI project type.
 
-<div class="code">
-
+```
     name: Adv3 - Introductory - Web UI
     sequence: 3
     desc: Create a game based on the Adv3 library for Web browser play.
@@ -198,8 +193,7 @@ for the Introductory Adv3 Web UI project type.
     define: TADS_INCLUDE_NET
     define: LANGUAGE=en_us
     define: MESSAGESTYLE=neu
-
-</div>
+```
 
 ## Installation
 

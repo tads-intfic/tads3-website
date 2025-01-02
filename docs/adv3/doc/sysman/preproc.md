@@ -149,14 +149,12 @@ happen to match the words in the message text.
 Here's an example that checks to make sure an included library header
 has a suitable version number:
 
-<div class="code">
-
+```
     #include "MyLib.h"
     #if MYLIB_VSN < 5
     #error "This module requires MyLib version 5 or higher."
     #endif
-
-</div>
+```
 
 ### \#if, \#ifdef, \#elif, \#else, \#endif
 
@@ -296,11 +294,9 @@ suppose you decide that you'd like to keep your include files in a
 subfolder of this folder called "Include Files". You could write your
 \#include lines like so:
 
-<div class="code">
-
+```
     #include ":Include Files:defs.h"
-
-</div>
+```
 
 But if you did this, and then you gave a copy of your source code to a
 friend running Windows, your friend wouldn't be able to compile the code
@@ -315,11 +311,9 @@ local conventions - place slashes only between path elements, never at
 the beginning of the filename. So, we'd rewrite the example above like
 this:
 
-<div class="code">
-
+```
     #include "Include Files/defs.h"
-
-</div>
+```
 
 Even though this doesn't look a thing like a Mac path name, the Mac
 version of the TADS 3 compiler will happily find your file in the
@@ -411,13 +405,11 @@ in normal program text.
 Unlike C and Java, a string in TADS 3 doesn't have to fit all on one
 line. You can instead write a string that spans several lines:
 
-<div class="code">
-
+```
     "This is a string
     that spans several
     lines of source code. ";
-
-</div>
+```
 
 By default, the compiler treats this as though you had written it all on
 one line. It converts each line break into a single space character. If
@@ -436,15 +428,13 @@ and subsequent run of whitespace is collapsed into a single space. You
 can explicitly set this mode by writing this directive in your source
 file:
 
-<div class="code">
-
+```
     #pragma newline_spacing(collapse)
-
-</div>
+```
 
 (Prior to TADS 3.1.3, this mode's name was "on" instead of "collapse".
-The compiler still accepts <span class="code">\#pragma
-newline_spacing(on)</span> as equivalent, so existing code will work
+The compiler still accepts `\#pragma
+newline_spacing(on)` as equivalent, so existing code will work
 without any changes.)
 
 In some written languages, such as Chinese, there isn't typically any
@@ -454,11 +444,9 @@ between words wherever you happen to put a line break in the source
 code. To accommodate languages without inter-word spacing, the compiler
 has another newline spacing mode, called "delete" mode:
 
-<div class="code">
-
+```
     #pragma newline_spacing(delete)
-
-</div>
+```
 
 (The pre-3.1.3 name for this mode was "off", which is also still
 accepted and is equivalent to "delete" mode.)
@@ -471,14 +459,12 @@ spacing.
 There's one additional mode, "preserve" mode, for times when you want
 precise control over the contents of strings.
 
-<div class="code">
-
+```
     #pragma newline_spacing(preserve)
-
-</div>
+```
 
 In "preserve" mode, the compiler keeps the string exactly as you wrote
-it, with each line break turning into a <span class="code">\n</span>
+it, with each line break turning into a `\n`
 (newline) character, and all subsequent spacing left intact. This can be
 useful if you're constructing multi-line strings for special purposes,
 such as storing in external files.
@@ -505,22 +491,18 @@ of a module.
 To turn on sourceTextGroup generation, include this directive in your
 source code:
 
-<div class="code">
-
+```
     #pragma sourceTextGroup(on)
-
-</div>
+```
 
 This tells the compiler to generate sourceTextGroup values for objects
 defined after this point in the current module's source code.
 
 You can turn sourceTextGroup generation off with this directive:
 
-<div class="code">
-
+```
     #pragma sourceTextGroup(off)
-
-</div>
+```
 
 This disables sourceTextGroup generation for subsequent object
 definitions.
@@ -561,16 +543,14 @@ Note that C/C++ programmers usually solve this same problem by enclosing
 the entire contents of each header file in a protective series of
 \#ifdef-type directives. Each header file follows this pattern:
 
-<div class="code">
-
+```
     #ifndef MY_HEADER_NAME_H
     #define MY_HEADER_NAME_H
 
     // the rest of the contents of the header go here
 
     #endif
-
-</div>
+```
 
 The idea is that, the first time this file is included, the preprocessor
 symbol MY_HEADER_NAME_H (which is usually based on the name of the
@@ -619,29 +599,23 @@ actual values in each usage of the macro.
 
 For example, suppose we define this macro:
 
-<div class="code">
-
+```
     #define ERROR(msg)  tadsSay('An error occurred: ' + msg + '\n')
-
-</div>
+```
 
 Now suppose we write this in our code somewhere:
 
-<div class="code">
-
+```
     ERROR('invalid value');
-
-</div>
+```
 
 During compilation, the preprocessor will expand this macro invocation,
 substituting the actual parameter value when msg appears in the
 replacement text. The resulting expansion is:
 
-<div class="code">
-
+```
     tadsSay('An error occurred: ' + 'invalid value' + '\n');
-
-</div>
+```
 
 (It is worth pointing out that the compiler will subsequently compute
 the constant value of this string concatenation, so this will not result
@@ -668,8 +642,7 @@ to see if it contains any macros that need to be expanded.
 
 For example, consider the following:
 
-<div class="code">
-
+```
     #define SUM(a, b)  (VAL(a) + VAL(b))
     #define VAL(a)     (a)
 
@@ -679,8 +652,7 @@ For example, consider the following:
     #define VAL(a)     (-(a))
 
     local y = SUM(1, 2);
-
-</div>
+```
 
 There are two important things to note about this example. The first is
 that our macro SUM references a macro named VAL that isn't even defined
@@ -695,12 +667,10 @@ definition of SUM when we change the definition of VAL.
 
 The code above will expand as follows:
 
-<div class="code">
-
+```
     local x = ((1) + (2));
     local y = ((-(1)) + (-(2)));
-
-</div>
+```
 
 ### Recursive macros
 
@@ -717,11 +687,9 @@ expansion. Basically, when a macro is being expanded, the preprocessor
 temporarily "forgets" the macro, then remembers it again as soon as the
 expansion is finished. So, for example, suppose you write this:
 
-<div class="code">
-
+```
     #define hello(x) hello((x)+1)
-
-</div>
+```
 
 This macro *looks* like it would expand forever. If we wrote hello(1),
 we'd naively expect this to expand to hello((1)+1), which would in turn
@@ -750,11 +718,9 @@ To define a macro with varying arguments, place an ellipsis ("...")
 immediately after the last parameter in the macro's formal parameter
 list:
 
-<div class="code">
-
+```
     #define ERROR(msg, args...) displayError('Error:', msg, args)
-
-</div>
+```
 
 The "..." after the last argument tells the preprocessor that the macro
 allows zero or more arguments in place of the last parameter, so the
@@ -769,21 +735,17 @@ replaced by the entire varying part of the argument list, including the
 commas between adjacent arguments, but not including the comma before
 the first varying argument. For example:
 
-<div class="code">
-
+```
     #define VAR(a, b...) { b }
-
-</div>
+```
 
 This macro will expand as follows:
 
-<div class="code">
-
+```
     VAR(1) expands to { }
     VAR(1,2) expands to { 2 }
     VAR(1,2,3,4) expands to { 2,3,4 }
-
-</div>
+```
 
 #### Expansion with no variable arguments, and deleting the extra comma
 
@@ -791,11 +753,9 @@ If the varying part of the list contains zero arguments, note that it is
 replaced by nothing at all. In some cases, this can be problematic; for
 example, in the ERROR macro defined above, consider this expansion:
 
-<div class="code">
-
+```
     ERROR('syntax error') -> displayError('Error:', 'syntax error', )
-
-</div>
+```
 
 Note the extra comma after the last argument to displayError - the comma
 is from the original expansion text in the macro definition, not from
@@ -814,11 +774,9 @@ works with commas - if anything else precedes the "##" operator, the
 operator works as it would in normal (non-varying arguments) cases. We
 can use this feature to rewrite the ERROR macro:
 
-<div class="code">
-
+```
     #define ERROR(msg, args...) displayError('Error:', msg, ## args)
-
-</div>
+```
 
 Now when we expand this macro with no additional arguments, the extra
 comma is deleted:
@@ -872,27 +830,21 @@ comment. You're probably better off avoiding using "/" as the delimiter.
 
 This sounds a bit complicated, so let's see an example:
 
-<div class="code">
-
+```
     #define ERROR(msg, arg...) displayError('Error: ' + msg arg#foreach: +arg ::)
-
-</div>
+```
 
 The first part of the macro is simple:
 
-<div class="code">
-
+```
     displayError('Error: ' + msg
-
-</div>
+```
 
 This part expands in the familiar way. Now we come to this sequence:
 
-<div class="code">
-
+```
     arg#foreach: +arg ::
-
-</div>
+```
 
 Remember that the \#foreach operator must appear immediately after the
 varying argument name, as we see here. After the \#foreach operator, we
@@ -920,53 +872,43 @@ between iterations.
 
 Let's look at how the macro expands. Consider this invocation:
 
-<div class="code">
-
+```
     ERROR('syntax error')
-
-</div>
+```
 
 In this case, we have no varying arguments at all, so the entire
 \#foreach sequence - from the "arg#foreach" part to the final colon - is
 iterated zero times, and hence expands to nothing at all. The expansion
 is thus:
 
-<div class="code">
-
+```
     displayError('Error:' + 'syntax error' )
-
-</div>
+```
 
 Note that we don't have any problem handling the zero varying arguments,
 since the entire iteration simply occurs zero times in this case.
 
 Now consider what happens when we include some arguments:
 
-<div class="code">
-
+```
     ERROR('token error', 1, 2)
-
-</div>
+```
 
 This time, the \#foreach sequence is iterated twice. The first time,
 "arg" expands to "1", since that's the first varying argument, and the
 second time, "arg" expands to "2". The two iterations are expanded like
 this:
 
-<div class="code">
-
+```
     +1
     +2
-
-</div>
+```
 
 These are concatenated together, so the result looks like this:
 
-<div class="code">
-
+```
     displayError('Error: ' + 'token error' +1 +2)
-
-</div>
+```
 
 The "interim" portion is useful for solving the same kinds of problems
 as the "##" comma deletion feature, but is more general. Since the
@@ -975,11 +917,9 @@ arguments, it is useful for building lists of zero or more arguments.
 For example, suppose we want to write a macro that adds zero or more
 values:
 
-<div class="code">
-
+```
     #define ADD(val...) val#foreach:val:+:
-
-</div>
+```
 
 If we call this with no arguments, the expansion will be empty, because
 we'll iterate the \#foreach zero times. If we call this with one
@@ -989,14 +929,12 @@ because we skip the interim expansion after the last argument. With two
 arguments, we'll expand the interim once, between the two. Here are some
 sample expansions:
 
-<div class="code">
-
+```
     ADD() expands to nothing
     ADD(1) expands to 1
     ADD(1,2) expands to 1+2
     ADD(1,2,3) expands to 1+2+3
-
-</div>
+```
 
 #### Conditional expansion with \#ifempty and \#ifnempty
 
@@ -1023,21 +961,17 @@ variable arguments into a concatenated list, and then passes the
 concatenated list as the second argument to another function. We might
 try defining this using \#foreach:
 
-<div class="code">
-
+```
     #define CALL_CONCAT(firstArg, args...) \
        myFunc(firstArg, args#foreach#args#+#)
-
-</div>
+```
 
 However, this has a problem: if the varying argument part of the list is
 empty, we have an unnecessary comma in the expansion:
 
-<div class="code">
-
+```
     CALL_CONCAT(test) -> myFunc(test, )
-
-</div>
+```
 
 This is similar to the problem that we mentioned earlier in describing
 the "##" operator, but we can't use the "##" operator to delete the
@@ -1049,12 +983,10 @@ case, we want to include the comma after firstArg in the expansion only
 when the argument list isn't empty, so we can change the macro like
 this:
 
-<div class="code">
-
+```
     #define CALL_CONCAT(firstArg, args...) \
        myFunc(firstArg args#ifnempty#,# args#foreach#args#+#)
-
-</div>
+```
 
 This does what we want: when the variable argument list is empty, the
 \#ifnempty expansion text is omitted, so we have no extra comma; when we
@@ -1070,11 +1002,9 @@ name of the varying parameter, without any spaces. This operator expands
 to a token giving the number of arguments in the varying list. For
 example:
 
-<div class="code">
-
+```
     #define MAKELIST(ret, val...) ret = [val#argcount val#foreach#,val##]
-
-</div>
+```
 
 This expands as follows:
 
@@ -1096,27 +1026,21 @@ operator has a similar effect, but encloses the text in single quotes.
 For example, suppose we wanted to write a debugging macro that displays
 the value of an arbitrary expression:
 
-<div class="code">
-
+```
     #define printval(val) tadsSay(#@val + ' = ' + toString(val))
-
-</div>
+```
 
 We could use this macro in our code like this:
 
-<div class="code">
-
+```
     printval(MyObject.codeNum);
-
-</div>
+```
 
 This would expand as follows:
 
-<div class="code">
-
+```
     tadsSay('MyObject.codeNum' + ' = ' + toString(MyObject.codeNum));
-
-</div>
+```
 
 ### Token Pasting
 
@@ -1133,39 +1057,31 @@ then performs pasting on the result.
 For example, suppose we wanted to construct a method call based on a
 partial method name:
 
-<div class="code">
-
+```
     #define callDo(verb, actor)  do##verb(actor)
-
-</div>
+```
 
 We could use the macro like this:
 
-<div class="code">
-
+```
     dobj.callDo(Take, Me);
-
-</div>
+```
 
 This would expand into this text:
 
-<div class="code">
-
+```
     dobj.doTake(Me);
-
-</div>
+```
 
 The preprocessor scans a pasted token for further expansion, so if the
 pasted token is itself another macro, the preprocessor expands that as
 well:
 
-<div class="code">
-
+```
     #define PASTE(a, b) a##b
     #define FOOBAR 123
     PASTE(FOO, BAR)
-
-</div>
+```
 
 The macro above expands as follows. First, the preprocessor expands the
 PASTE macro, pasting the two arguments together to yield the token
@@ -1191,8 +1107,7 @@ stringized parameters, the result is a single string.
 
 Here are some examples:
 
-<div class="code">
-
+```
     #define PAREN_STR(a) "(" ## a ")"
     #define CONCAT(a, b) a ## b
     #define CONCAT_STR(a, b) #a ## #b
@@ -1202,19 +1117,16 @@ Here are some examples:
     2: CONCAT("abc", "def")
     3: CONCAT_STR(uvw, xyz)
     4: DEBUG_PRINT(obj.prop[3])
-
-</div>
+```
 
 After preprocessing, the file above would appear as follows:
 
-<div class="code">
-
+```
     1: "(parens)"
     2: "abcdef"
     3: "uvwxyz"
     4: "value of obj.prop[3] = <<obj.prop[3]>>"
-
-</div>
+```
 
 Note that string concatenation is a TADS extension, and is not found in
 ANSI C preprocessors. The C preprocessor doesn't provide a way of

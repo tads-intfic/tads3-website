@@ -56,30 +56,26 @@ that's displayed in bold at the start of a room description), its
 **vocab**. The normal way to define these properties is through the Room
 template. Without the vocab property this looks like this:
 
-<div class="code">
-
+```
     kitchen: Room 'Kitchen' 
         "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
         over by the back door to the east, not far from the fridge. The other exits
         are west to the hall, north to the dining-room and down to the cellar. "
     ;
-
-</div>
+```
 
 If the vocab property is defined, it is given in a second single-quoted
 string, thus:
 
-<div class="code">
-
+```
     kitchen: Room 'Kitchen' 'kitchen' 
         "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
         over by the back door to the east, not far from the fridge. The other exits
         are west to the hall, north to the dining-room and down to the cellar. "
     ;
-
-</div>
+```
 
 There are a couple of advantages to defining the vocab property on a
 Room:
@@ -121,21 +117,19 @@ example.
 
 <span id="styletag"></span>
 
-By default the <span class="code">roomTitle</span> is displayed in bold
+By default the `roomTitle` is displayed in bold
 at the start of a room description. This normally works well, but if for
 any reason you want to change this format you can do so by modifying the
 **roomnameStyleTag**. For example, if you wanted the roomTitle (the name
 of the room) to be displayed in bold italics each time, you could
 override roomnameStyleTag thus:
 
-<div class="code">
-
+```
     modify roomnameStyleTag
         openText = '\n<b><i>'
         closeText = '</i></b>\n'
     ;
-
-</div>
+```
 
 You could also use \<FONT\> tags here for other effects, for example
 specifying a particular colour, but this needs to be done with caution,
@@ -145,14 +139,12 @@ text on a blue background. On the other hand, there's no reason why you
 shouldn't use a \<FONT\> tag to change the *size* of the room name if
 you so wished, for example:
 
-<div class="code">
-
+```
     modify roomnameStyleTag
         openText = '\n<b><FONT SIZE=+2>'
         closeText = '</FONT></b>\n'
     ;
-
-</div>
+```
 
 Incidentally, there's also a **roomdescStyleTag** that can be used in a
 similar way to format the long description of a room (but not the
@@ -196,7 +188,7 @@ you do define any of these properties they can be defined as one of:
 - A single- or double-quoted string, in which case the string will
   simply be displayed.
 - A method, in which case the method will be executed.
-- The **asExit** macro, e.g. <span class="code">out asExit(west)</span>,
+- The **asExit** macro, e.g. `out asExit(west)`,
   in which case the command OUT will result in trying to move the player
   character west, without OUT being listed as a separate exit in any
   list of exits.
@@ -219,8 +211,7 @@ method that simply displays a string is equivalent to an adv3
 FakeConnector (which is likewise not defined in the adv3Lite library).
 For example:
 
-<div class="code">
-
+```
     kitchen: Room 'Kitchen' 'kitchen' 
         "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
@@ -234,8 +225,7 @@ For example:
         south = "Unfortunately, you can't simply walk through the window, and you have no means of opening it. "
         southwest { "You have no reason to visit the pantry. "; }
     ;
-
-</div>
+```
 
 This illustrates what is probably likely to be the most common use of a
 method defined on a direction property, but in principle such a method
@@ -264,31 +254,31 @@ relevant commands (e.g. GO PORT, THROW BALL PORT or PUSH TROLLEY PORT)
 carried out in the room in question. Attempts to use the disallowed
 directions in any command will then be blocked with message stating
 "Shipboard/compass directions have no meaning here." By default
-<span class="code">allowCompassDirections</span> is true for all rooms,
+`allowCompassDirections` is true for all rooms,
 but game code can override this on rooms that are meant to be aboard
 ship (or, indeed, in any game that wants to abolish compass directions
 altogether). On the other hand the default behaviour of
-<span class="code">allowShipboardDirections()</span> is to return true
+`allowShipboardDirections()` is to return true
 if and only if one or more of the shipboard direction exits (port,
 starboard, fore or aft) is non-nil on the room in question. Normally,
-this means that <span class="code">allowShipboardDirections()</span> can
+this means that `allowShipboardDirections()` can
 be left to take care of itself, but occasionally you may have rooms,
 such as a the hold of the ship, where none of the shipboard directions
 is actually defined (because the only way out is UP, say) but the
 shipboard directions are still notionally meaningful; on such a room you
-could simply define <span class="code">allowShipboardDirections =
-true</span>. (The enforcement of these conditions is carried out by the
-[Doer](doer.html) method <span class="code">checkDirection()</span> which
-is called from <span class="code">Doer.exec()</span> for any command
+could simply define `allowShipboardDirections =
+true`. (The enforcement of these conditions is carried out by the
+[Doer](doer.html) method `checkDirection()` which
+is called from `Doer.exec()` for any command
 involving a direction).
 
 Finally, note that defining anything on a direction property of a room
 establishes a connection in one direction only. For example, in the
-sample code shown above, defining <span class="code">north =
-diningRoom</span> on the kitchen establishes a connection to the dining
+sample code shown above, defining `north =
+diningRoom` on the kitchen establishes a connection to the dining
 from the kitchen going north, but it doesn't also establish a connection
 south from the dining room to the kitchen; that would need to be defined
-explicitly on the <span class="code">diningRoom</span> object. This may
+explicitly on the `diningRoom` object. This may
 be an advantage (a) because it may help to make your code clearer and
 (b) you may not always want a connection back in the reverse direction,
 or you may want it to behave differently. On the other hand, if you
@@ -318,8 +308,7 @@ the player character to travel via the nornoreast property of the
 current room when the player entered the command NORNOREAST or NNE. You
 would just need to do this:
 
-<div class="code">
-
+```
     nornoreastDir: CompassDirection
         name = 'nornoreast'
         dirProp = &nornoreast
@@ -330,8 +319,7 @@ would just need to do this:
     grammar directionName(nornoreast): 'nornoreast' | 'nne' : Production
         dir = nornoreastDir
     ;
-
-</div>
+```
 
 With these two definitions, you could then used nornoreast just like any
 of the built-in directions. The **sortingOrder** property on the
@@ -398,9 +386,9 @@ Some other properties and methods of Room you may find useful include:
   processing cycle. It can be used, for example, to display a series of
   atmpospheric message string (by defining the Room as also being a
   [EventList](eventList.html) in which case
-  <span class="code">roomDaemon()</span> would automatically call its
-  <span class="code">doScript()</span> method to cycle through its
-  eventList, unless <span class="code">roomDaemon</span> had been
+  `roomDaemon()` would automatically call its
+  `doScript()` method to cycle through its
+  eventList, unless `roomDaemon` had been
   overridden to do something different). If the eventList contains a
   list of atmospheric strings including sounds (as might often be the
   case) there's could be a clash with the response to LISTEN and an
@@ -410,7 +398,7 @@ Some other properties and methods of Room you may find useful include:
   as a LISTEN command. If the Room's eventList contains nothing but
   atmospheric sounds and there is nothing else in scope to responde to a
   LISTEN command, you may also want to define the Room's listenDesc
-  property as <span class="code">listenDesc() { { doScript();} }</span>.
+  property as `listenDesc() { { doScript();} }`.
 - **extraScopeItems** A list of items that would not normally be in
   scope but which should nevertheless be placed in scope in this room.
   This can of course be defined as a method that returns different lists
@@ -454,7 +442,7 @@ Some other properties and methods of Room you may find useful include:
   direction corresponding to the direction property on which *conn* is
   defined). For example, if frontDoor was assigned to the north property
   of a room called hall,
-  <span class="code">hall.getDirection(frontDoor)</span> would return
+  `hall.getDirection(frontDoor)` would return
   northDir.
 
 Note that some of these explanations involve concepts we haven't come to
@@ -476,11 +464,11 @@ there were two identical coins, one on a table and one directly in the
 room, the parser would have to ask "Which do you mean, the coin on the
 table or the coin?", which is unclear and fails to give the player an
 easy way of selecting the latter. Thanks to the presence of a
-<span class="code">defaultGround</span> in every Room the parser can ask
+`defaultGround` in every Room the parser can ask
 "Which do you mean, the coin on the table or the coin on the ground?"
 and the player can refer to "the coin on the ground" to disambiguate.
 
-The <span class="code">defaultGround</span> object present in every room
+The `defaultGround` object present in every room
 also performs the secondary purpose of allowing players to refer to 'the
 ground' or 'the floor' which must be implicitly present in nearly every
 room, but its implementation is deliberately minimalistic to discouraage
@@ -529,8 +517,7 @@ you do. To include a Room in a Region, simply list that Region in the
 Room's region property and create a corresponding Region object, for
 example:
 
-<div class="code">
-
+```
     kitchen: Room 'Kitchen' 'kitchen' 
         "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
@@ -542,23 +529,20 @@ example:
 
     downstairs: Region
     ;
-
-</div>
+```
 
 Regions can themselves be included within other regions by setting their
 regions property. For example, to place the downstairs Region entirely
 within the indoors Region we could write:
 
-<div class="code">
-
+```
     downstairs: Region
       regions = [indoors]
     ;
 
     indoors: Region
     ;
-
-</div>
+```
 
 It is also perfectly legal to define the regions property of Rooms in
 such a way that Regions end up overlapping.
@@ -579,10 +563,10 @@ The properties and methods of Region you may find useful include:
 - **rooms** A user-defined list of Rooms that are directly within this
   region. This can be used to define the rooms (or some of the rooms)
   that go to make up a Region. At the pre-initialization stage this list
-  will be used in conjunction with the <span class="code">regions</span>
+  will be used in conjunction with the `regions`
   property of individual Rooms to build the
-  <span class="code">roomList</span> for each Region and update the
-  <span class="code">regions</span> list of each Room. For a fuller
+  `roomList` for each Region and update the
+  `regions` list of each Room. For a fuller
   explanation see below.
 - **familiar** (true or nil) Making a Region familiar has the effect of
   making every Room in the Region familiar. This in turn can be useful
@@ -609,11 +593,11 @@ The properties and methods of Region you may find useful include:
   region after a *traveler* in any room in the region has traveled via
   *connector*; note that this method is invoked after all other after
   travel notifications (to allow more specific ones to react first).
-- **fastGoTo**: if <span class="code">gameMain.fastGoTo</span> is true,
-  the setting of <span class="code">fastGoTo</span> on individual
+- **fastGoTo**: if `gameMain.fastGoTo` is true,
+  the setting of `fastGoTo` on individual
   regions will have no effect, since [fast GoTo](pathfind.html#fastgo)
   (GoTo without stopping for CONTINUE commands) will then be in effect
-  globally. If <span class="code">gameMain.fastGoTo</span> is nil,
+  globally. If `gameMain.fastGoTo` is nil,
   however, setting it to true on an individual region will allow fast
   GoTo travel within that Region.
 - **regionDaemon()**: A method that is executed each turn the player
@@ -641,8 +625,8 @@ them, but in summary the main uses to which Regions can be put include:
   the GO TO command) without having to explore it first.
 - Conditionally preventing travel between Regions or making things
   happen when travel between Regions occurs (using the
-  <span class="code">travelerLeaving()</span> and
-  <span class="code">travelerEntering()</span> methods).
+  `travelerLeaving()` and
+  `travelerEntering()` methods).
 
 A further word of explanation may be in order about travelerLeaving()
 and travelerEntering(). The first is called on all the regions the
@@ -661,8 +645,7 @@ actually executed. If you want something to take place immediately after
 the traveler enters a region one way to do it would be to set a
 zero-length fuse in the travelerEntering() method, e.g.:
 
-<div class="code">
-
+```
     planeRegion: Region
         travelerLeaving(traveler, dest) { "You're about to leave the plane. "; }
         travelerEntering(traveler, origin) 
@@ -672,8 +655,7 @@ zero-length fuse in the travelerEntering() method, e.g.:
         }
         edesc = "You've just boarded the plane. "
     ;
-
-</div>
+```
 
 One further point: several of the properties on which the Region
 mechanisms depend are set up by the library at the preinitialization
@@ -683,44 +665,42 @@ during the course of a game. If you need a Region that changes during
 the course of your game you could try the
 [DynamicRegion](../../extensions/docs/dynregion.html) extension.
 
-If a Region is defined with a <span class="code">rooms</span> property
+If a Region is defined with a `rooms` property
 containing a list of rooms, each of these rooms will have that Region
 added to its regions list, but the building of the Region's roomList
 will still proceed as before (removing duplicate entries in any case).
 This makes it safe to define the Rooms that go into a Region either by
-listing the Regions in a Room's <span class="code">regions</span>
+listing the Regions in a Room's `regions`
 property, or by listing the rooms if a Region's
-<span class="code">rooms</span> property, or a mixture of both.
+`rooms` property, or a mixture of both.
 
 There is absolutely no need to define both the
-<span class="code">regions</span> property of a Rooms and the
-<span class="code">rooms</span> property of a Region to associate Rooms
+`regions` property of a Rooms and the
+`rooms` property of a Region to associate Rooms
 with Regions, but no harm will be done if you do. The purpose is simply
 to allow both methods of associating Rooms with Regions so that game
 authors can use whichever method they find most congenial, including a
 mixture of the two.
 
-The <span class="code">rooms</span> property of a Region can be
+The `rooms` property of a Region can be
 specified via a template, thus:
 
-<div class="code">
-
+```
      downstairsRegion: Region
        [hall, kitchen, study, lounge]
        regions = [indoorRegion]
     ;
      
-
-</div>
+```
 
 In this example, note how putting one Region inside another must still
-be done via the enclosed Region's <span class="code">regions</span>
+be done via the enclosed Region's `regions`
 property. If you have a larger Region that encloses smaller Regions you
-could also use the <span class="code">rooms</span> property on the
+could also use the `rooms` property on the
 larger Region to list the smaller Regions that go to make it up. The
-point to bear in mind is that the <span class="code">regions</span>
+point to bear in mind is that the `regions`
 property of X can be used to define the regions that X is in, while the
-<span class="code">rooms</span> property can be used to define the Rooms
+`rooms` property can be used to define the Rooms
 (or Regions) that are in X, and that these provide alternative means for
 defining the same relationship.
 

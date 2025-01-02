@@ -79,8 +79,7 @@ true (or a method that returns true) when the time is right for the
 AgendaItem to be invoked. In addition, AgendaItems should always be
 located directly in the Actor to which they relate. For example:
 
-<div class="code">
-
+```
     guard: Actor 'burly guard; strong powerful; man; him' @doorway
         "He looks incredibly strong and powerful. "
     ;
@@ -97,32 +96,31 @@ located directly in the Actor to which they relate. For example:
              isDone = true;
         }
     ;
-
-</div>
+```
 
 Here we've defined an AgendaItem that will be invoked as soon as the
 guard can see the player character, but which will only be invoked once
 (since isDone is set to true at the end of the first invocation).
 However, it won't be invoked at all unless we also do one of two things:
 
-1.  Also define <span class="code">isInitiallyActive = true</span> on
+1.  Also define `isInitiallyActive = true` on
     the AgendaItem; or
 2.  Previously call the **addToAgenda(item)** method on the actor, e.g.
-    <span class="code">guard.addToAgenda(guardWarnAgenda)</span>, to add
+    `guard.addToAgenda(guardWarnAgenda)`, to add
     it to the actor's agendaList property.
 
 Note that we could also call the addToAgenda() method indirectly via the
-\<.agenda item\> tag, e.g. <span class="code">\<.agenda
-guardWarnAgenda\></span>, though this also adds the item to the
+\<.agenda item\> tag, e.g. `\<.agenda
+guardWarnAgenda\>`, though this also adds the item to the
 agendaLists of any [DefaultAgendaTopics](defaultagendatopic.html)
 associated with the Actor, which may or may not be what we want to do
 (we shall describe DefaultAgendaTopics more fully in a later section).
 If for some reason we want to prevent an AgendaItem from being invoked
 after we've added it to the actor's agendaList we can use the actor's
 removeFromAgenda() method, e.g.
-<span class="code">guard.removeFromAgenda(guardWarnAgenda)</span>, for
+`guard.removeFromAgenda(guardWarnAgenda)`, for
 which there's also a corresponding \<.remove item\> tag, e.g.
-<span class="code">\<.remove guardWarnAgenda\></span>. In adv3Lite the
+`\<.remove guardWarnAgenda\>`. In adv3Lite the
 addToAgenda(item) and removeFromAgenda(item) can also be called with a
 list of items (a list enclosed in square brackets); this is one
 difference from the adv3 library, which does not allow this (and even in
@@ -178,8 +176,8 @@ likely to be of interest to game authors includes:
   optional second parameter is provided in case you want the display of
   the report to depend on some sense other than sight, in which case the
   second argument would be passed as a pointer to the appropriate
-  property of the Query object, e.g. <span class="code">report('Bob
-  coughs loudly. ', &canHear)</span>.
+  property of the Query object, e.g. `report('Bob
+  coughs loudly. ', &canHear)`.
 
   
 <span id="other"></span>
@@ -196,18 +194,15 @@ agendaList. The delay is set by calling the DelayedAgendaItem's
 DelayedAgendaItem. This allows you to add a DelayedAgendaItem to the
 actor's agendaList and set the delay in a single statement, e.g.:
 
-<div class="code">
-
+```
         bob.addToAgenda(someDelayedAgendaItem.setDelay(3));
-
-</div>
+```
 
 Note that the delay is enforced on the isReady property of the
 DelayedAgendaItem, so that if you want to enforce some other condition
 as well you need to *and* it with the inherited condition, e.g.:
 
-<div class="code">
-
+```
     + guardReactionAgenda: DelayedAgendaItem
          isReady = inherited && canSee(guard, gPlayerChar)
          
@@ -218,8 +213,7 @@ as well you need to *and* it with the inherited condition, e.g.:
                as if to say, <q>Go now, while you still can!</q> ";
          }
     ;
-
-</div>
+```
 
   
 <span id="convagenda"></span>
@@ -237,8 +231,7 @@ Once again, if you need to define a further condition on the isReady
 property of a ConvAgendaItem you need to *and* it with the inherited
 handling, for example:
 
-<div class="code">
-
+```
     + clerkPartyAgenda: ConvAgendaItem
         isReady = inherited && gRevealed('office-party')
 
@@ -250,14 +243,12 @@ handling, for example:
             wasn't <i>that</i> wild. ";
         }
     ;
-
-</div>
+```
 
 Note that if you want something to behave as both a DelayedAgendaItem
 and a ConvAgendaItem you can just define it with both classes,e.g.:
 
-<div class="code">
-
+```
     + clerkJacketAgenda: DelayedAgendaItem, ConvAgendaItem
        invokeItem()
        {
@@ -272,15 +263,14 @@ and a ConvAgendaItem you can just define it with both classes,e.g.:
      /* Somewhere else in the code */
      
         clerk.addToAgenda(clerkJacketAgenda.setDelay(10));
-
-</div>
+```
 
 <span id="followagenda"></span>
 
 The third special kind of AgendaItem is the
 **<span id="followagenda">FollowAgendaItem</span>**. This is used when
 an actor want the player character to follow him/her/it. To define a
-<span class="code">FollowAgendaItem</span> you need to define its
+`FollowAgendaItem` you need to define its
 **connectorList** property, which is a list of connectors (which in the
 simplest case could just be rooms, but might need to include doors,
 stairways and other TravelConnectors) through which the actor wishes to
@@ -290,8 +280,7 @@ to lead the player character, and an **arrivingDesc** method to describe
 the leading actor arriving in a new destination having just led the
 player character there; for example:
 
-<div class="code">
-
+```
         
     + FollowAgendaItem
         initiallyActive = true
@@ -321,8 +310,7 @@ player character there; for example:
             <<nextDirection.departureName>>. ";
         }
     ;
-
-</div>
+```
 
 <span id="followprops"></span>
 
@@ -345,38 +333,38 @@ defines is as follows:
   actor's actorSpecialDesc). It can be used to describe the fact that
   the actor is waiting for the Player Character to follow him/her; e.g.
   "Bob is waiting for you to follow him north through the blue door".
-  You can use <span class="code">nextConnector</span> or
-  <span class="code">nextConnNum</span> or
-  <span class="code">getActor.getOutermostRoom</span> to determine where
+  You can use `nextConnector` or
+  `nextConnNum` or
+  `getActor.getOutermostRoom` to determine where
   along the path the actor is and so customize this property
   accordingly. By default specialDesc displays a 'plain vanilla'
   description ("Bob is waiting for you to follow him to the north") but
   game code will usually want to override this.
 - **arrivingDesc**: this is displayed instead of
-  <span class="code">specialDesc</span> on the turn on which the lead
+  `specialDesc` on the turn on which the lead
   actor arrives in a new destination when the Player Character is
   following him/her. By default the method just displays the
-  <span class="code">specialDesc</span>, but game code will generally
+  `specialDesc`, but game code will generally
   want to override it to something more appropriate, e.g. "Bob crosses
   the lounge and waits for you to follow him out through the french
   windows."
 - **traveledThisTurn**: the last turn on which this FollowAgendaItem
   caused the NPC to travel; this is used by
-  <span class="code">showSpecialDesc()</span> to decide whether to
-  display <span class="code">specialDesc</span> or
-  <span class="code">arrivingDesc</span>.
+  `showSpecialDesc()` to decide whether to
+  display `specialDesc` or
+  `arrivingDesc`.
 - **sayDeparting(conn)**: Display a message announcing our actor's
   travel; by default we simply use conn's sayActorFollowing() method,
   but we make this a separate method on the FollowAgendaItem to make it
   easy to customise.
 - **noteArrival()**: This method is invoked when our NPC arrives at
   his/her final destination (having traveled via the last connector in
-  <span class="code">connectorList</span>). By default we do nothing,
+  `connectorList`). By default we do nothing,
   but instances can override to provide code to handle the arrival, e.g.
   by changing the NPC's ActorState.
 - **cancel()**: Cancel this FollowAgendaItem before its normal
   termination (and remove it from all AgendaLists). Use this method
-  rather than <span class="code">Actor.removeAgendaItem()</span> for a
+  rather than `Actor.removeAgendaItem()` for a
   FollowAgendaItem.
 - **beforeTravel(traveler, connector)**: Notification that *traveler* is
   about to travel via *connector* while this FollowAgendaItem is active.

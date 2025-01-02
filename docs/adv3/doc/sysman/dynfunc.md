@@ -35,105 +35,101 @@ restored when it's restored.
 ## Headers and source files
 
 If you use the DynamicFunc class in your program, you must
-<span class="code">\#include \<dynfunc.h\></span> in your source files,
+`\#include \<dynfunc.h\>` in your source files,
 to define the intrinsic class interface.
 
 You should also add the system library file
-<span class="code">dynfunc.t</span> to your project's list of source
+`dynfunc.t` to your project's list of source
 files. This file isn't required, but if it's included, it defines some
 useful helper objects. In particular, it defines the
-<span class="code">Compiler</span> object, which provides a convenient
+`Compiler` object, which provides a convenient
 interface to several dynamic compiler functions; and the
-<span class="code">CompilerException</span> class, which is the
+`CompilerException` class, which is the
 exception type thrown when a source code compilation error occurs while
 creating a DynamicFunc instance.
 
 ## The Compiler helper object
 
 The easiest way to use DynamicFunc is through the helper object
-<span class="code">Compiler</span>. This object is defined in the system
-library file <span class="code">dynfunc.t</span>. To include this
-optional file, add <span class="code">dynfunc.t</span> (from the system
+`Compiler`. This object is defined in the system
+library file `dynfunc.t`. To include this
+optional file, add `dynfunc.t` (from the system
 library folder) to your project's source file list.
 
-The <span class="code">Compiler</span> object provides a couple of
+The `Compiler` object provides a couple of
 methods that make it easier to work with dynamic code.
 
 ### Compiler.compile()
 
-<span class="code">Compiler.compile()</span> takes a source code string,
-and returns a <span class="code">DynamicFunc</span> object with the
+`Compiler.compile()` takes a source code string,
+and returns a `DynamicFunc` object with the
 executable version of the string. The string uses the function syntax
 describe [below](#funcSyntax). To invoke the compiled code, simply treat
 the returned object as though it were a function, and use the standard
 function call syntax with it.
 
-<div class="code">
-
+```
     local square = Compiler.compile('function(x) { return x*x; }');
     local a = 100;
     "<<a>> squared is <<square(a)>>.";
-
-</div>
+```
 
 Notice how the naming works. The source code string that you compile
 doesn't give the function a name at all - it's just "function(x)". The
-name <span class="code">square</span> isn't actually the name of the
+name `square` isn't actually the name of the
 function, but simply the name of an ordinary local variable. The value
 in the local variable is the actual function: it's the
-<span class="code">DynamicFunc</span> object that
-<span class="code">Compiler.compile</span> creates when it compiles the
+`DynamicFunc` object that
+`Compiler.compile` creates when it compiles the
 source code. Because the compiler lets us use a local variable name with
 the ordinary function call syntax, we can write
-<span class="code">square(a)</span> as though
-<span class="code">square</span> were a function name. This has the
+`square(a)` as though
+`square` were a function name. This has the
 effect of getting the value stored in the the variable - in this case,
-the <span class="code">DynamicFunc</span> object - and invoking it as a
+the `DynamicFunc` object - and invoking it as a
 function.
 
 ### Compiler.eval()
 
-<span class="code">Compiler.eval()</span> takes a source code string and
+`Compiler.eval()` takes a source code string and
 not only compiles it, but also executes it, and returns any return
 value. If you just need to get the value of an expression, this skips
 the extra step of making a function call to the compiled DynamicFunc.
 
-<div class="code">
-
+```
     local x = Compiler.eval('Me.location.name');
-
-</div>
+```
 
 If you're going to execute the same code many times, you're better off
-using <span class="code">compile()</span> and saving the DynamicFunc
-result. Using <span class="code">eval()</span> repeatedly on the same
+using `compile()` and saving the DynamicFunc
+result. Using `eval()` repeatedly on the same
 expression is inefficient because it has to recompile the source code
 every time, which is a fairly complex process.
 
 ### Global symbols
 
-The main advantage of using the <span class="code">Compiler</span>
+The main advantage of using the `Compiler`
 object to compile source code strings (instead of calling
-<span class="code">new DynamicFunc()</span> directly) is that
-<span class="code">Compiler</span> automatically handles the global
-symbol table for you. <span class="code">Compiler</span> saves the
+`new DynamicFunc()` directly) is that
+`Compiler` automatically handles the global
+symbol table for you. `Compiler` saves the
 symbol table during pre-initialization, and then supplies it to the
 compiler for each invocation.
 
-Note that merely including <span class="code">dynfunc.t</span> in your
-build will include the <span class="code">Compiler</span> object in your
+Note that merely including `dynfunc.t` in your
+build will include the `Compiler` object in your
 program, whether you end up using it or not. And including
-<span class="code">Compiler</span> means that you include the global
+`Compiler` means that you include the global
 symbol table. This adds to the size of your compiled .t3 file. If you're
 trying to minimize the .t3 file size, and you *don't* actually need to
 keep the global symbol table around, you'll probably want to avoid
-adding <span class="code">dynfunc.t</span> to your build.
+adding `dynfunc.t` to your build.
 
 ### Local variables from enclosing scopes
 
-The <span class="code">compile()</span> and
-<span class="code">eval()</span> methods of the
-<span class="code">Compiler</span> object each accept an optional second
+The `compile()` and
+`eval()` methods of the
+`Compiler` object each accept an optional second
 argument giving a StackFrameDesc object to use for local variable access
 to another function's locals. See the section on [local variable
 access](#localFrames) for more details.
@@ -145,94 +141,84 @@ objects.
 
 First, you can specify a simple expression.
 
-<div class="code">
-
+```
     local f = Compiler.compile('me.location');
-
-</div>
+```
 
 This compiles the code as though it were a function taking no arguments,
-consisting of a <span class="code">return</span> statement returning the
+consisting of a `return` statement returning the
 expression value.
 
 Second, you can specify an entire function. The syntax for this is
 *almost* the same as for a function in ordinary static source code. The
 only difference is that a function you define dynamically is
 **unnamed**. Instead of writing a function name followed by a parameter
-list, you simply write the word <span class="code">function</span> where
+list, you simply write the word `function` where
 the name would ordinarily go:
 
-<div class="code">
-
+```
     local src = 'function(a) { return a*a; }';
-
-</div>
+```
 
 Inside the function, you use the same syntax you'd use within a function
-in a regular source file. You can use <span class="code">if</span>,
-<span class="code">while</span>, <span class="code">switch</span>, and
+in a regular source file. You can use `if`,
+`while`, `switch`, and
 all the other procedural statements; you can call other functions and
 methods; you can create new objects; you can print out messages with
 double-quoted strings or with calls to
-<span class="code">tadsSay()</span>; you can use
-<span class="code">return</span> to return a value. You can do pretty
+`tadsSay()`; you can use
+`return` to return a value. You can do pretty
 much anything you can do in a regular function.
 
-You can alternatively use the <span class="code">method</span> keyword
-in place of <span class="code">function</span>:
+You can alternatively use the `method` keyword
+in place of `function`:
 
-<div class="code">
-
+```
     local src = 'method(a) { return self.isIn(a); }';
-
-</div>
+```
 
 If you don't supply a stack frame context when you compile the dynamic
 code, there's no difference at all between using the
-<span class="code">function</span> and <span class="code">method</span>
+`function` and `method`
 keywords. The choice of keywords only matters when you compile with a
-stack frame context that includes a <span class="code">self</span>
-object. In that case, using <span class="code">function</span> tells the
-compiler that you want to use the <span class="code">self</span> value
-from the supplied stack frame; <span class="code">method</span>, in
-contrast, uses the actual <span class="code">self</span> in effect each
+stack frame context that includes a `self`
+object. In that case, using `function` tells the
+compiler that you want to use the `self` value
+from the supplied stack frame; `method`, in
+contrast, uses the actual `self` in effect each
 time the DynamicFunc is called. The same applies to the other method
-context variables (<span class="code">definingobj</span>,
-<span class="code">targetobj</span>, and
-<span class="code">targetprop</span>).
+context variables (`definingobj`,
+`targetobj`, and
+`targetprop`).
 
 As a rule of thumb, you'll generally want to use the
-<span class="code">method</span> syntax any time you're going to plug
+`method` syntax any time you're going to plug
 the DynamicFunc into another object as a new method, using
-[<span class="code">setMethod()</span>](tadsobj.html#setMethod). In those
-cases you'll want the "live" <span class="code">self</span> value that's
+[`setMethod()`](tadsobj.html#setMethod). In those
+cases you'll want the "live" `self` value that's
 in effect in the invoked method. Any time you're going to use the
 DynamicFunc as a function, in contrast, you can use the
-<span class="code">function</span> keyword.
+`function` keyword.
 
 Note that the source code is given as a string value. This can make it a
 bit tricky to handle quote marks properly. For example:
 
-<div class="code">
-
+```
     local src = 'tadsSay(\'Oh, look, it\\\'s a DynamicFunc!\');';
-
-</div>
+```
 
 Pay special attention to that triple backslash within "it's". You need a
 backslash-quote just to get the apostrophe itself into the
-<span class="code">src</span> string value. But what are the other two
+`src` string value. But what are the other two
 for? Those are there because you need to make sure the *compiler*
 actually sees a backslash in front of the apostrophe, since that
 apostrophe is inside a string in the source code fragment. Here's what
-that <span class="code">src</span> string actually looks like on the
+that `src` string actually looks like on the
 inside, which is what the compiler will see at run-time:
 
-<div class="code">
-
+```
     tadsSay('Oh, look, it\'s a DynamicFunc!');
-
-</div>
+```
 
 The first two backslashes turn into a literal backslash, and the third
 escapes the apostrophe.
@@ -240,8 +226,7 @@ escapes the apostrophe.
 Note that you can use the triple-quoting syntax to make that sort of
 thing a lot more readable:
 
-<div class="code">
-
+```
     local src = '''tadsSay('Oh, look, it\\'s a DynamicFunc!');''';
 
     <p>You still need the double-backslash to escape the quote inside
@@ -275,54 +260,49 @@ thing a lot more readable:
 
     <code>
     print('My location is {me.location.name}.');
-
-</div>
+```
 
 The routine to implement this might look something like this:
 
-<div class="code">
-
+```
     print(msg)
     {
       // replace each {...} expression with its evaluated result
       tadsSay(rexReplace('<lbrace>(<^rbrace>*)<rbrace>', msg,
               {m: Compiler.eval(rexGroup(1)[3])}));
     }
+```
 
-</div>
-
-We use <span class="code">rexReplace()</span> to look for each
+We use `rexReplace()` to look for each
 occurrence of a brace sequence, `{...}`, and replace it with the result
 of evaluating the expression within. For each pair of braces, we extract
 the part between the braces (that's what the
-<span class="code">rexGroup(1)\[3\]</span> is for - it pulls out the
+`rexGroup(1)\[3\]` is for - it pulls out the
 text that matches the parenthesized part of the regular expression). We
 then use a callback function to submit that string to the compiler's
-<span class="code">eval()</span> function, which compiles the expression
+`eval()` function, which compiles the expression
 and runs the resulting code, returning the result of evaluating the
-expression. So when we submit the example string <span class="code">'My
-location is {me.location.name}.'</span>, we evaluate the expression
-<span class="code">me.location.name</span>, which we expect to return a
-string. <span class="code">rexReplace()</span> then substitutes this
+expression. So when we submit the example string `'My
+location is {me.location.name}.'`, we evaluate the expression
+`me.location.name`, which we expect to return a
+string. `rexReplace()` then substitutes this
 result value into the string, so we get a result along the lines of
-<span class="code">My location is Ice Cave.</span>
+`My location is Ice Cave.`
 
 So far so good. But what happens if we want to evaluate something like
 this?
 
-<div class="code">
-
+```
     local loc = me.location;
     print('My location is {loc.name}.');
-
-</div>
+```
 
 In the previous example, we didn't have to worry about local variables,
 because everything was a global name - we're assuming that
-<span class="code">me</span> is an object name, and
-<span class="code">location</span> and <span class="code">name</span>
+`me` is an object name, and
+`location` and `name`
 are properties. Now, though, we have this local variable
-<span class="code">loc</span> to deal with. This is where the local
+`loc` to deal with. This is where the local
 variable access feature comes in.
 
 The way we provide local variable access to a dynamic function is to
@@ -338,16 +318,15 @@ available to the dynamic code.
 You obtain StackFrameDesc objects using the
 [t3GetStackTrace()](t3vm.html#t3GetStackTrace) function. This function
 returns information on the active call stack; when you use the
-<span class="code">T3GetStackDesc</span> flag, it includes a
+`T3GetStackDesc` flag, it includes a
 StackFrameDesc for each stack level.
 
 Here's the new version of our example function, using the stack frame
 object for the function's immediate caller. This lets us call our
-<span class="code">print()</span> function with a string that refers to
+`print()` function with a string that refers to
 our own local variables.
 
-<div class="code">
-
+```
     print(msg)
     {
       // Get the local variables for the caller.  The current function is
@@ -359,11 +338,10 @@ our own local variables.
       tadsSay(rexReplace('<lbrace>(<^rbrace>*)<rbrace>', msg,
               {m: Compiler.eval(rexGroup(1)[3], frame)}));
     }
-
-</div>
+```
 
 Notice how we retrieved the StackFrameDesc object for the caller, then
-passed it to the <span class="code">Compiler.eval()</span> method. That
+passed it to the `Compiler.eval()` method. That
 method takes an optional second argument for the stack frame object. If
 you omit it, as we did in the original version of the function above,
 the dynamic function won't have access to any local variables in any
@@ -380,8 +358,7 @@ assigning a new value to it. This changes the actual local variable
 value, so the original function will see the changed value when it
 resumes execution. For example:
 
-<div class="code">
-
+```
     main(args)
     {
       local x = 1;
@@ -389,12 +366,11 @@ resumes execution. For example:
       Compiler.eval('x++', frame);
       "After eval: x = <<x>>\n";
     }
+```
 
-</div>
-
-The final value of <span class="code">x</span> will be
-<span class="code">2</span>, because the dynamic function evaluation
-changes the actual, live value of <span class="code">x</span> in the
+The final value of `x` will be
+`2`, because the dynamic function evaluation
+changes the actual, live value of `x` in the
 original frame.
 
 ### Using multiple local frames
@@ -417,37 +393,37 @@ inner scopes hide variables in enclosing scopes.
 
 If you supply one or more stack frames for local variables, the function
 not only has access to the local variables, but also to the
-<span class="code">self</span> value in the frame, along with the rest
-of the method context variables: <span class="code">definingobj</span>,
-<span class="code">targetobj</span>, and
-<span class="code">targetprop</span>. If you refer to
-<span class="code">self</span> or the other context variables within the
+`self` value in the frame, along with the rest
+of the method context variables: `definingobj`,
+`targetobj`, and
+`targetprop`. If you refer to
+`self` or the other context variables within the
 function, it will refer to the corresponding value from the local frame
 you supply.
 
-If you supply a list of stack frames, the <span class="code">self</span>
+If you supply a list of stack frames, the `self`
 value (and other method context values) are always taken from the first
 frame in the list.
 
 If you supply a frame, but the frame refers to an ordinary function (as
 opposed to a method), the method context in the new code will also be
 for an ordinary function, so it won't be able to refer to
-<span class="code">self</span> and the other context variables.
+`self` and the other context variables.
 
 All of this is designed to work analogously to anonymous functions. You
 can think of the stack frame list as equivalent to the enclosing lexical
 scopes of an anonymous function. Just as an anonymous function takes its
-<span class="code">self</span> and other method context variables from
+`self` and other method context variables from
 its enclosing scope, a dynamic function takes its method context from
 the stack frame context you specify.
 
 In cases where you intend to create a dynamic method that you'll later
-plug in to an object via <span class="code">setMethod()</span>, you
+plug in to an object via `setMethod()`, you
 usually won't want to copy the method context from the local variable
 context, since you'll instead want to use the "live" context when the
 method is called. In these cases, use the
-<span class="code">method</span> keyword in place of
-<span class="code">function</span> in the dynamic source code string.
+`method` keyword in place of
+`function` in the dynamic source code string.
 This tells the compiler to ignore the method context from the stack
 frame, while still allowing you to access the frame's local variables.
 
@@ -457,8 +433,8 @@ The DynamicFunc constructor takes a source code string, compiles it into
 bytecode, and returns a DynamicFunc that stores the compiled code. The
 constructor takes the following arguments:
 
-<span class="code">new DynamicFunc(*sourceString*, *globalTable*?,
-*localFrame*?, *macroTable*?)</span>
+`new DynamicFunc(*sourceString*, *globalTable*?,
+*localFrame*?, *macroTable*?)`
 
 The *sourceString* argument is a string containing the TADS source code
 to compile. It uses the syntax described [above](#funcSyntax).
@@ -468,8 +444,8 @@ to compile. It uses the syntax described [above](#funcSyntax).
 use for compiling the string. Each key in the table is a string
 containing a symbol name, and the value for a key is the meaning of that
 value. This is the same format as the table returned by
-[<span class="code">t3GetGlobalSymbols()</span>](t3vm.html#t3GetGlobalSymbols),
-and in fact the <span class="code">t3GetGlobalSymbols()</span> table is
+[`t3GetGlobalSymbols()`](t3vm.html#t3GetGlobalSymbols),
+and in fact the `t3GetGlobalSymbols()` table is
 exactly what you'll want to use in most cases. You're free to provide a
 custom table instead if you wish to use different symbol mappings, but
 in most cases you'll want to compile the string with global symbols from
@@ -488,42 +464,40 @@ compiler uses the first match and ignores the others.
 *macroTable* is optional. If it's included, it must be a LookupTable
 containing the global macro table to use for compiling the string. Each
 key is a macro symbol name (that is, a name defined in the program's
-source code with the <span class="code">\#define</span> directive), and
+source code with the `\#define` directive), and
 each corresponding value is the definition of the macro. The macro
 definitions must use the same format as in the table returned by
-<span class="code">t3GetGlobalSymbols(T3PreprocMacros)</span>. As you'd
+`t3GetGlobalSymbols(T3PreprocMacros)`. As you'd
 guess, that's where you'd normally get this argument value in the first
 place, since this allows the string to use the same macros defined in
 the program's own source code. You can alternatively construct your own
 custom macro table, as long as you use the same format as the system
 table.
 
-Passing <span class="code">nil</span> for any of the optional arguments
+Passing `nil` for any of the optional arguments
 has the same effect as omitting the argument entirely. Since the
 arguments are positional, you'll need to pass
-<span class="code">nil</span> if you want to supply one of the later
+`nil` if you want to supply one of the later
 arguments but want to omit an earlier one. For example, if you want to
 provide a macro table argument but no local frame value, you must
-specify <span class="code">nil</span> for the local frame, simply to
+specify `nil` for the local frame, simply to
 fill out the position in the argument list.
 
-Note that <span class="code">t3GetGlobalSymbols()</span> can only return
+Note that `t3GetGlobalSymbols()` can only return
 information on the global symbols or macros during pre-initialization,
 *or* when the program is built with full debugging information. That
 means that if you plan to use the symbol table, you'll have to retrieve
 it during preinit and save it in an object property, like this:
 
-<div class="code">
-
+```
     symTabCache: PreinitObject
        execute() { symtab = t3GetGlobalSymbols(); }
        symtab = nil
     ;
+```
 
-</div>
-
-That's exactly what the <span class="code">Compiler</span> object
-defined in <span class="code">dynfunc.t</span> does, so if you include
+That's exactly what the `Compiler` object
+defined in `dynfunc.t` does, so if you include
 that module in your build you won't have to worry about this. It might
 seem like TADS is gratuitously making you jump through hoops with this
 extra step, by the way, but there's a good reason for it. Most programs
@@ -532,7 +506,7 @@ up extra space in the compiled .t3 file. That's why TADS discards it by
 default.
 
 If you omit the global symbol table argument, or specify
-<span class="code">nil</span>, the string is compiled with no global
+`nil`, the string is compiled with no global
 symbols at all. This means that it can only reference its own function
 arguments and local variables. No global symbols, not even property
 names, will be available.
@@ -542,17 +516,15 @@ names, will be available.
 Once you've successfully created a DynamicFunc, you can call it using
 the same syntax you'd use for an ordinary function.
 
-<div class="code">
-
+```
     local src = 'function(x) { return x*3; }';
     local f = new DynamicFunc(src);
     local result = f(7);
-
-</div>
+```
 
 ## Compiler error handling
 
-When you create a DynamicFunc with <span class="code">new</span>, the
+When you create a DynamicFunc with `new`, the
 system compiles the string into "bytecode," which is the internal
 representation TADS uses for executable code. The compilation process
 parses the source code, checks that the syntax is correct, looks up any
@@ -561,13 +533,13 @@ number of other checks for correctness. The process is largely the same
 as when you use the regular compiler to build your project, and it can
 catch the same types of errors.
 
-If an error occurs, the <span class="code">new DynamicFunc()</span> call
+If an error occurs, the `new DynamicFunc()` call
 will throw an exception of type
-<span class="code">CompilerException</span>. You can use the
-<span class="code">displayException()</span> method of the exception
+`CompilerException`. You can use the
+`displayException()` method of the exception
 object to display the compiler error messages. It's possible for
-multiple errors to occur in a single call to <span class="code">new
-DynamicFunc()</span>, since the compiler tries to carry on as best it
+multiple errors to occur in a single call to `new
+DynamicFunc()`, since the compiler tries to carry on as best it
 can after an error. (It does this to be helpful, by the way, not because
 it enjoys nitpicking. The idea is to give you as many details as
 possible about what needs to be fixed with a single run of the compiler,
@@ -578,12 +550,12 @@ exception object.
 
 ## Methods
 
-<span class="code">getSource()</span>
+`getSource()`
 
 <div class="fdef">
 
 Returns a string containing the source code originally used to create
-the object via the <span class="code">new DynamicFunc()</span>
+the object via the `new DynamicFunc()`
 constructor.
 
 </div>
@@ -630,16 +602,14 @@ Because an anonymous function is statically compiled, it's syntactically
 part of the surrounding code. This allows an anonymous function to
 access local variables in the enclosing scope. For example:
 
-<div class="code">
-
+```
     local lst = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
     local cnt = 0;
     lst.forEach(function(val) { if (val.length() > 3) ++cnt; });
-
-</div>
+```
 
 This function refers to the local variable
-<span class="code">cnt</span>, which isn't defined as part of the
+`cnt`, which isn't defined as part of the
 anonymous function, but rather in the enclosing scope.
 
 A DynamicFunc, in contrast, doesn't automatically have access to its
@@ -659,24 +629,20 @@ This access to caller locals isn't automatic. If you don't make explicit
 arrangements, a DynamicFunc can't access any locals in its callers. That
 means that something like this won't work:
 
-<div class="code">
-
+```
     local cnt = 0;
     local f = new DynamicFunc('function(val) { if (val > 3) ++cnt; }'); // WON'T WORK!
-
-</div>
+```
 
 To make that work, you'd have to explicitly grant the DynamicFunc access
 to the current local frame. You do this by passing in the StackFrameDesc
 object for the current frame, like so:
 
-<div class="code">
-
+```
     local cnt = 0;
     local frame = t3GetStackTrace(1, T3GetStackDesc).frameDesc_;
     local f = new DynamicFunc('function(val) { if (val > 3) ++cnt; }', nil, frame);
-
-</div>
+```
 
 For more details, see the section on [accessing a caller's
 locals](#localFrames) above.
@@ -687,8 +653,8 @@ The debugger can't stop in dynamic code, so you can't set breakpoints or
 single-step through a DynamicFunc's contents.
 
 As described above, dynamic code can't automatically refer to variables
-defined in the scope that calls <span class="code">new
-DynamicFunc()</span>. You can, however, explicitly give the code access
+defined in the scope that calls `new
+DynamicFunc()`. You can, however, explicitly give the code access
 to a frame's locals by supplying a StackFrameDesc object when compiling
 the dynamic code.
 
@@ -714,20 +680,18 @@ the symbol table under the function name of your choosing. Once you've
 added the function to the symbol table, you can call it from other
 dynamic code strings as though it were part of the original source code.
 
-The <span class="code">Compiler</span> helper object even provides a
+The `Compiler` helper object even provides a
 method that does all of this for you:
 
-<div class="code">
-
+```
     // define a new function, square(x)
     Compiler.defineFunc('square', 'function(x) { return x*x; }');
 
     // we can now call it from subsequent code
     local x = Compiler.eval('square(10)');
+```
 
-</div>
-
-Note that this only updates the <span class="code">Compiler</span>
+Note that this only updates the `Compiler`
 object's copy of the symbol table. It doesn't change the original symbol
 table used by the running program. This means you're free to redefine
 the name of an existing function, but doing so will only affect *future*

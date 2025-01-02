@@ -67,13 +67,11 @@ present, gives the name by which the VM knows the entity. If the
 external_name is not present, the symbol name is used as the external
 name. For example:
 
-<div class="code">
-
+```
     export RuntimeError;
+```
 
-</div>
-
-This statement exports the <span class="code">RuntimeError</span> object
+This statement exports the `RuntimeError` object
 defined in the program, using 'RuntimeError' as the external name as
 well.
 
@@ -84,9 +82,9 @@ uses a different name internally. Some libraries have their own naming
 conventions, so they might want not want to use the VM-defined symbol
 names internally.
 
-An <span class="code">export</span> statement can appear anywhere a
+An `export` statement can appear anywhere a
 top-level statement (such as an object or function definition) can. It
-doesn't matter if an <span class="code">export</span> comes before or
+doesn't matter if an `export` comes before or
 after the actual definition of the object or property it exports; all of
 the exports are resolved during linking, so where they appear within the
 source code is unimportant.
@@ -105,16 +103,16 @@ program. (The VM also looks for the symbols supplied automatically by
 the compiler, as explained below, but library code only provides the
 ones listed here.)
 
-<span class="code">RuntimeError</span> - the exception class for
+`RuntimeError` - the exception class for
 run-time error exceptions. The basic system library provides an exported
 definition for this object.
 
-<span class="code">exceptionMessage</span> - the property to which to
+`exceptionMessage` - the property to which to
 assign an explanatory message string in a run-time error exception
 object. The basic system library provides an exported definition for
 this property.
 
-<span class="code">propNotDefined</span> - a method which the VM invokes
+`propNotDefined` - a method which the VM invokes
 when a call is made to an undefined property. This method is invoked
 with the original property ID as the first argument, and the original
 argument list as the remaining arguments. The adv3 library provides an
@@ -127,18 +125,18 @@ The compiler automatically provides a number of exports. Libraries do
 not need to provide exports for these; they are listed here only for
 completeness.
 
-<span class="code">Constructor</span> - the property invoked to
+`Constructor` - the property invoked to
 construct new object. The compiler exports the
-<span class="code">construct</span> property for this symbol.
+`construct` property for this symbol.
 
-<span class="code">Destructor</span> - the property invoked to finalize
+`Destructor` - the property invoked to finalize
 an object during garbage collection. The compiler exports the
-<span class="code">finalize</span> property for this symbol.
+`finalize` property for this symbol.
 
-<span class="code">LastProp</span> - the highest property ID value
+`LastProp` - the highest property ID value
 allocated by the compiler.
 
-<span class="code">ObjectCallProp</span> - a property assigned for
+`ObjectCallProp` - a property assigned for
 invocation of anonymous function pointers.
 
 </div>

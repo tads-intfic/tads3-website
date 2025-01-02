@@ -46,13 +46,12 @@ A TopicGroup can be of particular use for defining Conversation Nodes:
 the [ConvNode](convnode.html#convnode) subclass of TopicGroup is provided
 especially for this purpose.
 
-The TopicGroup template is defined as <span class="code">+scoreBoost?
-'convKeys' \| \[convKeys\] ?</span>, so that both the scoreBoost and the
+The TopicGroup template is defined as `+scoreBoost?
+'convKeys' \| \[convKeys\] ?`, so that both the scoreBoost and the
 convKeys properties can be readily defined through the template.
 Consider the following example:
 
-<div class="code">
-
+```
     + TopicGroup +10 'alice-info'
        isActive = gRevealed('alice')
     ;
@@ -67,8 +66,7 @@ Consider the following example:
        "<q>Where did you hear about this Alice person?</q> you enquire. 
         <q>From the old vicar,</q> he tells you. "
     ;
-
-</div>
+```
 
 This adds the 'alice-info' convKey to both the TopicEntries defined
 above, and ensures that they are only active when the 'alice' tag has

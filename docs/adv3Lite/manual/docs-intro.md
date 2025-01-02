@@ -112,14 +112,14 @@ differences are noted below:
     them, but they consist of shallow definitions which simply define
     the appropriate properties of Thing.
 2.  The adv3Lite library defines only one class of
-    <span class="code">Room</span>.
+    `Room`.
 3.  The adv3Lite library adds an additional stage —
-    <span class="code">report</span> — to the preCond, remap, verify,
+    `report` — to the preCond, remap, verify,
     check and action familiar from adv3. Also, the check stage halts the
     action if it displays anything; there is no need to use the exit
     macro (and it's better not to).
-4.  The common <span class="code">Thing</span> and
-    <span class="code">Room</span> templates are subtly different. In
+4.  The common `Thing` and
+    `Room` templates are subtly different. In
     particular the Thing template defines only one single-quoted string
     property (vocab) which defines both the name and the vocabWords in
     one go.

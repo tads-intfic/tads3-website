@@ -105,8 +105,8 @@ normally go about customizing *specific* responses on *specific* objects
 (such as "You gingerly pick up the vase" or "The cheese smells
 exceptionally ripe"). For that kind of thing you'd typically just
 override an appropriate message property (or method) with your own
-string (e.g. <span class="code">smellDesc = "The cheese smells
-exceptionally ripe. "</span>), using, for example, one of the properties
+string (e.g. `smellDesc = "The cheese smells
+exceptionally ripe. "`), using, for example, one of the properties
 provided for the purpose on the [Thing](thing.html) class or one of the
 methods described in the discussion of [Action Results](actres.html).
 
@@ -117,8 +117,8 @@ methods described in the discussion of [Action Results](actres.html).
 **DMsg()** and **BMsg()** (think of them as standing for 'Display
 Message' and 'Build Message') are the mechanisms derived from the
 Mercury code for handling customizable messages. The difference between
-them is that <span class="code">DMsg()</span> displays a message
-while<span class="code"> BMsg()</span> returns the text of a message in
+them is that `DMsg()` displays a message
+while` BMsg()` returns the text of a message in
 a single-quoted string (to be stored in an object property or variable,
 for example).
 
@@ -146,8 +146,7 @@ This may all become a bit clearer with a couple of examples, which we
 shall take from the library's definition of dobjFor(Take) on the Thing
 class:
 
-<div class="code">
-
+```
     class Thing: Mentionable
         ...
 
@@ -205,8 +204,7 @@ class:
             
         ...
     ;    
-
-</div>
+```
 
 First note that we define three messages that might be used at the
 verify stage, cannotTakeMsg, alreadyHeldMsg and cannotTakeMyContainerMsg
@@ -233,8 +231,8 @@ context. We'll give a full list of these below; for now we'll simply
 illustrate the principle by describing how they work in the particular
 examples above.
 
-We'll start with <span class="code">BMsg(fixed in place, '{The subj
-dobj} {is} fixed in place. ')</span> In this message '{the subj dobj}'
+We'll start with `BMsg(fixed in place, '{The subj
+dobj} {is} fixed in place. ')` In this message '{the subj dobj}'
 will be replaced by the theName of the current direct object in the
 subjective case and {is} will be replaced by the appropriate form of the
 verb "to be" to match the direct object (in English nothing marks the
@@ -246,8 +244,8 @@ ball is fixed in place. ' or 'The stone pillars are fixed in place. '
 place. ' or 'The stone pillars were fixed in place. ' (if the game is in
 the past tense).
 
-Next, let's look at <span class="code">BMsg(already holding, '{I}{\\m}
-already holding {the dobj}. ')</span> Here '{I}' stands for the actor,
+Next, let's look at `BMsg(already holding, '{I}{\\m}
+already holding {the dobj}. ')` Here '{I}' stands for the actor,
 {\\m} will be replaced with the appropriately contracted form of the
 verb "to be", and {the dobj} will the replaced with the theName property
 of the direct object, which the message builder will consider to be the
@@ -257,8 +255,8 @@ the red ball. " For a first-person game in the past tense it would come
 out as "I was already holding the red ball. "
 
 Now let's consider the slightly more complex
-<span class="code">BMsg(cannot take my container, '{I} {can\\t} {take}
-{the dobj} while {i}{\\m} {1} {him dobj}. ', objInPrep)</span>. Here, as
+`BMsg(cannot take my container, '{I} {can\\t} {take}
+{the dobj} while {i}{\\m} {1} {him dobj}. ', objInPrep)`. Here, as
 before, '{I}' becomes the appropriate form of the actor ('I', 'You',
 'He', or whatever the case may be). '{can\\t} then becomes either
 "can\\t" or "could not" depending on whether the game is in the present
@@ -272,8 +270,8 @@ pronoun to refer to the direct object (either 'him' or 'them', depending
 on whether the direct object is singular or plural).
 
 Finally, there's the DMsg() macro in the report() method:
-<span class="code">DMsg(report take, 'Taken. \| {I} {take} {1}. ',
-gActionListStr);</span> In this case the library uses the DMsg() macro
+`DMsg(report take, 'Taken. \| {I} {take} {1}. ',
+gActionListStr);` In this case the library uses the DMsg() macro
 to display the message straight away rather than going via a message
 property (a) because there's no point in overriding the report() method
 on individual objects, and (b) because it's easy enough to override a
@@ -369,8 +367,8 @@ use a method whose return value changes dynamically.
 
 **messages**: The list of messages being customized. This can contain
 any number of messages; the order isn't important. Each message is
-defined with a Msg() macro: <span class="code">Msg(id key, 'Message
-text'), ...</span>. The "id key" is the message ID that the library uses
+defined with a Msg() macro: `Msg(id key, 'Message
+text'), ...`. The "id key" is the message ID that the library uses
 in the DMsg() or BMsg() message that you're customizing. (DON'T use
 quotes around the ID key.) The message text is a single-quoted string
 giving the message text. This can contain curly-brace replacement
@@ -379,8 +377,7 @@ parameters.
 For example, here's how we might define a CustomMessages object to
 replace the dobjFor(Take) messages we looked at above:
 
-<div class="code">
-
+```
      
     CustomMessages
         messages = [
@@ -394,8 +391,7 @@ replace the dobjFor(Take) messages we looked at above:
                
         ]
     ;
-
-</div>
+```
 
 Note that we can't *change* the parameters used by the message strings
 (the ones that {1} and the like refer to) but that we can continue to
@@ -412,11 +408,9 @@ numerical expressions) and objects (in which case the name property is
 used in the substitution). For example, the following is legal if not
 exactly useful:
 
-<div class="code">
-
+```
     DMsg(two things, 'The {1} and the {2} are {3} separate objects. ', redBall, blueBall, 1 + 1);
-
-</div>
+```
 
   
 
@@ -424,8 +418,7 @@ Note that some care needs to be taken with a CustomMessages object
 that's meant to supply variable messages via embedded expressions. For
 example the following CustomMessages object won't work as expected:
 
-<div class="code">
-
+```
      CustomMessages
         messages = [
             Msg(not important, '<<one of>>Leave it alone<<or>>It\'s not worth messing
@@ -433,8 +426,7 @@ example the following CustomMessages object won't work as expected:
         ]
     ;
      
-
-</div>
+```
 
 This is to do with the way the TADS 3 language evaluates embedded
 expressions in single-quoted strings, and with the fact that a
@@ -446,8 +438,7 @@ without any embedded expressions but containing just one of the options.
 The way round this is to wrap the string in an anonymous function, like
 so:
 
-<div class="code">
-
+```
       
       CustomMessages
         messages = [
@@ -456,8 +447,7 @@ so:
         ]
     ;
       
-
-</div>
+```
 
 In fact, the second parameter of any Msg(), BMsg() or DMsg() macro can
 always be an anonymous function that returns a single-quoted string
@@ -504,7 +494,7 @@ to refer to. If you want to use these numerical parameters outside
 BMsg() and DMsg() (i.e. without specifying a key value you have no use
 for) you can use the dmsg() and bmsg() functions, which work like DMsg()
 and BMsg() but don't take the first (key) parameter, e.g.
-<span class="code">dmsg('You take {1}. ', gActionListStr);</span>. To
+`dmsg('You take {1}. ', gActionListStr);`. To
 make full use of the message substitution parameters, however, you have
 to know what they all are, so we shall next provide a list of them all.
 
@@ -925,10 +915,10 @@ shows the list given by integer argument n (1-9) as a basic "or" list
 displays *b* if the game is in the past tense and *a* otherwise.
 
 A couple of these may be made clearer by a couple of examples.
-<span class="code">dmsg('The available colours are {and 1}', \['red',
-'blue', 'green'\]);</span> would display "The available colours are red,
-blue and green.". <span class="code">dmsg('There are {# 1} colour{s}
-available. ', 3); </span>would display "There are three colours
+`dmsg('The available colours are {and 1}', \['red',
+'blue', 'green'\]);` would display "The available colours are red,
+blue and green.". `dmsg('There are {# 1} colour{s}
+available. ', 3); `would display "There are three colours
 available. "
 
 You'll note that there are several message substitution parameters that
@@ -953,7 +943,7 @@ authors may prefer to use the first person plural versions ("we", "us",
 7 does).
 
 The *verb* parameter is generally used like this:
-<span class="code">DMsg(okay take, '{I} {take} {the dobj}. ')</span>.
+`DMsg(okay take, '{I} {take} {the dobj}. ')`.
 But how do you know which verbs the library defines? You can see them by
 looking at the definition of englishCustomVocab.verbParams in english.t.
 If the verb you need isn't there (and it actually needs to be defined as
@@ -968,8 +958,7 @@ gMessageParams(). A globalParamName is simply a string property you can
 define on any Thing and use later as a message parameter to refer to
 that thing, e.g.:
 
-<div class="code">
-
+```
     george: Actor 'George; tall thin; man' @hall
         "He's a tall thin man. "
         isHim = true
@@ -980,8 +969,7 @@ that thing, e.g.:
     ...
 
       "{The subj george} {seems} upset with you. ";
-
-</div>
+```
 
 In this case there's little advantage in using the globalParamName over
 simply writing "George seems upset with you." But one reason you might
@@ -998,12 +986,10 @@ the message to be displayed but is not represented by anything in the
 game, so that there's no further message parameter to attach it to. A
 simple example would be:
 
-<div class="code">
-
+```
      'There{dummy}{\'s} nothing {here}.'
      
-
-</div>
+```
 
 This marks 'There' as the subject of the sentence so that it will come
 out as "There's nothing here" or "There was nothing there" according to
@@ -1018,39 +1004,33 @@ that expands these message substitution parameters isn't smart enough to
 distinguish between the structure of these two sentences unless you help
 it out. So in the first example:
 
-<div class="code">
-
+```
     "{He actor} {know} that exercise is good for {him actor}. ";
-
-</div>
+```
 
 The expansion would go wrong because the subject of the verb in the
 subordinate clause is "exercise", but the routine that does the
 expansion can only go by what's been explicitly marked as a subject, and
-the last one marked is "<span class="code">{He actor}</span>", so that
-it appears to the library that <span class="code">{him actor}</span> is
-the object of "<span class="code">{He actor} {know}</span>", which,
+the last one marked is "`{He actor}`", so that
+it appears to the library that `{him actor}` is
+the object of "`{He actor} {know}`", which,
 contrary to what we want here, would be expanded to "He knows himself."
 There's nothing in the string "that exercise is good for" that signals
 the actual sentence construction to the expansion routine; from the
 software's point of view it's structually identical to:
 
-<div class="code">
-
+```
     "{He actor} {know} everything about {him actor}. ";
-
-</div>
+```
 
 Where "He knows everything about himself" would be correct. But in the
 first example we need to tell the game what the actual grammatical
 subject of the subordinate clause is, which we do by marking it with
-<span class="code">{dummy}</span>, thus:
+`{dummy}`, thus:
 
-<div class="code">
-
+```
     "{He actor} {know} that {dummy}exercise is good for {him actor}. ";
-
-</div>
+```
 
 This tells the parameter expansion routine that "exercise" and not
 "actor" is now the subject of "is".
@@ -1062,12 +1042,10 @@ a parameter, but for convenience, the library defines the
 names exactly match their local variable names. In other words, if you
 call this macro like this:
 
-<div class="code">
-
+```
      gMessageParams(obj, cont);
      
-
-</div>
+```
 
 then you'll get one parameter with the text name 'obj' whose expansion
 will be the value of the local variable obj, and another with text name
@@ -1082,12 +1060,10 @@ secure agreement betweeb a verb and its grammatical subject, in
 whichever tense the game happens to be. If you need to write code which
 might vary by person and/or tense, you'll typically write messages like:
 
-<div class="code">
-
+```
     "{I} climb{s/ed} over the fence. ";
     "{The subj dobj} {breaks} in two. ";
-
-</div>
+```
 
 In the first of these strings, "climb" is a regular verb, so we can
 conjugate it by adding {s/ed} to the end. In the second case "breaks" is
@@ -1105,15 +1081,13 @@ different meanings, so if you're using a verb of this sort you need to
 choose the message parameter substitution that gives you the form you
 want, e.g.:
 
-<div class="code">
-
+```
     "{I} hang{s/ed} the murderer on the gallows. ";
     "{I} {hang} the picture on the wall. ";
 
     "{I} {lie} down on the bed. ";
     "{I} lie{s/d} about my age. ";
-
-</div>
+```
 
 In either case all six tenses are available (e.g. I hang the murderer on
 the gallows, I hanged the murderer on the gallows, I have hanged the
@@ -1150,12 +1124,10 @@ the same meaning. In such cases use an {s/d} type ending if you want the
 regular form and surround the complete verb in braces if you want the
 irregular form, for example:
 
-<div class="code">
-
+```
     "{I} {dive} into the pool. " // past "You dove into the pool", preferred in American English
     "{I} dive{s/d} into the pool. " // past "You dived into the pool", preferred in British English
-
-</div>
+```
 
 Normally, either form of verb conjugated with a message parameter
 substitution requires a subject, supplied by a previous message
@@ -1166,24 +1138,20 @@ parameter substitution to represent the subject of the verb, for example
 "There is nothing much here/There was nothing much there." This can be
 written:
 
-<div class="code">
-
+```
     "There {is} nothing much {here}. ";
      
-
-</div>
+```
 
 In such a case, where the message parameter substitution mechanism finds
 no subject for the verb (in this case, {is}) to agree with, it defaults
 to a third-person singular subject (via the dummy\_ object), so that the
 above statement is equivalent to:
 
-<div class="code">
-
+```
     "There {dummy} {is} nothing much {here}. ";
      
-
-</div>
+```
 
 Where {dummy} explicitly makes the dummy\_ object the subject of the
 sentence (since the dummy\_ object has an empty name, its presence
@@ -1197,22 +1165,18 @@ here/There were no sausages there/There have been no sausages here/There
 had been no sausages there/There will be no sausages here/There will
 have been no sausages here" according to tense, you'd need to write:
 
-<div class="code">
-
+```
     "There {plural} {are} no sausages here. ";
-
-</div>
+```
 
 The **{aac}** parameter substitution can be used to ensure continuing
 agreement with the subject of sucessive verbs when the subject is the
 actor. Normally this should't be necessary, but should problems occur
 you can use {aac} to secure actor-verb agreement like so:
 
-<div class="code">
-
+```
     "{I} yell{s/ed} and {aac} drop{s/?ed} my guard and {aac} scream{s/ed}.
-
-</div>
+```
 
 If your game is only ever going to switch between the present tense and
 the past tense (and never going to use any of the others), then you can
@@ -1221,26 +1185,24 @@ forms, either long-windedly through the **tSel('present', 'past')**
 macro, or more concisely with the **{present\|past}** message
 substitution, for example:
 
-<div class="code">
-
+```
     "There {is|was} nothing much {here}. ";
     "There {are|were} no sausages {here|there}. ";
-
-</div>
+```
 
 One other point to consider is that the special parameter substitutions
-<span class="code">{don't verb}</span> and <span class="code">{must
-verb}</span> may need the past participle of verb in some tenses
+`{don't verb}` and `{must
+verb}` may need the past participle of verb in some tenses
 (Perfect, Past Perfect and Future Perfect). Very few games are likely to
 make use of these tenses in practice, so for the great majority of games
 this is unlikely to be an issue, and in any case the library already
 knows how to form the past participle of most English irregular verbs.
 For regular verbs you can supply the past participle ending in square
-brackets with the <span class="code">don't</span> and
-<span class="code">must</span> parameter substitutions if you feel you
-need it: e.g. <span class="code">{don't open\[ed\]}</span>,
-<span class="code">{must stop\[?ep\]}</span> or
-<span class="code">{don't close\[d\]}</span>.
+brackets with the `don't` and
+`must` parameter substitutions if you feel you
+need it: e.g. `{don't open\[ed\]}`,
+`{must stop\[?ep\]}` or
+`{don't close\[d\]}`.
 
   
 <span id="whentouse"></span>
@@ -1254,13 +1216,11 @@ in library code to make sure that standard library messages work with
 whatever tense and objects a game may happen to define. In your own game
 code you'll mainly be able to write straightforward strings like:
 
-<div class="code">
-
+```
     "You shut the door. ";
     "There are no sausages here. "; 
      
-
-</div>
+```
 
 You only need to consider using message parameter substitutions where
 your text might vary, either because you don't know what the subject of
@@ -1314,8 +1274,7 @@ formatted list.
 For example, suppose we have a pond whose contents are a duck, a green
 bottle and an old boot. Then we could write:
 
-<div class="code">
-
+```
     /* lst1 becomes 'a duck, a green bottle and an old boot' */
     local lst1 = makeListStr(pond.contents);
 
@@ -1324,30 +1283,25 @@ bottle and an old boot. Then we could write:
 
     /* lst3 becomes 'the duck, the green bottle or the old boot' */
     local lst3 = makeListStr(pond.contents, &theName, 'or');
-
-</div>
+```
 
 If we just want the first form embedded in a string, we can use the \<\<
 list of \* \>\> string template, for example.
 
-<div class="code">
-
+```
     /* Displays "You see a duck, a green bottle and an old boot in the pond. */
     "You see <<list of pond.contents>> in the pond. ";
-
-</div>
+```
 
 If pond.contents were an empty list, then the previous code would output
 "You see nothing in the pond". This may be just what you want, or you
 may want to test that your list has any elements in it (e.g.
 pond.contents.length \> 0) before trying to display your list, e.g.:
 
-<div class="code">
-
+```
     "<<if pond.contents.length > 0>>You see <<list of pond.contents>> in the pond. 
      <<else>>The pond seems quite clear of debris.<<end>>> ";     
-
-</div>
+```
 
 This is all very well if you are preceeding your list with a verb phrase
 like "You see" of which the list is the object, but what if you want the
@@ -1357,15 +1311,13 @@ form)? For this purpose you can use the *{prev}* tag, which acts as a
 stand-in for the list you've just displayed (whether you use
 makeListStr() or \<\<list of \*\>\>). So for example, you could write:
 
-<div class="code">
-
+```
     /* This gives "A duck, a green bottle and an old boot are floating on the pond." */
     "\^<<list of pond.contents>> {prev} {is} floating on the pond. ";
 
     /* Don't do this; it'll produce a run-time error! */ 
     "\^<<list of pond.contents>> {is} floating on the pond. ";
-
-</div>
+```
 
 Note that you must use the *{prev}* tag here, or the *{is}* tag (or the
 tag for whichever verb you want to use) won't have a subject to agree
@@ -1377,22 +1329,18 @@ to agree with (as appropriate).
 Because this is a relatively common case, with the verb 'to be' you can
 also use the form \<\<list of \* is\>\>, for example:
 
-<div class="code">
-
+```
     /* This also gives "A duck, a green bottle and an old boot are floating on the pond." */
     "\^<<list of pond.contents is>> floating on the pond. ";
-
-</div>
+```
 
 This avoids the need to remember to use {prev}, but with any other verb
 you would still need to use it, for example:
 
-<div class="code">
-
+```
     * This gives "A duck, a green bottle and an old boot sit on the pond." */
     "\^<<list of pond.contents>> {prev} {sit} on the pond. ";
-
-</div>
+```
 
 Finally, you may occasionally want the verb to precede the list, as in
 "Floating around on the pond are a duck, a green bottle and an old
@@ -1400,11 +1348,9 @@ boot." You can do this with the \<\< is list of \* \>\> embedded
 expression (but only for the verb 'to be'), in which case you once again
 don't need to use *{prev}* or another verb tag. For example:
 
-<div class="code">
-
+```
     "Floating around on the pond <<is list of pond.contents>>. ";
-
-</div>
+```
 
   
 
@@ -1416,8 +1362,7 @@ You can see which ones the library defines by looking at the definition
 of englishCustomVocab.verbParams in english.t. If you need to define
 more you can do so by defining a CustomVocab object like this:
 
-<div class="code">
-
+```
     CustomVocab
         verbParams = 
         [
@@ -1426,8 +1371,7 @@ more you can do so by defining a CustomVocab object like this:
             'break/breaks/broke/broken'
         ]   
     ;
-
-</div>
+```
 
 The **verbParams** property is defined as is a list of strings, using
 the following template: 'infinitive/present3/past/past-participle'. The
@@ -1449,8 +1393,7 @@ given in a list, since some words have more than one valid plural. The
 first plural is the preferred one; the remaining entries are alternates.
 For example the library definition of its irregularPlurals list begins:
 
-<div class="code">
-
+```
     irregularPlurals = [
             'calf', ['calves', 'calfs'],
             'elf', ['elves', 'elfs'],
@@ -1458,8 +1401,7 @@ For example the library definition of its irregularPlurals list begins:
             'hoof', ['hooves', 'hoofs'],
             'knife', ['knives'],
             ...
-
-</div>
+```
 
 **specialAOrAn**: usually the indefinite article is 'a' for a word that
 starts with consonant and 'an' for a word that starts with a vowel, but

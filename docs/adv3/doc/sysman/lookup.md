@@ -28,19 +28,17 @@ programming languages call an "associative array," because it allows a
 value to be associated with an arbitrary key, and then efficiently found
 given the same key.
 
-You must <span class="code">\#include \<lookup.h\></span> in your source
+You must `\#include \<lookup.h\>` in your source
 code to use the LookupTable class.
 
 ## Creating a LookupTable
 
-You create a lookup table with the <span class="code">new</span>
+You create a lookup table with the `new`
 operator:
 
-<div class="code">
-
+```
     local tab = new LookupTable();
-
-</div>
+```
 
 You can optionally specify two parameters to fine-tune the table's
 efficiency: the "bucket count," and the initial capacity. When you
@@ -53,13 +51,11 @@ necessary to specify the parameters, since a lookup table will always
 work properly with the defaults; the only thing the parameters do is
 tune the object's performance.
 
-<div class="code">
-
+```
     // override the default creation parameters
     // use 256 hash slots and an initial capacity of 1024 entries
     local tab = new LookupTable(256, 1024);
-
-</div>
+```
 
 The first parameter, the bucket count, specifies the size of the hash
 table that the object uses to organize the keys. See [below](#details)
@@ -85,26 +81,22 @@ You can also create a LookupTable that's pre-loaded with an initial set
 of values. To do this, pass a list, Vector, or [list-like
 object](opoverload.html#listlike) as the argument to the constructor:
 
-<div class="code">
-
+```
     local tab = new LookupTable(['red', 0xff0000,
                                  'green', 0x00ff00,
                                  'blue', 0x0000ff]);
-
-</div>
+```
 
 This creates a table and initializes it with the keys and values from
 the list. The constructor interprets the list elements as pairs of Key
 and Value elements. So for our example above, we'd get the same result
 by setting the values explicitly like this:
 
-<div class="code">
-
+```
     tab['red'] = 0xff0000;
     tab['green'] = 0x00ff00;
     tab['blue'] = 0x0000ff;
-
-</div>
+```
 
 When you create a table from a list, the bucket count and overall size
 will both be initialized according to the length of the list. The system
@@ -124,45 +116,41 @@ with another element.
 
 The compiler provides a special short-form syntax that lets you create a
 LookupTable and load it with values. It works exactly like
-<span class="code">new LookupTable()</span> with a list argument, but
+`new LookupTable()` with a list argument, but
 it's less typing. It looks like this:
 
-<div class="code">
-
+```
     local tab = ['red' -> 0xff0000, 'green' -> 0x00ff00, 'blue' -> 0x0000ff];
-
-</div>
+```
 
 The notation looks a lot like an ordinary list, but for each element of
 the list, you provide a key and a value, separated by an arrow symbol,
-<span class="code">-\></span> (that's a hyphen followed by a
+`-\>` (that's a hyphen followed by a
 greater-than sign, without any spaces between the two).
 
 This creates the same LookupTable as the earlier example that called
 constructor with a list argument. In fact, it really is equivalent
 code - the compiler internally converts the shorthand notation into the
-same <span class="code">new LookupTable()</span> call as before.
+same `new LookupTable()` call as before.
 
 You can also specify the default value, which is the value returned when
 you index the table by a key that doesn't exist in the table. To do
 this, include a final item in the list using the notation
-<span class="code">\*-\></span>*Value* - an asterisk, followed by an
+`\*-\>`*Value* - an asterisk, followed by an
 arrow, followed by the desired default value. (The syntax is meant to
 suggest a "wildcard" key, to match any other key that's not defined in
 the table. The asterisk isn't literally stored as a key, though; the
 default value has no key, since it's specifically for use when a key
 isn't present.) The default value **must** be the last item in the list.
 
-<div class="code">
-
+```
     local tab = ['red' -> 0xff0000, 'green' -> 0x00ff00, 'blue' -> 0x0000ff,
                  * -> 'undefined'];
-
-</div>
+```
 
 Even though the list-style shorthand notation might look like a
 "constant" value, it's not. It's just a compact way of writing the
-equivalent <span class="code">new LookupTable</span> expression. Each
+equivalent `new LookupTable` expression. Each
 time you evaluate the expression, it'll create a new object. If the code
 is part of a routine that will be executed repeatedly, you might want to
 create the table once and save it somewhere (in an object property,
@@ -174,44 +162,40 @@ You use a lookup table as though it were a list or Vector, except that
 you can use any type of value as an "index." For example, we could use a
 lookup table to associate objects with strings:
 
-<div class="code">
-
+```
     symtab['book'] = book;
     symtab['ball'] = ball;
     symtab['table'] = table;
-
-</div>
+```
 
 Now, if we want to look up the object associated with one of these
 words, we simply index the lookup table:
 
-<div class="code">
-
+```
     obj = symtab['ball'];
-
-</div>
+```
 
 If you store a value in the lookup table, and a value was already stored
 at the same key, the old value at the key is discarded and replaced by
 the new value. If you look up a key that doesn't exist in the table, the
 result is the "default value" - initially nil, but you can change this
 to another value if desired with the
-<span class="code">setDefaultValue()</span> method.
+`setDefaultValue()` method.
 
 A LookupTable matches key values the same way the
-<span class="code">==</span> operator does.
+`==` operator does.
 
 ## Iterating over a LookupTable's contents
 
 LookupTable is a subclass of [Collection](collect.html), so you can use
-the <span class="code">createIterator()</span> method to create an
+the `createIterator()` method to create an
 Iterator to iterate over the elements of the lookup table. The Iterator
 that a LookupTable creates is called a LookupTableIterator; it visits
 the values stored in the table in an arbitrary order.
 
 Because a LookupTable is a Collection, you can also use the
-<span class="code">foreach</span> statement to iterate over its values.
-When you use <span class="code">foreach</span> with a LookupTable, the
+`foreach` statement to iterate over its values.
+When you use `foreach` with a LookupTable, the
 iteration variable is assigned a value from the table (not a key) on
 each iteration.
 
@@ -221,12 +205,12 @@ LookupTable is a subclass of [Collection](collect.html), and thus
 includes all Collection methods. In addition, LookupTable defines the
 methods listed below.
 
-<span class="code">applyAll(*func*)</span>
+`applyAll(*func*)`
 
 <div class="fdef">
 
 For each element in the table, this method invokes the callback function
-<span class="code">(*func*)(*key*, *value*)</span>, and then changes the
+`(*func*)(*key*, *value*)`, and then changes the
 element's value to the return value of *func*. This allows you to modify
 all of the values in the table according to the given function. The keys
 are not changed. The entries are visited in arbitrary order. No return
@@ -234,32 +218,32 @@ value.
 
 </div>
 
-<span class="code">forEach(*func*)</span>
+`forEach(*func*)`
 
 <div class="fdef">
 
 For each element in the table, invokes the function
-<span class="code">(*func*)(*value*)</span>. Any return value from
+`(*func*)(*value*)`. Any return value from
 *func* is ignored; the values and keys stored in the table are not
 changed. The entries are visited in arbitrary order. No return value.
 
 </div>
 
-<span class="code">forEachAssoc(*func*)</span>
+`forEachAssoc(*func*)`
 
 <div class="fdef">
 
 For each element in the table, invokes the callback function
-<span class="code">(*func*)(*key*, *value*)</span>. Any return value
+`(*func*)(*key*, *value*)`. Any return value
 from *func* is ignored; the values and keys stored in the table are not
 changed. The entries are visited in arbitrary order. This argument is
-the same as <span class="code">forEach()</span>, except that this method
+the same as `forEach()`, except that this method
 provides the callback with the key in addition to the value for each
 element. No return value.
 
 </div>
 
-<span class="code">getBucketCount()</span>
+`getBucketCount()`
 
 <div class="fdef">
 
@@ -269,18 +253,18 @@ bucket count that was specified when the object was created.
 
 </div>
 
-<span class="code">getDefaultValue()</span>
+`getDefaultValue()`
 
 <div class="fdef">
 
 Returns the table's default value. This is the value returned when you
 index the table with a key that doesn't exist in the table. The default
 value is initially nil, but you can change it with
-<span class="code">setDefaultValue()</span>.
+`setDefaultValue()`.
 
 </div>
 
-<span class="code">getEntryCount()</span>
+`getEntryCount()`
 
 <div class="fdef">
 
@@ -290,17 +274,17 @@ the initial capacity that was specified when the object was created.
 
 </div>
 
-<span class="code">isKeyPresent(*key*)</span>
+`isKeyPresent(*key*)`
 
 <div class="fdef">
 
 Checks to see if an entry with the given key is present in the table.
-Returns <span class="code">true</span> if the key is present,
-<span class="code">nil</span> if not.
+Returns `true` if the key is present,
+`nil` if not.
 
 </div>
 
-<span class="code">keysToList()</span>
+`keysToList()`
 
 <div class="fdef">
 
@@ -310,31 +294,31 @@ ordering.
 
 </div>
 
-<span class="code">nthKey(*n*)</span>
+`nthKey(*n*)`
 
 <div class="fdef">
 
 Returns the key at the given index in the table. This returns the key
 that appears at the given index in the
-<span class="code">keysToList()</span> list, but if you just want one
+`keysToList()` list, but if you just want one
 key it's more efficient to use this method, since it doesn't construct a
 list. If the index is out of range, an error occurs.
 
 </div>
 
-<span class="code">nthVal(*n*)</span>
+`nthVal(*n*)`
 
 <div class="fdef">
 
 Returns the value at the given index in the table. This returns the
 value that appears at the given index in the
-<span class="code">keysToList()</span> list, but if you just want one
+`keysToList()` list, but if you just want one
 value it's more efficient to use this method, since it doesn't construct
 a list. If the index is out of range, an error occurs.
 
 </div>
 
-<span class="code">removeElement(*key*)</span>
+`removeElement(*key*)`
 
 <div class="fdef">
 
@@ -345,7 +329,7 @@ the value associated with the key (before the removal) is returned.
 
 </div>
 
-<span class="code">setDefaultValue(*val*)</span>
+`setDefaultValue(*val*)`
 
 <div class="fdef">
 
@@ -356,7 +340,7 @@ to any other value.
 
 </div>
 
-<span class="code">valsToList()</span>
+`valsToList()`
 
 <div class="fdef">
 

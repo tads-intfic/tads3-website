@@ -56,7 +56,7 @@ You can place an inline object definition anywhere you could write the
 name of a regular object.
 
 An inline object definition always starts with the keyword
-<span class="code">object</span>. You can optionally follow that with a
+`object`. You can optionally follow that with a
 colon and a superclass list; then you write the property list for the
 object, in braces. Note that enclosing the property list in braces is
 optional for a top-level object, but required for an inline object.
@@ -64,28 +64,25 @@ optional for a top-level object, but required for an inline object.
 Here's an example that creates an object with no superclasses and a
 single property:
 
-<div class="code">
-
+```
     func()
     {
        local o = object { weight = 10; };
     }
+```
 
-</div>
-
-When this code runs, the <span class="code">object { ... }</span>
-expression behaves like a <span class="code">new</span> expression: it
+When this code runs, the `object { ... }`
+expression behaves like a `new` expression: it
 creates a new object instance at the moment the
-<span class="code">object</span> expression is evaluated. The
-<span class="code">weight</span> property is added to the new object,
+`object` expression is evaluated. The
+`weight` property is added to the new object,
 and the overall expression yields a reference to the new object as its
 result. If you run this code multiple times, you'll create a separate
 object each time through.
 
 Here's an example that creates an object of the Adv3 Thing class:
 
-<div class="code">
-
+```
     func()
     {
        local box = object: Thing {
@@ -93,16 +90,14 @@ Here's an example that creates an object of the Adv3 Thing class:
           desc = "It's a large cardboard box. ";
        };
     }
-
-</div>
+```
 
 An inline object expression is truly an expression, so you can use it
 anywhere you could write any other expression; you're not limited to
 using it in local variable initializers as we've done so far. You could
 just as well use an inline object as an argument to a function call:
 
-<div class="code">
-
+```
     func()
     {
        addToScope(object: Thing {
@@ -110,32 +105,28 @@ just as well use an inline object as an argument to a function call:
           desc = "It's a large cardbox box. ";
        });
     }
-
-</div>
+```
 
 ## Methods
 
 An inline object can define methods, just like any other object. Inline
 object methods use the same syntax as for top-level object methods.
 
-<div class="code">
-
+```
     func()
     {
        local o = object: Thing {
            hideFromAll(action) { return action.ofKind(TakeAction); }
        };
     }
-
-</div>
+```
 
 Inline object methods have an important additional capability that
 regular top-level object methods don't have. An inline object method can
 access the local variables in the enclosing scope, just like an
 anonymous function can:
 
-<div class="code">
-
+```
     func()
     {
        local owner = bob;
@@ -143,8 +134,7 @@ anonymous function can:
            isOwnedBy(obj) { return obj == owner; }
        };
     }
-
-</div>
+```
 
 As with anonymous functions, an inline object method can both read and
 write local variables in the enclosing scope.
@@ -158,15 +148,14 @@ referenced.
 
 For an inline object, it's obviously not possible to evaluate a static
 property when the program is compiled, since an inline object isn't
-created until its <span class="code">object</span> expression is
+created until its `object` expression is
 executed. Instead, static properties of an inline object are evaluated
 when the object is created - that is, when the
-<span class="code">object</span> expression is executed. As with a
+`object` expression is executed. As with a
 top-level object, a static property is fixed at its initial value,
 rather than being re-evaluated each time the property is referenced.
 
-<div class="code">
-
+```
     func()
     {
        local x = 'original';
@@ -177,25 +166,22 @@ rather than being re-evaluated each time the property is referenced.
        x = 'updated';
        "o.prop1=<<o.prop1>>, o.prop2=<<o.prop2>>\n";
     }
-
-</div>
+```
 
 When you run this example, it will display:
 
-<div class="code">
-
+```
     o.prop1=original, o.prop2=updated
-
-</div>
+```
 
 See how this works? prop1 is defined as static, so it evaluates its
-expression - the local variable <span class="code">x</span> from the
+expression - the local variable `x` from the
 enclosing scope - at the moment the object is created, and saves that
 value. prop2, on the other hand, isn't static, which means that its
 expression is evaluated anew every time
-<span class="code">o.prop2</span> is evaluated. Since we've changed the
-value of <span class="code">x</span> before we evaluate
-<span class="code">o.prop2</span>, we get the updated value.
+`o.prop2` is evaluated. Since we've changed the
+value of `x` before we evaluate
+`o.prop2`, we get the updated value.
 
 ## Nested objects
 
@@ -207,8 +193,7 @@ object, which means that the nested object is created at the same time
 as the enclosing inline object, and the property is set to a reference
 to the newly created object.
 
-<div class="code">
-
+```
     func()
     {
        local o = object {
@@ -218,13 +203,12 @@ to the newly created object.
           };
        };
     }
+```
 
-</div>
-
-In this example, when the outer <span class="code">object</span>
+In this example, when the outer `object`
 expression is executed, the system creates an object to represent the
 outer object. It then creates a second object for the nested object, and
-stores a reference to it in <span class="code">o.subobj</span>.
+stores a reference to it in `o.subobj`.
 
 ## Constructors
 
@@ -232,19 +216,17 @@ When an inline object expression is evaluated, the system creates a new
 instance of the specified class or class list, and initializes the new
 instance with the properties and methods contained in the expression. If
 the inline object contains an explicit
-<span class="code">construct()</span> method, the system then calls that
-<span class="code">construct()</span> method, with no arguments. If the
-object doesn't define a <span class="code">construct()</span> method of
+`construct()` method, the system then calls that
+`construct()` method, with no arguments. If the
+object doesn't define a `construct()` method of
 its own, the system doesn't call any constructor for the object at all,
 including inherited constructors. This means that if you want to invoke
 inherited base class constructors, you have to do so explicitly, by
-specifying a <span class="code">construct()</span> method like this:
+specifying a `construct()` method like this:
 
-<div class="code">
-
+```
     construct() { inherited(); }
-
-</div>
+```
 
 The rationale for calling the constructor only if it's explicitly
 defined has two parts. The first part is that the property list in the
@@ -253,11 +235,11 @@ typical constructor does, which is to initialize the object's properties
 with suitable parameter values at the time the object is created. To
 that extent, the normal constructor call would be redundant. The second
 part is that any inherited constructors might require arguments, and
-unlike the <span class="code">new</span> operator, the inline object
+unlike the `new` operator, the inline object
 syntax doesn't have a way to specify any constructor arguments. Writing
-an explicit <span class="code">construct()</span> method solves this
+an explicit `construct()` method solves this
 problem, since you can specify whatever arguments are required for the
-base class constructor in the <span class="code">inherited()</span>
+base class constructor in the `inherited()`
 call.
 
 </div>

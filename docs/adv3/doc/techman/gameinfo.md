@@ -133,8 +133,7 @@ this object in your game's main source file, so you merely need to find
 the placeholder object and edit its property values. Here's an example
 of how this object should look:
 
-<div class="code">
-
+```
     versionInfo: GameID
       IFID = '64d2c120-c80b-11da-a94d-0800200c9a66'
       name = 'My Test Game'
@@ -147,8 +146,7 @@ of how this object should look:
       htmlDesc = 'My simple <b>test game</b>, just to demonstrate
           how to write <i>GameInfo</i> data.'
     ;
-
-</div>
+```
 
 **Step 3.** Compile your game. You must compile for release (not for
 debugging) in order for preinitialization to run during compilation - if

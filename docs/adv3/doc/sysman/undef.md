@@ -43,13 +43,11 @@ variable might contain, the compiler can't determine whether or not a
 particular property will be defined for the object. For example,
 consider this code:
 
-<div class="code">
-
+```
     local x;
     x = getSomeObject();
     x.name;
-
-</div>
+```
 
 Because the compiler can't tell what kind of object x will contain when
 this code is executed, the compiler can't know whether or not that
@@ -60,19 +58,19 @@ the object doesn't define that property and doesn't inherit it from any
 superclass, the VM will do one of two things:
 
 - If the program exports a property called
-  <span class="code">propNotDefined</span>, and the object defines or
+  `propNotDefined`, and the object defines or
   inherits this property, the VM invokes
-  <span class="code">propNotDefined</span> with the original property ID
+  `propNotDefined` with the original property ID
   as the first argument, followed by all of the other arguments of the
   original invocation.
 - Otherwise, the undefined property invocation returns nil.
 
 The basic system library doesn't export any symbol called
-<span class="code">propNotDefined</span>, so in a low-level TADS 3
+`propNotDefined`, so in a low-level TADS 3
 program, you must explicitly export this symbol if you want to use the
-<span class="code">propNotDefined</span> mechanism. However, note that
+`propNotDefined` mechanism. However, note that
 the adv3 library **does** export
-<span class="code">propNotDefined</span>, so the mechanism is enabled
+`propNotDefined`, so the mechanism is enabled
 automatically if you're writing a library-based game.
 
 Refer to the section on [exporting symbols](export.html) for details on
@@ -95,8 +93,7 @@ replacement library.
 
 Here's an example of how you might do this:
 
-<div class="code">
-
+```
     // this export is needed only if the library doesn't
     // otherwise define it
     property propNotDefined;
@@ -118,8 +115,7 @@ Here's an example of how you might do this:
         throw new PropNotDefinedException(prop, args);
       }
     ;
-
-</div>
+```
 
 ## Proxy Objects
 
@@ -127,11 +123,10 @@ It's frequently useful to define one object as a "proxy" for another, so
 that the proxy object redirects most method calls to its underlying
 object. This allows the proxy to provide its own definitions for a few
 particular properties, while letting the original object do everything
-else. The <span class="code">propNotDefined</span> mechanism makes this
+else. The `propNotDefined` mechanism makes this
 easy to implement.
 
-<div class="code">
-
+```
     // redirect everything but 'name' to the original
     class Proxy: object
       construct(original) { orig_ = original; }
@@ -149,8 +144,7 @@ easy to implement.
       // my underlying object
       orig_ = nil
     ;
-
-</div>
+```
 
 </div>
 

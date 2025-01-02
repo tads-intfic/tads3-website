@@ -74,8 +74,7 @@ object of the *action*, much as you would for any other action, while
 making use of gLiteral as appropriate. For example, to implement a note
 on which the player character can write things you could define:
 
-<div class="code">
-
+```
     note: Thing 'note; white of[prep]; sheet piece paper writing' 
       "It's a sheet of white paper with writing on it. "
       
@@ -102,8 +101,7 @@ on which the player character can write things you could define:
           
       }  
     ;
-
-</div>
+```
 
   
 <span id="defining"></span>
@@ -119,8 +117,7 @@ execAction() method of the Write action to install the default writing
 surface as the other object of the current Command object and then use
 the WriteOn command to actually carry out the action:
 
-<div class="code">
-
+```
     VerbRule(Write)
         'write' literalDobj
         : VerbProduction
@@ -137,8 +134,7 @@ the WriteOn command to actually carry out the action:
             WriteOn.exec(cmd);
         }
     ;
-
-</div>
+```
 
 The main thing to note here is the use of the token **literalDobj** to
 represent where in the command the literal object comes.
@@ -151,8 +147,7 @@ treat the physical object involved as actual direct object). For
 example, to define a CarveOn command to carve an inscription on
 something we might define:
 
-<div class="code">
-
+```
     VerbRule(CarveOn)
         ('carve' | 'inscribe') literalDobj 'on' singleIobj
         : VerbProduction
@@ -197,8 +192,7 @@ something we might define:
            }
        }
     ;
-
-</div>
+```
 
   
 <span id="numeric"></span>
@@ -209,18 +203,17 @@ NumericActions and NumericTActions work very similarly to LiteralActions
 and LiteralTActions, except that they deal in numeric values rather than
 string ones (and are probably even more rarely encountered). Whereas a
 LiteralAction or LiteralTAction stores its associated string literal
-value in its <span class="code">literal</span> property, a
+value in its `literal` property, a
 **NumericAction** or **NumericTAction** stores its associated number (as
 an integer value) in its **num** property (also accessible as
 **gNumber**).
 
-A <span class="code">NumericAction</span> may be defined using the
+A `NumericAction` may be defined using the
 **DefineNumericAction** macro, with **numericDobj** used to represent
 the numeric value in the associated VerbRule. The following somewhat
 trivial example should serve to illustrate the point:
 
-<div class="code">
-
+```
     DefineNumericAction(GetNum)
         execAction(c)
         {
@@ -237,8 +230,7 @@ trivial example should serve to illustrate the point:
         missingQ = 'what number do you want'
     ;
      
-
-</div>
+```
 
 This action simply echoes back the number typed, although it is shown as
 an integer even if typed spelled-out; e.g. the response to NUMBER
@@ -249,8 +241,7 @@ LiteralTAction, except that it concerns a numeric value instead of a
 string one in addition to the game object. Again to give a trivial
 example that nevertheless serves to illustrate the principle:
 
-<div class="code">
-
+```
      VerbRule(CountAs)
         'count' singleDobj 'as' numericIobj
         : VerbProduction
@@ -269,12 +260,11 @@ example that nevertheless serves to illustrate the principle:
         }
     ;
      
-
-</div>
+```
 
 As with a LiteralTAction, a NumericTAction will always treat the
 physical object as the direct object, however the associated
-<span class="code">VerbRule</span> grammar defined it.
+`VerbRule` grammar defined it.
 
 </div>
 

@@ -40,11 +40,9 @@ After the "enum" keyword, simply list the enumerator names you wish to
 define, separating multiple names with commas and ending the list with a
 semicolon. For example:
 
-<div class="code">
-
+```
     enum apple, orange, pear;
-
-</div>
+```
 
 If you're familiar with C or C++, note that there is no name for the
 group of symbols. In fact, defining these symbols together in a single
@@ -64,8 +62,7 @@ property or a local variable, store it in a list, or compare it to
 another value. You cannot use an enumerator value in arithmetic
 expressions.
 
-<div class="code">
-
+```
     local x = apple;
     switch(lst[i])
     {
@@ -79,8 +76,7 @@ expressions.
       "It's green.";
       break;
     }
-
-</div>
+```
 
 Enumerators have advantages and disadvantages relative to the primary
 alternative, which is preprocessor symbols created with the \#define
@@ -103,11 +99,9 @@ enumerator can be used in a grammar statement's match list. A token
 enumerator is declared by adding the word "token" after the "enum"
 keyword in the definition:
 
-<div class="code">
-
+```
     enum token dictWord, unknownWord, punctuation;
-
-</div>
+```
 
 </div>
 

@@ -33,8 +33,7 @@ these are two sides of the same door it is further necessary to set the
 **otherSide** property of each Door object to point to the other Door
 object, for example:
 
-<div class="code">
-
+```
     hall: Room 'Hall' 'hall'
        "The front door lies to the west. "
        west = frontDoor
@@ -68,7 +67,7 @@ lockability property just as we would on any other Thing.
 
 Another point to note is that in order to keep everything in sync we
 defined the **otherSide** property on both sides of the Door and
-<span class="code"><span id="doorlocked_idx">isLocked</span> =
+`<span id="doorlocked_idx">isLocked` =
 true</span> on both sides of the Door. While this is good practice, it
 is not absolutely necessary, however, since if we forget to do it the
 library will attempt to correct it for us. In particular, if we are
@@ -85,8 +84,8 @@ you *deliberately* don't want a door to have another side (for example,
 because it's a fake door that's never opened, or it's one side of a lift
 door whose other side may change in the course of the game) you can
 suppress the warning messages by setting its
-<span class="code">otherSide</span> property to
-<span class="code">self</span> instead of <span class="code">nil</span>.
+`otherSide` property to
+`self` instead of `nil`.
 In that case the exit leading through the door will be shown in the exit
 lister as visited, which may or may not be what you want; on the one
 hand it can betray the fact that the door doesn't go anywhere, while on
@@ -95,7 +94,7 @@ to try to find a way through the door since it can never be opened. You
 may thus also want to override the **destination** property of such a
 door to **unknownDest\_**, which will make it show up in the exit
 listing as an unvisited exit. You could then subsequently change the
-<span class="code">destination</span> to getOutermostRoom (which will
+`destination` to getOutermostRoom (which will
 make it show up as a visited exit) once something happens to tell the
 player that there's in fact no way through the door.
 
@@ -127,8 +126,8 @@ particular:
   key that might plausibly unlock the door).
 
 Finally, note that to define the front door in the example above we had
-to define two objects, <span class="code">frontDoor</span> and
-<span class="code">frontDoorOutside</span>, each representing one side
+to define two objects, `frontDoor` and
+`frontDoorOutside`, each representing one side
 of the door. This is nearly always the case when using the Door class
 (unless you're using it to define a dummy door that can never be
 opened). For doors that are the same both sides you may find it easier
@@ -137,8 +136,7 @@ defined in the [symconn](../../extensions/docs/symconn.html) extension,
 since this allows you to define a door using only one game object
 instead of two. To take advantage of this class you would need to
 explicitly include the symconn extension in your build.
-
-</div>
+```
 
 ------------------------------------------------------------------------
 

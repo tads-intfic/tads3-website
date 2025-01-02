@@ -34,8 +34,7 @@ more properties to be defined on it to make it function properly as a
 player character. You must also remember to include the library header.
 An absolutely minimal adv3Lite game might therefore look like this:
 
-<div class="code">
-
+```
     #charset "us-ascii"
     #include "advlite.h"
 
@@ -52,8 +51,7 @@ An absolutely minimal adv3Lite game might therefore look like this:
         person = 2 // or person = 1 for a first-person game    
         contType = Carrier   
     ;
-
-</div>
+```
 
 Alternatively, you could achieve the same result a little more concisely
 by using the Player class rather than the Thing class to define the
@@ -62,8 +60,7 @@ gameMain object, but you need not set is initialPlayerChar property
 since the object you define with the Player class takes care of
 identifying itself as the initial player character:
 
-<div class="code">
-
+```
     #charset "us-ascii"
     #include "advlite.h"
 
@@ -76,8 +73,7 @@ identifying itself as the initial player character:
 
     + me: Player   
     ;
-
-</div>
+```
 
 In practice, any real game would want also to include a
 [versionInfo](beginning.html#versioninfo) object to provide information
@@ -87,8 +83,7 @@ the player character and a more fully-implemented starting location. The
 actual starting code for a real game might therefore look more like
 this:
 
-<div class="code">
-
+```
     #charset "us-ascii"
     #include "advlite.h"
 
@@ -199,8 +194,7 @@ this:
         familiar = true
     ;    
             
-
-</div>
+```
 
 Don't worry if not all of this code makes sense to you yet. It will all
 be explained in due course (not least what to authors used to the adv3
@@ -210,8 +204,8 @@ until the study, lounge, kitchen and landing rooms have been implemented
 along with the front door, but that's a separate exercise. If you want
 to try to compile and run the above code you will need to first comment
 out all the direction property definitions on the hall object, i.e. all
-the lines from <span class="code">south = study</span> to
-<span class="code">out asExit(west)</span>. You will also need to ensure
+the lines from `south = study` to
+`out asExit(west)`. You will also need to ensure
 that the adv3Lite library is properly included and configured in your
 project, which is what we shall briefly discuss next.
 
@@ -240,9 +234,9 @@ types).
 If you're not using Workbench but you're instead compiling from the
 command line, proceed as you would for an adv3 game (see the section on
 Compiling and Linking in the TADS 3 System Manual if you need guidance
-on this), but specify the adv3Lite library instead (<span class="code">
--lib adv3Lite</span>) and include the option <span class="code"> -D
-LANGUAGE = english</span> on the command line.
+on this), but specify the adv3Lite library instead (`
+-lib adv3Lite`) and include the option ` -D
+LANGUAGE = english` on the command line.
 
 ## An Alternative Way to Set Up a New Game
 
@@ -319,8 +313,7 @@ copy of the System Manual simply by editing the file **sysman.html** in
 your adv3Lite/docs directory. When you first open this file you should
 find it looks like this:
 
-<div class="code">
-
+```
     <html>
     <head>
     <title>System Manual</title>
@@ -338,53 +331,44 @@ find it looks like this:
     <!-- FOR UNIX-like systems it might be something along the lines of -->
     <!--  <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin /TADS 3/doc/sysman/toc.html"> -->
     </head>
-
-</div>
+```
 
 To make it redirect to your local copy of the System Manual, you'll need
 to edit the line:
 
-<div class="code">
-
+```
      
     <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.html">
-
-</div>
+```
 
 So that the url it redirects to is the location of the System Manual's
 toc.html file on your machine. For example, if you're running a 64-bit
 version of Windows (such as Windows 7) you'll probably need to change
 this line to:
 
-<div class="code">
-
+```
     <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.html"> 
      
-
-</div>
+```
 
 For a 32-bit version of Windows (e.g. Windows XP) you'd most likely
 need:
 
-<div class="code">
-
+```
     <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.html"> 
      
-
-</div>
+```
 
 On a MAC or LINUX system the change will need to be slightly more
 extensive, possibly to something like:
 
-<div class="code">
-
+```
     <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin/TADS 3/doc/sysman/toc.html"> 
      
-
-</div>
+```
 
 As an alternative, you may be able simply to comment out the existing
-<span class="code">\<meta HTTP-EQUIV="REFRESH"</span> line and uncomment
+`\<meta HTTP-EQUIV="REFRESH"` line and uncomment
 one of the other versions that fits the bill. Obviously, you'll need to
 check that it conforms to the actual location of the TADS 3 installation
 on your system. The good news, though, is that this change only needs to

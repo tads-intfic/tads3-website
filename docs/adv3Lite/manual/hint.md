@@ -43,8 +43,7 @@ many hints you're likely to need to show at once, you can either put
 a current objective the player may be trying to achieve) or create a
 sub-menu structure using **HintMenu** items; for example:
 
-<div class="code">
-
+```
      topHintMenu: TopHintMenu 'Hints';
        + HintMenu 'General Questions';
        ++ Goal 'What am I supposed to be doing?' [answer, answer, answer];
@@ -55,8 +54,7 @@ sub-menu structure using **HintMenu** items; for example:
        + HintMenu 'Second Area';
        ++ Goal 'Where is the gold key?' [answer, answer, answer];
        ++ Goal 'How do I unlock the gold door?' [answer, answer, answer];  
-
-</div>
+```
 
 Note that there's no requirement that the hint menu tree takes exactly
 this shape. A very small game could dispense with the submenus and
@@ -117,8 +115,7 @@ single-quoted strings, each one successively nudging the player towards
 the goal by giving just a bit more information or a slightler clearer
 clue (since they will be displayed one at a time); for example:
 
-<div class="code">
-
+```
     + Goal 'Where is the gold key?'
        [
           'What did the old man tell you?',
@@ -131,8 +128,7 @@ clue (since they will be displayed one at a time); for example:
        openWhenSeen = goldDoor
        closeWhenSeen = goldKey
     ;
-
-</div>
+```
 
 Occasionally, though, you may want to use a
 <span id="hint-idx">Hint</span> object instead of a single-quoted string
@@ -141,8 +137,7 @@ appear in more than one list, or you want displaying the hint to open a
 fresh goal. For example, instead of the final item in the previous
 example we might have defined:
 
-<div class="code">
-
+```
     fountainHint: Hint 'What\'s the temperature like in the fountain? ' [fountainGoal] ; 
 
 
@@ -183,8 +178,7 @@ example we might have defined:
         
         priority = 110
     ;
-
-</div>
+```
 
 Note how we can make use of the ExtraHint template to define the
 hintDelay and hintText properties of these ExtraHints. In this instance
@@ -206,7 +200,7 @@ asked for them, perhaps because your game has determined that the player
 is floundering (see the discussion of the
 [playerHelper](newbie.html#playerhelper) object for one way to determine
 that), you can call
-<span class="code">extraHintManager.activate()</span> to force the
+`extraHintManager.activate()` to force the
 display of extra hints. If players don't like them, they can still
 banish them with an EXTRA OFF command, but this may be a tactic of last
 resort to use with a stubbornly struggling player who refused to ask for
@@ -219,8 +213,7 @@ one nudge, particularly if s/he fails to respond to the first. In such a
 case you can mix the ExtraHint in with an EventList class to provide a
 series of nudges, for example:
 
-<div class="code">
-
+```
     ExtraHint, EventList +7 
         [
            'Try taking the document. ',
@@ -230,8 +223,7 @@ series of nudges, for example:
         openWhenSeen = study
         closeWhenMoved = document  
     ;
-
-</div>
+```
 
 <span id="setdelay"></span>
 
@@ -241,16 +233,15 @@ opportunity to respond to the first nudge before giving them the second.
 In fact each of the hints in the list will be displayed *hintDelay*
 turns afer the last. But what happens if we want to vary the interval
 between hints? We can do this by means of the **setDelay()** method:
-calling <span class="code">setDelay(val)</span> will change the value of
-<span class="code">hintDelay</span> to <span class="code">val</span>,
+calling `setDelay(val)` will change the value of
+`hintDelay` to `val`,
 thereby reducing or increasing the number of turns that must elapse
 until the next hint in the series is displayed. But how and where can
 one call this method? Because single-quoted strings can contained
 embedded expressions, you might be tempted to make the following
 mistake:
 
-<div class="code">
-
+```
     ExtraHint, EventList +7 
         [
            'Try taking the document. <<setDelay(6)>>',  // DON'T DO THIS!
@@ -260,8 +251,7 @@ mistake:
         openWhenSeen = study
         closeWhenMoved = document  
     ;
-
-</div>
+```
 
 The problem with code like this is that all the list elements are
 evaluated the first time the list is referenced, so that it will most
@@ -269,8 +259,7 @@ likely result in the hintDelay being set to 5 all the way through. One
 way to avoid this is to embed the calls to setDelay in double-quoted
 strings inside anonymous functions, like this:
 
-<div class="code">
-
+```
     ExtraHint, EventList +7 
         [
            {: "Try taking the document. <<setDelay(6)>>" },  // DO THIS INSTEAD
@@ -280,8 +269,7 @@ strings inside anonymous functions, like this:
         openWhenSeen = study
         closeWhenMoved = document  
     ;
-
-</div>
+```
 
 If you use an EventList, as in the foregoing examples, then the
 ExtraHint will automatically close itself off after the last hint in the
@@ -294,14 +282,12 @@ By default extra hints are shown in italics. If you like you can change
 this by modifying the **extraHintStyleTag**. For example, to make the
 hints appear in bold blue, you'd define the following:
 
-<div class="code">
-
+```
     modify extraHintStyleTag
         openText = '<.p><b><font color=blue>'
         closeText = '</font></b><.p>'
     ;
-
-</div>
+```
 
 You need to be a bit careful about specifying particular colours like
 this, however; what may look good in your interpreter may not work at
@@ -311,14 +297,12 @@ background! For that reason it may be safer to stick to using different
 styles (bold, italic, etc.) or prefix and suffix characters such a
 square brackets or asterisks, e.g.:
 
-<div class="code">
-
+```
     modify extraHintStyleTag
         openText = '<.p>** '
         closeText = ' **<.p>'
     ;
-
-</div>
+```
 
 Of course, you can simply stick with the default italics here and not
 bother with modifying extraHintStyleTag at all.

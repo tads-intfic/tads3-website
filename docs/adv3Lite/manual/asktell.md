@@ -54,8 +54,7 @@ TopicEntries located directly in the actor.
 
 To give a simple example:
 
-<div class="code">
-
+```
     bob: Actor 'Bob; short; man; him'
        "He's a short man, with a permanently worried-looking expression. "
     ;
@@ -78,8 +77,7 @@ To give a simple example:
        "<q>Nice weather we're having, don't you think?</q> you ask.\b
        <q>Not bad,</q> he concurs. "
     ;
-
-</div>
+```
 
   
 <span id="varying"></span>
@@ -98,8 +96,7 @@ a list of different responses, each of which can be used in turn. Once
 again the TopicEntry template makes it possible to do this in a succinct
 way, for example:
 
-<div class="code">
-
+```
      + AskTopic, StopEventList @darkTower
        [
           '<q>What do you know about the dark tower?</q> you ask.\b
@@ -116,8 +113,7 @@ way, for example:
        ]
     ;
      
-
-</div>
+```
 
 A TopicEntry can be mixed-in with any EventList class like this, but for
 this type of situation a StopEventList is usually the most appropriate.
@@ -137,8 +133,7 @@ way: defining multiple TopicEntries that match the same objects but
 using a combination of there matchScore and isActive properties to
 determine which one is chosen. For example:
 
-<div class="code">
-
+```
     + TellTopic [tVisit, darkTower]
        "<q>I'm thinking of making a visit to the dark tower later today,</q> you
         announce. <q>I've heard so much about it, I want to see it for myself.</q>\b
@@ -157,8 +152,7 @@ determine which one is chosen. For example:
         
         isActive = (gPlayerChar.hasSeen(darkTower))
     ;
-
-</div>
+```
 
 In this above example, if the player types TELL BOB ABOUT VISIT or T
 TOWER before the player character has seen the dark tower, the first
@@ -168,7 +162,7 @@ types T VISIT or TELL BOB ABOUT TOWER after the player character has
 seen the dark tower, then the isActive property of the second response
 ("I visited the dark tower...") will be true, and since it has the
 higher matchScore, it will be the one chosen. The
-<span class="code">+110</span> in the template gives the second
+`+110` in the template gives the second
 TellTopic a matchScore of 110, which is higher than the default value of
 100.
 
@@ -203,13 +197,11 @@ NPC is to your game. For a minor NPC or a game which in primarily
 puzzle-driven as opposed to character-driven (say) it might suffice to
 do this:
 
-<div class="code">
-
+```
     + DefaultAskTellTopic
         "Bob merely shrugs and shakes his head. "
     ;
-
-</div>
+```
 
 In a game where the characters are more important, and you want to give
 them a bit more personality and make them a bit more lifelike, you'll
@@ -223,8 +215,7 @@ characterization of your NPCs.
 Writing the DefaultTellTopic is probably easier, since here you can have
 the NPC apparently react to what the player character supposedly says:
 
-<div class="code">
-
+```
     + DefaultTellTopic, ShuffledEventList
       [
          '<q>Fascinating!</q> Bob declares. ',
@@ -234,8 +225,7 @@ the NPC apparently react to what the player character supposedly says:
          '<q>Yes, indeed!</q>, says Bob. '
       ]
     ;
-
-</div>
+```
 
 Defining the DefaultAskTopic follows the same principles, but can be a
 little trickier, since you have to give the NPC a plausible reason for
@@ -257,8 +247,7 @@ you might end up with exchanges like the following:
 
 A DefaultAskTopic might look like this:
 
-<div class="code">
-
+```
     + DefaultAskTopic
        [
           '<q>Let\'s change the subject,</q> he suggests with a wry smile. ',
@@ -271,8 +260,7 @@ A DefaultAskTopic might look like this:
           
        ]
     ;
-
-</div>
+```
 
 You may still get some incongruous responses, that's almost impossible
 to avoid given that the player is free to type absolutely anything, but

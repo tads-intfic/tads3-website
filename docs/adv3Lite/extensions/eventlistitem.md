@@ -50,8 +50,7 @@ example, suppose we have a ShuffledEventList that displays a list of
 atmospheric strings for a room. We could add an EventListItem to it
 thus:
 
-<div class="code">
-
+```
     startroom: Room, ShuffledEventList 'The Starting Location'
         "This is the starting location, blah, blah, blah. "
         
@@ -74,8 +73,7 @@ thus:
         maxFireCt = 2
     ;   
      
-
-</div>
+```
 
 This defines an EventListItem that won't be used until the silverKey has
 been moved, and which will then display the text "The key may help you
@@ -86,11 +84,9 @@ Using the abbreviated alias **ELI** for the EventListItem class together
 with the EventListItem template defined in advLite.h, we could
 abbreviate the definition of EventListIem here to:
 
-<div class="code">
-
+```
     + ELI ~(silverKey.moved) +5 *2 "The key may help you escape the atmosphere here. ";
-
-</div>
+```
 
 This illustrates the basic usage; we move next to some of the detail.
 
@@ -156,7 +152,7 @@ the implementation of this class, but we won't include them here):
   underused if its missedTurn property (for which see below) is non-nil,
   which probably works well enough in many situations, but game code may
   wish to define some other method of prioritization, such as
-  <span class="code">fireCt == 0</span> (meaning that the EventListItem
+  `fireCt == 0` (meaning that the EventListItem
   in question has never been used), so this is defined as a separate
   method to make it easy to customize.
 - **canRemoveWhenDone**: Flag - do we want to allow our EventList to
@@ -220,7 +216,7 @@ them out. If in doubt, this is probably best left at nil.
 ## Convenient Shorthand
 
 To save typing, EventListItem can be abbreviated to **ELI** (the
-extensions defines <span class="code">class ELI: EventListItem;</span>).
+extensions defines `class ELI: EventListItem;`).
 
 The clase **ELI1** can be used as a shorthand way of defining an
 EventListItem with a maxFireCt of 1.
@@ -228,11 +224,9 @@ EventListItem with a maxFireCt of 1.
 EventListItems can be defined using the following template (itself
 defined in advlite.h):
 
-<div class="code">
-
+```
     EventListItem template @myListObj? ~isReady? +minInterval? *maxFireCt? "invokeItem"? ;
-
-</div>
+```
 
   
 

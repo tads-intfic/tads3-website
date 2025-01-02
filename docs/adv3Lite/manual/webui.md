@@ -255,7 +255,7 @@ Here are some tips for creating a dual-mode game:
 - When you're ready to build the two versions, be sure to do a *full*
   build of each version, so that all of the intermediate files are
   rebuilt from scratch. If you're compiling from the command line, use
-  the -a option (<span class="code">t3make -a -f mygame</span>). If
+  the -a option (`t3make -a -f mygame`). If
   you're compiling with Workbench on Windows, use the "Full Recompile
   for Debugging" command (note that "Compile for Release" always does a
   full build, so you can use that command as well).
@@ -266,13 +266,12 @@ Here are some tips for creating a dual-mode game:
   and/or the Javascript UI directly. If you do, you'll have to write a
   different version of that special code for each UI mode. There are two
   ways to isolate code that works only in one or the other UI mode:
-  - You can use <span class="code">\#ifdef TADS_INCLUDE_NET</span> to
+  - You can use `\#ifdef TADS_INCLUDE_NET` to
     mark off sections that apply only to one or the other mode. Recall
     that we added this symbol to the .t3m file for the Web UI only, so
     if this symbol is defined, you know you're compiling the Web UI
     version.
-    <div class="code">
-
+    ```
         #ifdef TADS_INCLUDE_NET
            special code for the Web UI goes here
         #else
@@ -284,7 +283,7 @@ Here are some tips for creating a dual-mode game:
     be cleaner to separate the variant code into two separate source
     files. Create one file that's exclusively for the Web UI, and
     another that's exclusively for the console UI. In your .t3m files,
-    include a <span class="code">-source</span> line for the appropriate
+    include a `-source` line for the appropriate
     source file for each build. This ensures that the Web UI source file
     is only included in the Web UI build, and the console source file is
     only in the console build. Adv3Lite itself uses this approach - it
@@ -310,8 +309,7 @@ each folder, add an object definition like this to your game:
     WebResourceResFile
        vpath = static new RexPattern('/foldername/')
     ;
-
-</div>
+```
 
 That tells the library to treat anything in the "foldername"
 subdirectory of the game folder as an HTML resource, allowing the client
@@ -327,7 +325,7 @@ definition will allow files in subfolders of 'foldername'.)
 In the traditional console UI, the way the game program terminates is
 fairly straightforward. When the player types QUIT, the Adv3Lite command
 loop exits, which unwinds the call stack until the
-<span class="code">main()</span> function returns. This terminates the
+`main()` function returns. This terminates the
 game program, at which point the interpreter program exits to the
 operating system. Alternatively, on GUI versions (such as QTads or HTML
 TADS), the player can end the program by closing the main window. This
@@ -454,34 +452,32 @@ should do to make sure your game works correctly.
 
 ### Use aHref() for command links
 
-In HTML TADS games, you can use <span class="code">\<A HREF=xxx\></span>
+In HTML TADS games, you can use `\<A HREF=xxx\>`
 to create clickable command links. With the Web UI, all HTML is
-displayed by a standard Web browser, so the <span class="code">\<A
-HREF\></span> tag has its standard meaning, which is to create a
+displayed by a standard Web browser, so the `\<A
+HREF\>` tag has its standard meaning, which is to create a
 hyperlink to a separate Web page.
 
 To create a command link, use the Adv3LiteWeb function
-<span class="code">aHref()</span>:
+`aHref()`:
 
-<div class="code">
-
+```
     "To save the game, type <<aHref('SAVE')>>. "
+```
 
-</div>
-
-You should continue to use <span class="code">\<A HREF\></span> for
+You should continue to use `\<A HREF\>` for
 actual hyperlinks, where the link navigates to another Web page rather
 than entering a command, as well as for special links such as
-<span class="code">mailto:</span> links.
+`mailto:` links.
 
-### Don't use <span class="code">\<TAB\></span>
+### Don't use `\<TAB\>`
 
-The <span class="code">\<TAB\></span> tag is an HTML TADS extension that
+The `\<TAB\>` tag is an HTML TADS extension that
 isn't in standard HTML. Standard Web browsers don't support it.
 Unfortunately, standard HTML doesn't have a simple equivalent of
-<span class="code">\<TAB\></span>, but you can usually achieve similar
-effects using <span class="code">\<SPAN\></span> or
-<span class="code">\<DIV\></span> tags with CSS styling to control
+`\<TAB\>`, but you can usually achieve similar
+effects using `\<SPAN\>` or
+`\<DIV\>` tags with CSS styling to control
 spacing.
 
 ### <span id="inputmanager">Use inputManager methods for input</span>
@@ -506,27 +502,27 @@ Instead of the interpreter built-ins, always use the
 
 The *promptFunc* parameter can be supplied either as an anonymous
 function that displays a prompt or simply as a single-quoted string. For
-<span class="code">getInputLine()</span> and
-<span class="code">getKey()</span> (or their macro equivalents) this
+`getInputLine()` and
+`getKey()` (or their macro equivalents) this
 parameter can be omitted altogether; you can simply display a prompt
 string before calling the method.
 
 For the most common cases you can use the following macros:
 
 - **more** expands to
-  <span class="code">inputManager.pauseForMore()</span>
+  `inputManager.pauseForMore()`
 - **input(x)** expands to
-  <span class="code">inputManager.getInputLine(x)</span>
+  `inputManager.getInputLine(x)`
 - **waitKey(x)** expands to
-  <span class="code">inputManager.getKey(x)</span>
+  `inputManager.getKey(x)`
 
 <span id="cls"></span>
 
-### Use <span class="code">cls()</span> instead of <span class="code">clearScreen()</span>
+### Use `cls()` instead of `clearScreen()`
 
 You shouldn't use the built-in function
-<span class="code">clearScreen()</span>, just as you shouldn't use any
-other built-in I/O functions. Use <span class="code">cls()</span>
+`clearScreen()`, just as you shouldn't use any
+other built-in I/O functions. Use `cls()`
 instead - this will work correctly in both Adv3 and Adv3web.
 <span id="nobanner"></span>
 
@@ -554,7 +550,7 @@ the banner API. <span id="sound"></span>
 
 ### Sound playback
 
-The <span class="code">\<SOUND\></span> tag is an HTML TADS extension
+The `\<SOUND\>` tag is an HTML TADS extension
 that's not in standard HTML, so you can't use it for sound playback in
 Web UI games.
 
@@ -563,14 +559,14 @@ Mike Roberts plans to add this in the future. For the moment, if you
 need sound playback, you'll have to resort to direct Javascript
 programming. <span id="aboutbox"></span>
 
-### <span class="code">\<ABOUTBOX\></span>
+### `\<ABOUTBOX\>`
 
-The <span class="code">\<ABOUTBOX\>\></span> tag is an HTML TADS
+The `\<ABOUTBOX\>\>` tag is an HTML TADS
 extension, not part of standard HTML. You shouldn't use this tag.
 There's currently no equivalent in the Web UI. However, note that the
 Adv3Lite library only calls
-<span class="code">gameMain.setAboutBox()</span> when running in console
-mode, so it's fine to write your <span class="code">\<ABOUTBOX\></span>
+`gameMain.setAboutBox()` when running in console
+mode, so it's fine to write your `\<ABOUTBOX\>`
 code as usual in that method.
 
 </div>

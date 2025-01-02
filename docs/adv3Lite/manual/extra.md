@@ -100,16 +100,14 @@ read several messages along the lines of 'X is not important' in
 response to such commands. So a commonly useful modification to the
 Decoration class might be:
 
-<div class="code">
-
+```
     modify Decoration
         hideFromAll(action) { return true; }
     ;
-
-</div>
+```
 
 This particular modification may be less useful in games that in any
-case define <span class="code">gameMain.allVerbsAllowAll = nil</span>,
+case define `gameMain.allVerbsAllowAll = nil`,
 but it illustrates the principle. It might nevertheless have been a good
 default to define in the library, but changing it in the library now
 would compromise backward compatibility.
@@ -139,8 +137,7 @@ appropriate direction property of the room to point to it. For example,
 to implement a flight of stairs leading up from the hall to the landing
 you might write:
 
-<div class="code">
-
+```
     hall: Room 'Hall'
         "A broad flight of stairs leads up to the landing above. "
         up = hallStairs
@@ -149,8 +146,7 @@ you might write:
     + hallStairs 'flight[n] of stairs; broad; steps staircase'
          destination = landing
     ;
-
-</div>
+```
 
 ## <span id="emanation">Sensory Emanation Classes</span>
 
@@ -168,8 +164,7 @@ provide simple implementations of any smells or sounds whose existence
 is suggested by smelling or listening to other objects, or by issuing an
 intransitive SMELL or LISTEN command. For example:
 
-<div class="code">
-
+```
     + cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
@@ -185,8 +180,7 @@ intransitive SMELL or LISTEN command. For example:
     + Odor 'smell of burning; acrid distinct'
         "It smells quite acrid. "   
     ;
-
-</div>
+```
 
 As of Version 1.61, SensoryEmanations are hidden from any actions
 applied to ALL that are not relevant to the SensoryEmanation in questio
@@ -220,13 +214,11 @@ question isn't there. For example, if the player drops a key down a
 drain, you could then add an Unthing to the location to remind the
 player why the key is no longer available:
 
-<div class="code">
-
+```
     unKey: Unthing 'small silver key'
        'Unfortunately, you dropped the silver key down the drain. '
     ;   
-
-</div>
+```
 
 Note that the second property we're defining with the template here is
 not the description but the **notHereMsg**, and that this must be a
@@ -245,15 +237,13 @@ property. E.g. if you'd defined a RETRIEVE command which you wanted to
 work on the UnKey (to make the player character try to fish the real
 silver key out of the drain, maybe), you could define your unKey thus:
 
-<div class="code">
-
+```
     unKey: Unthing 'small silver key'
        'Unfortunately, you dropped the silver key down the drain. '
        
        decorationActions = [Retrieve]
     ;   
-
-</div>
+```
 
 A <span id="minoritem"></span>**MinorItem** is an unobtrusive and
 possibly unimportant portable object that's worth implementing in the
@@ -276,8 +266,7 @@ other objects to point to the CollectiveGroup. For example, suppose we
 have a bank of switches comprising a red switch, a blue switch and a
 green switch; in outline we might do something like this:
 
-<div class="code">
-
+```
     + switchBank: CollectiveGroup 'switches; of[prep]; row bank; them'
        "The bank comprises a row of three switches: one red, one blue, one green. "
        collectiveActions = [Examine, Take]
@@ -297,8 +286,7 @@ green switch; in outline we might do something like this:
         isFixed = true
         collectiveGroups = [switchBank]
     ;
-
-</div>
+```
 
 With this in place the command X SWITCHES will give the description of
 the bank of switches, rather than of each individual switch, and TAKE
@@ -306,26 +294,26 @@ SWITCHES will yield the message "The switches are fixed in place" rather
 than three messages to that effect, one for each switch. On the other
 hand the command FLIP SWITCHES will act on each of the individual
 switches in turn, since it's not one of the **collectiveActions**
-defined for the <span class="code">switchBank</span>
-<span class="code">CollectiveGroup</span>.
+defined for the `switchBank`
+`CollectiveGroup`.
 
-Note the use of the <span class="code">collectiveActions</span> property
+Note the use of the `collectiveActions` property
 to define which actions will be handled by the CollectiveGroup rather
 than by each of its members. By default,
-<span class="code">collectiveActions</span> is simply
-<span class="code">\[Examine\]</span>, but, as here, we can override it
+`collectiveActions` is simply
+`\[Examine\]`, but, as here, we can override it
 to contain other actions instead or as well.
 
 For this to work properly, the name section of the CollectiveGroup
 object should simply be the plural of the name common to each of its
 members (here 'switches' corresponding to 'switch').
 
-If the <span class="code">desc</span> property of a CollectiveGroup is
+If the `desc` property of a CollectiveGroup is
 not explicitly defined, it defaults to a list of those of its members
 that are in scope.
 
-For some situations the <span class="code">Collective</span> class (or
-its <span class="code">DispensingCollective</span> subclass) defined in
+For some situations the `Collective` class (or
+its `DispensingCollective` subclass) defined in
 the [Collective](../../extensions/docs/collective.html) extension, may be
 a better bet than CollectiveGroup. The kind of situation where you'd
 want to use a Collective of DispensingCollective is where you have a
@@ -337,7 +325,7 @@ to draw one or more individual items (e.g. grapes or cans).
 If you need a CollectiveGroup to represent items that are not fixed in
 place, but might be moved around (a collection of short portable cables,
 for example), you can instead use the
-<span class="code">MobileCollectiveGroup</span> class defined in the
+`MobileCollectiveGroup` class defined in the
 [MobileCollectiveGroup](../../extensions/docs/mobilecollectivegroup.html)
 extension.
 
@@ -350,12 +338,11 @@ panel.
 
 To use a SecretDoor, define it just like a [Door](door.html), but
 (assuming it starts out closed) define its
-<span class="code">vocab</span> property to be whatever's suitable for
+`vocab` property to be whatever's suitable for
 its closed state, and a separate **vocabWhenOpen** property to define
 the name and other vocab to use when it's open. For example:
 
-<div class="code">
-
+```
     cellar: Room 'Cellar' 'cellar'
         "It's not a pleasant place at the best of times, dark, dank and smelly, with
         piles of old junk strewn all over the place waiting for you to find time to
@@ -391,15 +378,14 @@ the name and other vocab to use when it's open. For example:
         
         vocabWhenOpen = 'dark passage; empty wine; rack'
     ;
-
-</div>
+```
 
 Note that the OPEN command won't work on a
-<span class="code">SecretDoor</span> when it's closed, but the CLOSE
-command will work on a <span class="code">SecretDoor</span> when it's
+`SecretDoor` when it's closed, but the CLOSE
+command will work on a `SecretDoor` when it's
 open (unless you override the isOpenable property to make it do
 otherwise). The default assumption is that a
-<span class="code">SecretDoor</span> has to be opened by some
+`SecretDoor` has to be opened by some
 non-standard and probably non-obvious means.
 
 If (exceptionally) a SecretDoor starts out open you can define its
@@ -409,11 +395,10 @@ when it's closed.
 If you want a SecretDoor to be effectively invisible when it's closed,
 you could give it a vocab property comprising an empty string and make
 sure nothing else mentions it when it's closed, but it's probably easier
-just to make it a Door and define <span class="code">isHidden =
-!isOpen</span>, for example:
+just to make it a Door and define `isHidden =
+!isOpen`, for example:
 
-<div class="code">
-
+```
     loft: Room 'Hay Loft' 'hay loft'
         "There's not much up here, apart from a few stray strands of straw
         scattered across the bare boards. A ladder leads back down to the
@@ -472,10 +457,9 @@ just to make it a Door and define <span class="code">isHidden =
     + compartmentDoor: Door 'small door'
         otherSide = loftDoor
     ;
+```
 
-</div>
-
-Note that in both these example, the <span class="code">west</span> exit
+Note that in both these example, the `west` exit
 will only be displayed in the exit lister when the corresponding
 SecretDoor is open. When a SecretDoor is closed then, for travel
 purposes, it behaves as if there's no exit through it, even though it's
@@ -487,15 +471,14 @@ an openable container, such that opening, closing, locking and unlocking
 the ContainerDoor has the same effect as opening, closing, locking and
 unlocking the container. To use a ContainerDoor we must locate it in
 multipy-containing Thing that has an OpenableContainer defined on its
-<span class="code">remapIn</span> property; we can't define a
+`remapIn` property; we can't define a
 ContainerDoor directly as part of an openable container since the door
 would then be hidden inside the container when it was closed.
 
 So, for example, to define a cooker/oven we can put things in or on and
 which has a door we should do this:
 
-<div class="code">
-
+```
     cooker: Fixture 'cooker;; oven stove'
        remapIn: SubComponent { isOpenable = true }
        remapOn: SubComponent { }
@@ -503,8 +486,7 @@ which has a door we should do this:
 
     + cookerDoor: ContainerDoor 'cooker door; oven stove'
     ;
-
-</div>
+```
 
 </div>
 

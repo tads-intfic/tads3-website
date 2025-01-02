@@ -128,20 +128,20 @@ features of the adv3Lite containment model thus:
 
 It's probably helpful to spell out some of the implementation details at
 this point. Programmatically, containment is modelled through two
-properties of each Thing. The <span class="code">location</span>
+properties of each Thing. The `location`
 property contains the identity of an object's parent. The
-<span class="code">contents</span> property contains a list of the
+`contents` property contains a list of the
 object's children. Thus, in the example above, the contents property of
-the clearing starts out as <span class="code">\[tree, nest,
-heidi\]</span> and ends up as <span class="code">\[tree, heidi\]</span>,
-while Heidi's contents start out as <span class="code">\[bird\]</span>
-and end up as <span class="code">\[nest\]</span>. Meanwhile the bird's
-<span class="code">location</span> property starts out as
-<span class="code">heidi</span> and ends up as
-<span class="code">nest</span>, while the nest's
-<span class="code">location</span> property starts out as
-<span class="code">clearing</span> and ends up as
-<span class="code">heidi</span>.
+the clearing starts out as `\[tree, nest,
+heidi\]` and ends up as `\[tree, heidi\]`,
+while Heidi's contents start out as `\[bird\]`
+and end up as `\[nest\]`. Meanwhile the bird's
+`location` property starts out as
+`heidi` and ends up as
+`nest`, while the nest's
+`location` property starts out as
+`clearing` and ends up as
+`heidi`.
 
 It's clearly important that the location and contents properties of
 every object in the game remain mutually consistent. That is if objectA
@@ -154,33 +154,31 @@ perfectly okay to specify the *initial* location of an object). Nor
 should you manipulate the contents property of an object directly in
 your code (although of course it's perfectly okay for your code to test
 or use what it contains). Instead you should always use the
-<span class="code">moveInto(obj)</span> or
-<span class="code">actionMoveInto(obj)</span> methods to move objects
+`moveInto(obj)` or
+`actionMoveInto(obj)` methods to move objects
 around your game world. For example, if you wanted to move Heidi to the
 top of the tree in response to a CLIMB TREE command you would use:
 
-<div class="code">
-
+```
       heidi.actionMoveInto(topOfTree);
+```
 
-</div>
-
-The difference between <span class="code">moveInto()</span> and
-<span class="code">actionMoveInto()</span> needn't detain us long here.
-In brief, <span class="code">moveInto()</span> simply carries out the
+The difference between `moveInto()` and
+`actionMoveInto()` needn't detain us long here.
+In brief, `moveInto()` simply carries out the
 basic housekeeping of ensuring that location and contents properties
-remain consistent, while <span class="code">actionMoveInto()</span> also
+remain consistent, while `actionMoveInto()` also
 triggers certain notifications. You would typically use
-<span class="code">actionMoveInto()</span> to implement the direct
+`actionMoveInto()` to implement the direct
 response to a player command (such as climbing a tree) and
-<span class="code">moveInto()</span> to move stuff around by authorial
+`moveInto()` to move stuff around by authorial
 fiat.
 
 To move something into limbo, i.e. off the game map altogether, you can
-use <span class="code">obj.moveInto(nil)</span>. This sets the location
-property of <span class="code">obj</span> to nil (a special value in
+use `obj.moveInto(nil)`. This sets the location
+property of `obj` to nil (a special value in
 TADS 3 that means 'nothing at all') and removes
-<span class="code">obj</span> from the contents list of its previous
+`obj` from the contents list of its previous
 parent (it's not added to the contents list of nil, since nil is nothing
 at all, not an object that can have properties).
 
@@ -193,12 +191,12 @@ a sense that's true, and yet the adv3Lite world model clearly does keep
 track of whether something is in, on, under or behind something else,
 and if you've been following this tutorial reasonably closely up till
 now, you'll probably have surmised that it does so by means of the
-parent's <span class="code">contType</span> property. Whether something
+parent's `contType` property. Whether something
 is described as being in, on, under or behind its parent depends
-entirely on whether its parent's <span class="code">contType</span> is
-<span class="code">In</span>, <span class="code">On</span>,
-<span class="code">Under</span> or <span class="code">Behind</span>. An
-object's <span class="code">contType</span> property also determines
+entirely on whether its parent's `contType` is
+`In`, `On`,
+`Under` or `Behind`. An
+object's `contType` property also determines
 whether the player character can put something in, on, under or behind
 that object.
 
@@ -222,17 +220,17 @@ animal or robot). The containment children of a person can be either (a)
 something carried by that person or (b) something worn by that person or
 (c) part of that person, such as a limb. The way adv3Lite decides which
 is which is to assume that anything fixed (with
-<span class="code">isFixed = true</span>) must be a part of the person
-(c), anything with <span class="code">wornBy</span> not nil (but rather
+`isFixed = true`) must be a part of the person
+(c), anything with `wornBy` not nil (but rather
 pointing to the parent person) is something worn by the person, and any
 other portable (i.e. non-fixed) contained child must be something
 carried by the person. An object representing a person has the special
-<span class="code">contType</span> <span class="code">Carrier</span>
+`contType` `Carrier`
 (which is meant to indicate this special case). The Actor class (which
-we'll meet in a later chapter) defines <span class="code">contType =
-Carrier</span> by default; if you use an ordinary Thing to represent a
+we'll meet in a later chapter) defines `contType =
+Carrier` by default; if you use an ordinary Thing to represent a
 person (such as the player character object, me) then you should define
-<span class="code">contType = Carrier</span> on it yourself, as we've
+`contType = Carrier` on it yourself, as we've
 already seen.
 
 </div>

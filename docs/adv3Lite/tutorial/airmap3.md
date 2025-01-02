@@ -29,14 +29,12 @@ how to do this, refer to the instructions at the start of the [previous
 section](airmap2.html)). Remember to make sure you new source file begins
 with:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
     #include "advlite.h"
-
-</div>
+```
 
 For the moment we'll stick to a fairly skeletal layout. There'll be
 plenty of complications to add later, especially in the cockpit. We will
@@ -45,15 +43,13 @@ about to define have in common that they're aboard an
 airplane/aeroplane, we'll assign them to a common **Region**, which
 we'll call planeRegion. We'll start out by defining the Region itself:
 
-<div class="code">
-
+```
     planeRegion: Region
     ;
-
-</div>
+```
 
 That's all there is to it; it's up to rooms to say what regions they
-belong to (by listing them in their <span class="code">regions</span>
+belong to (by listing them in their `regions`
 property), not to regions to say what rooms they contain (actually
 that's not quite true; internally the game keeps note of what rooms each
 region contains, but game authors don't have to define it, since it's
@@ -74,8 +70,7 @@ compass directions as silent synonyms.
 
 Here's our initial skeletal layout for the plane:
 
-<div class="code">
-
+```
     cockpit: Room 'Cockpit' 'cockpit'
         
         aft = planeFront
@@ -150,40 +145,38 @@ Here's our initial skeletal layout for the plane:
     + brassKey: Thing 'small brass key; yale'
         "It's just like all the other yale keys you've ever seen. "    
     ;
-
-</div>
+```
 
 There's only a couple of things to remark on here. The first is the use
-of <span class="code">"A little further forward is a door that
+of `"A little further forward is a door that
 \<\<unless me.hasSeen(cockpit)\>\>presumably\<\<end\>\> leads into the
-cockpit."</span> The purpose of this is to get rid of the word
+cockpit."` The purpose of this is to get rid of the word
 'presumably' once the player character has visited the cockpit, since he
 then knows for certain where the door leads. One way to test this is to
 check whether the player character has seen the cockpit, which we can do
-with <span class="code">me.hasSeen(cockpit)</span>. Since we want the
+with `me.hasSeen(cockpit)`. Since we want the
 word 'presumably' to appear only if the player character *hasn't* seen
-the cockpit we use <span class="code">\<\<unless *cond*\>\></span>
-rather than <span class="code">\<\<if *cond*\>\></span>, so that what
+the cockpit we use `\<\<unless *cond*\>\>`
+rather than `\<\<if *cond*\>\>`, so that what
 follows is displayed if *cond* is *false*.
 
-The second point of note is the use of <span class="code">\<\<list of
-location.listableContents.subset({x: x.moved == nil})\>\></span> in the
+The second point of note is the use of `\<\<list of
+location.listableContents.subset({x: x.moved == nil})\>\>` in the
 initSpecialDesc of the bucket object. We've met the
-<span class="code">\<\<list of\>\></span> construct before, as a means
+`\<\<list of\>\>` construct before, as a means
 of controlling how a list of items is presented to the player. You may
-recall that anything listed by <span class="code">\<\< list of *lst*
-\>\></span> is marked as mentioned so it isn't mentioned again in the
-room description object listing. It's the expression <span class="code">
-location.listableContents.subset({x: x.moved == nil})</span> that may
+recall that anything listed by `\<\< list of *lst*
+\>\>` is marked as mentioned so it isn't mentioned again in the
+room description object listing. It's the expression `
+location.listableContents.subset({x: x.moved == nil})` that may
 look a bit strange. What it does is to provide a list of all the
 listable items directly in the location that haven't yet been moved. If
 you like you can think of it as equivalent to a hypothetical
-<span class="code">\<\<list of
-unMoved(location.listableContents)\>\></span> where
-<span class="code">unMoved()</span> would be defined as:
+`\<\<list of
+unMoved(location.listableContents)\>\>` where
+`unMoved()` would be defined as:
 
-<div class="code">
-
+```
      unMoved(lst)
      {
          local ret = [];
@@ -196,12 +189,11 @@ unMoved(location.listableContents)\>\></span> where
          return ret;
      }
      
-
-</div>
+```
 
 The rather odd expression
-<span class="code">location.listableContents.subset({x: x.moved ==
-nil})</span> is basically just a shorthand means of doing that; if it
+`location.listableContents.subset({x: x.moved ==
+nil})` is basically just a shorthand means of doing that; if it
 looks a bit daunting, don't worry about it too much for now; it does
 make use of some of the more advanced features of the TADS 3 language.
 If you are curious to know more about it you'll need to look at a couple
@@ -230,8 +222,7 @@ the same object twice and put it in two different locations, we'll
 therefore take a shortcut and define the seating only once but put it in
 both locations. We can do that by means of the **MultiLoc** class:
 
-<div class="code">
-
+```
      
     MultiLoc, Decoration 'seats; red airline; seating seat; them'
         "Like all airline seats, these ones look like they were designed for the
@@ -242,8 +233,7 @@ both locations. We can do that by means of the **MultiLoc** class:
         
         locationList = [planeFront, planeRear]
     ;
-
-</div>
+```
 
 There's a few points to note here. First of all, MultiLoc is what is
 known as a *mix-in* class. This means it must come first in the list of
@@ -290,8 +280,7 @@ minimalist representation of the passengers on the plane. This time
 we'll name the object since we'll later want to remove these passengers
 from the plane.
 
-<div class="code">
-
+```
      
     airlinePassengers: MultiLoc, Decoration 'passengers;;men women; them'
         "You sense an air of impatience about them, as if they're all wondering when
@@ -302,27 +291,25 @@ from the plane.
         
         locationList = [planeFront, planeRear]
     ;
-
-</div>
+```
 
 ## Making Use of the Region
 
 Earlier on we promised we'd show a couple of uses for regions. The time
 has come to make good on that promise. One thing we can do with a region
 is test whether something is in it by using
-<span class="code">isIn()</span> just as we can for rooms and other
-things. The expression <span class="code">obj.isIn(*reg*)</span> is true
+`isIn()` just as we can for rooms and other
+things. The expression `obj.isIn(*reg*)` is true
 if obj is in any of the rooms in *reg* (where *reg* is a region). Now
 let's see how we can use that in practice.
 
 You'll recall that we set up an object to provide a number of
 announcements over the airport's public address system. It's likely
 these announcements wouldn't be audible aboard the plane, so we can use
-<span class="code">me.isIn(planeRegion)</span> to silence the
+`me.isIn(planeRegion)` to silence the
 announcements when the player character is aboard the plane:
 
-<div class="code">
-
+```
     announcementObj: ShuffledEventList
         ...
         announce()
@@ -333,8 +320,7 @@ announcements when the player character is aboard the plane:
         
         prefix = 'An announcement comes over the public address system: '
     ;
-
-</div>
+```
 
 Secondly, we used shipboard directions (port, starboard, fore and aft)
 as directions of travel aboard the plane, but they're not very
@@ -342,8 +328,7 @@ meaningful anywhere else. In a previous chapter we saw how to use a Doer
 to block the use of these directions altogether. Now we can define one
 that blocks them *except* aboard the plane (i.e. in the planeRegion):
 
-<div class="code">
-
+```
     Doer 'go dir'
         exec(c)
         {
@@ -354,10 +339,9 @@ that blocks them *except* aboard the plane (i.e. in the planeRegion):
         direction = [portDir, starboardDir, foreDir, aftDir]
         when = (!me.isIn(planeRegion))
     ;
+```
 
-</div>
-
-The <span class="code">when</span> property of a Doer can be used to
+The `when` property of a Doer can be used to
 specify any condition we please, and the Doer only takes effect when it
 evaluates to true.
 

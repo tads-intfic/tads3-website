@@ -37,8 +37,7 @@ shoot him.
 
 We start by defining the basic Actor object as before:
 
-<div class="code">
-
+```
     cortez: Actor 'Pablo Cortez; evil latinate;man;him'
         "He's really quite a handsome man, in a latinate sort of way; if you met him
         in a different context you might not realize quite what an evil devil he
@@ -52,8 +51,7 @@ We start by defining the basic Actor object as before:
             quite deadly with that gun. '
             
     ;
-
-</div>
+```
 
 The only novelty here is the use of the \<\<first
 time\>\>...\<\<only\>\> construct to ensure that the explanation that
@@ -68,8 +66,7 @@ we're at it we'll customize the message that's otherwise shown when the
 player character attempts to take another actor's possessions to
 something a bit less bland than the library default:
 
-<div class="code">
-
+```
     cortez: Actor 'Pablo Cortez; evil latinate;man;him'
         "He's really quite a handsome man, in a latinate sort of way; if you met him
         in a different context you might not realize quite what an evil devil he
@@ -93,17 +90,15 @@ something a bit less bland than the library default:
         "It's a Beretta 93R, capable of firing at a rate of more than a thousand
         rounds per minute. "
     ;
-
-</div>
+```
 
 To make Cortez shoot the player character if he tries to enter the
 cockpit we can use a beforeTravel() notification on the Actor object.
 Although we could use the beforeTravel() method in this case, we'll use
-<span class="code">actorBeforeTravel()</span>, again for reasons that
+`actorBeforeTravel()`, again for reasons that
 will become clearer when we come to look at ActorStates:
 
-<div class="code">
-
+```
     cortez: Actor 'Pablo Cortez; evil latinate;man;him'
         "He's really quite a handsome man, in a latinate sort of way; if you met him
         in a different context you might not realize quite what an evil devil he
@@ -140,12 +135,11 @@ will become clearer when we come to look at ActorStates:
             }        
         }
     ;
+```
 
-</div>
-
-Note the use of the <span class="code">finishGameMsg(ftDeath,...)</span>
+Note the use of the `finishGameMsg(ftDeath,...)`
 to kill the player character. We supply
-<span class="code">\[finishOptionUndo\]</span> as the second parameter
+`\[finishOptionUndo\]` as the second parameter
 to allow the player to undo the fatal move. Note too that since we
 defined the first part of the vocab property as 'Pablo Cortez', with
 every word starting with a capital letter, the library will recognize it
@@ -155,24 +149,24 @@ opportunity to prevent the player character retreating to the rear of
 the plane again once he's encountered Cortez; this will prevent
 potential problems with the AgendaItems we're about to define next.
 
-The <span class="code">cortez</span> Actor object is beginning to look a
+The `cortez` Actor object is beginning to look a
 bit complicated, but this is as complicated as it needs to get. To
 implement the rest of Cortez's behaviour we'll use **AgendaItems**.
 
 An AgendaItem is an object that can be used to define what an Actor does
 when a certain condition is met. An AgendaItem is considered for
-execution when its <span class="code">isReady</span> property becomes
-true. When that happens, its <span class="code">invokeItem()</span>
+execution when its `isReady` property becomes
+true. When that happens, its `invokeItem()`
 method is called. Its invokeItem() method will continue to be executed
-every turn until the AgendaItem's <span class="code">isDone</span>
+every turn until the AgendaItem's `isDone`
 property becomes true, so if you want an AgendaItem to execute only
-once, make sure that it sets <span class="code">isDone = true</span> in
-its <span class="code">invokeItem()</span> method. But to be considered
+once, make sure that it sets `isDone = true` in
+its `invokeItem()` method. But to be considered
 for execution at all an AgendaItem must be in its actor's
-<span class="code">agendaList</span>. To put it there you can either
-call a<span class="code">ddToAgenda(*item*)</span> on the actor object,
+`agendaList`. To put it there you can either
+call a`ddToAgenda(*item*)` on the actor object,
 where *item* is the AgendaItem in question, or define
-<span class="code">initiallyActive = true</span> on the AgendaItem to
+`initiallyActive = true` on the AgendaItem to
 have it included in the actor's agendaList at the start of the game.
 
 An AgendaItem is associated with its actor by being located in its
@@ -182,8 +176,7 @@ As a first example, we'll use an AgendaItem to move Pablo Cortez to the
 front of the plane when the takeover scene starts. The following code
 should be placed immediately after the definition of the gun object:
 
-<div class="code">
-
+```
     + cortezArrivalAgenda: AgendaItem
         initiallyActive = true
         isReady = (takeover.isHappening)
@@ -194,23 +187,22 @@ should be placed immediately after the definition of the gun object:
             getActor.moveInto(planeFront);
         }
     ;
+```
 
-</div>
-
-Note the use of <span class="code">getActor</span> within the
-<span class="code">invokeItem()</span> method to get a reference to the
+Note the use of `getActor` within the
+`invokeItem()` method to get a reference to the
 actor this AgendaItem belongs to. We could have written
-<span class="code">cortez.moveInto(planeFront)</span>, but it's better
-practice to use <span class="code">getActor</span> in case, for example,
+`cortez.moveInto(planeFront)`, but it's better
+practice to use `getActor` in case, for example,
 you later decided to change the name of the cortez object. Note too the
-use of <span class="code">isDone = true</span> at the start of the
-<span class="code">invokeItem()</span> method (it could equally well
+use of `isDone = true` at the start of the
+`invokeItem()` method (it could equally well
 have come at the end, of course) to ensure this AgendaItem only fires
 once.
 
 You may be thinking it would have been simpler to have moved the
-<span class="code">cortez</span> object to the front of the plane in the
-<span class="code">whenStarting()</span> method of the takeover scene.
+`cortez` object to the front of the plane in the
+`whenStarting()` method of the takeover scene.
 We certainly could have done it that way, and it may even have been
 better. It's a matter of taste and opinion whether it's preferable to
 keep all the Scene-related code with the Scene, or all the Actor-related
@@ -226,8 +218,7 @@ several ways we could arrange this, but the one we'll use here is to
 hold off adding our second AgendaItem to Cortez's agendaList until the
 first one is invoked:
 
-<div class="code">
-
+```
     + cortezArrivalAgenda: AgendaItem
         initiallyActive = true
         isReady = (takeover.isHappening)
@@ -252,11 +243,10 @@ first one is invoked:
             I shall shoot any of you who are still aboard! Now, move, move!</q> ";
         }
     ;
-
-</div>
+```
 
 Note the use of
-<span class="code">getActor.addToAgenda(cortezTalkingAgenda)</span> to
+`getActor.addToAgenda(cortezTalkingAgenda)` to
 add the cortezTalkingAgenda AgendaItem to Cortez's agenda.
 
 Let's say that if the player character hangs around for more than
@@ -264,14 +254,13 @@ another two turns, Cortez will spot him and instantly shoot him. For
 that we can use a special kind of AgendaItem called a
 **DelayedAgendaItem**. To set the delay of a DelayedAgendaItem we can
 add it to its actor's agenda and call its
-<span class="code">setDelay()</span> method at the same time as adding
+`setDelay()` method at the same time as adding
 to its actor's agendaList with a statement like
-<span class="code">getActor.addToAgenda(*item*.setDelay(*turns*))</span>.
+`getActor.addToAgenda(*item*.setDelay(*turns*))`.
 In the case of this DelayedAgendaItem we must also make sure that the
 player is still around to be shot:
 
-<div class="code">
-
+```
     + cortezTalkingAgenda: AgendaItem
         isReady = (me.isIn(planeFront))
         
@@ -303,13 +292,12 @@ player is still around to be shot:
                 getActor.moveInto(nil);                
         }
     ;
-
-</div>
+```
 
 You may be wondering about that
-<span class="code">getActor.moveInto(nil)</span> in the
-<span class="code">else</span> clause of
-<span class="code">cortezShootingAgenda.invokeItem()</span>. Here we're
+`getActor.moveInto(nil)` in the
+`else` clause of
+`cortezShootingAgenda.invokeItem()`. Here we're
 simply saving ourselves the additional AgendaItem that would otherwise
 be needed to move Cortez off-stage again at the end of the takeover
 scene. If the player character isn't around to be shot when the
@@ -321,7 +309,7 @@ altogether, presumably he notionally moves to the rear of the plane to
 take a seat among his pals and buddies.
 
 You may also be wondering about the lack of an
-<span class="code">isReady</span> property on cortezShootingAgenda.
+`isReady` property on cortezShootingAgenda.
 That's because it's already defined on the DelayedAgendaClass; it's
 defined so that a DelayedAgendaItem becomes ready when the delay
 specified in its setDelay() method has passed.

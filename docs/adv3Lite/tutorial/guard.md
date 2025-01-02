@@ -35,8 +35,7 @@ opposed to various aspects of its behaviour) is defined much like any
 other Thing, except that we define it to be of class Actor. The Actor
 object representing the security guard might look like this:
 
-<div class="code">
-
+```
     guard: Actor 'security guard; burly flab; man; him' @securityGate
         "He's a burly-looking fellow, though it's probably as much flab as muscle. "
         
@@ -48,8 +47,7 @@ object representing the security guard might look like this:
             probably result in all the other airport security staff coming after you,
             which is a complication you could do without right now. '
     ;
-
-</div>
+```
 
 You can place this code right at the start of your npcs.t file, and then
 recompile and run the game to ensure that the security guard is now
@@ -61,7 +59,7 @@ There are a few points to note about this definition:
     use the + notation to define his initial location. Instead we use
     the @ notation as the second element in the template to define where
     the security guard starts out, hence
-    <span class="code">@securityGate</span>. This is a technique you'll
+    `@securityGate`. This is a technique you'll
     often use when defining NPCs.
 2.  Note that we use all four sections of the vocab property, ending it
     with 'him' after the third and final semicolon. This defines the NPC
@@ -69,11 +67,11 @@ There are a few points to note about this definition:
     referred to with the pronoun 'him', and so that any
     library-generated messages will use the right pronoun to refer to
     him.
-3.  Note that we've used <span class="code">actorSpecialDesc</span> to
+3.  Note that we've used `actorSpecialDesc` to
     provide a separate paragraph about the security guard in the room
-    listing. This works much like <span class="code">specialDesc</span>,
+    listing. This works much like `specialDesc`,
     and indeed in this particular case we could have used
-    <span class="code">specialDesc</span> just as well, but with a more
+    `specialDesc` just as well, but with a more
     complex actor this would have broken part of the ActorState
     mechanism, so using **actorSpecialDesc** with Actors is a good habit
     to get into. The reason for this will become more apparent when we

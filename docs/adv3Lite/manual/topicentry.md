@@ -37,16 +37,14 @@ To create a Consultable object in adv3Lite we first define an object of
 class Consultable, in much the same way as we'd define any other Thing,
 for example:
 
-<div class="code">
-
+```
     blueBook: Consultable 'blue book; useless trusty of[prep];dictionary information' @desk
         "It's your trusty dictionary of useless information. "
         
         readDesc = "It's not the sort of book you'd want to read from cover to
             cover; it's more for looking things up in. "
     ;
-
-</div>
+```
 
 Each item you want the player to be able to look up in the blue book can
 then be represented by a **ConsultTopic** object. These should be
@@ -81,8 +79,8 @@ defined with some combination of the following properties:
   case we should not also define the topicResponse property, since if we
   do, that will be used instead.).
 - **topicMatched**: The topic actually matched by this TopicEntry. This
-  is set by the <span class="code">matchTopic()</span> method and is
-  intended for use by the <span class="code">topicResponse()</span>
+  is set by the `matchTopic()` method and is
+  intended for use by the `topicResponse()`
   method, which can then access the Topic (or Thing) whose match
   triggered this TopicEntry (in case the TopicEntry can match more than
   one Topic or Thing).
@@ -90,14 +88,12 @@ defined with some combination of the following properties:
 Most of these properties can be defined through a template. The basic
 template for a TopicEntry looks like this:
 
-<div class="code">
-
+```
     TopicEntry template
        +matchScore?
        @matchObj | [matchObj] | 'matchPattern'
        "topicResponse" | [eventList] ?;
-
-</div>
+```
 
 This means that a TopicEntry can optionally be defined with a + sign and
 a number giving its matchScore; following that (if it is present) or
@@ -110,8 +106,7 @@ strings) if the TopicEntry is also an EventList.
 To continue the previous example, we might begin to populate our
 dictionary of useless information with ConsultTopics thus:
 
-<div class="code">
-
+```
     + ConsultTopic @tLemons    
         "Apparently they're yellow and sour. "
     ;
@@ -127,8 +122,7 @@ dictionary of useless information with ConsultTopics thus:
     + ConsultTopic '(black|red|green) blob(s){0,1}'
        "They're very blobby. "   
     ;
-
-</div>
+```
 
 <span id="defaultconsult"></span>
 
@@ -138,20 +132,17 @@ ABRAHAM LINCOLN IN BOOK or CONSULT DICTIONARY ABOUT KNOWN UNKNOWNS for
 example. For that purpose we use a **DefaultConsultTopic** which acts a
 catch-all for anything we haven't specifically defined:
 
-<div class="code">
-
+```
     + DefaultConsultTopic
         "You thumb through the blue book in vain for any interesting information on
         that topic. "
     ;
-
-</div>
+```
 
 Alternatively, we might mix in the DefaultConsultTopic with an EventList
 class to provide a sequence of responses:
 
-<div class="code">
-
+```
     + DefaultConsultTopic, StopEventList
       [
         'You thumb through the blue book in vain for any interesting information on
@@ -165,8 +156,7 @@ class to provide a sequence of responses:
         'Oh dear! Yet again you fail to find what you\'re looking for. '    
        ]
     ;
-
-</div>
+```
 
 If you don't need Consultables or any other kind of TopicEntries then
 you can exclude topicEntry.t from your build, but note that topicEntry

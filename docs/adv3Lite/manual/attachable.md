@@ -60,8 +60,7 @@ example) with a list of objects that can be attached to it (e.g.
 \[roundMagnet, squareMagnet, starMagnet\]). For example, if we had just
 one magnet we wanted to be able to attach to a fridge we might define:
 
-<div class="code">
-
+```
 
     + fridge: SimpleAttachable 'fridge; large white; refrigerator door'
         "It's a large, white floor-standing refrigerator. "
@@ -76,11 +75,10 @@ one magnet we wanted to be able to attach to a fridge we might define:
         last trip to Canada. "
         attachedTo = fridge
     ;
-
-</div>
+```
 
 In this example, the magnet starts out attached to the fridge, which is
-why we define <span class="code">attachedTo = fridge</span> and locate
+why we define `attachedTo = fridge` and locate
 the magnet in the fridge (with the ++ notation; note also that to make
 sure the magnet is on the outside of the fridge we define the interior
 of the fridge on its remapIn property). If you didn't want the magnet to
@@ -163,7 +161,7 @@ lengths of hose or cable together, or assembling a device out of its
 components). You can override the **attachedLocation** and
 **detachedLocation** properties (on the object to be attached) to tweak
 this behaviour; for example you could set both to
-<span class="code">location</span> (meaning the location of the attached
+`location` (meaning the location of the attached
 object) if you don't want attaching it to the other object to move it at
 all.
 
@@ -184,17 +182,17 @@ NearbyAttachable, the Attachable class defines the following:
   contains a single item). Note that this remains distinct from the
   attachments property which continues to hold the list of items
   attached to this one. On an Attachable item the
-  <span class="code">isAttachedTo(obj)</span> method can be used to
+  `isAttachedTo(obj)` method can be used to
   determine if *obj* is in either list.
 - **maxAttachedTo**: the maximum number of items to which this object
   can be attached at once. The default value is 2, on the basis that
   this is likely to be the most common case. If you don't want there to
   be any limit at all, you can set this property to nil. Note that the
-  <span class="code">maxAttachedTo</span> property does not impose any
+  `maxAttachedTo` property does not impose any
   limit on the number of items that can be attached to the objects it's
   defined on (the number of items in the
-  <span class="code">attachments</span> property); it merely limits the
-  maximum length of the <span class="code">attachedToList</span>
+  `attachments` property); it merely limits the
+  maximum length of the `attachedToList`
   property.
 - **reverseConnect(obj)**: If this method returns true for *obj* then
   this reverses the order of connection between self and *obj* when
@@ -212,22 +210,20 @@ NearbyAttachable, the Attachable class defines the following:
 ## <span id="plug">PlugAttachable</span>
 
 The **PlugAttachable** class is a mix-in class designed to be used
-together with either <span class="code">SimpleAttachable</span> or
-<span class="code">NearbyAttachable</span>. This allows an object to be
+together with either `SimpleAttachable` or
+`NearbyAttachable`. This allows an object to be
 Plugged into or Unplugged from another object. It's then attached to the
 other object, but described as being plugged into it. Attaching one
 PlugAttachable to another is equivalent to plugging it in. For example:
 
-<div class="code">
-
+```
     + plug: PlugAttachable, NearbyAttachable 'electric plug'    
     ;
 
     + socket: PlugAttachable, NearbyAttachable, Fixture 'power socket'
         allowableAttachments = [plug]
     ;
-
-</div>
+```
 
 The number of items that can be plugged into something (the socket) at
 any one time is controlled by the socket's **socketCapacity** property,
@@ -235,11 +231,10 @@ which is 1 by default.
 
 If you want to define an object that can be plugged in and unplugged
 without specifying a particular socket, you can use the
-<span class="code">PlugAttachable</span> mix-in with an ordinary Thing
+`PlugAttachable` mix-in with an ordinary Thing
 class and define its **needsExplicitSocket** property as nil, e.g.:
 
-<div class="code">
-
+```
     + tv: PlugAttachable, Switch, Fixture 'television;;tv'
         "It's currently <<if isOn>>on<<else>>off<<end>>, not that it makes much
         difference to the quality of what appears on the screen. "
@@ -263,8 +258,7 @@ class and define its **needsExplicitSocket** property as nil, e.g.:
                 makeOn(nil);
         }
     ;
-
-</div>
+```
 
 </div>
 

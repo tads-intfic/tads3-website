@@ -66,16 +66,14 @@ extension file names to your project (t3m) file in the equivalent place:
 between the library files and your own game code files, in the following
 manner:
 
-<div class="code">
-
+```
     -lib system
     -lib adv3Lite
     -source extensions/roomparts
     -source start
 
      
-
-</div>
+```
 
 Many of the extensions that come with adv3Lite make use of additional
 macros, templates and enums. These are all defined in the advlite.h file
@@ -101,8 +99,8 @@ extension.
 
 ## Collective
 
-This extension defines the <span class="code">Collective</span> and
-<span class="code">DispensingCollective</span> classes, which can help
+This extension defines the `Collective` and
+`DispensingCollective` classes, which can help
 with situations where you have one object representing a collective
 (e.g. a bunch of grapes) and one or more objects representing items
 drawn from that collective (e.g. individual grapes). The Collective
@@ -271,13 +269,13 @@ events. For details see [subtime.t](../extensions/subtime.html)
 
 The symconn (Symmetrical Connectors) extension can be used to simplify
 the creation of symmetrical connections between rooms (for example where
-<span class="code">room1.east</span> leads to
-<span class="code">room2</span> and <span class="code">room2.west</span>
-leads to <span class="code">room1</span>). It can automate the
+`room1.east` leads to
+`room2` and `room2.west`
+leads to `room1`). It can automate the
 reciprocal connections between rooms (so that, for example, if
-<span class="code">hall.east</span> is set to
-<span class="code">lounge</span>, <span class="code">lounge.west</span>
-will automatically be set to <span class="code">hall</span>). It also
+`hall.east` is set to
+`lounge`, `lounge.west`
+will automatically be set to `hall`). It also
 defines a number of two-way connector classes so that, for example, a
 simple door between two rooms can be specified with one object instead
 of the normal two. For details see

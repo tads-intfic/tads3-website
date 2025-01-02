@@ -24,8 +24,8 @@ Collective
 
 ## Overview
 
-This extension defines the <span class="code">Collective</span> and
-<span class="code">DispensingCollective</span> classes, which can help
+This extension defines the `Collective` and
+`DispensingCollective` classes, which can help
 with situations where you have one object representing a collective
 (e.g. a bunch of grapes) and one or more objects representing items
 drawn from that collective (e.g. individual grapes). The Collective
@@ -49,23 +49,23 @@ properties/methods:
 - *New Classes*: [Collective](#collective),
   [DispensingCollective](#dispensing)
 - *Properties/Methods of Collective*:
-  <span class="code">collectiveToks</span>,
-  <span class="code">extraToks</span>,
-  <span class="code">collectiveDobjMatch</span>,
-  <span class="code">collectiveIobjMatch</span>,
-  <span class="code">numberWanted</span>,
-  <span class="code">isCollectiveFor(obj)</span>,
-  <span class="code">collectiveAction(np, cmd)</span>.
+  `collectiveToks`,
+  `extraToks`,
+  `collectiveDobjMatch`,
+  `collectiveIobjMatch`,
+  `numberWanted`,
+  `isCollectiveFor(obj)`,
+  `collectiveAction(np, cmd)`.
 - *Additional properties/methods of DispensingCollective*:
-  <span class="code">dispensedClass</span>,
-  <span class="code">dispensedObjs</span>,
-  <span class="code">maxToDispense</span>,
-  <span class="code">numLeft</span>,
-  <span class="code">sayDispensed(obj)</span>,
-  <span class="code">exhaustDispenser()</span>,
-  <span class="code">cannotTakeFromHereMsg</span>,
-  <span class="code">cannotDispenseMsg</span>,
-  <span class="code">notEnoughLeftMsg</span>.
+  `dispensedClass`,
+  `dispensedObjs`,
+  `maxToDispense`,
+  `numLeft`,
+  `sayDispensed(obj)`,
+  `exhaustDispenser()`,
+  `cannotTakeFromHereMsg`,
+  `cannotDispenseMsg`,
+  `notEnoughLeftMsg`.
 
   
 <span id="usage"></span>
@@ -87,8 +87,7 @@ grapes) and individual items making up or taken from that collective.
 For example, supposed we defined an object representing a bunch of
 grapes together with a class to represent individual grapes thus:
 
-<div class="code">
-
+```
     bunch: Thing 'bunch of grapes[n]'
       ...
     ;  
@@ -98,8 +97,7 @@ grapes together with a class to represent individual grapes thus:
       disambigName = 'loose grape'  
     ; 
      
-
-</div>
+```
 
 If we were then to define a number of grapes (objects of the Grape
 class) and any of them were in scope at the same time as the bunch
@@ -112,28 +110,26 @@ grape in scope along with the bunch of grapes, the player is likely to
 intend 'grapes' to refer to the bunch and 'grape' to the individual
 grape. The use of the disambigName alleviates this problem a little, but
 does not fully solve it. A better solution is to make the bunch a
-<span class="code">Collective</span>:
+`Collective`:
 
-<div class="code">
-
+```
     bunch: Collective 'bunch of grapes[n]'
           isCollectiveFor(obj) { return obj.ofKind(Grape); }
     ;
      
-
-</div>
+```
 
 <span id="iscollective"></span>
 
 The first thing to note here is the use of the **isCollectiveFor()**
 method. In order to decide whether it or some other object should
-respond to the player's command, a <span class="code">Collective</span>
+respond to the player's command, a `Collective`
 needs to know what objects it needs to be distinguished from, that is,
 which objects it is acting as a collective for. In this case we want the
 parser to make the correct selection between the bunch of grapes and
 individual (loose) grapes; in other words the bunch is a collective for
 individual grapes, which in this case will be objects of the Grape
-class. We thus need <span class="code">isCollectiveFor(obj)</span> to
+class. We thus need `isCollectiveFor(obj)` to
 return true if and only if *obj* is a Grape.
 
 But there's more going on behind the scenes that immediately meets the
@@ -146,70 +142,66 @@ with those defined on the Collective's **collectiveToks** property. In
 the example above, however, this property seems not to have been
 defined. In fact, if it's not defined by the user (game author), the
 library defines it automatically from the Collective's name property; so
-in the example above the <span class="code">collectiveToks</span>
-property is automatically set to <span class="code">\['bunch', 'of',
-'grapes'\]</span>.
+in the example above the `collectiveToks`
+property is automatically set to `\['bunch', 'of',
+'grapes'\]`.
 
 Much of the time this will work perfectly well, but what if our
 Collective can be described in more than one way? Suppose, for example,
 we have a stack of cans object that can also be referred to as a pile of
 tins. If we left the library to set the
-<span class="code">collectiveToks</span> property the parser would still
+`collectiveToks` property the parser would still
 take CANS to refer to the stack rather than to one or more individual
 cans, but could not make the same distinction if the player typed TINS.
 One way to deal with this would be to set the
-<span class="code">collectiveToks</span> property manually:
+`collectiveToks` property manually:
 
-<div class="code">
-
+```
      canStack: Collective 'stack of cans;;pile tins'
         isCollectiveFor(obj) { return obj.ofKind(Can); }
         collectiveToks = ['stack', 'of', 'cans', 'pile', 'tins'] 
      ;
      
-
-</div>
+```
 
 This will work since the library will see that we've defined the
-<span class="code">collectiveToks</span> property for ourselves, so it
+`collectiveToks` property for ourselves, so it
 won't overwrite it with the tokens from the name property, but it's a
 bit more typing than we need to do, since we've had to repeat the
-<span class="code">'stack', 'of', 'cans'</span> that the library would
+`'stack', 'of', 'cans'` that the library would
 otherwise have dealt with for us. A better alternative, then, is to use
-the **extraToks** property. If the <span class="code">extraToks</span>
+the **extraToks** property. If the `extraToks`
 property is defined as a list of tokens, these will be added to the list
 of tokens the library builds from the Collective's name when it
-initializes its <span class="code">collectiveToks</span> property. The
+initializes its `collectiveToks` property. The
 above example could then be re-written:
 
-<div class="code">
-
+```
      canStack: Collective 'stack of cans;;pile tins'
         isCollectiveFor(obj) { return obj.ofKind(Can); }
         extraToks = ['pile', 'tins'] 
      ;   
      
+```
 
-</div>
-
-Finally, action-processing code (<span class="code">dobjFor</span> and
-<span class="code">iobjFor</span> methods) defined on a Collective can
+Finally, action-processing code (`dobjFor` and
+`iobjFor` methods) defined on a Collective can
 test the value of its **collectiveDobjMatch** and
 **collectiveIobjMatch** properties to see whether the Collective was
 matched as either the direct or indirect object of the command using any
-of the tokens in its <span class="code">collectiveToks</span> property.
+of the tokens in its `collectiveToks` property.
 This is useful when the Collective also includes singular words in its
 vocab (e.g. 'grape' or 'tin') so that the player can refer to an
 individual grape or tin before any have come into scope. The reason for
 this will become clearer when we go on to discuss the
-<span class="code">DispensingCollector</span> class.
+`DispensingCollector` class.
 
   
 <span id="dispensing"></span>
 
 ## DispensingCollective Class
 
-The <span class="code">Collective</span> class provides a helpful
+The `Collective` class provides a helpful
 framework for helping the parser to choose between a collective (e.g. a
 bunch of grapes) and the individual objects for which it is a collective
 (e.g. individual grapes), but is otherwise a bit limited in what it can
@@ -220,8 +212,7 @@ This is best explained by way of an example: here's how we might define
 a bunch of grapes from which the player will be allowed to take up to
 five grapes:
 
-<div class="code">
-
+```
     bunch: DispensingCollective 'bunch of grapes[n]; another more; grape'
         dispensedClass = Grape
         
@@ -231,17 +222,16 @@ five grapes:
         notEnoughLeftMsg = '{I} {don\'t need} that many grapes. '
     ; 
      
-
-</div>
+```
 
 There are a number of points to note here. First, the word 'grape' is
 included as an addition noun in the noun section of the vocab property.
 This allows the player to type TAKE GRAPE even when there are no
 individual grapes in scope, since the Collective (bunch) object will
 match 'grape'. When it matches, however, its
-<span class="code">collectiveDobjMatch</span> property will be set to
+`collectiveDobjMatch` property will be set to
 nil, since it did not match on any of the tokens on the bunch's
-<span class="code">collectiveToks</span> property. This tells the bunch
+`collectiveToks` property. This tells the bunch
 object that the player wants to take an individual grape from the bunch
 rather than the whole bunch. We don't have to do anything to make this
 happen; this behaviour is all defined on the DispensingCollective class,
@@ -285,8 +275,7 @@ Collective will dispense. For example, if you only wanted to allow the
 player to take a single grape from the bunch, then instead of defining a
 Grape class you could define a single grape object and the bunch thus:
 
-<div class="code">
-
+```
     bunch: DispensingCollective 'bunch of grapes[n]; another more; grape'
         dispensedObjs = [grape]
            
@@ -295,21 +284,20 @@ Grape class you could define a single grape object and the bunch thus:
         notEnoughLeftMsg = '{I} {don\'t need} that many grapes. '
     ; 
      
-
-</div>
+```
 
 Note that in this instance there's no need to define the
-<span class="code">maxToDispense</span> property, since the maximum
+`maxToDispense` property, since the maximum
 number of objects that can be dispensed is simply the length of the
-<span class="code">dispensedObjs</span> list. Note finally that whether
-you define <span class="code">dispensedClass</span> or
-<span class="code">dispensedObjs</span>, there is no need to define the
-<span class="code">isCollectiveFor(obj)</span> method on a
-<span class="code">DispensingCollective</span>, since it this method is
+`dispensedObjs` list. Note finally that whether
+you define `dispensedClass` or
+`dispensedObjs`, there is no need to define the
+`isCollectiveFor(obj)` method on a
+`DispensingCollective`, since it this method is
 already defined there, and can figure out whether *obj* is something the
 DispensingCollective is a collective for from its
-<span class="code">dispensedClass</span> or
-<span class="code">dispensedObjs</span> property.
+`dispensedClass` or
+`dispensedObjs` property.
 
 <span id="exhaust"></span>
 
@@ -320,8 +308,7 @@ nothing, but it can easily be overridden to carry out some side-effect
 of running out of items to dispense, such as changing the description,
 for example:
 
-<div class="code">
-
+```
     bunch: DispensingCollective 'bunch of grapes[n]; another more ;grape'
         dispensedClass = Grape
         
@@ -337,16 +324,14 @@ for example:
         }
     ; 
      
-
-</div>
+```
 
 If we had been dealing with a bunch of bananas rather than a bunch of
 grapes, the effect of taking the last banana from the bunch (when there
 are two bananas left) would be to leave a single banana behind, so we
 might do something like this:
 
-<div class="code">
-
+```
      bananaBunch: DispensingCollective 'bunch of bananas[n]; another more; banana'
         "There are <<spellNumber(numLeft)>> bananas left on the bunch. "
         
@@ -362,8 +347,7 @@ might do something like this:
         }
     ;
      
-
-</div>
+```
 
   
 

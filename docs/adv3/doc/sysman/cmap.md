@@ -54,11 +54,9 @@ in a format that you can directly feed into the TADS character map
 compiler, but you must make one small addition first. At the end of the
 file, add a line that looks like this:
 
-<div class="code">
-
+```
     default_display 0x81
-
-</div>
+```
 
 For the "0x81", however, you should substitute the character that you
 want to use as the default display character. This defines the character
@@ -137,8 +135,8 @@ original character can't be displayed on this system.
 
 In addition, some glyphs can be approximated visually by combining two
 or more glyphs from a more limited character set. For example, left and
-right arrows can be approximated by <span class="code">\<-</span> and
-<span class="code">-\></span>.
+right arrows can be approximated by `\<-` and
+`-\>`.
 
 The TADS 3 character mapping system provides an optional mechanism for
 making these types of approximations. If you wish to provide
@@ -148,24 +146,20 @@ you obtain from mapping files found on the Unicode web site). After all
 of the local-to-Unicode mappings, add this line to your mapping source
 file:
 
-<div class="code">
-
+```
     display_mappings
-
-</div>
+```
 
 After this line, provide your approximation mappings. These mappings can
 take two forms, as shown in these examples:
 
-<div class="code">
-
+```
     &mdash  '--'
     0x0141      'L'
-
-</div>
+```
 
 In the first form, you can specify an HTML entity name, written with a
-leading ampersand (<span class="code">&</span>) as it is in HTML source
+leading ampersand (`&`) as it is in HTML source
 code. In the second form, you use a number (the "0x" prefix indicates
 that the number is in hexadecimal; you can specify a decimal number by
 omitting the "0x" prefix, but the Unicode listings specify everything in
@@ -181,11 +175,9 @@ range 0 to 255). If you want to substitute any Unicode characters
 outside of the plain ASCII range, use numbers to specify the Unicode
 code points of the substitution:
 
-<div class="code">
-
+```
     &mdash  0x2d 0x2d
-
-</div>
+```
 
 The numeric form eliminates any character set translation issues with
 respect to the character mapping source file itself (the last thing we

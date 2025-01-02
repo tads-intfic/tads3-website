@@ -133,9 +133,16 @@ of the identifiers within the function or method.
 An example of declaring local variables, using multiple local
 statements, and using initializers is below.
 
-    f(a, b){  local i, j;                   /* no initializers */  local k = 1, m, n = 2;        /* some with initializers, some without */  local q = 5 * k, r = m + q;   /* OK to use q after it's initialized */  for (i = 1 ; i < q ; i++)  {    local x, y;                 /* locals can be declared in any block */    say(i);  }}
-
-  
+```
+f(a, b){  local i, j;
+    /* no initializers */
+    local k = 1, m, n = 2;
+    /* some with initializers, some without */
+    local q = 5 * k, r = m + q;   /* OK to use q after it's initialized */  for (i = 1 ; i < q ; i++)  {
+        local x, y;
+        /* locals can be declared in any block */
+        say(i);  }}
+```
 
 ### b. Loops
 
@@ -146,7 +153,7 @@ of times or, more commonly, a number of times determined by some
 condition, such as the number of objects in a set we wish to examine.
 For example at the start of the game we might want to go through every
 object in the game and ensure that it is has been added to the
-<span class="code">contents </span>property of its immediately container
+`contents `property of its immediately container
 (the library in fact does this for us). It would be tedious indeed to
 have to write code to do this on every single object that might be
 affected; it's far better to write a set of statements once and have
@@ -155,8 +162,6 @@ game. A programming construct that accomplishes this sort of task is
 traditionally called a *loop*, and the TADS 3 language provides four
 types of loop: while, do-while, for and foreach. It also contains a
 number of statements to help control how loops function.
-
-  
 
 #### i) While
 
@@ -1250,7 +1255,7 @@ when you want to break out of a loop from within a switch statement:
 |     |     |
 |-----|-----|
 |     |     |
-
+```
 scanLoop:  
     for (i = 1 ; i \< 10 ; ++i)  
     {  
@@ -1268,10 +1273,10 @@ scanLoop:
             break scanLoop;  
         }  
     }  
-  
+  ```
 Targeted break statements are also useful for breaking out of nested
 loops:  
-  
+  ```
 matchLoop:  
   
     for (i = 1 ; i \<= val.length() ; ++i)  
@@ -1282,7 +1287,7 @@ matchLoop:
                 break matchLoop;  
         }  
     }  
-
+```
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
 <col style="width: 50%" />
@@ -2582,13 +2587,13 @@ score.t (part of the standard adv3 library):
 |     |     |
 |-----|-----|
 |     |     |
-
+```
 replace addToScore(points, desc)   
 {   
    if(gPlayerChar.isWorthy)  
       libScore.addToScore\_(points, desc);   
 }   
-
+```
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
 <col style="width: 33%" />
@@ -2629,14 +2634,14 @@ you can entirely replace the coarseMesh object defined in sense.t:
 |     |     |
 |-----|-----|
 |     |     |
-
+```
 replace coarseMesh: Material   
    seeThru = transparent   
    hearThru = transparent   
    smellThru = distant  
    touchThru = transparent   
 ;   
-
+```
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
 <col style="width: 33%" />
@@ -2704,12 +2709,12 @@ responses and add one of your own:
 |     |     |
 |-----|-----|
 |     |     |
-
+```
 modify playerActionMessages  
    cannotTurnMsg = '{The dobj/he} just will not turn. '  
    shouldNotSpitMsg = 'It's rude to spit in public. '  
 ;  
-
+```
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
 <col style="width: 50%" />
@@ -2759,7 +2764,7 @@ inherited with modify.
 |     |     |
 |-----|-----|
 |     |     |
-
+```
      class testClass: object  
        sdesc = "testClass"  
      ;  
@@ -2779,7 +2784,7 @@ inherited with modify.
       inherited;  
        }  
      ;  
-
+```
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
 <col style="width: 33%" />
@@ -2879,7 +2884,7 @@ itself. In the example above, we could do this instead:
 |     |     |
 |-----|-----|
 |     |     |
-
+```
       modify testObj  
         replace sdesc  
        {  
@@ -2889,7 +2894,7 @@ itself. In the example above, we could do this instead:
       ;  
   
    This would result in a different display for testObj.sdesc:  
-
+```
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
 <col style="width: 33%" />
@@ -2964,7 +2969,7 @@ obtain a pointer to the old function. Here's an example.
 |-----|-----|
 |     |     |
 
-  
+  ```
     getName(val)  
     {  
       switch(dataType(val))  
@@ -2984,8 +2989,7 @@ obtain a pointer to the old function. Here's an example.
       else  
         return replaced(val);  
     }  
-  
-  
+  ```
 Note how the modified function refers back to the original version: we
 add handling for string values, which the original definition didn't
 provide, but simply invoke the original version of the function for any
@@ -3053,7 +3057,7 @@ The syntax of delegated is similar to that of inherited:
 |     |     |
 |-----|-----|
 |     |     |
-
+```
   return_value = delegated object_expression.property   
 optional_argument_list*  
 *  
@@ -3064,7 +3068,7 @@ book: Thing
   handler = Readable  
   doTake(actor) { return delegated handler.doTake(actor); }  
 ;  
-  
+  ```
 In this example, the doTake method delegates its processing to the
 doTake method of the object given by the "handler" property of the
 "self" object, which in this case is the Readable object. When

@@ -151,11 +151,9 @@ Online" link; the user can launch the game by going to the game's IFDB
 page and clicking this link. Alternatively, you can set up a direct link
 from your own Web site to the IFDB launch page, following this template:
 
-<div class="code">
-
+```
     <a href="http://ifdb.tads.org/t3run?id=TUID&storyfile=FILENAME">Play Online</a>
-
-</div>
+```
 
 In the HREF string above, replace **TUID** with your game's IFDB TUID -
 you can find this information in the "Details" section of the game's
@@ -165,11 +163,9 @@ Replace **FILE** with the name of your .t3 file on the IF Archive - you
 only need the filename portion, since the server will assume it's on the
 IF Archive in the games/tads section. For example:
 
-<div class="code">
-
+```
     <a href="http://ifdb.tads.org/t3run?id=sicva377zqygxcq2&storyfile=return-to-ditch-day.t3">Play Online</a>
-
-</div>
+```
 
 Upon reaching the "Play Online" page, if the user isn't already logged
 in, IFDB displays a login screen. The user can enter her credentials, or

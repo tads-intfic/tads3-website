@@ -28,14 +28,12 @@ Locations</a>     </span>
 You may recall that the source file begins with the following three
 lines:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
     #include "advlite.h"
-
-</div>
+```
 
 *Every* source file you create for use with an adv3Lite game should
 begin in precisely the same way. When you come to create a larger game,
@@ -46,11 +44,9 @@ source files with the same three lines as above.
 
 The first line is:
 
-<div class="code">
-
+```
     #charset "us-ascii"
-
-</div>
+```
 
 This tells the compiler which *character set* you are using in your
 source file (in this case, us-ascii), so that it knows how to translate
@@ -70,12 +66,10 @@ comment or whitespace.
 
 The next two lines are also compiler directives. These are:
 
-<div class="code">
-
+```
     #include <tads.h>
     #include "advlite.h"
-
-</div>
+```
 
 The \#include directive tells the compiler to copy the contents of
 whatever file is specified immediately afterwards into that place in
@@ -85,9 +79,9 @@ as template and macro definitions) needs to be included in each and
 every source file. It is thus convenient to package this repeated
 information into *header* files (files with a .h extension) and include
 them in each source file as we are doing here. The first \#include line,
-<span class="code">\#include \<tads.h\></span>, includes certain
+`\#include \<tads.h\>`, includes certain
 definitions common to nearly all TADS 3 programs. The second,
-<span class="code">\#include "advlite.h"</span>, includes a whole bunch
+`\#include "advlite.h"`, includes a whole bunch
 of definitions specific to the adv3Lite library. Every source file you
 create for an adv3Lite game needs to include both these files.
 
@@ -114,16 +108,15 @@ understand it when you come back to it after an interval.
 
 There are two ways of marking texts as comments in TADS 3:
 
-1.  Anything after <span class="code">//</span> on a line is a comment.
-2.  Anything between <span class="code">/\*</span> and
-    <span class="code">\*/</span> is a comment. This allows you to write
+1.  Anything after `//` on a line is a comment.
+2.  Anything between `/\*` and
+    `\*/` is a comment. This allows you to write
     comments that span multiple lines.
 
 The following are thus examples of comments in the source file we have
 just created:
 
-<div class="code">
-
+```
        // obtain IFID from http://www.tads.org/ifidgen/ifidgen
        
        /* Define the initial player character; this is compulsory */
@@ -134,8 +127,7 @@ just created:
      *   convenient name. If you change it to something else, rememember to change
      *   gameMain.initialPlayerChar accordingly.
      */
-
-</div>
+```
 
 ## Object Definitions
 
@@ -148,8 +140,7 @@ or two other things), but we needn't worry about any of those for now.
 Most of what you'll be doing when writing IF in TADS 3 is defining
 objects. Let's take a closer look at the first one in our source file:
 
-<div class="code">
-
+```
     versionInfo: GameID
         IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
         name = 'The Adventures of Heidi'
@@ -164,20 +155,19 @@ objects. Let's take a closer look at the first one in our source file:
             by Roger Firth and Sonja Kesserich.'    
         
     ;
-
-</div>
+```
 
 The object definition begins with the name of the object (here
-<span class="code">versionInfo</span>), followed by a colon, followed by
+`versionInfo`), followed by a colon, followed by
 the name of the class to which the object belongs (here
-<span class="code">GameID</span>). Note the convention that an object
+`GameID`). Note the convention that an object
 name begins with a lower-case letter while a class name begins with an
 upper-case letter (though this is simply a convention). The object
 definition ends with a semicolon, which tells the compiler "We've
 finished defining this object". In between the class name and the
 terminating semicolon come a list of properties, each one defined with a
 property name followed by an equals sign followed by the initial value
-of that property; for example the <span class="code">version</span>
+of that property; for example the `version`
 property has an initial value of '1'. When you're defining your own
 objects, be careful *not* to terminate a property definition with a
 semicolon (it's easily done), because the compiler will think you mean
@@ -222,18 +212,16 @@ any public database, we don't need to worry about it here, but if this
 were a real game you'd need to do what the comment suggests, namely
 visit <http://www.tads.org/ifidgen/ifidgen> to obtain a unique IFID
 which you could then copy and paste into your own code (between the
-single quote marks after <span class="code">IFID = </span>).
+single quote marks after `IFID = `).
 
 The next object in our source file is:
 
-<div class="code">
-
+```
     gameMain: GameMainDef
         /* Define the initial player character; this is compulsory */
         initialPlayerChar = me
     ;
-
-</div>
+```
 
 This is where you can define certain other basic information about your
 game, such as certain options and what it does on start-up. For the full
@@ -251,8 +239,7 @@ The final two objects define the player character's starting location
 and the object representing the player character. These must be present
 for your game to compile correctly:
 
-<div class="code">
-
+```
     /* The starting location; this can be called anything you like */
 
     beforeCottage: Room 'In front of a Cottage'
@@ -272,8 +259,7 @@ for your game to compile correctly:
         person = 2   
         contType = Carrier    
     ;
-
-</div>
+```
 
 Note the use of the + sign to indicate the me object is located inside
 the beforeCottage location. You'll probably be using this notation a

@@ -57,8 +57,7 @@ enough to put right, though; all we need to do is to override the
 **listenDesc** property of the bird to provide a more satisfactory
 response:
 
-<div class="code">
-
+```
     + bird: Thing 'baby bird;;nestling'
         "Too young to fly, the nestling tweets helplessly. "
            
@@ -66,8 +65,7 @@ response:
         
         listenDesc = "The nestling sounds scared and in need of assistance. "
     ;
-
-</div>
+```
 
 Now all should be well. If you recompile the game and try to listen to
 the bird you should now see a more appropriate response. Incidentally,
@@ -82,18 +80,18 @@ typed LISTEN.
 
 Alternatively, if you didn't want the bird's tweeting to be reported in
 response to a bare LISTEN command, you could define
-<span class="code">isProminentNoise = nil</span> on the bird.
+`isProminentNoise = nil` on the bird.
 
 You can deal with SMELL, FEEL and TASTE in exactly the same way, by
-defining <span class="code">smellDesc</span>,
-<span class="code">feelDesc</span> and/or
-<span class="code">tasteDesc</span> on the appropriate objects.
-<span class="code">smellDesc</span> works just like
-<span class="code">listenDesc</span>, in that a bare SMELL command will
+defining `smellDesc`,
+`feelDesc` and/or
+`tasteDesc` on the appropriate objects.
+`smellDesc` works just like
+`listenDesc`, in that a bare SMELL command will
 report the smellDescs of everything in the vicinity that has one
 (provided its isProminentSmell property is true). This doesn't happen
-with <span class="code">feelDesc</span> and
-<span class="code">tasteDesc</span> however, since the intransitive
+with `feelDesc` and
+`tasteDesc` however, since the intransitive
 commands FEEL and TASTE wouldn't make much sense.
 
 </div>

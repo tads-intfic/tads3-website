@@ -27,10 +27,9 @@ begins with a somewhat minimalist room description and that's it,
 leaving the player no indication of what he should be trying to do or
 what the game is actually about. We really need to add a proper
 introduction, which we can do in the **showIntro()** method of the
-<span class="code">gameMain</span> object:
+`gameMain` object:
 
-<div class="code">
-
+```
     gameMain: GameMainDef
         /* Define the initial player character; this is compulsory */
         initialPlayerChar = me
@@ -47,14 +46,13 @@ introduction, which we can do in the **showIntro()** method of the
            airport and now your only hope is to get the first plane out of here.\b";
         }       
     ;
+```
 
-</div>
-
-The <span class="code">gameMain</span> object can also be used to define
+The `gameMain` object can also be used to define
 a number of options that affect the whole game (for a complete list, see
 the section on [Beginnings](../manual/beginning.html) in the *adv3Lite
 Library Manual*). Here we've taken the opportunity to define
-<span class="code">paraBrksBtwnSubcontents = nil</span> (paragraph
+`paraBrksBtwnSubcontents = nil` (paragraph
 breaks between subcontents); this can make room listings more compact by
 removing the, possibly unnecessary, paragraph breaks between sentences
 like, "In the red box you see a pen and a notepad. On the desk you see a
@@ -65,8 +63,7 @@ Another thing players commonly try at the start of the game is X ME
 is meant to be. It's generally a good idea to oblige them by providing a
 custom description on the player character object:
 
-<div class="code">
-
+```
     + me: Thing 'you'   
         "Secret agents are normally meant to be well equipped, but your quick
         getaway just now meant you had to leave just about everything behind
@@ -78,8 +75,7 @@ custom description on the player character object:
         person = 2   
         contType = Carrier    
     ;
-
-</div>
+```
 
 ------------------------------------------------------------------------
 

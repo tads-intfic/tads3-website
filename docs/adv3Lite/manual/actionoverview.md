@@ -254,7 +254,7 @@ the player actually typed.
 - **gVerbPhrase**: This returns the complete command, with the actual
   object names replaced by place-holders: '(dobj)' for the direct object
   and '(iobj)' for the indirect object. So if the command were ATTACK
-  BIG JIM WITH SHARP SWORD, <span class="code">gVerbPhrase</span> would
+  BIG JIM WITH SHARP SWORD, `gVerbPhrase` would
   be 'attack (dobj) with (iobj)'. This can provide additional useful
   information if the meaning of the command depends on more than one
   word (e.g. PUT ON versus PUT IN).
@@ -270,11 +270,11 @@ because it cannot find a verb in the command line, it next attempts to
 interpret the command line as as the single object of the default
 action. What the default action is depends on the context. It also
 depends on the setting of
-<span class="code">Parser.defaultActions</span>, which is true by
+`Parser.defaultActions`, which is true by
 default.
 
 If the player character is not currently conversing with anyone, and if
-<span class="code">Parser.defaultActions</span> is true, the default
+`Parser.defaultActions` is true, the default
 action is whatever is defined as such in the DefaultAction property of
 Parser. Normally this is ExamineOrGoTo, which normally behaves just like
 Examine, so that, for example, the command ME would be interpreted as
@@ -292,7 +292,7 @@ If the player character is currently conversing with another character,
 then a command without an explicit verb is treated as the topic of a SAY
 command; i.e. WHATEVER is treated as SAY WHATEVER if WHATEVER doesn't
 make sense as an ordinary command. This takes place regardless of the
-value of <span class="code">Parser.defaultActions</span>, since it's
+value of `Parser.defaultActions`, since it's
 vital to the conversation system. (For further details about what this
 means, see under [SayTopic](specialtopic.html#saytopic) below).
 

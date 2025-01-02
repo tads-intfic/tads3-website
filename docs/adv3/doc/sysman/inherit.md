@@ -135,16 +135,16 @@ In the simple case, C simply inherits everything that A defines plus
 everything that B defines. Things start to get complicated, though, when
 there are inheritance "conflicts" between the two base classes. What
 happens when our two base classes both define the same property *p*? In
-other words, in the diagram above, if A.*p*<span class="code">=</span>1,
-and B.*p*<span class="code">=</span>2, what value of *p* does C inherit?
+other words, in the diagram above, if A.*p*`=`1,
+and B.*p*`=`2, what value of *p* does C inherit?
 Here's a picture of what we mean:
 
 ![](class1a.gif)
 
 Our new notation in the diagram shows property definitions - that little
 *p=1* next to A means that A defines property *p* with the value 1. So
-now we have A.*p*<span class="code">=</span>1 and
-B.*p*<span class="code">=</span>2. So, the question is, what value of
+now we have A.*p*`=`1 and
+B.*p*`=`2. So, the question is, what value of
 *p* does C inherit?
 
 There are a few different theoretical approaches to resolving
@@ -168,17 +168,15 @@ leftmost, we mean the one defined earliest in the superclass list. The
 TADS syntax for defining the object C in the diagram above would be like
 this:
 
-<div class="code">
-
+```
     class C: A, B
       // C's own overrides go here...
     ;
-
-</div>
+```
 
 In this definition, A is the leftmost superclass of C, since it appears
 earliest in the list of superclasses in the
-<span class="code">class</span> statement that defines C. So, in case of
+`class` statement that defines C. So, in case of
 a conflict between A and B, A wins: C inherits *p* from A.
 
 Of course, none of this is an issue if C *also* defines *p*, because in
@@ -196,14 +194,12 @@ We now have A as a subclass of Z, B as a sublass of Z, and C as a
 subclass of A and B. In terms of TADS definitions, this would look like
 so:
 
-<div class="code">
-
+```
     class Z: object;
     class A: Z;
     class B: Z;
     class C: A, B;
-
-</div>
+```
 
 If we still have A and B defining *p*, this doesn't change anything - C
 still inherits *p* from A because of the "leftmost superclass" rule. But
@@ -213,7 +209,7 @@ now consider this bizarre situation:
 
 Remember our notation: that little *p=1* next to Z means that Z defines
 property *p* with the value 1. So we now have
-Z.*p*<span class="code">=</span>1 and B.*p*<span class="code">=</span>2.
+Z.*p*`=`1 and B.*p*`=`2.
 The question once again is: what value of *p* does C inherit?
 
 Using our "leftmost superclass" rule, we'd say that the value C inherits
@@ -295,19 +291,19 @@ Stated as an algorithm:
   - In any case, keep going.
 - We're done: the last match from the loop is the one to use.
 
-## Where <span class="code">inherited</span> goes next
+## Where `inherited` goes next
 
 The rules above for inheritance and multiple inheritance explain how to
 find the definition of a property to use when evaluating an initial
 property evaluation - a direct property evaluation or a call to a
-method, as in <span class="code">obj.p</span>. But there's more to
-inheritance than this, thanks to the <span class="code">inherited</span>
+method, as in `obj.p`. But there's more to
+inheritance than this, thanks to the `inherited`
 operator.
 
-The <span class="code">inherited</span> operator's job is to *continue*
+The `inherited` operator's job is to *continue*
 the traversal of the inheritance tree. An initial property evaluation
 reaches the most specific override of the property, but then
-<span class="code">inherited</span> can be used to call the *next-most
+`inherited` can be used to call the *next-most
 specific* version of the property. This extends the basic benefits of
 inheritance to a much finer granularity: not only can we inherit whole
 properties and methods from base classes, but we can actually *extend*
@@ -315,8 +311,8 @@ base class methods by incorporating the originals into our code even
 when we override them.
 
 The rules for continuing an inheritance tree traversal with
-<span class="code">inherited</span> are actually very simple.
-<span class="code">inherited</span> just goes to the instance of the
+`inherited` are actually very simple.
+`inherited` just goes to the instance of the
 method that the current instance overrides. In other words, it's the
 instance that *would* have been called if the current instance had never
 been defined.
@@ -339,7 +335,7 @@ non-deterministic, as though there were all sorts of paths through the
 tree. But that's not really the case: there's *always* a unique linear
 ordering for the inheritance order. Given a class tree, you can always
 work out *exactly* the order in which
-<span class="code">inherited</span> will traverse the classes.
+`inherited` will traverse the classes.
 
 There's one other thing to note. The traversal order depends on the
 *final* subclass we're talking about - in other words, it depends on the
@@ -350,7 +346,7 @@ example above, but some other class might mix A and C as superclasses,
 or might mix A and B and some other class X. Another object might use B
 and A as superclasses rather than A and B, making B take precedence over
 A in that case. This means that we can't look at a given method and
-determine *in isolation* where its <span class="code">inherited</span>
+determine *in isolation* where its `inherited`
 calls will go - it all depends on the full class tree of the final
 object that's involved.
 

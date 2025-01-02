@@ -39,11 +39,11 @@ purely for internal use, this extension defines the following new
 classes, methods and properties:
 
 - *Classes*: **SceneTopic**, **SceneStartTopic**, **SceneEndTopic**.
-- *Methods on SceneTopic*: <span class="code">beforeResponse()</span>,
-  <span class="code">afterResponse()</span>.
-- *New Property on Scene*: <span class="code">notifySingleActor</span>.
+- *Methods on SceneTopic*: `beforeResponse()`,
+  `afterResponse()`.
+- *New Property on Scene*: `notifySingleActor`.
 - *Otherwise Unused Property on Actor*:
-  <span class="code">notificationOrder</span>
+  `notificationOrder`
 
   
 <span id="usage"></span>
@@ -61,15 +61,14 @@ that takes place when the player character can talk to the actor for
 whom the SceneTopic is defined.
 
 The SceneTopic class is not used directly. Instead use
-<span class="code">SceneStartTopic</span> for a topic entry that is to
+`SceneStartTopic` for a topic entry that is to
 be triggered by the start of a scene, and
-<span class="code">SceneEndTopic</span> for one that is to be triggered
+`SceneEndTopic` for one that is to be triggered
 by the end of the scene. In either case, the scene or scenes whose
 beginning or ending is to trigger the SceneTopic are defined on its
-<span class="code">matchObj</span> property in the normal way, e.g.
+`matchObj` property in the normal way, e.g.
 
-<div class="code">
-
+```
      jane: Actor 'Jane;;;her' @hall;
 
     + janeState: ActorState
@@ -85,8 +84,7 @@ beginning or ending is to trigger the SceneTopic are defined on its
         "<q>Well, that was quite a scene!</q> Jane declares. "
     ; 
      
-
-</div>
+```
 
 <span id="before"></span>
 
@@ -94,9 +92,9 @@ Additional control over how a SceneTopic responds to the beginning or
 ending of a scene is provided by its **beforeResponse()** and
 **afterResponse()** methods, which can be used to define additional
 behaviour that is to occur before or after the response displayed by the
-SceneTopic. By default the <span class="code">beforeResponse()</span>
+SceneTopic. By default the `beforeResponse()`
 simply outputs a spacing paragraph break and the
-<span class="code">afterResponse()</span> method does nothing.
+`afterResponse()` method does nothing.
 
 Note that the same matching rules apply to SceneTopics as to other
 TopicEntries; that is, if an Actor has several SceneTopics that could
@@ -113,10 +111,10 @@ the Scene's **notifySingleActor** property to nil. In any case before
 any Actor's SceneTopic is triggered the relevant Actors are sorted in
 ascending order of their **notificationOrder** property. This means that
 if only one Actor's SceneTopic is used, it will be the one that has the
-lowest <span class="code">notificationOrder</span> (out of those that
+lowest `notificationOrder` (out of those that
 have a matching SceneTopic), while if every relevant Actor with a
 matching SceneTopic is allowed to respond, they will respond in order of
-their <span class="code">notificationOrder</span> property.
+their `notificationOrder` property.
 
   
 

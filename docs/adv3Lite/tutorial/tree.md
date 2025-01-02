@@ -27,14 +27,12 @@ The description of the clearing mentions a tall sycamore tree standing
 at its centre. We'd better define it next. A first attempt based on what
 we've done so far is:
 
-<div class="code">
-
+```
     + tree: Thing 'tall sycamore tree;;stout proud'     
         "Standing proud in the middle of the clearing, the stout tree looks easy to
         climb."
     ;
-
-</div>
+```
 
 Add this to your file just after the definition of the nest (in the
 clearing). Because both the nest and the tree have a single + sign, both
@@ -75,10 +73,9 @@ can pick up the tree and carry it around with her!
 </div>
 
 We should fix this at once. We can do so by adding
-<span class="code">isFixed = true</span> to the definition of the tree.
+`isFixed = true` to the definition of the tree.
 
-<div class="code">
-
+```
      
     + tree: Thing 'tall sycamore tree;;stout proud'     
         "Standing proud in the middle of the clearing, the stout tree looks easy to
@@ -86,43 +83,41 @@ We should fix this at once. We can do so by adding
         
         isFixed = true
     ;
-
-</div>
+```
 
 If you try compiling and running the game again, you should find it now
 works rather better: the tree isn't listed twice in the clearing and
 Heidi can't pick it up. The first thing defining
-<span class="code">isFixed = true</span> does is to make the tree
+`isFixed = true` does is to make the tree
 non-portable so it can't be picked up and carried around. More often
 than not non-portable items like the tree have already been mentioned in
 the main body of the room description, so we normally don't want to see
 them listed among the miscellaneous portable items that happen to be in
 the location like the nest. For that reason Thing is set up so that when
-<span class="code">isFixed</span> is true,
-<span class="code">isListed</span> is nil (i.e. false) so that fixed
+`isFixed` is true,
+`isListed` is nil (i.e. false) so that fixed
 items aren't listed separately (though note that if you want to, you can
-override <span class="code">isListed</span> separately from
-<span class="code">isFixed</span>, as we'll go on to illustrate next).
+override `isListed` separately from
+`isFixed`, as we'll go on to illustrate next).
 
 Finally, we'll add a branch at the top of the tree. Once again this
-needs to be fixed in place, so we'll define <span class="code">isFixed =
-true</span>. This time, though, just to show that it can be done (and
+needs to be fixed in place, so we'll define `isFixed =
+true`. This time, though, just to show that it can be done (and
 because we haven't mentioned the branch yet in the room description of
-<span class="code">topOfTree</span>) we'll also define
-<span class="code">isListed = true</span>, so that the branch is still
+`topOfTree`) we'll also define
+`isListed = true`, so that the branch is still
 listed as a separate object. Finally, we want Heidi to be able to put
 things (such as the bird and the nest) *on* the branch, so we'll define
-<span class="code">contType = On</span> (meaning that things can now be
+`contType = On` (meaning that things can now be
 placed on the branch, and that anything located 'in' the branch (via
 the + syntax or one of its equivalents) is to be considered as resting
 on top of it.
 
-The definition of the <span class="code">branch</span> object should
+The definition of the `branch` object should
 come directly after the definition for
-<span class="code">topOfTree</span>, and should look like this:
+`topOfTree`, and should look like this:
 
-<div class="code">
-
+```
     + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
@@ -130,8 +125,7 @@ come directly after the definition for
         isListed = true
         contType = On
     ;
-
-</div>
+```
 
 Once you've made all the appropriate changes, try compiling and running
 the game again and see what you can now do in it.

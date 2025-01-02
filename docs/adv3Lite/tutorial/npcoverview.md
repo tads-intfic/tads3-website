@@ -48,19 +48,17 @@ Then select File -\> Save to save the untitled source file and call it
 npcs; when asked if you wish to add npcs.t to the project, say yes. If
 you're not using Workbench, create a new file called npcs.t in your text
 editor, then edit your airport.t3m file to add
-<span class="code">-SOURCE npcs</span> at the end.
+`-SOURCE npcs` at the end.
 
 Either way, then make sure you copy the following three lines to the
 start of your new source file:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
     #include "advlite.h"
-
-</div>
+```
 
 For the purposes of this tutorial we'll restrict ourselves to
 implementing just three NPCs: Pablo Cortez, the Security Guard by the

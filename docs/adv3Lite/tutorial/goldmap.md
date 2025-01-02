@@ -52,8 +52,7 @@ represent the cave, and three objects: the pedestal, the skull and the
 rock. There's very little that's new here; this is what the code should
 look like:
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -126,8 +125,7 @@ look like:
     + smallRock: Thing 'small rock; round solid'
          "It's roughly round and looks pretty solid. "
     ;
-
-</div>
+```
 
 Changes to the boiler-plate code already provided are marked in bold to
 make them easier to see. There's just a couple of things to note here.
@@ -138,11 +136,11 @@ instead of the Thing class, though we needn't have made this change;
 defining the player character as a Thing and setting its essential
 properties as in the Heidi example would have had exactly the same
 effect. Note in particular the two + signs in front of the
-<span class="code">goldSkull</span> object, to indicate that it's
+`goldSkull` object, to indicate that it's
 located on the pedestal, which is itself located in the cave. Note also
-that since the <span class="code">smallRock</span> object has only one
+that since the `smallRock` object has only one
 plus sign, it's in the cave, not on the pedestal. Finally, recall that
-defining <span class="code">contType = On</span> on the pedestal makes
+defining `contType = On` on the pedestal makes
 it something its contents rest *on* (rather than in, under or behind).
 
 If you try compiling and running the game now you should be able to move

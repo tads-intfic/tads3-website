@@ -62,8 +62,7 @@ helpMessage object in your own code to override one or more of these
 methods. For example, you might want to display a transcript that's more
 relevant to your own game you might do something like this:
 
-<div class="code">
-
+```
     modify helpMsg
       showSample()
       {
@@ -83,8 +82,7 @@ relevant to your own game you might do something like this:
             gPlayerChar.getOutermostRoom.lookAroundWithin();          
       }
     ;
-
-</div>
+```
 
 <span id="trapping"></span>
 
@@ -124,8 +122,8 @@ STUPID GAME are fielded by a StringPreParser that recommends use of the
 HELP command.
 
 Both the VerbRules and the StringPreParsers defined in this module have
-an isActive property defined as <span class="code">isActive =
-(gPlayerChar.currentInterlocutor == nil)</span>. The reason for this is
+an isActive property defined as `isActive =
+(gPlayerChar.currentInterlocutor == nil)`. The reason for this is
 that commands that might be badly formed in the context of normal play
 could conceivably be perfectly legitimate conversational responses, so
 we don't want any of these special actions or StringPreParsers to be
@@ -147,13 +145,11 @@ Unthing. If you find the bodyParts object a nuisance (perhaps because
 your game actually uses a lot of body parts) you can banish it
 altogether like so:
 
-<div class="code">
-
+```
     modify bodyParts
       initialLocationClass = nil
     ;
-
-</div>
+```
 
 <span id="playerhelper"></span>
 
@@ -211,24 +207,24 @@ accordingly less likely to be worth customizing. Interested readers can
 look these up in the [Library Reference Manual](../libref/index.html).
 For now let's concentrate on the firstCheck mechanism, which is what
 game code will most often need to customize via the
-<span class="code">firstCheckCriterion</span> and
-<span class="code">firstCheckAfter</span> properties. Basically what
+`firstCheckCriterion` and
+`firstCheckAfter` properties. Basically what
 happens is that at the start of play the playerHelper object sets up a
-Fuse to execute the <span class="code">firstCheck()</span> method after
-*firstCheckAfter* turns. The <span class="code">firstCheck</span> method
-then looks to see if the <span class="code">firstCheckCriterion</span>
+Fuse to execute the `firstCheck()` method after
+*firstCheckAfter* turns. The `firstCheck` method
+then looks to see if the `firstCheckCriterion`
 is true. If it is, then it displays a message saying that the player
 doesn't seem to be making much progress and suggesting use of the HELP
 command (firstCheckMsg). It also sets a Fuse to start the error Daemon
 after a decent interval. Otherwise, if the player does seem to have made
-reasonable progress (<span class="code">firstCheckCriterion</span>
-returns nil), <span class="code">firstCheck</span> starts the error
+reasonable progress (`firstCheckCriterion`
+returns nil), `firstCheck` starts the error
 checking Daemon straight away.
 
 What game code is most likely to need to customize here are the
-<span class="code">firstCheckCriterion</span> (the condition that must
+`firstCheckCriterion` (the condition that must
 be true if the player seems not to be making much progress) and,
-perhaps, the <span class="code">firstCheckAfter</span> interval (the
+perhaps, the `firstCheckAfter` interval (the
 number of turns into the game at which it's reasonable to make the
 check). Both these values may need a bit of trial and error to get right
 (perhaps with the help of feedback from beta-testers), but we can at
@@ -240,13 +236,11 @@ threshold to somewhere else, the simplest check might be whether the
 player character is still in his/her starting location, for which we can
 just write this:
 
-<div class="code">
-
+```
     modify playerHelper
         firstCheckCriterion() { return gLocation == startLocation; }
     ;
-
-</div>
+```
 
 This would, however, be quite inappropriate in a one-room game or a game
 where there's a lot to interact with in the starting location. In such a
@@ -261,8 +255,7 @@ of the game if s/he hasn't managed at least two out of those four
 obvious actions after ten turns. We might then write the
 firstCheckCriterion thus:
 
-<div class="code">
-
+```
     modify playerHelper
         firstCheckCriterion() 
         { 
@@ -272,8 +265,7 @@ firstCheckCriterion thus:
             return checkList.countWhich({x: x == true}) < 2; 
         }    
     ;
-
-</div>
+```
 
 One other thing we can do if the player appears to be getting stuck is
 to start the [ExtraHints](hint.html#extra) mechanism, if we are using it
@@ -281,16 +273,14 @@ in our game, by calling extraHintManager.startDaemon(). We could, for
 example, override firstCheckMsg to do this rather than displaying a
 message telling players that they're not making much progress:
 
-<div class="code">
-
+```
     modify playerHelper
         firstCheckMsg() 
         { 
             extraHintManager.activate();
         }    
     ;
-
-</div>
+```
 
 Some game authors may prefer this as a less intrusive (or less
 belittling) approach.

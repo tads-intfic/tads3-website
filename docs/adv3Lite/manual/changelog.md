@@ -107,7 +107,7 @@ this is a minor improvement (avoiding unnecessary clutter in respose to
 FOO ALL commands) that will not cause any problematic issues with
 backward compatibility, but any games that wish to reinstate the old
 behaviour can do so by overriding the
-<span class="code">hideFromAll(action)</span> method on the
+`hideFromAll(action)` method on the
 SensoryEmanation class.
 
 ------------------------------------------------------------------------
@@ -143,10 +143,10 @@ TellAbout and so on.
 
 ------------------------------------------------------------------------
 
-The <span class="code">statuslineExitLister.showListEmpty()</span>
-method now uses <span class="code">BMsg(status line noexits,
-'\<i\>None\</i\>'</span> instead of just
-<span class="code">'\<i\>None\</i\>'</span> to display an empty list of
+The `statuslineExitLister.showListEmpty()`
+method now uses `BMsg(status line noexits,
+'\<i\>None\</i\>'` instead of just
+`'\<i\>None\</i\>'` to display an empty list of
 exits in the status line. This makes it easier to customize what's shown
 by using a CustomMessages object, which may, for example, be useful in
 situations where there is a way of moving from the current location but
@@ -235,14 +235,14 @@ check method needs to display some text.
 ------------------------------------------------------------------------
 
 The [Special](query.html#special) class now invalidates the cached list
-of active Specials (<span class="code">Special.allActive\_</span>) each
-time its <span class="code">first()</span> method is called. This
+of active Specials (`Special.allActive\_`) each
+time its `first()` method is called. This
 ensures that the list of active Specials is recalculated every time the
 Q object is queried, which is useful if Specials become active or
 inactive during the course of the game. If this behaviour is not wanted,
 it can be switched off by setting
-<span class="code">Q.dynamicSpecials</span> to
-<span class="code">nil</span>.
+`Q.dynamicSpecials` to
+`nil`.
 
 ------------------------------------------------------------------------
 
@@ -402,7 +402,7 @@ defaultSayResponse, thus producing the same effect.
 ------------------------------------------------------------------------
 
 The default value of **Parser.autoSpell** has been changed from true to
-<span class="code">(gPlayerChar.currentInterlocutor == nil)</span>. This
+`(gPlayerChar.currentInterlocutor == nil)`. This
 is because the spelling corrector can often appear inappropriately
 intrusive in conversational contexts, so not attempting spelling
 corrections during an ongoing conversation seems to give better results.
@@ -441,9 +441,9 @@ they might be executed.
 
 ------------------------------------------------------------------------
 
-The <span class="code">outermostVisibleParent(</span>) and
-<span class="code">outermostParent</span> properties of **Room** are now
-defined as <span class="code">self</span> (rather than nil, as
+The `outermostVisibleParent(`) and
+`outermostParent` properties of **Room** are now
+defined as `self` (rather than nil, as
 previously). This avoids run-time errors that could otherwise occur in
 attempting to construct a scope list for a Room.
 
@@ -694,24 +694,24 @@ There is now a [SymConn](../../extensions/docs/symconn.html) (Symmetrical
 Connectors) extension. This does two things. First, if a direction
 property of a room points to another room, it automatically sets up the
 connection back in the reverse direction (so, for example, if you
-defined <span class="code">hall.east = study</span> it would
-automatically set <span class="code">study.west = hall</span>). Second,
+defined `hall.east = study` it would
+automatically set `study.west = hall`). Second,
 it defines **SymConnector**, **SymPassage** and **SymDoor** classes
 which can be used to set up symmetrical connections between rooms
 requiring one object instead of the normal two (so that, for example, a
-single <span class="code">SymDoor</span> object can be used to represent
+single `SymDoor` object can be used to represent
 both sides of a door, instead of needing two Door objects).
 
 ------------------------------------------------------------------------
 
 The **Direction** class now has an **opposite** property, which
 specifies the direction object corresponding to the opposite direction
-(e.g. <span class="code">eastDir.opposite</span> would be
-<span class="code">westDir</span>). It also has an
+(e.g. `eastDir.opposite` would be
+`westDir`). It also has an
 **oppositeProp(prop)** method which returns the direction property
 corresponding to the opposite of *prop* (for example
-<span class="code">Direction.oppositeProp(&east)</span> would return
-<span class="code">&west</span>). Both these changes are principally to
+`Direction.oppositeProp(&east)` would return
+`&west`). Both these changes are principally to
 facilitate the implementation of the SymConn extension, but are also
 available for use by game code.
 
@@ -720,11 +720,11 @@ available for use by game code.
 The **TravelConnector** class now has a **getDestination(origin)**
 method which returns the destination to which the connector leads for an
 actor starting from *origin*. For all TravelConnectors defined in the
-main library this simply returns <span class="code">direction</span>, so
+main library this simply returns `direction`, so
 existing user code should be unaffected by this change, although a
 number of library methods that used to use the value of the
-<span class="code">direction</span> property now use the value returned
-by <span class="code">getDirection()</span> instead. Again, this change
+`direction` property now use the value returned
+by `getDirection()` instead. Again, this change
 is principally to facilitate implementation of the SymConn extension.
 
 ------------------------------------------------------------------------
@@ -738,7 +738,7 @@ overlooked by the Viewport.
 
 The new Thing property **inDarkDesc** can be used to give an alternative
 description for an object that is
-<span class="code">visibleInDark</span> in an unlit room.
+`visibleInDark` in an unlit room.
 
 ------------------------------------------------------------------------
 
@@ -791,16 +791,16 @@ of a noun may be signficant.
 
 ------------------------------------------------------------------------
 
-Three message ID names have been changed: <span class="code">already
-plugged in vagaue</span> is now <span class="code">already plugged in
-vague</span> (thereby correcting the obvious typo), and
-<span class="code">cannot smell</span> used as the ID name of an error
+Three message ID names have been changed: `already
+plugged in vagaue` is now `already plugged in
+vague` (thereby correcting the obvious typo), and
+`cannot smell` used as the ID name of an error
 message in the objSmellable Precondition is now
-<span class="code">cannot smell through</span> to avoid collision with
-the <span class="code">cannot smell</span> message ID used elsewhere;
-finally one instance of <span class="code">game now brief</span> (it was
+`cannot smell through` to avoid collision with
+the `cannot smell` message ID used elsewhere;
+finally one instance of `game now brief` (it was
 used twice) has been changed to (the more obviously correct)
-<span class="code">game now verbose</span>.
+`game now verbose`.
 
 ------------------------------------------------------------------------
 
@@ -838,12 +838,12 @@ game.
 
 Bug fixed whereby the **writeToStream(val)** method of OutputStream
 didn't cater for the case where *val* was the Boolean value
-<span class="code">true</span>. This could cause run-time errors with
+`true`. This could cause run-time errors with
 embedded expressions that called a function or method for its
 side-effects when that function returned true.
 OutputStream.writeToStream(val) now treats
-<span class="code">true</span> the same way as
-<span class="code">nil</span>; i.e. it outputs nothing in either case
+`true` the same way as
+`nil`; i.e. it outputs nothing in either case
 (which is intended to cater for the embedded expression situation).
 
 ------------------------------------------------------------------------
@@ -896,7 +896,7 @@ script might be blocked by a door the NPC ought to be able to open.
 **Minor Risk of Incompatibility**: The identifier **stop** is now
 defined as a macro (for use with the Rules extension), so any methods,
 properties, functions or other identifiers in game code called
-<span class="code">stop</span> will need to be changed to something
+`stop` will need to be changed to something
 else. In particular this will effect the Airport sample game developed
 in the Tutorial. The same applies to **nostop**, **rnull** and
 **nextrule**, which have also been defined as macros, and to **null**,
@@ -905,14 +905,14 @@ identifiers in user code.
 
 ------------------------------------------------------------------------
 
-The <span class="code">nameDistinguisher</span> in parser.t has been
+The `nameDistinguisher` in parser.t has been
 altered so that it now considers two object names to be 'equal' not just
 if they are the same, but if one is wholly contained within the other.
 The effect of this is that when the parser wishes to disambiguate
 between two objects with names one of which is a subset of the other, it
 will now resort to using their disambigNames rather than displaying a
 message like "Which do you mean, the red ball or the ball?" when use of
-the <span class="code">disambigName</span> might have avoided this. This
+the `disambigName` might have avoided this. This
 may lead to a few 'false positives' (e.g. the name 'ant' is contained in
 'pants', which would now trigger use of the disambigName of both objects
 were there a need to disambiguate between them), but since by default
@@ -925,8 +925,8 @@ difference.
 
 The rules for scope and for matching objects in remote locations have
 been tightened up, especially in relation to SenseRegions which do not
-allow line of sight (i.e. for which <span class="code">canSeeAcross =
-nil</span>). Objects the player character does not yet know about in
+allow line of sight (i.e. for which `canSeeAcross =
+nil`). Objects the player character does not yet know about in
 remote locations are not added to scope, and objects in remote locations
 are excluded from plural matches if there are also matches in the player
 character's current location (which is more likely to be what the player
@@ -969,11 +969,11 @@ hyperlinked so that a command can be selected by clicking on it.
 ------------------------------------------------------------------------
 
 The Actor method **handleTopic()** can now take
-<span class="code">nil</span> as its third parameter. This means that
+`nil` as its third parameter. This means that
 nothing will be displayed, and nil returned to the caller, if no
 matching topic is found (rather than the display of a default message).
 The new SceneTopic extension takes advantage of this, and the workings
-of <span class="code">InitTopic</span> and some greeting topics have
+of `InitTopic` and some greeting topics have
 also been changed to take advantage of it. This is a change that mainly
 affects the internal workings of the library, but might be relevant to
 game code that wants to call this method directly.
@@ -983,11 +983,11 @@ game code that wants to call this method directly.
 Three new macros have been added to the library to assist with the
 interpretation of commands: **gVerbWord**, **gVerbPhrase** and
 **gCommandToks**. If the player entered the command PUT RED BALL ON
-TABLE then <span class="code">gVerbWord</span> would be 'put' (i.e. the
-first word of the command), <span class="code">gVerbPhrase</span> would
+TABLE then `gVerbWord` would be 'put' (i.e. the
+first word of the command), `gVerbPhrase` would
 be 'put (dobj) on (iobj)' (i.e. the command entered by the player with
 (dobj) and (iobj) replacing the words used to describe the direct and
-indirect objects) and <span class="code">gCommandToks</span> would be
+indirect objects) and `gCommandToks` would be
 \['put', 'red', 'ball', 'on', 'table'\].
 
 ------------------------------------------------------------------------
@@ -999,9 +999,9 @@ SOMETHING SOMEWHERE, PULL SOMETHING SOMEWHERE, DRAG SOMETHING SOMEWHERE
 and MOVE SOMETHING SOMEWHERE were all treated as synonymous. This is
 still the default behaviour, but there is now a **canPullTravel**
 property that can be set separately from
-<span class="code">canPushTravel</span>. By default
-<span class="code">canPullTravel</span> takes its value from
-<span class="code">canPushTravel</span>, but if one is set to true and
+`canPushTravel`. By default
+`canPullTravel` takes its value from
+`canPushTravel`, but if one is set to true and
 the other to nil it's possible to define an object that can be pulled
 from one place to another but not pushed, or pushed from one place
 another put not pulled. In addition, where appropriate the descriptions
@@ -1011,7 +1011,7 @@ of PushTravel now reflect whether the object was pushed or pulled.
 
 The **Noise** and **Odor** classes have been refactored, so that they
 are now defined as belonging to the
-<span class="code">SensoryEmanation</span> class in the main library.
+`SensoryEmanation` class in the main library.
 This makes it possible to tidy up the way they are enhanced in the
 sensory.t extension without having to replace classes and duplicate
 existing definitions. No functionality should be affected.
@@ -1028,32 +1028,32 @@ template that can be used with these classes.
 ------------------------------------------------------------------------
 
 The **Doer** class now has a new **handleAction** property. This should
-be set to true if the Doer's <span class="code">execAction()</span>
+be set to true if the Doer's `execAction()`
 method handles the complete action instead of either stopping it or
 replacing it with another one. The effect is to ensure that the proper
 beforeAction notifications are called.
 
 ------------------------------------------------------------------------
 
-The <span class="code">Wear</span> action now calls **makeWorn(gActor)**
-rather than <span class="code">makeWorn(true)</span>, while
-<span class="code">makeWorn(stat)</span> now just sets
-<span class="code">wornBy</span> to *stat*. This ends up having the same
+The `Wear` action now calls **makeWorn(gActor)**
+rather than `makeWorn(true)`, while
+`makeWorn(stat)` now just sets
+`wornBy` to *stat*. This ends up having the same
 effect as before; it just does it more directly.
 
 ------------------------------------------------------------------------
 
-The <span class="code">NumberPhrase</span> class in parser.t has now
+The `NumberPhrase` class in parser.t has now
 been fully implemented. This has allowed two new action classes to be
 added: **NumericAction** and **NumericTAction** (see the manual section
 on [Numeric Actions](literalact.html#numeric) for details). The Footnote
 action (in the [Footnote](..\..\extensions\docs\footnotes.html)
 extension) has accordingly been redefined as a
-<span class="code">NumericAction</span>.
+`NumericAction`.
 
 ------------------------------------------------------------------------
 
-The <span class="code">suggestedTopicLister</span> now has a
+The `suggestedTopicLister` now has a
 **hyperlinkSuggestions** property. If this is set to true then (provided
 the player is using an HTML-capable interpreter) the list of topic
 suggestions will be hyperlinked, allowing players to select a suggested
@@ -1069,7 +1069,7 @@ particular objects.
 ------------------------------------------------------------------------
 
 There is now an **illogicalAlready()** macro. This doesn't do anything
-different from <span class="code">IllogicalNow()</span> in adv3Lite, but
+different from `IllogicalNow()` in adv3Lite, but
 is supplied so that game authors familiar with adv3 can use it without
 getting a compilation error. It may also be slightly useful for
 documentary purposes to clarify why a verify routine in game code is
@@ -1083,9 +1083,9 @@ to an extension rather than the main library.
 
 ------------------------------------------------------------------------
 
-In the objtime extension, both <span class="code">GoTo.timeTaken</span>
-and <span class="code">Continue.timeTaken</span> are now defined to be
-<span class="code">TravelAction.timeTaken</span>. This makes it possible
+In the objtime extension, both `GoTo.timeTaken`
+and `Continue.timeTaken` are now defined to be
+`TravelAction.timeTaken`. This makes it possible
 to change the time taken for all travel-related actions in one place
 (and in particular, set to zero in one place if you want to use the
 TravelConnector traversalTime mechanism instead).
@@ -1119,7 +1119,7 @@ The new Thing property **autoUnlock** (nil by default) can be used to
 make the actor attempt to unlock a locked item (door or container)
 before attempting to open it, provided unlocking is straightforwardly
 possible (in other words it adds the
-<span class="code">objUnlocked</span> Precondition to the opening
+`objUnlocked` Precondition to the opening
 action).
 
 ------------------------------------------------------------------------
@@ -1134,9 +1134,9 @@ FILL GLASS.
 ------------------------------------------------------------------------
 
 The order of events in the Actor **setState()** method has been changed
-so that the <span class="code">curState</span> property of the actor is
+so that the `curState` property of the actor is
 set to the new state before the new state's
-<span class="code">activateState()</span> method is called (instead of
+`activateState()` method is called (instead of
 after, as previously). This removes a potential problem that might
 otherwise occur if an activateState() method wants to change the state
 of another actor, and the other actor needs to know what state the first
@@ -1148,11 +1148,11 @@ The new Actor methods **curNodeIdx()**, **curNodeKey()** and
 **curNodeObj()** can be used to test whether the actor is currently at a
 Conversation Node, and, if so, what it is. If you simply want to test
 whether there is an active ConvNode, test whether
-<span class="code">curNodeIdx()</span> returns a number (meaning there
+`curNodeIdx()` returns a number (meaning there
 is one) or nil (meaning there isn't). The
-<span class="code">curNodeKey()</span> method returns the convKeys value
+`curNodeKey()` method returns the convKeys value
 associated with the current ConvNode (if there is one) or nil otherwise,
-while the <span class="code">curNodeObj()</span> method returns the
+while the `curNodeObj()` method returns the
 current ConvNode object, if there is one.
 
 ------------------------------------------------------------------------
@@ -1187,7 +1187,7 @@ Actor to reflect its reaction to the player character's arrival.
 ------------------------------------------------------------------------
 
 In the English language library the **makeLit()**method of Thing now
-checks whether the <span class="code">LitUnlit</span> state needs to be
+checks whether the `LitUnlit` state needs to be
 added/subtracted from the list of states on the object concerned.
 
 ------------------------------------------------------------------------
@@ -1220,7 +1220,7 @@ as 'Door A').
 
 ------------------------------------------------------------------------
 
-Bug fixed whereby a <span class="code">takeObj</span> precondition on an
+Bug fixed whereby a `takeObj` precondition on an
 immovable indirect object wrongly reported that it was the direct object
 that couldn't be taken. To fix this the various cannotTakeMsg properties
 that referred to {the dobj} now refer to {the cobj} instead.
@@ -1279,7 +1279,7 @@ boostScore property instead of the scoreBoost property).
 
 Bug fixed with the way TopicGroups applied their score boosts to
 SlaveTopics. The score boost mechanism has been reworked to make use of
-a new <span class="code">scoreBooster()</span> method on TopicEntry and
+a new `scoreBooster()` method on TopicEntry and
 TopicGroup; this is for internal use only and should not affect user
 code.
 
@@ -1291,10 +1291,10 @@ appropriate part of the name (e.g. 'the king' or 'the Hague').
 
 ------------------------------------------------------------------------
 
-Bug fixed with <span class="code">setPlayer()</span> that could cause
+Bug fixed with `setPlayer()` that could cause
 messages using the parameter substitution {I} to conjugate the verb in
 the wrong person (e.g. 'you sees') just after
-<span class="code">setPlayer()</span> has been called.
+`setPlayer()` has been called.
 
 ------------------------------------------------------------------------
 
@@ -1303,7 +1303,7 @@ curTopic property (so that gTopic would be left at nil)
 
 ------------------------------------------------------------------------
 
-Bug fixed with typo in <span class="code">goInstead</span> macro.
+Bug fixed with typo in `goInstead` macro.
 
 ------------------------------------------------------------------------
 
@@ -1335,7 +1335,7 @@ unaffected, since it isn't usually necessary to call these methods
 directly, but if you do use either of the methods in your own game code
 you will need to make the appropriate change. The new Thing property
 **roomSubContentsLister** has been added to hold the
-<span class="code">lookContentsLister</span> so that this can be passed
+`lookContentsLister` so that this can be passed
 via a property pointer (although this is mainly for the internal use of
 the library).
 
@@ -1350,7 +1350,7 @@ it won't.
 
 ------------------------------------------------------------------------
 
-The <span class="code">SenseRegion</span> class now has an **autoGoTo**
+The `SenseRegion` class now has an **autoGoTo**
 property. If this is true, then an attempt to touch an object from a
 different room in the same SenseRegion will trigger an implicit GoTo
 action attempting to move the actor to the location of the object to be
@@ -1360,16 +1360,16 @@ touched.
 
 The **fastGoTo** property can now be set on an individual Region as well
 as globally on gameMain. Note that if
-<span class="code">gameMain.fastGoTo</span> is true, the setting of
+`gameMain.fastGoTo` is true, the setting of
 fastGoTo on individual regions will have no effect, since fast GoTo
 (GoTo without stopping for CONTINUE commands) will then be in effect
-globally. If <span class="code">gameMain.fastGoTo</span> is nil,
+globally. If `gameMain.fastGoTo` is nil,
 however, setting it to true on an individual region will allow fast GoTo
 travel within that Region.
 
 ------------------------------------------------------------------------
 
-The <span class="code">SenseRegion</span> class also has a new
+The `SenseRegion` class also has a new
 **contSpace** property. If this is true (it's nil by default) then
 moving from one room to another within the SenseRegion does not cause a
 LOOK AROUND to be performed (and hence a description of the new room to
@@ -1382,11 +1382,11 @@ into subsections which are modelled as the Rooms within the SenseRegion.
 The **Scene** class now has the new methods **beforeAction()** and
 **afterAction()**, which work analogously to the similarly-named methods
 on Rooms, Regions and objects in scope. The
-<span class="code">beforeAction()</span> and
-<span class="code">afterAction()</span> method of every currently active
+`beforeAction()` and
+`afterAction()` method of every currently active
 Scene is called just before and after an action is about to take place
-or has taken place. The <span class="code">beforeAction()</span> method
-can veto the proposed action with the <span class="code">exit</span>
+or has taken place. The `beforeAction()` method
+can veto the proposed action with the `exit`
 macro.
 
 ------------------------------------------------------------------------
@@ -1394,9 +1394,9 @@ macro.
 The **MultiLoc** methods **moveInto(loc)**, **moveIntoAdd(loc)** and
 **moveOutOf(loc)** now work if *loc* is a Region (as well as if it is a
 Thing or Room); previously *loc* had to be a Thing or Room. If *loc* is
-a Region then <span class="code">moveIntoAdd(loc)</span> or
-<span class="code">moveInto(loc)</span> adds the MultiLoc to every room
-in the Region while <span class="code">moveOutOf(loc)</span> removes it
+a Region then `moveIntoAdd(loc)` or
+`moveInto(loc)` adds the MultiLoc to every room
+in the Region while `moveOutOf(loc)` removes it
 from every room in the Region.
 
 ------------------------------------------------------------------------
@@ -1407,7 +1407,7 @@ applied to particular objects. It is principally intended for IActions
 to allow PreConditions that apply to the actor, such as the new
 **actorOutOfNested** PreCondition, which tries to take the actor out of
 any nested room that it's in before carrying out the action. This is now
-applied to the <span class="code">Jump</span> action, so that a JUMP
+applied to the `Jump` action, so that a JUMP
 command will try to take the actor out of any nested room (e.g. a bed or
 chair) that it's in before attempting to Jump. If this behaviour is not
 wanted (e.g. because while on a nested room such as a high ladder is the
@@ -1416,14 +1416,14 @@ nil on the nested room object in question.
 
 ------------------------------------------------------------------------
 
-The <span class="code">ActorTopicEntry</span> class now has a new
+The `ActorTopicEntry` class now has a new
 **listOrder** property that gives some control over the order in which
 topic suggestions are listed within each group (e.g. an AskTopic with a
 listOrder of 110 will be listed after an AskTopic with a listOrder of
 100). It is also now possible in principle to alter the order of the
 groups of topic suggestions (ask, tell, show etc.) by overriding the
-<span class="code">typeInfo</span> property of
-<span class="code">suggestedTopicLister</span> to list things in a
+`typeInfo` property of
+`suggestedTopicLister` to list things in a
 different order.
 
 ------------------------------------------------------------------------
@@ -1443,47 +1443,47 @@ extensions just noted above).
 ------------------------------------------------------------------------
 
 The **Command** class now sets provisional values for **gDobj** and
-**gIobj** (if <span class="code">dobj</span> and
-<span class="code">iobj</span> are defined for the current Command) just
+**gIobj** (if `dobj` and
+`iobj` are defined for the current Command) just
 before searching for matching Doers; this avoids problems that might
 otherwise occur if game authors reference
-<span class="code">gDobj</span> and/or <span class="code">gIobj</span>
-in conditions (such as <span class="code">when</span>) applied to
+`gDobj` and/or `gIobj`
+in conditions (such as `when`) applied to
 particular Doers.
 
 ------------------------------------------------------------------------
 
-The library now sets the value of the <span class="code">which</span>
+The library now sets the value of the `which`
 parameter when calling the **StringPreParser**
-<span class="code">doParsing(str, which)</span> method. If the game is
-requesting disambiguation, <span class="code">which</span> is set to
-<span class="code">rmcDisambig</span>; if the parser is asking for a
-missing noun, <span class="code">which</span> is set to
-<span class="code">rmcAskObject</span>; otherwise
-<span class="code">which</span> is set to
-<span class="code">rmcCommand</span> (rmcDisambing, rmcAskObject and
+`doParsing(str, which)` method. If the game is
+requesting disambiguation, `which` is set to
+`rmcDisambig`; if the parser is asking for a
+missing noun, `which` is set to
+`rmcAskObject`; otherwise
+`which` is set to
+`rmcCommand` (rmcDisambing, rmcAskObject and
 rmcCommand are enums).
 
 ------------------------------------------------------------------------
 
-The previous change to the <span class="code">checkDisplay()</span>
+The previous change to the `checkDisplay()`
 method caused one problem while solving another; in particular the new
-version of <span class="code">checkDisplay()</span> is no longer able to
+version of `checkDisplay()` is no longer able to
 prevent a LISTEN or SMELL command sometimes giving an empty response
-when <span class="code">listenDesc</span> or
-<span class="code">smellDesc</span> don't actually display anything. To
+when `listenDesc` or
+`smellDesc` don't actually display anything. To
 solve this problem without reintroducing the problem afflicted embedded
-expressions in <span class="code">listenDesc</span> and
-<span class="code">smellDesc</span>, a new Thing method
-<span class="code">displayAlt()</span> has been added to the library and
+expressions in `listenDesc` and
+`smellDesc`, a new Thing method
+`displayAlt()` has been added to the library and
 the handling of LISTEN and SMELL actions refactored to make use of it.
 This works by avoiding the need to predict whether
-<span class="code">listenDesc</span> and
-<span class="code">smellDesc</span> will produce any output and instead
+`listenDesc` and
+`smellDesc` will produce any output and instead
 checking to see if they have. This is largely a purely internal change
 to the library that should not effect game code except by making
-<span class="code">listenDesc</span> and
-<span class="code">smellDesc</span> work more reliably.
+`listenDesc` and
+`smellDesc` work more reliably.
 
 ------------------------------------------------------------------------
 
@@ -1497,8 +1497,8 @@ commanded had meanwhile been moved into nil).
 
 Bug fixed that gave an inappropriate response to trying to give an order
 to an **Unthing**. Attempting to give an order to an
-<span class="code">Unthing</span> now causes its
-<span class="code">notHereMsg</span> to be displayed, which is
+`Unthing` now causes its
+`notHereMsg` to be displayed, which is
 consistent with the way an Unthing responds to any other commands.
 
 ------------------------------------------------------------------------
@@ -1515,7 +1515,7 @@ parameter in the 'no room' DMsg.
 ------------------------------------------------------------------------
 
 Bug fixed with **setPlayer()** function, which now sets
-<span class="code">gActor</span> to the new player character to ensure
+`gActor` to the new player character to ensure
 that an action like looking around immediately after changing the player
 character now works as expected.
 
@@ -1565,24 +1565,24 @@ to be suggested (they weren't before).
 was largely copied from the adv3 library, but this included provisions
 for handling real-time processing, which adv3Lite doesn't have. This in
 turn resulted in several methods of
-<span class="code">inputManager</span> taking a wholly redundant
-<span class="code">allowRealTime</span> argument. This argument has now
+`inputManager` taking a wholly redundant
+`allowRealTime` argument. This argument has now
 been removed from all the affected methods. Since the arguments to these
 methods were optional, some code may not be affected by the change, but
 any code that calls these methods with the arguments supplied will need
 to change them to match the new argument signature:
 
-- <span class="code">getInputLine(allowRealTime?, promptFunc?)</span>
-  becomes <span class="code">getInputLine(promptFunc?)</span>.
-- <span class="code">getEvent(allowRealTime?, promptFunc?)</span>
-  becomes <span class="code">getEvent(promptFunc?)</span>.
-- <span class="code">getKey(allowRealTime?, promptFunc?)</span> becomes
-  <span class="code">getKey(promptFunc?)</span>.
-- <span class="code">getEventOrKey(allowRealTime, promptFunc,
-  keyOnly)</span> becomes <span class="code">getEventOrKey(promptFunc,
-  keyOnly)</span>.
+- `getInputLine(allowRealTime?, promptFunc?)`
+  becomes `getInputLine(promptFunc?)`.
+- `getEvent(allowRealTime?, promptFunc?)`
+  becomes `getEvent(promptFunc?)`.
+- `getKey(allowRealTime?, promptFunc?)` becomes
+  `getKey(promptFunc?)`.
+- `getEventOrKey(allowRealTime, promptFunc,
+  keyOnly)` becomes `getEventOrKey(promptFunc,
+  keyOnly)`.
 
-The <span class="code">promptFunc</span> parameter can now be supplied
+The `promptFunc` parameter can now be supplied
 as a single-quoted string instead of a function pointer (previously it
 could only be a function pointer; now it can be either).
 
@@ -1593,11 +1593,11 @@ The library now defines a number of macros that can be used as
 abbreviations for inputManager methods:
 
 - \#define **more**
-  <span class="code">inputManager.pauseForMore()</span>
+  `inputManager.pauseForMore()`
 - \#define **input(x)**
-  <span class="code">inputManager.getInputLine(x)</span>
+  `inputManager.getInputLine(x)`
 - \#define **waitKey(x)**
-  <span class="code">inputManager.getKey(x)</span>
+  `inputManager.getKey(x)`
 
   
 
@@ -1628,7 +1628,7 @@ Actor than to a Thing without having to override Thing's verify routine
 on Actor. It could also be used in game code if there are certain Actors
 the PC is more likely to want to kiss than others; these more
 kiss-desirable Actors could be given a higher
-<span class="code">kissRank</span>, making the parser more likely to
+`kissRank`, making the parser more likely to
 choose them in case of ambiguity.
 
 The rationale for the slightly special treatment of ATTACK and KISS is
@@ -1637,30 +1637,30 @@ nuanced treatment than most typical IF actions, even though they are not
 exactly conversational. The same would seem to apply to TOUCH, so this
 is now handled in an analogous fashion, and a new **TouchTopic** class
 has been added to allow the handling of TOUCH commands in a similar
-manner to <span class="code">HitTopic</span> and
-<span class="code">KissTopic</span> for ATTACK and KISS. There is
+manner to `HitTopic` and
+`KissTopic` for ATTACK and KISS. There is
 likewise a corresponding new checkFeelMsg property on Thing (and hence
 on Actor) and a new **touchResponseMsg** property on Actor, both of
-which work in the same way as <span class="code">checkAttackMsg</span>
-and <span class="code">attackResponseMsg</span>.
+which work in the same way as `checkAttackMsg`
+and `attackResponseMsg`.
 
 To help cover possible confusion between HIT and ATTACK and between
 TOUCH and FEEL the library now defines seven macros which convert:
 
-- <span class="code">checkTouchMsg</span> into
-  <span class="code">checkFeelMsg</span>
-- <span class="code">feelResponseMsg</span> into
-  <span class="code">touchResponseMsg</span>
-- <span class="code">isTouchable</span> into
-  <span class="code">isFeelable</span>
-- <span class="code">cannotTouchMsg</span> into
-  <span class="code">cannotFeelMsg</span>
-- <span class="code">touchDesc</span> into
-  <span class="code">feelDesc</span>
-- <span class="code">checkHitMsg</span> into
-  <span class="code">checkAttackMsg</span>
-- <span class="code">hitResponseMsg</span>
-  <span class="code">attackResponseMsg</span>
+- `checkTouchMsg` into
+  `checkFeelMsg`
+- `feelResponseMsg` into
+  `touchResponseMsg`
+- `isTouchable` into
+  `isFeelable`
+- `cannotTouchMsg` into
+  `cannotFeelMsg`
+- `touchDesc` into
+  `feelDesc`
+- `checkHitMsg` into
+  `checkAttackMsg`
+- `hitResponseMsg`
+  `attackResponseMsg`
 
 For the full story see the section on [Attacking, Touching and
 Kissing](actorobj.html#hitkiss) in the chapter on the Actor object.
@@ -1668,7 +1668,7 @@ Kissing](actorobj.html#hitkiss) in the chapter on the Actor object.
 ------------------------------------------------------------------------
 
 The library now defines the macro **gTurns**, which expands to
-<span class="code">libGlobal.totalTurns</span>, as a convenient
+`libGlobal.totalTurns`, as a convenient
 abbreviation for getting at the current turn count.
 
 ------------------------------------------------------------------------
@@ -1691,21 +1691,21 @@ even without having previously visited their locations; this models the
 fact that the PC can presumably see how to get there since there's a
 line-of-sight connection between all the rooms in the SenseRegion.
 
-The <span class="code">gameMain</span> object has a new property
+The `gameMain` object has a new property
 **fastGoTo**; if this is true then the GO TO X command will carry on
 moving the player character either until s/he reaches the destination or
 until some obstacle prevents it. This allows players to go straight to
 the desired destination without needing to use the CONTINUE command
 (unless something blocks their journey). The default value of
-<span class="code">fastGoTo</span> is nil, so that by default the
+`fastGoTo` is nil, so that by default the
 behaviour of the GO TO command remains as before.
 
 ------------------------------------------------------------------------
 
 The TopicEntry class now as a **topicMatched** property which is set to
 the topic being tested for a match by the
-<span class="code">matchTopic()</span> method. This is intended for use
-by the <span class="code">topicResponse()</span> method which can then
+`matchTopic()` method. This is intended for use
+by the `topicResponse()` method which can then
 access the Topic that was actually matched.
 
 ------------------------------------------------------------------------
@@ -1718,16 +1718,16 @@ expressions.
 
 ------------------------------------------------------------------------
 
-The <span class="code">StairwayDown</span> class now has its own
-<span class="code">cannotClimbMsg</span> to give a more appropriate
+The `StairwayDown` class now has its own
+`cannotClimbMsg` to give a more appropriate
 response to CLIMB STAIRS or CLIMB UP STAIRS when the stairs lead down.
 
 ------------------------------------------------------------------------
 
 The **purloin** action now works on an item even it if is hidden. To
-achieve this the <span class="code">Action</span> class now has a new
+achieve this the `Action` class now has a new
 **unhides** property which, if true, allows the action to proceed even
-on an item for which <span class="code">isHidden</span> is true.
+on an item for which `isHidden` is true.
 Additionally, the PURLOIN action sets isHidden to nil on anything it
 takes (otherwise the player character would still not be able to
 interact with it).
@@ -1757,8 +1757,8 @@ Previously the library was a bit over-zealous in suppressing the display
 of zero-length strings that might result from SMELL or LISTEN commands;
 the test applied to achieve this meant that embedded expressions (such
 as \<\<one of\>\>... constructions) in properties like
-<span class="code">smellDesc</span> and
-<span class="code">listenDesc</span> would not work as expected. The
+`smellDesc` and
+`listenDesc` would not work as expected. The
 library now applies a less stringent test, which appears to have no
 adverse effects, and which allows embedded expressions to work with such
 properties as game authors would expect.
@@ -1815,11 +1815,11 @@ the timing of **Scenes** to make it easier to define a Scene that starts
 when the game starts. The scene manager now first executes just after
 the initial display of the starting location, rather than at the Init
 stage (before anything is displayed). This means that the
-<span class="code">whenStarting()</span> method of a
-<span class="code">Scene</span> whose
-<span class="code">startsWhen</span> condition is simply
-<span class="code">true</span> no longer needs to use a
-<span class="code">OneTimePromptDaemon</span> to display text; it can
+`whenStarting()` method of a
+`Scene` whose
+`startsWhen` condition is simply
+`true` no longer needs to use a
+`OneTimePromptDaemon` to display text; it can
 simply display the text using a double-quoted string.
 
 ------------------------------------------------------------------------
@@ -1833,8 +1833,8 @@ has certainly seen it.
 
 ------------------------------------------------------------------------
 
-The **canSee(a, b)** methods of <span class="code">QDefaults</span> and
-<span class="code">QSenseRegion</span> now return nil if b.isHidden is
+The **canSee(a, b)** methods of `QDefaults` and
+`QSenseRegion` now return nil if b.isHidden is
 true (reflecting the fact that if b is explicitly hidden, a shouldn't be
 able to see it).
 
@@ -1842,7 +1842,7 @@ able to see it).
 
 The **discover()** method of Thing now marks the object as seen by the
 player character if the player character can see it when its
-<span class="code">discover()</span> method is called.
+`discover()` method is called.
 
 ------------------------------------------------------------------------
 
@@ -1888,8 +1888,8 @@ Completing this related trio of changes, Thing now also has a
 explaining why the actor cannot reach *target* from within the Thing in
 question when reaching out is disallowed (for example when the player
 character is on a chair and the chair has defined both
-<span class="code">allowReachOut(obj)</span> and
-<span class="code">autoGetOutToReach</span> as nil).
+`allowReachOut(obj)` and
+`autoGetOutToReach` as nil).
 
 ------------------------------------------------------------------------
 
@@ -1925,16 +1925,16 @@ numerical value of zero or some invalid input like 'foobar'.
 
 ------------------------------------------------------------------------
 
-The <span class="code">checkDirection()</span> method of the Doer class
+The `checkDirection()` method of the Doer class
 now sets the current command's
-<span class="code">action.direction</span> to the value of the current
-command's <span class="code">verbProd.dirMatch.dir</span> in case game
+`action.direction` to the value of the current
+command's `verbProd.dirMatch.dir` in case game
 authors attempt to use the former instead of the latter to get at the
 direction entered in a player's command. Note, however, that this is not
 guaranteed to be totally failsafe; game authors are advised to use the
-current command's <span class="code">verbProd.dirMatch.dir</span>
+current command's `verbProd.dirMatch.dir`
 property chain to get at the direction associated with a command, and to
-first ensure that <span class="code">verbProd.dirMatch</span> is not nil
+first ensure that `verbProd.dirMatch` is not nil
 to avoid a run-time error.
 
 ------------------------------------------------------------------------
@@ -1953,7 +1953,7 @@ for all actions or specific actions.
 
 A Doer with a command string of 'foo bar' will now match when the FOO
 action is applied to an object whose lexicalParent is
-<span class="code">bar</span> (as well as <span class="code">bar</span>
+`bar` (as well as `bar`
 itself). This makes it easier to get a Doer to match a command to a
 multiple-containment object where a command like OPEN WASHING MACHINE
 might be redirected to the remapIn SubComponent of the object specified
@@ -1988,12 +1988,12 @@ There is now more control over what listers are used to list the
 contents of objects in response to player commands. The new Thing
 property **myOpeningContentsLister** determines which lister is to be
 used to list the contents of a container when it is opened (the default
-value is <span class="code">openingContentsLister</span>). The new Thing
+value is `openingContentsLister`). The new Thing
 properties **myLookInLister**, **myLookUnderLister** and
 **myLookBehindLister** allow you to define which listers are to be used
 to list what is inside, under or behind an object in response to LOOK
 IN, LOOK UNDER and LOOK BEHIND commands; all three of these properties
-default to <span class="code">lookInLister</span>. The new properties
+default to `lookInLister`. The new properties
 **myInventoryLister** and **myWornLister** can similarly be used to
 define which listers are used to list what an actor is carrying or
 wearing in response to an INVENTORY command.
@@ -2002,7 +2002,7 @@ wearing in response to an INVENTORY command.
 
 The library now implements **BRIEF** and **VERBOSE** commands. The
 current setting is controlled by the new
-<span class="code">gameMain</span> property **verbose**, which is true
+`gameMain` property **verbose**, which is true
 by default.
 
 ------------------------------------------------------------------------
@@ -2016,7 +2016,7 @@ as the command TURN DIAL TO 2 followed by the meaningless command 4).
 
 ------------------------------------------------------------------------
 
-The <span class="code">NumberedDial</span> class now has a new property
+The `NumberedDial` class now has a new property
 **allowDecimal**. By default this is nil, but if it is true then the
 dial can be turned/set to numbers that include a decimal point. If it is
 nil only integer numbers will be accepted as valid settings for the
@@ -2037,7 +2037,7 @@ treated as equivalent to TURN DIAL TO 43.
 ------------------------------------------------------------------------
 
 A number of bugs have been fixed with the
-<span class="code">spelledXXXNumber</span> grammar productions which
+`spelledXXXNumber` grammar productions which
 caused run-time errors when trying to use them to convert a spelt-out
 number into its integer equivalent.
 
@@ -2092,17 +2092,17 @@ example, BOB'S would be stored as BOB 'S).
 ------------------------------------------------------------------------
 
 Bug fixed that caused the exit and exitAction macros to be treated the
-same way, so that <span class="code">exitAction</span> caused an action
+same way, so that `exitAction` caused an action
 to be considered a failure (thereby bypassing the
-<span class="code">afterAction</span> handling). Now only
-<span class="code">exit</span> does this, while
-<span class="code">exitAction</span> stops the action but allows the
-<span class="code">afterAction</span> handling to go ahead.
+`afterAction` handling). Now only
+`exit` does this, while
+`exitAction` stops the action but allows the
+`afterAction` handling to go ahead.
 
 ------------------------------------------------------------------------
 
 Bug fixed with the (mis)definition of the
-<span class="code">isDirectlyHeldBy()</span> method of Thing.
+`isDirectlyHeldBy()` method of Thing.
 
 ------------------------------------------------------------------------
 
@@ -2129,7 +2129,7 @@ be suggested when there is in fact nothing for it to key.
 ------------------------------------------------------------------------
 
 Bug fixed that could cause a run-time error in the
-<span class="code">checkPreCondition()</span> method of the
+`checkPreCondition()` method of the
 **actorInStagingLocation** PreCondition.
 
 ------------------------------------------------------------------------
@@ -2240,10 +2240,10 @@ lockability other than notLockable) now start out locked by default.
 This is probably the more natural assumption since most game authors
 defining lockable objects generally want them to start out locked, and
 it can be all too easy to forget to explicitly make them locked. Game
-code that already defines <span class="code">isLocked = true</span> on
+code that already defines `isLocked = true` on
 such objects will not be affected, but if you have any lockable objects
 that you want to start out unlocked you'll need to define
-<span class="code">isLocked = nil</span> on them (as is the case for the
+`isLocked = nil` on them (as is the case for the
 subclasses of Door defined for the plane in the
 [Airport](../tutorial/doors.html#planedoors) game example in the
 Tutorial).
@@ -2252,7 +2252,7 @@ Tutorial).
 
 **Risk of incompatibility:** The **sayFollowing()** method of Actor and
 ActorState, along with **actorSayFollowing()**, now takes two arguments
-instead of one: <span class="code">sayFollowing(oldLoc, conn)</span>
+instead of one: `sayFollowing(oldLoc, conn)`
 where conn is the TravelConnector just traversed.
 
 ------------------------------------------------------------------------
@@ -2265,13 +2265,13 @@ these is called on the direct object (the object pushed) when
 push-travel is via another object (up the stairs or through the door)
 for example, and is displayed just before the move; *via* is the
 preposition (e.g. Through, Up) relevant to the travel. The second,
-<span class="code">beforeMovePushable(connector, dir)</span>, is called
+`beforeMovePushable(connector, dir)`, is called
 on the direct object in response to push-travelling in a particular
 direction (e.g. PUSH TROLLEY EAST), and again displays a message just
 before the move. Here *connector* is the TravelConnector being pushed
 through and *dir* (e.g. northDir) is the direction the object is being
 pushed in. The third of these methods,
-<span class="code">describeMovePushable(connector, dest)</span> is
+`describeMovePushable(connector, dest)` is
 called on the direct object after the actor arrives in the new room to
 describe the arrival of the object in its new location (dest) after
 being pushed via connector.
@@ -2281,9 +2281,9 @@ being pushed via connector.
 The new Thing properties **objIntoPrep** and **objIntoName** can be used
 to defined the preposition and prepositional phrase used to describe
 motion into an object (e.g. 'onto' and 'onto the lawn'). By default
-<span class="code">objIntoName</span> uses
-<span class="code">objIntoPrep</span> and
-<span class="code">theName</span> to construct the appropriate phrase.
+`objIntoName` uses
+`objIntoPrep` and
+`theName` to construct the appropriate phrase.
 This was introduced to help push travel messages read more naturally
 ('You push the trolley onto the lawn' rather than 'You push the trolley
 into the lawn') but may have other uses.
@@ -2297,11 +2297,11 @@ is moved. The previous behaviour was inconsistent, in that objects
 hidden behind or under something would be left behind, while objects
 otherwise located behind or under (in an Underside or RearContainer)
 would move with the item being moved. Now if
-<span class="code">dropItemsBehind</span> and/or
-<span class="code">dropItemsUnder</span> is true, all such objects
+`dropItemsBehind` and/or
+`dropItemsUnder` is true, all such objects
 notionally behind and/or under are left behind, while if
-<span class="code">dropItemsBehind</span> and/or
-<span class="code">dropItemsUnder</span> are nil, items notionally
+`dropItemsBehind` and/or
+`dropItemsUnder` are nil, items notionally
 behind and/or under the item being moved are moved with it.
 
 ------------------------------------------------------------------------
@@ -2373,7 +2373,7 @@ purpose of these changes is to alleviate the problems that could
 otherwise occur when one Daemon or Fuse is set by the execution of
 another, which can happen under circumstances that may not be
 immediately obvious to the game author, for example by calling
-<span class="code">startFollowing()</span> from a Scene or AgendaItem.
+`startFollowing()` from a Scene or AgendaItem.
 Now that Scenes (as well as AgendaItems) are executed at an earlier and
 seperate phase from Daemons and Fuses, it should in future be safe to
 set Fuses and Daemons from them. The test for whether an Event has ever
@@ -2405,10 +2405,10 @@ together (which needs to be attached to all of them).
 
 The relationship between locks and keys can now also be defined via the
 new [keyList](key.html#keylist) property of Thing. Giving a Thing a
-<span class="code">keyList</span> property automatically makes it
-<span class="code">lockableWithKey</span>, and thereby makes it start
+`keyList` property automatically makes it
+`lockableWithKey`, and thereby makes it start
 out locked. This is in addition to the existing method of defining what
-items a Key unlocks on its <span class="code">actualLockList</span>
+items a Key unlocks on its `actualLockList`
 property.
 
 ------------------------------------------------------------------------
@@ -2584,14 +2584,14 @@ travelerEntering() method of Room and Region has been changed from
 *dest* to *origin*, on the grounds that this is likely to be more useful
 (the *dest* parameter was entirely redundant on a Room, and it seems as
 well to make Region consistent with it). The method thus becomes
-<span class="code">travelerEntering(traveler, origin)</span>, where
+`travelerEntering(traveler, origin)`, where
 *origin* is the Room that the traveler is on the point of leaving.
 
 ------------------------------------------------------------------------
 
 **Risk of incompatibility:** The method of indicating plurals in a vocab
-string has changed from using parentheses <span class="code">()</span>
-to braces <span class="code">{}</span>, so, for example, one would now
+string has changed from using parentheses `()`
+to braces `{}`, so, for example, one would now
 use 'child{-ren}' rather than 'child(-ren)' or 'mouse{mice}' in place of
 'mouse(mice)'. The reason for the change is to avoid a potential clash
 with the use of parentheses to indicate weak tokens, introduced in
@@ -2615,17 +2615,17 @@ strings.
 **Slight Risk of incompatibility:** The order of end-of-turn events has
 now changed, so that Actors' AgendaItems and the like are run before
 Fuses and Daemons. This allows an AgendaItem to set a Fuse or Daemon
-(for example via a call to <span class="code">startFollowing()</span>)
+(for example via a call to `startFollowing()`)
 without the risk of errors due to timing issues. One knock-on effect of
 this change is that AgendaItems that executed on the same turn as an NPC
 moved from one location to another (for example, as a result of
 following the player character) may not now execute until the following
 turn. If this creates problems, you can call
-<span class="code">getActor.executeAgenda()</span> from the
-<span class="code">arrivingTurn()</span> method of the actor's current
+`getActor.executeAgenda()` from the
+`arrivingTurn()` method of the actor's current
 ActorState, or, if there is none,
-<span class="code">executeAgenda()</span> from the actor's
-<span class="code">actorArrivingTurn(</span>) method.
+`executeAgenda()` from the actor's
+`actorArrivingTurn(`) method.
 
 ------------------------------------------------------------------------
 
@@ -2648,9 +2648,9 @@ adapting for use with adv3Lite).
 ------------------------------------------------------------------------
 
 **NodeEndCheck** and **NodeContinuationTopic** now have the
-<span class="code">nodeActive</span> condition as part of their
-<span class="code">active</span> property instead of their
-<span class="code">isActive</span> property. The reason for the change
+`nodeActive` condition as part of their
+`active` property instead of their
+`isActive` property. The reason for the change
 is that game authors could easily override the isActive property without
 realizing that they needed to add the inherited condition to their own.
 Now they don't have to worry.
@@ -2669,8 +2669,8 @@ TRUTH. A similar change has been made to the grammar for ASK X.
 The definition of **blockEndConv** has been moved from NodeEndCheck to a
 new EndConvBlocker mix-in class, which has been added to the classlist
 of the Actor, ActorState and NodeEndCheck classes. This allows the
-<span class="code">canEndConversation()</span> methods of all three
-classes to use <span class="code">blockEndConv</span> as a possible
+`canEndConversation()` methods of all three
+classes to use `blockEndConv` as a possible
 return value.
 
 ------------------------------------------------------------------------
@@ -2678,11 +2678,11 @@ return value.
 The library now has a **commLink** object that can be used to establish
 remote communications between the player character and one or more other
 actors in remote locations. You can use
-<span class="code">commLink.connectTo(other)</span> to establish a
+`commLink.connectTo(other)` to establish a
 remote audio link with other, or
-<span class="code">commLink.connectTo(other, true)</span> to establish a
+`commLink.connectTo(other, true)` to establish a
 remote audiovisual link. Use
-<span class="code">commLink.disconnect()</span> to sever the connection
+`commLink.disconnect()` to sever the connection
 again. For further details read about the [Communications Link
 Special](query.html#commlink) in the chapter on Querying the World Model.
 
@@ -2706,9 +2706,9 @@ The new Mentionable method [filterResolveList()](thing.html#filter)
 allows objects to adjust the list of matched objects while the parser is
 deciding which objects to match to a player command. This can be used
 for an object to exclude itself or other objects from the match list.
-The <span class="code">Unthing</span> class now uses this to exclude any
+The `Unthing` class now uses this to exclude any
 Unthings from the match list when any other objects are present; it is
-also used by the new <span class="code">CollectiveGroup</span> class.
+also used by the new `CollectiveGroup` class.
 
 ------------------------------------------------------------------------
 
@@ -2721,7 +2721,7 @@ selected actions.
 The Actor method **startFollowing()** now checks whether there's already
 a following Daemon running for that actor before creating a new one;
 this should prevent problems that could otherwise occur if
-<span class="code">startFollowing()</span> were called while the actor
+`startFollowing()` were called while the actor
 was already following the player character.
 
 ------------------------------------------------------------------------
@@ -2743,17 +2743,17 @@ error when there wasn't any journey to continue on.
 
 ------------------------------------------------------------------------
 
-Bug fixed whereby <span class="code">askMissingObject()</span> could
+Bug fixed whereby `askMissingObject()` could
 cause a run-time error when an existing direct object was needed to help
 choose a new indirect object.
 
 ------------------------------------------------------------------------
 
-Bug fixed whereby <span class="code">askMissingObject()</span> was
+Bug fixed whereby `askMissingObject()` was
 allowing the action that called it to continue instead of stopping it in
 the case where it executed a replacement command. A
-<span class="code">return</span> statement was being used where an
-<span class="code">exit</span> statement was needed to terminate the
+`return` statement was being used where an
+`exit` statement was needed to terminate the
 original action.
 
 ------------------------------------------------------------------------
@@ -2800,38 +2800,38 @@ module.
 **Slight risk of incompatibility:** The **mentionsAll()** function has
 been withdrawn, since it's no longer needed, and it wasn't a good way of
 doing what in did anyway. Instead of testing
-<span class="code">mentionsAll(cmd)</span> test
-<span class="code">cmd.matchedAll</span>.
+`mentionsAll(cmd)` test
+`cmd.matchedAll`.
 
 ------------------------------------------------------------------------
 
 **Slight risk of incompatibility:** The regular verbs have been removed
-from the <span class="code">englishCustomVocab.verbParams</span> list,
+from the `englishCustomVocab.verbParams` list,
 since they are no longer needed. If you have any code that still uses
-message parameters like <span class="code">{appears}</span> or
-<span class="code">{opens}</span> with regular verbs, you'll need to
-change them to the regular form (<span class="code">appear{s/ed}</span>
-or open<span class="code">{s/ed}</span>). Irregular verbs like
-<span class="code">{think}</span> or <span class="code">{take}</span>
+message parameters like `{appears}` or
+`{opens}` with regular verbs, you'll need to
+change them to the regular form (`appear{s/ed}`
+or open`{s/ed}`). Irregular verbs like
+`{think}` or `{take}`
 are not affected.
 
 ------------------------------------------------------------------------
 
 **Very slight risk of incompatibility:** In a few cases the withdrawal
 of regular verbs from the verbParams list might have caused problems
-with the <span class="code">{don't verb}</span> and
-<span class="code">{must verb}</span> parameter substitutions that
+with the `{don't verb}` and
+`{must verb}` parameter substitutions that
 required the past participle of *verb* in some tenses. To deal with this
 regular verbs in these constructions should now be followed by the
 appropriate past participle in square brackets; e.g.
-<span class="code">{don't open\[ed\]}</span> or
-<span class="code">{don't close\[d\]}</span> or <span class="code">{must
-stop\[?ed\]}</span>. This will only effect games in fairly unusual
+`{don't open\[ed\]}` or
+`{don't close\[d\]}` or `{must
+stop\[?ed\]}`. This will only effect games in fairly unusual
 tenses, so it's quite likely that know existing game will actually be
 affected, although it has been necessary to change a few library
 messages to cater for this. Once again, irregular verbs (e.g.
-<span class="code">{must take}</span> or <span class="code">{don't
-know}</span>) are not affected.
+`{must take}` or `{don't
+know}`) are not affected.
 
 ------------------------------------------------------------------------
 
@@ -2848,12 +2848,12 @@ need to rename them accordingly.
 It is now possible to summarize the results of a GIVE or SHOW command
 acting on a set of objects, rather than getting an individual report for
 each object. The newly-named **summaryReport** property is now correctly
-reset in the <span class="code">execGroup()</span> method of Give, Show,
+reset in the `execGroup()` method of Give, Show,
 GiveImplicit and ShowImplicit and correctly used in the report phases of
 dobjFor(Give), dobjFor(Show), dobjFor(GiveImplicit) and
 dobjFor(ShowImplicit) on Thing. It is joined by a new property
 **summaryProp** defined and deployed in the same places.
-<span class="code">summaryProp</span> can be set to a property pointer
+`summaryProp` can be set to a property pointer
 to execute a method on the current interlocutor at the end of a GIVE or
 SHOW command executed on a set of objects. Instructions on how to use
 these properties can be found in the new section on [Summarizing Give
@@ -2875,11 +2875,11 @@ text.
 
 ------------------------------------------------------------------------
 
-The message parameter substitutions <span class="code">{donot
-*verb*}</span> and (equivalently) <span class="code">{doesnot
-verb}</span> have been added. These work just like
-<span class="code">{dont *verb*}</span> and <span class="code">{doesnt
-verb}</span>, except that the negation isn't contracted (e.g. "Fred does
+The message parameter substitutions `{donot
+*verb*}` and (equivalently) `{doesnot
+verb}` have been added. These work just like
+`{dont *verb*}` and `{doesnt
+verb}`, except that the negation isn't contracted (e.g. "Fred does
 not respond" instead of "Fred doesn't respond").
 
 ------------------------------------------------------------------------
@@ -2961,7 +2961,7 @@ represent objects that are absent.
 
 The Thing class now as an **isHidden** property which can be used to
 hide things from view. TravelConnector now accordingly defines
-<span class="code">isConnectorApparent = !isHidden</span>, so that a
+`isConnectorApparent = !isHidden`, so that a
 hidden TravelConnector (such as a concealed Door) is automatically not
 apparent.
 
@@ -3023,7 +3023,7 @@ specialDesc.
 There has been some rearrangement of the verify methods of
 conversational commands. These are now all defined on Thing and not
 overridden on Actor. The new property
-<span class="code">canTalkToMe</span> is nil on Thing and true on Actor
+`canTalkToMe` is nil on Thing and true on Actor
 (and normally shouldn't be overridden by game code); this allows
 conversational commands on Actor but not Thing. The main purpose of this
 is to allow Actor to inherit the new verify tests on Thing preventing
@@ -3060,15 +3060,15 @@ part, not something carried.
 
 The TravelConnector class now has a **noteTraversal(actor)** method
 which is invoked when it is traversed by *actor*. The
-<span class="code">travelDesc</span> method is now called via
-<span class="code">noteTraversal()</span>. This gives game authors a
+`travelDesc` method is now called via
+`noteTraversal()`. This gives game authors a
 little more flexibility in defining the side-effects of travel when the
 traveler is not the player character.
 
 ------------------------------------------------------------------------
 
 TravelConnector's **travelDesc()** method now calls
-<span class="code">doScript()</span> by default if the TravelConnector
+`doScript()` by default if the TravelConnector
 in question is also a Script (i.e. EventList). This makes it
 straightforward to vary the message that is shown when the player
 character traverses the connector.
@@ -3076,10 +3076,10 @@ character traverses the connector.
 ------------------------------------------------------------------------
 
 Room's **roomDaemon()** method now likewise calls
-<span class="code">doScript()</span> by default if the Room is also a
+`doScript()` by default if the Room is also a
 Script. This makes it easy to define a series of atmospheric messages on
 the Room (simply by mixing it in with an EventList class and giving it
-an <span class="code">eventList</span> property)
+an `eventList` property)
 
 ------------------------------------------------------------------------
 
@@ -3107,10 +3107,10 @@ of these is nil then referring to a compass or shipboard direction
 respectively in a command will result in the command being blocked with
 "Compass/Shipboard directions have no meaning here." This check enforced
 by the new Doer method **checkDirection()**, which is invoked from
-<span class="code">Doer.exec()</span> if the command refers to a
+`Doer.exec()` if the command refers to a
 direction. By default allowCompassDirection is true for all rooms
 (although game code can, of course, override this) whereas
-<span class="code">allowShipboardDirections</span> is true only on rooms
+`allowShipboardDirections` is true only on rooms
 that actually define a non-nil shipboard direction exit (fore, aft, port
 or starboard). This should make it easier for games to block the
 execution of seemingly meaningless commands like THROW BALL PORT in
@@ -3168,7 +3168,7 @@ to correct the occurrence of duplicate identifiers that had crept in,
 but in one or two cases was in the interests of naming consistency (in
 particular names beginning 'cant' have been changed to names beginning
 'cannot'). This will only affect game code if you have defined a
-<span class="code">CustomMessages</span> object to customize some of the
+`CustomMessages` object to customize some of the
 library messages, and even then only a few messages are affected.
 
 ------------------------------------------------------------------------
@@ -3177,11 +3177,11 @@ You can now control whether or not other actors in the vicinity
 "overhear" information imparted to the current interlocutor. By default
 a \<.inform tag\> tag calls the setInformed(tag) on every actor within
 earshot. This can now be prevented by setting
-<span class="code">informOverheard = nil</span> on the current
-ActorState, or <span class="code">actorInformOverheard = nil</span> on
+`informOverheard = nil` on the current
+ActorState, or `actorInformOverheard = nil` on
 the Actor (when the current ActorState is nil). To prevent the
-overhearing behaviour globally, set <span class="code">informOverheard =
-nil</span> on the actor or on the whole Actor class.
+overhearing behaviour globally, set `informOverheard =
+nil` on the actor or on the whole Actor class.
 
 ------------------------------------------------------------------------
 
@@ -3191,7 +3191,7 @@ Templates have been added for EventList and ShuffledEventList.
 
 The English-language library now automatically sets the name of a thing
 to the appropriate pronoun ('I', 'we', or 'you') if its
-<span class="code">person</span> is 1 or 2; this may make it slightly
+`person` is 1 or 2; this may make it slightly
 easier to define the player-character object.
 
 ------------------------------------------------------------------------
@@ -3217,11 +3217,11 @@ Before Travel notifications are now triggered when an actor tries to
 travel via a direction that's defined as a method or double-quoted
 string. That means that when you define the direction property of a Room
 as a method or double-quoted string,
-<span class="code">beforeAction(gActor, direction)</span> will be called
+`beforeAction(gActor, direction)` will be called
 on every object in scope (allowing any one of them to veto the proposed
 travel with an exit macro if desired). Note that normally before travel
-notifications are called as <span class="code">beforeAction(traveler,
-connector)</span>, but since in this case there's no connector object to
+notifications are called as `beforeAction(traveler,
+connector)`, but since in this case there's no connector object to
 pass as a parameter we pass the direction object (e.g. westDir if the
 actor is trying to go west) instead.
 
@@ -3233,9 +3233,9 @@ for the proposed travel.
 ------------------------------------------------------------------------
 
 The Distant class now defines its
-<span class="code">decorationActions</span> property as
-<span class="code">\[Examine\]</span> only, rather than inheriting
-<span class="code">\[Examine, GoTo\]</span> from Decoration. This is
+`decorationActions` property as
+`\[Examine\]` only, rather than inheriting
+`\[Examine, GoTo\]` from Decoration. This is
 probably the better default since most Distant objects are, by their
 nature, too far away for the player character to go to them (e.f. the
 sun, moon, sky or a distant mountain). In some cases a Distance object
@@ -3263,10 +3263,10 @@ been fixed (see below).
 ------------------------------------------------------------------------
 
 Game code can now use the tense-switching message substitution
-<span class="code">{*present-str*\|*past-str*}</span>; this simply
+`{*present-str*\|*past-str*}`; this simply
 displays *past-str* if the game is in the past tense and *present-str*
 otherwise. This does much the same
-<span class="code">tSel('present-str', 'past-str')</span>, but does it
+`tSel('present-str', 'past-str')`, but does it
 more concisely.
 
 ------------------------------------------------------------------------
@@ -3305,11 +3305,11 @@ an alternative means of conjugating regular verbs. The regular verbs
 have been left in the list for the time being for backward
 compatibility. In any case, library messages that make use of such
 regular verbs will first need to be changed to use the alternative
-conjugation method (e.g. <span class="code">{achieves}</span> will need
-to become <span class="code">achieve{s/d}</span>). Game code that uses
+conjugation method (e.g. `{achieves}` will need
+to become `achieve{s/d}`). Game code that uses
 the old-style message parameter substitutions for regular verb (e.g.
-<span class="code">{achieves}</span> rather than
-<span class="code">achieve{s/d}</span>) will not be affected for now,
+`{achieves}` rather than
+`achieve{s/d}`) will not be affected for now,
 but it will be advisable to replace any such old-style substitutions
 with the new-style ones in time for the next update.
 
@@ -3346,7 +3346,7 @@ Definition](mingame.html#including_idx)
 
 The new Actor method **actorSay(str)** can be used to output a string
 representing all or part of a conversational exchange in contexts where
-simply using <span class="code">say()</span> or a double-quoted string
+simply using `say()` or a double-quoted string
 could potentially confuse the conversation system and give rise to
 hard-to-find bugs in game code. For a fuller discussion see the
 subsections on [Actor-Specific and General Tags](tags.html#actor-tag-idx)
@@ -3355,10 +3355,10 @@ NPC conversation.
 
 ------------------------------------------------------------------------
 
-The <span class="code">suggestedTopicLister</span> now separates out the
-methods <span class="code">showListPrefix(lst, pl,
-explicit</span>),<span class="code"> showListSuffix(lst, pl, explicit)
-</span>and <span class="code">showListEmpty(explicit)</span>. This
+The `suggestedTopicLister` now separates out the
+methods `showListPrefix(lst, pl,
+explicit`),` showListSuffix(lst, pl, explicit)
+`and `showListEmpty(explicit)`. This
 brings it more into line with the Lister class and also makes it easier
 for game code to customize these parts of a list of suggested topics.
 
@@ -3369,8 +3369,8 @@ time at the Init stage, i.e. just before the first room description is
 displayed. Previously, the scene-checking mechanism was run for the
 first time at the end of the first turn, which made it difficult to
 define a Scene that starts out active right at the start of play. Note
-that this means that the <span class="code">whenStarting()</span> method
-of a Scene whose <span class="code">startsWhen</span> condition starts
+that this means that the `whenStarting()` method
+of a Scene whose `startsWhen` condition starts
 out true will be executed *before* the first room description is
 displayed.
 
@@ -3418,11 +3418,11 @@ something, all Actors ended up being informed about it).
 ------------------------------------------------------------------------
 
 Bug fixed in which the behaviour of
-<span class="code">checkReachIn()</span> might not have been what was
+`checkReachIn()` might not have been what was
 expected. Previously, checkReachIn() might block reaching from A to B
 even when A and B were on the same Platform (for example) that defined
 the checkReachIn() method. That was because the checkReachIn() method
-used the <span class="code">commonInteriorParent()</span> method to
+used the `commonInteriorParent()` method to
 determine whether A was trying to reach inside the object in question,
 but commonInteriorParent() only counts a parent as common if its a Room
 or if its contType is In. The library now defines a new
@@ -3434,7 +3434,7 @@ which should produce more intuitive results.
 
 ------------------------------------------------------------------------
 
-Bug fixed whereby the <span class="code">sayDeparting()</span> method of
+Bug fixed whereby the `sayDeparting()` method of
 FollowAgendaItem did not work as stated in the manual (since it was
 never being invoked).
 
@@ -3487,33 +3487,33 @@ say that there were no topics to suggest.
 ## <span id="v0.7">Version 0.7 (10 April 2013)</span>
 
 **Risk of incompatibility:** The way the **activated** property of an
-<span class="code">ActorTopicEntry</span> works has been substantially
+`ActorTopicEntry` works has been substantially
 changed. The activated property now starts out true by default on all
 ActorTopicEntries; if it becomes nil the ActorTopicEntry becomes
 inactive regardless of the value of its
-<span class="code">isActive</span> property. Thus, for an
+`isActive` property. Thus, for an
 ActorTopicEntry to be active, both its
-<span class="code">isActive</span> property and its
-<span class="code">activated</span> property must be true.
+`isActive` property and its
+`activated` property must be true.
 
-The <span class="code">\<.activate key\></span> tag works as before,
-setting the <span class="code">activated</span> property to true of all
+The `\<.activate key\>` tag works as before,
+setting the `activated` property to true of all
 ActorTopicEntries whose convKeys match *tag*. There is now also a
-<span class="code">\<.deactivate key\></span> tag which does the
-reverse, i.e. setting the <span class="code">activated</span> property
+`\<.deactivate key\>` tag which does the
+reverse, i.e. setting the `activated` property
 to nil of all ActorTopicEntries whose convKeys match *tag*. The
-<span class="code">topicResponse</span> method of an ActorTopicEntry can
+`topicResponse` method of an ActorTopicEntry can
 also call the new **deactivate()** method to deactivate itself, which
 may be useful, for example, in making an ActorTopicEntry no longer
 available once it has been viewed.
 
-If you have used the <span class="code">activated</span> property in
+If you have used the `activated` property in
 existing code, search for every ActorTopicEntry in your game that uses
 the activated property as part of its isActive condition, then remove
-activated from the <span class="code">isActive</span> condition (or
-remove the <span class="code">isActive</span> condition altogether if it
-simply defines <span class="code">isActive = activated</span>) and
-instead defined <span class="code">activated = nil</span> on the
+activated from the `isActive` condition (or
+remove the `isActive` condition altogether if it
+simply defines `isActive = activated`) and
+instead defined `activated = nil` on the
 ActorTopicEntry in question.
 
 While this change might be a minor nuisance, it should hopefully make it
@@ -3562,8 +3562,8 @@ to open it).
 A new **extraReport()** macro has been added, for use in action()
 methods. This is to allow an action method to output a brief message
 like "(with the brass key)" without suppressing the default message from
-the report stage. It's now used on<span class="code">
-dobjFor(Lock)</span> and <span class="code">dobjFor(Unlock)</span> to
+the report stage. It's now used on`
+dobjFor(Lock)` and `dobjFor(Unlock)` to
 allow the default messages for these actions to be moved to the report
 stage, which is more consistent with how other actions work.
 
@@ -3607,8 +3607,8 @@ the Room.
 
 A **sayDeparting()** method has been added to several classes to provide
 a default message describing the departure of an NPC. The
-<span class="code">sayDeparting(traveler)</span> method On
-<span class="code">TravelConnector</span> describes traveler leaving via
+`sayDeparting(traveler)` method On
+`TravelConnector` describes traveler leaving via
 that connector. On the base class this is described as the traveler
 leaving in the appropriate compass direction. On Door, StairwayUp and
 StairwayDown this is overridden to describe the traveler leaving through
@@ -3617,7 +3617,7 @@ the door or up or down the stairway.
 The new Actor method **sayDeparting(conn)** calls **sayDeparting(conn)**
 on the current ActorState which in turn calls
 **sayActorDeparting(conn)** on the actor which in turn calls
-<span class="code">sayDeparting()</span> on conn, allowing customization
+`sayDeparting()` on conn, allowing customization
 at any point.
 
 At the moment these methods are only used by the new FollowAgendaItem
@@ -3634,7 +3634,7 @@ object thrown to that actor.
 
 ------------------------------------------------------------------------
 
-The test for <span class="code">Q.canThrowTo(gActor, self)</span> in the
+The test for `Q.canThrowTo(gActor, self)` in the
 action handling of Actor iobjFor(ThrowTo) has been moved from
 senseRegion.t to actor.t to allow these two files to be included or not
 included in a project independently of each other. Previously
@@ -3646,7 +3646,7 @@ had to be present if senseRegion.t was present.
 The new **FollowAgendaItem** class can be used to make an NPC move along
 a predefined path in response to a FOLLOW command of which the NPC is
 the direct object. For example, if Bob has an active
-<span class="code">FollowAgendaItem</span> then when the player types
+`FollowAgendaItem` then when the player types
 FOLLOW BOB, Bob will move through the next connector in his
 FollowAgendaItem's connectorList and the player character will follow
 him. For details see the section on
@@ -3692,8 +3692,8 @@ The **keyTopics** list property of an ActorTopicEntry can now contain
 control tags (such as \<.arouse key\> or \<.activate key\>) as well as
 convKeys strings. This is to allow a group of topic entries to be
 activated or aroused just prior to being suggested; e.g.
-<span class="code">keyTopics = \['\<.activate bob-info\>',
-bob-info\]</span>.
+`keyTopics = \['\<.activate bob-info\>',
+bob-info\]`.
 
 ------------------------------------------------------------------------
 
@@ -3705,18 +3705,18 @@ command.
 ------------------------------------------------------------------------
 
 The library now defines two new methods on the
-<span class="code">Region</span> class: **regionBeforeAction** and
+`Region` class: **regionBeforeAction** and
 **regionAfterAction**. These methods are called just before and just
 after an action takes place in any room in the region.
 
 ------------------------------------------------------------------------
 
-The <span class="code">Mentionable</span> class now defines the
+The `Mentionable` class now defines the
 **ambiguouslyPlural** property which allows objects with names like
 'pair of shoes' or 'flight of stairs' to be referred to as either 'it'
 or 'them'.
 
-In the English library the <span class="code">ambiguouslyPlural</span>
+In the English library the `ambiguouslyPlural`
 property can be set automatically from the vocab property by including
 both 'it' and 'them' in the pronoun property. To make the object
 actually plural, put 'them' first.
@@ -3728,15 +3728,15 @@ which one would have to travel from the room in order to travel via
 *conn* (i.e. the direction corresponding to the direction property on
 which *conn* is defined). For example, if frontDoor was assigned to the
 north property of a room called hall,
-<span class="code">hall.getDirection(frontDoor)</span> would return
+`hall.getDirection(frontDoor)` would return
 northDir.
 
 ------------------------------------------------------------------------
 
 The new outputFilter method **captureOutputIgnoreExit()** works the same
-as <span class="code">captureOutput()</span> but attempts to ignore any
+as `captureOutput()` but attempts to ignore any
 exit signal thrown by the function whose output it's capturing. This is
-principally to allow for the use of <span class="code">exit</span>
+principally to allow for the use of `exit`
 macros in check routines, where they are not needed but may be used by
 authors used to adv3.
 
@@ -3746,9 +3746,9 @@ The handling of the LookIn, LookUnder and LookBehind actions has been
 streamlined slightly, to make them more consistent with one another, to
 make proper use of remapping to appropriate remapXXX objects and
 refactor some common code into shared methods. Also,
-<span class="code">lookInMsg</span>,
-<span class="code">lookUnderMsg</span> and
-<span class="code">lookBehindMsg</span> are now displayed using the
+`lookInMsg`,
+`lookUnderMsg` and
+`lookBehindMsg` are now displayed using the
 display() method, which means they can be specified as double-quoted
 strings or methods in addition to single-quoted strings.
 
@@ -3793,15 +3793,15 @@ message for setting something to.
 
 Bug fixed whereby attempting to travel through a closed door which may
 not be opened via an implicit action (because opening the door verifies
-to <span class="code">nonObvious</span> or
-<span class="code">dangerous</span>) would display nothing at all,
+to `nonObvious` or
+`dangerous`) would display nothing at all,
 leaving it unclear what had happened. Such travel now results in a
 message saying that the door is in the way.
 
 ------------------------------------------------------------------------
 
-Bug fixed in the Thing method <span class="code">display(prop)</span>,
-which failed to display anything if <span class="code">prop</span> was a
+Bug fixed in the Thing method `display(prop)`,
+which failed to display anything if `prop` was a
 method that returned a single-quoted string; now the single-quoted
 string is displayed.
 
@@ -3843,7 +3843,7 @@ Bug fixed which stopped the verifyReach() method working properly.
 ------------------------------------------------------------------------
 
 Bug fixed whereby an UnlistedProxyConnector (one created using the
-<span class="code">asExit()</span> macro) might be treated as invisible
+`asExit()` macro) might be treated as invisible
 in the dark even when the connector it was a proxy for was visible.
 
 ------------------------------------------------------------------------
@@ -3865,10 +3865,10 @@ List.
 
 ------------------------------------------------------------------------
 
-Bug fixed whereby use of the <span class="code">exit</span> macro in the
+Bug fixed whereby use of the `exit` macro in the
 checkPreCondition method of a PreCondition would cause the game to
 terminate with an unknown exception. There is actually no need to use an
-<span class="code">exit</span> macro in this situation, and game code
+`exit` macro in this situation, and game code
 should avoid doing so, but authors used to adv3 might include one and it
 is as well for the adv3Lite library to handle it gracefully.
 
@@ -3905,12 +3905,12 @@ circumvent this problem.
 ## <span id="v0.6">Version 0.6</span> (2 March 2013)
 
 **Risk of incompatibility:** The long form of remap (using
-<span class="code">remapTo()</span> or
-<span class="code">maybeRemapTo()</span> or a list defined on a remap
+`remapTo()` or
+`maybeRemapTo()` or a list defined on a remap
 property) has been withdrawn. This feature was deprecated from the
 first, and we said we might withdraw it all along. The same
 functionality is better implemented using a Doer (see below on the new
-Doer <span class="code">doInstead()</span> method).
+Doer `doInstead()` method).
 
 Note that the short form of remap (where remap simply evaluates to
 another object that replaces the current object in the same command)
@@ -3922,9 +3922,9 @@ the library.
 **Risk of incompatibility:** The Doer method **travel()** has been
 withdrawn, as it is no longer needed. Use the new **doInstead()** method
 with the new **Go** action instead (see below), e.g.
-<span class="code">doInstead(Go, northDir)</span>, or, if you prefer,
-the new <span class="code">goInstead()</span> macro, e.g.
-<span class="code">goInstead(north)</span>
+`doInstead(Go, northDir)`, or, if you prefer,
+the new `goInstead()` macro, e.g.
+`goInstead(north)`
 
 ------------------------------------------------------------------------
 
@@ -3943,30 +3943,30 @@ between the Query object and the touchObj PreCondition, so that if a
 Special wants to enforce different reachability rules these will be
 respected by touchObj without game authors needing to modify touchObj.
 
-The <span class="code">reachProblem()</span> method must return either
+The `reachProblem()` method must return either
 an empty list (meaning that there's no difficulty with A reaching B) or
 a list of one or more **ReachProblem** objects. A ReachProblem object
-must define a <span class="code">verify()</span> method and a
-<span class="code">check(allowImplicit)</span> method (which can be
+must define a `verify()` method and a
+`check(allowImplicit)` method (which can be
 called by touchObj.verifyPreCondition and touchObj.checkPreCondition
-respectively). The <span class="code">verify</span> method must either
+respectively). The `verify` method must either
 do nothing, or else use the same macros
-(<span class="code">inaccessible</span>,
-<span class="code">illogical</span>,
-<span class="code">implausible</span>, etc.) that are used elsewhere in
-verify routines. The <span class="code">check</span> method should
+(`inaccessible`,
+`illogical`,
+`implausible`, etc.) that are used elsewhere in
+verify routines. The `check` method should
 return true to allow the action to proceed or nil to fail it at the
 check stage; if it returns nil it should display a message explaining
 the problem. The check method may optionally also attempt to rectify the
 problem by carrying out an implicit action.
 
-The <span class="code">reachProblem()</span> method on QDefaults carries
+The `reachProblem()` method on QDefaults carries
 out the same checks that were formerly coded directly on
-<span class="code">touchObj</span>, so game behaviour should not be
+`touchObj`, so game behaviour should not be
 altered in any way unless your game modifies touchObj.
 
-<span class="code">QDefault.canReach(a, b)</span> now returns true if
-<span class="code">Q.reachProblem(a, b)</span> returns an empty list.
+`QDefault.canReach(a, b)` now returns true if
+`Q.reachProblem(a, b)` returns an empty list.
 
 ------------------------------------------------------------------------
 
@@ -3983,12 +3983,12 @@ DefaultTopic types that include SayTopics).
 
 **Slight risk of incompatibility:** The Action methods **getDobj()** and
 **getIobj()** have been removed. Since all they did was to return
-<span class="code">curDobj</span> and <span class="code">curIobj</span>
+`curDobj` and `curIobj`
 respectively, they seemed an unnecessary piece of indirection. It is
 unlikely that game code would call these methods directly, but if it
-does, just use <span class="code">curDobj</span> (or
-<span class="code">gDobj</span>) and <span class="code">curIobj</span>
-(or <span class="code">gIobj</span>) instead.
+does, just use `curDobj` (or
+`gDobj`) and `curIobj`
+(or `gIobj`) instead.
 
 ------------------------------------------------------------------------
 
@@ -4000,19 +4000,19 @@ complete this process in the next release.
 ------------------------------------------------------------------------
 
 **Slight risk of incompatibility:** A new **isConnectorVisible**
-property has been added to <span class="code">TravelConnector</span>.
-This functions rather like <span class="code">isConnectorApparent</span>
+property has been added to `TravelConnector`.
+This functions rather like `isConnectorApparent`
 did before, but allows isConnectorApparent to be defined as nil or true
 directly by game authors (instead of being derived from other
-properties, like <span class="code">isConnectorListed</span> and the
+properties, like `isConnectorListed` and the
 lighting conditions. The new set of relationships is now as follows:
-<span class="code">isConnectorApparent</span> is true by default but can
+`isConnectorApparent` is true by default but can
 be overridden by game authors.
-<span class="code">isConnectorListed</span> is
-<span class="code">(isConnectorApparent)</span> by default but can be
+`isConnectorListed` is
+`(isConnectorApparent)` by default but can be
 separately overridden by game authors.
-<span class="code">isConnectorVisible</span> is a derived property
-dependent on the value of <span class="code">isConnectorApparent</span>
+`isConnectorVisible` is a derived property
+dependent on the value of `isConnectorApparent`
 and the lighting conditions, and should not normally be overridden by
 game authors (though it obviously can be if special effects are
 desired). This change is intended to make it easier to make whether or
@@ -4022,9 +4022,9 @@ for attempted traversal.
 Game code that doesn't override any of these properties shouldn't be
 affected, but if you've overridden isConnectorListed anywhere in your
 game code you may want to check whether it would be better to override
-<span class="code">isConnectorApparent</span> instead (since previously
-the value of <span class="code">isConnectorListed</span> determined the
-value of <span class="code">isConnectorApparent</span>, but that's no
+`isConnectorApparent` instead (since previously
+the value of `isConnectorListed` determined the
+value of `isConnectorApparent`, but that's no
 longer the case).
 
 ------------------------------------------------------------------------
@@ -4048,7 +4048,7 @@ immediate container before attempting travel.
 action now adds the direct object of a command to it actionList even if
 the action is dealt with on the indirect object. This is probably better
 behaviour that what was there before, and means that
-<span class="code">gActionListStr</span> returns a useful value for
+`gActionListStr` returns a useful value for
 report() methods (usually defined on the direct object) even when the
 action handling has taken place on the indirect object (as may sometimes
 be more appropriate).
@@ -4089,16 +4089,16 @@ object while giving priority to the verify results.
 
 ------------------------------------------------------------------------
 
-<span class="code">replaceAction()</span> and
-<span class="code">nestedAction()</span> are now functions, not macros,
+`replaceAction()` and
+`nestedAction()` are now functions, not macros,
 although they still do exactly the same thing. They are joined by two
-new functions <span class="code">replaceActorAction()</span> and
-<span class="code">nestedActorAction()</span>, which can be used when
+new functions `replaceActorAction()` and
+`nestedActorAction()`, which can be used when
 you wish to specify the actor. Game authors are, however, encouraged to
-use the new methods <span class="code">doInstead()</span> and
-<span class="code">doNested(</span>) (see below) in place of
-<span class="code">replaceAction()</span> and
-<span class="code">nestedAction()</span> since these provide greater
+use the new methods `doInstead()` and
+`doNested(`) (see below) in place of
+`replaceAction()` and
+`nestedAction()` since these provide greater
 functionality and a more consistent interface.
 
 ------------------------------------------------------------------------
@@ -4107,15 +4107,15 @@ Doer, Action, Thing and ActorTopicEntry all define two methods,
 **doInstead()** and **doNested()** which can be used to divert one
 action to another (in the first case) or to execute one action in the
 course of another (in the second case), e.g.
-<span class="code">doInstead(PutIn, redBall, greenBox)</span> or
-<span class="code">doNested(Drop, gDobj)</span>. See the discussion on
+`doInstead(PutIn, redBall, greenBox)` or
+`doNested(Drop, gDobj)`. See the discussion on
 [Doer](doer.html) for details.
 
-Note that the existing Doer method <span class="code">redirect()</span>
+Note that the existing Doer method `redirect()`
 still exists and works as before, but is now a service method used by
-<span class="code">doInstead()</span>. Existing code that uses
-<span class="code">redirect()</span> will still work, but game authors
-are encouraged to use <span class="code">doInstead()</span> instead.
+`doInstead()`. Existing code that uses
+`redirect()` will still work, but game authors
+are encouraged to use `doInstead()` instead.
 
 ------------------------------------------------------------------------
 
@@ -4123,12 +4123,12 @@ There is now a new **Go** action to make it easier to synthesize travel
 commands. This action is never triggered directly by a player command,
 but can be used in doInstead(), doNested, replaceAction(),
 replaceActorAction, nestedAction() and nestedActorAction() in the form
-<span class="code">doInstead(Go, northDir)</span>.
+`doInstead(Go, northDir)`.
 
 If you prefer, you can use the new macros **goInstead()** and
 **goNested()** instead. For example,
-<span class="code">goInstead(north)</span> would be exactly equivalent
-to <span class="code">doInstead(Go, northDir)</span>.
+`goInstead(north)` would be exactly equivalent
+to `doInstead(Go, northDir)`.
 
 ------------------------------------------------------------------------
 
@@ -4144,8 +4144,8 @@ details.
 
 Two new verification macros have been added: **dangerous** and
 **nonObvious**. Both of these allow the action to go ahead unless it's
-an implicit action, but <span class="code">nonObvious</span> is given
-the same logical rank as <span class="code">illogical</span>. For
+an implicit action, but `nonObvious` is given
+the same logical rank as `illogical`. For
 further details see the [Verify](actres.html#verify) section of the
 Action Results article.
 
@@ -4153,7 +4153,7 @@ To allow these two new verification results to work, parts of the
 verification and implicit action handling have had to be tweaked along
 with the checkPreCondition methods of most PreConditions. As things
 stood before it was possible to create a VerifyResult with
-<span class="code">allowImplicit = nil</span>, but nothing took any
+`allowImplicit = nil`, but nothing took any
 notice of this value.
 
 ------------------------------------------------------------------------
@@ -4178,15 +4178,15 @@ input is then parsed in the normal way, as if the query had arisen from
 the parser; meaning that if the player supplies a valid object *action*
 will be executed with that object.
 
-The <span class="code">askMissingObject()</span> function first attempts
+The `askMissingObject()` function first attempts
 to find the missing object before prompting the player to supply one. It
 does so by finding the highest scoring object in scope for the requested
 role in the requested action. It uses this object if and only if (a) no
 other object it finds has so high a score and (b) if the action were
 tried with the object found it would pass the verify stage and would be
 allowed as an implicitAction (so we don't pick an object with a
-<span class="code">dangerous</span> or
-<span class="code">nonObvious</span> verify result, for example). If
+`dangerous` or
+`nonObvious` verify result, for example). If
 these conditions are met the requested action is executed with the best
 match object in the request role without the player being prompted to
 supply an object.
@@ -4195,7 +4195,7 @@ supply an object.
 
 The behaviour of the **Lock** and **Unlock** actions (LOCK DOOR or
 UNLOCK DOOR without specifying a key) has been altered slightly to take
-advantage of <span class="code">askForDobj()</span>. Now if the player
+advantage of `askForDobj()`. Now if the player
 attempts to lock or unlock something without specifying a key and the
 player character isn't holding an appropriate key the player is asked to
 specify a key; previous s/he was told the player character wasn't
@@ -4206,7 +4206,7 @@ unlock (or lock) something with.
 ------------------------------------------------------------------------
 
 The behaviour of several other actions have also been tweaked to take
-advantage of <span class="code">askMissingObject()</span>, namely Sit,
+advantage of `askMissingObject()`, namely Sit,
 Lie (as in Lie down), Write, Type, and Look up (as in Consult).
 
 ------------------------------------------------------------------------
@@ -4223,14 +4223,14 @@ tell an untruth), **PlugIn**, **PlugInto**, **Unplug** and
 ------------------------------------------------------------------------
 
 In order to facilitate the implementation of the
-<span class="code">Plug</span> set of actions a new **PlugAttachable**
+`Plug` set of actions a new **PlugAttachable**
 mix-in class has been added. For details see the appropriate part of the
 [Attachables](attachable.html#plug) section.
 
 In order to facilitate the implementation of the
-<span class="code">PlugAttachable</span> class there has been some
-tweaking of the <span class="code">SimpleAttachable</span> and
-<span class="code">NearbyAttachable</span> classes, including some
+`PlugAttachable` class there has been some
+tweaking of the `SimpleAttachable` and
+`NearbyAttachable` classes, including some
 changes to the NearbyAttachable class that now make it usable (it was
 fundamentally broken before).
 
@@ -4244,7 +4244,7 @@ another on the same object, apart from the verify stage.
 The main purpose of these new macros is to facilitate a slight tweak in
 the way the **SitOn**, **StandOn** and **LieOn** actions are
 implemented. Previously these were treated as synonyms of
-<span class="code">Board</span>. They still are, except at the verify
+`Board`. They still are, except at the verify
 stage, so that game authors have more control over which items actors
 can apparently sit, stand or lie on (although there is no difference in
 the end result). For details see the new paragraph on [Pseudo-Postural
@@ -4266,7 +4266,7 @@ It's now possible to specify a **matchPhrase** (and, if desired, a
 separate **disambigMatchPhrase**) that the player's input must match in
 order to refer to a particular object. For example, if an object with
 vocab 'dark green bottle; glass' is given a
-<span class="code">matchPhrase</span> of 'dark green', then it will
+`matchPhrase` of 'dark green', then it will
 match DARK GREEN BOTTLE but not just GREEN BOTTLE. For the full story
 see the paragraph on [Phrase Matching](thing.html#phrase) in the section
 on Thing.
@@ -4332,11 +4332,11 @@ the same objects. If it is true (the default), then the text of the
 previous command is reparsed, which may result in a different
 interpretation involving different objects. For example, suppose there
 are two coins on the floor. If
-<span class="code">againRepeatsParse</span> is nil then TAKE COIN
+`againRepeatsParse` is nil then TAKE COIN
 followed by AGAIN will result in one of the coins beingtaken, followed
 by an attempt to take the *same coin* again (which will fail with a
 message that you're already holding the coin. If
-<span class="code">againRepeatsParse</span> is true, however, than TAKE
+`againRepeatsParse` is true, however, than TAKE
 COIN followed by AGAIN will result in one coin being taken, and then the
 other, just as if the player had typed TAKE COIN twice. Which is the
 better behaviour depends on context; while in the coin example the
@@ -4347,7 +4347,7 @@ perverse.
 
 There is thus an additional gameMain option **autoSwitchAgain** which
 tries to give the player the best of both worlds by switching
-<span class="code">againRepeatsParse</span> between true and nil
+`againRepeatsParse` between true and nil
 depending on whether the command to be repeated is the kind of command
 it would make sense to repeat with the same objects (if it isn't, the
 command is reparsed in the hope of finding a more sensible match). This
@@ -4361,11 +4361,11 @@ The new Thing method **fluidName** makes it easier to produce
 satisfactory messages relating to objects doing duty both as fluid
 containers and the fluid they contain (e.g. an oilcan notionally
 containing oil). Library messages referring to drinking and pouring now
-use the new <span class="code">fluidName</span> property to refer to the
+use the new `fluidName` property to refer to the
 direct object of such actions rather than the
-<span class="code">theName</span> property (although
-<span class="code">fluidName</span> is set to
-<span class="code">theName</span> by default).
+`theName` property (although
+`fluidName` is set to
+`theName` by default).
 
 ------------------------------------------------------------------------
 
@@ -4391,7 +4391,7 @@ be particularly useful when reporting the movements and other actions of
 NPCs who may or may not be visible to the player character.
 
 The new AgendaItem method **report(msg)** simply calls
-<span class="code">senseSay(msg, getActor)</span>, thereby saving a bit
+`senseSay(msg, getActor)`, thereby saving a bit
 of typing in this commonly useful case. If required *report()* can pass
 a property pointer as a second optional parameter (e.g. &canHear) to use
 a different sense from sight.
@@ -4482,7 +4482,7 @@ taken even if it was fixed in place.
 
 Bug fixed whereby the TAKE FROM command might result in an object being
 taken even if the actor didn't have room to hold it. The dobj handling
-of TakeFrom now used the <span class="code">asDobjWithoutVerify()</span>
+of TakeFrom now used the `asDobjWithoutVerify()`
 macro to copy all its direct object handling apart from the verify stage
 from Take, while retaining its own verify handling.
 
@@ -4531,26 +4531,26 @@ proceeding.
 
 MultiLoc now also defines an **initialLocationClass** property and an
 **isInitiallyIn(obj)** method, which are intended to work together. If
-<span class="code">initialLocationClass</span> is not nil then every
+`initialLocationClass` is not nil then every
 instance of that class will be added to the MultiLoc's locationList
-provided <span class="code">isInitiallyIn(obj)</span> returns true for
+provided `isInitiallyIn(obj)` returns true for
 that instance (where *obj* is the instance in question). This introduces
 an existing adv3 feature into adv3Lite; the main reason for doing so at
 this stage is to facilitate the implementation of the new
-<span class="code">Floor</span> class (see below).
+`Floor` class (see below).
 
 Note that any locations added to the location list via
-<span class="code">initialLocationClass</span> will be in addition to
-those defined on <span class="code">initialLocationList</span>, and that
+`initialLocationClass` will be in addition to
+those defined on `initialLocationList`, and that
 any locations defined in the exceptions list will be removed from the
 location list after those defined in both
-<span class="code">initialLocationList</span> and
-<span class="code">initialLocationClass</span> have been added.
+`initialLocationList` and
+`initialLocationClass` have been added.
 
 ------------------------------------------------------------------------
 
-The <span class="code">addToContents()</span> method of
-<span class="code">Thing</span> and <span class="code">Region</span> now
+The `addToContents()` method of
+`Thing` and `Region` now
 has a second, optional, parameter *vec*. This is intended purely for
 internal use by the library to facilitate initiating the locationList of
 a MultiLoc from its initialLocationList and initialLocationClass, and
@@ -4665,8 +4665,8 @@ order to an NPC (or even the PC) with the "bob, whatever" syntax.
 
 ------------------------------------------------------------------------
 
-Bug fixed that caused things with <span class="code">visibleInDark =
-true</span> not to be visible in the dark.
+Bug fixed that caused things with `visibleInDark =
+true` not to be visible in the dark.
 
 ------------------------------------------------------------------------
 
@@ -4735,9 +4735,9 @@ suitcase itself.
 ## <span id="v0.4">Version 0.4</span> (12 January 2013)
 
 **Risk of incompatibility:** The properties
-<span class="code">allowPutIn</span>,
-<span class="code">allowPutUnder</span> and
-<span class="code">allowPutBehind</span> have been renamed
+`allowPutIn`,
+`allowPutUnder` and
+`allowPutBehind` have been renamed
 **canPutInMe**, **canPutUnderMe** and **canPutBehindMe** to make these
 names more consistent with the naming scheme used elsewhere in the
 library. By default these properties are true if the contType is of the
@@ -4761,7 +4761,7 @@ properties of Thing.
 
 **Risk of incompatibility:** The default value of the
 **specialDescBeforeContents** property of Thing has been hanged from
-true to <span class="code">(location && location.ofKind(Room))</span>.
+true to `(location && location.ofKind(Room))`.
 In other words the default is true for an object directly in a room and
 nil otherwise. This gives more satisfactory results for specialDescs
 shown as part of the listing of the contents of some other item, where
@@ -4780,8 +4780,8 @@ this was not the case, which was arguably a bug.
 Actor class has changed. The default behaviour is now to display the
 actor's shouldNotKissMsg or shouldNotAttackMsg (at the check stage). If
 you want to use KissTopics and HitTopics (or you want to define your own
-handling at the action stage), set <span class="code">allowKiss</span>
-and/or <span class="code">allowAttack</span> to true.
+handling at the action stage), set `allowKiss`
+and/or `allowAttack` to true.
 
 The reason for this change is that defining a shouldNotKissMsg and/or
 shouldNotAttackMsg is more straightfoward than having to define a
@@ -4798,7 +4798,7 @@ primarily for doors.
 
 ------------------------------------------------------------------------
 
-An optional parameter, <span class="code">paraBrk</span>, has been added
+An optional parameter, `paraBrk`, has been added
 to the show() method of Lister. The default value of this parameter is
 true, but if it is passed as nil the paragraph break at the end of the
 list is suppressed. This change has been introduced mainly to facilitate
@@ -4860,10 +4860,10 @@ listing of the location's contents.
 
 The listing mechanism has been thoroughly overhauled to make fuller use
 of Lister objects. A new subclass of Lister,
-<span class="code">ItemLister</span>, is now used as the base class for
+`ItemLister`, is now used as the base class for
 several kinds of lister used in room, examine and search listings. The
-ItemLister class defines a <span class="code">contentsListedProp</span>,
-the default value of which is <span class="code">&contentsListed</span>;
+ItemLister class defines a `contentsListedProp`,
+the default value of which is `&contentsListed`;
 this is the property defined on the object whose contents are to be
 listed that determines whether that object wishes to allow its contents
 to be listed.
@@ -4877,22 +4877,22 @@ parent in response to a LOOK command, or when its parent is EXAMINED, or
 when its parent is searched (with SEARCH or LOOK IN/UNDER/BEHIND)
 respectively. The second three determine whether the contents of the
 item on which it is defined are listed in response to a LOOK, EXAMINE or
-SEARCH command. By default <span class="code">examineListed</span>,
-<span class="code">lookListed</span> and
-<span class="code">searchListed</span> all take their value from the
-<span class="code">isListed</span> property. The
-<span class="code">contentsListedInLook</span> and
-<span class="code">contentsListedInExamine</span> properties both take
-their default values from the <span class="code">contentsListed</span>
+SEARCH command. By default `examineListed`,
+`lookListed` and
+`searchListed` all take their value from the
+`isListed` property. The
+`contentsListedInLook` and
+`contentsListedInExamine` properties both take
+their default values from the `contentsListed`
 property (which is true by default). The default value of
-<span class="code">contentsListedInSearch</span>, however, is simply
-<span class="code">true</span>, since it's hard to think of many cases
+`contentsListedInSearch`, however, is simply
+`true`, since it's hard to think of many cases
 where you wouldn't want an object to reveal its contents when explicitly
 searched; the property is nevertheless provided for completeness.
 
 The new Thing property **examineLister** defines the lister to be used
 to list an object's contents when it is examined. The default value is
-<span class="code">descContentsLister</span>.
+`descContentsLister`.
 
 ------------------------------------------------------------------------
 
@@ -4920,12 +4920,12 @@ Two new Thing properties **allowReachOut(obj)** and
 what happens when an actor tries to reach one object from within another
 (e.g. while the actor is on a bed or chair and tries to reach something
 elsewhere in the room). These properties should be defined on the object
-the actor is in. If <span class="code">allowReachOut(obj)</span> returns
+the actor is in. If `allowReachOut(obj)` returns
 true for the obj the actor is trying to reach (the default), then
 reaching is allowed. Otherwise, if
-<span class="code">autoGetOutToReach</span> is true (the default) the
+`autoGetOutToReach` is true (the default) the
 actor will try to get out of his/her immediate container to reach the
-object. Otherwise (if <span class="code">autoGetOutToReach</span> is
+object. Otherwise (if `autoGetOutToReach` is
 nil) reaching is prohibited and a message is displayed saying that the
 actor can't reach the target object from his/her present location.
 
@@ -4935,11 +4935,11 @@ The new Thing method **checkReachIn(actor)** can be used to put the
 contents of an object out of reach of an actor outside the object (for
 reasons other than enclosure), e.g. if the object is meant to be out of
 reach. The default behaviour is to put the contents of an object out of
-reach if its own <span class="code">checkReach(actor)</span> method puts
-it out of reach; <span class="code">checkReachIn(actor)</span> simply
-calls <span class="code">checkReach(actor)</span>. The contents of the
+reach if its own `checkReach(actor)` method puts
+it out of reach; `checkReachIn(actor)` simply
+calls `checkReach(actor)`. The contents of the
 object are considered out of reach if its
-<span class="code">checkReachIn()</span> method dislays anything at all.
+`checkReachIn()` method dislays anything at all.
 
 ------------------------------------------------------------------------
 
@@ -4947,9 +4947,9 @@ Thing now defines three new properties, **maxBulkHiddenIn**,
 **maxBulkHiddenUnder** and **maxBulkHiddenBehind** that limit the amount
 that can be but in, under or behind an object that ends up in hiddenIn,
 hiddenUnder or hiddenBehind list. The corresponding methods
-<span class="code">getBulkHiddenIn</span>,
-<span class="code">getBulkHiddenUnder</span> and
-<span class="code">getBulkHiddenBehind</span> return the total bulk of
+`getBulkHiddenIn`,
+`getBulkHiddenUnder` and
+`getBulkHiddenBehind` return the total bulk of
 the items currently contained in the corresponding lists.
 
 ------------------------------------------------------------------------
@@ -4960,8 +4960,7 @@ the plausibleKeyList and actualKeyList properties of a Key. For example,
 in the following definition the silver key will work as presumably
 intended:
 
-<div class="code">
-
+```
     cabinet: Fixture 'cabinet'
        remapIn: SubComponent
        {
@@ -4977,12 +4976,11 @@ intended:
        plausibleLockList = [cabinet]
        actualLockList = [cabinet]
     ;
-
-</div>
+```
 
 ------------------------------------------------------------------------
 
-<span class="code">QDefaults.canReach(a, b)</span> has been amended to
+`QDefaults.canReach(a, b)` has been amended to
 take account of the checkReach() and checkReachIn() methods of the
 objects along the containment path from a to b.
 
@@ -5010,7 +5008,7 @@ now also enforces checkRoomToHold() in its check() method.
 ------------------------------------------------------------------------
 
 The default value of **disambigOrder** (a property of Mentionable) has
-been changed to <span class="code">(listOrder)</span>, and that of
+been changed to `(listOrder)`, and that of
 **disambigGroup** has been changed from nil to 0 (zero). This means that
 the default behaviour of the library will be to list items in
 disambiguation prompts in the order of their listOrder property, which
@@ -5028,7 +5026,7 @@ example).
 
 ------------------------------------------------------------------------
 
-The function <span class="code">makeListStr(lst)</span> now sorts the
+The function `makeListStr(lst)` now sorts the
 objects in lst in ascending order of their listOrder property before
 constructing the string version of the list.
 
@@ -5050,8 +5048,8 @@ various valid forms).
 
 ------------------------------------------------------------------------
 
-The Lever class now as an <span class="code">isPushed</span> property as
-well as an <span class="code">isPulled</span> property. By default
+The Lever class now as an `isPushed` property as
+well as an `isPulled` property. By default
 isPushed = !isPulled, but the existence of the separate isPushed
 property makes it easier to decouple the two if you want a lever that
 can also be in a position between the two extremes (when both isPushed
@@ -5064,7 +5062,7 @@ GameMainDef.newGame() now sets gAction to a new Look action (the action
 effectively about to be performed just before the first turn) and gActor
 to the player character. This makes it more likely that any user startup
 code that assumes the existence of an action context, such as using
-<span class="code">gMessageParams()</span> in gameMain.showIntro() or
+`gMessageParams()` in gameMain.showIntro() or
 within the initial room description, will work as expected rather than
 causing a run-time error.
 
@@ -5095,12 +5093,12 @@ allow players to turn it on and off).
 
 ------------------------------------------------------------------------
 
-The <span class="code">StairwayUp</span>,
-<span class="code">StairwayDown</span> and
-<span class="code">Passage</span> classes have been amended to respect
-the values ot the <span class="code">isClimbable</span>,
-<span class="code">isClimbDownable</span> and
-<span class="code">isGoThroughable</span> properties respectively (these
+The `StairwayUp`,
+`StairwayDown` and
+`Passage` classes have been amended to respect
+the values ot the `isClimbable`,
+`isClimbDownable` and
+`isGoThroughable` properties respectively (these
 properties now being true by default for each of these classes in turn).
 Previously these classes overrid the verify() methods supplied by Thing
 so that these properties were effectively ignored, which made the
@@ -5335,17 +5333,17 @@ adv3Lite defines lookAroundWithin()).
 
 ------------------------------------------------------------------------
 
-The Actor class now defines <span class="code">contType = Carrier</span>
+The Actor class now defines `contType = Carrier`
 by default (as it should have done all along).
 
 ------------------------------------------------------------------------
 
-The Thing class now has a new <span class="code">display(prop)</span>
+The Thing class now has a new `display(prop)`
 method, where prop is a property pointer. If prop contains a
 double-quoted string or a method, the display() method simply calls
-<span class="code">self.(prop)</span>. If prop contains a single-quoted
+`self.(prop)`. If prop contains a single-quoted
 string or integer, display calls
-<span class="code">say(self.(prop))</span>. This simplifies the creation
+`say(self.(prop))`. This simplifies the creation
 of code that will display a text property correctly whether it has been
 defines as a single-quoted string, a double-quoted string and a method,
 and several routines have been adapted to take advantage of it.
@@ -5371,9 +5369,9 @@ to do something different if they need to. STAND IN, SIT IN and LIE IN
 actions have also been added; by default they're all equivalent to ENTER
 (although again this can be overridden). If you want SIT ON & SIT IN (or
 LIE ON and LIE IN) to act equivalently, e.g. for a chair or bed, define
-the chair or bed as a Surface with <span class="code">isBoardable =
-true</span>and <span class="code">dobjFor(Enter)
-asDobjFor(Board)</span>.
+the chair or bed as a Surface with `isBoardable =
+true`and `dobjFor(Enter)
+asDobjFor(Board)`.
 
 ------------------------------------------------------------------------
 

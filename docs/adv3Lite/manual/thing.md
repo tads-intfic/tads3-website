@@ -64,14 +64,12 @@ define a property that requires one kind of data with data of a
 different type things won't work as you expect. For example, the
 following three property definitions are anything but equivalent:
 
-<div class="code">
-
+```
         foo = bar   // An object (or possibly an enum or variable or property name)
         foo = 'bar' // a single-quoted string
         foo = "bar" // a double-quoted string 
      
-
-</div>
+```
 
 If you don't understand the distinctions being made above then you
 really should read Part III of the [TADS 3 System Manual](../sysman.html)
@@ -91,14 +89,12 @@ adv3Lite library the first two of these can be defined in single
 property, the vocab property. So, for example, to define a red ball you
 might write:
 
-<div class="code">
-
+```
     redBall: Thing
        vocab = 'red ball;bouncy rubber; sphere'
        desc = "It's very bouncy, and appears to be made of rubber. "
     ;
-
-</div>
+```
 
 Note how the vocab property works. First we supply the name of the
 object ('red ball'), then, following the first semicolon we supply any
@@ -126,13 +122,11 @@ In practice, though, we'd normally use the Thing template to define
 these basic properties, so in a real game our red ball definition would
 normally look like this:
 
-<div class="code">
-
+```
     redBall: Thing 'red ball;bouncy rubber; sphere'
        "It's very bouncy, and appears to be made of rubber. "
     ;
-
-</div>
+```
 
 If the name doesn't uniquely identify the object — say because there
 were two red balls in our game, the bouncy red rubber ball and a cricket
@@ -142,15 +136,13 @@ when the parser asks the player to disambiguate which ball s/he means
 ball or the red ball?'"). In this admittedly artificial example, we
 would need to define a disambigName on our redBall object so:
 
-<div class="code">
-
+```
     redBall: Thing 'red ball;bouncy rubber; sphere'
        "It's very bouncy, and appears to be made of rubber. "
        
        disambigName = 'bouncy rubber ball'
     ;
-
-</div>
+```
 
 Normally, though, this should not be necessary.
 
@@ -180,7 +172,7 @@ will normally make it unnecessary to use many of these explicitly:
   shoes or a flight of stairs might be referred to as either 'it' or
   'them'. Whether it's actually plural or singular (when the name is
   used as the subject of a sentence, for example) depends on the value
-  of the <span class="code">plural</span> property. You can also set
+  of the `plural` property. You can also set
   ambiguouslyPlural to true by including both 'it' and 'them' in the
   pronoun list at the end of the vocab property (e.g. 'flight stairs;
   steep; staircase; it them). To make an ambiguouslyPlural object
@@ -270,17 +262,17 @@ will normally make it unnecessary to use many of these explicitly:
   objects out of the list of possible matches while the parser is in the
   process of selecting the object or objects to which a command refers.
   The list of matches under consideration is given in
-  <span class="code">np.matches</span>, so this would be the list to
+  `np.matches`, so this would be the list to
   manipulate (the actual objects are found in the obj property of each
-  item in the matches list). The <span class="code">cmd</span> parameter
-  is the current Command object, so <span class="code">cmd.action</span>
+  item in the matches list). The `cmd` parameter
+  is the current Command object, so `cmd.action`
   would give the action about to be performed. The
-  <span class="code">mode</span> parameter refers to the type of match
-  being sought, and can be one of <span class="code">Definite</span>
+  `mode` parameter refers to the type of match
+  being sought, and can be one of `Definite`
   (the command ask for a specific object or objects, such as TAKE THE
-  RED BALL), <span class="code">Indefinite</span> (the command asks for
+  RED BALL), `Indefinite` (the command asks for
   a non-specific object, such as TAKE A BALL) or
-  <span class="code">All</span> (the command asks for all objects
+  `All` (the command asks for all objects
   meeting a specification such as TAKE ALL or TAKE BALLS). For a fuller
   explanation see [below](#filterresolve).
 
@@ -312,7 +304,7 @@ The other basic properties of Thing you will commonly use are:
   library).
 - **opened** (true or nil) Becomes true when this object has been opened
   (via the makeOpen()) method; note that if an object starts out open
-  its <span class="code">opened</span> property won't become true unless
+  its `opened` property won't become true unless
   and until it's closed and opened again.
 - **desc** (double-quoted string) The description of this object
   displayed in response to an EXAMINE command. This should be defined as
@@ -329,7 +321,7 @@ The other basic properties of Thing you will commonly use are:
   the player character (the library should track this automatically, but
   there may be occasions when you need to set this manually, for example
   when moving an object into scope using the
-  <span class="code">moveInto()</span> method).
+  `moveInto()` method).
 - **familiar** (true or nil) This determines whether the player
   character knows of the existence of this object even if s/he has not
   yet seen it. This is relevant to whether the object can be referred to
@@ -365,8 +357,8 @@ The other basic properties of Thing you will commonly use are:
   (assuming I'm a nested room) get out of me before executing an
   instransitive JUMP action? By default this is true.
 
-Note that the account of <span class="code">known</span>,
-<span class="code">seen</span> and <span class="code">familiar</span>
+Note that the account of `known`,
+`seen` and `familiar`
 given above is slightly simplified. If you wish, you can define seenProp
 and knownProp just as in the adv3 library in order to distinguish player
 character knowledge from that of other actors. If you do so, make sure
@@ -385,17 +377,17 @@ Character and NPC Knowledge](knowledge.html).
 
 ### filterResolveList()
 
-The <span class="code">filterResolveList()</span> method probably needs
+The `filterResolveList()` method probably needs
 a bit more explanation (although you can probably skip this first time
 through, since it's not often you'll need to use it). It's occasionally
 useful for an object to rule itself or other objects out of selection
 when the parser is choosing an object (or objects) to match the command
 entered by the player. In the course of making the selection the parser
-runs the <span class="code">selectObjects()</span>method on the
+runs the `selectObjects()`method on the
 NounPhrase object it's created to represent the noun phrase entered as
 part of the player's command (e.g. 'the blue ball'). We don't need to
 worry too much about this, except to note (a) that the selectObjects()
-routine calls <span class="code">filterResolveList(np, cmd, mode</span>)
+routine calls `filterResolveList(np, cmd, mode`)
 on all the objects the parser is considering as possible matches and (b)
 that the NounPhrase parameter is passed as the *np* parameter. This
 NounPhrase object passed as the *np* parameter has at least three useful
@@ -403,8 +395,8 @@ properties:
 
 - **role** either DirectObject or IndirectObject; the role (direct or
   indirect object) the noun phrase is being considered for.
-- **tokens** a list of the tokens (e.g. <span class="code">\['blue',
-  'ball'\]</span>) being matched by this noun phrase.
+- **tokens** a list of the tokens (e.g. `\['blue',
+  'ball'\]`) being matched by this noun phrase.
 - **matches** a list of the NPMatch objects being considered as possible
   matches.
 
@@ -412,29 +404,27 @@ In turn the NPMatch objects have a number of properties, of which the
 most relevant is **obj**, the actual simulation object (Thing) being
 matched. So, for example, from within a filterResolveList() method, the
 first game simulation object being considered for a match would be
-<span class="code">np.matches\[1\].obj</span>.
+`np.matches\[1\].obj`.
 
 Suppose, for example, we wanted an object to rule itself out of being
 matched. We could do this by making it adjust the
-<span class="code">np.matches</span> list to remove the NPMatch object
+`np.matches` list to remove the NPMatch object
 corresponding to itself:
 
-<div class="code">
-
+```
     filterResolveList(np, cmd, mode)
     {
        np.matches = np.matches.subset({m: m.obj != self});
     }
+```
 
-</div>
-
-Here we change the <span class="code">np.matches</span> list to a subset
+Here we change the `np.matches` list to a subset
 of that list that contains everything except the NPMatch corresponding
-to the <span class="code">self</span> object; in other words we remove
-<span class="code">self</span> from the
-<span class="code">np.matches</span> list. Remember that np.matches
+to the `self` object; in other words we remove
+`self` from the
+`np.matches` list. Remember that np.matches
 doesn't directly contain a list of Things, but rather a list of NPMatch
-objects whose <span class="code">obj</span> property actually contains
+objects whose `obj` property actually contains
 the matching Thing.
 
 You may wonder why we'd want an object to rule itself out like this.
@@ -446,8 +436,7 @@ an Unthing if nothing else in scope will match, so we want the
 filterResolveList() method of an Unthing to rule itself out if there are
 any other matches:
 
-<div class="code">
-
+```
     class Unthing: Decoration
         ...
         filterResolveList(np, cmd, mode)
@@ -456,15 +445,14 @@ any other matches:
                 np.matches = np.matches.subset({m: m.obj != self});
         }
     ;    
-
-</div>
+```
 
 In other situations we may want to filter according to what action is
 being considered and/or what role (direct object or indirect object) the
 potential matches are being considered for. The cmd and np parameters
 can give us both pieces of information:
-<span class="code">cmd.action</span> gives us the proposed action and
-<span class="code">np.role</span> the proposed role (DirectObject or
+`cmd.action` gives us the proposed action and
+`np.role` the proposed role (DirectObject or
 IndirectObject)..
 
 ## <span id="containment">Containment Properties</span>
@@ -482,8 +470,7 @@ directly, or through the template with an @ sign, or by using the +
 syntax to indicate the containment hierarchy. The three following
 definitions are thus equivalent:
 
-<div class="code">
-
+```
     hall: Room 'Hall'
     ;
 
@@ -496,13 +483,11 @@ definitions are thus equivalent:
        "It's very bouncy, and appears to be made of rubber. "
        location = box
     ;
-
-</div>
+```
 
 Means exactly the same as:
 
-<div class="code">
-
+```
     hall: Room 'Hall'
     ;
 
@@ -513,13 +498,11 @@ Means exactly the same as:
     redBall: Thing 'red ball;bouncy rubber; sphere' @box
        "It's very bouncy, and appears to be made of rubber. "  
     ;
-
-</div>
+```
 
 Which means exactly the same as:
 
-<div class="code">
-
+```
     hall: Room 'Hall'
     ;
 
@@ -530,8 +513,7 @@ Which means exactly the same as:
     ++ redBall: Thing 'red ball;bouncy rubber; sphere'
        "It's very bouncy, and appears to be made of rubber. "   
     ;
-
-</div>
+```
 
 The + syntax can be used to nest containment up to any desired depth.
 
@@ -620,14 +602,12 @@ been moved) or automatically taken by the player character. For example,
 to hide a gold coin and a silver key under a rug, you could define the
 rug thus:
 
-<div class="code">
-
+```
     rug: Thing 'persian rug; old worn'
        "The old rug has seen better days; it's now rather worn. "
        hiddenUnder = [goldCoin, silverKey]
     ;
-
-</div>
+```
 
 Note that in this case the location property of the goldCoin and the
 silverKey should be left at nil at the start of the game. Objects listed
@@ -642,14 +622,12 @@ contType = On and isEnterable = true). We could then define it thus,
 without having to worry about how to make the rug handle multiple kinds
 of containment:
 
-<div class="code">
-
+```
     rug: Platform 'persian rug; old worn'
        "The old rug has seen better days; it's now rather worn. "
        hiddenUnder = [goldCoin, silverKey]
     ;
-
-</div>
+```
 
 <span id="canput"></span>
 
@@ -677,9 +655,9 @@ properties, **maxBulkHiddenIn**, **maxBulkHiddenUnder** and
 **maxBulkHiddenBehind** that limit the amount that can be but in, under
 or behind an object that ends up in hiddenIn, hiddenUnder or
 hiddenBehind list. The corresponding methods
-<span class="code">getBulkHiddenIn</span>,
-<span class="code">getBulkHiddenUnder</span> and
-<span class="code">getBulkHiddenBehind</span> return the total bulk of
+`getBulkHiddenIn`,
+`getBulkHiddenUnder` and
+`getBulkHiddenBehind` return the total bulk of
 the items currently contained in the corresponding lists.
 
 One potential problem with the hiddenUnder and hiddenBehind properties
@@ -773,8 +751,7 @@ ComplexContainer. For example, suppose we want to define an oven (or
 stove) the player character can put things in or on. We could do it like
 this:
 
-<div class="code">
-
+```
     cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
@@ -784,14 +761,13 @@ this:
         remapIn: SubComponent  {   isOpenable = true   }
         remapOn: SubComponent  {  }
     ;
-
-</div>
+```
 
 Note that there's no need to define the contType property on these
 SubComponents, since the library can deduce what it should be from the
 remapXXX properties to which they're attached. In this case the only
 additional property we needed to define was
-<span class="code">isOpenable = true</span> on the remapIn SubComponent,
+`isOpenable = true` on the remapIn SubComponent,
 to make the cooker openable.
 
 If we want an object to start off inside or on top of (or under or
@@ -800,8 +776,7 @@ manner as in the adv3 library, i.e. by defining the contained objects
 subLocation property. Thus, for example, if there's a pan on top of the
 stove we'd define it thus:
 
-<div class="code">
-
+```
     cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
@@ -818,8 +793,7 @@ stove we'd define it thus:
        
         subLocation = &remapOn
     ;
-
-</div>
+```
 
 ### <span id="bulk">Bulk and BulkCapacity</span>
 
@@ -895,35 +869,35 @@ be used to check for containment:
 
 The method **checkReach(actor)** can be used to make an object
 inaccessible to an actor, for reasons other than being in a closed
-container. The <span class="code">checkReach()</span> method can, for
+container. The `checkReach()` method can, for
 example, be used to model an object that's too hot too touch or else out
 of reach on a high shelf. The library considers an object to be
 untouchable by *actor* if its
-<span class="code">checkReach(actor)</span> method displays anything.
+`checkReach(actor)` method displays anything.
 Note, this only takes effect if the touchObj precondition is defined for
 the action on the object in question.
 
 If an object is put out of reach by checkReach(actor) then the default
 behaviour is to put its contents out of reach as well. This is
 controlled by the method **checkReachIn(actor, target?)**, which, by
-default, simply calls <span class="code">checkReach(actor)</span>. The
+default, simply calls `checkReach(actor)`. The
 contents of the object are considered out of reach if its
-<span class="code">checkReachIn()</span> method dislays anything at all.
+`checkReachIn()` method dislays anything at all.
 The optional *target* parameter is the object that actor is actually
 trying to reach, but note that this parameter is always supplied when
-<span class="code">checkReachIn()</span> is called via
-<span class="code">Q.canReach()</span> or via the
-<span class="code">touchObj</span> precondition (in other words, the
+`checkReachIn()` is called via
+`Q.canReach()` or via the
+`touchObj` precondition (in other words, the
 *target* parameter will always be supplied when
-<span class="code">chechReachIn()</span> is called by other library
+`chechReachIn()` is called by other library
 code, which is likely to be the most common situation).
 
-If an object has <span class="code">contType = In</span> and
-<span class="code">isEnterable = true</span> then an actor can get in
+If an object has `contType = In` and
+`isEnterable = true` then an actor can get in
 it.
 
-If an object has <span class="code">contType = On</span> and
-<span class="code">isBoardable = true</span> then an actor can get on
+If an object has `contType = On` and
+`isBoardable = true` then an actor can get on
 it.
 
 In either case you may want to control what happens when an actor who is
@@ -932,12 +906,12 @@ tries to reach an object elsewhere in the room.
 
 For this purpose you can use **allowReachOut(obj)** and
 **autoGetOutToReach**. These properties should be defined on the object
-the actor is in/on. If <span class="code">allowReachOut(obj)</span>
+the actor is in/on. If `allowReachOut(obj)`
 returns true for the obj the actor is trying to reach (the default),
 then reaching is allowed. Otherwise, if
-<span class="code">autoGetOutToReach</span> is true (the default) the
+`autoGetOutToReach` is true (the default) the
 actor will try to get out of his/her immediate container to reach the
-object. Otherwise (if <span class="code">autoGetOutToReach</span> is
+object. Otherwise (if `autoGetOutToReach` is
 nil) reaching is prohibited and a message is displayed saying that the
 actor can't reach the target object from his/her present location.
 
@@ -984,13 +958,13 @@ Thing). The principal ones are:
   below.
 
 - **lockability** This must be one of
-  <span class="code">notLockable</span> (the default),
-  <span class="code">lockableWithoutKey</span> (which means that the
+  `notLockable` (the default),
+  `lockableWithoutKey` (which means that the
   object can be locked or unlocked via a simple LOCK or UNLOCK command),
-  <span class="code">lockableWithKey</span> (which means that the object
+  `lockableWithKey` (which means that the object
   can be locked or unlocked with the aid of the appropriate key or keys,
   on which see on [Key](key.html) below) or
-  <span class="code">indirectLockable</span>, which means that the
+  `indirectLockable`, which means that the
   object can be locked and unlocked by some other means (e.g. by
   pressing a button or pulling a lever or entering the appropriate
   combination on a keypad). Note that if you define a non-nil
@@ -1019,31 +993,31 @@ particular:
 - **isOpen** The object is open if this is true and closed otherwise. If
   you define a straightforward Container (contType = In) that isn't
   openable, you'll probably want to define isOpen = true to make its
-  contents accessible. Use <span class="code">isOpen</span> to determine
+  contents accessible. Use `isOpen` to determine
   whether something is open or closed, and to define whether it starts
-  out open or closed, but use <span class="code">makeOpen(true)</span>
-  and <span class="code">makeOpen(nil)</span> to open and close an
+  out open or closed, but use `makeOpen(true)`
+  and `makeOpen(nil)` to open and close an
   object programmatically during the course of a game. This ensures that
   the side effects of opening and closing (e.g. opening and closing the
   other side of a door) are properly dealt with.
 - **isLocked** The object is locked if this is true and unlocked
-  otherwise. Use <span class="code">isLocked</span> to determine whether
+  otherwise. Use `isLocked` to determine whether
   something is locked or unlocked, and to define whether it starts out
-  locked or unlocked, but use <span class="code">makeLocked(true)</span>
-  and <span class="code">makeLocked(nil)</span> to lock and unlock an
+  locked or unlocked, but use `makeLocked(true)`
+  and `makeLocked(nil)` to lock and unlock an
   object programmatically during the course of a game. This ensures that
   the side effects of locking and unlocking (e.g. locking and unlocking
   the other side of a door) are properly catered for.
 - **isOn** If true the object is switched on, otherwise it is switched
   off. Use isOn to check the on-off state and to set its initial value,
-  but <span class="code">makeOn(true)</span> and
-  <span class="code">makeOn(nil)</span> to switch it on and off
+  but `makeOn(true)` and
+  `makeOn(nil)` to switch it on and off
   programmatically during the course of the game.
 - **isLit** If true this object is lit (i.e. it provides sufficient
   light to make everything in scope visible). Use isLit to check the
   lit-unlit state and to set its initial value, but
-  <span class="code">makeLit(true)</span> and
-  <span class="code">makeLit(nil)</span> to make it lit or unlit during
+  `makeLit(true)` and
+  `makeLit(nil)` to make it lit or unlit during
   the course of the game.
 - **wornBy** If this is nil the object is not currently being worn. If
   it is not nil it should be set to the identity of the actor (or player
@@ -1066,16 +1040,14 @@ list of actions you want to allow. For example, extras.t defines a
 simple Odor class to represent something that can be smelled as well as
 examined:
 
-<div class="code">
-
+```
     class Odor: Thing
         isDecoration = true
         decorationActions = [Examine, SmellSomething]
         notImportantMsg = BMsg(only smell, '{I} {can\'t} do that to a smell. ')
         dobjFor(SmellSomething) asDobjFor(Examine)    
     ;
-
-</div>
+```
 
 Note that if you need additional behavioural or state properties you can
 always modify or subclass Thing to define them (or define them on the
@@ -1123,18 +1095,18 @@ be used to control whether or not a SIT ON, STAND ON or LIE ON command
 will work with the object in question (so that, for example, if you
 wanted to you could allow the player character to sit or stand on the
 stool, but not to lie on it). By default, all three of these properties
-take their value from <span class="code">isBoardable</span>, so that if
+take their value from `isBoardable`, so that if
 you just want it possible for the player character to get on something
 without being fussy about the command used to do, you can just set
-<span class="code">isBoardable = true</span> and forget about these
+`isBoardable = true` and forget about these
 other three properties.
 
 If, on the other hand, you want even finer-grained control you can
 exercise it through the properties **sitOnScore**, **standOnScore** and
 **lieOnScore**, each of which has a default value of 100. These only
-take effect if the corresponding <span class="code">canSitOnMe</span>,
-<span class="code">canStandOnMe</span> and/or
-<span class="code">canLieOnMe</span> property is true, but can then be
+take effect if the corresponding `canSitOnMe`,
+`canStandOnMe` and/or
+`canLieOnMe` property is true, but can then be
 used to determine how suitable an object is for the action in question.
 For example, while you can sit or stand on a bed, you'd most naturally
 lie on it, so you might give it a lieOnScore of 120, a sitOnScore of 90
@@ -1158,15 +1130,15 @@ these otherwise synonymous commands.
 
 Note that it's only possible for an actor to GET ON (i.e. Board)
 something, if the object in question (a) has
-<span class="code">isBoardable = true</span> and (b) has a
-<span class="code">contType = On</span>. You would normally achieve this
+`isBoardable = true` and (b) has a
+`contType = On`. You would normally achieve this
 by making the object to be got on of the
-<span class="code">Platform</span> class. If an object is not boardable
+`Platform` class. If an object is not boardable
 or if it doesn't have a contType of On, defining canSitOnMe,
 canStandOnMe or canLieOnMe on that object won't make it possible for an
 actor to SIT, STAND or LIE on it. So if you want to make an object an
 actor can GET ON, SIT ON, LIE ON and/or STAND ON you should use the
-<span class="code">Platform</span> class. The purpose of the canSitOnMe,
+`Platform` class. The purpose of the canSitOnMe,
 canStandOnMe and canLieOnMe properties is then to selectively *disallow*
 sitting or standing or lying on an object the player can otherwise get
 on by setting the corresponding property to nil. You cannot make it
@@ -1191,13 +1163,13 @@ properties:
 - **inDarkDesc**. If this property is defined then it is displayed
   instead of *any* other description (desc, stateDesc, contents
   information and anything else) if
-  <span class="code">visibleInDark</span> is true and the location is
+  `visibleInDark` is true and the location is
   not lit. Note that if inDarkDesc is displayed examined is not set to
   true, since the object is not considered to have been examined
-  properly; <span class="code">inDarkDesc</span> might typically be used
+  properly; `inDarkDesc` might typically be used
   to give a vague description of something that can only just be made
-  out in the dark. (Note that <span class="code">inDarkDesc</span>
-  should be distinguished from <span class="code">darkDesc</span>, which
+  out in the dark. (Note that `inDarkDesc`
+  should be distinguished from `darkDesc`, which
   gives the interior description of a dark room or nested room in the
   dark).
 - **smellDesc** A double-quoted string that contains the response to
@@ -1212,11 +1184,11 @@ properties:
   object from view (by making it impossible for the player to refer to
   it and ensuring it doesn't appear in any listings)
 - **discover()** Calling this method sets
-  <span class="code">isHidden</span> to nil, unless the method is called
-  as <span class="code">discover(nil)</span>, in which case isHidden
+  `isHidden` to nil, unless the method is called
+  as `discover(nil)`, in which case isHidden
   will be set to true. The parameter is optional; calling
-  <span class="code">discover()</span> is equivalent to calling
-  <span class="code">discover(true)</span>.
+  `discover()` is equivalent to calling
+  `discover(true)`.
 
 This may be a convenient point to note that any double-quoted string
 property can alternatively be implemented as a method that displays some
@@ -1232,13 +1204,13 @@ smellDesc or listenDesc is not nil. For this reason it is a good idea to
 write your smellDesc and listenDesc descriptions in a manner than
 identifies which objects they refer to. It is also *not* a good idea to
 use [message substitution parameters](message.html#parameter) like
-<span class="code">{the subj dobj}</span> in these properties, since if
+`{the subj dobj}` in these properties, since if
 they are being displayed in response to a intransitive SMELL or LISTEN
 command (one without any object specified),
-<span class="code">dobj</span> will have no meaning. If you need to
+`dobj` will have no meaning. If you need to
 generalize such messages to work with more than one object use
-<span class="code">\<\<theName\>\></span> or
-<span class="code">\<\<theNameIs\>\></span> instead.
+`\<\<theName\>\>` or
+`\<\<theNameIs\>\>` instead.
 
 You can however override this behaviour with the following two
 properties (which are both true by default):
@@ -1271,8 +1243,8 @@ properties (which are both true by default):
   then the fluidName property can be used to supply the name of the
   fluid (e.g. 'oil') to give better library default messages (e.g.
   "You'd best not pour oil there" rather than "You'd best not pour the
-  oilcan there"). By default the <span class="code">fluidName</span> is
-  simply <span class="code">theName</span>.
+  oilcan there"). By default the `fluidName` is
+  simply `theName`.
 - **hideFromAll(action)** To exclude this item from the list of objects
   to be acted upon when the player types a command with ALL for action,
   override this method to return true for the action or actions
@@ -1326,12 +1298,12 @@ through and *dir* (e.g. northDir) is the direction the object is being
 pushed in. For the second type (involving an indirect object) we can
 override the **describePushTravel(via)** method on the direct object,
 where the *via* parameter is the preposition applied to the indirect
-object (e.g. <span class="code">Through</span> if the command was PUSH
+object (e.g. `Through` if the command was PUSH
 TROLLEY THROUGH DOOR; note this is an object with the programmatic name
-of <span class="code">Through</span>, not the string 'Through').
+of `Through`, not the string 'Through').
 
 For either type of push-travel,
-<span class="code">describeMovePushable(connector, dest)</span> is
+`describeMovePushable(connector, dest)` is
 called on the direct object after the actor arrives in the new room to
 describe the arrival of the object in its new location (dest) after
 being pushed via connector. Again we can override this to provide a more
@@ -1340,7 +1312,7 @@ colourful message than the library default.
 If we want to prevent an object being pushed somewhere (e.g., up a
 flight of stairs), we can usually do so by testing whether it's been
 passed as the *traveler* parameter on the
-<span class="code">canTravelerPass()</span> method of a
+`canTravelerPass()` method of a
 [TravelConnector](travel.html) or
 [TravelBarrier](travel.html#travelbarrier) and then returning nil from
 that method if it has.
@@ -1350,12 +1322,12 @@ place to place and pulling it (except minimally, in the way the action
 is described). PUSH TROLLEY NORTH and PULL TROLLEY NORTH mean exactly
 the name thing. You can, however, change this behaviour by setting the
 value of **canPullTravel** separately from that of
-<span class="code">canPushTravel</span> (normally the former takes its
-value from the latter). If <span class="code">canPullTravel</span> is
-true and <span class="code">canPushTravel</span> is nil, then the object
+`canPushTravel` (normally the former takes its
+value from the latter). If `canPullTravel` is
+true and `canPushTravel` is nil, then the object
 can be pulled from place to place but not pushed. Likewise, If
-<span class="code">canPushTravel</span> is true and
-<span class="code">canPullTravel</span> is nil, then the object can be
+`canPushTravel` is true and
+`canPullTravel` is nil, then the object can be
 pushed from place to place but not pulled. The same action is being
 attempted in either case, but the library decides whether the player
 character is attempting to push or pull according to what the player
@@ -1383,12 +1355,10 @@ of their parts of speech.
 
 The 'vocab' string has this overall syntax:
 
-<div class="code">
-
+```
        
          vocab = 'article short name; adjectives; nouns; pronouns'
-
-</div>
+```
 
 You don't have to include all of the parts; you can simply stop when
 you're done, so it's valid, for example, to just write the 'short name'
@@ -1539,12 +1509,11 @@ present there'd normally be no way of referring to the 'green bottle'
 object since anything the player can enter to refer to it could also
 refer to the dark green bottle. One way to tackle this problem (the
 other would be to give the green bottle a
-<span class="code">vocabLikelihood</span>) is to define the
-<span class="code">matchPhrases</span> property on the dark green bottle
+`vocabLikelihood`) is to define the
+`matchPhrases` property on the dark green bottle
 so that it will match 'dark green' or 'dark' but not 'green' by itself:
 
-<div class="code">
-
+```
     ++ greenBottle: Thing 'green bottle'
         "It's just an ordinary green bottle. "
     ;
@@ -1553,8 +1522,7 @@ so that it will match 'dark green' or 'dark' but not 'green' by itself:
         "It's a dark green bottle. "
         matchPhrases = ['dark', 'dark green']    
     ;
-
-</div>
+```
 
 The rule is this: if any of the words in the noun phrase entered by the
 player occur in any of the matchPhrases, then one of the matchPhrases
@@ -1563,8 +1531,8 @@ phrase for the noun phrase to match. In the example above the
 darkGreenBottle will thus be matched by 'dark' or 'dark bottle' or 'dark
 green' or 'dark green bottle' but not by 'green' or 'green bottle'. The
 noun phrase 'green bottle' will therefore be taken as matching the
-<span class="code">greenBottle</span> object but not the
-<span class="code">darkGreenBottle</span> object. (The noun phrase
+`greenBottle` object but not the
+`darkGreenBottle` object. (The noun phrase
 'bottle' by itself would match both bottles, since the word 'bottle'
 does not appear anywhere in the matchPhrases and so is ignored for the
 purposes of phrase matching).
@@ -1577,22 +1545,21 @@ player's command didn't include the phrase 'dark green'. By including
 'dark' as a separate phrase we prevent the lone adjective 'dark' from
 being screened out by the phrase 'dark green'.
 
-Note also that the <span class="code">matchPhrases</span> property
+Note also that the `matchPhrases` property
 doesn't add anything to the vocab an object will match; any words that
-appear in <span class="code">matchPhrases</span> must also appear
+appear in `matchPhrases` must also appear
 somewhere in the object's vocb property or no match will occur. The
 function of matchPhrases is simply to *restrict* what words or
 combinations of words will apply to the object.
 
 In the foregoing example we used the
-<span class="code">matchPhrases</span> property to distinguish between
+`matchPhrases` property to distinguish between
 objects where the vocab of one of them was a subset of the vocab of the
 other. Another case might be where two objects share precisely the same
 vocab words but in a different order, for example a green broad bean and
 a broad green bean. We might handle this case thus:
 
-<div class="code">
-
+```
     ++ broadGreenBean: Thing 'broad green bean'
         "It's broad and green. "
         matchPhrases = 'broad green'
@@ -1604,23 +1571,22 @@ a broad green bean. We might handle this case thus:
         matchPhrases = 'green broad'
         matchPhrasesExclude = nil    
     ;
-
-</div>
+```
 
 <span id="matchphraseexcludes"></span>
 
-In this example the <span class="code">matchPhrases</span> distinguish
+In this example the `matchPhrases` distinguish
 between the order in which the words 'broad' and 'green' must appear in
 the player's input for the match to occur. Note, incidentally, that if
 we only want to specify one phrase we can specify it as a single-quoted
 string; in that instance it doesn't have to be a list. Note also the use
-of the <span class="code">matchPhrasesExcludes</span> property here.
+of the `matchPhrasesExcludes` property here.
 
 If **matchPhrasesExcludes** is true (the default), then failure to match
-one of the phrases in the <span class="code">matchPhrases</span>
+one of the phrases in the `matchPhrases`
 property will cause the match to fail (as in the dark green bottle
 example). If it is nil as here, however, then instead of the
-<span class="code">matchPhrases</span> property ruling out a match when
+`matchPhrases` property ruling out a match when
 it fails to match, it enhances the match when it does match. That means
 when only one bean is in scope it can be referred to as 'bean', 'green
 bean', 'broad bean' and so forth without any difficultly, but if both
@@ -1632,11 +1598,11 @@ that this score-boosting behaviour only applies to the original command;
 any disambiguation will still use the exluding behaviour (otherwise
 disambiguation would never succeed).
 
-As a rule of thumb, <span class="code">matchPhrasesExclude = true</span>
+As a rule of thumb, `matchPhrasesExclude = true`
 (the default) is the better option when one object's vocab is a subset
 of another's (otherwise the player can never refer to the object with
-the shorter vocab), while <span class="code">matchPhrasesExclude =
-nil</span> is the better option when two objects share the same vocab
+the shorter vocab), while `matchPhrasesExclude =
+nil` is the better option when two objects share the same vocab
 distiguished by word order (since this relaxes the requirement for a
 match when only one of the objects is in scope, and gives the player a
 disambiguation prompt instead of a 'You see no...' message in response
@@ -1651,8 +1617,8 @@ As a further refinement you can define the **disambigMatchPhrases**
 property to hold a different set of phrases (or none at all) for
 disambiguation purposes (i.e. when the player has responded to a a
 disambiguation request), but by default
-<span class="code">disambigMatchPhrases</span> takes its value from
-<span class="code">matchPhrases</span> and you will seldom, if ever,
+`disambigMatchPhrases` takes its value from
+`matchPhrases` and you will seldom, if ever,
 need to change this.
 
 Indeed, it's probably quite rare that you will need to use phrase
@@ -1689,8 +1655,7 @@ to the following rules:
 
 For example, suppose we define the following:
 
-<div class="code">
-
+```
     class Coin: Thing 'coin; round metal; money; it'
     ;
 
@@ -1699,28 +1664,24 @@ For example, suppose we define the following:
 
     silverCoin: Coin 'silver +; tiny; -shilling'
     ;
-
-</div>
+```
 
 The vocab properties of the two coins would end up just as if we had
 defined them thus:
 
-<div class="code">
-
+```
 
     goldCoin: Thing 'gold coin; small round metal; pound; it'
     ;
 
     silverCoin: Thing 'silver coin; tiny round metal; shilling; it'
     ;
-
-</div>
+```
 
 To a limited extent, we can also use the + sign in the name property to
 inherit multiple steps up the class tree, for example:
 
-<div class="code">
-
+```
      class Coin: Thing 'coin; round'
      ;
      
@@ -1730,25 +1691,22 @@ inherit multiple steps up the class tree, for example:
      smallGoldCoin: GoldCoin 'small +'
      ;
      
+```
 
-</div>
-
-This would give the <span class="code">smallGoldCoin</span> object a
+This would give the `smallGoldCoin` object a
 vocab property of 'small gold coin; round'.
 
 Note that this kind of use of the + property only works 'vertically',
 however. If you defined:
 
-<div class="code">
-
+```
      class Coin: Thing 'coin';
      
      class Gold: Thing 'gold';
      
      goldCoin: Gold, Coin '+'; 
      
-
-</div>
+```
 
 Then the vocab property of goldCoin would end up simply as 'gold', not
 'gold coin' or even 'goldcoin', since the + is simply replaced with the
@@ -1758,8 +1716,7 @@ carried out thereafter.
 Note also that the + substitution does not insert any additional spaces.
 This allows you to create definitions like:
 
-<div class="code">
-
+```
     class Light: Decoration 'light' 
        notImportantMsg = 'You can\'t do that with light.'
     ;
@@ -1768,8 +1725,7 @@ This allows you to create definitions like:
     sunlight: Light 'sun+';
     torchlight: Light 'torch+';  
      
-
-</div>
+```
 
 This would result in vocabs (and hence names) of 'moonlight', 'sunlight'
 and 'torchlight' respectively.
@@ -1800,8 +1756,7 @@ state objects of your own. For example if your game involves one or more
 objects that can be wet, damp or dry you could define the following
 State objects:
 
-<div class="code">
-
+```
     enum wet, damp, dry;
 
     WetDryDamp: State
@@ -1809,11 +1764,10 @@ State objects:
 
        adjectives = [[dry, 'dry'], [damp, 'damp'], [wet, 'wet']]
     ;
+```
 
-</div>
-
-The <span class="code">WetDryDamp</span> state will then be applicable
-to any object that defines the <span class="code">wetness</span>
+The `WetDryDamp` state will then be applicable
+to any object that defines the `wetness`
 property, allowing it to be referred to as 'dry', 'damp' or 'wet'
 according to its state.
 
@@ -1823,7 +1777,7 @@ Sometimes, though, you may encounter cases which fall outside what the
 State mechanism can readily do. For example, if a secret panel slides
 open to reveal a passage beyond, you may want both the name and the
 vocabulary referring to the panel to change to 'dark passage' once the
-panel is open (in fact the <span class="code">SecretDoor</span> class
+panel is open (in fact the `SecretDoor` class
 can do this for you, but it does so using one of the mechanisms we're
 about to describe). For such purposes the library provides four methods
 that can be used to adjust the vocabulary (and possibly the name) of an
@@ -1834,9 +1788,9 @@ object at run-time: **addVocabWord(word, matchFlags**),
 **addVocabWord(word, matchFlags**) adds *word* (given as a single-quoted
 string) to the words that can be used to refer to the object as the part
 of speech defined by *matchFlags*, which can be one of
-<span class="code">MatchPrep</span>, <span class="code">MatchAdj</span>.
-<span class="code">MatchNoun</span> or
-<span class="code">MatchPlural</span>.
+`MatchPrep`, `MatchAdj`.
+`MatchNoun` or
+`MatchPlural`.
 
 **removeVocabWord(word, matchFlags?)** removes *word* from the words
 that can be used to refer to the object. If the optional *matchFlags*
@@ -1857,14 +1811,13 @@ vocab string defined on the object to replace the existing vocabulary
 and name, just as if the object were being initialized from scratch.
 Where several changes are needed, this might be rather more
 straightforward than several calls to
-<span class="code">addVocabWord()</span> and
-<span class="code">removeVocabWord()</span> For example, the SecretDoor
+`addVocabWord()` and
+`removeVocabWord()` For example, the SecretDoor
 class uses this method to change the vocabulary that can be used to
 refer to a secret door (something that isn't obviously a door when it's
 closed) according to whether it's open or closed:
 
-<div class="code">
-
+```
     class SecretDoor: Door
         isGoThroughable = isOpen
         isConnectorListed = isOpen   
@@ -1892,8 +1845,7 @@ closed) according to whether it's open or closed:
                 replaceVocab(vocabWhenClosed);
         }
     ;
-
-</div>
+```
 
 ------------------------------------------------------------------------
 

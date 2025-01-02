@@ -72,31 +72,25 @@ symbol name as it appears in the source code. If you use a class name,
 the command matches any object of the class. For example, to handle
 putting any treasure in any container:
 
-<div class="code">
-
+```
     cmd = 'put Treasure in Container'
-
-</div>
+```
 
 You can match multiple objects or classes in a single noun slot (and you
 can freely mix objects and classes). For example, to handle putting any
 treasure or magic item in a container:
 
-<div class="code">
-
+```
     cmd = 'put Treasure|Magical in Container'
-
-</div>
+```
 
 You can't use the '\|' syntax with verbs, because the verb syntax covers
 the entire phrase. You can match multiple verbs by writing out the
 entire phrasing for each verb, separating each phrase with a semicolon:
 
-<div class="code">
-
+```
     cmd = 'take skull; put skull in Thing'
-
-</div>
+```
 
 You can also write a command that matches ANY verb, by using "\*" as the
 verb. You can follow the "\*" with any number of objects; the first is
@@ -119,55 +113,47 @@ along with IActions). It can, however, be made to appear to work with
 **directions** to a limited extent. For example, a Doer defined like
 this will match a GO NORTH command:
 
-<div class="code">
-
+```
     Doer
        cmd = 'go north'
        ...
     ;
-
-</div>
+```
 
 We can also define a Doer that will match an attempt to move in one of
 several directions, for example:
 
-<div class="code">
-
+```
     Doer
        cmd = 'go north|south'
        ...
     ;
-
-</div>
+```
 
 This will match both GO NORTH or GO SOUTH (or just N or S for that
 matter). But the way it works isn't quite the way it works with commands
 referring to physical objects, like the TAKE SKULL example. If you
 defined a Doer like this:
 
-<div class="code">
-
+```
     Doer
        cmd = 'go xxx'
        ...
     ;
-
-</div>
+```
 
 You'd find it would match an attempt to move in any direction (whatever
 xxx was, provided it wasn't the name of a direction). In the case of a
 movement command we could work round this by defining a **direction**
 property on the Doer:
 
-<div class="code">
-
+```
     Doer 'go dir'
       direction = northDir
       ...
     ;
      
-
-</div>
+```
 
 It would, however, be simpler to define the action as 'go north' to
 achieve the same effect. Note the use of the
@@ -188,12 +174,11 @@ indirect object, and accessory object names in a command string, and its
 parser doesn't treat a direction as any of these. The library conceals
 this limitation from game authors by scanning the cmd string of every
 Doer and, if it finds the name of a direction (e.g. 'north') it adds the
-corresponding direction object (e.g. <span class="code">northDir</span>)
-to the Doer's <span class="code">direction</span> property. So, for
+corresponding direction object (e.g. `northDir`)
+to the Doer's `direction` property. So, for
 example we could do the following:
 
-<div class="code">
-
+```
     Doer 'go port|starboard|forward|aft'
         exec(curCmd)
         {
@@ -208,8 +193,7 @@ example we could do the following:
         }
         
     ;
-
-</div>
+```
 
 This would block any command to go Port, Starboard, Forward or Aft with
 the message shown (rather than printing the normal "You can't go that
@@ -219,10 +203,9 @@ Directions might be usable in a different room).
 Note that if we want to test for the direction associated with the
 player's command in the exec() method of a Doer in any other way, we
 need to test the value of the current command's
-<span class="code">verbProd.dirMatch.dir</span> property, for example:
+`verbProd.dirMatch.dir` property, for example:
 
-<div class="code">
-
+```
     Doer 'go xxx'
         exec(curCmd)
         {
@@ -240,8 +223,7 @@ need to test the value of the current command's
      
      
      
-
-</div>
+```
 
 Incidentally, Doers work even less well at matching commands involving
 literals or topics (conversational commands and the like), but this is
@@ -253,8 +235,7 @@ counterintuitive: you have to use
 <span id="resolvedtop_idx">ResolvedTopic</span> as the name of the
 object or class to be matched. For example this works:
 
-<div class="code">
-
+```
     Doer 'think about ResolvedTopic'
         execAction(c)
         {
@@ -264,13 +245,11 @@ object or class to be matched. For example this works:
                 inherited(c);
         }    
     ;
-
-</div>
+```
 
 Or you could do it this way:
 
-<div class="code">
-
+```
     Doer 'think about ResolvedTopic'
         execAction(c)
         {
@@ -278,14 +257,12 @@ Or you could do it this way:
         }
         when = gCommand.dobj.name == 'relativity'
     ;
-
-</div>
+```
 
 For a LiteralAction you can do a similar trick using
 <span id="literalobj_idx">LiteralObject</span>:
 
-<div class="code">
-
+```
     Doer 'write LiteralObject'
         execAction(c)
         {
@@ -293,8 +270,7 @@ For a LiteralAction you can do a similar trick using
             to hand. ";
         }
     ;
-
-</div>
+```
 
   
 <span id="matching"></span>
@@ -329,8 +305,7 @@ command during combat. Here's one way we could do it with a Doer: first
 define a scene during which the combat takes place then define the
 corresponding Doer:
 
-<div class="code">
-
+```
     Doer 'undo'
         exec(curCmd)
         {
@@ -339,8 +314,7 @@ corresponding Doer:
         
         during = combatScene
     ;
-
-</div>
+```
 
 Note that we don't need to use the abort macro in this case (though
 doing so would be harmless) since Undo, being a SystemAction, wouldn't
@@ -413,13 +387,13 @@ The two optional parameters are the new direct and indirect objects of
 the command which, if they are included, must be called in the order
 direct object, indirect object.To give some examples:
 
-- <span class="code">doInstead(Jump);</span> makes the player character
+- `doInstead(Jump);` makes the player character
   jump.
-- <span class="code">doInstead(Take, redBall);</span> makes the player
+- `doInstead(Take, redBall);` makes the player
   character take the red ball.
-- <span class="code">doInstead(PutIn, redBall, blueBox);</span> makes
+- `doInstead(PutIn, redBall, blueBox);` makes
   the player character put the red ball in the blue box.
-- <span class="code">doInstead(PutIn, gDobj, blueBox); </span> makes the
+- `doInstead(PutIn, gDobj, blueBox); ` makes the
   player character put the original direct object of the command in the
   blue box.
 
@@ -429,16 +403,14 @@ interpretation. For example, whereas GO THROUGH X normally means passing
 through X or walking through X, a command like GO THROUGH JUNK could be
 a way of saying SEARCH JUNK, so we might define a Doer like this:
 
-<div class="code">
-
+```
     Doer 'go through junk'   
         exec(curCmd)
         {
             doInstead(LookIn, gDobj);
         }
     ;
-
-</div>
+```
 
 The one slight problem with this is that this Doer will match any
 wording of the GO THROUGH action, including WALK THROUGH JUNK, for
@@ -449,8 +421,7 @@ command (the command verb) is strictly identical to the first word of
 the Doer's cmd property. So in this case do define the Doer to match GO
 THROUGH JUNK but not WALK THROUGH JUNK we'd write:
 
-<div class="code">
-
+```
     Doer 'go through junk'    
         strict = true
         
@@ -459,15 +430,13 @@ THROUGH JUNK but not WALK THROUGH JUNK we'd write:
             doInstead(LookIn, gDobj);
         }
     ;
-
-</div>
+```
 
 For a travel command, use the special **Go** action followed by the
 direction object corresponding to the direction you want the player
 character to go in; for example:
 
-<div class="code">
-
+```
      Doer 'jump'
         execAction(curCmd)
         {       
@@ -477,13 +446,12 @@ character to go in; for example:
         where = cliffEdge
      ;
      
-
-</div>
+```
 
 If you prefer, you can use the macros **goInstead()** and **goNested()**
-instead. For example, <span class="code">goInstead(north)</span> would
-be exactly equivalent to <span class="code">doInstead(Go,
-northDir)</span>.
+instead. For example, `goInstead(north)` would
+be exactly equivalent to `doInstead(Go,
+northDir)`.
 
 The kind of situation where one might want to use a Doer to carry out
 the full processing of a command rather than simply redirecting it to
@@ -493,8 +461,7 @@ that inserting the blood-diamond into the crown of the demon king
 results in the player character being instantly transported into the
 nether regions; we might use a Doer like this:
 
-<div class="code">
-
+```
      Doer 'put bloodDiamond in crown'
         execAction(c)
         {        
@@ -521,8 +488,7 @@ nether regions; we might use a Doer like this:
         handleAction = true
      ;
      
-
-</div>
+```
 
 <span id="handleact"></span>
 
@@ -534,62 +500,62 @@ the normal beforeAction notifications are sent. Failure to do so may
 lead to puzzling bugs later when we find that various beforeAction(),
 roomBeforeAction() etc. methods defined elsewhere are not working as we
 expect. We can take care of this by setting the
-<span class="code">handleAction</span> property of the Doer, which will
+`handleAction` property of the Doer, which will
 then call the appopriate beforeAction() handling for us. To trigger
-beforeAction handling <span class="code">handleAction</span> property
-should either be set to <span class="code">true</span> or to the name of
-an Action object. If it is set to <span class="code">true</span> the
+beforeAction handling `handleAction` property
+should either be set to `true` or to the name of
+an Action object. If it is set to `true` the
 beforeAction routines of the action we are notionally handling will be
 carried out (in the above example, those for the PutIn action). If we
 set it to some other action, such as Travel (since in this example we
 are sending the player character on a journey to hell), the beforeAction
 handlings for that action will be executed instead. The main difference
-is in what will show up as <span class="code">gAction</span> (i.e. the
+is in what will show up as `gAction` (i.e. the
 current action) if we want to test for it in the beforeAction() and/or
 roomBeforeAction() methods of any objects and/or rooms.
 
 That said, there are two cases where it makes sense to leave
-<span class="code">handleAction</span> at its default value of
-<span class="code">nil</span>. The first is where you want the Doer to
+`handleAction` at its default value of
+`nil`. The first is where you want the Doer to
 stop the action in its tracks and do nothing (such as refusing to go to
 starboard when the attempt to do so doesn't even make sense), since in
 such a case no action is actually carried out and you don't want any
 beforeAction notifications to occur. The second is when you use
-<span class="code">doInstead()</span> to carry out a new action, in
+`doInstead()` to carry out a new action, in
 which case that new action will handle its own beforeAction
 notifications without further ado.
 
-Note that you can also call <span class="code">doInstead()</span> on a
+Note that you can also call `doInstead()` on a
 Thing or an Action, using precisely the same syntax, and with broadly
 similar effects (broadly similar in that when you call this method on an
 Action or Thing you're intervening at a later stage of the
 action-processing cycle, so the effect isn't quite the same). Thing and
-Action also define a <span class="code">doNested()</span> method for
+Action also define a `doNested()` method for
 when you want to perform one action as part of another instead of
 replacing one action with another. It's also perfectly okay to call
-<span class="code">doNested()</span> on a Doer, but in that case it
-won't do anything different from <span class="code">doInstead()</span>,
+`doNested()` on a Doer, but in that case it
+won't do anything different from `doInstead()`,
 so there's little point.
 
 If you're wondering which to use, then as a rule of thumb
-<span class="code">Doer.doInstead()</span> should be used to handle
+`Doer.doInstead()` should be used to handle
 special cases in your game code, whereas calling
-<span class="code">doInstead()</span> or
-<span class="code">doNested()</span> in the
-<span class="code">execAction()</span> method of an Action or an action
+`doInstead()` or
+`doNested()` in the
+`execAction()` method of an Action or an action
 method on a Thing (or, for that matter, using the lower-level functions
-<span class="code">replaceAction()</span> or
-<span class="code">nestedAction()</span>) is best left either to general
+`replaceAction()` or
+`nestedAction()`) is best left either to general
 case handling of a new (user defined) action or when
-<span class="code">Doer.doInstead()</span> simply won't do the job (for
+`Doer.doInstead()` simply won't do the job (for
 example because you need to execute a nested action as part of another
 action, or you need to make another actor do something via
-<span class="code">nestedActorAction()</span> or
-<span class="code">replaceActorAction()</span>, but such cases are
+`nestedActorAction()` or
+`replaceActorAction()`, but such cases are
 likely to be rare). The technical difference is that calling
-<span class="code">Doer.doInstead()</span> calls the exec() method of
+`Doer.doInstead()` calls the exec() method of
 the new action (and so gives you the entire action cycle) whereas all
-the other methods call the <span class="code">execAction()</span> method
+the other methods call the `execAction()` method
 of the new action (and so skip part of the action cycle).
 
 Under what other circumstances is it better to define a Doer rather than
@@ -604,14 +570,14 @@ seems likely that a Doer may be the better choice include:
 2.  Transforming one action into another action.
 3.  Doing something different under special circumstances, which can be
     readily specified using the where, when and/or during properties of
-    a Doer (but remember to set <span class="code">handleAction</span>
+    a Doer (but remember to set `handleAction`
     to true).
 4.  Implementing special handling of a TIAction when what should happen
     depends on the particular objects involved, particularly when it
     depends on particular pairings of direct and indirect objects, which
     can become quite awkward to deal with using the methods described
     under [Action Results](actres.html) (but remember to set
-    <span class="code">handleAction</span> to true).
+    `handleAction` to true).
 
 Of these, 1 and 2 are the safest. In cases 3 and 4 you need to remember
 to set the Doer's **handleAction** property to true, as shown above, or
@@ -627,11 +593,11 @@ useful, but they are not a magic bullet for every kind of complex
 problem. Rules are also smarter about sorting themselves in order of
 specificity.
 
-The effect of setting <span class="code">handleAction</span> to true is
+The effect of setting `handleAction` to true is
 to ensure that the appropriate beforeAction notifications are sent
 before the execAction() method is executed, thus, for example, allowing
-a relevant <span class="code">beforeAction()</span> or
-<span class="code">roomBeforeAction()</span> method to veto the action.
+a relevant `beforeAction()` or
+`roomBeforeAction()` method to veto the action.
 It is good practice to do this unless you are absolutely certain you
 want to bypass the beforeAction notifications, since otherwise you may
 be left wondering why beforeAction notifications aren't working as you
@@ -640,8 +606,7 @@ expect.
 The effect may be illustrated by means of the following examples.
 Suppose on the current room you have defined:
 
-<div class="code">
-
+```
      roomBeforeAction()
         {
             if(gActionIs(Wait))
@@ -651,13 +616,11 @@ Suppose on the current room you have defined:
             }
         } 
      
-
-</div>
+```
 
 And elsewhere in you code you have the following Doer:
 
-<div class="code">
-
+```
      Doer 'wait'
         execAction(c)
         {
@@ -665,16 +628,14 @@ And elsewhere in you code you have the following Doer:
         }   
     ; 
      
-
-</div>
+```
 
 Then the response to WAIT would be "You wait patiently, but nothing much
 happens. " Since the beforeAction notifications haven't been sent,
-<span class="code">roomBeforeAction()</span> never gets a look-in. But
+`roomBeforeAction()` never gets a look-in. But
 if instead you defined the Doer thus:
 
-<div class="code">
-
+```
      Doer 'wait'
         execAction(c)
         {
@@ -684,11 +645,10 @@ if instead you defined the Doer thus:
         handleAction = true // NOTE THIS ADDITION
     ; 
      
-
-</div>
+```
 
 Then the response to WAIT would be "There's no time to hang around here!
-" In this case the <span class="code">roomBeforeAction()</span> method
+" In this case the `roomBeforeAction()` method
 would intercept the action, as you would normally expect.
 
 <span id="enterdoer"></span>
@@ -713,8 +673,7 @@ want to allow the player character to walk into the copse without using
 any vehicle), and is almost certainly much more easily handled with a
 Doer:
 
-<div class="code">
-
+```
     Doer 'enter copse'
         execAction(c)
         {
@@ -727,8 +686,7 @@ Doer:
         when = gPlayerChar.isIn(bike);    
     ;
      
-
-</div>
+```
 
   
 <span id="doerpriority"></span>

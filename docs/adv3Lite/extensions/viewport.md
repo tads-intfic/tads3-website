@@ -44,14 +44,14 @@ properties:
 - *Classes*: **Viewport** and **SwitchableViewport**.
 - *Objects*: **QViewport**.
 - *Additional properties/methods on Room*:
-  <span class="code">roomRemoteDesc(pov)</span>,
-  <span class="code">roomsViewed</span>.
+  `roomRemoteDesc(pov)`,
+  `roomsViewed`.
 - *Properties/methods on Viewport*:
-  <span class="code">describeVisibleRooms()</span>,
-  <span class="code">visibleRooms</span>,
-  <span class="code">lookThroughToView</span>,
-  <span class="code">examineToView</span>,
-  <span class="code">isViewing</span>.
+  `describeVisibleRooms()`,
+  `visibleRooms`,
+  `lookThroughToView`,
+  `examineToView`,
+  `isViewing`.
 
 <span id="usage"></span>
 
@@ -61,16 +61,16 @@ Include the viewport.t file after the library files but before your game
 source files. Make sure that senseRegion.t is also included in the
 build.
 
-<span class="code">Viewport</span> and
-<span class="code">SwitchableViewport</span> are mix-in classes that can
+`Viewport` and
+`SwitchableViewport` are mix-in classes that can
 be used to define objects such as windows and CCTV screens that can be
 used to view remote locations. The only difference between them is that
-a <span class="code">SwitchableViewport</span> can be turned on and off,
+a `SwitchableViewport` can be turned on and off,
 so that the remote room and its contents can only be viewed while it's
 on.
 
-Looking through or at a <span class="code">Viewport</span>, or looking
-at a <span class="code">SwitchableViewport</span> displays a description
+Looking through or at a `Viewport`, or looking
+at a `SwitchableViewport` displays a description
 of the room it provides a view of, including any listable contents (for
 which isVisibleFrom(pov) is true when *pov* is the actor doing the
 looking). Once the player character has used the Viewport, the player
@@ -105,22 +105,22 @@ called when EXAMINING the Viewport.
 
 The **isViewing** property defines whether the Viewport currently
 affords a view of the rooms in its visibleRooms list. On Viewport
-<span class="code">isViewing</span> is true by default, whereas on
-SwitchableViewport <span class="code">isViewing</span> follows the value
-of <span class="code">IsOn</span>.
+`isViewing` is true by default, whereas on
+SwitchableViewport `isViewing` follows the value
+of `IsOn`.
 
 The **roomsViewed** property of a Room keeps track of which rooms have
 been viewed via Viewports from within the Room, so that their contents
 can subsequently be referred to in commands. The
-<span class="code">roomsViewed</span> property is reset to an empty list
+`roomsViewed` property is reset to an empty list
 when the player character leaves the room, on the basis that on
 returning the pc would need to use the Viewport again in order to become
 aware of what it shows. Switching off a SwitchableViewport also removes
-its list of <span class="code">visibleRooms</span> from its enclosing
-room's <span class="code">roomsViewed</span> list, since they're no
+its list of `visibleRooms` from its enclosing
+room's `roomsViewed` list, since they're no
 longer visible. If anything else affects what can be seen via a
 Viewport, you may need to adjust the room's
-<span class="code">roomsViewed</span> list in your own code.
+`roomsViewed` list in your own code.
 
 Note that you wouldn't normally use a SenseRegion as well to provide a
 sensory connection between the room a Viewport's in and the room it
@@ -129,21 +129,18 @@ overlooks.
 To define a window the player character can look through you can just do
 this:
 
-<div class="code">
-
+```
      + window: Viewport, Fixture 'window'   
         isOpenable = true   
         visibleRooms = [alley]       
     ;
      
-
-</div>
+```
 
 Then you'd also want to define an appropriate roomRemoteDesc() on the
 alley:
 
-<div class="code">
-
+```
      alley: Room 'Alley'
         "A narrow east/west alley, ...<.p>"
           
@@ -154,14 +151,12 @@ alley:
     ;
      
      
-
-</div>
+```
 
 To define a CCTV monitor that provides a view into a cell, in outline we
 could do something like this:
 
-<div class="code">
-
+```
      + tv: SwitchableViewport, Heavy 'cctv monitor'
         specialDesc = "A cctv monitor lurks in the corner. "
         visibleRooms = [cell]
@@ -185,8 +180,7 @@ could do something like this:
         sightSize = large
     ;
      
-
-</div>
+```
 
 <span id="setrooms"></span>
 
@@ -196,10 +190,10 @@ different cameras, or the view from a train window may change as the
 train progresses down the track. You can do this by calling the
 **setRooms(lst)** method of a Viewport, where *lst* is the list of rooms
 (or just one individual room) that you want the Viewport to overlook
-from now on. Using <span class="code">setRooms()</span> rather than just
-changing the Viewport's <span class="code">visibleRooms</span> property
+from now on. Using `setRooms()` rather than just
+changing the Viewport's `visibleRooms` property
 directly ensures that the appropriate adjustments are also made to the
-enclosing rooms's <span class="code">roomViewed</span> property at the
+enclosing rooms's `roomViewed` property at the
 same time.
 
 This covers most of what you need to know to use this extension. For

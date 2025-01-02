@@ -118,8 +118,8 @@ t3make ignores comment lines.
 
 **Quoted elements:** if a file name contains a space or "#", enclose the
 file name in double quotes. If the name contains a double quote mark,
-stutter (double) it: for <span class="code">my "file".txt</span>, write
-<span class="code">"my ""file"".txt"</span>.
+stutter (double) it: for `my "file".txt`, write
+`"my ""file"".txt"`.
 
 **Portable path notation:** filenames that contain directory path
 elements should be expressed in Unix-style notation, with "/" characters
@@ -149,8 +149,7 @@ specify the exact name you want.
 
 Here's a sample project file.
 
-<div class="code">
-
+```
     #
     # project file for calc
     #
@@ -161,8 +160,7 @@ Here's a sample project file.
     # source files
     -file "calc sources/calc"
     -file "tok sources/tok"
-
-</div>
+```
 
 ### Using a project file
 
@@ -590,16 +588,15 @@ item can be one of the following:
   resource name that's different from the original filename. *alias*
   must be given in URL notation, **not** local path conventions. For
   example:
-  <div class="code">
-
+  ```
          graphics\title.jpg=pics/main.jpg
 
   </div>
 
   That bundles the local file called
-  <span class="code">graphics\title.jpg</span>, but names the resource
-  <span class="code">pics/main.jpg</span>. This overrides the default
-  resource name (<span class="code">graphics/title.jpg</span>) that
+  `graphics\title.jpg`, but names the resource
+  `pics/main.jpg`. This overrides the default
+  resource name (`graphics/title.jpg`) that
   would have been used if the alias hadn't been specified.
 - *folderName* - this adds all of the files contained in the given
   folder/directory. Note that the syntax is exactly the same as for an
@@ -689,8 +686,7 @@ definition has this format:
 <div class="syntax">
 
     keyword : value
-
-</div>
+```
 
 The *keyword* is a word specifying what kind of information the line
 contains, and the *value* is the text of the information defined. The
@@ -795,22 +791,18 @@ To substitute the value of a preprocessor symbol, use the format
 substitute. For example, to substitute the value of the LANGUAGE
 variable, put "\$(LANGUAGE)" where you want the value to be substituted:
 
-<div class="code">
-
+```
     library: $(LANGUAGE)/$(LANGUAGE).tl
-
-</div>
+```
 
 In this example, the LANGUAGE variable's value is substituted into this
 line of text twice. If the command line contained the option "-D
 LANGUAGE=en_us", then the compiler would read the line above as though
 it were written like this:
 
-<div class="code">
-
+```
     library: en_us/en_us.tl
-
-</div>
+```
 
 The compiler substitutes all "\$(NAME)" sequences before interpreting
 each line of text from the library file.
@@ -832,16 +824,14 @@ file but isn't defined with a -D option.
 
 Here's an example of a library file:
 
-<div class="code">
-
+```
     name: Calculator Library
     source: display
     source: keypad
     source: arith
     source: sci
     source: trig
-
-</div>
+```
 
 This library has the display name "Calculator Library", and includes
 five source files: display.t, keypad.t, arith.t, sci.t, and trig.t.
@@ -898,15 +888,13 @@ prefix, and place a "/" after the sub-library name, then add the
 filename as it appears in the sub-library. For example, suppose that
 another library, desk.tl, includes the calc.tl library as a sub-library:
 
-<div class="code">
-
+```
     # desk accessory library
     name: Desk Accessory Library
     library: pen
     library: pencil
     library: calc
-
-</div>
+```
 
 Now, suppose you compile a program including the desk.tl library, but
 you want to exclude the trig.t module included in the calc.tl library.

@@ -95,13 +95,13 @@ there is no need to keep most pairs of adjacent glyphs together on one
 line.
 
 The wrapping mode is selected using the
-<span class="code">\<WRAP\></span> tag (which is a TADS extension, not a
-standard HTML tag). <span class="code">\<WRAP WORD\></span> sets
-word-wrapping mode, and <span class="code">\<WRAP CHAR\></span> sets
+`\<WRAP\>` tag (which is a TADS extension, not a
+standard HTML tag). `\<WRAP WORD\>` sets
+word-wrapping mode, and `\<WRAP CHAR\>` sets
 character-wrapping mode. The interpreter always starts in word-wrapping
 mode. This tag is not a container, but simply an in-line mode switch, so
-there is no <span class="code">\</WRAP\></span> tag; to change out of
-the current mode, simply use another <span class="code">\<WRAP\></span>
+there is no `\</WRAP\>` tag; to change out of
+the current mode, simply use another `\<WRAP\>`
 tag with the new mode.
 
 ### Overriding the Default Breaking Rules
@@ -132,7 +132,7 @@ non-breaking space." This is a special character, defined in the Unicode
 standard, that can be written in TADS as "\uFEFF" (that "\u" is the TADS
 way of entering a specific Unicode character code as a hexadecimal
 number); it can also be written with an HTML markup,
-<span class="code">&zwnbsp;</span>. It's a "zero-width" character, which
+`&zwnbsp;`. It's a "zero-width" character, which
 means that it doesn't show up on the display: it's simply invisible as
 far as the user is concerned. The "non-breaking" part is the special
 feature: this tells the interpreter that it cannot break the line here,
@@ -157,7 +157,7 @@ The other main control is the "zero-width space," and it does
 essentially the opposite of the zero-width non-breaking space: this
 character enables a line break where the rules would otherwise not allow
 it. This is another standard Unicode character, written in TADS as
-"\u200B" or with the HTML markup <span class="code">&zwsp;</span>. Like
+"\u200B" or with the HTML markup `&zwsp;`. Like
 \uFEFF, this is a zero-width character, so it's invisible on the
 display. Otherwise, though, it counts as a space-which means that the
 formatter, even in word-wrap mode, is free to break the line between the
@@ -177,7 +177,7 @@ necessary.
 
 In addition to the zero-width non-breaking space, Unicode defines a
 regular-width non-breaking space. This is written as "\u00A0", or with
-the HTML markup <span class="code">&nbsp;</span>. This type of space
+the HTML markup `&nbsp;`. This type of space
 looks exactly the same as an ordinary space (the kind you get by
 pressing the space bar on the keyboard), but it behaves as though it
 were a non-space character: the formatter never breaks a line at a
@@ -201,7 +201,7 @@ Another special control, the "soft hyphen," lets the game tell the
 interpreter that it can break a word with hyphenation at a particular
 point, but that it doesn't have to. The soft hyphen is another standard
 Unicode character, "\u00AD", or equivalently in HTML,
-<span class="code">&shy;</span>.
+`&shy;`.
 
 Soft hyphens are normally invisible, so you can freely insert them into
 words without adding visual clutter. When the formatter decides to take
@@ -289,28 +289,28 @@ window's prevailing background color.)
 
 The character-mode text-only interpreters and the multimedia
 interpreters provide support for the HTML 3.0
-<span class="code">\<TAB\></span> tag. This can be used for fairly
+`\<TAB\>` tag. This can be used for fairly
 complex alignment effects, including centering text or aligning it at
 the right edge of the window, and simple data tables. Refer to the HTML
 TADS documentation for full details on how to use
-<span class="code">\<TAB\></span>.
+`\<TAB\>`.
 
-Since the <span class="code">\<TAB\></span> tag is usable on both
+Since the `\<TAB\>` tag is usable on both
 character-mode and multimedia interpreters, it's usually preferable to
-use <span class="code">\<TAB\></span> instead of
-<span class="code">\<TABLE\></span> for simple alignment.
-<span class="code">\<TABLE\></span> is considerably more powerful, since
+use `\<TAB\>` instead of
+`\<TABLE\>` for simple alignment.
+`\<TABLE\>` is considerably more powerful, since
 it provides both horizontal and vertical alignment capabilities, and
 does a great deal of complex layout work automatically; but
-<span class="code">\<TABLE\></span> is only available on the multimedia
+`\<TABLE\>` is only available on the multimedia
 interpreters, so using it can hurt a game's usability on other
-interpreters. If you must use <span class="code">\<TABLE\></span> (and
+interpreters. If you must use `\<TABLE\>` (and
 there often is no substitute), you should consider providing an
 alternative format for character-mode platforms.
 
 The GUI text-only interpreters do not support either
-<span class="code">\<TAB\></span> or
-<span class="code">\<TABLE\></span>; it's not possible to create any
+`\<TAB\>` or
+`\<TABLE\>`; it's not possible to create any
 sort of text alignment effects on these interpreters. This is due to the
 use of proportional type without full HTML support; eventually, these
 interpreters should be superseded by full HTML versions, so this should
@@ -377,7 +377,7 @@ en space
 
 \u2002
 
-<span class="code">&ensp;</span>
+`&ensp;`
 
 Half an em space
 
@@ -390,7 +390,7 @@ Em space
 
 \u2003
 
-<span class="code">&emsp;</span>
+`&emsp;`
 
 Depends on the font; usually equal to the font's point size in width
 
@@ -400,7 +400,7 @@ Three-per-em space
 
 \u2004
 
-<span class="code">&tpmsp;</span>
+`&tpmsp;`
 
 One-third the width of an em space
 
@@ -410,7 +410,7 @@ Four-per-em space
 
 \u2005
 
-<span class="code">&fpmsp;</span>
+`&fpmsp;`
 
 A quarter of an em space
 
@@ -422,7 +422,7 @@ Six-per-em space
 
 \u2006
 
-<span class="code">&spmsp;</span>
+`&spmsp;`
 
 One-sixth of an em space
 
@@ -432,7 +432,7 @@ Figure space
 
 \u2007
 
-<span class="code">&figsp;</span>
+`&figsp;`
 
 Equal in width to a digit zero ("0")
 
@@ -442,7 +442,7 @@ Punctuation space
 
 \u2008
 
-<span class="code">&puncsp;</span>
+`&puncsp;`
 
 Equal in width to a period (".")
 
@@ -452,7 +452,7 @@ Thin space
 
 \u2009
 
-<span class="code">&thinsp;</span>
+`&thinsp;`
 
 One-fifth of an em space
 
@@ -462,7 +462,7 @@ Hair space
 
 \u200A
 
-<span class="code">&hairsp;</span>
+`&hairsp;`
 
 One-eighth of an em space
 
@@ -475,7 +475,7 @@ Quoted space
 
 "\\ "
 
-<span class="code"></span>
+``
 
 Same as ordinary space
 
@@ -542,7 +542,7 @@ The interpreter classes are:
   - The GUI text-only interpreters don't support the markup for text
     alignment.
   - They don't support any of the line-breaking control sequences or
-    <span class="code">\<WRAP CHAR\></span> mode.
+    `\<WRAP CHAR\>` mode.
   - They don't support the typographical spaces.
   - None of these interpreters currently support the banner API (unlike
     the previous items, it's technically possible for these interpreters
@@ -583,10 +583,10 @@ with some added text that doesn't appear when the game is played with a
 multimedia interpreter.
 
 To determine the interpreter class, a game can call
-<span class="code">systemInfo(SysInfoInterpClass)</span>. This returns
-<span class="code">SysInfoIClassText</span> for a character-mode
-text-only system, <span class="code">SysInfoIClassTextGUI</span> for a
-GUI text-only system, and <span class="code">SysInfoIClassHTML</span>
+`systemInfo(SysInfoInterpClass)`. This returns
+`SysInfoIClassText` for a character-mode
+text-only system, `SysInfoIClassTextGUI` for a
+GUI text-only system, and `SysInfoIClassHTML`
 for a full multimedia interpreter. (See the [tads-io](tadsio.html)
 function set for details.)
 
@@ -599,41 +599,37 @@ substitution parameters. If you're writing a message that plugs in a
 value at the start of a sentence, for example, you'll want to make sure
 the first character of the substituted text is capitalized.
 
-The <span class="code">\\</span> sequence is the "caps flag." When you
+The `\\` sequence is the "caps flag." When you
 display this in a text window, it causes the next character displayed to
 be converted to upper-case.
 
-The <span class="code">\v</span> sequence is the "no-caps flag." When
+The `\v` sequence is the "no-caps flag." When
 you display this in a text window, it causes the next character
 displayed to be converted to lower-case.
 
 The output formatter tries to handle the "caps" and "no-caps" flags
 smoothly when combined with HTML markups. In particular, the output
-formatter watches for <span class="code">\<...\></span> and
-<span class="code">&...;</span> sequences in the output stream, and wait
+formatter watches for `\<...\>` and
+`&...;` sequences in the output stream, and wait
 to apply a caps or no-caps flag until *after* any markups have been
 passed. For example, if you display this:
 
-<div class="code">
-
+```
     "\^<a href='testing'><i>hello</i></a>\n";
-
-</div>
+```
 
 then the effect of the caps flag on the output stream will be as
 follows:
 
-<div class="code">
-
+```
     <a href='testing'><i>Hello</i></a>\n
-
-</div>
+```
 
 Note how the output formatter waits to apply the caps flag until after
 all of the intervening markups. This is desirable, since the caps flag
 would have effectively been "lost" if it had applied to the first
 alphabetic character after the flag - that would have been the "a" in
-the <span class="code">\<a\></span> tag, and there would have been no
+the `\<a\>` tag, and there would have been no
 point in capitalizing that character, as it's just the name of a tag.
 
 This behavior ensures that caps and nocaps flags won't be lost if the

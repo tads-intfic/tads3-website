@@ -851,8 +851,7 @@ Once you have made a decision about the scope and location of the
 appropriate directives, you can add the following to the respective
 configuration file:
 
-<div class="code">
-
+```
     # TADS 2 Game
     AddType application/x-tads .gam
     # TADS 2 Saved Game
@@ -875,8 +874,7 @@ configuration file:
     AddCharset us-ascii .tl
     # TADS Source
     AddType text/plain .t .h
-
-</div>
+```
 
 Additionally, in case all your [TADS Source](#t) files are encoded in a
 single charset, e.g. `us-ascii`, you might want to add a directive like

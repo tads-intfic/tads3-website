@@ -67,21 +67,20 @@ if you do switch states the rule is this: both types of greeting
 TopicEntry must be located either directly in the Actor or in the
 ActorState the actor is in at the point at which the Hello or Goodbye
 occurs. This means that if there is a switch of state, the
-<span class="code">HelloTopic</span> should be located in the ActorState
+`HelloTopic` should be located in the ActorState
 the actor is in immediately prior to the conversation, while the
-<span class="code">ByeTopic</span> should be in the state the actor is
+`ByeTopic` should be in the state the actor is
 in while conversing. To make a HelloTopic or ByeTopic switch states you
 define its **changeToState** property to point to the ActorState you
 want it to change to.
 
 To see how this works in practice, let's add a HelloTopic that switches
-Angela to the <span class="code">angelaTalkingState</span> when the
+Angela to the `angelaTalkingState` when the
 player character starts addressing her on the Jetway. The following
 definition should be placed immediately after that of the
-<span class="code">angelaAssistingState</span> object:
+`angelaAssistingState` object:
 
-<div class="code">
-
+```
     ++ HelloTopic, StopEventList
         [
             '<q>Excuse me, might I have a word?</q> you say.\b
@@ -95,8 +94,7 @@ definition should be placed immediately after that of the
         
         changeToState = angelaTalkingState
     ;
-
-</div>
+```
 
 Here we've combined the HelloTopic with a StopEventList to vary the
 greeting used on the first and subsequent occasions. Note that this
@@ -113,15 +111,14 @@ could define a separate **ImpHelloTopic** (implicit HelloTopic) to deal
 with it, but we hardly need one here.
 
 To end the conversation we can define a
-<span class="code">ByeTopic</span> in much the same way, except that the
+`ByeTopic` in much the same way, except that the
 ByeTopic needs to be located in the
-<span class="code">angelaTalkingState</span> and to define
-<span class="code">changeToState = angelaAssistingState</span> to ensure
+`angelaTalkingState` and to define
+`changeToState = angelaAssistingState` to ensure
 that Angela switches back to her former ActorState at the end of the
 conversation:
 
-<div class="code">
-
+```
     ++ ByeTopic
         "<q>Well, cheerio for now then,</q> you say.\b
         <q>Goodbye,</q> she replies with a brisk nod, before turning to yet another
@@ -129,8 +126,7 @@ conversation:
         
         changeToState = angelaAssistingState
     ;
-
-</div>
+```
 
 As we've defined it this ByeTopic will be triggered however the player
 character ends the conversation, whether via an explicit BYE command or
@@ -138,8 +134,7 @@ simply if the player character walks away. It may be that we'd rather
 the latter case was handled a bit differently, in which case we can
 define a separate LeaveByeTopic to handle it:
 
-<div class="code">
-
+```
     ++ LeaveByeTopic
         "{The subj angela} looks momentarily taken aback at your somewhat abrupt
         departure, but quickly turns back to the other passengers clamouring for
@@ -147,8 +142,7 @@ define a separate LeaveByeTopic to handle it:
         
         changeToState = angelaAssistingState
     ;
-
-</div>
+```
 
 That covers most of what you need to know about Greeting Protocols in
 adv3Lite, but for the full story you can consult the section on [Hello

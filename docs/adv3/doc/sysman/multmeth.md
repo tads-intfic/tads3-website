@@ -102,8 +102,7 @@ happens dynamically at run-time.
 
 Consider the following C++ code:
 
-<div class="code">
-
+```
     #include <stdio.h>
 
     class A { };
@@ -117,8 +116,7 @@ Consider the following C++ code:
         A *a = new B();
         foo(a);
     }
-
-</div>
+```
 
 If you run this code, you'll find that the function invoked is foo(A\*).
 At first glance, this might look wrong - the object we're passing to
@@ -195,36 +193,32 @@ function to be a multi-method, because you can't define the same name as
 both a multi-method and an ordinary function - a given name has to be
 exclusively one or the other. In other words, this is illegal:
 
-<div class="code">
-
+```
     foo(Thing x) { ... }
     foo(x) { ... }
-
-</div>
+```
 
 This is illegal because you've defined foo() as both a multi-method (the
 first line) and as an ordinary function (the second line).
 
-This is where the <span class="code">multimethod</span> qualifier shown
+This is where the `multimethod` qualifier shown
 in the syntax diagram comes in. This qualifier tells the compiler that,
 whatever it might infer from the presence or absence of parameter types,
 you intend to define a multi-method rather than an ordinary function. To
 fix the code above, then, we'd change the second line to this:
 
-<div class="code">
-
+```
     foo(x) multimethod { ... }
-
-</div>
+```
 
 Now the two foo's can happily coexist, since they're both multi-methods.
 
 Note that when at least one parameter has a type, the
-<span class="code">multimethod</span> qualifier isn't needed, since a
+`multimethod` qualifier isn't needed, since a
 function is automatically a multi-method if it has any typed parameters.
-However, the <span class="code">multimethod</span> qualifier does no
+However, the `multimethod` qualifier does no
 harm in these cases, so you're free to include it if you prefer. Note
-also that <span class="code">multimethod</span>'s opposite number
+also that `multimethod`'s opposite number
 doesn't exist - there's no qualifier that says "this is *not* a
 multi-method." This is because there's no situation where it would be
 useful; when there are no typed parameters, "not a multi-method" is the
@@ -236,14 +230,12 @@ specifiers aren't allowed there.
 
 Here's an example of defining a multi-method:
 
-<div class="code">
-
+```
     putIn(Thing obj, Container cont)
     {
        // ...
     }
-
-</div>
+```
 
 This creates a function called putIn() that takes two parameters: the
 first is a Thing, and the second is a Container. As with an ordinary
@@ -265,14 +257,12 @@ the same name, as long as each new version can be distinguished from the
 others by its parameter types. For example, we could define a second
 multi-method called putIn() like so:
 
-<div class="code">
-
+```
     putIn(Thing obj, Surface cont)
     {
        // ...
     }
-
-</div>
+```
 
 This version will be invoked when putIn() is called with a second
 argument value that's a Surface instead of a Container.
@@ -283,11 +273,9 @@ Calling a multi-method is exactly like calling an ordinary function. You
 simply write the function name followed by the list of parameters in
 parentheses:
 
-<div class="code">
-
+```
     putIn(blueBook, cardboardBox);
-
-</div>
+```
 
 When this line of code is executed, TADS evaluates the arguments,
 determines their types, and finds the appropriate version of the
@@ -297,12 +285,10 @@ parameter types.
 You can use function pointers to multi-methods the same way as with
 ordinary functions:
 
-<div class="code">
-
+```
     local x = putIn;
     x(blueBook, cardboardBox);
-
-</div>
+```
 
 As with any other call to a multi-method, the system waits until you
 actually use the function pointer to call the function to determine
@@ -323,12 +309,10 @@ multi-method - that is, the specific function that would be invoked for
 a given set of arguments. The library provides a function for this
 purpose, getMultiMethodPointer():
 
-<div class="code">
-
+```
     local y = getMultiMethodPointer(putIn, blueBook, cardboardBox);
     y(redBook, woodenCrate);
-
-</div>
+```
 
 The difference between this and the earlier example ("x = putIn") is
 that getMultiMethodPointer() returns a pointer to the specific version
@@ -357,13 +341,11 @@ The easiest way to see how multi-methods work with OOP is to define a
 multi-method that takes only one parameter, and then define some
 variations that take class types that are related by inheritance:
 
-<div class="code">
-
+```
     lookAt(Thing obj) {  }
     lookAt(Container obj) {  }
     lookAt(SingleContainer obj) { }
-
-</div>
+```
 
 In the Adv3 library, Container is a subclass of Thing, and
 SingleContainer is a subclass of Container.
@@ -397,8 +379,7 @@ equivalent to regular methods defined on the corresponding objects. In
 other words, we could have written our three lookAt() functions above as
 ordinary object methods, thus:
 
-<div class="code">
-
+```
     Thing: object
        newLookAt() { }
     ;
@@ -408,14 +389,13 @@ ordinary object methods, thus:
     SingleContainer: Container
        newLookAt() { }
     ;
-
-</div>
+```
 
 (We're obviously simplifying this a lot from what's in the real Adv3
 library - we just care about the basic structure here.) So now, if we
-write <span class="code">x.newLookAt()</span>, we get the same effect as
-calling <span class="code">lookAt(x)</span> - we dispatch to the version
-defined for the closest match to <span class="code">x</span>'s class in
+write `x.newLookAt()`, we get the same effect as
+calling `lookAt(x)` - we dispatch to the version
+defined for the closest match to `x`'s class in
 the inheritance structure.
 
 So, to summarize, a multi-method with one typed parameter is basically
@@ -454,10 +434,9 @@ everything the base class does, but adds a little something extra. This
 happens so often that TADS has special syntax to help out, by letting
 the subclass method invoke its base class version as a subroutine,
 rather than repeating its whole contents - namely, the
-<span class="code">inherited</span> operator.
+`inherited` operator.
 
-<div class="code">
-
+```
     class Thing: object
        examine()
        {
@@ -477,33 +456,32 @@ rather than repeating its whole contents - namely, the
            // show contents listing here...
        }
     ;
-
-</div>
+```
 
 Multi-methods can override one another, so the analogous situation can
 arise, where an overriding multi-method wants to invoke a multi-method
 that it overrides, as a subroutine. TADS offers support for this, using
-syntax that's very similar to the <span class="code">inherited</span>
+syntax that's very similar to the `inherited`
 syntax for ordinary methods.
 
-When used in a multi-method, the <span class="code">inherited</span>
+When used in a multi-method, the `inherited`
 operator calls the next more general form of the current function. That
 is, the version of the multi-method that's effectively overridden by the
 current version.
 
-The <span class="code">inherited</span> operator chooses the function to
+The `inherited` operator chooses the function to
 call by asking this question: which function would have been called if
 the current function (the one containing the
-<span class="code">inherited</span> call) had never been defined? The
+`inherited` call) had never been defined? The
 system looks at the argument list specified in the
-<span class="code">inherited</span> operator to make this determination;
+`inherited` operator to make this determination;
 it finds the next function after the current function ("after" in terms
 of class inheritance order) that matches the types in the argument list.
 
-There's also an extended <span class="code">inherited</span> syntax that
+There's also an extended `inherited` syntax that
 lets you call a *specific* inherited version of the function. You do
 this by adding a type list in angle brackets between
-<span class="code">inherited</span> and the argument list:
+`inherited` and the argument list:
 
 <div class="syntax">
 
@@ -513,53 +491,51 @@ this by adding a type list in angle brackets between
 
 Each type specifier (*type1* and so on) is the name of a class or
 object, just like in a multi-method definition. You can also use the
-special symbol <span class="code">\*</span> (asterisk) for a slot that
+special symbol `\*` (asterisk) for a slot that
 has no type specifier in the original definition, and you can use
-<span class="code">...</span> at the end of the list to indicate that
+`...` at the end of the list to indicate that
 you're calling a version with variable arguments.
 
 For example:
 
-<div class="code">
-
+```
     lookAt(SingleContainer obj)
     {
        return inherited<Container>(obj);
     }
-
-</div>
+```
 
 This calls the version of the function defined as
-<span class="code">lookAt(Container x)</span>, regardless of what other
+`lookAt(Container x)`, regardless of what other
 versions might also exist.
 
 As with regular method inheritance, the
-<span class="code">inherited</span> operator behaves like an ordinary
+`inherited` operator behaves like an ordinary
 function call: it evaluates the arguments, invokes the inherited
 multi-method, and yields as its value the return value of the invoked
 function. You can use the multi-method version of
-<span class="code">inherited</span> as part of a larger expression, just
-as you can with the regular <span class="code">inherited</span>.
+`inherited` as part of a larger expression, just
+as you can with the regular `inherited`.
 
-The compiler resolves <span class="code">inherited\<\></span> calls
+The compiler resolves `inherited\<\>` calls
 statically. Since you specify the exact type list for the function to be
 invoked, the compiler knows which version of the function to call. This
 means that this version has no run-time overhead; it's just like an
 ordinary function call in terms of its run-time performance.
 
-The multi-method version of <span class="code">inherited</span>
+The multi-method version of `inherited`
 *without* a type list determines which function to call dynamically, at
 run time, which makes it a little slower than
-<span class="code">inherited\<\></span> with a type list. (Internally,
+`inherited\<\>` with a type list. (Internally,
 this is implemented by calling a library function,
 \_multiMethodCallInherited(). We recommend using
-<span class="code">inherited</span> rather than calling this function
+`inherited` rather than calling this function
 directly, since the function could conceivably change in future
 releases.)
 
 ### Dynamic vs. static inheritance
 
-As described above, when you use the <span class="code">inherited</span>
+As described above, when you use the `inherited`
 operator without an explicit type list (in angle brackets), the system
 automatically chooses which inherited function to call. The mechanism
 that we described for making the selection is actually one of two modes
@@ -568,7 +544,7 @@ that you can select.
 The default mode, which we described above, is the "dynamic" mode. In
 dynamic mode, the system chooses which function to call by looking at
 the **actual argument values** specified in the
-<span class="code">inherited</span> call. The system finds the matching
+`inherited` call. The system finds the matching
 function using the same process that it used to resolve the original
 call to the multi-method, except this time it pretends that the current
 (calling) function was never defined, so that it can find the next
@@ -576,9 +552,9 @@ matching function in inheritance order.
 
 The dynamic mode is so named because it chooses the target function at
 run-time, according to the actual argument values. This means that a
-particular <span class="code">inherited</span> call could end up calling
+particular `inherited` call could end up calling
 different functions for different argument values. The selection can't
-be made until the <span class="code">inherited</span> operator is
+be made until the `inherited` operator is
 actually executed, since we can't know the actual argument values until
 that moment.
 
@@ -587,7 +563,7 @@ system chooses which function to call by looking only at the **formal
 parameters** to the current function. The formal parameters are the
 parameters and types specified in the function's definition. In static
 mode, the system finds the function to call for
-<span class="code">inherited</span> by looking for the next matching
+`inherited` by looking for the next matching
 function (ignoring the current function) for the formal parameter list
 to the current function.
 
@@ -603,23 +579,23 @@ more intuitive in its behavior. The dynamic mode has to determine which
 function to call on the fly, whereas the static mode can figure and
 cache the target function during pre-init; so the dynamic mode requires
 more work (and thus more time) on every
-<span class="code">inherited</span> call. The benefit of the dynamic
+`inherited` call. The benefit of the dynamic
 mode is that it's more consistent with the regular
-<span class="code">inherited</span> operator for object methods: the
-regular <span class="code">inherited</span> uses the actual
-<span class="code">self</span> value to make its determination, and the
-dynamic multi-method <span class="code">inherited</span> uses the actual
+`inherited` operator for object methods: the
+regular `inherited` uses the actual
+`self` value to make its determination, and the
+dynamic multi-method `inherited` uses the actual
 argument values to make its selection. Most people will therefore find
 the dynamic mode more intuitive, which is why we made it the default.
 
 Apart from the performance difference, the static mode has one other
 potential benefit: it's more predictable. In static mode, a given
-<span class="code">inherited</span> call can only go to one target
+`inherited` call can only go to one target
 function, which you can determine by inspecting the code - there's no
 need to take into account the actual argument values because the
 selection depends only on the definition of the calling function. For
 some applications, this predictability might be more important than
-consistency with the regular <span class="code">inherited</span>
+consistency with the regular `inherited`
 behavior.
 
 **How to select static mode:** The mode selection is controlled by a
@@ -632,12 +608,12 @@ command line. (If you're using Workbench for Windows, simply add
 MULTMETH_STATIC_INHERITED to your \#define list in the Project & Build
 Settings dialog, on the Compiler \| Defines page.)
 
-**Historical note:** when the <span class="code">inherited</span>
+**Historical note:** when the `inherited`
 operator for multi-methods debuted, in version 3.0.18, it used the
 static mode. This was quickly changed, though: the dynamic mode was
 introduced a short time later, in the 3.0.18.1 patch release, and was
 made the default because of its better consistency with the conventional
-<span class="code">inherited</span> operator's behavior.
+`inherited` operator's behavior.
 
 ## Limitations
 
@@ -661,8 +637,8 @@ structure the code so that the loop is inside the multi-method, so that
 you only have to call it once.
 
 **Asymmetrical parameters:** If you define a multi-method of the form
-<span class="code">foo(A a, B b)</span>, calls like
-<span class="code">foo(B, A)</span> won't match, because the order of
+`foo(A a, B b)`, calls like
+`foo(B, A)` won't match, because the order of
 the arguments matters in finding a type match. For problems where you
 want to match the parameters in any order, you'll have to explicitly
 define variations for the different possible orders, and have them call
@@ -685,14 +661,12 @@ where two methods have different parameter lists, but are nonetheless
 ambiguous, where you won't receive any warnings. For example, suppose
 that we have a class A, and a subclass of A called B, and we define
 
-<div class="code">
-
+```
     foo(A a, B b) { }
     foo(B b, A a) { }
+```
 
-</div>
-
-Now, if we call this with <span class="code">foo(B, B)</span>, note that
+Now, if we call this with `foo(B, B)`, note that
 either version is an equally good match - the first version is a better
 match to the second argument than the second version is, but the second
 is a better match to the first argument. The strict theoretical view
@@ -704,10 +678,10 @@ However, the TADS implementation is not strict about this type of
 ambiguity. Instead, TADS has a rule to resolve the ambiguity: arguments
 are resolved individually in left-to-right order, and the first, best
 resolution in left-to-right order wins. In this example, this means that
-<span class="code">foo(B, B)</span> resolves to the second definition:
+`foo(B, B)` resolves to the second definition:
 we first try to find the best resolution to first argument in isolation,
 which gives us the second definition, then we look at all
-<span class="code">foo(B, ...)</span> options and find that the second
+`foo(B, ...)` options and find that the second
 option is again the best.
 
 **No pointer type differentiation:** There's no way to distinguish a

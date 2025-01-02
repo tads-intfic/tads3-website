@@ -41,8 +41,8 @@ this extension defines the following new class and properties for the
 direct use of game authors:
 
 - *New Class*: **Footnote**
-- *Properties/Methods*: <span class="code">desc</span>,
-  <span class="code">noteRef()</span>.
+- *Properties/Methods*: `desc`,
+  `noteRef()`.
 - *Actions*: FootnoteAction, FootnotesFullAction, FootnotesMediumAction,
   FootnoteOffAction, FootnotesStatus.
 
@@ -58,46 +58,38 @@ To define a footnote object, create an object of the Footnote class and
 define its desc property to hold the text you want it to display, for
 example:
 
-<div class="code">
-
+```
     henryNote: Footnote
        desc = "King Henry II reigned from 1154 to 1189, when he was succeeded by Richard I. "
     ; 
      
-
-</div>
+```
 
 Or, if you like, you can take advantage of the Footnote template
 supplied in advlite.h to abbreviate this to:
 
-<div class="code">
-
+```
     henryNote: Footnote "King Henry II reigned from 1154 to 1189, when he was succeeded by Richard I. "; 
      
-
-</div>
+```
 
 Then, when you want to display a footnote marker in your game text, you
 simply call your footnote's **noteRef()** method, for example:
 
-<div class="code">
-
+```
       henryNote.noteRef(); 
      
-
-</div>
+```
 
 The game will then assign a sequential footnote number and display it
 accordingly. For example, if you wrote:
 
-<div class="code">
-
+```
      oldCoin: Thing 'old coin'
         "From the very worn inscription the head on the coin appears to be that of Henry II.<<henryNote.noteRef()>> "
      ; 
      
-
-</div>
+```
 
 You'd get an exchange like:
 
@@ -115,7 +107,7 @@ to query the current behaviour status via the command FOOTNOTES. If the
 setting is OFF, footnote numbers are never displayed in the game text.
 If the setting is FULL then they always are. If the setting is MEDIUM
 (the default) then the footnote number is displayed in the game text
-each time that note's <span class="code">noteRef()</span> method is
+each time that note's `noteRef()` method is
 called until the note's text has been read via a FOOTNOTE command, but
 not thereafter.
 

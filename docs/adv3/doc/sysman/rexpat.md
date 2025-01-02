@@ -28,9 +28,9 @@ details of the compiled representation aren't important, and the program
 can't access the compiled data directly.
 
 Every time the program performs a search involving a regular expression
-(using the [<span class="code">rexMatch()</span>,
-<span class="code">rexSearch()</span>, or
-<span class="code">rexReplace()</span>
+(using the [`rexMatch()`,
+`rexSearch()`, or
+`rexReplace()`
 functions](tadsgen.html#rexmatch)), the system must work with the
 compiled form of the search pattern. The simplest way to call these
 functions is to pass them a string giving the search pattern, but when
@@ -52,11 +52,9 @@ pattern string.
 You can define a static RexPattern object using the regular expression
 literal syntax:
 
-<div class="code">
-
+```
     local r = R'%w+';
-
-</div>
+```
 
 That defines a static RexPattern object that matches any series of one
 or more "word" characters.
@@ -67,36 +65,32 @@ double quotes are interchangeable for "R" strings - they have exactly
 the same meaning, but of course the ending quote must match the open
 quote. You can also use the triple-quote syntax with "R" strings:
 
-<div class="code">
-
+```
     local r2 = R"""%w"%w""";
-
-</div>
+```
 
 That creates a pattern that matches a word character followed by a
 double quote followed by a word character. (In this case the triple
 quotes aren't really necessary, in that it might have been easier to
 just use single quotes to delimit the string:
-<span class="code">R'%w"%w'</span>.)
+`R'%w"%w'`.)
 
-The embedding expression syntax, <span class="code">\<\< \>\></span>,
+The embedding expression syntax, `\<\< \>\>`,
 isn't allowed in regular expression literals.
 
 ## RexPattern creation
 
 You can create a RexPattern object dynamically using the
-<span class="code">new</span> operator, giving the pattern string as the
+`new` operator, giving the pattern string as the
 argument:
 
-<div class="code">
-
+```
     local pat = new RexPattern('a.*b');
-
-</div>
+```
 
 This creates the pattern object and compiles the pattern string. You can
 now use the object in the regular expression search and match functions
-(<span class="code">rexMatch()</span>, etc.) in place of the pattern
+(`rexMatch()`, etc.) in place of the pattern
 string. The functions will behave exactly as though you had used the
 original pattern string, except that they will run a little faster,
 because they won't need to compile the string.
@@ -106,7 +100,7 @@ because they won't need to compile the string.
 The class provides the standard Object intrinsic class methods, plus the
 following:
 
-<span class="code">getPatternString()</span>
+`getPatternString()`
 
 <div class="fdef">
 

@@ -49,11 +49,9 @@ time the user fills a new container.
 To create a new object dynamically, you use the "new" operator with the
 name of the class:
 
-<div class="code">
-
+```
     local x = new QuantityOfWater;
-
-</div>
+```
 
 This creates a new object of the given class, returning a reference to
 the new object. You can now use the new object just like any other.
@@ -64,11 +62,9 @@ reference in a local variable. If we wanted to call the "sdesc" method
 to display the object's description, we'd call the method on the local
 variable:
 
-<div class="code">
-
+```
     x.sdesc;
-
-</div>
+```
 
 ## Constructors
 
@@ -76,23 +72,20 @@ When you create a new object with the "new" operator, the system
 automatically calls the method "construct" in the new object immediately
 after creating it. You can define this method just like any other.
 
-<div class="code">
-
+```
     class QuantityOfWater: Item
       construct()
       {
         volume_ = 5;
       }
     ;
-
-</div>
+```
 
 The construct method can optionally take arguments. If you define a
 construct method with arguments, you must pass the arguments to the
 "new" operator. For example:
 
-<div class="code">
-
+```
     class QuantityOfWater: Item
       construct(vol)
       {
@@ -104,8 +97,7 @@ construct method with arguments, you must pass the arguments to the
     {
       local x = new QuantityOfWater(3);
     }
-
-</div>
+```
 
 If you're familiar with C++ or Java, you should take note of some
 important features of TADS constructors that differ from those of C++
@@ -139,27 +131,23 @@ same as the arguments passed to the object's constructor.
 
 For example, suppose you define a class like this:
 
-<div class="code">
-
+```
     class MultiClass: Class1, Class2
     ;
-
-</div>
+```
 
 This class does not define an explicit constructor - in other words, it
 has no construct method defined in the class. Because of this, the
 compiler automatically generates an implicit constructor for the object;
 the implicit constructor is equivalent to this:
 
-<div class="code">
-
+```
     construct([args])
     {
       inherited Class1.construct(args...);
       inherited Class2.construct(args...);
     }
-
-</div>
+```
 
 The compiler only generates an implicit constructor for objects and
 classes with multiple superclasses and no explicit construct method.
@@ -187,7 +175,7 @@ collection](gc.html) section for details on finalization.
 
 ## Notes for TADS 2 users
 
-TADS 2's <span class="code">delete</span> operator doesn't exist in TADS
+TADS 2's `delete` operator doesn't exist in TADS
 3. There's no equivalent - you simply don't ever have to delete objects
 manually in TADS 3.
 

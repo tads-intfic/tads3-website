@@ -229,7 +229,7 @@ characters populating the locations, and so on. All of these instances
 are defined, with property values filled in, directly in the game
 program. In contrast, a C++ or Java program usually defines mostly
 classes, and creates most instances at run-time (via
-<span class="code">new</span>, for example). Because this is such a
+`new`, for example). Because this is such a
 basic need of IF programs, the TADS language caters to it with numerous
 convenience features that make it less work to set up these pre-defined
 objects.

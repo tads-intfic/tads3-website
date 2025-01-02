@@ -45,19 +45,19 @@ introduction.
 
 [File](file.html#packBytes)
 
-<span class="code">packBytes(*format*, ...)</span>  
-<span class="code">unpackBytes(*format*)</span>
+`packBytes(*format*, ...)`  
+`unpackBytes(*format*)`
 
 [ByteArray](bytearr.html#packBytes)
 
-<span class="code">packBytes(*index*, *format*, ...)</span>  
-<span class="code">ByteArray.packBytes(*format*, ...)</span>  
-<span class="code">unpackBytes(*index*, *format*)</span>
+`packBytes(*index*, *format*, ...)`  
+`ByteArray.packBytes(*format*, ...)`  
+`unpackBytes(*index*, *format*)`
 
 [String](string.html#packBytes)
 
-<span class="code">String.packBytes(*format*, ...)</span>  
-<span class="code">unpackBytes(*format*)</span>
+`String.packBytes(*format*, ...)`  
+`unpackBytes(*format*)`
 
 ### Type codes
 
@@ -90,7 +90,7 @@ d
 
 Double-precision floating point number ("double" in C). Packed in
 standard IEEE 754-2008 64-bit binary interchange format, but in
-little-endian byte order. Use <span class="code">d\></span> to pack in
+little-endian byte order. Use `d\>` to pack in
 the IEEE standard big-endian order. Packs to 8 bytes; unpacks as
 BigNumber. This type can store about 16 decimal digits of precision, and
 can represent absolute values up to 1.7976931348623158e+308.
@@ -99,7 +99,7 @@ f
 
 Single-precision floating point number ("float" in C). Packed in
 standard IEEE 754-2008 32-bit binary interchange format, but in
-little-endian byte order. Use <span class="code">d\></span> to pack in
+little-endian byte order. Use `d\>` to pack in
 the IEEE standard big-endian order. Packs to 4 bytes; unpacks as
 BigNumber. This type can store about 7 decimal digits of precision, and
 can represent absolute values up to 3.402823466e+38F.
@@ -172,7 +172,7 @@ w
 "Wide character" Unicode string, in UCS-2 format, 16 bits per character;
 padded with null characters. The length is in characters, but the "!"
 suffix changes to the packed byte length (two bytes per character). The
-default byte order is little-endian; use <span class="code">w\></span>
+default byte order is little-endian; use `w\>`
 for big-endian.
 
 W
@@ -199,16 +199,16 @@ boundary.
 Moves the file pointer to a byte offset from the start of the current
 group (in parentheses or square brackets), or from the start of the
 format string if not in a group. The offset is given as the suffix:
-<span class="code">@15</span> moves to byte offset 15. When packing, if
+`@15` moves to byte offset 15. When packing, if
 the position is moved forward, the bytes from the current position to
 the new position are filled with null bytes. Each iteration of a
 repeated group resets the zero point for the group. If the ! qualifier
-is used (e.g., <span class="code">@15!</span>, the position is relative
+is used (e.g., `@15!`, the position is relative
 start of the entire format string rather than the current group.
 
-When unpacking, <span class="code">@?</span> returns the current byte
+When unpacking, `@?` returns the current byte
 offset in the file relative to the current group, and
-<span class="code">@!?</span> returns the offset relative to the whole
+`@!?` returns the offset relative to the whole
 format string. These codes do nothing when packing.
 
 "*text*"
@@ -224,7 +224,7 @@ that the bytes in the file actually match the literal bytes given.
 {*hex-digits*}
 
 Packs the literal bytes encoded by the series of hex digit pairs. For
-example, <span class="code"> '{4142434445}'</span> packs the bytes
+example, ` '{4142434445}'` packs the bytes
 "ABCDE", since 0x41 is the ASCII code for "A", 0x42 for "B", etc.
 
 On unpacking, this simply skips the number of bytes implied by the digit
@@ -240,7 +240,7 @@ qualifiers doesn't matter.
 
 For integer and floating point types (cCsSlLqQdf), specifies the repeat
 count: the given number of values are written. E.g.,
-<span class="code">s5</span> packs five 16-bit integer values.
+`s5` packs five 16-bit integer values.
 
 For string types (aAbuUwWhH), the number qualifier specifies the length
 of the **unpacked** string. For aAbuU, the length is in bytes; for wW,
@@ -253,20 +253,20 @@ For padding (xX), specifies the number of bytes to skip.
 For positioning (@), specifies the offset from the start of the group
 (or the start of the format string, if not in a group).
 
-Combining the <span class="code">\*</span> qualifier with a number
-qualifier (e.g., <span class="code">H30\*</span>) makes the number an
+Combining the `\*` qualifier with a number
+qualifier (e.g., `H30\*`) makes the number an
 upper limit when unpacking (and has no effect when packing); see below.
 
 \*
 
-In place of a numeric qualifier, <span class="code">\*</span> means
+In place of a numeric qualifier, `\*` means
 "infinity" for the count or length. Packs all remaining argument values
 for a numeric type, or the full string for a string type. Unpacks the
 entire rest of the file.
 
 You can also combine \* with a numeric count for unpacking, as in
-<span class="code">H30\*</span>. The combination of a number and
-<span class="code">\*</span> means to unpack *up to* the numeric limit,
+`H30\*`. The combination of a number and
+`\*` means to unpack *up to* the numeric limit,
 but stop earlier if there's not enough source material to fulfill the
 count. Normally, trying to unpack more items than are actually available
 would cause an error, because the unpacker would try to read past the
@@ -284,12 +284,12 @@ through the iteration.
 :*type*
 
 (where *type* is one of the type codes listed above, such as
-<span class="code">q</span> for a quad-word integer) Equivalent to
+`q` for a quad-word integer) Equivalent to
 specifying the packed byte length of the given type as a numeric repeat
-count. For example, <span class="code">:q</span> is equivalent to a
-repeat count of <span class="code">8</span>, because the packed size of
+count. For example, `:q` is equivalent to a
+repeat count of `8`, because the packed size of
 the q type is 8 bytes. This is most useful with the x and X codes (e.g.,
-<span class="code">X:q</span> skips backwards 8 bytes), but can be used
+`X:q` skips backwards 8 bytes), but can be used
 with any item.
 
 0
@@ -314,7 +314,7 @@ For wide character (wW) and hex digit (hH) string types, changes the
 length count into a byte length.
 
 For padding (xX), changes the length count into an alignment size. E.g.,
-<span class="code">x4!</span> pads just enough to position the next byte
+`x4!` pads just enough to position the next byte
 at a multiple of 4 bytes from the start of the format string.
 
 For positioning (@), makes the position relative to the start of the
@@ -323,21 +323,21 @@ entire format string (rather than the current group).
 When unpacking a square bracketed group, specifies that *each iteration*
 of the group is to be unpacked into a sublist, rather than unpacking the
 whole group into a single sublist. For example, unpacking
-<span class="code">\[L S\]3!</span> returns a list of three sublists,
+`\[L S\]3!` returns a list of three sublists,
 each of which contains two elements (a long integer and a short
 integer).
 
-<span class="code">?</span>
+`?`
 
 Changes @ to a query operator: when unpacking,
-<span class="code">@?</span> returns an integer value giving the current
+`@?` returns an integer value giving the current
 byte offset within the file, relative to the start of the current group,
-and <span class="code">@?!</span> returns the file offset relative to
+and `@?!` returns the file offset relative to
 the start of the entire format string.
 
 Has no effect with other types.
 
-<span class="code">\></span>
+`\>`
 
 Change the byte order of a multi-byte type to big-endian. For integers,
 the most significant byte of the value is packed first. For
@@ -350,11 +350,11 @@ themselves, though, obviously).
 This can be applied to a group, in which case it makes everything in the
 group big-endian by default.
 
-<span class="code">\<</span>
+`\<`
 
 Use little-endian byte order. This is the default for all types, but
-<span class="code">\<</span> can be used to override the order for an
-item within a group that has the <span class="code">\></span> qualifier,
+`\<` can be used to override the order for an
+item within a group that has the `\>` qualifier,
 because everything within a group inherits the endian-ness of the group.
 For integers, this packs the least significant byte first. For
 floating-point numbers, it packs the mantissa bytes first, from least
@@ -365,7 +365,7 @@ of each character first.
 This can be applied to a group, in which case it makes everything within
 the group little-endian by default.
 
-<span class="code">~</span>
+`~`
 
 When unpacking an integer type, uses the smallest type that will hold
 the value. Specifically, when unpacking L, q, and Q, returns an integer
@@ -374,13 +374,13 @@ value if the packed value fits in a 32-bit signed integer
 types always return BigNumber by default, even for values that would fit
 an integer.
 
-<span class="code">~</span> can be applied to a parenthesized or
+`~` can be applied to a parenthesized or
 square-bracketed group, in which case it applies to each individual item
 within the group.
 
 This qualifier has no effect when packing.
 
-<span class="code">%</span>
+`%`
 
 When packing values, ignores type limit overflows, and instead packs a
 truncated value. The value stored in case of overflow depends on the
@@ -388,7 +388,7 @@ type:
 
 - Integers (cCsSlLqQ): a value that's too large for the type is
   "truncated" by dropping the most significant bits until it fits. For
-  example, <span class="code">packBytes('s%', 0x12345678)</span> will
+  example, `packBytes('s%', 0x12345678)` will
   pack the value 0x5678, dropping all but the low-order 16 bits.
 - Character and byte strings (aAb): The qualifier affects each character
   individually in the string. Each character that's outside the 0-255
@@ -397,7 +397,7 @@ type:
   754-2008 format is stored as "infinity", which is a special,
   distinguished value within the IEEE and BigNumber type systems.
 
-<span class="code">%</span> can be applied to a parenthesized or
+`%` can be applied to a parenthesized or
 square-bracketed group, in which case it applies to each individual item
 within the group.
 
@@ -410,39 +410,39 @@ overflow.
 ( )
 
 Parentheses group a set of items. Groups can be repeated by using a
-count suffix, as in <span class="code">(l s)3</span>, or a length
-prefix, as in <span class="code">C/(l s)</span>.
+count suffix, as in `(l s)3`, or a length
+prefix, as in `C/(l s)`.
 
 The following attributes can be applied to a group:
-<span class="code">\<</span> <span class="code">\></span>
-<span class="code">~</span> <span class="code">%</span>. Attributes
+`\<` `\>`
+`~` `%`. Attributes
 applied to a group are inherited by everything within the group. For
-example, <span class="code">(l s q)\></span> is equivalent to
-<span class="code">l\> s\> q\></span>.
+example, `(l s q)\>` is equivalent to
+`l\> s\> q\>`.
 
 \[ \]
 
 Square brackets group items the same as parentheses, but indicate that
 the grouped items are taken from a list in the packing arguments, or
 unpacked into a list in the unpacking results. For example, unpacking
-<span class="code">'s \[l\]3 s</span>' might return
-<span class="code">\[1, \[2, 3, 4\], 5\]</span>.
+`'s \[l\]3 s`' might return
+`\[1, \[2, 3, 4\], 5\]`.
 
 As with parenthesized groups, when any of the qualifiers
-<span class="code">\<</span> <span class="code">\></span>
-<span class="code">~</span> <span class="code">%</span> are applied to
+`\<` `\>`
+`~` `%` are applied to
 the group, they're inherited by all items within the group.
 
-If the <span class="code">!</span> modifier is used, each iteration of
+If the `!` modifier is used, each iteration of
 the group is packed from or unpacked into a separate sublist. Without
 this modifier, the entire group is packed/unpacked as a single sublist.
 
 /
 
-Count prefix. Use the syntax *count-type* <span class="code">/</span>
+Count prefix. Use the syntax *count-type* `/`
 *repeated-item*. The *count-type* value is packed first, as a length
 prefix, then the repeated items are packed:
-<span class="code">fp.packBytes('S/l', 100, 200, 300)</span> packs an
+`fp.packBytes('S/l', 100, 200, 300)` packs an
 unsigned 16-bit integer "3" as the number of items, then three 32-bit
 integers. If the repeated item is a string, the count is the length of
 the string in the normal units for the type: 'S/a' packs the length in
@@ -454,10 +454,10 @@ packs a prefix-counted list of structures with three elements each.
 
 Be careful when repeating a fixed-length string. When an item has both a
 count prefix and a repeat count suffix, the prefix overrides the suffix.
-For example, <span class="code">C/A4</span> means "one counted-length
+For example, `C/A4` means "one counted-length
 Latin-1 string", because the "C/" prefix supersedes the "4" suffix. To
 pack a counted-length list of four-character strings, you must use
-<span class="code">C/(A4)</span>.
+`C/(A4)`.
 
 ### Miscellaneous notes
 
@@ -506,25 +506,25 @@ whenever we talk about reading or writing "the file", understand that
 we're talking generically about whatever underlying data source you're
 using.
 
-You pack bytes using the <span class="code">packBytes()</span> method.
+You pack bytes using the `packBytes()` method.
 For files, this is a method on the File object. It's essentially a
-replacement for <span class="code">writeBytes()</span>. Instead of
+replacement for `writeBytes()`. Instead of
 having to prepare the individual byte values yourself, as you do with
-<span class="code">writeBytes()</span>, the
-<span class="code">packBytes()</span> method combines the steps of
+`writeBytes()`, the
+`packBytes()` method combines the steps of
 translating data values into the desired byte representation and writing
 the resulting bytes to the file. (You can still use
-<span class="code">writeBytes()</span> - it's not obsolete by any
-means - and you can freely mix <span class="code">packBytes()</span> and
-<span class="code">writeBytes()</span> calls for the same file. You
+`writeBytes()` - it's not obsolete by any
+means - and you can freely mix `packBytes()` and
+`writeBytes()` calls for the same file. You
 probably won't need to, though, since
-<span class="code">packBytes()</span> can do anything
-<span class="code">writeBytes()</span> can do, usually with a lot less
+`packBytes()` can do anything
+`writeBytes()` can do, usually with a lot less
 hassle.)
 
-Unpacking uses the <span class="code">unpackBytes()</span> method, which
+Unpacking uses the `unpackBytes()` method, which
 is also a method on the File object. This method can serve as a
-replacement for <span class="code">readBytes()</span>. It combines the
+replacement for `readBytes()`. It combines the
 steps of reading bytes from the file and translating them into data
 values.
 
@@ -568,16 +568,14 @@ the 32-bit long.
 Anyway, on to the example. To write a series of integers to a file, you
 write something like this:
 
-<div class="code">
-
+```
     local fp = File.openRawFile('myfile.bin', FileAccessWrite);
     fp.packBytes('l l l', 1, 2, 3);
-
-</div>
+```
 
 The format string is the first argument to
-<span class="code">packBytes</span> - in this case, the string
-<span class="code">'l l l'</span>. The spaces in the string are
+`packBytes` - in this case, the string
+`'l l l'`. The spaces in the string are
 meaningless; you can include spaces anywhere in the string without
 changing the meaning. As we'll see shortly, items can be more complex
 than a single character, so spacing things out can help make your code
@@ -593,15 +591,13 @@ significant (i.e., containing the lowest bit places of the number) to
 most significant. So after running this code, the file contains 12
 bytes, which look like this in hexadecimal format:
 
-<div class="code">
-
+```
     01 00 00 00 02 00 00 00 03 00 00 00
-
-</div>
+```
 
 To unpack this file - that is, read the bytes from the file and convert
 them back into TADS data values - we use the
-<span class="code">unpackBytes</span> method. We once again need a
+`unpackBytes` method. We once again need a
 format string to tell us how to interpret the bytes. Fortunately, the
 unpacking format string uses exactly the same syntax as the packing
 format string, so there's no new syntax to learn for this part. In fact,
@@ -609,31 +605,27 @@ in most cases, you'll use exactly the same format string to unpack a
 given set of values that you used to pack the values in the first place.
 That's the case here:
 
-<div class="code">
-
+```
     local fp = File.openRawFile('myfile.bin', FileAccessRead);
     local vals = fp.unpackBytes('l l l');
-
-</div>
+```
 
 The unpacker reads just enough bytes to satisfy the items in the format
 string, converting each item into the corresponding data value. For an
 integer type such as 'l', the unpacker converts the bytes into an
-integer value. The <span class="code">unpackBytes()</span> function
+integer value. The `unpackBytes()` function
 returns a list containing the values it unpacked, in sequence, so
-<span class="code">vals</span> now contains the list
-<span class="code">\[1, 2, 3\]</span>.
+`vals` now contains the list
+`\[1, 2, 3\]`.
 
 ### Repeat counts
 
 The format string syntax has a shorthand for a repeated item. Instead of
-writing <span class="code">'l l l'</span>, we can write:
+writing `'l l l'`, we can write:
 
-<div class="code">
-
+```
     fp.packBytes('l3', 1, 2, 3);
-
-</div>
+```
 
 The "3" after the "l" means "pack (or unpack) three copies of this". You
 can use this notation with any integer or floating point type.
@@ -647,11 +639,9 @@ specifies the length of the string rather than a repeat count.
 Let's go back and take another look at the file we've been working on.
 Recall that the bytes in the file, in hexadecimal, are:
 
-<div class="code">
-
+```
     01 00 00 00 02 00 00 00 03 00 00 00
-
-</div>
+```
 
 The first integer value, 1, takes up the first four bytes of the file.
 Remember that type code 'l' means "32-bit integer", and 32 bits take up
@@ -712,36 +702,32 @@ Finally, the packer lets you control the byte order. Recall that the
 packer always uses little-endian byte order by default. Many file
 formats call for big-endian order, though, so the packer lets you
 override the default. To use big-endian order for any integer type,
-place a <span class="code">\></span> after the type code. You can also
+place a `\>` after the type code. You can also
 mark a type as explicitly little-endian by putting a
-<span class="code">\<</span> after the type code.
+`\<` after the type code.
 
 So if we wanted to change our format to store big-endian, unsigned,
 16-bit values, here's what we'd write:
 
-<div class="code">
-
+```
     fp.packBytes('S3>', 1, 2, 3);
-
-</div>
+```
 
 The file would now look like this:
 
-<div class="code">
-
+```
     00 01 00 02 00 03
+```
 
-</div>
-
-The <span class="code">3</span> and the <span class="code">\></span> are
+The `3` and the `\>` are
 both suffix codes. These apply to the immediately preceding item only.
-For example, if we wrote <span class="code">'lS3\>'</span>, this would
+For example, if we wrote `'lS3\>'`, this would
 write one signed little-endian long, followed by three unsigned
 big-endian shorts. You can probably see how spaces would help make this
-clearer: <span class="code">'l S3\>'</span> means exactly the same thing
+clearer: `'l S3\>'` means exactly the same thing
 but is a bit easier to read. (Then again, spaces can also make things
-less clear: <span class="code">'lS 3\>'</span> means exactly the same
-thing as <span class="code">'l S3\>'</span>, even though it might look
+less clear: `'lS 3\>'` means exactly the same
+thing as `'l S3\>'`, even though it might look
 like the 'l' and 'S' are meant to be grouped. But the space doesn't
 change anything, no matter where you put it.)
 
@@ -750,11 +736,9 @@ that these types have smaller range than the TADS integer type. If you
 try to pack a value that doesn't fit, it'll trigger a "numeric overflow"
 error. For example, this will cause an error:
 
-<div class="code">
-
+```
     fp.packBytes('c', 1000);
-
-</div>
+```
 
 The ranges for the integer types are as follows:
 
@@ -828,7 +812,7 @@ The reasoning is that even if the unpacked value would fit a regular
 integer, you're asserting via the 'L' that you're *using* it as an
 unsigned 32-bit value, so you might perform arithmetic on the value that
 would push it over the regular integer type's limits. You can override
-this by using the ~ qualifier, as in <span class="code">'L~'</span>,
+this by using the ~ qualifier, as in `'L~'`,
 which tells the unpacker to return the value as regular integer if it'll
 fit, otherwise as a BigNumber.
 
@@ -845,7 +829,7 @@ just as for type L. And as with type L, you can override this with the ~
 qualifier, which unpacks a q or Q value as an integer when it'll fit,
 and as a BigNumber when it won't.
 
-The main reason for using <span class="code">~</span>, by the way, is
+The main reason for using `~`, by the way, is
 that integers are quite a lot faster than BigNumber values for most
 calculations, and use less memory. If you're doing anything very
 complicated with the unpacked data, or reading very large files, this
@@ -857,19 +841,19 @@ small files or simple processing.
 If an integer value is out of bounds for the item type, as listed in the
 table above, the packer throws a "numeric overflow" error by default.
 You can tell the packer to ignore these errors, though. To do this, add
-the <span class="code">%</span> qualifier to the type. For example, to
+the `%` qualifier to the type. For example, to
 pack a short integer without checking for overflow, you'd write
-<span class="code">'s%'</span>.
+`'s%'`.
 
-The <span class="code">%</span> qualifier tells the packer to "truncate"
+The `%` qualifier tells the packer to "truncate"
 any integer values that don't fit in the type code's range. This means
 that the packer simply discards as many bits of the value as needed to
 make it fit, at the most significant end of the value. For example, if
-you pack 0x123456 with <span class="code">'s%'</span>, only the
+you pack 0x123456 with `'s%'`, only the
 low-order 16 bits are actually packed, which means the value stored is
 0x3456.
 
-The reason that the <span class="code">%</span> keeps only the lowest
+The reason that the `%` keeps only the lowest
 bits of the value is that this is the behavior typical in C or Perl/php
 programs in similar situations. This behavior thus provides a degree of
 compatibility for programs ported from or based on code written in those
@@ -877,7 +861,7 @@ languages. It's not exactly safe or programmer-friendly, since careless
 use could lead you to create corrupted files without realizing it, but
 that's why it's not the default.
 
-The symbol <span class="code">%</span>, by the way, is meant to suggest
+The symbol `%`, by the way, is meant to suggest
 a "modulo" or remainder calculation, which is exactly what happens when
 a value overflows. An overflowing value is effectively reduced modulo
 the largest possible value for the type (i.e., it's divided by the upper
@@ -894,7 +878,7 @@ promoted to BigNumber when unpacked.
 
 For unpacking purposes, that natural corrspondence is exactly what the
 unpacker uses to determine the type of each returned value. (But
-remember that you can also use the <span class="code">~</span> qualifier
+remember that you can also use the `~` qualifier
 for q, Q, and L, to unpack into integers instead of BigNumbers whenever
 possible.)
 
@@ -905,16 +889,16 @@ for the format:
 - For an integer type, you can supply an integer value, a BigNumber, or
   a string. BigNumber values with fractional portions are rounded to the
   nearest integers. Strings are parsed in decimal format, as though you
-  ran them through <span class="code">toInteger()</span>. If a converted
+  ran them through `toInteger()`. If a converted
   value doesn't fit within the range limits of the format code, a
   numeric overflow error is triggered.
 - For "quad word" types (q Q, and the quasi-quad type L), you can supply
   an integer, BigNumber, or string. All of these are converted just as
   for the shorter integer types.
 - For a string type, you can supply a string, an integer, a BigNumber,
-  or <span class="code">nil</span>. Integers and BigNumbers are
+  or `nil`. Integers and BigNumbers are
   converted to their decimal text representations, and
-  <span class="code">nil</span> is treated as an empty string.
+  `nil` is treated as an empty string.
 
 ### Compressed integers
 
@@ -968,7 +952,7 @@ Here are the basic string types:
 - w - 16-bit Unicode (UCS-2), default little-endian byte order, pad with
   null characters ("w" is for "wide character" - a C-ism for 16-bit
   characters, as opposed to the plain old 8-bit "char"). Use
-  <span class="code">w\></span> for big-endian order.
+  `w\>` for big-endian order.
 - W - 16-bit unicode (UCS-2), pad with space characters
 - u - Unicode UTF-8, pad with spaces ("u" is for UTF-8)
 - U - Unicode UTF-8, pad with null bytes
@@ -990,7 +974,7 @@ If you pack a string into type 'a' or 'A', any characters outside of the
 Latin-1 range are written as '?'. The u, U, w, and W formats can
 represent every character TADS can internally.
 
-If you use the <span class="code">%</span> qualifier with 'a' or 'A', it
+If you use the `%` qualifier with 'a' or 'A', it
 changes the behavior for characters outside the Latin-1 range. 'a%' or
 'A%' treat characters outside the range as integer overflows, which are
 then truncated to fit the 8-bit character type using the same scheme we
@@ -1007,20 +991,16 @@ length by adding spaces or "null" characters (zero bytes) after the end
 of the string. For example, if you have a 16-byte field, you can pack a
 string into it like this:
 
-<div class="code">
-
+```
     fp.packBytes('a16', 'test string');
-
-</div>
+```
 
 The resulting bytes in the file will look like this (hex 20 is the ASCII
 code for a space character):
 
-<div class="code">
-
+```
     t e s t 20 s t r i n g 00 00 00 00 00
-
-</div>
+```
 
 If you write a string that's longer than 16 characters with 'a16', the
 string will be truncated to 16 characters.
@@ -1065,20 +1045,16 @@ followed by the string code. The string code in this case doesn't need a
 length suffix, since the "/" tells the packer to write the exact length
 of the string. For example:
 
-<div class="code">
-
+```
     fp.packBytes('C/a', 'Hi!');
-
-</div>
+```
 
 This first stores an 8-bit unsigned integer containing the length, then
 the bytes of the string in ASCII format. Here's how the file looks:
 
-<div class="code">
-
+```
     03 H i !
-
-</div>
+```
 
 When unpacking, the file reader knows from the "/" to interpret the "C"
 code as a length prefix, so it knows exactly how many bytes to read for
@@ -1096,11 +1072,9 @@ the packer converts the length value to a string, in decimal format; the
 unpacker converts the string back to a number to use as the length. For
 example:
 
-<div class="code">
-
+```
     fp.packBytes('A3/a', 'Hello from the string packer!');
-
-</div>
+```
 
 That code stores "29 " - two digits plus a space to fill out the three
 bytes of the 'A3' format - followed by the bytes of the string.
@@ -1118,19 +1092,15 @@ memory, so some file formats use the same approach.
 The special '0' qualifier lets you pack and unpack null-terminated
 strings. For example:
 
-<div class="code">
-
+```
     fp.packBytes('a0', 'Null-terminated!');
-
-</div>
+```
 
 This is stored in the file as follows:
 
-<div class="code">
-
+```
     N u l l - t e r m i n a t e d ! 00
-
-</div>
+```
 
 When unpacking, the unpacker reads a character at a time from the file,
 and stops when it reaches the null. The null isn't part of the returned
@@ -1209,11 +1179,9 @@ The h and H formats give you a third way to unpack raw bytes. These
 codes unpack into strings containing printable hex digits. For example,
 suppose we have a file with these bytes:
 
-<div class="code">
-
+```
     H e l l o !
-
-</div>
+```
 
 Now let's unpack it with 'H12'. This returns the string '48656C6C6F21'.
 The first pair of digits, '48', is the hex value of the ASCII code for
@@ -1237,7 +1205,7 @@ and 'f' uses the binary 32-bit sub-format (base 2, 7-bit exponent,
 BigNumber values can store much larger absolute values than the 'd' and
 'f' types can represent. If you pack a BigNumber value that doesn't fit,
 a numeric overflow error is thrown. You can change this by adding the
-<span class="code">%</span> qualifier. 'd%' and 'f%' won't throw errors
+`%` qualifier. 'd%' and 'f%' won't throw errors
 when confronted with numbers that are too large, but instead pack
 "infinity" values. "Infinity" is a special distinguished value in the
 IEEE type scheme, meaning that the result of a calculation was too large
@@ -1249,8 +1217,8 @@ that the least significant byte of the mantissa is stored first, and the
 byte with the sign bit and exponent is stored last. Note that this byte
 order is backwards from the IEEE standard, which calls for big-endian
 order. You can force standard big-endian order using the
-<span class="code">\></span> suffix as usual:
-<span class="code">d\></span> and <span class="code">f\></span> store
+`\>` suffix as usual:
+`d\>` and `f\>` store
 precisely the formats defined in the standard.
 
 The IEEE 754-2008 interchange format is a standard, portable format. It
@@ -1293,33 +1261,33 @@ apply a repeat count and a byte order suffix to a whole series of items
 at once.
 
 Suppose you're working with a file format that stores pairs of names and
-numbers. For each one, we'll write <span class="code">'C/a l'</span> - a
+numbers. For each one, we'll write `'C/a l'` - a
 counted-length string, followed by a 32-bit integer. Now suppose we have
-six of these to store. We could write it as <span class="code">'C/a l
-C/a l C/a l C/a l C/a l C/a l'</span>. But that's tedious; using
+six of these to store. We could write it as `'C/a l
+C/a l C/a l C/a l C/a l C/a l'`. But that's tedious; using
 parentheses and a repeat count suffix, we could shorten this to
-<span class="code">'(C/a l)6'</span>.
+`'(C/a l)6'`.
 
 Note that the whole group is repeated on each iteration. The packer runs
 through the entire contents of the group once, then starts over at the
 beginning of the group for each repetition.
 
-Groups can be nested: <span class="code">'(l (C/a)2)3'</span> is the
-same as <span class="code">'l C/a C/a l C/a C/a l C/a C/a'</span>.
+Groups can be nested: `'(l (C/a)2)3'` is the
+same as `'l C/a C/a l C/a C/a l C/a C/a'`.
 
 One of the simplest uses of groups is to repeat a string format.
 Remember that a repeat count suffix (or a "/" prefix) for a string
 format specifies the number of bytes or characters in the string. If you
 want to pack or unpack multiple strings, use a group. For example, to
 write four Latin-1 strings with a fixed length of 15 bytes, you can
-write <span class="code">'(a15)4'</span>. To write six length-prefixed
-Unicode strings, use '<span class="code">'(C/u)6'</span>.
+write `'(a15)4'`. To write six length-prefixed
+Unicode strings, use '`'(C/u)6'`.
 
 Grouping is also handy if you need to apply a byte-order override to a
-group of items. For example, you can simplify <span class="code">'l\>
-s\> s\> S\>'</span> by grouping it as <span class="code">'(l s s
-S)\>'</span>. Within a group, you can override the group byte order:
-<span class="code">'(l\< s s S)\>'</span> treats all of the items as
+group of items. For example, you can simplify `'l\>
+s\> s\> S\>'` by grouping it as `'(l s s
+S)\>'`. Within a group, you can override the group byte order:
+`'(l\< s s S)\>'` treats all of the items as
 big-endian except the first.
 
 ### List grouping
@@ -1333,17 +1301,15 @@ represented as a list.
 When packing, a square bracket group reads its contents from a list in
 the arguments:
 
-<div class="code">
-
+```
     fp.packBytes('C/a [l s]3', 'string', [1, 2, 3, 4, 5]);
+```
 
-</div>
+Note how the `\[l s\]3` corresponds to the list
+value `\[1, 2, 3, 4, 5\]` in the arguments.
 
-Note how the <span class="code">\[l s\]3</span> corresponds to the list
-value <span class="code">\[1, 2, 3, 4, 5\]</span> in the arguments.
-
-You might also notice that the format code <span class="code">\[l
-s\]3</span> specifies six items to pack, but the list argument only
+You might also notice that the format code `\[l
+s\]3` specifies six items to pack, but the list argument only
 contains five values. What happens with that sixth packed item? When a
 value list is too short for a square-bracket group in the format list,
 the packer simply packs a default value for each missing item. For
@@ -1356,19 +1322,17 @@ packer simply ignores the extra items.
 When unpacking, a square bracket group is unpacked as a sublist in the
 result list. We can unpack the file we just packed above, like this:
 
-<div class="code">
-
+```
     local lst = fp.unpackBytes('C/a [l s]3');
+```
 
-</div>
-
-This returns the list <span class="code">\['string', \[1, 2, 3, 4, 5,
-0\]</span>. As you can see, the unpacker create a sublist for the
+This returns the list `\['string', \[1, 2, 3, 4, 5,
+0\]`. As you can see, the unpacker create a sublist for the
 grouped item. Whenever the unpacker sees a square-bracket group in the
 format list, it uses a list for that group in the return value list.
 
 Note that the sublist for the group contains six entries, even though
-our original input list for <span class="code">packBytes()</span> had
+our original input list for `packBytes()` had
 five values. Remember what we said about the default: the packer stored
 a default value of zero in the file for the missing sixth slot. The
 unpacker didn't supply the default - that was actually stored in the
@@ -1387,27 +1351,24 @@ square-bracketed group.
 Let's revisit the example above, but this time unpack the group data
 into sublists:
 
-<div class="code">
-
+```
     local lst = fp.unpackBytes('C/a [l s]3!');
+```
 
-</div>
-
-In this case, the return list will be <span class="code">\['string',
-\[1, 2\], \[3, 4\], \[5, 0\]\]</span>. Rather than returning the entire
+In this case, the return list will be `\['string',
+\[1, 2\], \[3, 4\], \[5, 0\]\]`. Rather than returning the entire
 group as a single sublist with six items, the unpacker returns a
 separate sublist for each iteration of the group.
 
 This can be handy when you're unpacking data into object structures,
 since it lets you use list iteration functions like
-<span class="code">mapAll()</span> to transform the unpacked data into
+`mapAll()` to transform the unpacked data into
 objects. For example, if we have a file that contains a list of
 structures, each of which consists of a 32-bit integer and a 16-bit
 integer, we could read the file into a custom object with something like
 this:
 
-<div class="code">
-
+```
     class InfoObj: object
       construct(lst)
       {
@@ -1422,8 +1383,7 @@ this:
     {
       return fp.unpackBytes('[L S]5!').mapAll({x: new InfoObj(x)});
     }
-
-</div>
+```
 
 This tells unpackBytes() to read five of the long/short structures from
 the file, returning each one as a list with two elements. The overall
@@ -1442,11 +1402,9 @@ group, but instead use the actual length of the list. We could do this
 using the usual "/" syntax, but this time we apply it to the whole group
 rather than an individual item:
 
-<div class="code">
-
+```
     fp.packBytes('C/s C/[l s]', 'string', [1, 2, 3, 4, 5]);
-
-</div>
+```
 
 When you use the "/" prefix with a square-bracket group, the packer
 figures out how many iterations of the group will be needed to store all
@@ -1455,14 +1413,12 @@ writes out the repeat count prefix, just as when you use "/" with a
 single item, then iterates through the list. So for the example above,
 the bytes in the file will be:
 
-<div class="code">
-
+```
     05 s t r i n g 03 01 00 00 00 02 00 03 00 00 00 04 00 05 00 00 00 00 00
-
-</div>
+```
 
 When we unpack with the same format string, the result will be
-<span class="code">\['string', \[1, 2, 3, 4, 5, 0\]\]</span>, just as
+`\['string', \[1, 2, 3, 4, 5, 0\]\]`, just as
 when we explicitly entered the repeat count of 3.
 
 You can use a string type, such as 'A', for the length prefix type. If
@@ -1477,22 +1433,18 @@ them, but that also stores the counter prefix. When you want automatic
 counting *without* storing the count, you can use the special repeat
 count "\*":
 
-<div class="code">
-
+```
     fp.packBytes('s*', 1, 2, 3, 4, 5);
-
-</div>
+```
 
 The \* repeat count simply packs everything remaining in the argument
 list, without storing a repeat count anywhere. When a starred item
 matches up with a list value, the packer writes out everything in the
 list to the starred item, then continues with the next item as normal:
 
-<div class="code">
-
+```
     fp.packBytes('s* a15', [1, 2, 3], 'hello!');
-
-</div>
+```
 
 That writes the three 16-bit integer values, followed by the string.
 
@@ -1500,13 +1452,11 @@ On unpacking, a \* means *unpack the whole rest of the file*. For
 example, to unpack an entire file into a byte array, you could simply
 write
 
-<div class="code">
-
+```
     local fp = File.openFile('test.bin', FileAccessRead);
     local b = fp.unpackBytes('b*');
     fp.closeFile();
-
-</div>
+```
 
 Be careful with \* on unpacking, since it could read a lot of data if
 you accidentally use it in the middle of a large file.
@@ -1516,15 +1466,15 @@ you accidentally use it in the middle of a large file.
 It's sometimes useful to pack or unpack a repeated item up to some
 limit, *or* to the end of the actual data being packed/unpacked,
 whichever comes first. So far, we've seen how to pack or unpack an exact
-number of items, as in <span class="code">s30</span>; we've also seen
+number of items, as in `s30`; we've also seen
 how to pack the whole rest of the argument list, or unpack the whole
-rest of hte file, as in <span class="code">s\*</span>. But what if you
+rest of hte file, as in `s\*`. But what if you
 want to unpack 30 items, but stop if the file runs out of data before
 unpacking all 30?
 
 You can do this using an "up to" count. Specify an up-to count by
 combining a numeric limit and \*. For example,
-<span class="code">s30\*</span> packs or unpacks up to 30 short-integer
+`s30\*` packs or unpacks up to 30 short-integer
 values, but stops if the end of the arguments (when packing) or file
 (unpacking) is encountered midway through the set.
 
@@ -1562,11 +1512,9 @@ this. First, you can enclose a string of ordinary charactres in double
 quotes in the pack string, and the packer will simply write those
 characters as bytes:
 
-<div class="code">
-
+```
     fp.packBytes('"hello"');
-
-</div>
+```
 
 This packs the bytes h, e, l, l, o. The characters within the double
 quotes are treated as byte values, so each character must be in the
@@ -1577,28 +1525,24 @@ won't return any values when unpacking. In fact, this format code
 doesn't do anything when unpacking except skip the number of bytes
 implied. It doesn't even verify that the bytes in the file match the
 text in the format code. In other words, unpacking
-<span class="code">'"hello"'</span> is exactly the same as unpacking
-<span class="code">'xxxxx'</span> or <span class="code">'x5'</span>}.
+`'"hello"'` is exactly the same as unpacking
+`'xxxxx'` or `'x5'`}.
 
 The second "literal" packing format is a string of hex digit pairs
 enclosed in curly braces. Each pair of hex digits gives a byte value.
-For example, we could write our <span class="code">'"hello"'</span>
+For example, we could write our `'"hello"'`
 example above like this instead, and get the same effect:
 
-<div class="code">
-
+```
     fp.packBytes('{68 65 6C 6C 6F}');
-
-</div>
+```
 
 You can, of course, use repeat counts with these formats. For example,
 you could write 100 ASCII "A" bytes to a file like so:
 
-<div class="code">
-
+```
     fp.packBytes('"A"100');
-
-</div>
+```
 
 Our next code doesn't write anything at all - in fact, it sort of
 "unwrites". 'X' moves the file position backwards by one byte. With a

@@ -26,8 +26,7 @@ intended for reference from the [Action Reference](actionref.html). It is
 not a complete listing. For complete listings please see the actual
 source files.
 
-<div class="code">
-
+```
     action.t
     /* 
      *   A TravelAction is one that moves (or at least tries to move) the player
@@ -292,13 +291,11 @@ source files.
         /* It's generally possible to undo a travel command. */
         canUndo = true
     ;
-
-</div>
+```
 
 ## actions.t
 
-<div class="code">
-
+```
     DefineSystemAction(Again)
         
         exec(cmd)
@@ -326,11 +323,9 @@ source files.
         }
         
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     DefineIAction(Continue)
         execAction(cmd)
         {
@@ -388,11 +383,9 @@ source files.
         }
         
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     DefineSystemAction(ExitsColour)
         execAction(cmd)
         {
@@ -421,11 +414,9 @@ source files.
             }
         }
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     DefineIAction(GoBack)
         execAction(cmd)
         {
@@ -462,11 +453,9 @@ source files.
             
         }
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     GoIn: TravelAction
         direction = inDir
         predefinedDirection = true
@@ -487,11 +476,9 @@ source files.
             }
         }
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     Hello: IAction
         baseActionClass = Hello
         
@@ -552,11 +539,9 @@ source files.
         
         curObj = nil  
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     class ImplicitConversationAction: TopicAction
         execAction(cmd)
         {
@@ -613,11 +598,9 @@ source files.
         topicListProperty = nil
         topics = nil
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     DefineIAction(Inventory)
         execAction(cmd)
         {
@@ -678,11 +661,9 @@ source files.
         /* Do we want separate lists of what's worn and what's carried? */
         splitListing = true
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     DefineIAction(Listen)
         execAction(cmd)
         {
@@ -726,11 +707,9 @@ source files.
         /* Do nothing in the core library; senseRegion.t will override if present */
         listRemoteSounds(lst) { }
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     DefineTAction(PushTravelDir)
         execAction(cmd)
         {
@@ -841,11 +820,9 @@ source files.
         
         doTravel() { delegated TravelAction(); }
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     DefineIAction(Smell)
         execAction(cmd)
         {
@@ -896,21 +873,17 @@ source files.
         /* Do nothing in the core library; senseRegion.t will override if present */
         listRemoteSmells(lst) { }
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
     Travel: TravelAction
         direction = (dirMatch.dir)
     ;
-
-</div>
+```
 
 ## debug.t
 
-<div class="code">
-
+```
     DefineSystemAction(Debug)
         execAction(cmd)
         {
@@ -941,13 +914,11 @@ source files.
             
         }
     ;
-
-</div>
+```
 
 ## thing.t
 
-<div class="code">
-
+```
     class Thing:  ReplaceRedirector, Mentionable
 
        
@@ -3357,11 +3328,9 @@ source files.
         cannotUnlockWithSelfMsg = BMsg(cannot unlock with self, '{I} {can\'t} unlock
             anything with itself. ' )
     ;
+```
 
-</div>
-
-<div class="code">
-
+```
      /*  
      *   A Key is any object that can be used to lock or lock selected items whose
      *   lockabilty is lockableWithKey. We define all the special handling on the
@@ -3562,8 +3531,7 @@ source files.
             plausibleLockList = plausibleLockList.appendUnique(actualLockList);
         }
     ;
-
-</div>
+```
 
 </div>
 

@@ -67,15 +67,13 @@ just the same way as you'd define them on Thing are:
 
 A minimal Actor definition might thus look something like this:
 
-<div class="code">
-
+```
     george: Actor 'George; tall thin; man; him' @hall
         "He's a tall thin man. "    
        
         globalParamName = 'george'
     ;
-
-</div>
+```
 
 <span id="additional"></span>
 
@@ -176,7 +174,7 @@ Thing are a number peculiar to Actor. The most commonly useful of these
   actor has just arrived.
 - **pcArrivalTurn**: The last turn (if any) on which the player
   character arrived in the location of this actor. This is mainly for
-  use by <span class="code">pcJustArrived</span>.
+  use by `pcJustArrived`.
 - **pcJustArrived**: flag, this is true if the player character arrived
   in the location of this actor on the current turn and nil otherwise.
   This can be used, for example, to adjust our specialDesc to reflect
@@ -263,7 +261,7 @@ inanimate object is rather different from attacking, kissing or touching
 a person). On the Thing class the result is to display the
 **futileToAttackMsg** (if attacking is allowed at all, by default it
 isn't since it's stopped at the verify stage so we'd normally see the
-<span class="code">cannotAttackMsg</span> instead), the **feelDesc**, or
+`cannotAttackMsg` instead), the **feelDesc**, or
 the **futileToKissMsg** if it is non-nil (by default it's nil) or else
 the default message generated at the report stage, respectively.
 
@@ -278,41 +276,41 @@ the **attackResponseMsg**, **touchResponseMsg** or **kissResponseMsg**
 (all of which should be defined as single-quoted strings) is displayed.
 
 At first sight it may seem a bit confusing that some properties refer to
-'feel' (e.g. <span class="code">feelDesc</span>,
-<span class="code">checkFeelMsg</span>) while others refer to 'touch'
-(e.g. <span class="code">touchResponseMsg</span>). The pattern is that
+'feel' (e.g. `feelDesc`,
+`checkFeelMsg`) while others refer to 'touch'
+(e.g. `touchResponseMsg`). The pattern is that
 properties defined on Thing use 'feel' while those peculiar to Actor use
 'touch'; the rationale of this is that the naming of the Thing
 properties follows the convention of using the action name, which is
 actually Feel, but that it's rather more natural to talk in terms of
 touching someone than feeling someone (hence
-<span class="code">touchResponseMsg</span> and
-<span class="code">TouchTopic</span>). However, to alleviate any
+`touchResponseMsg` and
+`TouchTopic`). However, to alleviate any
 confusion that might arise the library defines a number of macros that
 convert the plausible but wrong form of the property name into the
 correct one:
 
-- <span class="code">checkTouchMsg</span> into
-  <span class="code">checkFeelMsg</span>
-- <span class="code">feelResponseMsg</span> into
-  <span class="code">touchResponseMsg</span>
-- <span class="code">isTouchable</span> into
-  <span class="code">isFeelable</span>
-- <span class="code">cannotTouchMsg</span> into
-  <span class="code">cannotFeelMsg</span>
-- <span class="code">touchDesc</span> into
-  <span class="code">feelDesc</span>
-- <span class="code">checkHitMsg</span> into
-  <span class="code">checkAttackMsg</span>
-- <span class="code">hitResponseMsg</span>
-  <span class="code">attackResponseMsg</span>
+- `checkTouchMsg` into
+  `checkFeelMsg`
+- `feelResponseMsg` into
+  `touchResponseMsg`
+- `isTouchable` into
+  `isFeelable`
+- `cannotTouchMsg` into
+  `cannotFeelMsg`
+- `touchDesc` into
+  `feelDesc`
+- `checkHitMsg` into
+  `checkAttackMsg`
+- `hitResponseMsg`
+  `attackResponseMsg`
 
 While these can't be relied upon in every single case, and it's better
 to use the correct names, these macros will probably cover the great
 majority of cases where the plausibly wrong property name is used, so
 that most of the time it won't matter whether, for instance, you use
-<span class="code">feelResponseMsg</span> or
-<span class="code">touchResponseMsg</span> as the property name, since
+`feelResponseMsg` or
+`touchResponseMsg` as the property name, since
 in most common cases they'll end up meaning exactly the same thing.
 
   
@@ -331,7 +329,7 @@ define. We could explicitly set the location property of all such
 objects to refer to an Actor object in another file, but this could soon
 become quite laborious, and may easily lead to errors if we slip back
 into using the + notation we're more used to. To address these problems
-we can use a <span class="code">ProxyActor</span> object. This can be
+we can use a `ProxyActor` object. This can be
 placed at the head of any second or subsequent file we're using to
 define the same actor, and then we can continue to use the + notation to
 locate ActorStates, AgendaItems and all the rest in the ProxyActor just
@@ -340,8 +338,7 @@ to set the ProxyActor's location property to the Actor it's standing in
 for, which we can do via the @ notation in the ProxyActor template,
 e.g.:
 
-<div class="code">
-
+```
     ProxyActor @guard    
     ;
 
@@ -364,8 +361,7 @@ e.g.:
        ...
 
     ;
-
-</div>
+```
 
 </div>
 

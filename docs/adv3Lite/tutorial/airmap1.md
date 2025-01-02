@@ -42,8 +42,7 @@ definition template). I'll explain why when we get to the end. I'll also
 interrupt the program listing every now and again to explain particular
 points as they arise.
 
-<div class="code">
-
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -61,15 +60,13 @@ points as they arise.
         htmlDesc = 'A brief demonstration of game design in TADS 3.'    
         
     ;
-
-</div>
+```
 
 Note that we've filled in some of the properties of versionInfo,
 including the IFID, from those shown in the game design article we're
 borrowing from in the *TADS 3 Technical Menual*.
 
-<div class="code">
-
+```
     gameMain: GameMainDef
         /* Define the initial player character; this is compulsory */
         initialPlayerChar = me
@@ -144,8 +141,7 @@ borrowing from in the *TADS 3 Technical Menual*.
             from the card, and it would almost certainly render the card useless if
             you did so. '
     ;
-
-</div>
+```
 
 Note how we've made the magnetic stripe a part of the ID card, by making
 it a Fixture (so it can't be taken separately) and then providing a
@@ -153,8 +149,7 @@ custom cannotTakeMsg. The description also hints both that the card
 might be useful in a card lock and that it might trigger a metal
 detector.
 
-<div class="code">
-
+```
     + Decoration 'people; of[prep]; line queue tourists businesspeople; them'
         "A motley collection of tourists and businesspeople, so far as you can
         tell, many of them looking increasingly frustrated at the length of the
@@ -172,8 +167,7 @@ detector.
         
         notImportantMsg = 'Unfortunately you can\'t get anywhere near any of them. '
     ;
-
-</div>
+```
 
 Here we've simply used the Decoration class to implement people the
 player character isn't meant to interact with. Even this minimal
@@ -184,8 +178,7 @@ attention to the ID card that's been left lying around. We'll see how to
 implement rather livelier and more responsive non-player characters in
 later chapters.
 
-<div class="code">
-
+```
     securityGate: Room 'Security Gate' 'security gate'
         "You are at the security gate leading into the main
         concourse and boarding gate areas. The concourse lies to the
@@ -229,21 +222,20 @@ later chapters.
         notImportantMsg = 'You\'re morally certain the security guard won\'t let you
             get anywhere near it. '
     ;
-
-</div>
+```
 
 The main point of note here is the use of the Passage class (yet another
 combination of TravelConnector and Thing) to implement the metal
 detector. This has two uses: first it allows commands like GO THROUGH
 METAL DETECTOR and ENTER METAL DETECTOR to work just the same as NORTH
 in this context; second it enables us to put conditions on the travel
-(in the <span class="code">canTravelerPass()</span> method) to stop the
+(in the `canTravelerPass()` method) to stop the
 player character carrying the ID card through the metal detector when
 the detector is on. Note that we've added a custom
-<span class="code">isOn</span> property to metalDetector to represent
+`isOn` property to metalDetector to represent
 whether it is on or off, but at the moment there's no mechanism for
 turning it on or off (that will follow in the next chapter). The
-<span class="code">explainTravelBarrier()</span> method not only
+`explainTravelBarrier()` method not only
 explains why passage through the metal detector hasn't been allowed, it
 also returns the ID card to the ticket counter (as in Mike Roberts'
 specification). Once we add the security guard as an object in his own
@@ -251,12 +243,11 @@ right, we can probably improve on this implementation, but it will do
 for now. Finally, note the power cable trailing across the floor from
 the metal detector. This is a hint that preventing power from reaching
 the metal detector might be a way to disable it, but its
-<span class="code">notImportantMsg</span> should make it reasonably
+`notImportantMsg` should make it reasonably
 clear that interfering directly with the cable isn't the way to go about
 it.
 
-<div class="code">
-
+```
     concourse: Room 'Concourse' 'concourse; long; hallway'
         "You are in a long hallway connecting the terminal
         building (which lies to the south) to the boarding gates (which are
@@ -273,17 +264,15 @@ it.
         "The slot appears to accept special ID cards with magnetic encoding. If you
         had an appropriate ID card, you could put it in the slot to open the door. "
     ;   
+```
 
-</div>
-
-Note that we've commented out the line <span class="code">north =
-gateArea</span> for now, since gateArea hasn't been implemented yet.
+Note that we've commented out the line `north =
+gateArea` for now, since gateArea hasn't been implemented yet.
 This will allow us to test this part of the map without first completing
 the rest of the map. The implementation of the card slot is obviously
 incomplete, but it will do for now.
 
-<div class="code">
-
+```
     snackBar: Room 'Snack Bar' 'snack bar'
         "The snack bar seems to be full of passengers jostling one another to get at
         the serving counter, or consuming their homogenized snacks at the crowded
@@ -344,8 +333,7 @@ incomplete, but it will do for now.
             something <i>big</i>, but you knew that anyway; that's what brought you
             to this godforsaken hell-hole. "   
     ;
-
-</div>
+```
 
 Once again we've used Decoration objects to represent people we don't
 want the player character to interact with, although the description of
@@ -355,14 +343,13 @@ move it out of the snack bar when these sinister characters board the
 plane; we've also defined the description of the general tourists so it
 will no longer mention the men in dark suits once the latter are moved.
 The newspaper provides another example of the use of the
-<span class="code">readDesc</span> property to give a suitable response
+`readDesc` property to give a suitable response
 to a READ command; it also potentially provides the player with some
 more information about the game's setting. It does not yet provide an
 airline ticket when taken, but we'll be coming back to that in the next
 chapter.
 
-<div class="code">
-
+```
     securityArea: Room 'Security Area' 'security area'
         "This somewhat bare room seems to be a lobby for other areas. There are exits
         south and west, while the way out back to the concourse lies through the
@@ -407,14 +394,13 @@ chapter.
         east = securityArea
         out asExit(east)
     ;
-
-</div>
+```
 
 These last three rooms are quite sparsely implemented for now, and will
 need to be filled out more later, but we do at least have the suitcase
 and pilot's uniform in place. Note the use of the OpenableContainer
-class. This is equivalent to defining <span class="code">contType =
-In</span> and <span class="code">isOpenable = true</span> on the
+class. This is equivalent to defining `contType =
+In` and `isOpenable = true` on the
 suitcase, and provides us with an object that can be open and closed and
 which can contain things that are only accessible when it's open. By
 default an OpenableContainer starts out closed.
@@ -422,7 +408,7 @@ default an OpenableContainer starts out closed.
 ## Further Explanations
 
 A minor point to note is the way in which we've used the
-<span class="code">asExit()</span> construct to make OUT a synonym for
+`asExit()` construct to make OUT a synonym for
 whichever seems the most natural way out wherever it's appropriate. This
 can make for a smoother playing experience when OUT seems the most
 natural thing to the player to type, even when it isn't explicitly

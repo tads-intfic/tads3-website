@@ -36,7 +36,7 @@ List](#grammar) immediately below to find it. For example, to find what
 action would be triggered by KILL FRED, click on K in the list of
 letters at the start of the Grammar List, and find the line that reads
 '**kill** something'. At the end of the line you'll see the hyperlinked
-action name <span class="code">Attack</span>. Clicking on the link will
+action name `Attack`. Clicking on the link will
 take you to further information about the Attack action in the Action
 List.
 
@@ -677,12 +677,12 @@ action handling is defined on the Thing class. The **Verify
 Property/Condition** column holds the name of the basic property that
 must be true for the action to go ahead with that object, together with
 the default value of that property in the form
-<span class="code">propName = val</span>. For example, the basic
+`propName = val`. For example, the basic
 property determining whether something can be opened is
-<span class="code">isOpenable</span>, which is nil by default on Thing,
-so it appears as <span class="code">isOpenable = nil</span>. Sometimes
+`isOpenable`, which is nil by default on Thing,
+so it appears as `isOpenable = nil`. Sometimes
 this property depends on the value of another property, e.g.
-<span class="code">isTakeable = !isFixed</span>, meaning a Thing is
+`isTakeable = !isFixed`, meaning a Thing is
 takeable if it is not fixed in place. Occasionally this colummn just
 holds the value nil, which means that the verfy routine on Thing fails
 the action unconditionally (as is mainly the case with conversational
@@ -692,8 +692,8 @@ The **Failure Message** column then holds the name of the property that
 defines the message to be displayed if the action fails on account of
 not meeting the Verify Property/Condition requirement. For example, if
 the player attempts to OPEN an object whose
-<span class="code">isOpenable</span> property is nil, the object's
-<span class="code">cannotOpenMsg</span> property is displayed. Knowing
+`isOpenable` property is nil, the object's
+`cannotOpenMsg` property is displayed. Knowing
 this property name makes it easy for game authors to customize the
 failure messages on particular objects or classes of object.
 
@@ -701,8 +701,8 @@ The **Action Result** column attempts to summarize the *main* result of
 the action if it is allowed to proceed. Note that actions may have
 additional side effects not shown in the table. Where an entry is blank,
 no action results are defined for that action on Thing. Where the action
-column contains an entry like <span class="code">report { DMsg (so and
-so) }</span>, this means that the action method does nothing, but the
+column contains an entry like `report { DMsg (so and
+so) }`, this means that the action method does nothing, but the
 report phase displays the report indicated. Occasionally there is a link
 to another class name, such as Key; this means that more significant
 handling for the action is defined on the class in question and that
@@ -734,7 +734,7 @@ for the very simplest cases. In particular, the properties listed in the
 whether an action can succeed on an object because of the type of object
 it is. For example, there is no prospect of an OPEN command operating on
 an object unless that object is openable (isOpenable = true), but while
-<span class="code">isOpenable = true</span> is a necessary condition for
+`isOpenable = true` is a necessary condition for
 the OPEN command to work, it may not be sufficient. An OPEN command will
 also fail, for example, if the object in question is already open, or if
 it is locked. In some cases the presence of further such information is

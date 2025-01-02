@@ -26,8 +26,7 @@ The description of the Airport game calls for a ticket found by picking
 up a newspaper in the snack bar. We've already implemented the
 newspaper; now it's time to implement the ticket:
 
-<div class="code">
-
+```
     ticket: Thing 'plane ticket'
         "It's a ticket for flight TI 179 to Buenos Aires. "
         
@@ -36,8 +35,7 @@ newspaper; now it's time to implement the ticket:
         useSpecialDesc = (location == getOutermostRoom)
 
     ;
-
-</div>
+```
 
 That was the easy bit. The only new thing here is the use of the
 useSpecialDesc property to determine when the specialDesc is used. We
@@ -45,8 +43,8 @@ want "A ticket lies on the ground" to appear in the room description
 whenever the ticket is notionally lying on the ground, which is whenever
 it's directly in a room rather than some other object; we can test this
 by testing whether its location is the same as the room it's in, as
-above. While we're at it we define <span class="code">readDesc</span> as
-<span class="code">(desc)</span> so that READ TICKET gives the same
+above. While we're at it we define `readDesc` as
+`(desc)` so that READ TICKET gives the same
 response as X TICKET. The next trick is to hide it in the newspaper so
 that the player character finds it if he either searches the newspaper
 or picks it up.
@@ -61,8 +59,7 @@ defining the items elsewhere in our code with no starting location (i.e.
 a starting location of nil), as with the ticket above. We can thus put
 the ticket in the hiddenIn property of the newspaper:
 
-<div class="code">
-
+```
     ++ newspaper: Thing 'newspaper; narcosia; paper herald'
         "It's a copy of the latest edition of the <i>Narcosia Herald</i>. "
         
@@ -73,18 +70,17 @@ the ticket in the hiddenIn property of the newspaper:
         
         hiddenIn = [ticket]
     ;
+```
 
-</div>
-
-In the same way we could use <span class="code">hiddenUnder</span> or
-<span class="code">hiddenBehind</span> to hide items under or behind
+In the same way we could use `hiddenUnder` or
+`hiddenBehind` to hide items under or behind
 another object.
 
 This will work well enough if the player thinks to LOOK IN or SEARCH the
 newspaper, but nothing happens if the player character just picks it up.
 Picking up an object would reveal any items in its
-<span class="code">hiddenUnder</span> or
-<span class="code">hiddenBehind</span> lists, on the basis that they
+`hiddenUnder` or
+`hiddenBehind` lists, on the basis that they
 would be left behind when the object is picked up and hence revealed to
 view, but if an object is picked up anything hidden in it is assumed to
 travel with it. We can change that by overriding the **revealOnMove()**
@@ -93,8 +89,7 @@ this is the method that reveals anything hidden under or behind the
 object, but since we're not hiding anything under or behind the
 newspaper we can override this method to do just what we need:
 
-<div class="code">
-
+```
     ++ newspaper: Thing 'newspaper; narcosia; paper herald'
         "It's a copy of the latest edition of the <i>Narcosia Herald</i>. "
         
@@ -120,8 +115,7 @@ newspaper we can override this method to do just what we need:
         
         lookInMsg = (readDesc)
     ;
-
-</div>
+```
 
 We first check that there's something still hidden in the newspaper
 before doing anything else, since we only want the ticket to fall out of
@@ -129,12 +123,11 @@ the newspaper the first time it's picked up, and not thereafter. Then,
 if the ticket is still hidden in the newspaper, we display a message to
 say that it flutters out and lands on the floor, move the ticket to the
 enclosing outer room, and empty the hiddenIn list. Although this version
-of <span class="code">revealOnMove()</span> will work perfectly well for
+of `revealOnMove()` will work perfectly well for
 this game, if you wanted a more generalized version of the routine that
 worked whatever was hidden in the newspaper you could write:
 
-<div class="code">
-
+```
     ++ newspaper: Thing 'newspaper; narcosia; paper herald'
         "It's a copy of the latest edition of the <i>Narcosia Herald</i>. "
         
@@ -158,21 +151,20 @@ worked whatever was hidden in the newspaper you could write:
         
         lookInMsg = (readDesc)
     ;
+```
 
-</div>
-
-Here, <span class="code">\<\<list of hiddenIn\>\></span> provides a list
+Here, `\<\<list of hiddenIn\>\>` provides a list
 of everything that's hidden in the newspaper, while the
-<span class="code">{prev}</span> tag then ensures that the verbs
-<span class="code">{falls}</span> and
-<span class="code">land{s/ed}</span> will agree with the list, whether
+`{prev}` tag then ensures that the verbs
+`{falls}` and
+`land{s/ed}` will agree with the list, whether
 it turns out to be a singular or plural subject (e.g. "a ticket
 falls..." or "a ticket and a leaflet fall..."). Meanwhile the
-<span class="code">moveHidden(&prop, loc)</span> method moves everything
+`moveHidden(&prop, loc)` method moves everything
 in the *prop* list to *loc* and then sets *prop* to \[\]. Note that we
 pass the property pointer &prop to this method. I repeat, we don't
 actually *need* this more general form of
-<span class="code">revealOnMove()</span> in this game; it's shown here
+`revealOnMove()` in this game; it's shown here
 so you can see how to do it if you need it in your own game.
 
 One last thing: once the ticket has fallen out of the newspaper then
@@ -182,28 +174,28 @@ on the paper's contents. To avoid this, it would be better if LOOK IN
 NEWSPAPER worked the same as READ NEWSPAPER once there's nothing left
 inside it. When LOOK IN has nothing else to display, it displays the
 object's **lookInMsg**. So here the easiest thing to do is to define
-<span class="code">lookInMsg</span> to be the same as
-<span class="code">readDesc</span>. But then we hit another apparent
-snag: <span class="code">lookInMsg</span> would normally be defined as a
-single-quoted string but we defined <span class="code">readDesc</span>
+`lookInMsg` to be the same as
+`readDesc`. But then we hit another apparent
+snag: `lookInMsg` would normally be defined as a
+single-quoted string but we defined `readDesc`
 as a double-quoted string. Fortunately, adv3Lite also allows us to
 define it as a single-quoted string, so we need to change it to one
 here. But our original definition of the newspaper's
-<span class="code">readDesc</span> contained a number of apostrophes
+`readDesc` contained a number of apostrophes
 which we'd now need to escape with backslashes. To avoid having to do
 this, we use the alternative way of defining a single-quoted string, by
 starting and ending it with three single-quote marks in a row '''like
 this'''. This removes the need to escape any apostrophes/single-quote
 marks (two names for the same character here) within the string.
 (Alternatively, we could have got away with defining
-<span class="code">lookInMsg = readDesc</span>, since this is an
+`lookInMsg = readDesc`, since this is an
 instance where adv3Lite allows a double-quoted string to be used in
 place of the expected single-quoted one, but this isn't always the case,
 so don't get into the habit of thinking they're always interchangeable!)
 
 Now try compiling and running the game again to test that the newspaper
 and ticket work as expected. Use whichever version of
-<span class="code">revealOnMove()</span> you prefer.
+`revealOnMove()` you prefer.
 
 </div>
 

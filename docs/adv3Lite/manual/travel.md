@@ -48,15 +48,15 @@ these purposes are as follows:
   to be allowed via this connector. By default this property is true. In
   this context 'apparent' means 'not concealed'. To be usable the
   TravelConnector must be not only apparent but visible (i.e.
-  <span class="code">isConnectorVisible</span> must be true); this is
-  the case if <span class="code">isConnectorApparent</span> is true and
+  `isConnectorVisible` must be true); this is
+  the case if `isConnectorApparent` is true and
   the lighting conditions are sufficient to see the exit by.
 - **isConnectorListed** (true or nil) If this is true then the
   corresponding exit will be shown in the exit lister. This can be set
   to nil to hide the exit (presumably until something occurs to reveal
   it, when you would then set it to true). By default
-  <span class="code">isConnectorListed</span> takes its value from
-  <span class="code">isConnectorApparent</span>.
+  `isConnectorListed` takes its value from
+  `isConnectorApparent`.
 - **isDestinationKnown** (true or nil) This is true when the player
   character knows where this exit leads. By default this is true if the
   destination of the connector has been visited (visited = true). You
@@ -75,23 +75,23 @@ these purposes are as follows:
 - **noteTraversal(actor)** This method is called when *actor* traverses
   this connector, and can be used to carry out any side-effects of the
   travel. By default we simply display the
-  <span class="code">travelDesc</span> here if *actor* is the player
-  character and update the <span class="code">traversedBy</span>
+  `travelDesc` here if *actor* is the player
+  character and update the `traversedBy`
   property with the actor and/or vehicle and/or travel pushable that has
   just traversed us.
 - **travelDesc** (double-quoted string) A message that's displayed when
   the player character traverses this TravelConnector (alternatively,
   this could be defined as a method that carried out all sorts of side
   effects of traversing this TravelConnector). Note that if
-  <span class="code">noteTraversal()</span> is overridden without a call
-  to <span class="code">inherited()</span>, the
-  <span class="code">travelDesc</span> will be disabled. Note also that
+  `noteTraversal()` is overridden without a call
+  to `inherited()`, the
+  `travelDesc` will be disabled. Note also that
   the default behaviour of travelDesc is to call the TravelConnector's
   doScript() method if the TravelConnector is also a Script; this makes
   it easy to vary the message displayed when the player character
   traverses the connector by adding an [EventList](eventList.html) class
   to the TravelConnector's class list and defining an
-  <span class="code">eventList</span> property on it.
+  `eventList` property on it.
 - **traversedBy** A list of all the actors, vehicles and push-travelers
   (objects pushed around by an actor) that have traversed this Travel
   Collector over the course of the game.
@@ -122,9 +122,9 @@ these purposes are as follows:
 - **travelVia(actor)** This is the principal method called when the
   actor tries to traverse this TravelConnector. It first checks for
   travel barriers (see below), and then if the travel barriers don't
-  prevent travel, it calls the <span class="code">execTravel()</span>
+  prevent travel, it calls the `execTravel()`
   method. The only reason to override
-  <span class="code">travelVia()</span> would be if you wanted
+  `travelVia()` would be if you wanted
   attempting to travel via this connector to do something drastically
   different from a normal travel action.
 - **canTravelerPass(traveler)** Returns true if the traveler is allowed
@@ -160,8 +160,7 @@ An example of a TravelConnector which conditionally blocks travel could
 be one that only allows travel down a smoke-filled passage if the player
 is wearing a wet blanket, which could be defined thus:
 
-<div class="code">
-
+```
     landing: Room 'Landing' 'landing'
         "The smoke is already becoming so thick here that it's hard to see much.
         Your bedroom lies to the north -- if you can make your way through the
@@ -200,8 +199,7 @@ is wearing a wet blanket, which could be defined thus:
         
         regions = upstairs
     ;
-
-</div>
+```
 
 This incidentally illustrates that if we only want to use a particular
 TravelConnector once, we don't need to define it as separate named
@@ -210,13 +208,13 @@ directly on the appropriate direction property.
 
 Note that a TravelConnector only establishes a connection in one
 direction: the TravelConnector defined on the
-<span class="code">north</span> property in the example above creates a
+`north` property in the example above creates a
 direction north from the landing to the bedroom, but no connection back
 south from the bedroom to the landing. Often, as here, that's what we
 want (since we wouldn't want the same travel restrictions to apply to
 the attempt to return from the bedroom to the landing), but if you do
 want a TravelConnector that works the same both ways, you could try
-using the <span class="code">SymConnector</span> defined in the
+using the `SymConnector` defined in the
 [symconn](../../extensions/docs/symconn.html) extension.
 
 <span id="travelbarrier"></span>
@@ -255,8 +253,7 @@ name the connector that's being blocked. For example, suppose our game
 had several exits that required the player character to be wearing a wet
 blanket in order to penetrate the smoke. We might set it up thus:
 
-<div class="code">
-
+```
     landing: Room 'Landing' 'landing'
         "The smoke is already becoming so thick here that it's hard to see much.
         Your bedroom lies to the north -- if you can make your way through the
@@ -309,8 +306,7 @@ blanket in order to penetrate the smoke. We might set it up thus:
                     after the first step and are forced to retreat. ";
             }
     ;
-
-</div>
+```
 
 Note how we've added a custom theName property to the two
 TravelConnectors so that smokeBarrier.explainTravelBarrier(actor,

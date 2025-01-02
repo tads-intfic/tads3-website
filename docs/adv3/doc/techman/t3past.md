@@ -57,35 +57,35 @@ time during the game.
 ## Selecting the person and tense of the narrative
 
 You select the narrative tense via the
-<span class="code">usePastTense</span> property of your
-<span class="code">gameMain</span> object. This is the object where you
+`usePastTense` property of your
+`gameMain` object. This is the object where you
 define the initial player character and the messages displayed during
 the introduction and after quitting. The default value of
-<span class="code">usePastTense</span> is <span class="code">nil</span>,
+`usePastTense` is `nil`,
 meaning that, by default, the story uses the present tense. Override
-this property to <span class="code">true</span> for a past tense
+this property to `true` for a past tense
 narrative.
 
 You can reset this property at any time during the game to switch to a
 different tense. The TADS 3 Library defines a convenience macro for
-this, called <span class="code">setPastTense</span>. This macro takes a
+this, called `setPastTense`. This macro takes a
 single argument and is just a shorthand for assigning
-<span class="code">gameMain.usePastTense</span> directly:
-<span class="code">setPastTense(val)</span> simply expands to
-<span class="code">gameMain.usePastTense = val</span>.
+`gameMain.usePastTense` directly:
+`setPastTense(val)` simply expands to
+`gameMain.usePastTense = val`.
 
 Unlike the narrative tense, the person in which the player character is
 referred to is a property of the player character's
-<span class="code">Actor</span> object. In a game where several
+`Actor` object. In a game where several
 characters can be controlled by the player at different times, you might
 want to use distinct grammatical persons for some of them, so it makes
 sense to define this setting separately for each potential player
 character. To select the person for the player character object, you set
-its <span class="code">pcReferralPerson</span> property to one of the
-three following values: <span class="code">FirstPerson</span>,
-<span class="code">SecondPerson</span>, or
-<span class="code">ThirdPerson</span>. The default value is
-<span class="code">SecondPerson</span>, so that the game refers to the
+its `pcReferralPerson` property to one of the
+three following values: `FirstPerson`,
+`SecondPerson`, or
+`ThirdPerson`. The default value is
+`SecondPerson`, so that the game refers to the
 player character as "you" unless otherwise specified.
 
 ## The past tense handling framework
@@ -104,19 +104,15 @@ familiarity with the material exposed therein.
 If you have read the article in question, you have probably noticed that
 the first given example of a message that uses substitution parameters:
 
-<div class="code">
-
+```
        {You/he} see{s} nothing unusual about {it dobj/him}.
-
-</div>
+```
 
 has been updated in a more recent version of the TADS 3 Library to:
 
-<div class="code">
-
+```
        {You/he} {sees} nothing unusual about {it dobj/him}.
-
-</div>
+```
 
 Although the verb "see" could be considered regular as long as we were
 only interested in the present-tense form, and could be handled with the
@@ -342,11 +338,9 @@ parameters, if present, must be enclosed in square brackets rather than
 braces. For example, a message involving the verb "understand" could be
 written like this:
 
-<div class="code">
-
+```
        {You/he} hardly underst{and[s]|ood} Blottnyan poetry.
-
-</div>
+```
 
 Let's look at this example in detail. The initial substitution parameter
 sets up the actor as the grammatical subject. Then, a bit further on, we
@@ -374,12 +368,10 @@ forms, or for things other than verbs but that still vary with tense.
 For example, the following message string is defined somewhere in the
 TADS 3 Library:
 
-<div class="code">
-
+```
        {The dobj/he} should {be|have been} right {|t}here,
        but {you/he} {can\'t} see {it dobj/him}.
-
-</div>
+```
 
 In this example, the tense-switching syntax is used twice. The first
 instance generates a present or past conditional: the substring "should
@@ -394,13 +386,11 @@ might very well have left since then.)
 Note also an important difference between the two following messages
 (both found in the TADS 3 Library):
 
-<div class="code">
-
+```
        {You/he} smell{s/ed} nothing out of the ordinary.
 
        Opening {the dobj/him} reveal{s|ed} nothing unusual.
-
-</div>
+```
 
 You may wonder why the first message uses the ordinary verb ending
 substitution parameter {s/ed}, whereas the second message uses the
@@ -419,10 +409,10 @@ syntax.
 
 Behind the scenes, the tense-switching syntax is implemented via a macro
 which you may find convenient in its own right. The macro is named
-<span class="code">tSel</span> and takes two arguments; it just expands
+`tSel` and takes two arguments; it just expands
 to its first argument if the current narrative tense is the present, and
 to its second argument if it is the past. For example,
-<span class="code">tSel(getTime()\[1\], 1492)</span> would give the
+`tSel(getTime()\[1\], 1492)` would give the
 current year for the present tense, and the year of the discovery of
 America by Columbus for the past tense.
 
@@ -436,11 +426,9 @@ past tense narrative.
 You might be tempted to write a default response to giving an arbitrary
 object to a certain character as follows:
 
-<div class="code">
-
+```
        {The iobj/he} {says}, <q>{The dobj/he} {is} of no use to me right now.</q>
-
-</div>
+```
 
 except that this won't quite work as you want it to, at least in the
 past tense. The kind of response you are aiming for with such a message
@@ -458,11 +446,9 @@ TADS 3 provides a solution to this problem. Just add an exclamation mark
 at the end of the substitution parameter for which you want the
 present-tense form unconditionally, like this:
 
-<div class="code">
-
+```
        {The iobj/he} {says}, <q>{The dobj/he} {is!} of no use to me right now.</q>
-
-</div>
+```
 
 The Library then will not attempt to render the verb "to be" in the past
 tense, but still knows that you want it to agree with the subject.
@@ -486,27 +472,27 @@ use {was!} or {were!}, with final exclamation marks. These always give
 the past-tense form of the verb "to be" that agrees with the subject.
 
 Internally, the fixed-tense parameter substitution mechanism makes use
-of a function named <span class="code">withTense</span>, whose purpose
+of a function named `withTense`, whose purpose
 is to temporarily override the current narrative tense and to invoke and
 return the value of a callback function within the new, temporary tense
-context. The function <span class="code">withTense</span> takes two
-arguments. The first one must be either <span class="code">nil</span>
-(selecting the present tense) or <span class="code">true</span>
+context. The function `withTense` takes two
+arguments. The first one must be either `nil`
+(selecting the present tense) or `true`
 (selecting the past tense). The second argument is a reference to the
 callback function.
 
 The TADS 3 Library complements this function with two convenience
-macros, named <span class="code">withPresent</span> and
-<span class="code">withPast</span>. They simply call the function
-<span class="code">withTense</span> with a <span class="code">nil</span>
-or <span class="code">true</span> first argument, respectively. Both
+macros, named `withPresent` and
+`withPast`. They simply call the function
+`withTense` with a `nil`
+or `true` first argument, respectively. Both
 macros take a single argument, which is the callback function to be
-passed to <span class="code">withTense</span>.
+passed to `withTense`.
 
 For example, on the assumption that your game contains an actor named
-"me", <span class="code">withPast({:
-me.conjugateRegularVerb('carry')})</span> would return the string
-<span class="code">'carried'</span> no matter what the current narrative
+"me", `withPast({:
+me.conjugateRegularVerb('carry')})` would return the string
+`'carried'` no matter what the current narrative
 tense is.
 
 </div>

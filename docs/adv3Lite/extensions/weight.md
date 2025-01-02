@@ -47,22 +47,22 @@ objects it contains.
 In addition to a number of properties intended purely for internal use,
 this extension defines the following methods and properties on Thing:
 
-- *Additional properties*: <span class="code">weight</span>,
-  <span class="code">weightCapacity</span>,
-  <span class="code">maxSingleWeight</span>,
-  <span class="code">maxWeightHiddenUnder</span>,
-  <span class="code">maxWeightHiddenBehind</span>,
-  <span class="code">maxWeightHiddenIn</span>.
-- *Additional methods*: <span class="code">totalWeight()</span>,
-  <span class="code">getWeightWithin()</span>,
-  <span class="code">getCarriedWeight()</span>,
-  <span class="code">sayTooHeavy(obj)</span>,
-  <span class="code">sayCantBearMoreWeight(obj)</span>,
-  <span class="code">totalWeightIn(lst)</span>,
-  <span class="code">sayTooHeavyToHide(obj, insType)</span>,
-  <span class="code">getWeightHiddenUnder</span>,
-  <span class="code">getWeightHiddenIn</span>,
-  <span class="code">getWeightHiddenBehind</span>.
+- *Additional properties*: `weight`,
+  `weightCapacity`,
+  `maxSingleWeight`,
+  `maxWeightHiddenUnder`,
+  `maxWeightHiddenBehind`,
+  `maxWeightHiddenIn`.
+- *Additional methods*: `totalWeight()`,
+  `getWeightWithin()`,
+  `getCarriedWeight()`,
+  `sayTooHeavy(obj)`,
+  `sayCantBearMoreWeight(obj)`,
+  `totalWeightIn(lst)`,
+  `sayTooHeavyToHide(obj, insType)`,
+  `getWeightHiddenUnder`,
+  `getWeightHiddenIn`,
+  `getWeightHiddenBehind`.
 
 <span id="usage"></span>
 
@@ -73,47 +73,47 @@ source files.
 
 Every object (or every portable object) can be assigned a **weight**
 value, which is an integer value representing its weight on whatever
-scale you find convenient. This <span class="code">weight</span>
+scale you find convenient. This `weight`
 represents the intrinsic weight of the object by itself, less any
-contents. By default every object has a <span class="code">weight</span>
+contents. By default every object has a `weight`
 of 0.
 
 The total weight of an object, including its contents, is given by its
 **totalWeight()** method, while the weight of its contents (excluding
 the object's own weight) is given by its **getWeightWithin()** method.
-Hence for any object, <span class="code">totalWeight = weight +
-getWeightWithin()</span>. For actors, **getCarriedWeight()** gives the
+Hence for any object, `totalWeight = weight +
+getWeightWithin()`. For actors, **getCarriedWeight()** gives the
 total weight carried by the actor; this excludes the weight of anything
 worn or of anything fixed in place (the latter are assumed to be body
 parts).
 
 The carrying capacity of both actors and other objects is defined by
 their **weightCapacity** and **maxSingleWeight** properties. The
-<span class="code">weightCapacity</span> (by default 100000) is the
+`weightCapacity` (by default 100000) is the
 maximum total weight that can be carried by the actor, or the maximum
 load that can be placed in/on/under or behind the object. The
-<span class="code">maxSingleWeight</span> (which by default takes its
-value from <span class="code">weightCapacity</span>) defines the maximum
+`maxSingleWeight` (which by default takes its
+value from `weightCapacity`) defines the maximum
 weight of a single object that can be carried by the actor or borne by
 the object.
 
 The method **sayTooHeavy(obj)** is used to display a message to the
 effect that *obj* exceeds the load capacity of the object into or onto
 which an attempt is being made to place it (i.e. when the total weight
-of *obj* exceeds either the <span class="code">weightCapacity</span> or
-<span class="code">maxSingleWeight</span> of the object on which
-<span class="code">sayTooHeavy(obj)</span> is defined). The method
+of *obj* exceeds either the `weightCapacity` or
+`maxSingleWeight` of the object on which
+`sayTooHeavy(obj)` is defined). The method
 **sayCantBearMoreWeight(obj)** is used to display a message when *obj*
 would otherwise cause the object's weightCapacity to be exceeded (since
 the addition of *obj* would make its
-<span class="code">getWeightWithin</span> greater than its
-<span class="code">weightCapacity</span>).
+`getWeightWithin` greater than its
+`weightCapacity`).
 
 In some instances, objects can be effectively
 [hidden](../../docs/manual/thing.html#hidden) in, under or behind other
-objects by being added to their <span class="code">hiddenIn</span>,
-<span class="code">hiddenUnder</span> or
-<span class="code">hiddenBehind</span> lists. While in virtually every
+objects by being added to their `hiddenIn`,
+`hiddenUnder` or
+`hiddenBehind` lists. While in virtually every
 case it probably makes more sense to limit this by bulk than by weight,
 for the sake of completeness this extension provides
 **maxWeightHiddenIn**, **maxWeightHiddenUnder** and
@@ -123,8 +123,8 @@ value of all these properties is 100000. The method
 **sayTooHeavyToHide(obj, insType)** is used to display a message when
 hiding would cause the maximum weight to be exceeded; *obj* is the
 object that the player is attempting to hide and *insType* is one of
-<span class="code">In</span>, <span class="code">Under</span> or
-<span class="code">Behind</span> depending whether the action being
+`In`, `Under` or
+`Behind` depending whether the action being
 attempted is PutIn, PutUnder or PutBehind.
 
 Finally, the service method **totalWeightIn(lst)** is used to calculate

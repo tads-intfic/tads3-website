@@ -44,20 +44,20 @@ properties:
 - *Classes*: **ClockEvent**.
 - *Objects*: **clockManager**.
 - *Properties/methods on clockManager*:
-  <span class="code">checkTime()</span>,
-  <span class="code">baseScaleFactor</span>,
-  <span class="code">scaleFactor</span>,
-  <span class="code">checkTimeFmt(fmt)</span>,
-  <span class="code">formatTime(t, fmt)</span>,
-  <span class="code">eventReached(evt)</span>,
-  <span class="code">baseDate</span>.
+  `checkTime()`,
+  `baseScaleFactor`,
+  `scaleFactor`,
+  `checkTimeFmt(fmt)`,
+  `formatTime(t, fmt)`,
+  `eventReached(evt)`,
+  `baseDate`.
 - *Properties/methods on ClockEvent*:
-  <span class="code">eventTime</span>,
-  <span class="code">formatTime(fmt)</span>,
-  <span class="code">eventReached()</span>,
-  <span class="code">reachedWhen</span>,
-  <span class="code">scaleFactor</span>,
-  <span class="code">turnsToEvent</span>.
+  `eventTime`,
+  `formatTime(fmt)`,
+  `eventReached()`,
+  `reachedWhen`,
+  `scaleFactor`,
+  `turnsToEvent`.
 
 <span id="usage"></span>
 
@@ -66,27 +66,27 @@ properties:
 Include the subtime.t file after the library files but before your game
 source files.
 
-Create a number of <span class="code">ClockEvent</span> objects in your
+Create a number of `ClockEvent` objects in your
 game, each representing an event that occurs at a particular time. The
 Clock Manager automatically builds a list of all of these objects during
 pre-initialization, so you don't have to explicitly tell the clock
 manager about these. Whenever the story reaches one of these events, you
-should call the <span class="code">eventReached()</span> method of the
+should call the `eventReached()` method of the
 event object. This will set the clock time to the event's current time,
 and take note of how long we have until the next plot event.
 Alternatively, you can define the ClockEvent's
-<span class="code">reachedWhen</span> property as a condition that
+`reachedWhen` property as a condition that
 becomes true (or a method that returns true) when this ClockEvent is
 reached. For this to work, the events.t module must be present in the
-game. If several ClockEvents have <span class="code">reachedWhen</span>
+game. If several ClockEvents have `reachedWhen`
 conditions that become true on the same turn, only the first one (i.e.
-the one with the earliest <span class="code">eventTime</span>) will be
+the one with the earliest `eventTime`) will be
 reached on that turn (the next one will be reached on the next turn, and
 so on).
 
-To create a <span class="code">ClockEvent</span> object you need to give
+To create a `ClockEvent` object you need to give
 it a programmatic name and define its
-<span class="code">eventTime</span> property. The eventTime property
+`eventTime` property. The eventTime property
 specifies the time at which this event occurs. This is expressed as a
 list with three elements: the day number, the hour (on a 24-hour clock),
 and the minute. The day number is relative to the start of the game —
@@ -98,40 +98,34 @@ is written as 0 (zero) on a 24-hour clock, so 12:05am on day 1 would be
 Thus, for example, to specify that when the player character first meets
 Bob the time is 2:40pm on the second day of the4 game you might define:
 
-<div class="code">
-
+```
     meetBobEvent: ClockEvent
         eventTime = [2, 14, 10]
     ;
      
-
-</div>
+```
 
 Or, by taking advantage of the ClockEvent template defined in advlite.h
 you could abbreviate this to:
 
-<div class="code">
-
+```
     meetBobEvent: ClockEvent [2, 14, 10];
      
-
-</div>
+```
 
 Either way, when the player character first meets Bob you would then
 call:
 
-<div class="code">
-
+```
        meetBobEvent.eventReached();
      
-
-</div>
+```
 
 Then, when you want to get the current time at any point in the game
 (when the player character looks at a clock, for example), you would
-call <span class="code">clockManager.checkTime()</span>. This returns a
+call `clockManager.checkTime()`. This returns a
 list in the same format as
-<span class="code">ClockEvent.eventTime</span>: \[day,hour,minute\].
+`ClockEvent.eventTime`: \[day,hour,minute\].
 Remember that between time checks, the game time clock is in a vague,
 fuzzy state, drifting along at an indeterminate pace from the most
 recent check. When this method is called, though, the clock manager is
@@ -147,8 +141,8 @@ will cause a run-time error. You should in any case create a ClockEvent
 to set the time at the start of play. This will be the ClockEvent with
 the earliest eventTime; the earliest ClockEvent is automatically marked
 as reached at the start of the game; you don't need to call its
-<span class="code">eventReached()</span> method or set its
-<span class="code">reachedWhen</span> property.
+`eventReached()` method or set its
+`reachedWhen` property.
 
 If you want your game to start on a particular day (that is, it's
 important to track the date as well at the time), you can set the
@@ -156,46 +150,44 @@ starting date (i.e. the date that counts as Day 1) by overriding the
 clockManager's **baseDate** property to a Date object; for example to
 start the game on August 24th 2015 you might write:
 
-<div class="code">
-
+```
      modify clockManager
         baseDate = static new Date(2015, 8, 24)
      ;
      
-
-</div>
+```
 
 If **gameMain.gameStartTime** is defined, the date defined there will be
 used as the starting date instead. If the starting date is not defined
 in either place, the game will notionally start on January 1st, 2000.
 
-The <span class="code">clockManager</span> works by advancing the
+The `clockManager` works by advancing the
 notional time by 60 minutes per hundred turns (by default) until half
 the time until the next ClockEvent is reached. The passage of time per
 turn is then progressively slowed down to prevent the time of the next
 ClockEvent being reached prematurely. Note that time is only computed
-when <span class="code">clockManager.checkTime()</span> is called
+when `clockManager.checkTime()` is called
 (either directly or via
-<span class="code">clockManager.checkTimeFmt(fmt)</span>).
+`clockManager.checkTimeFmt(fmt)`).
 
 If the notional rate of 60 minutes per 100 turns doesn't suit the pace
 of your game there are various ways in which you can change it. To
 change it globally for the entire game you can override the
-**baseScaleFactor** of <span class="code">clockManager</span> to some
+**baseScaleFactor** of `clockManager` to some
 other number of minutes per hundred turns, or else override the
-**scaleFactor** property of the <span class="code">clockManager</span>
+**scaleFactor** property of the `clockManager`
 for the number of minutes per hundred turns to use once the last
 ClockEvent is passed. For finer-grained control you can override either
 the **scaleFactor** or the **turnsToEvent** property of one or more
 ClockEvents. The ClockEvent's **scaleFactor** determines the
-<span class="code">baseScaleFactor</span> the clockManager will use when
+`baseScaleFactor` the clockManager will use when
 the game is between the previous event and this ClockEvent.
 Alternatively, you can get the game to calculate a suitable
-<span class="code">scaleFactor</span> for you by defining the
-ClockEvent's <span class="code">turnsToEvent</span> property. This can
+`scaleFactor` for you by defining the
+ClockEvent's `turnsToEvent` property. This can
 be set to an estimate of the number of turns you expect a typical player
 to take to get from the previous ClockEvent to this one; the
-<span class="code">scaleFactor</span> will then be calculated
+`scaleFactor` will then be calculated
 accordingly (on the basis of the estimated number of turns and the
 number of minutes between the two ClockEvents). It may well be difficult
 to estimate the number of turns a "typical" player will take, but given
@@ -207,7 +199,7 @@ than to overestimate this number.
 Formatting the Time
 
 If you want a string-formatted version of the time (as in '9:05pm'), you
-can call <span class="code">clockManager.checkTimeFmt(*fmt*)</span>,
+can call `clockManager.checkTimeFmt(*fmt*)`,
 where *fmt* is a string specifying how you want the time to appear. Note
 that this method does not display anything; rather it returns a
 single-quoted string containing the current game time formatted in the
@@ -217,34 +209,34 @@ For a full list of possible format strings, consult the chapter on the
 Date intrinsic class in the TADS 3 System Manual. A few of the more
 convenient ones are listed below:
 
-- <span class="code">%r</span> the full 12-hour clock time, e.g.
+- `%r` the full 12-hour clock time, e.g.
   '3:30:00 PM'
-- <span class="code">%R</span> the 24-hour clock time with minutes, e.g.
+- `%R` the 24-hour clock time with minutes, e.g.
   '15:30'
-- <span class="code">%T</span> the 24-hour clock time with seconds, e.g.
+- `%T` the 24-hour clock time with seconds, e.g.
   '15:30:00'
-- <span class="code">%X</span> the preferred time representation
+- `%X` the preferred time representation
   according to the locale settings; e.g. '15:30:00'
-- <span class="code">%c</span> the preferred date and time stamp for the
+- `%c` the preferred date and time stamp for the
   locale, e.g.'Sun Jun 22 15:30:00 2014'
-- <span class="code">%D</span> the short date (in American format), e.g.
+- `%D` the short date (in American format), e.g.
   to '06/22/14'
-- <span class="code">%d/%m/%y</span> the short date (in European
+- `%d/%m/%y` the short date (in European
   format), e.g. '22/06/14'
-- <span class="code">%d-%b-%y</span> the short date in dd-mmm-yy format,
+- `%d-%b-%y` the short date in dd-mmm-yy format,
   e,g, '22-Jun-14' (probably the best format to use to avoid USA/Europe
   ambiguity)
-- <span class="code">%Y</span> the four-digit year number, e.g. 2014;
-  use in place of <span class="code">%y</span> in any of the above when
+- `%Y` the four-digit year number, e.g. 2014;
+  use in place of `%y` in any of the above when
   a four-digit year is required.
-- <span class="code">%I:%M %P</span> the 12-hour clock time with
+- `%I:%M %P` the 12-hour clock time with
   minutes, e.g. '03:30 PM'
-- <span class="code">%a </span> the abbreviated weekday name ('Mon')
-- <span class="code">%A</span> the full weekday name ('Monday')
+- `%a ` the abbreviated weekday name ('Mon')
+- `%A` the full weekday name ('Monday')
 
 Note that these can be combined as needed, for example
-<span class="code">timeManager.formatDate('%A, %d-%b-%y %I:%M
-%P')</span> might return the string 'Sunday, 22-Jun-14 03:30 PM', and of
+`timeManager.formatDate('%A, %d-%b-%y %I:%M
+%P')` might return the string 'Sunday, 22-Jun-14 03:30 PM', and of
 course this method may be used wherever you like in your game code, not
 just in the status line.
 

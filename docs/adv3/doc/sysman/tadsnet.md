@@ -26,17 +26,17 @@ The tads-net function set is part of the TADS networking package. These
 functions provide access to certain network features.
 
 To use these functions in your program, you must
-<span class="code">\#include \<tadsnet.h\></span> in your source files.
-You should also add the library file <span class="code">tadsnet.t</span>
+`\#include \<tadsnet.h\>` in your source files.
+You should also add the library file `tadsnet.t`
 to your build, by adding it to the .t3m file for your project.
-<span class="code">tadsnet.t</span> defines some helper classes that are
+`tadsnet.t` defines some helper classes that are
 used in conjunction with the networking functions.
 
 ## tads-net functions
 
 <span id="connectWebUI"></span>
 
-<span class="code">connectWebUI(*server*, *path*)</span>
+`connectWebUI(*server*, *path*)`
 
 <div class="fdef">
 
@@ -65,12 +65,12 @@ they don't get any information back within a timeout limit.
 
 <span id="getHostName"></span>
 
-<span class="code">getHostName()</span>
+`getHostName()`
 
 <div class="fdef">
 
 Returns a string giving the default host name for the computer that's
-running your program, or <span class="code">nil</span> if the host name
+running your program, or `nil` if the host name
 isn't available. The main use of this name is for setting up a network
 server, such as an [HTTPServer](httpsrv.html) object, because it tells
 you the name to use for binding the listener port of the server.
@@ -89,7 +89,7 @@ there are reasons it's needed for certain operations, such as starting a
 network server.
 
 Some machines have multiple host names. When this is the case,
-<span class="code">getHostName()</span> returns the primary or default
+`getHostName()` returns the primary or default
 host name, if the operating system has such a thing, otherwise it picks
 one arbitrarily.
 
@@ -99,9 +99,9 @@ the server level is 1 (local access only), the function returns
 'localhost' regardless of the actual network host name. If the server
 level is 2 (no access), the function returns nil.
 
-Note that you should use <span class="code">getLaunchHostAddr()</span>
+Note that you should use `getLaunchHostAddr()`
 instead of this function to establish the listening address for a TADS
-Web UI game. <span class="code">getLaunchHostAddr()</span> returns the
+Web UI game. `getLaunchHostAddr()` returns the
 specific host address that the client used to launch the game, which
 allows you to distinguish local stand-alone launches from client/server
 launches.
@@ -110,7 +110,7 @@ launches.
 
 <span id="getLaunchHostAddr"></span>
 
-<span class="code">getLaunchHostAddr()</span>
+`getLaunchHostAddr()`
 
 <div class="fdef">
 
@@ -121,9 +121,9 @@ address. In either case, the value is a string that can be passed as the
 "hostname" parameter of the [HTTPServer](httpsrv.html) constructor.
 
 If the user launched the game in local stand-alone mode, this function
-returns <span class="code">nil</span>. This allows you to distinguish
+returns `nil`. This allows you to distinguish
 client/server Web launches from local launches. In local mode, you
-should simply use 'localhost' (<span class="code">nil</span> is
+should simply use 'localhost' (`nil` is
 equivalent) as the host name when creating the HTTPServer object.
 
 When a game uses the TADS Web UI to run as a client/server program, the
@@ -151,12 +151,12 @@ this by making the HTTPServer's listener bind to this same address.
 
 <span id="getLocalIP"></span>
 
-<span class="code">getLocalIP()</span>
+`getLocalIP()`
 
 <div class="fdef">
 
 Returns a string giving the default IP address for the computer that's
-running your program, or <span class="code">nil</span> if no address is
+running your program, or `nil` if no address is
 available. The returned address string is in the standard '1.2.3.4'
 decimal format. The IP address is the low-level version of the host
 name; the host name is actually just an alias for the IP address.
@@ -170,11 +170,11 @@ associated with the machine itself, but rather with a single network
 adapter (the hardware card that physically plugs into the network). Some
 machines have more than one adapter, in which case each adapter will
 have its own separate IP address. On such machines,
-<span class="code">getLocalIP()</span> returns the primary or default
+`getLocalIP()` returns the primary or default
 address, if the operating system defines such a thing; otherwise it
 arbitrarily returns one of the machine's valid IP addresses.
 
-As with <span class="code">getHostName()</span>, this function is
+As with `getHostName()`, this function is
 sensitive to the network safety level setting for server features. If
 the server level is 1 (local access only), the function returns
 '127.0.0.1' (this is a special IP address that always refers to the
@@ -185,7 +185,7 @@ server level is 2 (no access), the function returns nil.
 
 <span id="getNetEvent"></span>
 
-<span class="code">getNetEvent(*timeout*?)</span>
+`getNetEvent(*timeout*?)`
 
 <div class="fdef">
 
@@ -205,7 +205,7 @@ information, see the [HTTPServer](httpsrv.html) object.
 
 </div>
 
-<span class="code">getNetStorageURL(*resource*)</span>
+`getNetStorageURL(*resource*)`
 
 <div class="fdef">
 
@@ -228,7 +228,7 @@ information on how the storage server works.
 
 <span id="sendNetRequest"></span>
 
-<span class="code">sendNetRequest(*id*, *url*, ...)</span>
+`sendNetRequest(*id*, *url*, ...)`
 
 <div class="fdef">
 
@@ -241,8 +241,8 @@ for client access.
 *id* is your identifier for the request, which can be any value of any
 type you choose. TADS doesn't use this value itself, but simply hangs
 onto it for the duration of the request, and passes it back to you via
-the <span class="code">requestID</span> property of the
-<span class="code">NetReplyEvent</span> object posted to the network
+the `requestID` property of the
+`NetReplyEvent` object posted to the network
 event queue when the request completes. This allows you to relate the
 reply back to the corresponding request, so that you can go back and
 finish what you were doing when you originally posted the request. It's
@@ -253,8 +253,8 @@ the request.
 *url* is a string giving the URL of the request. This is a standard
 Internet URL, which must start with a "scheme" name specifying the
 protocol. Currently, the only protocol supported is HTTP, so the URL
-string must start with either "<span class="code">http://</span>" or
-"<span class="code">https://</span>".
+string must start with either "`http://`" or
+"`https://`".
 
 Additional arguments depend on the protocol - see the individual
 protocol descriptions below.
@@ -264,7 +264,7 @@ The function has no return value.
 ### How requests are processed
 
 Network requests are sent asynchronously. That is,
-<span class="code">sendNetRequest()</span> initiates a request and then
+`sendNetRequest()` initiates a request and then
 immediately returns, allowing your program to continue running while the
 request is processed in the background. While many requests take only a
 few milliseconds to complete, some take much longer, so it's best to let
@@ -272,29 +272,29 @@ the program continue with other tasks while awaiting a reply. It's
 especially important to continue handling user interface actions, so
 that the program doesn't appear unresponsive to the user. When the
 request is completed, TADS posts a
-<span class="code">NetReplyEvent</span> object to the network event
+`NetReplyEvent` object to the network event
 queue with the results of the request. You read these reply events using
-<span class="code">getNetEvent()</span>.
+`getNetEvent()`.
 
 Because the function just initiates the request and returns, it has no
 way of knowing whether the request will be successful or not. This means
 that the function can't return any status information. All results,
 including errors, are returned to the program via the
-<span class="code">NetReplyEvent</span> that's posted when the request
+`NetReplyEvent` that's posted when the request
 completes. If an error occurs at the system or network transmission
 level (e.g., TADS is unable to open a network connection to the remote
 server, or can't start a background thread to process the request), the
-<span class="code">statusCode</span> property of the reply event will be
+`statusCode` property of the reply event will be
 a negative number indicating what went wrong. Otherwise,
-<span class="code">statusCode</span> will be a positive number with the
+`statusCode` will be a positive number with the
 result status sent by the server.
 
 ### HTTP Requests
 
 The argument list for an HTTP request looks like this:
 
-<span class="code">sendNetRequest(*id*, *url*, *verb*, *options*?,
-*headers*?, *body*?, *bodyType*?)</span>
+`sendNetRequest(*id*, *url*, *verb*, *options*?,
+*headers*?, *body*?, *bodyType*?)`
 
 *verb* is a string giving the HTTP verb (also known as the method) for
 the request. This is most commonly GET, POST, or PUT, but can be any
@@ -302,12 +302,12 @@ valid verb the server accepts.
 
 *options* is an optional integer value giving a bitwise OR (\|)
 combination of option flags to select special features. Pass 0 or
-<span class="code">nil</span>, or simply omit the argument, for the
+`nil`, or simply omit the argument, for the
 default behavior. The option flags are:
 
-- <span class="code">NetReqNoRedirect</span>: This tells the function
+- `NetReqNoRedirect`: This tells the function
   not to follow HTTP redirects, but instead simply return (via the
-  <span class="code">NetReplyEvent</span> object) the raw redirect
+  `NetReplyEvent` object) the raw redirect
   information sent back by the server. If this option isn't specified,
   the default is to automatically and transparently follow redirects,
   returning the final result from the final server after all
@@ -324,8 +324,8 @@ default behavior. The option flags are:
 
   Note that automatic redirection only applies to HTTP-level redirects,
   via 301 result codes. There also exists a separate type of redirection
-  via HTML <span class="code">\<META\></span> tags. TADS doesn't follow
-  <span class="code">\<META\></span> redirects, regardless of the option
+  via HTML `\<META\>` tags. TADS doesn't follow
+  `\<META\>` redirects, regardless of the option
   flags, since it doesn't parse the content (HTML or otherwise) that the
   server returns.
 
@@ -333,10 +333,10 @@ default behavior. The option flags are:
 wish to include with the request. The function automatically generates
 certain basic headers; any custom headers you specify are added to the
 automatic headers. The *headers* string must be given in the standard
-"Name: Value" format, with CR-LF (<span class="code">\r\n</span>)
+"Name: Value" format, with CR-LF (`\r\n`)
 sequences separating headers. (It's okay if the overall string ends in
 CR-LF, but this isn't required.) Omit this argument or pass
-<span class="code">nil</span> if you don't have any custom headers to
+`nil` if you don't have any custom headers to
 send.
 
 *body* is a string or [ByteArray](bytearr.html) object containing the
@@ -344,61 +344,61 @@ content to send with the request. This only applies to certain verbs,
 such as POST and PUT; most HTTP verbs send only headers with the
 request, not a body. If a string is supplied, it will be sent as UTF-8
 text; a ByteArray is sent as raw binary bytes. Omit this argument or
-pass <span class="code">nil</span> if you don't want to send any content
+pass `nil` if you don't want to send any content
 with the request.
 
 If the verb is POST, *body* can alternatively be a LookupTable object
 containing a set of form fields for an HTML-style form. Each key in the
 table is a string giving the name of a field, and the corresponding
 value is a string giving the value for that field. (On an HTML form, a
-field is represented by an <span class="code">\<INPUT\></span> or
-<span class="code">\<SELECT\></span> element.) The function encodes the
+field is represented by an `\<INPUT\>` or
+`\<SELECT\>` element.) The function encodes the
 lookup table into an
-<span class="code">application/x-www-form-urlencoded</span> content body
+`application/x-www-form-urlencoded` content body
 for the request.
 
 When posting form data, you can also include file uploads. These
-correspond to <span class="code">\<INPUT TYPE=FILE\></span> elements in
+correspond to `\<INPUT TYPE=FILE\>` elements in
 an HTML form. To specify a file upload, use a
-<span class="code">FileUpload</span> object as the value for the field,
+`FileUpload` object as the value for the field,
 instead of a simple string. You must populate the FileUpload object with
 the following properties:
 
-- <span class="code">contentType</span> = a string with the MIME type of
+- `contentType` = a string with the MIME type of
   the file
-- <span class="code">filename</span> = a string with the client-side
+- `filename` = a string with the client-side
   filename
-- <span class="code">file</span> = a String or ByteArray containing the
+- `file` = a String or ByteArray containing the
   file to upload
 
-If the <span class="code">contentType</span> property is omitted, the
-default is <span class="code">'text/plain;charset=utf-8'</span> if the
-<span class="code">file</span> value is a string, or
-<span class="code">'application/octet-stream'</span> if it's a
+If the `contentType` property is omitted, the
+default is `'text/plain;charset=utf-8'` if the
+`file` value is a string, or
+`'application/octet-stream'` if it's a
 ByteArray. You shouldn't override the string default, since the string
 will be sent as UTF-8 data in any case. You should override the default
 for a ByteArray if you know the actual format of the data you're
 sending.
 
 *bodyType* is a string giving the MIME type of the *body* data. If this
-is omitted or <span class="code">nil</span>, the function uses a default
+is omitted or `nil`, the function uses a default
 value that depends on the *body* value's type:
 
 - If *body* is a string,
-  <span class="code">'text/plain;charset=utf-8'</span>
+  `'text/plain;charset=utf-8'`
 - If *body* is a ByteArray,
-  <span class="code">'application/octet-stream'</span>
+  `'application/octet-stream'`
 - If *body* is a LookupTable,
-  <span class="code">'application/x-www-form-urlencoded'</span> or
-  <span class="code">'multipart/form'</span>, depending on whether any
+  `'application/x-www-form-urlencoded'` or
+  `'multipart/form'`, depending on whether any
   file uploads are included in the form data
 
 When you know the specific format of ByteArray data that you're sending,
 you should use *bodyType* to specify the format, since the
-<span class="code">octet-stream</span> type is a generic default that
+`octet-stream` type is a generic default that
 doesn't tell the server anything about the object you're sending. For
 example, if you're sending a JPEG image, you should specify
-<span class="code">'image/jpeg'</span>.
+`'image/jpeg'`.
 
 You shouldn't override *bodyType* for strings, since the content is
 actually sent as UTF-8 character data regardless of the MIME type you
@@ -419,69 +419,69 @@ type.
 
 ## The NetEvent class
 
-The <span class="code">getNetEvent()</span> function returns an object
+The `getNetEvent()` function returns an object
 of class NetEvent (or one of NetEvent's subclasses) describing the
 event. NetEvent is defined in the library file
-<span class="code">tadsnet.t</span>. You can determine the type of the
-event by looking at the <span class="code">evType</span> property of the
+`tadsnet.t`. You can determine the type of the
+event by looking at the `evType` property of the
 object:
 
-- <span id="NetEvRequest"><span class="code">NetEvRequest</span></span> -
+- <span id="NetEvRequest">`NetEvRequest`</span> -
   this represents an incoming network request from a client. When the
-  event type is <span class="code">NetEvRequest</span>, the event object
+  event type is `NetEvRequest`, the event object
   is of class **NetRequestEvent**, a subclass of NetEvent. The
-  <span class="code">evRequest</span> property of the object contains a
+  `evRequest` property of the object contains a
   separate object representing the client request. You can determine the
   specific type of request by inspecting the class of this object:
-  - For an HTTP request, the <span class="code">evRequest</span> value
+  - For an HTTP request, the `evRequest` value
     is an object of intrinsic class [HTTPRequest](httpreq.html).
-- <span id="NetEvReply"><span class="code">NetEvReply</span></span> -
+- <span id="NetEvReply">`NetEvReply`</span> -
   this represents a reply to a network request made with
-  [<span class="code">sendNetRequest()</span>](#sendNetRequest). The
+  [`sendNetRequest()`](#sendNetRequest). The
   event object for this event type is of class
-  <span class="code">NetReplyEvent</span>. This object tells you whether
+  `NetReplyEvent`. This object tells you whether
   the request succeeded or failed, and if it succeeded, contains the
   reply information from the server. Some key properties:
-  - <span class="code">requestID</span> contains the identifier value
-    originally passed to <span class="code">sendNetRequest()</span>,
+  - `requestID` contains the identifier value
+    originally passed to `sendNetRequest()`,
     which lets you relate the reply back to the original request.
-  - <span class="code">statusCode</span> indicates whether the request
+  - `statusCode` indicates whether the request
     succeeded or failed. If this is a negative number, it means that the
     system was unable to send the network request at all, or that the
     request failed due to a networking error. If the status is a
     positive number, it's a result code from the server; for HTTP
     requests, this is an HTTP status code. HTTP codes in the 200 range
     indicate success, and other ranges indicate errors.
-  - <span class="code">replyBody</span> is the content body of an HTTP
+  - `replyBody` is the content body of an HTTP
     reply. This is a File object, open in read-only mode, containing the
     data of the reply. If the reply is textual, the file is open in text
     mode, otherwise it's open in raw mode.
-  - <span class="code">replyHeaders</span> is a lookup table containing
+  - `replyHeaders` is a lookup table containing
     the HTTP headers of the reply. The table's keys are header names
     (all in lower-case), and the corresponding values are the header
     values, in string format. For example,
-    <span class="code">replyHeaders\['content-type'\]</span> contains
+    `replyHeaders\['content-type'\]` contains
     the Content-Type header value.
-- <span id="NetEvTimeout"><span class="code">NetEvTimeout</span></span> -
+- <span id="NetEvTimeout">`NetEvTimeout`</span> -
   the timeout that you specified in the call to
-  <span class="code">getNetEvent()</span> expired before any network
+  `getNetEvent()` expired before any network
   event occurred. When the event type is
-  <span class="code">NetEvTimeout</span>, the event object is of class
+  `NetEvTimeout`, the event object is of class
   **NetTimeoutEvent**.
-- <span id="NetEvDebugBreak"><span class="code">NetEvDebugBreak</span></span> -
+- <span id="NetEvDebugBreak">`NetEvDebugBreak`</span> -
   the user manually broke into the debugger before any network event (or
   timeout) occurred. This event is possible only when the program is
   being run under the interactive debugger. The event interrupts the
   event wait to allow the debugger to pause the program at a byte-code
   instruction.
-- <span id="NetEvUIClose"><span class="code">NetEvUIClose</span></span> -
+- <span id="NetEvUIClose">`NetEvUIClose`</span> -
   the user manually closed the Web UI window. This event is possible
   only when the program is running in a TADS interpreter where the Web
   UI is integrated with the interpreter, so that both pieces are running
   locally on the same computer. This configuration is available on some
   platforms to emulate the traditional TADS interpreter, where the game
   runs as a simple local application with its own UI window. The
-  <span class="code">NetEvUIClose</span> event occurs when the user
+  `NetEvUIClose` event occurs when the user
   closes this integrated application window. In this configuration, the
   point is to emulate an ordinary, local, stand-alone application, so
   closing the window is one way for the user to terminate the program.
@@ -509,31 +509,31 @@ object:
   actually has closed the browser with the intention of quitting,
   though, there will be no more network activity, so the server will
   give up waiting and shut itself down after the time limit expires.
-- <span id="NetEvReplyDone"><span class="code">NetEvReplyDone</span></span> -
+- <span id="NetEvReplyDone">`NetEvReplyDone`</span> -
   an asynchronous reply to a request (see
   [HTTPRequest.sendReplyAsync()](httpreq.html#sendReplyAsync)) has
   completed. This event occurs when an asynchronous reply has been
   successfully completed or fails with an error (such as a broken
   network connection). When the event type is
-  <span class="code">NetEvReplyDone</span>, the event object is of class
+  `NetEvReplyDone`, the event object is of class
   **NetReplyDoneEvent**, which has the following properties and methods:
-  - <span class="code">requestObj</span> - the original request object
+  - `requestObj` - the original request object
     for which the reply was being sent (this is an
     [HTTPRequest](httpreq.html) object in the case of an HTTP request)
-  - <span class="code">isSuccessful()</span> - returns
-    <span class="code">true</span> if the reply was successfully
-    completed, <span class="code">nil</span> if it failed. There's not
+  - `isSuccessful()` - returns
+    `true` if the reply was successfully
+    completed, `nil` if it failed. There's not
     much that the server can do if an HTTP reply fails, since HTTP
     doesn't have a way for a server to initiate contact with a client.
     It's really up to the client to take any needed recovery action,
     such as retrying the request, so this error information is mostly
     advisory.
-  - <span class="code">socketErr</span> - an integer giving the network
+  - `socketErr` - an integer giving the network
     error code that caused the reply to fail, if applicable; this is
     zero if there was no network error.
-  - <span class="code">errMsg</span> - a string describing the error
+  - `errMsg` - a string describing the error
     that caused the reply to fail, if applicable; this is
-    <span class="code">nil</span> if there was no error.
+    `nil` if there was no error.
 
 </div>
 

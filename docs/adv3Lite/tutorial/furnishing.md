@@ -50,8 +50,7 @@ plane to take off and the game to be won.
 
 The first step is to give the cockpit a decent description:
 
-<div class="code">
-
+```
     cockpit: Room 'Cockpit' 'cockpit'
         "The cockpit is quite small but has everything you might expect: a
         windscreen looking forward, a pilot's seat from which you can operate all
@@ -62,12 +61,11 @@ The first step is to give the cockpit a decent description:
         
         regions = [planeRegion]
     ;
-
-</div>
+```
 
 Next we need to implement the pilot's seat and the controls. For the
-seat we can use a Platform, and set <span class="code">dobjFor(Enter)
-asDobjFor(Board)</span> so that SIT IN SEAT will do the same as SIT ON
+seat we can use a Platform, and set `dobjFor(Enter)
+asDobjFor(Board)` so that SIT IN SEAT will do the same as SIT ON
 SEAT. We'll use a single object to represent the controls as a group,
 and then make the individual controls and instruments components of the
 controls object by locating them within it. This will make it relatively
@@ -77,8 +75,7 @@ things you can reach in the cockpit are the controls. Here's how we can
 start this off (putting these object definitions immediately after that
 of the cabinDoor that's already in the cockpit):
 
-<div class="code">
-
+```
     + pilotSeat: Fixture, Platform 'pilot\'s seat'
             
         dobjFor(Enter) asDobjFor(Board)
@@ -100,47 +97,46 @@ of the cabinDoor that's already in the cockpit):
                 operating the controls. ";
         }
     ;
-
-</div>
+```
 
 The first point of note here is the use of a Platform to implement the
 seat. For an actor to be able to get on (sit on/stand on/lie on) an
-object, the object's <span class="code">contType</span> must be
-<span class="code">On</span> and its
-<span class="code">isBoardable</span> property true; a Platform is
+object, the object's `contType` must be
+`On` and its
+`isBoardable` property true; a Platform is
 basically the subclass of Thing that fulfils these two conditions. For
 an actor to be able to get *in* (sit in/stand in/lie in) an object its
-<span class="code">contType</span> must be <span class="code">In</span>
-and its <span class="code">isEnterable</span> property true. The
+`contType` must be `In`
+and its `isEnterable` property true. The
 subclass of Thing that fulfils those two conditions is
-<span class="code">Booth</span>, but something can't be both a Booth and
+`Booth`, but something can't be both a Booth and
 a Platform at the same time, since its contType can't be simultaneously
 In and On. To allow the player character to SIT IN SEAT as well as SIT
-ON SEAT we therefore define <span class="code">dobjFor(Enter)
-asDobjFor(Board)</span> on the seat, which means 'Treat ENTER SEAT as
+ON SEAT we therefore define `dobjFor(Enter)
+asDobjFor(Board)` on the seat, which means 'Treat ENTER SEAT as
 BOARD SEAT'. Since SIT IN SEAT is treated as ENTER SEAT, this makes SIT
 IN SEAT behave like BOARD SEAT, which is what SIT ON SEAT also does. The
 wider lesson here is that if you want to define a piece of furniture
 which the player can get in or on without it meaning anything much
 different, define it as a Platform and add
-<span class="code">dobjFor(Enter) asDobjFor(Board)</span>.
+`dobjFor(Enter) asDobjFor(Board)`.
 
 The second point of note is the use of
-<span class="code">allowReachOut(obj)</span> on the seat to control
+`allowReachOut(obj)` on the seat to control
 which items are in reach of someone sitting on the seat (the seat itself
 and anything on the seat are automatically in reach). Here we want the
 controls object and all its contents to be reachable from the seat, so
 we get the method to return
-<span class="code">obj.isOrIsIn(controls)</span>, which will be true
-either if obj is the <span class="code">controls</span> object or if it
+`obj.isOrIsIn(controls)`, which will be true
+either if obj is the `controls` object or if it
 is directly or indirectly contained in the
-<span class="code">controls</span> object. The default behaviour if an
+`controls` object. The default behaviour if an
 actor sitting on the chair tries to reach anything else is to move the
 actor out of the chair, which is absolutely fine here.
 
 The third point is the use of the
-<span class="code">checkReach(actor)</span> method on the
-<span class="code">controls</span> object to control where the controls
+`checkReach(actor)` method on the
+`controls` object to control where the controls
 are reachable from. If the method displays anything (normally a reason
 why the object or its contents can't be reached) then the contents of
 the object and the object itself are considered out of reach to the
@@ -149,13 +145,13 @@ you need to be in the pilot's seat to operate the controls if the actor
 isn't in the pilot's seat.
 
 The fourth point is the use of
-<span class="code">\<\<makeListStr(contents, &theName)\>\></span> to
+`\<\<makeListStr(contents, &theName)\>\>` to
 provide a list of the controls, which we're about to locate in the
-<span class="code">controls</span> object. The
-<span class="code">contents</span> parameter simply refers to the
+`controls` object. The
+`contents` parameter simply refers to the
 contents of the controls object, which we're about to define. The option
-<span class="code">&theName</span> parameter tells the
-<span class="code">makeListStr()</span> to use the theName property of
+`&theName` parameter tells the
+`makeListStr()` to use the theName property of
 each item in the contents when building its list, instead of the aName
 property it would otherwise have used by default, since it will look
 more natural to list the names of the controls with the definite article
@@ -164,35 +160,35 @@ here.
 Before we go on, let's pause and look at the second and third points in
 a bit more detail. Note first of all that although they have similar
 names, they're not mirror images of each other, and they do work a
-little differently. <span class="code">allowReachOut(obj)</span> takes
+little differently. `allowReachOut(obj)` takes
 the *object* to be reached as its parameter and returns true or nil
 depending on whether an actor can reach the object from within the
 container on which the method is defined.
-<span class="code">checkReach(actor)</span> takes the *actor* doing the
+`checkReach(actor)` takes the *actor* doing the
 reaching as its parameter and displays a message if the actor can't
 reach the object on which it's defined (and so can't reach inside the
 object either). There is also a
-<span class="code">checkReachIn(actor)</span> method which you can use
+`checkReachIn(actor)` method which you can use
 if you want reaching inside an object to be possible under different
 conditions from reaching the object itself, but by default
-<span class="code">checkReachIn(actor)</span> just calls
-<span class="code">checkReach(actor)</span>.
+`checkReachIn(actor)` just calls
+`checkReach(actor)`.
 
 The reason for the difference between the two methods is that they're
 modelling slightly different circumstances.
-<span class="code">allowReachOut(obj)</span> is typically intended for
+`allowReachOut(obj)` is typically intended for
 cases where an actor is on a piece of furniture like a chair or bed and
 may not be able to reach everything in the room from that container. If
 an object can't be reached it's because it's too far away, and the
 obvious default behaviour is for the actor to leave the container to
 reach the object s/he's trying to reach. If we want to disallow this
 default for any reason, which we can do by setting
-<span class="code">autoGetOutToReach</span> to nil, then the default
+`autoGetOutToReach` to nil, then the default
 refusal message of the form "You can't reach the bookcase from the
 armchair" will nearly always be appropriate, so we don't generally need
 to provide a means for producing a custom message. On the other hand
-<span class="code">checkReach(obj)</span> and
-<span class="code">checkReachIn(obj)</span> are intended to model a
+`checkReach(obj)` and
+`checkReachIn(obj)` are intended to model a
 whole range of situations where an object can't be reached; perhaps it's
 too high up on a shelf, or perhaps it's too hot to touch, or perhaps
 there's a venomous spider on it, or perhaps there's some other reason.
@@ -207,20 +203,20 @@ appropriate to give them names that start with check.
 There is a further asymmetry between the two cases that results in one
 taking the object to be reached as its parameter and the other the actor
 doing the reaching. In the case of
-<span class="code">allowReachOut(obj)</span> we know exactly where the
+`allowReachOut(obj)` we know exactly where the
 actor doing the reaching is; s/he's in or on the piece of furniture on
-which we're defining the <span class="code">allowReachOut(obj)</span>
+which we're defining the `allowReachOut(obj)`
 method, and whether obj is reachable from there or not depends on which
 obj it is and where it is located. In the case of
-<span class="code">canReach(actor)</span> or
-<span class="code">canReachIn(actor)</span> we already know precisely
+`canReach(actor)` or
+`canReachIn(actor)` we already know precisely
 which object is being reached and/or where it is; it's the object on
 which we're defining the method, and whether the actor can reach it or
 not may well depend on the location of the actor.
 
 The most typical kind of case where we might use
-<span class="code">checkReach()</span> and/or
-<span class="code">checkReachIn()</span> is, say, to represent a high
+`checkReach()` and/or
+`checkReachIn()` is, say, to represent a high
 shelf which the actor can only reach when s/he's standing on a ladder or
 a chair. Here we're using it a bit differently to prevent the player
 character operating the cockpit controls unless he's sitting in the
@@ -229,14 +225,13 @@ have to be sitting in the seat to reach the controls, but it's far
 easier to trap every attempt to touch them in a single checkReach()
 method than it would be to attempt to trap every action that might count
 as manipulating the controls to fly the plane. By placing the individual
-controls within the <span class="code">controls</span> object, that is
+controls within the `controls` object, that is
 just what we can do. So the next step is to define the individual
 instruments and controls, locating them in the
-<span class="code">controls</span> object, although at this stage their
+`controls` object, although at this stage their
 implementations will be a little sketchy:
 
-<div class="code">
-
+```
     ++ controlColumn: Fixture 'control column;;stick'
         "It's basically a stick that can be pushed forward or pulled back, with a
         wheel attached at the top. "
@@ -290,8 +285,7 @@ implementations will be a little sketchy:
 
     + windscreen: Fixture 'windscreen;; window windshield'
     ;
-
-</div>
+```
 
 The implementation is deliberately incomplete at this stage, since
 completing it will be the task that occupies the remainder of this
@@ -300,20 +294,20 @@ class to implement the ignition button. In the adv3Lite library a Button
 is fixed by default (since buttons are nearly always part of something
 else, and not free-standing items that can be picked up and carried
 around by themselves), so there's no need to define
-<span class="code">isFixed = true</span>. A Button doesn't do much by
-default. If pushed a Button's <span class="code">makePushed()</span>
+`isFixed = true`. A Button doesn't do much by
+default. If pushed a Button's `makePushed()`
 method is called, but does nothing by default, so this is a good place
 to put code to make the Button do something useful. Here we make it
-display a message and set <span class="code">isOn</span> to true if it
-wasn't already. A Button doesn't have an <span class="code">isOn</span>
+display a message and set `isOn` to true if it
+wasn't already. A Button doesn't have an `isOn`
 property by default, but there's nothing to stop our giving it one, as
-here. If we hadn't overridden the <span class="code">makePushed()</span>
+here. If we hadn't overridden the `makePushed()`
 method the response to PUSH BUTTON would have been "Click", but the text
-output by our custom <span class="code">makePushed()</span> method
+output by our custom `makePushed()` method
 displaces this default response for reasons we'll look at later.
 
-We've also given custom <span class="code">airspeed</span> and
-<span class="code">altitude</span> properties to the air speed indicator
+We've also given custom `airspeed` and
+`altitude` properties to the air speed indicator
 and the altimeter respectively, so that their descriptions can mention
 what these instruments are measuring. We haven't bothered to do this
 with the fuel gauge, because the game will end before the plane has used
@@ -322,7 +316,7 @@ a significant amount of fuel.
 We've also defined the listOrder on each of the controls and
 instruments; this is principally to ensure that
 \<\<makeListStr(contents, &theName)\>\> in the description of the
-<span class="code">controls</span> object lists these instruments in the
+`controls` object lists these instruments in the
 order we want.
 
 In the next section we'll start discussing how to make the controls

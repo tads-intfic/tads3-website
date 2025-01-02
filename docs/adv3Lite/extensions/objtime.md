@@ -43,21 +43,21 @@ properties for use by game authors:
 - *Classes*: **TimeFuse**, **SenseTimeFuse**.
 - *Objects*: **timeManager**.
 - *Properties/methods on timeManager*:
-  <span class="code">currentTime</span>,
-  <span class="code">formatDate(fmt)</span>,
-  <span class="code">setTime(\[args\])</span>,
-  <span class="code">addInterval(interval)</span>.
+  `currentTime`,
+  `formatDate(fmt)`,
+  `setTime(\[args\])`,
+  `addInterval(interval)`.
 - *Properties/methods added to Action*:
-  <span class="code">advanceOnFailure</span>,
-  <span class="code">timeTaken</span>,
-  <span class="code">implicitTimeTaken</span>.
+  `advanceOnFailure`,
+  `timeTaken`,
+  `implicitTimeTaken`.
 - *Properties added to GameMainDef*:
-  <span class="code">gameStartTime</span>.
+  `gameStartTime`.
 - *Properties/methods added to TravelConnector*:
-  <span class="code">traversalTime</span>,
-  <span class="code">traversalTimeFrom(origin)</span>.
-- *Functions*: <span class="code">addTime(secs)</span>,
-  <span class="code">takeTime(secs)</span>.
+  `traversalTime`,
+  `traversalTimeFrom(origin)`.
+- *Functions*: `addTime(secs)`,
+  `takeTime(secs)`.
 
 <span id="usage"></span>
 
@@ -69,25 +69,23 @@ source files.
 When defining your **gameMain** object, you now need to define its
 **gameStartTime** property to set the date and time of day at which your
 game notionally starts. This should be set to a list of numbers in the
-format <span class="code">\[year, month, day, hour, minute, second,
-millisecond\]</span>. Trailing zero elements may be omitted. For example
-setting <span class="code">gameStartTime</span> to
-<span class="code">\[2014, 7, 23, 15, 30\]</span> would setting the
+format `\[year, month, day, hour, minute, second,
+millisecond\]`. Trailing zero elements may be omitted. For example
+setting `gameStartTime` to
+`\[2014, 7, 23, 15, 30\]` would setting the
 starting time of your game clock to 3.30pm on 23rd July 2014.
-Alternatively the <span class="code">gameStartTime</span> may be
+Alternatively the `gameStartTime` may be
 specified as a Date object (for details of which consult the TADS 3
 System Manual), for example:
 
-<div class="code">
-
+```
     gameMain: GameMainDef
         initialPlayerChar = me   
        
         gameStartTime = static new Date(2014, 6, 22, 15, 30, 0, 0)
     ;
      
-
-</div>
+```
 
 This is all you actually *need* to do to use the extension, but it won't
 be very useful if it's simply updating the time each turn unless you do
@@ -101,13 +99,12 @@ you can do with it.
 
 One of the most basic and obvious things you can do with the time is to
 display it somewhere. To do this you can use the **formatDate(fmt)**
-method of the <span class="code">dateManager</span> to return a string
+method of the `dateManager` to return a string
 containing the date, time, or date and time in a suitable format defined
 by the *fmt* parameter. For example, to display the date and time at the
 right-hand end of the status line you could do this:
 
-<div class="code">
-
+```
      modify statusLine
         showStatusRight()
         {
@@ -115,42 +112,41 @@ right-hand end of the status line you could do this:
         }
     ; 
      
-
-</div>
+```
 
 For a full list of possible format strings, consult the chapter on the
 Date intrinsic class in the TADS 3 System Manual. A few of the more
 convenient ones are listed below:
 
-- <span class="code">%r</span> the full 12-hour clock time, e.g.
+- `%r` the full 12-hour clock time, e.g.
   '3:30:00 PM'
-- <span class="code">%R</span> the 24-hour clock time with minutes, e.g.
+- `%R` the 24-hour clock time with minutes, e.g.
   '15:30'
-- <span class="code">%T</span> the 24-hour clock time with seconds, e.g.
+- `%T` the 24-hour clock time with seconds, e.g.
   '15:30:00'
-- <span class="code">%X</span> the preferred time representation
+- `%X` the preferred time representation
   according to the locale settings; e.g. '15:30:00'
-- <span class="code">%c</span> the preferred date and time stamp for the
+- `%c` the preferred date and time stamp for the
   locale, e.g.'Sun Jun 22 15:30:00 2014'
-- <span class="code">%D</span> the short date (in American format), e.g.
+- `%D` the short date (in American format), e.g.
   to '06/22/14'
-- <span class="code">%d/%m/%y</span> the short date (in European
+- `%d/%m/%y` the short date (in European
   format), e.g. '22/06/14'
-- <span class="code">%d-%b-%y</span> the short date in dd-mmm-yy format,
+- `%d-%b-%y` the short date in dd-mmm-yy format,
   e,g, '22-Jun-14' (probably the best format to use to avoid USA/Europe
   ambiguity)
-- <span class="code">%Y</span> the four-digit year number, e.g. 2014;
-  use in place of <span class="code">%y</span> in any of the above when
+- `%Y` the four-digit year number, e.g. 2014;
+  use in place of `%y` in any of the above when
   a four-digit year is required.
-- <span class="code">%I:%M %P</span> the 12-hour clock time with
+- `%I:%M %P` the 12-hour clock time with
   minutes, e.g. '03:30 PM'
-- <span class="code">%a </span> the abbreviated weekday name ('Mon')
-- <span class="code">%A</span> the full weekday name ('Monday')
+- `%a ` the abbreviated weekday name ('Mon')
+- `%A` the full weekday name ('Monday')
 
 Note that these can be combined as needed, for example
-<span class="code">timeManager.formatDate('%A, %d-%b-%y %I:%M
-%P')</span> might return the string 'Sunday, 22-Jun-14 03:30 PM'. The
-<span class="code">formatDate()</span> method may, of course, be used
+`timeManager.formatDate('%A, %d-%b-%y %I:%M
+%P')` might return the string 'Sunday, 22-Jun-14 03:30 PM'. The
+`formatDate()` method may, of course, be used
 wherever you like in your game code, not just in the status line.
 
   
@@ -165,7 +161,7 @@ of time (or indeed, at a certain time)? Since the objtime extension
 allows us to keep track of time, we may sometimes find this a more
 useful way to specify when something should happen than in terms of so
 many turns. To that end the objtime extension defines a **TimeFuse**
-class that works just like a <span class="code">Fuse</span>, but is
+class that works just like a `Fuse`, but is
 specified in terms of time rather than turns.
 
 To create set up a TimeFuse, just create a new TimeFuse object thus:
@@ -178,23 +174,23 @@ TimeFuse(</span><span class="synPar">obj</span><span class="synLit">,
 <span class="synLit">)</span>
 
 This defines a TimeFuse that will call
-<span class="code">obj.(prop)</span>, i.e. the prop method of obj, after
+`obj.(prop)`, i.e. the prop method of obj, after
 an timespec of *timespec* turns or at the time specified by *timespec*.
 How *timespec* is interpreted depends on how it is specified. It can be
 any of the following:
 
-- A list in the format <span class="code">\[years, months, days, hours,
-  minutes, seconds\]</span> (trailing elements can be omitted if they
+- A list in the format `\[years, months, days, hours,
+  minutes, seconds\]` (trailing elements can be omitted if they
   are zero). The TimeFuse will then execute *after* the timespec
   specified by the list.
 - An integer, in which case the TimeFuse will execute after that number
   of minutes.
 - A BigNumber (which can be specified by simply including a decimal
   point), in which case the TimeFuse will execute after than number of
-  hours. For example, an <span class="code">timespec</span> of 1.25 will
+  hours. For example, an `timespec` of 1.25 will
   cause the TimeFuse to execute 1 hour and 15 minutes after the TimeFuse
-  is created. Note than an <span class="code">timespec</span> of 1.0
-  thus means one hour an while <span class="code">timespec</span> of 1
+  is created. Note than an `timespec` of 1.0
+  thus means one hour an while `timespec` of 1
   means one minute.
 - A Date (i.e. an object of the Date class), in which case the TimeFuse
   will execute at the Date specified.
@@ -259,14 +255,12 @@ simply been informed why the proposed action can't be carried out. To do
 this we simply need to set the Action property **advanceOnFailure** to
 nil, e.g.:
 
-<div class="code">
-
+```
     modify Action
         advanceOnFailure = nil
     ; 
      
-
-</div>
+```
 
 #### Action Times
 
@@ -275,21 +269,18 @@ actions, by overriding their **timeTaken** property (which is specified
 in seconds). You could do this globally for all actions, if you wished;
 for example to make every action in the game take 20 seconds:
 
-<div class="code">
-
+```
     modify Action
         timeTaken = 20
     ; 
      
-
-</div>
+```
 
 Or you may want different actions to take different amounts of time. For
 example, to make examining something take 15 seconds and taking
 something take 30 seconds you could do this:
 
-<div class="code">
-
+```
     modify Examine
         timeTaken = 15
     ;
@@ -298,8 +289,7 @@ something take 30 seconds you could do this:
         timeTaken = 30
     ;    
      
-
-</div>
+```
 
 And so on for as many action times as you care to customize.
 
@@ -313,56 +303,51 @@ circumstances by using the **addTime(secs)** and **takeTime(secs)**
 functions. The addTime(secs) function adds *secs* seconds to the time
 taken for the turn. It can also reduce the time taken for the turn if
 *secs* is negative, but it can never reduce it below zero. You can use
-the <span class="code">addTime(secs) </span>function as many times as
+the `addTime(secs) `function as many times as
 you like in the course of a turn, and its effect will be cumulative.
 
-The <span class="code">takeTime(secs)</span> function, on the other
-hand, <span class="code">replaces</span> whatever the time taken for
+The `takeTime(secs)` function, on the other
+hand, `replaces` whatever the time taken for
 turn would have been with *secs*. If
-<span class="code">takeTime()</span> is used more than once in a turn,
+`takeTime()` is used more than once in a turn,
 it will be the latest one that takes effect, and if
-<span class="code">takeTime()</span> is used on a turn, both the
-<span class="code">timeTaken</span> property for the action and any
-calls to <span class="code">addTime()</span> on the same turn will
+`takeTime()` is used on a turn, both the
+`timeTaken` property for the action and any
+calls to `addTime()` on the same turn will
 simply be ignored.
 
-As an alternative to calling <span class="code">addTime(n)</span> and
-<span class="code">takeTime(n) </span>from within an embedded expression
-you can use <span class="code">\<\<add n secs\>\></span> and
-<span class="code">\<\<take n secs\>\> </span>respectively, together
+As an alternative to calling `addTime(n)` and
+`takeTime(n) `from within an embedded expression
+you can use `\<\<add n secs\>\>` and
+`\<\<take n secs\>\> `respectively, together
 with some obvious variants.
 
 In particular all these do the same thing:
 
-<div class="code">
-
+```
      "<<takeTime(n)>>";
      "<<take n seconds>>";
      "<<take n secs>>";
      "<<take n second>>";
      "<<take n sec>>"; 
      
-
-</div>
+```
 
 And all these do the same thing as one another:
 
-<div class="code">
-
+```
      "<<addTime(n)>>";
      "<<add n seconds>>";
      "<<add n secs>>";
      "<<add n second>>";
      "<<add n sec>>"; 
      
-
-</div>
+```
 
 So, for example, if unlocking a door involves shifting a particularly
 rusty bolt you could write:
 
-<div class="code">
-
+```
      + oldDoor: Door 'old oak door'
        ...
        lockability = lockableWithoutKey
@@ -377,8 +362,7 @@ rusty bolt you could write:
        }
      
      
-
-</div>
+```
 
 <span id="implicit"></span>
 
@@ -397,16 +381,14 @@ take when performed implicitly. To have every Action take the same time
 when performed implicitly as it does when carried out in response to an
 explicit command you can simply write:
 
-<div class="code">
-
+```
     modify Action    
         implicitTimeTaken = timeTaken
     ;
-
-</div>
+```
 
 Alternatively, you can override the
-<span class="code">implicitTimeTaken</span> property to any number of
+`implicitTimeTaken` property to any number of
 seconds you please, either globally or on individual actions.
 
   
@@ -426,8 +408,7 @@ time taken by travel actions and instead make traversing
 TravelConnectors take time instead, which you can do by setting their
 **traversalTime** property. As a start you might do something like this:
 
-<div class="code">
-
+```
     modify TravelAction
         timeTaken = 0    
     ;
@@ -436,44 +417,42 @@ TravelConnectors take time instead, which you can do by setting their
         traversalTime = 120
     ;
      
-
-</div>
+```
 
 This assumes that you reckon that in your game world, travel from one
 place to the next should typically take two minutes. If your map was on
 a smaller scale, you'd obviously choose a smaller number, perhaps only
 30 seconds. Of course, it may be that not all distances on your game map
 are equal. You can deal with this by assigning different
-<span class="code">traversalTime</span> values to different
+`traversalTime` values to different
 TravelConnectors. Note that unless we've explicitly changed them in our
 own code, we don't need to override the
-<span class="code">timeTaken</span> properties of the GoTo and Continue
+`timeTaken` properties of the GoTo and Continue
 actions (as we otherwise might), since by default these take their
-values from <span class="code">TravelAction.timeTaken</span>.
+values from `TravelAction.timeTaken`.
 
 That's all very well up to a point, but what if many (if not most) of
 your connections are direct from one room to another, without any other
 TravelConnector object intervening? Since Room inherits from
 TravelConnector, you can give a Room a
-<span class="code">traversalTime</span>, but then that will be the time
+`traversalTime`, but then that will be the time
 taken to enter the room from any other room (unless the travel is
 carried out via some intermediate TravelConnector such as a Door,
 Stairway or Passage, in which case that intermediary TravelConnector's
-<span class="code">traversalTime</span> will apply instead). You
+`traversalTime` will apply instead). You
 probably won't want to create a lot of extra TravelConnector objects
 just to vary the TravelTime, however, so fortunately there's another way
 to handle this situation. Instead of overriding the room's
-<span class="code">traversalTime</span> property, you can override its
+`traversalTime` property, you can override its
 **traversalTimeFrom(origin)** method (where *origin* is the other room
 the traveler is coming from) to return different traversal times
 depending on the origin. For example, suppose you think it should take
 30 seconds to reach the meadow from the road, a minute to reach the
 meadow from the river bank, and two minutes to reach it from the wood,
 you could define the meadow's
-<span class="code">traversalTimeFrom()</span> method accordingly:
+`traversalTimeFrom()` method accordingly:
 
-<div class="code">
-
+```
      meadow: Room 'Meadow'
         "The road lies just to the south..."
         south = road
@@ -496,13 +475,12 @@ you could define the meadow's
         }
     ;    
      
-
-</div>
+```
 
 The default in the switch statement may not be strictly necessary, but
 it may be as well to put in for safety; if you were later to add another
 connection to the meadow and forget to change the
-<span class="code">traversalTimeFrom()</span> method, it would at least
+`traversalTimeFrom()` method, it would at least
 then handle it reasonably gracefully. Perhaps a more serious problem is
 that this method of specifying travel times between different rooms
 could quickly become quite tedious and long-winded if there were a lot
@@ -511,8 +489,7 @@ structure, perhaps a LookupTable, to store the different traversal times
 between pairs of rooms and then define the traversalTimeFrom() method to
 make use of it, e.g.:
 
-<div class="code">
-
+```
      modify Room
         traversalTab = static [
             [road, meadow] -> 30,
@@ -528,14 +505,12 @@ make use of it, e.g.:
         }
     ; 
      
-
-</div>
+```
 
 One alternative would be to use a list defined on each room of the
 travel times from other rooms, something like:
 
-<div class="code">
-
+```
      modify Room
         timeFrom = []
         
@@ -555,13 +530,12 @@ travel times from other rooms, something like:
         timeFrom = [road, 30, riverbank, 60, wood, 120]    
     ;    
      
-
-</div>
+```
 
 This may well be easier to work with, since the relevant data is kept
 with the room it relates to. Either way you would, of course, only have
 to specify the exceptions, since for any route not otherwise specified
-the room's <span class="code">traversalTime</span> would be used.
+the room's `traversalTime` would be used.
 
 <span id="leaps"></span>
 
@@ -572,56 +546,56 @@ time. These may occur in your game if it contains a flashback, for
 example, or if you cut from one scene to another that takes place hours
 or even days later. In principle this is simple enough to do: you just
 call the **setTime()** method of the
-<span class="code">timeManager</span> object, or else update
-<span class="code">timeManager.currentTime</span> directly. If you use
-the <span class="code">setTime()</span> method the arguments to pass to
+`timeManager` object, or else update
+`timeManager.currentTime` directly. If you use
+the `setTime()` method the arguments to pass to
 it are the same as those you'd pass to the Date constructor (for which
 see the TADS 3 System Manual). The two simplest formats to use are
 probably:
 
-- <span class="code">timeManager.setTime(year, month, day, hour,
-  minutes, seconds, ms)</span>: possibly the best bet if you want to
+- `timeManager.setTime(year, month, day, hour,
+  minutes, seconds, ms)`: possibly the best bet if you want to
   change both the date and the time; *year* is the year number (e.g.,
   2012), *month* is the month (1 to 12), *day* is the day of the month
   (1 to 31), *hour* is the clock hour (0 for midnight to 23 for 11 PM),
   *minutes* is the number of minutes past the hour (0 to 59), *seconds*
   is the number of seconds past the minute (0 to 59), and *ms* is the
   number of milliseconds past the second (0 to 999).
-- <span class="code">timeManager.setTime('hour:minutes:seconds')</span>
-  or <span class="code">timeManager.setTime('hour:minutes')</span>,
+- `timeManager.setTime('hour:minutes:seconds')`
+  or `timeManager.setTime('hour:minutes')`,
   where *hour*, *minutes* and *seconds* have the same meaning as before.
   This is probably the best option to use if you simply want to jump to
   a different time on the same day. (Note that if you were using the
   Date constructor directly you would need to supply a couple of extra
   arguments to make sure the day did stay the same, but the
-  <span class="code">setTime()</span> method takes care of this for
+  `setTime()` method takes care of this for
   you.)
 
 If you want to jump *by* a certain amount you can use the
 **addInterval(interval)** method of timeManager, where *interval* can be
 one of:
 
-- A list of numbers in the form <span class="code">\[years, months,
-  days, hours, minutes, seconds\]</span>; trailing zero elements may be
+- A list of numbers in the form `\[years, months,
+  days, hours, minutes, seconds\]`; trailing zero elements may be
   omitted.
 - A single integer, in which case this will be taken as the number of
   minutes to advance the time.
 - A single BigNumber (a number containing a decimal point), in which
   case this will be taken as the number of hours to advance the time.
 
-Thus calling <span class="code">timeManager.addInterval(15)</span> and
-<span class="code">timeManager.addInterval(0.25)</span> would both
+Thus calling `timeManager.addInterval(15)` and
+`timeManager.addInterval(0.25)` would both
 advance the time by a quarter of an hour. Note that these numbers can be
 negative as well as positive, so that, for example,
-<span class="code">timeManager.addInterval(-24.0)</span> would send the
+`timeManager.addInterval(-24.0)` would send the
 time a day into the past. A further subtlety to note is that unless you
 do something to prevent it, calling
-<span class="code">timeManager.addInterval()</span> won't prevent the
+`timeManager.addInterval()` won't prevent the
 normal advance of time that takes place in any case on each turn. So,
 for example, if each turn would normally take one minute and you call
-<span class="code">timeManager.addInterval(1)</span> you'll find that
+`timeManager.addInterval(1)` you'll find that
 the game time has advanced by *two* minutes at the end of the turn, one
-minute from <span class="code">addInterval()</span> and the other from
+minute from `addInterval()` and the other from
 the normal turn handling.
 
   

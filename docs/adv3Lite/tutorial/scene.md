@@ -54,8 +54,7 @@ effect during the Scene or Scenes in question.
 
 To create a Scene we simply define an object of the Scene class, e.g.;
 
-<div class="code">
-
+```
     myScene: Scene
        startsWhen = (me.isIn(throneRoom))
        whenStarting()
@@ -66,8 +65,7 @@ To create a Scene we simply define an object of the Scene class, e.g.;
        }
        ...
     ;
-
-</div>
+```
 
 You may recall that earlier on we said that at some point the drug
 cartels would take over the aeroplane standing at Gate 3 for their own
@@ -85,8 +83,7 @@ As a start, we might then define a Scene that's triggered by the player
 reaching the plane's toilet, and starts with an announcement over the
 plane's intercom:
 
-<div class="code">
-
+```
     takeover: Scene
         startsWhen = (bathroom.visited)
         
@@ -100,8 +97,7 @@ plane's intercom:
             cabin. ";
         }
     ;
-
-</div>
+```
 
 A good place to put this might be right at the end of the plane.t file.
 
@@ -117,8 +113,7 @@ that is to change the description of the passenger object so it's
 conditional on whether the takeover scene is happening or not, and add a
 specialDesc that's only used when the takeover scene is happening:
 
-<div class="code">
-
+```
     airlinePassengers: MultiLoc, Decoration 'passengers;;men women; them'
         "<<if takeover.isHappening>>They seem confused and annoyed in equal
         measure<<else>>You sense an air of impatience about them, as if they're all
@@ -136,15 +131,13 @@ specialDesc that's only used when the takeover scene is happening:
         useSpecialDesc = (takeover.isHappening)  
         
     ;
-
-</div>
+```
 
 The notImportantMsg of the seats Decoration object referred to them all
 being occupied. This too needs to change to reflect that the passengers
 are now milling about in the aisle:
 
-<div class="code">
-
+```
     MultiLoc, Decoration 'seats; red; seating seat airline; them'
         "Like all airline seats, these ones look like they were designed for the
         average-sized person of a century and a half ago. "
@@ -155,8 +148,7 @@ are now milling about in the aisle:
         
         locationList = [planeFront, planeRear]
     ;
-
-</div>
+```
 
 The commotion has been caused because El Diablo has instructed his
 ruthless lieutenant Pablo Cortez to order the passengers off the plane
@@ -173,17 +165,16 @@ back on until he's wearing the pilot's uniform.
 
 We can achieve this by putting a **TravelConnector** on the exit leading
 foreward from the rear of the plane, and setting up its
-<span class="code">canTravelerPass()</span> and
-<span class="code">explainTravelBarrier()</span> to prevent travel
+`canTravelerPass()` and
+`explainTravelBarrier()` to prevent travel
 during the takeover scene unless all four items from the toilet are
 being carried. In this case, though, we don't need to create a separate
 TravelConnector object, since in this case we're not implementing it as
 a physical object but as an abstract means of enforcing various
 conditions. We can therefore define it on the
-<span class="code">fore</span> property of the planeRear room:
+`fore` property of the planeRear room:
 
-<div class="code">
-
+```
     planeRear: Room 'Rear of Plane' 'rear[n] of the plane;;airplane aeroplane'
         "The main aisle continue forward to the front of the plane and aft to the
         bathroom between rows of red coloured seats. "
@@ -247,48 +238,47 @@ conditions. We can therefore define it on the
         
         regions = [planeRegion]    
     ;
-
-</div>
+```
 
 We've introduced a new TADS 3 language construct here, namely the
 **switch** statement. This compares the value of the expression in
 parentheses immediately following the keyword
-<span class="code">switch</span> with the constant values after each
-<span class="code">case</span> statement until it finds one that
+`switch` with the constant values after each
+`case` statement until it finds one that
 matches, and then executes the code it finds from there either until the
 end of the switch statement block (the closing brace matching the open
-brace immediately following <span class="code">switch(*expr*)</span>, or
+brace immediately following `switch(*expr*)`, or
 until it encounters a **break** statement. For that reason we normally
-need to place a <span class="code">break</span> statement at the end of
-each <span class="code">case</span> block to prevent fall-through to the
+need to place a `break` statement at the end of
+each `case` block to prevent fall-through to the
 next case block (unless we want to allow fall-through, as in the example
-above where we want <span class="code">case 0</span> and
-<span class="code">case 1</span> to do the same thing). If no matching
-<span class="code">case</span> is found the code following **default**
-is executed if <span class="code">default</span> is present. In the
+above where we want `case 0` and
+`case 1` to do the same thing). If no matching
+`case` is found the code following **default**
+is executed if `default` is present. In the
 above example it is not, because we don't need it; this code can only be
 executed if the player character is holding 0, 1, 2 or 3 items from the
 toilet, so we have every possible case covered.
 
-In the <span class="code">explainTravelBarrier()</span> method above the
-<span class="code">switch</span> statement simply varies the message
+In the `explainTravelBarrier()` method above the
+`switch` statement simply varies the message
 according to the number of items from the toilet being carried, at the
 same time trying to give the player a gentle hint what needs to be done
 to sneak past Pablo Cortez unobserved.
-<span class="code">cleanerItemCount(traveler)</span> is a service method
+`cleanerItemCount(traveler)` is a service method
 we define to return the number of items from the toilet the player
 character is currently carrying; it simply looks through all the player
 character's contents (direct or indirect) and counts the number of them
-that are one of the four items. The expression <span class="code">o is
-in (bucket, sponge, garbageBag, brassKey)</span> is true if o is either
+that are one of the four items. The expression `o is
+in (bucket, sponge, garbageBag, brassKey)` is true if o is either
 the bucket, the sponge, the garbageBag or the brassKey (note this use of
-<span class="code">is in ( )</span>; it can be a very useful tool).
+`is in ( )`; it can be a very useful tool).
 
-The <span class="code">canTravelerPass()</span> method returns true (and
+The `canTravelerPass()` method returns true (and
 so allows the player to proceed) either if the takeover scene is not
 happening (in which case no further checks are needed) or if the player
 is carrying more than three items from the toilet. Finally, the
-<span class="code">travelDesc</span> property displays a message
+`travelDesc` property displays a message
 describing what happens when the player does go foreward to the front of
 the plane. Strictly speaking we should check whether the takeover scene
 is happening before we display this message, but in practice we don't
@@ -299,8 +289,7 @@ To make sure the player can't get the game into an unwinnable state by
 dropping the key in the front of the cabin before leaving the plane
 we'll use a Doer to prevent this from happening:
 
-<div class="code">
-
+```
     Doer 'drop Thing'
         execAction(c)
         {
@@ -312,11 +301,10 @@ we'll use a Doer to prevent this from happening:
         where = planeFront
         during = takeover
     ;
+```
 
-</div>
-
-Notice the use of the <span class="code">where</span> and
-<span class="code">during</span> properties to restrict when this Doer
+Notice the use of the `where` and
+`during` properties to restrict when this Doer
 is applicable: it only takes effect at the front of the plane when the
 takeover scene is happening.
 
@@ -326,8 +314,7 @@ another TravelConnector, this time on the east property of the jetway.
 While we're at it we should also change the description of the jetway to
 reflect the change in situation:
 
-<div class="code">
-
+```
     jetway: Room 'Jetway' 'jetway;short enclosed; walkway'
         "This is little more than a short enclosed walkway leading west-east from
         the gate to the plane. <<if takeover.isHappening>> Right now it's thronging
@@ -349,8 +336,7 @@ reflect the change in situation:
         }
         
     ;
-
-</div>
+```
 
 This description mentions a throng of disgruntled passengers, which we
 should implement and move into the jetway when the scene starts. We
@@ -359,8 +345,7 @@ now notionally about to board the plane. The start of the scene might
 also be a good time to cut off the announcements calling for passengers
 to board at Gate 3, since this clearly isn't relevant any more:
 
-<div class="code">
-
+```
     takeover: Scene
         startsWhen = (bathroom.visited)
         
@@ -390,16 +375,14 @@ to board at Gate 3, since this clearly isn't relevant any more:
         
         notImportantMsg = 'You don\'t have time for these people right now. ' 
     ;
-
-</div>
+```
 
 This might be a good point at which to ensure the player character
 doesn't start the announcements up again the next time he passes through
 the metal detector. We can check whether the takeover Scene has ever
 started by checking whether or not its startAt property is nil:
 
-<div class="code">
-
+```
     + metalDetector: Passage 'metal detector; crude; frame'
         "The metal detector is little more than a crude metal frame, just large
         enough to step through, with a power cable trailing across the floor. "
@@ -415,8 +398,7 @@ started by checking whether or not its startAt property is nil:
                 announcementObj.start();
         }
     ;
-
-</div>
+```
 
 We've defined what happens when the takeover scene starts; we also need
 to define its ending. We'll end it when the player character puts on the
@@ -426,8 +408,7 @@ to remove the disgruntled passengers from the jetway, since they should
 all have left by then; we should also remove the original set of
 passengers from the plane and replace them with a new set:
 
-<div class="code">
-
+```
     takeover: Scene
         startsWhen = (bathroom.visited)
         
@@ -477,32 +458,30 @@ passengers from the plane and replace them with a new set:
             }
         }
     ;
+```
 
-</div>
-
-Although the <span class="code">airlinePassengers</span> object is a
+Although the `airlinePassengers` object is a
 MultiLoc, we can quite happily move it off stage with
-<span class="code">moveInto(nil)</span>. There's no need to make the
-<span class="code">criminalPassengers</span> object a MultiLoc since we
+`moveInto(nil)`. There's no need to make the
+`criminalPassengers` object a MultiLoc since we
 shan't be letting the player character return to the rear of the plane.
-This is ensured by the <span class="code">beforeTravel()</span> method
-defined on the <span class="code">criminalPassengers</span> object. The
-<span class="code">beforeTravel()</span> method is called on all objects
+This is ensured by the `beforeTravel()` method
+defined on the `criminalPassengers` object. The
+`beforeTravel()` method is called on all objects
 in scope just before travel is about to be carried out, and can be used
 to allow any object to react to the travel or, as here, veto it (via the
-use of <span class="code">exit</span>). There's also an
-<span class="code">afterTravel(traveler, connector)</span> method that's
+use of `exit`). There's also an
+`afterTravel(traveler, connector)` method that's
 called on every object in scope just after travel has been completed.
 
 One last thing: the player could defeat our scheme by donning the
 uniform and then taking it off again before boarding the plane. To
 prevent this we'll insert a check() stage into the
-<span class="code">dobjFor(Doff)</span> handling of the uniform (Doff is
+`dobjFor(Doff)` handling of the uniform (Doff is
 the action corresponding to taking clothes off) to prevent the player
 character from taking off the uniform once he's put it on:
 
-<div class="code">
-
+```
     ++ uniform: Wearable 'pilot\'s uniform; timo large'  
         "It's a uniform for a Timo Airlines pilot. It's a little large for you, but
         <<if wornBy == me>> it's not too bad a f<<else>>you could probably wear
@@ -520,8 +499,7 @@ character from taking off the uniform once he's put it on:
             }
         }
     ;
-
-</div>
+```
 
 Note that we've also tweaked the description of the uniform so that it
 changes when the player character is wearing it. We've rather sneakily

@@ -32,8 +32,7 @@ plane to the start of the runway, leaving the plane ready for take-off.
 We'll also reset the controls to their starting positions, and close off
 the exit from the plane to the walkway:
 
-<div class="code">
-
+```
     takeoff: Scene
         startsWhen = (ignitionButton.isOn == true)
         
@@ -54,21 +53,20 @@ the exit from the plane to the walkway:
             planeFront.port = 'You can\'t leave the plane now it\'s left the jetway.
                 ';
         }
+```
 
-</div>
-
-We'll use the <span class="code">eachTurn()</span> method of the takeoff
+We'll use the `eachTurn()` method of the takeoff
 scene to control just about everything else. A scene's
-<span class="code">eachTurn()</span> method is executed every turn the
+`eachTurn()` method is executed every turn the
 scene is happening. We can therefore use it to check the state of the
 controls at the end of every turn after the button is pushed and make
 the plane respond accordingly. To do this we need to check how fast the
 plane is travelling, and how far down the runway it has gone. If it goes
 too far it'll go past the end of the runway, presumably with dire
 consequences as it ploughs into whatever lies beyond. We'll define a
-custom <span class="code">distanceTraveled</span> property on the
+custom `distanceTraveled` property on the
 takeoff scene to keep track of how far the plane has travelled down the
-runway. We can used <span class="code">asi.airspeed</span> to keep track
+runway. We can used `asi.airspeed` to keep track
 of its speed.
 
 The first thing to check for is whether the plane should now take off.
@@ -81,8 +79,7 @@ player pulls back much too early then nothing much happens until the
 plane has picked up just enough speed to start taking off and then
 stall:
 
-<div class="code">
-
+```
         /* The total distance traveled along the runway */
         distanceTraveled = 0
         
@@ -116,8 +113,7 @@ stall:
                     "The aircraft judders slightly but nothing else happens; it
                     isn't traveling nearly fast enough to take off. ";
             }
-
-</div>
+```
 
 We next need to do some calculations to determine how fast the plane is
 now travelling and how far down the runway it has travelled. There's no
@@ -135,8 +131,7 @@ traveled by the average of the new airspeed and the previous airspeed
 tutorial in applied mathematics, don't worry if these details don't make
 too much sense to you. In terms of code they look like:
 
-<div class="code">
-
+```
             local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;
             
             asi.airspeed += (thrust/100);
@@ -145,21 +140,19 @@ too much sense to you. In terms of code they look like:
                 asi.airspeed = 0;
             
             distanceTraveled += ((asi.airspeed + oldSpeed)/2);
-
-</div>
+```
 
 Here we're simply assuming that one turn represents an appropriate unit
 of time. Note the use of the **toInteger()** function to convert the
 current setting of the thrust lever (a string property) into a number we
 can use in calculations.
 
-If we've reached this point in the <span class="code">eachTurn()</span>
+If we've reached this point in the `eachTurn()`
 method the plane hasn't taken off yet, so we need to check that it
 hasn't overshot the runway. If it has, then a fatal crash occurs and we
 end the game in death:
 
-<div class="code">
-
+```
            /* If we go too far, we run off the end of the runway */
             if(distanceTraveled > 500)
             {
@@ -170,8 +163,7 @@ end the game in death:
                 
                 finishGameMsg(ftDeath, [finishOptionUndo]);
             }
-
-</div>
+```
 
 The figure of 500 for the length of the runway wasn't arrived at by any
 kind of calculation, by the way; I simply ran the previous code to get
@@ -185,8 +177,7 @@ runway will send it to one side or the other with catastrophic effects,
 although in case the player tries this more than once we'll introduce
 some slight variations into the description of the ensuing catastrophe:
 
-<div class="code">
-
+```
             /* 
              *   If we turn the wheel while the plane is moving along the runway,
              *   the results are likely to be catastrophic.
@@ -203,8 +194,7 @@ some slight variations into the description of the ensuing catastrophe:
                 
                 finishGameMsg(ftDeath, [finishOptionUndo]);
             }
-
-</div>
+```
 
 If you've been following the logic of what we've been doing up until now
 at all closely, you'll have noticed that this is the only effect that
@@ -222,12 +212,11 @@ If you feel one of the other approaches would be preferable, however,
 you can always try to implement one or the other of them yourself, using
 the tools we have already covered.
 
-The final task for this <span class="code">eachTurn()</span> to perform
+The final task for this `eachTurn()` to perform
 is to provide the player with some feedback on what's happening if
 nothing more dramatic has intervened:
 
-<div class="code">
-
+```
             /* 
              *   If nothing else dramatic has intervened, report what's happening to
              *   the speed.
@@ -244,8 +233,7 @@ nothing more dramatic has intervened:
                 "The plane is losing speed. ";
         }   
     ;
-
-</div>
+```
 
 Hopefully the logic of this should be reasonably apparent. If the speed
 has increased since the previous turn, we select a message depending on
@@ -257,8 +245,7 @@ If we now put all the pieces together, the complete definition of the
 takeoff scene (which does all the work of responding to the movement of
 the cockpit controls) looks like this:
 
-<div class="code">
-
+```
     takeoff: Scene
         startsWhen = (ignitionButton.isOn == true)
         
@@ -373,8 +360,7 @@ the cockpit controls) looks like this:
                 "The plane is losing speed. ";
         }   
     ;
-
-</div>
+```
 
 There is quite a lot happening on this Scene object, but it's probably
 easier to co-ordinate it all there rather than distribute the effects of
@@ -387,11 +373,10 @@ windscreen. Really all the player needs to do with it is EXAMINE it or
 LOOK THROUGH IT, and both actions may as well do the same thing. The
 complication is that the view through the windscreen will change
 depending on what's happening, so perhaps the easiest approach is to
-make the windscreen's <span class="code">desc</span> property a method
+make the windscreen's `desc` property a method
 that calls a separate method when the takeoff scene is in progress:
 
-<div class="code">
-
+```
     + windscreen: Fixture 'windscreen;; window windshield'
         desc()
         {
@@ -420,11 +405,10 @@ that calls a separate method when the takeoff scene is in progress:
         
         dobjFor(LookThrough) asDobjFor(Examine)
     ;
+```
 
-</div>
-
-Defining <span class="code">takeoff.distanceTraveled/5</span> at the
-start of the <span class="code">takeoffDesc</span> method not only saves
+Defining `takeoff.distanceTraveled/5` at the
+start of the `takeoffDesc` method not only saves
 us a lot of repetitive typing of an awkwardly long name, it turns dt
 into a percentage of the runway traversed (through dividing by 5), which
 makes it a bit easier to decide at what points to change the text
@@ -440,8 +424,7 @@ directly after the end of the windscreen object, assuming that the
 windscreen is the last of the cockpit contents objects you've defined in
 your source:
 
-<div class="code">
-
+```
     + terminalBuilding: Distant 'terminal building; shabby white large; structure'
         "It's a large white structure just off to port. In the fading light you
         can't really make out how shabby it actually looks. "
@@ -475,12 +458,11 @@ your source:
             terminalBuilding.moveInto(nil);
         }
         ...
+```
 
-</div>
-
-By making the <span class="code">terminalBuilding</span> and
-<span class="code">landingLights</span> both of the
-<span class="code">Distant</span> class, we ensure that all the player
+By making the `terminalBuilding` and
+`landingLights` both of the
+`Distant` class, we ensure that all the player
 can do with them is EXAMINE them. Any other command will be met with a
 response that they're too far away.
 

@@ -59,7 +59,7 @@ comparison rules dynamically, simply create a new StringComparator (or a
 custom comparator object of your own) and install it in the dictionary.
 
 When using the StringComparator class, you must
-<span class="code">\#include \<strcomp.h\></span> in your source files.
+`\#include \<strcomp.h\>` in your source files.
 
 ## Equivalence mappings
 
@@ -171,11 +171,11 @@ equivalence mappings should use values 0x0100 and above.
 
 ## Construction
 
-To create a StringComparator, use the <span class="code">new</span>
+To create a StringComparator, use the `new`
 operator:
 
-<span class="code">new StringComparator(*truncLen*, *caseSensitive*,
-*mappings*)</span>
+`new StringComparator(*truncLen*, *caseSensitive*,
+*mappings*)`
 
 The parameters are:
 
@@ -186,18 +186,18 @@ The parameters are:
   meets the minimum length requirement and is a leading substring of
   "flashlight"; however, "flash" will not match "flashlight," because,
   at five characters, it doesn't meet the minimum length for truncated
-  matches. Specify 0 (zero) or <span class="code">nil</span> if you do
+  matches. Specify 0 (zero) or `nil` if you do
   not want to allow truncated matches at all.
 - *caseSensitive* is a flag indicating whether or not the matches are to
-  be sensitive to case. If this flag is <span class="code">true</span>,
+  be sensitive to case. If this flag is `true`,
   then matches are sensitive to case, which means that each character
-  must match exactly. If this flag is <span class="code">nil</span>,
+  must match exactly. If this flag is `nil`,
   then matches are insensitive to case, which means that an upper-case
   letter in one string matches the corresponding lower-case letter in
   the other.
 - *mappings* is a list (or [list-like object](opoverload.html#listlike))
   giving the equivalence mappings. This is an empty list, or simply
-  <span class="code">nil</span>, if there are no mappings. Each mapping
+  `nil`, if there are no mappings. Each mapping
   is a sublist, with elements as follows: \[*refChar*, *inputStr*,
   *upperCaseFlags*, *lowerCaseFlags\]*
   - *refChar* is a one-character string giving the "reference"
@@ -224,20 +224,20 @@ to the [Dictionary](dict.html) section.
 In addition to the standard Object methods, StringComparator provides
 the following methods:
 
-<span class="code">calcHash(*str*)</span>
+`calcHash(*str*)`
 
 <div class="fdef">
 
 Calculate a hash value for the given string. Returns an integer giving
 the hash value. The hash calculation conforms to the requirement that,
-for two strings *s1* and *s2*, if <span class="code">matchValues(s1,
-s2)</span> indicates a match, then
-<span class="code">calcHash(s1)</span> will equal
-<span class="code">calcHash(s2)</span>.
+for two strings *s1* and *s2*, if `matchValues(s1,
+s2)` indicates a match, then
+`calcHash(s1)` will equal
+`calcHash(s2)`.
 
 </div>
 
-<span class="code">matchValues(*inputStr*, *refStr*)</span>
+`matchValues(*inputStr*, *refStr*)`
 
 <div class="fdef">
 
@@ -255,17 +255,17 @@ flags for the match, including the pre-defined flags and the result
 flags for all equivalence mappings used to make the match. The following
 flag values are pre-defined:
 
-- <span class="code">StrCompMatch</span> (0x0001) - this flag is set for
+- `StrCompMatch` (0x0001) - this flag is set for
   all matching values, simply to ensure that, even in the absence of any
   other flags, a non-zero value is returned from matchValues().
-- <span class="code">StrCompCaseFold</span> (0x0002) - indicates that
+- `StrCompCaseFold` (0x0002) - indicates that
   the match used "case folding," which is to say that one or more
   upper-case letters in the input matched corresponding lower-case
   letters in the reference string, or vice versa. This flag can only be
   returned when case-insensitive matches were selected in the
   constructor, since a case-sensitive comparator will not match strings
   that differ in case.
-- <span class="code">StrCompTrunc</span> (0x0004) - the match was
+- `StrCompTrunc` (0x0004) - the match was
   truncated; in other words, the input string was a leading substring of
   the reference string, was shorter than the reference string, and was
   at least the truncation length specified when the comparator was

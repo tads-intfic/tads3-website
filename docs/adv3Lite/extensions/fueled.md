@@ -38,14 +38,14 @@ In addition to a number of properties intended purely for internal use,
 this extension defines the following new class and properties:
 
 - *New Mix-in Class*: **FueledLightSource**
-- *Properties/Methods*: <span class="code">fuelSource</span>,
-  <span class="code">fuelLevel</span>,
-  <span class="code">showWarning()</span>,
-  <span class="code">sayBurnedOut()</span>,
-  <span class="code">burnedOutMsg</span>,
-  <span class="code">plungedIntoDarknessMsg</span>,
-  <span class="code">wontLightMsg</span>,
-  <span class="code">removeFuelSource()</span>
+- *Properties/Methods*: `fuelSource`,
+  `fuelLevel`,
+  `showWarning()`,
+  `sayBurnedOut()`,
+  `burnedOutMsg`,
+  `plungedIntoDarknessMsg`,
+  `wontLightMsg`,
+  `removeFuelSource()`
 
   
 <span id="usage"></span>
@@ -67,7 +67,7 @@ contril this behaviour are:
   but for an object that uses an external fuel source, this could be the
   external fuel source (such as a battery for a flashlight); if so then
   the external fuel source must supply the
-  <span class="code">fuelLevel</span> property.
+  `fuelLevel` property.
 - **fuelLevel**: this is the amount of fuel remaining in the fuel
   source. One unit of fuel is consumed for every turn that the
   FueledLightSource is lit. The default starting value for a
@@ -85,13 +85,13 @@ contril this behaviour are:
   - **burnedOutMsg**: this is the start of the message; it shouldn't be
     a complete sentence but something of the form, '{The subj obj}
     {goes} out' or 'The torch dies'; if the mesage parameter substition
-    form is used, <span class="code">{the subj obj}</span> will be
+    form is used, `{the subj obj}` will be
     replaced with the name of the object that's just gone out.
   - **plungedIntoDarknessMsg**: this should be a fragment of a sentence
     describing what happens if the player character is left in darkness
     as a result of the light source going out. It should be of the form
     ', leaving you in darkness' (i.e. something that can follow on
-    directly from the <span class="code">burnedOutMsg</span>).
+    directly from the `burnedOutMsg`).
 - **wontLightMsg**: the message to display (as a single-quoted string)
   if the FueledLightSource won't light because it has no fuel.
 - **removeFuelSource()**: a message that can be called from game code
@@ -104,8 +104,7 @@ contril this behaviour are:
 As an example to illustrate all of this, here's how we might implement a
 flashlight (or torch in British parlance) that requires a battery:
 
-<div class="code">
-
+```
     + torch: FueledLightSource, OpenableContainer, Flashlight 'torch; heavy black; flashlight'
         "It's a heavy black torch. "
         
@@ -163,8 +162,7 @@ flashlight (or torch in British parlance) that requires a battery:
     class Battery: Thing 'battery'
        fuelLevel = 200
     ;
-
-</div>
+```
 
 This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the

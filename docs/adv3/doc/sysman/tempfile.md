@@ -50,7 +50,7 @@ special properties:
   the file system.
 
 To use the TemporaryFile class, you should \#include the system header
-file <span class="code">file.h</span> in your source files.
+file `file.h` in your source files.
 
 TemporaryFile objects are always transient. This means that they're not
 saved or restored as part of saved game files. Saving a TemporaryFile
@@ -61,14 +61,12 @@ that previous session.
 
 ## Creation
 
-To create a TemporaryFile object, use the <span class="code">new</span>
+To create a TemporaryFile object, use the `new`
 operator:
 
-<div class="code">
-
+```
     local temp = new TemporaryFile();
-
-</div>
+```
 
 There are no arguments. The system automatically assigns the new object
 a unique filename in the local file system directory designated by the
@@ -83,11 +81,9 @@ To create the file itself, you can use any of the "open" methods of the
 [File](file.html) object, passing the TemporaryFile in place of the
 filename:
 
-<div class="code">
-
+```
     local f = File.openTextFile(temp, FileAccessWrite, 'ascii');
-
-</div>
+```
 
 After you open a temporary file, you can use it just like an ordinary
 file.
@@ -109,7 +105,7 @@ to the following built-in functions:
 
 <span id="deleteFile"></span>
 
-<span class="code">deleteFile()</span>
+`deleteFile()`
 
 <div class="fdef">
 
@@ -136,7 +132,7 @@ This method has no arguments and no return value.
 
 <span id="getFilename" <="" a=""></span>
 
-<span class="code">getFilename()</span>
+`getFilename()`
 
 <div class="fdef">
 
@@ -211,7 +207,7 @@ automatically when the program exits (if not sooner).
 
 This safety level override feature is the reason that you shouldn't
 attempt to use the string version of the filename (as returned by
-<span class="code">getFilename</span>) to open or delete the file. The
+`getFilename`) to open or delete the file. The
 File class grants the special exception only to the TemporaryFile object
 itself, not to the underlying filename.
 

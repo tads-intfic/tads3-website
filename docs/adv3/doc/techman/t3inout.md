@@ -30,9 +30,9 @@ Configurations</a>     </span>
 For the most part, input and output in TADS 3 is pretty straightforward.
 The player types commands at the command prompt and presses the RETURN
 or ENTER key, and your game responds. You output text to the screen
-using a string in double-quotes such as <span class="code">"this will be
-shown on screen"</span> or else by using the
-<span class="code">say()</span> function, and the library contributes to
+using a string in double-quotes such as `"this will be
+shown on screen"` or else by using the
+`say()` function, and the library contributes to
 the output with its own standard messages and responses. For many games
 this is enough, and there's no need to complicate matters any further.
 
@@ -51,24 +51,23 @@ briefly explore some of the alternatives.
 ## The inputManager
 
 The tads-io function set includes the functions
-<span class="code">morePrompt()</span>, which displays a MORE prompt and
+`morePrompt()`, which displays a MORE prompt and
 waits for the player to press a key;
-<span class="code">inputKey()</span>, which waits for the player to
+`inputKey()`, which waits for the player to
 press a key and returns the key pressed, and
-<span class="code">inputLine()</span>, which reads a whole line of text
+`inputLine()`, which reads a whole line of text
 from the player (up to the point the player presses the ENTER or RETURN
 key) and then returns the string entered.
 
 The trouble is, as you will soon discover if you've tried to use them,
 that these functions don't entirely work as you want them to. For
-example you may try placing <span class="code">morePrompt()</span> in a
+example you may try placing `morePrompt()` in a
 the middle of some text to create a dramatic pause, but what actually
 happens is that all your text is displayed, and only then the does the
 more prompt appear, at the end, and not in the middle where you actually
 wanted it. E.g. you might write code like:
 
-<div class="code">
-
+```
     "The evil baby-eating villain points his splat-gun at you, pulls the trigger and...";  
     morePrompt();   
     "... suffers a sudden fatal heart attack! ";  
@@ -378,9 +377,9 @@ wanted it. E.g. you might write code like:
        532 
 
 Although in this case we could have tested for
-<span class="code">dataType(val)</span> being of kind
-<span class="code">TypeDString</span>, that wouldn't work in the more
-general case in which <span class="code">specialMessage</span> was a
+`dataType(val)` being of kind
+`TypeDString`, that wouldn't work in the more
+general case in which `specialMessage` was a
 routine that may or may not display something, e.g:
 
 <div class="code">
@@ -398,32 +397,31 @@ routine that may or may not display something, e.g:
          }   
         fooVal = 4   
      ;  
-
-</div>
+```
 
 In this highly artificial example,
-<span class="code">specialBall.specialMessage</span> always returns
+`specialBall.specialMessage` always returns
 'It\\s a moderately special ball. ' but may also display a different
 string as well depending on the value of
-<span class="code">specialBall.fooVal</span>. Calling
-<span class="code">specialBall.showSpecialMessage</span> will cause
+`specialBall.fooVal`. Calling
+`specialBall.showSpecialMessage` will cause
 'It\\s a moderately special ball. ' to be displayed if and only if
-<span class="code">fooVal</span> is between 3 and 9 inclusive; otherwise
+`fooVal` is between 3 and 9 inclusive; otherwise
 one of the other messages will be displayed instead.
 
 ### Output Filters
 
-If you look up the <span class="code">OutputManager</span> class in the
+If you look up the `OutputManager` class in the
 *Library Reference Manual* (or in output.t), you'll see that it has a
 number of methods for adding and removing Output Filters:
-<span class="code">addOutputFilter(filter), addOutputFilterBelow
-(newFilter, existingFilter),</span> and
-<span class="code">removeOutputFilter(filter)</span>. An OutputFilter is
-simply an object that defines a <span class="code">filterText()</span>
+`addOutputFilter(filter), addOutputFilterBelow
+(newFilter, existingFilter),` and
+`removeOutputFilter(filter)`. An OutputFilter is
+simply an object that defines a `filterText()`
 method that can process any string passed to it and then pass it on to
 the next filter (or, finally, to the display). Both
-<span class="code">captureOutput()</span> and
-<span class="code">watchForOutput()</span> work by temporarily
+`captureOutput()` and
+`watchForOutput()` work by temporarily
 installing an OutputFilter and then removing it again when it's done its
 job. The library also installs a number of OutputFilters to carry out
 tasks such as managing the transcript and interpreting style tags. For
@@ -440,15 +438,15 @@ OutputFilters *may* turn out to be something you could use sometime in
 the future. <span id="typo"></span>
 
 There is, however, one further OuputFilter you might find useful
-straight away: this is the <span class="code">cquoteOutputFilter</span>
+straight away: this is the `cquoteOutputFilter`
 provided by Stephen Granade's very useful cquotes.t extension. (The
 source file is in the *lib/extensions* folder in the standard TADS 3
 distributions.) Its function is simply to change straight quotes into
 typographic (curly) ones. Since many of the library messages use
 typographic quotes, and output from code you've written using
-<span class="code">\<q\></span> and <span class="code">\</q\></span>
+`\<q\>` and `\</q\>`
 tags will also use them, but since it's a huge effort to use
-<span class="code">&rsquo;</span> for every apostrophe in your own text,
+`&rsquo;` for every apostrophe in your own text,
 you can all too easily end up with a ugly mixture of quote styles like:
 
 “Let's get going – I'm starving!” Bob insists.
@@ -460,7 +458,7 @@ When it would look so much better to have:
 The cquotes.t extension makes this easy by installing an OutputFilter
 that converts all your straight apostrophes (') into typographical ones
 (’), without your having to go to the trouble of typing
-<span class="code">&rsquo;</span> for each and every apostrophe in your
+`&rsquo;` for each and every apostrophe in your
 game. It's both an extension well worth using, and a neat illustration
 of the potential usefulness of OutputFilters.
 
@@ -489,16 +487,14 @@ don't want it (i.e. when we're about to output our diagram) and turn it
 back on again when we do (i.e. when we've finished with our diagram and
 we're ready to display ordinary text again):
 
-<div class="code">
-
+```
     modify typographicalOutputFilter
         isActive = true
         activate() { isActive = true; }
         deactivate { isActive = nil; }
         filterText(ostr, val) { return isActive ? inherited(ostr, val) : val; }
     ;  
-
-</div>
+```
 
 Next, we can define a special function for displaying diagrams; this can
 deactive and reactive the typographicalOutputFilter and also convert
@@ -508,8 +504,7 @@ accepts a list of strings and inserts a newline after each one, and also
 if it sets and unsets the use of a fixed-spacing font. Our custom
 function could thus look something like this:
 
-<div class="code">
-
+```
     showDiag(lst)
     {    
         typographicalOutputFilter.deactivate();
@@ -522,13 +517,11 @@ function could thus look something like this:
         "</pre>";
         typographicalOutputFilter.activate();
     } 
-
-</div>
+```
 
 We could then use the following code to display our ASCII diagram:
 
-<div class="code">
-
+```
     local diag = [
         '+---   -----------',
         '|    *         +  \',
@@ -537,8 +530,7 @@ We could then use the following code to display our ASCII diagram:
       ];
      
     showDiag(diag);
-
-</div>
+```
 
 </div>
 

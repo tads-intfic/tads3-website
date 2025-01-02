@@ -54,14 +54,12 @@ action (e.g. 'LockWith') if you know it.
 Suppose, for example, you wanted to make the commands GRAB and SNATCH
 work just like TAKE. Here's how you'd do it by modifying a VerbRule:
 
-<div class="code">
-
+```
     modify VerbRule(Take)
         ('take' | 'pick' 'up' | 'get' |'grab'| 'snatch') multiDobj
         | 'pick' multiDobj 'up' :
     ;
-
-</div>
+```
 
 Note that we start by using the keyword **modify** and then our
 redefinition with a colon following our new grammar specification
@@ -79,8 +77,7 @@ command, PICK *object* UP.
 The other way of adding synonyms to an existing action is to create a
 new VerbRule that refers to the existing action. For example:
 
-<div class="code">
-
+```
     VerbRule(Grab)
         ('grab' | 'snatch') multiDobj  
         : VerbProduction
@@ -88,8 +85,7 @@ new VerbRule that refers to the existing action. For example:
         verbPhrase = 'grab/grabbing (what)'
         missingQ = 'what do you want to grab'
     ;
-
-</div>
+```
 
 Here we define the new vocabulary that we want to trigger the action in
 much the same way as before, except this time we do only have to define
@@ -164,11 +160,9 @@ phrase that's missing.
 The first step in defining a VerbRule is to use the VerbRule() macro
 with a suitable name tag, as in our previous example:
 
-<div class="code">
-
+```
     VerbRule(Grab)
-
-</div>
+```
 
 The name-tag is arbitrary, but must be different for each VerbRule. It
 is usual (and advisable) to use something that relates as closely as
@@ -179,24 +173,20 @@ action.
 We next define the grammar that applies to the action (i.e. the way the
 player can refer to it when entering commands). e.g.:
 
-<div class="code">
-
+```
     VerbRule(Grab)
        ('grab' | 'snatch') multiDobj
-
-</div>
+```
 
 Exactly how this should be defined for each type of action is something
 we'll explain as we come to each type of action in turn. We next define
 the VerbRule to be of the VerbProduction class:
 
-<div class="code">
-
+```
     VerbRule(Grab)
        ('grab' | 'snatch') multiDobj
        : VerbProduction
-
-</div>
+```
 
 <span id="vrprops"></span>
 
@@ -282,12 +272,11 @@ Sometimes you may want to define a command with one or more optional
 words; for example you might want HANG COAT ON HOOK or HANG COAT UP ON
 HOOK to mean the same thing. To achieve this you can define options
 between parentheses leaving one of them empty thus:
-<span class="code">('up'\| )</span>. The complete VerbRule for Hang On
+`('up'\| )`. The complete VerbRule for Hang On
 (let us suppose for the sake of argument that it simply performs a PutOn
 action here) might then look like this:
 
-<div class="code">
-
+```
      VerbRule(HangOn)
         'hang' ('up'|) singleDobj ('up'|) 'on' singleIobj
         : VerbProduction
@@ -296,13 +285,12 @@ action here) might then look like this:
         missingQ = 'what do you want to hang; what do you want to hang it on'    
      ;
      
-
-</div>
+```
 
 This would then respond to commands like HANG COAT ON PEG, HANG UP COAT
 ON PEG, HANG COAT UP ON PEG or even HANG UP COAT UP ON PEG.
 
-In the case like our <span class="code">VerbRule(Grab)</span> example
+In the case like our `VerbRule(Grab)` example
 above, i.e. a VerbRule for an action that takes only one, direct,
 object, the parser will automatically take care of incomplete commands
 like GRAB or SNATCH by posing the question defined in the missingQ
@@ -333,16 +321,14 @@ responds to the command WAKE UP (in its intransitive sense, i.e. telling
 the player character to wake up, not trying to wake up another character
 as in WAKE BOB). The VerbRule might look like this:
 
-<div class="code">
-
+```
     VerbRule(WakeUp)
         'wake' 'up'
         : VerbProduction
         action = WakeUp
         verbPhrase = 'wake/waking up'        
     ;
-
-</div>
+```
 
 Note that we don't define the missingQ property here, since an IAction
 can never have a missing object. Otherwise we define the rest of the
@@ -361,16 +347,14 @@ action's **execAction(cmd)** method to define what the action does. A
 minimal definition in the case of our new WakeUp action might look like
 this:
 
-<div class="code">
-
+```
     DefineIAction(WakeUp)
         execAction(cmd)
         {
             "{I}{\'m} not asleep. ";
         }
     ;       
-
-</div>
+```
 
 Of course, your action may need to be more complex than this, in which
 case you'd need to define a more complicated execAction() method, for
@@ -379,8 +363,7 @@ asleep, in a dream sequence say (although another way of handling this
 might be via a [Doer](doer.html) to handle the special cases, for
 example:)
 
-<div class="code">
-
+```
     Doer 'wake up'         
         execAction(c)
         {
@@ -388,11 +371,10 @@ example:)
         }
         during = dreamScene
     ; 
-
-</div>
+```
 
 One further small point to note: in the adv3 library
-<span class="code">DefineIAction(WakeUp)</span> would have defined a new
+`DefineIAction(WakeUp)` would have defined a new
 class called WakeUpAction which inherits from IAction; in adv3Lite it
 defines an object called WakeUp, which is of the IAction class.
 
@@ -412,8 +394,7 @@ For example, suppose we wanted to define a new Rub action, which can be
 applied to one or more objects at a time. Our VerbRule would look like
 this:
 
-<div class="code">
-
+```
     VerbRule(Rub)
         'rub' multiDobj
         : VerbProduction
@@ -421,14 +402,12 @@ this:
         verbPhrase = 'rub/rubbing (what)'
         missingQ = 'what do you want to rub'
     ;
-
-</div>
+```
 
 As a second example, we could define a Repair command that can only act
 on one object at a time:
 
-<div class="code">
-
+```
     VerbRule(Repair)
        ('repair' | 'mend' | 'fix') singleDobj
        : VerbProduction
@@ -436,8 +415,7 @@ on one object at a time:
        verbPhrase = 'repair/ repairing (what)'
        missingQ = 'what do you want to repair'
     ;
-
-</div>
+```
 
 Note how we use the bar (\|) symbol to define alternative phrasings and
 the brackets to group them. We want the command to match REPAIR FOO,
@@ -447,25 +425,23 @@ MEND, or FIX FOO.
 The second step is usually very simple indeed; we just define the new
 action using the **DefineTAction(*action-name*)** macro, for example:
 
-<div class="code">
-
+```
     DefineTAction(Rub)
     ;
 
     DefineTAction(Repair)
     ;
-
-</div>
+```
 
 <span id="all"></span>
 
 And normally that's all there is to it; note in particular that when
-defining a <span class="code">TAction</span> (or
-<span class="code">TIAction</span>) we *don't* override its
-<span class="code">execAction(cmd)</span> method, since the library
+defining a `TAction` (or
+`TIAction`) we *don't* override its
+`execAction(cmd)` method, since the library
 already makes it own use for this for TActions and TIActions, and
 overriding it will stop things working properly (*especially* if you
-override it without calling <span class="code">inherited(cmd)</span> in
+override it without calling `inherited(cmd)` in
 the overridden method, but there normally shouldn't be any reason to
 override it at all). Occasionally, though, you might want do define the
 method **getAll(cmd, role)** which defines which objects should match
@@ -475,14 +451,12 @@ IndirectObject). The default behaviour is to return every object in
 scope, but for some actions you may want to restrict this. For example
 on the Take action the adv3Lite library defines:
 
-<div class="code">
-
+```
         getAll(cmd, role)
         {
             return scopeList.subset({ x: !x.isDirectlyIn(cmd.actor) && !x.isFixed});
         }
-
-</div>
+```
 
 This stops TAKE ALL from trying to take objects the actor is already
 holding (which is unlikely to be what the player intended) or objects
@@ -494,12 +468,12 @@ To prevent an action accepting ALL altogether you can set its
 **allowAll** property to nil. Any action you do this on will respond to
 FOO ALL with "Sorry; ALL is not allowed with this command." You can also
 set this globally for most actions using
-<span class="code">gameMain.allActionsAllowAll</span>; see the
+`gameMain.allActionsAllowAll`; see the
 description of the [gameMain](beginning.html#gamemain) object.
 
 Both these ways of modifying what ALL does can be used on both new and
 existing actions (in the case of existing ones you'd need to use a
-<span class="code">modify</span> statement). A third method that can be
+`modify` statement). A third method that can be
 applied to both is the **hideFromAll(action)** method of Thing. If this
 method returns true for *action*, then the Thing in question will be
 excluded from the list of things FOO ALL applies to (when FOO is the
@@ -508,8 +482,7 @@ poison, we may want to prevent the player from accidentally killing the
 player character with a DRINK ALL or EAT ALL command by doing something
 like the following:
 
-<div class="code">
-
+```
     poisonBottle: Thing 'dark green bottle; of[prep]; poison'
       "It's labeled POISON. "
       isDrinkable = true
@@ -530,18 +503,17 @@ like the following:
       
       dobjFor(Taste) asDobjFor(Drink)
     ;
+```
 
-</div>
-
-Note that while making <span class="code">hideFromAll(action)</span>
+Note that while making `hideFromAll(action)`
 return true will certainly exclude the item from ALL, having it return
 nil does not necessarily mean that the item will be included in ALL,
 since it may already have been excluded by the action's
-<span class="code">allowAll</span> setting or
-<span class="code">getAll()</span> method. In particular, the
-<span class="code">hideFromAll()</span> method is used to filter out
+`allowAll` setting or
+`getAll()` method. In particular, the
+`hideFromAll()` method is used to filter out
 items from the list returned by the current action's
-<span class="code">getAll()</span> method; it cannot be used to add any
+`getAll()` method; it cannot be used to add any
 items back in.
 
 <span id="announce"></span>
@@ -594,8 +566,7 @@ behaviour). For this step you basically need to follow the principles
 already explained in the [Action Results](actres.html) section above. So
 for our Rub and Repair actions we might define:
 
-<div class="code">
-
+```
     modify Thing
        dobjFor(Rub)
        {
@@ -619,8 +590,7 @@ for our Rub and Repair actions we might define:
        
        cannotRepairMsg = '{The subj dobj} {doesn\'t need} mending. '
     ;
-
-</div>
+```
 
 We could have defined the message '{The subj dobj} {doesn\\t need}
 mending. ' directly in the illogical() macro, but by taking the extra
@@ -638,17 +608,14 @@ that the Rub action was only ever going to be performed by the player
 character and the game was never going to change tense, then we could
 skip this step and simply define:
 
-<div class="code">
-
+```
        report() { "You rub <<gActionListStr>>. "; }
-
-</div>
+```
 
 At some point you'll presumably want to define objects where these
 actions do something more interesting, e.g.:
 
-<div class="code">
-
+```
     magicLamp: Thing 'brass lamp;magic; lantern'
       ...
       
@@ -683,8 +650,7 @@ actions do something more interesting, e.g.:
        }
      ;
        
-
-</div>
+```
 
   
 
@@ -696,8 +662,7 @@ for defining a TAction. Here we'll use new RubWith and RepairWith
 actions as our examples. The first step to define the VerbRules that
 trigger the actions:
 
-<div class="code">
-
+```
     VerbRule(RubWith)
         'rub' multiDobj 'with' singleIobj
         : VerbProduction
@@ -714,8 +679,7 @@ trigger the actions:
        verbPhrase = 'repair/ repairing (what) (with what)'
        missingQ = 'what do you want to repair; what do you want to repair it with'
     ;
-
-</div>
+```
 
 These follow much the same pattern as VerbRules for TActions, but with a
 couple of additions. First, note how the verbPhrase property is defined
@@ -736,8 +700,7 @@ multiObj.
 The second step is to define the actual actions, which we do with the
 **DefineTIAction(*action-name*)** macro:
 
-<div class="code">
-
+```
     DefineTIAction(RubWith)
        resolveIobjFirst = nil   
     ;
@@ -745,13 +708,12 @@ The second step is to define the actual actions, which we do with the
     DefineTIAction(RepairWith)
        resolveIobjFirst = nil
     ;
-
-</div>
+```
 
 <span id="resolvefirst"></span>
 
 Note that we once again *don't* override the
-<span class="code">execAction(cmd)</span> method when defining a new
+`execAction(cmd)` method when defining a new
 TIAction. An additional point to note here is the use of the
 **resolveIobjFirst** property. In adv3Lite the verify() properties are
 only consulted once (at most) during object resolution; the
@@ -778,8 +740,7 @@ indirect object is a logical choice to rub or repair it with.
 The third step proceeds as before, except that we now have to define the
 iobjFor(Action) methods as well as the dobjFor(Action) methods:
 
-<div class="code">
-
+```
     modify Thing
        dobjFor(RubWith)
        {
@@ -823,8 +784,7 @@ iobjFor(Action) methods as well as the dobjFor(Action) methods:
        cannotRepairWithMsg = '{I} {can\'t} repair anything with {that iobj}. '
        cannotRepairWithSelfMsg = '{I} {can\'t} repair anything with itself. '
     ;
-
-</div>
+```
 
 Here we're assuming that we've previously defined a Repair action as
 above, so we can re-use the cannotRepairMsg on the direct object of a
@@ -840,7 +800,7 @@ less illogical than attempting to repair the box with itself. Note too
 the definition of a new cannotRepairWithMe property (following the
 naming convention used in the library). This simplifies writing the code
 for objects that can be used to repair other ones with, since we can
-then simply define <span class="code">canRepairWithMe = true</span>
+then simply define `canRepairWithMe = true`
 without having to override the verify() method again and remembering to
 copy the code to block the attempt to repair something with itself.
 
@@ -850,8 +810,7 @@ In addition to defining particular objects in our game that can be
 repaired, we might want to define a Tool class for objects we can
 reasonably attempt repairs with:
 
-<div class="code">
-
+```
     class Tool: Thing
        canRepairWithMe = true
        
@@ -873,8 +832,7 @@ reasonably attempt repairs with:
        
        itemsRepaired = nil
     ;
-
-</div>
+```
 
 This assumes that you've defined a suitable makeRepaired(stat) method on
 the various things that might need mending over the course of your game.
@@ -896,8 +854,7 @@ HANG COAT or HANG UP COAT or HANG COAT UP with a response like "What do
 you want to hang it on?" we need to provide an additional VerbRule to
 field the incomplete command. Such a VerbRule would take the form:
 
-<div class="code">
-
+```
      VerbRule(HangOnWhat)
         [badness 500] 'hang' ('up'|) singleDobj ('up'|)
         : VerbProduction
@@ -908,17 +865,16 @@ field the incomplete command. Such a VerbRule would take the form:
         iobjReply = onSingleNoun    
      ;
      
-
-</div>
+```
 
 <span id="badness"></span>
 
 (HangOnWhat) is simply an arbitrary name (or tag) we give this VerbRule
 which has to be unique among VerbRules (although it's usually a good
 idea to use something reasonably meaningful). The additional features
-here are <span class="code">\[badness 500\]</span>,
-<span class="code">missingRole</span>, and
-<span class="code">iobjReply</span>. We'll explain each in turn.
+here are `\[badness 500\]`,
+`missingRole`, and
+`iobjReply`. We'll explain each in turn.
 
 The **badness** tag is simply a way of telling the parser that this is
 potentially a badly-formed command, so that, for example, if a player
@@ -945,19 +901,17 @@ phrase or just a noun phrase). Other common possibilities include
 **withSingleNoun**, **atSingleNoun** and **outOfSingleNoun**, all of
 which work analogously (i.e. they can match either just a noun phrase or
 the relevant preposition followed by a noun phrase). In fact the first
-of these, <span class="code">inSingleNoun</span>, can match several
+of these, `inSingleNoun`, can match several
 related phrases, such as IN X, INTO X or IN TO X, where X is any noun
 phrase (such as PEG, WOODEN PEG or THE BIG WOODEN PEG). If we needed
 something that didn't match any of these we could simply define our own
 **grammar** entity like so:
 
-<div class="code">
-
+```
     grammar underSingleNoun(main):
        singleNoun->np_ | 'under' singleNoun->np_ : Production
     ;
-
-</div>
+```
 
 This would then match either a plain noun phrase (e.g. just BED) or a
 noun phrase preceded by 'under' (e.g. UNDER THE BED).
@@ -1003,8 +957,7 @@ This may be clearer with the aid of an example. Suppose we want to allow
 an action like WRITE TEXT IN NOTEBOOK WITH PEN. We could define the
 action and its VerbRule thus:
 
-<div class="code">
-
+```
     /* 
      * Although it takes three objects, we can define this action as a TIAction
      * since the third object is a literal.
@@ -1041,13 +994,11 @@ action and its VerbRule thus:
     ;
      
      
-
-</div>
+```
 
 This allows us define the default handling on Thing in the normal way:
 
-<div class="code">
-
+```
       modify Thing    
         dobjFor(WriteOnWith)
         {
@@ -1073,16 +1024,14 @@ This allows us define the default handling on Thing in the normal way:
         cannotWriteWithMsg = '{I} {can\'t} write anything with {the iobj}. '   
     ; 
       
-
-</div>
+```
 
 Finally, we can define a couple of objects, a notebook and pen, say,
 that do allow writing with the WriteOnWith action. In this case we
 probably want the existing WriteOn command to insist on a writing
 implement. In outline the code might look something like this:
 
-<div class="code">
-
+```
      
     + notebook: Thing 'notebook'
         canWriteOnMe = true
@@ -1128,8 +1077,7 @@ implement. In outline the code might look something like this:
     ;  
       
       
-
-</div>
+```
 
 The treatment here has deliberately been kept brief, but hopefully it
 will be enough to illustrate the principle. Game authors may need to

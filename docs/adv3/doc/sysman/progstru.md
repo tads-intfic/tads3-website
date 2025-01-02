@@ -45,7 +45,7 @@ nesting structure. Some languages (Python, for example) use indentation
 to indicate that a statement is nested within another statement, such in
 an if-then-else construct. TADS 3 doesn't pay any attention to
 indentation for this purpose; the TADS language uses punctuation marks
-(mostly braces, <span class="code"> { }</span>) to indicate statement
+(mostly braces, ` { }`) to indicate statement
 grouping. To the TADS compiler, spacing at the beginning of a line is no
 different from any other whitespace.
 
@@ -67,74 +67,74 @@ A token is:
   string of decimal digits, optionally followed by a period and more
   digits, optionally followed by an "e" or "E", an optional "+" or "-",
   and a string of decimal digits. Examples:
-  <span class="code">1.25</span>, <span class="code">1e10</span>,
-  <span class="code">1.000e+207</span>,
-  <span class="code">1.23456E-5</span>
+  `1.25`, `1e10`,
+  `1.000e+207`,
+  `1.23456E-5`
 - A single-quoted string: a single-quote mark
-  (<span class="code">'</span> - Unicode x0027), followed by any
+  (`'` - Unicode x0027), followed by any
   characters (including newlines) other than single-quotes, followed by
   a single-quote. Single-quotes can be embedded within the string by
-  using the sequence <span class="code">\\</span> (backslash
+  using the sequence `\\` (backslash
   single-quote).
 - A double-quoted string: a double-quote mark
-  (<span class="code">"</span> - Unicode x0022), followed by any
+  (`"` - Unicode x0022), followed by any
   characters (including newlines) other than double-quotes, followed by
   a double-quote. Double-quotes can be embedded within the string by
-  using the sequence <span class="code">\\</span> (backslash
+  using the sequence `\\` (backslash
   double-quote). Double-quoted strings can also contain embedded
-  expressions using the <span class="code">\<\< \>\></span> marks; when
-  used this way, a <span class="code">\<\<</span> mark effectively ends
-  a string token, and the corresponding <span class="code">\>\></span>
+  expressions using the `\<\< \>\>` marks; when
+  used this way, a `\<\<` mark effectively ends
+  a string token, and the corresponding `\>\>`
   mark effectively starts a new one.
-- Any of these punctuation marks or sequences: <span class="code">( ) ,
+- Any of these punctuation marks or sequences: `( ) ,
   . .. ... { } \[ \] == = : ? ?? += ++ + -= -- - -\> \*= \* /= / %=
-  %</span> <span class="code">\>= \>\>= \>\>\>= \> \>\> \>\>\> \<= \<\<=
-  \<\< \< ; && &= & \|\| \|= \| ^= ^ != ! ~ @ \## \#@ \#</span>
+  %` `\>= \>\>= \>\>\>= \> \>\> \>\>\> \<= \<\<=
+  \<\< \< ; && &= & \|\| \|= \| ^= ^ != ! ~ @ \## \#@ \#`
 
 Within strings, both single-quoted and double-quoted, the backslash
-character, <span class="code">\\</span>, is special. A backslash
+character, `\\`, is special. A backslash
 introduces an "escape sequence," which lets you specify a character that
 would otherwise be impossible (or at least difficult) to enter into the
 string directly:
 
-- <span class="code">\\</span> - a double-quote mark
-- <span class="code">\\</span> - a single-quote mark
-- <span class="code">\\</span> - a less-than sign (write
-  <span class="code">\<\\</span> to prevent the compiler from treating
-  <span class="code">\<\<</span> as the start of an embedded expression)
-- <span class="code">\\</span> - a greater-than sign
-- <span class="code">\n</span> - a newline ("line feed") character,
+- `\\` - a double-quote mark
+- `\\` - a single-quote mark
+- `\\` - a less-than sign (write
+  `\<\\` to prevent the compiler from treating
+  `\<\<` as the start of an embedded expression)
+- `\\` - a greater-than sign
+- `\n` - a newline ("line feed") character,
   Unicode x000A
-- <span class="code">\b</span> - a "blank line" character, Unicode
+- `\b` - a "blank line" character, Unicode
   0x000B; when displayed in an output window, this displays one newline
   if the current output line is empty, or two newlines otherwise
-- <span class="code">\r</span> - a carriage return character, Unicode
+- `\r` - a carriage return character, Unicode
   x000D
-- <span class="code">\\</span> - a "capitalize" character, Unicode
+- `\\` - a "capitalize" character, Unicode
   x000F; when displayed in an output window, this sets an internal flag
   that causes the next character displayed in the same window to be
   capitalized, if it's alphabetic
-- <span class="code">\v</span> - a "minusculize" character, Unicode
+- `\v` - a "minusculize" character, Unicode
   x000E; when displayed in an output window, this sets an internal flag
   that causes the next character displayed in the same window to be
   converted to lower-case, if it's alphabetic
-- <span class="code">\\</span>  - a "quoted space," Unicode x0015; when
+- `\\`  - a "quoted space," Unicode x0015; when
   displayed in a formatted text window, this displays a space that isn't
   "collapsed" (i.e., combined with adjacent spaces) the way ordinary
   spaces normally are
-- <span class="code">\t</span> - a horizontal tab character, Unicode
+- `\t` - a horizontal tab character, Unicode
   x0009
-- <span class="code">\u</span>*hhhh* - the Unicode character *hhhh*,
+- `\u`*hhhh* - the Unicode character *hhhh*,
   where each *X* is a hexadecimal digit. For example,
-  <span class="code">\u000A</span> encodes a newline character.
-- <span class="code">\x</span>*hh* - the Unicode character *hh*, where
+  `\u000A` encodes a newline character.
+- `\x`*hh* - the Unicode character *hh*, where
   each *h* is a hexadecimal digit. (This differs from
-  <span class="code">\u</span> only in that <span class="code">\x</span>
+  `\u` only in that `\x`
   limits the digit string to two hex digits, whereas
-  <span class="code">\u</span> allows up to four hex digits.
-  <span class="code">\x</span> is included only as a convenience to
+  `\u` allows up to four hex digits.
+  `\x` is included only as a convenience to
   people familiar with other C-like languages that support this code.)
-- <span class="code">\\</span>*ooo* - the Unicode character *ooo*, where
+- `\\`*ooo* - the Unicode character *ooo*, where
   each *o* is an octal digit.
 
 ## "Compilation unit" defined

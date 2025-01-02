@@ -27,8 +27,8 @@ ordered collection of elements, like [List](list.html), but provides
 "reference semantics," which means that you can modify the elements of a
 Vector directly.
 
-To use the Vector class, you should <span class="code">\#include
-\<systype.h\></span> or <span class="code">\#include \<vector.h\></span>
+To use the Vector class, you should `\#include
+\<systype.h\>` or `\#include \<vector.h\>`
 in your source files.
 
 ## Which should I use: List or Vector?
@@ -73,7 +73,7 @@ you're going to do with it:
 
 ## Creating a Vector
 
-To create a Vector, you use the <span class="code">new</span> operator.
+To create a Vector, you use the `new` operator.
 The constructor can be called with several different argument formats.
 
 The simplest way to call the constructor is with no arguments. This
@@ -81,39 +81,33 @@ creates an empty Vector (one with no elements, and a length() of zero)
 and a default "initial allocation size" (we'll explain what that means
 shortly).
 
-<div class="code">
-
+```
     local x = new Vector();
-
-</div>
+```
 
 You can also use a single integer argument to specify an initial
 allocation size. This still creates an empty vector - its length() will
 be zero - but it allows you to control how much memory is initially
 allocated for the Vector.
 
-<div class="code">
-
+```
     // create an empty Vector with an initial allocation of 10 elements
     x = new Vector(10);
-
-</div>
+```
 
 Next, you can create a Vector and fill it in with a given number of
-elements already present, populated with <span class="code">nil</span>
+elements already present, populated with `nil`
 values. To do this, pass two integer values. The first is the initial
 allocation length, as above, and the second is the number of slots to
-fill in with <span class="code">nil</span> values. It's exactly as
-though you called <span class="code">append(nil)</span> that many times
+fill in with `nil` values. It's exactly as
+though you called `append(nil)` that many times
 after creating the Vector.
 
-<div class="code">
-
+```
     // create a Vector with 10 slots allocated, and with 5 slots initially
     // filled in with nil - so x.length() is 5
     x = new Vector(10, 5);
-
-</div>
+```
 
 You can also create a Vector as a copy of a List or another Vector. To
 do this, pass in the source object as the single argument. This creates
@@ -121,23 +115,19 @@ a new Vector object and copies all of the elements from the source
 object. The new Vector will have the same length() as the source object,
 and an initial allocation equal to the length of the source object.
 
-<div class="code">
-
+```
     // create a Vector with the same elements as a list
     x = new Vector([1, 2, 3]);
-
-</div>
+```
 
 Finally, you can create a copy of a List or Vector, and also specify the
 initial allocation length. This is useful if you want to leave room in
 the initial allocation for adding more elements.
 
-<div class="code">
-
+```
     // create a copy of the list, but allocate 10 elements initially
     x = new Vector(10, [1, 2, 3]);
-
-</div>
+```
 
 Note that if the initial allocation you specify in this kind of call is
 smaller than what's required to copy the source object, the constructor
@@ -151,31 +141,27 @@ size for the Vector. What is this? Well, let's first look at what it
 isn't.
 
 First, it's *not* the initial number of elements in the Vector; that's
-determined by the other arguments. For example, <span class="code">new
-Vector(100)</span> creates an empty vector, even though you've specified
+determined by the other arguments. For example, `new
+Vector(100)` creates an empty vector, even though you've specified
 a fairly large initial allocation:
 
-<div class="code">
-
+```
     x = new Vector(100);
     say(x.length());  // displays "0"
-
-</div>
+```
 
 Second, the initial allocation is *not* the maximum size that the Vector
 can ever attain. No matter what initial allocation size you set, a
 Vector can grow to any length. The system will simply keep allocating
 more memory as needed when you add more elements.
 
-<div class="code">
-
+```
     x = new Vector(1);
     x.append(1);
     x.append(2);
     x.append(3);
     say(x.length());  // displays "3"
-
-</div>
+```
 
 Note that it's perfectly legal to add three elements to this Vector,
 even though it was created with room for only one item. A Vector always
@@ -211,25 +197,25 @@ size.
 
 ## Vector operators
 
-The <span class="code">+</span> operator adds new elements to the end of
+The `+` operator adds new elements to the end of
 a Vector. If the operand on the right side of the
-<span class="code">+</span> is a list or another Vector, its elements
+`+` is a list or another Vector, its elements
 are individually added to the vector; otherwise, the value on the right
-side of the <span class="code">+</span> is added as a single new
+side of the `+` is added as a single new
 element. Note that this operator always creates a new Vector to store
 the result; the original vector's value is unchanged.
 
-The <span class="code">-</span> operator removes elements from the
+The `-` operator removes elements from the
 Vector. If the operand on the right side of the
-<span class="code">-</span> is a list or Vector, each element of the
+`-` is a list or Vector, each element of the
 list of Vector is individually removed from the Vector on the left of
-the <span class="code">-</span>. If the operand on the right side of the
-<span class="code">-</span> is not a list or vector, each element of the
+the `-`. If the operand on the right side of the
+`-` is not a list or vector, each element of the
 vector whose value equals the right operand is deleted from the vector
-on the left. Note that the <span class="code">-</span> operator always
+on the left. Note that the `-` operator always
 creates a new Vector to store the result.
 
-The indexing operator <span class="code">\[ \]</span> can be used to get
+The indexing operator `\[ \]` can be used to get
 and set elements of the array using an integer index, just as with a
 List. If you assign an element of the vector past the current length of
 the vector, the vector is automatically extended to include the
@@ -238,21 +224,21 @@ element and the element at the requested index are set to nil. If you
 try to retrieve a vector element with an index higher than any existing
 element, a run-time exception ("index out of range") is thrown.
 
-A Vector can be used with the <span class="code">==</span> or
-<span class="code">!=</span> operators to compare a Vector to another
+A Vector can be used with the `==` or
+`!=` operators to compare a Vector to another
 value. A Vector is equal to another Vector or List if the other Vector
 or List has the same number of elements, and each element of the Vector
 equals the corresponding element of the other Vector or List, using the
-same rules as the <span class="code">==</span> operator to compare the
+same rules as the `==` operator to compare the
 elements.
 
-Note: Because the <span class="code">==</span> test is defined
+Note: Because the `==` test is defined
 recursively, if a Vector contains a reference to itself, either directly
-or indirectly through another Vector, the <span class="code">==</span>
+or indirectly through another Vector, the `==`
 test can recurse infinitely. The Vector class avoids this infinite
 recursion by limiting the depth of recursion in an equality comparison
 to 256 levels. If this recursion depth is exceeded, the
-<span class="code">==</span> test throws an exception ("maximum equality
+`==` test throws an exception ("maximum equality
 test/hash recursion depth exceeded"). This same exception will result,
 for the same reason, if a Vector with a self-reference is used as a key
 in a LookupTable. The recursion depth exception can occur even if a
@@ -276,8 +262,8 @@ where the left-hand side is a string).
 The string conversion of a Vector consists of the Vector's elements,
 each itself first converted to a string if necessary, concatenated
 together, with commas separating elements. For example,
-<span class="code">toString(new Vector(\[1, 2, 3\]))</span> yields the
-string <span class="code">'1,2,3'</span>.
+`toString(new Vector(\[1, 2, 3\]))` yields the
+string `'1,2,3'`.
 
 ## Vector methods
 
@@ -285,49 +271,49 @@ Vector is a subclass of [Collection](collect.html), so the Collection
 methods are available on a Vector object. In addition to the Collection
 methods, Vector provides many methods of its own, shown below.
 
-<span class="code">append(*val*)</span>
+`append(*val*)`
 
 <div class="fdef">
 
 Appends the value *val* to the end of the vector, increasing the
 vector's length by one. This method has almost the same effect as the
-<span class="code">+</span> operator, except for the treatment if *val*
+`+` operator, except for the treatment if *val*
 is a list: this method simply appends a list value as a single new
-element, whereas the <span class="code">+</span> operator appends each
+element, whereas the `+` operator appends each
 element of the list value as a separate new element. In addition, unlike
-the <span class="code">+</span> operator, this method modifies the
+the `+` operator, this method modifies the
 Vector object, rather than creating a new Vector to store the result.
-Returns <span class="code">self</span>.
+Returns `self`.
 
 </div>
 
-<span class="code">appendAll(*val*)</span>
+`appendAll(*val*)`
 
 <div class="fdef">
 
-This works like <span class="code">append(*val*)</span>, except that if
+This works like `append(*val*)`, except that if
 *val* is a List or Vector, each element of *val* is individually
 appended to the target Vector. This method works like the
-<span class="code">+</span> operator, except that this method modifies
+`+` operator, except that this method modifies
 the Vector, rather than creating a new Vector to store the result.
-Returns <span class="code">self</span>.
+Returns `self`.
 
 </div>
 
-<span class="code">appendUnique(*val*)</span>
+`appendUnique(*val*)`
 
 <div class="fdef">
 
 Appends the elements of the list or Vector *val* to this vector; the
 vector is modified so that it consists only of the unique elements of
 the combination. On return, any given value will appear in the vector
-will appear only once. Like <span class="code">append()</span> and
-<span class="code">appendAll()</span>, this modifies the Vector
+will appear only once. Like `append()` and
+`appendAll()`, this modifies the Vector
 directly.
 
 </div>
 
-<span class="code">applyAll(*func*)</span>
+`applyAll(*func*)`
 
 <div class="fdef">
 
@@ -335,7 +321,7 @@ For each element of the vector, this method invokes the callback
 function *func*, passing the current element as the single argument,
 then replaces the vector element with the return value from the
 callback. This method does not create a new Vector; rather, it modifies
-the original Vector. This method returns <span class="code">self</span>
+the original Vector. This method returns `self`
 as the result value.
 
 This method is useful for transforming the elements of a vector by
@@ -343,11 +329,9 @@ applying a modifier function. For example, if we have a vector of
 numbers, we could use this method to multiply each number in the vector
 by two:
 
-<div class="code">
-
+```
     x.applyAll({x: x*2});
-
-</div>
+```
 
 This method is also handy for performing complex initializations on a
 new Vector. For example, here's a function that creates a new vector and
@@ -355,44 +339,42 @@ initializes it with the first *n* Fibonacci numbers. Because we're
 simply initializing the new vector, note that the callback function
 doesn't make any reference to the original element value, but it must
 still declare a parameter for the argument value so that the arguments
-passed from <span class="code">applyAll()</span> match the declaration.
+passed from `applyAll()` match the declaration.
 
-<div class="code">
-
+```
     createFibonacciVector(n)
     {
       local f0 = 0, f1 = 1;
       return new Vector(n, n).applyAll(function(x)
         { local ret = f0; f0 = f1; f1 += ret; return ret; });
     }
-
-</div>
+```
 
 Note that we specify the value *n* twice in the constructor to
 explicitly set the initial size of the vector to *n*
-<span class="code">nil</span> elements. This is important because a
+`nil` elements. This is important because a
 newly-created vector normally doesn't contain any elements, regardless
 of the initial allocation setting; by explicitly using the initial
-length argument *n*, we ensure that <span class="code">applyAll()</span>
+length argument *n*, we ensure that `applyAll()`
 will visit *n* elements.
 
 </div>
 
-<span class="code">copyFrom(*source*, *sourceStart*, *destStart*,
-*count*)</span>
+`copyFrom(*source*, *sourceStart*, *destStart*,
+*count*)`
 
 <div class="fdef">
 
 Copies values from a list or from another list or vector into this
 Vector. This function doesn't create a new Vector, but simply modifies
-entries in the <span class="code">self</span> vector. *source* is the
+entries in the `self` vector. *source* is the
 source of the values; it must be either a vector or a list.
 *sourceStart* is an index into source, and specifies the first element
 of source that is to be copied. *destStart* is an index into the
-<span class="code">self</span> vector, and specifies the first element
+`self` vector, and specifies the first element
 of the vector that is to be modified. *count* is the number of elements
 to modify. The method copies elements from *source* into the
-<span class="code">self</span> vector, one at a time, until it reaches
+`self` vector, one at a time, until it reaches
 the last element of source, or has copied the number of elements
 specified by count.
 
@@ -402,29 +384,25 @@ and so on.
 
 Calling this method is equivalent to writing a code fragment like this:
 
-<div class="code">
-
+```
     for (local i = 0 ; i < count ; ++i)
       dest[destStart + i] = source[sourceStart + i];
+```
 
-</div>
-
-If necessary, the method expands the <span class="code">self</span>
+If necessary, the method expands the `self`
 vector to make room for the added elements.
 
-The <span class="code">copyFrom()</span> method simply returns
-<span class="code">self</span>; this is convenient for expressions like
+The `copyFrom()` method simply returns
+`self`; this is convenient for expressions like
 this:
 
-<div class="code">
-
+```
     x = new Vector(20).copyFrom(lst, 3, 2, 5);
+```
 
 </div>
 
-</div>
-
-<span class="code">countOf(*val*)</span>
+`countOf(*val*)`
 
 <div class="fdef">
 
@@ -432,28 +410,28 @@ Returns the number of elements in the vector whose values equal *val*.
 
 </div>
 
-<span class="code">countWhich(*cond*)</span>
+`countWhich(*cond*)`
 
 <div class="fdef">
 
 Returns the number of elements in the vector for which the callback
 function *cond* returns a non-false value (anything but
-<span class="code">nil</span> or 0). For each element in the Vector, the
+`nil` or 0). For each element in the Vector, the
 method invokes *cond*, passing the element as the argument to the
-callback. If *cond* returns anything but <span class="code">nil</span>
+callback. If *cond* returns anything but `nil`
 or 0, the method counts the element. After invoking *cond* for each
 element, the method returns the number of elements for which *cond*
 returned a non-false value.
 
 </div>
 
-<span class="code">fillValue(*value*, *start*?, *count*?)</span>
+`fillValue(*value*, *start*?, *count*?)`
 
 <div class="fdef">
 
 Fills elements of this Vector with *value*. If only *value* is
 specified, this method simply stores *value* in every element of the
-<span class="code">self</span> vector. If *start* is specified, it gives
+`self` vector. If *start* is specified, it gives
 the starting index; the method fills values starting with *start*, to
 the end of the Vector. If both *start* and *count* are specified, count
 gives the maximum number of elements to fill.
@@ -463,46 +441,42 @@ is negative, it counts from the end of the vector: -1 is the last
 element, -2 is the second to last, and so on.
 
 If *count* isn't specified, the default count is
-<span class="code">self.length() -</span> *start* <span class="code">+
-1</span>, or 0 if that yields a negative value. In other words, the
+`self.length() -` *start* `+
+1`, or 0 if that yields a negative value. In other words, the
 default *count* is chosen to fill to the end of the existing elements of
 the Vector. Note that this is the actual populated length of the Vector,
-*not* the initial allocation size: <span class="code">new
-Vector(10).fillValue('x')</span> yields a vector with zero elements
+*not* the initial allocation size: `new
+Vector(10).fillValue('x')` yields a vector with zero elements
 filled in, not 10, because a Vector created this way is initially
-empty - the <span class="code">10</span> is merely the initial
+empty - the `10` is merely the initial
 allocation size hint, not the initial filled length.
 
 This method is equivalent to writing a code fragment like this:
 
-<div class="code">
-
+```
     for (local i = 0 ; i < count ; ++i)
       dest[start + i] = value;
+```
 
-</div>
-
-Calling <span class="code">fillValue()</span> is easier than writing
+Calling `fillValue()` is easier than writing
 this code fragment, though, and considerably faster because it is
 implemented as native code.
 
-This method returns <span class="code">self</span>, which allows for
+This method returns `self`, which allows for
 expressions like this:
 
-<div class="code">
-
+```
     x = new Vector(20).fillValue('A', 1, 20);
+```
 
 </div>
 
-</div>
-
-<span class="code">forEach(*func*)</span>
+`forEach(*func*)`
 
 <div class="fdef">
 
 Invokes the callback function
-<span class="code">(*func*)(*value*)</span> for each element, in order
+`(*func*)(*value*)` for each element, in order
 from first to last, passing the value of one element as *value* to the
 callback on each invocation. The callback function takes one argument
 giving the value of the current element, and returns no value. This
@@ -511,15 +485,15 @@ some code for each element of the vector.
 
 </div>
 
-<span class="code">forEachAssoc(*func*)</span>
+`forEachAssoc(*func*)`
 
 <div class="fdef">
 
-Invokes the callback function <span class="code">(*func*)(*index*,
-*value*)</span> for each element, in order from first to last, passing
+Invokes the callback function `(*func*)(*index*,
+*value*)` for each element, in order from first to last, passing
 each element's index and value to the function *func*. The callback
 function returns no value. This method returns no value. This method is
-the same as <span class="code">forEach()</span>, except that this method
+the same as `forEach()`, except that this method
 provides the callback with the index as well as the value for each
 element it visits.
 
@@ -527,33 +501,31 @@ element it visits.
 
 <span id="generate"></span>
 
-<span class="code">generate(*func*, *n*)</span>
+`generate(*func*, *n*)`
 
 <div class="fdef">
 
 Creates a new Vector containing *n* elements by invoking the callback
 function *func* once for each element, and using the return value as the
 element value. This is a class method that you call on the Vector class
-directly, as in <span class="code">Vector.generate(f, 10)</span>.
+directly, as in `Vector.generate(f, 10)`.
 
 *func* is a callback function, which can be a regular function or an
 anonymous function. *func* can take zero or one argument. The
 one-argument form is invoked with the index of the current element as
 the argument on each call.
 
-<span class="code">generate()</span> is convenient for creating a Vector
+`generate()` is convenient for creating a Vector
 of items based on a formula. For example, this creates a Vector of the
 first ten positive even integers:
 
-<div class="code">
-
+```
     local e = Vector.generate({i: i*2}, 10);
+```
 
 </div>
 
-</div>
-
-<span class="code">getUnique()</span>
+`getUnique()`
 
 <div class="fdef">
 
@@ -569,57 +541,57 @@ might be smaller than the original vector.
 
 </div>
 
-<span class="code">indexOf(*val*)</span>
+`indexOf(*val*)`
 
 <div class="fdef">
 
 Finds the first element of the vector whose value equals *val*, and
-returns the index of the element. Returns <span class="code">nil</span>
+returns the index of the element. Returns `nil`
 if none of the vector's elements equals *val*.
 
 </div>
 
-<span class="code">indexOfMax(*func*?)</span>
+`indexOfMax(*func*?)`
 
 <div class="fdef">
 
 If *func* is omitted, returns the index of the element with the maximum
 value, comparing values to one another as though using the
-<span class="code">\></span> operator.
+`\>` operator.
 
 If *func* is specified, it must be a function pointer. The method calls
 *func*() for each element in the vector, passing the element's value as
 the function argument. The function must return a value. The result of
-<span class="code">indexOfMax</span> in this case is the index of the
+`indexOfMax` in this case is the index of the
 element for which *func*() returned the maximum value.
 
-For example, if <span class="code">v</span> is a vector containing
-string values as elements, <span class="code">v.indexOfMax({x:
-x.length()})</span> returns the index of the longest string.
+For example, if `v` is a vector containing
+string values as elements, `v.indexOfMax({x:
+x.length()})` returns the index of the longest string.
 
 </div>
 
-<span class="code">indexOfMin(*func*?)</span>
+`indexOfMin(*func*?)`
 
 <div class="fdef">
 
 If *func* is omitted, returns the index of the element with the minimum
 value, comparing values to one another as though using the
-<span class="code">\<</span> operator.
+`\<` operator.
 
 If *func* is specified, it must be a function pointer. The method calls
 *func*() for each element in the vector, passing the element's value as
 the function argument. The function must return a value. The result of
-<span class="code">indexOfMin</span> in this case is the index of the
+`indexOfMin` in this case is the index of the
 element for which *func*() returned the minimum value.
 
-For example, if <span class="code">lst</span> is a vector containing
-string values as elements, <span class="code">v.indexOfMin({x:
-x.length()})</span> returns the index of the shortest string.
+For example, if `lst` is a vector containing
+string values as elements, `v.indexOfMin({x:
+x.length()})` returns the index of the shortest string.
 
 </div>
 
-<span class="code">indexWhich(*cond*)</span>
+`indexWhich(*cond*)`
 
 <div class="fdef">
 
@@ -629,15 +601,15 @@ first element and proceeding in order, and applies the callback function
 *cond* to each element. The callback takes one argument, which is the
 value of the vector element, and returns a condition result value. For
 each element, if the callback function returns a non-false value (i.e.,
-any value except <span class="code">nil</span> or zero), the method
+any value except `nil` or zero), the method
 immediately stops the iteration and returns the index of that element.
-If the callback returns a false value (<span class="code">nil</span> or
+If the callback returns a false value (`nil` or
 zero) for every element of the vector, the method returns
-<span class="code">nil</span>.
+`nil`.
 
 </div>
 
-<span class="code">insertAt(*startingIndex*, *val*, ...)</span>
+`insertAt(*startingIndex*, *val*, ...)`
 
 <div class="fdef">
 
@@ -645,7 +617,7 @@ Inserts one or more values into the vector at the giving starting index.
 The size of the vector is increased to accommodate the new elements.
 Note that, if any of the values are lists or other collections, they are
 simply inserted as single elements; this contrasts with the
-<span class="code">+</span> operator, which adds each element of a list
+`+` operator, which adds each element of a list
 as a separate element of the vector.
 
 If *startingIndex* is negative, it counts from the end of the vector: -1
@@ -659,13 +631,13 @@ appended after the last existing element of the vector. If the starting
 index is out of this valid range, the method throws an error ("index out
 of range").
 
-Returns the <span class="code">self</span> object.
+Returns the `self` object.
 
 </div>
 
 <span id="join"></span>
 
-<span class="code">join(*sep*?)</span>
+`join(*sep*?)`
 
 <div class="fdef">
 
@@ -680,42 +652,42 @@ to string, the method throws an error.
 
 </div>
 
-<span class="code">lastIndexOf(*val*)</span>
+`lastIndexOf(*val*)`
 
 <div class="fdef">
 
 Returns the index of the last element in the vector whose value equals
 *val*. If none of the elements in the vector matches the given value,
-the method returns <span class="code">nil</span>.
+the method returns `nil`.
 
 </div>
 
-<span class="code">lastIndexWhich(*cond*)</span>
+`lastIndexWhich(*cond*)`
 
 <div class="fdef">
 
 Finds the last element for which the given condition is true. This
-method is similar to <span class="code">indexWhich(*cond*)</span>, but
+method is similar to `indexWhich(*cond*)`, but
 scans the vector in reverse order, starting with the last element and
 working backwards. Returns the index of the matching element, or
-<span class="code">nil</span> if the condition returns false for every
+`nil` if the condition returns false for every
 element.
 
 </div>
 
-<span class="code">lastValWhich(*cond*)</span>
+`lastValWhich(*cond*)`
 
 <div class="fdef">
 
 Finds the last element for which the given condition is true, and
 returns the element's value. This method is similar to
-<span class="code">lastIndexWhich(*cond*)</span>, but returns the value
+`lastIndexWhich(*cond*)`, but returns the value
 of the matching element rather than its index. Returns
-<span class="code">nil</span> if no matching element is found.
+`nil` if no matching element is found.
 
 </div>
 
-<span class="code">length()</span>
+`length()`
 
 <div class="fdef">
 
@@ -725,74 +697,74 @@ to the initial allocation size specified when the vector was created.
 
 </div>
 
-<span class="code">mapAll(*func*)</span>
+`mapAll(*func*)`
 
 <div class="fdef">
 
 Creates a new vector consisting of the results of applying the callback
 function *func* to each element of the original vector. This method is
-similar to <span class="code">applyAll(*func*)</span>, but rather than
+similar to `applyAll(*func*)`, but rather than
 modifying the elements of the original vector, this method creates a new
 vector, and leaves the elements of the original vector unchanged. The
 return value is the new vector.
 
 </div>
 
-<span class="code">maxVal(*func*?)</span>
+`maxVal(*func*?)`
 
 <div class="fdef">
 
 If *func* is omitted, returns the maximum of the element values in the
 vector, comparing values to one another as though using the
-<span class="code">\></span> operator.
+`\>` operator.
 
 If *func* is specified, it must be a function pointer. The method calls
 *func*() for each element in the vector, passing the element's value as
 the function argument. The function must return a value. The result of
-<span class="code">maxVal</span> in this case is the value of the
+`maxVal` in this case is the value of the
 element that maximizes *func*. Note that the **element value** is
 returned, *not* the return value of *func*.
 
-For example, if <span class="code">v</span> is a vector containing
-string values, <span class="code">v.maxVal({x: x.length()})</span>
+For example, if `v` is a vector containing
+string values, `v.maxVal({x: x.length()})`
 returns the longest string element.
 
 </div>
 
-<span class="code">minVal(*func*?)</span>
+`minVal(*func*?)`
 
 <div class="fdef">
 
 If *func* is omitted, returns minimum of the element values in the
 vector, comparing values to one another as though using the
-<span class="code">\<</span> operator.
+`\<` operator.
 
 If *func* is specified, it must be a function pointer. The method calls
 *func*() for each element in the vector, passing the element's value as
 the function argument. The function must return a value. The result of
-<span class="code">minVal</span> in this case is the element value that
+`minVal` in this case is the element value that
 minimizes *func* Note that the **element value** is returned, *not* the
 return value of *func*.
 
-For example, if <span class="code">v</span> is a vector containing
-string values, <span class="code">v.minVal({x: x.length()})</span>
+For example, if `v` is a vector containing
+string values, `v.minVal({x: x.length()})`
 returns the shortest string element.
 
 </div>
 
-<span class="code">prepend(*val*)</span>
+`prepend(*val*)`
 
 <div class="fdef">
 
 Inserts the value *val* before the first element of the vector,
 increasing the vector's length by one. This method is similar to
-<span class="code">append(*val*)</span>, but inserts the new element at
+`append(*val*)`, but inserts the new element at
 the start of the vector rather than at the end. Returns
-<span class="code">self</span>.
+`self`.
 
 </div>
 
-<span class="code">removeElement(*val*)</span>
+`removeElement(*val*)`
 
 <div class="fdef">
 
@@ -800,25 +772,25 @@ Deletes one or more elements from the vector; each vector element whose
 value equals *val* is removed from the vector. This reduces the length
 of the vector by the number of elements removed. If there is no element
 of the vector whose value equals *val*, the vector is unchanged. Returns
-<span class="code">self</span>.
+`self`.
 
 </div>
 
-<span class="code">removeElementAt(*index*)</span>
+`removeElementAt(*index*)`
 
 <div class="fdef">
 
 Deletes one element from the vector at the given index. This reduces the
 length of the vector by one. The *index* value must refer to an existing
 element of the vector, or the method throws an error ("index out of
-range"). Returns <span class="code">self</span>.
+range"). Returns `self`.
 
 If *index* is negative, it counts from the end of the vector: -1 is the
 last element, -2 is the second to last, and so on.
 
 </div>
 
-<span class="code">removeRange(*startingIndex*, *endingIndex*)</span>
+`removeRange(*startingIndex*, *endingIndex*)`
 
 <div class="fdef">
 
@@ -830,18 +802,18 @@ by the number of elements removed.
 Either index (or both) can be negative. A negative index counts from the
 end of the vector: -1 is the last element, -2 is the second to last,
 etc. To delete the last two elements, for example, you can use
-<span class="code">vec.removeRange(-2, -1)</span>.
+`vec.removeRange(-2, -1)`.
 
 Both *startingIndex* and *endingIndex* must refer to existing elements
 of the vector, and the ending index must be greater than or equal to the
 starting index; if these conditions don't hold, the method throws an
 error ("index out of range").
 
-Returns the <span class="code">self</span> object.
+Returns the `self` object.
 
 </div>
 
-<span class="code">setLength(*newLength*)</span>
+`setLength(*newLength*)`
 
 <div class="fdef">
 
@@ -849,12 +821,12 @@ Sets the number of elements of the vector to *newLength*. If *newLength*
 is smaller than the number of elements currently in the vector, this
 discards elements at the end of the vector. If *newLength* is larger
 than the current size, this adds new elements and sets their values to
-<span class="code">nil</span>. Returns the
-<span class="code">self</span> object.
+`nil`. Returns the
+`self` object.
 
 </div>
 
-<span class="code">sort(*descending*?, *comparisonFunction*?)</span>
+`sort(*descending*?, *comparisonFunction*?)`
 
 <div class="fdef">
 
@@ -865,7 +837,7 @@ argument.
 
 The optional *comparisonFunction* can be used to specify the ordering of
 the result. If this argument is not specified (or is
-<span class="code">nil</span>), the method will sort the elements
+`nil`), the method will sort the elements
 according to the standard system ordering of values; hence, the elements
 must be of comparable types (such as all integers or all strings). By
 specifying a comparison function, you can provide your own special
@@ -873,13 +845,13 @@ ordering, and you can also sort values that have no system-defined
 order, such as object values.
 
 The *comparisonFunction* works the same way as the for the
-[List](list.html) class's <span class="code">sort()</span> method.
+[List](list.html) class's `sort()` method.
 
 </div>
 
 <span id="splice"></span>
 
-<span class="code">splice(*idx*, *del*, ...)</span>
+`splice(*idx*, *del*, ...)`
 
 <div class="fdef">
 
@@ -902,11 +874,11 @@ To insert elements without deleting any existing elements, pass 0 for
 place, simply omit any additional arguments.
 
 This method modifies the vector in place, and returns
-<span class="code">self</span>.
+`self`.
 
 You can get the same effect as this method using a combination of
-<span class="code">removeRange()</span> and
-<span class="code">insertAt()</span>. <span class="code">splice()</span>
+`removeRange()` and
+`insertAt()`. `splice()`
 is clearer and more concise for cases where you want to replace a range
 with new values. It's also a little more efficient, because it minimizes
 the number of copy operations needed to move elements around in the
@@ -914,16 +886,16 @@ vector to open and/or close gaps as the size of the vector changes.
 
 </div>
 
-<span class="code">subset(*func*)</span>
+`subset(*func*)`
 
 <div class="fdef">
 
 Creates and returns a new vector containing the elements of this vector
 for which the callback function *func* returns a non-false value (i.e.,
-any value other than <span class="code">nil</span> or 0). For each
+any value other than `nil` or 0). For each
 element of the source vector, this method invokes the callback function,
 passing the value of the current element as the callback function's
-single argument. If the callback returns <span class="code">nil</span>
+single argument. If the callback returns `nil`
 or 0, the method omits the element from the result; otherwise, the
 method includes the element in the result vector. The new vector's
 elements will be in the same order as the selected elements from the
@@ -935,15 +907,13 @@ This example uses a short-form anonymous function to create to create a
 new vector that contains only the elements from an original vector whose
 values are greater than 10.
 
-<div class="code">
-
+```
     y = x.subset({x: x > 10});
+```
 
 </div>
 
-</div>
-
-<span class="code">toList(*start*?, *count*?)</span>
+`toList(*start*?, *count*?)`
 
 <div class="fdef">
 
@@ -965,20 +935,20 @@ This method does not modify the vector.
 
 </div>
 
-<span class="code">valWhich(*cond*)</span>
+`valWhich(*cond*)`
 
 <div class="fdef">
 
 Returns the value of the first element for which the callback function
 *cond* returns a non-false value (i.e., any value other than
-<span class="code">nil</span> or 0). The method applies the callback to
+`nil` or 0). The method applies the callback to
 each element of the vector, starting with the first, and calls the
 function for each element in turn until *cond* returns a non-false
-value. Returns <span class="code">nil</span> if the callback returns a
+value. Returns `nil` if the callback returns a
 false value for every element. This function is almost the same as
-<span class="code">indexWhich(*cond*)</span>, but returns the value of
+`indexWhich(*cond*)`, but returns the value of
 the first element for which *cond* returns non-false rather than the
-index of the element. Returns <span class="code">nil</span> if no
+index of the element. Returns `nil` if no
 matching value is found.
 
 </div>
@@ -1015,15 +985,13 @@ the change.
 
 Consider this example:
 
-<div class="code">
-
+```
     local a = [1, 2, 3];
     local b = a;
 
     a[2] = 100;
     tadsSay(b[2]);
-
-</div>
+```
 
 What will this example display? At the beginning of the code, we set a
 to a list, and then we set b to the value in a, so b refers to the same
@@ -1039,15 +1007,13 @@ b still refers to the original, unmodified list.
 
 Now, consider the same example with an vector:
 
-<div class="code">
-
+```
     local a = new Vector(10, [1, 2, 3]);
     local b = a;
 
     a[2] = 100;
     tadsSay(b[2]);
-
-</div>
+```
 
 This code looks almost identical, but it displays a different result
 than the list version. We start out by creating a new vector object and
@@ -1060,8 +1026,7 @@ example, we see the modified value.
 
 Here's a more interesting example:
 
-<div class="code">
-
+```
     f1()
     {
       local a = new Vector(3);
@@ -1078,8 +1043,7 @@ Here's a more interesting example:
       "Please enter your age: "; x[2] = toInteger(input());
       "Please enter your social security number: "; x[3] = input();
     }
-
-</div>
+```
 
 This is something we couldn't have done with lists: assigning elements
 of x in getInfo() wouldn't have affected the caller's copy of the list,
@@ -1089,15 +1053,13 @@ lists.
 Note that, when you explicitly create a copy of a vector, the new copy
 is not affected by any changes to the original:
 
-<div class="code">
-
+```
     x = new Vector(10, [1, 2, 3, 4, 5]);
     y = new Vector(10, x);
 
     x[3] = 100;
     tadsSay(y[3]);
-
-</div>
+```
 
 This example displays the value "3" (not "100"), because x and y refer
 to separate objects. Changing a value in the vector to which x refers

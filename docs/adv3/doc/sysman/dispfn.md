@@ -27,12 +27,12 @@ is concerned, input/output operations are part of the host environment,
 and not part of the VM. As a result, T3 doesn't know what to do with
 self-printing strings (strings enclosed in double quotes in a TADS
 program's source code) or embedded expressions (expressions contained in
-<span class="code">\<\< \>\></span> sequences within double-quoted
+`\<\< \>\>` sequences within double-quoted
 strings). To enable implicit display operations, the VM has a mechanism
 that lets the running program specify a function, defined in the program
 code, to call to display self-printing strings and embedded expressions.
 This is the "default display function." The program can also define a
-method to be called on the active <span class="code">self</span> object
+method to be called on the active `self` object
 at the time a string is to be displayed; this is the "default display
 method."
 
@@ -48,22 +48,22 @@ function on a case-by-case basis, each time a value is to be displayed:
 - If all of the following conditions are true, the VM calls the default
   display *method*:
   - A default display method has been defined (via the
-    <span class="code">t3SetSay()</span> function)
-  - There is a valid <span class="code">self</span> object that is
+    `t3SetSay()` function)
+  - There is a valid `self` object that is
     displaying the string or embedded value
-  - The <span class="code">self</span> object defines or inherits the
+  - The `self` object defines or inherits the
     default display method
 - If any of the necessary conditions for invoking the default display
   method aren't met, then the VM invokes the default display *function*
   instead. If no default display function has been defined (via the
-  <span class="code">t3SetSay()</span> function), the VM throws an
+  `t3SetSay()` function), the VM throws an
   error.
 
 To set the default display function, call the
-<span class="code">t3SetSay()</span> function in the [t3vm](t3vm.html)
+`t3SetSay()` function in the [t3vm](t3vm.html)
 function set, passing a function pointer argument (this must be a
 program-defined function, not an intrinsic function). To set the default
-display method, call <span class="code">t3SetSay()</span> with a
+display method, call `t3SetSay()` with a
 property pointer argument.
 
 Most programs can simply set up the default display function and method
@@ -78,29 +78,25 @@ output.
 
 A default display function takes a single argument, which is the value
 to be displayed, and returns no value. The simplest implementation is to
-simply pass the value to the <span class="code">tadsSay()</span>
+simply pass the value to the `tadsSay()`
 function (in the [tads-io](tadsio.html) function set) to display the
 value on the console:
 
-<div class="code">
-
+```
     myDispFunction(val)
     {
       tadsSay(val);
     }
+```
 
-</div>
-
-To establish <span class="code">myDispFunction()</span> as the default
+To establish `myDispFunction()` as the default
 display function, you'd write a line of code like this:
 
-<div class="code">
-
+```
     t3SetSay(myDispFunction);
+```
 
-</div>
-
-t3SetSay() call in your <span class="code">main()</span> routine, since
+t3SetSay() call in your `main()` routine, since
 this would establish the display function during start-up. Of course,
 you can also switch display functions at any time during program
 execution, which can be useful for certain special effects. For example,
@@ -108,8 +104,7 @@ if you wanted to display text in all capitals at certain times (such as
 when the player is in a particular location), you could switch to a
 capitalizing display function:
 
-<div class="code">
-
+```
     dispAllCaps(val)
     {
       tadsSay(val.toUpper());
@@ -120,8 +115,7 @@ capitalizing display function:
 
     // when leaving all-caps room
     t3SetSay(myDispFunction);
-
-</div>
+```
 
 ## Writing a display method
 
@@ -136,13 +130,11 @@ single argument, which is a value to be displayed, and returns no value.
 The method should simply display the value using whatever mechanism you
 wish.
 
-<div class="code">
-
+```
     class Item: object
       myDispMethod(val) { tadsSay(val); }
     ;
-
-</div>
+```
 
 The benefit of using a default display method instead of (or in addition
 to) a display function is that the method can use properties of the
@@ -155,8 +147,7 @@ string - let's say it's "COLOR" - then looking for that string in
 display values and substituting the color attribute. Here's some code
 that would accomplish this.
 
-<div class="code">
-
+```
     class ColorItem: Item
       myDispMethod(val)
       {
@@ -173,14 +164,13 @@ that would accomplish this.
 
     redItem: ColorItem colorName='red';
     blueItem: ColorItem colorName='blue';
+```
 
-</div>
-
-The implementation of <span class="code">myDispMethod()</span> in the
+The implementation of `myDispMethod()` in the
 ColorItem class, which is inherited by redItem and blueItem, checks the
 datatype of the value to be displayed. If the value is a string, the
 method performs a replacement on the string, substituting the string in
-the <span class="code">self</span> object's colorName property for any
+the `self` object's colorName property for any
 instance of the text "COLOR" in the original string.
 
 ## How the VM calls the display function
@@ -188,18 +178,18 @@ instance of the text "COLOR" in the original string.
 The VM calls the current display method or function each time your
 program evaluates a double-quoted string, and each time the program
 evaluates an expression embedded in a double-quoted string with the
-<span class="code">\<\< \>\></span> syntax.
+`\<\< \>\>` syntax.
 
 The argument to the display function can be of any type. When you
 evaluate a double-quoted string, the VM calls the display function with
 a single-quoted string containing the same text as the double-quoted
 string. However, when you evaluate an expression embedded in a
-double-quoted string using the <span class="code">\<\< \>\></span>
+double-quoted string using the `\<\< \>\>`
 syntax, the VM calls the display function with the result of evaluating
 the expression. This value can be of any type.
 
 Note that the display function should generally display nothing when
-called with a <span class="code">nil</span> argument. This allows you to
+called with a `nil` argument. This allows you to
 use expressions that have side effects, but which return no value, as
 embedded expressions. We will see an example of this a little later.
 
@@ -207,34 +197,27 @@ By way of explanation, we could rewrite any double-quoted string in the
 program as a call to the display function with the string value as the
 argument. So, we could rewrite this:
 
-<div class="code">
-
+```
     f1() { "Hello!"; }
-
-</div>
+```
 
 like this:
 
-<div class="code">
-
+```
     f1() { myDispFunction('Hello!'); }
-
-</div>
+```
 
 Similarly, any time there is an embedded expression in a string, we
 could rewrite the entire string as a series of calls to the display
 function. We could thus rewrite this:
 
-<div class="code">
-
+```
     f2() { "Hello <<Me.nameString>>!  Your age is <<Me.age>>."; }
-
-</div>
+```
 
 like so:
 
-<div class="code">
-
+```
     f2()
     {
       myDispFunction('Hello ');
@@ -243,8 +226,7 @@ like so:
       myDispFunction(Me.age);
       myDispFunction('.');
     }
-
-</div>
+```
 
 When a default display method is in effect, and you display a string or
 embedded expression from an object that defines or inherits the display
@@ -252,18 +234,15 @@ method, double-quoted strings are displayed by calls to the method. For
 example, assume that we have a class named DispItem that defines the
 current default display method. We could then rewrite this:
 
-<div class="code">
-
+```
     obj1: DispItem
       sdesc = "My name is <<nameString>>."
     ;
-
-</div>
+```
 
 as this:
 
-<div class="code">
-
+```
     obj1: DispItem
       sdesc
       {
@@ -273,16 +252,14 @@ as this:
 
       }
     ;
+```
 
-</div>
-
-When the VM calls the display method, <span class="code">self</span> is
+When the VM calls the display method, `self` is
 the object that actually defines the property or method displaying the
 string. This applies even for embedded expressions. Consider this
 example:
 
-<div class="code">
-
+```
     obj2: DispItem
       sdesc = "The other object is <<obj3.openDesc>>"
     ;
@@ -291,20 +268,18 @@ example:
       openDesc { isOpen ? "open" : "closed"; }
       isOpen = true
     ;
-
-</div>
+```
 
 This is a bit complicated, because we are evaluating a double-quoted
 string which has an embedded expression, which in turn evaluates a
 double-quoted string in a different object. So, what
-<span class="code">self</span> object is in effect when we display
+`self` object is in effect when we display
 "open" or "closed"?
 
 This is easier to answer if we use our rewriting rules. We can rewrite
 the example like this:
 
-<div class="code">
-
+```
     obj2: DispItem
       sdesc 
       {
@@ -321,27 +296,26 @@ the example like this:
       }
       isOpen = true
     ;
+```
 
-</div>
-
-We can see that we start out in <span class="code">obj2.sdesc</span>,
+We can see that we start out in `obj2.sdesc`,
 and display the first fragment of the string ("The other object is ");
-<span class="code">self</span> is clearly obj2 for this display method
-call. We then evaluate <span class="code">obj3.openDesc</span> (using
+`self` is clearly obj2 for this display method
+call. We then evaluate `obj3.openDesc` (using
 the normal TADS order of evaluation rules, we must evaluate a function's
 arguments before we can call the function). So, we find ourselves in
-<span class="code">obj3.openDesc</span>. This method chooses to display
+`obj3.openDesc`. This method chooses to display
 either "open" or "closed", depending on its isOpen property value. Once
 again, the rewrite makes it fairly obvious what's going on: we call
 myDispMethod to display "open" or "closed", with
-<span class="code">self</span> set to obj3. This method returns no
+`self` set to obj3. This method returns no
 value, which means that its effective return value is
-<span class="code">nil</span>. Finally, we return back to where we came
-from in <span class="code">obj2.sdesc</span>, where we call
-<span class="code">myDisplayMethod()</span> with the
-<span class="code">nil</span> return value from
-<span class="code">obj3.openDesc</span>, using obj2 for the
-<span class="code">self</span> object.
+`nil`. Finally, we return back to where we came
+from in `obj2.sdesc`, where we call
+`myDisplayMethod()` with the
+`nil` return value from
+`obj3.openDesc`, using obj2 for the
+`self` object.
 
 It should be noted that the compiler does not actually make the
 transformations above; the actual compiled representation is a lot more

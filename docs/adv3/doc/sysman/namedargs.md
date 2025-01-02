@@ -53,14 +53,12 @@ functions and methods.
 When you define a function or method, you indicate that it will receive
 named parameter values by adding a colon suffix to each parameter name:
 
-<div class="code">
-
+```
     diff(a:, b:)
     {
       return a - b;
     }
-
-</div>
+```
 
 Note how we've written the parameter list in the function definition:
 we've placed a colon after each variable name. This looks a little
@@ -69,22 +67,18 @@ something is about to follow, but here we just sort of stop after it.
 But there is a method to the madness: it's designed to parallel the
 syntax we use for **calling** a function with named arguments:
 
-<div class="code">
-
+```
     local x = diff(a: 5, b: 3);
-
-</div>
+```
 
 This says that we want to assign the value 5 to the variable "a" in the
 callee, and assign 3 to "b". Because everything has a name, the order
 doesn't matter - we can get exactly the same effect by rewriting it like
 this:
 
-<div class="code">
-
+```
     local x = diff(b: 3, a: 5);
-
-</div>
+```
 
 It's important to understand that the caller and callee must **both**
 use the special syntax. TADS always assumes that arguments are
@@ -99,21 +93,19 @@ caller and callee both have to use the special protocol.
 
 A named parameter can be declared as optional, using the same syntax as
 for an optional positional parameter. In the case of a named parameter,
-the "<span class="code">?</span>" suffix or "<span class="code">=</span>
-*expression*" clause go *after* the "<span class="code">:</span>"
+the "`?`" suffix or "`=`
+*expression*" clause go *after* the "`:`"
 suffix. For example:
 
-<div class="code">
-
+```
     f(a:, b:?)
     {
     }
-
-</div>
+```
 
 This defines a function that takes a required named parameter
-<span class="code">a</span>, and an optional named parameter
-<span class="code">b</span>.
+`a`, and an optional named parameter
+`b`.
 
 Refer to the [optional parameters chapter](optparams.html) for full
 details.
@@ -147,36 +139,30 @@ right order relative to one another, though.
 Here's an example of a function definition that mixes the two parameter
 styles:
 
-<div class="code">
-
+```
     putIn(dobj, iobj, cmd:, actor:)
     {
       // ... do something ...
     }
-
-</div>
+```
 
 The first two parameters are positional, since they don't have the colon
 suffix. The next two are named. We could have put the named items first
-in the list, or between <span class="code">dobj</span> and
-<span class="code">iobj</span>, without changing anything.
+in the list, or between `dobj` and
+`iobj`, without changing anything.
 
 We can now call the function like so:
 
-<div class="code">
-
+```
     putIn(book, drawer, cmd:new Command('put book in drawer'), actor:me);
-
-</div>
+```
 
 As with the definition, the order of the named items doesn't matter, so
 this would have the same effect:
 
-<div class="code">
-
+```
     putIn(cmd:new Command('put book in drawer'), book, actor:me, drawer);
-
-</div>
+```
 
 ## Missing and extra named arguments
 
@@ -192,28 +178,24 @@ argument mismatches: if the caller expects to receive an argument, and
 the caller didn't provide it, the programmer probably got something
 wrong.
 
-For example, for the <span class="code">putIn()</span> function that we
+For example, for the `putIn()` function that we
 defined earlier, suppose we call it like this:
 
-<div class="code">
-
+```
     putIn(book, drawer, actor:me);
-
-</div>
+```
 
 This will trigger an argument mismatch error, because
-<span class="code">putIn()</span> expects to receive an argument named
-<span class="code">cmd</span>, and there's no such thing in our list.
+`putIn()` expects to receive an argument named
+`cmd`, and there's no such thing in our list.
 
 However, the opposite case *doesn't* trigger an error: it's okay for a
 caller to supply **extra** named arguments that the callee doesn't ask
 for. For example, this will work without a hitch:
 
-<div class="code">
-
+```
     putIn(book, drawer, actor:me, cmd:new Command('put book in drawer'), verb:'put in');
-
-</div>
+```
 
 There are two reasons that extra named arguments are allowed.
 
@@ -249,8 +231,7 @@ visible in all nested calls.
 
 For example, consider the following:
 
-<div class="code">
-
+```
     f(a:)
     {
        "a=<<a>>!\n";
@@ -265,27 +246,26 @@ For example, consider the following:
     {
        g(a: 'hello');
     }
-
-</div>
+```
 
 What will this print out? If you didn't know about the extended
 visibility rule we just explained, you'd expect that the call from
-<span class="code">g()</span> to <span class="code">f()</span> would
-trigger an error, because the caller <span class="code">g()</span>
+`g()` to `f()` would
+trigger an error, because the caller `g()`
 doesn't supply the named parameter "a:" that the callee
-<span class="code">f()</span> expects. (As we saw earlier, if a function
+`f()` expects. (As we saw earlier, if a function
 expects a named argument and doesn't receive it from its caller, a
 run-time error occurs.)
 
 But that's not what happens. Extended visibility ensures that the "a:"
-value that <span class="code">main()</span> supplied in its call to
-<span class="code">g()</span> passes through
-<span class="code">g()</span>, and ultimately reaches
-<span class="code">f()</span>. Remember that it's okay to pass **extra**
-named arguments, so it's okay that <span class="code">g()</span> doesn't
-want an "a:" parameter - <span class="code">g()</span> simply ignores
+value that `main()` supplied in its call to
+`g()` passes through
+`g()`, and ultimately reaches
+`f()`. Remember that it's okay to pass **extra**
+named arguments, so it's okay that `g()` doesn't
+want an "a:" parameter - `g()` simply ignores
 the extra value, but the extra value nonetheless remains available for
-use in anything that <span class="code">g()</span> calls.
+use in anything that `g()` calls.
 
 So, the result is to print out "a=hello!".
 
@@ -326,8 +306,7 @@ function that receives a named argument is also free to override the
 value when it calls other functions. It does this simply by using the
 standard named argument syntax when making calls itself.
 
-<div class="code">
-
+```
     f(a:)
     {
       "This is f: a=<<a>>!\n";
@@ -344,25 +323,22 @@ standard named argument syntax when making calls itself.
     {
       g(a: 'hello');
     }
-
-</div>
+```
 
 This will print out the following:
 
-<div class="code">
-
+```
     This is g: a=hello!
     This is f: a=goodbye!
     This is g again: a=hello!
+```
 
-</div>
-
-Note that the call to <span class="code">f()</span> from within
-<span class="code">g()</span> overrides "a:" for the subroutine call,
+Note that the call to `f()` from within
+`g()` overrides "a:" for the subroutine call,
 but it *doesn't* affect the value of "a" within
-<span class="code">g()</span> itself. When <span class="code">f()</span>
+`g()` itself. When `f()`
 returns, "a" still has the same value originally passed to
-<span class="code">g()</span>.
+`g()`.
 
 A function that receives named arguments can use this technique to
 override all, some, or none of the arguments when it calls other
@@ -387,8 +363,7 @@ subroutines.
 
 Let's look at an example illustrating these points.
 
-<div class="code">
-
+```
     f(a:)
     {
       "This is f: a=<<a>>!\n";
@@ -407,48 +382,43 @@ Let's look at an example illustrating these points.
       g(a: x);
       "This is main: x=<<x>>!\n";
     }
-
-</div>
+```
 
 This will print out the following:
 
-<div class="code">
-
+```
     This is f: a=hello!
     This is g: a=goodbye!
     This is main: x=hello!
+```
 
-</div>
-
-The first thing to observe is that <span class="code">f()</span> still
+The first thing to observe is that `f()` still
 sees "a:" with the original value passed from
-<span class="code">main()</span>, even though
-<span class="code">g()</span> assigned a new value to its copy of "a".
-The key is that the assignment in <span class="code">g()</span> only
-affects the **copy** of "a" in <span class="code">g()</span>. Within
-<span class="code">g()</span>, "a" is just a local variable that happens
+`main()`, even though
+`g()` assigned a new value to its copy of "a".
+The key is that the assignment in `g()` only
+affects the **copy** of "a" in `g()`. Within
+`g()`, "a" is just a local variable that happens
 to be initialized with the named argument value of "a:". So even though
 we assigned a new value to that copy, it doesn't affect the named
-argument value itself, so when we call <span class="code">f()</span> the
+argument value itself, so when we call `f()` the
 named argument value it sees for *its* copy of "a" is still 'hello'.
 
-If you want <span class="code">f()</span> to see the modified value of
+If you want `f()` to see the modified value of
 "a", you simply pass the new value in the call to
-<span class="code">f()</span> as an explicit named argument:
+`f()` as an explicit named argument:
 
-<div class="code">
-
+```
     f(a: a);
+```
 
-</div>
-
-Second, note that the assignment in <span class="code">g()</span> really
-does alter the local copy of "a" within <span class="code">g()</span>,
-since when <span class="code">f()</span> returns, the local variable "a"
+Second, note that the assignment in `g()` really
+does alter the local copy of "a" within `g()`,
+since when `f()` returns, the local variable "a"
 still contains the newly assigned value. The call to
-<span class="code">f()</span> doesn't change that.
+`f()` doesn't change that.
 
-Third, we can see that the value that <span class="code">main()</span>
+Third, we can see that the value that `main()`
 passed under the name "a:" was never affected by any of this. In that
 respect there's no difference between named and positional parameters,
 but we thought it would be worth pointing out anyway.
@@ -461,11 +431,9 @@ any other function.
 One thing to note is that the syntax for short-form anonymous functions
 can look a little strange when named parameters are used:
 
-<div class="code">
-
+```
     local f = { a: : a + 1 };
-
-</div>
+```
 
 The odd bit is that a colon normally ends the argument list in a
 short-form function like this. But the compiler knows that a colon might
@@ -483,8 +451,7 @@ from the **current** call context at the time of invocation. This is the
 same way that ordinary positional arguments to anonymous functions work,
 so this should be no surprise. For example:
 
-<div class="code">
-
+```
     f(a:)
     {
       "This is f: a=<<a>>!\n";
@@ -501,17 +468,14 @@ so this should be no surprise. For example:
       local func = f(a: 'hello');
       func(a: 'goodbye');
     }
-
-</div>
+```
 
 This prints out:
 
-<div class="code">
-
+```
     This is f: a=hello!
     This is anonymous: a=goodbye!
-
-</div>
+```
 
 Note how the value of "a:" in the anonymous function is taken from the
 arguments at the time it's called, *not* from the time it was created.
@@ -519,8 +483,7 @@ That might be fairly obvious in that example, from the way we explicitly
 pass "a:" when we call the anonymous function, but consider this
 slightly subtler version:
 
-<div class="code">
-
+```
     f(a:)
     {
       "This is f: a=<<a>>!\n";
@@ -537,11 +500,10 @@ slightly subtler version:
       local func = f(a: 'hello');
       g(func, a: 'goodbye');
     }
-
-</div>
+```
 
 This prints out exactly the same thing. Here, the 'goodbye' value of
-"a:" passes through the call to <span class="code">g()</span> and into
+"a:" passes through the call to `g()` and into
 the anonymous function.
 
 ## Named arguments and multi-methods
@@ -558,11 +520,11 @@ Named arguments have some dynamic access capabilities similar to the
 [reflection](reflect.html) system for objects.
 
 You can retrieve a list of all of the named arguments in effect by
-calling the function <span class="code">t3GetNamedArgList()</span>. Each
+calling the function `t3GetNamedArgList()`. Each
 element of the list is a string giving the name of a named argument.
 
 To get the value for a named argument given its name, use
-<span class="code">t3GetNamedArg()</span>.
+`t3GetNamedArg()`.
 
 Positional arguments are not accessible via these functions, of course.
 
@@ -621,19 +583,17 @@ few instances will ever use. It would be annoying if you had to type out
 something like this every time you wanted to write an object's
 description:
 
-<div class="code">
-
+```
     desc(actor, pov, visList, lightList, distanceList)
     {
        "It's green.";
     }
-
-</div>
+```
 
 One approach that TADS *could* have taken, but didn't, would be to mimic
 Javascript by simply ignoring extra positional parameters. That would
-let you define the method above as simply <span class="code">desc =
-"It's green"</span>. The library would pass all of the extra context
+let you define the method above as simply `desc =
+"It's green"`. The library would pass all of the extra context
 arguments, but since the method doesn't define them in its parameter
 list, they'd just be silently ignored. That seems to be a good idiom in
 Javascript, and it certainly works fine for a simple example like
@@ -647,7 +607,7 @@ would have to declare the parameter names and supply them in its nested
 calls. This entirely defeats the purpose of making them optional. What's
 more, we'd never be able flag errors for mismatched parameters, and
 those errors are often useful in catching serious coding problems.
-Finally, even a simple function like <span class="code">desc</span>
+Finally, even a simple function like `desc`
 would still be inconvenient to define if it just wanted the distanceList
 value in this example, since to get at the 5th positional parameter
 you'd need to include the 1st through 4th.
@@ -656,23 +616,21 @@ So TADS didn't take the Javascript approach of making all parameters
 optional.
 
 Another approach is to use "layered" methods. First, the library makes a
-call to a <span class="code">complexDesc</span> method that takes the
+call to a `complexDesc` method that takes the
 huge long list of parameters. Second, the library provides a base class
 definition of this method that simply calls a *second* method that
 doesn't take any parameters:
 
-<div class="code">
-
+```
     class Thing
       complexDesc(actor, pov, visList, lightList, distanceList) { desc; }
     ;
-
-</div>
+```
 
 When the game wants to supply a simple description that doesn't use any
-of the parameters, it defines the simple <span class="code">desc</span>
+of the parameters, it defines the simple `desc`
 method. When it needs the parameters, it instead overrides the layered
-<span class="code">complexDesc</span> method.
+`complexDesc` method.
 
 The layered approach works reasonably well, and in fact the Adv3 library
 uses it in a number of places. The drawback is that it basically doubles
@@ -697,8 +655,7 @@ This is, in fact, the approach that the Adv3 library has traditionally
 used to handle most of the situations we're discussing. The usual Adv3
 idiom looks like this:
 
-<div class="code">
-
+```
     call_user_method(a, b, c)
     {
        local old_a = global.a;
@@ -719,8 +676,7 @@ idiom looks like this:
           global.c = old_c;
        }
     }
-
-</div>
+```
 
 The idea is that we pass the information in a bunch of global variables,
 and in order to ensure that recursive calls don't corrupt the globals,

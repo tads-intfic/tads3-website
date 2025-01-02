@@ -129,18 +129,18 @@ The interpreter options are:
 
 - -norand - do not "seed" the random number generator. By default, at
   startup, the interpreter automatically scrambles the starting point of
-  the built-in <span class="code">rand()</span> function using some
+  the built-in `rand()` function using some
   truly random data obtained from the operating system. This ensures
-  that <span class="code">rand()</span> generates different random
+  that `rand()` generates different random
   number sequences on each run. However, it's sometimes desirable for
   the "random" sequence to be predictable, such as when you're testing a
   program. If you use the `-norand` option, the system will use a fixed
-  starting point for the <span class="code">rand()</span> sequence. This
-  means that <span class="code">rand()</span> will return the same
+  starting point for the `rand()` sequence. This
+  means that `rand()` will return the same
   sequence of numbers every time you run the program, which is good for
   situations like testing because it makes the results repeatable on
   every run. Note that `-norand` doesn't make the
-  <span class="code">rand()</span> results *appear* any less random -
+  `rand()` results *appear* any less random -
   rather, it makes the sequence repeatable, so that you get the same
   apparently random sequence of numbers on each run.
 
@@ -183,9 +183,9 @@ The interpreter options are:
 
   For example, to allow the program to make outgoing connections to any
   other machine, but prohibit it from setting up any servers of its own,
-  you'd specify <span class="code">-ns02</span> (minimum client safety,
+  you'd specify `-ns02` (minimum client safety,
   no server access). To allow local access for both client and server
-  functions, use <span class="code">-ns1</span>.
+  functions, use `-ns1`.
 
 - -o *file* - log all console input (but not output) to *file*. This
   option lets you easily prepare a command file for later use with -i.
@@ -259,9 +259,9 @@ The interpreter options are:
   override it with [-sd](#-sd-option). If you know the program comes
   from a trustworthy source, and it needs to access files outside of its
   sandbox directory, you can manually give it full access to all files
-  with <span class="code">-s0</span>. If the source of the program is
+  with `-s0`. If the source of the program is
   dubious, you can prohibit all file access with
-  <span class="code">-s4</span>.
+  `-s4`.
 
   The possible safety level settings are:
 

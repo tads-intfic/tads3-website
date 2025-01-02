@@ -66,22 +66,22 @@ properties:
 - *Classes*: **Posture**, **Bed** and **Chair**
 - *Objects*: **standing**, **sitting** and **lying** (all Postures)
 - *Additional properties on Thing*:
-  <span class="code">canStandInMe</span>,
-  <span class="code">canSitInMe</span>,
-  <span class="code">canLieInMe</span>,
-  <span class="code">posture</span>,
-  <span class="code">defaultPosture</span>,
-  <span class="code">okayStandOnMsg</span>,
-  <span class="code">okaySitOnMsg</span>,
-  <span class="code">okayLieOnMsg</span>,
-  <span class="code">okayStandInMsg</span>,
-  <span class="code">okaySitInMsg</span>,
-  <span class="code">okayLieInMsg</span>,
-  <span class="code">cannotStandInMsg</span>,
-  <span class="code">cannotSitInMsg</span>,
-  <span class="code">cannotLieInMsg</span>,
-  <span class="code">tryMakingPosture(pos)</span>,
-  <span class="code">verifyEnterPosture(pos)</span>
+  `canStandInMe`,
+  `canSitInMe`,
+  `canLieInMe`,
+  `posture`,
+  `defaultPosture`,
+  `okayStandOnMsg`,
+  `okaySitOnMsg`,
+  `okayLieOnMsg`,
+  `okayStandInMsg`,
+  `okaySitInMsg`,
+  `okayLieInMsg`,
+  `cannotStandInMsg`,
+  `cannotSitInMsg`,
+  `cannotLieInMsg`,
+  `tryMakingPosture(pos)`,
+  `verifyEnterPosture(pos)`
 
   
 <span id="usage"></span>
@@ -105,41 +105,39 @@ and **lieOnScore**, which all work as they did before (for which see the
 discussion of [Pseudo-Postural
 Properties](../../docs/manual/thing.html#posture) on Thing). You can also
 give an object a **defaultPosture** property (which should be one of
-<span class="code">standing</span>, <span class="code">sitting</span> or
-<span class="code">lying</span>) to define the posture adopted by an
+`standing`, `sitting` or
+`lying`) to define the posture adopted by an
 actor in response to a BOARD/GET ON or ENTER/GET IN command with this
 object (or in response to a GET OFF or GET OUT OF command that results
 in the actor being in/on this object)
 
 The new **Chair** and **Bed** classes can do some of this work for you,
 by defining combinations of these properties that are typically suitable
-for chairs and beds. A <span class="code">Chair</span> is an object an
+for chairs and beds. A `Chair` is an object an
 actor can sit on or stand on (but not by default lie on), but for which
 sitting is the both the default and the preferred posture. (To make a
 chair you can also lie on, like a long settee, just override its
-<span class="code">canLieOn</span> property to true). A
-<span class="code">Bed</span> is something you can stand, lie or sit on,
+`canLieOn` property to true). A
+`Bed` is something you can stand, lie or sit on,
 but which has lying as its default posture. For the already existing
-<span class="code">Platform</span> class the default posture is
+`Platform` class the default posture is
 standing, but you can also sit or lie on a Platform.
 
 An actor's (or the player character's) current posture is given in its
 **posture** property, which can be one of
-<span class="code">standing</span>, <span class="code">sitting</span> or
-<span class="code">lying</span>. To get at a textual description of an
+`standing`, `sitting` or
+`lying`. To get at a textual description of an
 actor's current posture you can use the posture's **participle**
 property. You should always do this in a description that mentions the
 player character's posture, for example:
 
-<div class="code">
-
+```
     startRoom: Room 'Outside Building'
        "You are <<gPlayerChar.posture.participle>> outside a small brick building
         just to the north. "
     ;
      
-
-</div>
+```
 
 If you don't do this, but simply write "You are standing outside...",
 the player can instantly make you a liar by typing LIE DOWN or SIT

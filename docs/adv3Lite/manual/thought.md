@@ -28,8 +28,7 @@ almost precisely the same way. All you need to do is to define an object
 of the **ThoughtManager** class and then populate it with **Thought**
 objects, like so:
 
-<div class="code">
-
+```
     myThoughts: ThoughtManager
     ;
 
@@ -46,8 +45,7 @@ objects, like so:
         "You find your thoughts start to wander; for some reason you can't
         concentrate on that topic right now. "
     ;
-
-</div>
+```
 
 Thought inherits from [TopicEntry](topicentry.html), so you can use all
 the properties and methods of TopicEntry with it; Thought and

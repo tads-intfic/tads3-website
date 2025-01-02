@@ -219,8 +219,7 @@ actor interactions, since it funnels both phrasings into the single ASK
 FOR format, which means that you can handle both kinds using AskForTopic
 objects. Here's the object definition:
 
-<div class="code">
-
+```
     /*
      *   Define a global remapping to transform commands of the form "X, GIVE
      *   ME Y" to the format "ME, ASK X FOR Y".  This makes it easier to write
@@ -298,31 +297,26 @@ objects. Here's the object definition:
             return nil;
         }
     ;
-
-</div>
+```
 
 Let's go over that line by line.
 
 First, we have to define the GlobalRemapping object, using an ordinary
 object definition for an object of class GlobalRemapping:
 
-<div class="code">
-
+```
     giveMeToAskFor: GlobalRemapping
-
-</div>
+```
 
 Next, we define a getRemapping() method. We're required to define this
 method for each GlobalRemapping we create, since it's where we determine
 whether or not to do a remapping, and if so, it's where we create the
 remapped action.
 
-<div class="code">
-
+```
         getRemapping(issuingActor, targetActor, action)
         {
-
-</div>
+```
 
 The first thing we do in this method is to determine if we want to remap
 the command. For this mapping, we're interested in any command of the
@@ -355,13 +349,11 @@ potential resolution of the iobj phrase, we come up with our main "if"
 statement, determining whether or not we're going to perform a
 remapping:
 
-<div class="code">
-
+```
             if (action.ofKind(GiveToAction)
                 && action.canIobjResolveTo(issuingActor))
             {
-
-</div>
+```
 
 Entering the "if" block means that we've passed the test, so we're going
 to perform the remapping. Our job at this point is to create the new
@@ -370,22 +362,18 @@ instance of our new action. We want to change the action to ASK FOR,
 which is represented by the AskForAction class. To create an instance,
 we do this:
 
-<div class="code">
-
+```
                 local newAction = AskForAction.createActionInstance();
-
-</div>
+```
 
 This new action is a replacement for another action that the parser was
 working on, and in these cases it's important to tell the parser about
 that relationship. We do this by telling the new Action object that it
 has an "original" Action:
 
-<div class="code">
-
+```
                 newAction.setOriginalAction(action);
-
-</div>
+```
 
 Next, we have to deal with a subtle complication that comes from
 changing the target actor. Recall that we're changing the phrasing from
@@ -404,11 +392,9 @@ easier way of handling this: it lets us temporarily override the meaning
 of "you", just for the duration of this action. To do this, we use the
 method setPronounOverride() on the action:
 
-<div class="code">
-
+```
                 newAction.setPronounOverride(PronounYou, targetActor);
-
-</div>
+```
 
 Note that we only have to override "you", not "your" and "yours,"
 because the parser considers all of these to be aspects of the same
@@ -433,11 +419,9 @@ known ("pre-resolved") object. To use it, we just create an instance of
 PreResolvedProd, passing in as the constructor argument the known object
 that we want to "wrap" in match tree clothing:
 
-<div class="code">
-
+```
                 local dobj = new PreResolvedProd(targetActor);
-
-</div>
+```
 
 For the indirect object, we would *normally* do something even simpler.
 We're transforming from ACTOR, GIVE ME ITEM to ME, ASK ACTOR FOR ITEM:
@@ -458,31 +442,25 @@ takes an ordinary noun phrase match tree and turns it into a topic
 phrase match tree. We just pass our dobjMatch from the original action
 into this method, and out pops our topic match tree:
 
-<div class="code">
-
+```
                 local iobj = newAction.reparseMatchAsTopic(
                     action.dobjMatch, issuingActor, issuingActor);
-
-</div>
+```
 
 We finally have all of the objects (actually, match trees) for the new
 action, but we still have to fill the slots in, which we do using the
 setObjectMatches() method on the new action:
 
-<div class="code">
-
+```
                 newAction.setObjectMatches(dobj, iobj);
-
-</div>
+```
 
 Now we just need to return the new command. This is done by returning a
 list consisting of the new target actor and the new Action object:
 
-<div class="code">
-
+```
                 return [issuingActor, newAction];
-
-</div>
+```
 
 That's it for the main "if". All that remains is to close off the "if"
 block, and deal with the case where we *didn't* decide to remap the
@@ -490,22 +468,18 @@ action. To signal that we're not doing any remapping, we simply return
 nil; so we just need to add a nil return in case we didn't go into the
 "if" block and return a new action.
 
-<div class="code">
-
+```
             }
             return nil;
-
-</div>
+```
 
 And that's everything - we just close the method, end the object, and
 we're done.
 
-<div class="code">
-
+```
         }
     ;
-
-</div>
+```
 
 </div>
 

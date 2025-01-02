@@ -60,10 +60,10 @@ used to ask questions about the game state. The methods defined on Q
 - **scentBlocker(a, b)**: returns a list of all the objects (if there
   are any) that block the scent (smell) path from *a* to *b* (if there
   are none, returns an empty list).
-- **dynamicSpecials**: set this to <span class="code">nil</span> to
+- **dynamicSpecials**: set this to `nil` to
   prevent the list of active Specials from being recalculated every time
   the Q object is queried. The default value is
-  <span class="code">true</span> to facilitate Specials that may become
+  `true` to facilitate Specials that may become
   active or inactive over the course of a game.
 
 Note that for your convenience Thing defines the methods canSee(obj),
@@ -178,8 +178,8 @@ might prevent it:
 2.  The object is in a closed (transparent) container; the player
     character can see it but can't touch it.
 3.  The object is out of reach (because the game author has defined it
-    to be so through its <span class="code">checkReach()</span> or
-    <span class="code">verifyReach()</span> method).
+    to be so through its `checkReach()` or
+    `verifyReach()` method).
 4.  The player character is in a nested room (located on a chair, say)
     and the game author has made it so that an actor on the chair can't
     reach out to other objects in the room without leaving the chair.
@@ -195,34 +195,34 @@ from the actor to the object that needs to be touched is not possible,
 the game needs to explain why, so it's not good enough just to call
 Q.canReach(gActor, obj) and return nil if reaching is impossible.
 
-To cater for this, the <span class="code">verifyPreCondition()</span>
-and <span class="code">checkPreCondition()</span> call
-<span class="code">Q.reachProblemVerify(gActor, obj)</span> and
-<span class="code">Q.reachProblemCheck(gActor, obj)</span> respectively
+To cater for this, the `verifyPreCondition()`
+and `checkPreCondition()` call
+`Q.reachProblemVerify(gActor, obj)` and
+`Q.reachProblemCheck(gActor, obj)` respectively
 to build lists of issues that might prevent
-<span class="code">gActor</span> from reaching (i.e. touching)
-<span class="code">obj</span>. These lists contain objects of the
+`gActor` from reaching (i.e. touching)
+`obj`. These lists contain objects of the
 **ReachProblem** class (or one of its subclasses) that define the nature
 of the problem that prevents the actor from reaching the object. The
-<span class="code">verifyPreCondition()</span> method then calls the
-<span class="code">verify()</span> method of every item in the list it
-has built while the <span class="code">checkPreCondition()</span> method
-calls the <span class="code">check()</span> method on everything in its
+`verifyPreCondition()` method then calls the
+`verify()` method of every item in the list it
+has built while the `checkPreCondition()` method
+calls the `check()` method on everything in its
 list. If the lists are empty, or the verify()/check methods allow
 touching to go ahead, then the whole action can go ahead; otherwise the
 action will be prevented and an appropriate explanatory message
 displayed.
 
 In the first instance, then, these explanatory messages come from the
-<span class="code">verify()</span> and/or
-<span class="code">check()</span> methods of some
-<span class="code">ReachProblem</span> object. If you've followed the
+`verify()` and/or
+`check()` methods of some
+`ReachProblem` object. If you've followed the
 discussion so far, you may have surmised that this isn't the easiest
 place for such messages to be customized if they aren't what you want in
 your game. If you haven't followed the discussion all that well up to
 this point you may be even more convinced that these messages aren't
 easy to customize. But don't worry; to make things easier the relevant
-<span class="code">ReachProblem</span> objects farm the production of
+`ReachProblem` objects farm the production of
 messages out to one of the objects causing the problem where you can
 easily customize it.
 
@@ -250,14 +250,14 @@ default message they relate to and the game object's they're defined on:
     defined on the *target* object.
 4.  **cannotReachTargetMsg(target)**: By default this method (called on
     the actor's room) returns the value of
-    <span class="code">target.tooFarAwayMsg</span>, which in turn
+    `target.tooFarAwayMsg`, which in turn
     generates the message "**The *target* is too far away**" as in (3)
     above. This may be a more convenient point at which to customize
     messages of this sort, since this method allows you to customize the
     message on the room the actor is trying to reach the *target* from,
     rather than having to do so on each potential target. Note that
     overriding this method will normally suppress the use of the
-    target's <span class="code">tooFarAwayMsg</span>. As in (3) above
+    target's `tooFarAwayMsg`. As in (3) above
     this method will normally be invoked when the player character is
     trying to touch an object in a different room.
 
@@ -297,8 +297,8 @@ know about to make use of it:
   link with *obj*. A value of nil means there's currently no link. A
   value of **AudioLink** means there's an audio connection only. A value
   of **VideoLink** means there's both an audio and a video connection.
-  (Note: <span class="code">AudioLink</span> and
-  <span class="code">VideoLink</span> are simply macros that expand to 1
+  (Note: `AudioLink` and
+  `VideoLink` are simply macros that expand to 1
   and 2 respectively).
 
 Note that this mechanism allows the player character to be in remote
@@ -311,27 +311,26 @@ other actor will normally be in a remote location, the default response
 to trying to examine him/her will be that s/he's too far away to make
 out any detail, which probably isn't what you want for a remote
 audiovisual link. To fix that you'd either need to set
-<span class="code">sightSize = large</span> on the remote actor or
-define its <span class="code">remoteDesc(pov)</span> method. For further
+`sightSize = large` on the remote actor or
+define its `remoteDesc(pov)` method. For further
 details see the discussion of [Remote
 Communications](senseregion.html#remotecomm) in the SenseRegion chapter.
 
 As an example, suppose we want to define a Phone command that can be
 used to phone other actors. We need to ensure that potential callees are
 in scope, so we need to add all known actors to scope in our Phone
-action's <span class="code">addExtraScopeItems()</span> method. We then
+action's `addExtraScopeItems()` method. We then
 need a response to attempts to trying to phone things that aren't
 actors, and another response to phoning actors. Some actors may not be
 contactable by phone so we need to defined a
-<span class="code">canPhoneMe</span> property on the Actor class that
+`canPhoneMe` property on the Actor class that
 determines this. If phoning is allowed then we want it to establish a
 link with the other actor and say hello to him or her. Conversely, we
 want ending a conversation with another actor to sever any
 communications link there may have been. A fairly basic scheme to do all
 this might be as follows:
 
-<div class="code">
-
+```
      DefineTAction(Phone)
         addExtraScopeItems(role)
         {
@@ -392,13 +391,12 @@ this might be as follows:
         canBePhoned = true
     ; 
      
-
-</div>
+```
 
 If you want to try this out for yourself, bear in mind that the way
 we've tried it allows the player character to phone only those actors
 already known to him or her, so you may need to define
-<span class="code">familiar = true</span> on the remote actor for it to
+`familiar = true` on the remote actor for it to
 work.
 
 </div>

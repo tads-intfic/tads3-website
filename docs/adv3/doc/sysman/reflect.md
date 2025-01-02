@@ -48,7 +48,7 @@ Certain reflection functions return or accept "type code" values. These
 are integer values that represent the fundamental system types in these
 contexts.
 
-The system header file <span class="code">\<systype.h\></span> defines
+The system header file `\<systype.h\>` defines
 macro symbols for the types:
 
 TypeNil
@@ -113,7 +113,7 @@ determine specifically which type of object you're working with.
 An anonymous function can be represented as either TypeFuncPtr or
 TypeObject. This depends on whether or not the function refers to any of
 the local variables from the enclosing scope where the function is
-defined. (This includes <span class="code">self</span> and the other
+defined. (This includes `self` and the other
 method context pseudo-variables.) If the anonymous function does refer
 to any variables from the enclosing scope, it's represented as an
 object, which contains the context information tying the function to the
@@ -140,7 +140,7 @@ to perform arbitrary conversions between types; you can never use an
 integer as though it were an object reference, for example.
 
 You can access the type of any value using the
-<span class="code">dataType()</span> intrinsic function. This function
+`dataType()` intrinsic function. This function
 returns a code that indicates the "primitive" (built-in) type of the
 value. The primitive types are the basic types built in to the language:
 true, nil, integer, string, list, object reference, function pointer,
@@ -150,54 +150,54 @@ If the primitive type of a value is object reference, you can learn more
 about the type by inspecting the class relationships of the object. At
 the simplest level, you can determine if the object is related by
 inheritance to a particular class using the
-<span class="code">ofKind()</span> method on the object. If you need
+`ofKind()` method on the object. If you need
 more general information, you can use the
-<span class="code">getSuperclassList()</span> method to obtain a list of
+`getSuperclassList()` method to obtain a list of
 all of the direct superclasses of the object.
 
 ### dataTypeXlat()
 
 The standard library adds another function,
-<span class="code">dataTypeXlat()</span>, that provides a slightly
-higher-level version of <span class="code">dataType()</span>. The two
+`dataTypeXlat()`, that provides a slightly
+higher-level version of `dataType()`. The two
 functions are almost the same, except for how they treat anonymous
 functions and dynamic functions.
 
 An anonymous function is technically an object of intrinsic class
-AnonFuncPtr, and <span class="code">dataType()</span> doesn't make any
+AnonFuncPtr, and `dataType()` doesn't make any
 attempt to hide this fact: it returns TypeObject. The same goes for
 DynamicFunc objects.
 
 However, for most practical purposes, anonymous and dynamic function
 objects are interchangeable with regular function pointers; in practice,
 you end up using all function types the same way. This sometimes makes
-it slightly inconvenient that <span class="code">dataType()</span>
+it slightly inconvenient that `dataType()`
 returns TypeObject for anonymous and dynamic functions, vs. TypeFuncPtr
 for regular function pointers. This is where
-<span class="code">dataTypeXlat()</span> comes in. This function returns
+`dataTypeXlat()` comes in. This function returns
 TypeFuncPtr for anonymous function objects and dynamic function objects,
 just as it does for a regular function pointer. So wh en you're
 interested in determining whether a particular value is *effectively* a
 function, meaning it can be invoked as though it were a function,
-<span class="code">dataTypeXlat()</span> makes it easier to find out.
+`dataTypeXlat()` makes it easier to find out.
 
 For all other types, dataType() and dataTypeXlat() return the same
 results.
 
 ## Determining a property's definition
 
-The <span class="code">dataType()</span> function can be used with any
+The `dataType()` function can be used with any
 value, but sometimes it is useful to obtain the type of a particular
 property definition for a particular object without evaluating the
 property. If an object's property is defined as a method, evaluating the
 property will call the method; sometimes it is necessary to learn
 whether or not the property is defined as a method without actually
 calling the method. For these cases, you can use the
-<span class="code">propType()</span> method, which obtains the type of
+`propType()` method, which obtains the type of
 data defined for a property without actually evaluating the property.
 
 You can determine if an object defines a property at all using the
-<span class="code">propDefined()</span> method. This method also lets
+`propDefined()` method. This method also lets
 you determine whether the object defines the method directly or inherits
 it from a superclass, and when the method is inherited, to identify the
 superclass from which the object inherits the method.
@@ -205,18 +205,16 @@ superclass from which the object inherits the method.
 ## Enumerating active objects
 
 You can enumerate all of the objects in the running program using the
-<span class="code">firstObj()</span> and
-<span class="code">nextObj()</span> intrinsic functions. These functions
+`firstObj()` and
+`nextObj()` intrinsic functions. These functions
 let you iterate through the set of all objects in the program, including
 objects statically defined in the compiler and those dynamically
 allocated during execution.
 
-<div class="code">
-
+```
     for (local o = firstObj(Thing) ; o != nil ; o = nextObj(o, Thing))
       "<<o.name>>\n";
-
-</div>
+```
 
 ## Retrieving function and method interfaces
 
@@ -225,37 +223,33 @@ method takes.
 
 For a function, use [getFuncParams()](tadsgen.html#getFuncParams):
 
-<div class="code">
-
+```
     // get parameter information on function main()
     local p = getFuncParams(&main);
-
-</div>
+```
 
 For a method, use the [getPropParams](objic.html#getPropParams) method of
 the containing object:
 
-<div class="code">
-
+```
     // get the method parameters for book.lookAround()
     local p = book.getPropParams(&lookAround);
-
-</div>
+```
 
 ## Accessing named arguments
 
 You can get a list of all of the [named arguments](namedargs.html)
 currently in effect by calling
-<span class="code">t3GetNamedArgList()</span>. This function returns a
+`t3GetNamedArgList()`. This function returns a
 list of strings, where each string is the name of a currently active
 named argument.
 
 You can retrieve the value of a named argument given its name via
-<span class="code">t3GetNamedArg()</span>.
+`t3GetNamedArg()`.
 
 (These functions are part of the [t3vm](t3vm.html) set.)
 
-## Accessing compiler symbols: the <span class="code">reflectionServices</span> object
+## Accessing compiler symbols: the `reflectionServices` object
 
 TADS 3 lets a running program access the global symbols that were
 defined during compilation. This powerful capability makes it possible
@@ -267,7 +261,7 @@ The system library provides an optional module that you can include in
 your program for a simple interface to the compiler symbols. To use
 these services, simply include the module reflect.t in your build Note
 that this is designed to be a separately-compiled module, so **do not**
-<span class="code">\#include</span> it from your source modules -
+`\#include` it from your source modules -
 instead, simply add it to your project (.t3m) file. If you're not using
 a project file, just add it to your t3make command line:
 
@@ -279,8 +273,8 @@ a project file, just add it to your t3make command line:
 
 Note that, by default, reflect.t does not include support for the
 BigNumber intrinsic class. However, you can enable BigNumber support by
-defining the symbol <span class="code">REFLECT_BIGNUM</span>, using the
-<span class="code">-D</span> option in your project file or on the
+defining the symbol `REFLECT_BIGNUM`, using the
+`-D` option in your project file or on the
 t3make command line.
 
 <div class="cmdline">
@@ -289,37 +283,35 @@ t3make command line.
 
 </div>
 
-The <span class="code">reflectionServices</span> object provides the
+The `reflectionServices` object provides the
 high-level compiler symbols interface. The methods of this object are
 discussed below.
 
 ### formatStackFrame
 
-<span class="code">formatStackFrame(fr, includeSourcePos)</span> returns
+`formatStackFrame(fr, includeSourcePos)` returns
 a string with a formatted representation of the stack frame fr, which
-must be an object of class <span class="code">T3StackInfo</span> (the
+must be an object of class `T3StackInfo` (the
 type of object in the list returned by the intrinsic function
-<span class="code">t3GetStackTrace()</span>). If
-<span class="code">includeSourcePos</span> is
-<span class="code">true</span>, and source information is available for
+`t3GetStackTrace()`). If
+`includeSourcePos` is
+`true`, and source information is available for
 the frame, the return value includes a printable representation of the
 source position's filename and line number. The return values look like
 this:
 
-<div class="code">
-
+```
     myObj.prop1('abc', 123) myProg.t, line 52
-
-</div>
+```
 
 ### valToSymbol
 
-<span class="code">valToSymbol(val)</span> converts the value val to a
+`valToSymbol(val)` converts the value val to a
 symbolic or string representation, as appropriate. If the value is an
-integer, string, BigNumber, list, <span class="code">true</span>, or
-<span class="code">nil</span>, the return value is a string
+integer, string, BigNumber, list, `true`, or
+`nil`, the return value is a string
 representation of the value appropriate to the type (in the case of
-<span class="code">true</span> and <span class="code">nil</span>, the
+`true` and `nil`, the
 strings 'true' and 'nil' are returned, respectively). If the value is an
 object, property ID, function pointer, or enumerator, the return value
 is a string giving the symbolic name of the value, if available, or a
@@ -330,7 +322,7 @@ string showing the type without a symbol (such as "(obj)" or "(prop)").
 This section discusses the low-level compiler symbol services. These
 services are built into the VM. In most cases, you should use the
 high-level services provided by the
-<span class="code">reflectionServices</span> object, since that
+`reflectionServices` object, since that
 interface is easier to use and provides substantially the same
 capabilities.
 
@@ -343,12 +335,12 @@ object as its value. In addition, the table includes all of the
 properties, functions, enumerators, and intrinsic classes.
 
 To obtain a reference to the symbol table, use the
-<span class="code">t3GetGlobalSymbols()</span> intrinsic function. This
+`t3GetGlobalSymbols()` intrinsic function. This
 function returns the LookupTable object, if it's available, or
-<span class="code">nil</span> if not.
+`nil` if not.
 
 Note that the global symbol table is available from
-<span class="code">t3GetGlobalSymbols()</span> only under certain
+`t3GetGlobalSymbols()` only under certain
 conditions:
 
 - The global symbols are available during pre-initialization when
@@ -357,8 +349,8 @@ conditions:
   program was compiled with debugging symbols.
 
 At other times, the symbol table isn't available, so
-<span class="code">t3GetGlobalSymbls()</span> returns
-<span class="code">nil</span>. In particular, this is the case during
+`t3GetGlobalSymbls()` returns
+`nil`. In particular, this is the case during
 normal execution (after preinit) of a program compiled for release,
 since the compiler omits the symbol table information from release
 builds to reduce the size of the image file.
@@ -371,8 +363,7 @@ compiler builds the final image file, it will automatically keep the
 symbol table because of the reference stored in the program. Here's an
 example:
 
-<div class="code">
-
+```
     #include <t3.h>
     #include <lookup.h>
 
@@ -386,13 +377,12 @@ example:
       }
       symtab = nil
     ;
-
-</div>
+```
 
 To reference the symbol table at run-time, you would get it from
-<span class="code">symtabObj.symtab</span>. Note that even though you
+`symtabObj.symtab`. Note that even though you
 stored a reference to the table,
-<span class="code">t3GetGlobalSymbols()</span> will still return nil at
+`t3GetGlobalSymbols()` will still return nil at
 run-time if the program wasn't compiled for debugging; the reference you
 saved is to the table that was created during pre-initialization, which
 at run-time is just an ordinary LookupTable object loaded from the image
@@ -408,8 +398,7 @@ Here's an example of using the symbol table to call a method by name.
 This example asks the user to type in the name of a method, then looks
 up the name in the symbol table and calls the property, if it's found.
 
-<div class="code">
-
+```
     callMethod(obj)
     {
       local methodName;
@@ -444,26 +433,23 @@ up the name in the symbol table and calls the property, if it's found.
         }
       }
     }
-
-</div>
+```
 
 ## Preprocessor macros
 
-The <span class="code">t3GetGlobalSymbols()</span> function can also
+The `t3GetGlobalSymbols()` function can also
 retrieve information on the preprocessor macros defined in the program's
 source code. This information is in the correct format for use with the
 [DynamicFunc](dynfunc.html) class's dynamic compiler, so you can pass it
 directly to the DynamicFunc constructor as the "macroTable" argument.
 
 To retrieve the macro information, specify the constant value
-<span class="code">T3PreprocMacros</span> as the selector argument to
-<span class="code">t3GetGlobalSymbols()</span>:
+`T3PreprocMacros` as the selector argument to
+`t3GetGlobalSymbols()`:
 
-<div class="code">
-
+```
     local macros = t3GetGlobalSymbols(T3PreprocMacros);
-
-</div>
+```
 
 This retrieves a LookupTable containing all of the "global" macros
 defined in the compiled program's source code (more on this
@@ -479,7 +465,7 @@ The definition of a macro consists of a list with three elements:
 - Element \[2\] is a list giving the names of the parameters to the
   macro. This is an empty list if the macro doesn't take any arguments.
 - Element \[3\] is an integer with a combination of bit flags (combined
-  with the bitwise OR operator "<span class="code">\|</span>") with more
+  with the bitwise OR operator "`\|`") with more
   details on the macro:
   - T3MacroHasArgs (0x0001) is set if the macro has a parameter list at
     all. A macro defined without a parameter list behaves a little
@@ -496,8 +482,7 @@ The definition of a macro consists of a list with three elements:
 Here are a few examples of macros and their corresponding table
 information.
 
-<div class="code">
-
+```
     #define HUNDRED  100
        ->   ['100', [], 0]
 
@@ -506,25 +491,24 @@ information.
 
     #define debugPrint(msg...)  tadsSay('Debug message: ', ##msg)
        ->   ['tadsSay(\'Debug message: \', ##msg)', ['msg'], 0x0003]
-
-</div>
+```
 
 ### <span id="globalMacros"></span>What makes a macro global?
 
 The macro table returned by
-<span class="code">t3GetGlobalSymbols()</span> only contains "global"
+`t3GetGlobalSymbols()` only contains "global"
 macros.
 
 A global macro is one that has a fixed value throughout the program.
 Global macros are the most common type, because the usual convention is
 to define macros in common header files, which ensures that each module
 throughout the program has the same definition for any given macro.
-However, it's perfectly legal to use <span class="code">\#define</span>
+However, it's perfectly legal to use `\#define`
 directly in a source code module, rather than in a header, and it's
 legal for different modules to have different definitions for the same
 macro. It's also possible to change a macro's definition one or more
 times within a single source module, by using
-<span class="code">\#undef</span> to remove the old definition. In
+`\#undef` to remove the old definition. In
 either case, the table excludes macros that have two or more distinct
 definitions anywhere in the program.
 
@@ -556,18 +540,16 @@ when they're available, so for full functionality you'll need to define
 your replacements using the same interfaces in those cases. The specific
 requirements are:
 
-- <span class="code">reflectionServices.valToSymbol(val)</span> -
+- `reflectionServices.valToSymbol(val)` -
   returns a string giving the symbolic version of *val*, if possible.
   You can use whatever names you want for the object and property, as
   long as you export your names as follows:
-  <div class="code">
-
+  ```
       export reflectionServices 'reflection.reflectionServices';
       export valToSymbol 'reflection.valToSymbol';
 
   </div>
-
-</div>
+```
 
 ------------------------------------------------------------------------
 

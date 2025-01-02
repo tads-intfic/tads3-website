@@ -67,17 +67,16 @@ We've by no means covered the whole of it yet, and we'll return to the
 topic in Chapter 10, but we have gone further than before. In particular
 we've seen how you can use a **check()** method to stop an action
 proceeding, as well as an **action()** method to define what happens if
-the action does go ahead. All a <span class="code">check()</span> method
+the action does go ahead. All a `check()` method
 needs to do in order to prevent an action is to display some text,
 usually text that explains why the action can't or won't go ahead. To
 define a check method or an action method you create a block with
-<span class="code">dobjFor(*ActionName*)</span> or
-<span class="code">iobjFor(*ActionName*)</span> followed by opening and
+`dobjFor(*ActionName*)` or
+`iobjFor(*ActionName*)` followed by opening and
 closing braces (usually several lines apart) and then place your check()
 and action() code between the braces, like so:
 
-<div class="code">
-
+```
     dobjFor(Turn)
     {
         check()
@@ -95,8 +94,7 @@ and action() code between the braces, like so:
              hasBeenTurned = true;
         }
     }
-
-</div>
+```
 
 Although the adv3Lite library does its best to provide standard handling
 for as many actions as possible, this can only take you so far, as most
@@ -107,12 +105,12 @@ skill you will need to acquire sooner or later if you're going to make
 any real progress in writing Interactive Fiction (in whatever authoring
 system you use).
 
-In adv3Lite <span class="code">check()</span> and
-<span class="code">action</span>() are only two of the six sections that
+In adv3Lite `check()` and
+`action`() are only two of the six sections that
 can be defined in an action handler, the others being
-<span class="code">preCond</span>, <span class="code">remap</span>,
-<span class="code">verify()</span> and
-<span class="code">report()</span>. If you want the full story right
+`preCond`, `remap`,
+`verify()` and
+`report()`. If you want the full story right
 away you can find it in the [Action Results](../manual/actres.html)
 section of the *adv3Lite Library Manual*, or if you want the absolute
 complete full story you can read the entire [Part IV:
@@ -128,8 +126,7 @@ objects**. This is a form of syntax that allows us to define one object
 (the nested anonymous object) directly on the property of another
 object, like so:
 
-<div class="code">
-
+```
     enclosingObject: Thing 'whatsit'
        "This is just a demonstration object. "
        
@@ -147,32 +144,31 @@ object, like so:
            
        }
     ;
-
-</div>
+```
 
 In this example, the object defined on the
-<span class="code">someProperty</span> property of
-<span class="code">enclosingObject</span> is *anonymous* because it has
+`someProperty` property of
+`enclosingObject` is *anonymous* because it has
 no name of its own and *nested* because it is defined within the
 definition of another object, here
-<span class="code">enclosingObject</span>. We can get a *reference* to
+`enclosingObject`. We can get a *reference* to
 this object with the expression
-<span class="code">enclosingObject.someProperty</span>, but this is not
+`enclosingObject.someProperty`, but this is not
 the name of the object. Indeed, we could assign some other value to
-<span class="code">enclosingObject.someProperty</span> during the course
+`enclosingObject.someProperty` during the course
 of the game, and then the reference to the anonymous object would be
 lost.
 
 If we need to refer to the enclosing object or a property of the
 enclosing object from within the nested object, we should use the
-pseudo-variable <span class="code">lexicalParent</span> to refer to it.
+pseudo-variable `lexicalParent` to refer to it.
 Look carefully at the desc property of the nested object above. What do
 you think it will display? If you think it should display "I am nestedin
 the whatsit, which has a bulk of 10. My own bulk is 4." you've got it
 right. Pay close attention to the difference between referring to
-<span class="code">bulk</span> and
-<span class="code">lexicalParent.bulk</span> in this context. In writing
-your own code forgetting to use <span class="code">lexicalParent</span>
+`bulk` and
+`lexicalParent.bulk` in this context. In writing
+your own code forgetting to use `lexicalParent`
 to refer to a property of an enclosing object when that's what you mean
 to do is a very easy mistake to make.
 
@@ -198,8 +194,7 @@ objects of the **SubComponent** class directly on the **remapIn**,
 **remapOn**, **remapUnder** and **remapBehind** properties of the Thing
 in question, for example:
 
-<div class="code">
-
+```
     chest: Heavy 'large chest'
        remapIn: SubComponent
        {
@@ -211,8 +206,7 @@ in question, for example:
        remapUnder: SubComponent {}
        remapBehind: SubComponent {}
     ;
-
-</div>
+```
 
 Note that if we want the chest to be openable or lockable we need to
 define these properties on the remapIn object, not directly on the chest
@@ -237,14 +231,13 @@ SOMETHING BEHIND CHEST are redirected to the remapBehind SubComponent.
 To define the starting location of an object as being with a
 SubComponent (rather than in the master object) we can use the +
 notation as usual, but we then also have to use the
-<span class="code">subLocation</span> property to provide a pointer to
+`subLocation` property to provide a pointer to
 the remapXXX property for the SubComponent we wish to use. For example,
 if we wanted the chest to start off with a book inside it, a plate on
 top of it, a coin underneath it, and pen behind it we'd define these
 four objects thus:
 
-<div class="code">
-
+```
     + book: Thing 'book'
       subLocation = &remapIn
     ;
@@ -260,10 +253,9 @@ four objects thus:
     + pen: Thing 'pen'
       subLocation = &remapBehind
     ;  
+```
 
-</div>
-
-If we omitted to define these <span class="code">subLocation</span>
+If we omitted to define these `subLocation`
 properties then we'd effectively have made the book, plate, coin and pen
 parts or components of the chest.
 
@@ -272,8 +264,7 @@ distinct from the main object, such as a desk with a drawer. In which
 case we can point the appropriate remapXXX property to the separate
 container, for example:
 
-<div class="code">
-
+```
     desk: Fixture 'desk'
       "It has a single drawer. "
       
@@ -284,8 +275,7 @@ container, for example:
     + drawer: OpenableContainer, Fixture 'drawer'
        bulkCapacity = 8
     ;
-
-</div>
+```
 
 With this set-up, LOOK IN DESK, OPEN DESK, CLOSE DESK, PUT SOMETHING IN
 DESK, LOCK DESK etc, will behave exaclty like LOOK IN DRAWER, OPEN
@@ -297,8 +287,7 @@ or handle, otherwise what was meant to be an external component will end
 up shut up inside the container when it's closed. You must be careful
 NOT to do this:
 
-<div class="code">
-
+```
     suitcase: OpenableContainer 'suitcase;;case' //DON'T DO THIS!
       "It has a combination lock. "
       lockability = indirectLockable
@@ -308,13 +297,11 @@ NOT to do this:
     + comboLock: Fixture 'combination lock'
      ...
     ;
-
-</div>
+```
 
 Instead, you need to do this:
 
-<div class="code">
-
+```
     suitcase: Thing 'suitcase;;case' 
       "It has a combination lock. "
       
@@ -329,8 +316,7 @@ Instead, you need to do this:
     + comboLock: Fixture 'combination lock'
      ...
     ;
-
-</div>
+```
 
 You can read more about [remapXXX properties and Multiple
 Containment](../manual/thing.html#remapxxx) in the *adv3Lite Library
@@ -350,8 +336,7 @@ properties. For example, if what we really wanted was for the coin and
 the pen to be hidden under and behind the chest until the player
 explicitly looks under and behind it, we should probably have written:
 
-<div class="code">
-
+```
     chest: Heavy 'large chest'
        remapIn: SubComponent
        {
@@ -377,8 +362,7 @@ explicitly looks under and behind it, we should probably have written:
 
     pen: Thing 'pen'
     ;  
-
-</div>
+```
 
 Note that in this case the coin and the pen start out with no location
 at all (i.e. a location of nil), since they're off stage until the
@@ -395,23 +379,23 @@ been searched (a small coin in a large vase for example). There is no
 hiddenOn property, however, since it is hard to imagine how one object
 on top of another could ever be concealed by it.
 
-You can override <span class="code">canPutInMe</span>,
-<span class="code">canPutUnderMe</span> and
-<span class="code">canPutBehindMe</span> to true to allow items to be
+You can override `canPutInMe`,
+`canPutUnderMe` and
+`canPutBehindMe` to true to allow items to be
 put in, under or behind objects that lack the appropriate remapXXX
 SubComponent, in which case the objects put in, under, or behind will be
 moved off stage and added to the hiddenIn, hiddenUnder or hiddenBehind
 list. You can control how much is hidden in, under or behind an object
 by these means by use of the properties
-<span class="code">maxBulkHiddenIn</span>,
-<span class="code">maxBulkHiddenUnder</span> and
-<span class="code">maxBulkHiddenBehind</span>. However, if you find
+`maxBulkHiddenIn`,
+`maxBulkHiddenUnder` and
+`maxBulkHiddenBehind`. However, if you find
 yourself making much use of all these properties you should ask yourself
 whether you really ought to have implemented the corresponding remapXXX
 SubComponents instead, since the main purpose of
-<span class="code">hiddenIn</span>,
-<span class="code">hiddenUnder</span> and
-<span class="code">hiddenBehind</span> is to provide a quick and easy
+`hiddenIn`,
+`hiddenUnder` and
+`hiddenBehind` is to provide a quick and easy
 means of hiding objects for subsequent discovery, not to provide an
 alternative mechanism for multiple containment in general, unless you
 really do need the player character to be able to *hide* objects in,
@@ -437,7 +421,7 @@ contained within the second object to become larger than its
 bulkCapacity.
 
 There is also **maxSingleBulk** property which by default is the same as
-the <span class="code">bulkCapacity</span>. This could be set smaller
+the `bulkCapacity`. This could be set smaller
 than the bulkCapacity to simulate an object with a restricted opening,
 such as a bottle with a narrow neck, or any other such limitation that
 requires individual objects being placed inside another to be smaller
@@ -454,7 +438,7 @@ halfway through your game that you haven't allowed for enough gradations
 so that you're forced to go back and change all the bulks and
 bulkCapacities you've defined so far.
 
-Note that the value of an object's <span class="code">bulk</span>
+Note that the value of an object's `bulk`
 property is usually only relevant if the object is portable (and so can
 be placed in, on, under or behind other objects with a finite
 bulkCapacity). You don't normally have to worry about the bulk of
@@ -502,14 +486,12 @@ statistics. For this kind of topic — something that may be talked about,
 thought about, or looked up, but not manipulated as a physical object
 within the game — we can define Topic objects, for example:
 
-<div class="code">
-
+```
     tLove: Topic 'love';
     tLife: Topic 'life';
     tInflationRate: Topic 'rate[n] of inflation';
     tPopulationStats: Topic 'population statistics';
-
-</div>
+```
 
 Note that starting the object names of these Topics with t is simply a
 convention; you don't have to adopt it if you don't want to, but it's
@@ -517,7 +499,7 @@ quite useful to adopt something of the sort to distinguish Topic objects
 from Things when they appear elsewhere in game code.
 
 Note too that the property we're defining on the Topic template in the
-above examples is the <span class="code">vocab</span> property, which
+above examples is the `vocab` property, which
 works in precisely the same way as it does on a Thing. This means, among
 other things, that the above definitions gives each of the Topic objects
 a name property as well as the vocabulary words which can be used to
@@ -548,31 +530,27 @@ ABOUT TOO or TALK ABOUT FOO, FOO is a Topic.
 
 To use a Topic (or Thing) in conjunction with a TopicEntry (such as a
 Consultable) we assign it to the TopicEntry's
-<span class="code">matchObj</span> property and the corresponding
-response to its <span class="code">topicResponse</span> property, which
+`matchObj` property and the corresponding
+response to its `topicResponse` property, which
 we can do via a conveniently defined template:
 
-<div class="code">
-
+```
     + ConsultTopic @tLife
        "According to Dodgypedia life is hard to define, but is generally regarded
         as being preferable to the alternative. "
     ;
-
-</div>
+```
 
 The matchObj property can also be defined as a list of Topics (and/or
 Things), in which case the TopicEntry will be matched if any of the
 items in the matchObj list are requested:
 
-<div class="code">
-
+```
     + ConsultTopic [tLife, tLove]
        "According to the dictionary of hard-nosed economics, such imponderables
         are not worth factoring into one's calculations. "
     ;
-
-</div>
+```
 
 The full story on [Topics](../manual/topic.html) and
 [TopicEntries](../manual/topicentry.html) can be found in the *adv3Lite
@@ -601,8 +579,7 @@ There's usually no need to define an abstract TravelConnector as a
 distinct defined object. The most normal way to define one is as an
 anonymous nested object on the direction property of a room, e.g.:
 
-<div class="code">
-
+```
     meadow: Room 'Meadow'
       "An extremely muddy path leads off to the south. "
       
@@ -621,8 +598,7 @@ anonymous nested object on the direction property of a room, e.g.:
             boots, as you set off down the path. "
        }
     ;   
-
-</div>
+```
 
 ## Scenes
 
@@ -664,7 +640,7 @@ to using a TravelConnector), and of course a Doer would provide yet
 another method. Which you use on any particular occasion is largely a
 matter of taste and convenience. In the example in the 'Making a Scene'
 section it was logical and convenient to use a
-<span class="code">beforeTravel()</span> method on the
+`beforeTravel()` method on the
 criminalPassengers object because (a) it's the presence of these
 passengers that inhibits the player character from travelling past them
 to the rear of the plane and (b) this inhibition is automatically put in

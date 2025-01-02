@@ -56,9 +56,9 @@ features that work differently in each subclass.
 An object can be either static or dynamic. A static object is one that's
 defined directly in your program's source code; it exists throughout
 execution of the program. A dynamic object is one that's created on the
-fly while the program runs, using the <span class="code">new</span>
+fly while the program runs, using the `new`
 operator. A dynamic object it comes into existence when the
-<span class="code">new</span> expression is executed, and exists only as
+`new` expression is executed, and exists only as
 long as it's reachable, meaning that an active local variable or a
 property of another object contains a reference to the object. Once a
 dynamic object is no longer referenced anywhere, TADS automatically
@@ -144,106 +144,98 @@ version, or you might simply want to replace that part of the library's
 functionality with a different approach entirely.
 
 You can replace an object or class using the
-<span class="code">replace</span> keyword. You put this keyword
+`replace` keyword. You put this keyword
 immediately before your new object definition; the object definition is
 otherwise the same as a normal object definition. For example:
 
-<div class="code">
-
+```
     replace class LibClass: object
        prop1 = 10
     ;
+```
 
-</div>
-
-<span class="code">replace</span> effectively deletes the original
+`replace` effectively deletes the original
 object and replaces it with your new definition. You can change
 everything about the object, including its superclasses.
 
-While <span class="code">replace</span> is useful, it's even more
+While `replace` is useful, it's even more
 frequently the case that you want to supplement a library class or
 object, instead of replacing it. For example, you might want to add some
 new methods to the library class, or you might want to override one or
 two of the existing methods with new versions. For this, you use the
-<span class="code">modify</span> keyword. Unlike
-<span class="code">replace</span>, the <span class="code">modify</span>
+`modify` keyword. Unlike
+`replace`, the `modify`
 keyword doesn't let you change the superclass list: the modified object
 will have the same superclasses as the original. So, when you use
-<span class="code">modify</span>, you don't include a new superclass
+`modify`, you don't include a new superclass
 list in the definition; instead, you jump directly to the properties and
 methods that you wish to override.
 
-<div class="code">
-
+```
     modify LibClass
       test(x) { return x*2; }
     ;
+```
 
-</div>
-
-When you use <span class="code">modify</span>, the compiler doesn't
+When you use `modify`, the compiler doesn't
 delete the original object. Instead, it takes the symbol name away from
 the original, and gives it to your new object instead. The old object is
 kept around exactly as it was, but without its name. Your new object is
 set up so that it's a subclass of the original (now nameless) object.
-This means that you can use <span class="code">inherited</span> to
+This means that you can use `inherited` to
 inherit the original library implementation of any method you override:
 
-<div class="code">
-
+```
     modify LibClass
       test(x) { return inherited(x) * 2; }
     ;
-
-</div>
+```
 
 In some cases, you might not want this inheritance behavior: you might
 want instead to replace the original class's method rather than just
 overriding it, so that you can inherit directly from the original
 class's superclass. For these situations, you can use the
-<span class="code">replace</span> keyword on the *method* definition in
+`replace` keyword on the *method* definition in
 the modifier object:
 
-<div class="code">
-
+```
     modify LibClass
       replace test(x) { return inherited(x) * 2; }
     ;
-
-</div>
+```
 
 The difference between this example and the previous one is that the
-<span class="code">inherited(x)</span> in the first example invokes the
-original LibClass version of the <span class="code">test()</span>
-method, whereas the <span class="code">inherited(x)</span> in the second
+`inherited(x)` in the first example invokes the
+original LibClass version of the `test()`
+method, whereas the `inherited(x)` in the second
 version invokes the version that the original LibClass itself inherited
 from its superclass.
 
-The **order** of <span class="code">modify</span> and
-<span class="code">replace</span> definitions is important. This is
+The **order** of `modify` and
+`replace` definitions is important. This is
 because you can repeatedly modify or replace the same object - you can
-apply a <span class="code">modify</span> to an object that's already
+apply a `modify` to an object that's already
 been modified, and then apply yet another
-<span class="code">modify</span> to the same object later, as many times
+`modify` to the same object later, as many times
 as you want. So the only way that the compiler can sort out which
 version is the "final" version of the object is to put the
-<span class="code">modify</span> and <span class="code">replace</span>
+`modify` and `replace`
 definitions in some kind of well-defined order.
 
 The order that the compiler uses to apply
-<span class="code">modify</span> and <span class="code">replace</span>
+`modify` and `replace`
 definitions is simply the order in which the definitions appear in the
-source code. Within a single file, each <span class="code">modify</span>
+source code. Within a single file, each `modify`
 affects the nearest previous definition of the same object within the
 file. You can also modify and replace objects defined in other files, in
 which case the order of the operations is determined by the order of the
 modules in the project (.t3m) file list.
 
 An important consequence of the ordering rule is that a
-<span class="code">modify</span> or <span class="code">replace</span>
+`modify` or `replace`
 can never precede the base definition of the object being modified. The
 compiler will display an error if it encounters a
-<span class="code">modify</span> or <span class="code">replace</span>
+`modify` or `replace`
 before the base definition of the object.
 
 ## Property sets
@@ -308,8 +300,7 @@ can come before and after a property set).
 
 Here's an example, using the mouse events we proposed above:
 
-<div class="code">
-
+```
     class myWindow: myWidget
       x = 0
       y = 0
@@ -322,8 +313,7 @@ Here's an example, using the mouse events we proposed above:
         Up(x, y) { ... }
       }
     ;
-
-</div>
+```
 
 The property set syntax is essentially a textual substitution facility,
 in that the compiler actually translates the properties within the
@@ -336,16 +326,14 @@ within. In the example above, each method has the same first two
 parameters, x and y, so we can further reduce the amount of typing by
 putting these common parameters in the propertyset definition:
 
-<div class="code">
-
+```
     propertyset 'onMouse*' (x, y, *)
     {
        Down(clicks) { ... }
        Move { ... }
        Up { ... }
     }
-
-</div>
+```
 
 The propertyset definition specifies that every item defined within has
 x and y as the first two parameters, and that any additional parameters
@@ -373,13 +361,11 @@ The language provides a simple way to specify non-constant static
 initializations. In a property definition, place the keyword "static"
 just before the value to be computed:
 
-<div class="code">
-
+```
     desk: object
        topSurface = static new Surface()
     ;
-
-</div>
+```
 
 You can place any expression after the "static" keyword.
 
@@ -404,11 +390,9 @@ For the technically inclined, the technique the compiler uses to resolve
 dependency ordering correctly is fairly simple. The compiler effectively
 re-writes each static initializer like so:
 
-<div class="code">
-
+```
     prop = { self.prop = expr; return self.prop; }
-
-</div>
+```
 
 So, if the expression references another property with a static
 initializer, it doesn't matter whether or not that initializer has been
@@ -441,12 +425,10 @@ To define an object with no name, simply start the definition with the
 class list. Everything else about the object definition is the same as
 for a named object. For example:
 
-<div class="code">
-
+```
     Item sdesc = "red box" ;
     Readable { sdesc = "book" }
-
-</div>
+```
 
 Because an anonymous object doesn't have a symbol that you can use to
 refer to the object, you must use some other mechanism to manipulate the
@@ -460,8 +442,7 @@ property as a "nested" object. This syntax allows you to define one
 object within another, and at the same time initialize a property of the
 outer object to refer to the inner object. For example:
 
-<div class="code">
-
+```
     bottomOfStairs: Room
        name = "Bottom of Stairs"
        desc = "This dark, narrow chamber is just large enough
@@ -473,8 +454,7 @@ outer object to refer to the inner object. For example:
           destination = topOfStairs
        }
     ;
-
-</div>
+```
 
 This example defines, in addition to the object bottomOfStairs, a
 separate object of class MsgConnector whose properties desc and
@@ -488,8 +468,7 @@ contains a reference to an object.
 
 The example above is almost the same as this:
 
-<div class="code">
-
+```
     bottomOfStairs: Room
        name = "Bottom of Stairs"
        desc = "This dark, narrow chamber is just large enough
@@ -502,8 +481,7 @@ The example above is almost the same as this:
        desc = "You force yourself to climb the hundreds of stairs..."
        destination = topOfStairs
     ;
-
-</div>
+```
 
 The only difference between the first example and the second is that the
 MsgConnector object in the second example has a name ("connector123"),
@@ -527,8 +505,7 @@ The compiler automatically defines the property lexicalParent in each
 nested object as a reference to the lexically enclosing object. For
 example, consider the following object definition:
 
-<div class="code">
-
+```
     outer: object
        desc = "This is 'outer'"
        inner: object
@@ -536,16 +513,13 @@ example, consider the following object definition:
          desc = "This is 'inner' - enclosing: <<lexicalParent.desc>>"
        }
     ;
-
-</div>
+```
 
 If we evaluate outer.inner.desc, we'll see the following displayed:
 
-<div class="code">
-
+```
     This is 'inner' - enclosing: This is 'outer'
-
-</div>
+```
 
 Note that lexicalParent is defined as a property of each nested object.
 This makes it possible for a class specifically designed for
@@ -586,15 +560,15 @@ Classes behave very much like objects, with a few important differences:
   classes *and* ordinary objects.)
 - The compiler does not include classes when building dictionary entries
   based on vocabulary property definitions.
-- The compiler doesn't count classes in the <span class="code">+</span>
+- The compiler doesn't count classes in the `+`
   location hierarchy. This means that you can freely define new classes
   in the midst of a hierarchy of objects defined with the
-  <span class="code">+</span> syntax, without breaking up the location
-  hierarchy. The compiler knows to leave <span class="code">class</span>
-  objects out of the <span class="code">+</span> depth counting.
+  `+` syntax, without breaking up the location
+  hierarchy. The compiler knows to leave `class`
+  objects out of the `+` depth counting.
 
 You can tell at run-time whether a given object is a class or a regular
-object by calling the object's <span class="code">isClass()</span>
+object by calling the object's `isClass()`
 method.
 
 ## Contained objects
@@ -617,11 +591,9 @@ This is called the "+ property" or "plus property," because the object
 syntax for a contained object uses plus signs. To define the plus
 property, use this statement:
 
-<div class="code">
-
+```
     + property locationProp ;
-
-</div>
+```
 
 This statement must occur as a top-level statement, outside of any
 object or function definitions, and must precede any objects that make
@@ -646,8 +618,7 @@ initializes that object's "+" property to the implied container.
 
 For example:
 
-<div class="code">
-
+```
     // define the '+' property
     // (we need this only once per source file)
     + property location;
@@ -663,8 +634,7 @@ For example:
     + rustyKnife: Item
        sdesc = "rusty knife"
     ;
-
-</div>
+```
 
 We start by specifying that "location" is the "+" property. We then
 define the object iceCave with no "+" signs, which specifies no implicit
@@ -678,8 +648,7 @@ it's still the last object with no "+" signs.
 You can use the "+" syntax to any depth. Here's an example with several
 levels of containers:
 
-<div class="code">
-
+```
     + property location;
 
     office: Room
@@ -717,8 +686,7 @@ levels of containers:
     + chair: Chair
        sdesc = "chair"
     ;
-
-</div>
+```
 
 The desk and chair are located directly in the office, the file box and
 pen are on the desk, the green and red files are in the file box, and
@@ -731,8 +699,7 @@ You can combine the anonymous object syntax and the contained object
 syntax for an especially concise way of defining objects. We could
 rewrite the example above much more compactly:
 
-<div class="code">
-
+```
     office: Room
        sdesc = "Office"
     ;
@@ -750,8 +717,7 @@ rewrite the example above much more compactly:
     ++ Item sdesc = "pen" ;
 
     + Chair sdesc = "chair" ;
-
-</div>
+```
 
 ## sourceTextOrder
 
@@ -877,28 +843,24 @@ template substituted for the inherited keyword in the new template, plus
 one extra definition with nothing substituted for inherited. To
 illustrate, suppose that you make the following definitions:
 
-<div class="code">
-
+```
     class A: object;
     class B: A;
 
     A template 'name';
     A template 'name' "desc";
     B template 'author' inherited;
-
-</div>
+```
 
 The last template, for class B, is identical to defining each possible
 inherited template explicitly. In other words, you could replace the
 last line above with the following:
 
-<div class="code">
-
+```
     B template 'author';
     B template 'author' 'name';
     B template 'author' 'name' "desc";
-
-</div>
+```
 
 The inherited keyword can appear at any point in the item list;
 superclass template items are substituted at the point at which
@@ -913,11 +875,9 @@ specifies three properties: the first is the location, which is marked
 with an "at" sign; the second is the short description in double quotes;
 and the third is the long description in double quotes.
 
-<div class="code">
-
+```
     object template @location "sdesc" "ldesc";
-
-</div>
+```
 
 Once you define a template, you can use it in object definitions. To use
 a template, simply put the data definitions for the template's items
@@ -925,8 +885,7 @@ before the object definition's normal property list, immediately after
 the object's class list. For example, to use the template above, we
 could write this:
 
-<div class="code">
-
+```
     poemBook: Book @schoolDesk "poem book" 
        "It's a book of poems. "
        readPoem(num)
@@ -935,8 +894,7 @@ could write this:
        }
        poem1 = "The first poem is by someone named Wadswurth. "
     ;
-
-</div>
+```
 
 Note that you don't have to put any properties after the template data
 for the object, but if you do, you define them using exactly the same
@@ -944,28 +902,24 @@ syntax that you use for a non-template object.
 
 Here's an example of a template with an optional item:
 
-<div class="code">
-
+```
     Thing template 'name' "desc"? ;
 
     cardTable: Thing 'card table';
     lamp: Thing 'lamp' "It's a fairly ordinary desk lamp. ";
-
-</div>
+```
 
 The single template matches both object definitions, because the "desc"
 item can be omitted or included as desired.
 
 An example using alternation:
 
-<div class="code">
-
+```
     Message template 'name' "messageText" | [messageList];
 
     Message 'one' "This is message one.";
     Message 'two' ['Message 2a.', 'Message 2b.', 'Message 2c.'];
-
-</div>
+```
 
 In this example, the second item in the template can either be a
 double-quoted string, or it can be a list. (The contents of the list
@@ -988,14 +942,12 @@ Note that using optional and alternative items can sometimes create
 duplicate templates that aren't obviously duplicates. For example,
 consider these templates:
 
-<div class="code">
-
+```
     Thing template 'vocab' 'name'?;
     Thing template 'vocab' 'name' 'desc'?;
 
     Thing 'book' 'It\'s a dusty old tome. ';
-
-</div>
+```
 
 In this case, it's pretty clear to a human reader that the object
 definition meant to use the second template - but the compiler will pick
@@ -1005,14 +957,12 @@ source file.
 Another situation where templates can be ambiguous in form is multiple
 inheritance. For example:
 
-<div class="code">
-
+```
     A template 'name';
     B template 'desc';
 
     myObj: B, A 'this is myObj!';
-
-</div>
+```
 
 In this case, the object inherits a matching template from each of its
 superclasses. In this case, though, the compiler has a better way of
@@ -1029,12 +979,10 @@ continuations of templates for more specialized classes. For example,
 suppose we wanted to define a couple of basic templates for our Thing
 class, like so:
 
-<div class="code">
-
+```
     Thing template 'name';
     Thing template 'name' "desc";
-
-</div>
+```
 
 These two templates allow us to define any Thing instance with a name,
 and optionally with a description. Now, suppose we define Book as a
@@ -1045,13 +993,11 @@ properties. The obvious way to do this would be to create a template for
 Book with only the author property, plus another with the author and
 name, and another with the author, name, and description:
 
-<div class="code">
-
+```
     Book template 'author';
     Book template 'author' 'name';
     Book template 'author' 'name' "desc";
-
-</div>
+```
 
 If we had more than two Thing templates, though, this would become
 tedious. It would also create a maintenance problem: if we ever wanted
@@ -1068,11 +1014,9 @@ inherited templates to go.
 
 For our Book template, we'd use template inheritance like so:
 
-<div class="code">
-
+```
     Book template 'author' inherited;
-
-</div>
+```
 
 This single statement is exactly equivalent to the three we gave
 earlier, but it's obviously a lot less work to type this definition, and
@@ -1085,8 +1029,7 @@ If you use braces around your property list, you can put the template
 properties either immediately before or immediately after the open
 brace:
 
-<div class="code">
-
+```
     // template properties can go outside the braces...
     book1: Book @shelf "red book"
     {
@@ -1099,18 +1042,15 @@ brace:
        @shelf "blue book"
        ldesc = "It's a blue book."
     }
-
-</div>
+```
 
 You can use templates with anonymous objects, as well as with objects
 that use the "+" containment specification syntax:
 
-<div class="code">
-
+```
     + Container "back-pack" "It's a green back-pack. " ;
     ++ Item "puzzle cube" "You haven't seen one of these in year. ";
-
-</div>
+```
 
 ### Scope and placement of template definitions
 
@@ -1215,22 +1155,18 @@ First, when you're defining an object directly in your source code, you
 can preface the object definition with the "transient" keyword. The
 object definition is otherwise exactly like any other. For example:
 
-<div class="code">
-
+```
     transient mainOutputStream: OutputStream
        // etc
     ;
-
-</div>
+```
 
 Second, when you're creating an object dynamically, you can place the
 "transient" keyword immediately after the "new" operator:
 
-<div class="code">
-
+```
     local x = new transient Vector(10);
-
-</div>
+```
 
 In addition, the [TadsObject](tadsobj.html) intrinsic class provides the
 createTransientInstance() method to create a transient instance of a
@@ -1245,9 +1181,9 @@ will execute InitObject and (if necessary) PreinitObject instances
 regardless of whether they're persistent or transient.
 
 Some intrinsic class types are inherently transient. For example, a
-[<span class="code">StackFrameDesc</span>](framedesc.html) object is
+[`StackFrameDesc`](framedesc.html) object is
 always transient. For such objects you don't have to specify
-<span class="code">new transient</span> when you create them; they'll
+`new transient` when you create them; they'll
 just be naturally transient because of the way they're implemented
 within the system.
 
@@ -1261,11 +1197,11 @@ restore, undo, and restart operations.
 When you save a game, the system simply omits any transient objects from
 the saved state. But what happens if you have a persistent object that
 refers to a transient object through one of its properties? In this
-case, the system simply saves a <span class="code">nil</span> value for
+case, the system simply saves a `nil` value for
 the property that points to the transient object, because the transient
 object itself isn't stored in the file. When you restore the game, the
 persistent object will be restored, and the property that contained the
-transient object reference will be <span class="code">nil</span>.
+transient object reference will be `nil`.
 
 </div>
 

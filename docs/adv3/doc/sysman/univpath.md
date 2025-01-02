@@ -28,7 +28,7 @@ your Windows "X:\Y\Z" paths will work on a Linux machine, or vice versa.
 
 TADS accepts the universal path syntax in several places:
 
-- <span class="code">\#include</span> directives in TADS source files
+- `\#include` directives in TADS source files
 - File names in [.t3m project files](build.html#projects)
 - File and directory option arguments in .t3m files (-I, -o, -Os, -FL,
   -FI, -Fs, -Fy, -Fo, -Fa)
@@ -44,16 +44,16 @@ system.
 ## Universal path rules
 
 **Path separators:** "/" is the path separator. For example, to include
-a file <span class="code">defs.h</span> from subdirectory
-<span class="code">inc</span>, you'd write <span class="code">\#include
-"inc/defs.h"</span>.
+a file `defs.h` from subdirectory
+`inc`, you'd write `\#include
+"inc/defs.h"`.
 
 **Relative paths:** For portability, use relative paths whenever
 possible. "Relative" means that the path is interpreted starting from
 the current working directory or some other context. In the case of
-<span class="code">\#include</span>, relative paths are relative to the
+`\#include`, relative paths are relative to the
 folder containing the source file with the
-<span class="code">\#include</span> directive; for .t3m files, paths are
+`\#include` directive; for .t3m files, paths are
 relative to the .t3m file's location.
 
 Relative paths improve portability because they adapt automatically to
@@ -62,9 +62,9 @@ new machine, you only have to reproduce the subdirectories of the main
 program folder - everything is relative to that folder, so it's all
 self-contained. Importantly, it doesn't matter where that main folder is
 situated within the system's overall directory structure. If you keep
-the project in <span class="code">C:\My Documents\games\tads</span> on
+the project in `C:\My Documents\games\tads` on
 your Windows machine, and you send it to someone who puts it in
-<span class="code">/home/projects</span> on her Linux machine, the
+`/home/projects` on her Linux machine, the
 difference in absolute location doesn't matter; it's only what's inside
 that directory that matters.
 
@@ -76,9 +76,9 @@ current directory. ".." is the parent of the preceding path element, or
 the parent of the current directory when ".." appears at the start of a
 path.
 
-For example, <span class="code">../games/deep.gam</span> in the
+For example, `../games/deep.gam` in the
 universal path notation will translate on classic Mac OS to
-<span class="code">::games:deep.gam</span>.
+`::games:deep.gam`.
 
 **Absolute paths:** In some cases it's not possible to use a relative
 path. You should use relative paths when you can, but when you can't,
@@ -90,8 +90,8 @@ In the universal notation, an absolute path always starts with "/". On
 systems like Windows that use a volume prefix (e.g., "C:"), write the
 volume prefix as the first path element. Include the full local syntax -
 in the case of a Windows drive letter, include the colon. For example,
-the Windows path <span class="code">C:\games\deep.gam</span> becomes
-<span class="code">/C:/games/deep.gam</span> in the universal notation.
+the Windows path `C:\games\deep.gam` becomes
+`/C:/games/deep.gam` in the universal notation.
 
 The reason you should avoid absolute paths is that they're inherently
 non-portable - not just between operating systems, but even between two

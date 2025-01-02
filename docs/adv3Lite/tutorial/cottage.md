@@ -42,16 +42,14 @@ cottage, this hardly seems an appropriate response. We need to provide a
 more plausible reason why Heidi can't enter her cottage. Here's one way
 to do it:
 
-<div class="code">
-
+```
     beforeCottage: Room 'In front of a Cottage'
         "You stand outside a cottage. The forest stretches east. "
         
         east = forest
         in = 'It\'s such a lovely day -- much too nice to go inside. '
     ;
-
-</div>
+```
 
 Previously we only attached rooms to direction properties, but we can
 attach all sorts of other things as well. If, as here, we define a
@@ -63,16 +61,14 @@ allowed.
 
 While we're at it we could also change the default refusal message to
 something a bit less generic than "You can't go that way." One way to do
-that is to override <span class="code">cannotGoThatWayMsg</span> on
+that is to override `cannotGoThatWayMsg` on
 Room:
 
-<div class="code">
-
+```
     modify Room
         cannotGoThatWayMsg = 'Better stick to the path. '
     ;
-
-</div>
+```
 
 Then we'd see something like:
 
@@ -86,17 +82,16 @@ Then we'd see something like:
 
 </div>
 
-Note how overriding <span class="code">cannotGoThatWayMsg</span> thus
+Note how overriding `cannotGoThatWayMsg` thus
 changed the first part of the refusal message ("You can't go that way"
 becomes "Better stick to the path") but leaves the second part ("From
 here you could go east") intact. If we wanted to change the entire
 message we would need to override the method
-<span class="code">cannotGoThatWay(dir)</span>. This might be the
+`cannotGoThatWay(dir)`. This might be the
 appropriate thing to do at the top of the tree, where being told "Better
 stick to the path" is hardly appropriate:
 
-<div class="code">
-
+```
     topOfTree: Room 'At the top of the tree'
         "You cling precariously to the trunk. "
         
@@ -107,8 +102,7 @@ stick to the path" is hardly appropriate:
             "The only way from here is down. ";
         }
     ;
-
-</div>
+```
 
 But even with all these changes we're not out of the woods yet, since if
 players attempt to EXAMINE THE COTTAGE or ENTER THE COTTAGE, they'll be
@@ -117,15 +111,13 @@ the room description. It's easy enough to add a cottage object; just add
 the following object definition immediately after the definition of the
 beforeCottage room:
 
-<div class="code">
-
+```
     + cottage: Thing 'tiny cottage;small simple; house home'
         "It's small and simple, but you're very happy here. "
         
         isFixed = true
     ;
-
-</div>
+```
 
 This only does half the job, though:
 
@@ -143,10 +135,9 @@ This only does half the job, though:
 </div>
 
 We can fix this by overriding the
-<span class="code">cannotEnterMsg</span> property of the cottage:
+`cannotEnterMsg` property of the cottage:
 
-<div class="code">
-
+```
     + cottage: Thing 'tiny cottage;small simple; house home'
         "It's small and simple, but you're very happy here. "
         
@@ -154,20 +145,18 @@ We can fix this by overriding the
         
         cannotEnterMsg = 'It\'s such a lovely day -- much too nice to go inside. '
     ;
-
-</div>
+```
 
 This works, but now we've defined exactly the same response twice, once
 on the cottage and once on the beforeCottage location. This seems a bit
 of a nuisance at best, and could be even more of a nuisance if we
 decided we wanted to change this message, since we'd now have to
 remember to change it in two places. One solution would be simply to
-have the <span class="code">cannotEnterMsg</span> property of the
-cottage take its value from the <span class="code">in</span> property of
+have the `cannotEnterMsg` property of the
+cottage take its value from the `in` property of
 beforeCottage:
 
-<div class="code">
-
+```
     + cottage: Thing 'tiny cottage;small simple; house home'
         "It's small and simple, but you're very happy here. "
         
@@ -175,27 +164,25 @@ beforeCottage:
         
         cannotEnterMsg = location.in
     ;
-
-</div>
+```
 
 You may have noticed that the property for the message explaining the
 refusal to allow Heidi to enter the cottage is called
-<span class="code">cannotEnterMsg</span>. The adv3lite library tries to
+`cannotEnterMsg`. The adv3lite library tries to
 follow this pattern consistenly, so that when an Xxxx action is refused,
 the corresponding message property is called
-<span class="code">cannotXxxxMsg</span>. Of course this only helps if
+`cannotXxxxMsg`. Of course this only helps if
 you know the name of the action. For the example the commands GET
 COTTAGE, TAKE COTTAGE and PICK UP cottage would all result in the Take
 action, so to respond to any of them with something a bit less bland
 than the standard "The tiny cottage is fixed in place" you'd need to
-override <span class="code">cannotTakeMsg</span>. Taking the trouble to
+override `cannotTakeMsg`. Taking the trouble to
 do this kind of thing is often worth it, since it helps lend a bit of
 character to your game when you refuse impossible or unimplemented
 actions with customized messages. In this case of the cottage, for
 example, you could write:
 
-<div class="code">
-
+```
     + cottage: Thing 'tiny cottage;small simple; house home'
         "It's small and simple, but you're very happy here. "
         
@@ -205,11 +192,10 @@ example, you could write:
         cannotTakeMsg = 'You\'re not a tortoise; you can\'t carry your home with
             you. '
     ;
-
-</div>
+```
 
 I'll leave it as an exercise to the reader to add an appropriate
-<span class="code">cannotTakeMsg</span> to the tree and the branch. You
+`cannotTakeMsg` to the tree and the branch. You
 may also like to define some additional objects to implement other items
 that are mentioned in room descriptions but not actually implemented.
 

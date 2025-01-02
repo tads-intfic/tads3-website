@@ -42,54 +42,53 @@ Exception handling has two components: "throwing" and "catching."
 When something unusual occurs in your program that you wish to handle
 using the exception mechanism, you "throw an exception." This means that
 you create a new object to describe the unusual condition or error, then
-use the <span class="code">throw</span> statement to throw the
-exception. The <span class="code">throw</span> statement is a little
-like <span class="code">return</span> or <span class="code">goto</span>,
+use the `throw` statement to throw the
+exception. The `throw` statement is a little
+like `return` or `goto`,
 in that it abruptly transfers execution somewhere else; hence any
-statement immediately following a <span class="code">throw</span> is
+statement immediately following a `throw` is
 unreachable (unless, of course, it can be reached by a label or some
 other means that doesn't involve going through the
-<span class="code">throw</span> statement).
+`throw` statement).
 
-Where does <span class="code">throw</span> send execution? This is where
+Where does `throw` send execution? This is where
 "catching" comes in. When you throw an exception, the VM looks for an
-enclosing block of code protected within a <span class="code">try</span>
+enclosing block of code protected within a `try`
 block. This search is done according to the "call chain" - the series of
 function and method calls that have been made so far to reach the
 current point in the code. The VM looks for the nearest enclosing
-<span class="code">try</span> statement in the call chain - this might
+`try` statement in the call chain - this might
 be in the current method, actually enclosing the code with the
-<span class="code">throw</span>, or it might be in one of the callers.
+`throw`, or it might be in one of the callers.
 The VM searches outward from the current method.
 
-When the VM finds the first enclosing <span class="code">try</span>
-statement, it looks at the statement's <span class="code">catch</span>
-clauses. If there's a <span class="code">catch</span> for a superclass
+When the VM finds the first enclosing `try`
+statement, it looks at the statement's `catch`
+clauses. If there's a `catch` for a superclass
 of the thrown exception, the VM transfers control to the code within
-that <span class="code">catch</span> clause's handler block; otherwise,
-the VM skips that <span class="code">try</span> and continues searching
-for the next enclosing <span class="code">try</span>.
+that `catch` clause's handler block; otherwise,
+the VM skips that `try` and continues searching
+for the next enclosing `try`.
 
-For each <span class="code">try</span> statement that encloses the
-current code but doesn't define a <span class="code">catch</span> block
+For each `try` statement that encloses the
+current code but doesn't define a `catch` block
 for the thrown exception, the VM checks to see if the
-<span class="code">try</span> has an associated
-<span class="code">finally</span> block, and executes the enclosed code
-before looking for an enclosing <span class="code">try</span> block.
+`try` has an associated
+`finally` block, and executes the enclosed code
+before looking for an enclosing `try` block.
 
 If the VM searches the entire call stack without finding any enclosing
-<span class="code">try</span> block with a
-<span class="code">catch</span> for the thrown exception, the VM
+`try` block with a
+`catch` for the thrown exception, the VM
 terminates the program. If it has to do this, the VM checks the
-<span class="code">exceptionMessage</span> property of the unhandled
+`exceptionMessage` property of the unhandled
 exception object, and displays the value of that property if it's a
 (single-quoted) string value. This at least lets the user see a message
 describing the error that forced the program to terminate.
 
-A <span class="code">try</span> statement looks like this:
+A `try` statement looks like this:
 
-<div class="code">
-
+```
     try
     {
       // some code that might throw an exception, or call
@@ -110,86 +109,84 @@ A <span class="code">try</span> statement looks like this:
       // do some cleanup work  this gets called
       // whether an exception occurs or not
     }
+```
 
-</div>
-
-A <span class="code">try</span> statement can have as many
-<span class="code">catch</span> clauses as needed – it can even have no
-<span class="code">catch</span> clauses at all. The
-<span class="code">finally</span> clause is optional, but only one is
+A `try` statement can have as many
+`catch` clauses as needed – it can even have no
+`catch` clauses at all. The
+`finally` clause is optional, but only one is
 allowed if it's present at all, and it must follow all of the
-<span class="code">catch</span> clauses.
+`catch` clauses.
 
-Each <span class="code">catch</span> clause has a name following the
-name of the exception. The <span class="code">catch</span> defines a new
+Each `catch` clause has a name following the
+name of the exception. The `catch` defines a new
 local variable with the given name – the variable is local to the code
-within the <span class="code">catch</span> clause. When the exception is
+within the `catch` clause. When the exception is
 caught, the VM will store a reference to the thrown exception object in
 this variable; this is, of course, the same object that was used in the
-<span class="code">throw</span> statement that threw the exception in
+`throw` statement that threw the exception in
 the first place.
 
-The VM searches for a <span class="code">catch</span> clause that
+The VM searches for a `catch` clause that
 matches the exception class starting with the first
-<span class="code">catch</span> associated with the
-<span class="code">try</span>, and considers each
-<span class="code">catch</span> in turn until it finds a match. A
-<span class="code">catch</span> matches if the named class is a
+`catch` associated with the
+`try`, and considers each
+`catch` in turn until it finds a match. A
+`catch` matches if the named class is a
 superclass of the exception behing handled. Because the
-<span class="code">catch</span> clauses are tried in order, you can have
+`catch` clauses are tried in order, you can have
 one handler for a specific type of exception, and also have a later
 handler for a superclass of the first exception; the specific type will
 be handled by the first handler, since the VM will find that handler
 earlier than the more general handler. In such cases, only the first
 matching handler will be invoked.
 
-If a <span class="code">finally</span> clause is present, the VM will
+If a `finally` clause is present, the VM will
 always execute the code contained within, no matter how control leaves
-the <span class="code">try</span> block. If control leaves via an
-exception that isn't handled by any of the <span class="code">try</span>
-statement's <span class="code">catch</span> clauses, the VM will execute
-the <span class="code">finally</span> code before it continues the
-search for the next enclosing <span class="code">try</span>. If no
-exceptions occur, so control leaves the <span class="code">try</span>
-block normally, the <span class="code">finally</span> code is executed
+the `try` block. If control leaves via an
+exception that isn't handled by any of the `try`
+statement's `catch` clauses, the VM will execute
+the `finally` code before it continues the
+search for the next enclosing `try`. If no
+exceptions occur, so control leaves the `try`
+block normally, the `finally` code is executed
 immediately after the last statement in the main
-<span class="code">try</span> block. If an exception is thrown but one
-of the <span class="code">try</span> statement's
-<span class="code">catch</span> clauses catches the exception, the VM
-executes the <span class="code">finally</span> code immediately after
-the last statement in the <span class="code">catch</span> block (or, if
-control is transfered out of the <span class="code">catch</span> block
-in some other way - <span class="code">goto</span>,
-<span class="code">return</span>, <span class="code">throw</span>,
-etc. - the <span class="code">finally</span> is executed just before
+`try` block. If an exception is thrown but one
+of the `try` statement's
+`catch` clauses catches the exception, the VM
+executes the `finally` code immediately after
+the last statement in the `catch` block (or, if
+control is transfered out of the `catch` block
+in some other way - `goto`,
+`return`, `throw`,
+etc. - the `finally` is executed just before
 that control transfer).
 
-Note that the code in a <span class="code">finally</span> clause will
+Note that the code in a `finally` clause will
 execute *no matter how execution leaves the
-<span class="code">try</span> block*. This even includes
-<span class="code">goto</span>, <span class="code">return</span>,
-<span class="code">break</span>, and <span class="code">continue</span>
-statements. If the <span class="code">try</span> block contains a
-<span class="code">return</span> statement, the program will first
+`try` block*. This even includes
+`goto`, `return`,
+`break`, and `continue`
+statements. If the `try` block contains a
+`return` statement, the program will first
 calculate the value of the expression being returned (if any), then it
-will execute the <span class="code">finally</span> code, and only then
+will execute the `finally` code, and only then
 will control transfer back to the caller of the current function or
 method. (It's important that the return value is calculated first,
 because it counts as code that's protected by the
-<span class="code">try</span>. If an exception is thrown while
+`try`. If an exception is thrown while
 calculating that value, it'll be handled the same as any other exception
-thrown inside the <span class="code">try</span>.) If you use
-<span class="code">goto</span>, <span class="code">break</span>, or
-<span class="code">continue</span> within the
-<span class="code">try</span> block to jump to a statement that's
-outside the <span class="code">try</span> block, the program will
-execute the <span class="code">finally</span> code just before jumping
+thrown inside the `try`.) If you use
+`goto`, `break`, or
+`continue` within the
+`try` block to jump to a statement that's
+outside the `try` block, the program will
+execute the `finally` code just before jumping
 to the target statement.
 
 Here's an example that illustrates how all of this works.
 
-<div class="code">
-
+```
     #include "tads.h"
 
     class ResourceError: Exception;
@@ -261,13 +258,11 @@ Here's an example that illustrates how all of this works.
       }
       "Done with e(<<x>>)\n";
     }
-
-</div>
+```
 
 When this program is run, it will show the following output:
 
-<div class="code">
-
+```
     This is b(1)
     This is c(1)
     This is d(1)
@@ -294,26 +289,25 @@ When this program is run, it will show the following output:
     In c's finally clause
     Done with c(3)
     Done with b(3)
-
-</div>
+```
 
 This illustrates several aspects of exceptions.
 
-First, note that function <span class="code">d()</span> doesn't have any
-exception handlers (i.e., it has no <span class="code">try</span>
+First, note that function `d()` doesn't have any
+exception handlers (i.e., it has no `try`
 block). Since this function is not concerned with catching any
 exceptions that occur within itself or functions it calls, it doesn't
 need any exception handlers. This is one of the advantages of exceptions
 over using return codes to indicate errors: intermediate routines that
 don't care about exceptions don't need to include any code to check for
-them. When searching for a <span class="code">try</span> block, the VM
-simply skips function <span class="code">d()</span> if it's in the call
+them. When searching for a `try` block, the VM
+simply skips function `d()` if it's in the call
 chain, since it has no handlers.
 
-Second, note that function <span class="code">c()</span> only handles
+Second, note that function `c()` only handles
 ParsingError exceptions. Since this function has no handlers for any
 other exception types, the VM skips past this function when trying to
-find a handler for the <span class="code">ResourceError</span>
+find a handler for the `ResourceError`
 exception. So, not only can a function ignore exceptions entirely, but
 it can selectively include handlers only for the specific exceptions it
 wants to handle, and ignore anything else.
@@ -321,7 +315,7 @@ wants to handle, and ignore anything else.
 Third, note that, once an exception is caught, it no longer disrupts the
 program's control flow. In other words, an exception isn't "re-thrown"
 after it's caught, unless you explicitly throw it again with another
-<span class="code">throw</span> statement in the handler that caught it.
+`throw` statement in the handler that caught it.
 
 ## Handling VM Run-Time Errors
 
@@ -332,17 +326,17 @@ ordinary exceptions; this means that you can handle run-time errors
 using the same try/catch mechanism that you use to handle your own
 exceptions.
 
-The system library defines the <span class="code">RuntimeError</span>
+The system library defines the `RuntimeError`
 class, which serves as the base class for all VM run-time errors.
 
 When a VM run-time error occurs, the VM create and throws a new
-<span class="code">RuntimeError</span> instance. The
-<span class="code">errno\_</span> property of this object is set to the
+`RuntimeError` instance. The
+`errno\_` property of this object is set to the
 VM error number describing the error that occurred, and the
-<span class="code">exceptionMessage</span> property is set to the VM
+`exceptionMessage` property is set to the VM
 error text for the error. You can inspect these properties directly, but
 if you just want to display the error message, you should call the
-<span class="code">displayException()</span> method of the error object.
+`displayException()` method of the error object.
 
 </div>
 

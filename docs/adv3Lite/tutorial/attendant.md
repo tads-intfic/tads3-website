@@ -28,8 +28,7 @@ as a female NPC, and her name, which the player character may or may not
 learn, will be Angela. Once again we'll start by defining the basic
 Actor object:
 
-<div class="code">
-
+```
     angela: Actor 'flight attendant; statuesque young; woman angela; her'
         @planeFront
         "She's a statuesque and by no means unattractive young woman. "
@@ -38,15 +37,14 @@ Actor object:
         
         globalParamName = 'angela'
     ;
-
-</div>
+```
 
 The one new feature we've introduced here is the **globalParamName**
 property. Because the player character may learn the flight attendant's
 name at some point during the course of the game, it's hard to know when
 text that mentions her should call her 'the flight attendant' and when
 it should call her 'Angela'. By giving her a
-<span class="code">globalParamName</span> we can use a message
+`globalParamName` we can use a message
 substitution parameter like '{the subj angela}' whenever we need to
 refer to her, and either 'the flight attendant' or 'Angela' will be
 substituted for it, according to the current value of her name property.
@@ -68,7 +66,7 @@ somewhere else, because we wouldn't be following such a consistent
 convention. If we wrote '{The subj blonde}' or '{The subj foo}' we might
 rather too easily lose track of who it was meant to refer to.
 
-Thus <span class="code">globalParamName</span> creates a label that can
+Thus `globalParamName` creates a label that can
 be used in message substitutions, and later we'll see how we can change
 in the middle of the game what that label refers to.
 
@@ -88,7 +86,7 @@ new passengers, effectively as their hostage.
 Rather than trying to represent these four different states with a lot
 of if-statements or switch-statements on the Actor object, we'll
 represent each of them with an **ActorState**. As its name hopefully
-implies, an <span class="code">ActorState</span> is a special kind of
+implies, an `ActorState` is a special kind of
 object used to track the state of an Actor. During the course of a game,
 an NPC may change from doing one thing to another, stacking cans at one
 moment, sweeping the floor at another, talking with the player character
@@ -97,7 +95,7 @@ to be described differently on each occasion. In a room description one
 would need to see "Bob is busily stacking cans" or "Bob is sweeping the
 floor" or "Bob is watching you, waiting for you to speak" or "Bob is
 walking rapidly down the street". Ordinarily such paragraphs would come
-from an object's <span class="code">specialDesc()</span> property, but
+from an object's `specialDesc()` property, but
 in the case of Bob we'd need to write quite a complex specialDesc that
 varied according to state. This would become more complicated (and
 messier) the more different activities Bob could be engaged in over the
@@ -122,9 +120,9 @@ the security guard and Pablo Cortez, they aren't really needed. But if
 an Actor does have a current ActorState then the Actor object gets the
 value of various of its properties and methods from the corresponding
 property on its current ActorState object. For example,
-<span class="code">Actor.specialDesc()</span> simply calls
+`Actor.specialDesc()` simply calls
 curState.specialDesc() if curState is not nil (if it is nil it calls
-<span class="code">actorSpecialDesc</span> instead). To illustrate this
+`actorSpecialDesc` instead). To illustrate this
 by means of a crude flowchart:
 
 
@@ -150,11 +148,11 @@ by means of a crude flowchart:
                                     V
 
 You can see from this flowchart that it's a bad idea to override
-<span class="code">actor.specialDesc</span> because that's where the
+`actor.specialDesc` because that's where the
 switching logic resides and if you override it you'll break the code
-that reroutes <span class="code">specialDesc</span> to the
-<span class="code">curState</span> when available. Furthermore, you can
-see that <span class="code">actor.actorSpecialDesc</span> is where you
+that reroutes `specialDesc` to the
+`curState` when available. Furthermore, you can
+see that `actor.actorSpecialDesc` is where you
 want to place the fallback special description that should hold whenever
 no special state is in effect. The same pattern holds for the following
 properties and methods of actor:
@@ -171,13 +169,12 @@ As previously mentioned, we can see what ActorState an Actor is
 currently in from the value of its **curState** property (which is
 allowed to be nil, if there is no ActorState currently associated with
 the Actor). If you want an Actor to start out in a particular state, you
-can just set <span class="code">isInitState = true</span> on the
+can just set `isInitState = true` on the
 ActorState in question. Like AgendaItems, ActorStates are associated
 with their Actor by being located within them using the + syntax. We can
 thus define Angela's initial ActorState like this:
 
-<div class="code">
-
+```
     + angelaGreetingState: ActorState
         isInitState = true
         specialDesc = "{The subj angela} {is} standing just inside the entrance
@@ -213,27 +210,25 @@ thus define Angela's initial ActorState like this:
         
         ticketSeen = nil
     ;
+```
 
-</div>
-
-The <span class="code">specialDesc</span> defined on this ActorState is
+The `specialDesc` defined on this ActorState is
 how the flight attendant will be shown in the room description when the
 player character first encounters her. The stateDesc will be added to
 the Actor's desc when she's examined, so that X FLIGHT ATTENDANT will
 initially produce "She's a statuesque and by no means unattractive young
 woman. Right now, she's wearing a fixed professional smile." We use the
-<span class="code">beforeTravel()</span> method on this ActorState to
+`beforeTravel()` method on this ActorState to
 make Angela prevent the player character from venturing into the
 cockpit, or moving further into the plane until Angela has seen his
 ticket, for which purpose we define a custom
-<span class="code">ticketSeen</span> property on the ActorState object.
+`ticketSeen` property on the ActorState object.
 
 Angela's other three ActorStates can be defined in like manner, though
-obviously without defining <span class="code">isInitState = true</span>
+obviously without defining `isInitState = true`
 on any of them, and without any need for a beforeTravel() method:
 
-<div class="code">
-
+```
     + angelaAssistingState: ActorState
         specialDesc = "{The subj angela} {is} standing in the middle of the jetway,
             trying to calm the passengers who have just been forced off the plane. "
@@ -250,19 +245,17 @@ on any of them, and without any need for a beforeTravel() method:
         specialDesc = "{The subj angela} {is} sitting near the front of the plane. "
         stateDesc = "Right now, though, she's looking worried and afraid. "
     ;
-
-</div>
+```
 
 Our final task in this chapter is to make sure that the flight attendant
 ends up in the right state (and the right place) at the right time. To
 change an Actor's current ActorState you should always call its
 **setState(*state*)** method. We could do this in the
-<span class="code">whenStarting()</span> and
-<span class="code">whenEnding(</span>) methods of the takeover scene,
+`whenStarting()` and
+`whenEnding(`) methods of the takeover scene,
 but we'll once again use a couple of AgendaItems to do the job:
 
-<div class="code">
-
+```
     + angelaAssistingAgenda: AgendaItem
         initiallyActive = true
         isReady = (takeover.isHappening)
@@ -287,8 +280,7 @@ but we'll once again use a couple of AgendaItems to do the job:
         }
         
     ;
-
-</div>
+```
 
 If you compile and run the game now, you'll find that there's now no way
 for the player character to reach the rear of the plane and trigger the
@@ -303,8 +295,7 @@ soon as the player character is in a position to speak to the actor
 concerned, which in this case will happen as soon as he enters the front
 of the plane:
 
-<div class="code">
-
+```
     + angelaTicketAgenda: ConvAgendaItem
         initiallyActive = true
         
@@ -326,19 +317,17 @@ of the plane:
             
         }
     ;
-
-</div>
+```
 
 That's fine apart from one thing: if the player character boards the
 plane without the ticket, he won't get a second chance to show it to the
 flight attendant and the game will be in an unwinnable state. The best
-way to cure that is to have the <span class="code">beforeTravel()</span>
+way to cure that is to have the `beforeTravel()`
 method of angelaGreetingState reset angelaTicketAgenda (i.e. add it to
 Angela's agendaList again) if the player character leaves the plane when
 Angela hasn't seen the ticket:
 
-<div class="code">
-
+```
     + angelaGreetingState: ActorState
         isInitState = true
         specialDesc = "{The subj angela} {is} standing just inside the entrance
@@ -378,8 +367,7 @@ Angela hasn't seen the ticket:
         
         ticketSeen = nil
     ;
-
-</div>
+```
 
 And that's where we'll leave Angela and her ActorStates for now,
 although we'll find further uses for them in the next chapter when we

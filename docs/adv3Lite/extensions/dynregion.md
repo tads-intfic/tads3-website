@@ -26,7 +26,7 @@ EventListItem</a>     </span>
 
 The purpose of the [dynamicRegion.t](../dynamicRegion.t) extension is to
 enable the definition of [Regions](../../docs/manual/room.html#regions)
-(of the <span class="code">DynamicRegion</span> class) that can be
+(of the `DynamicRegion` class) that can be
 expanded or contracted during the course of a game (a normal Region is
 fixed and can't be changed). This ability comes with certain
 restrictions, however.
@@ -40,10 +40,10 @@ In addition to a number of properties intended purely for internal use,
 this extension defines the following new class and properties:
 
 - *New Class*: **DynamicRegion**
-- *Properties/Methods*: <span class="code">expandRegion()</span>,
-  <span class="code">contractRegion()</span>,
-  <span class="code">isCurrentlyWithin()</span>,
-  <span class="code">extraAdjustments()</span>.
+- *Properties/Methods*: `expandRegion()`,
+  `contractRegion()`,
+  `isCurrentlyWithin()`,
+  `extraAdjustments()`.
 
   
 <span id="usage"></span>
@@ -74,18 +74,16 @@ the following methods:
   *expanded* is nil) this DynamicRegion.
 
 To create a Dynamic SenseRegion, just define an object as being of both
-the <span class="code">DynamicRegion</span> and the
-<span class="code">SenseRegion</span> class, but note that the
+the `DynamicRegion` and the
+`SenseRegion` class, but note that the
 DynamicRegion class must then be listed first in such a definition, for
 example:
 
-<div class="code">
-
+```
      myDynamicSenseRegion: DynamicRegion, SenseRegion
      ;
      
-
-</div>
+```
 
 <span id="restrictions"></span>
 
@@ -100,7 +98,7 @@ permanent relation with any other Regions. In particular this means:
 This does not prevent your *defining* a DynamicRegion as part of the
 contents of another Region, or another Region as part of the contents of
 a DynamicRegion (for example, through its
-<span class="code">expandRegion(rm, expanded)</span> method), but these
+`expandRegion(rm, expanded)` method), but these
 are just shorthand ways of listing the contents (i.e. list of rooms) of
 the enclosed Region/DynamicRegion in the enclosing DynamicRegion/Region
 as part of the initial contents of the enclosing Region. It does not set
@@ -125,14 +123,14 @@ that are all in some other Region as well, but we don't *count* this as
 the DynamicRegion being *in* the other Region since there's no guarantee
 that this relation will continue to hold. We can, however, test for
 *temporary* containment with the
-<span class="code">isCurrentlyWithin(region)</span> method;
-<span class="code">X.isCurrentlyWithin(Y)</span> returns true if all the
+`isCurrentlyWithin(region)` method;
+`X.isCurrentlyWithin(Y)` returns true if all the
 rooms in X are also in Y.
 
 But note the distinction. If X is a DynamicRegion that contains rooms A,
 B and C, while Y is some other Region that contains rooms A, B, C, D and
-E, although <span class="code">X.isCurrentlyIn(Y)</span> will then be
-true, <span class="code">X.isIn(Y)</span> will be nil (i.e. false),
+E, although `X.isCurrentlyIn(Y)` will then be
+true, `X.isIn(Y)` will be nil (i.e. false),
 since there is no *intrinsic* relation between the Regions X and Y.
 
 Additionally, DynamicRegions don't do the following:
@@ -150,9 +148,9 @@ requirements may be different in every particular case. However, in game
 code it may be relatively straightforward to work round these
 limitations provided it's clear what's wanted. To help with this, the
 DynamicRegion class defines the
-<span class="code">extraAdjustments()</span> method which is executed at
-the end of any call to <span class="code">expandRegion()</span> or
-<span class="code">contractRegion()</span>. By default it does nothing,
+`extraAdjustments()` method which is executed at
+the end of any call to `expandRegion()` or
+`contractRegion()`. By default it does nothing,
 and is thus available to be overridden to do whatever might be needed.
 
 For example, suppose we had an overcastArea DynamicRegion that can
@@ -160,8 +158,7 @@ expand or shrink, and that a MultiLoc clouds object should be present in
 every room of that DynamicRegion at all times. Initially we might
 define:
 
-<div class="code">
-
+```
     clouds: MultiLoc, Distant 'clouds; dark grey;;them'
        "Dark grey clouds cover the sky. "
        
@@ -169,17 +166,15 @@ define:
     ;
      
      
-
-</div>
+```
 
 This is fine for defining the initial locations of the clouds object,
 but these need to be updated when overcastArea gains or loses rooms. To
-achieve this we can use its <span class="code">extraAdjustments()</span>
+achieve this we can use its `extraAdjustments()`
 method to recalculate where the clouds object should be when the
 overcastArea grows or shrinks:
 
-<div class="code">
-
+```
      overcastArea: DynamicRegion
          extraAdjustments(rm, expanded)
          {
@@ -189,8 +184,7 @@ overcastArea grows or shrinks:
          }
      ;
      
-
-</div>
+```
 
 We could use a similar technique for making one DynamicRegion expand or
 contract in line with another. Suppose, for example, that we have a
@@ -199,8 +193,7 @@ shrinks if the other grows (as trees are cut down or planted). We could
 then make the meadowRegion automatically grow or shrink as the
 forestRegion shrinks or grows:
 
-<div class="code">
-
+```
     meadowRegion: DynamicRegion
     ;
 
@@ -214,14 +207,12 @@ forestRegion shrinks or grows:
         }
     ;
      
-
-</div>
+```
 
 Alternatively, if the meadowRegion were notionally part of an
 outdoorRegion, we might want both to expand or contract together:
 
-<div class="code">
-
+```
      meadowRegion: DynamicRegion
         extraAdjustments(rm, expanded)
         {
@@ -235,8 +226,7 @@ outdoorRegion, we might want both to expand or contract together:
      outdoorRegion: DynamicRegion
      ;
      
-
-</div>
+```
 
 As can be seen from these examples, such things are quite easy to
 arrange in game code on a case by case basis, but would be almost

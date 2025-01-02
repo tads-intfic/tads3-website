@@ -67,8 +67,7 @@ each of these sections by using the following properties:
 Thus, for example, suppose we had a room defined along the following
 lines:
 
-<div class="code">
-
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -142,8 +141,7 @@ lines:
             you why this rubbish would be best consigned to the flames. "
           
     ;
-
-</div>
+```
 
 Suppose further that an NPC called George follows the player character
 into the room, and the player character opens the desk drawer, drops a
@@ -210,15 +208,14 @@ otherwise have listed things:
 
 The first three of these can be immediately followed by the *{prev}* tag
 to make any verb that follows agree, for example
-<span class="code">"\\\<\<list of contents\>\> {prev} {lie} strewn
-across the desk. "</span>
+`"\\\<\<list of contents\>\> {prev} {lie} strewn
+across the desk. "`
 
 Armed with these tools we can, for example, amend the specialDesc of the
 desk so that the desk lists its contents in any way we please. For
 example:
 
-<div class="code">
-
+```
     + desk: Thing 'desk; fine old'
         "It's a fine old desk with a single drawer. "
         
@@ -236,8 +233,7 @@ example:
         
         remapIn = deskDrawer    
     ;
-
-</div>
+```
 
 Which would give us:
 
@@ -276,8 +272,7 @@ can see a note and a blue ball here. " One way we could change this is
 by incorporating a list of miscellaneous items into the room description
 itself, for example:
 
-<div class="code">
-
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -292,8 +287,7 @@ itself, for example:
         
         regions = downstairs
     ;
-
-</div>
+```
 
 This works after a fashion, but it's less than ideal, not least because
 you may not want this list of miscellaneous items to appear before the
@@ -313,8 +307,7 @@ listing. To use a CustomRoomLister you attach it to the
 roomContentsLister property of the room in question and pass the prefix
 and suffix text you want to use via its constructor, thus:
 
-<div class="code">
-
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -330,14 +323,13 @@ and suffix text you want to use via its constructor, thus:
         roomContentsLister = new CustomRoomLister('Someone\'s left ', suffix: '
             lying on the floor. ')
     ;
-
-</div>
+```
 
 Note that here the first parameter we pass to the CustomRoomLister's
 constructor is always the prefix string (since this is the most common
 case). Any other parameters we want to pass to this constructor are
 *optional named* paramaters, hence the need to include
-<span class="code">suffix:</span> before the suffix string we want to
+`suffix:` before the suffix string we want to
 use. If we didn't pass a suffix string the lister would simply use a
 full stop at the end of the list.
 
@@ -370,8 +362,7 @@ need to name the parameter, use the **method** keyword to define a
 method with three parameters, and then write our method definition
 within curly braces, for example:
 
-<div class="code">
-
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -388,15 +379,13 @@ within curly braces, for example:
                                                   method (lst, pl, irName) 
             {"Lying on the floor <<if pl>>are<<else>>is<<end>> ";})
     ;
-
-</div>
+```
 
 Note that since we don't need a prefix string here, we supply the first
 parameter as nil. We'd define a suffix method in much the same way, for
 example:
 
-<div class="code">
-
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -413,8 +402,7 @@ example:
                                                   method (lst, pl, irName) 
             {" <<if pl>>are<<else>>is<<end>> lying on the floor. ";})
     ;
-
-</div>
+```
 
 Note that in this case we supply '\\' as the prefix string to make sure
 that the sentence listing the room contents starts with a capital
@@ -445,7 +433,7 @@ resulted in a listing like:
 
 There are two further options you can set to change the way this basic
 listing is presented. The first is to change
-**gameMain.paraBrksBtwnSubcontents** to <span class="code">nil</span>,
+**gameMain.paraBrksBtwnSubcontents** to `nil`,
 which will remove the paragraph breaks between the sentences that list
 the contents of the items in the room. In the above example, this would
 mean that the final three sentences would be run together into a single
@@ -505,7 +493,7 @@ resulting in output like:
 
 </div>
 
-If you increased the <span class="code">maxNestingDepth</span> to 4,
+If you increased the `maxNestingDepth` to 4,
 say, you might potentially see something like:
 
 <div class="cmdline">
@@ -522,8 +510,8 @@ say, you might potentially see something like:
 
 </div>
 
-If you set both <span class="code">paraBrksBtwnSubcontents</span> and
-<span class="code">useParentheticalListing</span> to true, your output
+If you set both `paraBrksBtwnSubcontents` and
+`useParentheticalListing` to true, your output
 might look like:
 
 <div class="cmdline">
@@ -556,22 +544,22 @@ when its parent is EXAMINED, or when its parent is searched (with SEARCH
 or LOOK IN/UNDER/BEHIND) respectively. The second three determine
 whether the contents of the item on which it is defined are listed in
 response to a LOOK, EXAMINE or SEARCH command. By default
-<span class="code">examineListed</span>,
-<span class="code">lookListed</span> and
-<span class="code">searchListed</span> all take their value from the
-<span class="code">isListed</span> property. The
-<span class="code">contentsListedInLook</span> and
-<span class="code">contentsListedInExamine</span> properties both take
-their default values from the <span class="code">contentsListed</span>
+`examineListed`,
+`lookListed` and
+`searchListed` all take their value from the
+`isListed` property. The
+`contentsListedInLook` and
+`contentsListedInExamine` properties both take
+their default values from the `contentsListed`
 property (which is true by default). The default value of
-<span class="code">contentsListedInSearch</span>, however, is simply
-<span class="code">true</span>, since it's hard to think of many cases
+`contentsListedInSearch`, however, is simply
+`true`, since it's hard to think of many cases
 where you wouldn't want an object to reveal its contents when explicitly
 searched; the property is nevertheless provided for completeness.
 
-The <span class="code">inventoryListed</span> property determines
+The `inventoryListed` property determines
 whether an object is listed in response to an INVENTORY command. It too
-takes its default value from <span class="code">isListed</span>.
+takes its default value from `isListed`.
 
 </div>
 

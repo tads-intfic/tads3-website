@@ -78,40 +78,38 @@ the next line after the short message, and goes on until the next blank
 line.
 
 Messages are separated by one or more blank lines. Comments are lines
-starting with two slashes (<span class="code">//</span>), but comments
+starting with two slashes (`//`), but comments
 cannot appear in the middle of a message, so a comment must always be
 preceded by a blank line (or appear at the start of the file).
 
 Two special directives let you control compilation.
 
-The <span class="code">\#charset</span> directive lets you specify the
+The `\#charset` directive lets you specify the
 character set that the message file uses. You must provide a
-<span class="code">\#charset</span> directive before the first message,
+`\#charset` directive before the first message,
 because the message compiler must know what character set you're using.
 The message file is stored in Unicode format, like everything else in
 TADS 3, so the compiler must know the source file character set in order
 to translate it properly. The line looks like this:
 
-<div class="code">
-
+```
     #charset "cp437"
-
-</div>
+```
 
 The character set name is in the same format that the compiler and
 interpreter use. For Windows, this is always "cp" followed by the code
 page number. For other platforms, check your release notes for details
 on local conventions.
 
-The <span class="code">\#include</span> directive lets you include a
+The `\#include` directive lets you include a
 header file. Unlike the TADS compiler itself, you can only include files
 from the main file (included files cannot themselves include other
 files). Furthermore, \#include files have only one purpose: they define
 symbolic message ID's. You should normally include the following file,
 depending on which type of message file you're creating:
 
-Interpreter: <span class="code">\#include "vmerrnum.h"</span>  
-Compiler: <span class="code">\#include "tcerrnum.h"</span>
+Interpreter: `\#include "vmerrnum.h"`  
+Compiler: `\#include "tcerrnum.h"`
 
 ## Compiling
 
@@ -152,8 +150,7 @@ Here's an example of a message file. This file only defines two
 messages, so a real message file would obviously be a lot longer, but
 this file has all of the essential elements and will compile properly.
 
-<div class="code">
-
+```
     #charset "cp1252"
     #include "vmerrnum.h"
 
@@ -166,8 +163,7 @@ this file has all of the essential elements and will compile properly.
     This image file has an incompatible method header format.
      This is an older image file version which this interpreter
      does not support.
-
-</div>
+```
 
 The first line specifies the character set, which in this case is
 Windows code page 1252 (the Windows US/Western Europe code page).

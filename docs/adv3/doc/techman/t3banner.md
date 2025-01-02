@@ -125,7 +125,7 @@ picture window at some point, we wouldn't want to retain the caption
 window).
 
 We could create the picture window using the low level function
-<span class="code">bannerCreate()</span>:
+`bannerCreate()`:
 
 ```
     picWin = bannerCreate(nil, BannerAfter, statuslineBanner.handle_, BannerTypeText, 
@@ -134,20 +134,20 @@ We could create the picture window using the low level function
 
 The first argument here is the parent window of the new window we're
 creating. In this case the parent is the main window so we use the value
-<span class="code">nil</span>. The second and third arguments define
+`nil`. The second and third arguments define
 where in the parent window we want our new banner created; in this case,
 we want it after the status line banner. There's a slight complication
-here, in that <span class="code">bannerCreate</span> expects us to
+here, in that `bannerCreate` expects us to
 specify not the sibling banner *object* here but the sibling banner's
 *handle*, which is simply an integer that the system uses internally to
 keep track of which banner is which.
 
-The fifth argument, <span class="code">BannerAlignTop</span>, stipulates
+The fifth argument, `BannerAlignTop`, stipulates
 that we want our new banner to appear at the top of the available space
 we're carving out of the main window, but after the statusline banner.
 The sixth argument is the size (in this case depth) of our new banner
 window (at this stage its width is simply the full screen width), the
-seventh argument, <span class="code">BannerSizeAbsolute</span>
+seventh argument, `BannerSizeAbsolute`
 stipulates that this is an absolute size, the unit being lines of text
 in the default font of the window. Finally we give our new banner a
 border with the last argument.
@@ -171,21 +171,21 @@ and assign it 50% of the space:
 ```
 
 This time the second and third arguments are
-<span class="code">BannerFirst</span> and <span class="code">nil</span>
+`BannerFirst` and `nil`
 respectively, since we want this new banner to be the first (in this
 case rightmost) child of its parent, which means in turn that we don't
 need to name a sibling for it to come before or after (in any case, it
 has no siblings).
 
 At this point we need to stop and ask the question, what kind of values
-are <span class="code">pcWin</span> and
-<span class="code">captionWin</span>? They are, in fact, banner handles,
+are `pcWin` and
+`captionWin`? They are, in fact, banner handles,
 which as we've already seen, are simply integers. This being so we need
 some place we can store a reference to them so we can refer to them
 later; that place will almost certainly need to be a pair of object
 properties, which means in turn that we need to create an object in
 which to store them. While we're at it, we could make it an
-<span class="code">InitObject</span> so that it can automatically create
+`InitObject` so that it can automatically create
 our banner layout at startup:
 
 ```
@@ -207,7 +207,7 @@ our banner layout at startup:
 ```
 
 Now, when we want to display anything in our new banner windows, we can
-simply use the <span class="code">bannerSay()</span> method; e.g. to
+simply use the `bannerSay()` method; e.g. to
 display a picture of a banner with a caption:
 
 ```
@@ -247,30 +247,30 @@ manipulate them. In essence we create:
 Of course the above definitions will not actually do anything, since
 they don't define where our two new banners are to appear, or do
 anything to make them appear. But they do illustrate one point: whereas
-before <span class="code">picWindow</span> and
-<span class="code">captionWindow</span> were properties of a separate
+before `picWindow` and
+`captionWindow` were properties of a separate
 object we had to create for the purpose, now they are objects in their
-own right. The identifiers <span class="code">picWindow</span> and
-<span class="code">captionWindow</span> thus refer to *objects* and not
+own right. The identifiers `picWindow` and
+`captionWindow` thus refer to *objects* and not
 to integers representing handles. The handle values we used before would
-now be given by <span class="code">picWindow.handle\_</span> and
-<span class="code">captionWindow.handle\_</span>, but in fact we
+now be given by `picWindow.handle\_` and
+`captionWindow.handle\_`, but in fact we
 probably won't need to refer to these handles any more, since we can now
 refer to the objects instead. Indeed, if we *did* refer to the
-<span class="code">handle\_</span> properties at this point, we'd find
-they were both <span class="code">nil</span>, since we've done nothing
+`handle\_` properties at this point, we'd find
+they were both `nil`, since we've done nothing
 to create the actual banner windows in the screen layout.
 
-To make a <span class="code">BannerWindow</span> object actually do
+To make a `BannerWindow` object actually do
 something to the screen layout, we need to do the equivalent of invoking
-the <span class="code">bannerCreate()</span> function, which is to evoke
-the <span class="code">BannerWindow</span>'s
-<span class="code">showBanner()</span> method (which in fact does itself
-call <span class="code">bannerCreate()</span>, after carrying out lot of
+the `bannerCreate()` function, which is to evoke
+the `BannerWindow`'s
+`showBanner()` method (which in fact does itself
+call `bannerCreate()`, after carrying out lot of
 intermediate background busy-work to help keep track of what's going
 on). A good place to call this method if we want our banners to be
 included in the screen layout at startup is their
-<span class="code">initBannerWindow()</span> method, since this is
+`initBannerWindow()` method, since this is
 called during game initialization. Following the same logic we used
 before, as a first attempt we might try:
 
@@ -303,11 +303,11 @@ before, as a first attempt we might try:
 ```
 
 As you may have noticed, the arguments to
-<span class="code">showBanner()</span> are almost identical to those of
-<span class="code">bannerCreate()</span>, with one important difference:
-in <span class="code">showBanner()</span> the first and third arguments
+`showBanner()` are almost identical to those of
+`bannerCreate()`, with one important difference:
+in `showBanner()` the first and third arguments
 (if present), representing the parent and sibling of this window, are
-now <span class="code">BannerWindow</span> *objects*, not integers
+now `BannerWindow` *objects*, not integers
 representing handles.
 
 If you actually tried to run the above code, however, there's a good
@@ -315,15 +315,15 @@ chance you'd encounter a run-time error. The problem is that there's now
 nothing in our code to control the *order* in which our banner windows
 are created (we can't rely on source text order to determine it), with
 the result that the VM may attempt to initialize
-<span class="code">captionWindow</span> before
-<span class="code">picWindow</span>; this will cause an error because
+`captionWindow` before
+`picWindow`; this will cause an error because
 you must create the parent banner before any of its children; in fact
 you must create it before *any* of the other banners listed among the
-arguments it uses in <span class="code">showBanner()</span>, whether a
+arguments it uses in `showBanner()`, whether a
 parent banner, or a sibling banner we're to be placed before or after.
 
-The trick is to ensure that <span class="code">initBannerWindow()</span>
-calls the <span class="code">initBannerWindow()</span> methods of any
+The trick is to ensure that `initBannerWindow()`
+calls the `initBannerWindow()` methods of any
 banners that must already exist. So as a second attempt we might try:
 
 ```
@@ -354,26 +354,26 @@ banners that must already exist. So as a second attempt we might try:
 ```
 
 Now if the initialization routine happens upon
-<span class="code">captionWindow</span> before
-<span class="code">picWindow</span>,
-<span class="code">captionWindow.initBannerWindow()</span> will invoke
-<span class="code">picWindow.initBannerWindow()</span> before calling
-its own <span class="code">showBanner()</span> method, thereby ensuring
-that the banner created for <span class="code">picWindow</span> exists
+`captionWindow` before
+`picWindow`,
+`captionWindow.initBannerWindow()` will invoke
+`picWindow.initBannerWindow()` before calling
+its own `showBanner()` method, thereby ensuring
+that the banner created for `picWindow` exists
 before we try to give it a child. Unfortunately, this at once leads us
 to another problem, namely that if
-<span class="code">captionWindow.initBannerWindow()</span> runs first,
-<span class="code">picWindow.initBannerWindow()</span> will be called a
+`captionWindow.initBannerWindow()` runs first,
+`picWindow.initBannerWindow()` will be called a
 second time when the initializer reaches
-<span class="code">picWindow</span>, with the result that we could end
+`picWindow`, with the result that we could end
 up with two picture banners displayed on screen.
 
-To avoid that, we make use of the <span class="code">inited\_</span>
+To avoid that, we make use of the `inited\_`
 property set by the inherited method. If
-<span class="code">inited\_</span> is true, we know we have already been
+`inited\_` is true, we know we have already been
 initialized, so we don't need to be initialized again. We can therefore
-check the value of <span class="code">inited\_</span> at the start of
-the <span class="code">initBannerWindow()</span> method:
+check the value of `inited\_` at the start of
+the `initBannerWindow()` method:
 
 ```
     picWindow: BannerWindow
@@ -411,7 +411,7 @@ the <span class="code">initBannerWindow()</span> method:
 At this point, you may be getting the impression that it was more
 straightforward to use the low level banner API functions, except that
 we no longer need to create a special object to hold references to the
-banner handles. But in fact the <span class="code">BannerWindow</span>
+banner handles. But in fact the `BannerWindow`
 class, and the classes associated with it in banner.t, are taking care
 of a lot of the complexity for us. In particular, although they don't
 address the issue of keeping the banner *contents* in sync with any
@@ -424,7 +424,7 @@ more of an issue in a game in which the banner layout changed according
 to circumstance.
 
 In order to display actual content in these banner windows, we simply
-need to call their <span class="code">writeToBanner()</span> method; for
+need to call their `writeToBanner()` method; for
 example:
 
 ```
@@ -450,7 +450,7 @@ However, if neither of the above conditions is met, then we still have
 to find some means of updating our banner contents after a RESTORE or
 UNDO (though our initialization code will probably take care of
 RESTART). One way to do this is to define a
-<span class="code">currentContents</span> property on each of our
+`currentContents` property on each of our
 banners that gets updated with whatever we write to the banners, so that
 we can arrange for it to be displayed again after a RESTORE or UNDO.
 That's not too hard to do, but we also have to make sure that we do
@@ -497,7 +497,7 @@ of these issues for you.
 
 ## <span id="CustomBannerWindow">Using the CustomBannerWindow Class</span>
 
-Using <span class="code">CustomBannerWindow</span>, the banners we
+Using `CustomBannerWindow`, the banners we
 defined in the previous section could be defined simply with:
 
 ```
@@ -514,36 +514,36 @@ defined in the previous section could be defined simply with:
 
 This code in fact does much the same as the code we ended up with using
 BannerWindow. In particular,
-<span class="code">CustomBannerWindow.initBannerWindow()</span> follows
+`CustomBannerWindow.initBannerWindow()` follows
 the coding pattern we used above, but works out from the
-<span class="code">bannerArgs</span> property which other BannerWindows
+`bannerArgs` property which other BannerWindows
 it needs to initialize first. Using
-<span class="code">CustomBannerWindow</span> thus saves both quite a bit
+`CustomBannerWindow` thus saves both quite a bit
 of typing and the danger of some errors.
 
 But it can do quite a bit more for us besides.
-<span class="code">CustomBannerWindow</span> is a subclass of
-<span class="code">BannerWindow</span> and inherits all its methods,
+`CustomBannerWindow` is a subclass of
+`BannerWindow` and inherits all its methods,
 which you can still use, but it also defines a number of methods and
 properties of its own. So, for example, while you can still call
-<span class="code">writeToBanner()</span> on a
-<span class="code">CustomBannerWindow()</span>, to take advantage of
+`writeToBanner()` on a
+`CustomBannerWindow()`, to take advantage of
 this class it's more useful to update its contents with its
-<span class="code">updateContents()</span> method. This does two things:
+`updateContents()` method. This does two things:
 first it stores the banner's new contents (as defined by the string
-argument of <span class="code">updateContents()</span>) in the
-<span class="code">currentContents</span> property, and then displays
-the contents of the <span class="code">currentContents</span> property
+argument of `updateContents()`) in the
+`currentContents` property, and then displays
+the contents of the `currentContents` property
 in the banner. By itself this storing of the banner's output in a banner
 property may not seem very exciting, but the
-<span class="code">CustomBannerWindow</span> also takes care of
-displaying its <span class="code">currentContents</span> property on
+`CustomBannerWindow` also takes care of
+displaying its `currentContents` property on
 RESTORE, UNDO or RESTART (and, indeed, on startup). This means that as
 long as you consistently use the
-<span class="code">updateContents()</span> method to display content in
-a <span class="code">CustomBannerWindow</span>, the RESTORE/UNDO/RESTART
+`updateContents()` method to display content in
+a `CustomBannerWindow`, the RESTORE/UNDO/RESTART
 issue is automatically taken care of for you. It also means that you can
-use the <span class="code">currentContents</span> property to stipulate
+use the `currentContents` property to stipulate
 what you want a banner to play at the start of the game, for example:
 
 ```
@@ -556,22 +556,22 @@ what you want a banner to play at the start of the game, for example:
 ```
 
 Apart from initialization, however, your game code should not modify
-<span class="code">currentContents</span> directly (unless for some very
+`currentContents` directly (unless for some very
 peculiar purpose), but should allow
-<span class="code">updateContents()</span> to keep the
-<span class="code">currentContents</span> property in sync with what the
+`updateContents()` to keep the
+`currentContents` property in sync with what the
 banner actually displays.
 
-We said above that <span class="code">updateContents()</span> method
+We said above that `updateContents()` method
 does two things; actually it normally does three: normally it clears the
 banner window before displaying the new content. This is typically what
 you'd want for a banner that displays a picture that reflects the
 current situation, say. But it may not always be what you want, e.g. for
 a scrolling window to which text is added cumulatively. So if you don't
 want a particular banner to be cleared before displaying new content in
-it via <span class="code">updateContents()</span>, you need to override
-its <span class="code">clearBeforeUpdate</span> property to
-<span class="code">nil</span>.
+it via `updateContents()`, you need to override
+its `clearBeforeUpdate` property to
+`nil`.
 
 CustomBannerWindow can also help us with the varying interpreter type
 issue. To recapitulate, the problem is not that trying to display a
@@ -587,20 +587,20 @@ means of deciding whether we want a particular banner to display on a
 particular class of interpreter, and have attempts to write to the
 banner simply ignored if the banner isn't displayed.
 
-CustomBannerWindow provides the <span class="code">canDisplay</span>
-property for this purpose. If <span class="code">canDisplay</span>
-evaluates to <span class="code">nil</span>,
-<span class="code">initBannerWindow()</span> will not add the banner to
+CustomBannerWindow provides the `canDisplay`
+property for this purpose. If `canDisplay`
+evaluates to `nil`,
+`initBannerWindow()` will not add the banner to
 the screen layout, but we can nevertheleess call any of the
-<span class="code">BannerWindow</span> or
-<span class="code">CustomBannerWindow</span> methods without causing a
+`BannerWindow` or
+`CustomBannerWindow` methods without causing a
 run-time error, since they'll then all be ignored (except that
-<span class="code">updateContents()</span> will still update the
-<span class="code">currentContents</span> property, even though nothing
+`updateContents()` will still update the
+`currentContents` property, even though nothing
 will be shown on screen).
 
-The <span class="code">canDisplay</span> property is meant to be used
-with in conjunction with the <span class="code">SystemInfo()</span>
+The `canDisplay` property is meant to be used
+with in conjunction with the `SystemInfo()`
 function, to determine the kind of interpreter we're running on. So, for
 example, to suppress the display of a banner on an interpreter than
 can't display JPEGs we'd define:
@@ -610,9 +610,9 @@ can't display JPEGs we'd define:
 ```
 
 The main thing we need to be careful about here ensuring that we don't
-define <span class="code">canDisplay</span> methods that can evaluate to
-<span class="code">nil</span> on a parent window and
-<span class="code">true</span> on one or more of its child windows at
+define `canDisplay` methods that can evaluate to
+`nil` on a parent window and
+`true` on one or more of its child windows at
 the same time. So if we are designing a banner layout in which one
 window (a text-diplay window, say) is always required, but another (a
 graphics window, say) is only required if our game is running on an HTML
@@ -625,8 +625,8 @@ to display if we can't display graphics: there's no point in showing the
 picture caption without the picture. To ensure that both our custom
 banners either do or don't display together, it's slightly less work and
 slightly less error-prone to override the
-<span class="code">CustomBannerWindow</span> class than to override the
-<span class="code">canDisplay</span> property separately on each window:
+`CustomBannerWindow` class than to override the
+`canDisplay` property separately on each window:
 
 ```
     modify CustomBannerWindow
@@ -637,20 +637,20 @@ slightly less error-prone to override the
 It's safe to do this since the only CustomBannerWindows that exist in
 our game are the ones we create ourselves. The banner windows defined in
 the library, such as the statusline banner and various banners used in
-displaying menus are of class <span class="code">BannerWindow</span>,
+displaying menus are of class `BannerWindow`,
 and so won't be affected by any changes we make to
-<span class="code">CustomBannerWindow</span>.
+`CustomBannerWindow`.
 
-The <span class="code">canDisplay</span> property is intended purely for
+The `canDisplay` property is intended purely for
 testing the interpreter type. We can use a different property,
-<span class="code">isActive</span>, to add or remove a
-<span class="code">CustomBannerWindow</span> from the display during the
+`isActive`, to add or remove a
+`CustomBannerWindow` from the display during the
 course of our game. More accurately, we can define the
-<span class="code">isActive</span> property as
-<span class="code">nil</span> on a
-<span class="code">CustomBannerWindow</span> we don't want displayed at
-game start-up, and then use the <span class="code">activate()</span> and
-<span class="code">deactivate()</span> methods to add or remove custom
+`isActive` property as
+`nil` on a
+`CustomBannerWindow` we don't want displayed at
+game start-up, and then use the `activate()` and
+`deactivate()` methods to add or remove custom
 banners to or from the screen. Once again, it's our responsibility to
 respect the dependency order of any parent, child or sibling banners
 involved.
@@ -712,10 +712,10 @@ under our game folder:
     ;
 ```
 
-Note that the <span class="code">&lt;-</span> in the last line is
+Note that the `&lt;-` in the last line is
 deliberate here; we want this to appear in the window as \<-, but since
 what we send to the window will be interpreted as HTML, we need to use
-the <span class="code">&lt;</span> entity to represent the \< character.
+the `&lt;` entity to represent the \< character.
 
 Since we may be defining many Picture objects, we can save ourselves a
 bit of typing by defining an appropriate template:
@@ -768,7 +768,7 @@ We next need to make an explicit LOOK command display any relevant
 picture and caption for the player character's current location. For the
 purposes of this example, we only want an explicit LOOK to do this, not
 an implicit lookAround called by the library code. We therefore need to
-make a minor override to <span class="code">LookAction</span>:
+make a minor override to `LookAction`:
 
 ```
     modify LookAction
@@ -785,8 +785,8 @@ make a minor override to <span class="code">LookAction</span>:
 
 Our final task is to make the picture and caption of the starting
 location appear on the first turn. The easiest way to achieve that may
-be to call the room's <span class="code">showPic()</span> method from
-<span class="code"> gameMain.showIntro()</span>:
+be to call the room's `showPic()` method from
+` gameMain.showIntro()`:
 
 ```
     gameMain: GameMainDef  
@@ -797,7 +797,7 @@ be to call the room's <span class="code">showPic()</span> method from
 ```
 
 And this is all we need to do to implement our scheme; the
-<span class="code"> CustomBannerWindow</span> class can be left to do
+` CustomBannerWindow` class can be left to do
 the rest, such as displaying the right picture and caption (or absence
 of picture and caption) after RESTORE, RESTART and UNDO. At this point
 we can start defining our rooms and objects, e.g.:
@@ -899,8 +899,8 @@ definition of the central banner is then something like the following:
 Since we need the left and right frames to go on the outside, we need to
 define them next. The point to bear in mind here is that we are going to
 define the remaining windows with
-<span class="code">BannerAlignLeft</span> and
-<span class="code">BannerAlignRight</span>, and that the earliest
+`BannerAlignLeft` and
+`BannerAlignRight`, and that the earliest
 windows in sequence take the outermost positions, and that windows
 defined as coming immediately *after* them will thus appear closer to
 the centre. It doesn't much matter, however, whether the outer left
@@ -1017,93 +1017,93 @@ implement the banner layout you want in your own game, or at least to
 experiment with the banner API a little more productively. In conclusion
 it may be helpful to summarize the methods and properties you will most
 commonly want to use when working with the
-<span class="code">CustomerBannerWindow</span> class.
+`CustomerBannerWindow` class.
 
-- <span class="code">**activate(*\[txt\|true\]*)**</span>: call this
+- `**activate(*\[txt\|true\]*)**`: call this
   method to add or restore to the screen a previously inactive banner
-  (one defined with <span class="code">isActive = nil</span> or removed
-  by <span class="code">deactivate()</span>) This method takes one
+  (one defined with `isActive = nil` or removed
+  by `deactivate()`) This method takes one
   optional argument, which may either be the value
-  <span class="code">true</span>, in which case the banner displays its
+  `true`, in which case the banner displays its
   current contents on activation, or a single-quoted string, in which
   case the banner displays that single-quoted string on activation.
-- <span class="code">**autoSize**</span>: set to
-  <span class="code">true</span> to have the banner size to contents
+- `**autoSize**`: set to
+  `true` to have the banner size to contents
   after each update of its contents. The default is
-  <span class="code">nil</span>.
-- <span class="code">**bannerArgs**</span>: this is the one property
-  that every <span class="code">CustomBannerWindow</span> *must* define.
+  `nil`.
+- `**bannerArgs**`: this is the one property
+  that every `CustomBannerWindow` *must* define.
   It should consist of a list containing exactly eight elements in the
-  form <span class="code">\[*parent, where, other, windowType, align,
-  size, sizeUnits, styleFlags*\]</span>.
-- <span class="code">**canDisplay**</span>: if you want your banner to
+  form `\[*parent, where, other, windowType, align,
+  size, sizeUnits, styleFlags*\]`.
+- `**canDisplay**`: if you want your banner to
   be displayed on every interpreter that can display banners, this can
-  simply be set to <span class="code">true</span>. Otherwise it should
+  simply be set to `true`. Otherwise it should
   normally contain the result of a call to the
-  <span class="code">SystemInfo</span> function to determine what class
+  `SystemInfo` function to determine what class
   of interpreter this banner should be used on, e.g.
-  <span class="code">canDisplay = (SystemInfo(SysInfoJpeg))</span>.
-- <span class="code">**clearBeforeUpdate**</span>: set to
-  <span class="code">true </span> to have the banner window cleared just
-  before writing new content to it, or <span class="code">nil</span>
-  otherwise. The default is <span class="code">true </span>.
-- <span class="code">**clearWindow()**</span>: clear the banner window.
-  This is much the same as the <span class="code">clearWindow()</span>
-  method on <span class="code"> BannerWindow</span>, except that it
+  `canDisplay = (SystemInfo(SysInfoJpeg))`.
+- `**clearBeforeUpdate**`: set to
+  `true ` to have the banner window cleared just
+  before writing new content to it, or `nil`
+  otherwise. The default is `true `.
+- `**clearWindow()**`: clear the banner window.
+  This is much the same as the `clearWindow()`
+  method on ` BannerWindow`, except that it
   checks that the banner is active before attempting to do anything, so
   that it's safe to call on an inactive banner.
-- <span class="code">**currentContents**</span>: the current contents
+- `**currentContents**`: the current contents
   displayed by this banner, if it is on screen. This may be overridden
   when defining a banner instance to give the contents that the banner
   should display when it is first added to the screen layout.
-  Thereafter, use the <span class="code">updateBanner()</span> method to
+  Thereafter, use the `updateBanner()` method to
   change what the banner displays.
-- <span class="code">**deactivate(*\[txt\|true\]*)**</span>: remove a
+- `**deactivate(*\[txt\|true\]*)**`: remove a
   currently active banner from the screen layout. This method optionally
   takes one argument. If the argument is the actual value
-  <span class="code">true</span> then the currentContents of the banner
+  `true` then the currentContents of the banner
   are reset to a zero-length string. If the argument is a single-quoted
   string then the current contents are set to that string.
-- <span class="code">**flushBanner()**</span>: flush any pending output
+- `**flushBanner()**`: flush any pending output
   to the banner; if we're inactive, do nothing.
-- <span class="code">**isActive**</span>: override to
-  <span class="code">nil</span> on a banner you want to start out not
+- `**isActive**`: override to
+  `nil` on a banner you want to start out not
   being displayed on screen. Don't manipulate this property directly
-  thereafter; use the <span class="code">activate()</span> and
-  <span class="code">deactivate()</span> methods instead.
-- <span class="code">**setSize(*size, sizeUnits, isAdvisory*)**</span>:
+  thereafter; use the `activate()` and
+  `deactivate()` methods instead.
+- `**setSize(*size, sizeUnits, isAdvisory*)**`:
   Set the banner window to a specific size. *size* is the new size, in
   units given by *sizeUnits*, which is a BannerSizeXxx constant.
   *isAdvisory* is true or nil; if true, it indicates that the size
   setting is only an estimate, and that a call to
-  <span class="code">sizeToContents()</span> will be made later; in this
+  `sizeToContents()` will be made later; in this
   case, the interpreter might simply ignore this estimated size setting
   entirely, to avoid unnecessary redrawing. Platforms that do not
   support contents-based sizing will always set the estimated size, even
   when *isAdvisory* is true. If *isAdvisory* is nil, the platform will
   set the banner size as requested; set *isAdvisory* to nil when you
   will not follow up with a call to
-  <span class="code">sizeToContents()</span>. If the banner is inactive,
+  `sizeToContents()`. If the banner is inactive,
   calling this method will be ignored.
-- <span class="code">**sizeToContents()**</span>: Size the banner to its
+- `**sizeToContents()**`: Size the banner to its
   current contents. Note that some systems do not support this
   operation, so callers should always make an advisory call to
-  <span class="code">setSize()</span> first to set a size based on the
+  `setSize()` first to set a size based on the
   expected content size. If this method is called on an inactive
-  <span class="code">CustomBannerWindow</span> it is simply ignored.
-- <span class="code">**updateContents(*txt, \[clear\]*)**</span>: update
+  `CustomBannerWindow` it is simply ignored.
+- `**updateContents(*txt, \[clear\]*)**`: update
   the contents of the banner with *txt*, i.e. have the banner display
   the string passed in the *txt* argument and store it in the
-  <span class="code">currentContents</span> property. This is the method
+  `currentContents` property. This is the method
   you should normally call when you want to display content in a
-  <span class="code">CustomBannerWindow</span>. This method optionally
+  `CustomBannerWindow`. This method optionally
   takes a second argument, which should be
-  <span class="code">true</span> or <span class="code">nil</span>; if
+  `true` or `nil`; if
   present this argument overrides the
-  <span class="code">clearBeforeUpdate</span> setting to force the
+  `clearBeforeUpdate` setting to force the
   window to be cleared before displaying the new contents (if
-  <span class="code">true</span>) or else not to (if
-  <span class="code">nil</span>).
+  `true`) or else not to (if
+  `nil`).
 
 Using the methods and properties listed above should provide a
 reasonably trouble-free interface to the TADS 3 banner implementation,
@@ -1123,15 +1123,15 @@ provided that you keep the following points in mind:
     needs.
 
 There are other methods and properties that
-<span class="code">CustomBannerWindow</span> either defines or inherits
-from <span class="code">BannerWindow</span>, but for the most part these
+`CustomBannerWindow` either defines or inherits
+from `BannerWindow`, but for the most part these
 are used internally by the library and you won't need to worry about
 them (although of course there can always be special cases that may
 require you to delve deeper). There are also a number of inherited
-methods such as <span class="code">setOutputStream()</span>,
-<span class="code">captureOutput(func)</span>, and the methods specific
+methods such as `setOutputStream()`,
+`captureOutput(func)`, and the methods specific
 to text grid windows that you can use, but which
-<span class="code">CustomBannerWindow</span> provides only partial
+`CustomBannerWindow` provides only partial
 support for, in that a RESTORE or UNDO will not automatically return
 what's displayed in a window to the result of the output from these
 methods.

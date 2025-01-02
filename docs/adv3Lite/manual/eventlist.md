@@ -89,8 +89,7 @@ current location at the end of every turn. This could be used to drive a
 ShuffledEventList displaying atmospheric messages, as in the following
 example:
 
-<div class="code">
-
+```
 
     hall: Room, ShuffledEventList 'Hall' 'hall'   
         "<<one of>>At least the fire hasn't reached the ground floor yet. The hall
@@ -133,8 +132,7 @@ example:
         
         listenDesc = "There's a disturbing crackling of flames somewhere upstairs. "
     ;
-
-</div>
+```
 
 Although the items in an event list are usually single-quoted strings
 they can be any of the following:
@@ -163,40 +161,34 @@ single quoted string in this kind of situation if and only if evaluating
 it won't change the value of anything. So for example, the following
 would all be quite safe:
 
-<div class="code">
-
+```
     eventList = [
       '<q>What do you think about<<me.hasSeen(mary)>> Mary<<else>> Jane?<<end>> you ask. '
       
       '<q>I personally don\'t care for <<oddBloke.theName>> you say. <.inform dislike-oddbloke> '
     ]
-
-</div>
+```
 
 But the following most certainly would NOT:
 
-<div class="code">
-
+```
     eventList = [
        '<q>Tell me about <<one of>> Jane<<or>> Martha<<or>> green cheese<<cycling>>, you request. ',
        
        '<q>I have now said this <<++count>> times!</q> you declare. '
     ]
-
-</div>
+```
 
 You can make the second version safe by using anonymous functions in
 place of single-quoted strings:
 
-<div class="code">
-
+```
     eventList = [
        {: "<q>Tell me about <<one of>> Jane<<or>> Martha<<or>> green cheese<<cycling>>, you request. " },
        
        {: "<q>I have now said this <<++count>> times!</q> you declare. " }
     ]
-
-</div>
+```
 
 Note that this is far from being the *only* situation in which you can
 get caught out by the unexpected evaluation of embedded expressions in

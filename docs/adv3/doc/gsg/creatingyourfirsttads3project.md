@@ -132,13 +132,30 @@ non-Windows systems with a little adaptation):
 6.  Create a starter game file, again as a text file, and save it to the
     MyGame directory. Your starter game should look more or less like
     this:
-
-             #include <adv3.h>     #include <en_us.h>     gameMain: GameMainDef       initialPlayerChar = me     ;     versionInfo: GameID       name = 'My First Game'       byline = 'by Bob Author'       authorEmail = 'Bob Author <bob@myisp.com>'       desc = 'This is an example of how to start a new game project. '       version = '1'       IFID = 'b8563851-6257-77c3-04ee-278ceaeb48ac'     ;     firstRoom: Room 'Starting Room'       "This is the boring starting room."     ;     +me: Actor     ; 
-
+```
+#include <adv3.h>
+#include <en_us.h>
+gameMain: GameMainDef
+  initialPlayerChar = me
+;
+versionInfo: GameID
+  name = 'My First Game'
+  byline = 'by Bob Author'
+  authorEmail = 'Bob Author <bob@myisp.com>'
+  desc = 'This is an example of how to start a new game project. '
+  version = '1'
+  IFID = 'b8563851-6257-77c3-04ee-278ceaeb48ac'
+;
+firstRoom: Room 'Starting Room'
+  "This is the boring starting room."
+;
++me: Actor
+;
+```
     Fill in those quoted parts under the line reading
-    "<span class="code">versionInfo:GameID</span>" with your own
+    "`versionInfo:GameID`" with your own
     information. Everything should beself-explanatory, except that last
-    line that starts "<span class="code">IFID =</span>". That long,
+    line that starts "`IFID =`". That long,
     random-looking string of letters and numbers is exactly what it
     appears to be - a long, random string of letters and numbers. Well,
     almost: it's actually composed of random "hexadecimal", or base-16,

@@ -35,8 +35,8 @@ not just one but *two* distinct places for each object to make those
 go/no-go decisions. One is the "verify" routine, and one is the "check"
 routine.
 
-Broadly speaking, both <span class="code">verify()</span> and
-<span class="code">check()</span> have the the same mandate, namely to
+Broadly speaking, both `verify()` and
+`check()` have the the same mandate, namely to
 determine whether or not allow the command to proceed. But they're not
 interchangeable; there are definite differences in their effects. The
 distinction between the two is a bit subtle, and at times it can be
@@ -45,30 +45,30 @@ and to help you develop a sense of when to use which one.
 
 ## Strictly speaking
 
-The <span class="code">verify()</span> stage of action processing is
+The `verify()` stage of action processing is
 designed to interrupt the action processing only when there's a
 "logical" problem with the command. Pouring a desk or eating a topic -
 such actions would be illogical.
 
-In contrast, the <span class="code">check()</span> stage is for commands
+In contrast, the `check()` stage is for commands
 that *seem* logical enough, but nonetheless won't work. In these cases,
 the action still needs to be quashed, but not until after the parser has
 decided which objects could logically be involved. For example, the
 player tries to wear some jeans, but the jeans are too small. Maybe the
 player tries to melt something with the match, but the match isn't
-producing enough heat. In such cases, <span class="code">check()</span>
+producing enough heat. In such cases, `check()`
 can interrupt the action, and explain the failure.
 
 ## So why the two phases?
 
-The benefit of having a <span class="code">check()</span> stage separate
+The benefit of having a `check()` stage separate
 from the verify() step is not in making the verification stage purely
 logic-oriented, nor in removing some of the conditional statements from
 the action stage. Such cosmetic adjustments would hardly justify the
 added complication of the check() stage.
 
-The point of separating <span class="code">verify()</span> and
-<span class="code">check()</span> is that it lets the parser ask the
+The point of separating `verify()` and
+`check()` is that it lets the parser ask the
 game if a command makes logical sense, *separately* from determining if
 the command can actually be executed. It might seem difficult to
 separate these two ideas, but the distinction isn't just philosophical
@@ -90,14 +90,14 @@ white box is already open but the black box is closed, a human listener
 would assume the player means OPEN BLACK BOX, since that's the only way
 the command is useful.
 
-The parser uses <span class="code">verify()</span> to get this sort of
+The parser uses `verify()` to get this sort of
 information about what ought to be obvious to the player. When there's
 enough information to make the same kind of decision a human listener
 would, the parser can successfully resolve the ambiguity without asking
 the player for help - that is, the parser can *disambiguate* the command
 by itself.
 
-<span class="code">check()</span>, in contrast, is for enforcing
+`check()`, in contrast, is for enforcing
 conditions that *aren't* obvious to the player, and thus can *not* be
 used to resolve ambiguous references. For example, suppose we have our
 two boxes again, but this time they're both closed. Furthermore, suppose
@@ -118,23 +118,23 @@ player by surprise - the player might really have meant OPEN WHITE BOX,
 and would be surprised if the parser interpreted the command to mean
 something else.
 
-The point of separating <span class="code">verify()</span> and
-<span class="code">check()</span>, then, is to let the parser ask
+The point of separating `verify()` and
+`check()`, then, is to let the parser ask
 whether an action is logical, and then separately determine whether the
 action is actually possible.
 
 Now, this discussion raises another question. We can see why we need to
-separate <span class="code">verify()</span> and
-<span class="code">check()</span>, but why do we need to separate
-<span class="code">check()</span> and
-<span class="code">action()</span>? In other words, why not just check
+separate `verify()` and
+`check()`, but why do we need to separate
+`check()` and
+`action()`? In other words, why not just check
 the "possibleness" conditions - the box being glued shut, for example -
-during the <span class="code">action()</span> phase?
+during the `action()` phase?
 
-The main reason to separate <span class="code">check()</span> from
-<span class="code">action()</span> comes into play with two-object
+The main reason to separate `check()` from
+`action()` comes into play with two-object
 commands, such as PUT X IN Y. In these cases, we might have
-<span class="code">action()</span> handlers for both the direct and
+`action()` handlers for both the direct and
 indirect objects. The order of execution for the action handlers depends
 on the verb - for PUT X IN Y, we run the indirect object handler first,
 but for some verbs it's the other way around. Now, if we did all of our
@@ -142,47 +142,47 @@ checking in one or the other action handler, we might run into a slight
 problem: what if the action handler that runs second needs to block the
 command?
 
-The separate <span class="code">check()</span> phase solves this
-problem. We run the <span class="code">check()</span> handlers for both
-objects *before* we run *either* <span class="code">action()</span>
+The separate `check()` phase solves this
+problem. We run the `check()` handlers for both
+objects *before* we run *either* `action()`
 handler. This ensures that either object can cancel the command before
 any part of the command has been carried out.
 
 This means that it's important to remember that
-<span class="code">check()</span>, like
-<span class="code">verify()</span>, shouldn't actually carry out any
+`check()`, like
+`verify()`, shouldn't actually carry out any
 part of the command. In particular, these routines shouldn't make any
 changes to "game state" - they shouldn't move any objects around, change
 properties, etc. All game state changes should be put off until the
-<span class="code">action()</span> phase, when we know that we've passed
+`action()` phase, when we know that we've passed
 all of our tests and that the action is allowed to proceed.
 
 ## Thinking about this from disambiguation: an extended example
 
 Without recourse to a potentially confusing philosophical distinction
 between logical and illogical, we can understand the use of the
-<span class="code">check()</span> stage as one which enables us to make
+`check()` stage as one which enables us to make
 extra adjustments to interactive disambiguation questions. (Interactive
 disambiguation questions are the questions which the game generates when
 the player makes an ambiguous command: "Which fan do you mean? The....")
 
-*An object which fails in the <span class="code">check()</span> phase is
+*An object which fails in the `check()` phase is
 favored over an object which fails in the
-<span class="code">verify()</span> phase, as far as disambiguation is
+`verify()` phase, as far as disambiguation is
 concerned.* In fact, during disambiguation, the parser doesn't even call
-the <span class="code">check()</span> method. The parser calls the
-<span class="code">verify()</span> method to narrow down the field, and
+the `check()` method. The parser calls the
+`verify()` method to narrow down the field, and
 then might have to ask the player to choose from the remaining objects,
-but the parser doesn't call <span class="code">check()</span> at all
+but the parser doesn't call `check()` at all
 until after the objects have been chosen.
 
 For example, we have three fans, one which is a fixed ceiling fan, which
 can be turned on and off, one which is a takeable oscillating fan, but
 which can only be taken when it is off, and one which is a hand-fan, a
 stylized pingpong paddle if you will. First we'll discuss
-<span class="code">verify()</span> by itself, and then we'll discuss
-<span class="code">verify()</span> in combination with
-<span class="code">check()</span>.
+`verify()` by itself, and then we'll discuss
+`verify()` in combination with
+`check()`.
 
 ### Good use of verify()
 
@@ -208,7 +208,7 @@ verify. So we might get the following disambiguation question:
 Now let's say that one of these fans is already on -- we would want to
 eliminate this option also, or else we're effectively asking: "Which fan
 do you mean, the fan that's already on, or the fan that is off?" The
-<span class="code">verify()</span> stage is designed to eliminate the
+`verify()` stage is designed to eliminate the
 obviously silly interpretation of the command when there are other good
 options.
 
@@ -224,7 +224,7 @@ something like this:
 </div>
 
 Now let's think about the case in which all three fans fail the
-<span class="code">verify()</span> stage: the hand-fan obviously cannot
+`verify()` stage: the hand-fan obviously cannot
 be turned on, the other two are already on, so they can't be turned on
 either. If the player types:
 
@@ -236,7 +236,7 @@ either. If the player types:
 
 -- we need to ask which fan is intended, so that we can print the
 appropriate failure message. So when all three fail the
-<span class="code">verify()</span> stage, a disambiguation question like
+`verify()` stage, a disambiguation question like
 this is asked:
 
 <div class="cmdline">
@@ -253,10 +253,10 @@ what the player is trying to do isn't going to work.
 
 ### Combining verify() and check()
 
-So far we have an example of how <span class="code">verify()</span> is
+So far we have an example of how `verify()` is
 used. Let's continue with this example to explore how
-<span class="code">check()</span> is used in combination with
-<span class="code">verify()</span> to make the intended disambiguation
+`check()` is used in combination with
+`verify()` to make the intended disambiguation
 messages. We'll change the verb from "turn on" to "take".
 
 The ceiling fan cannot be taken ever, since it's attached to the
@@ -279,7 +279,7 @@ It's pretty clear what we want here:
 </div>
 
 Note that the ceiling fan isn't an option, since it can't be taken: it
-has failed the <span class="code">verify()</span> stage. The two good
+has failed the `verify()` stage. The two good
 options are offered in interactive disambiguation.
 
 Now what if the oscillating fan is on:
@@ -292,7 +292,7 @@ Now what if the oscillating fan is on:
 
 What do we want here? The answer to this question determines whether or
 not we want the oscillating fan's takeable-condition to be in
-<span class="code">check()</span> or <span class="code">verify()</span>.
+`check()` or `verify()`.
 Is it obvious to the player that the oscillating fan cannot be taken
 when it is on? If not, we want this:
 
@@ -304,8 +304,8 @@ when it is on? If not, we want this:
 </div>
 
 The above is produced when the fan.isOn condition goes in
-<span class="code">check()</span>. If we instead put this condition in
-<span class="code">verify()</span>, we will get this:
+`check()`. If we instead put this condition in
+`verify()`, we will get this:
 
 <div class="cmdline">
 
@@ -316,14 +316,14 @@ The above is produced when the fan.isOn condition goes in
 </div>
 
 If we want to eliminate the oscillating fan during object resolution,
-then we put the condition in <span class="code">verify()</span>, so that
+then we put the condition in `verify()`, so that
 the game will know that it's supposed to assume the player is referring
 to the hand-held fan when the oscillating fan is on. We should only do
 this if it should be obvious to the player that the oscillating fan
 cannot be taken when it's on. (Making too many assumptions about what
 the player means can spoil puzzles sometimes, and is somewhat intrusive
 generally speaking. In this sense, "logical" means "what's logical or
-obvious *to the player*." The <span class="code">verify()</span> stage
+obvious *to the player*." The `verify()` stage
 being a logic test should be understood in this spirit.)
 
 We can make one other consideration: let's say that the hand-held fan is
@@ -338,8 +338,8 @@ do we want to handle this:
 </div>
 
 Deciding this will also help us determine whether or not we want the
-<span class="code">fan.isOn</span> condition to be in
-<span class="code">check()</span> or <span class="code">verify()</span>.
+`fan.isOn` condition to be in
+`check()` or `verify()`.
 If it's not obvious that the oscillating fan cannot be taken, we want
 the following:
 
@@ -364,8 +364,8 @@ But if we want the following:
 </div>
 
 -- then we should put the oscillating fan's
-<span class="code">isOn</span> condition in
-<span class="code">verify()</span>. Whether you want to assume that the
+`isOn` condition in
+`verify()`. Whether you want to assume that the
 player means the oscillating fan in this case is up to you; the "logic"
 will be different between games, based on the context, how obvious the
 situation is to the player, and based on the game author's sense of
@@ -382,17 +382,17 @@ code should go from a stylistic point of view.
 From a goal-oriented perspective, it all comes down to the practical
 implications of putting a condition in one place or another, and often
 there are no practical consequences, in fact, to the distinction between
-<span class="code">check()</span> and
-<span class="code">verify()</span>; but you can imagine disambiguation
+`check()` and
+`verify()`; but you can imagine disambiguation
 conflicts to insure you're using the right style in principle.
 
-## <span class="code">check()</span> and <span class="code">beforeAction()</span>
+## `check()` and `beforeAction()`
 
 Traditionally, the library ran the "before" notifiers - beforeAction and
-roomBeforeAction - *before* the <span class="code">check()</span> phase.
+roomBeforeAction - *before* the `check()` phase.
 Starting with version 3.0.15.1 of the library, however, you can
 optionally enable a new, alternative ordering that runs the
-<span class="code">check()</span> phase first.
+`check()` phase first.
 
 To enable the alternative ordering, set gameMain.beforeRunsBeforeCheck
 to nil. By default, this property is set to true, which tells the
@@ -404,18 +404,18 @@ lets you consider a command to be more or less "committed" by the time
 the "before" handlers are reached. In other words, the "before" handlers
 can assume that the command will run to completion. The reason they can
 make this assumption is that they know that they're running after the
-<span class="code">check()</span> phase. If the action makes it as far
-as the "before" handlers at all, the <span class="code">check()</span>
+`check()` phase. If the action makes it as far
+as the "before" handlers at all, the `check()`
 phase will have already judged the command to be acceptable as far as
-the <span class="code">check()</span> tests are concerned.
+the `check()` tests are concerned.
 
-So, when we get past the <span class="code">check()</span> stage, we
+So, when we get past the `check()` stage, we
 know that a viable action is under way. Any objects which want to
 interfere with that action can then do so with
-<span class="code">beforeAction()</span>. This means that
-<span class="code">check()</span> can interrupt an action before other
+`beforeAction()`. This means that
+`check()` can interrupt an action before other
 objects, say NPC's, have a chance to react to it. So a good use of
-<span class="code">check()</span> can avoid sequences like this:
+`check()` can avoid sequences like this:
 
 <div class="cmdline">
 
@@ -427,21 +427,21 @@ objects, say NPC's, have a chance to react to it. So a good use of
 </div>
 
 In the above example, Mary's response was a
-<span class="code">beforeAction()</span>, and the line about the large
+`beforeAction()`, and the line about the large
 chair being an unimportant topic was mistakenly placed in the action
-phase rather than the <span class="code">check()</span> phase. By
+phase rather than the `check()` phase. By
 failing the command before the action phase, we could have avoided
-printing Mary's <span class="code">beforeAction()</span> message. So if
+printing Mary's `beforeAction()` message. So if
 we want to tell the player that the chair is an unimportant topic before
 Mary becomes involved, we need to use the
-<span class="code">check()</span> phase.
+`check()` phase.
 
 It is important to remember, therefore, that
-<span class="code">check()</span> really is another verification phase,
+`check()` really is another verification phase,
 and not a preliminary action phase. Only if a command passes
-<span class="code">check()</span> should a change in game state be made.
+`check()` should a change in game state be made.
 In other words, some initial conditional statements should be part of
-the action stage. The <span class="code">check()</span> stage should not
+the action stage. The `check()` stage should not
 perform preliminary checks which determine which action methods are
 called.
 

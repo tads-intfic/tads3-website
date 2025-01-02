@@ -39,7 +39,7 @@ makes isPulled true). When isPulled is true the lever can be pushed back
 into its original state again. You can override the **makePulled(stat)**
 method to carry out any side-effects of pulling and pushing the lever,
 but remember to call the inherited method (i.e. included a call to
-<span class="code">inherited(stat)</span>) somewhere in your overridden
+`inherited(stat)`) somewhere in your overridden
 method).
 
 <span id="settables"></span>
@@ -66,8 +66,7 @@ rememember to call the inherited method.
 A **Dial** is simply a Settable that responds to TURN WHATEVER TO VALUE
 in the same way as SET WHATEVER TO VALUE. For example:
 
-<div class="code">
-
+```
     + Dial 'dial'
         "It can be set to 'off', 'slow' or 'fast'; it's currently set to
         <<curSetting>>. "
@@ -76,8 +75,7 @@ in the same way as SET WHATEVER TO VALUE. For example:
         
         validSettings = ['off', 'slow', 'fast']
     ;
-
-</div>
+```
 
 A **NumberedDial** is a Dial that can be turned to any (integer)
 numerical setting between **minSetting** and **maxSetting**. Note that
@@ -86,8 +84,7 @@ curSetting is still a single-quoted string (representing a number). For
 example to define a dial that can be set to any number between 1 and 50
 and starts out set to 2 you might do this:
 
-<div class="code">
-
+```
     + NumberedDial 'dial'
         "It can be set to any number between 1 and 50; it's currently set to
         <<curSetting>>. "
@@ -96,8 +93,7 @@ and starts out set to 2 you might do this:
         minSetting = 1
         maxSetting = 50    
     ;
-
-</div>
+```
 
 By default, a NumberedDial can only be set to integer settings, but if
 the **allowDecimal** property is set to true then any number within the
@@ -140,8 +136,8 @@ something worn, like a knapsack).
 
 And adv3Lite game can define any number of objects to be bags of
 holding. To make an object a bag of holding, we use the
-<span class="code">BagOfHolding</span> mix-in class. This means (a) that
-<span class="code">BagOfHolding</span> must appear first in the class
+`BagOfHolding` mix-in class. This means (a) that
+`BagOfHolding` must appear first in the class
 list and (b) that it must be followed by an appropriate Thing-derived
 class like Container.
 
@@ -152,7 +148,7 @@ from the player's inventory into that BagOfHolding when trying to make
 room for the player to take something else. If the player is carrying
 more than one BagOfHolding, then the one that will be used to take *obj*
 from the player's inventory is the one for which
-<span class="code">affinityFor(obj)</span> returns the greatest value.
+`affinityFor(obj)` returns the greatest value.
 By default the library returns 100 for every obj except the BagOfHolding
 itself, for which it returns 0 (to prevent any attempt by the library to
 move a BagOfHolding into itself to make room in the player character's
@@ -167,8 +163,7 @@ a light source into a bag of holding when the player character is in a
 dark room. To prevent this we can make the bag of holding's affinity for
 light sources zero, for example:
 
-<div class="code">
-
+```
     knapsack: BagOfHolding, Wearable, OpenableContainer 'knapsack; brown canvas large'
         "It's a large, brown knapsack made of canvas. "
         
@@ -177,8 +172,7 @@ light sources zero, for example:
             return obj.isLit ? 0 : inherited(obj);
         }
     ;
-
-</div>
+```
 
 </div>
 
