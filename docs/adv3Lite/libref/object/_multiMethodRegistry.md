@@ -1,128 +1,154 @@
-[\_multiMethodRegistry]{.title}[object]{.type}
+<span class="title">\_multiMethodRegistry</span><span class="type">object</span>
 
 [multmeth.t](../file/multmeth.t.html)\[[775](../source/multmeth.t.html#775)\]
 
-[Superclass\
+[Superclass  
 Tree](#_SuperClassTree_)
 
-[Property\
+[Property  
 Summary](#_PropSummary_)
 
-[Method\
+[Method  
 Summary](#_MethodSummary_)
 
-[Property\
+[Property  
 Details](#_Properties_)
 
-[Method\
+[Method  
 Details](#_Methods_)
 
-::: fdesc
+<div class="fdesc">
+
 Multi-method registry. This is where we keep the registry information
 that we build during initialization.
 
 **`_multiMethodRegistry`**` :   object`
-:::
 
-[]{#_SuperClassTree_}
+</div>
 
-::: mjhd
-[Superclass Tree]{.hdln}   (in declaration order)
-:::
+<span id="_SuperClassTree_"></span>
 
-**`_multiMethodRegistry`**\
-`         object`\
-[]{#_PropSummary_}
+<div class="mjhd">
 
-::: mjhd
-[Summary of Properties]{.hdln}  
-:::
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+</div>
+
+**`_multiMethodRegistry`**  
+`         object`  
+<span id="_PropSummary_"></span>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
 
 ` `[`baseFuncTab_`](#baseFuncTab_)`  `[`boundFuncTab_`](#boundFuncTab_)`  `[`funcNameTab_`](#funcNameTab_)`  `[`funcParamTab_`](#funcParamTab_)`  `[`funcTab_`](#funcTab_)`  `[`inhTab_`](#inhTab_)`  `
 
-[]{#_MethodSummary_}
+<span id="_MethodSummary_"></span>
 
-::: mjhd
-[Summary of Methods]{.hdln}  
-:::
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
 
 ` `
 
-*(none)* []{#_Properties_}
+*(none)* <span id="_Properties_"></span>
 
-::: mjhd
-[Properties]{.hdln}  
-:::
+<div class="mjhd">
 
-[]{#baseFuncTab_}
+<span class="hdln">Properties</span>  
+
+</div>
+
+<span id="baseFuncTab_"></span>
 
 `baseFuncTab_`
 
 [multmeth.t](../file/multmeth.t.html)\[[789](../source/multmeth.t.html#789)\]
 
-::: desc
-function -\> base function
-:::
+<div class="desc">
 
-[]{#boundFuncTab_}
+function -\> base function
+
+</div>
+
+<span id="boundFuncTab_"></span>
 
 `boundFuncTab_`
 
 [multmeth.t](../file/multmeth.t.html)\[[786](../source/multmeth.t.html#786)\]
 
-::: desc
-base function -\> initial binding property
-:::
+<div class="desc">
 
-[]{#funcNameTab_}
+base function -\> initial binding property
+
+</div>
+
+<span id="funcNameTab_"></span>
 
 `funcNameTab_`
 
 [multmeth.t](../file/multmeth.t.html)\[[783](../source/multmeth.t.html#783)\]
 
-::: desc
-function name table
-:::
+<div class="desc">
 
-[]{#funcParamTab_}
+function name table
+
+</div>
+
+<span id="funcParamTab_"></span>
 
 `funcParamTab_`
 
 [multmeth.t](../file/multmeth.t.html)\[[780](../source/multmeth.t.html#780)\]
 
-::: desc
-table of function parameter lists, indexed by function
-:::
+<div class="desc">
 
-[]{#funcTab_}
+table of function parameter lists, indexed by function
+
+</div>
+
+<span id="funcTab_"></span>
 
 `funcTab_`
 
 [multmeth.t](../file/multmeth.t.html)\[[777](../source/multmeth.t.html#777)\]
 
-::: desc
-table of registered functions, indexed by base function
-:::
+<div class="desc">
 
-[]{#inhTab_}
+table of registered functions, indexed by base function
+
+</div>
+
+<span id="inhTab_"></span>
 
 `inhTab_`
 
 [multmeth.t](../file/multmeth.t.html)\[[793](../source/multmeth.t.html#793)\]
 
-::: desc
+<div class="desc">
+
 table of cached inherited() information, indexed by function
-:::
 
-[]{#_Methods_}
+</div>
 
-::: mjhd
-[Methods]{.hdln}  
-:::
+<span id="_Methods_"></span>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
 
 *(none)*
 
-::: ftr
-Adv3Lite Library Reference Manual\
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
-:::
+
+</div>

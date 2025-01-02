@@ -1,95 +1,115 @@
-[\_MultiMethodInheritCtx]{.title}[class]{.type}
+<span class="title">\_MultiMethodInheritCtx</span><span class="type">class</span>
 
 [multmeth.t](../file/multmeth.t.html)\[[297](../source/multmeth.t.html#297)\]
 
-[Superclass\
+[Superclass  
 Tree](#_SuperClassTree_)
 
-[Subclass\
+[Subclass  
 Tree](#_SubClassTree_)
 
-[Global\
+[Global  
 Objects](#_ObjectSummary_)
 
-[Property\
+[Property  
 Summary](#_PropSummary_)
 
-[Method\
+[Method  
 Summary](#_MethodSummary_)
 
-[Property\
+[Property  
 Details](#_Properties_)
 
-[Method\
+[Method  
 Details](#_Methods_)
 
-::: fdesc
+<div class="fdesc">
+
 *no description available*
 
 `class `**`_MultiMethodInheritCtx`**` :   object`
-:::
 
-[]{#_SuperClassTree_}
+</div>
 
-::: mjhd
-[Superclass Tree]{.hdln}   (in declaration order)
-:::
+<span id="_SuperClassTree_"></span>
 
-**`_MultiMethodInheritCtx`**\
-`         object`\
-[]{#_SubClassTree_}
+<div class="mjhd">
 
-::: mjhd
-[Subclass Tree]{.hdln}  
-:::
+<span class="hdln">Superclass Tree</span>   (in declaration order)
 
-*(none)* []{#_ObjectSummary_}
+</div>
 
-::: mjhd
-[Global Objects]{.hdln}  
-:::
+**`_MultiMethodInheritCtx`**  
+`         object`  
+<span id="_SubClassTree_"></span>
 
-*(none)* []{#_PropSummary_}
+<div class="mjhd">
 
-::: mjhd
-[Summary of Properties]{.hdln}  
-:::
+<span class="hdln">Subclass Tree</span>  
+
+</div>
+
+*(none)* <span id="_ObjectSummary_"></span>
+
+<div class="mjhd">
+
+<span class="hdln">Global Objects</span>  
+
+</div>
+
+*(none)* <span id="_PropSummary_"></span>
+
+<div class="mjhd">
+
+<span class="hdln">Summary of Properties</span>  
+
+</div>
 
 ` `[`foundFromFunc`](#foundFromFunc)`  `
 
-[]{#_MethodSummary_}
+<span id="_MethodSummary_"></span>
 
-::: mjhd
-[Summary of Methods]{.hdln}  
-:::
+<div class="mjhd">
+
+<span class="hdln">Summary of Methods</span>  
+
+</div>
 
 ` `
 
-*(none)* []{#_Properties_}
+*(none)* <span id="_Properties_"></span>
 
-::: mjhd
-[Properties]{.hdln}  
-:::
+<div class="mjhd">
 
-[]{#foundFromFunc}
+<span class="hdln">Properties</span>  
+
+</div>
+
+<span id="foundFromFunc"></span>
 
 `foundFromFunc`
 
 [multmeth.t](../file/multmeth.t.html)\[[298](../source/multmeth.t.html#298)\]
 
-::: desc
+<div class="desc">
+
 *no description available*
-:::
 
-[]{#_Methods_}
+</div>
 
-::: mjhd
-[Methods]{.hdln}  
-:::
+<span id="_Methods_"></span>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
 
 *(none)*
 
-::: ftr
-Adv3Lite Library Reference Manual\
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
-:::
+
+</div>

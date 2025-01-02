@@ -1,15 +1,23 @@
-::: topbar
-![](../manual/topbar.jpg){border="0"}
-:::
+<div class="topbar">
 
-::: nav
-[Table of Contents](../manual/toc.htm){.nav} \| [Final
-Moves](../manual/final.htm){.nav} \> Exercises & Samples\
-[[*Prev:* Extensions](../manual/extensions.htm){.nav}     [*Next:*
-Feedback](../manual/feedback.htm){.nav}     ]{.navnp}
-:::
+<img src="../manual/topbar.jpg" data-border="0" />
 
-::: main
+</div>
+
+<div class="nav">
+
+<a href="../manual/toc.htm" class="nav">Table of Contents</a> \|
+<a href="../manual/final.htm" class="nav">Final Moves</a> \> Exercises &
+Samples  
+<span class="navnp"><a href="../manual/extensions.htm" class="nav"><em>Prev:</em>
+Extensions</a>    
+<a href="../manual/feedback.htm" class="nav"><em>Next:</em> Feedback</a>
+    </span>
+
+</div>
+
+<div class="main">
+
 # Exercises & Samples
 
 [Learning TADS 3 With Adv3Lite](LearningT3Lite.pdf) contains a number of
@@ -68,14 +76,20 @@ of what is probably the most complex game of any of the examples here.
 [Exercise 23 - An Eventful Walk](Exercise%2023.t) is primarily an
 illustration of EventLists, Menus, Hints and Scoring, although it also
 includes a couple of examples of simple Scenes.
-:::
+
+</div>
 
 ------------------------------------------------------------------------
 
-::: navb
-*Adv3Lite Manual*\
-[Table of Contents](../manual/toc.htm){.nav} \| [Final
-Moves](../manual/final.htm){.nav} \> Exercises & Samples\
-[[*Prev:* Extensions](../manual/extensions.htm){.nav}     [*Next:*
-Feedback](../manual/feedback.htm){.nav}     ]{.navnp}
-:::
+<div class="navb">
+
+*Adv3Lite Manual*  
+<a href="../manual/toc.htm" class="nav">Table of Contents</a> \|
+<a href="../manual/final.htm" class="nav">Final Moves</a> \> Exercises &
+Samples  
+<span class="navnp"><a href="../manual/extensions.htm" class="nav"><em>Prev:</em>
+Extensions</a>    
+<a href="../manual/feedback.htm" class="nav"><em>Next:</em> Feedback</a>
+    </span>
+
+</div>

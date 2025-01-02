@@ -1,6 +1,7 @@
 ---
 title: Adv3Lite - Quickstart
 description: A guide for quickly starting a new adv3Lite project.
+published: false
 ---
 
 # Adv3Lite Quick Start Guide

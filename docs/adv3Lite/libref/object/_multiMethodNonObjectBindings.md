@@ -1,76 +1,89 @@
-[\_multiMethodNonObjectBindings]{.title}[object]{.type}
+<span class="title">\_multiMethodNonObjectBindings</span><span class="type">object</span>
 
 [multmeth.t](../file/multmeth.t.html)\[[464](../source/multmeth.t.html#464)\]
 
-[Superclass\
+[Superclass  
 Tree](#_SuperClassTree_)
 
-[Property\
+[Property  
 Summary](#_PropSummary_)
 
-[Method\
+[Method  
 Summary](#_MethodSummary_)
 
-[Property\
+[Property  
 Details](#_Properties_)
 
-[Method\
+[Method  
 Details](#_Methods_)
 
-::: fdesc
+<div class="fdesc">
+
 A placeholder object for bindings for non-object arguments. Whenever we
-have an actual argument value that\'s not an object, we\'ll look here
-for bindings for that parameter. When registering a function, we\'ll
-register a binding here for any parameter that doesn\'t have a type
-specification.
+have an actual argument value that's not an object, we'll look here for
+bindings for that parameter. When registering a function, we'll register
+a binding here for any parameter that doesn't have a type specification.
 
 **`_multiMethodNonObjectBindings`**` :   `[`_MultiMethodPlaceholder`](../object/_MultiMethodPlaceholder.html)
-:::
 
-[]{#_SuperClassTree_}
+</div>
 
-::: mjhd
-[Superclass Tree]{.hdln}   (in declaration order)
-:::
+<span id="_SuperClassTree_"></span>
 
-**`_multiMethodNonObjectBindings`**\
-`         `[`_MultiMethodPlaceholder`](../object/_MultiMethodPlaceholder.html)\
-`                 object`\
-[]{#_PropSummary_}
+<div class="mjhd">
 
-::: mjhd
-[Summary of Properties]{.hdln}  
-:::
+<span class="hdln">Superclass Tree</span>   (in declaration order)
 
-` `
+</div>
 
-` `
+**`_multiMethodNonObjectBindings`**  
+`         `[`_MultiMethodPlaceholder`](../object/_MultiMethodPlaceholder.html)  
+`                 object`  
+<span id="_PropSummary_"></span>
 
-*(none)* []{#_MethodSummary_}
+<div class="mjhd">
 
-::: mjhd
-[Summary of Methods]{.hdln}  
-:::
+<span class="hdln">Summary of Properties</span>  
+
+</div>
 
 ` `
 
 ` `
 
-*(none)* []{#_Properties_}
+*(none)* <span id="_MethodSummary_"></span>
 
-::: mjhd
-[Properties]{.hdln}  
-:::
+<div class="mjhd">
 
-*(none)* []{#_Methods_}
+<span class="hdln">Summary of Methods</span>  
 
-::: mjhd
-[Methods]{.hdln}  
-:::
+</div>
+
+` `
+
+` `
+
+*(none)* <span id="_Properties_"></span>
+
+<div class="mjhd">
+
+<span class="hdln">Properties</span>  
+
+</div>
+
+*(none)* <span id="_Methods_"></span>
+
+<div class="mjhd">
+
+<span class="hdln">Methods</span>  
+
+</div>
 
 *(none)*
 
-::: ftr
-Adv3Lite Library Reference Manual\
+<div class="ftr">
+
+Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
-:::
+
+</div>
