@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-guidedtourstate-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-guidedtourstate-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>GuidedTourState : <a href="accompanyingstate.html">AccompanyingState</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="accompanyingintravelstate.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="guidedintravelstate.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>There may be occasions when you want an NPC to take the lead and have
+the player character invited to follow him or her. First, we’ll give a
+brief description of how it works.</p>
+
+<p>According to the comments in the library code:</p>
+
+<p>*Guided Tour state. This provides a simple way of defining a “guided
+tour,” which is a series of locations to which we try to guide the
+player character. We don’t force the player character to travel as
+specified; we merely try to lead the player. The actual travel is up to
+the player.</p>
+
+<p>Here’s how this works. For each location on the guided tour, create one
+of these state objects. Set escortDest to the travel connector to which
+we’re attempting to guide the player character from the current
+location. Set stateAfterEscort to the state object for the next location
+on the tour. Set stateDesc to something indicating that we’re trying to
+show the player to the next stop - something along the lines of “Bob
+waits for you by the door.” Set arrivingWithDesc to a message indicating
+that we just showed up in the current location and are ready to show the
+player to the next - “Bob goes to the door and waits for you to follow
+him.”*</p>
+
+<p>The significant new properties defined on GuidedTourState are:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>escortActor</strong> - the actor being escorted - this is
+usually the player character  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>escortDest</strong> - the travel connector we're trying to
+show the player character into  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>escortStateClass</strong> - The class we use for our actor
+state during the escort travel. By default, we use the basic guided-tour
+accompanying travel state class (<a href="guidedintravelstate.html">GuidedInTravelState</a>), but games will
+probably want to use a customized subclass of this basic class in most
+cases. The main reason to use a custom subclass is to provide customized
+messages to describe the departure of the escorting actor.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>stateAfterEscort</strong> - The next state for our actor to
+assume after the travel. This should be overridden and set to the state
+object for the next stop on the tour.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now we’ll give a very simple example. Sarah has lost her ring, and if
+the player character asks her about it enough times, she’ll lead him
+back inside the cave to look for it, decide she can’t find it, and then
+lead him back out to the lakeside again. We can define a series of
+GuidedTourStates (which must obviously be located in Sarah), that define
+her leading the playing character on a brief and futile search for her
+lost ring:</p>
+
+<p>+ sarahGuide1 : GuidedTourState<br />
+  stateAfterEscort = sarahGuide2<br />
+  escortDest = lakeDoor2<br />
+  stateDesc = ”She’s waiting for you by the door. ”<br />
+  specialDesc { inherited; stateDesc;}<br />
+;</p>
+
+<p>+ sarahGuide2 : GuidedTourState<br />
+  stateAfterEscort = sarahGuide3<br />
+  escortDest = mainCave<br />
+  arrivingWithDesc = ”{The sarah/she} walks round the cave, scanning the<br />
+   floor and the furniture with a deep frown on her face, then shakes<br />
+   her head and walks back over to the door.&lt;.p&gt;<br />
+   &lt;q&gt;I can’t see it here,&lt;/q&gt; she says, &lt;q&gt;Perhaps it’s in that<br />
+   big cave over there.&lt;/q&gt; She starts walking north, then stops<br />
+   and turns, waiting for you to follow.&lt;.p&gt;”<br />
+  stateDesc = ”She’s standing looking at you, waiting for you<br />
+   to follow her into the large cave to the north. ”<br />
+  specialDesc { inherited; stateDesc;} <br />
+;</p>
+
+<p>+ sarahGuide3 : GuidedTourState<br />
+  stateAfterEscort = sarahGuide4<br />
+  escortDest = anotherCave<br />
+  arrivingWithDesc = ”{The sarah/she} hunts round the cave, peering at<br />
+   the torch on the wall, the trunk on the floor, and the various<br />
+   ways out. Then she lets out a heavy sigh and declares, &lt;q&gt;Oh, it’s<br />
+   &lt;i&gt;hopeless&lt;/i&gt;! How can I find such a small thing here? Anyway,<br />
+   I’m sure he ran outside with it. Let’s go back out by the lake.&lt;/q&gt;\b<br />
+   So saying, she walks back towards the cave to the south, then stops,<br />
+   waiting for you to follow.&lt;.p&gt;”<br />
+  stateDesc = ”She’s waiting for you by the opening to the cave to<br />
+   the south. ”<br />
+  specialDesc {inherited; stateDesc; }<br />
+;</p>
+
+<p>+ sarahGuide4 : GuidedTourState<br />
+  stateAfterEscort = sarahTalking<br />
+  escortDest = lakeDoor<br />
+  arrivingWithDesc = ”{The sarah/she} walks briskly over to the door,<br />
+   then stops to wait for you. ”<br />
+  stateDesc = ”She’s waiting for you by the door. ”<br />
+  specialDesc {inherited; stateDesc; }<br />
+;</p>
+
+<p>There’s one other refinement we can add her, and that’s to add
+<strong>TourGuide</strong> to Sarah’s class list, ahead of Person:</p>
+
+<p>sarah : <strong>TourGuide</strong>, Person ’attractive young woman/brunette’ ’young woman’ @lakeRoom<br />
+  …<br />
+;</p>
+
+<p>This will allow the player to type FOLLOW SARAH or FOLLOW WOMAN and have
+her lead the way while she’s in one of her GuidedTourStates.</p>
+
+<p>There’s only one problem: so far we’ve provided no means for her to
+<em>get</em> into these GuidedTourStates. Since in this case it will require a
+mechanism we haven’t yet come to, we’ll have to wait until we do, which
+will be when we start defining some <a href="asktopic.html">AskTopics</a> for
+Sarah.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

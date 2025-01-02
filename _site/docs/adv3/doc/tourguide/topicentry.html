@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-topicentry-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-topicentry-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TopicEntry : object<br />
+</strong></td>
+<td style="text-align: right;"><a href="greetingprotocols.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="givetopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>One way to handle conversational commands such as ASK FRED ABOUT
+TREASURE or SHOW ROTTEN APPLE TO MAVIS might be to override the
+actionIobjAskAbout and actionIobjShowTo methods on Fred and Mavis with
+long and complicated statements, probably starting with switch(gDobj)
+and then going on to have complex IF … ELSE IF spaghetti within the
+more complex cases, until the whole thing becomes a nightmare to code,
+an impossibility to debug, and a disincentive to attempt any kind of
+sophisticated conversation with an NPC. Fortunately TADS 3 makes such
+spaghetti nightmares a thing of the past, thanks mainly to the
+TopicEntry.</p>
+
+<p>To handle conversations in TADS 3 there is no need to override a single
+action method on any NPC (unless you’re attempting something not covered
+by the library). The commands ASK ABOUT, ASK FOR, TELL ABOUT, SHOW TO
+and GIVE TO can all be handled with TopicEntry objects (as can some
+other constructs we’ll be meeting later). These objects define the
+response an actor gives to a particular command concerning a particular
+object (for example an object defined as AskTopic @carbuncle would
+define a response to an ASK ABOUT CARBUNCLE command). TopicEntry objects
+may be nested directly inside the Actor whose responses they represent,
+but they may also be nested inside ActorStates, to form the set of
+responses the Actor gives when in that state, or else within
+TopicGroups, to form a set of responses the actor gives when certain
+conditions obtain. TopicEntry objects may also be placed within
+TopicGroups within ActorStates. Again, each TopicEntry may be allocated
+a condition that must obtain before it is used as a response, or may be
+assigned one or more alternative entries (AltTopics) that will be used
+under different conditions. Again, a TopicEntry may (depending on
+circumstances) match a physical game object (such as the carbuncle), an
+abstract topic (such as ‘the meaning of life’), a set of objects or
+topics, or a regular expression. If none of these is suitable, the
+author can override the TopicEntry’s <strong>matchTopic</strong> method to provide
+custom matching (for example, to match any object belonging to a certain
+class). As if that were not enough, the TopicEntry system can also cater
+for NPCs being proactive and posing questions to the player character,
+to which any set of responses may be defined (via SpecialTopic).</p>
+
+<p>The above explanation is probably too abstract and dense to be terribly
+meaningful at first reading. For a more digestible explanation you may
+want to read the article on
+<a href="../techman/t3conv.html" target="_top">Programming Conversations
+with NPCs</a> in the <em>Technical Manual</em>. In any case, hopefully the
+dense, abstract explanation given above will begin to make more sense
+when we start giving concrete examples.</p>
+
+<p>The first thing to note is that game authors are most unlikely to use
+raw TopicEntry objects (unless they’re devising a custom TopicEntry
+class of their own). In practice one uses one of the subclasses of
+TopicEntry:</p>
+
+<p>TopicEntry<br />
+   <a href="alttopic.html">AltTopic</a><br />
+   <a href="commandtopic.html">CommandTopic</a><br />
+   <a href="defaulttopics-overview.html">DefaultTopic</a><br />
+      <a href="defaultaskfortopic.html">DefaultAskForTopic</a><br />
+      <a href="defaultasktelltopic.html">DefaultAskTellTopic</a><br />
+      <a href="defaultasktopic.html">DefaultAskTopic</a><br />
+      DefaultCommandTopic<br />
+      <a href="defaultconsulttopic.html">DefaultConsultTopic</a><br />
+      <a href="defaultgiveshowtopic.html">DefaultGiveShowTopic</a><br />
+      <a href="defaultgivetopic.html">DefaultGiveTopic</a><br />
+      DefaultInitiateTopic<br />
+      <a href="defaultshowtopic.html">DefaultShowTopic</a><br />
+      <a href="defaulttelltopic.html">DefaultTellTopic</a><br />
+   <a href="specialtopic.html">SpecialTopic</a><br />
+   ThingMatchTopic<br />
+      <a href="giveshowtopic.html">GiveShowTopic</a><br />
+         <a href="givetopic.html">GiveTopic</a><br />
+         <a href="showtopic.html">ShowTopic</a><br />
+      <a href="initiatetopic.html">InitiateTopic</a><br />
+   TopicMatchTopic<br />
+      <a href="asktelltopic.html">AskTellTopic</a><br />
+         <a href="askaboutfortopic.html">AskForAboutTopic</a><br />
+         <a href="askfortopic.html">AskForTopic</a><br />
+         AskTellAboutForTopic<br />
+         <a href="asktopic.html">AskTopic</a><br />
+         <a href="telltopic.html">TellTopic</a><br />
+      <a href="consulttopic.html">ConsultTopic</a><br />
+   TopicOrThingMatchTopic<br />
+      <a href="asktellgiveshowtopic.html">AskTellGiveShowTopic</a><br />
+      <a href="asktellshowtopic.html">AskTellShowTopic</a><br />
+   <a href="misctopic.html">MiscTopic</a><br />
+      <a href="byetopic.html">ByeTopic</a><br />
+      <a href="hellogoodbyetopic.html">HelloGoodbyeTopic</a><br />
+      <a href="hellotopic.html">HelloTopic</a><br />
+      <a href="impbyetopic.html">ImpByeTopic</a><br />
+      <a href="imphellotopic.html">ImpHelloTopic</a><br />
+      YesNoTopic<br />
+         <a href="notopic.html">NoTopic</a><br />
+         <a href="yestopic.html">YesTopic</a></p>
+
+<p>The structure of this inheritance tree is important, because it gives a
+clear indication of the different subcategories of TopicEntry, each one
+of which is subtly different and has a slightly different use and
+purpose. The first distinction to be clear about is between
+ThingMatchTopics and TopicMatchTopics; the former match game objects
+(generally of class Thing or one of its subclasses) while the latter
+match ResolvedTopics. The main consequence of this is that a
+ThingMatchTopic can only match an object that’s in scope (this makes
+sense - you can’t give or show an object to someone unless the object is
+there to be given or shown), whereas a TopicMatchTopic can match any
+object that’s been defined (including a Topic), since something doesn’t
+have to be physically present to be asked about, asked for, or told
+about. The distinction between ThingMatchTopic and TopicMatchTopic is
+also important if you override certain of their methods, as we’ll see
+presently.</p>
+
+<p>We’ll come across the other main types of TopicEntry in due course.
+<a href="alttopic.html">AltTopic</a> is used to provide an alternative response to
+another TopicEntry under author-defined conditions.
+<a href="defaulttopics-overview.html">DefaultTopics</a> match any input relating to
+the command in question, (i.e. a DefaultAskTopic matches ASK FRED ABOUT
+X whatever X is), and is activated by anything for which a more specific
+response has not been defined. <a href="specialtopic.html">SpecialTopic</a> responds
+to any author-defined string (e.g. PRAISE SARAH, TELL CURATOR A LIE or
+RECITE A POEM), but works only in the context of a Conversation Node.</p>
+
+<p>TopicEntries have the following methods and properties which you either
+will or may need to use:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>matchObj</strong> - The matching simulation object or
+objects; this can either be a single object or a list of objects.
+ <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>matchPattern</strong> - a regular expression pattern that
+this TopicEntry matches (as an alternative to matchObj)  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>matchScore</strong> - the match strength score. By default
+this is 100 (except on DefaultTopics, where it's 1, 2 or 3). If more
+than one TopicEntry is a possible match to a conversational command, the
+one with the highest matchScore is used.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>getActor()</strong> - The Actor object to which this
+TopicEntry ultimately belongs (you'll never want to override this but
+you may want to refer to it).  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>topicResponse</strong> - The response to ASK, TELL, GIVE or
+SHOW. You override this to show the response text (normally in a
+double-quoted string, but you can define this as a method if you need
+something more complicated), alternatively you can override handleTopic
+to do the job.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>isActive</strong> - The condition that must be true for this
+TopicEntry to be matched. This is true by default but can be set to
+anything you like to make matching conditional; while this property
+evaluates to nil its response will not be shown. For example, you might
+want a particular response to be used only if Sarah has seen the ghost,
+in which case you could define isActive = sarah.hasSeen(ghost).  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>isConversational</strong> - true by default, this property
+determines whether this response is treated as conversational. If this
+property is set to nil then matching this topic will not trigger any
+greeting protocols. For example, if the player attempts to ASK SARAH FOR
+BANANA when the PC is already carrying the banana, instead of having
+Sarah deliver a sarcastic reply you may simply want the game to report
+"You already have the banana." Since this would not constitute a
+conversational exchange between Sarah and the PC you'd probably want to
+set isConversational = nil on this response.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>handleTopic(fromActor, topic)</strong> - By default this
+either calls doScript (if the TopicEntry also inherits from a Script
+class - e.g. if it was defined as AskTopic, StopEventList) or else (if
+the TopicEntry is not also a Script) simply calls topicResponse. The
+first parameter (fromActor) is the actor (normally the player character)
+doing the asking, showing, giving or telling. The meaning of the second
+parameter depends on the type of TopicEntry. For a ThingMatchTopic
+(GiveTopic, ShowTopic or InitiateTopic) the parameter is the actual game
+object that the TopicEntry matched (this can be useful, e.g. in a Give
+command if you want to move the object matched into the actor it's been
+given to). For a TopicMatchTopic (AskTopic, TellTopic, AskForTopic),
+however, the second parameter is a ResolvedTopic object (though you may
+be able to get at the actual game object matched by calling
+topic.getBestMatch).  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>matchTopic(fromActor, topic)</strong> - By default this
+matches the TopicEntry according to what you have defined in matchObj or
+matchPattern, so you don't need to worry about overriding it. On
+occasion, however, you may have a special case that's most easily dealt
+with by overriding this method. For example, if you defined a custom
+Coin class and then wanted a GiveTopic that matched any member of the
+Coin class you could override matchTopic(fromActor, obj) to return
+matchScore if obj is ofKind(Coin). Note that the parameters to this
+method mean the same as those for handleTopic, so that the meaning of
+the second parameter depends on whether we're using a TopicMatchTopic or
+a ThingMatchTopic.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="top">
+<td width="14"><strong></strong>·<strong></strong></td>
+<td><strong>isMatchPossible(actor, scopeList)</strong> - This method
+decides whether the TopicEntry can be matched. For a TopicMatchTopic it
+returns true if the matchObj (or any of the objects in the matchObj list
+if it is a list) is either in scope (in the scopeList) or is known to
+actor, or if matchObj is nil (which means that the TopicEntry is being
+matched by a pattern or a custom method). For a ThingMatchTopic it
+returns true only if matchObj or one of the objects in the matchObj list
+is in scope. Most of the time you probably won't want to change this
+behaviour.  <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This may look a bit daunting, but in practice the use of templates makes
+the definition of the majority of TopicEntries pretty straightforward.
+To ask about a single object, for example, one might define an AskTopic
+thus:</p>
+
+<p>+ AskTopic @cheese<br />
+  ”&lt;q&gt;Do you like cheese?&lt;/q&gt; you ask.\b<br />
+   &lt;q&gt;Only if it’s blue cheese.&lt;/q&gt; she replies. ”<br />
+;</p>
+
+<p>The object following the @ sign is the matchObj, and the double-quoted
+string that follows is the topicResponse.</p>
+
+<p>If you want a TopicEntry that matches a list of items, you enclose that
+list in square brackets instead of using the @ sign, e.g.</p>
+
+<p>+ AskTopic [cheese, bread]<br />
+   ”&lt;q&gt;Do you like cheese on your bread?&lt;/q&gt; you enquire.\b<br />
+   &lt;q&gt;That depends on the cheese.&lt;/q&gt; she tells you.”<br />
+;</p>
+
+<p>If you wanted a different response that takes preference under special
+circumstances you could use a higher matchScore by placing it after a +
+sign before the matchObj:</p>
+
+<p>+ AskTopic +110 @cheese<br />
+  ”&lt;q&gt;Do you like this cheese?&lt;/q&gt; you ask, holding out the lump you’re holding.\b<br />
+   &lt;q&gt;Ooh! Blue Stilton! lovely!&lt;/q&gt; she exclaims. ”<br />
+  isActive = (cheese.isHeldBy(gPlayerChar))<br />
+;</p>
+
+<p>In all these examples the player will always see the same response to
+the same command. For more realism you may prefer to use a list of
+responses, which you can do by adding a Script class to the class list
+of the TopicEntry and supplying a list of responses in square brackets
+instead of a single response in a double-quoted string:</p>
+
+<p>+ AskTopic, StopEventList [cheese, bread]<br />
+  [ ’&lt;q&gt;Do you like cheese on your bread?&lt;/q&gt; you ask.\b<br />
+    &lt;q&gt;That depends on the cheese&lt;/q&gt; she tells you. ’,</p>
+
+<p>   ’&lt;q&gt;So, what kind of cheese do you like with your bread?&lt;/q&gt; you enquire.\b<br />
+    &lt;q&gt;Blue cheese.&lt;/q&gt; she replies firmly. ’,</p>
+
+<p>    ’&lt;q&gt;I can\t interest you in some nice gooey brie on a fresh crusty piece<br />
+    of wholemeal then?&lt;/q&gt; you suggest\b<br />
+     &lt;q&gt;No - but if you made that a nice smelly piece of Blue Stilton on a<br />
+    fresh crusty piece of wholemeal that’d be a different matter.&lt;/q&gt; she smiles. ’,</p>
+
+<p>    ’&lt;q&gt;So - only blue cheese on your bread will do.&lt;/q&gt; you surmise.\b<br />
+    &lt;q&gt;That\s right.&lt;/q&gt; she affirms. ’<br />
+   ]<br />
+;</p>
+
+<p>Finally, you might want to override topicResponse with a method if it
+needs to do something more complicated than merely displaying a piece of
+text, for example:</p>
+
+<p>+ GiveTopic @cheese<br />
+  topicResponse<br />
+  {<br />
+    ”&lt;q&gt;Here, have this,&lt;/q&gt; you say, handing over the lump of stilton.\b<br />
+     &lt;q&gt;Thanks!&lt;/q&gt; she beams, then proceeds to eat the lot. ”<br />
+     cheese.moveInto(getActor);<br />
+     nestedActorAction(getActor, Eat, cheese);<br />
+  }<br />
+;</p>
+
+<p>Having looked at TopicEntries in the abstract, we can now go on to see
+how we might use the various types of TopicEntry in our game.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

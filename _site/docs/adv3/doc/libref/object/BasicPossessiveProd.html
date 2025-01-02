@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-basicpossessiveprod-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-basicpossessiveprod-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">BasicPossessiveProd</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2770">2770</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Basic possessive phrase. The grammar rules for these phrases must map
+the possessive qualifier phrase to poss_, and the noun phrase being
+qualified to np_. We are based on DefiniteNounProd because we resolve
+the possessive qualifier as though it had a definite article.</p>
+
+<p>The possessive production object poss_ must define the method
+getOrigMainText() to return the text of its noun phrase in a format
+suitable for disambiguation prompts or error messages. In English, for
+example, this means that the getOrigMainText() must omit the
+apostrophe-S suffix if present.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">BasicPossessiveProd</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/DefiniteNounProd.html"><code class="language-plaintext highlighter-rouge">DefiniteNounProd</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BasicPossessiveProd</code></strong><br />
+<a href="../object/DefiniteNounProd.html"><code class="language-plaintext highlighter-rouge">DefiniteNounProd</code></a><br />
+<a href="../object/NounPhraseProd.html"><code class="language-plaintext highlighter-rouge">NounPhraseProd</code></a><br />
+<a href="../object/BasicProd.html"><code class="language-plaintext highlighter-rouge">BasicProd</code></a><br />
+`                                 object<code class="language-plaintext highlighter-rouge">  
+[</code>AmbigResponseKeeper<code class="language-plaintext highlighter-rouge">](../object/AmbigResponseKeeper.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BasicPossessiveProd</code></strong><br />
+<a href="../object/ButPossessiveProd.html"><code class="language-plaintext highlighter-rouge">ButPossessiveProd</code></a><br />
+<a href="../object/exceptNounPhrase(singlePossessive).html"><code class="language-plaintext highlighter-rouge">exceptNounPhrase(singlePossessive)</code></a><br />
+<a href="../object/DisambigPossessiveProd.html"><code class="language-plaintext highlighter-rouge">DisambigPossessiveProd</code></a><br />
+<a href="../object/disambigListItem(possessive).html"><code class="language-plaintext highlighter-rouge">disambigListItem(possessive)</code></a><br />
+<a href="../object/PossessiveNounProd.html"><code class="language-plaintext highlighter-rouge">PossessiveNounProd</code></a><br />
+<a href="../object/qualifiedSingularNounPhrase(possessive).html"><code class="language-plaintext highlighter-rouge">qualifiedSingularNounPhrase(possessive)</code></a><br />
+<a href="../object/PossessivePluralProd.html"><code class="language-plaintext highlighter-rouge">PossessivePluralProd</code></a><br />
+<a href="../object/explicitDetPluralNounPhrase(possessive).html"><code class="language-plaintext highlighter-rouge">explicitDetPluralNounPhrase(possessive)</code></a><br />
+<a href="../object/explicitDetPluralOnlyNounPhrase(possessive).html"><code class="language-plaintext highlighter-rouge">explicitDetPluralOnlyNounPhrase(possessive)</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#npKeeper"><code class="language-plaintext highlighter-rouge">npKeeper</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
+<a href="../object/NounPhraseProd.html#filterForCollectives"><code class="language-plaintext highlighter-rouge">filterForCollectives</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a> <a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AmbigResponseKeeper</code> :<br />
+<a href="../object/AmbigResponseKeeper.html#ambigResponses_"><code class="language-plaintext highlighter-rouge">ambigResponses_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#resolvePossessive"><code class="language-plaintext highlighter-rouge">resolvePossessive</code></a> <a href="#selectWithPossessive"><code class="language-plaintext highlighter-rouge">selectWithPossessive</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">DefiniteNounProd</code> :<br />
+<a href="../object/DefiniteNounProd.html#reduceDefinite"><code class="language-plaintext highlighter-rouge">reduceDefinite</code></a> <a href="../object/DefiniteNounProd.html#resolveDefinite"><code class="language-plaintext highlighter-rouge">resolveDefinite</code></a> <a href="../object/DefiniteNounProd.html#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
+<a href="../object/NounPhraseProd.html#filterTruncations"><code class="language-plaintext highlighter-rouge">filterTruncations</code></a> <a href="../object/NounPhraseProd.html#getVerifyKeepers"><code class="language-plaintext highlighter-rouge">getVerifyKeepers</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a> <a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a> <a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a> <a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AmbigResponseKeeper</code> :<br />
+<a href="../object/AmbigResponseKeeper.html#addAmbigResponse"><code class="language-plaintext highlighter-rouge">addAmbigResponse</code></a> <a href="../object/AmbigResponseKeeper.html#getAmbigResponses"><code class="language-plaintext highlighter-rouge">getAmbigResponses</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="npKeeper"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">npKeeper</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2979">2979</a>]</p>
+
+<p>our ambiguous response keeper</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2779">2779</a>]</p>
+
+<p>To allow this class to be mixed with other classes that have mixed-in
+ambiguous response keepers, create a separate object to hold our
+ambiguous response keeper for the possessive phrase. We will never use
+our own ambiguous response keeper properties, so those are available to
+any other production class we’re mixed into.</p>
+
+<p><span id="resolvePossessive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolvePossessive (resolver, results, num)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2795">2795</a>]</p>
+
+<p>Resolve the possessive, and perform preliminary resolution of the
+qualified noun phrase. We find the owner object and reduce the resolved
+objects for the qualified phrase to those owned by the owner.</p>
+
+<p>If we fail, we return nil. Otherwise, we return a list of the
+tentatively resolved objects. The caller can further resolve this list
+as needed.</p>
+
+<p><span id="selectWithPossessive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">selectWithPossessive (resolver, results, lst, lstOrigText, num)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#2830">2830</a>]</p>
+
+<p>Resolve the possessive, and reduce the given match list by selecting
+only those items owned by the resolution of the possessive phrase.</p>
+
+<p>‘num’ is the number of objects we want to select. If the noun phrase
+being qualified is singular, this will be 1; if it’s plural, this will
+be nil, to indicate that there’s no specific target quantity; if the
+phrase is something like “bob’s five books,” the the number will be the
+qualifying quantity (5, in this case).</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

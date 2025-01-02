@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-initdesc-initspecialdesc-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-initdesc-initspecialdesc-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>initDesc &amp;
+initSpecialDesc<br />
+</strong></td>
+<td style="text-align: right;"><a href="vocabwords.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="globalparamname.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>If the coin starts life lying on the ground as a small brassy object,
+rather than seeing a description that reads “You see a small brassy
+object here” it would be nicer if it read something like “A small brassy
+object lies on the ground in a dim corner of the cave. “ Likewise, if we
+examined the coin without first picking it up it would be good if we
+obtained a vaguer description such as “It looks like it might be a coin
+of some sort. “ - after all, the standard description we’ve given the
+coin refers to what’s on its obverse and its reverse, but how can we see
+what’s on both sides of the coin while it’s still lying on the ground?</p>
+
+<p>To achieve this we can use the initSpecialDesc and initDesc properties.
+The first of these, initSpecialDesc, is what will be displayed in a room
+or contents listing before the object has been moved (while its moved
+property is nil); initDesc (if defined) is the description that will be
+given in response to an EXAMINE command before the object has been moved
+(if initDesc is not defined, the ordinary desc property will be used
+instead). The definition of brassCoin then becomes:</p>
+
+<p>brassCoin : Thing ’(small) brassy object’ ’small brassy object’ @longCave<br />
+  ”On the obverse is the head of King Freddie the Fat, and on the reverse<br />
+   is stamped ONE GROAT. ” <br />
+   <strong>initSpecialDesc = ”A small brassy object lies on the ground in a dim corner of the cave. ”<br />
+   initDesc = ”It looks like it might be a coin of some sort. ”</strong><br />
+   dobjFor(Examine)<br />
+   {<br />
+     action()<br />
+     {<br />
+       inherited;<br />
+       changeName();<br />
+     }<br />
+   }<br />
+   changeName()<br />
+   {<br />
+     name = ’small brass coin’;<br />
+     cmdDict.removeWord(self, ’object’, &amp;noun);<br />
+     initializeVocabWith(‘brass coin/groat*coins’);<br />
+   } <br />
+;</p>
+
+<p>Note that initSpecialDesc and initDesc are only used so long as moved is
+nil; as soon as moved is set to true they are no longer employed. The
+moved property is set to nil by the mainMoveInto(newContainer), which is
+called by moveIntoForTravel(newContainer) which is in turn called by
+moveInto(newContainer), the method most commonly used to move objects in
+game code or the library’s handling of actions like TAKE. Normally this
+does not matter, but there may be occasions when it could defeat the use
+of initSpecialDesc and initDesc. For example, suppose the player had to
+perform some action to reveal the coin, e.g. because it was hidden under
+something else or falls out of something else. We might start the coin
+in another container (or nil) and then move it into the longCave
+using:</p>
+
+<p>brassCoin.moveInto(longCave);</p>
+
+<p>The trouble is that this will set brassCoin.moved to true, so the
+initSpecialDesc and initExaminedDesc won’t be used, even though this is
+effectively the first appearance of the coin in the game. The way round
+this under such circumstances is to set moved back to nil in your
+code:</p>
+
+<p>brassCoin.moveInto(longCave);<br />
+brassCoin.moved = nil;</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

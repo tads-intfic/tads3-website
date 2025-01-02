@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-techman-t3spec-bincode-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-techman-t3spec-bincode-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="../topbar.jpg" data-border="0" /></p>
+
+<p><a href="../toc.html" class="nav">Table of Contents</a> |
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> &gt;
+Portable Binary Encoding<br />
+<span class="navnp"><a href="format.html" class="nav"><em>Prev:</em> Image File Format</a>
+   
+<a href="charmap.html" class="nav"><em>Next:</em> Character Mapping</a>
+    </span></p>
+
+<p><img src="t3logo.gif" alt="" /></p>
+
+<h2 id="t3-portable-binary-encoding">T3 Portable Binary Encoding</h2>
+
+<p>All T3 binary files are encoded in a portable format that allows a
+binary file created on one type of computer to be used without any
+changes with T3 implementations on other types of computers. To achieve
+this binary portability, T3 binary files use a portable encoding that
+represents datatypes in a standard format. Each T3 implementation
+translates between the standard format and the local representation of
+the datatype when reading and writing files.</p>
+
+<h3 id="datatypes">Datatypes</h3>
+
+<p>The following are the portable datatypes and their encoding:</p>
+
+<h4 id="utf-8-text">UTF-8 Text</h4>
+
+<p>Unicode text is encoded in UTF-8. This encoding represents each 16-bit
+Unicode character with one, two, or three bytes:</p>
+
+<p>From</p>
+
+<p>To</p>
+
+<p>Binary Encoding</p>
+
+<p>0x0000</p>
+
+<p>0x007f</p>
+
+<p>0bbbbbbb</p>
+
+<p>0x0080</p>
+
+<p>0x07ff</p>
+
+<p>110bbbbb 10bbbbbb</p>
+
+<p>0x0800</p>
+
+<p>0xffff</p>
+
+<p>1110bbbb 10bbbbbb 10bbbbbb</p>
+
+<p>The bits of the 16-bit value are encoded into the <strong>b</strong>’s in the table
+above with the most significant group of bits in the first byte. So:
+0x571 has the 16-bit Unicode binary pattern 0000011001110001, and is
+encoded in UTF-8 as 11011001 10110001.</p>
+
+<p>Note that UTF-8 encodes the most significant bits in the first bytes;
+this is different from the byte ordering used for other types (such as
+integers), which are all stored in little-endian format
+(least-significant byte first). The reason for this disparity is that
+this ordering makes it possible to compare two UTF-8 strings in a
+byte-wise fashion. (This type of magnitude comparison is not always
+especially useful, since it does not produce correct results for a
+localized sorting order, but it at least produces a uniform sorting
+order based on the Unicode code points stored in the string and hence
+may be useful in certain cases for building internal indices and
+tables.)</p>
+
+<h4 id="integer-values">Integer values</h4>
+
+<p>Integer values are stored in little-endian format (i.e.,
+least-significant byte first) in fixed-size byte arrays. These values
+are not aligned on any particular boundary in the file. These values can
+be interpreted as signed or unsigned. Signed values are encoded in
+2’s-complement notation.</p>
+
+<p><strong>16-bit integers</strong> are stored as 2-byte arrays. The first byte has the
+low-order 8 bits, the second byte has the high-order 8 bits.</p>
+
+<p><strong>32-bit integers</strong> are stored as 4-byte arrays. The first byte has the
+low-order 8 bits, the second byte has the next more significant 8 bits,
+the third byte has the next more significant 8 bits, and the fourth byte
+has the most significant 8 bits.</p>
+
+<h3 id="data-holders">Data Holders</h3>
+
+<p>The T3 VM uses run-time typing, which allows certain types of variables
+to hold any type of value; this type of value is tagged with its type,
+so that the VM can interpret the value correctly whenever it is used.</p>
+
+<p>In order to store these “variant” types, the VM defines a composite type
+called a data holder. This composite contains the type information along
+with the value.</p>
+
+<p>To store a data holder portably, we store a 5-byte array. The first byte
+contains the type ID value. The remaining 4 bytes encode the value using
+the standard primitive type encodings; the table below shows the
+correspondence between the primitive types and their encodings.</p>
+
+<p>When an encoding does not take up the full 4 bytes, the value is packed
+into the earlier bytes, and the later bytes have arbitrary values. For
+example, a property ID is encoded in a data holder as follows:</p>
+
+<p>Byte Index</p>
+
+<p>Value</p>
+
+<p>0</p>
+
+<p>6 (the type code for VM_PROP)</p>
+
+<p>1</p>
+
+<p>low-order 8 bits of property ID value</p>
+
+<p>2</p>
+
+<p>high-order 8 bits of property ID value</p>
+
+<p>3</p>
+
+<p>arbitrary</p>
+
+<p>4</p>
+
+<p>arbitrary</p>
+
+<h3 id="type-ids">Type ID’s</h3>
+
+<p>The table below shows the assigned ID values for the primitive types.
+(The types shown in italics are reserved for internal use by
+implementations and will never appear in portable files; we list them
+for the sake of completeness, but they’ll never be stored persistently
+and thus are not relevant to the portable file format.)</p>
+
+<p>Type Name</p>
+
+<p>Type ID</p>
+
+<p>Description</p>
+
+<p>Value Encoding</p>
+
+<p>VM_NIL</p>
+
+<p>1</p>
+
+<p>nil (boolean “false” or null pointer)</p>
+
+<p>none</p>
+
+<p>VM_TRUE</p>
+
+<p>2</p>
+
+<p>boolean “true”</p>
+
+<p>none</p>
+
+<p><em>VM_STACK</em></p>
+
+<p>3</p>
+
+<p><em>Reserved for implementation use for storing native machine pointers to
+stack frames (see note below)</em></p>
+
+<p>none</p>
+
+<p><em>VM_CODEPTR</em></p>
+
+<p>4</p>
+
+<p><em>Reserved for implementation use for storing native machine pointers to
+code (see note below)</em></p>
+
+<p>none</p>
+
+<p>VM_OBJ</p>
+
+<p>5</p>
+
+<p>object reference as a 32-bit unsigned object ID number</p>
+
+<p>UINT4</p>
+
+<p>VM_PROP</p>
+
+<p>6</p>
+
+<p>property ID as a 16-bit unsigned number</p>
+
+<p>UINT2</p>
+
+<p>VM_INT</p>
+
+<p>7</p>
+
+<p>integer as a 32-bit signed number</p>
+
+<p>INT4</p>
+
+<p>VM_SSTRING</p>
+
+<p>8</p>
+
+<p>single-quoted string; 32-bit unsigned constant pool offset</p>
+
+<p>UINT4</p>
+
+<p>VM_DSTRING</p>
+
+<p>9</p>
+
+<p>double-quoted string; 32-bit unsigned constant pool offset</p>
+
+<p>UINT4</p>
+
+<p>VM_LIST</p>
+
+<p>10</p>
+
+<p>list constant; 32-bit unsigned constant pool offset</p>
+
+<p>UINT4</p>
+
+<p>VM_CODEOFS</p>
+
+<p>11</p>
+
+<p>code offset; 32-bit unsigned code pool offset</p>
+
+<p>UINT4</p>
+
+<p>VM_FUNCPTR</p>
+
+<p>12</p>
+
+<p>function pointer; 32-bit unsigned code pool offset</p>
+
+<p>UINT4</p>
+
+<p>VM_EMPTY</p>
+
+<p>13</p>
+
+<p>no value (this is useful in some cases to represent an explicitly unused
+data slot, such as a slot that has never been initialized)</p>
+
+<p>none</p>
+
+<p><em>VM_NATIVE_CODE</em></p>
+
+<p>14</p>
+
+<p><em>Reserved for implementation use for storing native machine pointers to
+native code (see note below)</em></p>
+
+<p>none</p>
+
+<p>VM_ENUM</p>
+
+<p>15</p>
+
+<p>enumerated constant; 32-bit integer</p>
+
+<p>UINT4</p>
+
+<p>VM_BIFPTR</p>
+
+<p>16</p>
+
+<p>built-in function pointer; 32-bit integer, encoding the function set
+dependency table index in the high-order 16 bits, and the function’s
+index within its set in the low-order 16 bits.</p>
+
+<p>UINT4</p>
+
+<p><em>VM_OBJX</em></p>
+
+<p>17</p>
+
+<p><em>Reserved for implementation use for an executable object, as a 32-bit
+object ID number (see note below)</em></p>
+
+<p>UINT4</p>
+
+<p>Note that types 3 (VM_STACK), 4 (VM_CODEPTR), 14 (VM_NATIVE_CODE), and
+17 (VM_OBJX) are reserved for implementation use. These will <strong>never</strong>
+appear in a portable binary file; we list them here only for
+completeness. These types are intended to allow implementations to store
+native datatypes (such as native machine pointers) for which there is no
+meaningful portable representation. Implementations are free to use
+these types for any purposes of their own; the names and descriptions in
+the table are for mnemonic value only and shouldn’t be taken to imply a
+required use for these types.</p>
+
+<h3 id="type-names">Type Names</h3>
+
+<p>The file format specifications use the following names to refer to the
+portable datatypes:</p>
+
+<p>Name</p>
+
+<p>Description</p>
+
+<p>SBYTE</p>
+
+<p>Signed 8-bit byte</p>
+
+<p>UBYTE</p>
+
+<p>Unsigned 8-bit byte</p>
+
+<p>UTF8</p>
+
+<p>Unicode text encoded as UTF-8</p>
+
+<p>INT2</p>
+
+<p>Signed 16-bit (2-byte) integer</p>
+
+<p>UINT2</p>
+
+<p>Unsigned 16-bit (2-byte) integer</p>
+
+<p>INT4</p>
+
+<p>Signed 32-bit (4-byte) integer</p>
+
+<p>UINT4</p>
+
+<p>Unsigned 32-bit (4-byte) integer</p>
+
+<p>DATA_HOLDER</p>
+
+<p>Data holder for any primitive type</p>
+
+<p>Copyright © 2001, 2006 by Michael J. Roberts.<br />
+Revision: September, 2006</p>
+
+<hr />
+
+<p><em>TADS 3 Technical Manual</em><br />
+<a href="../toc.html" class="nav">Table of Contents</a> |
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> &gt;
+Portable Binary Encoding<br />
+<span class="navnp"><a href="format.html" class="nav"><em>Prev:</em> Image File Format</a>
+   
+<a href="charmap.html" class="nav"><em>Next:</em> Character Mapping</a>
+    </span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

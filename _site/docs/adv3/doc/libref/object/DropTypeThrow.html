@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-droptypethrow-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-droptypethrow-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">DropTypeThrow</span><span class="type">class</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#327">327</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A drop-type descriptor for the THROW command. This object keeps track of
+the target (the object that was hit by the projectile) and the
+projectile’s path to the target. The projectile is simply the direct
+object.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">DropTypeThrow</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/DropType.html"><code class="language-plaintext highlighter-rouge">DropType</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DropTypeThrow</code></strong><br />
+<a href="../object/DropType.html"><code class="language-plaintext highlighter-rouge">DropType</code></a><br />
+`                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DropTypeThrow</code></strong><br />
+<a href="../object/DropTypeShortThrow.html"><code class="language-plaintext highlighter-rouge">DropTypeShortThrow</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#path_"><code class="language-plaintext highlighter-rouge">path_</code></a> <a href="#target_"><code class="language-plaintext highlighter-rouge">target_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#getReportPrefix"><code class="language-plaintext highlighter-rouge">getReportPrefix</code></a> <a href="#standardReport"><code class="language-plaintext highlighter-rouge">standardReport</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="path_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">path_</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#363">363</a>]</p>
+
+<p>the path the projectile took to reach the target</p>
+
+<p><span id="target_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">target_</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#360">360</a>]</p>
+
+<p>the object that was hit by the projectile</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (target, path)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#328">328</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="getReportPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getReportPrefix (obj, dest)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#353">353</a>]</p>
+
+<p>if the actual target and the nominal destination are the same, just say
+that it lands on the destination; otherwise, say that it bounces off the
+target and falls to the nominal destination</p>
+
+<p><span id="standardReport"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">standardReport (obj, dest)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#335">335</a>]</p>
+
+<p>remember the target and path</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

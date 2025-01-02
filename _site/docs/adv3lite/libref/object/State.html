@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-state-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-state-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">State</span><span class="type">class</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#805">805</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A State represents a changeable condition of a Mentionable that can be
+used as part of the object’s name in command input. For example, a state
+could be used to represent whether a match is lit or unlit: the words
+‘lit’ and ‘unlit’ could then be used to describe the object, according
+to its current condition.</p>
+
+<p>The actual current condition of a given object is given by a property of
+the Mentionable, which we define as part of the State object. So testing
+whether an object is lit or unlit is just a matter of checking the
+corresponding property of the object.</p>
+
+<p>The parser considers an object to have the state, for parsing purposes,
+if the object defines any value for the state property.</p>
+
+<p>Most of the State object’s definition is its vocabulary, which is
+obviously language-specific. We therefore leave it to the language
+modules to define the individual State instances. Games can also add new
+states as needed, of course.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">State</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/LState.html"><code class="language-plaintext highlighter-rouge">LState</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">State</code></strong><br />
+<a href="../object/LState.html"><code class="language-plaintext highlighter-rouge">LState</code></a><br />
+`                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/DirState.html"><code class="language-plaintext highlighter-rouge">DirState</code></a> <a href="../object/LitUnlit.html"><code class="language-plaintext highlighter-rouge">LitUnlit</code></a> <a href="../object/OpenClosed.html"><code class="language-plaintext highlighter-rouge">OpenClosed</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#adjectives"><code class="language-plaintext highlighter-rouge">adjectives</code></a> <a href="#all"><code class="language-plaintext highlighter-rouge">all</code></a> <a href="#stateProp"><code class="language-plaintext highlighter-rouge">stateProp</code></a> <a href="#vocabTab"><code class="language-plaintext highlighter-rouge">vocabTab</code></a> <a href="#vocabWords"><code class="language-plaintext highlighter-rouge">vocabWords</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">LState</code> :<br />
+<a href="../object/LState.html#additionalInfo"><code class="language-plaintext highlighter-rouge">additionalInfo</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#appliesTo"><code class="language-plaintext highlighter-rouge">appliesTo</code></a> <a href="#classInit"><code class="language-plaintext highlighter-rouge">classInit</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#getVocab"><code class="language-plaintext highlighter-rouge">getVocab</code></a> <a href="#matchName"><code class="language-plaintext highlighter-rouge">matchName</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">LState</code> :<br />
+<a href="../object/LState.html#addToName"><code class="language-plaintext highlighter-rouge">addToName</code></a> <a href="../object/LState.html#getAdditionalInfo"><code class="language-plaintext highlighter-rouge">getAdditionalInfo</code></a> <a href="../object/LState.html#initWord"><code class="language-plaintext highlighter-rouge">initWord</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="adjectives"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">adjectives</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#878">878</a>]</p>
+
+<p>State/adjective initializer list.</p>
+
+<p>States are generally represented in names by adjectives added to the
+object name, both in displaying output and in parsing input. For
+example, a Lit/Unlit state would add ‘lit’ in the lit state and ‘unlit’
+in the unlit state. So we provide an easy way of initializing a state
+object: just list the states and their corresponding adjectives.</p>
+
+<p>Make one entry in this list for each possible state; the entry is a
+list, [stateval, [adjectives]], where ‘stateval’ is the state
+variable value, and [adjectives] is a list of strings giving the
+corresponding adjectives. The first adjective in the list is the display
+adjective - this is the one that addToName() will use to generate an
+object name for display. The rest are used to parse input; they’ll all
+be matched to the state.</p>
+
+<p><span id="all"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">all</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#894">894</a>]</p>
+
+<p>class property: master list of all State objects</p>
+
+<p><span id="stateProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stateProp</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#814">814</a>]</p>
+
+<p>The Mentionable property that indicates the current condition of an
+object that has this State. The range of values that this property takes
+on in the Mentionable is up to the State to define. For some states,
+this will be a simple boolean: Lit/Unlit, Open/Closed, On/Off, etc. For
+others, this might be an integer range or a set of string values.</p>
+
+<p><span id="vocabTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vocabTab</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#858">858</a>]</p>
+
+<p>state vocabulary lookup table (built automatically during preinit)</p>
+
+<p><span id="vocabWords"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vocabWords</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#891">891</a>]</p>
+
+<p>*Full* vocabulary initializer list. If the ‘adjectives’ list isn’t
+sufficiently flexible for your needs, you can use this initializer list
+instead. This consists of a list of sublist entries, [stateval, word,
+flags]. ‘stateval’ is a state value, ‘word’ is a string giving a
+vocabulary word to match, and ‘flags’ is a combination of MatchXxx flags
+for the word.</p>
+
+<p>[[nil, ‘unlit’, MatchAdj],<br />
+[true, ‘lit’, MatchAdj]]</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="appliesTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">appliesTo (obj)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#821">821</a>]</p>
+
+<p>Does this state apply to the given object? By default, we consider any
+object that defines the state property to exhibit the state.</p>
+
+<p><span id="classInit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">classInit ( )</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#939">939</a>]</p>
+
+<p>class initialization</p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ( )</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#897">897</a>]</p>
+
+<p>construction</p>
+
+<p><span id="getVocab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getVocab (state)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#851">851</a>]</p>
+
+<p>Get the vocabulary words that apply to the given state. For example, a
+Lit/Unlit object might return ‘lit’ if state is true and ‘unlit’ if
+state is nil.</p>
+
+<p><span id="matchName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchName (tok, state, cmp)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#835">835</a>]</p>
+
+<p>Match a token from the object name for the given state value.
+Mentionable.matchName() calls this to see if a token applies because of
+the object’s current conditdion. ‘tok’ is the token string; ‘state’ is
+the object’s value for the state property; and ‘cmp’ is the string
+comparator to use for the string comparisons. Returns a combination of
+MatchXxx flags, or zero if the token doesn’t match the current
+condition.</p>
+
+<p>For example, a Lit/Unlit state would return MatchAdj for ‘lit’ if
+‘state’ is true, 0 otherwise.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

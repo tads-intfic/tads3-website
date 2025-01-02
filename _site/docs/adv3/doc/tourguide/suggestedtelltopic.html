@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-suggestedtelltopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-suggestedtelltopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SuggestedTellTopic : <a href="suggestedtopic.html">SuggestedTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="suggestedasktopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="suggestedgivetopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A SuggestedAskTopic is the particular type of
+<a href="suggestedtopic.html">SuggestedTopic</a> that prompts the player to Tell
+About such-and-such a thing.</p>
+
+<p>For example, you might want to tell Sarah about the rockfall blocking
+the obvious way back out:</p>
+
+<p>+ TellTopic, SuggestedTellTopic, StopEventList @tRockfall<br />
+   [<br />
+     {: ”&lt;q&gt;We won’t get out the way we came it,&lt;/q&gt; you warn her, &lt;q&gt;I’m<br />
+        afraid there’s just been a rockfall, blocking the way back out<br />
+        to the outside world!&lt;/q&gt; &lt;&lt;sarah.setKnowsAbout(tRockfall)&gt;&gt;\b<br />
+        &lt;q&gt;Oh wonderful!&lt;/q&gt; {the sarah/she} declares, as if it was your<br />
+        fault. ” },<br />
+     ’&lt;q&gt;The way out back through the caves is blocked by a rockfall.&lt;/q&gt;<br />
+       you say.\b<br />
+      &lt;q&gt;Yes, you already told me.&lt;/q&gt; she reminds you. ’         <br />
+   ]     <br />
+   timesToSuggest = 1<br />
+   name = ’the rockfall’<br />
+   isActive = entranceTunnel.blocked<br />
+;</p>
+
+<p>tRockfall : Topic ’rockfall’ sarahKnowsAbout = nil;</p>
+
+<p>Note that we set timesToSuggest here because we overrode it on
+<a href="suggestedtopic.html">SuggestedTopic</a> to be the length of the list, but
+here only the first response is really worth seeing. In case at a later
+date we want any of Sarah’s responses to depend on whether she knows
+about the rockfall or not, we call sarah.setKnowsAbout(tRockfall),
+although since Sarah is likely to be the only NPC interested in this we
+could perhaps more simply have used &lt;.reveal rockfall&gt;, which we could
+test with gRevealed(‘rockfall’). We also set isActive so that the player
+character can’t talk about the rockfall before it happens. Note finally
+that we also need to define the tRockfall Topic; be careful not to mix
+this is with the TopicEntries, which might upset the location nesting
+tree.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

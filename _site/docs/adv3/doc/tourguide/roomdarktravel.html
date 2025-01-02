@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-roomdarktravel-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-roomdarktravel-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>roomDarkTravel<br />
+</strong></td>
+<td style="text-align: right;"><a href="cannotgothatwayindark.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="travelerarriving.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>BasicLocation.roomDarkTravel() defines what happens if we try to move
+from the current location when it’s dark to another dark location. By
+default, it simply displays the same message as
+<a href="cannotgothatwayindark.html">cannotGoThatWayInDark</a> and then uses exit to
+cancel the movement action. In most cases you’ll probably want to keep
+both methods appearing to do the same thing (unless you want to allow
+travel from one dark location to another), so that the player is given
+no indication in the dark whether a given direction is valid for travel
+or not. In this case we could simply override roomDarkTravel to call
+cannotGoThatWayInDark and then exit:</p>
+
+<p>crewQuarters : DarkCabin ’Crew Quarters’ ’the crew quarters’<br />
+  ”The crew quarters seem largely deserted. There’s an exit back aft and a<br />
+   ladder leading down into the hold. ”<br />
+   down = holdLadderDown<br />
+   aft = greatCabin<br />
+   cannotGoThatWayInDark()   <br />
+     {<br />
+       darkEvents.doScript();         <br />
+     }<br />
+   <strong>roomDarkTravel(actor)<br />
+    {<br />
+      cannotGoThatWayInDark;<br />
+      exit;<br />
+    }</strong>   <br />
+   darkEvents : StopEventList    <br />
+   {<br />
+    [<br />
+     ’Blundering about a ship in the dark could prove dangerous. ’,<br />
+     new function<br />
+     {<br />
+       ”Blundering around in the dark you fall down a ladder into the hold<br />
+        and break your neck. ”;<br />
+        endGame(ftDeath);<br />
+     }     <br />
+    ]<br />
+   }<br />
+;</p>
+
+<p>In this case the player only gets one warning; if the PC leaves the
+crewQuarters aft to the greatCabin after making one false step in the
+dark, the next false step in crewQuarters in the dark will kill the PC
+off. This may be what you want, but we’ll try changing it next using
+<a href="travelerarriving.html">enteringRoom</a>.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

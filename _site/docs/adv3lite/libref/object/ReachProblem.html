@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-reachproblem-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-reachproblem-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">ReachProblem</span><span class="type">class</span></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1055">1055</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>An object describing a reach problem; such objects are used by the Query
+object to communicate problems with one object touching another to the
+touchObj PreCondition (see also precond.t). ReachProblem objects are
+normally created dynamicallty as required, although it is usually one of
+the subclasses of ReachProblem that it used.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ReachProblem</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ReachProblem</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ReachProblem</code></strong><br />
+<a href="../object/ReachProblemBlocker.html"><code class="language-plaintext highlighter-rouge">ReachProblemBlocker</code></a><br />
+<a href="../object/ReachProblemCheckReach.html"><code class="language-plaintext highlighter-rouge">ReachProblemCheckReach</code></a><br />
+<a href="../object/ReachProblemDistance.html"><code class="language-plaintext highlighter-rouge">ReachProblemDistance</code></a><br />
+<a href="../object/ReachProblemReachOut.html"><code class="language-plaintext highlighter-rouge">ReachProblemReachOut</code></a><br />
+<a href="../object/ReachProblemRemote.html"><code class="language-plaintext highlighter-rouge">ReachProblemRemote</code></a><br />
+<a href="../object/ReachProblemVerifyReach.html"><code class="language-plaintext highlighter-rouge">ReachProblemVerifyReach</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#target_"><code class="language-plaintext highlighter-rouge">target_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#check"><code class="language-plaintext highlighter-rouge">check</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#verify"><code class="language-plaintext highlighter-rouge">verify</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="target_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">target_</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1083">1083</a>]</p>
+
+<p>The object we’re trying to reach</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="check"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">check (allowImplicit)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1075">1075</a>]</p>
+
+<p>The check() method of a ReachProblem should check whether the target
+object can be reached by the source object. If allowImplicit is true the
+check method may attempt an implicit action to bring the target object
+within reach.</p>
+
+<p>Return true if the target object is within reach, and nil otherwise.</p>
+
+<p>Note that the check() method of a ReachProblem will normally be called
+from the checkPreCondition() method of touchObj.</p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (target)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1077">1077</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="verify"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verify ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#1062">1062</a>]</p>
+
+<p>Problems which reaching an object that occur at the verify stage and
+which might affect the choice of object. If the verify() method of a
+ReachProblem object wishes to rule out an action it should do so using
+illogical(), inaccessible() or other such verification macros.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-file-msg-neu-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-file-msg-neu-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">msg_neu.t</span><span class="type">file</span></p>
+
+<p><a href="../source/msg_neu.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p>TADS 3 Library - “neutral” messages for US English</p>
+
+<p>This module provides standard library messages with a parser/narrator
+that’s as invisible (neutral) as possible. These messages are designed
+to reduce the presence of the computer as mediator in the story, to give
+the player the most direct contact that we can with the scenario.</p>
+
+<p>The parser almost always refers to itself in the third person (by
+calling itself something like “this story”) rather than in the first
+person, and, whenever possible, avoids referring to itself in the first
+place. Our ideal phrasing is either second-person, describing things
+directly in terms of the player character’s experience, or “no-person,”
+simply describing things without mentioning the speaker or listener at
+all. For example, rather than saying “I don’t see that here,” we say
+“you don’t see that here,” or “that’s not here.” We occasionally stray
+from this ideal where achieving it would be too awkward.</p>
+
+<p>In the earliest days of adventure games, the parser was usually a
+visible presence: the early parsers frequently reported things in the
+first person, and some even had specific personalities. This conspicuous
+parser style has become less prevalent in modern games, though, and
+authors now usually prefer to treat the parser as just another part of
+the user interface, which like all good UI’s is best when the user
+doesn’t notice it.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><a href="../object/BaseContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseContentsLister</code></a> <a href="../object/BaseInlineContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseInlineContentsLister</code></a> <a href="../object/BaseRearContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseRearContentsLister</code></a> <a href="../object/BaseSurfaceContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseSurfaceContentsLister</code></a> <a href="../object/BaseThingContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseThingContentsLister</code></a> <a href="../object/BaseUndersideContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseUndersideContentsLister</code></a> <a href="../object/CustomRoomLister.html"><code class="language-plaintext highlighter-rouge">CustomRoomLister</code></a> <a href="../object/ExitLister1.html"><code class="language-plaintext highlighter-rouge">ExitLister</code></a> <a href="../object/LookWhereContentsLister.html"><code class="language-plaintext highlighter-rouge">LookWhereContentsLister</code></a> <a href="../object/MajorAttachmentLister.html"><code class="language-plaintext highlighter-rouge">MajorAttachmentLister</code></a> <a href="../object/RemoteRoomLister.html"><code class="language-plaintext highlighter-rouge">RemoteRoomLister</code></a> <a href="../object/SimpleAttachmentLister.html"><code class="language-plaintext highlighter-rouge">SimpleAttachmentLister</code></a> <a href="../object/SuggestedTopicLister.html"><code class="language-plaintext highlighter-rouge">SuggestedTopicLister</code></a> <a href="../object/SuggestionListGroup.html"><code class="language-plaintext highlighter-rouge">SuggestionListGroup</code></a>
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Objects</span>  </p>
+
+<p><a href="../object/aboardVehicleLister.html"><code class="language-plaintext highlighter-rouge">aboardVehicleLister</code></a> <a href="../object/actorHoldingDescInventoryListerLong.html"><code class="language-plaintext highlighter-rouge">actorHoldingDescInventoryListerLong</code></a> <a href="../object/actorHoldingDescInventoryListerShort.html"><code class="language-plaintext highlighter-rouge">actorHoldingDescInventoryListerShort</code></a> <a href="../object/actorInventoryLister.html"><code class="language-plaintext highlighter-rouge">actorInventoryLister</code></a> <a href="../object/actorSingleInventoryLister.html"><code class="language-plaintext highlighter-rouge">actorSingleInventoryLister</code></a> <a href="../object/darkRoomLister.html"><code class="language-plaintext highlighter-rouge">darkRoomLister</code></a> <a href="../object/equivalentStateLister.html"><code class="language-plaintext highlighter-rouge">equivalentStateLister</code></a> <a href="../object/exitsTip.html"><code class="language-plaintext highlighter-rouge">exitsTip</code></a> <a href="../object/explicitExitLister.html"><code class="language-plaintext highlighter-rouge">explicitExitLister</code></a> <a href="../object/finishOptionsLister.html"><code class="language-plaintext highlighter-rouge">finishOptionsLister</code></a> <a href="../object/footnotesTip.html"><code class="language-plaintext highlighter-rouge">footnotesTip</code></a> <a href="../object/fullScoreTip.html"><code class="language-plaintext highlighter-rouge">fullScoreTip</code></a> <a href="../object/implicitAnnouncementGrouper.html"><code class="language-plaintext highlighter-rouge">implicitAnnouncementGrouper</code></a> <a href="../object/inlineListingContentsLister.html"><code class="language-plaintext highlighter-rouge">inlineListingContentsLister</code></a> <a href="../object/keyringExamineContentsLister.html"><code class="language-plaintext highlighter-rouge">keyringExamineContentsLister</code></a> <a href="../object/keyringInlineContentsLister.html"><code class="language-plaintext highlighter-rouge">keyringInlineContentsLister</code></a> <a href="../object/libMessages.html"><code class="language-plaintext highlighter-rouge">libMessages</code></a> <a href="../object/lookAroundExitLister.html"><code class="language-plaintext highlighter-rouge">lookAroundExitLister</code></a> <a href="../object/lookAroundTerseExitLister.html"><code class="language-plaintext highlighter-rouge">lookAroundTerseExitLister</code></a> <a href="../object/npcActionMessages.html"><code class="language-plaintext highlighter-rouge">npcActionMessages</code></a> <a href="../object/npcDeferredMessages.html"><code class="language-plaintext highlighter-rouge">npcDeferredMessages</code></a> <a href="../object/npcDeferredMessagesDirect.html"><code class="language-plaintext highlighter-rouge">npcDeferredMessagesDirect</code></a> <a href="../object/npcMessages.html"><code class="language-plaintext highlighter-rouge">npcMessages</code></a> <a href="../object/npcMessagesDirect.html"><code class="language-plaintext highlighter-rouge">npcMessagesDirect</code></a> <a href="../object/oopsTip.html"><code class="language-plaintext highlighter-rouge">oopsTip</code></a> <a href="../object/openableDescContentsLister.html"><code class="language-plaintext highlighter-rouge">openableDescContentsLister</code></a> <a href="../object/openableOpeningLister.html"><code class="language-plaintext highlighter-rouge">openableOpeningLister</code></a> <a href="../object/otherExitLister.html"><code class="language-plaintext highlighter-rouge">otherExitLister</code></a> <a href="../object/playerActionMessages.html"><code class="language-plaintext highlighter-rouge">playerActionMessages</code></a> <a href="../object/playerMessages.html"><code class="language-plaintext highlighter-rouge">playerMessages</code></a> <a href="../object/rearAbandonContentsLister.html"><code class="language-plaintext highlighter-rouge">rearAbandonContentsLister</code></a> <a href="../object/rearContentsLister.html"><code class="language-plaintext highlighter-rouge">rearContentsLister</code></a> <a href="../object/rearDescContentsLister.html"><code class="language-plaintext highlighter-rouge">rearDescContentsLister</code></a> <a href="../object/rearInlineContentsLister.html"><code class="language-plaintext highlighter-rouge">rearInlineContentsLister</code></a> <a href="../object/rearLookBehindLister.html"><code class="language-plaintext highlighter-rouge">rearLookBehindLister</code></a> <a href="../object/roomLister.html"><code class="language-plaintext highlighter-rouge">roomLister</code></a> <a href="../object/roomPartContentsLister.html"><code class="language-plaintext highlighter-rouge">roomPartContentsLister</code></a> <a href="../object/roomPartDescContentsLister.html"><code class="language-plaintext highlighter-rouge">roomPartDescContentsLister</code></a> <a href="../object/roomPartLookInLister.html"><code class="language-plaintext highlighter-rouge">roomPartLookInLister</code></a> <a href="../object/scoreChangeTip.html"><code class="language-plaintext highlighter-rouge">scoreChangeTip</code></a> <a href="../object/statuslineExitLister.html"><code class="language-plaintext highlighter-rouge">statuslineExitLister</code></a> <a href="../object/suggestionAskForGroup.html"><code class="language-plaintext highlighter-rouge">suggestionAskForGroup</code></a> <a href="../object/suggestionAskGroup.html"><code class="language-plaintext highlighter-rouge">suggestionAskGroup</code></a> <a href="../object/suggestionGiveGroup.html"><code class="language-plaintext highlighter-rouge">suggestionGiveGroup</code></a> <a href="../object/suggestionShowGroup.html"><code class="language-plaintext highlighter-rouge">suggestionShowGroup</code></a> <a href="../object/suggestionTellGroup.html"><code class="language-plaintext highlighter-rouge">suggestionTellGroup</code></a> <a href="../object/suggestionYesNoGroup.html"><code class="language-plaintext highlighter-rouge">suggestionYesNoGroup</code></a> <a href="../object/surfaceContentsLister.html"><code class="language-plaintext highlighter-rouge">surfaceContentsLister</code></a> <a href="../object/surfaceDescContentsLister.html"><code class="language-plaintext highlighter-rouge">surfaceDescContentsLister</code></a> <a href="../object/surfaceInlineContentsLister.html"><code class="language-plaintext highlighter-rouge">surfaceInlineContentsLister</code></a> <a href="../object/surfaceLookInLister.html"><code class="language-plaintext highlighter-rouge">surfaceLookInLister</code></a> <a href="../object/thingContentsLister.html"><code class="language-plaintext highlighter-rouge">thingContentsLister</code></a> <a href="../object/thingDescContentsLister.html"><code class="language-plaintext highlighter-rouge">thingDescContentsLister</code></a> <a href="../object/thingLookInLister.html"><code class="language-plaintext highlighter-rouge">thingLookInLister</code></a> <a href="../object/undersideAbandonContentsLister.html"><code class="language-plaintext highlighter-rouge">undersideAbandonContentsLister</code></a> <a href="../object/undersideContentsLister.html"><code class="language-plaintext highlighter-rouge">undersideContentsLister</code></a> <a href="../object/undersideDescContentsLister.html"><code class="language-plaintext highlighter-rouge">undersideDescContentsLister</code></a> <a href="../object/undersideInlineContentsLister.html"><code class="language-plaintext highlighter-rouge">undersideInlineContentsLister</code></a> <a href="../object/undersideLookUnderLister.html"><code class="language-plaintext highlighter-rouge">undersideLookUnderLister</code></a> <a href="../object/undoTip.html"><code class="language-plaintext highlighter-rouge">undoTip</code></a>
+<span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><a href="#buildParam"><code class="language-plaintext highlighter-rouge">buildParam</code></a> <a href="#buildSynthParam"><code class="language-plaintext highlighter-rouge">buildSynthParam</code></a></p>
+
+<p><span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><span id="buildParam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildParam (typeString, nm)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#53">53</a>]</p>
+
+<p>Build a message parameter string with the given parameter type and name.</p>
+
+<p>This is useful when we have a name from a variable, and we need to build
+the message substitution string for embedding in a larger string. We
+can’t just embed the name variable using &lt;&lt;var&gt;&gt;, because that would
+process the output piecewise - the output filter needs to see the whole
+{typ var} expression in one go. So, instead of writing this:</p>
+
+<p>{The/he &lt;&lt;var&gt;&gt;} {is} …</p>
+
+<p>write this:</p>
+
+<p>&lt;&lt;buildParam(‘The/he’, var)&gt;&gt; {is} …</p>
+
+<p><span id="buildSynthParam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildSynthParam (typeString, obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#66">66</a>]</p>
+
+<p>Synthesize a message parameter, and build it into a parameter string
+with the given substitution type.</p>
+
+<p>For example, buildSynthParam(‘abc’, obj) returns ‘{abc xxx}’, where
+‘xxx’ is a synthesized message parameter name (created using
+gSynthMessageParam) for the object obj.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

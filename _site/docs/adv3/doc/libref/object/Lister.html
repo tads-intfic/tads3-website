@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-lister-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-lister-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Lister</span><span class="type">class</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#33">33</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Lister. This is the base class for formatting of lists of objects.</p>
+
+<p>The external interface consists of the showList() method, which displays
+a formatted list of objects according to the rules of the lister
+subclass.</p>
+
+<p>The rest of the methods are an internal interface which lister
+subclasses can override to customize the way that a list is shown.
+Certain of these methods are meant to be overridden by virtually all
+listers, such as the methods that show the prefix and suffix messages.
+The remaining methods are designed to allow subclasses to customize
+detailed aspects of the formatting, so they only need to be overridden
+when something other than the default behavior is needed.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Lister</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Lister</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Lister</code></strong><br />
+<a href="../object/BaseContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseContentsLister</code></a><br />
+<a href="../object/BaseRearContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseRearContentsLister</code></a><br />
+<a href="../object/BaseSurfaceContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseSurfaceContentsLister</code></a><br />
+<a href="../object/BaseUndersideContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseUndersideContentsLister</code></a><br />
+<a href="../object/BaseThingContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseThingContentsLister</code></a><br />
+<a href="../object/ContentsLister.html"><code class="language-plaintext highlighter-rouge">ContentsLister</code></a><br />
+<a href="../object/BaseInlineContentsLister.html"><code class="language-plaintext highlighter-rouge">BaseInlineContentsLister</code></a><br />
+<a href="../object/CustomRoomLister.html"><code class="language-plaintext highlighter-rouge">CustomRoomLister</code></a><br />
+<a href="../object/DescContentsLister.html"><code class="language-plaintext highlighter-rouge">DescContentsLister</code></a><br />
+<a href="../object/LookWhereContentsLister.html"><code class="language-plaintext highlighter-rouge">LookWhereContentsLister</code></a><br />
+<a href="../object/ExitLister1.html"><code class="language-plaintext highlighter-rouge">ExitLister</code></a><br />
+<a href="../object/InventoryLister.html"><code class="language-plaintext highlighter-rouge">InventoryLister</code></a><br />
+<a href="../object/DividedInventoryLister.html"><code class="language-plaintext highlighter-rouge">DividedInventoryLister</code></a><br />
+<a href="../object/InventorySublister.html"><code class="language-plaintext highlighter-rouge">InventorySublister</code></a><br />
+<a href="../object/WearingLister.html"><code class="language-plaintext highlighter-rouge">WearingLister</code></a><br />
+<a href="../object/WearingSublister.html"><code class="language-plaintext highlighter-rouge">WearingSublister</code></a><br />
+<a href="../object/ParagraphLister.html"><code class="language-plaintext highlighter-rouge">ParagraphLister</code></a><br />
+<a href="../object/SenseLister.html"><code class="language-plaintext highlighter-rouge">SenseLister</code></a><br />
+<a href="../object/SpecialDescContentsLister.html"><code class="language-plaintext highlighter-rouge">SpecialDescContentsLister</code></a><br />
+<a href="../object/RemoteRoomLister.html"><code class="language-plaintext highlighter-rouge">RemoteRoomLister</code></a><br />
+<a href="../object/SimpleAttachmentLister.html"><code class="language-plaintext highlighter-rouge">SimpleAttachmentLister</code></a><br />
+<a href="../object/MajorAttachmentLister.html"><code class="language-plaintext highlighter-rouge">MajorAttachmentLister</code></a><br />
+<a href="../object/SimpleLister.html"><code class="language-plaintext highlighter-rouge">SimpleLister</code></a><br />
+<a href="../object/SuggestedTopicLister.html"><code class="language-plaintext highlighter-rouge">SuggestedTopicLister</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/aboardVehicleLister.html"><code class="language-plaintext highlighter-rouge">aboardVehicleLister</code></a> <a href="../object/darkRoomLister.html"><code class="language-plaintext highlighter-rouge">darkRoomLister</code></a> <a href="../object/equivalentStateLister.html"><code class="language-plaintext highlighter-rouge">equivalentStateLister</code></a> <a href="../object/finishOptionsLister.html"><code class="language-plaintext highlighter-rouge">finishOptionsLister</code></a> <a href="../object/fullScoreLister.html"><code class="language-plaintext highlighter-rouge">fullScoreLister</code></a> <a href="../object/otherExitLister.html"><code class="language-plaintext highlighter-rouge">otherExitLister</code></a> <a href="../object/plainLister.html"><code class="language-plaintext highlighter-rouge">plainLister</code></a> <a href="../object/roomLister.html"><code class="language-plaintext highlighter-rouge">roomLister</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#nextCustomFlag"><code class="language-plaintext highlighter-rouge">nextCustomFlag</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#contentsListed"><code class="language-plaintext highlighter-rouge">contentsListed</code></a> <a href="#contentsListedSeparately"><code class="language-plaintext highlighter-rouge">contentsListedSeparately</code></a> <a href="#getArrangedListCardinality"><code class="language-plaintext highlighter-rouge">getArrangedListCardinality</code></a> <a href="#getArrangedListNounPhraseCount"><code class="language-plaintext highlighter-rouge">getArrangedListNounPhraseCount</code></a> <a href="#getContents"><code class="language-plaintext highlighter-rouge">getContents</code></a> <a href="#getFilteredList"><code class="language-plaintext highlighter-rouge">getFilteredList</code></a> <a href="#getListedContents"><code class="language-plaintext highlighter-rouge">getListedContents</code></a> <a href="#getListGrouping"><code class="language-plaintext highlighter-rouge">getListGrouping</code></a> <a href="#getTopLister"><code class="language-plaintext highlighter-rouge">getTopLister</code></a> <a href="#isListed"><code class="language-plaintext highlighter-rouge">isListed</code></a> <a href="#listCardinality"><code class="language-plaintext highlighter-rouge">listCardinality</code></a> <a href="#listSepEnd"><code class="language-plaintext highlighter-rouge">listSepEnd</code></a> <a href="#listSepMiddle"><code class="language-plaintext highlighter-rouge">listSepMiddle</code></a> <a href="#listSepTwo"><code class="language-plaintext highlighter-rouge">listSepTwo</code></a> <a href="#listWith"><code class="language-plaintext highlighter-rouge">listWith</code></a> <a href="#longListSepEnd"><code class="language-plaintext highlighter-rouge">longListSepEnd</code></a> <a href="#longListSepMiddle"><code class="language-plaintext highlighter-rouge">longListSepMiddle</code></a> <a href="#longListSepTwo"><code class="language-plaintext highlighter-rouge">longListSepTwo</code></a> <a href="#showArrangedList"><code class="language-plaintext highlighter-rouge">showArrangedList</code></a> <a href="#showContentsList"><code class="language-plaintext highlighter-rouge">showContentsList</code></a> <a href="#showInlineContentsList"><code class="language-plaintext highlighter-rouge">showInlineContentsList</code></a> <a href="#showList"><code class="language-plaintext highlighter-rouge">showList</code></a> <a href="#showListAll"><code class="language-plaintext highlighter-rouge">showListAll</code></a> <a href="#showListContentsPrefixTall"><code class="language-plaintext highlighter-rouge">showListContentsPrefixTall</code></a> <a href="#showListEmpty"><code class="language-plaintext highlighter-rouge">showListEmpty</code></a> <a href="#showListIndent"><code class="language-plaintext highlighter-rouge">showListIndent</code></a> <a href="#showListItem"><code class="language-plaintext highlighter-rouge">showListItem</code></a> <a href="#showListItemCounted"><code class="language-plaintext highlighter-rouge">showListItemCounted</code></a> <a href="#showListPrefixTall"><code class="language-plaintext highlighter-rouge">showListPrefixTall</code></a> <a href="#showListPrefixWide"><code class="language-plaintext highlighter-rouge">showListPrefixWide</code></a> <a href="#showListSeparator"><code class="language-plaintext highlighter-rouge">showListSeparator</code></a> <a href="#showListSimple"><code class="language-plaintext highlighter-rouge">showListSimple</code></a> <a href="#showListSuffixWide"><code class="language-plaintext highlighter-rouge">showListSuffixWide</code></a> <a href="#showSeparateContents"><code class="language-plaintext highlighter-rouge">showSeparateContents</code></a> <a href="#showTallListNewline"><code class="language-plaintext highlighter-rouge">showTallListNewline</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="nextCustomFlag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextCustomFlag</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1258">1258</a>]</p>
+
+<p>The last custom flag defined by this class. Lister and each subclass are
+required to define this so that each subclass can allocate its own
+custom flags in a manner that adapts automatically to future additions
+of flags to base classes. As the base class, we allocate our flags
+statically with #define’s, so we simply use the fixed #define’d last
+flag value here.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="contentsListed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contentsListed (obj)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1088">1088</a>]</p>
+
+<p>Are this item’s contents listable?</p>
+
+<p><span id="contentsListedSeparately"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contentsListedSeparately (obj)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1008">1008</a>]</p>
+
+<p>Determine if an object’s contents are listed separately from its own
+list entry for the purposes of our type of listing. If this returns
+true, then we’ll list the object’s contents in a separate listing (a
+separate sentence following the main listing sentence, or a separate
+tree when in ‘tall’ mode).</p>
+
+<p>Note that this only matters for objects listed in the top-level list.
+We’ll always show the contents separately for an object that isn’t
+listed in the top-level list (i.e., an object for which isListed(obj)
+returns nil).</p>
+
+<p><span id="getArrangedListCardinality"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getArrangedListCardinality (singles, groups, groupTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#769">769</a>]</p>
+
+<p>Get the cardinality of an arranged list. Returns the number of items
+that will appear in the list, for grammatical agreement.</p>
+
+<p><span id="getArrangedListNounPhraseCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getArrangedListNounPhraseCount (singles, groups, groupTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#805">805</a>]</p>
+
+<p>Get the number of noun phrase elements in a list. This differs from the
+cardinality in that we only count noun phrases, not the cardinality of
+each noun phrase. So, for example, “five coins” has cardinality five,
+but has only one noun phrase.</p>
+
+<p><span id="getContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getContents (obj)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1093">1093</a>]</p>
+
+<p>Get all contents of this item.</p>
+
+<p><span id="getFilteredList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getFilteredList (lst, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#148">148</a>]</p>
+
+<p>Filter a list to get only the elements we actually want to show. Returns
+a new list consisting only of the items that (1) pass the isListed()
+test, and (2) are represented in the sense information table (infoTab).
+If infoTab is nil, no sense filtering is applied.</p>
+
+<p><span id="getListedContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getListedContents (obj, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1102">1102</a>]</p>
+
+<p>Get the listed contents of an object. ‘infoTab’ is the sense information
+table for the enclosing listing. By default, we call the object’s
+getListedContents() method, but this is virtualized in the lister
+interface to allow for listing other hierarchies besides ordinary
+contents.</p>
+
+<p><span id="getListGrouping"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getListGrouping (groupTab, groups, singles, lst, parentGroup)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#194">194</a>]</p>
+
+<p>Get the groupings for a given listing.</p>
+
+<p>‘groupTab’ is an empty LookupTable, and ‘groups’ is an empty Vector;
+we’ll populate these with the grouping information. ‘singles’ is an
+empty Vector that we’ll populate with the single items not part of any
+group.</p>
+
+<p><span id="getTopLister"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getTopLister ( )</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1248">1248</a>]</p>
+
+<p>Get my “top-level” lister. For a sub-lister, this will return the parent
+lister’s top-level lister. The default lister is a top-level lister, so
+we just return ourself.</p>
+
+<p><span id="isListed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isListed (obj)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1076">1076</a>]</p>
+
+<p>Is this item to be listed in room descriptions? Returns true if so, nil
+if not. By default, we’ll use the object’s isListed method to make this
+determination. We virtualize this into the lister interface to allow for
+different inclusion rules for the same object depending on the type of
+list we’re generating.</p>
+
+<p><span id="listCardinality"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listCardinality (obj)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1083">1083</a>]</p>
+
+<p>Get the grammatical cardinality of this listing item. This should return
+the number of items that this item appears to be grammatically, for
+noun-verb agreement purposes.</p>
+
+<p><span id="listSepEnd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listSepEnd ( )</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1240">1240</a>]</p>
+
+<p>normal and long list separator between second-to-last and last items in
+a list with more than two items</p>
+
+<p><span id="listSepMiddle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listSepMiddle ( )</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1233">1233</a>]</p>
+
+<p>normal and long list separator between items in list with more than two
+items</p>
+
+<p><span id="listSepTwo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listSepTwo ( )</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1226">1226</a>]</p>
+
+<p>normal and “long list” separator between the two items in a list with
+exactly two items</p>
+
+<p><span id="listWith"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listWith (obj)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1119">1119</a>]</p>
+
+<p>Get the list of grouping objects for listing the item. By default, we
+return the object’s listWith result. Subclasses can override this to
+specify different groupings for the same object depending on the type of
+list we’re generating.</p>
+
+<p>The group list returned is in order from most general to most specific.
+For example, if an item is grouped with coins in general and silver
+coins in particular, the general coins group would come first, then the
+silver coin group, because the silver coin group is more specific.</p>
+
+<p><span id="longListSepEnd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">longListSepEnd ( )</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1241">1241</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="longListSepMiddle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">longListSepMiddle ( )</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1234">1234</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="longListSepTwo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">longListSepTwo ( )</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1227">1227</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="showArrangedList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showArrangedList (pov, parent, lst, options, indent, infoTab, itemCount, singles, groups, groupTab, origLst)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#533">533</a>]</p>
+
+<p>Show the list. This is called after we’ve figured out which items we
+intend to display, and after we’ve arranged the items into groups. In
+rare cases, listers might want to override this, to customize the way
+the way the list is displayed based on the internal arrangement of the
+list.</p>
+
+<p><span id="showContentsList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showContentsList (pov, obj, options, indent, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#985">985</a>]</p>
+
+<p>List the contents of an item.</p>
+
+<p>‘pov’ is the point of view, which is usually an actor (and usually the
+player character actor).</p>
+
+<p>‘obj’ is the item whose contents we are to display.</p>
+
+<p>‘options’ is the set of flags that we’ll pass to showList(), and has the
+same meaning as for that function.</p>
+
+<p>‘infoTab’ is a lookup table of SenseInfo objects giving the sense
+information for all of the objects that the actor to whom we’re showing
+the contents listing can sense.</p>
+
+<p><span id="showInlineContentsList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showInlineContentsList (pov, obj, options, indent, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1016">1016</a>]</p>
+
+<p>Show an “in-line” contents list. This shows the item’s contents list as
+a parenthetical, as part of a recursive listing. This is pretty much the
+same as showContentsList(), but uses the object’s in-line contents
+lister instead of its regular contents lister.</p>
+
+<p><span id="showList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showList (pov, parent, lst, options, indent, infoTab, parentGroup)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#95">95</a>]</p>
+
+<p>Display a list of items, grouping according to the ‘listWith’
+associations of the items. We will only list items for which isListed()
+returns true.</p>
+
+<p>‘pov’ is the point of view of the listing, which is usually an actor
+(and usually the player character actor).</p>
+
+<p>‘parent’ is the parent (container) of the list being shown. This should
+be nil if the listed objects are not all within a single object.</p>
+
+<p>‘lst’ is the list of items to display.</p>
+
+<p>‘options’ gives a set of ListXxx option flags.</p>
+
+<p>‘indent’ gives the indentation level. This is used only for “tall” lists
+(specified by including ListTall in the options flags). An indentation
+level of zero indicates no indentation.</p>
+
+<p>‘infoTab’ is a lookup table of SenseInfo objects for all of the objects
+that can be sensed from the perspective of the actor performing the
+action that’s causing the listing. This is normally the table returned
+from Thing.senseInfoTable() for the actor from whose point of view the
+list is being generated. (We take this as a parameter rather than
+generating ourselves for two reasons. First, it’s often the case that
+the same information table will be needed for a series of listings, so
+we can save the compute time of recalculating the same table repeatedly
+by having the caller obtain the table and pass it to each lister.
+Second, in some cases the caller will want to synthesize a special sense
+table rather than using the actual sense information; taking this as a
+parameter allows the caller to easily customize the table.)</p>
+
+<p>‘parentGroup’ is the ListGroup object that is showing this list. We will
+not group the objects we list into the parent group, or into any group
+more general than the parent group.</p>
+
+<p>This routine is not usually overridden in lister subclasses. Instead,
+this method calls a number of other methods that determine the listing
+style in more detail; usually those other, simpler methods are
+customized in subclasses.</p>
+
+<p><span id="showListAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListAll (lst, options, indent)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#38">38</a>]</p>
+
+<p>Show a list, showing all items in the list as though they were fully
+visible, regardless of their actual sense status.</p>
+
+<p><span id="showListContentsPrefixTall"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListContentsPrefixTall (itemCount, pov, parent)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1057">1057</a>]</p>
+
+<p>Show the list prefix for the contents of an object in a ‘tall’ listing.
+By default, we just show our usual tall list prefix.</p>
+
+<p><span id="showListEmpty"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListEmpty (pov, parent)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1067">1067</a>]</p>
+
+<p>Show an empty list. If the list to be displayed has no items at all,
+this is called instead of the prefix/suffix routines. This can be left
+empty if no message is required for an empty list, or can display the
+complete message appropriate for an empty list (such as “You are
+empty-handed”).</p>
+
+<p><span id="showListIndent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListIndent (options, indent)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#874">874</a>]</p>
+
+<p>Show a list indent if necessary. If ListTall is included in the options,
+we’ll indent to the given level; otherwise we’ll do nothing.</p>
+
+<p><span id="showListItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListItem (obj, options, pov, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1122">1122</a>]</p>
+
+<p>show an item in a list</p>
+
+<p><span id="showListItemCounted"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListItemCounted (lst, options, pov, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1138">1138</a>]</p>
+
+<p>Show a set of equivalent items as a counted item (“three coins”). The
+listing mechanism itself never calls this directly; instead, this is
+provided so that ListGroupEquivalent can ask the lister how to describe
+its equivalent sets, so that different listers can customize the display
+of equivalent items.</p>
+
+<p>‘lst’ is the full list of equivalent items. By default, we pick one of
+these arbitrarily to show, since they’re presumably all the same for the
+purposes of the list.</p>
+
+<p><span id="showListPrefixTall"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListPrefixTall (itemCount, pov, parent)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1051">1051</a>]</p>
+
+<p>Show the list prefix for a ‘tall’ listing. Note that there is no list
+suffix for a tall listing, because the format doesn’t allow it.</p>
+
+<p><span id="showListPrefixWide"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListPrefixWide (itemCount, pov, parent, lst, :)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1038">1038</a>]</p>
+
+<p>Show the prefix for a ‘wide’ listing - this is a message that appears
+just before we start listing the objects. ‘itemCount’ is the number of
+items to be listed; the items might be grouped in the listing, so a list
+that comes out as “three boxes and two books” will have an itemCount of</p>
+<ol>
+  <li>(The purpose of itemCount is to allow the message to have grammatical
+agreement in number.)</li>
+</ol>
+
+<p>‘lst’ is the entire list, which some languages need for grammatical
+agreement. This is passed as a named argument, so an overrider can omit
+it from the parameter list if it’s not needed.</p>
+
+<p>This will never be called with an itemCount of zero, because we will
+instead use showListEmpty() to display an empty list.</p>
+
+<p><span id="showListSeparator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListSeparator (options, curItemNum, totalItems)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1161">1161</a>]</p>
+
+<p>Show a list separator after displaying an item. curItemNum is the number
+of the item just displayed (1 is the first item), and totalItems is the
+total number of items that will be displayed in the list.</p>
+
+<p>This generic routine is further parameterized by properties for the
+individual types of separators. This default implementation
+distinguishes the following separators: the separator between the two
+items in a list of exactly two items; the separator between adjacent
+items other than the last two in a list of more than two items; and the
+separator between the last two elements of a list of more than two
+items.</p>
+
+<p><span id="showListSimple"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListSimple (pov, lst, options, indent, prevCnt, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#903">903</a>]</p>
+
+<p>Show a simple list, recursing into contents lists if necessary. We pay
+no attention to grouping; we just show the items individually.</p>
+
+<p>‘prevCnt’ is the number of items already displayed, if anything has
+already been displayed for this list. This should be zero if this will
+display the entire list.</p>
+
+<p><span id="showListSuffixWide"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListSuffixWide (itemCount, pov, parent)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1044">1044</a>]</p>
+
+<p>show the suffix for a ‘wide’ listing - this is a message that appears
+just after we finish listing the objects</p>
+
+<p><span id="showSeparateContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showSeparateContents (pov, lst, options, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#835">835</a>]</p>
+
+<p>Service routine: show the separately-listed contents of the items in the
+given list, and their separately-listed contents, and so on. This
+routine is not normally overridden in subclasses, and is not usually
+called except from the Lister implementation.</p>
+
+<p>For each item in the given list, we show the item’s contents if the item
+is either marked as unlisted, or it’s marked as showing its contents
+separately. In the former case, we know that we cannot have shown the
+item’s contents in-line in the main list, since we didn’t show the item
+at all in the main list. In the latter case, we know that we didn’t show
+the item’s contents in the main list because it’s specifically marked as
+showing its contents out-of-line.</p>
+
+<p><span id="showTallListNewline"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showTallListNewline (options)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#888">888</a>]</p>
+
+<p>Show a newline after a list item if we’re in a tall list; does nothing
+for a wide list.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

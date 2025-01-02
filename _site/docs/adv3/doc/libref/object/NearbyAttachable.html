@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-nearbyattachable-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-nearbyattachable-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">NearbyAttachable</span><span class="type">class</span></p>
+
+<p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3311">3311</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A “nearby” attachable is a subclass of Attachable that adds a
+requirement that the attached objects be in a given location. By
+default, we simply require that they have a common immediate container,
+but this can be overridden so that each object’s location is negotiated
+separately. This is a simple and effective pattern that avoids many of
+the potential anomalies with attachment (see the Attachable comments for
+examples).</p>
+
+<p>In AttachTo actions, we enforce the nearby requirement with a
+precondition requiring the direct object to be in the same immediate
+container as the indirect object, and vice versa. In
+moveWhileAttached(), we enforce the rule by detaching the objects if one
+is being moved away from the other’s immediate container.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">NearbyAttachable</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Attachable.html"><code class="language-plaintext highlighter-rouge">Attachable</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">NearbyAttachable</code></strong><br />
+<a href="../object/Attachable.html"><code class="language-plaintext highlighter-rouge">Attachable</code></a><br />
+`                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Attachable</code> :<br />
+<a href="../object/Attachable.html#attachedObjects"><code class="language-plaintext highlighter-rouge">attachedObjects</code></a> <a href="../object/Attachable.html#attachmentLister"><code class="language-plaintext highlighter-rouge">attachmentLister</code></a> <a href="../object/Attachable.html#majorAttachmentLister"><code class="language-plaintext highlighter-rouge">majorAttachmentLister</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#dobjFor(AttachTo)"><code class="language-plaintext highlighter-rouge">dobjFor(AttachTo)</code></a> <a href="#getNearbyAttachmentLocs"><code class="language-plaintext highlighter-rouge">getNearbyAttachmentLocs</code></a> <a href="#iobjFor(AttachTo)"><code class="language-plaintext highlighter-rouge">iobjFor(AttachTo)</code></a> <a href="#moveWhileAttached"><code class="language-plaintext highlighter-rouge">moveWhileAttached</code></a> <a href="#nestedDetachFrom"><code class="language-plaintext highlighter-rouge">nestedDetachFrom</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Attachable</code> :<br />
+<a href="../object/Attachable.html#attachTo"><code class="language-plaintext highlighter-rouge">attachTo</code></a> <a href="../object/Attachable.html#beforeTravel"><code class="language-plaintext highlighter-rouge">beforeTravel</code></a> <a href="../object/Attachable.html#canAttachTo"><code class="language-plaintext highlighter-rouge">canAttachTo</code></a> <a href="../object/Attachable.html#canDetachFrom"><code class="language-plaintext highlighter-rouge">canDetachFrom</code></a> <a href="../object/Attachable.html#cannotDetachMsgFor"><code class="language-plaintext highlighter-rouge">cannotDetachMsgFor</code></a> <a href="../object/Attachable.html#detachFrom"><code class="language-plaintext highlighter-rouge">detachFrom</code></a> <a href="../object/Attachable.html#dobjFor(Detach)"><code class="language-plaintext highlighter-rouge">dobjFor(Detach)</code></a> <a href="../object/Attachable.html#dobjFor(DetachFrom)"><code class="language-plaintext highlighter-rouge">dobjFor(DetachFrom)</code></a> <a href="../object/Attachable.html#dobjFor(TakeFrom)"><code class="language-plaintext highlighter-rouge">dobjFor(TakeFrom)</code></a> <a href="../object/Attachable.html#examineStatus"><code class="language-plaintext highlighter-rouge">examineStatus</code></a> <a href="../object/Attachable.html#explainCannotAttachTo"><code class="language-plaintext highlighter-rouge">explainCannotAttachTo</code></a> <a href="../object/Attachable.html#getNonPermanentAttachments"><code class="language-plaintext highlighter-rouge">getNonPermanentAttachments</code></a> <a href="../object/Attachable.html#handleAttach"><code class="language-plaintext highlighter-rouge">handleAttach</code></a> <a href="../object/Attachable.html#handleDetach"><code class="language-plaintext highlighter-rouge">handleDetach</code></a> <a href="../object/Attachable.html#initializeThing"><code class="language-plaintext highlighter-rouge">initializeThing</code></a> <a href="../object/Attachable.html#iobjFor(DetachFrom)"><code class="language-plaintext highlighter-rouge">iobjFor(DetachFrom)</code></a> <a href="../object/Attachable.html#iobjFor(TakeFrom)"><code class="language-plaintext highlighter-rouge">iobjFor(TakeFrom)</code></a> <a href="../object/Attachable.html#isAttachedTo"><code class="language-plaintext highlighter-rouge">isAttachedTo</code></a> <a href="../object/Attachable.html#isListedAsAttachedTo"><code class="language-plaintext highlighter-rouge">isListedAsAttachedTo</code></a> <a href="../object/Attachable.html#isListedAsMajorFor"><code class="language-plaintext highlighter-rouge">isListedAsMajorFor</code></a> <a href="../object/Attachable.html#isMajorItemFor"><code class="language-plaintext highlighter-rouge">isMajorItemFor</code></a> <a href="../object/Attachable.html#isPermanentlyAttachedTo"><code class="language-plaintext highlighter-rouge">isPermanentlyAttachedTo</code></a> <a href="../object/Attachable.html#mainMoveInto"><code class="language-plaintext highlighter-rouge">mainMoveInto</code></a> <a href="../object/Attachable.html#maybeHandleAttach"><code class="language-plaintext highlighter-rouge">maybeHandleAttach</code></a> <a href="../object/Attachable.html#maybeHandleDetach"><code class="language-plaintext highlighter-rouge">maybeHandleDetach</code></a> <a href="../object/Attachable.html#travelWhileAttached"><code class="language-plaintext highlighter-rouge">travelWhileAttached</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="dobjFor(AttachTo)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor(AttachTo)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3312">3312</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="getNearbyAttachmentLocs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNearbyAttachmentLocs (other)</code></p>
+
+<p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3347">3347</a>]</p>
+
+<p>Get the target locations for attaching to the given other object. The
+“target locations” are the locations where the objects are required to
+be in order to carry out the ATTACH command to attach this object to the
+other object (or vice versa).</p>
+
+<p>This method returns a list with three elements. The first element is the
+target location for ‘self’, and the second is the target location for
+‘other’, the object we’re attaching to. The third element is an integer
+giving the priority; a higher number means higher priority.</p>
+
+<p>The priority is an arbitrary value that we use to determine which of the
+two objects involved in the attach gets to decide on the target
+locations. We call this method on both of the two objects being attached
+to one another, then we use the target locations returned by the object
+that claims the higher priority. If the two priorities are equal, we
+pick one arbitrarily.</p>
+
+<p>The default implementation chooses my own immediate container as the
+target location for both objects. However, if the other object is
+non-portable, we’ll choose its immediate location instead, since we
+obviously can’t move it to our container.</p>
+
+<p><span id="iobjFor(AttachTo)"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjFor(AttachTo)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3317">3317</a>]</p>
+
+<p>require that the objects be in the negotiated locations</p>
+
+<p><span id="moveWhileAttached"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveWhileAttached (movedObj, newCont)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3373">3373</a>]</p>
+
+<p>when an attached object is being moved, detach the objects</p>
+
+<p><span id="nestedDetachFrom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nestedDetachFrom (obj)</code></p>
+
+<p><a href="../file/extras.t.html">extras.t</a>[<a href="../source/extras.t.html#3404">3404</a>]</p>
+
+<p>perform a nested DetachFrom action on the given object</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

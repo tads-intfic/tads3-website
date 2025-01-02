@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-file-actor-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-file-actor-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">actor.t</span><span class="type">file</span></p>
+
+<p><a href="../source/actor.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p>TADS 3 Library - actors</p>
+
+<p>This module provides definitions related to actors, which represent
+characters in the game.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><a href="../object/AccompanyingInTravelState.html"><code class="language-plaintext highlighter-rouge">AccompanyingInTravelState</code></a> <a href="../object/AccompanyingState.html"><code class="language-plaintext highlighter-rouge">AccompanyingState</code></a> <a href="../object/Actor.html"><code class="language-plaintext highlighter-rouge">Actor</code></a> <a href="../object/ActorByeTopic.html"><code class="language-plaintext highlighter-rouge">ActorByeTopic</code></a> <a href="../object/ActorHelloTopic.html"><code class="language-plaintext highlighter-rouge">ActorHelloTopic</code></a> <a href="../object/ActorState.html"><code class="language-plaintext highlighter-rouge">ActorState</code></a> <a href="../object/ActorTopicDatabase.html"><code class="language-plaintext highlighter-rouge">ActorTopicDatabase</code></a> <a href="../object/AgendaItem.html"><code class="language-plaintext highlighter-rouge">AgendaItem</code></a> <a href="../object/AltTopic.html"><code class="language-plaintext highlighter-rouge">AltTopic</code></a> <a href="../object/AskAboutForTopic.html"><code class="language-plaintext highlighter-rouge">AskAboutForTopic</code></a> <a href="../object/AskForTopic.html"><code class="language-plaintext highlighter-rouge">AskForTopic</code></a> <a href="../object/AskTellAboutForTopic.html"><code class="language-plaintext highlighter-rouge">AskTellAboutForTopic</code></a> <a href="../object/AskTellGiveShowTopic.html"><code class="language-plaintext highlighter-rouge">AskTellGiveShowTopic</code></a> <a href="../object/AskTellShowTopic.html"><code class="language-plaintext highlighter-rouge">AskTellShowTopic</code></a> <a href="../object/AskTellTopic.html"><code class="language-plaintext highlighter-rouge">AskTellTopic</code></a> <a href="../object/AskTopic.html"><code class="language-plaintext highlighter-rouge">AskTopic</code></a> <a href="../object/BoredByeTopic.html"><code class="language-plaintext highlighter-rouge">BoredByeTopic</code></a> <a href="../object/BoredomAgendaItem.html"><code class="language-plaintext highlighter-rouge">BoredomAgendaItem</code></a> <a href="../object/ByeTopic.html"><code class="language-plaintext highlighter-rouge">ByeTopic</code></a> <a href="../object/CommandTopic.html"><code class="language-plaintext highlighter-rouge">CommandTopic</code></a> <a href="../object/ConvAgendaItem.html"><code class="language-plaintext highlighter-rouge">ConvAgendaItem</code></a> <a href="../object/ConversationReadyState.html"><code class="language-plaintext highlighter-rouge">ConversationReadyState</code></a> <a href="../object/ConvNode.html"><code class="language-plaintext highlighter-rouge">ConvNode</code></a> <a href="../object/ConvType.html"><code class="language-plaintext highlighter-rouge">ConvType</code></a> <a href="../object/DefaultAnyTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAnyTopic</code></a> <a href="../object/DefaultAskForTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAskForTopic</code></a> <a href="../object/DefaultAskTellTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAskTellTopic</code></a> <a href="../object/DefaultAskTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAskTopic</code></a> <a href="../object/DefaultCommandTopic.html"><code class="language-plaintext highlighter-rouge">DefaultCommandTopic</code></a> <a href="../object/DefaultGiveShowTopic.html"><code class="language-plaintext highlighter-rouge">DefaultGiveShowTopic</code></a> <a href="../object/DefaultGiveTopic.html"><code class="language-plaintext highlighter-rouge">DefaultGiveTopic</code></a> <a href="../object/DefaultInitiateTopic.html"><code class="language-plaintext highlighter-rouge">DefaultInitiateTopic</code></a> <a href="../object/DefaultShowTopic.html"><code class="language-plaintext highlighter-rouge">DefaultShowTopic</code></a> <a href="../object/DefaultTellTopic.html"><code class="language-plaintext highlighter-rouge">DefaultTellTopic</code></a> <a href="../object/DefaultTopic.html"><code class="language-plaintext highlighter-rouge">DefaultTopic</code></a> <a href="../object/DelayedAgendaItem.html"><code class="language-plaintext highlighter-rouge">DelayedAgendaItem</code></a> <a href="../object/FollowInfo.html"><code class="language-plaintext highlighter-rouge">FollowInfo</code></a> <a href="../object/GiveShowTopic.html"><code class="language-plaintext highlighter-rouge">GiveShowTopic</code></a> <a href="../object/GiveTopic.html"><code class="language-plaintext highlighter-rouge">GiveTopic</code></a> <a href="../object/HelloGoodbyeTopic.html"><code class="language-plaintext highlighter-rouge">HelloGoodbyeTopic</code></a> <a href="../object/HelloTopic.html"><code class="language-plaintext highlighter-rouge">HelloTopic</code></a> <a href="../object/HermitActorState.html"><code class="language-plaintext highlighter-rouge">HermitActorState</code></a> <a href="../object/ImpByeTopic.html"><code class="language-plaintext highlighter-rouge">ImpByeTopic</code></a> <a href="../object/ImpHelloTopic.html"><code class="language-plaintext highlighter-rouge">ImpHelloTopic</code></a> <a href="../object/InConversationState.html"><code class="language-plaintext highlighter-rouge">InConversationState</code></a> <a href="../object/InitiateTopic.html"><code class="language-plaintext highlighter-rouge">InitiateTopic</code></a> <a href="../object/LeaveByeTopic.html"><code class="language-plaintext highlighter-rouge">LeaveByeTopic</code></a> <a href="../object/MiscTopic.html"><code class="language-plaintext highlighter-rouge">MiscTopic</code></a> <a href="../object/NoTopic.html"><code class="language-plaintext highlighter-rouge">NoTopic</code></a> <a href="../object/PendingCommandAction.html"><code class="language-plaintext highlighter-rouge">PendingCommandAction</code></a> <a href="../object/PendingCommandInfo.html"><code class="language-plaintext highlighter-rouge">PendingCommandInfo</code></a> <a href="../object/PendingCommandMarker.html"><code class="language-plaintext highlighter-rouge">PendingCommandMarker</code></a> <a href="../object/PendingCommandToks.html"><code class="language-plaintext highlighter-rouge">PendingCommandToks</code></a> <a href="../object/PendingConvInfo.html"><code class="language-plaintext highlighter-rouge">PendingConvInfo</code></a> <a href="../object/PendingResponseInfo.html"><code class="language-plaintext highlighter-rouge">PendingResponseInfo</code></a> <a href="../object/Person.html"><code class="language-plaintext highlighter-rouge">Person</code></a> <a href="../object/Posture.html"><code class="language-plaintext highlighter-rouge">Posture</code></a> <a href="../object/ShowTopic.html"><code class="language-plaintext highlighter-rouge">ShowTopic</code></a> <a href="../object/SpecialTopic.html"><code class="language-plaintext highlighter-rouge">SpecialTopic</code></a> <a href="../object/SuggestedAskForTopic.html"><code class="language-plaintext highlighter-rouge">SuggestedAskForTopic</code></a> <a href="../object/SuggestedAskTopic.html"><code class="language-plaintext highlighter-rouge">SuggestedAskTopic</code></a> <a href="../object/SuggestedGiveTopic.html"><code class="language-plaintext highlighter-rouge">SuggestedGiveTopic</code></a> <a href="../object/SuggestedNoTopic.html"><code class="language-plaintext highlighter-rouge">SuggestedNoTopic</code></a> <a href="../object/SuggestedShowTopic.html"><code class="language-plaintext highlighter-rouge">SuggestedShowTopic</code></a> <a href="../object/SuggestedTellTopic.html"><code class="language-plaintext highlighter-rouge">SuggestedTellTopic</code></a> <a href="../object/SuggestedTopic.html"><code class="language-plaintext highlighter-rouge">SuggestedTopic</code></a> <a href="../object/SuggestedTopicTree.html"><code class="language-plaintext highlighter-rouge">SuggestedTopicTree</code></a> <a href="../object/SuggestedYesTopic.html"><code class="language-plaintext highlighter-rouge">SuggestedYesTopic</code></a> <a href="../object/TellTopic.html"><code class="language-plaintext highlighter-rouge">TellTopic</code></a> <a href="../object/ThingMatchTopic.html"><code class="language-plaintext highlighter-rouge">ThingMatchTopic</code></a> <a href="../object/Topic.html"><code class="language-plaintext highlighter-rouge">Topic</code></a> <a href="../object/TopicDatabase.html"><code class="language-plaintext highlighter-rouge">TopicDatabase</code></a> <a href="../object/TopicEntry.html"><code class="language-plaintext highlighter-rouge">TopicEntry</code></a> <a href="../object/TopicGroup.html"><code class="language-plaintext highlighter-rouge">TopicGroup</code></a> <a href="../object/TopicMatchTopic.html"><code class="language-plaintext highlighter-rouge">TopicMatchTopic</code></a> <a href="../object/TopicOrThingMatchTopic.html"><code class="language-plaintext highlighter-rouge">TopicOrThingMatchTopic</code></a> <a href="../object/UntakeableActor.html"><code class="language-plaintext highlighter-rouge">UntakeableActor</code></a> <a href="../object/YesNoTopic.html"><code class="language-plaintext highlighter-rouge">YesNoTopic</code></a> <a href="../object/YesTopic.html"><code class="language-plaintext highlighter-rouge">YesTopic</code></a>
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Objects</span>  </p>
+
+<p><a href="../object/actorByeTopicObj.html"><code class="language-plaintext highlighter-rouge">actorByeTopicObj</code></a> <a href="../object/actorHelloTopicObj.html"><code class="language-plaintext highlighter-rouge">actorHelloTopicObj</code></a> <a href="../object/askAboutConvType.html"><code class="language-plaintext highlighter-rouge">askAboutConvType</code></a> <a href="../object/askForConvType.html"><code class="language-plaintext highlighter-rouge">askForConvType</code></a> <a href="../object/boredByeTopicObj.html"><code class="language-plaintext highlighter-rouge">boredByeTopicObj</code></a> <a href="../object/byeConvType.html"><code class="language-plaintext highlighter-rouge">byeConvType</code></a> <a href="../object/byeTopicObj.html"><code class="language-plaintext highlighter-rouge">byeTopicObj</code></a> <a href="../object/commandConvType.html"><code class="language-plaintext highlighter-rouge">commandConvType</code></a> <a href="../object/consultConvType.html"><code class="language-plaintext highlighter-rouge">consultConvType</code></a> <a href="../object/conversationManager.html"><code class="language-plaintext highlighter-rouge">conversationManager</code></a> <a href="../object/giveConvType.html"><code class="language-plaintext highlighter-rouge">giveConvType</code></a> <a href="../object/helloConvType.html"><code class="language-plaintext highlighter-rouge">helloConvType</code></a> <a href="../object/helloTopicObj.html"><code class="language-plaintext highlighter-rouge">helloTopicObj</code></a> <a href="../object/impHelloTopicObj.html"><code class="language-plaintext highlighter-rouge">impHelloTopicObj</code></a> <a href="../object/initiateConvType.html"><code class="language-plaintext highlighter-rouge">initiateConvType</code></a> <a href="../object/leaveByeTopicObj.html"><code class="language-plaintext highlighter-rouge">leaveByeTopicObj</code></a> <a href="../object/lying.html"><code class="language-plaintext highlighter-rouge">lying</code></a> <a href="../object/noConvType.html"><code class="language-plaintext highlighter-rouge">noConvType</code></a> <a href="../object/noTopicObj.html"><code class="language-plaintext highlighter-rouge">noTopicObj</code></a> <a href="../object/showConvType.html"><code class="language-plaintext highlighter-rouge">showConvType</code></a> <a href="../object/sitting.html"><code class="language-plaintext highlighter-rouge">sitting</code></a> <a href="../object/specialTopicHistory.html"><code class="language-plaintext highlighter-rouge">specialTopicHistory</code></a> <a href="../object/specialTopicPreParser.html"><code class="language-plaintext highlighter-rouge">specialTopicPreParser</code></a> <a href="../object/standing.html"><code class="language-plaintext highlighter-rouge">standing</code></a> <a href="../object/tellAboutConvType.html"><code class="language-plaintext highlighter-rouge">tellAboutConvType</code></a> <a href="../object/yesConvType.html"><code class="language-plaintext highlighter-rouge">yesConvType</code></a> <a href="../object/yesTopicObj.html"><code class="language-plaintext highlighter-rouge">yesTopicObj</code></a>
+<span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><a href="#setPlayer"><code class="language-plaintext highlighter-rouge">setPlayer</code></a></p>
+
+<p><span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><span id="setPlayer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setPlayer (actor)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#10575">10575</a>]</p>
+
+<p>Set the current player character</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

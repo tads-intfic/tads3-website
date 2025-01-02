@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-systemaction-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-systemaction-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">SystemAction</span><span class="type">class</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1009">1009</a>],
+<a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#221">221</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The SystemAction class is for actions not affecting the game world but
+rather acting on the game session, such as SAVE, RESTORE and QUIT.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">SystemAction</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/IAction.html"><code class="language-plaintext highlighter-rouge">IAction</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SystemAction</code></strong><br />
+<a href="../object/IAction.html"><code class="language-plaintext highlighter-rouge">IAction</code></a><br />
+<a href="../object/Action.html"><code class="language-plaintext highlighter-rouge">Action</code></a><br />
+<a href="../object/ReplaceRedirector.html"><code class="language-plaintext highlighter-rouge">ReplaceRedirector</code></a><br />
+<a href="../object/Redirector.html"><code class="language-plaintext highlighter-rouge">Redirector</code></a><br />
+`                                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SystemAction</code></strong><br />
+<a href="../object/FileOpAction.html"><code class="language-plaintext highlighter-rouge">FileOpAction</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/About.html"><code class="language-plaintext highlighter-rouge">About</code></a> <a href="../object/Again.html"><code class="language-plaintext highlighter-rouge">Again</code></a> <a href="../object/Brief.html"><code class="language-plaintext highlighter-rouge">Brief</code></a> <a href="../object/CmdMenu.html"><code class="language-plaintext highlighter-rouge">CmdMenu</code></a> <a href="../object/Credits.html"><code class="language-plaintext highlighter-rouge">Credits</code></a> <a href="../object/Debug.html"><code class="language-plaintext highlighter-rouge">Debug</code></a> <a href="../object/DebugI.html"><code class="language-plaintext highlighter-rouge">DebugI</code></a> <a href="../object/Exits.html"><code class="language-plaintext highlighter-rouge">Exits</code></a> <a href="../object/ExitsColour.html"><code class="language-plaintext highlighter-rouge">ExitsColour</code></a> <a href="../object/ExitsMode.html"><code class="language-plaintext highlighter-rouge">ExitsMode</code></a> <a href="../object/ExtraHints.html"><code class="language-plaintext highlighter-rouge">ExtraHints</code></a> <a href="../object/FootnoteAction.html"><code class="language-plaintext highlighter-rouge">FootnoteAction</code></a> <a href="../object/Footnotes.html"><code class="language-plaintext highlighter-rouge">Footnotes</code></a> <a href="../object/FootnotesStatus.html"><code class="language-plaintext highlighter-rouge">FootnotesStatus</code></a> <a href="../object/FullScore.html"><code class="language-plaintext highlighter-rouge">FullScore</code></a> <a href="../object/Help.html"><code class="language-plaintext highlighter-rouge">Help</code></a> <a href="../object/Hints.html"><code class="language-plaintext highlighter-rouge">Hints</code></a> <a href="../object/HintsOff.html"><code class="language-plaintext highlighter-rouge">HintsOff</code></a> <a href="../object/Instructions.html"><code class="language-plaintext highlighter-rouge">Instructions</code></a> <a href="../object/Intro.html"><code class="language-plaintext highlighter-rouge">Intro</code></a> <a href="../object/InventoryTall.html"><code class="language-plaintext highlighter-rouge">InventoryTall</code></a> <a href="../object/InventoryWide.html"><code class="language-plaintext highlighter-rouge">InventoryWide</code></a> <a href="../object/ListRelations.html"><code class="language-plaintext highlighter-rouge">ListRelations</code></a> <a href="../object/ListTests.html"><code class="language-plaintext highlighter-rouge">ListTests</code></a> <a href="../object/Notify.html"><code class="language-plaintext highlighter-rouge">Notify</code></a> <a href="../object/NotifyOff.html"><code class="language-plaintext highlighter-rouge">NotifyOff</code></a> <a href="../object/NotifyOn.html"><code class="language-plaintext highlighter-rouge">NotifyOn</code></a> <a href="../object/Quit.html"><code class="language-plaintext highlighter-rouge">Quit</code></a> <a href="../object/RecordOff.html"><code class="language-plaintext highlighter-rouge">RecordOff</code></a> <a href="../object/RelationDetails.html"><code class="language-plaintext highlighter-rouge">RelationDetails</code></a> <a href="../object/Restart.html"><code class="language-plaintext highlighter-rouge">Restart</code></a> <a href="../object/Restore.html"><code class="language-plaintext highlighter-rouge">Restore</code></a> <a href="../object/Sample.html"><code class="language-plaintext highlighter-rouge">Sample</code></a> <a href="../object/Score.html"><code class="language-plaintext highlighter-rouge">Score</code></a> <a href="../object/ScriptOff.html"><code class="language-plaintext highlighter-rouge">ScriptOff</code></a> <a href="../object/Topics.html"><code class="language-plaintext highlighter-rouge">Topics</code></a> <a href="../object/Undo.html"><code class="language-plaintext highlighter-rouge">Undo</code></a> <a href="../object/Verbose.html"><code class="language-plaintext highlighter-rouge">Verbose</code></a> <a href="../object/Version.html"><code class="language-plaintext highlighter-rouge">Version</code></a> <a href="../object/WhereHelp.html"><code class="language-plaintext highlighter-rouge">WhereHelp</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#includeInUndo"><code class="language-plaintext highlighter-rouge">includeInUndo</code></a> <a href="#isRepeatable"><code class="language-plaintext highlighter-rouge">isRepeatable</code></a> <a href="#timeTaken"><code class="language-plaintext highlighter-rouge">timeTaken</code></a> <a href="#turnsTaken"><code class="language-plaintext highlighter-rouge">turnsTaken</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">IAction</code> :<br />
+<a href="../object/IAction.html#againRepeatsParse"><code class="language-plaintext highlighter-rouge">againRepeatsParse</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
+<a href="../object/Action.html#actionFailed"><code class="language-plaintext highlighter-rouge">actionFailed</code></a> <a href="../object/Action.html#advanceOnFailure"><code class="language-plaintext highlighter-rouge">advanceOnFailure</code></a> <a href="../object/Action.html#allowAll"><code class="language-plaintext highlighter-rouge">allowAll</code></a> <a href="../object/Action.html#extraMessageParams"><code class="language-plaintext highlighter-rouge">extraMessageParams</code></a> <a href="../object/Action.html#failCheckMsg"><code class="language-plaintext highlighter-rouge">failCheckMsg</code></a> <a href="../object/Action.html#failedActionCountsAsTurn"><code class="language-plaintext highlighter-rouge">failedActionCountsAsTurn</code></a> <a href="../object/Action.html#implicitTimeTaken"><code class="language-plaintext highlighter-rouge">implicitTimeTaken</code></a> <a href="../object/Action.html#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a> <a href="../object/Action.html#isImplicit"><code class="language-plaintext highlighter-rouge">isImplicit</code></a> <a href="../object/Action.html#oldRoom"><code class="language-plaintext highlighter-rouge">oldRoom</code></a> <a href="../object/Action.html#parentAction"><code class="language-plaintext highlighter-rouge">parentAction</code></a> <a href="../object/Action.html#parentAllowAll"><code class="language-plaintext highlighter-rouge">parentAllowAll</code></a> <a href="../object/Action.html#preCond"><code class="language-plaintext highlighter-rouge">preCond</code></a> <a href="../object/Action.html#redirectParent"><code class="language-plaintext highlighter-rouge">redirectParent</code></a> <a href="../object/Action.html#reportImplicitActions"><code class="language-plaintext highlighter-rouge">reportImplicitActions</code></a> <a href="../object/Action.html#scopeList"><code class="language-plaintext highlighter-rouge">scopeList</code></a> <a href="../object/Action.html#spellingPriority"><code class="language-plaintext highlighter-rouge">spellingPriority</code></a> <a href="../object/Action.html#synthParamID"><code class="language-plaintext highlighter-rouge">synthParamID</code></a> <a href="../object/Action.html#unhides"><code class="language-plaintext highlighter-rouge">unhides</code></a> <a href="../object/Action.html#verifyObj"><code class="language-plaintext highlighter-rouge">verifyObj</code></a> <a href="../object/Action.html#wasIlluminated"><code class="language-plaintext highlighter-rouge">wasIlluminated</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a> <a href="#exec"><code class="language-plaintext highlighter-rouge">exec</code></a> <a href="#execCycle"><code class="language-plaintext highlighter-rouge">execCycle</code></a> <a href="#getInputFile"><code class="language-plaintext highlighter-rouge">getInputFile</code></a> <a href="#turnSequence"><code class="language-plaintext highlighter-rouge">turnSequence</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">IAction</code> :<br />
+<a href="../object/IAction.html#execResolvedAction"><code class="language-plaintext highlighter-rouge">execResolvedAction</code></a> <a href="../object/IAction.html#resolvedObjectsInScope"><code class="language-plaintext highlighter-rouge">resolvedObjectsInScope</code></a> <a href="../object/IAction.html#scoreObjects"><code class="language-plaintext highlighter-rouge">scoreObjects</code></a> <a href="../object/IAction.html#setResolvedObjects"><code class="language-plaintext highlighter-rouge">setResolvedObjects</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
+<a href="../object/Action.html#acknowledgeNotifyStatus"><code class="language-plaintext highlighter-rouge">acknowledgeNotifyStatus</code></a> <a href="../object/Action.html#addExtraScopeItems"><code class="language-plaintext highlighter-rouge">addExtraScopeItems</code></a> <a href="../object/Action.html#addImplicitTime"><code class="language-plaintext highlighter-rouge">addImplicitTime</code></a> <a href="../object/Action.html#advanceTime"><code class="language-plaintext highlighter-rouge">advanceTime</code></a> <a href="../object/Action.html#announceObject"><code class="language-plaintext highlighter-rouge">announceObject</code></a> <a href="../object/Action.html#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a> <a href="../object/Action.html#buildImplicitActionAnnouncement"><code class="language-plaintext highlighter-rouge">buildImplicitActionAnnouncement</code></a> <a href="../object/Action.html#buildScopeList"><code class="language-plaintext highlighter-rouge">buildScopeList</code></a> <a href="../object/Action.html#checkAction"><code class="language-plaintext highlighter-rouge">checkAction</code></a> <a href="../object/Action.html#checkActionPreconditions"><code class="language-plaintext highlighter-rouge">checkActionPreconditions</code></a> <a href="../object/Action.html#commandNotPresent"><code class="language-plaintext highlighter-rouge">commandNotPresent</code></a> <a href="../object/Action.html#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a> <a href="../object/Action.html#execGroup"><code class="language-plaintext highlighter-rouge">execGroup</code></a> <a href="../object/Action.html#getAll"><code class="language-plaintext highlighter-rouge">getAll</code></a> <a href="../object/Action.html#getAllUnhidden"><code class="language-plaintext highlighter-rouge">getAllUnhidden</code></a> <a href="../object/Action.html#getMessageParam"><code class="language-plaintext highlighter-rouge">getMessageParam</code></a> <a href="../object/Action.html#implicitAnnouncement"><code class="language-plaintext highlighter-rouge">implicitAnnouncement</code></a> <a href="../object/Action.html#reportAction"><code class="language-plaintext highlighter-rouge">reportAction</code></a> <a href="../object/Action.html#setMessageParam"><code class="language-plaintext highlighter-rouge">setMessageParam</code></a> <a href="../object/Action.html#setMessageParams"><code class="language-plaintext highlighter-rouge">setMessageParams</code></a> <a href="../object/Action.html#spPrefix"><code class="language-plaintext highlighter-rouge">spPrefix</code></a> <a href="../object/Action.html#spSuffix"><code class="language-plaintext highlighter-rouge">spSuffix</code></a> <a href="../object/Action.html#synthMessageParam"><code class="language-plaintext highlighter-rouge">synthMessageParam</code></a> <a href="../object/Action.html#verify"><code class="language-plaintext highlighter-rouge">verify</code></a> <a href="../object/Action.html#verifyObjRole"><code class="language-plaintext highlighter-rouge">verifyObjRole</code></a> <a href="../object/Action.html#wrapObjectsNP"><code class="language-plaintext highlighter-rouge">wrapObjectsNP</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ReplaceRedirector</code> :<br />
+<a href="../object/ReplaceRedirector.html#redirect"><code class="language-plaintext highlighter-rouge">redirect</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
+<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a> <a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a> <a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="includeInUndo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">includeInUndo</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1011">1011</a>]</p>
+
+<p>A SystemAction is not normally undo-able</p>
+
+<p><span id="isRepeatable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isRepeatable</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1014">1014</a>]</p>
+
+<p>A SystemAction is not normally repeatable</p>
+
+<p><span id="timeTaken"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timeTaken</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#226">226</a>]</p>
+
+<p>For OBJTIME extension; a SystemAction shouldn’t normally take any game
+clock time.</p>
+
+<p><span id="turnsTaken"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">turnsTaken</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1033">1033</a>]</p>
+
+<p>A SystemAction doesn’t take any turns (this is a bit belt-and-braces
+since turnSequence does nothing in any case).</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="afterAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterAction ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1020">1020</a>]</p>
+
+<p>Since a SystemAction isn’t an action in the game world, we don’t want it
+to trigger any after action notifications.</p>
+
+<p><span id="exec"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exec (cmd)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1039">1039</a>]</p>
+
+<p>Since this isn’t an action within the game world we bypass all the
+normal pre-action handling and just execute a reduced cycle.</p>
+
+<p><span id="execCycle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execCycle (cmd)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1046">1046</a>]</p>
+
+<p>There’s no before notifications for a SystemAction so we simply execute
+the action and, if we should define it as repeatable, make a note of it
+in case the player issues an AGAIN command on the next turn.</p>
+
+<p><span id="getInputFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getInputFile (prompt, dialogType, fileType, flags)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1080">1080</a>]</p>
+
+<p>Ask for an input file. We call the input manager, which displays the
+appropriate local file selector dialog. This is used for SystemActions
+that need a file to act on, such as SAVE, RESTORE and QUIT.</p>
+
+<p><span id="turnSequence"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">turnSequence ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1027">1027</a>]</p>
+
+<p>Since a SystemAction isn’t an action in the game world, we don’t want it
+to count as a turn, so we don’t run any Daemons or Fuses and we don’t
+advance the turn count.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

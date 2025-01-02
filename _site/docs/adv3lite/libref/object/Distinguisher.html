@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-distinguisher-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-distinguisher-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Distinguisher</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1242">1242</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A Distinguisher is an abstract parser object that represents one way
+that we can tell two objects apart, both in the name we display and in
+command input.</p>
+
+<p>Note that this class is designed primarily for the parser’s internal
+use, to facilitate some bookkeeping that we have to do during
+disambiguation. It’s not really designed as an extensibility mechanism,
+because it’s not usually enough to just add a new instance: you usually
+also have to add grammar for whatever new phrasing the new distinguisher
+represents, plus object resolution code to handle the new form of
+qualification.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Distinguisher</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Distinguisher</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Distinguisher</code></strong><br />
+<a href="../object/StateDistinguisher.html"><code class="language-plaintext highlighter-rouge">StateDistinguisher</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/contentsDistinguisher.html"><code class="language-plaintext highlighter-rouge">contentsDistinguisher</code></a> <a href="../object/disambigNameDistinguisher.html"><code class="language-plaintext highlighter-rouge">disambigNameDistinguisher</code></a> <a href="../object/locationDistinguisher.html"><code class="language-plaintext highlighter-rouge">locationDistinguisher</code></a> <a href="../object/nameDistinguisher.html"><code class="language-plaintext highlighter-rouge">nameDistinguisher</code></a> <a href="../object/ownerDistinguisher.html"><code class="language-plaintext highlighter-rouge">ownerDistinguisher</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#all"><code class="language-plaintext highlighter-rouge">all</code></a> <a href="#classInitFirst"><code class="language-plaintext highlighter-rouge">classInitFirst</code></a> <a href="#sortOrder"><code class="language-plaintext highlighter-rouge">sortOrder</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#appliesTo"><code class="language-plaintext highlighter-rouge">appliesTo</code></a> <a href="#apply"><code class="language-plaintext highlighter-rouge">apply</code></a> <a href="#classInit"><code class="language-plaintext highlighter-rouge">classInit</code></a> <a href="#equal"><code class="language-plaintext highlighter-rouge">equal</code></a> <a href="#getNames"><code class="language-plaintext highlighter-rouge">getNames</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="all"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">all</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1318">1318</a>]</p>
+
+<p>class property: master list of all distinguishers</p>
+
+<p><span id="classInitFirst"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">classInitFirst</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1331">1331</a>]</p>
+
+<p>make sure the StateDistinguisher instances are constructed first</p>
+
+<p><span id="sortOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sortOrder</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1248">1248</a>]</p>
+
+<p>Sorting order. The parser sorts the master list of distinguishers in
+ascending order of this value to determine the order of application.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="appliesTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">appliesTo (obj)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1265">1265</a>]</p>
+
+<p>Is this distinguisher applicable to the given object? Some
+distinguishers can only apply to certain objects. For example, a
+Lit/Unlit distinguisher can only be applied to objects with that state
+variable, because there’s no vocabulary that we can add to an object
+without the variable. (We can talk about “lit” and “unlit” matches, but
+we don’t have any standard vocabulary to talk about “unlightable”
+matches.)</p>
+
+<p><span id="apply"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">apply (lst)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1271">1271</a>]</p>
+
+<p>Apply the distinguisher. Returns a DistResult object with the results.</p>
+
+<p><span id="classInit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">classInit ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1321">1321</a>]</p>
+
+<p>during initialization, build the master list</p>
+
+<p><span id="equal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">equal (a, b)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1254">1254</a>]</p>
+
+<p>Compare two objects for equivalence under this distinguisher. Returns
+true if the objects are equivalent, nil others.</p>
+
+<p><span id="getNames"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNames (objs, article)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1348">1348</a>]</p>
+
+<p>Class method: generate distinguishing names for a list of objects. This
+generates names that distinguish the objects from one another, by
+applying as many Distinguishers as needed to come up with unique names.</p>
+
+<p>If ‘article’ is true, we’ll use a definite or indefinite article, as
+appropriate: definite if the name we settle upon uniquely identifies the
+object within the list, indefinite if not. If ‘article’ is nil, the
+names don’t have articles at all.</p>
+
+<p>Returns a list of [name, [objects]] sublists. The name is a string
+giving the distinguished name; the [objects] sub-sublist is a list of
+the objects known under that name.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-showtopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-showtopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ShowTopic : <a href="showtopic.html">GiveShowTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="givetopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="giveshowtopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A ShowTopic is very similar to a GiveTopic, except that it handles the
+SHOW TO command rather than the GIVE TO command. We might, for example,
+use it to display a different response if the player character merely
+shows Sarah her lost diamond ring rather than returning it to her:</p>
+
+<p>++ ShowTopic @diamondRing<br />
+   ”{The sarah/she} inspects the ring then looks up at you, &lt;q&gt;Yes, that’s my ring!&lt;/q&gt;<br />
+    she declares, &lt;q&gt;May I have it, please?&lt;/q&gt;”<br />
+;</p>
+
+<p>Note that in this case, the topicResponse is simply a double-quoted
+string, which the TopicEntry template can cope with, so we don’t need to
+write out topicEntry as an explicit method. However, in this case the
+response is a bit too simplistic, since Sarah will keep repeating the
+response each time she’s shown the ring. It would be better if we used,
+say, a StopEventList to show a sequence of responses if the player
+character keeps showing Sarah the ring without giving it to her:</p>
+
+<p>++ ShowTopic, StopEventList @diamondRing<br />
+   [<br />
+    ’{The sarah/she} inspects the ring then looks up at you, &lt;q&gt;Yes, that\s my ring!&lt;/q&gt;<br />
+    she declares, &lt;q&gt;May I have it, please?&lt;/q&gt;’,<br />
+    ’&lt;q&gt;I think we\ve already established that\s my ring.&lt;/q&gt; she points out, &lt;q&gt;I\d<br />
+     like it back now, please.&lt;/q&gt;’,<br />
+    ’{The sarah/she} holds out her hand to you with a look of one doing her best to<br />
+     bear patiently with someone unusually slow of understanding. ’<br />
+   ]<br />
+;</p>
+
+<p>On the other hand, perhaps we can get away with one response should the
+player show the carbuncle to the curator:</p>
+
+<p>++ ShowTopic @carbuncle<br />
+  ”{The curator/he} stares at the carbuncle in your hand, &lt;q&gt;Is that what I think<br />
+   it is?&lt;/q&gt; he wonders, &lt;q&gt;May I have a closer look?&lt;/q&gt;”<br />
+;</p>
+
+<p>You may recall a little way back we left the path down into Hellfire
+Cavern blocked by a nasty bunch of demons. The Baaras root Solomon is
+busily studying is meant to be good for disposing of demons (or so
+Josephus tells us), so perhaps showing it to the demons will do the
+trick:</p>
+
+<p>++ GiveShowTopic @baarasRoot<br />
+   topicResponse<br />
+   {<br />
+     ”As you produce the baaras root and hold it up before their demonic little<br />
+      eyes, it starts to glow an eerie pink colour. &lt;q&gt;Begone foul fiends!&lt;/q&gt; you<br />
+      cry, &lt;q&gt;By the power of Solomon’s Baaras Root, and with the incantation he<br />
+      forgot to teach me - er - I banish all evil spirits, all demons and creatures unclean,<br />
+      into the Almighty Garbage Collection routine whence no Dangling Reference shall <br />
+      ever return!&lt;/q&gt;\b<br />
+      &lt;q&gt;Ah no! Mandragora Maxima!&lt;/q&gt; cries one of the demons.\n<br />
+      &lt;q&gt;Eek no! The forgotten incantation!&lt;/q&gt; shrieks another.\n<br />
+      &lt;q&gt;Fie and double discombobulation, the Almighty Garbage Collector!&lt;/q&gt; squeals<br />
+       another.\n<br />
+      &lt;q&gt;RunDaemon, RunDaemon!&lt;/q&gt; yells a fourth.\b<br />
+      As the demons turn in terror and try to flee, the Baaras root<br />
+      grows ever brighter in your hand, shedding its piercing pink rays over the<br />
+      demonic horde, so that even as they start to clamber down the slope they <br />
+      shimmer and dissolve, turning into plumes of oily black smoke which<br />
+      vanishes like a mist. ”;<br />
+      demons.moveInto(nil);      <br />
+   }<br />
+;</p>
+
+<p>On the other hand, showing them the banana will get them worked up for
+other reasons:</p>
+
+<p>++ ShowTopic @goldenBanana<br />
+  ”As you hold up the Golden Banana of Discord for the demons to see they <br />
+   become very excited indeed. &lt;q&gt;Give us our Banana back!&lt;/q&gt; they cry,<br />
+   &lt;q&gt;Yes, we have no banana, we want our banana today!&lt;/q&gt; they sing,<br />
+   &lt;q&gt;Gimme! Gimme! Gimme!&lt;/q&gt; they insist.\b<br />
+   &lt;q&gt;Pretty please?&lt;/q&gt; one of them adds plaintively. ”<br />
+;</p>
+
+<p>Since showing the Baaras root to the demons clears them out of the way,
+we ought to code the locations the player character will then be able to
+reach:</p>
+
+<p>basaltPlain : OutdoorRoom ’Basalt Plain’ ’the basalt plain’<br />
+  ”To the north this rough, grey basalt plain is bordered by the fiery volcano;<br />
+   to the south it comes to the end at a steep rocky slope, which can be ascended<br />
+   by means of steep stone steps. Progress across the bleak plain looks difficult,<br />
+   since the ground is broken, pitted and uneven. ”<br />
+  south asExit(up)<br />
+  north = baseOfVolcano<br />
+  east : FakeConnector { ”You struggle a few dozen yards to the east, but the effort<br />
+    seems so unrewarding that you quickly turn back. ” }<br />
+  west : FakeConnector { ”You stumble over the broken ground to the west, but there<br />
+    doesn’t appear to be anything interesting in that direction so you quickly<br />
+    abandon the attempt as futile. ” }<br />
+  up = basaltPathUp<br />
+;</p>
+
+<p>+ basaltPathUp : StairwayUp -&gt; hellPathDown ’stone upward up steps’ ’steep stone steps’<br />
+ isPlural = true<br />
+;</p>
+
+<p>baseOfVolcano : OutdoorRoom ’Base of Volcano’ ’the base of the volcano’<br />
+  ”The harsh basalt plain to the south comes to the end at the base of a<br />
+   volcanic mountain that’s busily belching flames and smoke. A narrow path<br />
+   leads uninvitingly up the side of the volcano. ”<br />
+  south = basaltPlain<br />
+  north asExit(up)<br />
+  up = volcanoPath<br />
+;</p>
+
+<p>+ volcanoPath : StairwayUp -&gt;volcanoPathDown ’narrow up path’ ’narrow path up’<br />
+;</p>
+
+<p>At this point you might want to add these two new rooms to the Distant
+volcano object’s locatiobList:</p>
+
+<p>MultiLoc, Distant ’mount volcano/gloom’ ’volcano’<br />
+   ”The volcano rises up from the basalt plain like an angry sore, belching fumes,<br />
+    smoke and occasional balls of lava, which spit from the summit and ooze<br />
+    pus-like down its rugged slopes. ”<br />
+   locationList = [hellFireCavern, hellPath, <strong>basaltPlain, baseOfVolcano</strong>]<br />
+;</p>
+
+<p>Note at this point we have finally connected up the full path to the
+lava pool where the Golden Banana of Discord is to be destroyed.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

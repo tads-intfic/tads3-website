@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-wordgames-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-wordgames-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Hiding with Words<br />
+</strong></td>
+<td style="text-align: right;"><a href="hiding+fiding-introduction.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="findingincode.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Perhaps the most basic way you could go about trying to hide something
+is by obscuring the way it’s described, at least until it comes into the
+player’s possession. We want to make the diamond lying at the end of the
+path a bit less obvious. To do this we could juggle the various
+description and name properties of the diamond, giving it a null string
+initSpecialDesc so it isn’t listed anywhere until moved, and employ our
+custom inRoomDesc method to add a little hint to the room description.
+As a first (and somewhat over-the-top attempt) we might try something
+like:</p>
+
+<p>diamond : Thing ’sparkle’ ’sparkle’ @pathEnd<br />
+  ”It looks like a genuine diamond - and a valuable one too, exquisitely cut<br />
+   and multifaceted. ”<br />
+  iobjFor(CutWith) { verify() { } }<br />
+  initSpecialDesc = ””<br />
+  initDesc = ”It’s hard to make out; maybe there’s something there, or<br />
+   maybe it’s just a trick of the light. ”<br />
+  inRoomDesc()<br />
+  {<br />
+    if(!moved) ”Something seems to sparkle among the rocks. ”;<br />
+  }<br />
+  moveInto(newDest)<br />
+  {<br />
+    if(!moved)<br />
+    {<br />
+      initializeVocabWith(‘sparkling diamond’);      <br />
+      name = ’diamond’;<br />
+      ”Take a sparkle? You’ll be wanting to drink a rainbow next!\b<br />
+       Oh well, if you insist. So, you scrabble among the rocks with your<br />
+       clumsy little fingers and - my goodness! They close upon the sparkle, <br />
+       and as you pick it up it turns out to be something very solid and<br />
+       hard after all - a diamond no less! ”;<br />
+    }<br />
+    inherited(newDest);<br />
+  }<br />
+;</p>
+
+<p>Decoration ’rocks’ ’rocks’ @pathEnd<br />
+  desc = ”&lt;&lt;diamond.moved ? ’They\re just rocks. ’ : diamond.inRoomDesc&gt;&gt;”<br />
+  isPlural = true<br />
+;</p>
+
+<p>This is really pretty horrendous, quite apart from the sarcasm of the
+message displayed when the player first takes the diamond, he or she is
+meant to guess that the correct action here is TAKE SPARKLE. This makes
+it little better than a “read the author’s mind” puzzle. It can be
+improved, however, by adding handling for searching the rocks (which is
+something the player is more likely to think of):</p>
+
+<p>diamond : Thing ’sparkle’ ’sparkle’ @pathEnd<br />
+  ”It looks like a genuine diamond - and a valuable one too, exquisitely cut<br />
+   and multifaceted. ”<br />
+  iobjFor(CutWith) { verify() { } }<br />
+  initSpecialDesc = ””<br />
+  initDesc = ”It’s hard to make out; maybe there’s something there, or<br />
+   maybe it’s just a trick of the light. ”<br />
+  inRoomDesc()<br />
+  {<br />
+    if(!moved) ”Something seems to sparkle among the rocks. ”;<br />
+  }<br />
+  moveInto(newDest)<br />
+  {<br />
+    <strong>if(!renamed)<br />
+    {<br />
+      ”When you pick it up it turns out to be a gem - a diamond no less! ”;<br />
+      rename();       <br />
+    }</strong><br />
+    inherited(newDest);<br />
+  }<br />
+  **rename()<br />
+  {<br />
+     initializeVocabWith(‘sparkling diamond’);     <br />
+     name = ’diamond’;<br />
+     renamed = true;<br />
+  }<br />
+  renamed = nil<br />
+**;</p>
+
+<p>Fixture ’rocks’ ’rocks’ @pathEnd<br />
+  desc = = ”&lt;&lt;diamond.moved ? ’They\re just rocks. ’ : diamond.inRoomDesc&gt;&gt;”<br />
+  isPlural = true<br />
+  dobjFor(LookIn)<br />
+  {<br />
+    action()<br />
+    {<br />
+      if(diamond.moved)<br />
+        ”There’s not much here. ”;<br />
+      else if(diamond.renamed)<br />
+        ”A diamond nestles among the rocks. ”;<br />
+      else<br />
+      {<br />
+        diamond.rename();<br />
+        ”Hunting diligently among the rocks you come across the source of the<br />
+         sparkle - something tangible and hard - a diamond! ”;<br />
+      }<br />
+    }<br />
+  }<br />
+;</p>
+
+<p>This may be acceptable, but it’s quite a lot of code for finding a
+diamond, and unless this is exactly what you want, there are probably
+better ways of doing it, as we shall see.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

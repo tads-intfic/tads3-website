@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-multiloc-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-multiloc-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">MultiLoc</span><span class="type">class</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2604">2604</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>MultiLoc: this class can be multiply inherited by any object that must
+exist in more than one place at a time. To use this class, put it BEFORE
+Thing (or any subclass of Thing) in the object’s superclass list, to
+ensure that we override the default containment implementation for the
+object.</p>
+
+<p>Note that a MultiLoc object appears *in its entirety* in each of its
+locations. This means that MultiLoc is most suitable for a couple of
+specific situations:</p>
+
+<p>- several locations overlap slightly so that they include a common
+object: a large statue at the center of a public square, for example;</p>
+
+<p>- an object forms a sense connection among its location: a window;</p>
+
+<p>- a distant object that is seen in its entirety from several locations:
+the moon, say, or a mountain range.</p>
+
+<p>Note that MultiLoc is NOT suitable for cases where an object spans
+several locations but isn’t contained entirely in any one of them: it’s
+not good for something like a rope or a river, for example. MultiLoc
+also isn’t good for cases where you simply want to avoid creating a
+bunch of repeated decorations in different locations. MultiLoc isn’t
+good for these cases because a MultiLoc is treated as though it exists
+ENTIRELY and SIMULTANEOUSLY in all of its locations, which means that
+all of its sense information and internal state is shared among all of
+its locations.</p>
+
+<p>MultiInstance is better than MultiLoc for cases where you want to share
+a decoration object across several locations. MultiInstance is better
+because it creates individual copies of the object in the different
+locations, so each copy has its own separate sense information and its
+own separate identity.</p>
+
+<p>MultiFaceted is better for objects that span several locations, such as
+a river or a long rope. Like MultiInstance, MultiFaceted creates a
+separate copy in each location; in addition, MultiFaceted relates the
+copies together as “facets” of the same object, so that the parser knows
+they’re all actually parts of one larger object.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">MultiLoc</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/BaseMultiLoc.html"><code class="language-plaintext highlighter-rouge">BaseMultiLoc</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MultiLoc</code></strong><br />
+<a href="../object/BaseMultiLoc.html"><code class="language-plaintext highlighter-rouge">BaseMultiLoc</code></a><br />
+`                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MultiLoc</code></strong><br />
+<a href="../object/SenseConnector.html"><code class="language-plaintext highlighter-rouge">SenseConnector</code></a><br />
+<a href="../object/DistanceConnector.html"><code class="language-plaintext highlighter-rouge">DistanceConnector</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#getConnectedContainers"><code class="language-plaintext highlighter-rouge">getConnectedContainers</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BaseMultiLoc</code> :<br />
+<a href="../object/BaseMultiLoc.html#initialLocationClass"><code class="language-plaintext highlighter-rouge">initialLocationClass</code></a> <a href="../object/BaseMultiLoc.html#locationList"><code class="language-plaintext highlighter-rouge">locationList</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addDirectConnections"><code class="language-plaintext highlighter-rouge">addDirectConnections</code></a> <a href="#baseMoveInto"><code class="language-plaintext highlighter-rouge">baseMoveInto</code></a> <a href="#baseMoveIntoAdd"><code class="language-plaintext highlighter-rouge">baseMoveIntoAdd</code></a> <a href="#baseMoveOutOf"><code class="language-plaintext highlighter-rouge">baseMoveOutOf</code></a> <a href="#cloneForMultiInstanceContents"><code class="language-plaintext highlighter-rouge">cloneForMultiInstanceContents</code></a> <a href="#cloneMultiInstanceContents"><code class="language-plaintext highlighter-rouge">cloneMultiInstanceContents</code></a> <a href="#forEachConnectedContainer"><code class="language-plaintext highlighter-rouge">forEachConnectedContainer</code></a> <a href="#forEachContainer"><code class="language-plaintext highlighter-rouge">forEachContainer</code></a> <a href="#getDropDestination"><code class="language-plaintext highlighter-rouge">getDropDestination</code></a> <a href="#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a> <a href="#moveIntoAdd"><code class="language-plaintext highlighter-rouge">moveIntoAdd</code></a> <a href="#moveOutOf"><code class="language-plaintext highlighter-rouge">moveOutOf</code></a> <a href="#reInitializeLocation"><code class="language-plaintext highlighter-rouge">reInitializeLocation</code></a> <a href="#restoreLocation"><code class="language-plaintext highlighter-rouge">restoreLocation</code></a> <a href="#saveLocation"><code class="language-plaintext highlighter-rouge">saveLocation</code></a> <a href="#sensePathToLoc"><code class="language-plaintext highlighter-rouge">sensePathToLoc</code></a> <a href="#shineOnLoc"><code class="language-plaintext highlighter-rouge">shineOnLoc</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BaseMultiLoc</code> :<br />
+<a href="../object/BaseMultiLoc.html#buildLocationList"><code class="language-plaintext highlighter-rouge">buildLocationList</code></a> <a href="../object/BaseMultiLoc.html#isDirectlyIn"><code class="language-plaintext highlighter-rouge">isDirectlyIn</code></a> <a href="../object/BaseMultiLoc.html#isIn"><code class="language-plaintext highlighter-rouge">isIn</code></a> <a href="../object/BaseMultiLoc.html#isInitiallyIn"><code class="language-plaintext highlighter-rouge">isInitiallyIn</code></a> <a href="../object/BaseMultiLoc.html#isListedInContents"><code class="language-plaintext highlighter-rouge">isListedInContents</code></a> <a href="../object/BaseMultiLoc.html#isOrIsIn"><code class="language-plaintext highlighter-rouge">isOrIsIn</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="getConnectedContainers"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getConnectedContainers</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2832">2832</a>]</p>
+
+<p>get a list of my connected containers; by default, we don’t connect our
+containers, so this is an empty list</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addDirectConnections"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addDirectConnections (tab)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2866">2866</a>]</p>
+
+<p>Add the direct containment connections for this item to a lookup table.</p>
+
+<p>A MultiLoc does not, by default, connect its multiple locations
+together. This means that if we’re traversing in from a point of view
+outside the MultiLoc object, we don’t add any of our other containers to
+the connection table. However, the MultiLoc itself, and its contents,
+*can* see out to all of its locations; so if we’re traversing from a
+point of view inside self, we will add all of our containers to the
+connection list.</p>
+
+<p><span id="baseMoveInto"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">baseMoveInto (newContainer)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2722">2722</a>]</p>
+
+<p>Basic routine to move this object into a given single container. Removes
+the object from all of its other containers. Performs no notifications.</p>
+
+<p><span id="baseMoveIntoAdd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">baseMoveIntoAdd (newContainer)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2747">2747</a>]</p>
+
+<p>Add this object to a new location - base version that performs no
+notifications.</p>
+
+<p><span id="baseMoveOutOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">baseMoveOutOf (cont)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2776">2776</a>]</p>
+
+<p>Base routine to move myself out of a given container. Performs no
+notifications.</p>
+
+<p><span id="cloneForMultiInstanceContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cloneForMultiInstanceContents (loc)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2848">2848</a>]</p>
+
+<p>Create a clone of this object for inclusion in a MultiInstance’s
+contents tree. We don’t actually need to make a copy of the object,
+because a MultiLoc can be in several locations simultaneously; all we
+need to do is add ourselves to the new location.</p>
+
+<p><span id="cloneMultiInstanceContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cloneMultiInstanceContents (loc)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2839">2839</a>]</p>
+
+<p>Clone this object’s contents for inclusion in a MultiInstance’s contents
+tree. A MultiLoc is capable of being in multiple places at once, so we
+can just use our original contents tree as is.</p>
+
+<p><span id="forEachConnectedContainer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEachConnectedContainer (func, ...)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2826">2826</a>]</p>
+
+<p>Call a function on each connected container. By default, we don’t
+connect our containers for sense purposes, so we do nothing here.</p>
+
+<p><span id="forEachContainer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEachContainer (func, [args])</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2814">2814</a>]</p>
+
+<p>Call a function on each container. We’ll invoke the function as follows
+for each container ‘cont’:</p>
+
+<p>(func)(cont, args…)</p>
+
+<p><span id="getDropDestination"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getDropDestination (obj, path)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2950">2950</a>]</p>
+
+<p>Get the drop destination. The default implementation in Thing won’t work
+for us, because it delegates to its location to find the drop
+destination; we can’t do that because we could have several locations.
+To figure out which of our multiple locations to delegate to, we’ll look
+for ‘self’ in the supplied sense path; if we can find it, and the
+previous path element is a container or peer of ours, then we’ll
+delegate to that container, because it’s the “side” we approached from.
+If there’s no path, or if we’re not preceded in the path by a container
+of ours, we’ll arbitrarily delegate to our first container.</p>
+
+<p>Note that when we don’t have a path, or there’s no container of ours
+preceding us in the path, the object being dropped must be starting
+inside us. It would be highly unusual for this to happen with a
+multi-location object, because MutliLoc isn’t designed for use as a
+“nested room” or the like. However, it’s not an impossible situation; if
+the game does want to create such a scenario, then the game simply needs
+to override this routine so that it does whatever makes sense in the
+game scenario. There’s no general way to handle such situations, but it
+should be possible to determine the correct handling for specific
+scenarios.</p>
+
+<p><span id="initializeLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeLocation ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2609">2609</a>]</p>
+
+<p>Initialize my location’s contents list - add myself to my container
+during initialization</p>
+
+<p><span id="moveIntoAdd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveIntoAdd (newContainer)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2759">2759</a>]</p>
+
+<p>Add this object to a new location.</p>
+
+<p><span id="moveOutOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveOutOf (cont)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2789">2789</a>]</p>
+
+<p>Remove myself from a given container, leaving myself in any other
+containers.</p>
+
+<p><span id="reInitializeLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reInitializeLocation ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2634">2634</a>]</p>
+
+<p>Re-initialize the location list. This calls buildLocationList() to
+re-evaluate the location rules, then updates the locationList to match
+the new results. We’ll remove the MultiLoc from any old locations that
+are no longer part of the location list, and we’ll add it to any new
+locations that weren’t previously in the location list. You can call
+this at any time to update the MutliLoc’s presence to reflect applying
+our location rules to the current game state.</p>
+
+<p>Note that this doesn’t trigger any moveInto notifications. This routine
+is a re-initialization rather than an in-game action, so it’s not meant
+to behave as though an actor in the game were walking around moving the
+MultiLoc around; thus no notifications are sent. Note also that we
+attempt to minimize our work by computing the “delta” from the old
+state - hence we only move the MultiLoc into containers it wasn’t in
+previously, and we only remove it from existing containers that it’s no
+longer in.</p>
+
+<p><span id="restoreLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restoreLocation (oldLoc)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2692">2692</a>]</p>
+
+<p>restore a previously saved location</p>
+
+<p><span id="saveLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">saveLocation ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2685">2685</a>]</p>
+
+<p>save my location for later restoration</p>
+
+<p><span id="sensePathToLoc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sensePathToLoc (sense, trans, obs, fill)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2919">2919</a>]</p>
+
+<p>Build a sense path to my location or locations. Note that even though we
+don’t by default connect our different containers together, we still
+build a sense path from within to outside, because we can see from
+within out to all of our containers.</p>
+
+<p><span id="shineOnLoc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shineOnLoc (sense, ambient, fill)</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#2905">2905</a>]</p>
+
+<p>Transmit ambient energy to my location or locations. Note that even
+though we don’t by default shine light from one of our containers to
+another, we still shine light from within me to each of our containers.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

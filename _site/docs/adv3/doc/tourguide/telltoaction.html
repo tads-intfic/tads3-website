@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-telltoaction-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-telltoaction-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TellToAction<br />
+</strong></td>
+<td style="text-align: right;"><a href="stringpreparser.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="consultable.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>We can define a custom TellTo action that will translate TELL SARAH TO
+JUMP into SARAH, JUMP or ASK SARAH TO GO NORTH into SARAH, NORTH rather
+more neatly than using a StringPreParser. All we need to do is to define
+a LiteralTAction that matches the grammar TELL X TO Y or ASK X TO Y. X
+will be taken as the direct object of the command, and Y as a string
+literal containing the command X is to execute. To make X execute the
+command Y all we need then do is to tokenize the string Y and then call
+Tokenizer.tokenize to convert it into a list of tokens we can feed into
+the executeCommand function.</p>
+
+<p>The only real complication is that the player who uses this syntax is
+likely to type ASK SARAH TO KISS YOU and expect it to behave like SARAH,
+KISS ME; we therefore have to test whether ‘you’ exists among the
+command tokens and if so replace every occurrence of it with ‘me’.</p>
+
+<p>Here’s the complete definition:</p>
+
+<p>DefineLiteralTAction(TellTo, IndirectObject); <br />
+ <br />
+VerbRule(TellTo)<br />
+ (‘tell’ | ’ask’ | ’order’) singleDobj ’to’ singleLiteral<br />
+ : TellToAction<br />
+ verbPhrase = ’tell/telling (whom) (to what)’<br />
+;</p>
+
+<p>modify Thing<br />
+  dobjFor(TellTo)<br />
+  {<br />
+    verify() { illogical(‘{The dobj/he} do{es}n\t accept orders. ’); }<br />
+  }<br />
+;</p>
+
+<p>modify Actor<br />
+  dobjFor(TellTo)<br />
+  {<br />
+    verify() {}<br />
+    preCond = [canTalkToObj]<br />
+    action()<br />
+    {<br />
+      local tokList = Tokenizer.tokenize(gLiteral);<br />
+      /* you probably want to translate ’you’ into ’me’<br />
+       * likewise ’himself’ or ’herself’ into ’yourself’<br />
+       * in any token */<br />
+      <br />
+      if(tokList.indexWhich({x: x[1] is in (‘you’, ’himself’, ’herself’)}))<br />
+      { <br />
+       local lst = [];<br />
+       foreach(local tok in tokList)<br />
+       {<br />
+         if(tok[1] == ’you’)<br />
+         {<br />
+           tok[1] = ’me’;<br />
+           tok[3] = ’me’;<br />
+         }<br />
+         if(tok[1] is in (‘himself’, ’herself’))<br />
+         {<br />
+           tok[1] = ’yourself’;<br />
+           tok[3] = ’yourself’;<br />
+         }       <br />
+        lst += [tok];  <br />
+       }<br />
+       tokList = lst; <br />
+      }<br />
+      executeCommand(self, gActor, tokList, true);<br />
+    }<br />
+  }<br />
+; </p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

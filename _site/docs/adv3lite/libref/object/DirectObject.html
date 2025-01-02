@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-directobject-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-directobject-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">DirectObject</span><span class="type">object</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3845">3845</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The DirectObject role is the role of the object being most directly
+acted upon in the command. The is the only role in a verb that has only
+one object. In a verb with two objects, this is the object most directly
+affected. For example, UNLOCK DOOR WITH KEY directly acts upon the door,
+so the door is the direct object; the key isn’t the direct object
+because it’s merely a tool used to effect the change on the door.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DirectObject</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/NounRole.html"><code class="language-plaintext highlighter-rouge">NounRole</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DirectObject</code></strong><br />
+<a href="../object/NounRole.html"><code class="language-plaintext highlighter-rouge">NounRole</code></a><br />
+`                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#curObjProp"><code class="language-plaintext highlighter-rouge">curObjProp</code></a> <a href="#matchProp"><code class="language-plaintext highlighter-rouge">matchProp</code></a> <a href="#missingReplyProp"><code class="language-plaintext highlighter-rouge">missingReplyProp</code></a> <a href="#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="#npListProp"><code class="language-plaintext highlighter-rouge">npListProp</code></a> <a href="#objListProp"><code class="language-plaintext highlighter-rouge">objListProp</code></a> <a href="#objMatchProp"><code class="language-plaintext highlighter-rouge">objMatchProp</code></a> <a href="#objProp"><code class="language-plaintext highlighter-rouge">objProp</code></a> <a href="#order"><code class="language-plaintext highlighter-rouge">order</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounRole</code> :<br />
+<a href="../object/NounRole.html#all"><code class="language-plaintext highlighter-rouge">all</code></a> <a href="../object/NounRole.html#allPredicate"><code class="language-plaintext highlighter-rouge">allPredicate</code></a> <a href="../object/NounRole.html#isPredicate"><code class="language-plaintext highlighter-rouge">isPredicate</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounRole</code> :<br />
+<a href="../object/NounRole.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="curObjProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curObjProp</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3852">3852</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="matchProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchProp</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3846">3846</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="missingReplyProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">missingReplyProp</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3851">3851</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="name"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3853">3853</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="npListProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">npListProp</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3847">3847</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="objListProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objListProp</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3848">3848</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="objMatchProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objMatchProp</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3850">3850</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="objProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objProp</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3849">3849</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="order"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">order</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3854">3854</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><em>(none)</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

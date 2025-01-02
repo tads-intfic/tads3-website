@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-extensions-tiaaction-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-extensions-tiaaction-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="../../docs/manual/topbar.jpg" data-border="0" /></p>
+
+<p><a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+TIAAction<br />
+<span class="navnp"><a href="sysrules.html" class="nav"><em>Prev:</em> Sysrules</a>
+    <a href="viewport.html" class="nav"><em>Next:</em> Viewport</a>    
+</span></p>
+
+<h1 id="tiaaction">TIAAction</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>The purpose of the <a href="../tiaaction.t">tiaaction.t</a> extension is to allow
+game authors to define actions involving three objects, such as PUT COIN
+IN SLOT WITH TWEEZERS. Note that you only need this extension if you
+want to define an action involving three physical objects. Actions
+involving two objects and a literal or topic, say, can be defined using
+<a href="../../docs/manual/define.html#threeobjects">other techniques</a>.</p>
+
+<p><span id="classes"></span></p>
+
+<h2 id="new-classes-objects-and-properties">New Classes, Objects and Properties</h2>
+
+<p>In addition to a number of properties intended purely for internal use,
+this extension defines the following new classes, objects and
+properties:</p>
+
+<ul>
+  <li><em>Classes</em>: <strong>TIAAction</strong>.</li>
+</ul>
+
+<p><span id="usage"></span></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Include the tiaaction.t file after the library files but before your
+game source files. This will allow you to define actions involving three
+objects. The macros needed to support this are already defined in
+advLite.html for your convenience.</p>
+
+<p>The third object involved in a three-object command is the <strong>Accessory
+Object</strong>, normally abbreviated to <strong>aobj</strong> (although in many contexts
+the abbreviation <strong>acc</strong> may also be used, since this is what is used by
+the Mercury parser on which adv3Lite is based). Thus, for example, do
+refer to the accessory object of the current command you’d use
+<strong>gAobj</strong>. To define action handling on an object in its role as
+accessory object you’d use <strong>aobjFor(WhateverAction)</strong>. In a message
+parameter substitution you’d use <code class="language-plaintext highlighter-rouge">aobj</code> to refer
+to the accessory object (e.g. <code class="language-plaintext highlighter-rouge">{the aobj}</code> or
+<code class="language-plaintext highlighter-rouge">{the subj aobj}</code>). In a VerbRule you’d use
+<strong>singleAobj</strong> or <strong>multiAobj</strong> (in practice nearly always the former)
+as the marker for the accessory object in the player’s command, and when
+defining a TIAAction you’d use the <strong>DefineTIAAction()</strong> macro. You use
+all these in much the same way as you’d use the dobj and iobj
+equivalents when defining a new TIAction.</p>
+
+<p>This is best explained by means of an example. Suppose we wanted to
+implement an action that could handle commands of the form PUT COIN IN
+SLOT WITH TWEEZERS. First we’d define the action and its associated
+VerbRule:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineTIAAction(PutInWith)
+    ;
+
+    VerbRule(PutInWith)
+        'put' multiDobj 'in' singleIobj 'with' singleAobj
+        : VerbProduction
+        action = PutInWith
+        verbPhrase = 'put/putting (what) (in what) (with what)'
+        missingQ = 'what do want to put; what do you want to put it in;
+            what do you want to put it in with'
+    ;
+     
+</code></pre></div></div>
+
+<p>Next, we’d define the default handling for this new action on the Thing
+class, as normal. In this simple example we’ll assume that PutInWith
+acts much like PutIn, except that by default we can’t use a Thing to put
+other things in with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     modify Thing
+        dobjFor(PutInWith) asDobjFor(PutIn)
+        iobjFor(PutInWith) asIobjFor(PutIn)
+        aobjFor(PutInWith)
+        {
+            preCond = [objHeld]
+            
+            verify() 
+            { 
+                illogical('{I} {can\'t} use {the aobj} to put anything anywhere. ');
+            }
+        }
+    ;
+     
+</code></pre></div></div>
+
+<p>Finally, we’d probably go on to define the slot, the coin and tweezers
+in such a way that the player has to use the tweezers to put the coin in
+the slot:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
+    + coinSlot: Container, Fixture 'coin slot'
+        bulkCapacity = 1
+            
+        notifyInsert(obj)
+        {
+            if(obj != coin)
+            {
+                "Only a coin will fit in that slot. ";
+                exit;
+            }
+            if(gAobj == nil)
+            {
+                "It's too fiddly to put the coin in the slot with your fingers. ";
+                exit;
+            }
+            
+            inherited(obj);
+        }
+    ;
+
+    + coin: Thing 'coin; worn'
+        "It's very worn. "
+        initSpecialDesc = "A coin lies on the ground. "   
+    ; 
+      
+    + tweezers: Thing 'tweezers;;;them'
+        aobjFor(PutInWith)
+        {
+            verify() 
+            {
+                if(gDobj == self)
+                    illogicalSelf('{The subj dobj} {can\'t} be used to manipulate
+                        themselves. ');
+            }
+            
+            check()
+            {
+                if(gDobj.bulk &gt; 1)
+                    "{The subj dobj} {is} too large to be manipulated with {the
+                    aobj}. ";
+            }
+        }
+    ;  
+      
+     
+</code></pre></div></div>
+
+<p>This covers most of what you need to know to use this extension. For
+additional information see the source code and comments in the
+<a href="../tiaaction.t">tiaaction.t</a> file.</p>
+
+<hr />
+
+<p><em>Adv3Lite Manual</em><br />
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+TIAAction<br />
+<span class="navnp"><a href="sysrules.html" class="nav"><em>Prev:</em> Sysrules</a>
+    <a href="viewport.html" class="nav"><em>Next:</em> Viewport</a>    
+</span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

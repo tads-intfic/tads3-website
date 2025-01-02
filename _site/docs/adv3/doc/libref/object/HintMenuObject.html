@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-hintmenuobject-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-hintmenuobject-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">HintMenuObject</span><span class="type">class</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#31">31</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A basic hint menu object. This is an abstract base class that
+encapsulates some behavior common to different hint menu classes.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">HintMenuObject</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">HintMenuObject</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">HintMenuObject</code></strong><br />
+<a href="../object/Goal.html"><code class="language-plaintext highlighter-rouge">Goal</code></a><br />
+<a href="../object/HintLongTopicItem.html"><code class="language-plaintext highlighter-rouge">HintLongTopicItem</code></a><br />
+<a href="../object/HintMenu.html"><code class="language-plaintext highlighter-rouge">HintMenu</code></a><br />
+<a href="../object/TopHintMenu.html"><code class="language-plaintext highlighter-rouge">TopHintMenu</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#topicOrder"><code class="language-plaintext highlighter-rouge">topicOrder</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#compareForTopicSort"><code class="language-plaintext highlighter-rouge">compareForTopicSort</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="topicOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicOrder</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#41">41</a>]</p>
+
+<p>The topic order. When we’re about to show a list of open topics, we’ll
+sort the list in ascending order of this property, then in ascending
+order of title. By default, we set this order value to 1000; if
+individual goals don’t override this, then they’ll simply be sorted
+lexically by topic name. This can be used if there’s some basis other
+than alphabetical order for sorting the list.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="compareForTopicSort"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compareForTopicSort (other)</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#52">52</a>]</p>
+
+<p>Compare this goal to another, for the purposes of sorting a list of
+topics. Returns a positive number if this goal sorts after the other
+one, a negative number if this goal sorts before the other one, 0 if the
+relative order is arbitrary.</p>
+
+<p>By default, we’ll sort by topicOrder if the topicOrder values are
+different, otherwise alphabetically by title.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

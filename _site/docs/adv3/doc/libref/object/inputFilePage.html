@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-inputfilepage-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-inputfilepage-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">inputFilePage</span><span class="type">object</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3471">3471</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>File dialog event page. This page is used by the IFDB Storage Server
+file dialog to return information to the game UI. The IFDB dialog page
+can’t itself perform scripting actions on the enclosing dialog frame,
+since it’s being served from a different domain - browsers prohibit
+cross-domain scripting for security reasons. The IFDB dialog must
+therefore navigate back to a page within the game server domain in order
+to return information through scripting. This is that page: when the
+IFDB page is ready to return information, it navigates its frame to this
+page, passing the return values in the request parameters. Since this
+page is served by the game server, within the game server domain, the
+browser allows it to use scripting actions on its enclosing frame. We
+finish the job by dismissing the dialog in the UI.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">inputFilePage</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/WebResource.html"><code class="language-plaintext highlighter-rouge">WebResource</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">inputFilePage</code></strong><br />
+<a href="../object/WebResource.html"><code class="language-plaintext highlighter-rouge">WebResource</code></a><br />
+`                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#vpath"><code class="language-plaintext highlighter-rouge">vpath</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+<a href="../object/WebResource.html#group"><code class="language-plaintext highlighter-rouge">group</code></a> <a href="../object/WebResource.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#processRequest"><code class="language-plaintext highlighter-rouge">processRequest</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+<a href="../object/WebResource.html#matchRequest"><code class="language-plaintext highlighter-rouge">matchRequest</code></a> <a href="../object/WebResource.html#sendAck"><code class="language-plaintext highlighter-rouge">sendAck</code></a> <a href="../object/WebResource.html#sendXML"><code class="language-plaintext highlighter-rouge">sendXML</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="vpath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vpath</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3472">3472</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="processRequest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processRequest (req, query)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3473">3473</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

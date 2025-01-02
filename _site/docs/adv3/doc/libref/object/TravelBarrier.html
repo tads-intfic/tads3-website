@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-travelbarrier-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-travelbarrier-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">TravelBarrier</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1658">1658</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A TravelBarrier can be attached to a TravelConnector, via the
+travelBarrier property, to form a conditional barrier to travel.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">TravelBarrier</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TravelBarrier</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TravelBarrier</code></strong><br />
+<a href="../object/PushTravelBarrier.html"><code class="language-plaintext highlighter-rouge">PushTravelBarrier</code></a><br />
+<a href="../object/VehicleBarrier.html"><code class="language-plaintext highlighter-rouge">VehicleBarrier</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#canTravelerPass"><code class="language-plaintext highlighter-rouge">canTravelerPass</code></a> <a href="#explainTravelBarrier"><code class="language-plaintext highlighter-rouge">explainTravelBarrier</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="canTravelerPass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canTravelerPass (traveler)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1664">1664</a>]</p>
+
+<p>Determine if this barrier blocks the given traveler. By default, we
+don’t block anyone. This doesn’t make us much of a barrier, so
+subclasses should override this with a more specific condition.</p>
+
+<p><span id="explainTravelBarrier"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">explainTravelBarrier (traveler)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1672">1672</a>]</p>
+
+<p>Explain why travel isn’t allowed. This should generate an appropriate
+failure report explaining the problem. This is invoked when travel is
+attempted and canTravelerPass returns nil. Subclasses must override
+this.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

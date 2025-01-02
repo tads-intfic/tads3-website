@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-funccommand-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-funccommand-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">FuncCommand</span><span class="type">class</span></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1403">1403</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A FuncCommand is a special version of Command that carries out its
+action via a custom callback function, rather than by executing a
+regular Action. This can be used to create a simple one-off custom
+command without having to create a separate Action for it.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">FuncCommand</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Command.html"><code class="language-plaintext highlighter-rouge">Command</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">FuncCommand</code></strong><br />
+<a href="../object/Command.html"><code class="language-plaintext highlighter-rouge">Command</code></a><br />
+`                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#func"><code class="language-plaintext highlighter-rouge">func</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Command</code> :<br />
+<a href="../object/Command.html#acc"><code class="language-plaintext highlighter-rouge">acc</code></a> <a href="../object/Command.html#accInfo"><code class="language-plaintext highlighter-rouge">accInfo</code></a> <a href="../object/Command.html#accNPs"><code class="language-plaintext highlighter-rouge">accNPs</code></a> <a href="../object/Command.html#accs"><code class="language-plaintext highlighter-rouge">accs</code></a> <a href="../object/Command.html#action"><code class="language-plaintext highlighter-rouge">action</code></a> <a href="../object/Command.html#actions"><code class="language-plaintext highlighter-rouge">actions</code></a> <a href="../object/Command.html#actor"><code class="language-plaintext highlighter-rouge">actor</code></a> <a href="../object/Command.html#actorNPs"><code class="language-plaintext highlighter-rouge">actorNPs</code></a> <a href="../object/Command.html#actorPerson"><code class="language-plaintext highlighter-rouge">actorPerson</code></a> <a href="../object/Command.html#actors"><code class="language-plaintext highlighter-rouge">actors</code></a> <a href="../object/Command.html#afterReports"><code class="language-plaintext highlighter-rouge">afterReports</code></a> <a href="../object/Command.html#aobj"><code class="language-plaintext highlighter-rouge">aobj</code></a> <a href="../object/Command.html#badMulti"><code class="language-plaintext highlighter-rouge">badMulti</code></a> <a href="../object/Command.html#cmdErr"><code class="language-plaintext highlighter-rouge">cmdErr</code></a> <a href="../object/Command.html#disambig"><code class="language-plaintext highlighter-rouge">disambig</code></a> <a href="../object/Command.html#disambigIdx"><code class="language-plaintext highlighter-rouge">disambigIdx</code></a> <a href="../object/Command.html#dobj"><code class="language-plaintext highlighter-rouge">dobj</code></a> <a href="../object/Command.html#dobjInfo"><code class="language-plaintext highlighter-rouge">dobjInfo</code></a> <a href="../object/Command.html#dobjNPs"><code class="language-plaintext highlighter-rouge">dobjNPs</code></a> <a href="../object/Command.html#dobjs"><code class="language-plaintext highlighter-rouge">dobjs</code></a> <a href="../object/Command.html#endOfSentence"><code class="language-plaintext highlighter-rouge">endOfSentence</code></a> <a href="../object/Command.html#implicitActionReports"><code class="language-plaintext highlighter-rouge">implicitActionReports</code></a> <a href="../object/Command.html#iobj"><code class="language-plaintext highlighter-rouge">iobj</code></a> <a href="../object/Command.html#iobjInfo"><code class="language-plaintext highlighter-rouge">iobjInfo</code></a> <a href="../object/Command.html#iobjNPs"><code class="language-plaintext highlighter-rouge">iobjNPs</code></a> <a href="../object/Command.html#iobjs"><code class="language-plaintext highlighter-rouge">iobjs</code></a> <a href="../object/Command.html#lastAction"><code class="language-plaintext highlighter-rouge">lastAction</code></a> <a href="../object/Command.html#madeTopic"><code class="language-plaintext highlighter-rouge">madeTopic</code></a> <a href="../object/Command.html#matchedAll"><code class="language-plaintext highlighter-rouge">matchedAll</code></a> <a href="../object/Command.html#matchedMulti"><code class="language-plaintext highlighter-rouge">matchedMulti</code></a> <a href="../object/Command.html#miscWordLists"><code class="language-plaintext highlighter-rouge">miscWordLists</code></a> <a href="../object/Command.html#missingNouns"><code class="language-plaintext highlighter-rouge">missingNouns</code></a> <a href="../object/Command.html#nextTokens"><code class="language-plaintext highlighter-rouge">nextTokens</code></a> <a href="../object/Command.html#npList"><code class="language-plaintext highlighter-rouge">npList</code></a> <a href="../object/Command.html#npListSorted"><code class="language-plaintext highlighter-rouge">npListSorted</code></a> <a href="../object/Command.html#npToResolve"><code class="language-plaintext highlighter-rouge">npToResolve</code></a> <a href="../object/Command.html#originalAction"><code class="language-plaintext highlighter-rouge">originalAction</code></a> <a href="../object/Command.html#parseTree"><code class="language-plaintext highlighter-rouge">parseTree</code></a> <a href="../object/Command.html#predActive"><code class="language-plaintext highlighter-rouge">predActive</code></a> <a href="../object/Command.html#predPriority"><code class="language-plaintext highlighter-rouge">predPriority</code></a> <a href="../object/Command.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a> <a href="../object/Command.html#reflexiveAnte"><code class="language-plaintext highlighter-rouge">reflexiveAnte</code></a> <a href="../object/Command.html#tokenLen"><code class="language-plaintext highlighter-rouge">tokenLen</code></a> <a href="../object/Command.html#verbProd"><code class="language-plaintext highlighter-rouge">verbProd</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Command</code> :<br />
+<a href="../object/Command.html#addDisambigNP"><code class="language-plaintext highlighter-rouge">addDisambigNP</code></a> <a href="../object/Command.html#addNounListItem"><code class="language-plaintext highlighter-rouge">addNounListItem</code></a> <a href="../object/Command.html#addNounProd"><code class="language-plaintext highlighter-rouge">addNounProd</code></a> <a href="../object/Command.html#afterReport"><code class="language-plaintext highlighter-rouge">afterReport</code></a> <a href="../object/Command.html#buildCommandString"><code class="language-plaintext highlighter-rouge">buildCommandString</code></a> <a href="../object/Command.html#buildObjLists"><code class="language-plaintext highlighter-rouge">buildObjLists</code></a> <a href="../object/Command.html#calcPriority"><code class="language-plaintext highlighter-rouge">calcPriority</code></a> <a href="../object/Command.html#changeAction"><code class="language-plaintext highlighter-rouge">changeAction</code></a> <a href="../object/Command.html#clone"><code class="language-plaintext highlighter-rouge">clone</code></a> <a href="../object/Command.html#cloneNP"><code class="language-plaintext highlighter-rouge">cloneNP</code></a> <a href="../object/Command.html#emptyNounRole"><code class="language-plaintext highlighter-rouge">emptyNounRole</code></a> <a href="../object/Command.html#exec"><code class="language-plaintext highlighter-rouge">exec</code></a> <a href="../object/Command.html#execCombos"><code class="language-plaintext highlighter-rouge">execCombos</code></a> <a href="../object/Command.html#execDoer"><code class="language-plaintext highlighter-rouge">execDoer</code></a> <a href="../object/Command.html#execIter"><code class="language-plaintext highlighter-rouge">execIter</code></a> <a href="../object/Command.html#fetchDisambigReply"><code class="language-plaintext highlighter-rouge">fetchDisambigReply</code></a> <a href="../object/Command.html#fixPriority"><code class="language-plaintext highlighter-rouge">fixPriority</code></a> <a href="../object/Command.html#forEachNP"><code class="language-plaintext highlighter-rouge">forEachNP</code></a> <a href="../object/Command.html#forEachObj"><code class="language-plaintext highlighter-rouge">forEachObj</code></a> <a href="../object/Command.html#getCommandPhrase"><code class="language-plaintext highlighter-rouge">getCommandPhrase</code></a> <a href="../object/Command.html#noteMiscWords"><code class="language-plaintext highlighter-rouge">noteMiscWords</code></a> <a href="../object/Command.html#npTokenLen"><code class="language-plaintext highlighter-rouge">npTokenLen</code></a> <a href="../object/Command.html#numNounSlots"><code class="language-plaintext highlighter-rouge">numNounSlots</code></a> <a href="../object/Command.html#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a> <a href="../object/Command.html#resolveReflexive"><code class="language-plaintext highlighter-rouge">resolveReflexive</code></a> <a href="../object/Command.html#saveReflexiveAnte"><code class="language-plaintext highlighter-rouge">saveReflexiveAnte</code></a> <a href="../object/Command.html#sortList"><code class="language-plaintext highlighter-rouge">sortList</code></a> <a href="../object/Command.html#startDisambigReply"><code class="language-plaintext highlighter-rouge">startDisambigReply</code></a> <a href="../object/Command.html#terseOK"><code class="language-plaintext highlighter-rouge">terseOK</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="func"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">func</code></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1421">1421</a>]</p>
+
+<p>the callback function for carrying out our command action</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (prod, func)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/command.t.html">command.t</a>[<a href="../source/command.t.html#1408">1408</a>]</p>
+
+<p>Create: provide the grammar match object, if any, and the callback
+function to execute to carry out the command.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

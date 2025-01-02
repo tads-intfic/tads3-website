@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-tutorial-guard-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-tutorial-guard-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="character.html" class="nav">Character Building</a> &gt; The
+Security Guard<br />
+<span class="navnp"><a href="npcoverview.html" class="nav"><em>Prev:</em> Overview</a>
+    <a href="cortes.html" class="nav"><em>Next:</em> Pablo Cortes</a>    
+</span></p>
+
+<h1 id="the-security-guard--a-really-simple-npc">The Security Guard — A Really Simple NPC</h1>
+
+<p>Back in Chapter 7 we arranged for the ID card to be confiscated by a
+security guard if the player character attempts to pass through the
+metal detector carrying the card, unless the metal detector is switched
+off. We therefore clearly need an NPC to represent the security guard,
+although the implementation can be very simple, since confiscating the
+card is about the only role he will be called to play in the game. He’s
+therefore a good choice for our first NPC.</p>
+
+<p>The object that represents the actual physical presence of the NPC (as
+opposed to various aspects of its behaviour) is defined much like any
+other Thing, except that we define it to be of class Actor. The Actor
+object representing the security guard might look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    guard: Actor 'security guard; burly flab; man; him' @securityGate
+        "He's a burly-looking fellow, though it's probably as much flab as muscle. "
+        
+        actorSpecialDesc = "A security guard stands by the metal detector, eyeing
+            you suspiciously. "
+        
+        checkAttackMsg = 'With your training you could probably overpower him
+            easily enough, although he\'s armed and you\'re not, but that would
+            probably result in all the other airport security staff coming after you,
+            which is a complication you could do without right now. '
+    ;
+</code></pre></div></div>
+
+<p>You can place this code right at the start of your npcs.t file, and then
+recompile and run the game to ensure that the security guard is now
+present by the security gate.</p>
+
+<p>There are a few points to note about this definition:</p>
+
+<ol>
+  <li>Since we’re defining the security guard in a separate file, we can’t
+use the + notation to define his initial location. Instead we use
+the @ notation as the second element in the template to define where
+the security guard starts out, hence
+<code class="language-plaintext highlighter-rouge">@securityGate</code>. This is a technique you’ll
+often use when defining NPCs.</li>
+  <li>Note that we use all four sections of the vocab property, ending it
+with ‘him’ after the third and final semicolon. This defines the NPC
+as being male (rather than female or neuter), so that he can be
+referred to with the pronoun ‘him’, and so that any
+library-generated messages will use the right pronoun to refer to
+him.</li>
+  <li>Note that we’ve used <code class="language-plaintext highlighter-rouge">actorSpecialDesc</code> to
+provide a separate paragraph about the security guard in the room
+listing. This works much like <code class="language-plaintext highlighter-rouge">specialDesc</code>,
+and indeed in this particular case we could have used
+<code class="language-plaintext highlighter-rouge">specialDesc</code> just as well, but with a more
+complex actor this would have broken part of the ActorState
+mechanism, so using <strong>actorSpecialDesc</strong> with Actors is a good habit
+to get into. The reason for this will become more apparent when we
+come to implement the flight attendant.</li>
+  <li>We’ve also defined a <strong>checkAttackMsg</strong> to provide a customized
+(refusal) response to HIT GUARD, ATTACK GUARD and the like, an
+action which the player might well try. If this property is defined
+it actually stops the ATTACK action at the check stage (typically as
+here with a message explaining why the player character isn’t going
+to carry out this action).</li>
+</ol>
+
+<p>For now, this really is all there is to defining the security guard. For
+sure, as implemented he seems hardly more than another Decoration
+object, but we’ll make him a bit more responsive in Chapter 11, when we
+implement some NPC conversation.</p>
+
+<p>For the full story on defining the basic <a href="../manual/actorobj.html">Actor
+Object</a>, consult the <em>adv3Lite Library Manual</em>.</p>
+
+<hr />
+
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="character.html" class="nav">Character Building</a> &gt; The
+Security Guard<br />
+<span class="navnp"><a href="npcoverview.html" class="nav"><em>Prev:</em> Overview</a>
+    <a href="cortes.html" class="nav"><em>Next:</em> Pablo Cortes</a>    
+</span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

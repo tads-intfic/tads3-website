@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-listgroup-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-listgroup-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">ListGroup</span><span class="type">class</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1877">1877</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>List Group Interface. An instance of this object is created for each set
+of objects that are to be grouped together.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ListGroup</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ListGroup</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ListGroup</code></strong><br />
+<a href="../object/ListGroupCustom.html"><code class="language-plaintext highlighter-rouge">ListGroupCustom</code></a><br />
+<a href="../object/ListGroupEquivalent.html"><code class="language-plaintext highlighter-rouge">ListGroupEquivalent</code></a><br />
+<a href="../object/ListGroupSorted.html"><code class="language-plaintext highlighter-rouge">ListGroupSorted</code></a><br />
+<a href="../object/ListGroupParen.html"><code class="language-plaintext highlighter-rouge">ListGroupParen</code></a><br />
+<a href="../object/ListGroupPrefixSuffix.html"><code class="language-plaintext highlighter-rouge">ListGroupPrefixSuffix</code></a><br />
+<a href="../object/SuggestionListGroup.html"><code class="language-plaintext highlighter-rouge">SuggestionListGroup</code></a><br />
+<a href="../object/RoomActorGrouper.html"><code class="language-plaintext highlighter-rouge">RoomActorGrouper</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#groupDisplaysSublist"><code class="language-plaintext highlighter-rouge">groupDisplaysSublist</code></a> <a href="#minGroupSize"><code class="language-plaintext highlighter-rouge">minGroupSize</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#createGroupSublister"><code class="language-plaintext highlighter-rouge">createGroupSublister</code></a> <a href="#groupCardinality"><code class="language-plaintext highlighter-rouge">groupCardinality</code></a> <a href="#groupNounPhraseCount"><code class="language-plaintext highlighter-rouge">groupNounPhraseCount</code></a> <a href="#showGroupItem"><code class="language-plaintext highlighter-rouge">showGroupItem</code></a> <a href="#showGroupItemCounted"><code class="language-plaintext highlighter-rouge">showGroupItemCounted</code></a> <a href="#showGroupList"><code class="language-plaintext highlighter-rouge">showGroupList</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="groupDisplaysSublist"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">groupDisplaysSublist</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1933">1933</a>]</p>
+
+<p>Determine if showing the group list will introduce a sublist into an
+enclosing list. This should return true if we will show a sublist
+without some kind of grouping, so that the caller knows to introduce
+some extra grouping into its enclosing list. This should return nil if
+the sublist we display will be clearly set off in some way (for example,
+by being enclosed in parentheses).</p>
+
+<p><span id="minGroupSize"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">minGroupSize</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1945">1945</a>]</p>
+
+<p>The minimum number of elements for which we should retain the group in a
+listing. By default, we need two elements to display a group; any group
+with only one element is discarded, and the single element is moved into
+the ‘singles’ list. This can be overridden to allow single-element
+groups to be retained. In most cases, it’s undesirable to retain
+single-element groups, but when grouping is used to partition a list
+into two or more fixed portions, single-element groups become desirable.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="createGroupSublister"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createGroupSublister (parentLister)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1999">1999</a>]</p>
+
+<p>Create the group sublister.</p>
+
+<p>In most cases, when a group displays a list of the items in the group as
+a sublist, it will not want to use the same lister that was used to show
+the enclosing group, because the enclosing lister will usually have
+different prefix/suffix styles than the sublist. However, the group list
+and the enclosing list might share many other attributes, such as the
+style of name to use when displaying items in the list. The default
+sublister we create, GroupSublister, is a hybrid that uses the enclosing
+lister’s attributes except for a few, such as the prefix and suffix,
+that usually need to be changed for the sublist.</p>
+
+<p>This can be overridden to use a completely customized Lister object for
+the group list, if desired.</p>
+
+<p><span id="groupCardinality"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">groupCardinality (lister, lst)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1968">1968</a>]</p>
+
+<p>Determine the cardinality of the group listing, grammatically speaking.
+This is the number of items that the group seems to be for the purposes
+of grammatical agreement. For example, if the group is displayed as
+“$1.38 in change”, it would be singular for grammatical agreement,
+hence would return 1 here; if it displays “five coins (two copper, three
+gold),” it would count as five items for grammatical agreement.</p>
+
+<p>For languages (like English) that grammatically distinguish number only
+between singular and plural, it is sufficient for this to return 1 for
+singular and anything higher for plural. For the sake of languages that
+make more elaborate number distinctions for grammatical agreement,
+though, this should return as accurate a count as is possible.</p>
+
+<p>By default, we return the number of items to be displayed in the list
+group. This should be overridden when necessary, such as when the group
+message is singular in usage even if the list has multiple items (as in
+“$1.38 in change”).</p>
+
+<p><span id="groupNounPhraseCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">groupNounPhraseCount (lister, lst)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1980">1980</a>]</p>
+
+<p>Get the number of noun phrases this group will display. This differs
+from the cardinality in that it doesn’t matter how many *objects* the
+phrases represent; it only matters how many phrases are displayed. For
+example, “five coins” has cardinality 5 but only displays one noun
+phrase.</p>
+
+<p>By default, we simply return the number of items in the group, since
+most groups individually list their items.</p>
+
+<p><span id="showGroupItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showGroupItem (sublister, obj, options, pov, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1909">1909</a>]</p>
+
+<p>Show an item in the group’s sublist. The sublister calls this to display
+each item in the group when the group calls the sublister to display the
+group list. By default, we simply let the sublister handle the request,
+which gives items in our group sublist the same appearance they would
+have had in the sublist to begin with. We can customize this behavior to
+give our list items a different appearance special to the group sublist.</p>
+
+<p>Note that the same customization could be accomplished by creating a
+specialized subclass of GroupSublister in createGroupSublister(), and
+overriding showListItem() in the specialized GroupSublister subclass. We
+use this mechanism as a convenience, so that a separate group sublister
+class doesn’t have to be created simply to customize the display of
+group items.</p>
+
+<p><span id="showGroupItemCounted"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showGroupItemCounted (sublister, lst, options, pov, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1919">1919</a>]</p>
+
+<p>Show a counted item in our group list. This is the counted item
+equivalent of showGroupItem.</p>
+
+<p><span id="showGroupList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showGroupList (pov, lister, lst, options, indent, infoTab)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#1890">1890</a>]</p>
+
+<p>Show a list of items from this group. All of the items in the list will
+be members of this list group; we are to display a sentence fragment
+showing the items in the list, suitable for embedding in a larger list.</p>
+
+<p>‘options’, ‘indent’, and ‘infoTab’ have the same meaning as they do for
+showList().</p>
+
+<p>Note that we are not to display any separator before or after our list;
+the caller is responsible for that.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

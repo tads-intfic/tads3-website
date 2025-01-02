@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-commandsequencer-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-commandsequencer-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">commandSequencer</span><span class="type">object</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1227">1227</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Command Sequencer Filter. This is an output filter that handles the
+special &lt;.commandsep&gt; tag for visual command separation. This tag has
+the form of a style tag, but must be processed specially.</p>
+
+<p>&lt;.commandsep&gt; shows an appropriate separator between commands. Before
+the first command output or after the last command output, this has no
+effect. A run of multiple consecutive &lt;.commandsep&gt; tags is treated as
+a single tag.</p>
+
+<p>Between commands, we show gLibMessages.commandResultsSeparator. After an
+input line and before the first command result text, we show
+gLibMessages.commandResultsPrefix. After the last command result text
+before a new input line, we show gLibMessages.commandResultsSuffix. If
+we read two input lines, and there is no intervening text output at all,
+we show gLibMessages.commandResultsEmpty.</p>
+
+<p>The input manager should write a &lt;.commandbefore&gt; tag whenever it
+starts reading a command line, and a &lt;.commandafter&gt; tag whenever it
+finishes reading a command line.</p>
+
+<p><code class="language-plaintext highlighter-rouge">transient </code><strong><code class="language-plaintext highlighter-rouge">commandSequencer</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">commandSequencer</code></strong><br />
+<a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a><br />
+`                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#patNextTag"><code class="language-plaintext highlighter-rouge">patNextTag</code></a> <a href="#state_"><code class="language-plaintext highlighter-rouge">state_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a> <a href="#setCommandMode"><code class="language-plaintext highlighter-rouge">setCommandMode</code></a> <a href="#writeThrough"><code class="language-plaintext highlighter-rouge">writeThrough</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="patNextTag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patNextTag</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1264">1264</a>]</p>
+
+<p>pre-compile our tag sequence pattern</p>
+
+<p><span id="state_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">state_</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1543">1543</a>]</p>
+
+<p>our current state - start out in before-command mode</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="filterText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterText (ostr, txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1272">1272</a>]</p>
+
+<p>Apply our filter</p>
+
+<p><span id="setCommandMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setCommandMode ( )</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1234">1234</a>]</p>
+
+<p>Force the sequencer into mid-command mode. This can be used to defeat
+the resequencing into before-results mode that occurs if any interactive
+command-line input must be read in the course of a command’s execution.</p>
+
+<p><span id="writeThrough"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeThrough (txt)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1240">1240</a>]</p>
+
+<p>Internal routine: write the given text directly through us, skipping any
+filtering we’d otherwise apply.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-mainoutputstream-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-mainoutputstream-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">mainOutputStream</span><span class="type">object</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#540">540</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The OutputStream for the main text area.</p>
+
+<p>This object is transient because the output stream state is effectively
+part of the interpreter user interface, which is not affected by save
+and restore.</p>
+
+<p><code class="language-plaintext highlighter-rouge">transient </code><strong><code class="language-plaintext highlighter-rouge">mainOutputStream</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputStream.html"><code class="language-plaintext highlighter-rouge">OutputStream</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">mainOutputStream</code></strong><br />
+<a href="../object/OutputStream.html"><code class="language-plaintext highlighter-rouge">OutputStream</code></a><br />
+<a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
+<a href="../object/ModuleExecObject.html"><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></a><br />
+`                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#curTranscript"><code class="language-plaintext highlighter-rouge">curTranscript</code></a> <a href="#myInputManager"><code class="language-plaintext highlighter-rouge">myInputManager</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStream</code> :<br />
+<a href="../object/OutputStream.html#filterList_"><code class="language-plaintext highlighter-rouge">filterList_</code></a> <a href="../object/OutputStream.html#justDidPara"><code class="language-plaintext highlighter-rouge">justDidPara</code></a> <a href="../object/OutputStream.html#justDidParaSuppressor"><code class="language-plaintext highlighter-rouge">justDidParaSuppressor</code></a> <a href="../object/OutputStream.html#prefix"><code class="language-plaintext highlighter-rouge">prefix</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#writeFromStream"><code class="language-plaintext highlighter-rouge">writeFromStream</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">OutputStream</code> :<br />
+<a href="../object/OutputStream.html#addOutputFilter"><code class="language-plaintext highlighter-rouge">addOutputFilter</code></a> <a href="../object/OutputStream.html#addOutputFilterBelow"><code class="language-plaintext highlighter-rouge">addOutputFilterBelow</code></a> <a href="../object/OutputStream.html#applyFilters"><code class="language-plaintext highlighter-rouge">applyFilters</code></a> <a href="../object/OutputStream.html#applyTextFilters"><code class="language-plaintext highlighter-rouge">applyTextFilters</code></a> <a href="../object/OutputStream.html#captureOutput"><code class="language-plaintext highlighter-rouge">captureOutput</code></a> <a href="../object/OutputStream.html#captureOutputIgnoreExit"><code class="language-plaintext highlighter-rouge">captureOutputIgnoreExit</code></a> <a href="../object/OutputStream.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/OutputStream.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/OutputStream.html#inputLineEnd"><code class="language-plaintext highlighter-rouge">inputLineEnd</code></a> <a href="../object/OutputStream.html#removeOutputFilter"><code class="language-plaintext highlighter-rouge">removeOutputFilter</code></a> <a href="../object/OutputStream.html#setPrefix"><code class="language-plaintext highlighter-rouge">setPrefix</code></a> <a href="../object/OutputStream.html#watchForOutput"><code class="language-plaintext highlighter-rouge">watchForOutput</code></a> <a href="../object/OutputStream.html#writeToStream"><code class="language-plaintext highlighter-rouge">writeToStream</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="curTranscript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curTranscript</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#549">549</a>]</p>
+
+<p>the current command transcript</p>
+
+<p><span id="myInputManager"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">myInputManager</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#546">546</a>]</p>
+
+<p>The main text area is the same place where we normally read command
+lines from the keyboard, so associate this output stream with the
+primary input manager.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="writeFromStream"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeFromStream (txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#552">552</a>]</p>
+
+<p>we sit atop the system-level main console output stream</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

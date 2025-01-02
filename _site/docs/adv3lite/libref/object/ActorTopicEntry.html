@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-actortopicentry-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-actortopicentry-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">ActorTopicEntry</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3058">3058</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>An ActorTopicEntry is a specialization of TopicEntry for use with the
+conversation system. ActorTopicEntries represent potential responses to
+conversational commands like ASK BOB ABOUT LIGHTHOUSE or TELL GEORGE
+ABOUT FIRE.</p>
+
+<p>Since ActorTopicEntry inherits from ReplaceRedirector as well as
+TopicEntry, its topicResponse() methods can make use of doInstead() and
+doNested().</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ActorTopicEntry</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ReplaceRedirector.html"><code class="language-plaintext highlighter-rouge">ReplaceRedirector</code></a> <a href="../object/TopicEntry.html"><code class="language-plaintext highlighter-rouge">TopicEntry</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorTopicEntry</code></strong><br />
+<a href="../object/ReplaceRedirector.html"><code class="language-plaintext highlighter-rouge">ReplaceRedirector</code></a><br />
+<a href="../object/Redirector.html"><code class="language-plaintext highlighter-rouge">Redirector</code></a><br />
+`                         object<code class="language-plaintext highlighter-rouge">  
+[</code>TopicEntry<code class="language-plaintext highlighter-rouge">](../object/TopicEntry.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorTopicEntry</code></strong><br />
+<a href="../object/AltTopic.html"><code class="language-plaintext highlighter-rouge">AltTopic</code></a><br />
+<a href="../object/AskAboutForTopic.html"><code class="language-plaintext highlighter-rouge">AskAboutForTopic</code></a><br />
+<a href="../object/AskForTopic.html"><code class="language-plaintext highlighter-rouge">AskForTopic</code></a><br />
+<a href="../object/AskTellGiveShowTopic.html"><code class="language-plaintext highlighter-rouge">AskTellGiveShowTopic</code></a><br />
+<a href="../object/AskTellShowTopic.html"><code class="language-plaintext highlighter-rouge">AskTellShowTopic</code></a><br />
+<a href="../object/AskTellTopic.html"><code class="language-plaintext highlighter-rouge">AskTellTopic</code></a><br />
+<a href="../object/AskTopic.html"><code class="language-plaintext highlighter-rouge">AskTopic</code></a><br />
+<a href="../object/CommandTopic.html"><code class="language-plaintext highlighter-rouge">CommandTopic</code></a><br />
+<a href="../object/DefaultTopic.html"><code class="language-plaintext highlighter-rouge">DefaultTopic</code></a><br />
+<a href="../object/DefaultAnyTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAnyTopic</code></a><br />
+<a href="../object/DefaultAgendaTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAgendaTopic</code></a><br />
+<a href="../object/DefaultAnyNonSayTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAnyNonSayTopic</code></a><br />
+<a href="../object/DefaultAskForTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAskForTopic</code></a><br />
+<a href="../object/DefaultAskQueryTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAskQueryTopic</code></a><br />
+<a href="../object/DefaultAskTellTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAskTellTopic</code></a><br />
+<a href="../object/DefaultAskTopic.html"><code class="language-plaintext highlighter-rouge">DefaultAskTopic</code></a><br />
+<a href="../object/DefaultCommandTopic.html"><code class="language-plaintext highlighter-rouge">DefaultCommandTopic</code></a><br />
+<a href="../object/DefaultConversationTopic.html"><code class="language-plaintext highlighter-rouge">DefaultConversationTopic</code></a><br />
+<a href="../object/DefaultNonSayTopic.html"><code class="language-plaintext highlighter-rouge">DefaultNonSayTopic</code></a><br />
+<a href="../object/DefaultGiveShowTopic.html"><code class="language-plaintext highlighter-rouge">DefaultGiveShowTopic</code></a><br />
+<a href="../object/DefaultGiveTopic.html"><code class="language-plaintext highlighter-rouge">DefaultGiveTopic</code></a><br />
+<a href="../object/DefaultQueryTopic.html"><code class="language-plaintext highlighter-rouge">DefaultQueryTopic</code></a><br />
+<a href="../object/DefaultSayQueryTopic.html"><code class="language-plaintext highlighter-rouge">DefaultSayQueryTopic</code></a><br />
+<a href="../object/DefaultSayTellTalkTopic.html"><code class="language-plaintext highlighter-rouge">DefaultSayTellTalkTopic</code></a><br />
+<a href="../object/DefaultSayTellTopic.html"><code class="language-plaintext highlighter-rouge">DefaultSayTellTopic</code></a><br />
+<a href="../object/DefaultSayTopic.html"><code class="language-plaintext highlighter-rouge">DefaultSayTopic</code></a><br />
+<a href="../object/DefaultShowTopic.html"><code class="language-plaintext highlighter-rouge">DefaultShowTopic</code></a><br />
+<a href="../object/DefaultTalkTopic.html"><code class="language-plaintext highlighter-rouge">DefaultTalkTopic</code></a><br />
+<a href="../object/DefaultTellTalkTopic.html"><code class="language-plaintext highlighter-rouge">DefaultTellTalkTopic</code></a><br />
+<a href="../object/DefaultTellTopic.html"><code class="language-plaintext highlighter-rouge">DefaultTellTopic</code></a><br />
+<a href="../object/GiveShowTopic.html"><code class="language-plaintext highlighter-rouge">GiveShowTopic</code></a><br />
+<a href="../object/GiveTopic.html"><code class="language-plaintext highlighter-rouge">GiveTopic</code></a><br />
+<a href="../object/InitiateTopic.html"><code class="language-plaintext highlighter-rouge">InitiateTopic</code></a><br />
+<a href="../object/NodeContinuationTopic.html"><code class="language-plaintext highlighter-rouge">NodeContinuationTopic</code></a><br />
+<a href="../object/NodeEndCheck.html"><code class="language-plaintext highlighter-rouge">NodeEndCheck</code></a><br />
+<a href="../object/MiscTopic.html"><code class="language-plaintext highlighter-rouge">MiscTopic</code></a><br />
+<a href="../object/GreetingTopic.html"><code class="language-plaintext highlighter-rouge">GreetingTopic</code></a><br />
+<a href="../object/ActorByeTopic.html"><code class="language-plaintext highlighter-rouge">ActorByeTopic</code></a><br />
+<a href="../object/BoredByeTopic.html"><code class="language-plaintext highlighter-rouge">BoredByeTopic</code></a><br />
+<a href="../object/ByeTopic.html"><code class="language-plaintext highlighter-rouge">ByeTopic</code></a><br />
+<a href="../object/HelloGoodbyeTopic.html"><code class="language-plaintext highlighter-rouge">HelloGoodbyeTopic</code></a><br />
+<a href="../object/HelloTopic.html"><code class="language-plaintext highlighter-rouge">HelloTopic</code></a><br />
+<a href="../object/ActorHelloTopic.html"><code class="language-plaintext highlighter-rouge">ActorHelloTopic</code></a><br />
+<a href="../object/ImpHelloTopic.html"><code class="language-plaintext highlighter-rouge">ImpHelloTopic</code></a><br />
+<a href="../object/ImpByeTopic.html"><code class="language-plaintext highlighter-rouge">ImpByeTopic</code></a><br />
+<a href="../object/LeaveByeTopic.html"><code class="language-plaintext highlighter-rouge">LeaveByeTopic</code></a><br />
+<a href="../object/HitTopic.html"><code class="language-plaintext highlighter-rouge">HitTopic</code></a><br />
+<a href="../object/KissTopic.html"><code class="language-plaintext highlighter-rouge">KissTopic</code></a><br />
+<a href="../object/NoTopic.html"><code class="language-plaintext highlighter-rouge">NoTopic</code></a><br />
+<a href="../object/TouchTopic.html"><code class="language-plaintext highlighter-rouge">TouchTopic</code></a><br />
+<a href="../object/YesNoTopic.html"><code class="language-plaintext highlighter-rouge">YesNoTopic</code></a><br />
+<a href="../object/YesTopic.html"><code class="language-plaintext highlighter-rouge">YesTopic</code></a><br />
+<a href="../object/SceneTopic.html"><code class="language-plaintext highlighter-rouge">SceneTopic</code></a><br />
+<a href="../object/SceneEndTopic.html"><code class="language-plaintext highlighter-rouge">SceneEndTopic</code></a><br />
+<a href="../object/SceneStartTopic.html"><code class="language-plaintext highlighter-rouge">SceneStartTopic</code></a><br />
+<a href="../object/ShowTopic.html"><code class="language-plaintext highlighter-rouge">ShowTopic</code></a><br />
+<a href="../object/SlaveTopic.html"><code class="language-plaintext highlighter-rouge">SlaveTopic</code></a><br />
+<a href="../object/SpecialTopic.html"><code class="language-plaintext highlighter-rouge">SpecialTopic</code></a><br />
+<a href="../object/QueryTopic.html"><code class="language-plaintext highlighter-rouge">QueryTopic</code></a><br />
+<a href="../object/SayTopic.html"><code class="language-plaintext highlighter-rouge">SayTopic</code></a><br />
+<a href="../object/TalkTopic.html"><code class="language-plaintext highlighter-rouge">TalkTopic</code></a><br />
+<a href="../object/AskTalkTopic.html"><code class="language-plaintext highlighter-rouge">AskTalkTopic</code></a><br />
+<a href="../object/AskTellTalkTopic.html"><code class="language-plaintext highlighter-rouge">AskTellTalkTopic</code></a><br />
+<a href="../object/TellTalkTopic.html"><code class="language-plaintext highlighter-rouge">TellTalkTopic</code></a><br />
+<a href="../object/TellTalkShowTopic.html"><code class="language-plaintext highlighter-rouge">TellTalkShowTopic</code></a><br />
+<a href="../object/TellTopic.html"><code class="language-plaintext highlighter-rouge">TellTopic</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#activated"><code class="language-plaintext highlighter-rouge">activated</code></a> <a href="#active"><code class="language-plaintext highlighter-rouge">active</code></a> <a href="#autoName"><code class="language-plaintext highlighter-rouge">autoName</code></a> <a href="#convKeys"><code class="language-plaintext highlighter-rouge">convKeys</code></a> <a href="#curiosityAroused"><code class="language-plaintext highlighter-rouge">curiosityAroused</code></a> <a href="#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a> <a href="#impliesGreeting"><code class="language-plaintext highlighter-rouge">impliesGreeting</code></a> <a href="#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a> <a href="#keyTopics"><code class="language-plaintext highlighter-rouge">keyTopics</code></a> <a href="#listOrder"><code class="language-plaintext highlighter-rouge">listOrder</code></a> <a href="#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="#suggestAs"><code class="language-plaintext highlighter-rouge">suggestAs</code></a> <a href="#timesInvoked"><code class="language-plaintext highlighter-rouge">timesInvoked</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+<a href="../object/TopicEntry.html#includeInList"><code class="language-plaintext highlighter-rouge">includeInList</code></a> <a href="../object/TopicEntry.html#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a> <a href="../object/TopicEntry.html#matchExactCase"><code class="language-plaintext highlighter-rouge">matchExactCase</code></a> <a href="../object/TopicEntry.html#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a> <a href="../object/TopicEntry.html#matchPattern"><code class="language-plaintext highlighter-rouge">matchPattern</code></a> <a href="../object/TopicEntry.html#matchScore"><code class="language-plaintext highlighter-rouge">matchScore</code></a> <a href="../object/TopicEntry.html#scoreBoost"><code class="language-plaintext highlighter-rouge">scoreBoost</code></a> <a href="../object/TopicEntry.html#topicMatched"><code class="language-plaintext highlighter-rouge">topicMatched</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#activate"><code class="language-plaintext highlighter-rouge">activate</code></a> <a href="#addToConvKeyTable"><code class="language-plaintext highlighter-rouge">addToConvKeyTable</code></a> <a href="#buildName"><code class="language-plaintext highlighter-rouge">buildName</code></a> <a href="#curiositySatisfied"><code class="language-plaintext highlighter-rouge">curiositySatisfied</code></a> <a href="#deactivate"><code class="language-plaintext highlighter-rouge">deactivate</code></a> <a href="#getKeyTopics"><code class="language-plaintext highlighter-rouge">getKeyTopics</code></a> <a href="#handleTopic"><code class="language-plaintext highlighter-rouge">handleTopic</code></a> <a href="#initializeTopicEntry"><code class="language-plaintext highlighter-rouge">initializeTopicEntry</code></a> <a href="#isReachable"><code class="language-plaintext highlighter-rouge">isReachable</code></a> <a href="#nodeActive"><code class="language-plaintext highlighter-rouge">nodeActive</code></a> <a href="#showKeyTopics"><code class="language-plaintext highlighter-rouge">showKeyTopics</code></a> <a href="#timesToSuggest"><code class="language-plaintext highlighter-rouge">timesToSuggest</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ReplaceRedirector</code> :<br />
+<a href="../object/ReplaceRedirector.html#redirect"><code class="language-plaintext highlighter-rouge">redirect</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
+<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a> <a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a> <a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+<a href="../object/TopicEntry.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a> <a href="../object/TopicEntry.html#matchTopic"><code class="language-plaintext highlighter-rouge">matchTopic</code></a> <a href="../object/TopicEntry.html#scoreBooster"><code class="language-plaintext highlighter-rouge">scoreBooster</code></a> <a href="../object/TopicEntry.html#topicResponse"><code class="language-plaintext highlighter-rouge">topicResponse</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="activated"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">activated</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3368">3368</a>]</p>
+
+<p>A flag that can be set with an &lt;.activate&gt; tag. It must be true for
+this TopicEntry to be active, regardless of the value of isActive. It
+starts out true by default, but it can be set to nil on TopicEntries
+that you want to start out as inactive subsequently activate via an
+activate tag.</p>
+
+<p><span id="active"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">active</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3392">3392</a>]</p>
+
+<p>This TopicEntry is active if its own isActive property is true and its
+activated property is true and if its location is active. This allows
+the isActive conditions of individual TopicEntries to be combined with
+that of any TopicGroups they’re in. This property should not normally be
+overridden in game code.</p>
+
+<p><span id="autoName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">autoName</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3073">3073</a>]</p>
+
+<p>Set autoName to true to have this topic entry generate a name from its</p>
+
+<p><span id="convKeys"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">convKeys</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3099">3099</a>]</p>
+
+<p>A string or list of strings defining one or more groups to which this
+topic entry belongs. Under certain circumstances an ActorTopicEntry may
+be prioritized if its convKeys overlaps with the associated actor’s
+activeKeys.</p>
+
+<p><span id="curiosityAroused"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curiosityAroused</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3210">3210</a>]</p>
+
+<p>We won’t suggest this topic entry (if we ever suggest it at all) until
+its curiosityAroused property by true. By default it normally is from
+the start, but this can be overridden in individual cases if desired.</p>
+
+<p><span id="getActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getActor</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3168">3168</a>]</p>
+
+<p>Our associated actor is our location’s associated actor.</p>
+
+<p><span id="impliesGreeting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">impliesGreeting</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3091">3091</a>]</p>
+
+<p>Normally a conversational command implies a greeting (that is, it should
+trigger a greeting if a conversation is not already in process). This
+needs to be overridden to nil on ActorTopicEntries that explicitly
+handle greetings (HelloTopic and its subclasses) to avoid an infinite
+loop.</p>
+
+<p><span id="isConversational"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConversational</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3082">3082</a>]</p>
+
+<p>An ActorTopicEntry is conversational (the default) if it results in an
+actual conversational exchange. Change this to nil for ActorTopicEntries
+that merely report why a conversational exchange did not take place
+(e.g. “Bob ignores you” or “You think better of talking to George about
+that.”)</p>
+
+<p><span id="keyTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">keyTopics</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3277">3277</a>]</p>
+
+<p>The keyTopics can contain a convKey or a list of convKeys, in which case
+when this TopicEntry is triggered instead of responding directly it will
+list topic suggestions that correspond to the convKeys defined here. For
+example, a TopicEntry that responded to ASK BOB ABOUT TROUBLES could
+define a keyTopics property of ‘troubles’ that triggered more specific
+suggestions such as “You could ask when the troubles started, or what
+the troubles were, or how the troubles ended”, assuming that these
+QueryTopics had a convKeys property of ‘troubles’</p>
+
+<p>If you want this TopicEntry to display its topicResponse in the normal
+way, leave keyTopics as nil.</p>
+
+<p><span id="listOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listOrder</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3230">3230</a>]</p>
+
+<p>The order this TopicEntry appears in within its group in a list of
+suggested topics. The higher this number, the later this topic will be
+suggested. Note that this does not override the grouping of suggestions
+into AskTopics, TellTopics, etc.</p>
+
+<p><span id="name"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3067">3067</a>]</p>
+
+<p>To make this a suggested topic, just give it a name under which it will
+be suggested (of the kind that could follow ‘You could ask about ‘ or
+‘You could tell him about ‘ or ‘You could show him ‘ etc.). Note that
+for QueryTopics and SayTopics that are specified with a matchObj the
+library constructs this name automatically.</p>
+
+<p><span id="suggestAs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">suggestAs</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3222">3222</a>]</p>
+
+<p>The suggestAs property can be overridden to change the list this topic
+entry will be suggested as if you don’t want it placed in the list the
+library chooses by default. The allowed values are one of AskTopic,
+TellTopic, GiveTopic, ShowTopic, or TalkTopic. Normally, though, the
+library default will work perfectly well and you don’t need to specify
+this property. If you do it must be specified as a kind that this topic
+entry can actually match, e.g. TellTopic for an AskTellTopic or
+ShowTopic for a GiveShowTopic.</p>
+
+<p><span id="timesInvoked"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timesInvoked</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3202">3202</a>]</p>
+
+<p>The number of times this topic entry has been invoked.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="activate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">activate ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3375">3375</a>]</p>
+
+<p>Activate this TopicEntry. This would normally be called in game code via
+an &lt;.activate&gt; tag.</p>
+
+<p><span id="addToConvKeyTable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToConvKeyTable ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3113">3113</a>]</p>
+
+<p>Add this ActorTopicEntry to its associated actor’s table of convKeys</p>
+
+<p><span id="buildName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildName ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3165">3165</a>]</p>
+
+<p>Construct the name of this ActorTopicEntry by using the theName property
+of our first matchObj.</p>
+
+<p><span id="curiositySatisfied"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curiositySatisfied ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3193">3193</a>]</p>
+
+<p>Assuming this topic entry is ever suggested, it will continue to be
+suggested until curiositySatisfied becomes true. By default this occurs
+when the topic has been invoked timesToSuggest times. If, however, we
+have any keyTopics we’ll take our curiosity to be satisfied when our
+keyTopics have all been satisfied.</p>
+
+<p><span id="deactivate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">deactivate ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3383">3383</a>]</p>
+
+<p>Deactivate this topic. This could typically be used from within the
+topicResponse of an ActorTopicEntry you only want to use once (or in the
+last entry in a StopEventList of an ActorTopicEntry). It can also be
+called via a &lt;.deactivate key&gt; tag in combination with the convKeys.</p>
+
+<p><span id="getKeyTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getKeyTopics (updateStatus)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3305">3305</a>]</p>
+
+<p>Obtain a list of the TopicEntries that match our keyTopics property.</p>
+
+<p><span id="handleTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">handleTopic ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3236">3236</a>]</p>
+
+<p>Handle this topic (if we’re the ActorTopicEntry selected to respond to a
+conversational command.</p>
+
+<p><span id="initializeTopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeTopicEntry ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3141">3141</a>]</p>
+
+<p>Initialize this ActorTopicEntry (this is actually called at preinit)</p>
+
+<p><span id="isReachable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isReachable ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3400">3400</a>]</p>
+
+<p>Determine whether this TopicEntry is currently reachable, i.e. whether
+it could be reached if the player asked/told etc. about its matchObj on
+the next turn.</p>
+
+<p><span id="nodeActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nodeActive ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3107">3107</a>]</p>
+
+<p>Test whether any of this Topic Entry’s convKeys match those in the
+Actor’s activeKeys list (whether or not the latter has any entries).
+This can be used in the isActive property to make this topic entry
+*only* available when its convKeys are active.</p>
+
+<p><span id="showKeyTopics"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showKeyTopics ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3280">3280</a>]</p>
+
+<p>Show our suggested keyTopics, if keyTopics is defined.</p>
+
+<p><span id="timesToSuggest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timesToSuggest ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#3177">3177</a>]</p>
+
+<p>The number of times to suggest this topic entry, if we do suggest it. By
+default this is either once (if we’re not also an EventList) or the
+number of items in our eventList (if we are an EventList). If you want
+this topic entry to go on being suggested ad infinitum, set
+timesToSuggest to nil.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

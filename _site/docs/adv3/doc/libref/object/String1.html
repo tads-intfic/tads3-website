@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-string1-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-string1-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">String</span><span class="type">class</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#307">307</a>],
+<a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#236">236</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The native string type.</p>
+
+<p><em>Modified in
+<a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#236">236</a>]:</em><br />
+Modify the String intrinsic class to provide a to-symbol mapping</p>
+
+<p><code class="language-plaintext highlighter-rouge">intrinsic class </code><strong><code class="language-plaintext highlighter-rouge">String</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Object1.html"><code class="language-plaintext highlighter-rouge">Object</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">String</code></strong><br />
+<a href="../object/Object1.html"><code class="language-plaintext highlighter-rouge">Object</code></a><br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#endsWith"><code class="language-plaintext highlighter-rouge">endsWith</code></a> <a href="#find"><code class="language-plaintext highlighter-rouge">find</code></a> <a href="#findReplace"><code class="language-plaintext highlighter-rouge">findReplace</code></a> <a href="#htmlify"><code class="language-plaintext highlighter-rouge">htmlify</code></a> <a href="#length"><code class="language-plaintext highlighter-rouge">length</code></a> <a href="#mapToByteArray"><code class="language-plaintext highlighter-rouge">mapToByteArray</code></a> <a href="#startsWith"><code class="language-plaintext highlighter-rouge">startsWith</code></a> <a href="#substr"><code class="language-plaintext highlighter-rouge">substr</code></a> <a href="#toLower"><code class="language-plaintext highlighter-rouge">toLower</code></a> <a href="#toUnicode"><code class="language-plaintext highlighter-rouge">toUnicode</code></a> <a href="#toUpper"><code class="language-plaintext highlighter-rouge">toUpper</code></a> <a href="#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+<a href="../object/Object1.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a> <a href="../object/Object1.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a> <a href="../object/Object1.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a> <a href="../object/Object1.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a> <a href="../object/Object1.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a> <a href="../object/Object1.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a> <a href="../object/Object1.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a> <a href="../object/Object1.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a> <a href="../object/Object1.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="endsWith"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endsWith (str)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#337">337</a>]</p>
+
+<p>determine if we end with the given string</p>
+
+<p><span id="find"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">find (str, index, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#322">322</a>]</p>
+
+<p>find a substring</p>
+
+<p><span id="findReplace"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findReplace (origStr, newStr, flags, index, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#352">352</a>]</p>
+
+<p>Replace one occurrence or all occurrences of the given substring with
+the given new string.</p>
+
+<p><span id="htmlify"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">htmlify (flags, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#331">331</a>]</p>
+
+<p>htmlify a string</p>
+
+<p><span id="length"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">length ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#310">310</a>]</p>
+
+<p>get the length of the string</p>
+
+<p><span id="mapToByteArray"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mapToByteArray (charset)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#346">346</a>]</p>
+
+<p>Map to a byte array, converting to the given character set. ‘charset’
+must be an object of intrinsic class CharacterSet; the characters in the
+string will be mapped from the internal Unicode representation to the
+appropriate byte representation in the given character set.</p>
+
+<p><span id="startsWith"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">startsWith (str)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#334">334</a>]</p>
+
+<p>determine if we start with the given string</p>
+
+<p><span id="substr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">substr (start, len, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#313">313</a>]</p>
+
+<p>extract a substring</p>
+
+<p><span id="toLower"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toLower ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#319">319</a>]</p>
+
+<p>convert to lower case</p>
+
+<p><span id="toUnicode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toUnicode (idx, ?)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#328">328</a>]</p>
+
+<p>convert to a list of Unicode character codes, or get the Unicode
+character code for the single character at the given index</p>
+
+<p><span id="toUpper"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">toUpper ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#316">316</a>]</p>
+
+<p>convert to upper case</p>
+
+<p><span id="valToSymbol"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valToSymbol ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#237">237</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 9/13/2007 from TADS version 3.0.15.2</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-defaultthought-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-defaultthought-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">DefaultThought</span><span class="type">class</span></p>
+
+<p><a href="../file/thoughts.t.html">thoughts.t</a>[<a href="../source/thoughts.t.html#77">77</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A DefaultThought is a Thought that matches any THINK ABOUT command with
+a very low match score, so that any more specific Thought that’s matched
+will take precedence. Game code can use this to provide a fall-back
+response when no more specific response is available.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">DefaultThought</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Thought.html"><code class="language-plaintext highlighter-rouge">Thought</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DefaultThought</code></strong><br />
+<a href="../object/Thought.html"><code class="language-plaintext highlighter-rouge">Thought</code></a><br />
+<a href="../object/TopicEntry.html"><code class="language-plaintext highlighter-rouge">TopicEntry</code></a><br />
+`                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#matchScore"><code class="language-plaintext highlighter-rouge">matchScore</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Thought</code> :<br />
+<a href="../object/Thought.html#includeInList"><code class="language-plaintext highlighter-rouge">includeInList</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+<a href="../object/TopicEntry.html#active"><code class="language-plaintext highlighter-rouge">active</code></a> <a href="../object/TopicEntry.html#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a> <a href="../object/TopicEntry.html#matchExactCase"><code class="language-plaintext highlighter-rouge">matchExactCase</code></a> <a href="../object/TopicEntry.html#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a> <a href="../object/TopicEntry.html#matchPattern"><code class="language-plaintext highlighter-rouge">matchPattern</code></a> <a href="../object/TopicEntry.html#scoreBoost"><code class="language-plaintext highlighter-rouge">scoreBoost</code></a> <a href="../object/TopicEntry.html#topicMatched"><code class="language-plaintext highlighter-rouge">topicMatched</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#matchTopic"><code class="language-plaintext highlighter-rouge">matchTopic</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TopicEntry</code> :<br />
+<a href="../object/TopicEntry.html#addTopic"><code class="language-plaintext highlighter-rouge">addTopic</code></a> <a href="../object/TopicEntry.html#initializeTopicEntry"><code class="language-plaintext highlighter-rouge">initializeTopicEntry</code></a> <a href="../object/TopicEntry.html#scoreBooster"><code class="language-plaintext highlighter-rouge">scoreBooster</code></a> <a href="../object/TopicEntry.html#topicResponse"><code class="language-plaintext highlighter-rouge">topicResponse</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="matchScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchScore</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/thoughts.t.html">thoughts.t</a>[<a href="../source/thoughts.t.html#83">83</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="matchTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchTopic (top)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/thoughts.t.html">thoughts.t</a>[<a href="../source/thoughts.t.html#78">78</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

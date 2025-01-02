@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-hintopener-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-hintopener-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">HintOpener</span><span class="type">class</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#32">32</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>HintOpener provides some properties common to Goal and ExtraHint, in
+particuar those relating to opening and closing Goals and ExtraHints.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">HintOpener</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">HintOpener</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">HintOpener</code></strong><br />
+<a href="../object/ExtraHint.html"><code class="language-plaintext highlighter-rouge">ExtraHint</code></a><br />
+<a href="../object/Goal.html"><code class="language-plaintext highlighter-rouge">Goal</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#closeWhen"><code class="language-plaintext highlighter-rouge">closeWhen</code></a> <a href="#closeWhenAchieved"><code class="language-plaintext highlighter-rouge">closeWhenAchieved</code></a> <a href="#closeWhenExamined"><code class="language-plaintext highlighter-rouge">closeWhenExamined</code></a> <a href="#closeWhenKnown"><code class="language-plaintext highlighter-rouge">closeWhenKnown</code></a> <a href="#closeWhenMoved"><code class="language-plaintext highlighter-rouge">closeWhenMoved</code></a> <a href="#closeWhenRevealed"><code class="language-plaintext highlighter-rouge">closeWhenRevealed</code></a> <a href="#closeWhenSeen"><code class="language-plaintext highlighter-rouge">closeWhenSeen</code></a> <a href="#closeWhenTrue"><code class="language-plaintext highlighter-rouge">closeWhenTrue</code></a> <a href="#openWhen"><code class="language-plaintext highlighter-rouge">openWhen</code></a> <a href="#openWhenAchieved"><code class="language-plaintext highlighter-rouge">openWhenAchieved</code></a> <a href="#openWhenExamined"><code class="language-plaintext highlighter-rouge">openWhenExamined</code></a> <a href="#openWhenKnown"><code class="language-plaintext highlighter-rouge">openWhenKnown</code></a> <a href="#openWhenMoved"><code class="language-plaintext highlighter-rouge">openWhenMoved</code></a> <a href="#openWhenRevealed"><code class="language-plaintext highlighter-rouge">openWhenRevealed</code></a> <a href="#openWhenSeen"><code class="language-plaintext highlighter-rouge">openWhenSeen</code></a> <a href="#openWhenTrue"><code class="language-plaintext highlighter-rouge">openWhenTrue</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><em>(none)</em> <span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="closeWhen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeWhen</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#164">164</a>]</p>
+
+<p>Determine if there’s any condition that should close this goal. We’ll
+check closeWhenSeen, closeWhenDescribed, and all of the other
+closeWhenXxx conditions; if any of these return true, then we’ll return
+true.</p>
+
+<p><span id="closeWhenAchieved"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeWhenAchieved</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#95">95</a>]</p>
+
+<p>An optional Achievement object that closes this goal. Once the
+achievement is completed, this goal’s state will automatically be set to
+Closed. This makes it easy to associate the goal with a puzzle: once the
+puzzle is solved, there’s no need to show hints for the goal any more.</p>
+
+<p><span id="closeWhenExamined"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeWhenExamined</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#59">59</a>]</p>
+
+<p>close the goal when the given object is described</p>
+
+<p><span id="closeWhenKnown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeWhenKnown</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#107">107</a>]</p>
+
+<p>an optional Topic or Thing that closes this goal when known</p>
+
+<p><span id="closeWhenMoved"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeWhenMoved</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#76">76</a>]</p>
+
+<p>An optional object that, when moved, closes this goal. Many goals will
+be things like “how do I find the X?”, in which case it’s nice to close
+the goal when the X is found.</p>
+
+<p><span id="closeWhenRevealed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeWhenRevealed</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#117">117</a>]</p>
+
+<p>an optional &lt;.reveal&gt; tag that closes this goal when revealed</p>
+
+<p><span id="closeWhenSeen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeWhenSeen</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#50">50</a>]</p>
+
+<p>An option object that, when seen by the player character, closes this
+goal. Many goals will be things like “how do I find the X?”, in which
+case it’s nice to close the goal when the X is found.</p>
+
+<p><span id="closeWhenTrue"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeWhenTrue</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#131">131</a>]</p>
+
+<p>an optional general-purpose check that closes the goal</p>
+
+<p><span id="openWhen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openWhen</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#149">149</a>]</p>
+
+<p>Determine if there’s any condition that should open this goal. This
+checks openWhenSeen, openWhenDescribed, and all of the other openWhenXxx
+conditions; if any of these return true, then we’ll return true.</p>
+
+<p>Note that this should generally NOT be overridden in individual
+instances; normally, instances would define openWhenTrue instead.
+However, some games might find that they use the same special condition
+over and over in many goals, often enough to warrant adding a new
+openWhenXxx property to Goal. In these cases, you can use ‘modify Goal’
+to override openWhen to add the new condition: simply define openWhen as
+(inherited || newCondition), where ‘newCondition’ is the new special
+condition you want to add.</p>
+
+<p><span id="openWhenAchieved"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openWhenAchieved</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#86">86</a>]</p>
+
+<p>An optional Achievement object that opens this goal. This goal will be
+opened automatically once the goal is achieved, if the goal was
+previously undiscovered. This makes it easy to set up a hint topic that
+becomes available after a particular puzzle is solved, which is useful
+when a new puzzle only becomes known to the player after a gating puzzle
+has been solved.</p>
+
+<p><span id="openWhenExamined"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openWhenExamined</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#56">56</a>]</p>
+
+<p>this is like openWhenSeen, but opens the topic when the given object is
+described (with EXAMINE)</p>
+
+<p><span id="openWhenKnown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openWhenKnown</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#104">104</a>]</p>
+
+<p>An optional Topic or Thing that opens this goal when the object becomes
+“known” to the player character. This will open the goal as soon as
+gPlayerChar.knowsAbout(openWhenKnown) returns true. This makes it easy
+to open a goal as soon as the player comes across some information in
+the game.</p>
+
+<p><span id="openWhenMoved"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openWhenMoved</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#69">69</a>]</p>
+
+<p>An optional object that, when moved, opens this goal. It’s often
+convenient to declare a goal open as soon as the player enters a
+particular area or has encountered a particular object. For such cases,
+simply set this property to the object that opens the goal, and we’ll
+automatically mark the goal as Open the next time the player asks for a
+hint after seeing the referenced object.</p>
+
+<p><span id="openWhenRevealed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openWhenRevealed</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#114">114</a>]</p>
+
+<p>An optional &lt;.reveal&gt; tag name that opens this goal. If this is set to
+a non-nil string, we’ll automatically open this goal when the tag has
+been revealed via &lt;.reveal&gt; (or gReveal()).</p>
+
+<p><span id="openWhenSeen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openWhenSeen</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#42">42</a>]</p>
+
+<p>An optional object that, when seen by the player character, opens this
+goal. It’s often convenient to declare a goal open as soon as the player
+enters a particular area or has encountered a particular object. For
+such cases, simply set this property to the room or object that opens
+the goal, and we’ll automatically mark the goal as Open the next time
+the player asks for a hint after seeing the referenced object.</p>
+
+<p><span id="openWhenTrue"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openWhenTrue</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#128">128</a>]</p>
+
+<p>An optional arbitrary check that opens the goal. If this returns true,
+we’ll open the goal. This check is made in addition to the other checks
+(openWhenSeen, openWhenDescribed, etc). This can be used for any custom
+check that doesn’t fit into one of the standard openWhenXxx properties.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><em>(none)</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

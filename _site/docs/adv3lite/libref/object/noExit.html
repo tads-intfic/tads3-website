@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-noexit-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-noexit-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">noExit</span><span class="type">object</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#906">906</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The noExit object can be used to block an exit that would otherwise be
+set as a reciprocal exit by Room.preinitThing(). This can be used to
+prevent this extension from creating symmetrical exits in cases where
+you don’t want them. E.g. if north from the smallCave leads to
+largeCave, but south from largeCave doesn’t lead anywhere (because the
+notional passage between the caves curves round, say), then you can set
+largeCave.south to noExit to prevent this extension from setting it to
+smallCave.</p>
+
+<p>The noExit object is thus a TravelConnector that simulates the effect of
+a nil exit in situations where a nil value might get overwritten by this
+extension. [SYMCOMM EXTENSION]</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">noExit</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/TravelConnector.html"><code class="language-plaintext highlighter-rouge">TravelConnector</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">noExit</code></strong><br />
+<a href="../object/TravelConnector.html"><code class="language-plaintext highlighter-rouge">TravelConnector</code></a><br />
+`                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#isConnectorListed"><code class="language-plaintext highlighter-rouge">isConnectorListed</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelConnector</code> :<br />
+<a href="../object/TravelConnector.html#destination"><code class="language-plaintext highlighter-rouge">destination</code></a> <a href="../object/TravelConnector.html#isConnectorApparent"><code class="language-plaintext highlighter-rouge">isConnectorApparent</code></a> <a href="../object/TravelConnector.html#isOpen"><code class="language-plaintext highlighter-rouge">isOpen</code></a> <a href="../object/TravelConnector.html#PushTravelVia"><code class="language-plaintext highlighter-rouge">PushTravelVia</code></a> <a href="../object/TravelConnector.html#suppressTravelDescForPushTravel"><code class="language-plaintext highlighter-rouge">suppressTravelDescForPushTravel</code></a> <a href="../object/TravelConnector.html#transmitsLight"><code class="language-plaintext highlighter-rouge">transmitsLight</code></a> <a href="../object/TravelConnector.html#travelBarriers"><code class="language-plaintext highlighter-rouge">travelBarriers</code></a> <a href="../object/TravelConnector.html#traversalTime"><code class="language-plaintext highlighter-rouge">traversalTime</code></a> <a href="../object/TravelConnector.html#traversed"><code class="language-plaintext highlighter-rouge">traversed</code></a> <a href="../object/TravelConnector.html#traversedBy"><code class="language-plaintext highlighter-rouge">traversedBy</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#canTravelerPass"><code class="language-plaintext highlighter-rouge">canTravelerPass</code></a> <a href="#explainTravelBarrier"><code class="language-plaintext highlighter-rouge">explainTravelBarrier</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TravelConnector</code> :<br />
+<a href="../object/TravelConnector.html#afterTravelNotifications"><code class="language-plaintext highlighter-rouge">afterTravelNotifications</code></a> <a href="../object/TravelConnector.html#beforeTravelNotifications"><code class="language-plaintext highlighter-rouge">beforeTravelNotifications</code></a> <a href="../object/TravelConnector.html#checkPushTravel"><code class="language-plaintext highlighter-rouge">checkPushTravel</code></a> <a href="../object/TravelConnector.html#checkTravelBarriers"><code class="language-plaintext highlighter-rouge">checkTravelBarriers</code></a> <a href="../object/TravelConnector.html#dobjFor(GoThrough)"><code class="language-plaintext highlighter-rouge">dobjFor(GoThrough)</code></a> <a href="../object/TravelConnector.html#dobjFor(TravelVia)"><code class="language-plaintext highlighter-rouge">dobjFor(TravelVia)</code></a> <a href="../object/TravelConnector.html#execTravel"><code class="language-plaintext highlighter-rouge">execTravel</code></a> <a href="../object/TravelConnector.html#getDepartingDirection"><code class="language-plaintext highlighter-rouge">getDepartingDirection</code></a> <a href="../object/TravelConnector.html#getDestination"><code class="language-plaintext highlighter-rouge">getDestination</code></a> <a href="../object/TravelConnector.html#getTraveler"><code class="language-plaintext highlighter-rouge">getTraveler</code></a> <a href="../object/TravelConnector.html#hasBeenTraversedBy"><code class="language-plaintext highlighter-rouge">hasBeenTraversedBy</code></a> <a href="../object/TravelConnector.html#iobjFor(PushTravelThrough)"><code class="language-plaintext highlighter-rouge">iobjFor(PushTravelThrough)</code></a> <a href="../object/TravelConnector.html#isConnectorVisible"><code class="language-plaintext highlighter-rouge">isConnectorVisible</code></a> <a href="../object/TravelConnector.html#isDestinationKnown"><code class="language-plaintext highlighter-rouge">isDestinationKnown</code></a> <a href="../object/TravelConnector.html#noteTraversal"><code class="language-plaintext highlighter-rouge">noteTraversal</code></a> <a href="../object/TravelConnector.html#sayActorFollowing"><code class="language-plaintext highlighter-rouge">sayActorFollowing</code></a> <a href="../object/TravelConnector.html#sayDeparting"><code class="language-plaintext highlighter-rouge">sayDeparting</code></a> <a href="../object/TravelConnector.html#sayNoDestination"><code class="language-plaintext highlighter-rouge">sayNoDestination</code></a> <a href="../object/TravelConnector.html#travelDesc"><code class="language-plaintext highlighter-rouge">travelDesc</code></a> <a href="../object/TravelConnector.html#travelVia"><code class="language-plaintext highlighter-rouge">travelVia</code></a> <a href="../object/TravelConnector.html#traversalMsg"><code class="language-plaintext highlighter-rouge">traversalMsg</code></a> <a href="../object/TravelConnector.html#traversalTimeFrom"><code class="language-plaintext highlighter-rouge">traversalTimeFrom</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="isConnectorListed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConnectorListed</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#911">911</a>]</p>
+
+<p>Since we’re mimicking the absence of an exit, we don’t want to be listed
+as one.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="canTravelerPass"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canTravelerPass (actor)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#914">914</a>]</p>
+
+<p>We’re not a real exit, so no actor can pass through us.</p>
+
+<p><span id="explainTravelBarrier"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">explainTravelBarrier (actor)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/symconn.t.html">symconn.t</a>[<a href="../source/symconn.t.html#921">921</a>]</p>
+
+<p>In order to behave just as a nil exit would, we call the actor’s
+location’s cannotGoThatWay() method to explain why travel isn’t
+possible.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

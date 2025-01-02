@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-hellotopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-hellotopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>HelloTopic : <a href="misctopic.html">MiscTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="yesno+specialtopics.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="imphellotopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A HelloTopic is normally used in connection with <a href="greetingprotocols.html">greeting
+protocols</a>. Its main purpose is to respond to a
+HELLO command or equivalent (such as TALK TO X). The normal place to put
+a HelloTopic would be in a
+<a href="conversationreadystate.html">ConversationReadyState</a>, where it will
+respond to any conversational command addressed to the NPC just before
+the NPC is switched into the corresponding
+<a href="inconversationstate.html">InConversationState</a>. If you want to
+differentiate between the case in which a conversation starts with an
+explicit HELLO, or TALK TO command, and when it starts with some other
+conversational command such as ASK ABOUT, you can use an
+<a href="imphellotopic.html">ImpHelloTopic</a> for the latter.</p>
+
+<p>Since King Solomon initiates the conversation the first time the player
+character walks in on him (we’ll code that later), there’s no need to
+provide a HelloTopic for that initial conversation, but you might want
+one for subsequent encounters, such as:</p>
+
+<p>+++ HelloTopic<br />
+  ”&lt;q&gt;I have returned, your majesty.&lt;/q&gt; you announce.\b<br />
+   &lt;q&gt;So I observe.&lt;/q&gt; the king replies, looking up at you. ”<br />
+;</p>
+
+<p>The trouble with the above HelloTopic, however, is that it assumes that
+the player character has been away and returned between conversations,
+which is not necessarily the case. What we need is a version of the
+HelloTopic that displays the above message if the player character has
+been away, but a different message otherwise. So instead of the above,
+we could define (locating this in solomonExamining):</p>
+
+<p>+++ solomonHelloTopic : HelloTopic, StopEventList <br />
+  [<br />
+   ’&lt;q&gt;I have returned, your majesty.&lt;/q&gt; you announce.\b<br />
+    &lt;q&gt;So I observe.&lt;/q&gt; the king replies. ’,<br />
+   ’&lt;q&gt;Your majesty,&lt;/q&gt; you begin.\b<br />
+    &lt;q&gt;Yes?&lt;/q&gt; the king replies, turning in his chair and looking<br />
+      up at you. ’   <br />
+  ]<br />
+  curScriptState = 2<br />
+;</p>
+
+<p>We set curScriptState to 2 initially, to cater for the possibility that
+the player strikes up a second conversation with the king before ever
+leaving his study. We next need to reset curScriptState to 1 each time
+the player character does leave the king’s presence. We can do this by
+adding the following method to the solomon object itself:</p>
+
+<p>solomon : Person ’middle-aged middle aged man’ ’middle-aged man’ @solomonChair<br />
+  …<br />
+  beforeTravel(traveler, connector)<br />
+    {<br />
+      if(connector == solBedroomDoorOutside)<br />
+        solomonHelloTopic.curScriptState = 1;<br />
+      inherited(traveler, connector);  <br />
+    }<br />
+;</p>
+
+<p>There’s one more thing you should know about HelloTopic (and this
+applies to ImpHelloTopic too). As we’ve already noted, a HelloTopic is
+triggered by an explicit greeting <em>or</em> by any other conversational
+command. Internally this means that if any other kind of TopicEntry is
+triggered when an actor is in a ConversationReadyState, a HelloTopic is
+triggered. Potentially, this could mean that a HelloTopic tries to
+trigger itself, which would then have it try to trigger itself, and so
+on <em>ad infinitum</em> (or, in practice, till you got a stack overflow
+error). The way HelloTopic (and ImpHelloTopic) prevent this is by
+defining <strong>impliesGreeting</strong> = nil.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

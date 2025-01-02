@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-tutorial-birdinnest-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-tutorial-birdinnest-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="revisit.html" class="nav">Heidi Revisited</a> &gt; Is the bird in
+the nest?<br />
+<span class="navnp"><a href="dropping.html" class="nav"><em>Prev:</em> Dropping objects from
+the tree</a>    
+<a href="summing.html" class="nav"><em>Next:</em> Summing Up</a>    
+</span></p>
+
+<h1 id="is-the-bird-in-the-nest">Is the bird in the nest?</h1>
+
+<p>Despite all we have done so far in this chapter, the game still has one
+rather obvious flaw: the intention is that the game should be won when
+Heidi restores both bird and nest to the branch with the bird in the
+nest, but if you try it as it is you’ll see that all she has to do to
+win the game is to put the nest on the branch; as things stands she can
+ignore the poor little bird altogether!</p>
+
+<p>Fortunately this is very easy to fix. All we need to do is to check that
+the nest is on the branch <em>and</em> that the bird is in the nest:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + branch: Thing 'wide firm bough; flat; branch'
+        "It's flat enough to support a small object. "
+        
+        iFixed = true
+        isListed = true
+        contType = On
+        
+        afterAction()
+        {
+            if(nest.isIn(self) &amp;&amp; bird.isIn(nest))
+                finishGameMsg(ftVictory, [finishOptionUndo]);
+        }
+    ;
+</code></pre></div></div>
+
+<p>We use the <code class="language-plaintext highlighter-rouge">isIn()</code> method here to test for
+containment: <code class="language-plaintext highlighter-rouge">obj1.isIn(obj2)</code> is true if obj1
+is either directly or indirectly contained in obj2. If you want to test
+for direct containment you could use
+<code class="language-plaintext highlighter-rouge">isDirectlyIn()</code>, and that would have worked
+here, but it isn’t actually needed.</p>
+
+<p>Perhaps of more significance is the use of <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>
+to join two conditions. The <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> operator is the
+TADS 3 way of joining two expressions together with a logical <em>and</em>. The
+compound expression <code class="language-plaintext highlighter-rouge">expression1 &amp;&amp; expression2</code>
+is true if and only if <em>expression1</em> and <em>expression2</em> are both true,
+otherwise it is nil (i.e. false). Note that either or both of
+<em>expression1</em> and <em>expression2</em> can themselves be compound expressions,
+but if they are, it is normally as well to surround them with
+parentheses to make your meaning clear both to the compiler and
+yourself.</p>
+
+<p>Remember that TADS 3 considers a value of 0 or nil to be false and
+anything else to be true. The value of the expression
+<code class="language-plaintext highlighter-rouge">2 &amp;&amp; 4 </code>is therefore true, while the value of
+the expression <code class="language-plaintext highlighter-rouge">bird &amp;&amp; nil</code> is nil.</p>
+
+<p>TADS 3 also defines a logical or operator, which looks like this:
+<code class="language-plaintext highlighter-rouge">\|\|</code>. The compound expression
+<code class="language-plaintext highlighter-rouge">expression1 \|\| expression2</code> is true if either
+<em>expression1</em> or <em>expression2</em> is true (i.e. neither nil nor 0) and nil
+if both <em>expression1</em> and <em>expression2</em> are false (i.e. either nil or
+0).</p>
+
+<p>TADS 3’s third logical operator is the logical not, represented by an
+exclamation mark, <code class="language-plaintext highlighter-rouge">!</code>. If
+<code class="language-plaintext highlighter-rouge">expression</code> is true then
+<code class="language-plaintext highlighter-rouge">!expression</code> is nil; if
+<code class="language-plaintext highlighter-rouge">expression</code> is nil then
+<code class="language-plaintext highlighter-rouge">!expression</code> is true.</p>
+
+<p>For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a = 12, b = 6;
+    (a == b * 2) || (b == 7) // true, because a is twice b
+    (a == b * 2) &amp;&amp; (b == 7) // nil, because b is not 7
+    (bird || nest) // true because bird is not nil
+    'Hampster' &amp;&amp; 'forest' // true because neither string is nil
+    (a &gt; b) &amp;&amp;  !bird.ofKind(Thing) // nil because bird does inherit from Thing
+</code></pre></div></div>
+
+<p>Finally note that both <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> and
+<code class="language-plaintext highlighter-rouge">\|\|</code> are <em>short-circuit operators</em>. This means
+that in the expression <code class="language-plaintext highlighter-rouge">a &amp;&amp; b</code>,
+<code class="language-plaintext highlighter-rouge">b</code> is never even evaluated if
+<code class="language-plaintext highlighter-rouge">a</code> is nil (or 0) since unless
+<code class="language-plaintext highlighter-rouge">a</code> is true, the compound expression
+<code class="language-plaintext highlighter-rouge">a &amp;&amp; b</code> must be false. Conversely in the
+expression <code class="language-plaintext highlighter-rouge">a \|\| b</code>,
+<code class="language-plaintext highlighter-rouge">b</code> will never be evaluated if
+<code class="language-plaintext highlighter-rouge">a</code> turns out to be true, since if
+<code class="language-plaintext highlighter-rouge">a</code> is true then the entire compound expression
+<code class="language-plaintext highlighter-rouge">a \|\| b</code> must be true. That is why the
+<code class="language-plaintext highlighter-rouge">bird \|\| nest</code> example above was true simply
+because <code class="language-plaintext highlighter-rouge">bird</code> was neither nil nor 0; given that
+<code class="language-plaintext highlighter-rouge">bird</code> is not false, the entire expression must
+be true, regardless of the value of <code class="language-plaintext highlighter-rouge">nest</code>.</p>
+
+<p>Besides saving time, this short-circuit evaluation makes it safe to
+write code like the following, even when <code class="language-plaintext highlighter-rouge">obj</code>
+might sometimes be nil:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    if(obj &amp;&amp; obj.bulk &gt; 4)
+       say "It's quite a bulky object. ";
+</code></pre></div></div>
+
+<p>In this example, if <code class="language-plaintext highlighter-rouge">obj</code> is nil, the expression
+<code class="language-plaintext highlighter-rouge">(obj.bulk \&gt; 4)</code> is never evaluated; we thus
+avoid the run-time error that would otherwise result from trying to
+evaluate a property of nil.</p>
+
+<p>Now try compiling and running the game one last time to check that
+everything still behaves as you expect.</p>
+
+<hr />
+
+<p><em>adv3Lite Library Tutorial</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="revisit.html" class="nav">Heidi Revisited</a> &gt; Is the bird in
+the nest?<br />
+<span class="navnp"><a href="dropping.html" class="nav"><em>Prev:</em> Dropping objects from
+the tree</a>    
+<a href="summing.html" class="nav"><em>Next:</em> Summing Up</a>    
+</span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

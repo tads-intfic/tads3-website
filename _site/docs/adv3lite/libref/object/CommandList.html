@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-commandlist-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-commandlist-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">CommandList</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#823">823</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A CommandList is a set of potential parsings for a given input with a
+given grammar.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">CommandList</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">CommandList</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#cmd"><code class="language-plaintext highlighter-rouge">cmd</code></a> <a href="#cmdLst"><code class="language-plaintext highlighter-rouge">cmdLst</code></a> <a href="#curable"><code class="language-plaintext highlighter-rouge">curable</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#acceptAny"><code class="language-plaintext highlighter-rouge">acceptAny</code></a> <a href="#acceptCurable"><code class="language-plaintext highlighter-rouge">acceptCurable</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#getBestCmd"><code class="language-plaintext highlighter-rouge">getBestCmd</code></a> <a href="#getResErr"><code class="language-plaintext highlighter-rouge">getResErr</code></a> <a href="#length"><code class="language-plaintext highlighter-rouge">length</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="cmd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmd</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1002">1002</a>]</p>
+
+<p>Our resolved Command. This is the first parsing in our list that (in
+priority order) we were able to resolve with no errors.</p>
+
+<p><span id="cmdLst"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmdLst</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#996">996</a>]</p>
+
+<p>our list of Command objects</p>
+
+<p><span id="curable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curable</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1009">1009</a>]</p>
+
+<p>Our semi-resolved Command. When we can’t find a command that resolves
+without errors, we’ll set this to the first one (in priority order) that
+resolves with a curable error.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="acceptAny"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acceptAny ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#945">945</a>]</p>
+
+<p>Accept ANY command, with or without a resolution error, curable or not.
+We’ll take the error-free resolution if we have one, otherwise the
+resolution with a curable error, otherwise just the first parsing in
+priority order.</p>
+
+<p><span id="acceptCurable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acceptCurable ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#929">929</a>]</p>
+
+<p>Accept a curable resolution as the actual resolution. If we don’t have
+an error-free resolution, we’ll set ‘cmd’ to the curable resolution.
+Returns true if we have any resolution, nil if not.</p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ([args])</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#834">834</a>]</p>
+
+<p>new CommandList(prod, toks, dict, wrapper) - construct a new CommandList
+object by parsing an input token list. ‘prod’ is the GrammarProd to
+parse against; ‘toks’ is the token list; ‘dict’ is the main parser
+dictionary; ‘wrapper’ is a callback function that maps a parse tree to a
+Command object.</p>
+
+<p>new CommandList(Command) - construct a CommandList containing a single
+pre-resolved Command object.</p>
+
+<p><span id="getBestCmd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getBestCmd ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#957">957</a>]</p>
+
+<p>Get the most promising command from the available parsings. This returns
+the first successfully resolved command in priority order, if any;
+otherwise the first command with a curable error, if any; otherwise the
+first command in priority order.</p>
+
+<p><span id="getResErr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getResErr ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#980">980</a>]</p>
+
+<p>Get the resolution error, if any. If we parsed but didn’t resolve, this
+returns the error from the first parsing in priority order.</p>
+
+<p><span id="length"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">length ( )</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#922">922</a>]</p>
+
+<p>number of parsings in the list</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

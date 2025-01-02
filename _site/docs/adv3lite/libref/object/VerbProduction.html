@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-verbproduction-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-verbproduction-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">VerbProduction</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3957">3957</a>],
+<a href="../file/grammar.t.html">grammar.t</a>[<a href="../source/grammar.t.html#3669">3669</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>VerbProduction is a special Production subclass for verb (predicate)
+rules. This production has special processing for building out the
+object phrases making up the verb.</p>
+
+<p>Each instance should have an ‘action’ property giving the Action object
+associated with the verb rule. This is the Action that will be performed
+when the parser matches the command input to the rule.</p>
+
+<p>Some languages, such as English, have “positional” predicate grammars.
+This means that the position of a noun phrase in the sentence determines
+its role (direct object, indirect object, etc). In the grammar for a
+positional language, each predicate rule simply needs to plug in a
+singleNoun or nounList production (as appropriate) in each noun phrase
+position, with its ‘-&gt;’ property set to correspond to the role:
+-&gt;dobjMatch for a direct object, -&gt;iobjMatch for an indirect object,
+and -&gt;accMatch for an accessory object.</p>
+
+<p>Some languages, such as German and Latin, identify the role of a noun
+phrase using grammatical case. This means that the articles change form
+in the different roles, or that the nouns themselves are inflected (they
+have different forms, such as added suffixes) according to role. Case
+languages tend to have flexible predicate word order, because the case
+markers tell you the role of each noun even if the nouns are rearranged.
+For this reason, it can be tedious to write a grammar for a case
+language the way we do for English, where the word ordering for a given
+verb is so rigid that we can easily just write out each possible
+phrasing manually. For a case language, you’ll probably instead want to
+write a set of generic verb rules that cover *all* verbs (i.e., you
+leave the verb word itself as a sub-production) in all of the different
+word orders, and use the case tagging in the language to determine the
+role of each noun phrase. For this style of grammar, the grammar must
+set the property nounPhraseRole in the top-level rule for each noun
+phrase case; set this to DirectObject, IndirectObject, AccessoryObject,
+etc., according to the role denoted by the case.</p>
+
+<p>Still other languages, such as Japanese, use particles (grammar function
+words) to denote the role of each noun phrase in the sentence. This is
+similar to grammatical case, but the role information is encoded in
+separate words (the particles) rather than in noun affixes, so the nouns
+themselves aren’t inflected. You can handle this type of language
+roughly the same way you’d handle a case language. Create generic rules
+that cover all verbs, then create a grammar rule for each
+particle-plus-noun structure. In each particle-plus-noun phrase’s
+top-level rule, set the nounPhraseRole property to the appropriate role
+object (DirectObject, etc).</p>
+
+<p><em>Modified in
+<a href="../file/grammar.t.html">grammar.t</a>[<a href="../source/grammar.t.html#3669">3669</a>]:</em><br />
+English-specific VerbProduction additions</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">VerbProduction</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">VerbProduction</code></strong><br />
+<a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a><br />
+`                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">VerbProduction</code></strong><br />
+<a href="../object/defaultVerbPhrase(noun).html"><code class="language-plaintext highlighter-rouge">defaultVerbPhrase(noun)</code></a><br />
+<a href="../object/EnTravelVia.html"><code class="language-plaintext highlighter-rouge">EnTravelVia</code></a><br />
+<a href="../object/VerbRule(About).html"><code class="language-plaintext highlighter-rouge">VerbRule(About)</code></a><br />
+<a href="../object/VerbRule(Again).html"><code class="language-plaintext highlighter-rouge">VerbRule(Again)</code></a><br />
+<a href="../object/VerbRule(AskAbout).html"><code class="language-plaintext highlighter-rouge">VerbRule(AskAbout)</code></a><br />
+<a href="../object/VerbRule(AskAboutImplicit).html"><code class="language-plaintext highlighter-rouge">VerbRule(AskAboutImplicit)</code></a><br />
+<a href="../object/VerbRule(AskAboutWhat).html"><code class="language-plaintext highlighter-rouge">VerbRule(AskAboutWhat)</code></a><br />
+<a href="../object/VerbRule(AskFor).html"><code class="language-plaintext highlighter-rouge">VerbRule(AskFor)</code></a><br />
+<a href="../object/VerbRule(AskForImplicit).html"><code class="language-plaintext highlighter-rouge">VerbRule(AskForImplicit)</code></a><br />
+<a href="../object/VerbRule(AskVague).html"><code class="language-plaintext highlighter-rouge">VerbRule(AskVague)</code></a><br />
+<a href="../object/VerbRule(AskWhomFor).html"><code class="language-plaintext highlighter-rouge">VerbRule(AskWhomFor)</code></a><br />
+<a href="../object/VerbRule(Attach).html"><code class="language-plaintext highlighter-rouge">VerbRule(Attach)</code></a><br />
+<a href="../object/VerbRule(AttachTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(AttachTo)</code></a><br />
+<a href="../object/VerbRule(Attack).html"><code class="language-plaintext highlighter-rouge">VerbRule(Attack)</code></a><br />
+<a href="../object/VerbRule(AttackWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(AttackWith)</code></a><br />
+<a href="../object/VerbRule(AuxQuery).html"><code class="language-plaintext highlighter-rouge">VerbRule(AuxQuery)</code></a><br />
+<a href="../object/VerbRule(Board).html"><code class="language-plaintext highlighter-rouge">VerbRule(Board)</code></a><br />
+<a href="../object/VerbRule(Break).html"><code class="language-plaintext highlighter-rouge">VerbRule(Break)</code></a><br />
+<a href="../object/VerbRule(Brief).html"><code class="language-plaintext highlighter-rouge">VerbRule(Brief)</code></a><br />
+<a href="../object/VerbRule(Burn).html"><code class="language-plaintext highlighter-rouge">VerbRule(Burn)</code></a><br />
+<a href="../object/VerbRule(BurnWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(BurnWith)</code></a><br />
+<a href="../object/VerbRule(Clean).html"><code class="language-plaintext highlighter-rouge">VerbRule(Clean)</code></a><br />
+<a href="../object/VerbRule(CleanWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(CleanWith)</code></a><br />
+<a href="../object/VerbRule(Climb).html"><code class="language-plaintext highlighter-rouge">VerbRule(Climb)</code></a><br />
+<a href="../object/VerbRule(ClimbDown).html"><code class="language-plaintext highlighter-rouge">VerbRule(ClimbDown)</code></a><br />
+<a href="../object/VerbRule(ClimbDownWhat).html"><code class="language-plaintext highlighter-rouge">VerbRule(ClimbDownWhat)</code></a><br />
+<a href="../object/VerbRule(ClimbUp).html"><code class="language-plaintext highlighter-rouge">VerbRule(ClimbUp)</code></a><br />
+<a href="../object/VerbRule(ClimbUpWhat).html"><code class="language-plaintext highlighter-rouge">VerbRule(ClimbUpWhat)</code></a><br />
+<a href="../object/VerbRule(Close).html"><code class="language-plaintext highlighter-rouge">VerbRule(Close)</code></a><br />
+<a href="../object/VerbRule(CmdMenu).html"><code class="language-plaintext highlighter-rouge">VerbRule(CmdMenu)</code></a><br />
+<a href="../object/VerbRule(ConsultAbout).html"><code class="language-plaintext highlighter-rouge">VerbRule(ConsultAbout)</code></a><br />
+<a href="../object/VerbRule(ConsultWhatAbout).html"><code class="language-plaintext highlighter-rouge">VerbRule(ConsultWhatAbout)</code></a><br />
+<a href="../object/VerbRule(Continue).html"><code class="language-plaintext highlighter-rouge">VerbRule(Continue)</code></a><br />
+<a href="../object/VerbRule(Credits).html"><code class="language-plaintext highlighter-rouge">VerbRule(Credits)</code></a><br />
+<a href="../object/VerbRule(Cut).html"><code class="language-plaintext highlighter-rouge">VerbRule(Cut)</code></a><br />
+<a href="../object/VerbRule(CutWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(CutWith)</code></a><br />
+<a href="../object/VerbRule(Debug).html"><code class="language-plaintext highlighter-rouge">VerbRule(Debug)</code></a><br />
+<a href="../object/VerbRule(DebugI).html"><code class="language-plaintext highlighter-rouge">VerbRule(DebugI)</code></a><br />
+<a href="../object/VerbRule(Detach).html"><code class="language-plaintext highlighter-rouge">VerbRule(Detach)</code></a><br />
+<a href="../object/VerbRule(DetachFrom).html"><code class="language-plaintext highlighter-rouge">VerbRule(DetachFrom)</code></a><br />
+<a href="../object/VerbRule(Dig).html"><code class="language-plaintext highlighter-rouge">VerbRule(Dig)</code></a><br />
+<a href="../object/VerbRule(DigWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(DigWith)</code></a><br />
+<a href="../object/VerbRule(Doff).html"><code class="language-plaintext highlighter-rouge">VerbRule(Doff)</code></a><br />
+<a href="../object/VerbRule(Drink).html"><code class="language-plaintext highlighter-rouge">VerbRule(Drink)</code></a><br />
+<a href="../object/VerbRule(Drop).html"><code class="language-plaintext highlighter-rouge">VerbRule(Drop)</code></a><br />
+<a href="../object/VerbRule(Eat).html"><code class="language-plaintext highlighter-rouge">VerbRule(Eat)</code></a><br />
+<a href="../object/VerbRule(Enter).html"><code class="language-plaintext highlighter-rouge">VerbRule(Enter)</code></a><br />
+<a href="../object/VerbRule(EnterOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(EnterOn)</code></a><br />
+<a href="../object/VerbRule(Evaluate).html"><code class="language-plaintext highlighter-rouge">VerbRule(Evaluate)</code></a><br />
+<a href="../object/VerbRule(Examine).html"><code class="language-plaintext highlighter-rouge">VerbRule(Examine)</code></a><br />
+<a href="../object/VerbRule(Exits).html"><code class="language-plaintext highlighter-rouge">VerbRule(Exits)</code></a><br />
+<a href="../object/VerbRule(ExitsColour).html"><code class="language-plaintext highlighter-rouge">VerbRule(ExitsColour)</code></a><br />
+<a href="../object/VerbRule(ExitsMode).html"><code class="language-plaintext highlighter-rouge">VerbRule(ExitsMode)</code></a><br />
+<a href="../object/VerbRule(Extinguish).html"><code class="language-plaintext highlighter-rouge">VerbRule(Extinguish)</code></a><br />
+<a href="../object/VerbRule(ExtraHints).html"><code class="language-plaintext highlighter-rouge">VerbRule(ExtraHints)</code></a><br />
+<a href="../object/VerbRule(Fasten).html"><code class="language-plaintext highlighter-rouge">VerbRule(Fasten)</code></a><br />
+<a href="../object/VerbRule(FastenTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(FastenTo)</code></a><br />
+<a href="../object/VerbRule(Feel).html"><code class="language-plaintext highlighter-rouge">VerbRule(Feel)</code></a><br />
+<a href="../object/VerbRule(FiatLux).html"><code class="language-plaintext highlighter-rouge">VerbRule(FiatLux)</code></a><br />
+<a href="../object/VerbRule(Flip).html"><code class="language-plaintext highlighter-rouge">VerbRule(Flip)</code></a><br />
+<a href="../object/VerbRule(Follow).html"><code class="language-plaintext highlighter-rouge">VerbRule(Follow)</code></a><br />
+<a href="../object/VerbRule(Footnote).html"><code class="language-plaintext highlighter-rouge">VerbRule(Footnote)</code></a><br />
+<a href="../object/VerbRule(FootnotesFull).html"><code class="language-plaintext highlighter-rouge">VerbRule(FootnotesFull)</code></a><br />
+<a href="../object/VerbRule(FootnotesMedium).html"><code class="language-plaintext highlighter-rouge">VerbRule(FootnotesMedium)</code></a><br />
+<a href="../object/VerbRule(FootnotesOff).html"><code class="language-plaintext highlighter-rouge">VerbRule(FootnotesOff)</code></a><br />
+<a href="../object/VerbRule(FootnotesStatus).html"><code class="language-plaintext highlighter-rouge">VerbRule(FootnotesStatus)</code></a><br />
+<a href="../object/VerbRule(FullScore).html"><code class="language-plaintext highlighter-rouge">VerbRule(FullScore)</code></a><br />
+<a href="../object/VerbRule(GetOff).html"><code class="language-plaintext highlighter-rouge">VerbRule(GetOff)</code></a><br />
+<a href="../object/VerbRule(GetOut).html"><code class="language-plaintext highlighter-rouge">VerbRule(GetOut)</code></a><br />
+<a href="../object/VerbRule(GetOutOf).html"><code class="language-plaintext highlighter-rouge">VerbRule(GetOutOf)</code></a><br />
+<a href="../object/VerbRule(GiveTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(GiveTo)</code></a><br />
+<a href="../object/VerbRule(GiveToImplicit).html"><code class="language-plaintext highlighter-rouge">VerbRule(GiveToImplicit)</code></a><br />
+<a href="../object/VerbRule(GiveToType2).html"><code class="language-plaintext highlighter-rouge">VerbRule(GiveToType2)</code></a><br />
+<a href="../object/VerbRule(GoAlong).html"><code class="language-plaintext highlighter-rouge">VerbRule(GoAlong)</code></a><br />
+<a href="../object/VerbRule(GoBack).html"><code class="language-plaintext highlighter-rouge">VerbRule(GoBack)</code></a><br />
+<a href="../object/VerbRule(GoNear).html"><code class="language-plaintext highlighter-rouge">VerbRule(GoNear)</code></a><br />
+<a href="../object/VerbRule(Goodbye).html"><code class="language-plaintext highlighter-rouge">VerbRule(Goodbye)</code></a><br />
+<a href="../object/VerbRule(GoSomewhere).html"><code class="language-plaintext highlighter-rouge">VerbRule(GoSomewhere)</code></a><br />
+<a href="../object/VerbRule(GoThrough).html"><code class="language-plaintext highlighter-rouge">VerbRule(GoThrough)</code></a><br />
+<a href="../object/VerbRule(GoTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(GoTo)</code></a><br />
+<a href="../object/VerbRule(Hello).html"><code class="language-plaintext highlighter-rouge">VerbRule(Hello)</code></a><br />
+<a href="../object/VerbRule(Help).html"><code class="language-plaintext highlighter-rouge">VerbRule(Help)</code></a><br />
+<a href="../object/VerbRule(Hints).html"><code class="language-plaintext highlighter-rouge">VerbRule(Hints)</code></a><br />
+<a href="../object/VerbRule(HintsOff).html"><code class="language-plaintext highlighter-rouge">VerbRule(HintsOff)</code></a><br />
+<a href="../object/VerbRule(In).html"><code class="language-plaintext highlighter-rouge">VerbRule(In)</code></a><br />
+<a href="../object/VerbRule(instructions).html"><code class="language-plaintext highlighter-rouge">VerbRule(instructions)</code></a><br />
+<a href="../object/VerbRule(Intro).html"><code class="language-plaintext highlighter-rouge">VerbRule(Intro)</code></a><br />
+<a href="../object/VerbRule(Inventory).html"><code class="language-plaintext highlighter-rouge">VerbRule(Inventory)</code></a><br />
+<a href="../object/VerbRule(InventoryTall).html"><code class="language-plaintext highlighter-rouge">VerbRule(InventoryTall)</code></a><br />
+<a href="../object/VerbRule(InventoryWide).html"><code class="language-plaintext highlighter-rouge">VerbRule(InventoryWide)</code></a><br />
+<a href="../object/VerbRule(Jump).html"><code class="language-plaintext highlighter-rouge">VerbRule(Jump)</code></a><br />
+<a href="../object/VerbRule(JumpOff).html"><code class="language-plaintext highlighter-rouge">VerbRule(JumpOff)</code></a><br />
+<a href="../object/VerbRule(JumpOffIntransitive).html"><code class="language-plaintext highlighter-rouge">VerbRule(JumpOffIntransitive)</code></a><br />
+<a href="../object/VerbRule(JumpOver).html"><code class="language-plaintext highlighter-rouge">VerbRule(JumpOver)</code></a><br />
+<a href="../object/VerbRule(KeepGoing).html"><code class="language-plaintext highlighter-rouge">VerbRule(KeepGoing)</code></a><br />
+<a href="../object/VerbRule(Kiss).html"><code class="language-plaintext highlighter-rouge">VerbRule(Kiss)</code></a><br />
+<a href="../object/VerbRule(Lie).html"><code class="language-plaintext highlighter-rouge">VerbRule(Lie)</code></a><br />
+<a href="../object/VerbRule(LieIn).html"><code class="language-plaintext highlighter-rouge">VerbRule(LieIn)</code></a><br />
+<a href="../object/VerbRule(LieOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(LieOn)</code></a><br />
+<a href="../object/VerbRule(Light).html"><code class="language-plaintext highlighter-rouge">VerbRule(Light)</code></a><br />
+<a href="../object/VerbRule(Listen).html"><code class="language-plaintext highlighter-rouge">VerbRule(Listen)</code></a><br />
+<a href="../object/VerbRule(ListenTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(ListenTo)</code></a><br />
+<a href="../object/VerbRule(ListRelations).html"><code class="language-plaintext highlighter-rouge">VerbRule(ListRelations)</code></a><br />
+<a href="../object/VerbRule(ListTests).html"><code class="language-plaintext highlighter-rouge">VerbRule(ListTests)</code></a><br />
+<a href="../object/VerbRule(Lock).html"><code class="language-plaintext highlighter-rouge">VerbRule(Lock)</code></a><br />
+<a href="../object/VerbRule(LockWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(LockWith)</code></a><br />
+<a href="../object/VerbRule(Look).html"><code class="language-plaintext highlighter-rouge">VerbRule(Look)</code></a><br />
+<a href="../object/VerbRule(LookBehind).html"><code class="language-plaintext highlighter-rouge">VerbRule(LookBehind)</code></a><br />
+<a href="../object/VerbRule(LookHere).html"><code class="language-plaintext highlighter-rouge">VerbRule(LookHere)</code></a><br />
+<a href="../object/VerbRule(LookIn).html"><code class="language-plaintext highlighter-rouge">VerbRule(LookIn)</code></a><br />
+<a href="../object/VerbRule(LookThrough).html"><code class="language-plaintext highlighter-rouge">VerbRule(LookThrough)</code></a><br />
+<a href="../object/VerbRule(LookUnder).html"><code class="language-plaintext highlighter-rouge">VerbRule(LookUnder)</code></a><br />
+<a href="../object/VerbRule(LookUp).html"><code class="language-plaintext highlighter-rouge">VerbRule(LookUp)</code></a><br />
+<a href="../object/VerbRule(LookX).html"><code class="language-plaintext highlighter-rouge">VerbRule(LookX)</code></a><br />
+<a href="../object/VerbRule(Move).html"><code class="language-plaintext highlighter-rouge">VerbRule(Move)</code></a><br />
+<a href="../object/VerbRule(MoveTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(MoveTo)</code></a><br />
+<a href="../object/VerbRule(MoveWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(MoveWith)</code></a><br />
+<a href="../object/VerbRule(No).html"><code class="language-plaintext highlighter-rouge">VerbRule(No)</code></a><br />
+<a href="../object/VerbRule(Notify).html"><code class="language-plaintext highlighter-rouge">VerbRule(Notify)</code></a><br />
+<a href="../object/VerbRule(NotifyOff).html"><code class="language-plaintext highlighter-rouge">VerbRule(NotifyOff)</code></a><br />
+<a href="../object/VerbRule(NotifyOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(NotifyOn)</code></a><br />
+<a href="../object/VerbRule(Open).html"><code class="language-plaintext highlighter-rouge">VerbRule(Open)</code></a><br />
+<a href="../object/VerbRule(Out).html"><code class="language-plaintext highlighter-rouge">VerbRule(Out)</code></a><br />
+<a href="../object/VerbRule(PlugIn).html"><code class="language-plaintext highlighter-rouge">VerbRule(PlugIn)</code></a><br />
+<a href="../object/VerbRule(PlugInto).html"><code class="language-plaintext highlighter-rouge">VerbRule(PlugInto)</code></a><br />
+<a href="../object/VerbRule(PlugIntoWhat).html"><code class="language-plaintext highlighter-rouge">VerbRule(PlugIntoWhat)</code></a><br />
+<a href="../object/VerbRule(Pour).html"><code class="language-plaintext highlighter-rouge">VerbRule(Pour)</code></a><br />
+<a href="../object/VerbRule(PourInto).html"><code class="language-plaintext highlighter-rouge">VerbRule(PourInto)</code></a><br />
+<a href="../object/VerbRule(PourOnto).html"><code class="language-plaintext highlighter-rouge">VerbRule(PourOnto)</code></a><br />
+<a href="../object/VerbRule(Pull).html"><code class="language-plaintext highlighter-rouge">VerbRule(Pull)</code></a><br />
+<a href="../object/VerbRule(Purloin).html"><code class="language-plaintext highlighter-rouge">VerbRule(Purloin)</code></a><br />
+<a href="../object/VerbRule(Push).html"><code class="language-plaintext highlighter-rouge">VerbRule(Push)</code></a><br />
+<a href="../object/VerbRule(PushTravelClimbDown).html"><code class="language-plaintext highlighter-rouge">VerbRule(PushTravelClimbDown)</code></a><br />
+<a href="../object/VerbRule(PushTravelClimbUp).html"><code class="language-plaintext highlighter-rouge">VerbRule(PushTravelClimbUp)</code></a><br />
+<a href="../object/VerbRule(PushTravelDir).html"><code class="language-plaintext highlighter-rouge">VerbRule(PushTravelDir)</code></a><br />
+<a href="../object/VerbRule(PushTravelEnter).html"><code class="language-plaintext highlighter-rouge">VerbRule(PushTravelEnter)</code></a><br />
+<a href="../object/VerbRule(PushTravelGetOutOf).html"><code class="language-plaintext highlighter-rouge">VerbRule(PushTravelGetOutOf)</code></a><br />
+<a href="../object/VerbRule(PushTravelThrough).html"><code class="language-plaintext highlighter-rouge">VerbRule(PushTravelThrough)</code></a><br />
+<a href="../object/VerbRule(PutBehind).html"><code class="language-plaintext highlighter-rouge">VerbRule(PutBehind)</code></a><br />
+<a href="../object/VerbRule(PutIn).html"><code class="language-plaintext highlighter-rouge">VerbRule(PutIn)</code></a><br />
+<a href="../object/VerbRule(PutOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(PutOn)</code></a><br />
+<a href="../object/VerbRule(PutUnder).html"><code class="language-plaintext highlighter-rouge">VerbRule(PutUnder)</code></a><br />
+<a href="../object/VerbRule(PutWhere).html"><code class="language-plaintext highlighter-rouge">VerbRule(PutWhere)</code></a><br />
+<a href="../object/VerbRule(Query).html"><code class="language-plaintext highlighter-rouge">VerbRule(Query)</code></a><br />
+<a href="../object/VerbRule(Query2).html"><code class="language-plaintext highlighter-rouge">VerbRule(Query2)</code></a><br />
+<a href="../object/VerbRule(QueryAbout).html"><code class="language-plaintext highlighter-rouge">VerbRule(QueryAbout)</code></a><br />
+<a href="../object/VerbRule(QueryVague).html"><code class="language-plaintext highlighter-rouge">VerbRule(QueryVague)</code></a><br />
+<a href="../object/VerbRule(Quit).html"><code class="language-plaintext highlighter-rouge">VerbRule(Quit)</code></a><br />
+<a href="../object/VerbRule(Read).html"><code class="language-plaintext highlighter-rouge">VerbRule(Read)</code></a><br />
+<a href="../object/VerbRule(Record).html"><code class="language-plaintext highlighter-rouge">VerbRule(Record)</code></a><br />
+<a href="../object/VerbRule(RecordEvents).html"><code class="language-plaintext highlighter-rouge">VerbRule(RecordEvents)</code></a><br />
+<a href="../object/VerbRule(RecordEventsString).html"><code class="language-plaintext highlighter-rouge">VerbRule(RecordEventsString)</code></a><br />
+<a href="../object/VerbRule(RecordOff).html"><code class="language-plaintext highlighter-rouge">VerbRule(RecordOff)</code></a><br />
+<a href="../object/VerbRule(RecordString).html"><code class="language-plaintext highlighter-rouge">VerbRule(RecordString)</code></a><br />
+<a href="../object/VerbRule(RelationDetails).html"><code class="language-plaintext highlighter-rouge">VerbRule(RelationDetails)</code></a><br />
+<a href="../object/VerbRule(Remove).html"><code class="language-plaintext highlighter-rouge">VerbRule(Remove)</code></a><br />
+<a href="../object/VerbRule(ReplayQuiet).html"><code class="language-plaintext highlighter-rouge">VerbRule(ReplayQuiet)</code></a><br />
+<a href="../object/VerbRule(ReplayString).html"><code class="language-plaintext highlighter-rouge">VerbRule(ReplayString)</code></a><br />
+<a href="../object/VerbRule(Restart).html"><code class="language-plaintext highlighter-rouge">VerbRule(Restart)</code></a><br />
+<a href="../object/VerbRule(Restore).html"><code class="language-plaintext highlighter-rouge">VerbRule(Restore)</code></a><br />
+<a href="../object/VerbRule(RestoreString).html"><code class="language-plaintext highlighter-rouge">VerbRule(RestoreString)</code></a><br />
+<a href="../object/VerbRule(Sample).html"><code class="language-plaintext highlighter-rouge">VerbRule(Sample)</code></a><br />
+<a href="../object/VerbRule(Save).html"><code class="language-plaintext highlighter-rouge">VerbRule(Save)</code></a><br />
+<a href="../object/VerbRule(SaveString).html"><code class="language-plaintext highlighter-rouge">VerbRule(SaveString)</code></a><br />
+<a href="../object/VerbRule(Say).html"><code class="language-plaintext highlighter-rouge">VerbRule(Say)</code></a><br />
+<a href="../object/VerbRule(SayTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(SayTo)</code></a><br />
+<a href="../object/VerbRule(Score).html"><code class="language-plaintext highlighter-rouge">VerbRule(Score)</code></a><br />
+<a href="../object/VerbRule(Screw).html"><code class="language-plaintext highlighter-rouge">VerbRule(Screw)</code></a><br />
+<a href="../object/VerbRule(ScrewWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(ScrewWith)</code></a><br />
+<a href="../object/VerbRule(ScriptOff).html"><code class="language-plaintext highlighter-rouge">VerbRule(ScriptOff)</code></a><br />
+<a href="../object/VerbRule(ScriptOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(ScriptOn)</code></a><br />
+<a href="../object/VerbRule(ScriptString).html"><code class="language-plaintext highlighter-rouge">VerbRule(ScriptString)</code></a><br />
+<a href="../object/VerbRule(Search).html"><code class="language-plaintext highlighter-rouge">VerbRule(Search)</code></a><br />
+<a href="../object/VerbRule(Seek).html"><code class="language-plaintext highlighter-rouge">VerbRule(Seek)</code></a><br />
+<a href="../object/VerbRule(Set).html"><code class="language-plaintext highlighter-rouge">VerbRule(Set)</code></a><br />
+<a href="../object/VerbRule(SetTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(SetTo)</code></a><br />
+<a href="../object/VerbRule(ShowTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(ShowTo)</code></a><br />
+<a href="../object/VerbRule(ShowToImplicit).html"><code class="language-plaintext highlighter-rouge">VerbRule(ShowToImplicit)</code></a><br />
+<a href="../object/VerbRule(ShowToType2).html"><code class="language-plaintext highlighter-rouge">VerbRule(ShowToType2)</code></a><br />
+<a href="../object/VerbRule(Sit).html"><code class="language-plaintext highlighter-rouge">VerbRule(Sit)</code></a><br />
+<a href="../object/VerbRule(SitIn).html"><code class="language-plaintext highlighter-rouge">VerbRule(SitIn)</code></a><br />
+<a href="../object/VerbRule(SitOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(SitOn)</code></a><br />
+<a href="../object/VerbRule(Sleep).html"><code class="language-plaintext highlighter-rouge">VerbRule(Sleep)</code></a><br />
+<a href="../object/VerbRule(Smell).html"><code class="language-plaintext highlighter-rouge">VerbRule(Smell)</code></a><br />
+<a href="../object/VerbRule(SmellSomething).html"><code class="language-plaintext highlighter-rouge">VerbRule(SmellSomething)</code></a><br />
+<a href="../object/VerbRule(Stand).html"><code class="language-plaintext highlighter-rouge">VerbRule(Stand)</code></a><br />
+<a href="../object/VerbRule(StandIn).html"><code class="language-plaintext highlighter-rouge">VerbRule(StandIn)</code></a><br />
+<a href="../object/VerbRule(StandOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(StandOn)</code></a><br />
+<a href="../object/VerbRule(Strike).html"><code class="language-plaintext highlighter-rouge">VerbRule(Strike)</code></a><br />
+<a href="../object/VerbRule(Switch).html"><code class="language-plaintext highlighter-rouge">VerbRule(Switch)</code></a><br />
+<a href="../object/VerbRule(SwitchOff).html"><code class="language-plaintext highlighter-rouge">VerbRule(SwitchOff)</code></a><br />
+<a href="../object/VerbRule(SwitchOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(SwitchOn)</code></a><br />
+<a href="../object/VerbRule(Take).html"><code class="language-plaintext highlighter-rouge">VerbRule(Take)</code></a><br />
+<a href="../object/VerbRule(TakeFrom).html"><code class="language-plaintext highlighter-rouge">VerbRule(TakeFrom)</code></a><br />
+<a href="../object/VerbRule(TalkAbout).html"><code class="language-plaintext highlighter-rouge">VerbRule(TalkAbout)</code></a><br />
+<a href="../object/VerbRule(TalkAboutImplicit).html"><code class="language-plaintext highlighter-rouge">VerbRule(TalkAboutImplicit)</code></a><br />
+<a href="../object/VerbRule(TalkTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(TalkTo)</code></a><br />
+<a href="../object/VerbRule(Taste).html"><code class="language-plaintext highlighter-rouge">VerbRule(Taste)</code></a><br />
+<a href="../object/VerbRule(TellAbout).html"><code class="language-plaintext highlighter-rouge">VerbRule(TellAbout)</code></a><br />
+<a href="../object/VerbRule(TellAboutImplicit).html"><code class="language-plaintext highlighter-rouge">VerbRule(TellAboutImplicit)</code></a><br />
+<a href="../object/VerbRule(TellAboutWhat).html"><code class="language-plaintext highlighter-rouge">VerbRule(TellAboutWhat)</code></a><br />
+<a href="../object/VerbRule(TellThat).html"><code class="language-plaintext highlighter-rouge">VerbRule(TellThat)</code></a><br />
+<a href="../object/VerbRule(TellTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(TellTo)</code></a><br />
+<a href="../object/VerbRule(TellVague).html"><code class="language-plaintext highlighter-rouge">VerbRule(TellVague)</code></a><br />
+<a href="../object/VerbRule(Test).html"><code class="language-plaintext highlighter-rouge">VerbRule(Test)</code></a><br />
+<a href="../object/VerbRule(Think).html"><code class="language-plaintext highlighter-rouge">VerbRule(Think)</code></a><br />
+<a href="../object/VerbRule(ThinkAbout).html"><code class="language-plaintext highlighter-rouge">VerbRule(ThinkAbout)</code></a><br />
+<a href="../object/VerbRule(Throw).html"><code class="language-plaintext highlighter-rouge">VerbRule(Throw)</code></a><br />
+<a href="../object/VerbRule(ThrowAt).html"><code class="language-plaintext highlighter-rouge">VerbRule(ThrowAt)</code></a><br />
+<a href="../object/VerbRule(ThrowDir).html"><code class="language-plaintext highlighter-rouge">VerbRule(ThrowDir)</code></a><br />
+<a href="../object/VerbRule(ThrowDirDown).html"><code class="language-plaintext highlighter-rouge">VerbRule(ThrowDirDown)</code></a><br />
+<a href="../object/VerbRule(ThrowTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(ThrowTo)</code></a><br />
+<a href="../object/VerbRule(ThrowToType2).html"><code class="language-plaintext highlighter-rouge">VerbRule(ThrowToType2)</code></a><br />
+<a href="../object/VerbRule(Topics).html"><code class="language-plaintext highlighter-rouge">VerbRule(Topics)</code></a><br />
+<a href="../object/VerbRule(Travel).html"><code class="language-plaintext highlighter-rouge">VerbRule(Travel)</code></a><br />
+<a href="../object/VerbRule(Turn).html"><code class="language-plaintext highlighter-rouge">VerbRule(Turn)</code></a><br />
+<a href="../object/VerbRule(TurnTo).html"><code class="language-plaintext highlighter-rouge">VerbRule(TurnTo)</code></a><br />
+<a href="../object/VerbRule(TurnWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(TurnWith)</code></a><br />
+<a href="../object/VerbRule(TypeLiteralOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(TypeLiteralOn)</code></a><br />
+<a href="../object/VerbRule(TypeLiteralOnWhat).html"><code class="language-plaintext highlighter-rouge">VerbRule(TypeLiteralOnWhat)</code></a><br />
+<a href="../object/VerbRule(TypeOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(TypeOn)</code></a><br />
+<a href="../object/VerbRule(Undo).html"><code class="language-plaintext highlighter-rouge">VerbRule(Undo)</code></a><br />
+<a href="../object/VerbRule(Unfasten).html"><code class="language-plaintext highlighter-rouge">VerbRule(Unfasten)</code></a><br />
+<a href="../object/VerbRule(UnfastenFrom).html"><code class="language-plaintext highlighter-rouge">VerbRule(UnfastenFrom)</code></a><br />
+<a href="../object/VerbRule(Unlock).html"><code class="language-plaintext highlighter-rouge">VerbRule(Unlock)</code></a><br />
+<a href="../object/VerbRule(UnlockWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(UnlockWith)</code></a><br />
+<a href="../object/VerbRule(Unplug).html"><code class="language-plaintext highlighter-rouge">VerbRule(Unplug)</code></a><br />
+<a href="../object/VerbRule(UnplugFrom).html"><code class="language-plaintext highlighter-rouge">VerbRule(UnplugFrom)</code></a><br />
+<a href="../object/VerbRule(Unscrew).html"><code class="language-plaintext highlighter-rouge">VerbRule(Unscrew)</code></a><br />
+<a href="../object/VerbRule(UnscrewWith).html"><code class="language-plaintext highlighter-rouge">VerbRule(UnscrewWith)</code></a><br />
+<a href="../object/VerbRule(VagueTravel).html"><code class="language-plaintext highlighter-rouge">VerbRule(VagueTravel)</code></a><br />
+<a href="../object/VerbRule(Verbose).html"><code class="language-plaintext highlighter-rouge">VerbRule(Verbose)</code></a><br />
+<a href="../object/VerbRule(Version).html"><code class="language-plaintext highlighter-rouge">VerbRule(Version)</code></a><br />
+<a href="../object/VerbRule(Wait).html"><code class="language-plaintext highlighter-rouge">VerbRule(Wait)</code></a><br />
+<a href="../object/VerbRule(Wear).html"><code class="language-plaintext highlighter-rouge">VerbRule(Wear)</code></a><br />
+<a href="../object/VerbRule(WhatAmICarrying).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhatAmICarrying)</code></a><br />
+<a href="../object/VerbRule(WhatIsNoun).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhatIsNoun)</code></a><br />
+<a href="../object/VerbRule(WhatNext).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhatNext)</code></a><br />
+<a href="../object/VerbRule(WhatsHere).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhatsHere)</code></a><br />
+<a href="../object/VerbRule(WhatsThePoint).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhatsThePoint)</code></a><br />
+<a href="../object/VerbRule(WhatThisGame).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhatThisGame)</code></a><br />
+<a href="../object/VerbRule(WhereAmI).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhereAmI)</code></a><br />
+<a href="../object/VerbRule(WhereGo).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhereGo)</code></a><br />
+<a href="../object/VerbRule(WhereHelp).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhereHelp)</code></a><br />
+<a href="../object/VerbRule(WhoAmI).html"><code class="language-plaintext highlighter-rouge">VerbRule(WhoAmI)</code></a><br />
+<a href="../object/VerbRule(Write).html"><code class="language-plaintext highlighter-rouge">VerbRule(Write)</code></a><br />
+<a href="../object/VerbRule(WriteOn).html"><code class="language-plaintext highlighter-rouge">VerbRule(WriteOn)</code></a><br />
+<a href="../object/VerbRule(Yell).html"><code class="language-plaintext highlighter-rouge">VerbRule(Yell)</code></a><br />
+<a href="../object/VerbRule(Yes).html"><code class="language-plaintext highlighter-rouge">VerbRule(Yes)</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a> <a href="#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
+<a href="../object/Production.html#determiner"><code class="language-plaintext highlighter-rouge">determiner</code></a> <a href="../object/Production.html#nounPhraseRole"><code class="language-plaintext highlighter-rouge">nounPhraseRole</code></a> <a href="../object/Production.html#npClass"><code class="language-plaintext highlighter-rouge">npClass</code></a> <a href="../object/Production.html#parent"><code class="language-plaintext highlighter-rouge">parent</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#answerMissing"><code class="language-plaintext highlighter-rouge">answerMissing</code></a> <a href="#build"><code class="language-plaintext highlighter-rouge">build</code></a> <a href="#missingRoleProd"><code class="language-plaintext highlighter-rouge">missingRoleProd</code></a> <a href="#visitProd"><code class="language-plaintext highlighter-rouge">visitProd</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
+<a href="../object/Production.html#addNounListItem"><code class="language-plaintext highlighter-rouge">addNounListItem</code></a> <a href="../object/Production.html#findAction"><code class="language-plaintext highlighter-rouge">findAction</code></a> <a href="../object/Production.html#findChild"><code class="language-plaintext highlighter-rouge">findChild</code></a> <a href="../object/Production.html#findParent"><code class="language-plaintext highlighter-rouge">findParent</code></a> <a href="../object/Production.html#getNounPhraseRole"><code class="language-plaintext highlighter-rouge">getNounPhraseRole</code></a> <a href="../object/Production.html#getText"><code class="language-plaintext highlighter-rouge">getText</code></a> <a href="../object/Production.html#getTokens"><code class="language-plaintext highlighter-rouge">getTokens</code></a> <a href="../object/Production.html#grammarInfoForBuild"><code class="language-plaintext highlighter-rouge">grammarInfoForBuild</code></a> <a href="../object/Production.html#isChildOf"><code class="language-plaintext highlighter-rouge">isChildOf</code></a> <a href="../object/Production.html#noteEndOfSentence"><code class="language-plaintext highlighter-rouge">noteEndOfSentence</code></a> <a href="../object/Production.html#visitLiteral"><code class="language-plaintext highlighter-rouge">visitLiteral</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="isActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActive</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3977">3977</a>]</p>
+
+<p>Do we want to consider this production to be active; we may want some
+VerbRules to be active only under certain circumstanes.</p>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3971">3971</a>]</p>
+
+<p>The “priority” of this grammar rule. This is a contributor to the
+Command priority - see Command.priority for an explanation of how that’s
+used.</p>
+
+<p>The predicate priority is a small number, 0-99. The default is 50, which
+should apply to most normal, complete verb phrases. For incomplete
+phrases (with a missing object, which will force the parser to assume a
+default or ask the player for the missing information), use 25. Other
+values are for fine-tuning as needed in the individual grammar rules. A
+higher value means higher priority.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="answerMissing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">answerMissing (cmd, np)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4040">4040</a>]</p>
+
+<p>The parser calls answerMissing() when the player answers a query for a
+missing noun phrase in the last command. There’s nothing that needs to
+happen here, and by default we do nothing; this is purely advisory. This
+routine gives the language module a chance to alter the command
+according to the reply, if necessary.</p>
+
+<p><span id="build"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">build (cmd, np)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#3980">3980</a>]</p>
+
+<p>build the command</p>
+
+<p><span id="missingRoleProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">missingRoleProd (role)</code></p>
+
+<p><a href="../file/grammar.t.html">grammar.t</a>[<a href="../source/grammar.t.html#3688">3688</a>]</p>
+
+<p>Get the grammar production for the given noun phrase role, for answering
+missing-noun questions (“What do you want to open?”). By default, we’ll
+look in three places:</p>
+
+<p>1. If we have the “reply” property that corresponds to the role
+(dobjReply, iobjReply, etc), we’ll return the grammar rule specified
+there.</p>
+
+<p>2. We’ll try to find the role’s match property in our grammar rule
+list. If we find it, we’ll return the production for the first one we
+find.</p>
+
+<p>3. Failing all that, we’ll return nounList for a direct object, or
+singleNoun for anything else.</p>
+
+<p>[Required]</p>
+
+<p><span id="visitProd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">visitProd (cmd, np, prod)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4002">4002</a>]</p>
+
+<p>Visit a production during the build process. If this is one of our noun
+phrase slots, we tell the command to add a new noun phrase of this type,
+and make it the current phrase; then we recursively build out this child
+to populate the new noun phrase.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

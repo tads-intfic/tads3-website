@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-hintmenu-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-hintmenu-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">HintMenu</span><span class="type">class</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#430">430</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A hint menu. This same class can be used for the top-level hints menu
+and for sub-menus within the hints menu.</p>
+
+<p>The typical hint menu system will be structured into a top-level hint
+menu that contains a set of sub-menus for the main areas of the game;
+each sub-menu will have a series of Goal items, each Goal providing a
+set of answers to a particular question. Something like this:</p>
+
+<p>topHintMenu: TopHintMenu ‘Hints’;</p>
+<ul>
+  <li>HintMenu ‘General Questions’;<br />
+++ Goal ‘What am I supposed to be doing?’ [answer, answer, answer];<br />
+++ Goal ‘Amusing things to try’ [thing, thing, thing];</li>
+  <li>HintMenu ‘First Area’;<br />
+++ Goal ‘How do I get past the shark?’ [answer, answer, answer];<br />
+++ Goal ‘How do I open the fish tank?’ [answer, answer, answer];</li>
+  <li>HintMenu ‘Second Area’;<br />
+++ Goal ‘Where is the gold key?’ [answer, answer, answer];<br />
+++ Goal ‘How do I unlock the gold door?’ [answer, answer, answer];</li>
+</ul>
+
+<p>Note that there’s no requirement that the hint menu tree takes exactly
+this shape. A very small game could dispense with the submenus and
+simply put all of the goals directly in the top hint menu. A very large
+game with lots of goals could add more levels of sub-menus to make it
+easier to navigate the large number of topics.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">HintMenu</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/MenuItem.html"><code class="language-plaintext highlighter-rouge">MenuItem</code></a> <a href="../object/HintMenuObject.html"><code class="language-plaintext highlighter-rouge">HintMenuObject</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">HintMenu</code></strong><br />
+<a href="../object/MenuItem.html"><code class="language-plaintext highlighter-rouge">MenuItem</code></a><br />
+<a href="../object/MenuObject.html"><code class="language-plaintext highlighter-rouge">MenuObject</code></a><br />
+`                         object<code class="language-plaintext highlighter-rouge">  
+[</code>HintMenuObject<code class="language-plaintext highlighter-rouge">](../object/HintMenuObject.html)  
+</code>                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">HintMenu</code></strong><br />
+<a href="../object/TopHintMenu.html"><code class="language-plaintext highlighter-rouge">TopHintMenu</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#allContents"><code class="language-plaintext highlighter-rouge">allContents</code></a> <a href="#isActiveInMenu"><code class="language-plaintext highlighter-rouge">isActiveInMenu</code></a> <a href="#title"><code class="language-plaintext highlighter-rouge">title</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuItem</code> :<br />
+<a href="../object/MenuItem.html#bgcolor"><code class="language-plaintext highlighter-rouge">bgcolor</code></a> <a href="../object/MenuItem.html#curKeyList"><code class="language-plaintext highlighter-rouge">curKeyList</code></a> <a href="../object/MenuItem.html#curMenu"><code class="language-plaintext highlighter-rouge">curMenu</code></a> <a href="../object/MenuItem.html#fgcolor"><code class="language-plaintext highlighter-rouge">fgcolor</code></a> <a href="../object/MenuItem.html#fullScreenMode"><code class="language-plaintext highlighter-rouge">fullScreenMode</code></a> <a href="../object/MenuItem.html#heading"><code class="language-plaintext highlighter-rouge">heading</code></a> <a href="../object/MenuItem.html#indent"><code class="language-plaintext highlighter-rouge">indent</code></a> <a href="../object/MenuItem.html#isOpen"><code class="language-plaintext highlighter-rouge">isOpen</code></a> <a href="../object/MenuItem.html#keyList"><code class="language-plaintext highlighter-rouge">keyList</code></a> <a href="../object/MenuItem.html#prevMenuLink"><code class="language-plaintext highlighter-rouge">prevMenuLink</code></a> <a href="../object/MenuItem.html#topbarbg"><code class="language-plaintext highlighter-rouge">topbarbg</code></a> <a href="../object/MenuItem.html#topbarfg"><code class="language-plaintext highlighter-rouge">topbarfg</code></a> <a href="../object/MenuItem.html#topMenu"><code class="language-plaintext highlighter-rouge">topMenu</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
+<a href="../object/MenuObject.html#contents"><code class="language-plaintext highlighter-rouge">contents</code></a> <a href="../object/MenuObject.html#menuOrder"><code class="language-plaintext highlighter-rouge">menuOrder</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">HintMenuObject</code> :<br />
+<a href="../object/HintMenuObject.html#topicOrder"><code class="language-plaintext highlighter-rouge">topicOrder</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addToContents"><code class="language-plaintext highlighter-rouge">addToContents</code></a> <a href="#initializeContents"><code class="language-plaintext highlighter-rouge">initializeContents</code></a> <a href="#updateContents"><code class="language-plaintext highlighter-rouge">updateContents</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuItem</code> :<br />
+<a href="../object/MenuItem.html#display"><code class="language-plaintext highlighter-rouge">display</code></a> <a href="../object/MenuItem.html#enterSubMenu"><code class="language-plaintext highlighter-rouge">enterSubMenu</code></a> <a href="../object/MenuItem.html#formatXML"><code class="language-plaintext highlighter-rouge">formatXML</code></a> <a href="../object/MenuItem.html#getChildIndex"><code class="language-plaintext highlighter-rouge">getChildIndex</code></a> <a href="../object/MenuItem.html#getKeysXML"><code class="language-plaintext highlighter-rouge">getKeysXML</code></a> <a href="../object/MenuItem.html#getNextMenu"><code class="language-plaintext highlighter-rouge">getNextMenu</code></a> <a href="../object/MenuItem.html#getPrevMenu"><code class="language-plaintext highlighter-rouge">getPrevMenu</code></a> <a href="../object/MenuItem.html#getXML"><code class="language-plaintext highlighter-rouge">getXML</code></a> <a href="../object/MenuItem.html#refreshTopMenuBanner"><code class="language-plaintext highlighter-rouge">refreshTopMenuBanner</code></a> <a href="../object/MenuItem.html#removeStatusLine"><code class="language-plaintext highlighter-rouge">removeStatusLine</code></a> <a href="../object/MenuItem.html#removeTopMenuBanner"><code class="language-plaintext highlighter-rouge">removeTopMenuBanner</code></a> <a href="../object/MenuItem.html#showMenu"><code class="language-plaintext highlighter-rouge">showMenu</code></a> <a href="../object/MenuItem.html#showMenuHtml"><code class="language-plaintext highlighter-rouge">showMenuHtml</code></a> <a href="../object/MenuItem.html#showMenuText"><code class="language-plaintext highlighter-rouge">showMenuText</code></a> <a href="../object/MenuItem.html#showTopMenuBanner"><code class="language-plaintext highlighter-rouge">showTopMenuBanner</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MenuObject</code> :<br />
+<a href="../object/MenuObject.html#compareForMenuSort"><code class="language-plaintext highlighter-rouge">compareForMenuSort</code></a> <a href="../object/MenuObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/MenuObject.html#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">HintMenuObject</code> :<br />
+<a href="../object/HintMenuObject.html#compareForTopicSort"><code class="language-plaintext highlighter-rouge">compareForTopicSort</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="allContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allContents</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#485">485</a>]</p>
+
+<p>our list of all of our sub-items (some of which may not be active, in
+which case they’ll appear in this list but not in our ‘contents’ list,
+which contains only active contents)</p>
+
+<p><span id="isActiveInMenu"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActiveInMenu</code></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#460">460</a>]</p>
+
+<p>we’re active in a menu if we have any active contents</p>
+
+<p><span id="title"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">title</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#432">432</a>]</p>
+
+<p>the menu’s title</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addToContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToContents (obj)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#463">463</a>]</p>
+
+<p>add a sub-item to our contents</p>
+
+<p><span id="initializeContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initializeContents ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#473">473</a>]</p>
+
+<p>initialize our contents list</p>
+
+<p><span id="updateContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">updateContents ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/hintsys.t.html">hintsys.t</a>[<a href="../source/hintsys.t.html#435">435</a>]</p>
+
+<p>update our contents</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

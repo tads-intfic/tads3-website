@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-bignumber-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-bignumber-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">BigNumber</span><span class="type">class</span></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#37">37</a>],
+<a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#407">407</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The BigNumber intrinsic class lets you perform floating-point and
+integer arithmetic with (almost) any desired precision. BigNumber uses a
+decimal representation, which means that decimal values can be
+represented exactly (i.e., with no rounding errors, as can happen with
+IEEE ‘double’ and ‘float’ values that languages like C typically
+support). BigNumber combines a varying-length mantissa with an exponent;
+the length of the mantissa determines how many digits of precision a
+given BigNumber can store, and the exponent lets you represent very
+large or very small values with minimal storage. You can specify the
+desired precision when you create a BigNumber explicitly; when BigNumber
+values are created implicitly by computations, the system chooses a
+precision based on the inputs to the calculations, typically equal to
+the largest of the precisions of the input values.</p>
+
+<p>The maximum precision for a BigNumber is about 64,000 digits, and the
+exponent can range from -32768 to +32767. Since this is a decimal
+exponent, this implies an absolute value range from 1.0e-32768 to
+1.0e+32767. The more digits of precision stored in a given BigNumber
+value, the more memory the object consumes, and the more time it takes
+to perform calculations using the value.</p>
+
+<p><em>Modified in
+<a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#407">407</a>]:</em><br />
+If desired, modify the BigNumber intrinsic class to provide a to-symbol
+mapping. We only include this modification if the program is compiled
+with REFLECT_BIGNUM defined.</p>
+
+<p><code class="language-plaintext highlighter-rouge">intrinsic class </code><strong><code class="language-plaintext highlighter-rouge">BigNumber</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BigNumber</code></strong><br />
+<a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a><br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#arccosine"><code class="language-plaintext highlighter-rouge">arccosine</code></a> <a href="#arcsine"><code class="language-plaintext highlighter-rouge">arcsine</code></a> <a href="#arctangent"><code class="language-plaintext highlighter-rouge">arctangent</code></a> <a href="#copySignFrom"><code class="language-plaintext highlighter-rouge">copySignFrom</code></a> <a href="#cosh"><code class="language-plaintext highlighter-rouge">cosh</code></a> <a href="#cosine"><code class="language-plaintext highlighter-rouge">cosine</code></a> <a href="#degreesToRadians"><code class="language-plaintext highlighter-rouge">degreesToRadians</code></a> <a href="#divideBy"><code class="language-plaintext highlighter-rouge">divideBy</code></a> <a href="#equalRound"><code class="language-plaintext highlighter-rouge">equalRound</code></a> <a href="#expE"><code class="language-plaintext highlighter-rouge">expE</code></a> <a href="#formatString"><code class="language-plaintext highlighter-rouge">formatString</code></a> <a href="#getAbs"><code class="language-plaintext highlighter-rouge">getAbs</code></a> <a href="#getCeil"><code class="language-plaintext highlighter-rouge">getCeil</code></a> <a href="#getE"><code class="language-plaintext highlighter-rouge">getE</code></a> <a href="#getFloor"><code class="language-plaintext highlighter-rouge">getFloor</code></a> <a href="#getFraction"><code class="language-plaintext highlighter-rouge">getFraction</code></a> <a href="#getPi"><code class="language-plaintext highlighter-rouge">getPi</code></a> <a href="#getPrecision"><code class="language-plaintext highlighter-rouge">getPrecision</code></a> <a href="#getScale"><code class="language-plaintext highlighter-rouge">getScale</code></a> <a href="#getWhole"><code class="language-plaintext highlighter-rouge">getWhole</code></a> <a href="#isNegative"><code class="language-plaintext highlighter-rouge">isNegative</code></a> <a href="#log10"><code class="language-plaintext highlighter-rouge">log10</code></a> <a href="#logE"><code class="language-plaintext highlighter-rouge">logE</code></a> <a href="#negate"><code class="language-plaintext highlighter-rouge">negate</code></a> <a href="#numType"><code class="language-plaintext highlighter-rouge">numType</code></a> <a href="#radiansToDegrees"><code class="language-plaintext highlighter-rouge">radiansToDegrees</code></a> <a href="#raiseToPower"><code class="language-plaintext highlighter-rouge">raiseToPower</code></a> <a href="#roundToDecimal"><code class="language-plaintext highlighter-rouge">roundToDecimal</code></a> <a href="#scaleTen"><code class="language-plaintext highlighter-rouge">scaleTen</code></a> <a href="#setPrecision"><code class="language-plaintext highlighter-rouge">setPrecision</code></a> <a href="#sine"><code class="language-plaintext highlighter-rouge">sine</code></a> <a href="#sinh"><code class="language-plaintext highlighter-rouge">sinh</code></a> <a href="#sqrt"><code class="language-plaintext highlighter-rouge">sqrt</code></a> <a href="#tangent"><code class="language-plaintext highlighter-rouge">tangent</code></a> <a href="#tanh"><code class="language-plaintext highlighter-rouge">tanh</code></a> <a href="#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+<a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a> <a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a> <a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a> <a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a> <a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a> <a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a> <a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a> <a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a> <a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="arccosine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">arccosine ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#182">182</a>]</p>
+
+<p>Calculate and return the arccosine (in radians). The value must be
+between -1 and +1 inclusive.</p>
+
+<p><span id="arcsine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">arcsine ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#176">176</a>]</p>
+
+<p>Calculate and return the arcsine (in radians) of the value. Note that
+the value must be between -1 and +1 inclusive, since sine() never has a
+value outside of this range.</p>
+
+<p><span id="arctangent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">arctangent ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#185">185</a>]</p>
+
+<p>calculate and return the arctangent (in radians)</p>
+
+<p><span id="copySignFrom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">copySignFrom (x)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#104">104</a>]</p>
+
+<p>copySignFrom - combine the absolute value of self with the sign of x</p>
+
+<p><span id="cosh"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cosh ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#213">213</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="cosine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cosine ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#151">151</a>]</p>
+
+<p>calculate and return the trigonometric cosine of the value (taken as a
+radian value)</p>
+
+<p><span id="degreesToRadians"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">degreesToRadians ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#163">163</a>]</p>
+
+<p>interpreting this number as a number of degrees, convert the value to
+radians and return the result</p>
+
+<p><span id="divideBy"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">divideBy (x)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#139">139</a>]</p>
+
+<p>Calculate the integer quotient and the remainder; returns a list whose
+first element is the integer quotient (a BigNumber containing an integer
+value), and whose second element is the remainder (the value R such that
+dividend = quotient*x + R).</p>
+
+<p>Note that the quotient returned will not necessarily have the same value
+as the whole part of dividing self by x with the ‘/’ operator, because
+this division handles rounding differently. In particular, the ‘/’
+operator will perform the appropriate rounding on the quotient if the
+quotient has insufficient precision to represent the exact result. This
+routine, in contrast, does NOT round the quotient, but merely truncates
+any trailing digits that cannot be represented in the result’s
+precision. The reason for this difference is that it ensures that the
+relation (dividend=quotient*x+remainder) holds, which would not always
+be the case if the quotient were rounded up.</p>
+
+<p>Note also that the remainder will not necessarily be less than the
+divisor. If the quotient cannot be exactly represented (which occurs if
+the precision of the quotient is smaller than its scale), the remainder
+will be the correct value so that the relationship above holds, rather
+than the unique remainder that is smaller than the divisor. In all cases
+where there is sufficient precision to represent the quotient exactly
+(to the units digit only, since the quotient returned from this method
+will always be an integer), the remainder will satisfy the relationship
+AND will be the unique remainder with absolute value less than the
+divisor.</p>
+
+<p><span id="equalRound"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">equalRound (num)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#47">47</a>]</p>
+
+<p>compare for equality after rounding to the smaller of my precision and
+num’s precision</p>
+
+<p><span id="expE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">expE ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#200">200</a>]</p>
+
+<p>raise e (the base of the natural logarithm) to the power of this value
+and return the result</p>
+
+<p><span id="formatString"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">formatString (maxDigits?, flags?, wholePlaces?, fracDigits?, expDigits?, leadFiller?)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#40">40</a>]</p>
+
+<p>format to a string</p>
+
+<p><span id="getAbs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getAbs ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#79">79</a>]</p>
+
+<p>return the absolute value</p>
+
+<p><span id="getCeil"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getCeil ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#82">82</a>]</p>
+
+<p>least integer greater than or equal to this number</p>
+
+<p><span id="getE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getE (digits)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#220">220</a>]</p>
+
+<p>class method: get the value of e to a given precision</p>
+
+<p><span id="getFloor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getFloor ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#85">85</a>]</p>
+
+<p>greatest integer less than or equal to this number</p>
+
+<p><span id="getFraction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getFraction ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#66">66</a>]</p>
+
+<p>get the fractional part</p>
+
+<p><span id="getPi"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPi (digits)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#217">217</a>]</p>
+
+<p>class method: get the value of pi to a given precision</p>
+
+<p><span id="getPrecision"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPrecision ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#53">53</a>]</p>
+
+<p>returns an integer giving the number of digits of precision that this
+number stores</p>
+
+<p><span id="getScale"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getScale ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#88">88</a>]</p>
+
+<p>get the base-10 scale of the number</p>
+
+<p><span id="getWhole"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getWhole ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#69">69</a>]</p>
+
+<p>get the whole part (truncates the fraction - doesn’t round)</p>
+
+<p><span id="isNegative"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isNegative ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#107">107</a>]</p>
+
+<p>determine if the value is negative</p>
+
+<p><span id="log10"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">log10 ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#203">203</a>]</p>
+
+<p>calculate the base-10 logarithm of the number and return the result</p>
+
+<p><span id="logE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">logE ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#194">194</a>]</p>
+
+<p>calculate the natural logarithm of this number and return the result</p>
+
+<p><span id="negate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">negate ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#98">98</a>]</p>
+
+<p>negate - invert the sign of the number</p>
+
+<p><span id="numType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numType ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#228">228</a>]</p>
+
+<p>Get the type of this number. This returns a combination of NumTypeXxx
+flags, combined with the ‘|’ operator. This can be used to check for
+special values, such as infinites and “not a number” values.</p>
+
+<p><span id="radiansToDegrees"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">radiansToDegrees ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#169">169</a>]</p>
+
+<p>interpreting this number as a number of radians, convert the value to
+degrees and return the result</p>
+
+<p><span id="raiseToPower"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">raiseToPower (x)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#209">209</a>]</p>
+
+<p>raise this number to the power of the argument and return the result</p>
+
+<p><span id="roundToDecimal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roundToDecimal (places)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#76">76</a>]</p>
+
+<p>round to the given number of digits after the decimal point; if the
+value is zero, round to integer; if the value is negative, round to the
+given number of places before the decimal point</p>
+
+<p><span id="scaleTen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scaleTen (x)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#95">95</a>]</p>
+
+<p>scale by 10^x - if x is positive, this multiplies the number by ten the
+given number of times; if x is negative, this divides the number by ten
+the given number of times</p>
+
+<p><span id="setPrecision"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setPrecision (digits)</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#63">63</a>]</p>
+
+<p>Return a new number, with the same value as this number but with the
+given number of decimal digits of precision. If the new precision is
+higher than the old precision, this will increase the precision to the
+requested new size and add trailing zeros to the value. If the new
+precision is lower than the old precision, we’ll round the number for
+the reduced precision.</p>
+
+<p><span id="sine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sine ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#145">145</a>]</p>
+
+<p>calculate and return the trigonometric sine of the value (taken as a
+radian value)</p>
+
+<p><span id="sinh"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sinh ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#212">212</a>]</p>
+
+<p>calculate the hyperbolic sine, cosine, and tangent</p>
+
+<p><span id="sqrt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sqrt ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#188">188</a>]</p>
+
+<p>calculate the square root and return the result</p>
+
+<p><span id="tangent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tangent ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#157">157</a>]</p>
+
+<p>calculate and return the trigonometric tangent of the value (taken as a
+radian value)</p>
+
+<p><span id="tanh"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tanh ( )</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#214">214</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="valToSymbol"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valToSymbol ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/reflect.t.html">reflect.t</a>[<a href="../source/reflect.t.html#408">408</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

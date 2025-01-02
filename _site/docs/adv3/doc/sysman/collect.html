@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-sysman-collect-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-sysman-collect-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Collection<br />
+<span class="navnp"><a href="charset.html" class="nav"><em>Prev:</em> CharacterSet</a>
+    <a href="date.html" class="nav"><em>Next:</em> Date</a>     </span></p>
+
+<h1 id="collection">Collection</h1>
+
+<p>A Collection is an object that contains a set of values. Each value in a
+Collection is called an element.</p>
+
+<p>The Collection intrinsic class is an abstract base class from which
+certain other intrinsic classes are derived. Because Collection is an
+abstract base class, you cannot create a Collection directly; you can
+only create its concrete subclasses. The Collection subclasses are:</p>
+
+<ul>
+  <li><a href="list.html">List</a></li>
+  <li><a href="lookup.html">LookupTable</a></li>
+  <li><a href="vector.html">Vector</a></li>
+</ul>
+
+<p>The Collection base class provides a set of operations that is common to
+all of its derived classes, so that all of these classes can be treated
+the same way for certain operations. In particular, Collection provides
+a mechanism that lets you iterate over all of the elements without
+regard to the specific mechanisms that the subclass normally uses to
+access the elements.</p>
+
+<h2 id="collection-methods">Collection methods</h2>
+
+<p><code class="language-plaintext highlighter-rouge">createIterator()</code></p>
+
+<p>Creates and returns an Iterator object. The Iterator is initialized so
+that it refers to the first element of the collection.</p>
+
+<p>Note that, when you call this method, the Iterator object is initialized
+with a “snapshot” of the collection’s contents. This means that you can
+use the Iterator to visit each element of the collection without having
+to worry about whether the collection can change. Even if you make
+changes to the contents of the collection after calling
+<code class="language-plaintext highlighter-rouge">createIterator()</code>, the Iterator object will
+refer to a consistent, frozen snapshot of the collection as it was when
+the Iterator was created.</p>
+
+<p><code class="language-plaintext highlighter-rouge">createLiveIterator()</code></p>
+
+<p>Creates and returns a “live” Iterator object. A live iterator refers
+directly to the original collection, not a snapshot copy of the
+collection.</p>
+
+<p>This method is provided mostly as an optimization for times when you
+know that the original collection won’t be modified in the course of the
+iteration, or at the least that it won’t be modified in such a way as to
+affect the iteration. Because the iterator object refers directly to the
+original collection, and not a frozen snapshot of it, changes made to
+the collection while traversing the elements using the iterator object
+could affect the iteration. If the collection changes while the Iterator
+is active, the Iterator is not guaranteed to visit every item in the
+collection, nor is it guaranteed to visit each item only once.
+Therefore, you should use <code class="language-plaintext highlighter-rouge">createIterator()</code>
+whenever there’s any doubt as to whether the collection could be
+modified while the Iterator is active, and use
+<code class="language-plaintext highlighter-rouge">createLiveIterator()</code> only when you are certain
+the collection will not change.</p>
+
+<p>Note that, for immutable collection objects, there is no difference
+between <code class="language-plaintext highlighter-rouge">createIterator()</code> and
+<code class="language-plaintext highlighter-rouge">createLiveIterator()</code>. For example, because a
+List object is immutable, a List returns identical iterators for both of
+these methods.</p>
+
+<hr />
+
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; Collection<br />
+<span class="navnp"><a href="charset.html" class="nav"><em>Prev:</em> CharacterSet</a>
+    <a href="date.html" class="nav"><em>Next:</em> Date</a>     </span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

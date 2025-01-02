@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-mainglobal-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-mainglobal-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">mainGlobal</span><span class="type">object</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1182">1182</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>global data object for this module</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">mainGlobal</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">mainGlobal</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#mainRestoreFunc"><code class="language-plaintext highlighter-rouge">mainRestoreFunc</code></a> <a href="#preinited_"><code class="language-plaintext highlighter-rouge">preinited_</code></a> <a href="#reflectionObj"><code class="language-plaintext highlighter-rouge">reflectionObj</code></a> <a href="#restartID"><code class="language-plaintext highlighter-rouge">restartID</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><em>(none)</em> <span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="mainRestoreFunc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mainRestoreFunc</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1212">1212</a>]</p>
+
+<p>pointer to mainRestore function, if defined</p>
+
+<p><span id="preinited_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">preinited_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1184">1184</a>]</p>
+
+<p>flag: we’ve run pre-initialization</p>
+
+<p><span id="reflectionObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reflectionObj</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1196">1196</a>]</p>
+
+<p>The global reflection object - if the program is compiled with the
+standard reflection module, that module will set this property to point
+to the reflection object.</p>
+
+<p>We use this so that we don’t require the reflection module to be
+included. If the module isn’t included, this will be nil, so we’ll know
+not to use reflection. If this is not nil, we’ll know we can use
+reflection services.</p>
+
+<p><span id="restartID"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restartID</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1209">1209</a>]</p>
+
+<p>Restart ID. This is an integer that indicates how the main entrypoint
+was last reached. This is initially zero; each time we restart the game,
+this is incremented.</p>
+
+<p>The restart ID is the only information that survives across a restart
+boundary. Other than this, entering via a restart is exactly like
+loading the program from scratch; all other information about the
+program state before the restart is lost in the restart operation.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><em>(none)</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

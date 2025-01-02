@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-apostrophespreparser-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-apostrophespreparser-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">apostropheSPreParser</span><span class="type">object</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5489">5489</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Possibly a temporary measure to replace the apostrophe in possessives in
+certain words in the player’s input with a carat in order to enable
+matching vocab.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">apostropheSPreParser</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/StringPreParser.html"><code class="language-plaintext highlighter-rouge">StringPreParser</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">apostropheSPreParser</code></strong><br />
+<a href="../object/StringPreParser.html"><code class="language-plaintext highlighter-rouge">StringPreParser</code></a><br />
+<a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
+<a href="../object/ModuleExecObject.html"><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></a><br />
+`                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#possTab"><code class="language-plaintext highlighter-rouge">possTab</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
+<a href="../object/StringPreParser.html#isActive"><code class="language-plaintext highlighter-rouge">isActive</code></a> <a href="../object/StringPreParser.html#regList"><code class="language-plaintext highlighter-rouge">regList</code></a> <a href="../object/StringPreParser.html#regListSorted"><code class="language-plaintext highlighter-rouge">regListSorted</code></a> <a href="../object/StringPreParser.html#runOrder"><code class="language-plaintext highlighter-rouge">runOrder</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addEntry"><code class="language-plaintext highlighter-rouge">addEntry</code></a> <a href="#doParsing"><code class="language-plaintext highlighter-rouge">doParsing</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
+<a href="../object/StringPreParser.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/StringPreParser.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/StringPreParser.html#registerPreParser"><code class="language-plaintext highlighter-rouge">registerPreParser</code></a> <a href="../object/StringPreParser.html#runAll"><code class="language-plaintext highlighter-rouge">runAll</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="possTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">possTab</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5514">5514</a>]</p>
+
+<p>If we haven’t created a LookupTable there aren’t any words to check for,
+so we can just return the string unaltered.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addEntry (key, val)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5516">5516</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="doParsing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doParsing (str, which)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5490">5490</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 20/06/2013 from adv3Lite version 0.91</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

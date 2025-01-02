@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-food-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-food-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Food : <a href="thing-thebasics.html">Thing</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="readable.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="disambigname.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The Food class, as its name suggests, is used for things that can be
+eaten. By default, when eaten, an object of class Food simply disappears
+(with a default message telling the player that he or she has eaten it).
+Since food can be eaten it can also be tasted, or smelt. For that
+matter, it can be touched or felt. To describe what happens when we
+TASTE it, SMELL it or FEEL it we can use its <strong>tasteDesc</strong>,
+<strong>smellDesc</strong> and <strong>feelDesc</strong> properties. If you really want to you can
+even define <strong>soundDesc</strong> to define a response to a LISTEN TO command.
+Actually, all four of these properties exist on Thing, but this seemed a
+convenient point at which to introduce them. Later on we shall be
+looking at more sophisticated ways of handling sensory information. For
+now we’ll just define a banana we’ll leave in squareCave:</p>
+
+<p>Food ’banana’ ’banana’ @squareCave<br />
+  ”It’s yellow, about six inches long, and slightly curved. And It looks<br />
+   reasonably fresh. ”<br />
+  tasteDesc = ”It’s distinctly banana-flavoured. ”<br />
+  smellDesc = ”It has a kind of faint, fruity smell. ”<br />
+  feelDesc = ”The banana skin feels firm but smooth. ”  <br />
+  soundDesc = ”The banana is strangely silent. ”<br />
+  initSpecialDesc = ”Someone has left a banana here. ”<br />
+;</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

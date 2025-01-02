@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-rulebook-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-rulebook-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">RuleBook</span><span class="type">class</span></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#20">20</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A RuleBook is a container for one or more rules. Calling the follow()
+method of a RuleBook causes each of its contained rules to be executed
+in turn until one returns a non-null value. That value is then returned
+to the caller of the RuleBook. [DEFINED IN RULES EXTENSION]</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">RuleBook</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">RuleBook</code></strong><br />
+<a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
+<a href="../object/ModuleExecObject.html"><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></a><br />
+`                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/afterRules.html"><code class="language-plaintext highlighter-rouge">afterRules</code></a> <a href="../object/beforeRules.html"><code class="language-plaintext highlighter-rouge">beforeRules</code></a> <a href="../object/initRules.html"><code class="language-plaintext highlighter-rouge">initRules</code></a> <a href="../object/preinitRules.html"><code class="language-plaintext highlighter-rouge">preinitRules</code></a> <a href="../object/reportRules.html"><code class="language-plaintext highlighter-rouge">reportRules</code></a> <a href="../object/turnEndRules.html"><code class="language-plaintext highlighter-rouge">turnEndRules</code></a> <a href="../object/turnStartRules.html"><code class="language-plaintext highlighter-rouge">turnStartRules</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#actor"><code class="language-plaintext highlighter-rouge">actor</code></a> <a href="#contents"><code class="language-plaintext highlighter-rouge">contents</code></a> <a href="#contValue"><code class="language-plaintext highlighter-rouge">contValue</code></a> <a href="#defaultVal"><code class="language-plaintext highlighter-rouge">defaultVal</code></a> <a href="#matchObj"><code class="language-plaintext highlighter-rouge">matchObj</code></a> <a href="#stopValue"><code class="language-plaintext highlighter-rouge">stopValue</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addToContents"><code class="language-plaintext highlighter-rouge">addToContents</code></a> <a href="#follow"><code class="language-plaintext highlighter-rouge">follow</code></a> <a href="#initBook"><code class="language-plaintext highlighter-rouge">initBook</code></a> <a href="#removeFromContents"><code class="language-plaintext highlighter-rouge">removeFromContents</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a> <a href="../object/ModuleExecObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="actor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actor</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#30">30</a>]</p>
+
+<p>The actor to use for comparison with the who property for rules in this
+RuleBook. The default is gPlayerChar, but for some RuleBooks gActor may
+be more appropriate.</p>
+
+<p><span id="contents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contents</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#23">23</a>]</p>
+
+<p>A list of rules contained in this rulebook</p>
+
+<p><span id="contValue"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contValue</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#120">120</a>]</p>
+
+<p>contValue (continue value) is the value that a Rule in this RuleBook
+needs to return to avoid the RuleBook stopping at that Rule (rather than
+going on to consider more Rules). By default this is null, which means
+by default a Rule that does not explicitly return a value (and so
+effectivelt returns nil) will stop the RuleBook. If you want the default
+behaviour for this RuleBook to be not for Rules to stop the book, then
+override this to nil. [RULES EXTENSION]</p>
+
+<p><span id="defaultVal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">defaultVal</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#131">131</a>]</p>
+
+<p>The default value to return to our caller. By default this is the same
+as our contValue , to make it easy to test whether we any rule returned
+a non-null value. By default a rule that does something will return nil,
+so if no rule does anything we want to return a different value. By
+making the defaultValue the same as the contValue, we ensure that we can
+tell our caller that no rule was executed (if that is indeed the case).
+[RULES EXTENSION]</p>
+
+<p><span id="matchObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchObj</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#153">153</a>]</p>
+
+<p>The object (or any other value) to be matched by our Rule’s matchObj
+conditions if they have any. This property is set by our follow() method
+(from its first argument) and so should not normally be directly changed
+from game code. [RULES EXTENSION]</p>
+
+<p><span id="stopValue"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stopValue</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#138">138</a>]</p>
+
+<p>The value our associated rules use by default to stop this RuleBook
+considering any further rules (when a Rule uses the stop macro). By
+default we use a value of true. [RULES EXTENSION]</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addToContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToContents (ru)</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#33">33</a>]</p>
+
+<p>Add a rule to the contents of this rulebook [RULES EXTENSION]</p>
+
+<p><span id="follow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">follow ([args])</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#61">61</a>]</p>
+
+<p>Follow this Rule. This is the method game code will normally call to
+make use of this RuleBook. Each of our rules will be tested to see if it
+matches its conditions; we then run through those of our rules that
+match their rules in order of precedence until one returns a non-null
+value, which we then in turn return to our caller. If no rule returns a
+non-null value we return our own default value, which is normally nil.</p>
+
+<p>This method can be called with as many arguments as the game code finds
+useful, or with none at all. Our arguments will then be passed on to
+each Rule that is called. The first argument will also be stored in our
+matchObj property, which our Rules can compare with their own matchObj
+condition to see if they match. This allows game code to, for example,
+run a RuleBook related to some object that isn’t one of the objects
+directly involved in the current action. [RULES EXTENSION]</p>
+
+<p><span id="initBook"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initBook ([args])</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#145">145</a>]</p>
+
+<p>Game code can use this method to initialize the values of custom
+RuleBook properties at the start of the processing of following a
+RuleBook. [RULES EXTENSION]</p>
+
+<p><span id="removeFromContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeFromContents (ru)</code></p>
+
+<p><a href="../file/rules.t.html">rules.t</a>[<a href="../source/rules.t.html#39">39</a>]</p>
+
+<p>Remove a rule from the contents of this rulebook [RULES EXTENSION]</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

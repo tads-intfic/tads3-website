@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-multifaceted-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-multifaceted-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">MultiFaceted</span><span class="type">class</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3264">3264</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A “multi-faceted” object is similar to a MultiInstance object, with the
+addition that the instance objects are “facets” of one another. This
+means that they have the same identity, from the perspective of a
+character in the scenario: all of the instance objects are part of the
+same conceptual object, not separate objects.</p>
+
+<p>This is especially useful for large objects that span multiple
+locations, such as a river or a long rope.</p>
+
+<p>You define a multi-faceted object the same way you set up a
+MultiInstance: definfe a MultiFaceted shell object, and as part of the
+shell, define the facet object using the instanceObject property. Here’s
+an example:</p>
+
+<p>river: MultiFaceted<br />
+locationList = [riverBank, meadow, canyon]<br />
+instanceObject: Fixture { ‘river’ ‘river’<br />
+“The river meanders by. “<br />
+}<br />
+;</p>
+
+<p>The main difference between MultiInstance and MultiFaceted is that the
+“facet” objects of a MultiFaceted are related as facets of a common
+object from the parser’s perspective. For example, if a player refers to
+one facet, then travels to another location that contains a different
+facet, then refers to “it”, the parser will realize that the pronoun
+refers to the new facet in the new location.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">MultiFaceted</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/MultiInstance.html"><code class="language-plaintext highlighter-rouge">MultiInstance</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MultiFaceted</code></strong><br />
+<a href="../object/MultiInstance.html"><code class="language-plaintext highlighter-rouge">MultiInstance</code></a><br />
+<a href="../object/BaseMultiLoc.html"><code class="language-plaintext highlighter-rouge">BaseMultiLoc</code></a><br />
+`                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#instanceMixIn"><code class="language-plaintext highlighter-rouge">instanceMixIn</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MultiInstance</code> :<br />
+<a href="../object/MultiInstance.html#instanceList"><code class="language-plaintext highlighter-rouge">instanceList</code></a> <a href="../object/MultiInstance.html#instanceObject"><code class="language-plaintext highlighter-rouge">instanceObject</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BaseMultiLoc</code> :<br />
+<a href="../object/BaseMultiLoc.html#initialLocationClass"><code class="language-plaintext highlighter-rouge">initialLocationClass</code></a> <a href="../object/BaseMultiLoc.html#locationList"><code class="language-plaintext highlighter-rouge">locationList</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#getFacets"><code class="language-plaintext highlighter-rouge">getFacets</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MultiInstance</code> :<br />
+<a href="../object/MultiInstance.html#addInstance"><code class="language-plaintext highlighter-rouge">addInstance</code></a> <a href="../object/MultiInstance.html#addToContents"><code class="language-plaintext highlighter-rouge">addToContents</code></a> <a href="../object/MultiInstance.html#getInstanceIn"><code class="language-plaintext highlighter-rouge">getInstanceIn</code></a> <a href="../object/MultiInstance.html#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a> <a href="../object/MultiInstance.html#moveInto"><code class="language-plaintext highlighter-rouge">moveInto</code></a> <a href="../object/MultiInstance.html#moveIntoAdd"><code class="language-plaintext highlighter-rouge">moveIntoAdd</code></a> <a href="../object/MultiInstance.html#moveOutOf"><code class="language-plaintext highlighter-rouge">moveOutOf</code></a> <a href="../object/MultiInstance.html#removeFromContents"><code class="language-plaintext highlighter-rouge">removeFromContents</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BaseMultiLoc</code> :<br />
+<a href="../object/BaseMultiLoc.html#buildLocationList"><code class="language-plaintext highlighter-rouge">buildLocationList</code></a> <a href="../object/BaseMultiLoc.html#isDirectlyIn"><code class="language-plaintext highlighter-rouge">isDirectlyIn</code></a> <a href="../object/BaseMultiLoc.html#isIn"><code class="language-plaintext highlighter-rouge">isIn</code></a> <a href="../object/BaseMultiLoc.html#isInitiallyIn"><code class="language-plaintext highlighter-rouge">isInitiallyIn</code></a> <a href="../object/BaseMultiLoc.html#isListedInContents"><code class="language-plaintext highlighter-rouge">isListedInContents</code></a> <a href="../object/BaseMultiLoc.html#isOrIsIn"><code class="language-plaintext highlighter-rouge">isOrIsIn</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="instanceMixIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">instanceMixIn</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3269">3269</a>]</p>
+
+<p>the mix-in superclass for our instance objects</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="getFacets"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getFacets ( )</code></p>
+
+<p><a href="../file/objects.t.html">objects.t</a>[<a href="../source/objects.t.html#3266">3266</a>]</p>
+
+<p>our instance objects represent our facets for parsing purposes</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

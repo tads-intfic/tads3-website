@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-commandreport-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-commandreport-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">CommandReport</span><span class="type">class</span></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#55">55</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Command report objects. The library uses these to control how the text
+from a command is displayed. Game code can also use report objects to
+show and control command results, but this isn’t usually necessary; game
+code can usually simply display messages directly.</p>
+
+<p>Reports are divided into two broad classes: “default” and “full”
+reports.</p>
+
+<p>A “default” report is one that simply confirms that an action was
+performed, and provides little additional information. The library uses
+default reports for simple commands whose full implications should
+normally be obvious to a player typing such commands: take, drop, put
+in, and the like. The library’s default reports are usually quite terse:
+“Taken”, “Dropped”, “Done”.</p>
+
+<p>A “full” report is one that gives the player more information than a
+simple confirmation. These reports typically describe either the changes
+to the game state caused by a command or surprising side effects of a
+command. For example, if the command is “push button,” and pushing the
+button opens the door next to the button, a full report would describe
+the door opening.</p>
+
+<p>Note that a full report is warranted any time a command describes
+anything beyond a simple confirmation. In our door-opening button
+example, opening the door by pushing the button always warrants a full
+report, even if the player has already seen the effects of the button a
+hundred times before, and even if the button is labeled “push to open
+door.” It doesn’t matter whether or not the consequences of the command
+ought to be obvious to the player; what matters is that the command
+warrants a report beyond a simple confirmation. Any time a report is
+more than a simple confirmation, it is a full report, no matter how
+obvious to the player the effects of the action.</p>
+
+<p>Full reports are further divided into three subcategories by time
+ordering: “main,” “before,” and “after.” “Before” and “after” reports
+are ordered before and after (respectively) a main report.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">CommandReport</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">CommandReport</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">CommandReport</code></strong><br />
+<a href="../object/CommandAnnouncement.html"><code class="language-plaintext highlighter-rouge">CommandAnnouncement</code></a><br />
+<a href="../object/AmbigObjectAnnouncement.html"><code class="language-plaintext highlighter-rouge">AmbigObjectAnnouncement</code></a><br />
+<a href="../object/CommandSepAnnouncement.html"><code class="language-plaintext highlighter-rouge">CommandSepAnnouncement</code></a><br />
+<a href="../object/DefaultObjectAnnouncement.html"><code class="language-plaintext highlighter-rouge">DefaultObjectAnnouncement</code></a><br />
+<a href="../object/ImplicitActionAnnouncement.html"><code class="language-plaintext highlighter-rouge">ImplicitActionAnnouncement</code></a><br />
+<a href="../object/MultiObjectAnnouncement.html"><code class="language-plaintext highlighter-rouge">MultiObjectAnnouncement</code></a><br />
+<a href="../object/RemappedActionAnnouncement.html"><code class="language-plaintext highlighter-rouge">RemappedActionAnnouncement</code></a><br />
+<a href="../object/CommandReportMessage.html"><code class="language-plaintext highlighter-rouge">CommandReportMessage</code></a><br />
+<a href="../object/CosmeticSpacingCommandReport.html"><code class="language-plaintext highlighter-rouge">CosmeticSpacingCommandReport</code></a><br />
+<a href="../object/DefaultCommandReport.html"><code class="language-plaintext highlighter-rouge">DefaultCommandReport</code></a><br />
+<a href="../object/DefaultDescCommandReport.html"><code class="language-plaintext highlighter-rouge">DefaultDescCommandReport</code></a><br />
+<a href="../object/ExtraCommandReport.html"><code class="language-plaintext highlighter-rouge">ExtraCommandReport</code></a><br />
+<a href="../object/FullCommandReport.html"><code class="language-plaintext highlighter-rouge">FullCommandReport</code></a><br />
+<a href="../object/AfterCommandReport.html"><code class="language-plaintext highlighter-rouge">AfterCommandReport</code></a><br />
+<a href="../object/BeforeCommandReport.html"><code class="language-plaintext highlighter-rouge">BeforeCommandReport</code></a><br />
+<a href="../object/FailCommandReport.html"><code class="language-plaintext highlighter-rouge">FailCommandReport</code></a><br />
+<a href="../object/MainCommandReport.html"><code class="language-plaintext highlighter-rouge">MainCommandReport</code></a><br />
+<a href="../object/QuestionCommandReport.html"><code class="language-plaintext highlighter-rouge">QuestionCommandReport</code></a><br />
+<a href="../object/ConvBoundaryReport.html"><code class="language-plaintext highlighter-rouge">ConvBoundaryReport</code></a><br />
+<a href="../object/ConvBeginReport.html"><code class="language-plaintext highlighter-rouge">ConvBeginReport</code></a><br />
+<a href="../object/ConvEndReport.html"><code class="language-plaintext highlighter-rouge">ConvEndReport</code></a><br />
+<a href="../object/GroupSeparatorMessage.html"><code class="language-plaintext highlighter-rouge">GroupSeparatorMessage</code></a><br />
+<a href="../object/InternalSeparatorMessage.html"><code class="language-plaintext highlighter-rouge">InternalSeparatorMessage</code></a><br />
+<a href="../object/MarkerReport.html"><code class="language-plaintext highlighter-rouge">MarkerReport</code></a><br />
+<a href="../object/EndOfDescReport.html"><code class="language-plaintext highlighter-rouge">EndOfDescReport</code></a><br />
+<a href="../object/FailCommandMarker.html"><code class="language-plaintext highlighter-rouge">FailCommandMarker</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#action_"><code class="language-plaintext highlighter-rouge">action_</code></a> <a href="#isFailure"><code class="language-plaintext highlighter-rouge">isFailure</code></a> <a href="#isQuestion"><code class="language-plaintext highlighter-rouge">isQuestion</code></a> <a href="#iter_"><code class="language-plaintext highlighter-rouge">iter_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#getAction"><code class="language-plaintext highlighter-rouge">getAction</code></a> <a href="#isActionImplicit"><code class="language-plaintext highlighter-rouge">isActionImplicit</code></a> <a href="#isActionNestedIn"><code class="language-plaintext highlighter-rouge">isActionNestedIn</code></a> <a href="#isPartOf"><code class="language-plaintext highlighter-rouge">isPartOf</code></a> <a href="#setAction"><code class="language-plaintext highlighter-rouge">setAction</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="action_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">action_</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#97">97</a>]</p>
+
+<p>the action I’m associated with</p>
+
+<p><span id="isFailure"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isFailure</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#85">85</a>]</p>
+
+<p>Flag: if this property is true, this report indicates a failure. By
+default, a report does not indicate failure.</p>
+
+<p><span id="isQuestion"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isQuestion</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#91">91</a>]</p>
+
+<p>Flag: if this property is true, this report indicates an interruption
+for interactive input.</p>
+
+<p><span id="iter_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iter_</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#94">94</a>]</p>
+
+<p>iteration number current when we were added to the transcript</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct ( )</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#56">56</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="getAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getAction ( )</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#67">67</a>]</p>
+
+<p>get/set my action</p>
+
+<p><span id="isActionImplicit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActionImplicit ( )</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#71">71</a>]</p>
+
+<p>check to see if my action is implicit</p>
+
+<p><span id="isActionNestedIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isActionNestedIn (other)</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#74">74</a>]</p>
+
+<p>check to see if my action is nested in the other report’s action</p>
+
+<p><span id="isPartOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isPartOf (report)</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#104">104</a>]</p>
+
+<p>Am I part of the same action as the given report? Returns true if this
+action is part of the same iteration and part of the same action as the
+other report.</p>
+
+<p><span id="setAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setAction (action)</code></p>
+
+<p><a href="../file/report.t.html">report.t</a>[<a href="../source/report.t.html#68">68</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

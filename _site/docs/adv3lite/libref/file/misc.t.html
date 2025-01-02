@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-file-misc-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-file-misc-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">misc.t</span><span class="type">file</span></p>
+
+<p><a href="../source/misc.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p>Adapted for adv3Lite by Eric Eve</p>
+
+<p>adv3Lite Library - miscellaneous definitions</p>
+
+<p>This module contains miscellaneous definitions that don’t have a natural
+grouping with any larger modules, and which aren’t complex enough to
+justify modules of their own.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><a href="../object/ArgumentMismatchError.html"><code class="language-plaintext highlighter-rouge">ArgumentMismatchError</code></a> <a href="../object/FinishOption.html"><code class="language-plaintext highlighter-rouge">FinishOption</code></a> <a href="../object/FinishType.html"><code class="language-plaintext highlighter-rouge">FinishType</code></a> <a href="../object/GameMainDef.html"><code class="language-plaintext highlighter-rouge">GameMainDef</code></a> <a href="../object/LCS.html"><code class="language-plaintext highlighter-rouge">LCS</code></a> <a href="../object/LibraryError.html"><code class="language-plaintext highlighter-rouge">LibraryError</code></a> <a href="../object/Script.html"><code class="language-plaintext highlighter-rouge">Script</code></a> <a href="../object/SingletonIterator.html"><code class="language-plaintext highlighter-rouge">SingletonIterator</code></a>
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Objects</span>  </p>
+
+<p><a href="../object/adv3LibInit.html"><code class="language-plaintext highlighter-rouge">adv3LibInit</code></a> <a href="../object/adv3LibPreinit.html"><code class="language-plaintext highlighter-rouge">adv3LibPreinit</code></a> <a href="../object/finishOptionAmusing.html"><code class="language-plaintext highlighter-rouge">finishOptionAmusing</code></a> <a href="../object/finishOptionCredits.html"><code class="language-plaintext highlighter-rouge">finishOptionCredits</code></a> <a href="../object/finishOptionFullScore.html"><code class="language-plaintext highlighter-rouge">finishOptionFullScore</code></a> <a href="../object/finishOptionQuit.html"><code class="language-plaintext highlighter-rouge">finishOptionQuit</code></a> <a href="../object/finishOptionRestart.html"><code class="language-plaintext highlighter-rouge">finishOptionRestart</code></a> <a href="../object/finishOptionRestore.html"><code class="language-plaintext highlighter-rouge">finishOptionRestore</code></a> <a href="../object/finishOptionScore.html"><code class="language-plaintext highlighter-rouge">finishOptionScore</code></a> <a href="../object/finishOptionUndo.html"><code class="language-plaintext highlighter-rouge">finishOptionUndo</code></a> <a href="../object/ftDeath.html"><code class="language-plaintext highlighter-rouge">ftDeath</code></a> <a href="../object/ftFailure.html"><code class="language-plaintext highlighter-rouge">ftFailure</code></a> <a href="../object/ftGameOver.html"><code class="language-plaintext highlighter-rouge">ftGameOver</code></a> <a href="../object/ftVictory.html"><code class="language-plaintext highlighter-rouge">ftVictory</code></a> <a href="../object/libGlobal.html"><code class="language-plaintext highlighter-rouge">libGlobal</code></a> <a href="../object/libObjectInitializer.html"><code class="language-plaintext highlighter-rouge">libObjectInitializer</code></a> <a href="../object/restoreOptionRestoreAnother.html"><code class="language-plaintext highlighter-rouge">restoreOptionRestoreAnother</code></a> <a href="../object/restoreOptionStartOver.html"><code class="language-plaintext highlighter-rouge">restoreOptionStartOver</code></a> <a href="../object/unknownDest_.html"><code class="language-plaintext highlighter-rouge">unknownDest_</code></a> <a href="../object/varDest_.html"><code class="language-plaintext highlighter-rouge">varDest_</code></a>
+<span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><a href="#cls"><code class="language-plaintext highlighter-rouge">cls</code></a> <a href="#failedRestoreOptions"><code class="language-plaintext highlighter-rouge">failedRestoreOptions</code></a> <a href="#findMatchingTopic"><code class="language-plaintext highlighter-rouge">findMatchingTopic</code></a> <a href="#finishGame"><code class="language-plaintext highlighter-rouge">finishGame</code></a> <a href="#finishGameMsg"><code class="language-plaintext highlighter-rouge">finishGameMsg</code></a> <a href="#isEmptyStr"><code class="language-plaintext highlighter-rouge">isEmptyStr</code></a> <a href="#isListSubset"><code class="language-plaintext highlighter-rouge">isListSubset</code></a> <a href="#makeMentioned"><code class="language-plaintext highlighter-rouge">makeMentioned</code></a> <a href="#matchCase"><code class="language-plaintext highlighter-rouge">matchCase</code></a> <a href="#nilToList"><code class="language-plaintext highlighter-rouge">nilToList</code></a> <a href="#objOfKind"><code class="language-plaintext highlighter-rouge">objOfKind</code></a> <a href="#overrides"><code class="language-plaintext highlighter-rouge">overrides</code></a> <a href="#partitionList"><code class="language-plaintext highlighter-rouge">partitionList</code></a> <a href="#processOptions"><code class="language-plaintext highlighter-rouge">processOptions</code></a> <a href="#setPlayer"><code class="language-plaintext highlighter-rouge">setPlayer</code></a> <a href="#tryInt"><code class="language-plaintext highlighter-rouge">tryInt</code></a> <a href="#tryNum"><code class="language-plaintext highlighter-rouge">tryNum</code></a> <a href="#valToList"><code class="language-plaintext highlighter-rouge">valToList</code></a></p>
+
+<p><span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><span id="cls"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cls ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#420">420</a>]</p>
+
+<p>Clear the main game window. In most cases, you should call this rather
+than calling the low-level clearScreen() function directly, since this
+routine takes care of a couple of chores that should usually be done at
+the same time.</p>
+
+<p>First, we flush the transcript to ensure that no left-over reports that
+were displayed before we cleared the screen will show up on the new
+screen. Second, we call the low-level clearScreen() function to actually
+clear the display window. Finally, we re-display any &lt;ABOUTBOX&gt; tag,
+to ensure that the about-box will still be around; this is necessary
+because any existing &lt;ABOUTBOX&gt; tag is lost after the screen is
+cleared.</p>
+
+<p><span id="failedRestoreOptions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">failedRestoreOptions ( )</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#981">981</a>]</p>
+
+<p>Show failed startup restore options. If a restore operation fails at
+startup, we won’t just proceed with the game, but ask the user what they
+want to do; we’ll offer the options of restoring another game, quitting,
+or starting the game from the beginning.</p>
+
+<p><span id="findMatchingTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findMatchingTopic (voc, cls, =, Topic)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1550">1550</a>]</p>
+
+<p>Find an existing Topic whose vocab is voc. If the cls parameter is
+supplied it can be used to find a match in some other class, such as
+Thing or Mentionable.</p>
+
+<p><span id="finishGame"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishGame (extra)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#970">970</a>]</p>
+
+<p>finish the game, offering the given extra options but no message</p>
+
+<p><span id="finishGameMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishGameMsg (msg, extra)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#912">912</a>]</p>
+
+<p>Finish the game, showing a message explaining why the game has ended.
+This can be called when an event occurs that ends the game, such as the
+player character’s death, winning, or any other endpoint in the story.</p>
+
+<p>We’ll show a message defined by ‘msg’, using a standard format. The
+format depends on the language, but in English, it’s usually the message
+surrounded by asterisks: “*** You have won! ***”. ‘msg’ can be:</p>
+
+<ul>
+  <li>nil, in which case we display nothing</li>
+  <li>a string, which we’ll display as the message</li>
+  <li>a FinishType object, from which we’ll get the message</li>
+</ul>
+
+<p>After showing the message (if any), we’ll prompt the user with options
+for how to proceed. We’ll always show the QUIT, RESTART, and RESTORE
+options; other options can be offered by listing one or more
+FinishOption objects in the ‘extra’ parameter, which is given as a list
+of FinishOption objects. The library defines a few non-default finish
+options, such as finishOptionUndo and finishOptionCredits; in addition,
+the game can subclass FinishOption to create its own custom options, as
+desired.</p>
+
+<p><span id="isEmptyStr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isEmptyStr (str)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1736">1736</a>]</p>
+
+<p>A string is empty if it’s nil or if when trimmed it’s ‘’</p>
+
+<p><span id="isListSubset"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isListSubset (a, b)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1523">1523</a>]</p>
+
+<p>Determine if list a is a subset of list b. a is a subset of b if every
+element of a is in b.</p>
+
+<p><span id="makeMentioned"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">makeMentioned (obj)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1490">1490</a>]</p>
+
+<p>Set the mentioned property of obj to true. If obj is supplied as a list,
+set every object’s mentioned property in the list to true. This can be
+used in room and object descriptions to mark an object as mentioned so
+it won’t be included in the listing.</p>
+
+<p><span id="matchCase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchCase (newTok, oldTok)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2215">2215</a>]</p>
+
+<p>Change the case (upper/lower) of a given new string to match the case
+pattern of the given original string.</p>
+
+<p>We recognize four patterns:</p>
+
+<p>- If the original string has at least one capital letter and no
+minuscules, we convert the new string to all caps. For example,
+matchCase(‘ALPHA-1’, ‘omicron-7’) yields ‘OMICRON-7’.</p>
+
+<p>- If the original string has at least one lower-case letter and no
+capitals, we convert the new string to all lower case. E.g.,
+matchCase(‘alpha-1’, ‘OMICRON-7’) yields ‘omicron-7’.</p>
+
+<p>- If the original string starts with a capital letter, and has at least
+one lower-case letter and no other capitals, we capitalize the first
+letter of the new string and lower-case everything else. E.g.,
+matchCase(‘Alpha-1’, ‘OMICRON-7’) yields ‘Omicron-7’.</p>
+
+<p>- Otherwise, we match the case pattern of the input string letter for
+letter: for each upper-case letter in the original, we capitalize the
+letter at the corresponding character index in the new string, and
+likewise with lower-case letters in the original. We leave other
+characters unchanged. E.g., matchCase(‘AlPhA-1’, ‘omicron-7’) yields
+‘OmIcRon-7’.</p>
+
+<p><span id="nilToList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nilToList (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1456">1456</a>]</p>
+
+<p>nilToList - convert a ‘nil’ value to an empty list. This can be useful
+for mix-in classes that will be used in different inheritance contexts,
+since the classes might or might not inherit a base class definition for
+list-valued methods such as preconditions. This provides a usable
+default for list-valued methods that return nothing from superclasses.</p>
+
+<p><span id="objOfKind"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objOfKind (obj, cls)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2467">2467</a>]</p>
+
+<p>Service function to determine whether obj is ofKind cls when obj might
+not be an object.</p>
+
+<p><span id="overrides"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">overrides (obj, base, prop)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#436">436</a>]</p>
+
+<p>Determine if the given object overrides the definition of the given
+property inherited from the given base class. Returns true if the object
+derives from the given base class, and the object’s definition of the
+property comes from a different place than the base class’s definition
+of the property.</p>
+
+<p><span id="partitionList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">partitionList (lst, fn)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1511">1511</a>]</p>
+
+<p>partitionList - partition a list into a pair of two lists, the first
+containing items that match the predicate ‘fn’, the second containing
+items that don’t match ‘fn’. ‘fn’ is a function pointer (usually an
+anonymous function) that takes a single argument - a list element - and
+returns true or nil.</p>
+
+<p>The return value is a list with two elements. The first element is a
+list giving the elements of the original list for which ‘fn’ returns
+true, the second element is a list giving the elements for which ‘fn’
+returns nil.</p>
+
+<p>(Contributed by Tommy Nordgren.)</p>
+
+<p><span id="processOptions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processOptions (lst)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#992">992</a>]</p>
+
+<p>Process a list of finishing options. We’ll loop, showing prompts and
+reading responses, until we get a response that terminates the loop.</p>
+
+<p><span id="setPlayer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setPlayer (actor, person, =, 2)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1566">1566</a>]</p>
+
+<p>Set the player character to another actor. If the optional second
+parameter is supplied, it sets the person of the player character;
+otherwise it defaults to the second person.</p>
+
+<p><span id="tryInt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryInt (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1348">1348</a>]</p>
+
+<p>Try converting val to an integer. If this results in an integer value,
+return it, otherwise return nil.</p>
+
+<p><span id="tryNum"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryNum (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1401">1401</a>]</p>
+
+<p>Try converting val to a number (integer or BigNumber); return the number
+if there is one, otherwise return nil.</p>
+
+<p><span id="valToList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">valToList (val)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#1466">1466</a>]</p>
+
+<p>val to list - convert any value to a list. If it’s already a list,
+simply return it. If it’s nil return an empty list. If it’s a singleton
+value, return a one-element list containing it.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

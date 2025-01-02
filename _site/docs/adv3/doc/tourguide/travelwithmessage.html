@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-travelwithmessage-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-travelwithmessage-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TravelWithMessage : object<br />
+</strong></td>
+<td style="text-align: right;"><a href="stairwayup.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="secretdoor.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>TravelWithMessage is a mix-in class for use with TravelConnectors (note
+that some descendents of TravelConnector -
+<a href="travelmessage.html">TravelMessage</a>,
+<a href="notravelmessage.html">NoTravelMessage</a> and
+<a href="fakeconnector.html">FakeConnector</a> - include TravelWithMessage in their
+definition in any case). TravelConnector overrides
+noteTraversal(traveler) to call showTravelDesc(), which in turn calls
+either travelDesc (if the Player Character is doing the traveling) or
+npcTravelDesc (if an NPC is doing the traveling).</p>
+
+<p>Firstly, we’ll add TravelWithMessage to the upLadder’s class list so
+that we can use its travelDesc property. We take advantage of the fact
+that this will call upLadder’s doScript method provided that it also
+inherits from the <a href="script.html">Script</a> class or one of its descendents.
+In this case we’ll use the <a href="stopeventlist.html">StopEventList</a> class with
+two items in its eventList. The first time the PC traverses the upLadder
+the first event in the eventList will be fired, and thereafter the
+second one will (defining with the <a href="passagetemplate.html">Passage
+template</a>):</p>
+
+<p>+ upLadder : TravelWithMessage, StairwayUp, StopEventList  -&gt;downLadder <br />
+  ’sturdy steel ladder’ ’sturdy steel ladder’<br />
+  ”The ladder leads up through a hole in the ceiling. ”   <br />
+<strong>  eventList =</strong> **<br />
+  [<br />
+    new function<br />
+    {<br />
+      ”As you climb the ladder you hear what sounds like a thunderous rockfall<br />
+       up above. ”;<br />
+      entranceTunnel.blocked = true;       <br />
+    },<br />
+    ’You climb the ladder again. ’<br />
+  ]  <br />
+**;</p>
+
+<p>This takes advantage of the fact that an eventList can contain, inter
+alia, single-quoted strings (such as ‘You climb the ladder again. ‘),
+which will just be displayed, or anonymous function pointers, in which
+case the anonymous function will be executed. To create an anonymous
+function containing more than one statement, as we wish to do here, we
+have to use the new function syntax:</p>
+
+<p>new function<br />
+{<br />
+  *statement1;<br />
+  statement2;<br />
+*  …<br />
+}</p>
+
+<p>In this case the function simply prints an appropriate message about the
+rockfall and sets <a href="roomconnector.html">entranceTunnel</a>’s blocked property
+to true.</p>
+
+<p>You can now recompile and test the game so far.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

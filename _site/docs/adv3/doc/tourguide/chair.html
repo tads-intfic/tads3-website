@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-chair-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-chair-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Chair : <a href="basicchair.html">BasicChair</a>, <a href="surface.html">Surface</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="bed.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="highnestedroom.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Having provided King Solomon somewhere to sleep, we can go on to provide
+somewhere for him to sit - a chair in the neighbouring room (along with
+one or two useful items):</p>
+
+<p>solomonStudy : Room ’Study’ ’the study’<br />
+  ”This is another square, cedar-panelled room, with windows to north and south<br />
+   and doors to east and west. It is largely bare apart from a table and chair<br />
+   over by the northern window. ”<br />
+  east = solBedroomDoorOutside<br />
+  west = studyDoor<br />
+;</p>
+
+<p>+ solBedroomDoorOutside : Door <br />
+   -&gt; solBedroomDoor ’bedroom door*doors’ ’bedroom door’<br />
+;</p>
+
+<p>+ studyDoor : Door ’study door’ ’study door’<br />
+  ”Predictably enough, it’s made of cedar. ”<br />
+  checkDobjOpen<br />
+  {<br />
+    reportFailure(‘You\d better not go that way. ’);<br />
+    exit;<br />
+  }<br />
+;</p>
+
+<p>+ solomonTable : Surface, Heavy ’table’ ’table’<br />
+  ”It’s a plain, square, cedarwood table. ”<br />
+;</p>
+
+<p>++ baarasRoot : Thing ’flame-coloured flame coloured baaras root/mandrake’ <br />
+  ’flame-coloured root’<br />
+  ”The flame-coloured root is forked and fleshy. ”<br />
+;</p>
+
+<p>++ carbuncle : Thing ’purple carbuncle/ruby/stone’ ’purple carbuncle’<br />
+   ”It’s an amazingly large stone - probably a ruby, but with a curious purple tinge. ”<br />
+;</p>
+
+<p>+ solomonChair : Chair, Heavy ’chair’ ’chair’<br />
+  ”The chair is made of cedar. It’s quite large and elegantly carved with<br />
+   pomegranates, but is totally unpadded and doesn’t look terribly<br />
+   comfortable. ”<br />
+;</p>
+
+<p>And just to show this works, we can put the king himself in his chair:</p>
+
+<p>solomon : Person ’king solomon’ ’King Solomon’ @solomonChair<br />
+  isHim = true   <br />
+  isProperName = true<br />
+  posture = sitting<br />
+;</p>
+
+<p>Okay, so you think a study is a bit of an anachronism in a tenth-century
+BCE palace; you’re probably right, but then where did Solomon sit around
+while he was getting all that wisdom? The Baaras root, by the way, will
+be used for its exorcistic properties. In the meantime, we already have
+another chair, the one in the cabin of our ship:</p>
+
+<p>cabinChair : Chair ’padded chair/cushion’ ’chair’ @deskRear<br />
+  ”It’s a fine wooden chair with a round back and a padded cushion. ”<br />
+  initSpecialDesc = ”A wooden chair sits behind the desk. ”<br />
+  bulk = 10<br />
+  weight = 7<br />
+;</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

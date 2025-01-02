@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-verifyresult-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-verifyresult-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">VerifyResult</span><span class="type">class</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3314">3314</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Verify Results: objects of this class are created by macros like
+logicalRank() and illogical() that are used in verify routines and
+stored in the verTab table of the current action.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">VerifyResult</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">VerifyResult</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p>` <a href="#allowAction"><code class="language-plaintext highlighter-rouge">allowAction</code></a>  <a href="#allowImplicit"><code class="language-plaintext highlighter-rouge">allowImplicit</code></a>  <a href="#errMsg"><code class="language-plaintext highlighter-rouge">errMsg</code></a>  <a href="#myObj"><code class="language-plaintext highlighter-rouge">myObj</code></a>  <a href="#resultRank"><code class="language-plaintext highlighter-rouge">resultRank</code></a>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p>` <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="allowAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowAction</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3328">3328</a>]</p>
+
+<p>Is the action allowed to proceed according to this verify result?</p>
+
+<p><span id="allowImplicit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowImplicit</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3331">3331</a>]</p>
+
+<p>Can this action be performed as an implicit action?</p>
+
+<p><span id="errMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">errMsg</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3325">3325</a>]</p>
+
+<p>The error message to display if this verify result prevents an action
+from going ahead.</p>
+
+<p><span id="myObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">myObj</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3334">3334</a>]</p>
+
+<p>The object to which this verify result refers</p>
+
+<p><span id="resultRank"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resultRank</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3319">3319</a>]</p>
+
+<p>Our resultRank; the lower this number the less likely it is that this
+action could succeed, or the more illogical it is.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (score_, errmsg_, allowAction_, myObj_, allowImplicit_, =, true)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3337">3337</a>]</p>
+
+<p>The constructor for creating a new verify result.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

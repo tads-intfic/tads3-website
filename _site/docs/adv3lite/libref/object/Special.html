@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-special-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-special-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Special</span><span class="type">class</span></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#565">565</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A Special defines a set of custom overrides to standard Query questions
+that apply under specific conditions.</p>
+
+<p>At any given time, a Special is either active or inactive. This is
+determined by the active() method.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Special</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Special</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/commLink.html"><code class="language-plaintext highlighter-rouge">commLink</code></a> <a href="../object/QDefaults.html"><code class="language-plaintext highlighter-rouge">QDefaults</code></a> <a href="../object/QSenseRegion.html"><code class="language-plaintext highlighter-rouge">QSenseRegion</code></a> <a href="../object/QViewport.html"><code class="language-plaintext highlighter-rouge">QViewport</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#active"><code class="language-plaintext highlighter-rouge">active</code></a> <a href="#all"><code class="language-plaintext highlighter-rouge">all</code></a> <a href="#allActive_"><code class="language-plaintext highlighter-rouge">allActive_</code></a> <a href="#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#allActive"><code class="language-plaintext highlighter-rouge">allActive</code></a> <a href="#classInit"><code class="language-plaintext highlighter-rouge">classInit</code></a> <a href="#first"><code class="language-plaintext highlighter-rouge">first</code></a> <a href="#next"><code class="language-plaintext highlighter-rouge">next</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="active"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">active</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#570">570</a>]</p>
+
+<p>Am I active? Each instance should override this to define the conditions
+that activate the Special.</p>
+
+<p><span id="all"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">all</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#711">711</a>]</p>
+
+<p>Class property: the list of all Special objects throughout the game.
+This is set up during preinit.</p>
+
+<p><span id="allActive_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allActive_</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#685">685</a>]</p>
+
+<p>Class property: cache of all currently active Specials. This is set
+whenever someone asks for the list and it’s not available, and is
+cleared whenever an Effect modifies the game state. (Callers shouldn’t
+access this directly - this is an internal cache. Use the allActive()
+method instead.)</p>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#607">607</a>]</p>
+
+<p>My priority. This is an integer value that determines which Special
+takes precedence when two or more Specials are active at the same time,
+and they both/all define a given query method. In such a situation, Q
+calls the active Specials in ascending priority order (lowest first,
+highest last), and takes the last one’s answer as the true answer to the
+question. This means that the Special with the highest priority takes
+precedence, and can override any lower-ranking Special that’s active at
+the same time.</p>
+
+<p>The library uses the following special priority values:</p>
+
+<p>0 = the basic library defaults. The defaults must have the lowest
+priority, meaning that all Special objects defined by a game or
+extension must use priorities higher than 0.</p>
+
+<p>Other than the special priorities listed above, the priority is simply a
+relative ordering, so games and extensions can use whatever range of
+values they like.</p>
+
+<p>Note that priorities can’t change while running. This is a permanent
+feature of the object. We take advantage of this to avoid re-sorting the
+active list every time we build it. We sort the master list at
+initialization and assume it stays sorted, so that any subset is
+inherently sorted. If it’s important to the game to dynamically change
+priorities, you just need to re-sort the allActive_ list at appropriate
+times. If priorities can only change when the game-world state changes,
+you can simply sort the list in allActive() each time it’s rebuilt. If
+priorities can change at other times (which doesn’t seem like it’d be
+useful, but just in case), you’d need to re-sort the list on every call
+to allActive(), even when the list isn’t rebuilt.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="allActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allActive ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#666">666</a>]</p>
+
+<p>Class method: get the list of active Specials.</p>
+
+<p><span id="classInit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">classInit ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#688">688</a>]</p>
+
+<p>during initialization, build the list of all Specials</p>
+
+<p><span id="first"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">first (prop)</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#644">644</a>]</p>
+
+<p>Get the first active Special (the one with the highest priority) that
+defines the given method. This is used by the Q query methods to invoke
+the correct current Special version of the method.</p>
+
+<p><span id="next"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">next ( )</code></p>
+
+<p><a href="../file/query.t.html">query.t</a>[<a href="../source/query.t.html#621">621</a>]</p>
+
+<p>Call the same method in the next lower priority Special. This can be
+used in any Special query method to invoke the “default” version that
+would have been used if the current Special had not been active.</p>
+
+<p>This is analogous to using ‘inherited’ to inherit the superclass version
+of a method from an overriding version in a subclass. As with
+‘inherited’, you can only call this directly from the method that you
+want to pass to the default handling, because this routine determines
+what to call based on the caller.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-clientsession-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-clientsession-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">ClientSession</span><span class="type">class</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#379">379</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Client session. This represents a connection to one browser (or other
+client application). Each browser client is a separate session, so we
+create one instance of this class per connected browser. Note that
+browser instances don’t necessarily represent different users - a single
+user could open multiple browser windows on the same server.</p>
+
+<p>We identify each browser instance via a session cookie, which we
+establish when the client connects. The browser sends the cookie with
+each subsequent request, allowing us to tie the request to the browser
+session we previously set up.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ClientSession</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ClientSession</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#clientKey"><code class="language-plaintext highlighter-rouge">clientKey</code></a> <a href="#downloads"><code class="language-plaintext highlighter-rouge">downloads</code></a> <a href="#ifdbTuid"><code class="language-plaintext highlighter-rouge">ifdbTuid</code></a> <a href="#isAlive"><code class="language-plaintext highlighter-rouge">isAlive</code></a> <a href="#isPrimary"><code class="language-plaintext highlighter-rouge">isPrimary</code></a> <a href="#lastEventTime"><code class="language-plaintext highlighter-rouge">lastEventTime</code></a> <a href="#pendingEvts"><code class="language-plaintext highlighter-rouge">pendingEvts</code></a> <a href="#pendingReqs"><code class="language-plaintext highlighter-rouge">pendingReqs</code></a> <a href="#screenName"><code class="language-plaintext highlighter-rouge">screenName</code></a> <a href="#storageSID"><code class="language-plaintext highlighter-rouge">storageSID</code></a> <a href="#uiPrefs"><code class="language-plaintext highlighter-rouge">uiPrefs</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addDownload"><code class="language-plaintext highlighter-rouge">addDownload</code></a> <a href="#allDownloads"><code class="language-plaintext highlighter-rouge">allDownloads</code></a> <a href="#broadcastDownload"><code class="language-plaintext highlighter-rouge">broadcastDownload</code></a> <a href="#broadcastEvent"><code class="language-plaintext highlighter-rouge">broadcastEvent</code></a> <a href="#cancelDownload"><code class="language-plaintext highlighter-rouge">cancelDownload</code></a> <a href="#checkDisconnect"><code class="language-plaintext highlighter-rouge">checkDisconnect</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#disconnectAll"><code class="language-plaintext highlighter-rouge">disconnectAll</code></a> <a href="#find"><code class="language-plaintext highlighter-rouge">find</code></a> <a href="#flushEvents"><code class="language-plaintext highlighter-rouge">flushEvents</code></a> <a href="#getPrimary"><code class="language-plaintext highlighter-rouge">getPrimary</code></a> <a href="#processQueues"><code class="language-plaintext highlighter-rouge">processQueues</code></a> <a href="#requestEvent"><code class="language-plaintext highlighter-rouge">requestEvent</code></a> <a href="#sendEvent"><code class="language-plaintext highlighter-rouge">sendEvent</code></a> <a href="#sendKeepAlive"><code class="language-plaintext highlighter-rouge">sendKeepAlive</code></a> <a href="#setDefaultScreenName"><code class="language-plaintext highlighter-rouge">setDefaultScreenName</code></a> <a href="#shutdownWait"><code class="language-plaintext highlighter-rouge">shutdownWait</code></a> <a href="#updateEventTime"><code class="language-plaintext highlighter-rouge">updateEventTime</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="clientKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clientKey</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#439">439</a>]</p>
+
+<p>The client session key. This identifies the client across requests. We
+send this to the client as a cookie when they connect, so we get it back
+on each request.</p>
+
+<p><span id="downloads"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">downloads</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#619">619</a>]</p>
+
+<p>this client’s list of downloadable temporary files</p>
+
+<p><span id="ifdbTuid"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ifdbTuid</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#422">422</a>]</p>
+
+<p>the client’s IFDB user ID (a “TUID”), if logged in to IFDB</p>
+
+<p><span id="isAlive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isAlive</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#463">463</a>]</p>
+
+<p>Is this session alive? When we detect that the client has disconnected,
+we’ll set this to nil. When waiting for a client in a modal event loop,
+this can be used to terminate the wait if the client disconnects.</p>
+
+<p><span id="isPrimary"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isPrimary</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#455">455</a>]</p>
+
+<p>Am I the primary player? This is true if the player connected using the
+primary session key. Collaborative players join through the separate
+collaborative session key.</p>
+
+<p><span id="lastEventTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastEventTime</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#472">472</a>]</p>
+
+<p>Last request time, in system ticks (ms). We use this to determine how
+long it’s been since we’ve heard from the client, for timeout purposes.
+This is updated any time we receive a command or event request from the
+client, and each time we successfully send an event reply.</p>
+
+<p><span id="pendingEvts"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pendingEvts</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#432">432</a>]</p>
+
+<p>The client’s event queue. When a server-to-client event occurs, we post
+it to each current client’s queue. When the client sends a get-event
+request, we satisfy it out of this queue.</p>
+
+<p><span id="pendingReqs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pendingReqs</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#425">425</a>]</p>
+
+<p>the list of pending event requests from this client</p>
+
+<p><span id="screenName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">screenName</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#406">406</a>]</p>
+
+<p>The client’s “screen name” - this is the user-visible name that we’ll
+show other users to identify commands and chat messages entered by this
+client.</p>
+
+<p><span id="storageSID"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">storageSID</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#448">448</a>]</p>
+
+<p>The storage server session key for the user connected to this session,
+if any. We can have multiple users logged in to the game in
+collaborative play mode, each with their own separate storage server
+session. This allows each user to have their own private preference
+settings, saved games, etc.</p>
+
+<p><span id="uiPrefs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">uiPrefs</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#399">399</a>]</p>
+
+<p>the UI preferences object for this session</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addDownload"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addDownload (desc)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#597">597</a>]</p>
+
+<p>add a download to this client</p>
+
+<p><span id="allDownloads"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allDownloads ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#622">622</a>]</p>
+
+<p>get a list of all of my downloadable files</p>
+
+<p><span id="broadcastDownload"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">broadcastDownload (desc)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#590">590</a>]</p>
+
+<p>broadcast a downloadable file to all clients</p>
+
+<p><span id="broadcastEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">broadcastEvent (msg)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#478">478</a>]</p>
+
+<p>class method: broadcast an event message to all connected clients</p>
+
+<p><span id="cancelDownload"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cancelDownload (desc)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#607">607</a>]</p>
+
+<p>Cancel a downloadable file. Removes the file from the download list and
+notifies the client that the file is no longer available.</p>
+
+<p><span id="checkDisconnect"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkDisconnect ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#693">693</a>]</p>
+
+<p>Check to see if the client is still alive. If the client has no pending
+event requests, and we haven’t heard from the client in more than the
+client session timeout interval, assume the client is no longer
+connected and kill the session object.</p>
+
+<p>This should be called whenever a sending a reply to a request fails with
+a Socket Disconnect exception. We also run this periodically during
+routine housekeeping to check for clients that haven’t even bothered to
+send a request.</p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (skey, ssid)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#380">380</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="disconnectAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">disconnectAll ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#714">714</a>]</p>
+
+<p>Class method: forcibly disconnect all clients. This simply deletes the
+list of active clients and deletes any pending events in their queues.
+This doesn’t actually terminate their network connections, but simply
+clears out any pending work for each client that we’ve initiated on the
+server side.</p>
+
+<p><span id="find"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">find (key)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#727">727</a>]</p>
+
+<p>Class method: Find a client session, given the session key or an
+HTTPRequest object.</p>
+
+<p><span id="flushEvents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flushEvents ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#501">501</a>]</p>
+
+<p>flush outstanding events for this client</p>
+
+<p><span id="getPrimary"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPrimary ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#755">755</a>]</p>
+
+<p>Get the primary session. This is the session for the original initiating
+user (the “host” in a multi-user game).</p>
+
+<p><span id="processQueues"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processQueues ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#625">625</a>]</p>
+
+<p>process the request and response queues</p>
+
+<p><span id="requestEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">requestEvent (req)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#493">493</a>]</p>
+
+<p>receive an event request from the client</p>
+
+<p><span id="sendEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sendEvent (msg)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#485">485</a>]</p>
+
+<p>send an event to this client</p>
+
+<p><span id="sendKeepAlive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sendKeepAlive ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#553">553</a>]</p>
+
+<p>Send a keep-alive reply to each pending request from this client that’s
+been waiting for longer than the timeout interval.</p>
+
+<p>Javascript clients in principle will wait indefinitely for an
+XmlHttpRequest to complete, but in practice browsers tend to set fairly
+long but finite time limits. If the time limit is exceeded for a
+request, the client will fail the request with an error. To prevent
+this, our main event loop (processNetRequests) periodically calls this
+routine if no other events have occurred recently. We’ll clear out the
+pending event request queue for each client by sending a no-op reply to
+each event. This tells the client that the server is still alive and
+connected but has nothing new to report.</p>
+
+<p><span id="setDefaultScreenName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setDefaultScreenName ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#409">409</a>]</p>
+
+<p>set the default screen name for a client</p>
+
+<p><span id="shutdownWait"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shutdownWait (timeout)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#675">675</a>]</p>
+
+<p>wait for the queues to empty in preparation for shutting down</p>
+
+<p><span id="updateEventTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">updateEventTime ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#475">475</a>]</p>
+
+<p>update the last event time for this client</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

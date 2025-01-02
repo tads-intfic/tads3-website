@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-outofreach-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-outofreach-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>OutOfReach : object<br />
+</strong></td>
+<td style="text-align: right;"><a href="highnestedroom.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="booth.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The OutOfReach class is a mix-in class that can be used to put its
+contents, and optionally itself, out of reach of anyone outside it.
+Whether the OutOfReach object is itself out of reach is determined by
+its <strong>canObjReachSelf(obj)</strong> property, which returns true if obj
+(normally an actor) can reach the OutOfReach object and nil otherwise.
+Likewise <strong>canObjReachContents(obj)</strong> returns true if obj (again
+normally an actor) can reach the OutOfReach object’s contents and nil
+otherwise. There are two corresponding methods for reaching things from
+inside the OutOfReach object: <strong>canReachFromInside(obj, dest)</strong> returns
+true if obj (again normally an actor) can reach dest, and nil otherwise;
+and <strong>canReachSelfFromInside(obj)</strong> returns true if the OutOfReach can
+be reached by an obj (once again normally an actor) located within the
+OutOfReach and nil otherwise. Note that canReachSelfFromInside(obj) is
+defined as { return canReachFromInside(obj, self); }, which means that
+if you want an actor to be able to reach an OutOfReach from within
+itself you can do so either by overriding canReachSelfFromInside(obj) to
+return true, or by overriding canReachFromInside(obj, dest) to return
+true when dest is self (amongst other things for which you might want it
+to return true).</p>
+
+<p>Again this is all very abstract, so let’s turn our top bunk into a
+concrete example. Because it’s already a HighNestedRoom we don’t want
+the bunk also to be unreachable from the outside by virtue of being an
+OutOfReach, so we need its canObjReachSelf method to return true. It
+seems reasonable that an actor should be able to reach the contents of
+the top bunk when s/he’s in a position to get onto it, so we want
+canObjReachContents to return true when obj is located in a valid
+staging location for the top bunk (if we’re actually on the bunk we’ll
+automatically be able to reach its contents). Finally, while we’re on
+the bunk we should be able to reach the bunk itself and also anything we
+could use as a staging platform to reach the bunk. At the same time
+we’ll make looking under or taking the pillow worthwhile by revealing a
+vital piece of paper:</p>
+
+<p><strong>OutOfReach,</strong> HighNestedRoom, Bed, Fixture ’top bunk bed*beds*bunks’ ’top bunk’ @crewQuarters<br />
+   ”The top bunk is mounted high on the port side, above the bottom bunk. ”<br />
+   stagingLocations()<br />
+   {<br />
+     local lst = new Vector(5);<br />
+     foreach(local cur in stagingPlatforms)<br />
+       if((gActor.posture==standing &amp;&amp; gActor.isIn(cur))</p>
+
+<p>         || (gActor.isIn(self) &amp;&amp; cur.isIn(location)))
+         lst.append(cur);<br />
+     return lst.toList;<br />
+   }<br />
+   stagingPlatforms = [cabinChair]<br />
+   <strong>canObjReachSelf(obj) { return true; } <br />
+   canObjReachContents(obj) { return stagingLocations.indexOf(obj.location); }  <br />
+   canReachFromInside(obj, dest) <br />
+    { return dest==self || stagingPlatforms.indexOf(dest); }  </strong><br />
+;</p>
+
+<p>+ <strong>Underside</strong> ’plain white pillow’ ’pillow’<br />
+  ”It’s just a plain white pillow. ”<br />
+  bulkCapacity = 1<br />
+  allowPutUnder = (!location.ofKind(Actor))<br />
+;<br />
+  <br />
+++ leftHalfPaper : Hidden, Readable ’left half torn sheet yellow paper*sheets*papers’ <br />
+  ’torn sheet of yellow paper’  <br />
+  ”It looks like the left hand half of a sheet of paper that’s been torn in two. It<br />
+   contains a list of letters and numbers. ”<br />
+  readDesc = ”A0\nA2\nC9\nJ8\nM3\nQ7\nT5\n”  <br />
+  mainExamine<br />
+  {<br />
+    if(!described) name += ’ (left half)’;<br />
+    inherited;<br />
+  }<br />
+;</p>
+
+<p>The importance of this sheet of paper is obvious. There is no way the
+player character can be expected to find which of the various possible
+settings of the slider and dial in the Tardis will actually bring it to
+a useful destination, so we provide a list of the settings that do. Note
+that we only add ‘ (left half)’ to the display name of this piece of
+paper once the player examines it to ascertain that it actually is the
+left half. While we’re at it we might as well supply the other half -
+behind the picture we’ll put in that cabinet aboard the Tardis:</p>
+
+<p>OpenableContainer, Fixture ’storage cabinet’ ’storage cabinet’ @tardisLivingQuarters<br />
+  ”The large cabinet is painted a cream colour and looks securely fixed to the wall. ”<br />
+;</p>
+
+<p>+ smallPicture : RearSurface ’small picture/photo/photograph’ ’small picture’<br />
+  ”It’s a faded photograph of an eccentrically-dressed man with a<br />
+    long scarf, in company with a smiling young woman with<br />
+    long blonde hair. ”<br />
+  allowPutBehind = nil<br />
+;</p>
+
+<p>++ rightHalfPaper : Hidden, Readable ’right half torn sheet yellow paper*sheets’ <br />
+  ’torn sheet of yellow paper’  <br />
+  ”It looks like the right hand half of a sheet of paper that’s been torn in two. It<br />
+   contains a list of names. ”<br />
+  <strong>readDesc = ”Ship Hold\nSpaceStation\nNew Mars\nJerusalem\n<br />
+      Nivalis\nLondon\nOutside Caves\n”  <br />
+  mainExamine<br />
+  {<br />
+    if(!described) name += ’ (right half)’;<br />
+    inherited;<br />
+  }</strong><br />
+;</p>
+
+<p>Meanwhile, there’s one other thing we may want to customize on our
+OutOfReach. If (for example) you try to take the pillow without being on
+the top bunk or standing on the chair, you’ll be told “The pillow is too
+far away.” You may think that this makes it sound like it’s a long way
+off, rather than fairly close at hand and just out of reach, so it may
+be you’d prefer “The pillow is out of reach. “ This seems a better
+message altogether for the OutOfReach class, so we’ll create a new
+library message and then modify OutOfReach to use it:</p>
+
+<p>modify playerActionMessages<br />
+ outOfReachMsg(obj)<br />
+     {<br />
+         gMessageParams(obj);<br />
+         return ’{The obj/he} {is} out of reach. ’;<br />
+     }<br />
+; </p>
+
+<p>modify OutOfReach<br />
+  cannotReachFromOutsideMsg(dest) { return &amp;outOfReachMsg; }<br />
+  cannotReachFromInsideMsg(dest) { return &amp;outOfReachMsg; }<br />
+;</p>
+
+<p>It’s worth pointing out that we can do far more with the OutOfReach
+class than the single example here may suggest; for further details see
+Section 11.7 “Nested Rooms and OutOfReach” in <em>Learning TADS 3</em>.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

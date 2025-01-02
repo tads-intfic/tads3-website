@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-disambigname-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-disambigname-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>disambigName<br />
+</strong></td>
+<td style="text-align: right;"><a href="food.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="wearable.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>If you haven’t tried compiling and running the game for a while, now
+would be a good time to try. Try going into the square cave (using the
+MEGA or FIAT LUX command to light your path) and then try TASTE BANANA,
+SMELL BANANA, FEEL BANANA and LISTEN TO BANANA. Then try taking the
+banana, moving west back into the main cave, dropping the banana, and
+then trying to take it again with a TAKE BANANA command. At this point
+you should encounter the following problem:</p>
+
+<p>&gt;<strong>take banana</strong><br />
+Which banana do you mean, the banana, or the golden banana?</p>
+
+<p>&gt;<strong>banana</strong><br />
+Which banana do you mean, the banana, or the golden banana?</p>
+
+<p>&gt;</p>
+
+<p>Since we have called our edible banana simply ‘banana’ there is nothing
+we can call it that will distinguish it from the golden banana, so in
+this situation nothing we type will enable us to take the (edible)
+banana. We could, of course, add edible to its vocabWords, but that
+won’t be apparent to the player, and actually calling it ‘edible banana’
+in its name property would look a bit clumsy. In a case like this the
+solution is to give it a <strong>disambigName</strong> property, a name that will be
+used solely for the purpose of disambiguation. We might amend our banana
+thus:</p>
+
+<p>Food ’<strong>(edible)</strong> banana’ ’banana’ @squareCave<br />
+  ”It’s yellow, about six inches long, and slightly curved. And It looks<br />
+   reasonably fresh. ”<br />
+  tasteDesc = ”It’s distinctly banana-flavoured. ”<br />
+  smellDesc = ”It has a kind of faint, fruity smell. ”<br />
+  feelDesc = ”The banana skin feels firm but smooth. ”<br />
+  soundDesc = ”The banana is strangely silent. ”<br />
+  <strong>disambigName = ’edible banana’</strong><br />
+  initSpecialDesc = ”Someone has left a banana here. ”<br />
+;</p>
+
+<p>If you now compile and run the game again, you’ll see how using
+disambigName (coupled with adding ‘edible’ to the banana’s vocabulary)
+has solved the problem.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-gsg-crossingthestream-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-gsg-crossingthestream-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
+
+<p><a href="index.html">[Main]</a><br />
+<em><a href="doorsandwindows.html">[Previous]</a>   <a href="buryingtheboots.html">[Next]</a></em></p>
+
+<h2 id="crossing-the-stream">Crossing the Stream</h2>
+
+<p>As the next step to making things more complicated for Heidi, we’ll put
+the key in a field on the far side of a stream. First we need to add two
+extra locations to accommodate the stream:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>pathByStream : OutdoorRoom ’By a stream’<br />
+  ”The path through the trees from the southeast comes to an end on<br />
+  the banks of a stream. Across the stream to the west you can see<br />
+  an open meadow. ”<br />
+  southeast = fireClearing<br />
+  west = streamWade<br />
+;</p>
+
+<p>streamWade : RoomConnector<br />
+  room1 = pathByStream<br />
+  room2 = meadow<br />
+;</p>
+
+<p>meadow : OutdoorRoom ’Large Meadow’<br />
+  ”This large, open meadow stretches almost as far as you can see<br />
+  to north, west, and south, but is bordered by a fast-flowing stream<br />
+  to the east. ”<br />
+  east = streamWade<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The reason for using the separate RoomConnector object, streamWade, will
+gradually become apparent. At the moment note that it simply connects
+the room in its room1 property to the room in its room2 property. It
+also furnishes an example of how we can set the direction property of a
+room to an explicit connector object. One further thing we need to do at
+this stage is to set the northwest property of fireClearing to
+pathByStream.</p>
+
+<p>Next we’ll move the small brass key to the meadow and tweak its
+properties a little.</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>+ cottageKey : Key ’small brass brassy key/object/something’ ’object’<br />
+  ”It’s a small brass key, with a faded tag you can no longer read. ”<br />
+  initSpecialDesc = ”A small brass object lies in the grass. ”<br />
+  remoteInitSpecialDesc(actor) <br />
+  { <br />
+    ”There is a momentary glint of something brassy as<br />
+    the sun reflects off something lying in the meadow across the stream. ”;<br />
+  }<br />
+  dobjFor(Take)<br />
+  {<br />
+    action()<br />
+    {<br />
+      if(!moved) <br />
+         addToScore(1, ’retrieving the key’); <br />
+      inherited;<br />
+      name = ’small brass key’;<br />
+    }<br />
+  }<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The reason for the special dobjFor(Take) routine is that if we let the
+key start with the name ‘small brass key’, it might give its presence
+away prematurely, so we give it about the vaguest name we can in its
+initial definition and then change it to a more meaningful name when
+it’s picked up. Note that we have once again used remoteInitSpecialDesc,
+which (once we’ve done some more clever stuff) will be the description
+that’s displayed when we view the key from a distance, in this case the
+other side of the stream. Note that this is a method, not a property,
+and it takes a single parameter pov (point of view). This parameter
+represents the actor who is doing the looking, and would allow you to
+alter the message displayed depending on where the actor was (e.g by
+testing for if(pov.isIn(pathByStream)) ). In this case the test is
+unnecessary, since there is only one location from which the key can be
+viewed remotely before it is moved.</p>
+
+<p>Now comes the clever stuff. In order to make objects in room A visible
+from room B we need to join the two locations together with a
+DistanceConnector; which is particular kind of SenseConnector (which we
+met before in connection with the cottage window); a SenseConnector can
+exist in two or more locations since it is a subclass of MultiLoc (more
+of which anon). A DistanceConnector has a library template that makes it
+exceedingly easy to define; all we need to add is:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>DistanceConnector [pathByStream, meadow];</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The list in square brackets is in fact the locationList property, the
+name of which should be fairly self-explanatory. Note that
+DistanceConnector is a descendant of both MultiLoc, which is a mix-in
+class, and Intangible (since the connector has no physical presence).
+Another MultiLoc object we could use here would be a stream, which runs
+through both the rooms. And while we’re at it, we’ll make it possible
+for the player to cross the stream with the command <strong>cross stream</strong>.</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>stream : MultiLoc, Fixture ’stream’ ’stream’<br />
+  ”The stream is not terribly deep at this point, though it’s flowing<br />
+    quite rapidly towards the south. ”<br />
+  locationList = [pathByStream, meadow]<br />
+  dobjFor(Cross)<br />
+  {<br />
+    verify() {}<br />
+    check() {}<br />
+    action()<br />
+    {<br />
+      replaceAction(TravelVia, streamWade);<br />
+    }<br />
+  }<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note that being a MultiLoc object (like the DistanceConnector), the
+stream does not have a location property (its list of locations instead
+being held in locationList). Note also that for this to work properly,
+MultiLoc must come first in the class list; MultiLoc is a mix-in class
+that should always be combined with something else.</p>
+
+<p>Part of the value of defining a separate streamWade object now becomes
+apparent; it makes the coding of the action method of
+dobjFor(Cross) exceedingly simple. Instead of having to test for which
+side of the stream we’re on to decide which side we need to end up on
+when we cross the stream, we simply TravelVia streamWade and leave
+streamWade to sort it all out. But as we’ll see shortly, that’s only
+part of the story.</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In the meantime, there’s another little matter we need to attend to.
+Unlike the other verbs we’ve used so far, there’s no definition of Cross
+anywhere in the TADS 3 library, so we have to create our own. For
+details of how to do this in general, see the
+*<a href="../techman/t3verb.html" target="_top">Technical Manual</a> (but
+there’s no need to consult it right now - you can finish this guide
+first). Here we’ll just list the steps for this simple case.</p>
+
+<p>First, we need to define both CrossAction and its associated grammar. A
+couple of library macros hide most of the complication of all this, and
+all we need write is:<br />
+*</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>DefineTAction(Cross);</p>
+
+<p>VerbRule(Cross)<br />
+  ’cross’ singleDobj<br />
+  : CrossAction<br />
+  verbPhrase = ’cross/crossing (what)’<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We use the DefineTAction() macro to define a Transitive Action (hence
+TAction), which means an action taking a direct object (as opposed to an
+IAction like <strong>Look</strong> which takes no objects, or a TIAction like <strong>put x
+on y</strong> which takes both a direct object and an indirect object). We next
+use the VerbRule() macro to define the grammar for the command, that is
+the form of words that a player can use to invoke it.</p>
+
+<p>The name of the VerbRule (here Cross) can be anything we like, so long
+as it’s unique among the VerbRule names in our game. It doesn’t actually
+<em>need</em> to match the name of our action, it’s just (a) a convenient way
+of ensuring a unique VerbRule name and (b) an obvious way of making it
+clear what the VerbRule is for. After naming the VerbRule we next need
+to define its grammar, i.e. the phrase that the player must enter to
+invoke this command. This will normally consist of a fixed element, such
+as the name of the verb, in this case ‘cross’, followed by a placeholder
+for the noun or nouns that the player wants the command to apply to. For
+a TAction this placeholder can either be singleDobj (meaning that only
+one direct object is allowed) or dobjList (meaning that the command can
+be applied to several direct objects at once, as in <strong>take the red ball,
+the long stick, and the bent banana</strong>).</p>
+
+<p>It would make no sense to cross several objects at once, so we
+definitely want singleDobj rather than dobjList here. We could, if we
+wanted, have defined more synonyms for the verb,
+e.g. (‘cross’ | ’ford’) singleDobj, but once more I’ll leave that as an
+exercise for the interested reader. The point to note is that if we do
+want to define alternative phrasings, we use a vertical bar (|) to
+separate the alternatives, and brackets to group them. The brackets
+would be necessary in the foregoing example, since without them we’d
+have ‘cross’ | ’ford’ singleDobj, which would mean ‘cross’ or ‘ford
+something’, rather than ‘cross something’ or ‘ford something’, as we’d
+actually want.</p>
+
+<p>After the definition of the grammar for the command comes a colon
+followed by the name of the action class, which is the name we gave the
+action plus the word ‘Action’ appended, hence CrossAction. If you think
+this looks rather like declaring our VerbRule (strictly speaking, our
+grammar definition) to be of class CrossAction, then you’re right; but
+again this isn’t an issue that need concern us here, beyond noting that
+the DefineTAction(Cross) macro in fact defines a new class called
+CrossAction as a subclass of TAction.</p>
+
+<p>We then have to define a verbPhrase so that the parser can construct
+certain messages, such as ‘(first crossing the stream)’ or ‘What do you
+want to cross?’ if it needs to. The correct format for a verb phrase for
+a TAction should be reasonably clear from the example shown: first the
+infinitive (without ‘to’) followed by the present participle with a
+slash (oblique) in between (hence ‘cross/crossing’). Then a placeholder
+for a direct object, enclosed in brackets (hence ‘(what)’). Note that
+this placeholder may be used by the parser to construct a question about
+a missing direct object (‘What do you want to cross?’), so for verbs
+that were more likely to be applied to people (e.g. ‘thank’) you’d want
+to use ‘(who)’ or, even more correctly, ‘(whom)’ rather than ‘(what)’.</p>
+
+<p>One more step we have to take is to define what happens when <strong>cross</strong>
+is used with any noun other than the stream, which we can do by
+modifying the definition of the Thing class:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modify Thing  dobjFor(Cross)  {   verify()    {      illogical('{The dobj/he} {is} not something you can cross. ' );    }  };
+</code></pre></div></div>
+
+<p>Note here how we’ve begun the illogical response with
+<code class="language-plaintext highlighter-rouge">'{The dobj/he} {is}'</code> rather than <code class="language-plaintext highlighter-rouge">'{The dobj/he} is'</code>. By putting ‘is’
+in curly braces we ensure that it will always agree in number with the
+name of the direct object (which is what, of course, <code class="language-plaintext highlighter-rouge">'{The dobj/he}'</code>
+expands to). This ensures that if the direct object were, say, some
+flowers growing on the river bank, then <strong>cross flowers</strong> will respond
+with ‘The flowers are not something you can cross’ rather than the
+incorrect ‘The flowers is not something you can cross’.</p>
+
+<p>If you now compile and run the game it should all work, though getting
+across the stream doesn’t seem to be much of a puzzle. We can make it
+more of one if Heidi has to wear a pair of old boots before she can
+cross. To start with we’ll leave the boots lying by the side of the
+stream. Then all we have to do is to modify the streamWade object so
+that it only allows anyone to pass when they’re wearing the boots.</p>
+
+<p>Before looking at the solution below, you may like to try to work out
+how to do all this yourself. The only new thing about the boots is that
+we need to make them of class Wearable, so Heidi can put them on. The
+trick is then to work out how to prevent Heidi from crossing the stream
+unless she is wearing the boots. You should be able to work it out by
+analogy from the way we prevented Heidi from climbing the tree unless
+she’s standing on the chair.**<br />
+**</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>First here’s the boots; as noted above the only thing new about them is
+that we make them of class Wearable, so Heidi can put them on:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>boots : Wearable ’old wellington pair/boots/wellies’ ’old pair of boots’<br />
+  @pathByStream<br />
+ ”They look ancient, battered, and scuffed, but probably still waterproof. ”<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Next we need to modify the RoomConnector so that Heidi can only cross
+the stream when she’s wearing the boots:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>streamWade : RoomConnector<br />
+  room1 = pathByStream<br />
+  room2 = meadow<br />
+  canTravelerPass(traveler) { return boots.isWornBy(traveler); }<br />
+  explainTravelBarrier(traveler) <br />
+  { <br />
+    ”Your shoes aren’t waterproof. If you wade across you’ll get your feet<br />
+      wet and probably catch your death of cold. ”; <br />
+  }  <br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>And that’s all there is to it. If you try the game again you’ll find you
+can’t cross the stream (in either direction) unless you’re wearing the
+boots. The next job is to hide the boots in a less obvious place.</p>
+
+<hr />
+
+<p><em>Getting Started in TADS 3</em><br />
+<a href="index.html">[Main]</a><br />
+<em><a href="doorsandwindows.html">[Previous]</a>   <a href="buryingtheboots.html">[Next]</a></em></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

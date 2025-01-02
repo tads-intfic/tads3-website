@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-actorresolutionerror-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-actorresolutionerror-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">ActorResolutionError</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5300">5300</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>ActorResolutionError - this is for resolution errors that are in the
+context of what the target actor of the command (the addressee) can see.
+These require the Command in addition to the noun phrase, since that
+provides the target actor information.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ActorResolutionError</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ResolutionError.html"><code class="language-plaintext highlighter-rouge">ResolutionError</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorResolutionError</code></strong><br />
+<a href="../object/ResolutionError.html"><code class="language-plaintext highlighter-rouge">ResolutionError</code></a><br />
+<a href="../object/ParseError.html"><code class="language-plaintext highlighter-rouge">ParseError</code></a><br />
+<a href="../object/Exception.html"><code class="language-plaintext highlighter-rouge">Exception</code></a><br />
+`                                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ActorResolutionError</code></strong><br />
+<a href="../object/InsufficientNounsError.html"><code class="language-plaintext highlighter-rouge">InsufficientNounsError</code></a><br />
+<a href="../object/NoneInLocationError.html"><code class="language-plaintext highlighter-rouge">NoneInLocationError</code></a><br />
+<a href="../object/NoneInOwnerError.html"><code class="language-plaintext highlighter-rouge">NoneInOwnerError</code></a><br />
+<a href="../object/NoneWithContentsError.html"><code class="language-plaintext highlighter-rouge">NoneWithContentsError</code></a><br />
+<a href="../object/UnmatchedNounError.html"><code class="language-plaintext highlighter-rouge">UnmatchedNounError</code></a><br />
+<a href="../object/AmbiguousMultiDefiniteError.html"><code class="language-plaintext highlighter-rouge">AmbiguousMultiDefiniteError</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#cmd"><code class="language-plaintext highlighter-rouge">cmd</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ResolutionError</code> :<br />
+<a href="../object/ResolutionError.html#np"><code class="language-plaintext highlighter-rouge">np</code></a> <a href="../object/ResolutionError.html#txt"><code class="language-plaintext highlighter-rouge">txt</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ParseError</code> :<br />
+<a href="../object/ParseError.html#allowOnRespell"><code class="language-plaintext highlighter-rouge">allowOnRespell</code></a> <a href="../object/ParseError.html#curable"><code class="language-plaintext highlighter-rouge">curable</code></a> <a href="../object/ParseError.html#errStage"><code class="language-plaintext highlighter-rouge">errStage</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+<a href="../object/Exception.html#errmsg_"><code class="language-plaintext highlighter-rouge">errmsg_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ResolutionError</code> :<br />
+<a href="../object/ResolutionError.html#rankCorrection"><code class="language-plaintext highlighter-rouge">rankCorrection</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ParseError</code> :<br />
+<a href="../object/ParseError.html#display"><code class="language-plaintext highlighter-rouge">display</code></a> <a href="../object/ParseError.html#tryCuring"><code class="language-plaintext highlighter-rouge">tryCuring</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+<a href="../object/Exception.html#displayException"><code class="language-plaintext highlighter-rouge">displayException</code></a> <a href="../object/Exception.html#getExceptionMessage"><code class="language-plaintext highlighter-rouge">getExceptionMessage</code></a> <a href="../object/Exception.html#showStackTrace"><code class="language-plaintext highlighter-rouge">showStackTrace</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="cmd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmd</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5308">5308</a>]</p>
+
+<p>the command that we were attempting to resolve</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (cmd, np)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#5301">5301</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

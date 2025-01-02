@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-messageresult-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-messageresult-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">MessageResult</span><span class="type">class</span></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1577">1577</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Result message object. This is used for verification results and main
+command reports, which must keep track of messages to display.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">MessageResult</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MessageResult</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MessageResult</code></strong><br />
+<a href="../object/CommandReportMessage.html"><code class="language-plaintext highlighter-rouge">CommandReportMessage</code></a><br />
+<a href="../object/CosmeticSpacingCommandReport.html"><code class="language-plaintext highlighter-rouge">CosmeticSpacingCommandReport</code></a><br />
+<a href="../object/DefaultCommandReport.html"><code class="language-plaintext highlighter-rouge">DefaultCommandReport</code></a><br />
+<a href="../object/DefaultDescCommandReport.html"><code class="language-plaintext highlighter-rouge">DefaultDescCommandReport</code></a><br />
+<a href="../object/ExtraCommandReport.html"><code class="language-plaintext highlighter-rouge">ExtraCommandReport</code></a><br />
+<a href="../object/FullCommandReport.html"><code class="language-plaintext highlighter-rouge">FullCommandReport</code></a><br />
+<a href="../object/AfterCommandReport.html"><code class="language-plaintext highlighter-rouge">AfterCommandReport</code></a><br />
+<a href="../object/BeforeCommandReport.html"><code class="language-plaintext highlighter-rouge">BeforeCommandReport</code></a><br />
+<a href="../object/FailCommandReport.html"><code class="language-plaintext highlighter-rouge">FailCommandReport</code></a><br />
+<a href="../object/MainCommandReport.html"><code class="language-plaintext highlighter-rouge">MainCommandReport</code></a><br />
+<a href="../object/QuestionCommandReport.html"><code class="language-plaintext highlighter-rouge">QuestionCommandReport</code></a><br />
+<a href="../object/VerifyResult.html"><code class="language-plaintext highlighter-rouge">VerifyResult</code></a><br />
+<a href="../object/DangerousVerifyResult.html"><code class="language-plaintext highlighter-rouge">DangerousVerifyResult</code></a><br />
+<a href="../object/IllogicalNowVerifyResult.html"><code class="language-plaintext highlighter-rouge">IllogicalNowVerifyResult</code></a><br />
+<a href="../object/IllogicalAlreadyVerifyResult.html"><code class="language-plaintext highlighter-rouge">IllogicalAlreadyVerifyResult</code></a><br />
+<a href="../object/IllogicalVerifyResult.html"><code class="language-plaintext highlighter-rouge">IllogicalVerifyResult</code></a><br />
+<a href="../object/IllogicalSelfVerifyResult.html"><code class="language-plaintext highlighter-rouge">IllogicalSelfVerifyResult</code></a><br />
+<a href="../object/InaccessibleVerifyResult.html"><code class="language-plaintext highlighter-rouge">InaccessibleVerifyResult</code></a><br />
+<a href="../object/LogicalVerifyResult.html"><code class="language-plaintext highlighter-rouge">LogicalVerifyResult</code></a><br />
+<a href="../object/NonObviousVerifyResult.html"><code class="language-plaintext highlighter-rouge">NonObviousVerifyResult</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#messageProp_"><code class="language-plaintext highlighter-rouge">messageProp_</code></a> <a href="#messageText_"><code class="language-plaintext highlighter-rouge">messageText_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#resolveMessageText"><code class="language-plaintext highlighter-rouge">resolveMessageText</code></a> <a href="#setMessage"><code class="language-plaintext highlighter-rouge">setMessage</code></a> <a href="#showMessage"><code class="language-plaintext highlighter-rouge">showMessage</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="messageProp_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">messageProp_</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1850">1850</a>]</p>
+
+<p>the message property, if we have one</p>
+
+<p><span id="messageText_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">messageText_</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1847">1847</a>]</p>
+
+<p>the text of our result message</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (msg, [params])</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1585">1585</a>]</p>
+
+<p>Construct given literal message text, or alternatively a property of the
+current actor’s verb messages object. In either case, we’ll expand the
+message immediately to allow the message to be displayed later with any
+parameters fixed at the time the message is constructed.</p>
+
+<p><span id="resolveMessageText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveMessageText (sources, msg, params)</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1620">1620</a>]</p>
+
+<p>Static method: resolve a message. If the message is given as a property,
+we’ll look up the message in the given source objects and in the actor’s
+“action messages” object. We’ll return the resolved message string.</p>
+
+<p><span id="setMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setMessage (msg, [params])</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1831">1831</a>]</p>
+
+<p>set a new message, given the same type of information as we’d use to
+construct the object</p>
+
+<p><span id="showMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showMessage ( )</code></p>
+
+<p><a href="../file/exec.t.html">exec.t</a>[<a href="../source/exec.t.html#1840">1840</a>]</p>
+
+<p>Display a message describing why the command isn’t allowed.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-containerdoor-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-containerdoor-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ContainerDoor : <a href="component.html">Component</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="complexcontainer.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="singlecontainer.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The purpose of a ContainerDoor is to represent the door of a Container,
+when the player might want to refer to it separately. A container’s door
+cannot be straightforwardly made a component of its container (located
+in the container), since this would have the effect of putting the door
+<em>inside</em> the container, where it would vanish out of sight when the
+container was closed. You would therefore normally use a ContainerDoor
+as a component of (located in) a
+<a href="complexcontainer.html">ComplexContainer</a>; it then maps OPEN, CLOSE,
+LOCK, UNLOCK, LOOK IN and LOOK BEHIND commands to the subContainer of
+that ComplexContainer.</p>
+
+<p>For example, the dressing table we’ve just defined mentions in its
+description that it has a pair of doors. To implement those doors we
+just need to define the following, immediately after the definition of
+the dressing table ComplexContainer object:</p>
+
+<p>+ ContainerDoor ’(dressing) (table) door/pair/doors’ ’dressing table door’<br />
+  ”They’re made of the same scratched, stained wood as the dressing table<br />
+   to which they’re attached, and perfectly match its generally battered<br />
+   appearance. ”<br />
+  isPlural = true<br />
+;</p>
+
+<p>It’s also possible to set up a ContainerDoor to act as the door to any
+kind of openable container, by setting its <strong>subContainer</strong> property to
+point to that container. For example, we could add a door to the locker
+in the crew quarters by this means:</p>
+
+<p>locker : LockableContainer, Fixture ’(crew) locker’ ’locker’ @crewQuarters<br />
+  ”The locker is fixed firmly to the bulkhead. Its door is fastened by a simple<br />
+   latch mechanism, though the latch looks a bit rusty. ”<br />
+  bulkCapacity = 15<br />
+  disambigName = ’crew locker’<br />
+  initiallyLocked = true  <br />
+  makeLocked(stat)<br />
+  {<br />
+    if(!lockerLatch.oiled)<br />
+    {<br />
+      reportFailure(‘The latch is stuck fast. ’);<br />
+      exit;<br />
+    }<br />
+    inherited(stat);<br />
+  }  <br />
+;</p>
+
+<p>NameAsOther, SecretFixture targetObj = locker location = crewQuarters;</p>
+
+<p><strong>+ ContainerDoor ’(locker) door’ ’locker door’<br />
+  ”The locker door is a plain wooden front, fastened by a latch. ”<br />
+  subContainer = locker<br />
+;</strong></p>
+
+<p><strong>++</strong> lockerLatch : Component ’(locker) latch’ ’latch’<br />
+  ”The latch looks a bit rusty. It’s currently in the &lt;&lt;locker.isLocked<br />
+   ? nil : ’un’ &gt;&gt;locked position. ”<br />
+   …<br />
+;</p>
+
+<p>Of course, it would probably have been easier to make the locker a
+ComplexContainer and attach the ContainerDoor to that; but at least this
+shows that other arrangements are possible.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

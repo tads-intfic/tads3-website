@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-postundoobject-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-postundoobject-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>PostUndoObject: <a href="moduleexecobject.html">ModuleExecObject</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="postrestoreobject.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="prerestartobject.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>PostUndoObject - every instance of this class is notified, via its
+execute() method, immediately after we perform an ‘undo’ command.</p>
+
+<p>You can probably guess how our manic player-hating author might put this
+to evil use:</p>
+
+<p>PostUndoObject<br />
+  execute() <br />
+  {<br />
+     ”If there’s one thing I hate more than players feeble enough to save and restore, <br />
+      it’s idiots who ruin the amazing gaming experience I’ve devised for them by <br />
+      resorting to UNDO. The penalty of &lt;i&gt;fifty&lt;/i&gt; thousand points you’re about to <br />
+      suffer is thus richly deserved.\b<br />
+      By the way, this makes the game unwinnable - but hey, only lousy LOSERS like <br />
+      you use UNDO.&lt;.p&gt;”;</p>
+
+<p>     addToScore(-50000, ’using undo’);<br />
+  }<br />
+;</p>
+
+<p>Hopefully if you do find yourself using a PostUndoObject it will be for
+a more legitimate purpose than this, though it’s probably not something
+you’ll need to use very often, if at all. A more legitimate use might be
+if, for some research purpose, you wanted to keep track of how often
+players used UNDO during a session with your game, then you might do
+something like this:</p>
+
+<p>transient statisticsObj: object<br />
+   undoCount = 0<br />
+   saveCount = 0<br />
+   restoreCount = 0<br />
+;</p>
+
+<p>PostUndoObject<br />
+  execute()<br />
+  {<br />
+     statisticsObj.undoCount += 1;<br />
+  }<br />
+;</p>
+
+<p>Because statisticsObj has been declared as <strong>transient</strong> (for fuller
+details of which see the Object Definitions section of the language
+documentation) its properties will be preserved across operations such
+as UNDO, RESTART, SAVE and RESTORE, and this should work (although since
+a transient object is thus not itself saved or restored, its properties
+cannot be preserved across different game sessions, hence the seemingly
+odd name ‘transient’ for this type of object).</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

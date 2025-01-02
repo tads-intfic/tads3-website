@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-flashlight-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-flashlight-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Flashlight : <a href="lightsource.html">LightSource</a>, <a href="switch.html">Switch</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="lightsource.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="candle.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A Flashlight is basically a LightSource with a switch that can be used
+to turn it on and off (just like a flashlight or, as we’d call it in
+Britain, a torch).</p>
+
+<p>blackTorch : Flashlight ’large black flashlight/torch’ ’large black torch’ @mainCave<br />
+  ”It looks a serious heavy-duty instrument, with a firm ridged grip and<br />
+   a powerful bulb. ”<br />
+   brightnessOn = 4<br />
+   bulk = 2<br />
+   weight = 2  <br />
+;</p>
+
+<p>There’s no particular reason for setting brightnessOn to 4 here, other
+than the fact that it’s described as a powerful torch and to demonstrate
+that it can be done. You can try this torch/flashlight out if you like,
+but we won’t be leaving it lying around in mainCave for the player to
+pick up so easily. Instead we’ll put in a storage cabinet aboard the
+Tardis:</p>
+
+<p>tardisLivingQuarters : ShipboardRoom ’Tardis Living Quarters’ ’the living quarters’<br />
+  ”These living quarters are pretty bare right now, but there is a storage cabinet<br />
+   fixed to one wall, and a door that leads out. ”<br />
+  out = tardisLivingQuartersDoor<br />
+  fore asExit(out)<br />
+;</p>
+
+<p>OpenableContainer, Fixture ’storage cabinet’ ’storage cabinet’ @tardisLivingQuarters <br />
+  ”The large cabinet is painted a cream colour and looks securely fixed to the wall. ”<br />
+;</p>
+
+<p>+ blackTorch : Flashlight ’large black flashlight/torch’ ’large black torch’<br />
+  ”It looks a serious heavy-duty instrument, with a firm ridged grip and<br />
+   a powerful bulb. ”<br />
+   brightnessOn = 4<br />
+   bulk = 2<br />
+   weight = 2  <br />
+;</p>
+
+<p>This, of course, leaves players with the problem of finding an
+alternative light source before they can reach the Tardis. We’ll deal
+with that next.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-achievement-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-achievement-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Achievement</span><span class="type">class</span></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#57">57</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>An Achievement is an object used to award points in the score. For most
+purposes, an achievement can be described simply by a string, but the
+Achievement object provides more flexibility in describing combined
+scores when a set of similar achievements are to be grouped.</p>
+
+<p>There are two ways to use the scoring system.</p>
+
+<p>1. You can use a mix of string names and Achievement objects for
+scoring items; each time you award a scoring item, you call the function
+addToScore() to specify the achievement (by name or by Achievement
+object) and the number of points to award. You can also call the method
+addToScoreOnce() on an Achievement object to award the scoring item,
+ensuring that the item is only awarded once in the entire game (saving
+you the trouble of checking to see if the event that triggered the
+scoring item has happened before already in the same game). If you do
+this, you MUST set the property gameMain.maxScore to reflect the maximum
+score possible in the game.</p>
+
+<p>2. You can use EXCLUSIVELY Achievement objects to represents scoring
+items, and give each Achievement object a ‘points’ property indicating
+the number of points it’s worth. To award a scoring item, you call the
+method awardPoints() on an Achievement object. If you use this style of
+scoring, the library AUTOMATICALLY computes the gameMain.maxScore value,
+by adding up the ‘points’ values of all of the Achievement objects in
+the game. For this to work properly, you have to obey the following
+rules:</p>
+
+<ul>
+  <li>use ONLY Achievement objects (never strings) to award points;</li>
+  <li>set the ‘points’ property of each Achievement to its score;</li>
+  <li>define Achievement objects statically only (never use ‘new’ to<br />
+create an Achievement dynamically)</li>
+  <li>if an Achievement can be awarded more than once, you must override<br />
+its ‘maxPoints’ property to reflect the total number of points it<br />
+will be worth when it is awarded the maximum number of times;</li>
+  <li>always award an Achievement through its awardPoints() or<br />
+awardPointsOnce() method;</li>
+  <li>there exists at least one solution of the game in which every<br />
+Achievement object is awarded</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Achievement</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Achievement</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Achievement</code></strong><br />
+<a href="../object/SimpleAchievement.html"><code class="language-plaintext highlighter-rouge">SimpleAchievement</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#desc"><code class="language-plaintext highlighter-rouge">desc</code></a> <a href="#maxPoints"><code class="language-plaintext highlighter-rouge">maxPoints</code></a> <a href="#points"><code class="language-plaintext highlighter-rouge">points</code></a> <a href="#scoreCount"><code class="language-plaintext highlighter-rouge">scoreCount</code></a> <a href="#totalPoints"><code class="language-plaintext highlighter-rouge">totalPoints</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addToScoreOnce"><code class="language-plaintext highlighter-rouge">addToScoreOnce</code></a> <a href="#awardPoints"><code class="language-plaintext highlighter-rouge">awardPoints</code></a> <a href="#awardPointsOnce"><code class="language-plaintext highlighter-rouge">awardPointsOnce</code></a> <a href="#listFullScoreItem"><code class="language-plaintext highlighter-rouge">listFullScoreItem</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="desc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">desc</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#97">97</a>]</p>
+
+<p>Describe the achievement - this must display a string explaining the
+reason the points associated with this achievement were awarded.</p>
+
+<p>Note that this description can make use of the scoreCount information to
+show different descriptions depending on how many times the item has
+scored. For example, an achievement for finding various treasure items
+might want to display “finding a treasure” if only one treasure was
+found and “finding five treasures” if five were found.</p>
+
+<p>In some cases, it might be desirable to keep track of additional custom
+information, and use that information in generating the description. For
+example, the game might keep a list of treasures found with the
+achievement, adding to the list each time the achievement is scored, and
+displaying the contents of the list when the description is shown.</p>
+
+<p><span id="maxPoints"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">maxPoints</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#76">76</a>]</p>
+
+<p>The MAXIMUM number of points this Achievement can award. This is by
+default just our ‘points’ value, on the assumption that the achievement
+is scored only once. The library uses this value during
+pre-initialization to compute the maximum possible score in the game.</p>
+
+<p><span id="points"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">points</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#67">67</a>]</p>
+
+<p>The number of points this Achievement scores individually. By default,
+we set this to nil. If you use the awardPoints() or awardPointsOnce()
+methods, you MUST set this to a non-nil value.</p>
+
+<p>If you set this to a non-nil value, the library will use it pre-compute
+the maximum possible score in the game, saving you the trouble of
+figuring out the maximum score by hand.</p>
+
+<p><span id="scoreCount"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scoreCount</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#114">114</a>]</p>
+
+<p>The number of times the achievement has been awarded. Each time the
+achievement is passed to addToScore(), this is incremented. Note that
+this is distinct from the number of points.</p>
+
+<p><span id="totalPoints"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">totalPoints</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#122">122</a>]</p>
+
+<p>the number of points awarded for the achievement; if this achievement
+has been accomplished multiple times, this reflects the aggregate number
+of points awarded for all of the times it has been accomplished</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addToScoreOnce"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToScoreOnce (points)</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#134">134</a>]</p>
+
+<p>Add this achievement to the score one time only, awarding the given
+number of points. This can be used to score an achievement without
+separately tracking whether or not the achievement has been accomplished
+previously. If the achievement has already been scored before, this will
+do nothing at all; otherwise, it’ll score the achievement with the given
+number of points. Returns true if we do award the points, nil if not
+(because we’ve awarded them before).</p>
+
+<p><span id="awardPoints"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">awardPoints ( )</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#156">156</a>]</p>
+
+<p>Award this Achievement’s score, using the score value specified in my
+‘points’ property.</p>
+
+<p><span id="awardPointsOnce"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">awardPointsOnce ( )</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#168">168</a>]</p>
+
+<p>Award this Achievement’s score, but ensure that we’re never awarded more
+than one time. If this Achievement has already been awarded, this does
+nothing at all. Returns true if we do award the points, nil if not
+(because we’ve awarded them before).</p>
+
+<p><span id="listFullScoreItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listFullScoreItem ( )</code></p>
+
+<p><a href="../file/score.t.html">score.t</a>[<a href="../source/score.t.html#100">100</a>]</p>
+
+<p>show myself in a full-score listing</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

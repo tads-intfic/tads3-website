@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-techman-t3projectstarters-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-techman-t3projectstarters-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="advtop.html" class="nav">Advanced Topics</a> &gt; Workbench
+Project Starter Templates<br />
+<span class="navnp"><a href="mediatypes.html" class="nav"><em>Prev:</em> Internet Media Types
+for TADS</a>    
+<a href="t3spec.html" class="nav"><em>Next:</em> T3 VM Technical
+Documentation</a>     </span></p>
+
+<h1 id="workbench-project-starter-templates">Workbench Project Starter Templates</h1>
+
+<p>TADS Workbench for Windows features a “New Project” command that
+generates all of the files necessary to compile and run a skeleton game.
+This saves the author the trouble of copying all of the boilerplate for
+the .t3m and .t files making up the project.</p>
+
+<p>If you’re creating your own library that’s designed to replace Adv3,
+Workbench provides a way for you to plug in your own project starter
+templates so that Workbench users can just as easily create new projects
+based on your library. This section describes how to create a project
+template.</p>
+
+<h2 id="template-file-format">Template file format</h2>
+
+<p>When Workbench displays the New Project dialog, it offers a list of
+project configurations for the user to choose from. Each entry in this
+list comes from a project starter template file, which has the suffix
+<code class="language-plaintext highlighter-rouge">.tdb-project-starter</code>. Workbench searches for all files with this
+suffix in the Extensions folder, each folder in the Library Paths list,
+and in the Workbench library folder. (Workbench searches all subfolders
+of each of these folders as well.)</p>
+
+<p>To create an entry for your library in the New Project dialog, then, you
+just need to create a template file, and include it in your library
+folder.</p>
+
+<p>The template file contains text in a special format, with instructions
+for Workbench on how to create the project. The file uses a simple
+name/value pair format, with one item per line. An item looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    name: value
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">name</code> must be at the very start of the
+line, with no leading spaces. If a line starts with one or more spaces,
+it’s read as a continuation of the previous line. This allows you to
+break up long values over several lines if needed for readability:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    name: This is a value that goes on for
+      quite a while, requiring several lines
+      to make it all fit neatly.
+</code></pre></div></div>
+
+<p>When Workbench reads the file, it joins these lines together as though
+the value had appeared all on the same line. Workbench replaces each
+line break, along with all of the leading spaces on the following line,
+with a single space.</p>
+
+<p>Here’s a list of the <code class="language-plaintext highlighter-rouge">name</code> elements and what
+they mean:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">name</code>: The title of the project
+configuration. This is displayed in the New Project dialog in the list
+of available project types. You should use something short and
+descriptive; it doesn’t have to be an exhaustive description, because
+the <code class="language-plaintext highlighter-rouge">desc</code> value is also displayed in the same
+list. The standard project starters included with Workbench use these
+names:
+    <ul>
+      <li>Adv3 - Introductory</li>
+      <li>Adv3 - Advanced</li>
+      <li>Adv3 - Introductory - Web UI</li>
+      <li>Adv3 - Advanced - Web UI</li>
+      <li>Plain T3</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">desc</code>: A detailed description of the project.
+This is displayed in the New Project dialog, under the
+<code class="language-plaintext highlighter-rouge">name</code>. This should be a couple of sentences
+describing your library and the type of project this template would
+create.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">source</code>: The name of a source (.t) file that
+you provide as part of your library folder, that’s meant to be
+<strong>copied</strong> into the user’s new project folder. The value for this item
+is the name of the file that you provide, optionally followed by a
+space and the name of the file as it should appear in the user’s copy.
+If you include only one name, the same name is used for the user’s
+copy. If you provide two names, the second name can use a dollar sign
+($) as a substitution parameter: this is replaced with the project
+name that the New Project dialog asks the user to choose. For example,
+suppose that the user enters “test one” as the project name. If you
+enter this <code class="language-plaintext highlighter-rouge">source</code> item:</p>
+
+    <p>` source: start.t $.t `</p>
+
+    <p>then the file <code class="language-plaintext highlighter-rouge">start.t</code> that you provide in
+your library folder will be copied into the new project folder with
+the name <code class="language-plaintext highlighter-rouge">test one.t</code>.</p>
+
+    <p>Note that the <code class="language-plaintext highlighter-rouge">\$</code> can be used anywhere in the
+target file name; it doesn’t have to be the entire name. For example,
+if you write <code class="language-plaintext highlighter-rouge">\$-actors.t</code> in the example
+above, the user’s copy of the file would be <code class="language-plaintext highlighter-rouge">test
+one-actors.t</code>.</p>
+
+    <p>You can use the <code class="language-plaintext highlighter-rouge">source</code> item repeatedly, if
+you wish, to copy multiple source files to the new project folder.
+Simply give each file a separate <code class="language-plaintext highlighter-rouge">source</code>
+line.</p>
+
+    <p>You can place the source files to be copied into a subfolder of your
+library folder. If you do, simply use a relative Windows-style path in
+the <code class="language-plaintext highlighter-rouge">source</code> line:</p>
+
+    <p>` source: samples\start.t $.t `</p>
+
+    <p>Workbench adds the <code class="language-plaintext highlighter-rouge">source</code> items to the new
+project’s .t3m file in the same order in which they appear in the
+template file.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">lib</code>: The name of a source (.t) or library
+(.tl) file to include in the project’s build list, but <strong>without</strong>
+copying it to the user’s project folder. This is for files that will
+be included in the project directly from your library. As with
+<code class="language-plaintext highlighter-rouge">source</code>, you can include as many
+<code class="language-plaintext highlighter-rouge">lib</code> items as you like.
+Workbench adds the files named in <code class="language-plaintext highlighter-rouge">lib</code> items
+to the new project’s .t3m in the same order in which they appear in
+the template file.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sysfile</code>: The name of a <strong>system</strong> source
+(.t) or library (.tl) file to include in the project’s build list.
+This works just like <code class="language-plaintext highlighter-rouge">lib</code>, except that these
+files are taken from the Workbench standard library folder rather than
+from your library folder. Use this for files like
+<code class="language-plaintext highlighter-rouge">tok.t</code> or <code class="language-plaintext highlighter-rouge">tadsnet.t</code>
+that come with the standard Workbench distribution.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">define</code>: A preprocessor symbol to define. The
+value is a symbol, optionally followed by an equals sign (=) and the
+text to define for the symbol:</p>
+
+    <p>` define: LANGUAGE=en_us `</p>
+
+    <p>Workbench will generate the appropriate compiler option to define the
+symbol in the macro preprocessor when the user builds the project. You
+can use as many <code class="language-plaintext highlighter-rouge">define</code> options as you need;
+simply use a separate <code class="language-plaintext highlighter-rouge">define</code> item for each
+symbol you wish to define.</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">sequence</code>: A number giving the sorting order
+for this item. This is intended for use by the standard templates
+included with Workbench; replacement libraries should generally omit
+this. When displaying the list of available project types, Workbench
+puts items with <code class="language-plaintext highlighter-rouge">sequence</code> items at the top of
+the list, in order of their <code class="language-plaintext highlighter-rouge">sequence</code> values,
+followed by the remaining items sorted in alphabetic order of their
+<code class="language-plaintext highlighter-rouge">name</code> strings. The intention is that standard
+system items are displayed first, followed by third-party libraries.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+
+<p>Here’s the template included with the standard Workbench installation
+for the Introductory Adv3 Web UI project type.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    name: Adv3 - Introductory - Web UI
+    sequence: 3
+    desc: Create a game based on the Adv3 library for Web browser play.
+      Your new project will be set up for deployment on Web servers, so
+      that users can play in a browser without installing any TADS
+      software.  This project starter includes a working game scenario 
+      as an example to help you get started.
+    source: samples\startI3.t $.t
+    lib: adv3web.tl
+    sysfile: webui.tl
+    sysfile: tadsnet.t
+    define: TADS_INCLUDE_NET
+    define: LANGUAGE=en_us
+    define: MESSAGESTYLE=neu
+</code></pre></div></div>
+
+<h2 id="installation">Installation</h2>
+
+<p>To distribute your library, simply create a ZIP file with all of your
+.t, .tl, and .tdb-project-starter files. Instruct users to install your
+library by following these steps:</p>
+
+<ul>
+  <li>Run Workbench, and verify that the Extensions folder is set up. This
+setting can be found by selecting the Tools - Options menu command and
+going to the System - Extensions pane. The Workbench installer
+normally sets this to “My Documents\TADS 3\Extensions”, but users can
+change it if they prefer to keep extensions somewhere else. If there’s
+no setting, the user should set it now.</li>
+  <li>Create a folder especially for your library in the Extensions folder.</li>
+  <li>Unzip your library files into the new folder.</li>
+</ul>
+
+<p>There’s no extra step to install your project template. Simply include
+the .tdb-project-starter file in the folder containing your library’s .t
+and .tl files. Workbench automatically searches for .tdb-project-starter
+files in the Extensions folder tree (including sub-folders) and all of
+the folders in Library Paths list.</p>
+
+<hr />
+
+<p><em>TADS 3 Technical Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="advtop.html" class="nav">Advanced Topics</a> &gt; Workbench
+Project Starter Templates<br />
+<span class="navnp"><a href="mediatypes.html" class="nav"><em>Prev:</em> Internet Media Types
+for TADS</a>    
+<a href="t3spec.html" class="nav"><em>Next:</em> T3 VM Technical
+Documentation</a>     </span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

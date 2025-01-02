@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-npcdeferredmessagesdirect-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-npcdeferredmessagesdirect-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">npcDeferredMessagesDirect</span><span class="type">object</span></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2457">2457</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Deferred NPC messages. We use this to report deferred messages from an
+NPC to the player. A message is deferred when a parsing error occurs,
+but the NPC can’t talk to the player because there’s no sense path to
+the player. When this happens, the NPC queues the message for eventual
+delivery; when a sense path appears later that lets the NPC talk to the
+player, we deliver the message through this object. Since these messages
+describe conditions that occurred in the past, we use the past tense to
+phrase the messages.</p>
+
+<p>Some messages will never be deferred:</p>
+
+<p>commandNotHeard - if a command is not heard, it will never enter an
+actor’s command queue; the error is given immediately in response to the
+command entry.</p>
+
+<p>refuseCommandBusy - same as commandNotHeard</p>
+
+<p>noMatchDisambig - interactive disambiguation will not happen in a
+deferred response situation, so it is impossible to have an interactive
+disambiguation failure.</p>
+
+<p>disambigOrdinalOutOfRange - for the same reason noMatchDisambig can’t be
+deferred.</p>
+
+<p>askDisambig - if we couldn’t display a message, we definitely couldn’t
+perform interactive disambiguation.</p>
+
+<p>askMissingObject - for the same reason that askDisambig can’t be
+deferred</p>
+
+<p>askUnknownWord - for the same reason that askDisambig can’t be deferred.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">npcDeferredMessagesDirect</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/npcDeferredMessages.html"><code class="language-plaintext highlighter-rouge">npcDeferredMessages</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">npcDeferredMessagesDirect</code></strong><br />
+<a href="../object/npcDeferredMessages.html"><code class="language-plaintext highlighter-rouge">npcDeferredMessages</code></a><br />
+`                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#ambiguousNounPhrase"><code class="language-plaintext highlighter-rouge">ambiguousNounPhrase</code></a> <a href="#askMissingObject"><code class="language-plaintext highlighter-rouge">askMissingObject</code></a> <a href="#commandNotUnderstood"><code class="language-plaintext highlighter-rouge">commandNotUnderstood</code></a> <a href="#emptyNounPhrase"><code class="language-plaintext highlighter-rouge">emptyNounPhrase</code></a> <a href="#insufficientQuantity"><code class="language-plaintext highlighter-rouge">insufficientQuantity</code></a> <a href="#noMatchCannotSee"><code class="language-plaintext highlighter-rouge">noMatchCannotSee</code></a> <a href="#noMatchForAll"><code class="language-plaintext highlighter-rouge">noMatchForAll</code></a> <a href="#noMatchForAllBut"><code class="language-plaintext highlighter-rouge">noMatchForAllBut</code></a> <a href="#noMatchNotAware"><code class="language-plaintext highlighter-rouge">noMatchNotAware</code></a> <a href="#singleObjectRequired"><code class="language-plaintext highlighter-rouge">singleObjectRequired</code></a> <a href="#uniqueObjectRequired"><code class="language-plaintext highlighter-rouge">uniqueObjectRequired</code></a> <a href="#wordIsUnknown"><code class="language-plaintext highlighter-rouge">wordIsUnknown</code></a> <a href="#zeroQuantity"><code class="language-plaintext highlighter-rouge">zeroQuantity</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="ambiguousNounPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ambiguousNounPhrase (actor, originalText, matchList, fullMatchList)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2526">2526</a>]</p>
+
+<p>we found an ambiguous noun phrase, but we were unable to perform
+interactive disambiguation</p>
+
+<p><span id="askMissingObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingObject (actor, action, which)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2533">2533</a>]</p>
+
+<p>an object phrase was missing</p>
+
+<p><span id="commandNotUnderstood"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandNotUnderstood (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2458">2458</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="emptyNounPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">emptyNounPhrase (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2488">2488</a>]</p>
+
+<p>empty noun phrase (‘take the’)</p>
+
+<p><span id="insufficientQuantity"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">insufficientQuantity (actor, txt, matchList, requiredNum)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2502">2502</a>]</p>
+
+<p>insufficient quantity to meet a command request (‘take five books’)</p>
+
+<p><span id="noMatchCannotSee"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchCannotSee (actor, txt)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2465">2465</a>]</p>
+
+<p>no match for a noun phrase</p>
+
+<p><span id="noMatchForAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForAll (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2475">2475</a>]</p>
+
+<p>no match for ‘all’</p>
+
+<p><span id="noMatchForAllBut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchForAllBut (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2481">2481</a>]</p>
+
+<p>nothing left for ‘all’ after removing ‘except’ items</p>
+
+<p><span id="noMatchNotAware"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noMatchNotAware (actor, txt)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2469">2469</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="singleObjectRequired"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleObjectRequired (actor, txt)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2516">2516</a>]</p>
+
+<p>a unique object is required, but multiple objects were specified</p>
+
+<p><span id="uniqueObjectRequired"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">uniqueObjectRequired (actor, txt, matchList)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2509">2509</a>]</p>
+
+<p>a unique object is required, but multiple objects were specified</p>
+
+<p><span id="wordIsUnknown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">wordIsUnknown (actor, txt)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2542">2542</a>]</p>
+
+<p>tell the user they entered a word we don’t know</p>
+
+<p><span id="zeroQuantity"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">zeroQuantity (actor, txt)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#2495">2495</a>]</p>
+
+<p>‘take zero books’</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

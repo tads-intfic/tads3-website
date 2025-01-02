@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-moreagendaitemexamples-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-moreagendaitemexamples-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>More AgendaItem Examples<br />
+</strong></td>
+<td style="text-align: right;"><a href="delayedagendaitem.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="overview-commandingnpcs.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Although we’ve already given several examples of AgendaItems, it may be
+worth giving a few more to explore what else can be done with this
+mechanism. All the following examples will apply to Sarah, so should be
+placed in your code so that they are located directly within the sarah
+object.</p>
+
+<p>The first problem we’ll solve using AgendaItems (though there are
+doubtless other ways of doing it) concerns the gas masks. So far we have
+devised a means of giving Sarah a gas mask, but not of making Sarah do
+anything with it. In order to follow the player character (PC) down the
+path to the basalt plane in Hell Fire Cavern, Sarah needs to don the gas
+mask when the PC does. We can use a pair of AgendaItems to make Sarah
+don her gas mask when the PC is wearing it and remove it again when the
+PC removes it:</p>
+
+<p>+ sarahDonGasMask : AgendaItem  <br />
+  isReady = (gPlayerChar.isMasked)<br />
+  invokeItem<br />
+  {<br />
+    nestedActorAction(getActor, Wear, getActor.maskObj);<br />
+    isDone = true;<br />
+    getActor.addToAgenda(sarahDoffGasMask);<br />
+  }<br />
+;  <br />
+  <br />
++ sarahDoffGasMask : AgendaItem<br />
+  isReady = (!gPlayerChar.isMasked)<br />
+  invokeItem<br />
+  { <br />
+    nestedActorAction(getActor, Remove, getActor.maskObj);<br />
+    isDone = true;<br />
+    getActor.addToAgenda(sarahDonGasMask);<br />
+  }<br />
+;</p>
+
+<p>Note how each of these AgendaItems adds the other to Sarah’s agenda when
+it is invoked. This allows the PC to don and remove his mask as many
+times as he likes, and Sarah will still follow his lead. At the moment,
+however, neither AgendaItem starts off in Sarah’s agenda, so neither
+will be executed. Since Sarah starts off without a gas mask,
+sarahDonMask is clearly the AgendaItem that needs to be added first;
+since Sarah can’t wear her gas mask before she’s got one, the
+appropriate place to add this to her agenda is probably when she’s first
+given a gas mask:</p>
+
+<p>+ GiveTopic<br />
+  matchTopic(fromActor, obj)<br />
+   { return obj.ofKind(GasMask) ? matchScore : nil; }<br />
+  handleTopic(fromActor, obj)<br />
+  {<br />
+    obj.moveInto(getActor);<br />
+    ”&lt;q&gt;Thanks,&lt;/q&gt; {the sarah/she} remarks dubiously as she accepts it from <br />
+    you, &lt;q&gt;I’m sure it’ll - er - come in very useful.&lt;/q&gt; ”;<br />
+    **getActor.addToAgenda(sarahDonGasMask);<br />
+**  }<br />
+;</p>
+
+<p>The next example shows how we can combine an AgendaItem with an
+EventList to provide Sarah with a list of responses to the demons
+whenever she can see them. It also provides an example of an AgendaItem
+with a declarative isDone condition.</p>
+
+<p>+ sarahHatesDemons : AgendaItem, ShuffledEventList<br />
+  isReady = (getActor.canSee(demons))<br />
+  initiallyActive = true<br />
+  invokeItem<br />
+  {<br />
+    doScript;<br />
+  }<br />
+  firstEvents =<br />
+  [<br />
+    ’{The sarah/she} backs away from the demons in disgust.<br />
+     &lt;q&gt;Ugh! Get away from me, you horrid creatures!&lt;/q&gt;<br />
+     she shrieks. ’<br />
+  ]<br />
+  eventList =<br />
+  [<br />
+    ’{The sarah/she} glances in horror at the demons crowding<br />
+     around you, raising her arms to ward them off. ’,<br />
+    ’One of the demons clutches at {the sarah\s/her} arms, and<br />
+     she does her best to shake it off. ’,<br />
+    ’{The sarah/she} throws you an anxious glance, &lt;q&gt;Can\t<br />
+     we get out of here?&lt;/q&gt; she pleads. ’,<br />
+    ’{The sarah/she} clutches your arm in fright as a pair<br />
+     of demons close in on her. ’  <br />
+  ] <br />
+  isDone = (demons.isIn(nil)) /* once the demons have been banished they’ll never be<br />
+                                 seen again, so there’s no point leaving this in<br />
+                                 Sarah’s agenda list */<br />
+;</p>
+
+<p>Finally, we can even have Sarah solve one of the puzzles (pulling the
+burned bush up) if it doesn’t occur to the player:</p>
+
+<p>+ sarahPullBush : DelayedAgendaItem<br />
+  isReady = (getActor.canSee(burnedBush))<br />
+  invokeItem<br />
+  {<br />
+    ”{The sarah/she} walks over to the bush and eyes it speculatively. ”;<br />
+    nestedActorAction(getActor, Pull, burnedBush);<br />
+    ”&lt;.p&gt;{The sarah/she} peers into the hole. &lt;q&gt;It looks like there’s<br />
+      some sort of tunnel.&lt;/q&gt; she remarks, a little dubiously, &lt;q&gt;I suppose<br />
+      you could crawl in there, but I wouldn’t fancy it.&lt;/q&gt;&lt;.p&gt;”;<br />
+  }<br />
+  isDone = (burnedBush.isPulled)<br />
+;</p>
+
+<p>Again, this needs to be added to Sarah’s agenda at some appropriate
+point:</p>
+
+<p>+ bush: CustomImmovable ’desiccated burning bush’ ’desiccated bush’<br />
+  ”The bush is &lt;&lt;daemonID == nil ? ’little more than a collections of<br />
+   dried sticks, with only the occasional apology for a leaf doing duty<br />
+   for foliage’ : ’ablaze’&gt;&gt;. ” <br />
+  inRoomDesc = ”The only sign of life on this barren hillside<br />
+    is a desiccated bush. ”<br />
+  burnDaemon { eventList.doScript; }<br />
+  daemonID = nil  <br />
+  eventList : EventList<br />
+  {<br />
+  [<br />
+    ’The bush is alight. ’,<br />
+    ’The bush is burning furiously. ’,<br />
+    ’The bush is starting to burn out. ’,<br />
+    &amp;swap<br />
+  ]  <br />
+  swap()<br />
+   {<br />
+    ”The flames on the bush die out, leaving only charred remains. ”;<br />
+    lexicalParent.daemonID.removeEvent();<br />
+    lexicalParent.daemonID = nil;<br />
+    burnedBush.moveInto(lexicalParent.location);<br />
+    lexicalParent.moveInto(nil);    <br />
+    **sarah.addToAgenda(sarahPullBush.setDelay(2));<br />
+**   }<br />
+  }<br />
+  cannotTakeMsg = ’Tug as {you/he} will, the bush will not not quite come<br />
+    free of the ground. ’<br />
+;</p>
+
+<p>Now, suppose we don’t want Sarah to follow the player character into the
+tunnel - perhaps she doesn’t like narrow, dark tunnels running into the
+side of rumbling volcanos (a pretty understandable attitude when you
+come to think of it.) The first thing to do is to prevent Sarah
+following the actor into the hole, which we can do by making the
+following alteration on the sarahFollowing state:</p>
+
+<p>accompanyTravel(leadActor, conn) <br />
+    { return leadActor == gPlayerChar<strong> &amp;&amp; conn != bushHole</strong>; }</p>
+
+<p>Both to make sure that the player notices that Sarah is no longer
+following, but waiting on the side of the volcano, and to make Sarah a
+bit more lifelike, we can then add a couple of AgendaItems to display a
+“farewell” and “welcome back” message. Note that we need to use
+callWithSenseContext for the first one so that the text is actually
+displayed:</p>
+
+<p>+ sarahWontFollow : AgendaItem <br />
+  isReady = (gPlayerChar.isIn(volcanoTunnel) &amp;&amp; getActor.curState==sarahFollowing)<br />
+  invokeItem<br />
+  {    <br />
+    callWithSenseContext(nil, nil, {:<br />
+    ”&lt;q&gt;Take care, now!&lt;/q&gt; you hear {the sarah/she} call after you<br />
+     anxiously.&lt;.p&gt;“ });    <br />
+    isDone = true;<br />
+    getActor.addToAgenda(sarahWelcomesBack);<br />
+  }<br />
+;<br />
+  <br />
++ sarahWelcomesBack : AgendaItem<br />
+  isReady = getActor.canSee(gPlayerChar)<br />
+  invokeItem<br />
+  {<br />
+    ”&lt;q&gt;You’re back then!&lt;/q&gt; {the sarah/she} declares, with<br />
+     evident relief.&lt;.p&gt;”;<br />
+    isDone = true;<br />
+    getActor.addToAgenda(sarahWontFollow);<br />
+  }<br />
+;</p>
+
+<p>Finally, we need to get the first of these into Sarah’s agenda in the
+first place. One way we can do this would be to add it, as before, in
+the swap message of the bush.eventList:</p>
+
+<p>+ bush: CustomImmovable ’desiccated burning bush’ ’desiccated bush’<br />
+  …<br />
+  eventList : EventList<br />
+  {<br />
+   …<br />
+   swap()<br />
+   {<br />
+    ”The flames on the bush die out, leaving only charred remains. ”;<br />
+    lexicalParent.daemonID.removeEvent();<br />
+    lexicalParent.daemonID = nil;<br />
+    burnedBush.moveInto(lexicalParent.location);<br />
+    lexicalParent.moveInto(nil);    <br />
+    sarah.addToAgenda(sarahPullBush.setDelay(2));<br />
+    **sarah.addToAgenda(sarahWontFollow);<br />
+**   }<br />
+  }<br />
+  …<br />
+;</p>
+
+<p>Ideally, one might want to make Sarah’s behaviour even more elaborate
+here, perhaps to have her ask the player character how he fared,
+depending on whether he carried the golden banana into the hole and
+whether he emerges with it; but at least this provides a basic
+framework.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

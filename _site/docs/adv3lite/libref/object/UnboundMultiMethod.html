@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-unboundmultimethod-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-unboundmultimethod-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">UnboundMultiMethod</span><span class="type">class</span></p>
+
+<p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#413">413</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Unbound multi-method exception. This is thrown when a call to resolve a
+multi-method fails to find a binding, meaning that there’s no definition
+of the method that matches the types of the arguments.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">UnboundMultiMethod</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Exception.html"><code class="language-plaintext highlighter-rouge">Exception</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">UnboundMultiMethod</code></strong><br />
+<a href="../object/Exception.html"><code class="language-plaintext highlighter-rouge">Exception</code></a><br />
+`                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">UnboundMultiMethod</code></strong><br />
+<a href="../object/UnboundInheritedMultiMethod.html"><code class="language-plaintext highlighter-rouge">UnboundInheritedMultiMethod</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#args_"><code class="language-plaintext highlighter-rouge">args_</code></a> <a href="#func_"><code class="language-plaintext highlighter-rouge">func_</code></a> <a href="#name_"><code class="language-plaintext highlighter-rouge">name_</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+<a href="../object/Exception.html#errmsg_"><code class="language-plaintext highlighter-rouge">errmsg_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#displayException"><code class="language-plaintext highlighter-rouge">displayException</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Exception</code> :<br />
+<a href="../object/Exception.html#getExceptionMessage"><code class="language-plaintext highlighter-rouge">getExceptionMessage</code></a> <a href="../object/Exception.html#showStackTrace"><code class="language-plaintext highlighter-rouge">showStackTrace</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="args_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">args_</code></p>
+
+<p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#437">437</a>]</p>
+
+<p>the number of arguments</p>
+
+<p><span id="func_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">func_</code></p>
+
+<p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#431">431</a>]</p>
+
+<p>the base function pointer</p>
+
+<p><span id="name_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name_</code></p>
+
+<p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#434">434</a>]</p>
+
+<p>the symbol name of the base function</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (func, args)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#414">414</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="displayException"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">displayException ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/multmeth.t.html">multmeth.t</a>[<a href="../source/multmeth.t.html#425">425</a>]</p>
+
+<p>display an error message describing the exception</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

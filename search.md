@@ -9,16 +9,15 @@ url: /search
 <script>
   // Template to generate the JSON to search
   window.store = {
-    {% for page in site.pages %}
+     {% for page in site.pages %}
       "{{ page.url | slugify }}": {
-        "title": "{{ page.title | xml_escape }}",
+        "title": "{{ page.url | slugify }}",
         "content": {{ page.content | strip_html | jsonify }},
         "url": "{{ page.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
-    {% endfor %},    
+    {% endfor %}
   };
-        console.log('Content:', window.store['docs-adv3lite-libref-object-yall-html'] );
 </script>
 
 <!-- Import lunr.js from unpkg.com -->

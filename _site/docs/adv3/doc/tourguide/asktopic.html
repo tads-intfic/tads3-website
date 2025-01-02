@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-asktopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-asktopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>AskTopic : <a href="asktelltopic.html">AskTellTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="initiatetopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="telltopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>An AskTopic is used to respond to an ASK ABOUT command, e.g. ASK SARAH
+ABOUT RING. Rather than overriding actionIobjAskAbout on the sarah
+object, we can nest a number of AskTopic objects either in Sarah or in
+one of Sarah’s ActorStates. To avoid the response becoming repetitive,
+it’s often a good idea to combine an AskTopic with some kind of
+<a href="eventlist.html">EventList</a> - often a
+<a href="stopeventlist.html">StopEventList</a> - which gives several different
+responses before finally coming to one that’s repeated.</p>
+
+<p>One thing a player will often want to ask about an NPC is the NPC
+him/herself. To handle ASK SARAH ABOUT HERSELF we don’t need to define
+some strange kind of herself object, we just treat it as equivalent to
+ASK SARAH ABOUT SARAH. Here is how we might define an appropriate
+AskTopic to put in the sarahTalking : InConversationState.</p>
+
+<p>++ AskTopic, StopEventList @sarah<br />
+  [ {: ”&lt;q&gt;What brings you here?&lt;/q&gt; you wonder,\b<br />
+     &lt;q&gt;I was just taking a walk in the valley when some madman snatched my ring<br />
+     off me and ran in here, shouting at me to come and find it if I wanted it<br />
+     back.&lt;/q&gt; she tells you, &lt;q&gt;So I followed him in. Now I<br />
+     just want to find my ring and get out of here.&lt;/q&gt;&lt;&lt;gSetKnown(diamondRing)&gt;&gt;“ },<br />
+    {: ”&lt;q&gt;And you are…?&lt;/q&gt; you ask.\b<br />
+       &lt;q&gt;&lt;&lt;sarah.makeProper&gt;&gt;,&lt;/q&gt; she tells you, &lt;q&gt;My name’s Sarah. Pleased<br />
+       to meet you - and I’ll be even more pleased if you help me find my ring.&lt;/q&gt;“ },<br />
+      ’&lt;q&gt;So you you\ve never been in these caves before?&lt;/q&gt; you ask.\b<br />
+       &lt;q&gt;No, never,&lt;/q&gt; she replies, &lt;q&gt;and I wouldn\t be here now if my ring<br />
+        hadn\t been stolen. Caves aren\t really my thing, though these<br />
+        aren\t at all what I expected!&lt;/q&gt; she nods towards the lake and the<br />
+        ship, and a pensive expression crosses her face, &lt;q&gt;I suppose it might<br />
+        be interesting to explore - but I really should get back.&lt;/q&gt;’,<br />
+      ’&lt;q&gt;What are you so anxious to get back to?&lt;/q&gt; you ask.\b<br />
+       &lt;q&gt;Fresh air and open sky, for a start!&lt;/q&gt; she laughs. ’              <br />
+  ]     <br />
+;</p>
+
+<p>Note that Sarah’s first response mentions her ring. Up to that point the
+player knows nothing about the ring, and so cannot refer to it in
+conversation; even if a TopicEntry is defined that matches the ring, it
+won’t be activated until the player knows about the ring. One way the
+player can get to know about the ring is by the player character
+actually seeing it, but another is through being told about it as here.
+In order to achieve this we use the gSetKnown(diamondRing) macro, which
+actually translated into gPlayerChar.setKnowsAbout(obj). Likewise,
+Sarah’s second response reveals her name, so we use the custom
+<a href="basicactors.html">makeProper</a> method both to make the appropriate
+changes on the Sarah object and to return her proper name. Both methods
+can be called using the &lt;&lt;&gt;&gt; syntax within a double-quoted string,
+but we can’t use a double-quoted string directly in an EventList. We
+can, however, use a function pointer, and that function pointer can be
+returned from an anonymous function declaration, and we can use the
+shortform syntax to declare it. Thus we can use
+{: ”Here’s a double-quoted string” } as a shorthand way of writing
+new Function { ”Here’s a double-quoted string”; }. Note that in the
+short form we <em>don’t</em> put a semi-colon after the closing double-quote
+mark.</p>
+
+<p>Since Sarah’s answer clearly invites a question about the ring, this is
+the next thing we should cater for:</p>
+
+<p>++ AskTopic, StopEventList @diamondRing<br />
+  [ ’&lt;q&gt;What does your ring look like?&lt;/q&gt; you ask.\b<br />
+     &lt;q&gt;It\s a plain platinum band with a solitaire diamond.&lt;/q&gt; she tells you. ’,</p>
+
+<p>    ’&lt;q&gt;This ring - it\s important to you?&lt;/q&gt; you inquire.\b<br />
+     &lt;q&gt;Oh yes!&lt;/q&gt; {the sarah/she} declares, &lt;q&gt;It\s not it\s monetary value, so<br />
+     much; it\s more a sentimental thing - you can\t replace that with insurance<br />
+     money. Besides, I was so &lt;i&gt;incensed&lt;/i&gt; when this bloke snatched it off me -<br />
+     why should he get away with it?&lt;/q&gt;’,</p>
+
+<p>     new function {<br />
+       ”&lt;q&gt;Have you any idea where your ring might be?&lt;/q&gt; you ask.\b<br />
+       &lt;q&gt;Perhaps he dropped it back in there,&lt;/q&gt; she suggests, nodding towards<br />
+        the open door,&lt;q&gt;let’s go and see.&lt;/q&gt;&lt;.p&gt;”;<br />
+        sarah.setCurState(sarahGuide1);<br />
+     },</p>
+
+<p>     ’&lt;q&gt;And the missing ring…&lt;/q&gt; you begin.\b<br />
+      &lt;q&gt;… is a plain platinum band with a solitaire diamond.&lt;/q&gt; she reminds you. ’<br />
+  ]   <br />
+;</p>
+
+<p>Note the new function in the event list; this finally sets Sarah off on
+her brief <a href="guidedtourstate.html">guided tour</a>, from which she’ll arrive
+back where she started having accomplished nothing.</p>
+
+<p>The player may also ask Sarah about herself when she starts following
+the player character around, so we need to put an appropriate AskTopic
+under the sarahFollowing state. We also need to cater for the
+possibility that the player has not yet discovered Sarah’s name:</p>
+
+<p>+ sarahFollowing : AccompanyingState<br />
+ …<br />
+;</p>
+
+<p>++ AskTopic, StopEventList @sarah<br />
+  [ ’&lt;q&gt;So, what you do when you\re not looking for missing rings?&lt;/q&gt; you ask.\b<br />
+     &lt;q&gt;Oh, nothing important,&lt;/q&gt; she replies, &lt;q&gt;I\m just a freelance journalist.&lt;/q&gt;’,<br />
+    ’&lt;q&gt;Have you come up with many interesting scoops?&lt;/q&gt; you wonder.\b<br />
+     &lt;q&gt;Now &lt;i&gt;that&lt;/i&gt; would be telling.&lt;/q&gt; she replies mysteriously. ’<br />
+  ] <br />
+;<br />
++++ AltTopic<br />
+  ”&lt;q&gt;What’s your name, by the way?&lt;/q&gt; you wonder.\b<br />
+   &lt;q&gt;I’m &lt;&lt;getActor.makeProper&gt;&gt;,&lt;/q&gt; she tells you with a warm smile. ”<br />
+  isActive = (!sarah.isProperName)<br />
+;</p>
+
+<p>Something else the player may ask about is the ghost. It doesn’t make
+sense to discuss the ghost unless both Sarah and the player character
+have encountered it. The library will take care of putting a ghost topic
+out of reach until the player character knows about the ghost, but we
+will want to add an isActive condition to make the topic unreachable
+unless Sarah has also seen it. Moreover, we’ll want to allow for the
+fact that the way the ghost is discussed is likely to be rather
+different if it’s still present at the time, which we’ll do by means of
+an AltTopic. Again, we nest all this in the sarahFollowing state (since
+in order to have seen the ghost, Sarah must be following the player
+character).</p>
+
+<p>++ AskTopic, StopEventList @ghost<br />
+ [<br />
+  ’&lt;q&gt;What did you make of that ghost?&lt;/q&gt; you ask.\b<br />
+   &lt;q&gt;Scary,&lt;/q&gt; she announces, &lt;q&gt;Definitely scary. But I suppose I might be<br />
+    a bit upset if someone had just pushed my statue over - especially if I was<br />
+    dead.&lt;/q&gt;’,<br />
+   ’&lt;q&gt;So you think it definitely was a ghost we saw in the churchyard?&lt;/q&gt; you enquire.\b<br />
+    &lt;q&gt;Definitely.&lt;/q&gt; {the sarah/she} nods vigorously, &lt;q&gt;Didn\t you see the way it<br />
+    just &lt;i&gt;appeared&lt;/i&gt; from that tomb - and then vanished away again?&lt;/q&gt;\b’,<br />
+   ’&lt;q&gt;What that ghost said - about a sacred task and a golden banana. Is that something<br />
+    we should take seriously, do you think?&lt;/q&gt; you ask.\b<br />
+    &lt;q&gt;Something &lt;i&gt;we&lt;/i&gt; should take seriously?&lt;/q&gt; {the sarah/she} replies, cocking<br />
+    one eyebrow, &lt;q&gt;It was &lt;i&gt;you&lt;/i&gt; he was talking to!&lt;/q&gt; Then, seeing your look<br />
+    of despair, she gives a little laugh and continues, &lt;q&gt;Come on, then, let\s go and<br />
+    find that banana - we can\t have you being haunted by a toppled statue for the<br />
+    rest of your life!&lt;/q&gt;’,<br />
+   ’&lt;q&gt;So you think we\d better take the ghost seriously.&lt;/q&gt; you conclude.\b<br />
+    &lt;q&gt;Yes,&lt;/q&gt; she says, &lt;q&gt;I do.&lt;/q&gt; ’<br />
+  ] <br />
+  isActive = (getActor.hasSeen(ghost))<br />
+;</p>
+
+<p>+++ AltTopic<br />
+  ”&lt;q&gt;Is that really what I think it is?&lt;/q&gt; you whisper.\b<br />
+   &lt;q&gt;Yes!&lt;/q&gt; she whispers back.”<br />
+  isActive = (ghost.isIn(getActor.location))<br />
+;</p>
+
+<p>We might also want to cover the case in which a sceptical Sarah has been
+told about the ghost but hasn’t seen it for herself (how that comes
+about will be dealt with in more detail when we come look at examples of
+<a href="telltopic.html">TellTopic</a>). In this case we can nest the AskTopic
+inside the sarah object instead of one of her ActorStates, since we’ll
+want this group of replies to be used whichever ActorState Sarah happens
+to be in. The player character (PC) could sail off in the ship,
+encounter the ghost, then return to tell and ask Sarah about it, all
+without giving Sarah the ring that makes her follow him, or he could
+give Sarah the ring between encountering the ghost and trying to discuss
+it with Sarah.</p>
+
+<p>+ AskTopic, ShuffledEventList @ghost<br />
+  <br />
+  [ ’&lt;q&gt;You don\t believe it was a ghost I saw, do you?&lt;/q&gt; you ask.\b<br />
+    &lt;q&gt;No - of course not!&lt;/q&gt; {the sarah/she} chuckles, &lt;q&gt;I mean, a<br />
+    ghost! They don\t exist - every sensible person knows that!&lt;/q&gt;‘ ]<br />
+    <br />
+  [ ’&lt;q&gt;So you think I\m lying about the ghost?&lt;/q&gt; you ask.\b<br />
+     &lt;q&gt;No,&lt;/q&gt; she replies carefully, &lt;q&gt;But I think you must be mistaken.&lt;/q&gt; ’,<br />
+    ’&lt;q&gt;So, what do you think I saw?&lt;/q&gt; you demand.\b<br />
+     &lt;q&gt;A trick of the light maybe?&lt;/q&gt; she suggests, &lt;q&gt;Or maybe you ate<br />
+     too much green cheese last night? Or graveyards bring out the over-<br />
+     active imagination in you?&lt;/q&gt;’,<br />
+     ’&lt;q&gt;If it wasn\t a ghost I saw, who or what was it told me about<br />
+     the golden banana and the cabal?&lt;/q&gt; you ask.\b<br />
+     &lt;q&gt;A ghost that burbles about bananas and cabals?&lt;/q&gt; she retorts,<br />
+     &lt;q&gt;Oh come on! You\re just having me on!&lt;/q&gt;’,<br />
+     ’&lt;q&gt;I\m sure I did see a ghost, you know.&lt;/q&gt; you insist, &lt;q&gt;Do I<br />
+     strike you as the sort of person who imagines or invents things?&lt;/q&gt;\b<br />
+      &lt;q&gt;Not normally, perhaps.&lt;/q&gt; {the sarah/she} concedes, &lt;q&gt;Perhaps<br />
+     someone was playing a trick on you? A holographic projection? A prankster<br />
+     in a sheet? This whole place seems a bit tricky to me!&lt;/q&gt;‘ <br />
+   ]<br />
+   isActive = (getActor.knowsAbout(ghost))<br />
+;</p>
+
+<p>Once again we apply an isActive condition; this discussion can only take
+place if Sarah knows about the ghost (because the player character has
+told her of his encounter with it). Note that if Sarah has actually seen
+the ghost for herself, the responses we defined previously for that
+eventuality will automatically override those defined just above if
+Sarah has seen the ghost, since a TopicEntry (even if it’s only a
+DefaultTopic) in the current ActorState always takes precedence over one
+in the Actor.</p>
+
+<p>So far our AskTopics have all concerned single game objects, but we can
+also create topics which can be asked (or told) about. For example, we
+might want to ask the curator about the museum, so we could create a
+suitable topic object:</p>
+
+<p>tMuseum : Topic ’museum’;</p>
+
+<p>Furthermore, we might want to make asking the curator about the museum
+and asking him about himself effectively the same. So instead of
+defining an AskTopic with a single object referenced by @ in its
+template, we can create it with a list of objects the AskTopic will
+match:</p>
+
+<p>++ AskTopic, StopEventList [curator, tMuseum]<br />
+   [ {: ”&lt;q&gt;Are you in charge here?&lt;/q&gt; you ask.\b<br />
+        &lt;q&gt;That’s right, I’m &lt;&lt;curator.makeProper&gt;&gt;, the curator of this<br />
+        museum.&lt;/q&gt; he replies with an evident air of self-importance. ” },<br />
+     ’&lt;q&gt;Have you been curator here long?&lt;/q&gt; you wonder.\b<br />
+      &lt;q&gt;Only for the last twenty years.&lt;/q&gt; he replies. ’,<br />
+     ’&lt;q&gt;Do you get many visitors to this museum?&lt;/q&gt; you wonder.\b<br />
+      &lt;q&gt;One or two.&lt;/q&gt; he replies, &lt;q&gt;After all, it\s not as if many<br />
+      people live round here.&lt;/q&gt;’,     <br />
+     ’&lt;q&gt;Are you interested in acquiring more exhibits?&lt;/q&gt; you enquire.\b<br />
+      &lt;q&gt;Naturlich - if they are of the right sort.&lt;/q&gt; he tells you. ’<br />
+   ]<br />
+;</p>
+
+<p>Clearly, this AskTopic must be nested inside the curatorTalking state,
+not inside the tMuseum topic object, so be careful where you position it
+in your code! The same applies to the following:</p>
+
+<p>++ AskTopic, StopEventList @tBenefactor<br />
+  [<br />
+    ’&lt;q&gt;Who are the benefactors?&lt;/q&gt; you ask.\b<br />
+     &lt;q&gt;Why, people who have been especially generous to the museum,<br />
+      of course.&lt;/q&gt; {the curator/he} tells you, in the tone of one<br />
+      explaining the absolutely blindingly obvious. ’,<br />
+      <br />
+    ’&lt;q&gt;So how does one become a benefactor?&lt;/q&gt; you wonder.\b<br />
+     &lt;q&gt;Well,&lt;/q&gt; he says, &lt;q&gt;one way would be to procure our most<br />
+      wanted acquisition of the month for us.&lt;/q&gt;’,<br />
+      <br />
+    ’&lt;q&gt;So if I wanted to become a benefactor…&lt;/q&gt; you begin,\b<br />
+     &lt;q&gt;Just bring us the exhibit we are most keen to acquire<br />
+      just now.&lt;/q&gt; {the curator/he} reminds you, &lt;q&gt;We publish<br />
+      the details on our monthly flyer.&lt;/q&gt;’<br />
+  ]<br />
+  isActive = gRevealed(‘benefactors’)<br />
+;</p>
+
+<p>For which we also need to define:</p>
+
+<p>tBenefactor : Topic ’benefactor/benefactors’;</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

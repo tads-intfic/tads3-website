@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-moduleexecobject-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-moduleexecobject-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">ModuleExecObject</span><span class="type">class</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#314">314</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Module Execution Object. This is an abstract base class for various
+classes that provide modular execution hooks. This class and its
+subclasses are mix-in classes - they can be multiply inherited by any
+object (as long as it’s not already some other kind of module execution
+object).</p>
+
+<p>The point of the Module Execution Object and its subclasses is to allow
+libraries and user code to define execution hooks, without having to
+worry about what other libraries and user code bits are defining the
+same hook. When we need to execute a hook defined via this object, we
+iterate over all of the instances of the appropriate subclass and invoke
+its execute() method.</p>
+
+<p>By default, the order of execution is arbitrary. In some cases, though,
+dependencies will exist, so that one object cannot be invoked until
+another object has already been invoked. In these cases, you must set
+the execBeforeMe property to contain a list of the objects whose
+execute() methods must be invoked before this object’s execute() method
+is invoked. The library will check this list before calling execute() on
+this object, and ensure that each object in the list has been invoked
+before calling this object’s execute().</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></strong><br />
+<a href="../object/InitObject.html"><code class="language-plaintext highlighter-rouge">InitObject</code></a><br />
+<a href="../object/PostRestoreObject.html"><code class="language-plaintext highlighter-rouge">PostRestoreObject</code></a><br />
+<a href="../object/PostUndoObject.html"><code class="language-plaintext highlighter-rouge">PostUndoObject</code></a><br />
+<a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
+<a href="../object/EventListItem.html"><code class="language-plaintext highlighter-rouge">EventListItem</code></a><br />
+<a href="../object/ELI.html"><code class="language-plaintext highlighter-rouge">ELI</code></a><br />
+<a href="../object/ELI1.html"><code class="language-plaintext highlighter-rouge">ELI1</code></a><br />
+<a href="../object/MetadataModuleID.html"><code class="language-plaintext highlighter-rouge">MetadataModuleID</code></a><br />
+<a href="../object/GameInfoModuleID.html"><code class="language-plaintext highlighter-rouge">GameInfoModuleID</code></a><br />
+<a href="../object/GameID.html"><code class="language-plaintext highlighter-rouge">GameID</code></a><br />
+<a href="../object/MobileCollectiveGroup.html"><code class="language-plaintext highlighter-rouge">MobileCollectiveGroup</code></a><br />
+<a href="../object/OutputStream.html"><code class="language-plaintext highlighter-rouge">OutputStream</code></a><br />
+<a href="../object/BannerOutputStream.html"><code class="language-plaintext highlighter-rouge">BannerOutputStream</code></a><br />
+<a href="../object/LogConsole.html"><code class="language-plaintext highlighter-rouge">LogConsole</code></a><br />
+<a href="../object/WebWinOutputStream.html"><code class="language-plaintext highlighter-rouge">WebWinOutputStream</code></a><br />
+<a href="../object/Relation.html"><code class="language-plaintext highlighter-rouge">Relation</code></a><br />
+<a href="../object/RuleBook.html"><code class="language-plaintext highlighter-rouge">RuleBook</code></a><br />
+<a href="../object/StringPreParser.html"><code class="language-plaintext highlighter-rouge">StringPreParser</code></a><br />
+<a href="../object/ThoughtManager.html"><code class="language-plaintext highlighter-rouge">ThoughtManager</code></a><br />
+<a href="../object/TopHintMenu.html"><code class="language-plaintext highlighter-rouge">TopHintMenu</code></a><br />
+<a href="../object/PreRestartObject.html"><code class="language-plaintext highlighter-rouge">PreRestartObject</code></a><br />
+<a href="../object/PreSaveObject.html"><code class="language-plaintext highlighter-rouge">PreSaveObject</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="execAfterMe"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execAfterMe</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#327">327</a>]</p>
+
+<p>List of objects that must be executed after me - this is analogous to
+execBeforeMe, but we make sure we run before these.</p>
+
+<p><span id="execBeforeMe"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execBeforeMe</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#321">321</a>]</p>
+
+<p>List of objects that must be executed before me - by default, the order
+doesn’t matter, so we’ll set this to an empty list. Instances can
+override this if it is necessary to execute other objects before this
+object can be executed.</p>
+
+<p><span id="hasInitialized_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hasInitialized_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#422">422</a>]</p>
+
+<p>flag to indicate that this is the first time running classExec</p>
+
+<p><span id="isDoingExec_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isDoingExec_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#345">345</a>]</p>
+
+<p>flag - true if we’re in the process of executing</p>
+
+<p><span id="isExecuted_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isExecuted_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#342">342</a>]</p>
+
+<p>flag - true if we’ve been executed on this round</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="_execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_execute ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#348">348</a>]</p>
+
+<p>execute - internal method: checks dependency order</p>
+
+<p><span id="classExec"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">classExec ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#429">429</a>]</p>
+
+<p>Class execution. Call this method on the particular class of modules to
+execute. We’ll iterate over all instances of that class and invoke each
+instance’s _execute() method.</p>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#333">333</a>]</p>
+
+<p>Subclass-specific execution method. Each subclass should override this
+method to provide its execution code.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-agendaitem-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-agendaitem-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">AgendaItem</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5790">5790</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>An “agenda item.” Each actor can have its own “agenda,” which is a list
+of these items. Each item represents an action that the actor wants to
+perform - this is usually a goal the actor wants to achieve, or a
+conversational topic the actor wants to pursue.</p>
+
+<p>On any given turn, an actor can carry out only one agenda item.</p>
+
+<p>Agenda items are a convenient way of controlling complex behavior. Each
+agenda item defines its own condition for when the actor can pursue the
+item, and each item defines what the actor does when pursuing the item.
+Agenda items can improve the code structure for an NPC’s behavior, since
+they nicely isolate a single background action and group it with the
+conditions that trigger it. But the main benefit of agenda items is the
+one-per-turn pacing - by executing at most one agenda item per turn, we
+ensure that the NPC will carry out its self-initiated actions at a
+measured pace, rather than as a jumble of random actions on a single
+turn.</p>
+
+<p>Note that NPC-initiated conversation messages override agendas. If an
+actor has an active ConvNode, AND the ConvNode displays a “continuation
+message” on a given turn, then the actor will not pursue its agenda on
+that turn. In this way, ConvNode continuation messages act rather like
+high-priority agenda items.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">AgendaItem</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">AgendaItem</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">AgendaItem</code></strong><br />
+<a href="../object/BoredomAgendaItem.html"><code class="language-plaintext highlighter-rouge">BoredomAgendaItem</code></a><br />
+<a href="../object/ConvAgendaItem.html"><code class="language-plaintext highlighter-rouge">ConvAgendaItem</code></a><br />
+<a href="../object/DelayedAgendaItem.html"><code class="language-plaintext highlighter-rouge">DelayedAgendaItem</code></a><br />
+<a href="../object/FollowAgendaItem.html"><code class="language-plaintext highlighter-rouge">FollowAgendaItem</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#agendaOrder"><code class="language-plaintext highlighter-rouge">agendaOrder</code></a> <a href="#calledBy"><code class="language-plaintext highlighter-rouge">calledBy</code></a> <a href="#initiallyActive"><code class="language-plaintext highlighter-rouge">initiallyActive</code></a> <a href="#invokedByActor"><code class="language-plaintext highlighter-rouge">invokedByActor</code></a> <a href="#isDone"><code class="language-plaintext highlighter-rouge">isDone</code></a> <a href="#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a> <a href="#name"><code class="language-plaintext highlighter-rouge">name</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a> <a href="#invokeItem"><code class="language-plaintext highlighter-rouge">invokeItem</code></a> <a href="#invokeItemBase"><code class="language-plaintext highlighter-rouge">invokeItemBase</code></a> <a href="#registerItem"><code class="language-plaintext highlighter-rouge">registerItem</code></a> <a href="#report"><code class="language-plaintext highlighter-rouge">report</code></a> <a href="#resetItem"><code class="language-plaintext highlighter-rouge">resetItem</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="agendaOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">agendaOrder</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5837">5837</a>]</p>
+
+<p>The ordering of the item relative to other agenda items. When we choose
+an agenda item to execute, we always choose the lowest numbered item
+that’s ready to run. You can leave this with the default value if you
+don’t care about the order.</p>
+
+<p><span id="calledBy"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">calledBy</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5863">5863</a>]</p>
+
+<p>The object from whose agendaList this AgendaItem was invoked</p>
+
+<p><span id="initiallyActive"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initiallyActive</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5804">5804</a>]</p>
+
+<p>Is this item active at the start of the game? Override this to true to
+make the item initially active; we’ll add it to the actor’s agenda
+during the game’s initialization.</p>
+
+<p><span id="invokedByActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invokedByActor</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5860">5860</a>]</p>
+
+<p>invokeItem can test the invokedByActor property to decide whether what
+the actor says should be a conversational gambit started on the actor’s
+own initiative or as a (default) response to something the pc has just</p>
+
+<p><span id="isDone"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isDone</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5829">5829</a>]</p>
+
+<p>Is this item done? On each turn, we’ll remove any items marked as done
+from the actor’s agenda list. We remove items marked as done before
+executing any items, so done-ness overrides readiness; in other words,
+if an item is both ‘done’ and ‘ready’, it’ll simply be removed from the
+list and will not be executed.</p>
+
+<p>By default, we simply return nil. Items can override this to provide a
+declarative condition of done-ness, or they can simply set the property
+to true when they finish their work. For example, an item that only
+needs to execute once can simply set isDone to true in its invokeItem()
+method; an item that’s to be repeated until some success condition
+obtains can override isDone to return the success condition.</p>
+
+<p><span id="isReady"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isReady</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5812">5812</a>]</p>
+
+<p>Is this item ready to execute? The actor will only execute an agenda
+item when this condition is met. By default, we’re ready to execute.
+Items can override this to provide a declarative condition of readiness
+if desired.</p>
+
+<p><span id="name"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">name</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5894">5894</a>]</p>
+
+<p>An optional tag, specified as a single-quoted string.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="getActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getActor ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5797">5797</a>]</p>
+
+<p>My actor - agenda items should be nested within the actor using ‘+’ so
+that we can find our actor. Note that this doesn’t add the item to the
+actor’s agenda - that has to be done explicitly with
+actor.addToAgenda().</p>
+
+<p><span id="invokeItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invokeItem ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5871">5871</a>]</p>
+
+<p>Execute this item. This is invoked during the actor’s turn when the item
+is the first item that’s ready to execute in the actor’s agenda list. We
+do nothing by default.</p>
+
+<p><span id="invokeItemBase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invokeItemBase (caller)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5845">5845</a>]</p>
+
+<p>The caller is passed as a parameter so we can tell whether we’re being
+called from an Actor or from a DefaultAgendaTopic, which may affect what
+we want to do – for example the wording of what the actor says at this
+point.</p>
+
+<p><span id="registerItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">registerItem ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5891">5891</a>]</p>
+
+<p>Carry out any additional registration when we’re added to our actor’s
+agenda. We do nothing here, but this is needed on FollowAgendaItem.</p>
+
+<p><span id="report"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">report (msg, prop, =, &amp;, canSee)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5902">5902</a>]</p>
+
+<p>A convenience method that can be used from within our invokeItem to
+display some text only if the player character can see us (or, if the
+optional second parameter is supplied, sense us through some other
+sense, e.g. &amp;canHear or &amp;canSmell).</p>
+
+<p><span id="resetItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resetItem ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5880">5880</a>]</p>
+
+<p>Reset the item. This is invoked whenever the item is added to an actor’s
+agenda. By default, we’ll set isDone to nil as long as isDone isn’t a
+method; this makes it easier to reuse agenda items, since we don’t have
+to worry about clearing out the isDone flag when reusing an item.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

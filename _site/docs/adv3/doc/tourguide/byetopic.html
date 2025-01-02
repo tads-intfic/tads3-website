@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-byetopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-byetopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ByeTopic : <a href="misctopic.html">MiscTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="imphellotopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="impbyetopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A ByeTopic is usually used in connection with <a href="greetingprotocols.html">greeting
+protocols</a>, to handle the end of a conversation.
+As such, it is normally located in the
+<a href="conversationreadystate.html">ConversationReadyState</a> to which the actor
+returns at the conclusion of the conversation. The ByeTopic handles
+explicit termination of a conversation (via a BYE command).</p>
+
+<p>In the case of King Solomon, we shall assume that our player character
+would not be so gauche as to walk out on the king without some attempt
+at formal leave-taking, so we really want a ByeTopic that handles both
+implicit and explicit conversation termination. As with the HelloTopic
+and the ImpHelloTopic this should go in the solomonExamining
+ConversationReadyState:</p>
+
+<p>+++ ByeTopic, ShuffledEventList<br />
+  [<br />
+    ’&lt;q&gt;Goodbye, your majesty.&lt;/q&gt; you say, with a little bow, just to be<br />
+      on the safe side.\b<br />
+     &lt;q&gt;Farewell, mysterious messenger,&lt;/q&gt; the king replies, &lt;q&gt;perhaps<br />
+      we shall meet again.&lt;/q&gt; ’,<br />
+     ’&lt;q&gt;Well, er, cheerio then, sire.&lt;/q&gt; you say.\b<br />
+      Solomon cocks one eyebrow, &lt;q&gt;Cheerio? Is that how angels speak?<br />
+       Fare thee well.&lt;/q&gt;’,<br />
+     ’&lt;q&gt;Goodbye, sir.&lt;/q&gt; you bid him farewell.\b<br />
+      &lt;q&gt;God be with you too.&lt;/q&gt; the king replies formally, before returning<br />
+       to his contemplations. ’    <br />
+  ] <br />
+;</p>
+
+<p>Note the symmetry here between HelloTopic and ByeTopic: while HelloTopic
+handles both implicit and explicit conversation initiation, ByeTopic
+handles both explicit and implicit conversation termination.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

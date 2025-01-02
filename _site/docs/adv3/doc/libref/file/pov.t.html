@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-file-pov-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-file-pov-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">pov.t</span><span class="type">file</span></p>
+
+<p><a href="../source/pov.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p>TADS 3 Library - point of view</p>
+
+<p>This module provides definitions related to point of view and sensory
+context. When we generate output, we do so with respect to a particular
+point of view; different points of view can result in different output,
+because of the viewer’s distance from an object, for example, or because
+of the presence of obscuring materials between the viewer and the viewed
+object. We also generate output in a particular sensory context, which
+controls whether or not a message that describes an object with respect
+to a particular sense should be generated at all; for example, if the
+viewer can’t see an object because of darkness or an obscuring layer of
+material, messages about the object’s visual appearance should not be
+generated.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Objects</span>  </p>
+
+<p><a href="../object/senseContext.html"><code class="language-plaintext highlighter-rouge">senseContext</code></a>
+<span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><a href="#callFromPOV"><code class="language-plaintext highlighter-rouge">callFromPOV</code></a> <a href="#callWithSenseContext"><code class="language-plaintext highlighter-rouge">callWithSenseContext</code></a> <a href="#clearPOV"><code class="language-plaintext highlighter-rouge">clearPOV</code></a> <a href="#getPOV"><code class="language-plaintext highlighter-rouge">getPOV</code></a> <a href="#getPOVActor"><code class="language-plaintext highlighter-rouge">getPOVActor</code></a> <a href="#getPOVActorDefault"><code class="language-plaintext highlighter-rouge">getPOVActorDefault</code></a> <a href="#getPOVDefault"><code class="language-plaintext highlighter-rouge">getPOVDefault</code></a> <a href="#popPOV"><code class="language-plaintext highlighter-rouge">popPOV</code></a> <a href="#pushPOV"><code class="language-plaintext highlighter-rouge">pushPOV</code></a> <a href="#setPOV"><code class="language-plaintext highlighter-rouge">setPOV</code></a> <a href="#setRootPOV"><code class="language-plaintext highlighter-rouge">setRootPOV</code></a></p>
+
+<p><span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><span id="callFromPOV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">callFromPOV (actor, pov, funcToCall, [args])</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#328">328</a>]</p>
+
+<p>Call a function from a point of view. We’ll set the new point of view,
+call the function with the given arguments, then restore the original
+point of view.</p>
+
+<p><span id="callWithSenseContext"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">callWithSenseContext (source, sense, func)</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#56">56</a>]</p>
+
+<p>Call a function with a given sensory context.</p>
+
+<p>The sensory context specifies the source of any messages generated in
+the course of the routine we invoke and the sense which those messages
+use to convey information. If the player character cannot sense the
+source object in the given sense, then we block all messages generated
+while calling this function.</p>
+
+<p>If the source object is nil, this establishes a neutral sense context in
+which all messages are visible.</p>
+
+<p>This can be used for processing events that are not directly initiated
+by the player character, such as non-player character activities or
+scheduled events (fuses and daemons). The idea is that anything
+described in the course of calling our routine is physically associated
+with the source object and relates to the given sense, so if the player
+character cannot sense the source object, then the player should not be
+aware of these happenings and thus should not see the messages.</p>
+
+<p>Sense contexts are not nested in their effects - we will show or hide
+the messages that our callback routine generates regardless of whether
+or not messages are hidden by an enclosing sensory context. So, this
+routine effectively switches to the new sense context for the duration
+of the callback, eliminating the effect of any enclosing context.
+However, we do restore the enclosing sense context before returning, so
+there is no lasting net effect on the global sense context.</p>
+
+<p><span id="clearPOV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clearPOV ( )</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#310">310</a>]</p>
+
+<p>Clear the point of view and all stacked elements</p>
+
+<p><span id="getPOV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPOV ( )</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#205">205</a>]</p>
+
+<p>Get the current point of view. In *most* cases, this is the same as
+the point-of-view actor: the actor is looking around with its own eyes,
+so it’s the point of view. However, this can differ from the actor when
+the actor is viewing the location being described through an
+intermediary of some kind. For example, if an actor is observing a
+remote room through a closed-circuit TV system, the point of view would
+be the camera in the remote room (not the TV - the point of view is
+intended to be the object that’s physically absorbing the light rays or
+other sensory equivalents).</p>
+
+<p><span id="getPOVActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPOVActor ( )</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#189">189</a>]</p>
+
+<p>Get the current point-of-view actor - this is the actor who’s performing
+the action (LOOK AROUND, EXAMINE, SMELL, etc) that’s generating the
+current description.</p>
+
+<p><span id="getPOVActorDefault"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPOVActorDefault (dflt)</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#211">211</a>]</p>
+
+<p>get the POV actor, returning the given default if there isn’t one set</p>
+
+<p><span id="getPOVDefault"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getPOVDefault (dflt)</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#221">221</a>]</p>
+
+<p>get the POV, returning the given default if there isn’t one set</p>
+
+<p><span id="popPOV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">popPOV ( )</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#283">283</a>]</p>
+
+<p>Pop the most recent point of view pushed</p>
+
+<p><span id="pushPOV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pushPOV (actor, pov)</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#270">270</a>]</p>
+
+<p>Push the current point of view</p>
+
+<p><span id="setPOV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setPOV (actor, pov)</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#233">233</a>]</p>
+
+<p>Change the point of view without altering the point-of-view stack</p>
+
+<p><span id="setRootPOV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setRootPOV (actor, pov)</code></p>
+
+<p><a href="../file/pov.t.html">pov.t</a>[<a href="../source/pov.t.html#245">245</a>]</p>
+
+<p>Set the root point of view. This doesn’t affect the current point of
+view unless there is no current point of view; this merely sets the
+outermost default point of view.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

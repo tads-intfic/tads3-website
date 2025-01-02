@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-extensions-dynregion-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-extensions-dynregion-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="../../docs/manual/topbar.jpg" data-border="0" /></p>
+
+<p><a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+Dynamic Region<br />
+<span class="navnp"><a href="cmdhelp.html" class="nav"><em>Prev:</em> Command Help</a>
+    <a href="eventlistitem.html" class="nav"><em>Next:</em>
+EventListItem</a>     </span></p>
+
+<h1 id="dynamicregion">DynamicRegion</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>The purpose of the <a href="../dynamicRegion.t">dynamicRegion.t</a> extension is to
+enable the definition of <a href="../../docs/manual/room.html#regions">Regions</a>
+(of the <code class="language-plaintext highlighter-rouge">DynamicRegion</code> class) that can be
+expanded or contracted during the course of a game (a normal Region is
+fixed and can’t be changed). This ability comes with certain
+restrictions, however.</p>
+
+<p><span id="classes"></span></p>
+
+<h2 id="new-classes-objects-and-properties">New Classes, Objects and Properties</h2>
+
+<p>In addition to a number of properties intended purely for internal use,
+this extension defines the following new class and properties:</p>
+
+<ul>
+  <li><em>New Class</em>: <strong>DynamicRegion</strong></li>
+  <li><em>Properties/Methods</em>: <code class="language-plaintext highlighter-rouge">expandRegion()</code>,
+<code class="language-plaintext highlighter-rouge">contractRegion()</code>,
+<code class="language-plaintext highlighter-rouge">isCurrentlyWithin()</code>,
+<code class="language-plaintext highlighter-rouge">extraAdjustments()</code>.</li>
+</ul>
+
+<p><span id="usage"></span></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Include the dynamicRegion.t file after the library files but before your
+game source files..</p>
+
+<p>With certain restrictions (to be described further below) you can use a
+DynamicRegion in the same way as a normal Region, with the addition of
+the following methods:</p>
+
+<ul>
+  <li><strong>expandRegion(rm)</strong>: Adds <em>rm</em> to the rooms in this DynamicRegion,
+where <em>rm</em> may be a single room, a list of room, or a list of rooms
+and/or regions.</li>
+  <li><strong>contractRegion(rm)</strong>: Removes <em>rm</em> from the rooms in this
+DynamicRegion, where <em>rm</em> may be a single room, a list of room, or a
+list of rooms and/or regions.</li>
+  <li><strong>isCurrentlyWithin(region)</strong>: returns true if and only if all our
+rooms are also in <em>region</em>; note that this extension also adds this
+method to the base Region class.</li>
+  <li><strong>extraAdjustments(rm, expanded)</strong>: Carry out any additional
+adjustments that need to be made as side-effects to adding or removing
+rooms. By default we do nothing here but game code can override as
+necessary. The <em>rm</em> parameter is the list of rooms and/or regions that
+have just been added to (if <em>expanded</em> is true) or removed from (if
+<em>expanded</em> is nil) this DynamicRegion.</li>
+</ul>
+
+<p>To create a Dynamic SenseRegion, just define an object as being of both
+the <code class="language-plaintext highlighter-rouge">DynamicRegion</code> and the
+<code class="language-plaintext highlighter-rouge">SenseRegion</code> class, but note that the
+DynamicRegion class must then be listed first in such a definition, for
+example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     myDynamicSenseRegion: DynamicRegion, SenseRegion
+     ;
+     
+</code></pre></div></div>
+
+<p><span id="restrictions"></span></p>
+
+<h2 id="restrictions-and-workarounds">Restrictions and Workarounds</h2>
+
+<p>Since a DynamicRegion may gain or lose rooms, it cannot be in any
+permanent relation with any other Regions. In particular this means:</p>
+
+<ul>
+  <li>A DynamicRegion cannot be part of (located in) any other Region.</li>
+  <li>No other Region can be part of (located in) a DynamicRegion.</li>
+</ul>
+
+<p>This does not prevent your <em>defining</em> a DynamicRegion as part of the
+contents of another Region, or another Region as part of the contents of
+a DynamicRegion (for example, through its
+<code class="language-plaintext highlighter-rouge">expandRegion(rm, expanded)</code> method), but these
+are just shorthand ways of listing the contents (i.e. list of rooms) of
+the enclosed Region/DynamicRegion in the enclosing DynamicRegion/Region
+as part of the initial contents of the enclosing Region. It does not set
+up any relation between the Regions themselves.</p>
+
+<p>For example, suppose we have a DynamicRegion X that initially starts out
+containing rooms A, B and C and we define it to be part of a larger
+region Y that also contains Rooms D, E and F. If we later added Room G
+to X and took away room C from X, would we also have to change region Y
+so that it now contained Rooms A, B, D, E, F, G? But then what if Region
+Y also contained Region Z that started out overlapping with Region X so
+that Region Z also contained Room C? Shouldn’t Room C then be retained
+in Region Y even when it’s removed from Region X?</p>
+
+<p>If this sounds a bit complicated and confusing, that’s because it is;
+once changes to one region are allowed to cause changes to other
+regions, it’s both unclear what ought to happen and horribly complex to
+keep track of. For that reason it seems better to keep things reasonably
+simple and not allow a DynamicRegion to contain or be contained by any
+other Region. Of course a DynamicRegion could happen to contain rooms
+that are all in some other Region as well, but we don’t <em>count</em> this as
+the DynamicRegion being <em>in</em> the other Region since there’s no guarantee
+that this relation will continue to hold. We can, however, test for
+<em>temporary</em> containment with the
+<code class="language-plaintext highlighter-rouge">isCurrentlyWithin(region)</code> method;
+<code class="language-plaintext highlighter-rouge">X.isCurrentlyWithin(Y)</code> returns true if all the
+rooms in X are also in Y.</p>
+
+<p>But note the distinction. If X is a DynamicRegion that contains rooms A,
+B and C, while Y is some other Region that contains rooms A, B, C, D and
+E, although <code class="language-plaintext highlighter-rouge">X.isCurrentlyIn(Y)</code> will then be
+true, <code class="language-plaintext highlighter-rouge">X.isIn(Y)</code> will be nil (i.e. false),
+since there is no <em>intrinsic</em> relation between the Regions X and Y.</p>
+
+<p>Additionally, DynamicRegions don’t do the following:</p>
+
+<ul>
+  <li>If the initial location of a MultiLoc is defined as being a
+DynamicRegion, adding or subtracting rooms to or from the
+DynamicRegion does not change the location of the MultiLoc.</li>
+  <li>If a DynamicRegion is defined as being familiar, changing its list of
+rooms doesn’t make the added rooms familiar if they weren’t before or
+unfamiliar if they were before.</li>
+</ul>
+
+<p>These limitations are there partly because it would be too complex to
+keep track of all such cases, and partly because each game’s
+requirements may be different in every particular case. However, in game
+code it may be relatively straightforward to work round these
+limitations provided it’s clear what’s wanted. To help with this, the
+DynamicRegion class defines the
+<code class="language-plaintext highlighter-rouge">extraAdjustments()</code> method which is executed at
+the end of any call to <code class="language-plaintext highlighter-rouge">expandRegion()</code> or
+<code class="language-plaintext highlighter-rouge">contractRegion()</code>. By default it does nothing,
+and is thus available to be overridden to do whatever might be needed.</p>
+
+<p>For example, suppose we had an overcastArea DynamicRegion that can
+expand or shrink, and that a MultiLoc clouds object should be present in
+every room of that DynamicRegion at all times. Initially we might
+define:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    clouds: MultiLoc, Distant 'clouds; dark grey;;them'
+       "Dark grey clouds cover the sky. "
+       
+       locationList = [overcastArea]
+    ;
+     
+     
+</code></pre></div></div>
+
+<p>This is fine for defining the initial locations of the clouds object,
+but these need to be updated when overcastArea gains or loses rooms. To
+achieve this we can use its <code class="language-plaintext highlighter-rouge">extraAdjustments()</code>
+method to recalculate where the clouds object should be when the
+overcastArea grows or shrinks:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     overcastArea: DynamicRegion
+         extraAdjustments(rm, expanded)
+         {
+             /* Re-initialize clouds' location list */
+             clouds.moveInto(nil);
+             clouds.moveIntoLocations();
+         }
+     ;
+     
+</code></pre></div></div>
+
+<p>We could use a similar technique for making one DynamicRegion expand or
+contract in line with another. Suppose, for example, that we have a
+forestRegion and a meadowRegion next to each other, such that one
+shrinks if the other grows (as trees are cut down or planted). We could
+then make the meadowRegion automatically grow or shrink as the
+forestRegion shrinks or grows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    meadowRegion: DynamicRegion
+    ;
+
+    forestRegion: DynamicRegion
+        extraAdjustments(rm, expanded)
+        {
+            if(expanded)
+               meadowRegion.contractRegion(rm);
+            else
+               meadowRegion.expandRegion(rm);
+        }
+    ;
+     
+</code></pre></div></div>
+
+<p>Alternatively, if the meadowRegion were notionally part of an
+outdoorRegion, we might want both to expand or contract together:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     meadowRegion: DynamicRegion
+        extraAdjustments(rm, expanded)
+        {
+            if(expanded)
+               outdoorRegion.expandRegion(rm);
+            else
+               outdoorRegion.contractRegion(rm);
+        }
+     ;
+     
+     outdoorRegion: DynamicRegion
+     ;
+     
+</code></pre></div></div>
+
+<p>As can be seen from these examples, such things are quite easy to
+arrange in game code on a case by case basis, but would be almost
+impossible to provide for in library code, since it would become at best
+horribly cumbersome for library code to attempt to cater for all the
+possibilities that game authors might want.</p>
+
+<hr />
+
+<p><em>Adv3Lite Manual</em><br />
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+Dynamic Region<br />
+<span class="navnp"><a href="cmdhelp.html" class="nav"><em>Prev:</em> Command Help</a>
+    <a href="eventlistitem.html" class="nav"><em>Next:</em>
+EventListItem</a>     </span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

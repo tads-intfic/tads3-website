@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-statusline-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-statusline-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">statusLine</span><span class="type">object</span></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#173">173</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Status line - this is an abstract object that controls the status line
+display.</p>
+
+<p>We provide two main methods: showStatusHtml, which shows the status line
+in HTML format, and showStatusText, which shows the status line in plain
+text mode. To display the status line, we invoke one or the other of
+these methods, according to the current mode, to display the statusline.
+The default implementations of these methods generate the appropriate
+formatting codes for a statusline with a left part and a right part,
+calling showStatusLeft and showStatusRight, respectively, to display the
+text for the parts.</p>
+
+<p>Games can customize the statusline at two levels. At the simpler level,
+a game can modify showStatusLeft and/or showStatusRight to change the
+text displayed on the left and/or right of the statusline. Since these
+two methods are used regardless of the statusline style of the
+underlying interpreter, games don’t have to worry about the different
+modes when overriding these.</p>
+
+<p>At the more complex level, a game can modify showStatusHtml and/or
+showStatusText. Modifying these routines provides complete control over
+the formatting of the entir status line. If a game wants to use
+something other than the traditional left/right display, it must modify
+these methods.</p>
+
+<p>This object is transient, because the statusline style is a function of
+the interpreter we’re currently running on, and thus isn’t suitable for
+saving persistently.</p>
+
+<p><code class="language-plaintext highlighter-rouge">transient </code><strong><code class="language-plaintext highlighter-rouge">statusLine</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">statusLine</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#statusDispMode"><code class="language-plaintext highlighter-rouge">statusDispMode</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#beginStatusLine"><code class="language-plaintext highlighter-rouge">beginStatusLine</code></a> <a href="#endStatusLine"><code class="language-plaintext highlighter-rouge">endStatusLine</code></a> <a href="#getEstimatedHeightHtml"><code class="language-plaintext highlighter-rouge">getEstimatedHeightHtml</code></a> <a href="#initBannerWindow"><code class="language-plaintext highlighter-rouge">initBannerWindow</code></a> <a href="#setColorScheme"><code class="language-plaintext highlighter-rouge">setColorScheme</code></a> <a href="#showStatusHtml"><code class="language-plaintext highlighter-rouge">showStatusHtml</code></a> <a href="#showStatusLeft"><code class="language-plaintext highlighter-rouge">showStatusLeft</code></a> <a href="#showStatusLine"><code class="language-plaintext highlighter-rouge">showStatusLine</code></a> <a href="#showStatusLineDaemon"><code class="language-plaintext highlighter-rouge">showStatusLineDaemon</code></a> <a href="#showStatusRight"><code class="language-plaintext highlighter-rouge">showStatusRight</code></a> <a href="#showStatusText"><code class="language-plaintext highlighter-rouge">showStatusText</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="statusDispMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">statusDispMode</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#564">564</a>]</p>
+
+<p>The status mode we’re using. If this is nil, it means we haven’t chosen
+a mode yet.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="beginStatusLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beginStatusLine ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#392">392</a>]</p>
+
+<p>Begin status-line mode. This sets up the output manager so that text
+written to the default output stream is displayed on the status line.
+Returns the original output stream.</p>
+
+<p><span id="endStatusLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endStatusLine (oldStr)</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#470">470</a>]</p>
+
+<p>end statusline display</p>
+
+<p><span id="getEstimatedHeightHtml"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getEstimatedHeightHtml ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#294">294</a>]</p>
+
+<p>Get the estimated HTML-style banner height, in lines of text. This is
+used to set the status line banner size for platforms where sizing to
+the exact height of the rendered contents isn’t supported.</p>
+
+<p>If showStatusHtml() is overridden to display more or fewer lines of text
+than the basic implementation here, then this routine must be overridden
+as well to reflect the new height.</p>
+
+<p><span id="initBannerWindow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">initBannerWindow (win)</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#513">513</a>]</p>
+
+<p>Initialize the banner window, given the BannerWindow object representing
+the status line banner API window.</p>
+
+<p><span id="setColorScheme"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setColorScheme ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#381">381</a>]</p>
+
+<p>Set up the status line’s color scheme. This is called each time we
+redraw the status line to set the background and text colors. We call
+the statusline banner window to do the work, since the mechanism is
+different between the traditional and Web UIs.</p>
+
+<p><span id="showStatusHtml"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusHtml ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#252">252</a>]</p>
+
+<p>Show the status line in HTML format. Our default implementation shows
+the traditional two-part (left/right) status line, using
+showStatusLeft() and showStatusRight() to display the parts.</p>
+
+<p><span id="showStatusLeft"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusLeft ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#337">337</a>]</p>
+
+<p>Show the left part of a standard left/right statusline. By default,
+we’ll show the player character’s location, by calling statusName() on
+the PC’s immediate container.</p>
+
+<p><span id="showStatusLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusLine ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#180">180</a>]</p>
+
+<p>Show the status line, in HTML or text mode, as appropriate. By default,
+the library sets this up as a “prompt daemon,” which means that this
+will be called automatically just before each command line is read.</p>
+
+<p><span id="showStatusLineDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusLineDaemon ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#232">232</a>]</p>
+
+<p>prompt-daemon showing the status line</p>
+
+<p><span id="showStatusRight"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusRight ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#358">358</a>]</p>
+
+<p>Show the right part of a standard left/right statusline. By default,
+we’ll show the current score, a slash, and the number of turns.</p>
+
+<p><span id="showStatusText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStatusText ( )</code></p>
+
+<p><a href="../file/status.t.html">status.t</a>[<a href="../source/status.t.html#317">317</a>]</p>
+
+<p>Show the statusline in text mode. Our default implementation shows the
+traditional two-part (left/right) status line, using showStatusLeft()
+and showStatusRight() to display the parts.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

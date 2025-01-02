@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-derivedrelation-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-derivedrelation-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">DerivedRelation</span><span class="type">object</span></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#400">400</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A DerivedRelation is one that doesn’t maintain its own table of what it
+related to what, but works out what is related to what on the basis of
+some other relation(s) (e.g. a sibling relation might work by testing
+for common parents).</p>
+
+<p>REQUIRES THE RELATIONS EXTENSION</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DerivedRelation</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Relation.html"><code class="language-plaintext highlighter-rouge">Relation</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DerivedRelation</code></strong><br />
+<a href="../object/Relation.html"><code class="language-plaintext highlighter-rouge">Relation</code></a><br />
+<a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
+<a href="../object/ModuleExecObject.html"><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></a><br />
+`                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Relation</code> :<br />
+<a href="../object/Relation.html#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="../object/Relation.html#reciprocal"><code class="language-plaintext highlighter-rouge">reciprocal</code></a> <a href="../object/Relation.html#relationType"><code class="language-plaintext highlighter-rouge">relationType</code></a> <a href="../object/Relation.html#relTab"><code class="language-plaintext highlighter-rouge">relTab</code></a> <a href="../object/Relation.html#reverseName"><code class="language-plaintext highlighter-rouge">reverseName</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addRelation"><code class="language-plaintext highlighter-rouge">addRelation</code></a> <a href="#inverselyRelatedTo"><code class="language-plaintext highlighter-rouge">inverselyRelatedTo</code></a> <a href="#relatedTo"><code class="language-plaintext highlighter-rouge">relatedTo</code></a> <a href="#removeRelation"><code class="language-plaintext highlighter-rouge">removeRelation</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Relation</code> :<br />
+<a href="../object/Relation.html#isInverselyRelated"><code class="language-plaintext highlighter-rouge">isInverselyRelated</code></a> <a href="../object/Relation.html#isRelated"><code class="language-plaintext highlighter-rouge">isRelated</code></a> <a href="../object/Relation.html#makeUnique"><code class="language-plaintext highlighter-rouge">makeUnique</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a> <a href="../object/ModuleExecObject.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addRelation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addRelation (objs)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#416">416</a>]</p>
+
+<p>By default we don’t permit the direct addition of relationships via this
+relation, since this is a relation dependent upon external conditions.</p>
+
+<p><span id="inverselyRelatedTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inverselyRelatedTo (a)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#409">409</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="relatedTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">relatedTo (a)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#407">407</a>]</p>
+
+<p>Instances need to override to provide a method that returns a list of
+items related to a via this relationship, on the basis of whatever
+criteria are appropriate.</p>
+
+<p><span id="removeRelation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeRelation (objs)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/relations.t.html">relations.t</a>[<a href="../source/relations.t.html#427">427</a>]</p>
+
+<p>By default we don’t permit the direct removal of relationships via this
+relation, since this is a relation dependent upon external conditions.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-question-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-question-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Question</span><span class="type">class</span></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1029">1029</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A Question is an interactive question we ask the player via the regular
+command line. The player then has the option to answer the question, or
+to ignore the question and enter a new command.</p>
+
+<p>The parser uses Question objects internally to handle certain errors
+that the player can fix by entering additional information, such as
+disambiguation queries and missing noun phrase queries. Games can use
+Question objects for other, custom interactions.</p>
+
+<p>The basic Question object is incomplete - you have to subclass it to get
+a functional question handler. In particular, you must provide a
+parseAnswer() routine that parses the reply and creates a Command to
+carry out the action of answering the question.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Question</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Question</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Question</code></strong><br />
+<a href="../object/GramQuestion.html"><code class="language-plaintext highlighter-rouge">GramQuestion</code></a><br />
+<a href="../object/YesNoQuestion.html"><code class="language-plaintext highlighter-rouge">YesNoQuestion</code></a><br />
+<a href="../object/ParseErrorQuestion.html"><code class="language-plaintext highlighter-rouge">ParseErrorQuestion</code></a><br />
+<a href="../object/RexQuestion.html"><code class="language-plaintext highlighter-rouge">RexQuestion</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#answerTemplate"><code class="language-plaintext highlighter-rouge">answerTemplate</code></a> <a href="#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#parseAnswer"><code class="language-plaintext highlighter-rouge">parseAnswer</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="answerTemplate"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">answerTemplate</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1074">1074</a>]</p>
+
+<p>the answer template</p>
+
+<p><span id="priority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">priority</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1057">1057</a>]</p>
+
+<p>Priority: Should the answer be parsed before checking for a regular
+command entry? If this is true, the parser will try parsing the player’s
+input as an answer to this question BEFORE it tries parsing the input as
+a regular command. If the answer parses, we’ll assume it really is an
+answer to the question, and we won’t even try parsing it as a new
+command.</p>
+
+<p>For disambiguation and missing noun queries, the parser only parses
+question replies AFTER parsing regular commands. Replies to these
+questions are frequently very short, abbreviated noun phrases - maybe
+just a single adjective or noun. It’s fairly common for there be at
+least a few nouns that are the same as verbs in the game, so the input
+after a disambiguation or missing noun reply can often be interpreted
+equally well as a new verb or as a reply to the question. There’s
+probably no theoretical basis for choosing one over the other when this
+happens, but in practice it seems that it’s usually better to treat the
+reply as a new command. So, by default we set this property to nil, to
+give priority to a new command.</p>
+
+<p>Custom questions posed by the game might want to give higher priority to
+the answer interpretation, though. Yes/No questions in particular will
+probably want to do this, because otherwise the parser would take the
+answer as a conversational overture to any nearby NPC.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="parseAnswer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parseAnswer (toks, dict)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#1071">1071</a>]</p>
+
+<p>Parse the answer. ‘toks’ is the token list of the user’s input, and
+‘dict’ is the main parser Dictionary object.</p>
+
+<p>If the input does look like a valid answer to the question, returns a
+CommandList with the parsed reply. If not, returns nil, in which case
+the parser will continue trying to parse the input as a whole new
+command.</p>
+
+<p>By default, we simply return nil. Subclasses/instances must override
+this to provide the custom answer parsing.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

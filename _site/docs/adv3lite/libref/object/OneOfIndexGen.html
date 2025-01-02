@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-oneofindexgen-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-oneofindexgen-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">OneOfIndexGen</span><span class="type">class</span></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1262">1262</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>&lt;&lt;one of&gt;&gt; index generator. The compiler generates an anonymous
+instance of this class for each &lt;&lt;one of&gt;&gt; list in string, setting
+the property ‘numItems’ to the number of items in the list, and
+‘listAttrs’ property to a string giving the sequence type. The compiler
+generates a call to getNextIndex() within the string to get the next
+index value, which is an integer from 1 to numItems.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">OneOfIndexGen</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">OneOfIndexGen</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#idx_"><code class="language-plaintext highlighter-rouge">idx_</code></a> <a href="#listAttrs"><code class="language-plaintext highlighter-rouge">listAttrs</code></a> <a href="#lst_"><code class="language-plaintext highlighter-rouge">lst_</code></a> <a href="#numItems"><code class="language-plaintext highlighter-rouge">numItems</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#getNextIndex"><code class="language-plaintext highlighter-rouge">getNextIndex</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="idx_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">idx_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1468">1468</a>]</p>
+
+<p>current position in the list</p>
+
+<p><span id="listAttrs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listAttrs</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1308">1308</a>]</p>
+
+<p>List attributes. This is a string with a comma-delimited list of tokens
+describing the treatment on the list for each fetch. The first call to
+getNextIndex() takes the first token off the list and generates an
+appropriate return value, possibly queuing up a list of future values.
+The next call to getNextIndex() reads from the queue. Once the queue is
+exhausted, the next call takes the second token off the attribute list
+and repeats the process. Once the attribute list is down to one token,
+we don’t remove the token, but simply repeat it forever.</p>
+
+<p>For example, ‘seq,rand’ runs through the entire list in sequence once,
+then generates independently random values from then on. ‘shuffle,stop’
+runs through the list once in shuffled order, then repeats the last pick
+from the shuffled list forever.</p>
+
+<p>The individual attribute values are:</p>
+
+<p>rand - pick an item at random, independently of past selections.</p>
+
+<p>rand-norpt - pick an item at random, but don’t pick the single most
+recent item chosen, to avoid repeating the same thing twice in a row.</p>
+
+<p>rand-wt - pick an item by random, weighting the items with decreasing
+probabilities. The last item is given relative weight 1, the second to
+last weight 2, the third to last weight 3, etc. In other words, the nth
+item from the end of the list is n times as likely to be picked as the
+last item. The picks are independent.</p>
+
+<p>seq - run through the items in sequence (1, 2, … numItems).</p>
+
+<p>shuffle - run through the list in a shuffled order.</p>
+
+<p>shuffle2 - shuffle the list into a random order, but only run through
+half before reshuffling</p>
+
+<p>stop - repeat the previous selection forever. (This should only be used
+as the second or later attribute in the list, since it depends on a
+prior selection being made.)</p>
+
+<p><span id="lst_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lst_</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1465">1465</a>]</p>
+
+<p>generated list</p>
+
+<p><span id="numItems"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numItems</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1264">1264</a>]</p>
+
+<p>number of list items</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="getNextIndex"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNextIndex ( )</code></p>
+
+<p><a href="../file/_main.t.html">_main.t</a>[<a href="../source/_main.t.html#1315">1315</a>]</p>
+
+<p>Get the next index value. Returns an integer from 1 to numItems. The
+algorithm for choosing the index depends on the list type, as defined by
+listAttrs.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

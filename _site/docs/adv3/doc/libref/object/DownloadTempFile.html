@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-downloadtempfile-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-downloadtempfile-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">DownloadTempFile</span><span class="type">class</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3369">3369</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Downloadable temporary file descriptor. We create this object when the
+program calls inputFile() to ask for a writable file. This lets the
+caller create and write a temporary file on the server side; when the
+caller is done with the file, we’ll offer the file for download to the
+client through the UI.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">DownloadTempFile</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">DownloadTempFile</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a> <a href="#isWebTempFile"><code class="language-plaintext highlighter-rouge">isWebTempFile</code></a> <a href="#mimeType"><code class="language-plaintext highlighter-rouge">mimeType</code></a> <a href="#resName"><code class="language-plaintext highlighter-rouge">resName</code></a> <a href="#resPath"><code class="language-plaintext highlighter-rouge">resPath</code></a> <a href="#tempFileName"><code class="language-plaintext highlighter-rouge">tempFileName</code></a> <a href="#timeCreated"><code class="language-plaintext highlighter-rouge">timeCreated</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#closeFile"><code class="language-plaintext highlighter-rouge">closeFile</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#getFilename"><code class="language-plaintext highlighter-rouge">getFilename</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="isReady"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isReady</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3415">3415</a>]</p>
+
+<p>is the file ready for download?</p>
+
+<p><span id="isWebTempFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isWebTempFile</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3418">3418</a>]</p>
+
+<p>this is a web temp file</p>
+
+<p><span id="mimeType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mimeType</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3409">3409</a>]</p>
+
+<p>MIME type</p>
+
+<p><span id="resName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resName</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3405">3405</a>]</p>
+
+<p>root resource name, and full resource path</p>
+
+<p><span id="resPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resPath</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3406">3406</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="tempFileName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tempFileName</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3402">3402</a>]</p>
+
+<p>TemporaryFile object for the local temp file</p>
+
+<p><span id="timeCreated"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timeCreated</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3412">3412</a>]</p>
+
+<p>creation timestamp, as a system tick count value</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="closeFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closeFile ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3392">3392</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (res, mimeType)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3370">3370</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="getFilename"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getFilename ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#3391">3391</a>]</p>
+
+<p>File spec interface. This allows the DownloadTempFile to be used as
+though it were a filename string.</p>
+
+<p>When the object is passed to one of the File.open methods, or to
+saveGame(), setScriptFile(), etc., the system will call our
+getFilename() method to determine the actual underlying file. We’ll
+return our temporary file object.</p>
+
+<p>When the underlying file is closed, the system calls our closeFile()
+method to notify us.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

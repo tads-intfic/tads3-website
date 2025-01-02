@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-gsg-climbingthetree-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-gsg-climbingthetree-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
+
+<p><a href="index.html">[Main]</a><br />
+<em><a href="basictravel.html">[Previous]</a>
+  <a href="makinglifemoreproblematic.html">[Next]</a></em></p>
+
+<h2 id="climbing-the-tree---remapping-behaviour">Climbing the Tree - Remapping Behaviour</h2>
+
+<p>Since the player will encounter a tree in the clearing, and since
+examining the tree will tell the player that the tree looks climbable,
+the player will probably try to climb the tree. But at the moment, the
+command <strong>climb the tree</strong> will result in the game responding, “That is
+not something you can climb.” What we need to do is to modify the tree
+object so that trying to climb it has the same effect as typing <strong>up</strong>.
+The simplest way to achieve this is to add the following to the
+definition of tree:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td>dobjFor(Climb) remapTo(Up) <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>I.e. replace <strong>climb tree</strong> with an <strong>up</strong> command. Both <code class="language-plaintext highlighter-rouge">dobjFor</code> and
+<code class="language-plaintext highlighter-rouge">remapTo</code> are macros that expand to more complex code, but that need not
+detain us here. What the construction means is “when the current object
+(in this case the tree) is the direct object of a <strong>climb</strong> command,
+replace this action with what would have happened if the player had
+simply typed <strong>up</strong>”.</p>
+
+<p>Since we’ve just introduced some basic but very important concepts here
+let’s pause to take a closer look at some of them. Whenever you see
+<code class="language-plaintext highlighter-rouge">dobj</code> in TADS 3 it’ll be an abbreviation for <strong>d</strong>irect <strong>obj</strong>ect. A
+direct object is the object a command principally works on: the direct
+object of the command <strong>climb tree</strong> is thus the tree. We define
+<code class="language-plaintext highlighter-rouge">dobjFor(Whatever)</code> on an object whenever we want to tell the game what
+to do when that object is the direct object of a Whatever command.
+Usually that’ll be more complicated than the example we’ve given here;
+this example is about as simple as it gets (don’t worry, we’ll be coming
+to more complex examples soon enough). The first part of this piece of
+code <code class="language-plaintext highlighter-rouge">dobjFor(Climb)</code> means “we’re about to define what to do in
+response to a climb tree command” (it means this because we’re defining
+it on the tree); the second part, <code class="language-plaintext highlighter-rouge">remapTo(Up)</code>, goes on to say what we
+want to do in this case, namely execute an <strong>up</strong> command instead. This
+is as simple as it gets because the action we’re remapping to is the
+simplest kind of action: a command with no objects. If we wanted to
+remap to another command consisting of a verb followed by a direct
+object we could just list the verb and the object. For example we could
+have used TravelVia and the name of the connector via which we want the
+player character to travel:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dobjFor(Climb) remapTo(TravelVia, topOfTree)
+</code></pre></div></div>
+
+<p>This illustrates a couple of useful things: first, how to use
+<code class="language-plaintext highlighter-rouge">remapTo </code>in the more general case where the verb takes a direct object,
+and second, how to use <code class="language-plaintext highlighter-rouge">TravelVia </code>with a travel connector to carry out
+travel. It also illustrates once again that a room is a kind of travel
+connector leading to itself. However, having pointed all this out, we’ll
+revert to the first version, which is what we actually want here. So if
+you changed your code to try out <code class="language-plaintext highlighter-rouge">TravelVia</code>, before going on change it
+back so it reads:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dobjFor(Climb) remapTo(Up)
+</code></pre></div></div>
+
+<hr />
+
+<p><em>Getting Started in TADS 3</em><br />
+<a href="index.html">[Main]</a><br />
+<em><a href="basictravel.html">[Previous]</a>
+  <a href="makinglifemoreproblematic.html">[Next]</a></em></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-commandtopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-commandtopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CommandTopic : <a href="topicentry.html">TopicEntry</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="overview-commandingnpcs.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="defaultcommandtopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A CommandTopic is a kind of TopicEntry that can be used to provide an
+actor’s response to a command directed to that actor. At its simplest it
+merely allows us to customize the message shown when an NPC declines to
+handle a command. For example, we could decide that Sarah, being a
+basically non-violent person, will refuse all commands to attack
+anything or anyone. We can therefore define the following CommandTopic
+for her (which we’ll locate in the sarah object itself, since Sarah is
+never violent whatever state she’s in):</p>
+
+<p>+ CommandTopic, ShuffledEventList @AttackAction<br />
+   [<br />
+     ’&lt;q&gt;I\m really not a violent person.&lt;/q&gt; she protests.&lt;.p&gt;’<br />
+   ]<br />
+   [<br />
+     ’&lt;q&gt;No, I never resort to violence.&lt;/q&gt; she refuses.&lt;.p&gt;’,<br />
+     ’&lt;q&gt;I told you, I don\t like violence!&lt;/q&gt; she reminds you.&lt;.p&gt;’,<br />
+     ’&lt;q&gt;I couldn\t, I just couldn\t. &lt;/q&gt; she shakes her head.&lt;.p&gt;’,<br />
+     ’&lt;q&gt;No way!&lt;/q&gt; she replies. ’<br />
+   ]   <br />
+;</p>
+
+<p>With a bit of effort, we can extend this so that a CommandTopic matches
+a specific command directed to a specific object. For example, suppose
+we want Sarah to make a particular response to SARAH, FOLLOW ME while
+she’s in the sarahTalking state. We can make a CommandTopic match this
+by overriding its <strong>matchTopic</strong> method:</p>
+
+<p>++ CommandTopic @FollowAction<br />
+   ”&lt;q&gt;I’m not going anywhere till I’ve found my ring.&lt;/q&gt; she<br />
+    tells you. ”    <br />
+   matchTopic(fromActor, action)<br />
+   {<br />
+     return action.ofKind(matchObj) &amp;&amp; action.dobjList_[1].obj_== fromActor<br />
+      ? matchScore : nil;<br />
+   }<br />
+;</p>
+
+<p>We can be quite sure that this will work, since FOLLOW can only take a
+single direct object; if the player tries typing the command SARAH,
+FOLLOW THE SHIP AND ME it will simply be rejected.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

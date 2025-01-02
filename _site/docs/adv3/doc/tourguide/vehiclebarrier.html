@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-vehiclebarrier-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-vehiclebarrier-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>VehicleBarrier : <a href="travelbarrier.html">TravelBarrier</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="vehicle.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="multiloc.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A VehicleBarrier is a special kind of <a href="travelbarrier.html">TravelBarrier</a>
+that allows actors to pass (effectively on foot) but (at least by
+default) prevents the passage of Vehicles, though this behaviour can be
+overridden (by overriding its <strong>canTravelerPass(traveler)</strong> method) to
+make it more selective about which kind of vehicles it will and won’t
+allow to pass. Here, however, we simply want to override the
+explainTravelBarrier method to provide a more specific message:</p>
+
+<p>snowmobileBarrier : VehicleBarrier<br />
+  explainTravelBarrier(traveler)<br />
+     {<br />
+         reportFailure(‘You can\t ride the snowmobile into there. ’);<br />
+     }<br />
+;</p>
+
+<p>Since the snowmobile is the only Vehicle we’re going to implement in
+this game, we can be sure that the explainTravelBarrier method will only
+ever be called for the snowmobile; otherwise, the
+explainTravelBarrier(traveler) method would have to test which traveler
+it was taking about, or else (and perhaps preferably)
+canTravelerPass(traveler) would need to be overridden to block only the
+snowmobile.</p>
+
+<p>We don’t want the snowmobile to be used anywhere except the snowy world
+on which it’s found, so the first place we’ll put this barrier is on the
+outside door of the Tardis, to prevent the snowmobile being ridden into
+the Tardis (you will recall that it’s too heavy to carry):</p>
+
+<p>+ tardisDoor : LockableWithKey, Door ’(tardis) door’ ’door’<br />
+  disambigName = ’Tardis door’<br />
+  keyList = [tardisKey]<br />
+  **travelBarrier = [snowmobileBarrier]<br />
+**;</p>
+
+<p>You may recall that the purpose of the snowmobile is to carry the player
+character further than he can walk on foot through the snow. We can
+enforce this by defining a custom TravelBarrier that allows <em>only</em> the
+snowmobile to pass:</p>
+
+<p>snowBarrier : TravelBarrier <br />
+  canTravelerPass(traveler) { return traveler==snowMobile; }<br />
+  explainTravelBarrier(traveler)<br />
+  {<br />
+    if(traveler == gPlayerChar)<br />
+    ”You trudge for half an hour or so through the snow, but then you<br />
+     are forced to realize that you can’t keep it up for long, so<br />
+     you turn round and come back. ”;<br />
+  }<br />
+;</p>
+
+<p>Note that the way we have defined it, this TravelBarrier will provide a
+‘soft’ boundary for travelers on foot; in other words it will make any
+TravelConnector with which it’s associated act like a FakeConnector for
+pedestrians but like a normal connector for those on the snowmobile.
+Note further that when the player character is riding the snowmobile,
+it’s the snowmobile that’s considered to be the traveler (in the sense
+of the traveler parameter here), even though its passengers are in a
+sense traveling with it.</p>
+
+<p>While we’re at it, we’ll provide a general custom connector to provide
+soft boundaries to our snowy world, as a kind of FakeConnector that
+provides different messages depending on whether we’re traveling on foot
+or on the snowmobile:</p>
+
+<p>snowWorldFakeConnector : TravelConnector<br />
+   canTravelerPass(traveler) { return nil; }<br />
+   explainTravelBarrier(traveler)<br />
+   {<br />
+     if(traveler == snowMobile)<br />
+       ”You ride across the vast snowy plain for several hours, without<br />
+        finding anything of interest, so you eventually decide to <br />
+        turn round and come back. ”;<br />
+     else if(traveler == gPlayerChar)<br />
+       ”You walk through the snow for what seems like hours, but all<br />
+        around the unremitting plain seems unchanging, so before you<br />
+        are overcome by frostbite or hypothermia you turn back. ”;     <br />
+   }<br />
+;</p>
+
+<p>We’ll also define a reusable connector for returning to the spot where
+the Tardis materializes on this world from locations that can only be<br />
+reached by riding the snowmobile:</p>
+
+<p>snowWorldConnector : OneWayRoomConnector  <br />
+    -&gt; snowWorld<br />
+    travelBarrier = [snowBarrier]<br />
+    noteTraversal(traveler)<br />
+    {<br />
+      ”You ride the snowmobile across the plain back to the Tardis. ”;<br />
+    }<br />
+;</p>
+
+<p>Armed with these special connectors and barriers we can now create the
+rest of our snowy world, the northern reaches of which will contain a
+forest in which we’ll hide the last of our mysterious tablets:</p>
+
+<p>snowWorld : OutdoorRoom ’Snow-Covered Plain’ ’the snow-covered plain’<br />
+  ”The bleak, snow-covered plain stretches as far as the eye can see in all directions<br />
+   under a leaden sky, the only visible feature being a tall mountain range to<br />
+   the east. ”<br />
+  vocabWords = ’snow plain’<br />
+  east : OneWayRoomConnector<br />
+          {<br />
+            -&gt;snowCliff<br />
+            noteTraversal(traveler)<br />
+            { <br />
+              if(traveler is in (gPlayerChar, snowMobile)) <br />
+              ”You &lt;&lt;traveler==snowMobile ? ’ride across’ : ’trudge through’&gt;&gt; the snow<br />
+               to the base of the mountains. ”;            <br />
+            }<br />
+          }<br />
+  north : OneWayRoomConnector <br />
+         {<br />
+           -&gt; snowForestEdge<br />
+           travelBarrier = [snowBarrier]<br />
+           noteTraversal(traveler)<br />
+           { ”It roars off to the north and takes you<br />
+             sweeping across the snow-clad plain until you eventually arrive<br />
+             at the edge of a forest. ”; }<br />
+         }<br />
+  west : OneWayRoomConnector<br />
+        {<br />
+          -&gt; snowPrecipice<br />
+          travelBarrier = [snowBarrier]<br />
+          noteTraversal(traveler)<br />
+          {<br />
+             ”You ride it westwards across the dazzling plain,<br />
+              until the monotony threatens to send you to sleep. Fortunately<br />
+              you are just alert enough to stop at the edge of a precipice. ”;<br />
+          }           <br />
+        }<br />
+  south = snowWorldFakeConnector<br />
+;</p>
+
+<p>+ Distant ’small mountain range’ ’small mountain range’<br />
+  ”Distances are hard to judge on this almost featureless white plain, but the<br />
+   mountains do not look far off. They seem to jut abruptly up against the sky<br />
+   without the basic courtesy of intervening foothills, suggesting that they<br />
+   were formed by a geological fault running across the plain. ”<br />
+;</p>
+
+<p>snowCliff : OutdoorRoom ’Under the cliff’ ’under the cliff’<br />
+  ”The sheer cliff of the mountain range brings the plain to an abrupt end at<br />
+   this point. A small wooden hut hugs the side of the cliff. ”<br />
+  west : OneWayRoomConnector<br />
+        {<br />
+          -&gt; snowWorld<br />
+          noteTraversal(traveler)<br />
+          {<br />
+            if(traveler is in (gPlayerChar, snowMobile))<br />
+             ”You &lt;&lt;traveler==snowMobile ? ’ride the snowmobile’ : ’walk’&gt;&gt; back<br />
+             to the Tardis. ”;<br />
+          }<br />
+        }<br />
+  in = insideHut<br />
+  north = snowWorldFakeConnector<br />
+  south = snowWorldFakeConnector<br />
+  east : NoTravelMessage { ”The sheer cliff blocks progress further south,<br />
+   and there’s no way you can climb it. ” }<br />
+;</p>
+
+<p>+ Enterable -&gt;insideHut ’small wooden hut’ ’small wooden hut’<br />
+  ”It’s a shabby structure, made of thin planking knocked together clumsily.<br />
+   It hasn’t weathered well, either. ”;<br />
+;</p>
+
+<p>snowForestEdge : OutdoorRoom ’Edge of Forest’ ’the edge of the forest’<br />
+  ”Although the snow-filled plain stretches to the eastern, southern and<br />
+   western horizons, directly to the north lies a pine forest thick with<br />
+   snow-covered trees. ”<br />
+  south = snowWorldConnector<br />
+  east = snowWorldFakeConnector<br />
+  west = snowWorldFakeConnector<br />
+  north = snowForest<br />
+;</p>
+
+<p>snowForest : OutdoorRoom ’Snow Forest Fork’ ’the fork in the path’<br />
+  ”This forest looks like it’s been deep in winter since time began. All around<br />
+   the tall pine trees are white with frost, their branches laden with<br />
+   snow. At this point in the forest the path from the south forks to<br />
+   northeast and northwest. ”<br />
+  south = snowForestEdge<br />
+  northwest = nwForestPath<br />
+  northeast = neForestPath<br />
+  travelBarrier = [snowmobileBarrier]<br />
+;</p>
+
+<p>nwForestPath : OutdoorRoom ’Northwest Forest Path’ ’the northwest forest path’<br />
+  ”Not only does this forest been in the depths of winter since time<br />
+   began, it seems to be of interminable extent, for this path running<br />
+   roughly northwest-southeast through it seem never-ending. ”<br />
+   southeast = snowForest<br />
+   northwest : FakeConnector { ”You carry on down the interminable<br />
+     forest path, and still there seems no end to it. ” }<br />
+;</p>
+
+<p>neForestPath : OutdoorRoom ’Clearing’ ’the clearing’<br />
+  ”The long path northeast through the forest eventually comes to an<br />
+   end in a small clearing, where branches and pine-leaves lie in<br />
+   a tangle on the ground amidst the snow. ”<br />
+   southwest = snowForest<br />
+;</p>
+
+<p>+ Immovable ’(pine) branches/leaves/twigs/pine-leaves’ ’leaves and branches’<br />
+  ”A tangle of pine twigs, branches and leaves clutters the ground, mingling<br />
+   with the snow. ”<br />
+  isPlural = true<br />
+  dobjFor(LookIn) asDobjFor(LookUnder)<br />
+  dobjFor(LookUnder)<br />
+  {<br />
+    verify() {}<br />
+    action()<br />
+    {<br />
+      if(woodenTablet.moved)<br />
+        ”You find nothing else there. ”;<br />
+      else<br />
+       {<br />
+         woodenTablet.discover;<br />
+         ”Half-buried among the leaves and twigs is a square wooden tablet. ”;<br />
+       }<br />
+    }<br />
+  }<br />
+;</p>
+
+<p>+ woodenTablet : Hidden, Tablet ’wooden tablet*tablets’ ’wooden tablet’<br />
+  inscription = ”T D A Z P\n S H S I L\nH E R O A\nC O H E N\nW H I T E”<br />
+  initSpecialDesc = ”A wooden tablet lies half-buried in the snow. ”<br />
+;</p>
+
+<p>snowPrecipice : OutdoorRoom ’Edge of Precipice’ ’the edge of the precipice’<br />
+  ”A deep fault line severs the plain here, leaving a sheer drop to the west.<br />
+   A white mist drifts below, making it hard to tell lies beyond, especially<br />
+   as it’s hard to distinguish white mist from white snow. The snowy plain<br />
+   continues to east, south, and north. ”<br />
+  east = snowWorldConnector<br />
+  south = snowWorldFakeConnector<br />
+  north = snowWorldFakeConnector<br />
+  west : NoTravelMessage { ”That way lies a sheer drop. ” }<br />
+;</p>
+
+<p>Finally, we mustn’t forget to make it possible for the Tardis to reach
+our new snow world (and Solomon’s bedroom, which we also need to add).
+While we’re at it, we’ll also illustrate an alternative way of
+initializing the values of a LookupTable:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ tardisDestinations : SecretFixture, PreinitObject
+  destinations = nil
+
+  execute()
+  {
+     destinations = [
+         'A0' -&gt; hold,
+         'A2' -&gt; spaceStation,
+         'C9' -&gt; redDesert,
+         'J8' -&gt; solomonBedroom,
+         'M3' -&gt; snowWorld,
+         'Q7' -&gt; londonStreet,
+         'T5' -&gt; outsideCave 
+        ];   
+   } 
+   ...
+;
+</code></pre></div></div>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-techman-t3verchk-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-techman-t3verchk-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="depth.html" class="nav">TADS 3 In Depth</a> &gt; Verify, Check,
+and When to Use Which<br />
+<span class="navnp"><a href="t3res.html" class="nav"><em>Prev:</em> Action Results</a>
+   
+<a href="t3verb.html" class="nav"><em>Next:</em> How to Create Verbs</a>
+    </span></p>
+
+<h1 id="verify-check-and-when-to-use-which">Verify, Check, and When to Use Which</h1>
+
+<p><em>by Steve Breslin<br />
+compiled from discussions on
+<a href="news:rec.arts.int-fiction">rec.arts.int-fiction</a></em></p>
+
+<p>The TADS 3 command execution model gets the command’s objects involved
+in the execution process, via the dobjFor(verb) and iobjFor(verb) groups
+of methods. Part of this process is to decide whether or not to allow
+the command to proceed in the first place. The execution model offers
+not just one but <em>two</em> distinct places for each object to make those
+go/no-go decisions. One is the “verify” routine, and one is the “check”
+routine.</p>
+
+<p>Broadly speaking, both <code class="language-plaintext highlighter-rouge">verify()</code> and
+<code class="language-plaintext highlighter-rouge">check()</code> have the the same mandate, namely to
+determine whether or not allow the command to proceed. But they’re not
+interchangeable; there are definite differences in their effects. The
+distinction between the two is a bit subtle, and at times it can be
+confusing. This article aims to clarify exactly what each one is for,
+and to help you develop a sense of when to use which one.</p>
+
+<h2 id="strictly-speaking">Strictly speaking</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">verify()</code> stage of action processing is
+designed to interrupt the action processing only when there’s a
+“logical” problem with the command. Pouring a desk or eating a topic -
+such actions would be illogical.</p>
+
+<p>In contrast, the <code class="language-plaintext highlighter-rouge">check()</code> stage is for commands
+that <em>seem</em> logical enough, but nonetheless won’t work. In these cases,
+the action still needs to be quashed, but not until after the parser has
+decided which objects could logically be involved. For example, the
+player tries to wear some jeans, but the jeans are too small. Maybe the
+player tries to melt something with the match, but the match isn’t
+producing enough heat. In such cases, <code class="language-plaintext highlighter-rouge">check()</code>
+can interrupt the action, and explain the failure.</p>
+
+<h2 id="so-why-the-two-phases">So why the two phases?</h2>
+
+<p>The benefit of having a <code class="language-plaintext highlighter-rouge">check()</code> stage separate
+from the verify() step is not in making the verification stage purely
+logic-oriented, nor in removing some of the conditional statements from
+the action stage. Such cosmetic adjustments would hardly justify the
+added complication of the check() stage.</p>
+
+<p>The point of separating <code class="language-plaintext highlighter-rouge">verify()</code> and
+<code class="language-plaintext highlighter-rouge">check()</code> is that it lets the parser ask the
+game if a command makes logical sense, <em>separately</em> from determining if
+the command can actually be executed. It might seem difficult to
+separate these two ideas, but the distinction isn’t just philosophical
+or cosmetic - there’s a practical need for it. The practical need is
+“disambiguation.”</p>
+
+<p>When the player types a command, the parser tries to figure out what the
+command means by looking up the associations between words and objects.
+Sometimes, a word or phrase might refer to multiple objects. When this
+happens, the command is <em>ambiguous</em>.</p>
+
+<p>For example, suppose a room contains two cardboard boxes, one white and
+one black, and the player types OPEN BOX. Does the player want to open
+the white box or the black box? One way of answering the question is to
+ask the player to be more specific: “Which box did you mean?” But the
+player will be annoyed if we ask this sort of question too often,
+especially if a human listener wouldn’t need to ask. For example, if the
+white box is already open but the black box is closed, a human listener
+would assume the player means OPEN BLACK BOX, since that’s the only way
+the command is useful.</p>
+
+<p>The parser uses <code class="language-plaintext highlighter-rouge">verify()</code> to get this sort of
+information about what ought to be obvious to the player. When there’s
+enough information to make the same kind of decision a human listener
+would, the parser can successfully resolve the ambiguity without asking
+the player for help - that is, the parser can <em>disambiguate</em> the command
+by itself.</p>
+
+<p><code class="language-plaintext highlighter-rouge">check()</code>, in contrast, is for enforcing
+conditions that <em>aren’t</em> obvious to the player, and thus can <em>not</em> be
+used to resolve ambiguous references. For example, suppose we have our
+two boxes again, but this time they’re both closed. Furthermore, suppose
+that the white box is an ordinary box, but the black box has been glued
+shut, so that it can’t be opened without some kind of tool.</p>
+
+<p>Now, if the player types OPEN BOX, what does the player mean? The <em>game</em>
+knows that OPEN BLACK BOX won’t work - but <em>the player doesn’t know this
+until she tries it</em>. So from the player’s perspective, OPEN BLACK BOX is
+a perfectly logical command: the box is closed, and to all appearances
+it’s something that can normally be opened, so OPEN BLACK BOX makes
+perfect sense. OPEN WHITE BOX likewise makes perfect sense. So it’s
+equally logical for the player to mean either one: the parser has to ask
+the player which box she meant in this case. The parser can’t assume
+that the player meant OPEN WHITE BOX just because the game knows that
+OPEN BLACK BOX won’t work. If the parser did this, it could take the
+player by surprise - the player might really have meant OPEN WHITE BOX,
+and would be surprised if the parser interpreted the command to mean
+something else.</p>
+
+<p>The point of separating <code class="language-plaintext highlighter-rouge">verify()</code> and
+<code class="language-plaintext highlighter-rouge">check()</code>, then, is to let the parser ask
+whether an action is logical, and then separately determine whether the
+action is actually possible.</p>
+
+<p>Now, this discussion raises another question. We can see why we need to
+separate <code class="language-plaintext highlighter-rouge">verify()</code> and
+<code class="language-plaintext highlighter-rouge">check()</code>, but why do we need to separate
+<code class="language-plaintext highlighter-rouge">check()</code> and
+<code class="language-plaintext highlighter-rouge">action()</code>? In other words, why not just check
+the “possibleness” conditions - the box being glued shut, for example -
+during the <code class="language-plaintext highlighter-rouge">action()</code> phase?</p>
+
+<p>The main reason to separate <code class="language-plaintext highlighter-rouge">check()</code> from
+<code class="language-plaintext highlighter-rouge">action()</code> comes into play with two-object
+commands, such as PUT X IN Y. In these cases, we might have
+<code class="language-plaintext highlighter-rouge">action()</code> handlers for both the direct and
+indirect objects. The order of execution for the action handlers depends
+on the verb - for PUT X IN Y, we run the indirect object handler first,
+but for some verbs it’s the other way around. Now, if we did all of our
+checking in one or the other action handler, we might run into a slight
+problem: what if the action handler that runs second needs to block the
+command?</p>
+
+<p>The separate <code class="language-plaintext highlighter-rouge">check()</code> phase solves this
+problem. We run the <code class="language-plaintext highlighter-rouge">check()</code> handlers for both
+objects <em>before</em> we run <em>either</em> <code class="language-plaintext highlighter-rouge">action()</code>
+handler. This ensures that either object can cancel the command before
+any part of the command has been carried out.</p>
+
+<p>This means that it’s important to remember that
+<code class="language-plaintext highlighter-rouge">check()</code>, like
+<code class="language-plaintext highlighter-rouge">verify()</code>, shouldn’t actually carry out any
+part of the command. In particular, these routines shouldn’t make any
+changes to “game state” - they shouldn’t move any objects around, change
+properties, etc. All game state changes should be put off until the
+<code class="language-plaintext highlighter-rouge">action()</code> phase, when we know that we’ve passed
+all of our tests and that the action is allowed to proceed.</p>
+
+<h2 id="thinking-about-this-from-disambiguation-an-extended-example">Thinking about this from disambiguation: an extended example</h2>
+
+<p>Without recourse to a potentially confusing philosophical distinction
+between logical and illogical, we can understand the use of the
+<code class="language-plaintext highlighter-rouge">check()</code> stage as one which enables us to make
+extra adjustments to interactive disambiguation questions. (Interactive
+disambiguation questions are the questions which the game generates when
+the player makes an ambiguous command: “Which fan do you mean? The….”)</p>
+
+<p><em>An object which fails in the <code class="language-plaintext highlighter-rouge">check()</code> phase is
+favored over an object which fails in the
+<code class="language-plaintext highlighter-rouge">verify()</code> phase, as far as disambiguation is
+concerned.</em> In fact, during disambiguation, the parser doesn’t even call
+the <code class="language-plaintext highlighter-rouge">check()</code> method. The parser calls the
+<code class="language-plaintext highlighter-rouge">verify()</code> method to narrow down the field, and
+then might have to ask the player to choose from the remaining objects,
+but the parser doesn’t call <code class="language-plaintext highlighter-rouge">check()</code> at all
+until after the objects have been chosen.</p>
+
+<p>For example, we have three fans, one which is a fixed ceiling fan, which
+can be turned on and off, one which is a takeable oscillating fan, but
+which can only be taken when it is off, and one which is a hand-fan, a
+stylized pingpong paddle if you will. First we’ll discuss
+<code class="language-plaintext highlighter-rouge">verify()</code> by itself, and then we’ll discuss
+<code class="language-plaintext highlighter-rouge">verify()</code> in combination with
+<code class="language-plaintext highlighter-rouge">check()</code>.</p>
+
+<h3 id="good-use-of-verify">Good use of verify()</h3>
+
+<p>Say the player types:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;turn fan on
+</code></pre></div></div>
+
+<p>We definitely want to exclude the hand-fan, since it’s obvious that the
+hand-fan can’t be turned on or off, so this exclusion goes in the
+verify. So we might get the following disambiguation question:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;turn fan on
+Which fan do you mean, the oscillating fan, or the ceiling fan?
+</code></pre></div></div>
+
+<p>Now let’s say that one of these fans is already on – we would want to
+eliminate this option also, or else we’re effectively asking: “Which fan
+do you mean, the fan that’s already on, or the fan that is off?” The
+<code class="language-plaintext highlighter-rouge">verify()</code> stage is designed to eliminate the
+obviously silly interpretation of the command when there are other good
+options.</p>
+
+<p>So if the ceiling fan is on, and the oscillating fan is off, we want
+something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;turn fan on
+(the oscillating fan)
+Done.
+</code></pre></div></div>
+
+<p>Now let’s think about the case in which all three fans fail the
+<code class="language-plaintext highlighter-rouge">verify()</code> stage: the hand-fan obviously cannot
+be turned on, the other two are already on, so they can’t be turned on
+either. If the player types:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;turn fan on
+</code></pre></div></div>
+
+<p>– we need to ask which fan is intended, so that we can print the
+appropriate failure message. So when all three fail the
+<code class="language-plaintext highlighter-rouge">verify()</code> stage, a disambiguation question like
+this is asked:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;turn fan on
+Which fan do you mean, the hand-held fan, the oscillating fan,
+or the ceiling fan?
+</code></pre></div></div>
+
+<p>All of these will fail, of course, but they’ll fail for different
+reasons, so we need to ask which the player meant before we explain why
+what the player is trying to do isn’t going to work.</p>
+
+<h3 id="combining-verify-and-check">Combining verify() and check()</h3>
+
+<p>So far we have an example of how <code class="language-plaintext highlighter-rouge">verify()</code> is
+used. Let’s continue with this example to explore how
+<code class="language-plaintext highlighter-rouge">check()</code> is used in combination with
+<code class="language-plaintext highlighter-rouge">verify()</code> to make the intended disambiguation
+messages. We’ll change the verb from “turn on” to “take”.</p>
+
+<p>The ceiling fan cannot be taken ever, since it’s attached to the
+ceiling. The oscillating fan can be taken when it’s off. The hand-held
+fan can be taken at any time. Let’s say the oscillating fan is off:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;take fan
+</code></pre></div></div>
+
+<p>It’s pretty clear what we want here:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;take fan
+Which fan do you mean, the oscillating fan, or the hand-held fan?
+</code></pre></div></div>
+
+<p>Note that the ceiling fan isn’t an option, since it can’t be taken: it
+has failed the <code class="language-plaintext highlighter-rouge">verify()</code> stage. The two good
+options are offered in interactive disambiguation.</p>
+
+<p>Now what if the oscillating fan is on:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;take fan
+</code></pre></div></div>
+
+<p>What do we want here? The answer to this question determines whether or
+not we want the oscillating fan’s takeable-condition to be in
+<code class="language-plaintext highlighter-rouge">check()</code> or <code class="language-plaintext highlighter-rouge">verify()</code>.
+Is it obvious to the player that the oscillating fan cannot be taken
+when it is on? If not, we want this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;take fan
+Which fan do you mean, the oscillating fan, or the hand-held fan?
+</code></pre></div></div>
+
+<p>The above is produced when the fan.isOn condition goes in
+<code class="language-plaintext highlighter-rouge">check()</code>. If we instead put this condition in
+<code class="language-plaintext highlighter-rouge">verify()</code>, we will get this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;take fan
+(the hand-held fan)
+Taken.
+</code></pre></div></div>
+
+<p>If we want to eliminate the oscillating fan during object resolution,
+then we put the condition in <code class="language-plaintext highlighter-rouge">verify()</code>, so that
+the game will know that it’s supposed to assume the player is referring
+to the hand-held fan when the oscillating fan is on. We should only do
+this if it should be obvious to the player that the oscillating fan
+cannot be taken when it’s on. (Making too many assumptions about what
+the player means can spoil puzzles sometimes, and is somewhat intrusive
+generally speaking. In this sense, “logical” means “what’s logical or
+obvious <em>to the player</em>.” The <code class="language-plaintext highlighter-rouge">verify()</code> stage
+being a logic test should be understood in this spirit.)</p>
+
+<p>We can make one other consideration: let’s say that the hand-held fan is
+directly contained by the player character. The oscillating fan is on,
+and standing on the desk, and the ceiling fan is circling overhead. How
+do we want to handle this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;take fan
+</code></pre></div></div>
+
+<p>Deciding this will also help us determine whether or not we want the
+<code class="language-plaintext highlighter-rouge">fan.isOn</code> condition to be in
+<code class="language-plaintext highlighter-rouge">check()</code> or <code class="language-plaintext highlighter-rouge">verify()</code>.
+If it’s not obvious that the oscillating fan cannot be taken, we want
+the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;take fan
+(the oscillating fan)
+You try to take it, but it's too awkward to grab while it's oscillating.
+Maybe you should turn it off first.
+</code></pre></div></div>
+
+<p>But if we want the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;take fan
+Which fan do you mean, the ceiling fan [which cannot be taken], the
+hand-held fan [which you already have], or the oscillating fan [which
+cannot be taken because it's on]?
+</code></pre></div></div>
+
+<p>– then we should put the oscillating fan’s
+<code class="language-plaintext highlighter-rouge">isOn</code> condition in
+<code class="language-plaintext highlighter-rouge">verify()</code>. Whether you want to assume that the
+player means the oscillating fan in this case is up to you; the “logic”
+will be different between games, based on the context, how obvious the
+situation is to the player, and based on the game author’s sense of
+taste in deciding what player knowledge should or should not be assumed.</p>
+
+<p><em>The point is that you should choose where the condition goes based on
+what you want to see in the disambiguation phase.</em></p>
+
+<p>Of course, you don’t need three fans to make up your mind about where
+the code should go, but you can imagine other objects in your game that
+could be competing with your object, to help you determine where the
+code should go from a stylistic point of view.</p>
+
+<p>From a goal-oriented perspective, it all comes down to the practical
+implications of putting a condition in one place or another, and often
+there are no practical consequences, in fact, to the distinction between
+<code class="language-plaintext highlighter-rouge">check()</code> and
+<code class="language-plaintext highlighter-rouge">verify()</code>; but you can imagine disambiguation
+conflicts to insure you’re using the right style in principle.</p>
+
+<h2 id="check-and-beforeaction"><code class="language-plaintext highlighter-rouge">check()</code> and <code class="language-plaintext highlighter-rouge">beforeAction()</code></h2>
+
+<p>Traditionally, the library ran the “before” notifiers - beforeAction and
+roomBeforeAction - <em>before</em> the <code class="language-plaintext highlighter-rouge">check()</code> phase.
+Starting with version 3.0.15.1 of the library, however, you can
+optionally enable a new, alternative ordering that runs the
+<code class="language-plaintext highlighter-rouge">check()</code> phase first.</p>
+
+<p>To enable the alternative ordering, set gameMain.beforeRunsBeforeCheck
+to nil. By default, this property is set to true, which tells the
+library to use the traditional ordering - “before” first - this ensures
+that existing code will work as it always has.</p>
+
+<p>The reason you might want to use the alternative ordering is that it
+lets you consider a command to be more or less “committed” by the time
+the “before” handlers are reached. In other words, the “before” handlers
+can assume that the command will run to completion. The reason they can
+make this assumption is that they know that they’re running after the
+<code class="language-plaintext highlighter-rouge">check()</code> phase. If the action makes it as far
+as the “before” handlers at all, the <code class="language-plaintext highlighter-rouge">check()</code>
+phase will have already judged the command to be acceptable as far as
+the <code class="language-plaintext highlighter-rouge">check()</code> tests are concerned.</p>
+
+<p>So, when we get past the <code class="language-plaintext highlighter-rouge">check()</code> stage, we
+know that a viable action is under way. Any objects which want to
+interfere with that action can then do so with
+<code class="language-plaintext highlighter-rouge">beforeAction()</code>. This means that
+<code class="language-plaintext highlighter-rouge">check()</code> can interrupt an action before other
+objects, say NPC’s, have a chance to react to it. So a good use of
+<code class="language-plaintext highlighter-rouge">check()</code> can avoid sequences like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;ask stu about chair
+As you are about to speak, Mary kicks you under the table. Glaring at
+her, you redirect your question to Dave.
+The large chair isn't something you need to be asking about.
+</code></pre></div></div>
+
+<p>In the above example, Mary’s response was a
+<code class="language-plaintext highlighter-rouge">beforeAction()</code>, and the line about the large
+chair being an unimportant topic was mistakenly placed in the action
+phase rather than the <code class="language-plaintext highlighter-rouge">check()</code> phase. By
+failing the command before the action phase, we could have avoided
+printing Mary’s <code class="language-plaintext highlighter-rouge">beforeAction()</code> message. So if
+we want to tell the player that the chair is an unimportant topic before
+Mary becomes involved, we need to use the
+<code class="language-plaintext highlighter-rouge">check()</code> phase.</p>
+
+<p>It is important to remember, therefore, that
+<code class="language-plaintext highlighter-rouge">check()</code> really is another verification phase,
+and not a preliminary action phase. Only if a command passes
+<code class="language-plaintext highlighter-rouge">check()</code> should a change in game state be made.
+In other words, some initial conditional statements should be part of
+the action stage. The <code class="language-plaintext highlighter-rouge">check()</code> stage should not
+perform preliminary checks which determine which action methods are
+called.</p>
+
+<hr />
+
+<p><em>TADS 3 Technical Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="depth.html" class="nav">TADS 3 In Depth</a> &gt; Verify, Check,
+and When to Use Which<br />
+<span class="navnp"><a href="t3res.html" class="nav"><em>Prev:</em> Action Results</a>
+   
+<a href="t3verb.html" class="nav"><em>Next:</em> How to Create Verbs</a>
+    </span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

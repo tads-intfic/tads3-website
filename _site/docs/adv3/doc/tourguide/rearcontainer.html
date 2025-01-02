@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-rearcontainer-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-rearcontainer-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>RearContainer : <a href="spaceoverlay.html">SpaceOverlay</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="underside.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="rearsurface.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A rear container represents the space behind an object. The principal
+additional property it defines is <strong>allowPutBehind</strong>; if this is true,
+objects may be placed in the RearContainer with a PUT BEHIND command; if
+it is nil, they may not.</p>
+
+<p>For the most part, a RearContainer will be most useful as the
+ComplexComponent of a <a href="complexcontainer.html">ComplexContainer</a>, since it
+is hard to think of something that only has a rear. A RearContainer can,
+however, quite successfully be used for an object like a painting or a
+mirror hanging on a wall, for example:</p>
+
+<p>mirror : RearContainer ’large gilt-framed gilt framed mirror’ <br />
+    ’mirror’ @anotherCave<br />
+  ”The mirror is about three foot tall by eighteen inches wide. It is<br />
+   brightly silvered, so that your reflection in it is no more flattering<br />
+   than you would expect. ”<br />
+   initSpecialDesc = ”A large gilt-framed mirror hangs on the wall opposite<br />
+     the dressing table. ”<br />
+   bulk = 8<br />
+   weight = 4  <br />
+   allowPutBehind = nil<br />
+;</p>
+
+<p>+ smallHoleInWall : Hidden, Container, Fixture ’small hole’ ’small hole’<br />
+   ”It’s just a couple of inches square, and about as deep. ”<br />
+   specialDesc = ”There’s a small hole in the wall<br />
+    opposite the dressing table. ”<br />
+   initSpecialDesc = ”Behind the mirror is a small hole in the wall. ”<br />
+   bulkCapacity = 2  <br />
+;</p>
+
+<p>Once again it has been necessary to anticipate the introduction of the
+<a href="hidden.html">Hidden</a> class, but it’s virtually impossible to illustrate
+the use of a RearContainer (or other SpaceOverlay) without it, so it’ll
+just have to be taken on trust for now. The effect is that the small
+hole in the wall will be revealed only when the player looks behind the
+mirror or takes it for the first time. Also, when the mirror is moved,
+the small hole is moved from the mirror to the mirror’s former location,
+which paradoxically has the effect of leaving it behind in the same
+place. This occurs even though the small hole is a fixture, so that
+after the mirror is moved, the hole ends up being a Fixture in the room,
+which is what we want.</p>
+
+<p>Note that we have set allowPutBehind to nil to prevent anything being
+put behind the mirror; which would normally make sense (since it would
+normally not be that easy to put sundry objects behind a mirror hanging
+on the wall). In this case, however, we might feel that while the mirror
+is still hanging on the wall, putting something behind the mirror is
+equivalent to putting it in the hole, but that it should not be possible
+to put anything behind the mirror once it’s been moved. We can implement
+this like so:</p>
+
+<p>mirror : RearContainer ’large gilt-framed gilt framed mirror’ <br />
+    ’mirror’ @anotherCave<br />
+  ”The mirror is about three foot tall by eighteen inches wide. It is<br />
+   brightly silvered, so that your reflection in it is no more flattering<br />
+   than you would expect. ”<br />
+   initSpecialDesc = ”A large gilt-framed mirror hangs on the wall opposite<br />
+     the dressing table. ”<br />
+   bulk = 8<br />
+   weight = 4  <br />
+   **allowPutBehind = (!moved)<br />
+   iobjFor(PutBehind) maybeRemapTo(!moved, PutIn, DirectObject, smallHoleInWall)<br />
+**;</p>
+
+<p>In due course, we’ll hide a small piece of black wire in the small hole,
+but we’ll wait till we get to the point when this bit of wire is needed
+and we’ve covered the ground we need to implement it properly. In the
+meantime, there’s one further detail to attend to. As things are at the
+moment, when you take the mirror the transcript goes something like
+this:</p>
+
+<p>&gt;<strong>take mirror</strong><br />
+Behind the mirror is a small hole in the wall. Taken.</p>
+
+<p>In this case it’s reasonably obvious that ‘Taken’ must refer to the
+mirror and not the small hole, but it’s not as clear as it might be, and
+in other circumstances, where what lay behind or beneath something was a
+portable object that easily could be taken, the ‘Taken’ message might be
+downright misleading. We can make the message clearer by making the
+following modification to SpaceOverlay:</p>
+
+<p>modify SpaceOverlay<br />
+  okayTakeMsg = ’{You/he} take{s} {the dobj/him}. ’<br />
+; </p>
+
+<p>Now, to return to our ship, since the chair in the main cabin is
+described as being behind the desk, it may be tempting to try this:</p>
+
+<p>cabinDesk : Heavy, Surface ’large solid oak desk’ ’desk’ @greatCabin<br />
+  ”It’s a large, solid oak desk, with a single drawer. ”<br />
+  initSpecialDesc = ”A large oak desk sits in the middle of the cabin. ”<br />
+  specialDescOrder = 50<br />
+  dobjFor(LookUnder) remapTo(LookUnder, underDesk)<br />
+  iobjFor(PutUnder) remapTo(PutUnder, DirectObject, underDesk)<br />
+  **dobjFor(LookBehind) remapTo(LookBehind, deskRear)<br />
+  iobjFor(PutBehind) remapTo(PutBehind, DirectObject, deskRear)<br />
+**;</p>
+
+<p>+ deskRear : NameAsOther, RearContainer, Component<br />
+  targetObj = cabinDesk<br />
+;</p>
+
+<p>cabinChair : Chair ’padded chair/cushion’ ’chair’ @deskRear<br />
+  ”It’s a fine wooden chair with a round back and a padded cushion. ”<br />
+  initSpecialDesc = ”A wooden chair sits behind the desk. ”<br />
+  bulk = 10<br />
+  weight = 7<br />
+;</p>
+
+<p>This appears to work well enough, in that you can look behind the desk
+and be told that the chair is there, or take the chair, subsequently put
+it behind the desk and find that it’s described as being there once
+more, but you’ll quickly discover that it all goes horribly wrong if you
+try to sit on the chair while it’s behind the desk.</p>
+
+<p>It takes quite a bit of work to fix this, which will involve classes and
+concepts we haven’t met yet (particularly the <a href="platform.html">Platform</a>
+class) . But to show what we need to do, here it is:</p>
+
+<p>cabinDesk : Heavy, Surface ’large solid oak desk’ ’desk’ @greatCabin<br />
+  ”It’s a large, solid oak desk, with a single drawer. ”<br />
+  initSpecialDesc = ”A large oak desk sits in the middle of the cabin. ”<br />
+  specialDescOrder = 50<br />
+  dobjFor(LookUnder) remapTo(LookUnder, underDesk)<br />
+  iobjFor(PutUnder) remapTo(PutUnder, DirectObject, underDesk)<br />
+  dobjFor(LookBehind) remapTo(LookBehind, deskRear)<br />
+  iobjFor(PutBehind) remapTo(PutBehind, DirectObject, deskRear)<br />
+  **dobjFor(GoBehind) remapTo(GoBehind, deskRear)<br />
+**;</p>
+
+<p>deskRear :  RearContainer, Platform, SecretFixture<br />
+   name = ’desk’<br />
+   actorInPrep = ’behind’<br />
+   actorIntoPrep = ’behind’<br />
+   actorOutOfPrep = ’from behind’<br />
+   location = greatCabin<br />
+   dobjFor(GoBehind)<br />
+   {<br />
+     verify() { logicalRank(140, ’rear’); }<br />
+     action()<br />
+     {<br />
+        gActor.moveIntoForTravel(self);<br />
+        defaultReport(‘{You/he} go{es} behind {the dobj/him} ’);<br />
+     }    <br />
+   }<br />
+   tryMovingIntoNested()<br />
+   {<br />
+     return tryImplicitAction(GoBehind, self);<br />
+   }<br />
+;</p>
+
+<p>DefineTAction(GoBehind)<br />
+;</p>
+
+<p>VerbRule(GoBehind)<br />
+  (‘go’ | ’stand’ | ’walk’) ’behind’ singleDobj<br />
+  : GoBehindAction<br />
+  verbPhrase = ’go/going (behind what)’<br />
+;</p>
+
+<p>modify Thing<br />
+  dobjFor(GoBehind)<br />
+  {<br />
+    verify() { illogical(‘{You/he} can\t go behind {that dobj/him}. ’); }<br />
+  }<br />
+;</p>
+
+<p>This seems a quite a lot of work to be able to put a chair behind a desk
+(and even then one or two the messages displayed may be less than
+ideal); but if you really <em>want</em> a chair behind the desk, it may be
+worthwhile.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

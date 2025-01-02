@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-openablecontainer-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-openablecontainer-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>OpenableContainer :<a href="openable.html">Openable</a>, <a href="container.html">Container</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="container.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="notifyinsert+notifyremove.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>If, unlike the cap and the glass jar in the last two sections, you want
+a container that can be opened and closed by the player, then you need
+to use OpenableContainer (or one of its lockable subclasses, which we’ll
+be encountering later). As an example of a simple OpenableContainer
+we’ll leave a first aid kit on the ledge in entranceCave and put a
+couple of items in it. For convenience, the definition of the ledge is
+repeated to show the nesting relationship using the + syntax:</p>
+
+<p>Surface, Fixture ’narrow ledge’ ’narrow ledge’ @entranceCave<br />
+  ”It’s about a foot wide and two feet long. ”<br />
+  bulkCapacity = 25<br />
+;</p>
+
+<p>+ firstAidKit : OpenableContainer ’small white first aid box/kit’ ’first aid kit’ <br />
+  ”It’s made of some kind of white plastic and is about nine inches long. The lid<br />
+   is marked with a broad red cross. ”<br />
+   initSpecialDesc = ”A small white box lies on the ledge. ”<br />
+   bulkCapacity = 3<br />
+   bulk = 4<br />
+;</p>
+
+<p>++ syringe : Thing ’syringe’ ’syringe’;</p>
+
+<p>++ stickingPlaster : Thing ’sticking adhesive plaster’ ’sticking plaster’;</p>
+
+<p>Note the use of the + notation to place the firstAidKit on the ledge,
+and the ++ notation to indicate a second level of nesting to put objects
+in the firstAidKit. The use of initSpecialDesc means that it will be
+described as a ‘small white box’ when the player first encounters it,
+but will be listed as ‘a first aid kit’ once the player picks it up,
+which seems reasonable: its vocabulary has been defined so that it will
+answer to either appellation. Since it is only a small box we give it
+quite a small bulkCapacity, and a bulk that’s just a bit bigger than its
+capacity. We also place a couple of items in it, but their definition is
+minimal for now - we’ll be fleshing them out in due course.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

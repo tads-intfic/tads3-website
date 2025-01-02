@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-giveshowtopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-giveshowtopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>GiveShowTopic : <a href="topicentry.html">ThingMatchTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="showtopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="alttopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>In many, perhaps most situations, we may not really want to distinguish
+between GIVE x TO y and SHOW x TO y. In such situations, where we want
+both commands to be treated exactly the same, we can use a
+GiveShowTopic. For example, if the player tries to return either the
+ring or the diamond to Sarah before attaching them together to restore
+the diamond ring, we might want Sarah to refuse politely and ask the
+player to complete the task:</p>
+
+<p>++ GiveShowTopic @diamond<br />
+  ”{The sarah/she} studies the gem carefully, &lt;q&gt;That certainly looks like it could<br />
+   be the diamond from my ring,&lt;/q&gt; she decides, &lt;q&gt;But where’s the ring?&lt;/q&gt;”<br />
+;</p>
+
+<p>++ GiveShowTopic @ring<br />
+  ”{The sarah/she} nods eagerly, &lt;q&gt;Yes, that’s my ring!&lt;/q&gt; she declares, but then<br />
+   her hand flies to her mouth, &lt;q&gt;But - oh my goodness - the diamond is missing!&lt;/q&gt;”<br />
+;</p>
+
+<p>If you try this out, however, it will rapidly become obvious that it
+generates something of an unrealistic succession if Sarah is shown both
+the ring (sans diamond) and the diamond (sans ring) in either order.
+We’ll see how to fix that shortly using <a href="alttopic.html">AltTopic</a>. In the
+meantime let’s add some more GiveShowTopics.</p>
+
+<p>You’ll remember some time ago we installed a vending machine to dispense
+museum tickets. Our curator really ought to check whether the player
+character has a ticket before allowing him into the museum. It would be
+tedious to enforce this check every time the player character enters the
+museum, however, so we’ll make it a once and for all check (which is
+reasonable; the ticket allows multiple entries and the curator can
+remember being shown it). Again, players shouldn’t guess whether they
+have to GIVE the ticket or SHOW the ticket, so it’s a good candidate for
+a GiveShowTopic. We could make the GiveShowTopic set a custom property
+of the curator to signal that the ticket has been shown, but it’s
+actually much simpler to use the &lt;.reveal &gt; tag to set a named key
+that does the same job. Our GiveShowTopic (belonging to the curator’s
+curatorTalking state) then looks like this:</p>
+
+<p>++ GiveShowTopic @museumTicket<br />
+  ”&lt;q&gt;Thank you, that’s fine.&lt;/q&gt; {the curator/he} nods as he inspects your ticket,<br />
+   &lt;q&gt;Enjoy the exhibits!&lt;/q&gt;&lt;.reveal ticket-shown&gt;”<br />
+;</p>
+
+<p>To test that the ‘ticket-shown’ flag has been set, we use
+gRevealed(‘ticket-shown’). We need to amend the code in curatorWatching
+to make this new check, and while we’re at it, we’ll change it so the
+curator will let the player character into the benefactors’ room if he
+(the curator) has been given the carbuncle (which makes the player
+character a benefactor of the museum), except that the curator won’t let
+anyone into the benefactors’ room with any kind of container in which
+the golden banana might be smuggled out (apart from the cap, which the
+curator fails to recognize as a potential container, or the Matchbook,
+which no one would regard as a container, though it does inherit from
+the Container class).</p>
+
+<p>++ curatorWatching : ConversationReadyState<br />
+  stateDesc = ”He’s watching you carefully. ”<br />
+  specialDesc { inherited; stateDesc; }<br />
+  isInitState = true<br />
+  beforeTravel(traveler, connector)<br />
+  {<br />
+    inherited(traveler, connector); <br />
+    if(traveler == gPlayerChar)<br />
+    {<br />
+      switch(connector) <br />
+      {<br />
+       <strong>case museum:     <br />
+        if(gRevealed(‘ticket-shown’))<br />
+        {<br />
+          getActor.moveIntoForTravel(byCases);<br />
+          ”{The curator/he} follows you into the museum. ”;<br />
+        }<br />
+        else<br />
+        {<br />
+          ”{The curator/he} stops you, asking, &lt;q&gt;May I see your<br />
+           ticket please?&lt;/q&gt;&lt;.p&gt;”;<br />
+           exit;<br />
+        }<br />
+         break;</strong><br />
+       case museumLobby:             <br />
+        getActor.moveIntoForTravel(behindTable);<br />
+        ”{The curator/he} follows you into the lobby. ”;<br />
+         break;<br />
+       case benefactorsRoom:      <br />
+        <strong>if(!carbuncle.isIn(getActor))<br />
+        {     <br />
+          ”&lt;q&gt;I’m afraid you can’t go in there,&lt;/q&gt; {the curator/he}<br />
+          intercepts you, &lt;q&gt;That’s the &lt;i&gt;benefactors’&lt;/i&gt; room; only<br />
+          our benefactors are allowed in there to see the special<br />
+          exhibits.&lt;/q&gt; ”;<br />
+          exit;<br />
+        } <br />
+        foreach(local cur in traveler.contents)<br />
+          if(cur.ofKind(Container) &amp;&amp; cur != cap &amp;&amp; !cur.ofKind(Matchbook))<br />
+           {<br />
+             ”&lt;q&gt;Sorry,&lt;/q&gt; {the curator/he} apologizes as he intercepts<br />
+              you, &lt;q&gt;But we can’t allow you to take any bags or containers<br />
+              in there. It’s policy, I’m afraid - one can’t be too careful<br />
+              these days.&lt;/q&gt; ”;<br />
+              exit;<br />
+           }  </strong>   <br />
+      }<br />
+    }                     <br />
+  }<br />
+;</p>
+
+<p>You may think that this beforeTravel method is beginning to get bloated
+with spaghetti - or at least with switch statements and if statements,
+and perhaps you feel it’s a shame that TADS 3 couldn’t find some way to
+avoid this sort of thing in this case too. Well, if you are thinking
+that, you’ll be glad to know that TADS 3 does provide an alternative
+here, which we’ll look at shortly when we come to discuss
+<a href="initiatetopic.html">InitiateTopic</a>.</p>
+
+<p>King Solomon, meanwhile, is fairly anxious to recover a certain bronze
+bowl he’s mislaid, so we need to provide for handing it over to him. The
+following GiveShowTopic belongs in the solomonTalking state:</p>
+
+<p>++ GiveShowTopic @bronzeBowl<br />
+  topicResponse<br />
+  {<br />
+  ”{The solomon/he}’s eyes light up as he spies the bronze bowl. &lt;q&gt;Excellent!&lt;/q&gt;<br />
+   he declares, &lt;q&gt;Now I can look old Hiram in the eye when he comes! Well, I believe<br />
+   the traditional reward for a delighted monarch to give for service well done is<br />
+   &lt;q&gt;up to half my kingdom&lt;/q&gt;, but being a wiser monarch than most I can see that’s<br />
+   clearly far too extravagant. Still, perhaps some there’s some more modest reward<br />
+   that would interest you?&lt;/q&gt;\b<br />
+   {The solomon/he} examines the bowl and then carefully puts it down on the table.<br />
+   &lt;.reveal bowl-returned&gt; ”;<br />
+   bronzeBowl.moveInto(solomonTable);<br />
+  }<br />
+;</p>
+
+<p>The player may also try to show or give this bowl to the curator, who,
+however, will prove uninterested; this belongs in curatorTalking:</p>
+
+<p>++ GiveShowTopic @bronzeBowl<br />
+   ”{The curator/he} takes the bowl, turns it over, and gives it a cursory examination.<br />
+   &lt;q&gt;It’s obviously very old,&lt;/q&gt; he announces, &lt;q&gt;probably of middle eastern<br />
+   provenance. Possibly a valuable item, but not the sort of thing we’re interested<br />
+   in here.&lt;/q&gt; So saying, he hands it back. ”<br />
+;</p>
+
+<p>In the course of discovering the bronze bowl the player will find a
+number of gold coins which he may also want to show to the curator. This
+is more complex since we created three gold coins as anonymous objects
+of the GoldCoin class. Here we can use essentially the same method we
+employed with the gas masks by overriding matchTopic to test for the
+class of object being shown or given:</p>
+
+<p>++ GiveShowTopic, StopEventList   <br />
+   [<br />
+    ’{The curator/he} takes a brief look at the coin then hands it back. &lt;q&gt;It\s<br />
+     just an old Roman coin,&lt;/q&gt; he remarks dismissively, &lt;q&gt;We don\t do coins<br />
+     here.&lt;/q&gt;’,<br />
+    ’&lt;q&gt;I told you, this museum is not interested in old coins.&lt;/q&gt; he reminds you.’<br />
+   ] <br />
+   matchTopic(fromActor, obj)<br />
+     { return obj.ofKind(GoldCoin) ? matchScore : nil; }<br />
+;</p>
+
+<p>We could use a similar technique for the tablets, which are sufficiently
+noteworthy that the curator might be expected to show some kind of
+interest in them. In this case we’ll keep a note of which of the tablets
+the curator has already seen so that he makes an appropriate response
+depending on whether he has seen none of the tablets before, other
+tablets but not the one we’re showing him, or the same one again:</p>
+
+<p>++ GiveShowTopic<br />
+  handleTopic(fromActor, obj)<br />
+  {<br />
+   /* note the invocation */<br />
+    noteInvocation(fromActor);<br />
+ <br />
+   /* set pronoun antecedents if possible */<br />
+    setTopicPronouns(fromActor, obj);<br />
+    <br />
+   if(tabletsSeen.indexOf(obj))<br />
+     ”&lt;q&gt;You’ve already shown me this &lt;&lt;obj.name&gt;&gt;.&lt;/q&gt; he points out. ”;<br />
+   else<br />
+   {   <br />
+     if(tabletsSeen.length==0)<br />
+     {<br />
+      ”{The curator/he} takes {the dobj/him} and examines it carefully. &lt;q&gt;Very interesting,&lt;/q&gt;<br />
+       he remarks as he hands it back to you, &lt;q&gt;I don\t exactly know what it is, but it\s<br />
+       definitely interesting. Unfortunately, without knowing what it is, I can’t give it<br />
+       a place in the museum.&lt;/q&gt;”;<br />
+     }     <br />
+    else<br />
+     {     <br />
+       ”{The curator/he} examines {the dobj/him} with evident curiosity. &lt;q&gt;Another one!&lt;/q&gt;<br />
+        he declares, &lt;q&gt;How very curious!&lt;/q&gt;”;<br />
+     }<br />
+     tabletsSeen += obj; <br />
+   }<br />
+  }<br />
+  matchTopic(fromActor, obj)<br />
+     { return obj.ofKind(Tablet) ? matchScore : nil; }<br />
+  tabletsSeen = []   <br />
+; </p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

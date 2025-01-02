@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-file-brightness-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-file-brightness-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">brightness.t</span><span class="type">file</span></p>
+
+<p><a href="../source/brightness.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p>Brightness Exteension for adv3Lite<br />
+Version 1.0 29-Oct-22<br />
+Eric Eve *. This extension provides much of the adv3 ligthting levels
+functionality in a slightly different form for the adv3Lite library.</p>
+
+<p>It adds brightness and opacity properties to the Thing class, as well as
+a brightnessWithin() method which returns the current brightness within
+a room or booth (which is taken to be the brightness of its brightest
+available light source). The opacity property takes effect only on a
+container that is defined as transparent, in which case the opacity is
+the loss of brightness for a light source shining in or out of that
+container.</p>
+
+<p>The extension is set up to mimic the adv3 brightness scale, in that a
+brightness of 0 equates to darkness, a brightness of 1 is a
+self-illuminating object (or isVisibleInDark) that doesn’t illuminate
+anything else, a brightness of 2 provides dim light that’s sufficient
+for examining one’s environment but not enough to read by, a brightness
+of 3 is normal light, and a brightness of 4 is an especially bright
+light, but game code can implement a differnent scale if desired.</p>
+
+<p>There are limitations to the realism of this brightness model, for
+example it doesn’t accumulate the brightness of multiple light sources,
+and offers only limited handling of light sources in remote locations in
+the same SenseRegion. Also, apart from imposing a minimum brightness
+level required for reading and providing the means to model loss of
+brightness at a distance or through a semi-transparent medium, it has
+very little impact on game behaviour out of the box; for the most part,
+it is up to game code to decide what it wants to do with the brightness
+mechanism provided.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Objects</span>  </p>
+
+<p><a href="../object/lightProbe_.html"><code class="language-plaintext highlighter-rouge">lightProbe_</code></a>
+<span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><em>(none)</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

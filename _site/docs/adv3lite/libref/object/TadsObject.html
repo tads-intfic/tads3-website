@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-tadsobject-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-tadsobject-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">TadsObject</span><span class="type">class</span></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#242">242</a>],
+<a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#322">322</a>],
+<a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#150">150</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The “TADS Object” intrinsic class. All objects that the program defines
+with the “class” or “object” statements descend from this class.</p>
+
+<p><em>Modified in
+<a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#322">322</a>]:</em><br />
+Provide TadsObject with an objToString() method so that the EVALUATE
+command can display some kind of name of the object via the toString()
+function</p>
+
+<p><em>Modified in
+<a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#150">150</a>]:</em><br />
+MODIFICATIONS TO TadsObject for SIGNALS EXTENSION</p>
+
+<p>Add handling for emiting, handling and dispatching signals.</p>
+
+<p><code class="language-plaintext highlighter-rouge">intrinsic class </code><strong><code class="language-plaintext highlighter-rouge">TadsObject</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">TadsObject</code></strong><br />
+<a href="../object/Object.html"><code class="language-plaintext highlighter-rouge">Object</code></a><br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#createClone"><code class="language-plaintext highlighter-rouge">createClone</code></a> <a href="#createInstance"><code class="language-plaintext highlighter-rouge">createInstance</code></a> <a href="#createTransientInstance"><code class="language-plaintext highlighter-rouge">createTransientInstance</code></a> <a href="#dispatchSignal"><code class="language-plaintext highlighter-rouge">dispatchSignal</code></a> <a href="#emit"><code class="language-plaintext highlighter-rouge">emit</code></a> <a href="#getMethod"><code class="language-plaintext highlighter-rouge">getMethod</code></a> <a href="#handle"><code class="language-plaintext highlighter-rouge">handle</code></a> <a href="#objToString"><code class="language-plaintext highlighter-rouge">objToString</code></a> <a href="#setMethod"><code class="language-plaintext highlighter-rouge">setMethod</code></a> <a href="#setSuperclassList"><code class="language-plaintext highlighter-rouge">setSuperclassList</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Object</code> :<br />
+<a href="../object/Object.html#callInherited"><code class="language-plaintext highlighter-rouge">callInherited</code></a> <a href="../object/Object.html#createIterator"><code class="language-plaintext highlighter-rouge">createIterator</code></a> <a href="../object/Object.html#createLiveIterator"><code class="language-plaintext highlighter-rouge">createLiveIterator</code></a> <a href="../object/Object.html#forEach"><code class="language-plaintext highlighter-rouge">forEach</code></a> <a href="../object/Object.html#getPropList"><code class="language-plaintext highlighter-rouge">getPropList</code></a> <a href="../object/Object.html#getPropParams"><code class="language-plaintext highlighter-rouge">getPropParams</code></a> <a href="../object/Object.html#getSuperclassList"><code class="language-plaintext highlighter-rouge">getSuperclassList</code></a> <a href="../object/Object.html#isClass"><code class="language-plaintext highlighter-rouge">isClass</code></a> <a href="../object/Object.html#isTransient"><code class="language-plaintext highlighter-rouge">isTransient</code></a> <a href="../object/Object.html#mapAll"><code class="language-plaintext highlighter-rouge">mapAll</code></a> <a href="../object/Object.html#ofKind"><code class="language-plaintext highlighter-rouge">ofKind</code></a> <a href="../object/Object.html#propDefined"><code class="language-plaintext highlighter-rouge">propDefined</code></a> <a href="../object/Object.html#propInherited"><code class="language-plaintext highlighter-rouge">propInherited</code></a> <a href="../object/Object.html#propType"><code class="language-plaintext highlighter-rouge">propType</code></a> <a href="../object/Object.html#valToSymbol"><code class="language-plaintext highlighter-rouge">valToSymbol</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="createClone"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createClone ( )</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#260">260</a>]</p>
+
+<p>Create a clone of this object. This creates an exact copy, with the same
+property values, as the original. This does not call any constructors;
+it merely instantiates an exact copy of the original.</p>
+
+<p>Note that the clone is a “shallow” copy, which means that any objects it
+references are not themselves cloned.</p>
+
+<p><span id="createInstance"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createInstance (...)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#250">250</a>]</p>
+
+<p>Create an instance of this object: in other words, create a new object
+whose superclass is this object. The arguments provided are passed to
+the new object’s constructor. This method returns a reference to the new
+object.</p>
+
+<p><span id="createTransientInstance"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">createTransientInstance (...)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#267">267</a>]</p>
+
+<p>Create a transient instance of this object. This works just like
+createInstance(), but creates a transient instance instead of an
+ordinary (persistent) instance.</p>
+
+<p><span id="dispatchSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dispatchSignal (sender, signal)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#177">177</a>]</p>
+
+<p>Dispatch a signal to the appropriate handler method on this object. We
+look up the property pointer to use on the signal’s dispatchTab
+LookupTable. If we find one and the property is defined on this object
+then we use that property to handle the signal. Otherwise, we simply use
+our catch-all generic handle(sender, signal) method.</p>
+
+<p>[SIGNALS EXTENSION]</p>
+
+<p><span id="emit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">emit (signal, [args])</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#152">152</a>]</p>
+
+<p>Emit a signal [SIGNALS EXTENSION]</p>
+
+<p><span id="getMethod"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getMethod (prop)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#330">330</a>]</p>
+
+<p>Get a method value. If the property is a method, this returns a function
+pointer to the method; this does NOT evaluate the method. If the
+property is not a method, this returns nil.</p>
+
+<p>The returned function pointer can be called like an ordinary function,
+but such a call will have no ‘self’ value, so the disembodied method
+won’t be able to refer to properties or methods of ‘self’. The main use
+of this method is to get a method of one object to assign as a method of
+another object using setMethod().</p>
+
+<p><span id="handle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">handle (sender, signal)</code></p>
+
+<p><a href="../file/signals.t.html">signals.t</a>[<a href="../source/signals.t.html#164">164</a>]</p>
+
+<p>Handle a signal from sender; game code will need to override particular
+instances. Note that this is a catch-all handler for signals we don’t
+recognize or for which more specific handlers haven’t been defined.
+[SIGNALS EXTENSION]</p>
+
+<p><span id="objToString"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objToString ( )</code></p>
+
+<p><a href="../file/debug.t.html">debug.t</a>[<a href="../source/debug.t.html#323">323</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="setMethod"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setMethod (prop, func)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#341">341</a>]</p>
+
+<p>Set a method value. Assigns the given function (which must be a function
+pointer value) to the given property of ‘self’. This effectively adds a
+new method to the object.</p>
+
+<p>The function can be an ordinary named function, or a method pointer
+retrieved from this object or from another object with getMethod().
+Anonymous functions are NOT allowed here.</p>
+
+<p><span id="setSuperclassList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setSuperclassList (scList)</code></p>
+
+<p><a href="../file/systype.h.html">systype.h</a>[<a href="../source/systype.h.html#317">317</a>]</p>
+
+<p>Set the superclass list. scList is a list giving the new superclasses.
+The superclasses must all be TadsObject objects, with one exception: the
+list [TadsObject] may be passed to create an object based directly on
+TadsObject. No other intrinsic classes can be used in the list, and
+objects of other types cannot be used in the list.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

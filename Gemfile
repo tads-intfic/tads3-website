@@ -4,5 +4,8 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-# gem "jekyll"
-gem "github-pages", "~> 232", group: :jekyll_plugins
+gem "jekyll"
+gem "kramdown"
+gem "kramdown-parser-gfm"
+gem "webrick"
+gem "jekyll-liquify"

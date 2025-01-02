@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-randomeventlist-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-randomeventlist-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>RandomEventList : <a href="randomfiringscript.html">RandomFiringScript</a>, <a href="eventlist.html">EventList</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="cycliceventlist.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="shuffledeventlist.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A RandomEventList is an EventList that randomly selects one of its items
+each turn its doScript method is run. In practice, the
+<a href="shuffledeventlist.html">ShuffledEventList</a>, which inherits from
+RandomEventList, may be more useful, since it ensures that the same
+event will not be chosen twice in succession. The typical use of a
+RandomEventList might be in the atmosphereList of a <a href="room.html">Room</a> or
+combined with a <a href="topicentry.html">TopicEntry</a> to provide a series of
+random conversational responses.</p>
+
+<p>RandomEventList defines, (and hence ShufffledEventList inherits) three
+useful properties to control the frequency with which random messages
+are displayed (or random events occur). This is principally designed for
+use in a Room’s atmosphereList (or perhaps an Actor’s ‘fidget list’),
+where once players have seen all the messages once or twice, they’ve got
+the general idea and may start to find them unduly repetitious.</p>
+
+<p>You can set the <strong>eventPercent</strong> property (an integer between 0 and 100)
+to define the proportion of turns in which you want one of the events
+(normally just displaying a string) to occur (for example, setting
+eventPercent = 75 would cause a random event to be selected on average
+in three turns out of every four). By default, eventPercent is 100.
+Additionally, if you wish, you can have this percentage fall (or even
+rise!) to a new value, <strong>eventReduceTo</strong> after <strong>eventReduceAfter</strong>
+turns. If <strong>eventReduceAfter</strong> is nil (as it is by default) then the
+eventPercent never changes. This behaviour is in fact provided by
+<a href="randomfiringscript.html">RandomFiringScript</a>.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

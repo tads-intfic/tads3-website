@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-sysman-nodef-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-sysman-nodef-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="lib.html" class="nav">The System Library</a> &gt; Replacing the
+System Library<br />
+<span class="navnp"><a href="libmisc.html" class="nav"><em>Prev:</em> Miscellaneous Library
+Definitions</a>    
+<a href="ui.html" class="nav"><em>Next:</em> The User Interface</a>    
+</span></p>
+
+<h1 id="replacing-the-standard-library">Replacing the Standard Library</h1>
+
+<p>The standard startup module that defines _main(), PreinitObject, and so
+on, is called _main.t. By default, the compiler includes this in every
+build automatically. Most programs will have no reason to modify the
+default versions provided in _main.t, which is why t3make includes the
+file in all builds by default. However, if you do need to replace this
+module, you can use the -nodef compiler option to tell the compiler not
+to include this default module. If you do this, you’ll minimally need to
+define the _main() and _mainRestore() functions yourself.</p>
+
+<p>Most programs also explicitly include system.tl in their project files.
+This is the full system library, which includes definitions for required
+support classes for the <a href="file.html">File</a> and <a href="gramprod.html">GrammarProd</a>
+intrinsic classes, as well as the <a href="tok.html">Tokenizer</a> class. You can
+eliminate this module from your build simply by removing system.tl from
+the list of files in your project. If you do this, you’ll have to define
+your own versions of the support classes for File and GrammarProd, if
+you use those classes.</p>
+
+<hr />
+
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="lib.html" class="nav">The System Library</a> &gt; Replacing the
+System Library<br />
+<span class="navnp"><a href="libmisc.html" class="nav"><em>Prev:</em> Miscellaneous Library
+Definitions</a>    
+<a href="ui.html" class="nav"><em>Next:</em> The User Interface</a>    
+</span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

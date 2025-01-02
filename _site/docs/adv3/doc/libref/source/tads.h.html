@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-source-tads-h-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-source-tads-h-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<h1 id="tadsh">tads.h</h1>
+
+<p><a href="../file/tads.h.html">documentation</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#charset "us-ascii"
+#pragma once
+
+/* 
+ *   Copyright (c) 1999, 2006 Michael J. Roberts
+ *.  This file is part of TADS 3.
+ *   
+ *   This file includes all of the standard TADS system headers, so programs
+ *   can include this header alone rather than having to include all of the
+ *   separate headers individually.  
+ */
+
+
+/*
+ *   To allow the standard library and header files to be used with
+ *   alternative I/O intrinsics, we explicitly use macros for the I/O
+ *   dependencies in the library - specifically, the I/O intrinsic header
+ *   file name, and the name of the default stream output function.
+ *   
+ *   We define defaults for these if they aren't otherwise defined.  To
+ *   compile library files with an alternative set of I/O intrinsics, define
+ *   these symbols in the compiler (for example, by using the -D command-line
+ *   option with t3make).  
+ */
+#ifndef TADS_IO_HEADER
+#define TADS_IO_HEADER "tadsio.h"
+#endif
+#ifndef _tads_io_say
+#define _tads_io_say(str) tadsSay(str)
+#endif
+
+
+/* include the T3 VM intrinsic function set */
+#include "t3.h"
+
+/* include the TADS general data manipulation function set */
+#include "tadsgen.h"
+
+/* include the TADS input/output function set */
+#include TADS_IO_HEADER
+
+/* include the system type definitions */
+#include "systype.h"
+
+/* if we're building a network program, include the net headers */
+#ifdef TADS_INCLUDE_NET
+#include &lt;tadsnet.h&gt;
+#include &lt;httpsrv.h&gt;
+#include &lt;httpreq.h&gt;
+#endif
+
+
+/* ------------------------------------------------------------------------ */
+/*
+ *   Break out of a callback iteration, such as a forEachInstance() loop.
+ *   This can be used within the callback code to break out of the loop.  
+ */
+#define breakLoop throw BreakLoopSignal
+
+
+/* ------------------------------------------------------------------------ */
+/*
+ *   Define a property value using an expression that's evaluated once per
+ *   instance of the class where the property is defined.  This is used like
+ *   so:
+ *   
+ *   class MyClass: MySuperClass
+ *.    prop1 = perInstance(new SubObject())
+ *.  ;
+ *   
+ *   Now, for each instance of MyClass, prop1 will be set to a separate
+ *   instance of SubObject.
+ *   
+ *   Note that the per-instance property value is set "on demand" in each
+ *   instance.  This means that a particular instance's copy of the property
+ *   will be set when the property is first evaluated.  Note in particular
+ *   that the value won't necessary be computed at compile time or during
+ *   pre-initialization, because the value for a particular instance won't be
+ *   calculated until the property is first used for a that instance.  
+ */
+#define perInstance(expr) (self.(targetprop) = (expr))
+</code></pre></div></div>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

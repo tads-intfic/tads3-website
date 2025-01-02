@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-lcs-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-lcs-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">LCS</span><span class="type">class</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2118">2118</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>LCS - class that computes the Longest Common Subsequence for two lists
+or vectors.</p>
+
+<p>The LCS is most frequently used as a differencing tool, to compute a
+description of how two data sets differ. This is at the core of tools
+like “diff”, which shows the differences between two versions of a file.
+The LCS is the part of the two sets that’s the same, so everything in
+one of the sets that’s not in the LCS is unique to that set. The
+standard diff algorithm computes the LCS, then generates a list of edits
+by specifying a “delete” operation on each item in the “new” set that’s
+not in the LCS, and an “insert” operation on each item in the “old” set
+that’s not in the LCS. Merge and sort the two edit lists and you have
+basically the standard Unix “diff” output. (Some diff utilities make the
+report more readable by combining overlapping edit and insert operations
+into “update” operations. But it’s really the same thing, of course.)</p>
+
+<p>The constructor does all the work: use ‘new’ to create an instance of
+this class, providing the two lists to be compared as arguments. The
+resulting object contains the LCS information.</p>
+
+<p>Note that you can use this class to generate a character-by-character
+LCS for two strings, simply by using toUnicode() to convert each string
+to a list of character values.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">LCS</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">LCS</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#lcsA"><code class="language-plaintext highlighter-rouge">lcsA</code></a> <a href="#lcsB"><code class="language-plaintext highlighter-rouge">lcsB</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="lcsA"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lcsA</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2183">2183</a>]</p>
+
+<p>the LCS, as lists of character indices into the respective strings</p>
+
+<p><span id="lcsB"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lcsB</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2184">2184</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (a, b)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2119">2119</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

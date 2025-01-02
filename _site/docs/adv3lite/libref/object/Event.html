@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-event-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-event-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Event</span><span class="type">class</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#213">213</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>An Event is an object such as a Fuse or Daemon that is executed
+according to certain conditions. Game code will normally use one of its
+subclasses rather than the Event class directly.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Event</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Event</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Event</code></strong><br />
+<a href="../object/Daemon.html"><code class="language-plaintext highlighter-rouge">Daemon</code></a><br />
+<a href="../object/SenseDaemon.html"><code class="language-plaintext highlighter-rouge">SenseDaemon</code></a><br />
+<a href="../object/Fuse.html"><code class="language-plaintext highlighter-rouge">Fuse</code></a><br />
+<a href="../object/SenseFuse.html"><code class="language-plaintext highlighter-rouge">SenseFuse</code></a><br />
+<a href="../object/TimeFuse.html"><code class="language-plaintext highlighter-rouge">TimeFuse</code></a><br />
+<a href="../object/SenseTimeFuse.html"><code class="language-plaintext highlighter-rouge">SenseTimeFuse</code></a><br />
+<a href="../object/PromptDaemon.html"><code class="language-plaintext highlighter-rouge">PromptDaemon</code></a><br />
+<a href="../object/OneTimePromptDaemon.html"><code class="language-plaintext highlighter-rouge">OneTimePromptDaemon</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/actorSchedule.html"><code class="language-plaintext highlighter-rouge">actorSchedule</code></a> <a href="../object/sceneManager.html"><code class="language-plaintext highlighter-rouge">sceneManager</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#captureText"><code class="language-plaintext highlighter-rouge">captureText</code></a> <a href="#eventOrder"><code class="language-plaintext highlighter-rouge">eventOrder</code></a> <a href="#executed"><code class="language-plaintext highlighter-rouge">executed</code></a> <a href="#interval_"><code class="language-plaintext highlighter-rouge">interval_</code></a> <a href="#isPromptDaemon"><code class="language-plaintext highlighter-rouge">isPromptDaemon</code></a> <a href="#nextRunTime"><code class="language-plaintext highlighter-rouge">nextRunTime</code></a> <a href="#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a> <a href="#prop_"><code class="language-plaintext highlighter-rouge">prop_</code></a> <a href="#senseObj_"><code class="language-plaintext highlighter-rouge">senseObj_</code></a> <a href="#senseProp_"><code class="language-plaintext highlighter-rouge">senseProp_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#callMethod"><code class="language-plaintext highlighter-rouge">callMethod</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#delayEvent"><code class="language-plaintext highlighter-rouge">delayEvent</code></a> <a href="#eventMatches"><code class="language-plaintext highlighter-rouge">eventMatches</code></a> <a href="#executeEvent"><code class="language-plaintext highlighter-rouge">executeEvent</code></a> <a href="#getNextRunTime"><code class="language-plaintext highlighter-rouge">getNextRunTime</code></a> <a href="#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="captureText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">captureText</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#330">330</a>]</p>
+
+<p>Text captured from callMethod()</p>
+
+<p><span id="eventOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eventOrder</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#268">268</a>]</p>
+
+<p>Event order - this establishes the order we run relative to other events
+scheduled to run at the same game clock time. Lowest number goes first.
+By default, we provide an event order of 100, which should leave plenty
+of room for custom events before and after default events.</p>
+
+<p><span id="executed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executed</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#333">333</a>]</p>
+
+<p>Flag - has this event ever been executed</p>
+
+<p><span id="interval_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">interval_</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#236">236</a>]</p>
+
+<p>The interval at which this Event is to be executed.</p>
+
+<p><span id="isPromptDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isPromptDaemon</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#278">278</a>]</p>
+
+<p>by default, we’re not a per-command-prompt daemon</p>
+
+<p><span id="nextRunTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextRunTime</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#275">275</a>]</p>
+
+<p>our next execution time, expressed in game clock time; by default, we’ll
+set this to nil, which means that we are not scheduled to execute at all</p>
+
+<p><span id="obj_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obj_</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#230">230</a>]</p>
+
+<p>The object we’re associated with</p>
+
+<p><span id="prop_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">prop_</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#233">233</a>]</p>
+
+<p>A pointer to the property of that object to execute</p>
+
+<p><span id="senseObj_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">senseObj_</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#320">320</a>]</p>
+
+<p>If the senseObj_ property is defined (normally via our constructor),
+the player character must be able to sense the senseObj_ via the sense
+defined in senseProp_ for any textual output from obj_.(prop_) to be
+displayed when this Event is executed.</p>
+
+<p><span id="senseProp_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">senseProp_</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#327">327</a>]</p>
+
+<p>The sense via which we test whether senseObj_ can be sensed by the
+player character. This must be given as an appropriate property of the
+Query object, e.g. &amp;canSee or &amp;canHear.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="callMethod"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">callMethod ( )</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#281">281</a>]</p>
+
+<p>Call the method this Event should execute when it’s ready to do so</p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (obj, prop)</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#216">216</a>]</p>
+
+<p>Construct a new Event</p>
+
+<p><span id="delayEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">delayEvent (turns)</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#248">248</a>]</p>
+
+<p>delay our scheduled run time by the given number of turns</p>
+
+<p><span id="eventMatches"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eventMatches (obj, prop)</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#259">259</a>]</p>
+
+<p>does this event match the given object/property combination?</p>
+
+<p><span id="executeEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeEvent ( )</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#256">256</a>]</p>
+
+<p>Execute the event. This must be overridden by the subclass to perform
+the appropriate operation when executed. In particular, the subclass
+must reschedule or unschedule the event, as appropriate.</p>
+
+<p><span id="getNextRunTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNextRunTime ( )</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#242">242</a>]</p>
+
+<p>Get the next run time, i.e. the next turn on which this Event should
+execute obj_.(prop_).</p>
+
+<p><span id="removeEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeEvent ( )</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#309">309</a>]</p>
+
+<p>Remove this event from the eventManager’s list of events.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

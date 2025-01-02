@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-conversationmanager-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-conversationmanager-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">conversationManager</span><span class="type">object</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5007">5007</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Conversation manager output filter. We look for special tags in the
+output stream:</p>
+
+<p>&lt;.reveal key&gt; - add ‘key’ to the knowledge token lookup table. The
+‘key’ is an arbitrary string, which we can look up in the table to
+determine if the key has even been revealed. This can be used to make a
+response conditional on another response having been displayed, because
+the key will only be added to the table when the text containing the
+&lt;.reveal key&gt; sequence is displayed.</p>
+
+<p>&lt;.unreveal key&gt; - remove ‘key from the knowledge token lookup table.</p>
+
+<p>&lt;.inform key&gt; - add ‘key’ to our actor’s knowledge token lookup take.
+The ‘key’ is an arbitrary string, which we can look up in the table to
+determine if the actor has ever been informed about this key. This can
+be used to make a response conditional on another response having been
+displayed, because the key will only be added to the information table
+when the text containing the &lt;.inform key&gt; sequence is displayed.</p>
+
+<p>&lt;.convnode name&gt; - add ‘name’ to the current list of convKeys (this
+actually adds it to the actor’s pendingKeys for use on the next turn);
+this is normally used to trigger a Conversation Node that’s defined to
+match the same name.</p>
+
+<p>&lt;.convodet name&gt; does the same as &lt;.convnode name&gt; and additionally
+schedules a topic inventory (a listing of suggested topics); this can be
+used to ensure that the player knows what conversational options are
+available in the node we’re about to enter, where this isn’t obvious
+from the context.</p>
+
+<p>&lt;.convstay&gt; - retain the same list of active keys for the next
+conversational response (and thus has the effect of making the
+conversation remain in the same conversation node).</p>
+
+<p>&lt;.convstayt&gt; - does the same as &lt;.convstay&gt; but additionally
+schedules a topic inventory.</p>
+
+<p>&lt;.topics&gt; - schedule a topic inventory for the end of the turn (just
+before the next command prompt)</p>
+
+<p>&lt;.arouse key&gt; Set the curiosityAroused property to true for all
+TopicEntries whose convKeys include key</p>
+
+<p>&lt;.suggest key&gt; Schedule a topic inventory for all topic entries whose
+convKeys include key.</p>
+
+<p>&lt;.sugkey key&gt; Set our actor’s suggestionKey to key (this potentially
+restricts the list of topics that will be suggested)</p>
+
+<p>&lt;.activate key&gt; Set the activated property to true for every topic
+entry whose convKeys list includes key.</p>
+
+<p>&lt;.agenda item&gt; Add item to the agenda list of our Actor and any
+associated DefaultAgendaTopics.</p>
+
+<p>&lt;.remove item&gt; Remove item from the agenda list of our Actor and any
+associated DefaultAgendaTopics.</p>
+
+<p>&lt;.state newstate&gt; Change our actor’s current ActorState to newstate.</p>
+
+<p>&lt;.known obj&gt; Mark obj (a Thing or Topic) as now being known (i.e.
+familiar)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">conversationManager</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a> <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">conversationManager</code></strong><br />
+<a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a><br />
+`                 object<code class="language-plaintext highlighter-rouge">  
+[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#convnodeSetTurn"><code class="language-plaintext highlighter-rouge">convnodeSetTurn</code></a> <a href="#customTags"><code class="language-plaintext highlighter-rouge">customTags</code></a> <a href="#idToActor"><code class="language-plaintext highlighter-rouge">idToActor</code></a> <a href="#objNameTab"><code class="language-plaintext highlighter-rouge">objNameTab</code></a> <a href="#pendingTopicInventory"><code class="language-plaintext highlighter-rouge">pendingTopicInventory</code></a> <a href="#pendingTopicInventoryKey"><code class="language-plaintext highlighter-rouge">pendingTopicInventoryKey</code></a> <a href="#respondingActor"><code class="language-plaintext highlighter-rouge">respondingActor</code></a> <a href="#tagPat"><code class="language-plaintext highlighter-rouge">tagPat</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#doCustomTag"><code class="language-plaintext highlighter-rouge">doCustomTag</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a> <a href="#manageKeys"><code class="language-plaintext highlighter-rouge">manageKeys</code></a> <a href="#scheduleTopicInventory"><code class="language-plaintext highlighter-rouge">scheduleTopicInventory</code></a> <a href="#setInformed"><code class="language-plaintext highlighter-rouge">setInformed</code></a> <a href="#setRevealed"><code class="language-plaintext highlighter-rouge">setRevealed</code></a> <a href="#setUnrevealed"><code class="language-plaintext highlighter-rouge">setUnrevealed</code></a> <a href="#showAgendaError"><code class="language-plaintext highlighter-rouge">showAgendaError</code></a> <a href="#showKnownError"><code class="language-plaintext highlighter-rouge">showKnownError</code></a> <a href="#showObjDoesNotBelongToActorError"><code class="language-plaintext highlighter-rouge">showObjDoesNotBelongToActorError</code></a> <a href="#showObjNotExistError"><code class="language-plaintext highlighter-rouge">showObjNotExistError</code></a> <a href="#showStateError"><code class="language-plaintext highlighter-rouge">showStateError</code></a> <a href="#showWrongKindofObjectError"><code class="language-plaintext highlighter-rouge">showWrongKindofObjectError</code></a> <a href="#topicInventoryDaemon"><code class="language-plaintext highlighter-rouge">topicInventoryDaemon</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="convnodeSetTurn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">convnodeSetTurn</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5358">5358</a>]</p>
+
+<p>The turn on which we last processed a convnode tag</p>
+
+<p><span id="customTags"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">customTags</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5025">5025</a>]</p>
+
+<p>Custom extended tags. Games and library extensions can add their own tag
+processing as needed, by using ‘modify’ to extend this object. There are
+two things you have to do to add your own tags:</p>
+
+<p>First, add a ‘customTags’ property that defines a regular expression for
+your added tags. This will be incorporated into the main pattern we use
+to look for tags. Simply specify a string that lists your tags separated
+by “|” characters, like this:</p>
+
+<p>customTags = ‘foo|bar’</p>
+
+<p>Second, define a doCustomTag() method to process the tags. The filter
+routine will call your doCustomTag() method whenever it finds one of
+your custom tags in the output stream.</p>
+
+<p><span id="idToActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">idToActor</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5573">5573</a>]</p>
+
+<p>a vector of actors, indexed by their convMgrID values</p>
+
+<p><span id="objNameTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objNameTab</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5623">5623</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="pendingTopicInventory"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pendingTopicInventory</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5618">5618</a>]</p>
+
+<p>flag: we have a pending prompt-time topic inventory request</p>
+
+<p><span id="pendingTopicInventoryKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pendingTopicInventoryKey</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5621">5621</a>]</p>
+
+<p>The key to use for the pending prompt-time inventory request</p>
+
+<p><span id="respondingActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">respondingActor</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5032">5032</a>]</p>
+
+<p>The actor we’re dealing with is the player character’s current
+interlocutor</p>
+
+<p><span id="tagPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tagPat</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5361">5361</a>]</p>
+
+<p>regular expression pattern for our tags</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="doCustomTag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doCustomTag (tag, arg)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5026">5026</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5576">5576</a>]</p>
+
+<p>preinitialize</p>
+
+<p><span id="filterText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterText (ostr, txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5035">5035</a>]</p>
+
+<p>filter text written to the output stream</p>
+
+<p><span id="manageKeys"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">manageKeys ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5370">5370</a>]</p>
+
+<p>Provided we have a respondingActor, call its manageKeys method.</p>
+
+<p><span id="scheduleTopicInventory"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scheduleTopicInventory (key, =, nil)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5383">5383</a>]</p>
+
+<p>Schedule a topic inventory request. Game code can call this at any time
+to request that the player character’s topic inventory be shown
+automatically just before the next command prompt. In most cases, game
+code won’t call this directly, but will request the same effect using
+the &lt;.topics&gt; tag in topic response text.</p>
+
+<p><span id="setInformed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setInformed (tag)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5455">5455</a>]</p>
+
+<p>Notify every actor who’s in a position to hear that we’ve just imparted
+some information.</p>
+
+<p><span id="setRevealed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setRevealed (tag)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5410">5410</a>]</p>
+
+<p>Mark a tag as revealed. This adds an entry for the tag to the
+revealedNameTab table. We simply set the table entry to ‘true’; the
+presence of the tag in the table constitutes the indication that the tag
+has been revealed.</p>
+
+<p>(Games and library extensions can use ‘modify’ to override this and
+store more information in the table entry. For example, you could store
+the time when the information was first revealed, or the location where
+it was learned. If you do override this, just be sure to set the
+revealedNameTab entry for the tag to a non-nil and non-zero value, so
+that any code testing the presence of the table entry will see that the
+slot is indeed set.)</p>
+
+<p>The actual method and the revealedNameTab are on libGlobal rather than
+here in order to make them available to games that don’t include
+actor.t.</p>
+
+<p><span id="setUnrevealed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setUnrevealed (tag)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5446">5446</a>]</p>
+
+<p>Mark a tag as unrevealed. This removes an entry for the tag to the
+revealedNameTab table.</p>
+
+<p>The actual method and the revealedNameTab are on libGlobal rather than
+here in order to make them available to games that don’t include
+actor.t.</p>
+
+<p><span id="showAgendaError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showAgendaError (tag, arg)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5489">5489</a>]</p>
+
+<p>Display an error message if the game code tries to add or remove agenda
+items from an agendaList using a &lt;.agenda item&gt; or &lt;.remove item&gt;
+tag, when item doesn’t correspond to a valid AgendaItem, but only do so
+if the game has been compiled for debugging.</p>
+
+<p><span id="showKnownError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showKnownError (tag, arg)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5531">5531</a>]</p>
+
+<p>Display an error message if the game code tries mark an object as known
+about using a &lt;.known obj&gt; tag, when obj doesn’t correspond to a valid
+Mentionable object, but only do so if the game has been compiled for
+debugging.</p>
+
+<p><span id="showObjDoesNotBelongToActorError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showObjDoesNotBelongToActorError (tag, arg, typ)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5565">5565</a>]</p>
+
+<p>The object referred to by tag doesn’t belong to the actor in question</p>
+
+<p><span id="showObjNotExistError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showObjNotExistError (tag, arg, typ)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5550">5550</a>]</p>
+
+<p>The object referred to by tag doesn’t exist</p>
+
+<p><span id="showStateError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showStateError (tag, arg)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5511">5511</a>]</p>
+
+<p>Display an error message if the game code tries to change our actor’s
+ActorState via a &lt;.state newstate&gt; tag, when tag doesn’t correspond to
+a valid ActorState, but only do so if the game has been compiled for
+debugging.</p>
+
+<p><span id="showWrongKindofObjectError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showWrongKindofObjectError (tag, arg, typ)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5558">5558</a>]</p>
+
+<p>The object referred to by tag is the wrong sort of object</p>
+
+<p><span id="topicInventoryDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicInventoryDaemon ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5596">5596</a>]</p>
+
+<p>Prompt daemon: show topic inventory when appropriate. When a response
+explicitly asks us to show a topic inventory using the &lt;.topics&gt; tag,
+or when other game code asks us to show topic inventory by calling
+scheduleTopicInventory(), we’ll show the inventory just before the
+command input prompt.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

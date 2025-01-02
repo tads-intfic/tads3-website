@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-defaultcommandtopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-defaultcommandtopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>DefaultCommandTopic : <a href="defaulttopics-overview.html">DefaultTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="commandtopic.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="overridingobeycommand.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>By default, if a player issues a command which the author has not
+catered for, such as CURATOR, KISS SARAH, the game responds with a
+message like “The curator refuses your request.” The DefaultCommandTopic
+provides a convenient means of customizing this response, either on each
+individual actor state, or globally for the actor.</p>
+
+<p>Here’s how we might define a global DefaultCommandTopic (located in the
+sarah object) for Sarah:</p>
+
+<p>+ DefaultCommandTopic, ShuffledEventList<br />
+  [<br />
+    ’&lt;q&gt;No, I\d really rather not!&lt;/q&gt; she tells you.&lt;.p&gt;’,<br />
+    ’&lt;q&gt;I don\t think so.&lt;/q&gt; she declines.&lt;.p&gt;’,<br />
+    ’&lt;q&gt;Since when did you have the right to boss me around?&lt;/q&gt;<br />
+      she demands.&lt;.p&gt;’,<br />
+    ’{The sarah/she} merely shakes her head.&lt;.p&gt;’,<br />
+    ’&lt;q&gt;Do it yourself!&lt;/q&gt; she tells you.&lt;.p&gt;‘  <br />
+  ] <br />
+;</p>
+
+<p>This is fine, except that if a command is directed at Sarah before
+you’ve struck up a conversation with her, you get something like this:</p>
+
+<p><strong>&gt;woman, examine the ship</strong><br />
+“Hello there,” you say.</p>
+
+<p>“Hello.” she smiles at you, slightly quizzically.</p>
+
+<p>“Do it yourself!” she tells you.</p>
+
+<p>The player will probably see what it means, but it does read a little
+strangely. It would be nicer if we could get something like this:</p>
+
+<p>&gt;<strong>woman, x ship</strong><br />
+“Hello there,” you say.</p>
+
+<p>“Hello.” she smiles at you, slightly quizzically.</p>
+
+<p>“Young woman, please examine the ship,” you request.</p>
+
+<p>“Do it yourself!” she tells you.</p>
+
+<p>This can be achieved, but it will take a bit of work; fortunately this
+work will prove generally beneficial in extending the power of the
+CommandTopic system. We’ll take it a step at a time.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

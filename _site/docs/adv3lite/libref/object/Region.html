@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-region-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-region-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Region</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1940">1940</a>],
+<a href="../file/dynamicRegion.t.html">dynamicRegion.t</a>[<a href="../source/dynamicRegion.t.html#153">153</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A Region is an object representing several rooms or even several other
+Regions.</p>
+
+<p><em>Modified in
+<a href="../file/dynamicRegion.t.html">dynamicRegion.t</a>[<a href="../source/dynamicRegion.t.html#153">153</a>]:</em><br />
+Modifications to Region to work safely with DynamicRegion</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Region</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Region</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Region</code></strong><br />
+<a href="../object/DynamicRegion.html"><code class="language-plaintext highlighter-rouge">DynamicRegion</code></a><br />
+<a href="../object/SenseRegion.html"><code class="language-plaintext highlighter-rouge">SenseRegion</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#extraScopeItems"><code class="language-plaintext highlighter-rouge">extraScopeItems</code></a> <a href="#familiar"><code class="language-plaintext highlighter-rouge">familiar</code></a> <a href="#fastGoTo"><code class="language-plaintext highlighter-rouge">fastGoTo</code></a> <a href="#regions"><code class="language-plaintext highlighter-rouge">regions</code></a> <a href="#roomList"><code class="language-plaintext highlighter-rouge">roomList</code></a> <a href="#rooms"><code class="language-plaintext highlighter-rouge">rooms</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addExtraScopeItems"><code class="language-plaintext highlighter-rouge">addExtraScopeItems</code></a> <a href="#addToContents"><code class="language-plaintext highlighter-rouge">addToContents</code></a> <a href="#addToRoomList"><code class="language-plaintext highlighter-rouge">addToRoomList</code></a> <a href="#allRegions"><code class="language-plaintext highlighter-rouge">allRegions</code></a> <a href="#isCurrentlyWithin"><code class="language-plaintext highlighter-rouge">isCurrentlyWithin</code></a> <a href="#isIn"><code class="language-plaintext highlighter-rouge">isIn</code></a> <a href="#isOrIsIn"><code class="language-plaintext highlighter-rouge">isOrIsIn</code></a> <a href="#makeRegionLists"><code class="language-plaintext highlighter-rouge">makeRegionLists</code></a> <a href="#moveMLIntoAdd"><code class="language-plaintext highlighter-rouge">moveMLIntoAdd</code></a> <a href="#moveMLOutOf"><code class="language-plaintext highlighter-rouge">moveMLOutOf</code></a> <a href="#notifyAfter"><code class="language-plaintext highlighter-rouge">notifyAfter</code></a> <a href="#notifyBefore"><code class="language-plaintext highlighter-rouge">notifyBefore</code></a> <a href="#regionAfterAction"><code class="language-plaintext highlighter-rouge">regionAfterAction</code></a> <a href="#regionAfterTravel"><code class="language-plaintext highlighter-rouge">regionAfterTravel</code></a> <a href="#regionBeforeAction"><code class="language-plaintext highlighter-rouge">regionBeforeAction</code></a> <a href="#regionBeforeTravel"><code class="language-plaintext highlighter-rouge">regionBeforeTravel</code></a> <a href="#regionDaemon"><code class="language-plaintext highlighter-rouge">regionDaemon</code></a> <a href="#removeFromContents"><code class="language-plaintext highlighter-rouge">removeFromContents</code></a> <a href="#setFamiliarRooms"><code class="language-plaintext highlighter-rouge">setFamiliarRooms</code></a> <a href="#travelerEntering"><code class="language-plaintext highlighter-rouge">travelerEntering</code></a> <a href="#travelerLeaving"><code class="language-plaintext highlighter-rouge">travelerLeaving</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="extraScopeItems"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">extraScopeItems</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2113">2113</a>]</p>
+
+<p>A list of items that should be added to the standard scope list for
+actions carried out in any room in this region.</p>
+
+<p><span id="familiar"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">familiar</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2019">2019</a>]</p>
+
+<p>Is the player char familiar with every room in this region. This should
+be set to true for a region whose geography the PC starts out familiar
+with, such as the layout of his own house.</p>
+
+<p><span id="fastGoTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fastGoTo</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2184">2184</a>]</p>
+
+<p>Should the fastGoTo option be used in this region (i.e. traveling from
+one room in the region to another is all done in one turn without the
+need for CONTINUE, even if several steps are involved)? Note that the
+value of this setting has no effect if gameMain.fastGoTo is true, since
+then the fastGoTo setting is always in effect.</p>
+
+<p><span id="regions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">regions</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1946">1946</a>]</p>
+
+<p>This region can optionally be in one or more regions. The regions
+property hold the region or a the list of regions I’m in.</p>
+
+<p><span id="roomList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roomList</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1989">1989</a>]</p>
+
+<p>A list of all the rooms in this region. This is built automatically at
+preinit and shouldn’t be altered by the user/author.</p>
+
+<p><span id="rooms"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rooms</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1996">1996</a>]</p>
+
+<p>A user-defined list of the rooms in this region. At Preinit this will be
+used along with the regions property of any rooms to build the roomList
+of this Region.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addExtraScopeItems"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addExtraScopeItems (action)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2092">2092</a>]</p>
+
+<p>Put extra items in scope when action is carried out in any room in this
+region.</p>
+
+<p><span id="addToContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToContents (obj, vec?)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2047">2047</a>]</p>
+
+<p>To add an object to our contents we need to add it to the contents of
+every room in this region. If the optional vec parameter is supplied it
+must be a vector; the rooms will then be added to the vector as well.
+The vec parameter is primarily for use by the MultiLoc class.</p>
+
+<p><span id="addToRoomList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addToRoomList (rm)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2074">2074</a>]</p>
+
+<p>Add an additional room (passed as the rm parameter) to our list of
+rooms. This method is intended for internal library use at PreInit only.</p>
+
+<p><span id="allRegions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allRegions ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1969">1969</a>]</p>
+
+<p>A list of all the regions this Region is within; in addition to any
+regions this Region is directly in (defined on its regions property)
+this will include all the regions it’s indirectly in (i.e. any regions
+the regions it’s in are in and so forth).</p>
+
+<p><span id="isCurrentlyWithin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isCurrentlyWithin (region)</code></p>
+
+<p><a href="../file/dynamicRegion.t.html">dynamicRegion.t</a>[<a href="../source/dynamicRegion.t.html#184">184</a>]</p>
+
+<p>Tests whether this room is currently contained within region in the
+sense that all our rooms are also in region. [DYNAMIC REGION
+EXTENSION]</p>
+
+<p><span id="isIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isIn (region)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1952">1952</a>],
+<a href="../file/dynamicRegion.t.html">dynamicRegion.t</a>[<a href="../source/dynamicRegion.t.html#158">158</a>]</p>
+
+<p>A Room can’t be in another Room or a Thing, but it can notionally be in
+a Region, so we check to see if we’re in the list of our regions.</p>
+
+<p><em>Modified in
+<a href="../file/dynamicRegion.t.html">dynamicRegion.t</a>[<a href="../source/dynamicRegion.t.html#158">158</a>]:</em><br />
+A DynamicRegion cannot contain other regions [DYNAMIC REGION
+EXTENSION]</p>
+
+<p><span id="isOrIsIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isOrIsIn (region)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#1958">1958</a>]</p>
+
+<p>Is this Region either itself region or contained within in region</p>
+
+<p><span id="makeRegionLists"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">makeRegionLists ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2005">2005</a>],
+<a href="../file/dynamicRegion.t.html">dynamicRegion.t</a>[<a href="../source/dynamicRegion.t.html#172">172</a>]</p>
+
+<p>Build the list of regions in all the rooms in this this region by going
+through every room defined in the roomList and adding us to its list of
+regions. Note that this is provided as an alternative way to define what
+rooms start out in which regions.</p>
+
+<p><em>Modified in
+<a href="../file/dynamicRegion.t.html">dynamicRegion.t</a>[<a href="../source/dynamicRegion.t.html#172">172</a>]:</em><br />
+A Region is not allowed to be part of a DynamicRegion, so clear out any
+DynamicRegions from our list of Regions at PreInit. [DYNAMIC REGION
+EXTENSION]</p>
+
+<p><span id="moveMLIntoAdd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveMLIntoAdd (ml)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2190">2190</a>]</p>
+
+<p>Move a MultiLoc (ml) into this region, by moving it into every room in
+this Region.</p>
+
+<p><span id="moveMLOutOf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moveMLOutOf (ml)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2199">2199</a>]</p>
+
+<p>Move a MultiLoc (ml) out of this region, by moving it out of every room
+in the Region.</p>
+
+<p><span id="notifyAfter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notifyAfter ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2148">2148</a>]</p>
+
+<p>Carry out after notifications on the region</p>
+
+<p><span id="notifyBefore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notifyBefore ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2128">2128</a>]</p>
+
+<p>Carry out before notifications on the region</p>
+
+<p><span id="regionAfterAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">regionAfterAction ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2162">2162</a>]</p>
+
+<p>Method called just after an action has taken place in this region.</p>
+
+<p><span id="regionAfterTravel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">regionAfterTravel (traveler, connector)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2175">2175</a>]</p>
+
+<p>Method called just after travel has taken place in this region (when
+traveler has just traveled via connector).</p>
+
+<p><span id="regionBeforeAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">regionBeforeAction ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2145">2145</a>]</p>
+
+<p>This method is called just before an action takes places in this region.</p>
+
+<p><span id="regionBeforeTravel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">regionBeforeTravel (traveler, connector)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2168">2168</a>]</p>
+
+<p>This method is called just before travel takes places in this region
+(when traveler is about to travel via connector).</p>
+
+<p><span id="regionDaemon"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">regionDaemon ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2209">2209</a>]</p>
+
+<p>The regionDaemon method is executed on ever region in which the player
+character is currently located. By default we call the region’s
+doScript() method so that the if the region is mixed in with an
+EventList class, that EventList can be executed.</p>
+
+<p><span id="removeFromContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeFromContents (obj, vec?)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2061">2061</a>]</p>
+
+<p>To remove an object from our contents we need to remove it from the
+contents of every room in the region. If the optional vec parameter is
+supplied it must be a vector; the rooms will then be removed from the
+vector as well.</p>
+
+<p><span id="setFamiliarRooms"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setFamiliarRooms ( )</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2025">2025</a>]</p>
+
+<p>Go through all the rooms in this region setting them to familiar if the
+region is familiar.</p>
+
+<p><span id="travelerEntering"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerEntering (traveler, origin)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2125">2125</a>]</p>
+
+<p>This method is invoked when traveler is about to enter this region from
+origin (the room traveled from.</p>
+
+<p><span id="travelerLeaving"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerLeaving (traveler, dest)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#2119">2119</a>]</p>
+
+<p>This method is invoked when traveler is about to leave this region and
+go to dest (the destination room).</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-listento-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-listento-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">ListenTo</span><span class="type">object</span></p>
+
+<p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#969">969</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p><em>no description available</em></p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ListenTo</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/TAction.html"><code class="language-plaintext highlighter-rouge">TAction</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">ListenTo</code></strong><br />
+<a href="../object/TAction.html"><code class="language-plaintext highlighter-rouge">TAction</code></a><br />
+<a href="../object/Action.html"><code class="language-plaintext highlighter-rouge">Action</code></a><br />
+<a href="../object/ReplaceRedirector.html"><code class="language-plaintext highlighter-rouge">ReplaceRedirector</code></a><br />
+<a href="../object/Redirector.html"><code class="language-plaintext highlighter-rouge">Redirector</code></a><br />
+`                                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#againRepeatsParse"><code class="language-plaintext highlighter-rouge">againRepeatsParse</code></a> <a href="#announceMultiAction"><code class="language-plaintext highlighter-rouge">announceMultiAction</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TAction</code> :<br />
+<a href="../object/TAction.html#actionList"><code class="language-plaintext highlighter-rouge">actionList</code></a> <a href="../object/TAction.html#announceMultiCheck"><code class="language-plaintext highlighter-rouge">announceMultiCheck</code></a> <a href="../object/TAction.html#announceMultiVerify"><code class="language-plaintext highlighter-rouge">announceMultiVerify</code></a> <a href="../object/TAction.html#aqinfo"><code class="language-plaintext highlighter-rouge">aqinfo</code></a> <a href="../object/TAction.html#curDobj"><code class="language-plaintext highlighter-rouge">curDobj</code></a> <a href="../object/TAction.html#curObj"><code class="language-plaintext highlighter-rouge">curObj</code></a> <a href="../object/TAction.html#dqinfo"><code class="language-plaintext highlighter-rouge">dqinfo</code></a> <a href="../object/TAction.html#gActor"><code class="language-plaintext highlighter-rouge">gActor</code></a> <a href="../object/TAction.html#haltOnMessageInCheck"><code class="language-plaintext highlighter-rouge">haltOnMessageInCheck</code></a> <a href="../object/TAction.html#iqinfo"><code class="language-plaintext highlighter-rouge">iqinfo</code></a> <a href="../object/TAction.html#lastVerifyMsg"><code class="language-plaintext highlighter-rouge">lastVerifyMsg</code></a> <a href="../object/TAction.html#reportFailureAfterSuccess"><code class="language-plaintext highlighter-rouge">reportFailureAfterSuccess</code></a> <a href="../object/TAction.html#reportList"><code class="language-plaintext highlighter-rouge">reportList</code></a> <a href="../object/TAction.html#signal"><code class="language-plaintext highlighter-rouge">signal</code></a> <a href="../object/TAction.html#verifyTab"><code class="language-plaintext highlighter-rouge">verifyTab</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
+<a href="../object/Action.html#actionFailed"><code class="language-plaintext highlighter-rouge">actionFailed</code></a> <a href="../object/Action.html#advanceOnFailure"><code class="language-plaintext highlighter-rouge">advanceOnFailure</code></a> <a href="../object/Action.html#allowAll"><code class="language-plaintext highlighter-rouge">allowAll</code></a> <a href="../object/Action.html#extraMessageParams"><code class="language-plaintext highlighter-rouge">extraMessageParams</code></a> <a href="../object/Action.html#failCheckMsg"><code class="language-plaintext highlighter-rouge">failCheckMsg</code></a> <a href="../object/Action.html#failedActionCountsAsTurn"><code class="language-plaintext highlighter-rouge">failedActionCountsAsTurn</code></a> <a href="../object/Action.html#implicitTimeTaken"><code class="language-plaintext highlighter-rouge">implicitTimeTaken</code></a> <a href="../object/Action.html#includeInUndo"><code class="language-plaintext highlighter-rouge">includeInUndo</code></a> <a href="../object/Action.html#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a> <a href="../object/Action.html#isImplicit"><code class="language-plaintext highlighter-rouge">isImplicit</code></a> <a href="../object/Action.html#isRepeatable"><code class="language-plaintext highlighter-rouge">isRepeatable</code></a> <a href="../object/Action.html#oldRoom"><code class="language-plaintext highlighter-rouge">oldRoom</code></a> <a href="../object/Action.html#parentAction"><code class="language-plaintext highlighter-rouge">parentAction</code></a> <a href="../object/Action.html#parentAllowAll"><code class="language-plaintext highlighter-rouge">parentAllowAll</code></a> <a href="../object/Action.html#preCond"><code class="language-plaintext highlighter-rouge">preCond</code></a> <a href="../object/Action.html#redirectParent"><code class="language-plaintext highlighter-rouge">redirectParent</code></a> <a href="../object/Action.html#reportImplicitActions"><code class="language-plaintext highlighter-rouge">reportImplicitActions</code></a> <a href="../object/Action.html#scopeList"><code class="language-plaintext highlighter-rouge">scopeList</code></a> <a href="../object/Action.html#spellingPriority"><code class="language-plaintext highlighter-rouge">spellingPriority</code></a> <a href="../object/Action.html#synthParamID"><code class="language-plaintext highlighter-rouge">synthParamID</code></a> <a href="../object/Action.html#timeTaken"><code class="language-plaintext highlighter-rouge">timeTaken</code></a> <a href="../object/Action.html#turnsTaken"><code class="language-plaintext highlighter-rouge">turnsTaken</code></a> <a href="../object/Action.html#unhides"><code class="language-plaintext highlighter-rouge">unhides</code></a> <a href="../object/Action.html#verifyObj"><code class="language-plaintext highlighter-rouge">verifyObj</code></a> <a href="../object/Action.html#wasIlluminated"><code class="language-plaintext highlighter-rouge">wasIlluminated</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addExtraScopeItems"><code class="language-plaintext highlighter-rouge">addExtraScopeItems</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">TAction</code> :<br />
+<a href="../object/TAction.html#addVerifyResult"><code class="language-plaintext highlighter-rouge">addVerifyResult</code></a> <a href="../object/TAction.html#check"><code class="language-plaintext highlighter-rouge">check</code></a> <a href="../object/TAction.html#checkAction"><code class="language-plaintext highlighter-rouge">checkAction</code></a> <a href="../object/TAction.html#checkPreCond"><code class="language-plaintext highlighter-rouge">checkPreCond</code></a> <a href="../object/TAction.html#doAction"><code class="language-plaintext highlighter-rouge">doAction</code></a> <a href="../object/TAction.html#doActionOnce"><code class="language-plaintext highlighter-rouge">doActionOnce</code></a> <a href="../object/TAction.html#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a> <a href="../object/TAction.html#execCycle"><code class="language-plaintext highlighter-rouge">execCycle</code></a> <a href="../object/TAction.html#execResolvedAction"><code class="language-plaintext highlighter-rouge">execResolvedAction</code></a> <a href="../object/TAction.html#getAll"><code class="language-plaintext highlighter-rouge">getAll</code></a> <a href="../object/TAction.html#getMessageParam"><code class="language-plaintext highlighter-rouge">getMessageParam</code></a> <a href="../object/TAction.html#getVerbPhrase"><code class="language-plaintext highlighter-rouge">getVerbPhrase</code></a> <a href="../object/TAction.html#getVerbPhrase1"><code class="language-plaintext highlighter-rouge">getVerbPhrase1</code></a> <a href="../object/TAction.html#makeScopeUniversal"><code class="language-plaintext highlighter-rouge">makeScopeUniversal</code></a> <a href="../object/TAction.html#reportAction"><code class="language-plaintext highlighter-rouge">reportAction</code></a> <a href="../object/TAction.html#reset"><code class="language-plaintext highlighter-rouge">reset</code></a> <a href="../object/TAction.html#resolvedObjectsInScope"><code class="language-plaintext highlighter-rouge">resolvedObjectsInScope</code></a> <a href="../object/TAction.html#setResolvedObjects"><code class="language-plaintext highlighter-rouge">setResolvedObjects</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Action</code> :<br />
+<a href="../object/Action.html#acknowledgeNotifyStatus"><code class="language-plaintext highlighter-rouge">acknowledgeNotifyStatus</code></a> <a href="../object/Action.html#addImplicitTime"><code class="language-plaintext highlighter-rouge">addImplicitTime</code></a> <a href="../object/Action.html#advanceTime"><code class="language-plaintext highlighter-rouge">advanceTime</code></a> <a href="../object/Action.html#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a> <a href="../object/Action.html#announceObject"><code class="language-plaintext highlighter-rouge">announceObject</code></a> <a href="../object/Action.html#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a> <a href="../object/Action.html#buildImplicitActionAnnouncement"><code class="language-plaintext highlighter-rouge">buildImplicitActionAnnouncement</code></a> <a href="../object/Action.html#buildScopeList"><code class="language-plaintext highlighter-rouge">buildScopeList</code></a> <a href="../object/Action.html#checkActionPreconditions"><code class="language-plaintext highlighter-rouge">checkActionPreconditions</code></a> <a href="../object/Action.html#commandNotPresent"><code class="language-plaintext highlighter-rouge">commandNotPresent</code></a> <a href="../object/Action.html#exec"><code class="language-plaintext highlighter-rouge">exec</code></a> <a href="../object/Action.html#execGroup"><code class="language-plaintext highlighter-rouge">execGroup</code></a> <a href="../object/Action.html#getAllUnhidden"><code class="language-plaintext highlighter-rouge">getAllUnhidden</code></a> <a href="../object/Action.html#implicitAnnouncement"><code class="language-plaintext highlighter-rouge">implicitAnnouncement</code></a> <a href="../object/Action.html#scoreObjects"><code class="language-plaintext highlighter-rouge">scoreObjects</code></a> <a href="../object/Action.html#setMessageParam"><code class="language-plaintext highlighter-rouge">setMessageParam</code></a> <a href="../object/Action.html#setMessageParams"><code class="language-plaintext highlighter-rouge">setMessageParams</code></a> <a href="../object/Action.html#spPrefix"><code class="language-plaintext highlighter-rouge">spPrefix</code></a> <a href="../object/Action.html#spSuffix"><code class="language-plaintext highlighter-rouge">spSuffix</code></a> <a href="../object/Action.html#synthMessageParam"><code class="language-plaintext highlighter-rouge">synthMessageParam</code></a> <a href="../object/Action.html#turnSequence"><code class="language-plaintext highlighter-rouge">turnSequence</code></a> <a href="../object/Action.html#verify"><code class="language-plaintext highlighter-rouge">verify</code></a> <a href="../object/Action.html#verifyObjRole"><code class="language-plaintext highlighter-rouge">verifyObjRole</code></a> <a href="../object/Action.html#wrapObjectsNP"><code class="language-plaintext highlighter-rouge">wrapObjectsNP</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ReplaceRedirector</code> :<br />
+<a href="../object/ReplaceRedirector.html#redirect"><code class="language-plaintext highlighter-rouge">redirect</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
+<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a> <a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a> <a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="againRepeatsParse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">againRepeatsParse</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#971">971</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="announceMultiAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceMultiAction</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#970">970</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addExtraScopeItems"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addExtraScopeItems (whichRole?)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actions.t.html">actions.t</a>[<a href="../source/actions.t.html#974">974</a>],
+<a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1361">1361</a>]</p>
+
+<p>Add any Noises the actor can hear</p>
+
+<p><em>Modified in
+<a href="../file/senseRegion.t.html">senseRegion.t</a>[<a href="../source/senseRegion.t.html#1361">1361</a>]:</em><br />
+Add any Noises the actor can hear</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

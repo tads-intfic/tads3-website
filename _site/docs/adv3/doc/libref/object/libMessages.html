@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-libmessages-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-libmessages-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">libMessages</span><span class="type">object</span></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#76">76</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Library Messages</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">libMessages</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/MessageHelper.html"><code class="language-plaintext highlighter-rouge">MessageHelper</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">libMessages</code></strong><br />
+<a href="../object/MessageHelper.html"><code class="language-plaintext highlighter-rouge">MessageHelper</code></a><br />
+`                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#commandFullScore"><code class="language-plaintext highlighter-rouge">commandFullScore</code></a> <a href="#commandInterruptionPrefix"><code class="language-plaintext highlighter-rouge">commandInterruptionPrefix</code></a> <a href="#commandLookAround"><code class="language-plaintext highlighter-rouge">commandLookAround</code></a> <a href="#commandNotPresent"><code class="language-plaintext highlighter-rouge">commandNotPresent</code></a> <a href="#commandResultsEmpty"><code class="language-plaintext highlighter-rouge">commandResultsEmpty</code></a> <a href="#commandResultsPrefix"><code class="language-plaintext highlighter-rouge">commandResultsPrefix</code></a> <a href="#commandResultsSeparator"><code class="language-plaintext highlighter-rouge">commandResultsSeparator</code></a> <a href="#commandResultsSuffix"><code class="language-plaintext highlighter-rouge">commandResultsSuffix</code></a> <a href="#complexResultsSeparator"><code class="language-plaintext highlighter-rouge">complexResultsSeparator</code></a> <a href="#currentlyClosed"><code class="language-plaintext highlighter-rouge">currentlyClosed</code></a> <a href="#currentlyLocked"><code class="language-plaintext highlighter-rouge">currentlyLocked</code></a> <a href="#currentlyNoHints"><code class="language-plaintext highlighter-rouge">currentlyNoHints</code></a> <a href="#currentlyOpen"><code class="language-plaintext highlighter-rouge">currentlyOpen</code></a> <a href="#currentlyUnlocked"><code class="language-plaintext highlighter-rouge">currentlyUnlocked</code></a> <a href="#defaultsFileNotSupported"><code class="language-plaintext highlighter-rouge">defaultsFileNotSupported</code></a> <a href="#defaultsFileWriteError"><code class="language-plaintext highlighter-rouge">defaultsFileWriteError</code></a> <a href="#dlgButtonCancel"><code class="language-plaintext highlighter-rouge">dlgButtonCancel</code></a> <a href="#dlgButtonNo"><code class="language-plaintext highlighter-rouge">dlgButtonNo</code></a> <a href="#dlgButtonOk"><code class="language-plaintext highlighter-rouge">dlgButtonOk</code></a> <a href="#dlgButtonYes"><code class="language-plaintext highlighter-rouge">dlgButtonYes</code></a> <a href="#dlgTitleError"><code class="language-plaintext highlighter-rouge">dlgTitleError</code></a> <a href="#dlgTitleInfo"><code class="language-plaintext highlighter-rouge">dlgTitleInfo</code></a> <a href="#dlgTitleNone"><code class="language-plaintext highlighter-rouge">dlgTitleNone</code></a> <a href="#dlgTitleQuestion"><code class="language-plaintext highlighter-rouge">dlgTitleQuestion</code></a> <a href="#dlgTitleWarning"><code class="language-plaintext highlighter-rouge">dlgTitleWarning</code></a> <a href="#emptyCommandResponse"><code class="language-plaintext highlighter-rouge">emptyCommandResponse</code></a> <a href="#finishDeathMsg"><code class="language-plaintext highlighter-rouge">finishDeathMsg</code></a> <a href="#finishFailureMsg"><code class="language-plaintext highlighter-rouge">finishFailureMsg</code></a> <a href="#finishGameOverMsg"><code class="language-plaintext highlighter-rouge">finishGameOverMsg</code></a> <a href="#finishVictoryMsg"><code class="language-plaintext highlighter-rouge">finishVictoryMsg</code></a> <a href="#getRecordingPrompt"><code class="language-plaintext highlighter-rouge">getRecordingPrompt</code></a> <a href="#getReplayPrompt"><code class="language-plaintext highlighter-rouge">getReplayPrompt</code></a> <a href="#getRestorePrompt"><code class="language-plaintext highlighter-rouge">getRestorePrompt</code></a> <a href="#getSavePrompt"><code class="language-plaintext highlighter-rouge">getSavePrompt</code></a> <a href="#getScriptingPrompt"><code class="language-plaintext highlighter-rouge">getScriptingPrompt</code></a> <a href="#hintsDisabled"><code class="language-plaintext highlighter-rouge">hintsDisabled</code></a> <a href="#hintsDone"><code class="language-plaintext highlighter-rouge">hintsDone</code></a> <a href="#hintsNotPresent"><code class="language-plaintext highlighter-rouge">hintsNotPresent</code></a> <a href="#inputFileScriptWarningButtons"><code class="language-plaintext highlighter-rouge">inputFileScriptWarningButtons</code></a> <a href="#inputScriptFailed"><code class="language-plaintext highlighter-rouge">inputScriptFailed</code></a> <a href="#internalResultsSeparator"><code class="language-plaintext highlighter-rouge">internalResultsSeparator</code></a> <a href="#intraCommandSeparator"><code class="language-plaintext highlighter-rouge">intraCommandSeparator</code></a> <a href="#listSepEnd"><code class="language-plaintext highlighter-rouge">listSepEnd</code></a> <a href="#listSepMiddle"><code class="language-plaintext highlighter-rouge">listSepMiddle</code></a> <a href="#listSepTwo"><code class="language-plaintext highlighter-rouge">listSepTwo</code></a> <a href="#longListSepEnd"><code class="language-plaintext highlighter-rouge">longListSepEnd</code></a> <a href="#longListSepMiddle"><code class="language-plaintext highlighter-rouge">longListSepMiddle</code></a> <a href="#longListSepTwo"><code class="language-plaintext highlighter-rouge">longListSepTwo</code></a> <a href="#menuKeyList"><code class="language-plaintext highlighter-rouge">menuKeyList</code></a> <a href="#menuLongTopicEnd"><code class="language-plaintext highlighter-rouge">menuLongTopicEnd</code></a> <a href="#menuTopicListEnd"><code class="language-plaintext highlighter-rouge">menuTopicListEnd</code></a> <a href="#nextMenuTopicLink"><code class="language-plaintext highlighter-rouge">nextMenuTopicLink</code></a> <a href="#noAboutInfo"><code class="language-plaintext highlighter-rouge">noAboutInfo</code></a> <a href="#noteWithoutScript"><code class="language-plaintext highlighter-rouge">noteWithoutScript</code></a> <a href="#noteWithoutScriptWarning"><code class="language-plaintext highlighter-rouge">noteWithoutScriptWarning</code></a> <a href="#noteWithScript"><code class="language-plaintext highlighter-rouge">noteWithScript</code></a> <a href="#notOnboardShip"><code class="language-plaintext highlighter-rouge">notOnboardShip</code></a> <a href="#noTopicsNotTalking"><code class="language-plaintext highlighter-rouge">noTopicsNotTalking</code></a> <a href="#offerOopsNote"><code class="language-plaintext highlighter-rouge">offerOopsNote</code></a> <a href="#oopsMissingWord"><code class="language-plaintext highlighter-rouge">oopsMissingWord</code></a> <a href="#oopsOutOfContext"><code class="language-plaintext highlighter-rouge">oopsOutOfContext</code></a> <a href="#prevMenuLink"><code class="language-plaintext highlighter-rouge">prevMenuLink</code></a> <a href="#recordingCanceled"><code class="language-plaintext highlighter-rouge">recordingCanceled</code></a> <a href="#recordingFailed"><code class="language-plaintext highlighter-rouge">recordingFailed</code></a> <a href="#recordingOkay"><code class="language-plaintext highlighter-rouge">recordingOkay</code></a> <a href="#recordOffIgnored"><code class="language-plaintext highlighter-rouge">recordOffIgnored</code></a> <a href="#recordOffOkay"><code class="language-plaintext highlighter-rouge">recordOffOkay</code></a> <a href="#replayCanceled"><code class="language-plaintext highlighter-rouge">replayCanceled</code></a> <a href="#roomDarkDesc"><code class="language-plaintext highlighter-rouge">roomDarkDesc</code></a> <a href="#roomDarkName"><code class="language-plaintext highlighter-rouge">roomDarkName</code></a> <a href="#scoreNotPresent"><code class="language-plaintext highlighter-rouge">scoreNotPresent</code></a> <a href="#scriptingCanceled"><code class="language-plaintext highlighter-rouge">scriptingCanceled</code></a> <a href="#scriptingFailed"><code class="language-plaintext highlighter-rouge">scriptingFailed</code></a> <a href="#scriptOffIgnored"><code class="language-plaintext highlighter-rouge">scriptOffIgnored</code></a> <a href="#scriptOffOkay"><code class="language-plaintext highlighter-rouge">scriptOffOkay</code></a> <a href="#settingsItemSeparator"><code class="language-plaintext highlighter-rouge">settingsItemSeparator</code></a> <a href="#showFullScorePrefix"><code class="language-plaintext highlighter-rouge">showFullScorePrefix</code></a> <a href="#showHintWarning"><code class="language-plaintext highlighter-rouge">showHintWarning</code></a> <a href="#sorryHintsDisabled"><code class="language-plaintext highlighter-rouge">sorryHintsDisabled</code></a> <a href="#webUploadTooBig"><code class="language-plaintext highlighter-rouge">webUploadTooBig</code></a> <a href="#whomPronoun"><code class="language-plaintext highlighter-rouge">whomPronoun</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#acknowledgeFootnoteStatus"><code class="language-plaintext highlighter-rouge">acknowledgeFootnoteStatus</code></a> <a href="#acknowledgeNotifyStatus"><code class="language-plaintext highlighter-rouge">acknowledgeNotifyStatus</code></a> <a href="#acknowledgeTipStatus"><code class="language-plaintext highlighter-rouge">acknowledgeTipStatus</code></a> <a href="#acknowledgeVerboseMode"><code class="language-plaintext highlighter-rouge">acknowledgeVerboseMode</code></a> <a href="#actorHereGroupPrefix"><code class="language-plaintext highlighter-rouge">actorHereGroupPrefix</code></a> <a href="#actorHereGroupSuffix"><code class="language-plaintext highlighter-rouge">actorHereGroupSuffix</code></a> <a href="#actorInGroupPrefix"><code class="language-plaintext highlighter-rouge">actorInGroupPrefix</code></a> <a href="#actorInGroupSuffix"><code class="language-plaintext highlighter-rouge">actorInGroupSuffix</code></a> <a href="#actorInRemoteGroupPrefix"><code class="language-plaintext highlighter-rouge">actorInRemoteGroupPrefix</code></a> <a href="#actorInRemoteGroupSuffix"><code class="language-plaintext highlighter-rouge">actorInRemoteGroupSuffix</code></a> <a href="#actorInRemoteNestedRoom"><code class="language-plaintext highlighter-rouge">actorInRemoteNestedRoom</code></a> <a href="#actorInRemoteRoom"><code class="language-plaintext highlighter-rouge">actorInRemoteRoom</code></a> <a href="#actorInRoom"><code class="language-plaintext highlighter-rouge">actorInRoom</code></a> <a href="#actorInRoomPosture"><code class="language-plaintext highlighter-rouge">actorInRoomPosture</code></a> <a href="#actorInRoomStatus"><code class="language-plaintext highlighter-rouge">actorInRoomStatus</code></a> <a href="#actorThereGroupPrefix"><code class="language-plaintext highlighter-rouge">actorThereGroupPrefix</code></a> <a href="#actorThereGroupSuffix"><code class="language-plaintext highlighter-rouge">actorThereGroupSuffix</code></a> <a href="#againCannotChangeActor"><code class="language-plaintext highlighter-rouge">againCannotChangeActor</code></a> <a href="#againCannotTalkToTarget"><code class="language-plaintext highlighter-rouge">againCannotTalkToTarget</code></a> <a href="#againNotPossible"><code class="language-plaintext highlighter-rouge">againNotPossible</code></a> <a href="#allInSameListState"><code class="language-plaintext highlighter-rouge">allInSameListState</code></a> <a href="#alreadyTalkingTo"><code class="language-plaintext highlighter-rouge">alreadyTalkingTo</code></a> <a href="#announceAmbigActionObject"><code class="language-plaintext highlighter-rouge">announceAmbigActionObject</code></a> <a href="#announceDefaultObject"><code class="language-plaintext highlighter-rouge">announceDefaultObject</code></a> <a href="#announceImplicitAction"><code class="language-plaintext highlighter-rouge">announceImplicitAction</code></a> <a href="#announceMoveToBag"><code class="language-plaintext highlighter-rouge">announceMoveToBag</code></a> <a href="#announceMultiActionObject"><code class="language-plaintext highlighter-rouge">announceMultiActionObject</code></a> <a href="#announceRemappedAction"><code class="language-plaintext highlighter-rouge">announceRemappedAction</code></a> <a href="#basicScoreChange"><code class="language-plaintext highlighter-rouge">basicScoreChange</code></a> <a href="#candleBurnedOut"><code class="language-plaintext highlighter-rouge">candleBurnedOut</code></a> <a href="#cannotReachContents"><code class="language-plaintext highlighter-rouge">cannotReachContents</code></a> <a href="#cannotReachObject"><code class="language-plaintext highlighter-rouge">cannotReachObject</code></a> <a href="#cannotReachOutside"><code class="language-plaintext highlighter-rouge">cannotReachOutside</code></a> <a href="#cannotTalkTo"><code class="language-plaintext highlighter-rouge">cannotTalkTo</code></a> <a href="#closedMsg"><code class="language-plaintext highlighter-rouge">closedMsg</code></a> <a href="#confirmQuit"><code class="language-plaintext highlighter-rouge">confirmQuit</code></a> <a href="#confirmRestart"><code class="language-plaintext highlighter-rouge">confirmRestart</code></a> <a href="#currentExitsSettings"><code class="language-plaintext highlighter-rouge">currentExitsSettings</code></a> <a href="#defaultsFileReadError"><code class="language-plaintext highlighter-rouge">defaultsFileReadError</code></a> <a href="#dimReadDesc"><code class="language-plaintext highlighter-rouge">dimReadDesc</code></a> <a href="#distantThingDesc"><code class="language-plaintext highlighter-rouge">distantThingDesc</code></a> <a href="#distantThingSmellDesc"><code class="language-plaintext highlighter-rouge">distantThingSmellDesc</code></a> <a href="#distantThingSoundDesc"><code class="language-plaintext highlighter-rouge">distantThingSoundDesc</code></a> <a href="#exitsOnOffOkay"><code class="language-plaintext highlighter-rouge">exitsOnOffOkay</code></a> <a href="#explainExitsOnOff"><code class="language-plaintext highlighter-rouge">explainExitsOnOff</code></a> <a href="#filePromptFailed"><code class="language-plaintext highlighter-rouge">filePromptFailed</code></a> <a href="#filePromptFailedMsg"><code class="language-plaintext highlighter-rouge">filePromptFailedMsg</code></a> <a href="#firstFootnote"><code class="language-plaintext highlighter-rouge">firstFootnote</code></a> <a href="#firstScoreChange"><code class="language-plaintext highlighter-rouge">firstScoreChange</code></a> <a href="#footnoteRef"><code class="language-plaintext highlighter-rouge">footnoteRef</code></a> <a href="#fullScoreItemPoints"><code class="language-plaintext highlighter-rouge">fullScoreItemPoints</code></a> <a href="#inputFileScriptWarning"><code class="language-plaintext highlighter-rouge">inputFileScriptWarning</code></a> <a href="#inputScriptFailedException"><code class="language-plaintext highlighter-rouge">inputScriptFailedException</code></a> <a href="#inputScriptOkay"><code class="language-plaintext highlighter-rouge">inputScriptOkay</code></a> <a href="#invalidCommandToken"><code class="language-plaintext highlighter-rouge">invalidCommandToken</code></a> <a href="#invalidFinishOption"><code class="language-plaintext highlighter-rouge">invalidFinishOption</code></a> <a href="#litCandleDesc"><code class="language-plaintext highlighter-rouge">litCandleDesc</code></a> <a href="#litMatchDesc"><code class="language-plaintext highlighter-rouge">litMatchDesc</code></a> <a href="#lockedMsg"><code class="language-plaintext highlighter-rouge">lockedMsg</code></a> <a href="#mainCommandPrompt"><code class="language-plaintext highlighter-rouge">mainCommandPrompt</code></a> <a href="#makeSentence"><code class="language-plaintext highlighter-rouge">makeSentence</code></a> <a href="#matchBurnedOut"><code class="language-plaintext highlighter-rouge">matchBurnedOut</code></a> <a href="#mentionFullScore"><code class="language-plaintext highlighter-rouge">mentionFullScore</code></a> <a href="#menuInstructions"><code class="language-plaintext highlighter-rouge">menuInstructions</code></a> <a href="#menuNextChapter"><code class="language-plaintext highlighter-rouge">menuNextChapter</code></a> <a href="#menuTopicProgress"><code class="language-plaintext highlighter-rouge">menuTopicProgress</code></a> <a href="#noCommandForAgain"><code class="language-plaintext highlighter-rouge">noCommandForAgain</code></a> <a href="#noSuchFootnote"><code class="language-plaintext highlighter-rouge">noSuchFootnote</code></a> <a href="#noteMainRestore"><code class="language-plaintext highlighter-rouge">noteMainRestore</code></a> <a href="#notRestarting"><code class="language-plaintext highlighter-rouge">notRestarting</code></a> <a href="#notTerminating"><code class="language-plaintext highlighter-rouge">notTerminating</code></a> <a href="#objBurnedOut"><code class="language-plaintext highlighter-rouge">objBurnedOut</code></a> <a href="#obscuredReadDesc"><code class="language-plaintext highlighter-rouge">obscuredReadDesc</code></a> <a href="#obscuredThingDesc"><code class="language-plaintext highlighter-rouge">obscuredThingDesc</code></a> <a href="#obscuredThingSmellDesc"><code class="language-plaintext highlighter-rouge">obscuredThingSmellDesc</code></a> <a href="#obscuredThingSoundDesc"><code class="language-plaintext highlighter-rouge">obscuredThingSoundDesc</code></a> <a href="#offMsg"><code class="language-plaintext highlighter-rouge">offMsg</code></a> <a href="#okayQuitting"><code class="language-plaintext highlighter-rouge">okayQuitting</code></a> <a href="#onMsg"><code class="language-plaintext highlighter-rouge">onMsg</code></a> <a href="#oopsNote"><code class="language-plaintext highlighter-rouge">oopsNote</code></a> <a href="#openMsg"><code class="language-plaintext highlighter-rouge">openMsg</code></a> <a href="#openStatusMsg"><code class="language-plaintext highlighter-rouge">openStatusMsg</code></a> <a href="#parserErrorString"><code class="language-plaintext highlighter-rouge">parserErrorString</code></a> <a href="#pauseEnded"><code class="language-plaintext highlighter-rouge">pauseEnded</code></a> <a href="#pausePrompt"><code class="language-plaintext highlighter-rouge">pausePrompt</code></a> <a href="#pauseSaving"><code class="language-plaintext highlighter-rouge">pauseSaving</code></a> <a href="#pcDesc"><code class="language-plaintext highlighter-rouge">pcDesc</code></a> <a href="#putDestBehind"><code class="language-plaintext highlighter-rouge">putDestBehind</code></a> <a href="#putDestContainer"><code class="language-plaintext highlighter-rouge">putDestContainer</code></a> <a href="#putDestFloor"><code class="language-plaintext highlighter-rouge">putDestFloor</code></a> <a href="#putDestRoom"><code class="language-plaintext highlighter-rouge">putDestRoom</code></a> <a href="#putDestSurface"><code class="language-plaintext highlighter-rouge">putDestSurface</code></a> <a href="#putDestUnder"><code class="language-plaintext highlighter-rouge">putDestUnder</code></a> <a href="#recordingFailedException"><code class="language-plaintext highlighter-rouge">recordingFailedException</code></a> <a href="#restoreCanceled"><code class="language-plaintext highlighter-rouge">restoreCanceled</code></a> <a href="#restoreCorruptedFile"><code class="language-plaintext highlighter-rouge">restoreCorruptedFile</code></a> <a href="#restoredDefaults"><code class="language-plaintext highlighter-rouge">restoredDefaults</code></a> <a href="#restoreFailed"><code class="language-plaintext highlighter-rouge">restoreFailed</code></a> <a href="#restoreFailedOnServer"><code class="language-plaintext highlighter-rouge">restoreFailedOnServer</code></a> <a href="#restoreInvalidFile"><code class="language-plaintext highlighter-rouge">restoreInvalidFile</code></a> <a href="#restoreInvalidMatch"><code class="language-plaintext highlighter-rouge">restoreInvalidMatch</code></a> <a href="#restoreOkay"><code class="language-plaintext highlighter-rouge">restoreOkay</code></a> <a href="#roomActorHereDesc"><code class="language-plaintext highlighter-rouge">roomActorHereDesc</code></a> <a href="#roomActorPostureDesc"><code class="language-plaintext highlighter-rouge">roomActorPostureDesc</code></a> <a href="#roomActorStatus"><code class="language-plaintext highlighter-rouge">roomActorStatus</code></a> <a href="#roomActorThereDesc"><code class="language-plaintext highlighter-rouge">roomActorThereDesc</code></a> <a href="#saveCanceled"><code class="language-plaintext highlighter-rouge">saveCanceled</code></a> <a href="#savedDefaults"><code class="language-plaintext highlighter-rouge">savedDefaults</code></a> <a href="#saveFailed"><code class="language-plaintext highlighter-rouge">saveFailed</code></a> <a href="#saveFailedOnServer"><code class="language-plaintext highlighter-rouge">saveFailedOnServer</code></a> <a href="#saveOkay"><code class="language-plaintext highlighter-rouge">saveOkay</code></a> <a href="#sayArriving"><code class="language-plaintext highlighter-rouge">sayArriving</code></a> <a href="#sayArrivingDir"><code class="language-plaintext highlighter-rouge">sayArrivingDir</code></a> <a href="#sayArrivingDownStairs"><code class="language-plaintext highlighter-rouge">sayArrivingDownStairs</code></a> <a href="#sayArrivingLocally"><code class="language-plaintext highlighter-rouge">sayArrivingLocally</code></a> <a href="#sayArrivingShipDir"><code class="language-plaintext highlighter-rouge">sayArrivingShipDir</code></a> <a href="#sayArrivingThroughPassage"><code class="language-plaintext highlighter-rouge">sayArrivingThroughPassage</code></a> <a href="#sayArrivingUpStairs"><code class="language-plaintext highlighter-rouge">sayArrivingUpStairs</code></a> <a href="#sayArrivingViaPath"><code class="language-plaintext highlighter-rouge">sayArrivingViaPath</code></a> <a href="#sayDeparting"><code class="language-plaintext highlighter-rouge">sayDeparting</code></a> <a href="#sayDepartingAft"><code class="language-plaintext highlighter-rouge">sayDepartingAft</code></a> <a href="#sayDepartingDir"><code class="language-plaintext highlighter-rouge">sayDepartingDir</code></a> <a href="#sayDepartingDownStairs"><code class="language-plaintext highlighter-rouge">sayDepartingDownStairs</code></a> <a href="#sayDepartingFore"><code class="language-plaintext highlighter-rouge">sayDepartingFore</code></a> <a href="#sayDepartingLocally"><code class="language-plaintext highlighter-rouge">sayDepartingLocally</code></a> <a href="#sayDepartingShipDir"><code class="language-plaintext highlighter-rouge">sayDepartingShipDir</code></a> <a href="#sayDepartingThroughPassage"><code class="language-plaintext highlighter-rouge">sayDepartingThroughPassage</code></a> <a href="#sayDepartingUpStairs"><code class="language-plaintext highlighter-rouge">sayDepartingUpStairs</code></a> <a href="#sayDepartingViaPath"><code class="language-plaintext highlighter-rouge">sayDepartingViaPath</code></a> <a href="#sayDepartingWith"><code class="language-plaintext highlighter-rouge">sayDepartingWith</code></a> <a href="#sayDepartingWithGuide"><code class="language-plaintext highlighter-rouge">sayDepartingWithGuide</code></a> <a href="#sayOpenDoorRemotely"><code class="language-plaintext highlighter-rouge">sayOpenDoorRemotely</code></a> <a href="#sayTravelingRemotely"><code class="language-plaintext highlighter-rouge">sayTravelingRemotely</code></a> <a href="#scoreChange"><code class="language-plaintext highlighter-rouge">scoreChange</code></a> <a href="#scriptingFailedException"><code class="language-plaintext highlighter-rouge">scriptingFailedException</code></a> <a href="#scriptingOkay"><code class="language-plaintext highlighter-rouge">scriptingOkay</code></a> <a href="#scriptingOkayWebTemp"><code class="language-plaintext highlighter-rouge">scriptingOkayWebTemp</code></a> <a href="#shortFootnoteStatus"><code class="language-plaintext highlighter-rouge">shortFootnoteStatus</code></a> <a href="#shortNotifyStatus"><code class="language-plaintext highlighter-rouge">shortNotifyStatus</code></a> <a href="#shortVerboseStatus"><code class="language-plaintext highlighter-rouge">shortVerboseStatus</code></a> <a href="#showCredit"><code class="language-plaintext highlighter-rouge">showCredit</code></a> <a href="#showFinishMsg"><code class="language-plaintext highlighter-rouge">showFinishMsg</code></a> <a href="#showFootnoteStatus"><code class="language-plaintext highlighter-rouge">showFootnoteStatus</code></a> <a href="#showListState"><code class="language-plaintext highlighter-rouge">showListState</code></a> <a href="#showNotifyStatus"><code class="language-plaintext highlighter-rouge">showNotifyStatus</code></a> <a href="#showScoreMessage"><code class="language-plaintext highlighter-rouge">showScoreMessage</code></a> <a href="#showScoreNoMaxMessage"><code class="language-plaintext highlighter-rouge">showScoreNoMaxMessage</code></a> <a href="#showScoreRankMessage"><code class="language-plaintext highlighter-rouge">showScoreRankMessage</code></a> <a href="#showVersion"><code class="language-plaintext highlighter-rouge">showVersion</code></a> <a href="#silentImplicitAction"><code class="language-plaintext highlighter-rouge">silentImplicitAction</code></a> <a href="#smellDescSeparator"><code class="language-plaintext highlighter-rouge">smellDescSeparator</code></a> <a href="#smellIsFromWithin"><code class="language-plaintext highlighter-rouge">smellIsFromWithin</code></a> <a href="#smellIsFromWithout"><code class="language-plaintext highlighter-rouge">smellIsFromWithout</code></a> <a href="#soundDescSeparator"><code class="language-plaintext highlighter-rouge">soundDescSeparator</code></a> <a href="#soundIsFromWithin"><code class="language-plaintext highlighter-rouge">soundIsFromWithin</code></a> <a href="#soundIsFromWithout"><code class="language-plaintext highlighter-rouge">soundIsFromWithout</code></a> <a href="#systemActionToNPC"><code class="language-plaintext highlighter-rouge">systemActionToNPC</code></a> <a href="#textMenuMainPrompt"><code class="language-plaintext highlighter-rouge">textMenuMainPrompt</code></a> <a href="#textMenuTopicPrompt"><code class="language-plaintext highlighter-rouge">textMenuTopicPrompt</code></a> <a href="#thingFeelDesc"><code class="language-plaintext highlighter-rouge">thingFeelDesc</code></a> <a href="#thingTasteDesc"><code class="language-plaintext highlighter-rouge">thingTasteDesc</code></a> <a href="#tipStatusShort"><code class="language-plaintext highlighter-rouge">tipStatusShort</code></a> <a href="#undoFailed"><code class="language-plaintext highlighter-rouge">undoFailed</code></a> <a href="#undoOkay"><code class="language-plaintext highlighter-rouge">undoOkay</code></a> <a href="#unlitMatchDesc"><code class="language-plaintext highlighter-rouge">unlitMatchDesc</code></a> <a href="#unlockedMsg"><code class="language-plaintext highlighter-rouge">unlockedMsg</code></a> <a href="#webNewUser"><code class="language-plaintext highlighter-rouge">webNewUser</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MessageHelper</code> :<br />
+<a href="../object/MessageHelper.html#askDisambigList"><code class="language-plaintext highlighter-rouge">askDisambigList</code></a> <a href="../object/MessageHelper.html#shortTIMsg"><code class="language-plaintext highlighter-rouge">shortTIMsg</code></a> <a href="../object/MessageHelper.html#shortTMsg"><code class="language-plaintext highlighter-rouge">shortTMsg</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="commandFullScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandFullScore</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#114">114</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="commandInterruptionPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandInterruptionPrefix</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#475">475</a>]</p>
+
+<p>Command “interruption” group prefix. This is displayed after an
+interrupted command line - a command line editing session that was
+interrupted by a timeout event - just before the text that interrupted
+the command line.</p>
+
+<p>By default, we’ll show a paragraph break here, to set off the
+interrupting text from the command line under construction.</p>
+
+<p><span id="commandLookAround"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandLookAround</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#113">113</a>]</p>
+
+<p>some standard commands for insertion into &lt;a&gt; tags - these are in the
+messages so they can translated along with the command set</p>
+
+<p><span id="commandNotPresent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandNotPresent</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1094">1094</a>]</p>
+
+<p>optional command is not supported in this game</p>
+
+<p><span id="commandResultsEmpty"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandResultsEmpty</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#533">533</a>]</p>
+
+<p>Empty command results - this is shown when we read a command line and
+then go back and read another without having displaying anything.</p>
+
+<p>By default, we’ll return a message indicating that nothing happened.</p>
+
+<p><span id="commandResultsPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandResultsPrefix</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#464">464</a>]</p>
+
+<p>Command group prefix - this is displayed after a command line and before
+the first command results shown after the command line.</p>
+
+<p>By default, we’ll show the “zero-space paragraph” marker, which acts
+like a paragraph break in that it swallows up immediately following
+paragraph breaks, but doesn’t actually add any space. This will ensure
+that we don’t add any space between the command input line and the next
+text.</p>
+
+<p><span id="commandResultsSeparator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandResultsSeparator</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#493">493</a>]</p>
+
+<p>Command separator - this is displayed after the results from a command
+when another command is about to be executed without any more user
+input. That is, when a command line contains more than one command, this
+message is displayed between each successive command, to separate the
+results visually.</p>
+
+<p>This is not shown before the first command results after a command input
+line, and is not shown after the last results before a new input line.
+Furthermore, this is shown only between adjacent commands for which
+output actually occurs; if a series of commands executes without any
+output, we won’t show any separators between the silent commands.</p>
+
+<p>By default, we’ll just start a new paragraph.</p>
+
+<p><span id="commandResultsSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandResultsSuffix</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#523">523</a>]</p>
+
+<p>Command results suffix - this is displayed just before a new command
+line is about to be read if any command results have been shown since
+the last command line.</p>
+
+<p>By default, we’ll show nothing extra.</p>
+
+<p><span id="complexResultsSeparator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">complexResultsSeparator</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#506">506</a>]</p>
+
+<p>“Complex” result separator - this is displayed between a group of
+messages for a “complex” result set and adjoining messages. A command
+result list is “complex” when it’s built up out of several generated
+items, such as object identification prefixes or implied command
+prefixes. We use additional visual separation to set off these groups of
+messages from adjoining messages, which is especially important for
+commands on multiple objects, where we would otherwise have several
+results shown together. By default, we use a paragraph break.</p>
+
+<p><span id="currentlyClosed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">currentlyClosed</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1665">1665</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="currentlyLocked"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">currentlyLocked</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1675">1675</a>]</p>
+
+<p>object is currently locked/unlocked</p>
+
+<p><span id="currentlyNoHints"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">currentlyNoHints</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1077">1077</a>]</p>
+
+<p>there are currently no hints available (but there might be later)</p>
+
+<p><span id="currentlyOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">currentlyOpen</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1664">1664</a>]</p>
+
+<p>object is currently open/closed</p>
+
+<p><span id="currentlyUnlocked"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">currentlyUnlocked</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1676">1676</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="defaultsFileNotSupported"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">defaultsFileNotSupported</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1137">1137</a>]</p>
+
+<p>SAVE/RESTORE DEFAULTS not supported (old interpreter version)</p>
+
+<p><span id="defaultsFileWriteError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">defaultsFileWriteError</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1150">1150</a>]</p>
+
+<p>SAVE DEFAULTS file creation error</p>
+
+<p><span id="dlgButtonCancel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dlgButtonCancel</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1727">1727</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="dlgButtonNo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dlgButtonNo</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1729">1729</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="dlgButtonOk"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dlgButtonOk</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1726">1726</a>]</p>
+
+<p>Standard dialog button labels, for the Web UI. These are built in to the
+conventional interpreters, but in the Web UI we have to generate these
+ourselves.</p>
+
+<p><span id="dlgButtonYes"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dlgButtonYes</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1728">1728</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="dlgTitleError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dlgTitleError</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1719">1719</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="dlgTitleInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dlgTitleInfo</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1717">1717</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="dlgTitleNone"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dlgTitleNone</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1715">1715</a>]</p>
+
+<p>Standard dialog titles, for the Web UI. These are shown in the title bar
+area of the Web UI dialog used for inputDialog() calls. These correspond
+to the InDlgIconXxx icons. The conventional interpreters use built-in
+titles when titles are needed at all, but in the Web UI we have to
+generate these ourselves.</p>
+
+<p><span id="dlgTitleQuestion"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dlgTitleQuestion</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1718">1718</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="dlgTitleWarning"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dlgTitleWarning</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1716">1716</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="emptyCommandResponse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">emptyCommandResponse</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#445">445</a>]</p>
+
+<p>show the response to an empty command line</p>
+
+<p><span id="finishDeathMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishDeathMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#768">768</a>]</p>
+
+<p>standard game-ending messages for the common outcomes</p>
+
+<p><span id="finishFailureMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishFailureMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#770">770</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="finishGameOverMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishGameOverMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#771">771</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="finishVictoryMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">finishVictoryMsg</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#769">769</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="getRecordingPrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getRecordingPrompt</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#959">959</a>]</p>
+
+<p>get the RECORD prompt</p>
+
+<p><span id="getReplayPrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getReplayPrompt</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#988">988</a>]</p>
+
+<p>REPLAY prompt</p>
+
+<p><span id="getRestorePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getRestorePrompt</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#781">781</a>]</p>
+
+<p>get the restore-game prompt</p>
+
+<p><span id="getSavePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getSavePrompt</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#778">778</a>]</p>
+
+<p>Get the save-game file prompt. Note that this must return a
+single-quoted string value, not display a value itself, because this
+prompt is passed to inputFile().</p>
+
+<p><span id="getScriptingPrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getScriptingPrompt</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#920">920</a>]</p>
+
+<p>get the scripting inputFile prompt message</p>
+
+<p><span id="hintsDisabled"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hintsDisabled</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1064">1064</a>]</p>
+
+<p>acknowledge HINTS OFF</p>
+
+<p><span id="hintsDone"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hintsDone</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1091">1091</a>]</p>
+
+<p>done with hints</p>
+
+<p><span id="hintsNotPresent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hintsNotPresent</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1073">1073</a>]</p>
+
+<p>this game has no hints</p>
+
+<p><span id="inputFileScriptWarningButtons"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputFileScriptWarningButtons</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1748">1748</a>]</p>
+
+<p>build the message</p>
+
+<p><span id="inputScriptFailed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputScriptFailed</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#910">910</a>]</p>
+
+<p>error opening input script</p>
+
+<p><span id="internalResultsSeparator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">internalResultsSeparator</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#514">514</a>]</p>
+
+<p>Internal results separator - this is displayed to visually separate the
+results of an implied command from the results for the initiating
+command, which are shown after the results from the implied command. By
+default, we show a paragraph break.</p>
+
+<p><span id="intraCommandSeparator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">intraCommandSeparator</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#541">541</a>]</p>
+
+<p>Intra-command report separator. This is used to separate report messages
+within a single command’s results. By default, we show a paragraph
+break.</p>
+
+<p><span id="listSepEnd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listSepEnd</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#265">265</a>]</p>
+
+<p>the list separator for the end of a list of at least three elements</p>
+
+<p><span id="listSepMiddle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listSepMiddle</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#259">259</a>]</p>
+
+<p>the list separator character in the middle of a list</p>
+
+<p><span id="listSepTwo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listSepTwo</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#262">262</a>]</p>
+
+<p>the list separator character for a two-element list</p>
+
+<p><span id="longListSepEnd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">longListSepEnd</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#277">277</a>]</p>
+
+<p>the list separator for the end of a long list</p>
+
+<p><span id="longListSepMiddle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">longListSepMiddle</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#271">271</a>]</p>
+
+<p>the list separator for the middle of a long list (a list with embedded
+lists not otherwise set off, such as by parentheses)</p>
+
+<p><span id="longListSepTwo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">longListSepTwo</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#274">274</a>]</p>
+
+<p>the list separator for a two-element list of sublists</p>
+
+<p><span id="menuKeyList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuKeyList</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1166">1166</a>]</p>
+
+<p>Command key list for the menu system. This uses the format defined for
+MenuItem.keyList in the menu system. Keys must be given as lower-case in
+order to match input, since the menu system converts input keys to lower
+case before matching keys to this list.</p>
+
+<p>Note that the first item in each list is what will be given in the
+navigation menu, which is why the fifth list contains ‘ENTER’ as its
+first item, even though this will never match a key press.</p>
+
+<p><span id="menuLongTopicEnd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuLongTopicEnd</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1220">1220</a>]</p>
+
+<p>Message to display at the end of a “long topic” in the menu system.
+We’ll display this at the end of the long topic’s contents.</p>
+
+<p><span id="menuTopicListEnd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuTopicListEnd</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1213">1213</a>]</p>
+
+<p>Message to display at the end of a topic list. We’ll display this after
+we’ve displayed all available items from a MenuTopicItem’s list of
+items, to let the user know that there are no more items available.</p>
+
+<p><span id="nextMenuTopicLink"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextMenuTopicLink</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1178">1178</a>]</p>
+
+<p>link title for ‘next topic’ navigation link in topic lists</p>
+
+<p><span id="noAboutInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noAboutInfo</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#163">163</a>]</p>
+
+<p>there’s no “about” information in this game</p>
+
+<p><span id="noteWithoutScript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteWithoutScript</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1015">1015</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="noteWithoutScriptWarning"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteWithoutScriptWarning</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1018">1018</a>]</p>
+
+<p>on the first comment without transcript recording, warn about it</p>
+
+<p><span id="noteWithScript"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteWithScript</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1014">1014</a>]</p>
+
+<p>comment accepted, with or without transcript recording in effect</p>
+
+<p><span id="notOnboardShip"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notOnboardShip</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1564">1564</a>]</p>
+
+<p>a shipboard direction was attempted while not onboard a ship</p>
+
+<p><span id="noTopicsNotTalking"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noTopicsNotTalking</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#575">575</a>]</p>
+
+<p>no topics to suggest when we’re not talking to anyone</p>
+
+<p><span id="offerOopsNote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">offerOopsNote</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#107">107</a>]</p>
+
+<p>Flag: offer an explanation of the “OOPS” command when it first comes up.
+We’ll only show this the first time the player enters an unknown word.
+If you never want to offer this message at all, simply set this flag to
+nil initially.</p>
+
+<p>See also oopsNote() below.</p>
+
+<p><span id="oopsMissingWord"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">oopsMissingWord</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#594">594</a>]</p>
+
+<p>OOPS in context, but without the word to correct</p>
+
+<p><span id="oopsOutOfContext"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">oopsOutOfContext</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#589">589</a>]</p>
+
+<p>can’t use OOPS right now</p>
+
+<p><span id="prevMenuLink"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">prevMenuLink</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1175">1175</a>]</p>
+
+<p>link title for ‘previous menu’ navigation link</p>
+
+<p><span id="recordingCanceled"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">recordingCanceled</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#978">978</a>]</p>
+
+<p>acknowledge cancellation</p>
+
+<p><span id="recordingFailed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">recordingFailed</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#968">968</a>]</p>
+
+<p>recording failed</p>
+
+<p><span id="recordingOkay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">recordingOkay</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#962">962</a>]</p>
+
+<p>acknowledge recording on</p>
+
+<p><span id="recordOffIgnored"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">recordOffIgnored</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#984">984</a>]</p>
+
+<p>RECORD OFF ignored because we’re not recording commands</p>
+
+<p><span id="recordOffOkay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">recordOffOkay</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#981">981</a>]</p>
+
+<p>recording turned off</p>
+
+<p><span id="replayCanceled"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">replayCanceled</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#991">991</a>]</p>
+
+<p>REPLAY file selection canceled</p>
+
+<p><span id="roomDarkDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roomDarkDesc</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1325">1325</a>]</p>
+
+<p>generic long description of a dark room</p>
+
+<p><span id="roomDarkName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roomDarkName</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1322">1322</a>]</p>
+
+<p>generic short description of a dark room</p>
+
+<p><span id="scoreNotPresent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scoreNotPresent</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1098">1098</a>]</p>
+
+<p>this game doesn’t use scoring</p>
+
+<p><span id="scriptingCanceled"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scriptingCanceled</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#949">949</a>]</p>
+
+<p>acknowledge cancellation of script file dialog</p>
+
+<p><span id="scriptingFailed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scriptingFailed</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#939">939</a>]</p>
+
+<p>scripting failed</p>
+
+<p><span id="scriptOffIgnored"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scriptOffIgnored</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#955">955</a>]</p>
+
+<p>SCRIPT OFF ignored because we’re not in a script file</p>
+
+<p><span id="scriptOffOkay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scriptOffOkay</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#952">952</a>]</p>
+
+<p>acknowledge scripting off</p>
+
+<p><span id="settingsItemSeparator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">settingsItemSeparator</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1134">1134</a>]</p>
+
+<p>show a separator for the settingsUI.showAll() list</p>
+
+<p><span id="showFullScorePrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showFullScorePrefix</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#302">302</a>]</p>
+
+<p>show the list prefix for the full score listing; this is shown on a line
+by itself before the list of full score items, shown indented and one
+item per line</p>
+
+<p><span id="showHintWarning"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showHintWarning</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1081">1081</a>]</p>
+
+<p>show the hint system warning</p>
+
+<p><span id="sorryHintsDisabled"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sorryHintsDisabled</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1067">1067</a>]</p>
+
+<p>rebuff a request for hints when they’ve been previously disabled</p>
+
+<p><span id="webUploadTooBig"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">webUploadTooBig</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#879">879</a>]</p>
+
+<p>Web UI inputFile error: uploaded file is too large</p>
+
+<p><span id="whomPronoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">whomPronoun</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#97">97</a>]</p>
+
+<p>The pronoun to use for the objective form of the personal interrogative
+pronoun. Strictly speaking, the right word for this usage is “whom”; but
+regardless of what the grammar books say, most American English speakers
+these days use “who” for both the subjective and objective cases; to
+many ears, “whom” sounds old-fashioned, overly formal, or even
+pretentious. (Case in point: a recent television ad tried to make a
+little kid look ultra-sophisticated by having him answer the phone by
+asking “*whom* may I ask is calling?”, with elaborate emphasis on the
+“whom.” Of course, the correct usage in this case is “who,” so the ad
+only made the kid look pretentious. It goes to show that, at least in
+the mind of the writer of the ad, “whom” is just the snooty, formal
+version of “who” that serves only to signal the speaker’s
+sophistication.)</p>
+
+<p>By default, we distinguish “who” and “whom.” Authors who prefer to use
+“who” everywhere can do so by changing this property’s value to ‘who’.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="acknowledgeFootnoteStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acknowledgeFootnoteStatus (stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#412">412</a>]</p>
+
+<p>acknowledge a change in the footnote status</p>
+
+<p><span id="acknowledgeNotifyStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acknowledgeNotifyStatus (stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#620">620</a>]</p>
+
+<p>acknowledge a change in the score notification status</p>
+
+<p><span id="acknowledgeTipStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acknowledgeTipStatus (stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#341">341</a>]</p>
+
+<p>acknowledge turning tips on or off</p>
+
+<p><span id="acknowledgeVerboseMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acknowledgeVerboseMode (verbose)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#598">598</a>]</p>
+
+<p>acknowledge setting VERBOSE mode (true) or TERSE mode (nil)</p>
+
+<p><span id="actorHereGroupPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorHereGroupPrefix (posture, lst)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1449">1449</a>]</p>
+
+<p>Prefix/suffix messages for listing actors in a room description, for
+cases when the actors’ nominal container cannot be seen or is not to be
+stated: “Bob and Bill are standing here.”</p>
+
+<p>Note that we don’t always want to state the nominal container, even when
+it’s visible. For example, when actors are standing on the floor, we
+don’t bother saying that they’re on the floor, as that’s stating the
+obvious. The container will decide whether or not it wants to be
+included in the message; containers that don’t want to be mentioned will
+use this form of the message.</p>
+
+<p><span id="actorHereGroupSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorHereGroupSuffix (posture, lst)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1450">1450</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="actorInGroupPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorInGroupPrefix (posture, cont, lst)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1416">1416</a>]</p>
+
+<p>Prefix/suffix messages for listing actors in a room description, for
+cases when the actors are in the local room in a nominal container that
+we want to mention: “Bob and Bill are sitting on the couch.”</p>
+
+<p><span id="actorInGroupSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorInGroupSuffix (posture, cont, lst)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1417">1417</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="actorInRemoteGroupPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorInRemoteGroupPrefix (pov, posture, cont, remote, lst)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1429">1429</a>]</p>
+
+<p>Prefix/suffix messages for listing actors in a room description, for
+cases when the actors are inside a nested room that’s inside a remote
+location: “Bob and Bill are in the courtyard, sitting on the bench.”</p>
+
+<p><span id="actorInRemoteGroupSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorInRemoteGroupSuffix (pov, posture, cont, remote, lst)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1430">1430</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="actorInRemoteNestedRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorInRemoteNestedRoom (actor, inner, outer, pov)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1399">1399</a>]</p>
+
+<p>mention that the given actor is visible, at a distance or remotely, in
+the given nested room within the given outer location; this is used in
+room descriptions</p>
+
+<p><span id="actorInRemoteRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorInRemoteRoom (actor, room, pov)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1387">1387</a>]</p>
+
+<p>mention that the given actor is visible, at a distance or remotely, in
+the given location; this is used in room descriptions when an NPC is
+visible in a remote or distant location</p>
+
+<p><span id="actorInRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorInRoom (actor, cont)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1352">1352</a>]</p>
+
+<p>Mention that an actor is in a given local room, as part of a room
+description. This is used as a default “special description” for an
+actor.</p>
+
+<p><span id="actorInRoomPosture"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorInRoomPosture (actor, room)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1364">1364</a>]</p>
+
+<p>Describe an actor as standing/sitting/lying on something, as part of the
+actor’s EXAMINE description. This is additional information added to the
+actor’s description, so we refer to the actor with a pronoun (“He’s
+standing here”).</p>
+
+<p><span id="actorInRoomStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorInRoomStatus (actor, room)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1318">1318</a>]</p>
+
+<p>show a status line addendum: standing in/on something</p>
+
+<p><span id="actorThereGroupPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorThereGroupPrefix (pov, posture, remote, lst)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1462">1462</a>]</p>
+
+<p>Prefix/suffix messages for listing actors in a room description, for
+cases when the actors’ immediate container cannot be seen or is not to
+be stated, and the actors are in a remote location: “Bob and Bill are in
+the courtyard.”</p>
+
+<p><span id="actorThereGroupSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actorThereGroupSuffix (pov, posture, remote, lst)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1463">1463</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="againCannotChangeActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">againCannotChangeActor ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#695">695</a>]</p>
+
+<p>‘again’ cannot be directed to a different actor</p>
+
+<p><span id="againCannotTalkToTarget"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">againCannotTalkToTarget (issuer, target)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#702">702</a>]</p>
+
+<p>‘again’: can no longer talk to target actor</p>
+
+<p><span id="againNotPossible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">againNotPossible (issuer)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#708">708</a>]</p>
+
+<p>the last command cannot be repeated in the present context</p>
+
+<p><span id="allInSameListState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allInSameListState (lst, stateName)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#174">174</a>]</p>
+
+<p>a set of equivalents are all in a given state</p>
+
+<p><span id="alreadyTalkingTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">alreadyTalkingTo (actor, greeter)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#568">568</a>]</p>
+
+<p>greeting actor while actor is already talking to us</p>
+
+<p><span id="announceAmbigActionObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceAmbigActionObject (obj, whichObj, action)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#655">655</a>]</p>
+
+<p>Announce a singleton object that we selected from a set of ambiguous
+objects. This is used when we disambiguate a command and choose an
+object over other objects that are also logical but are less likely. In
+such cases, it’s courteous to tell the player what we chose, because
+it’s possible that the user meant one of the other logical objects -
+announcing this type of choice helps reduce confusion by making it
+immediately plain to the player when we make a choice other than what
+they were thinking.</p>
+
+<p><span id="announceDefaultObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceDefaultObject (obj, whichObj, action, resolvedAllObjects)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#677">677</a>]</p>
+
+<p>Announce a singleton object we selected as a default for a missing noun
+phrase.</p>
+
+<p>‘resolvedAllObjects’ indicates where we are in the command processing:
+this is true if we’ve already resolved all of the other objects in the
+command, nil if not. We use this information to get the phrasing right
+according to the situation.</p>
+
+<p><span id="announceImplicitAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceImplicitAction (action, ctx)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#129">129</a>]</p>
+
+<p>Get a string to announce an implicit action. This announces the current
+global action. ‘ctx’ is an ImplicitAnnouncementContext object describing
+the context in which the message is being displayed.</p>
+
+<p><span id="announceMoveToBag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceMoveToBag (action, ctx)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#149">149</a>]</p>
+
+<p>Get a string to announce that we’re implicitly moving an object to a bag
+of holding to make room for taking something new. If ‘trying’ is true,
+it means we want to phrase the message as merely trying the action, not
+actually performing it.</p>
+
+<p><span id="announceMultiActionObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceMultiActionObject (obj, whichObj, action)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#632">632</a>]</p>
+
+<p>Announce the current object of a set of multiple objects on which we’re
+performing an action. This is used to tell the player which object we’re
+acting upon when we’re iterating through a set of objects specified in a
+command targeting multiple objects.</p>
+
+<p><span id="announceRemappedAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceRemappedAction (action)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#117">117</a>]</p>
+
+<p>announce a completely remapped action</p>
+
+<p><span id="basicScoreChange"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">basicScoreChange (delta)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#332">332</a>]</p>
+
+<p>basic score change notification message - this is an internal service
+routine for scoreChange and firstScoreChange</p>
+
+<p><span id="candleBurnedOut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">candleBurnedOut (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1694">1694</a>]</p>
+
+<p>daemon report for burning out a candle</p>
+
+<p><span id="cannotReachContents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotReachContents (obj, loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1259">1259</a>]</p>
+
+<p>cannot reach an object, because the object is inside the given container</p>
+
+<p><span id="cannotReachObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotReachObject (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1250">1250</a>]</p>
+
+<p>cannot reach (i.e., touch) an object that is to be manipulated in a
+command - this is a generic message used when we cannot identify the
+specific reason that the object is in scope but cannot be touched</p>
+
+<p><span id="cannotReachOutside"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotReachOutside (obj, loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1267">1267</a>]</p>
+
+<p>cannot reach an object because it’s outisde the given container</p>
+
+<p><span id="cannotTalkTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTalkTo (targetActor, issuingActor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#561">561</a>]</p>
+
+<p>a command was issued to a non-actor</p>
+
+<p><span id="closedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">closedMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1661">1661</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="confirmQuit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">confirmQuit ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#721">721</a>]</p>
+
+<p>confirm that we really want to quit</p>
+
+<p><span id="confirmRestart"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">confirmRestart ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#751">751</a>]</p>
+
+<p>confirm that they really want to restart</p>
+
+<p><span id="currentExitsSettings"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">currentExitsSettings (statusLine, roomDesc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1050">1050</a>]</p>
+
+<p>describe the current EXITS settings</p>
+
+<p><span id="defaultsFileReadError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">defaultsFileReadError (exc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1143">1143</a>]</p>
+
+<p>RESTORE DEFAULTS file open/read error</p>
+
+<p><span id="dimReadDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dimReadDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#234">234</a>]</p>
+
+<p>dim light “read” description</p>
+
+<p><span id="distantThingDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">distantThingDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#178">178</a>]</p>
+
+<p>generic long description of a Thing from a distance</p>
+
+<p><span id="distantThingSmellDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">distantThingSmellDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#203">203</a>]</p>
+
+<p>generic “smell” description of a Thing at a distance</p>
+
+<p><span id="distantThingSoundDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">distantThingSoundDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#192">192</a>]</p>
+
+<p>generic “listen” description of a Thing at a distance</p>
+
+<p><span id="exitsOnOffOkay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exitsOnOffOkay (stat, look)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1029">1029</a>]</p>
+
+<p>acknowledge new “exits on/off” status</p>
+
+<p><span id="explainExitsOnOff"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">explainExitsOnOff ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1044">1044</a>]</p>
+
+<p>explain how to turn exit display on and off</p>
+
+<p><span id="filePromptFailed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filePromptFailed ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#865">865</a>]</p>
+
+<p>error showing the input file dialog (or character-mode equivalent)</p>
+
+<p><span id="filePromptFailedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filePromptFailedMsg (msg)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#873">873</a>]</p>
+
+<p>error showing the input file dialog, with a system error message</p>
+
+<p><span id="firstFootnote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">firstFootnote ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#360">360</a>]</p>
+
+<p>first footnote notification</p>
+
+<p><span id="firstScoreChange"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">firstScoreChange (delta)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#315">315</a>]</p>
+
+<p>score change - first notification</p>
+
+<p><span id="footnoteRef"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">footnoteRef (num)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#353">353</a>]</p>
+
+<p>get the string to display for a footnote reference</p>
+
+<p><span id="fullScoreItemPoints"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">fullScoreItemPoints (points)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#309">309</a>]</p>
+
+<p>show the item prefix, with the number of points, for a full score item -
+immediately after this is displayed, we’ll display the description
+message for the achievement</p>
+
+<p><span id="inputFileScriptWarning"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputFileScriptWarning (warning, filename)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1740">1740</a>]</p>
+
+<p>Warning prompt for inputFile() warnings generated when reading a script
+file, for the Web UI. The interpreter normally displays these warnings
+directly, but in Web UI mode, the program is responsible, so we need
+localized messages.</p>
+
+<p><span id="inputScriptFailedException"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputScriptFailedException (exc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#914">914</a>]</p>
+
+<p>exception opening input script</p>
+
+<p><span id="inputScriptOkay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inputScriptOkay (fname)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#903">903</a>]</p>
+
+<p>acknowledge starting an input script</p>
+
+<p><span id="invalidCommandToken"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invalidCommandToken (ch)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#448">448</a>]</p>
+
+<p>invalid token (i.e., punctuation) in command line</p>
+
+<p><span id="invalidFinishOption"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invalidFinishOption (resp)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1023">1023</a>]</p>
+
+<p>invalid finishGame response</p>
+
+<p><span id="litCandleDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">litCandleDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#245">245</a>]</p>
+
+<p>lit candle description</p>
+
+<p><span id="litMatchDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">litMatchDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#241">241</a>]</p>
+
+<p>lit/unlit match description</p>
+
+<p><span id="lockedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lockedMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1671">1671</a>]</p>
+
+<p>locked/unlocked status - adjectives describing lock states</p>
+
+<p><span id="mainCommandPrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mainCommandPrompt (which)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#436">436</a>]</p>
+
+<p>Show the main command prompt.</p>
+
+<p>‘which’ is one of the rmcXxx phase codes indicating what kind of command
+we’re reading. This default implementation shows the same prompt for
+every type of input, but games can use the ‘which’ value to show
+different prompts for different types of queries, if desired.</p>
+
+<p><span id="makeSentence"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">makeSentence (msg)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#809">809</a>]</p>
+
+<p>make an error message into a sentence, by capitalizing the first letter
+and adding a period at the end if it doesn’t already have one</p>
+
+<p><span id="matchBurnedOut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">matchBurnedOut (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1686">1686</a>]</p>
+
+<p>daemon report for burning out a match</p>
+
+<p><span id="mentionFullScore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mentionFullScore ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1102">1102</a>]</p>
+
+<p>mention the FULL SCORE command</p>
+
+<p><span id="menuInstructions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuInstructions (keylist, prevLink)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1227">1227</a>]</p>
+
+<p>instructions text for banner-mode menus - this is displayed in the
+instructions bar at the top of the screen, above the menu banner area</p>
+
+<p><span id="menuNextChapter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuNextChapter (keylist, title, hrefNext, hrefUp)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1238">1238</a>]</p>
+
+<p>show a ‘next chapter’ link</p>
+
+<p><span id="menuTopicProgress"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">menuTopicProgress (cur, tot)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1205">1205</a>]</p>
+
+<p>Position indicator for topic list items - this is displayed after a
+topic list item to show the current item number and the total number of
+items in the list, to give the user an idea of where they are in the
+overall list.</p>
+
+<p><span id="noCommandForAgain"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noCommandForAgain ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#689">689</a>]</p>
+
+<p>‘again’ used with no prior command</p>
+
+<p><span id="noSuchFootnote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noSuchFootnote (num)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#366">366</a>]</p>
+
+<p>there is no such footnote as the given number</p>
+
+<p><span id="noteMainRestore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noteMainRestore ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#817">817</a>]</p>
+
+<p>note that we’re restoring at startup via a saved-position launch</p>
+
+<p><span id="notRestarting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notRestarting ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#758">758</a>]</p>
+
+<p>“not restarting” confirmation</p>
+
+<p><span id="notTerminating"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notTerminating ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#745">745</a>]</p>
+
+<p>“not terminating” confirmation - this is displayed when the player
+doesn’t acknowledge a ‘quit’ command with an affirmative response to our
+confirmation question</p>
+
+<p><span id="objBurnedOut"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objBurnedOut (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1702">1702</a>]</p>
+
+<p>daemon report for burning out a generic fueled light source</p>
+
+<p><span id="obscuredReadDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obscuredReadDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#226">226</a>]</p>
+
+<p>obscured “read” description</p>
+
+<p><span id="obscuredThingDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obscuredThingDesc (obj, obs)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#185">185</a>]</p>
+
+<p>generic long description of a Thing under obscured conditions</p>
+
+<p><span id="obscuredThingSmellDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obscuredThingSmellDesc (obj, obs)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#207">207</a>]</p>
+
+<p>generic obscured “smell” description</p>
+
+<p><span id="obscuredThingSoundDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obscuredThingSoundDesc (obj, obs)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#196">196</a>]</p>
+
+<p>generic obscured “listen” description</p>
+
+<p><span id="offMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">offMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1683">1683</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="okayQuitting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">okayQuitting ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#738">738</a>]</p>
+
+<p>QUIT message. We display this to acknowledge an explicit player command
+to quit the game. This is the last message the game displays on the way
+out; there is no need to offer any options at this point, because the
+player has decided to exit the game.</p>
+
+<p>By default, we show nothing; games can override this to display an
+acknowledgment if desired. Note that this isn’t a general end-of-game
+‘goodbye’ message; the library only shows this to acknowledge an
+explicit QUIT command from the player.</p>
+
+<p><span id="onMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">onMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1682">1682</a>]</p>
+
+<p>on/off status - these are simply adjectives that can be used to describe
+the status of a switchable object</p>
+
+<p><span id="oopsNote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">oopsNote ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#583">583</a>]</p>
+
+<p>Show a note about the OOPS command. This is, by default, added to the “I
+don’t know that word” error the first time that error occurs.</p>
+
+<p><span id="openMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1660">1660</a>]</p>
+
+<p>open/closed status - these are simply adjectives that can be used to
+describe the status of an openable object</p>
+
+<p><span id="openStatusMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">openStatusMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1668">1668</a>]</p>
+
+<p>stand-alone independent clause describing current open status</p>
+
+<p><span id="parserErrorString"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parserErrorString (actor, msg)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#442">442</a>]</p>
+
+<p>Show a pre-resolved error message string. This simply displays the given
+string.</p>
+
+<p><span id="pauseEnded"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pauseEnded ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#897">897</a>]</p>
+
+<p>PAUSE ended</p>
+
+<p><span id="pausePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pausePrompt ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#882">882</a>]</p>
+
+<p>PAUSE prompt</p>
+
+<p><span id="pauseSaving"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pauseSaving ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#891">891</a>]</p>
+
+<p>saving from within a pause</p>
+
+<p><span id="pcDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">pcDesc (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1299">1299</a>]</p>
+
+<p>default description of the player character</p>
+
+<p><span id="putDestBehind"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">putDestBehind (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#254">254</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="putDestContainer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">putDestContainer (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#251">251</a>]</p>
+
+<p>Prepositional phrases for putting objects into different types of
+objects.</p>
+
+<p><span id="putDestFloor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">putDestFloor (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#255">255</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="putDestRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">putDestRoom (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#256">256</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="putDestSurface"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">putDestSurface (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#252">252</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="putDestUnder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">putDestUnder (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#253">253</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="recordingFailedException"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">recordingFailedException (exc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#972">972</a>]</p>
+
+<p>recording failed with exception</p>
+
+<p><span id="restoreCanceled"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restoreCanceled ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#823">823</a>]</p>
+
+<p>restore canceled</p>
+
+<p><span id="restoreCorruptedFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restoreCorruptedFile ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#840">840</a>]</p>
+
+<p>restore failed because the file was corrupted</p>
+
+<p><span id="restoredDefaults"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restoredDefaults ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1122">1122</a>]</p>
+
+<p>RESTORE DEFAULTS successful</p>
+
+<p><span id="restoreFailed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restoreFailed (exc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#858">858</a>]</p>
+
+<p>restore failed for some reason other than those distinguished above</p>
+
+<p><span id="restoreFailedOnServer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restoreFailedOnServer (exc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#826">826</a>]</p>
+
+<p>restore failed due to storage server request error</p>
+
+<p><span id="restoreInvalidFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restoreInvalidFile ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#833">833</a>]</p>
+
+<p>restore failed because the file was not a valid saved game file</p>
+
+<p><span id="restoreInvalidMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restoreInvalidMatch ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#850">850</a>]</p>
+
+<p>restore failed because the file was for the wrong game or version</p>
+
+<p><span id="restoreOkay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">restoreOkay ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#820">820</a>]</p>
+
+<p>successfully restored</p>
+
+<p><span id="roomActorHereDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roomActorHereDesc (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1331">1331</a>]</p>
+
+<p>mention that an actor is here, without mentioning the enclosing room, as
+part of a room description</p>
+
+<p><span id="roomActorPostureDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roomActorPostureDesc (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1375">1375</a>]</p>
+
+<p>Describe an actor’s posture, as part of an actor’s “examine”
+description. If the actor is standing, don’t bother mentioning anything,
+as standing is the trivial default condition.</p>
+
+<p><span id="roomActorStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roomActorStatus (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1310">1310</a>]</p>
+
+<p>Show a status line addendum for the actor posture, without mentioning
+the actor’s location. We won’t mention standing, since this is the
+default posture.</p>
+
+<p><span id="roomActorThereDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">roomActorThereDesc (actor)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1342">1342</a>]</p>
+
+<p>mention that an actor is visible at a distance or remotely, without
+mentioning the enclosing room, as part of a room description</p>
+
+<p><span id="saveCanceled"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">saveCanceled ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#787">787</a>]</p>
+
+<p>save canceled</p>
+
+<p><span id="savedDefaults"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">savedDefaults ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1108">1108</a>]</p>
+
+<p>SAVE DEFAULTS successful</p>
+
+<p><span id="saveFailed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">saveFailed (exc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#790">790</a>]</p>
+
+<p>saved failed due to a file write or similar error</p>
+
+<p><span id="saveFailedOnServer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">saveFailedOnServer (exc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#798">798</a>]</p>
+
+<p>save failed due to storage server request error</p>
+
+<p><span id="saveOkay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">saveOkay ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#784">784</a>]</p>
+
+<p>successfully saved</p>
+
+<p><span id="sayArriving"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArriving (traveler)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1470">1470</a>]</p>
+
+<p>a traveler is arriving, but not from a compass direction</p>
+
+<p><span id="sayArrivingDir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingDir (traveler, dirName)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1514">1514</a>]</p>
+
+<p>a traveler is arriving from a compass direction</p>
+
+<p><span id="sayArrivingDownStairs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingDownStairs (traveler, stairs)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1618">1618</a>]</p>
+
+<p>a traveler is arriving by coming down a stairway</p>
+
+<p><span id="sayArrivingLocally"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingLocally (traveler, dest)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1487">1487</a>]</p>
+
+<p>a traveler is arriving locally (staying within view throughout the
+travel, and coming closer to the PC)</p>
+
+<p><span id="sayArrivingShipDir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingShipDir (traveler, dirName)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1530">1530</a>]</p>
+
+<p>a traveler is arriving from a shipboard direction</p>
+
+<p><span id="sayArrivingThroughPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingThroughPassage (traveler, passage)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1574">1574</a>]</p>
+
+<p>a traveler is arriving via a passage</p>
+
+<p><span id="sayArrivingUpStairs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingUpStairs (traveler, stairs)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1609">1609</a>]</p>
+
+<p>a traveler is arriving by coming up a stairway</p>
+
+<p><span id="sayArrivingViaPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArrivingViaPath (traveler, passage)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1588">1588</a>]</p>
+
+<p>a traveler is arriving via a path</p>
+
+<p><span id="sayDeparting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDeparting (traveler)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1477">1477</a>]</p>
+
+<p>a traveler is departing, but not in a compass direction</p>
+
+<p><span id="sayDepartingAft"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingAft (traveler)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1546">1546</a>]</p>
+
+<p>a traveler is going aft</p>
+
+<p><span id="sayDepartingDir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingDir (traveler, dirName)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1521">1521</a>]</p>
+
+<p>a traveler is leaving in a given compass direction</p>
+
+<p><span id="sayDepartingDownStairs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingDownStairs (traveler, stairs)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1602">1602</a>]</p>
+
+<p>a traveler is leaving down a stairway</p>
+
+<p><span id="sayDepartingFore"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingFore (traveler)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1555">1555</a>]</p>
+
+<p>a traveler is going fore</p>
+
+<p><span id="sayDepartingLocally"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingLocally (traveler, dest)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1497">1497</a>]</p>
+
+<p>a traveler is departing locally (staying within view throughout the
+travel, and moving further away from the PC)</p>
+
+<p><span id="sayDepartingShipDir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingShipDir (traveler, dirName)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1537">1537</a>]</p>
+
+<p>a traveler is leaving in a given shipboard direction</p>
+
+<p><span id="sayDepartingThroughPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingThroughPassage (traveler, passage)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1567">1567</a>]</p>
+
+<p>a traveler is leaving via a passage</p>
+
+<p><span id="sayDepartingUpStairs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingUpStairs (traveler, stairs)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1595">1595</a>]</p>
+
+<p>a traveler is leaving up a stairway</p>
+
+<p><span id="sayDepartingViaPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingViaPath (traveler, passage)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1581">1581</a>]</p>
+
+<p>a traveler is leaving via a path</p>
+
+<p><span id="sayDepartingWith"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingWith (traveler, lead)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1627">1627</a>]</p>
+
+<p>acompanying another actor on travel</p>
+
+<p><span id="sayDepartingWithGuide"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDepartingWithGuide (guide, lead)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1642">1642</a>]</p>
+
+<p>Accompanying a tour guide. Note the seemingly reversed roles: the lead
+actor is the one initiating the travel, and the tour guide is the
+accompanying actor. So, the lead actor is effectively following the
+accompanying actor. It seems backwards, but really it’s not: the tour
+guide merely shows the lead actor where to go, but it’s up to the lead
+actor to actually initiate the travel.</p>
+
+<p><span id="sayOpenDoorRemotely"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayOpenDoorRemotely (door, stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1649">1649</a>]</p>
+
+<p>note that a door is being opened/closed remotely</p>
+
+<p><span id="sayTravelingRemotely"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayTravelingRemotely (traveler, dest)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1507">1507</a>]</p>
+
+<p>a traveler is traveling remotely (staying within view through the
+travel, and moving from one remote top-level location to another)</p>
+
+<p><span id="scoreChange"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scoreChange (delta)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#322">322</a>]</p>
+
+<p>score change - notification other than the first time</p>
+
+<p><span id="scriptingFailedException"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scriptingFailedException (exc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#943">943</a>]</p>
+
+<p>scripting failed with an exception</p>
+
+<p><span id="scriptingOkay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scriptingOkay ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#923">923</a>]</p>
+
+<p>acknowledge scripting on</p>
+
+<p><span id="scriptingOkayWebTemp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scriptingOkayWebTemp ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#930">930</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="shortFootnoteStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shortFootnoteStatus (stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#419">419</a>]</p>
+
+<p>show the footnote status, in short form</p>
+
+<p><span id="shortNotifyStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shortNotifyStatus (stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#617">617</a>]</p>
+
+<p>show the current score notify status, in short form</p>
+
+<p><span id="shortVerboseStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shortVerboseStatus (stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#607">607</a>]</p>
+
+<p>show the current VERBOSE setting, in short form</p>
+
+<p><span id="showCredit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showCredit (name, byline)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#157">157</a>]</p>
+
+<p>show a library credit (for a CREDITS listing)</p>
+
+<p><span id="showFinishMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showFinishMsg (msg)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#765">765</a>]</p>
+
+<p>Show a game-finishing message - we use the conventional “*** You have
+won! ***” format that text games have been using since the dawn of
+time.</p>
+
+<p><span id="showFootnoteStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showFootnoteStatus (stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#373">373</a>]</p>
+
+<p>show the current footnote status</p>
+
+<p><span id="showListState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListState (state)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#171">171</a>]</p>
+
+<p>Show a list state name - this is extra state information that we show
+for an object in a listing involving the object. For example, a light
+source might add a state like “(providing light)”. We simply show the
+list state name in parentheses.</p>
+
+<p><span id="showNotifyStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showNotifyStatus (stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#610">610</a>]</p>
+
+<p>show the current score notify status</p>
+
+<p><span id="showScoreMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showScoreMessage (points, maxPoints, turns)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#280">280</a>]</p>
+
+<p>show the basic score message</p>
+
+<p><span id="showScoreNoMaxMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showScoreNoMaxMessage (points, turns)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#288">288</a>]</p>
+
+<p>show the basic score message with no maximum</p>
+
+<p><span id="showScoreRankMessage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showScoreRankMessage (msg)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#295">295</a>]</p>
+
+<p>show the full message for a given score rank string</p>
+
+<p><span id="showVersion"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showVersion (name, version)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#160">160</a>]</p>
+
+<p>show a library version number (for a VERSION listing)</p>
+
+<p><span id="silentImplicitAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">silentImplicitAction (action, ctx)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#141">141</a>]</p>
+
+<p>Announce a silent implied action. This allows an implied action to work
+exactly as normal (including the suppression of a default response
+message), but without any announcement of the implied action.</p>
+
+<p><span id="smellDescSeparator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">smellDescSeparator ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#547">547</a>]</p>
+
+<p>separator for “smell” results - we ordinarily show each item’s odor
+description as a separate paragraph</p>
+
+<p><span id="smellIsFromWithin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">smellIsFromWithin (obj, loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1287">1287</a>]</p>
+
+<p>odor is coming from inside/outside a container</p>
+
+<p><span id="smellIsFromWithout"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">smellIsFromWithout (obj, loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1292">1292</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="soundDescSeparator"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">soundDescSeparator ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#555">555</a>]</p>
+
+<p>separator for “listen” results</p>
+
+<p><span id="soundIsFromWithin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">soundIsFromWithin (obj, loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1275">1275</a>]</p>
+
+<p>sound is coming from inside/outside a container</p>
+
+<p><span id="soundIsFromWithout"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">soundIsFromWithout (obj, loc)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1280">1280</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="systemActionToNPC"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">systemActionToNPC ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#714">714</a>]</p>
+
+<p>system actions cannot be directed to non-player characters</p>
+
+<p><span id="textMenuMainPrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">textMenuMainPrompt (keylist)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1184">1184</a>]</p>
+
+<p>main prompt text for text-mode menus - this is displayed each time we
+ask for a keystroke to navigate a menu in text-only mode</p>
+
+<p><span id="textMenuTopicPrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">textMenuTopicPrompt ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1192">1192</a>]</p>
+
+<p>prompt text for topic lists in text-mode menus</p>
+
+<p><span id="thingFeelDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thingFeelDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#222">222</a>]</p>
+
+<p>generic “feel” description of a Thing</p>
+
+<p><span id="thingTasteDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">thingTasteDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#214">214</a>]</p>
+
+<p>generic “taste” description of a Thing</p>
+
+<p><span id="tipStatusShort"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tipStatusShort (stat)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#347">347</a>]</p>
+
+<p>describe the tip mode setting</p>
+
+<p><span id="undoFailed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">undoFailed ( )</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1007">1007</a>]</p>
+
+<p>undo command failed</p>
+
+<p><span id="undoOkay"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">undoOkay (actor, cmd)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#994">994</a>]</p>
+
+<p>undo command succeeded</p>
+
+<p><span id="unlitMatchDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unlitMatchDesc (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#242">242</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="unlockedMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unlockedMsg (obj)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1672">1672</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="webNewUser"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">webNewUser (name)</code></p>
+
+<p><a href="../file/msg_neu.t.html">msg_neu.t</a>[<a href="../source/msg_neu.t.html#1732">1732</a>]</p>
+
+<p>web UI alert when a new user has joined a multi-user session</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

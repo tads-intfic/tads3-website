@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-2-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-2-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">(</span><span class="type">grammar</span></p>
+
+<p><a href="../file/grammar.t.html">grammar.t</a>[<a href="../source/grammar.t.html#1471">1471</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Verb grammar (predicate) rules for English.</p>
+
+<p>English’s predicate syntax is highly positional. That is, the role of
+each word in a predicate is determined largely by its position in the
+phrase. There are a several common patterns to the predicate word order,
+but the specific pattern that applies to a given verb is essentially
+idiomatic to that verb, especially with respect to complement words
+(like the “up” in “pick up”). Our approach to defining the predicate
+grammar is therefore to define a separate, custom syntax rule for each
+verb. This makes it easy to add rules for the odd little idioms in
+English verbs.</p>
+
+<p>For verbs that take indirect objects, the indirect object is usually
+introduced by a preposition (e.g., PUT KEY IN LOCK). Since we consider
+the preposition in such a case to be part of the verb’s grammatical
+structure, we write it directly into the grammar rule as a literal. This
+means that we wouldn’t be able to parse input that’s missing the whole
+indirect object phrase (e.g., PUT KEY). We don’t want to just reject
+those without explanation, though, which means we have to define
+separate grammar rules for the truncated verbs. Some of these cases are
+valid commands in their own right: UNLOCK DOOR and UNLOCK DOOR WITH KEY
+are both valid grammatically. But PUT KEY isn’t, so we need to mark this
+as missing its indirect object. We do this by setting the missingRole
+property for these rules to the role (usually IndirectObject) of the
+phrase that’s missing.</p>
+
+<p>Each VerbRule has several properties and methods that it can or must
+define:</p>
+
+<p>action [Required] - The associated Action that’s executed when this
+verb is parsed. The base library requires this property.</p>
+
+<p>verbPhrase - The message-building template for the verb. The library
+uses this to construct messages to describe the associated action. The
+format is ‘verb/verbing (dobj) (iobj) (accessory)’. Each object role in
+parentheses consists of an optional preposition and the word ‘what’ or
+‘whom’. For example, ‘ask/asking (whom) (about what)’. Outside of the
+parentheses, you can also include verb complement words before the first
+object or after the last, but never between objects: for example,
+‘pick/picking up (what)’.</p>
+
+<p>missingQ - the template for asking missing object questions. This
+consists of one question per object, separated by semicolons, in the
+order dobj, iobj, accessory. You only need as many questions as the verb
+has object slots (i.e., you only need an iobj question if the verb takes
+an indirect object). The question is simply of the form “what do you
+want to &lt;verb&gt;”, but you can also include the words “it” and “that” to
+refer to the “other” object(s) in the verb. “It” will be replaced by
+it/him/her/them as appropriate, and “that” by that/them. Use it-dobj,
+it-iobj, it-acc to specify which other object you’re talking about
+(which is never necessary for two-object verbs, since there’s only one
+other object). Put the entire ‘it’ phrase, including prepositions, in
+parentheses to make it optional; it will be omitted if the object isn’t
+part of the command input. This is only necessary for objects appearing
+earlier in the verb rule, since it’s resolved left to right.</p>
+
+<p>missingRole - the object role (DirectObject, etc) that’s explicitly
+missing from this grammar syntax. This is for rules that you define
+specifically to recognize partial input, like “PUT &lt;dobj&gt;”. The parser
+will ask for the missing object when it resolves such a rule.</p>
+
+<p>answerMissing(cmd, np) - the base library calls this when the player
+answers the parser’s question asking for the missing noun phrase. ‘cmd’
+is the Command, and ‘np’ is the noun phrase parsed from the user’s
+answer to the query. This is called from the base library but isn’t
+required, in that it’s purely advisory. The point of this routine is to
+let the verb change the command according to the reply. For example, in
+English, we have a generic Put &lt;dobj&gt; verb that asks where to put the
+dobj. If the user says “in the box”, we can change the action to Put In;
+if the user says “on the table”, we can change the action to Put On.</p>
+
+<p>dobjReply, iobjReply, accReply - the noun phrase production to use for
+parsing a reply to the missing-object question for the corresponding
+role. Players sometimes reply to a question like “What do you want to
+put it in?” by starting the answer with the same preposition in the
+question: “in the box”. To support this, you can specify a noun phrase
+production that starts with the appropriate preposition (inSingleNoun,
+onSingleNoun, etc).</p>
+
+<p>(Note that the base library doesn’t place any requirements on exactly
+how the verb rules are defined. In particular, you don’t have to define
+one rule per verb, the way we do in English. The English module’s
+one-verb/one-rule approach might not be a good fit when implementing a
+highly inflected language, since such languages are typically a lot more
+flexible about word order, creating a wide range of possible phrasings
+for each verb. It might be easier to for such a language to define a set
+of universal verb grammar rules that cover the common structures for all
+verbs, and then define the individual verbs as simple vocabulary words
+that slot into this universal phrase structure.)</p>
+
+<p><code class="language-plaintext highlighter-rouge">grammar </code><strong><a href="../object/.html"></a><code class="language-plaintext highlighter-rouge">(</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/VerbProduction.html"><code class="language-plaintext highlighter-rouge">VerbProduction</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">(</code></strong><br />
+<a href="../object/VerbProduction.html"><code class="language-plaintext highlighter-rouge">VerbProduction</code></a><br />
+<a href="../object/Production.html"><code class="language-plaintext highlighter-rouge">Production</code></a><br />
+`                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#action"><code class="language-plaintext highlighter-rouge">action</code></a> <a href="#missingQ"><code class="language-plaintext highlighter-rouge">missingQ</code></a> <a href="#verbPhrase"><code class="language-plaintext highlighter-rouge">verbPhrase</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">VerbProduction</code> :<br />
+<a href="../object/VerbProduction.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
+<a href="../object/Production.html#determiner"><code class="language-plaintext highlighter-rouge">determiner</code></a> <a href="../object/Production.html#nounPhraseRole"><code class="language-plaintext highlighter-rouge">nounPhraseRole</code></a> <a href="../object/Production.html#npClass"><code class="language-plaintext highlighter-rouge">npClass</code></a> <a href="../object/Production.html#parent"><code class="language-plaintext highlighter-rouge">parent</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">VerbProduction</code> :<br />
+<a href="../object/VerbProduction.html#answerMissing"><code class="language-plaintext highlighter-rouge">answerMissing</code></a> <a href="../object/VerbProduction.html#build"><code class="language-plaintext highlighter-rouge">build</code></a> <a href="../object/VerbProduction.html#missingRoleProd"><code class="language-plaintext highlighter-rouge">missingRoleProd</code></a> <a href="../object/VerbProduction.html#visitProd"><code class="language-plaintext highlighter-rouge">visitProd</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Production</code> :<br />
+<a href="../object/Production.html#addNounListItem"><code class="language-plaintext highlighter-rouge">addNounListItem</code></a> <a href="../object/Production.html#findAction"><code class="language-plaintext highlighter-rouge">findAction</code></a> <a href="../object/Production.html#findChild"><code class="language-plaintext highlighter-rouge">findChild</code></a> <a href="../object/Production.html#findParent"><code class="language-plaintext highlighter-rouge">findParent</code></a> <a href="../object/Production.html#getNounPhraseRole"><code class="language-plaintext highlighter-rouge">getNounPhraseRole</code></a> <a href="../object/Production.html#getText"><code class="language-plaintext highlighter-rouge">getText</code></a> <a href="../object/Production.html#getTokens"><code class="language-plaintext highlighter-rouge">getTokens</code></a> <a href="../object/Production.html#isChildOf"><code class="language-plaintext highlighter-rouge">isChildOf</code></a> <a href="../object/Production.html#noteEndOfSentence"><code class="language-plaintext highlighter-rouge">noteEndOfSentence</code></a> <a href="../object/Production.html#visitLiteral"><code class="language-plaintext highlighter-rouge">visitLiteral</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="action"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">action</code></p>
+
+<p><a href="../file/grammar.t.html">grammar.t</a>[<a href="../source/grammar.t.html#1475">1475</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="missingQ"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">missingQ</code></p>
+
+<p><a href="../file/grammar.t.html">grammar.t</a>[<a href="../source/grammar.t.html#1477">1477</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="verbPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verbPhrase</code></p>
+
+<p><a href="../file/grammar.t.html">grammar.t</a>[<a href="../source/grammar.t.html#1476">1476</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><em>(none)</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 28/04/2013 from adv3Lite version 0.8</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

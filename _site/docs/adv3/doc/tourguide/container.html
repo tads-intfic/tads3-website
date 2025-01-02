@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-container-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-container-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Container : <a href="basiccontainer.html">BasicContainer</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="basiccontainer.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="openablecontainer.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Although the plain Container class contains no handling for dealing with
+OPEN and CLOSE commands from the player (for that you need
+<a href="openablecontainer.html">OpenableContaine</a>r or one of its subclasses), it
+does have an isOpen property that can be set and manipulated by the
+author in game code, and, unlike BasicContainer, a Container does allow
+things to be put inside it in response to a PUT IN command.</p>
+
+<p>One item we have already defined that could be used as a Container,
+though not obviously so, is the <a href="wearable.html">sailor’s cap</a>. It won’t
+have a huge capacity, but a cap ought to be able to contain a few small
+items. Also, it will have the interesting property that it will be
+closed when worn and open otherwise.</p>
+
+<p>cap : Wearable, <strong>Container</strong> ’sailor\s cap’ ’sailor\s cap’ @mainCave<br />
+  ”It’s a large round hat with a white top and a small blue peak. ”<br />
+  <strong>bulkCapacity = 3<br />
+  isOpen { return !isWorn(); }</strong><br />
+;</p>
+
+<p>Try compiling and running the game, then move to mainCave and experiment
+with using the cap as a Container when it is and isn’t worn (for now you
+can use the boulder as the object to put in it, though this isn’t very
+realistic). Everything should work fine until you try to put the boulder
+in the cap while the player character is wearing the cap, whereupon
+you’ll get:</p>
+
+<p>&gt;<strong>put boulder in cap</strong><br />
+You can’t move that through the sailor’s cap.</p>
+
+<p>Although far from disastrous, this is certainly less than ideal.
+Although you could override the message, a neater solution is to add
+objNotWorn to the preconditions for putting anything in the cap:</p>
+
+<p>cap : Wearable, Container ’sailor\s cap’ ’sailor\s cap’ @mainCave<br />
+  ”It’s a large round hat with a white top and a small blue peak. ”<br />
+  bulkCapacity = 3<br />
+  isOpen { return !isWorn(); }<br />
+  **iobjFor(PutIn) { preCond = static inherited + objNotWorn }<br />
+**;</p>
+
+<p>Then, when the player attempts to put something in the cap while it is
+worn, a REMOVE CAP command is carried out as an implicit action and the
+PUT IN command follows (try it and see).</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-sysman-naming-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-sysman-naming-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="begin.html" class="nav">Opening Moves</a> &gt; Naming
+Conventions<br />
+<span class="navnp"><a href="syntax.html" class="nav"><em>Prev:</em> Typographical
+Conventions</a>    
+<a href="hello.html" class="nav"><em>Next:</em> Hello, World!</a>    
+</span></p>
+
+<h1 id="naming-conventions">Naming Conventions</h1>
+
+<p>TADS 3’s standard libraries follow a naming convention similar to that
+used for the Java system classes. For consistency, the intrinsic
+function name and intrinsic class method definitions provided with the
+compiler follow this same set of conventions. Here’s a summary of the
+naming rules:</p>
+
+<ul>
+  <li>All identifiers use mixed-case letters. After the initial letter,
+small letters are used, except that if an identifier consists of more
+than one word, the first letter of each additional word is
+capitalized. It isn’t necessary to capitalize the first letter of an
+embedded word in a few cases, such as when the pair of words could
+reasonably be rendered in ordinary writing as a compound word or with
+a hyphen (for example, “sublist” could be used rather than “subList”).</li>
+  <li>A class name starts with a capital letter.</li>
+  <li>Function, method, property, and object instance names start with a
+small letter.</li>
+  <li>A manifest constant name (a “#define” symbol that expands to a simple
+numeric or other constant value) starts with a capital letter.</li>
+  <li>#define symbols that define names that are meant to behave like
+global variables use an initial “g” prefix (for example, “gActor” in
+the adv3 library).</li>
+  <li>Macros used only to control conditional compilation (through the
+“#ifdef” preprocessor directive) use all capitals, with underscores to
+separate words.</li>
+  <li>Other macro names should follow the appropriate convention for their
+intended use. For example, a macro that’s used to define a class
+should start with a capital letter, and a macro that is used like a
+function or method call should start with a small letter.</li>
+</ul>
+
+<p>The standard libraries sometimes use an abbreviation or acronym as
+though it were an ordinary word, to avoid really long names or long runs
+of capital letters. For example, the regular expression functions use
+“rex” instead of “regularExpression,” because the latter is too long
+(rexMatch, rexSearch, etc.), and the String method “htmlify” doesn’t
+capitalize the letters “HTML.”</p>
+
+<hr />
+
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="begin.html" class="nav">Opening Moves</a> &gt; Naming
+Conventions<br />
+<span class="navnp"><a href="syntax.html" class="nav"><em>Prev:</em> Typographical
+Conventions</a>    
+<a href="hello.html" class="nav"><em>Next:</em> Hello, World!</a>    
+</span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

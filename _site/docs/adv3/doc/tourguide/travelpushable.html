@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-travelpushable-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-travelpushable-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TravelPushable : <a href="immovable.html">Immovable</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="prerestartobject.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="pushtravelbarrier.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A TravelPushable is an object that can’t be picked up but can be pushed
+from one location to another (by the player issuing commands such as
+PUSH WHEELBARROW NORTH or PUSH BARROW INTO SHIP). As a simple example we
+can implement a wheelbarrow that would be useful for moving the gold
+tablet around:</p>
+
+<p>wheelBarrow : TravelPushable, Container ’old tin wheel wheelbarrow/barrow’ <br />
+  ’wheelbarrow’ @graveyard<br />
+  ”It’s an old tin wheelbarrow, a bit battered, but seemingly still <br />
+     in serviceable condition. ”<br />
+  initSpecialDesc = ”An old tin wheelbarrow lies forgotten in one corner of the graveyard. ”  <br />
+  specialDesc = ”The old tin wheelbarrow rests here. ”<br />
+  cannotTakeMsg = ’The wheelbarrow is a bit too heavy and cumbersome to carry around. <br />
+  Pushing it would probably prove more productive. ’<br />
+;</p>
+
+<p>Since TravelPushable inherits from Immovable, it’s a good idea to give
+the wheelbarrow a specialDesc as well as an initSpecialDesc to make sure
+that it gets listed in room descriptions. Although the default message
+you get when you try to take a TravelPushable is okay, we customize it
+here to say the same thing but in a manner slightly more tailored to the
+specific object; we do this by overriding <strong>cannotTakeMsg</strong> with a
+single-quoted string (it must contain either a single-quoted string or a
+property pointer).</p>
+
+<p>This wheelbarrow will work fine as it is, and will certainly help with
+carting the gold tablet around. One refinement we could add is to
+improve on the “You push the wheelbarrow into the area” that appears
+each time the barrow is pushed somewhere. We can take advantage of the
+fact that we’ve defined a destName on every location to override
+describeMovePushable with something a bit more specific:</p>
+
+<p>modify TravelPushable<br />
+  describeMovePushable(traveler, connector)<br />
+     {<br />
+         if (gActor.isPlayerChar)<br />
+           ”You push &lt;&lt;theName&gt;&gt; into &lt;&lt;location.destName&gt;&gt;. ”;<br />
+     }<br />
+;</p>
+
+<p>For a more complex example, let’s start filling in some of the detail on
+the south side of the lake. The tunnel south from the shore will soon
+come to a deep uncrossable chasm. However, a stone monolith waits on the
+shore; if the player pushes it into the chasm, the monolith then forms a
+bridge that can be crossed. The main trick here is to make the chasm a
+room in its own right, and, recognizing that a Room is also a
+TravelConnector, override its canTravelerPass and explainTravelBarrier
+methods to prevent travel unless either the monolith is already in the
+chasm or it is in the process of being pushed into the chasm:</p>
+
+<p>southShore : Room ’Rocky shore’ ’the rocky shore’<br />
+   ”The rocky shore looks so barren here as to be scarcely worth visiting, apart<br />
+    from a narrow tunnel leading off to the south<strong>”<br />
+   finalDesc = ”. ” // for the custom finalDesc property see our <a href="specialdesc.html#roomdesc">inRoomDesc modification</a><br />
+   south = narrowTunnel</strong>   <br />
+;</p>
+
+<p>+ monolith : TravelPushable ’large black monolith’ ’black monolith’<br />
+  ”Deep black in colour, it’s a smooth black oblong about six feet by three, and <br />
+   about six inches thick. &lt;&lt;isIn(deepChasm) ? ’Currently, it\s wedged in the<br />
+   chasm, forming a precarious bridge. ’ : nil&gt;&gt;”<br />
+  initSpecialDesc = ”“ <br />
+  specialDesc = ”&lt;&lt;isIn(deepChasm) || travelInProgress ? ’‘ <br />
+        : ’The black monolith stands on the ground. ’&gt;&gt;”<br />
+  inRoomDesc() { if(!moved) ”, and a black monolith projecting out of the rocks”; }<br />
+  cannotTakeMsg = ’There\s no way anyone\s going to lift that great block of stone. ’<br />
+  dobjFor(PushTravel)<br />
+  {<br />
+    verify()<br />
+      {<br />
+        if(isIn(deepChasm))<br />
+        {<br />
+          illogicalNow (‘For one thing you\re standing on the monolith, and<br />
+           for another it\s wedged firmly (you hope) in the chasm. ’);<br />
+        }<br />
+        else<br />
+          inherited;<br />
+      }  <br />
+    action<br />
+     {<br />
+       travelInProgress = true;<br />
+       inherited;<br />
+       travelInProgress = nil;<br />
+     }<br />
+  }<br />
+  travelInProgress = nil<br />
+  describeMovePushable(traveler, connector)<br />
+     {            <br />
+         if (location == deepChasm)<br />
+         {<br />
+           ”The monolith has toppled into the chasm, forming a precarious bridge of sorts,<br />
+            on which you’re now standing. ”;<br />
+            setSuperclassList([Floor]);<br />
+            deepChasm.roomParts += self;                       <br />
+         }<br />
+         else<br />
+           inherited(traveler, connector);  <br />
+     }<br />
+  beforeMovePushable(traveler, connector, dest) <br />
+  { <br />
+     if(connector == deepChasm)<br />
+      ”You push the monolith towards the edge of the chasm; as it reaches <br />
+       the edge it begins to topple.\b”;<br />
+     else<br />
+       ”The monolith is &lt;i&gt;very&lt;/i&gt; heavy, but with a supreme effort <br />
+        than nearly gives you three hernias and four burst blood<br />
+        vessels you manage to start pushing it. ”;<br />
+  }<br />
+  dobjFor(SitOn)<br />
+  {<br />
+    preCond = inherited + actorDirectlyInRoom<br />
+    verify()<br />
+    {<br />
+      if(ofKind(Floor) &amp;&amp; gActor.isIn(deepChasm))<br />
+        logicalRank(140, ’most likely floor’ );<br />
+      else if(ofKind(Floor))<br />
+        nonObvious;  <br />
+      else<br />
+        inherited;<br />
+    }<br />
+  }<br />
+  dobjFor(LieOn)<br />
+  {<br />
+    preCond = inherited + actorDirectlyInRoom<br />
+    verify() { if(ofKind(Floor)) verifyDobjSitOn; else inherited; }<br />
+  }<br />
+;</p>
+
+<p>narrowTunnel : DarkRoom ’Narrow Tunnel’ ’the narrow tunnel’<br />
+  ”This short section of tunnel leads south from the rocky shore, but then<br />
+    comes to an abrupt end at the edge of a deep chasm. Another tunnel continues<br />
+    south from the ledge on the far side of the chasm. ”<br />
+  north = southShore<br />
+  south = deepChasm<br />
+;</p>
+
+<p>MultiLoc, Enterable -&gt;deepChasm ’deep chasm’ ’deep chasm’<br />
+  ”&lt;&lt;deepChasm.desc&gt;&gt;”<br />
+  locationList = [narrowTunnel, chasmLedge]<br />
+;</p>
+
+<p>deepChasm : DarkRoom ’Deep Chasm’ ’the deep chasm’<br />
+  ”The chasm is not something you want to look down if you suffer from<br />
+   vertigo; but a long way below, almost too far down to see, runs a narrow, inky river. <br />
+   The chasm is about six feet wide, too far to jump&lt;&lt;monolith.isIn(self) ? ’,  but a<br />
+   stone monolith forms a bridge of sorts across it’ : nil&gt;&gt;. ”<br />
+  north = narrowTunnel<br />
+  south = chasmLedge<br />
+  canTravelerPass(traveler) <br />
+    {return monolith.isIn(self) || monolith.travelInProgress; }<br />
+  explainTravelBarrier(traveler)<br />
+  {<br />
+    ”The chasm is too wide to jump over, and you certainly don’t<br />
+     want to fall into it. ”;<br />
+  }<br />
+  cannotGoThatWayMsg = ’Stepping off the monolith into the chasm would mean<br />
+   falling to almost certain death. ’<br />
+  roomParts = [defaultCeiling]  <br />
+  lookAroundWithinName(actor, illum)<br />
+  {<br />
+    inherited(actor, illum);<br />
+    if (actor.posture == standing) <br />
+     ” (standing on &lt;&lt;monolith.theName&gt;&gt;)”;    <br />
+  }<br />
+;</p>
+
+<p>+ inkyRiver : Distant ’narrow inky black river/water’ ’river’<br />
+  ”The narrow river runs along the bottom of the chasm about a hundred feet or so below;<br />
+   its water looks inky black in the near darkness down there. ”<br />
+;</p>
+
+<p>chasmLedge : DarkRoom ’Ledge of Chasm’ ’the ledge of the chasm’<br />
+  ”A deep, wide chasm splits the ground immediately to the north of this<br />
+   narrow ledge, while a dark tunnel runs south. Another tunnel can be <br />
+   seen leading north from the far side of the chasm. ”<br />
+  north = deepChasm</p>
+
+<p>;</p>
+
+<p>One trick here is to override deepChasm.lookAroundWithinName so that it
+adds “(standing on the black monolith)” to the name of the room when the
+player character is indeed standing (the inherited behaviour will deal
+with sitting and lying).</p>
+
+<p>The other trick here is to make the monolith transform itself into a
+Floor and add itself to the chasm’s roomParts once it arrives in the
+chasm, so that we get the right responses if the player SITS or LIES
+there. Also, since the defaultFloors of the adjacent rooms will also be
+in scope thanks to the <a href="distanceconnector.html">DistanceConnector</a> we’ll
+be adding later, we need to make the monolith the most likely item to
+sit or lie on when we’re directly on top of it, but not when we’re in
+one of the adjacent locations. Conversely, we add actorDirectlyInRoom to
+the preconditions for sitting or lying on the monolith to prevent the
+otherwise rather odd behaviour that will occur (once the
+DistanceConnector is in place) when the player character attempts to sit
+or lie on the monolith while he’s in an adjacent location.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

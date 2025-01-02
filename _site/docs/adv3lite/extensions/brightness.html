@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-extensions-brightness-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-extensions-brightness-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="../../docs/manual/topbar.jpg" data-border="0" /></p>
+
+<p><a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+Brightness<br />
+<span class="navnp"><a href="../../docs/manual/extensions.html" class="nav"><em>Prev:</em>
+Extensions</a>    
+<a href="collective.html" class="nav"><em>Next:</em> Collective</a>    
+</span></p>
+
+<h1 id="brightness">Brightness</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>This extension provides basic modelling of different levels of lighting
+(by adding a <strong>brightness</strong> property to the Thing class) and different
+degrees of attenuation of light either as a result of distance or
+through a semi-transparent medium (specifically an otherwise transparent
+close container which can be given a user-defined quantity of
+<strong>opacity</strong>. It thus aims to replicate (albeit in a slightly different
+formn) much of the adv3 light levels functionality that is absent from
+the adv3Lite main library.</p>
+
+<p><span id="classes"></span></p>
+
+<h2 id="new-properties-and-methods">New Properties and Methods</h2>
+
+<p>In addition to a number of properties/methods and one object
+(lightProbe_) intended purely for internal use, this extension defines
+the following new properties and methods on the Thing class:</p>
+
+<ul>
+  <li><em>Properties of Thing</em>: <code class="language-plaintext highlighter-rouge">brightness</code>,
+<code class="language-plaintext highlighter-rouge">brightnessOn</code>,
+<code class="language-plaintext highlighter-rouge">brightnessOff</code>,
+<code class="language-plaintext highlighter-rouge">brightnessForReading</code>,
+<code class="language-plaintext highlighter-rouge">illuminationThreshold</code>,
+<code class="language-plaintext highlighter-rouge">opacity</code>,
+<code class="language-plaintext highlighter-rouge">tooDarkToReadMsg</code>,
+<code class="language-plaintext highlighter-rouge">lightSources</code>.</li>
+  <li><em>Methods of Thing</em>: <code class="language-plaintext highlighter-rouge">brightnessWithin()</code>,
+<code class="language-plaintext highlighter-rouge">accumulatedBrightnessWithin()</code>,
+<code class="language-plaintext highlighter-rouge">accumulateBrightness()</code>,
+<code class="language-plaintext highlighter-rouge">remoteBrightness(pov)</code>.</li>
+</ul>
+
+<p><span id="usage"></span></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Include the brighness.t file after the library files but before your
+game source files.</p>
+
+<p>This extension adds a <strong>brightness</strong> property to every Thing (including
+every Room), which defines the strength of the light it gives off when
+lit. Unless overridden by game code, this brightness will be the value
+of the <strong>brightnessOn</strong> property when the object is lit (i.e., its</p>
+
+<p>isLit property is true) and value of its <strong>brightnessOff</strong> (usuallu zero
+but possibly one — see further below) when its isLit property is nil.</p>
+
+<p>Out of the box, this extension assumes that brightness will take a value
+between 0 (totally unlit) and 4 (very brightly lit), as follows:</p>
+
+<ul>
+  <li><strong>0</strong> – Totally unlit</li>
+  <li><strong>1</strong> – Self-illuminating (so visible in an otherwise dark space) but
+not providing sufficient light to illuminate anything else. This might
+be used, for example, for stars in the night sky, or for the face of a
+flourescent clock, or for a large object like a staircase that is just
+about visible in a very dimly lit room.</li>
+  <li><strong>2</strong> – Relatively dim lighting that’s strong enough to see by, but
+not to read by, and may not penetrate well over a large distance or
+through an obscuring medium</li>
+  <li><strong>3</strong> – Normal light, sufficient to provide adequate illumination to
+everything around.</li>
+  <li><strong>4</strong> – Very bright light, that doesn’t necessarily provide better
+illumination locally, but which may be better able to penetrate
+through partially obscuring media or to illuminate over a larger
+distance.</li>
+</ul>
+
+<p>The other principal new property defined by this extension is
+<strong>opacity</strong>, which only has any effect on transparent closed containers
+(closed because othewise light is reckoned to be emitted at full
+strength through the opening, and transparent because otherwise no light
+would pass through a closed container at all). In other words, the
+opacity property is only meaningful on a container whose
+<span class="code" span="">isTransparent</span> property is set to true.
+If light passes through a closed container, its brightness is decreased
+by the value of its opacity property. So, for example, if a closed glass
+jar with an opacity of 1 contains a bulb with a brightness of 3 the
+light emanating from the jar will have a brightness of 2 (and similarly
+for light penetrating inside a closed semi-transparent booth from a
+light source outside the booth).</p>
+
+<p>To get at the brighthness of the current illumination within a Room or
+Booth you use the value returned by its <strong>brightnessWithin()</strong> or its
+<strong>accumulatedBrightnessWithin()</strong>. Out of the box both methods simply
+return the value of the brightest light source (adjusted for distance
+and/or opacity) that’s currently providing illumination to the Room,
+Booth or Container in question. The trong&gt;accumulatedBrightnessWithin()
+method is provided in case game code wants to implement a different
+method of calculating the cumulative brightness of multiple light
+sources (on which see further <a href="#limitations">below</a>).</p>
+
+<p>Finally, to allow for the attenuation of brightness over a distance,
+this extension provides a <strong>remoteBrightness(<em>pov</em>)</strong>, which should be
+called on the light source to obtain the effective brightness of this
+light source from the point of view of the <em>pov</em> object (typically but
+not necessarily the player character) in a remote location. This will
+only be relevant if the pov object and the light source object are both
+located in the same SenseRegion and that SenseRegion allows sight paths
+between the Rooms it contains. By default this method simply returns the
+value of the light source’s</p>
+
+<p>brightness property, which is almost certainly the correct behaviour if
+the SenseRegion is modelling the two ends of a large indoor hall with
+powerful electric lighting switched on at one end, but may not be so
+appropriate if the SenseRegion is modelling the two ends of a large
+field at night where the only light source is a candle at the other end
+of the field.</p>
+
+<p><span id="interaction"></span></p>
+
+<h2 id="interaction-with-the-main-librarys-handling-of-lighting">Interaction with the Main Library’s Handling of Lighting</h2>
+
+<p>The main library already contains its own handling of light and
+darkness, through such properties as <code class="language-plaintext highlighter-rouge">isLit</code> and
+methods as <code class="language-plaintext highlighter-rouge">isIlluminated()</code> and
+<code class="language-plaintext highlighter-rouge">litWithin()</code>. The brightness extension does its
+best to work smoothly with these existing methods and properties.</p>
+
+<p>As noted above, making (or defining) <code class="language-plaintext highlighter-rouge">isLit</code>
+true makes it take on the value of its
+<code class="language-plaintext highlighter-rouge">brightnessOn</code> property, which, by default, is</p>
+<ol>
+  <li>Without any further modification, an object with a
+<code class="language-plaintext highlighter-rouge">brightness</code> of 3 should for all intents and
+purposes act in the same way as a lit object in the main library.</li>
+</ol>
+
+<p>If an object is defined with <code class="language-plaintext highlighter-rouge">visibleInDark</code> as
+true, then its <code class="language-plaintext highlighter-rouge">brightnessOff</code> property will be
+1 by default; otherwise it will be 0. This should result in
+visibleInDark working much as it does in the main library.</p>
+
+<p>With the brightness extension is place (and no further customization),
+<code class="language-plaintext highlighter-rouge">litWithin()</code> simply returns the value of
+<code class="language-plaintext highlighter-rouge">isIlluminated()</code>, while
+<code class="language-plaintext highlighter-rouge">isIlluminated()</code> returns true if and only if
+<code class="language-plaintext highlighter-rouge">accumulatedBrightnessWithin()</code> returns a value
+greater than 1 (i.e. if there’s an available light source providing more
+brightness than something that’s merely self-illuminating), except that
+<code class="language-plaintext highlighter-rouge">isIlluminated()</code> uses the version inherited
+from the library when called during the calculations performed by
+<code class="language-plaintext highlighter-rouge">brightnessWithin()</code> (this is to avoid the
+vicious circularity that would otherwise occur with
+<code class="language-plaintext highlighter-rouge">brightnessWithin()</code> relying on the value of
+<code class="language-plaintext highlighter-rouge">isIlluminated()</code> to construct a list of items
+in scope, and Q.scopeList() relying on the value of isIlluminated() to
+construct the scope list, but shouldn’t otherwise have any impact on
+game code).</p>
+
+<p>Out of the box, the only action directly affected by light levels is
+Read, which, by default, will now fail at the check stage if the
+available illumination is less than 3. The message reporting this
+failure is defined in the <strong>tooDarkToReadMsg</strong> property of the item
+being read, where it can be readily overridden in game code.</p>
+
+<p><span id="limitations"></span></p>
+
+<h2 id="limitations-and-customization-hooks">Limitations and Customization Hooks</h2>
+
+<p>While this extension provides a some basic handling of levels of
+illumination, the model that results is fairly basic, especially in the
+way it handles illumination coming from remote objects elsewhere in a
+SenseRegion. It is difficult for this extension to do much more than it
+does, however, since beyond the basic implentation provided, the details
+of any further sophistication required are likely to be dependent upon
+what particular individual games are trying to model, which is likely to
+vary substantially from one game to another, or even between different
+situations in the same game. To compensate for this, the brightness
+extension provides a couple of hooks to aid customization.</p>
+
+<p>First, while the default implementation assumes that</p>
+
+<p>brightness will take on a value between 0 and 4, game code can override
+this to use a greater range of brightness values if they’re needed. In
+particular:</p>
+
+<ul>
+  <li>The default value of <strong>brightnessOn</strong> can be set to some value other
+than 3.</li>
+  <li>The value of <strong>illuminationThreshold</strong> can be set to some value other
+than 1, where illuminationThreshold is the available brightness that
+must be <em>exceeded</em> for a location or container to be considered
+sufficiently illuminated to ensure visibility (i.e. for the
+<code class="language-plaintext highlighter-rouge">objVisible</code> precondition to be satisifed).</li>
+  <li>The value of <strong>brightnessForReading</strong> can be set to some value other
+than its default of 3, where brightnessForReading is the brightness
+that must be available to allow things to be read.</li>
+</ul>
+
+<p>Note that these are all properties of the Thing class, and so can be
+overridden on the Thing class and/or the Room class (which inherits from
+Thing) and/or on individual Things (and Rooms).</p>
+
+<p>The other customization for which the brightness extension provides a
+hook is for defining the effects of multiple light sources in the same
+location. Here, no generalised solution is possible: for example, the
+effect on ambient lighting of having 20 candles rather than one in an
+otherwise dark hallway will be very different from that of having 20
+candles rather than 1 scattered over a large field in bright sunlight,
+and so it has to be up to game code to define what should happen in each
+case (if it wishes to define it).</p>
+
+<p>For this purpose, the customization provides the (Thing) method
+<strong>accumulateBrightness(maxBrightness)</strong>. As defined in the brightness
+extension, this is called from <strong>accumulatedBrightnessWithin()</strong> (and
+really should not be called in any other way), which passes the value of
+a call to <strong>brightnessWithin()</strong> in the <strong>maxBrightness</strong> parameter. By
+default <code class="language-plaintext highlighter-rouge">accumulatedBrightnessWithin()</code> simply
+returns the <code class="language-plaintext highlighter-rouge">maxBrightness</code> value that’s passed
+to it, but the point of the method is that it <em>can</em> be overridden by
+game code to do something different (possibly on a Room by Room or Thing
+by Thing basis).</p>
+
+<p>The call to <code class="language-plaintext highlighter-rouge">brightnessWithin()</code> from
+<code class="language-plaintext highlighter-rouge">accumulatedBrightnessWithin()</code> populate’s the
+Thing’s <strong>lightSources</strong> with a list of the light sources relevant to
+the calculation of the level of illumination (i.e., all the light
+sources that might need to be taken into account when deciding what
+value <code class="language-plaintext highlighter-rouge">accumulatedBrightnessWithin()</code> should
+return). Each element of the lightSources list is itself a two-item list
+of the form [obj, adjBt] where <em>obj</em> is the object providing light and
+<em>adjBt</em> is the brightness of the light it provides after adjustment for
+any distance or opacity between <em>obj</em> and the location whose accumulated
+interior brightness we wish to calculate. A custom
+<code class="language-plaintext highlighter-rouge">accumulateBrightness()</code> method can thus iterate
+over the list of lightSources to decide how it wishes to factor them
+into the value it wants to return. For example, in a location that might
+be lit either by multiple candles or by some other more powerful light
+source one might do something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    accumulateBrightness(maxBrightness)
+    {
+        
+        /* If our maxBrightness is already more than 2, simply return our maxBrightness. */ 
+        if(maxBrightness &gt; 2)
+            return maxBrightness;
+        
+        /* If we have more than 9 lightsources each with an adjusted brightness of 2, return a cumulative brightness of 3 */ 
+        if(lightSources.countWhich({s: s[2] == 2}) &gt; 9)
+            return 3;
+        
+        /* Otherwise return our maxBrightness, which will be 2 or less */ 
+        return maxBrightness; 
+    }
+</code></pre></div></div>
+
+<p>Of course, a real-life example may want to do something more
+sophisticated than this, and need not be restricted to integer
+arithmetic (since there is nothing to prevent game code using the
+BigNumber class for fractional values and more complicated mathematical
+functions if that is what it wants to do). Just to emphasize though: you
+may usefully override accumulateBrightness(maxBrightness) in your own
+game code but you should never call it directly from your game code
+(except perhaps for testing or debugging purposes). Conversely, it is
+fine to call accumulatedBrightnessWithin() from your game code, but you
+should probably refrain from trying to override it, unless you have a
+compelling reason for doing so and are completely confident that you’re
+not breaking anything.</p>
+
+<p>Finally, it should be borne in mind that this is the first version of
+the brightness extension. The use of it in real-life game code may well
+suggests improvements that could be made and wrinkles that could be
+ironed out.</p>
+
+<p>This covers most of what you need to know to use this extension. For
+additional information see the source code and comments in the
+<a href="../brightness.t">brightness.t</a> file.</p>
+
+<hr />
+
+<p><em>Adv3Lite Manual</em><br />
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+Brightness<br />
+<span class="navnp"><a href="../../docs/manual/extensions.html" class="nav"><em>Prev:</em>
+Extensions</a>    
+<a href="collective.html" class="nav"><em>Next:</em> Collective</a>    
+</span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

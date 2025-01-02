@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-sysman-timezone-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-sysman-timezone-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; TimeZone<br />
+<span class="navnp"><a href="tempfile.html" class="nav"><em>Prev:</em> TemporaryFile</a>
+    <a href="vector.html" class="nav"><em>Next:</em> Vector</a>    
+</span></p>
+
+<h1 id="timezone">TimeZone</h1>
+
+<p>A TimeZone object represents a local time zone. It works with the
+<a href="date.html">Date</a> class to convert between local time zones and universal
+time (UTC) when parsing, displaying, and manipulating dates and times.</p>
+
+<p>In most cases, you won’t need to use the TimeZone object directly, even
+if you use Date objects, because you’ll usually want to work in terms of
+the host computer’s local time zone. That’s the default that Date uses
+for local/UTC conversions, so you don’t have to use TimeZone objects in
+this case. The TimeZone object is only needed when you want to use a
+specific time zone for local/UTC conversions.</p>
+
+<p>TimeZone uses the <a href="http://www.iana.org/time-zones">IANA zoneinfo
+database</a> (also known as the tz database
+or Olson database) to perform its conversions. The zoneinfo database
+contains a comprehensive history of local time settings for locations
+around the world. The TADS interpreter includes a compiled version of
+the information in the zoneinfo database, so this information is always
+available. This allows the TimeZone object to calculate historically
+accurate local times for particular dates in the past in specific
+locations, based on actual historical records, including zone
+realignments (some cities have switched time zones on one or more
+occasions) and the daylight savings rules in effect in different years.
+The TimeZone object can also calculate local times in the future by
+extrapolating the current daylight savings rules for a zone. The
+zoneinfo database isn’t static; it’s updated frequently, because the
+world’s timezones are always being revised. The TADS version of the
+zoneinfo database is in a separate file that can be replaced as needed
+without updating the TADS interpreter itself.</p>
+
+<p>When using the TimeZone class, <code class="language-plaintext highlighter-rouge">\#include
+\&lt;date.h\&gt;</code> in your source files.</p>
+
+<h2 id="construction">Construction</h2>
+
+<p><code class="language-plaintext highlighter-rouge">new TimeZone()</code></p>
+
+<p>Creates a TimeZone object representing the host system’s local time
+zone. On Windows, this obtains the timezone settings from the operating
+system, and maps the Windows zone identifier to a corresponding zoneinfo
+key, using the mapping specified in the <a href="http://cldr.unicode.org">Unicode
+CLDR</a>. On most Unix systems, the “TZ”
+environment variable specifies the settings. (For best results on Unix,
+you should set TZ to the zoneinfo key you wish to use; for example, for
+US Eastern Time, set TZ=America/New_York.)</p>
+
+<p><code class="language-plaintext highlighter-rouge">new TimeZone(*zoneinfoName*)</code></p>
+
+<p>Creates a TimeZone object for the given location in the zoneinfo
+database, such as ‘America/New_York’ or ‘Europe/London’.</p>
+
+<p>When you create a TimeZone object based on a zoneinfo location, local
+time conversions using the object will take into account historical
+changes to the location’s time zone definition, including realignments
+(for example, America/Detroit was originally on US Central Time, but
+switched to Eastern Time in 1915) and daylight savings changes. It also
+applies the current daylight savings rules for the zone (if any) to
+dates in the future. Parsing or formatting a date/time value will treat
+the local time appropriately for its date, so that it matches the wall
+clock actually in effect on that date in the given location.</p>
+
+<p><code class="language-plaintext highlighter-rouge">new
+TimeZone('*STD*+*ofs*\[*DST*\[+*ofs*\],*start*,*end*\]')</code></p>
+
+<p>This format creates a custom time zone. This bypasses the zoneinfo
+database and lets you define a timezone with a custom name, UTC offset,
+and daylight savings rule. Since this type of TimeZone isn’t tied to a
+zoneinfo entry, it doesn’t have any location or history information.</p>
+
+<p>The syntax is modeled on the POSIX “TZ” environment variable syntax,
+with one important difference: we use the zoneinfo convention that that
+the UTC offset is negative if it’s west of UTC, whereas TZ uses positive
+offsets west of UTC. So if you’re copying a Unix TZ setting, reverse the
+signs on the offsets: Unix EST5EDT becomes ‘EST-5EDT’ for the TimeZone
+constructor.</p>
+
+<p>The simplest form is an abbreviation plus an offset in hours. For
+example, ‘PST-8’ defines a zone called “PST” with an offset 8 hours
+ahead of (west of) UTC. This is equivalent to the current official
+definition of US Pacific Standard Time, so a TimeZone created this way
+lets you parse and format times in Pacific Standard Time year round,
+even when daylight time would normally be in effect.</p>
+
+<p>The complete form includes the standard time name and offset, the
+daylight time name and offset, and the annual rules for when daylight
+time starts and ends in the zone. The daylight offset can be omitted, in
+which case it defaults to one hour ahead of standard time. If you do
+include it, specify the daylight offset from UTC, <em>not</em> the offset from
+standard time - so for US Eastern Time, you’d write
+<code class="language-plaintext highlighter-rouge">EST-5EDT-4</code>, or equivalently just
+<code class="language-plaintext highlighter-rouge">EST-5EDT</code>.</p>
+
+<p>The syntax for the <em>start</em> and <em>end</em> strings can be one of the
+following:</p>
+
+<ul>
+  <li>M<em>month</em>.<em>week</em>.<em>day</em> - this format lets you specify dates based on
+“first/last Sunday of March” rules, which is how official daylight
+time rules are usually specified. <em>month</em> is the month number, 1 to 12
+for January to December; <em>week</em> says which occurrence of the day to
+use; and <em>day</em> is the weekday, 0 to 6 for Sunday to Saturday. If
+<em>week</em> is 1, the first <em>day</em> of the month is used; 2 means the second
+<em>day</em>; and so on up to 4 for the 4th <em>day</em>. Setting <em>week</em> to 5 is
+special: it means the last <em>day</em> of the month, no matter how many
+occurrences of that day there actually are. For example,
+<code class="language-plaintext highlighter-rouge">M4.1.0</code> is the first Sunday in April, and
+<code class="language-plaintext highlighter-rouge">M10.5.6</code> is the last Saturday in October.</li>
+  <li>J<em>dayno</em> - a “Julian day”. <em>dayno</em> is the day of the year, 1 to 365,
+never counting February 29. That is, J60 always means March 1, even in
+leap years. This is essentially an obtuse way of specifying a fixed
+month and day: J1 is January 1, J32 is February 1, J365 is December
+31, and so on.</li>
+  <li><em>dayno</em> - a calendar day. <em>dayno</em> is the day of the year, 0 to 365,
+counting February 29 in leap years. Day 60 is March 1 in non-leap
+years, but is February 29 in leap years. (It seems unlikely that any
+official timezone has ever been defined using this type of rule, as
+it’s not clear why you’d want to set a date that moves by a day in
+leap years, but TimeZone accepts it for completeness.)</li>
+</ul>
+
+<p>All of the formats above can optionally be followed by “/<em>time</em>”, where
+<em>time</em> is the time of day on a 24-hour clock. This can simply be the
+hour if the time is at the top of the hours, so “/3” means 3:00 AM, and
+“/0:30” means 12:30 AM. If the time is omitted, the default is 2:00 AM
+(“/2”).</p>
+
+<p>Example: the complete current definition of US Eastern Time is
+<code class="language-plaintext highlighter-rouge">EST-5EDT-4,M3.2.0/2,M11.1.0/2</code>: standard time
+is called EST, with a UTC offset of 5 hours west; daylight time is EDT
+at 4 hours west; daylight time starts at 2:00 AM on the second Sunday in
+March, and ends at 2:00 AM on the first Sunday in November. You could
+write this more compactly, relying on the defaults, as
+<code class="language-plaintext highlighter-rouge">EST-5EDT,M3.2.0,M11.1.0</code>.</p>
+
+<p>If you specify both standard and daylight time in a zone, TimeZone will
+accept the string without the daylight time start/end rules, but without
+the rules the zone will always use standard time. There are no default
+rules, so if you want to define a zone that switches seasonally between
+standard and daylight time, you must specify the rules.</p>
+
+<p><code class="language-plaintext highlighter-rouge">new TimeZone('*UTC*')</code></p>
+
+<p>‘Z’ and ‘GMT’ are equivalent. This creates a TimeZone object
+representing UTC (Universal Time Coordinated), also known as Zulu (Z)
+time in military and aviation jargon. This is the worldwide standard
+reference point for timekeeping; all modern time zones are defined in
+terms of their offset (clock time difference) from UTC. GMT isn’t
+technically the same as UTC, but the two terms are commonly used
+interchangeably, which is why both are accepted here. UTC isn’t subject
+to daylight time; it’s on “standard time” year round.</p>
+
+<p><code class="language-plaintext highlighter-rouge">new TimeZone('*UTC*+*offset*')</code></p>
+
+<p>‘Z+<em>offset</em>’ and ‘GMT+<em>offset</em>’ are equivlaent. This creates a TimeZone
+object representing a zone at a fixed offset (time difference) from UTC.
+<em>offset</em> is a time difference in hours, hours and minutes, or hours,
+minutes, and seconds: ‘UTC-8’ is eight hours west of UTC; ‘UTC+0130’ is
+an hour and half east of UTC; ‘UTC+01:00’ is an hour east. The offset is
+the amount of time you add to UTC to get the local time, which means
+that negative numbers are west of UTC: Pacific Standard Time is UTC-8.</p>
+
+<p>Be careful about the ‘+’ or ‘-‘ sign when importing data from other
+computer systems, since some systems use the opposite sign convention.
+Unix in particular uses positive values for zones west of GMT.</p>
+
+<p>A TimeZone object created this way uses the same fixed UTC offset for
+all dates and times. It doesn’t observe daylight savings time and
+doesn’t have any historical data on zone realignments, because it
+doesn’t represent a timezone per se, even if it happens to align (in
+some or all of the year) with a defined regional zone. For example,
+‘UTC-8’ is distinct from the US Pacific Time zone, even though it
+happens to be at the same UTC offset as that zone’s standard (winter)
+time; the difference is that the US Pacific Time zone implies a history
+of daylight savings and other changes, while ‘UTC-8’ is simply 8 hours
+earlier than UTC for all dates and times.</p>
+
+<p><code class="language-plaintext highlighter-rouge">new TimeZone(*offsetSecs*)</code></p>
+
+<p>Creates a TimeZone object at the fixed UTC offset. <em>offsetSecs</em> is an
+integer giving the time zone offset in seconds; positive values are east
+of UTC and negative values are west (e.g., US Pacific Daylight Time is
+at -25200 seconds, which is -7 hours).</p>
+
+<p>This type of TimeZone object is equivalent to the ‘UTC+offset’
+constructor above for the corresponding offset. For example,
+<code class="language-plaintext highlighter-rouge">new TimeZone(-25200)</code> yields the same type of
+time zone object as <code class="language-plaintext highlighter-rouge">new TimeZone('UTC-7')</code>.</p>
+
+<h2 id="methods">Methods</h2>
+
+<p><span id="getNames"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getNames()</code></p>
+
+<p>Returns a list of strings giving the names by which the timezone is
+known. For a timezone based on a zoneinfo location, this returns a list
+of all of the aliases by which the zone is known; the first entry is the
+primary entry in the database for the zone, and the others are aliases
+(called “links” in the zoneinfo database). For a zone based on an
+abbreviation, the list has only one entry, with the abbreviation as the
+name. For a zone based on a UTC offset, the list has only one entry,
+with a name of the form ‘UTC+hh:mm:ss’ (but the seconds and minutes are
+dropped if they’re zero).</p>
+
+<p><span id="getHistory"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getHistory(*date*?)</code></p>
+
+<p>Gets the enumerated history of clock setting changes in this timezone,
+or the single history item that applies to the given date.</p>
+
+<p>If <em>date</em> is supplied, it’s a Date object specifying the date of
+interest. The method finds the appropriate history item and returns it;
+the return value is a list containing [<em>date</em>, <em>offset</em>, <em>save</em>,
+<em>abbr</em>]:</p>
+
+<p>[1] <em>date</em> is a <a href="date.html">Date</a> object giving the moment in time when
+the history item took effect</p>
+
+<p>[2] <em>offset</em> is the zone’s standard time offset from UTC in
+milliseconds during this period. Positive values are east of UTC,
+negative values west; e.g., New York standard time is 5 hours west,
+which corresponds to an <em>offset</em> value of -5*60*60*1000.</p>
+
+<p>[3] <em>save</em> is the additional time added if daylight savings time is in
+effect during this period, in milliseconds, or zero if standard time is
+in effect. Each period in the history is entirely in daylight or
+standard time; if <em>save</em> is zero, standard time is in effect for the
+duration of the period, otherwise daylight savings time is in effect.
+Note that <em>save</em> is an additional amount of time to add to <em>offset</em>, so
+the zone’s actual UTC offset during the period is <em>offset</em> + <em>save</em>.</p>
+
+<p>[4] <em>abbr</em> is a string giving the abbreviation for the zone during
+this period (‘PST’, ‘EDT’, etc).</p>
+
+<p>If <em>date</em> is in the future beyond the end of the pre-computed history
+list (see below), the method applies the ongoing rules and returns a
+synthesized history item (which, since it’s synthesized on the fly,
+won’t appear in the full pre-computed list).</p>
+
+<p>If <em>date</em> is omitted or nil, the result is a full list of all of the
+pre-computed changes to the timezone. This includes realignments (times
+when the defining city relocated itself from one timezone to another)
+and daylight time changes. Each list entry is sublist containing
+[<em>date</em>, <em>offset</em>, <em>save</em>, <em>abbr</em>], as described above.</p>
+
+<p>The first item in a full history list is special. This describes the
+location’s local time settings before the establishment of standard time
+zones (which occurred in the 19th century in most locations). Before
+time zones, cities generally used “local mean time”, which is the mean
+solar time as observed from the location. This is a function of
+longitude, so it can be inferred whether or not people were actually
+conducting solar observations in the locale at the time. The <em>date</em>
+value in this special first history item is
+<code class="language-plaintext highlighter-rouge">nil</code> because the item has no start date; it
+applies into the indefinite past.</p>
+
+<p>The last item is also somewhat special. This reflects the last
+enumerated change to the time zone, but not necessarily the last
+expected change. Many time zones have ongoing rules for daylight savings
+time changes that are effective until further notice. It’s not practical
+for TADS to pre-compute these ongoing changes until the end of time,
+particularly since the Date type can represent dates millions of years
+into the future. So TADS pre-computes the transitions for all known past
+changes and for a few years into the future, stopping there and letting
+the ongoing rules handle it from then on. In many cases TADS could
+compress the pre-computed list even further by going back to the point
+where the ongoing rules started applying monotonously without changes -
+the current rules for some zones have been in effect for many years
+without any changes. But TADS pre-computes the transitions up to the
+present day (and a few years into the future) anyway, because it’s much
+faster at run-time to look up a date in the history than to figure its
+clock settings by applying the rules. We figure that most programs will
+work mostly with dates close to the present, so it makes sense to
+optimize for nearby dates. For dates beyond the pre-computed list, TADS
+applies the ongoing rules, so it will still get the right result, but
+has to work a little harder.</p>
+
+<p>See the <a href="#getRules">getRules()</a> method for information on retrieving the
+ongoing rules.</p>
+
+<p><span id="getLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getLocation()</code></p>
+
+<p>Returns a description of the zone location, as a list consisting of
+[<em>country</em>, <em>latitude</em>, <em>longitude</em>, <em>desc</em>]. <em>country</em> is a string
+with the two-letter ISO 3166 country code for the zone’s primary city,
+<em>latitude</em> is a string giving the city’s latitude (in ‘+ddmm’ or
+‘+ddmmss’ format - degrees, minutes, and seconds; ‘+’ for northern
+latitudes and ‘-‘ for southern), <em>longitude</em> is a string giving the
+longitude (in ‘+dddmm’ or ‘+dddmmss’ format), and <em>desc</em> is a string
+with comment text describing the zone (or <code class="language-plaintext highlighter-rouge">nil</code>
+if there’s no descriptive text). This information comes from the
+zoneinfo database.</p>
+
+<p><span id="getRules"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getRules()</code></p>
+
+<p>Gets the ongoing rules that are in effect after the last enumerated
+history item (see <a href="#getHistory">getHistory()</a>). This returns a list of
+the rules for future changes to the zone; each rule fires once annually,
+and encodes the day of the year when the rule fires, the time on that
+day that it fires, and the new clock settings in effect after the rule
+fires.</p>
+
+<p>Virtually all zones that use ongoing rules have exactly two: one for the
+annual change to daylight savings time in the spring, and one for the
+return to standard time in the fall. Each rule’s firing date is
+specified in an abstract format designed to handle the variety of
+regional daylight savings schemes: “last Sunday in March”, “second
+Sunday in November”, “January 15”, etc. Zones that don’t observe
+daylight savings time generally have no ongoing rules, since they
+presumably plan to remain on the same standard time setting
+indefinitely.</p>
+
+<p>Each rule in the return list is described by a sublist with the
+following elements:</p>
+
+<p>[1] <em>abbr</em> - is a string with the time zone abbreviation while the
+rule is in effect; most zones use one abbreviation for standard time and
+another for daylight time, so each rule tells us the abbreviation to use
+while the rule is in effect.</p>
+
+<p>[2] <em>offset</em> is the standard time GMT offset for the zone, in
+milliseconds, while the rule is in effect. (To get the full offset, add
+the <em>save</em> value.)</p>
+
+<p>[3] <em>save</em> is the additional offset for daylight savings time, in
+milliseconds. The full offset while the rule is in effect is <em>offset</em> +
+<em>save</em>.</p>
+
+<p>[4] <em>when</em> is a string with a human-readable description of the firing
+date: this will be of the form ‘Mar last Sun’ (for the last Sunday in
+March), ‘Mar Sun&gt;=1’ for the first Sunday in March on or after March 1,
+‘Mar Sun&lt;=28’ for the last Sunday in March on or before March 28, ‘Mar
+7’ for March 7, or ‘DOY 72’ for the 72nd day of the year.</p>
+
+<p>The same information that <em>when</em> encodes is also broken down into a more
+computer-friendly format in <em>mm</em>, <em>typ</em>, <em>wkday</em>, and <em>dd</em>.</p>
+
+<p>[5] <em>mm</em> is the month number when the rule fires, 1-12 for January to
+December.</p>
+
+<p>[6] <em>typ</em> is an integer giving the type of date specification:</p>
+
+<ul>
+  <li>0 = a fixed day of the month <em>mm/dd</em></li>
+  <li>1 = the last <em>wkday</em> of month <em>mm</em></li>
+  <li>2 = the first <em>wkday</em> of month <em>mm</em> on or after day <em>dd</em></li>
+  <li>3 = the last <em>wkday</em> of month <em>mm</em> on or before day <em>dd</em>)</li>
+</ul>
+
+<p>[7] <em>dd</em> is the day of the month (ignored if <em>typ</em> is 1)</p>
+
+<p>[8] <em>wkday</em> is the day of the week, 1-7 for Sunday-Saturday (ignored
+if ‘typ’ is 0)</p>
+
+<p>[9] <em>time</em> is the time of day the rule goes into effect, as
+milliseconds after midnight</p>
+
+<p>[10] <em>zone</em> is a code indicating the timezone to use to interpret the
+date and time:</p>
+
+<ul>
+  <li>‘w’ means local wall clock time in the zone just before the rule takes
+effect. In other words, the local time setting that was in effect up
+until the moment this rule takes effect. This is almost always the way
+rules are defined, since it’s the intuitive way that people living in
+the zone would apply the rule - when it’s 2:00 AM on the current clock
+setting, you know it’s time to change to the new clock setting.</li>
+  <li>’s’ means local standard time in the zone before the rule. This means
+that if daylight time was in effect in the previous period, you ignore
+the additional daylight offset and read the change time in terms of
+the local base standard time.</li>
+  <li>‘u’ means UTC - so you ignore the local time zone entirely and apply
+the rule in terms of universal time.</li>
+</ul>
+
+<p>Note that the zone has to be applied to the full date-and-time value,
+not just the time, because the calendar date in the local zone at the
+rule’s firing time could differ by a day from the date in the reference
+zone for types ‘s’ and ‘u’. For example, if a US Pacific Time rule were
+stated as midnight UTC, the rule would fire on the previous afternoon in
+terms of the local date.</p>
+
+<hr />
+
+<p><em>TADS 3 System Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="builtins.html" class="nav">The Intrinsics</a> &gt; TimeZone<br />
+<span class="navnp"><a href="tempfile.html" class="nav"><em>Prev:</em> TemporaryFile</a>
+    <a href="vector.html" class="nav"><em>Next:</em> Vector</a>    
+</span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

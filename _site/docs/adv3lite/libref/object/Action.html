@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-action-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-action-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Action</span><span class="type">class</span></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#22">22</a>],
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5342">5342</a>],
+<a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#173">173</a>],
+<a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#340">340</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The library doesn’t yet provide any support for actions that take three
+objects (TIAActions, as they might hypothetically be called), but since
+the Mercury parser does we provide a number of hooks that other code
+could use. To this end we need to define the properties a TIAAction
+might use so the compiler recognizes them.</p>
+
+<p><em>Modified in
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5342">5342</a>]:</em><br />
+Language-specific modifications to Action classes principally to enable
+the construction of implicit action announcements.</p>
+
+<p><em>Modified in
+<a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#173">173</a>]:</em><br />
+Modifications to the Action class for use with the OBJTIME EXTENSION.
+The purpose of these modifications is to advance the game clock each
+turn.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Action</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ReplaceRedirector.html"><code class="language-plaintext highlighter-rouge">ReplaceRedirector</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Action</code></strong><br />
+<a href="../object/ReplaceRedirector.html"><code class="language-plaintext highlighter-rouge">ReplaceRedirector</code></a><br />
+<a href="../object/Redirector.html"><code class="language-plaintext highlighter-rouge">Redirector</code></a><br />
+`                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Action</code></strong><br />
+<a href="../object/IAction.html"><code class="language-plaintext highlighter-rouge">IAction</code></a><br />
+<a href="../object/LiteralAction.html"><code class="language-plaintext highlighter-rouge">LiteralAction</code></a><br />
+<a href="../object/MiscConvAction.html"><code class="language-plaintext highlighter-rouge">MiscConvAction</code></a><br />
+<a href="../object/NumericAction.html"><code class="language-plaintext highlighter-rouge">NumericAction</code></a><br />
+<a href="../object/SystemAction.html"><code class="language-plaintext highlighter-rouge">SystemAction</code></a><br />
+<a href="../object/FileOpAction.html"><code class="language-plaintext highlighter-rouge">FileOpAction</code></a><br />
+<a href="../object/TopicAction.html"><code class="language-plaintext highlighter-rouge">TopicAction</code></a><br />
+<a href="../object/ImplicitConversationAction.html"><code class="language-plaintext highlighter-rouge">ImplicitConversationAction</code></a><br />
+<a href="../object/TAction.html"><code class="language-plaintext highlighter-rouge">TAction</code></a><br />
+<a href="../object/LiteralTAction.html"><code class="language-plaintext highlighter-rouge">LiteralTAction</code></a><br />
+<a href="../object/NumericTAction.html"><code class="language-plaintext highlighter-rouge">NumericTAction</code></a><br />
+<a href="../object/TIAction.html"><code class="language-plaintext highlighter-rouge">TIAction</code></a><br />
+<a href="../object/TIAAction.html"><code class="language-plaintext highlighter-rouge">TIAAction</code></a><br />
+<a href="../object/TopicTAction.html"><code class="language-plaintext highlighter-rouge">TopicTAction</code></a><br />
+<a href="../object/TravelAction.html"><code class="language-plaintext highlighter-rouge">TravelAction</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/FootnotesFullAction.html"><code class="language-plaintext highlighter-rouge">FootnotesFullAction</code></a> <a href="../object/FootnotesMediumAction.html"><code class="language-plaintext highlighter-rouge">FootnotesMediumAction</code></a> <a href="../object/FootnotesOffAction.html"><code class="language-plaintext highlighter-rouge">FootnotesOffAction</code></a> <a href="../object/Record.html"><code class="language-plaintext highlighter-rouge">Record</code></a> <a href="../object/RecordEvents.html"><code class="language-plaintext highlighter-rouge">RecordEvents</code></a> <a href="../object/RecordEventsString.html"><code class="language-plaintext highlighter-rouge">RecordEventsString</code></a> <a href="../object/RecordString.html"><code class="language-plaintext highlighter-rouge">RecordString</code></a> <a href="../object/Replay.html"><code class="language-plaintext highlighter-rouge">Replay</code></a> <a href="../object/ReplayString.html"><code class="language-plaintext highlighter-rouge">ReplayString</code></a> <a href="../object/RestoreString.html"><code class="language-plaintext highlighter-rouge">RestoreString</code></a> <a href="../object/Save.html"><code class="language-plaintext highlighter-rouge">Save</code></a> <a href="../object/SaveString.html"><code class="language-plaintext highlighter-rouge">SaveString</code></a> <a href="../object/ScriptOn.html"><code class="language-plaintext highlighter-rouge">ScriptOn</code></a> <a href="../object/ScriptString.html"><code class="language-plaintext highlighter-rouge">ScriptString</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#actionFailed"><code class="language-plaintext highlighter-rouge">actionFailed</code></a> <a href="#advanceOnFailure"><code class="language-plaintext highlighter-rouge">advanceOnFailure</code></a> <a href="#againRepeatsParse"><code class="language-plaintext highlighter-rouge">againRepeatsParse</code></a> <a href="#allowAll"><code class="language-plaintext highlighter-rouge">allowAll</code></a> <a href="#extraMessageParams"><code class="language-plaintext highlighter-rouge">extraMessageParams</code></a> <a href="#failCheckMsg"><code class="language-plaintext highlighter-rouge">failCheckMsg</code></a> <a href="#failedActionCountsAsTurn"><code class="language-plaintext highlighter-rouge">failedActionCountsAsTurn</code></a> <a href="#implicitTimeTaken"><code class="language-plaintext highlighter-rouge">implicitTimeTaken</code></a> <a href="#includeInUndo"><code class="language-plaintext highlighter-rouge">includeInUndo</code></a> <a href="#isConversational"><code class="language-plaintext highlighter-rouge">isConversational</code></a> <a href="#isImplicit"><code class="language-plaintext highlighter-rouge">isImplicit</code></a> <a href="#isRepeatable"><code class="language-plaintext highlighter-rouge">isRepeatable</code></a> <a href="#oldRoom"><code class="language-plaintext highlighter-rouge">oldRoom</code></a> <a href="#parentAction"><code class="language-plaintext highlighter-rouge">parentAction</code></a> <a href="#parentAllowAll"><code class="language-plaintext highlighter-rouge">parentAllowAll</code></a> <a href="#preCond"><code class="language-plaintext highlighter-rouge">preCond</code></a> <a href="#redirectParent"><code class="language-plaintext highlighter-rouge">redirectParent</code></a> <a href="#reportImplicitActions"><code class="language-plaintext highlighter-rouge">reportImplicitActions</code></a> <a href="#scopeList"><code class="language-plaintext highlighter-rouge">scopeList</code></a> <a href="#spellingPriority"><code class="language-plaintext highlighter-rouge">spellingPriority</code></a> <a href="#synthParamID"><code class="language-plaintext highlighter-rouge">synthParamID</code></a> <a href="#timeTaken"><code class="language-plaintext highlighter-rouge">timeTaken</code></a> <a href="#turnsTaken"><code class="language-plaintext highlighter-rouge">turnsTaken</code></a> <a href="#unhides"><code class="language-plaintext highlighter-rouge">unhides</code></a> <a href="#verifyObj"><code class="language-plaintext highlighter-rouge">verifyObj</code></a> <a href="#wasIlluminated"><code class="language-plaintext highlighter-rouge">wasIlluminated</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#acknowledgeNotifyStatus"><code class="language-plaintext highlighter-rouge">acknowledgeNotifyStatus</code></a> <a href="#addExtraScopeItems"><code class="language-plaintext highlighter-rouge">addExtraScopeItems</code></a> <a href="#addImplicitTime"><code class="language-plaintext highlighter-rouge">addImplicitTime</code></a> <a href="#advanceTime"><code class="language-plaintext highlighter-rouge">advanceTime</code></a> <a href="#afterAction"><code class="language-plaintext highlighter-rouge">afterAction</code></a> <a href="#announceObject"><code class="language-plaintext highlighter-rouge">announceObject</code></a> <a href="#beforeAction"><code class="language-plaintext highlighter-rouge">beforeAction</code></a> <a href="#buildImplicitActionAnnouncement"><code class="language-plaintext highlighter-rouge">buildImplicitActionAnnouncement</code></a> <a href="#buildScopeList"><code class="language-plaintext highlighter-rouge">buildScopeList</code></a> <a href="#checkAction"><code class="language-plaintext highlighter-rouge">checkAction</code></a> <a href="#checkActionPreconditions"><code class="language-plaintext highlighter-rouge">checkActionPreconditions</code></a> <a href="#commandNotPresent"><code class="language-plaintext highlighter-rouge">commandNotPresent</code></a> <a href="#exec"><code class="language-plaintext highlighter-rouge">exec</code></a> <a href="#execAction"><code class="language-plaintext highlighter-rouge">execAction</code></a> <a href="#execCycle"><code class="language-plaintext highlighter-rouge">execCycle</code></a> <a href="#execGroup"><code class="language-plaintext highlighter-rouge">execGroup</code></a> <a href="#getAll"><code class="language-plaintext highlighter-rouge">getAll</code></a> <a href="#getAllUnhidden"><code class="language-plaintext highlighter-rouge">getAllUnhidden</code></a> <a href="#getMessageParam"><code class="language-plaintext highlighter-rouge">getMessageParam</code></a> <a href="#implicitAnnouncement"><code class="language-plaintext highlighter-rouge">implicitAnnouncement</code></a> <a href="#reportAction"><code class="language-plaintext highlighter-rouge">reportAction</code></a> <a href="#scoreObjects"><code class="language-plaintext highlighter-rouge">scoreObjects</code></a> <a href="#setMessageParam"><code class="language-plaintext highlighter-rouge">setMessageParam</code></a> <a href="#setMessageParams"><code class="language-plaintext highlighter-rouge">setMessageParams</code></a> <a href="#spPrefix"><code class="language-plaintext highlighter-rouge">spPrefix</code></a> <a href="#spSuffix"><code class="language-plaintext highlighter-rouge">spSuffix</code></a> <a href="#synthMessageParam"><code class="language-plaintext highlighter-rouge">synthMessageParam</code></a> <a href="#turnSequence"><code class="language-plaintext highlighter-rouge">turnSequence</code></a> <a href="#verify"><code class="language-plaintext highlighter-rouge">verify</code></a> <a href="#verifyObjRole"><code class="language-plaintext highlighter-rouge">verifyObjRole</code></a> <a href="#wrapObjectsNP"><code class="language-plaintext highlighter-rouge">wrapObjectsNP</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ReplaceRedirector</code> :<br />
+<a href="../object/ReplaceRedirector.html#redirect"><code class="language-plaintext highlighter-rouge">redirect</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Redirector</code> :<br />
+<a href="../object/Redirector.html#doInstead"><code class="language-plaintext highlighter-rouge">doInstead</code></a> <a href="../object/Redirector.html#doNested"><code class="language-plaintext highlighter-rouge">doNested</code></a> <a href="../object/Redirector.html#doOtherAction"><code class="language-plaintext highlighter-rouge">doOtherAction</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="actionFailed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">actionFailed</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#29">29</a>]</p>
+
+<p>Flag; should this action be considered a failure? This should be reset
+to true at the start of the action processing cycle but can be tested
+later to prevent, e.g., inappropriate reporting.</p>
+
+<p><span id="advanceOnFailure"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">advanceOnFailure</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#190">190</a>]</p>
+
+<p>Flag: should the game time be advanced if this action fails? By default
+we allow it to advance, but this can be overridden to nil for actions
+that should take no time if they’re not carried out. [OBJTIME
+EXTENSION]</p>
+
+<p><span id="againRepeatsParse"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">againRepeatsParse</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#389">389</a>]</p>
+
+<p>If an AGAIN command is used with this command, should the command be
+reparsed from scratch (because it might involve a different object) or
+not (because it should act on the same objects). We generally set this
+to true for actions it wouldn’t normally make sense to repeat on the
+same object straight away. Since this applies to the majority of
+actions, we make this the default.</p>
+
+<p><span id="allowAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">allowAll</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#951">951</a>]</p>
+
+<p>Can ALL be used with this action? By default we take our value from
+gameMain.allVerbsAllowAll, though basic inventory-handling actions in
+the library will override this. This property is really only relevant on
+TAction and its descendents, but we define it here just to make sure no
+cases are missed.</p>
+
+<p><span id="extraMessageParams"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">extraMessageParams</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#762">762</a>]</p>
+
+<p>Extra message parameters. If a message processor wants to add special
+message parameters of its own, we’ll create a lookup table for the extra
+parameters. Message processors might want to add their own special
+parameters to allow referring to objects other than the main objects of
+the command.</p>
+
+<p><span id="failCheckMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">failCheckMsg</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#967">967</a>]</p>
+
+<p>The message to display if an action fails at the check stage (via an
+exit macro) without any other explanatory text being displayed.</p>
+
+<p><span id="failedActionCountsAsTurn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">failedActionCountsAsTurn</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#581">581</a>]</p>
+
+<p>Flag, do we want an action that fails at the verify stage to count as a
+turn (in other words, if an action fails at the verify stage, do we want
+to advance the turn counter,excecute daemons, and do all the other turn
+sequence stuff)? By default we do, since this has long been the standard
+behaviour, but game code can override this to nil either globally on the
+Action class on on individual actions to cause failure at the verify
+stage to abort the remainder of the turn sequence.</p>
+
+<p><span id="implicitTimeTaken"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">implicitTimeTaken</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#208">208</a>]</p>
+
+<p>The number of seconds to carry out this action as an implicit action. By
+default we don’t take any, since the normal convention seems to be to
+count implicit actions as part of the main action, but this could be
+overridden to be, say, the same as timeTaken if zero-time implicit
+actions were felt to give an unfair advantage to timed puzzles.
+[OBJTIME EXTENSION]</p>
+
+<p><span id="includeInUndo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">includeInUndo</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#367">367</a>]</p>
+
+<p>Can this action be Undone? By default most actions can.</p>
+
+<p><span id="isConversational"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isConversational</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#370">370</a>]</p>
+
+<p>Flag: is this a conversational action?</p>
+
+<p><span id="isImplicit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isImplicit</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#364">364</a>]</p>
+
+<p>Flag: is this an implicit action? By default it isn’t.</p>
+
+<p><span id="isRepeatable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isRepeatable</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#378">378</a>]</p>
+
+<p>Is this action repeatable (with an AGAIN command)? Most actions are so
+the default is true but subclasses can override to exclude actions (such
+as certain system actions) that it would make no sense to repeat.</p>
+
+<p><span id="oldRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">oldRoom</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#136">136</a>]</p>
+
+<p>The room the actor was in when the action started</p>
+
+<p><span id="parentAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parentAction</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#408">408</a>]</p>
+
+<p>Do we have a parent action, and if so what is it? The parent action
+would be the action that’s using us as an implicit action or nested
+action.</p>
+
+<p><span id="parentAllowAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parentAllowAll</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#960">960</a>]</p>
+
+<p>Does the command from which we’ve been redirected allow ALL?</p>
+
+<p><span id="preCond"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">preCond</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#146">146</a>]</p>
+
+<p>A list of any PreConditions that apply to this action as a whole, as
+opposed to any of its objects. This is most likely to be relevant to an
+IAction.</p>
+
+<p><span id="redirectParent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">redirectParent</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#957">957</a>]</p>
+
+<p>If we’ve been redirected here from another action, store a reference to
+that action.</p>
+
+<p><span id="reportImplicitActions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reportImplicitActions</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5371">5371</a>]</p>
+
+<p>Flag - do we want to show implicit action reports for this action? By
+default we do.</p>
+
+<p><span id="scopeList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scopeList</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#939">939</a>]</p>
+
+<p>Our currently cached list of items in scope for this action.</p>
+
+<p><span id="spellingPriority"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">spellingPriority</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#942">942</a>]</p>
+
+<p>Used by Mercury’s spelling corrector code.</p>
+
+<p><span id="synthParamID"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">synthParamID</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#753">753</a>]</p>
+
+<p>synthesized message object parameter serial number</p>
+
+<p><span id="timeTaken"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">timeTaken</code></p>
+
+<p><a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#198">198</a>]</p>
+
+<p>The number of seconds it takes to carry out this action. By default we
+assume every action takes one minute, but this can be overridden either
+globally on the Action class or individually on each actiom. [OBJTIME
+EXTENSION]</p>
+
+<p><span id="turnsTaken"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">turnsTaken</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#361">361</a>]</p>
+
+<p>The number of turns this action is counted as taking. Normally, this
+will be 1.</p>
+
+<p><span id="unhides"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unhides</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#989">989</a>]</p>
+
+<p>Flag: is this an action that acts on an object even if it is hidden;
+normally this will only apply to debugging actions.</p>
+
+<p><span id="verifyObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verifyObj</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#666">666</a>]</p>
+
+<p>The object currently being verified</p>
+
+<p><span id="wasIlluminated"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">wasIlluminated</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#139">139</a>]</p>
+
+<p>Flag to indicate whether the actor’s location started out illuminated</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="acknowledgeNotifyStatus"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acknowledgeNotifyStatus (stat)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#979">979</a>]</p>
+
+<p>acknowledge a change in the score notification status</p>
+
+<p><span id="addExtraScopeItems"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addExtraScopeItems (role?)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#933">933</a>]</p>
+
+<p>Add extra scope items if this action needs a wider definition of scope
+than normal. By default we simply allow the current actor’s current
+location to add additional items to scope if it wishes to.</p>
+
+<p><span id="addImplicitTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addImplicitTime ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#995">995</a>],
+<a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#214">214</a>]</p>
+
+<p>This does nothing in the main library but is provided as a hook for the
+objtime extension to use to add to the time taken by implicit actions.</p>
+
+<p><em>Modified in
+<a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#214">214</a>]:</em><br />
+Add our implicitTimeTaken to the total time taken for the turn.
+[OBJTIME EXTENSION]</p>
+
+<p><span id="advanceTime"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">advanceTime ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1001">1001</a>],
+<a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#176">176</a>]</p>
+
+<p>Advance the game clock time. This does nothing in the main library but
+is provided as a hook for the objtime extension to use.</p>
+
+<p><em>Modified in
+<a href="../file/objtime.t.html">objtime.t</a>[<a href="../source/objtime.t.html#176">176</a>]:</em><br />
+Advance the notional game time [OBJTIME EXTENSION]</p>
+
+<p><span id="afterAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">afterAction ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#263">263</a>],
+<a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#352">352</a>]</p>
+
+<p>Carry out the post-action processing. This first checks to see if
+there’s been a change in illumination. If there has we either show a
+room description (if the actor’s location is now lit) or announce the
+onset of darkness. We then call the after action notifications first on
+the actor’s current room and then on every object in scope.</p>
+
+<p>Note that afterAction() is called from the current Command object.</p>
+
+<p><em>Modified in
+<a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#352">352</a>]:</em><br />
+Carry out the post-action processing. This first checks to see if
+there’s been a change in illumination. If there has we either show a
+room description (if the actor’s location is now lit) or announce the
+onset of darkness. We then call the after action notifications first on
+the actor’s current room and then on every object in scope.</p>
+
+<p>Note that afterAction() is called from the current Command object.
+[MODIFIED FOR SYSRULES EXTENSION]</p>
+
+<p><span id="announceObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">announceObject (obj)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5491">5491</a>]</p>
+
+<p>Announce an object (for use to introduce a report on what an action does
+to particular object when it’s one of a number of objects the actions is
+acting upon)</p>
+
+<p><span id="beforeAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">beforeAction ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#209">209</a>],
+<a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#377">377</a>]</p>
+
+<p>Return our overall check result.</p>
+
+<p><em>Modified in
+<a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#377">377</a>]:</em><br />
+[MODIFIED FOR SYSRULES EXTENSION] Use the beforeRules RuleBook to
+carry out the before action handling.</p>
+
+<p><span id="buildImplicitActionAnnouncement"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildImplicitActionAnnouncement (success, clearReports, =, true)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5380">5380</a>]</p>
+
+<p>Construct the announcement of an implicit action according to whether
+the implict action succeeds (success = true) or fails (success = nil)</p>
+
+<p>[Required]</p>
+
+<p><span id="buildScopeList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildScopeList (whichRole, =, DirectObject)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#917">917</a>]</p>
+
+<p>Build the scope list for this action.</p>
+
+<p><span id="checkAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkAction ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#46">46</a>]</p>
+
+<p>The checkAction() method calls the check routines on the objects
+involved in the command (where there are objects). Subclasses such as
+TAction and TIAction need to override this to carry out the appropriate
+handling.</p>
+
+<p><span id="checkActionPreconditions"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkActionPreconditions ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#148">148</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="commandNotPresent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">commandNotPresent ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#971">971</a>]</p>
+
+<p>optional command is not supported in this game</p>
+
+<p><span id="exec"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exec (cmd)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#53">53</a>]</p>
+
+<p>The main routine for handling an action. This is the method called by
+the command object; the cmd parameter gives the calling Command object.</p>
+
+<p><span id="execAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execAction (cmd)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#131">131</a>]</p>
+
+<p>The main action handler. Subclasses must override.</p>
+
+<p><span id="execCycle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execCycle (cmd)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#88">88</a>]</p>
+
+<p>The action-processing cycle carries out the before action notifications,
+then executes the action. This needs to be overridden on various
+subclasses since the beforeAction notifications can occur at different
+points in different kinds of action.</p>
+
+<p><span id="execGroup"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execGroup (cmd)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#38">38</a>]</p>
+
+<p>The execGroup() method is called by the current Command object before it
+calls the action on individual objects, to allow processing of the group
+of objects as a whole. By default we do nothing here in the library.</p>
+
+<p><span id="getAll"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getAll (cmd, role)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#772">772</a>]</p>
+
+<p>Get a list of all the objects that this action should act on if the
+player typed ALL for role (DirectObject, IndirectObject, or perhaps in
+some future version of the library, AccessoryObject. This is the method
+that can be overridden on subclasses to give action-specific definitions
+of ALL.</p>
+
+<p><span id="getAllUnhidden"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getAllUnhidden (cmd, role)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#786">786</a>]</p>
+
+<p>Get a list of all the objects this action will act on if the player
+types ALL for role (DirectObject or IndirectObject). This is the method
+actually called by the Parser. We first obtain the list of objects
+returned by getAll() and then filter out any objects for which
+hideFromAll(action) is true for this action. Subclasses should normally
+override getAll() rather than this method.</p>
+
+<p><span id="getMessageParam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getMessageParam (objName)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#674">674</a>]</p>
+
+<p>Get a message parameter object for the action. Each action subclass
+defines this to return its objects according to its own classifications.
+The default action has no objects, but recognizes ‘actor’ as the current
+command’s actor.</p>
+
+<p><span id="implicitAnnouncement"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">implicitAnnouncement (success)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5473">5473</a>]</p>
+
+<p>Return a string giving the implicit action announcement for the current
+action according to whether it’s a success (e.g. “taking the spoon”) or
+a failure (e.g. “trying to take the spoon”). We make this a separate
+method to make it a little easier for game code to customize implicit
+action announcements.</p>
+
+<p>A return value of nil will suppress the implicit action report for this
+action altogeher.</p>
+
+<p><span id="reportAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reportAction ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#400">400</a>]</p>
+
+<p>Report on the action. This is only relevant where the action has more or
+one objects, so TAction must override. This is called from the current
+Command object once all the objects have been acted on (in a case where
+multiple direct objects have been specified, as in TAKE ALL or TAKE RED
+BALL AND GREEN PEN). This allows the report routine to summarize the
+action for all the objects acted upon instead of displaying an
+individual report for each one.</p>
+
+<p><span id="scoreObjects"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scoreObjects (cmd, role, lst)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#832">832</a>]</p>
+
+<p>Score a set of objects in a given noun role in the action, in order to
+resolve an ambiguous command. Our job, in brief, is to READ THE PLAYER’S
+MIND: we want to figure out which object or objects the player is
+actually referring to when their words are ambiguous.</p>
+
+<p>‘cmd’ is the Command object describing the command. The various object
+lists (dobjs, iobjs, accs) have been filled in with the in-scope objects
+that match the noun phrase, but these haven’t been disambiguated yet, so
+there might be more objects listed than will actually be used in the
+final command.</p>
+
+<p>‘role’ tells us the noun phrase role that we’re scoring (DirectObject,
+IndirectObject, AccessoryObject, TopicRole, LiteralRole).</p>
+
+<p>‘lst’ is the match list. This is a Vector containing NPMatch objects.
+There’s one NPMatch for each object that we’re considering as a match
+for the player’s noun phrase.</p>
+
+<p>For each item in the match list, we must set the NPMatch object’s
+‘score’ property to a number indicating how likely we think it is that
+the player is referring to this object. The higher the score, the more
+likely we think it is. The score value is purely relative - the caller
+will pick the object or objects with the highest score.</p>
+
+<p>We run through the verify routine for each object, which in turn runs
+through the preconditions of that object. We take the returned verify
+score to be the score for the object (or its replacement if remapping
+took place).</p>
+
+<p>Next, we do any verb-specific adjustments via self.actionScore().</p>
+
+<p>Finally, we call each object’s scoreObject() routine to give the object
+a chance to make any adjustments for special affinities (or aversions).</p>
+
+<p><span id="setMessageParam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setMessageParam (objName, obj)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#710">710</a>]</p>
+
+<p>Define an extra message-specific parameter. Message processors can use
+this to add their own special parameters, so that they can refer to
+parameters that aren’t involved directly in the command. For example, a
+message for “take &lt;dobj&gt;” might want to refer to the object containing
+the direct object.</p>
+
+<p><span id="setMessageParams"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setMessageParams ([lst])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#727">727</a>]</p>
+
+<p>For convenience, this method allows setting any number of name/value
+pairs for message parameters.</p>
+
+<p><span id="spPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">spPrefix (str)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5483">5483</a>]</p>
+
+<p>add a space prefix/suffix to a string if the string is non-empty</p>
+
+<p><span id="spSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">spSuffix (str)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#5484">5484</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="synthMessageParam"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">synthMessageParam (obj)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#738">738</a>]</p>
+
+<p>Synthesize a global message parameter name for the given object. We’ll
+store the association and return the synthesized name.</p>
+
+<p><span id="turnSequence"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">turnSequence ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#329">329</a>],
+<a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#406">406</a>]</p>
+
+<p>The turnSequence() method is called from the current Command object. It
+first executes any current daemons (apart from any PromptDaemons) and
+then advances the turn counter. We define this on the Action class
+principally to make it simple for certain kinds of Action such as
+SystemActions to do nothing here (since they don’t count as actions
+within the game world).</p>
+
+<p><em>Modified in
+<a href="../file/sysrules.t.html">sysrules.t</a>[<a href="../source/sysrules.t.html#406">406</a>]:</em><br />
+[MODIFIED FOR SYSRULES EXTENSION] Use the turnEnd RuleBook to carry
+out the end-of-turn processing.</p>
+
+<p><span id="verify"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verify (obj, role)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#417">417</a>]</p>
+
+<p>Carry out the verification stage for this object in this role, and carry
+out any remapping needed. This needs to be defined on Action since there
+might be verification of the ActorRole.</p>
+
+<p><span id="verifyObjRole"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">verifyObjRole (obj, role)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#591">591</a>]</p>
+
+<p>Run the verify routine on the current object in the current role to see
+whether it will allow the action. If it won’t, display any pending
+implicit action announcements, then display the message explaining why
+the action is disallowed, and finally return nil to tell our caller to
+halt the action. If the verify stage does allow the action to go ahead,
+return true to tell our caller that this routine has no objection.</p>
+
+<p><span id="wrapObjectsNP"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">wrapObjectsNP (lst)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#904">904</a>]</p>
+
+<p>Wraps a list of objects in NPMatch objects so they can be run through
+the scoreObjects method.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-globalparamname-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-globalparamname-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>globalParamName<br />
+</strong></td>
+<td style="text-align: right;"><a href="initdesc+initspecialdesc.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="specialdesc.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The brassCoin is a little unusual in that it changes its name when it is
+first examined. This really ought to be reflected in the initSpecialDesc
+property which could instead have been defined as:</p>
+
+<p>initSpecialDesc = ”\&lt;&lt;aName&gt;&gt; lies on the ground in a dim corner of the cave. ”</p>
+
+<p>Then, before the coin is examined it will be listed in a room
+description as:</p>
+
+<p>“A small brassy object lies on the ground in a dim corner of the cave.
+“</p>
+
+<p>Whereas if it is examined before being picked up and another LOOK
+command is issued, it will then appear listed as:</p>
+
+<p>“A small brass coin lies on the ground in a dim corner of the cave.”</p>
+
+<p>Which more accurately describes the player’s state of knowledge of the
+object. This is fine, but globalParamName allows a slightly neater way
+of doing the same thing. It’s really only useful on objects that change
+their name in the course of the game (which is likely to be a small
+minority), and they allow the object to be referred to in a
+<a href="%20http://www.tads.org/howto/t3msg.html%20" target="_top">parameter substitution string</a>. This works by setting
+the globalParamName property to a single-quoted string that can be
+anything we like, but which must be unique (in the realm of parameter
+names). The globalParamName thus set can then be used as a message
+parameter which refers to this particular object, just as the library
+parameter dobj and iobj refer to the direct and indirect objects of the
+current command. This means we can then rewrite initSpecialDesc as</p>
+
+<p>initSpecialDesc = ”{A coin/he} lies on the ground in a dim corner of the cave. ”</p>
+
+<p>The definition of the brass coin object then becomes:</p>
+
+<p>brassCoin : Thing ’(small) brassy object’ ’small brassy object’ @longCave<br />
+  ”On the obverse is the head of King Freddie the Fat, and on the reverse<br />
+   is stamped ONE GROAT. ” <br />
+   <strong>initSpecialDesc = ”{A coin/he} lies on the ground in a dim corner of the cave. ”<br />
+**   initDesc = ”It looks like it might be a coin of some sort. ” <br />
+   </strong>globalParamName = ’coin’**<br />
+  <br />
+   dobjFor(Examine)<br />
+   {<br />
+     action()<br />
+     {<br />
+       inherited;<br />
+       changeName();<br />
+     }<br />
+   }<br />
+   changeName()<br />
+   {<br />
+     name = ’small brass coin’;<br />
+     cmdDict.removeWord(self, ’object’, &amp;noun);<br />
+     initializeVocabWith(‘brass coin/groat*coins’);<br />
+   } <br />
+;</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-collectivegroup-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-collectivegroup-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CollectiveGroup (static) : <a href="thing-introduction.html">Thing</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="multifaceted.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="collectivegroup(mobile).html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A CollectiveGroup is useful when you want some actions, typically
+EXAMINE, to work in a summary fashion rather than on every object that
+might match. In the abstract this probably doesn’t mean a great deal, so
+let’s create a specific example. A little while back we created a
+museum. The natural thing to do is to put some exhibits in it:</p>
+
+<p>museum : Room ’Museum of Curious Antiquities’ ’the main museum’<br />
+ ”Many display cases line this long chamber, each containing its own curious<br />
+  exhibit. There seems to be another chamber off to the south, marked by<br />
+  a sign saying &lt;q&gt;Benefactors’ Exhibition&lt;/q&gt;, while the main exit is to the east. ”<br />
+ east = museumLobby<br />
+ <strong>south = benefactorsRoom</strong><br />
+;</p>
+
+<p>+ Decoration ’sign’ ’sign’<br />
+  ”&lt;FONT COLOR=BLUE&gt;BENEFACTORS’ EXHIBITION&lt;/FONT&gt;\n<br />
+   Special Exhibits reserved for our benefactors\n<br />
+   Sorry! No bags allowed (we have to be careful!)”<br />
+;</p>
+
+<p>+ Decoration ’amber amulet/amazement*cases exhibits’ ’Amber Amulet of Amazement’<br />
+  ”The pendant on display in this case is indisputably amber, and quite possibly<br />
+   an amulet. The accompanying plaque explains that its principal source of amazement<br />
+   is that it performed no useful function whatsoever despite having several times <br />
+   changed hands at ever more inflated prices. &lt;i&gt;Quam credulus emptor nemo ineptior&lt;/i&gt;<br />
+   the plaque concludes pompously. ”<br />
+  aName = (theName)<br />
+  collectiveGroups = [exhibitGroup]<br />
+;</p>
+
+<p>+ Decoration ’green gargoyle/gloom*cases exhibits’ ’Green Gargolye of Gloom’<br />
+  ”The Green Gargoyle of Gloom is so ugly it would probably turn the Gorgon Medusa<br />
+   to stone. The small plaque affixed to the display case explains that it was made<br />
+   by the mad demons of Hell Fire Cavern in a fit of psychotic fury, and then cast<br />
+   out into the world of men as being too hideous for mere demonkind to bear. It<br />
+   subsequently caused a public scandal when King Freddie the Fatuous mistook it<br />
+   for a bust of his wife.”<br />
+  aName = (theName)<br />
+  collectiveGroups = [exhibitGroup]<br />
+;</p>
+
+<p>+ Decoration ’lost king crown/peregrine*cases exhibits’ ’Lost Crown of King Peregrine’<br />
+  ”Frankly, this does not seem to be the most impressive exhibit in the room. The<br />
+   Lost Crown of King Peregrine the Pipsqueak looks like it came out of a <br />
+   cheap Christmas cracker and then got itself coated with even cheaper tinsel. <br />
+   The plaque on the display case nevertheless assures all who care to read it<br />
+   that this was indeed genuinely the crown of this most ignominious of<br />
+   insignificant monarchs. ”<br />
+  aName = (theName)<br />
+  collectiveGroups = [exhibitGroup]<br />
+;</p>
+
+<p>+ Decoration ’invisible naked mantle/emperor*cases exhibits’ ’Invisible Mantle of the Naked Emperor’<br />
+  ”The display case housing the Invisible Mantle appears to be empty, but the plaque<br />
+   affixed to it declares that the Naked Emperor’s Invisible Mantle is indeed there,<br />
+   woven of the finest invisible cloth - so precious that none but the Naked Emperor<br />
+   dare be seen wearing it in public (and even then not around small boys who might<br />
+   ask awkward questions). ”<br />
+  aName = (theName)<br />
+  collectiveGroups = [exhibitGroup]<br />
+;</p>
+
+<p>At this stage, if the player types EXAMINE EXHIBITS or X CASES all four
+exhibits will be listed, together with their full descriptions. In place
+of this information overload, we may prefer to give the player a summary
+description of the exhibits on display; we can do this by defining a
+CollectiveGroup object with the same <em>plural</em> vocabulary that we’ve
+given to each of the exhibits:</p>
+
+<p>+ exhibitGroup : CollectiveGroup, SecretFixture ’display *cases*exhibits’ ’exhibits’  <br />
+  ”The exhibits include such rare curiosities as the Amber Amulet of Amazement, the<br />
+   Green Gargoyle of Gloom, the Lost Crown of King Peregrine the Pipsqueak<br />
+    and the Invisible Mantle of the Naked Emperor. ”    <br />
+;</p>
+
+<p>By default, straight out of the box, the CollectiveGroup only handles
+the EXAMINE command, but if we want we can change this by overriding
+isCollectiveAction(action, whichObj) and providing suitable handling on
+the CollectiveGroup. For example, we might want a collective response to
+an attempt to TAKE EXHIBITS:</p>
+
+<p>+ exhibitGroup : CollectiveGroup, SecretFixture ’display *cases*exhibits’ ’exhibits’  <br />
+  ”The exhibits include such rare curiosities as the Amber Amulet of Amazement, the<br />
+   Green Gargoyle of Gloom, the Lost Crown of King Peregrine the Pipsqueak<br />
+    and the Invisible Mantle of the Naked Emperor. ”    <br />
+   isCollectiveAction(action, whichObj)<br />
+     {<br />
+         /* we handle ’Examine’ and ’Take’*/<br />
+         if (action.ofKind(ExamineAction) || action.ofKind(TakeAction))<br />
+             return true;<br />
+ <br />
+         /* it’s not one of ours */<br />
+         return nil;<br />
+     }<br />
+   dobjFor(Take)<br />
+   {<br />
+     verify() { illogical(‘The exhibits are all fixed in place and protected<br />
+       by an alarm system. ’); }<br />
+   }<br />
+;</p>
+
+<p>(It may be debatable whether information about a previously unmentioned
+alarm system belongs in a call to illogical, but it should be reasonably
+obvious to the player that s/he can’t just walk off with museum
+exhibits, so this seems the best place to put it; besides, there’s no
+way we could put the ‘fixed in place’ part of the message in verify()
+and the ‘alarm system’ part in check() and have both displayed).</p>
+
+<p>If you wanted, you could take this a stage further still and have
+exhibitGroup.isCollectiveAction simply return true; any attempt to do
+anything to the exhibits will then give a perfectly good summary
+response. In the meantime, we should add the Benefactors’ Room referred
+to in the south property of the museum, together with the Golden Banana
+of Discord in its specially protected display case:</p>
+
+<p>benefactorsRoom : Room ’Benefactors\ Exhibition Room’ ’the benefactors\ room’<br />
+ ”This room seems brighter and cleaner than the main section of the museum,<br />
+  but is curiously bare, apart from a single glass display case in the middle<br />
+  of the room. ”<br />
+ north = museum<br />
+ out asExit(north)<br />
+;</p>
+
+<p>+ bananaCase : Container, Fixture ’glass display case’ ’display case’<br />
+  ”The case is of much higher quality that the display cases outside; standing on<br />
+   a polished oak plinth the large square case is held together with polished<br />
+   brass strips framing the glass sides and top. A polished brass plaque fastened<br />
+   near the top of the plinth declares the contents of the case to be the Golden<br />
+   Banana of Discord. ”  <br />
+  isOpen = nil<br />
+  material = glass<br />
+  dobjFor(CutWith)<br />
+  {<br />
+    verify() <br />
+    { <br />
+      if(isOpen) illogicalNow(‘It\s already been cut open. ’); <br />
+    }<br />
+    check()<br />
+    {<br />
+      if(gIobj != diamondRing)      <br />
+        failCheck(‘{You/he} can\t cut it with that. ’);       <br />
+    }<br />
+    action()<br />
+    {<br />
+      ”{You/he} cut{s} open the glass display case. ”;<br />
+      if(gActor != gPlayerChar)<br />
+        ”&lt;q&gt;There you are!&lt;/q&gt; {you/she} declare{s}, &lt;q&gt;Easy!&lt;/q&gt;\.p&gt;”;<br />
+      isOpen = true;<br />
+      microphone.notifyCut();<br />
+    } <br />
+  }<br />
+;</p>
+
+<p>++ goldenBanana : Thing ’golden banana/discord’ ’Golden Banana of Discord’<br />
+  ”It’s about the shape and size of an ordinary banana, but seems to be made<br />
+    of solid gold. ”<br />
+  aName = (theName)<br />
+  weight = 6<br />
+  isListedInContents = (!isIn(bananaCase))<br />
+;<br />
+  <br />
++ Fixture ’polished oak plinth’ ’plinth’<br />
+  ”The polished oak plinth supporting the glass display case is about a foot square<br />
+   and three feet tall. It’s quite plain in design, apart from a decoratively<br />
+   carved slat just beneath the case. ”<br />
+;</p>
+
+<p>++ Component ’decoratively carved leaf slat/pattern’ ’ridge’<br />
+  ”The slat, decoratively carved with a leaf pattern, runs round the top<br />
+   of the plinth, just beneath the glass display case. Close inspection<br />
+   reveals a small round black disc inset into one side of the slat, just above<br />
+   the plaque. ”<br />
+;</p>
+
+<p>+++ microphone : Attachable, Component ’small round black disc/disk/microphone’<br />
+   ’small round disc’<br />
+   ”Closer examination reveals that it could very well be a small<br />
+    microphone. &lt;&lt;rename&gt;&gt;”<br />
+   rename { name = ’microphone’; }  <br />
+   canAttachTo(obj) { return obj==stickingPlaster; }<br />
+   handleAttach(other)<br />
+   { other.moveInto(location.location); }<br />
+   <br />
+   moveWhileAttached(movedObj, newCont)<br />
+   {<br />
+     if(movedObj != self &amp;&amp; newCont != location.location)<br />
+        tryImplicitAction(DetachFrom, movedObj, self); <br />
+   }<br />
+   isMajorItemFor(obj) { return obj==stickingPlaster; }<br />
+   notifyCut() <br />
+   { <br />
+     if(!isAttachedTo(stickingPlaster))<br />
+     {        <br />
+        curator.moveIntoForTravel(benefactorsRoom);<br />
+       ”Almost at once an alarm bell starts ringing and a couple <br />
+        of seconds later {the curator/he} comes running into the <br />
+        room to find out what’s happened. He stares aghast at the <br />
+        opened case.&lt;.p&gt;”;        <br />
+     }         <br />
+   }<br />
+;   <br />
+   <br />
+++ bananaPlaque : Component ’brass plaque’ ’brass plaque’<br />
+   ”The plaque attached to the front of the case explains that this <br />
+   indeed &lt;i&gt;The&lt;/i&gt; famous Golden<br />
+   Banana, forged aeons ago in the fires of Mount Gloom, and borne out<br />
+   of Hell Fire Cavern by Benedict the Banana-Bearer at the cost of his<br />
+   sanity and his left big toe-nail. The plaque also warns:\b<br />
+   &lt;q&gt;This artefact is the most highly-treasured property of the state:\n<br />
+   Anyone attempting to steal it will be terminated without trial!&lt;/q&gt; ”<br />
+;</p>
+
+<p>As you’ll observe, the intention is to allow the player character or
+Sarah to cut open the glass case with the diamond ring, but to have the
+sound of their doing so picked up by a microphone that triggers an alarm
+unless the player has first attached a sticking plaster over the
+microphone to prevent it. For this to work we need to make sure that the
+sticking plaster, defined long ago as part of the contents of the first
+aid box, is also an Attachable:</p>
+
+<p>++ stickingPlaster : <strong>Attachable</strong>, Thing ’sticking adhesive plaster’ ’sticking plaster’<br />
+  ”It’s a small, round flesh-coloured sticking plaster that might just cover<br />
+   a small cut or blister. ”<br />
+;</p>
+
+<p>Note: as from TADS 3.0.10 it became possible for an object to be
+associated with more than one CollectiveGroup. Previously it was
+possible for an object to belong to only one collectiveGroup at a time,
+and membership of that group would have been indicated by setting the
+old collectiveGroup property to the single collectiveGroup object
+thus:</p>
+
+<p>+ Decoration ’amber amulet/amazement*cases exhibits’ ’Amber Amulet of Amazement’<br />
+  ”The pendant on display in this case is indisputably amber, and quite possibly<br />
+   an amulet. The accompanying plaque explains that its principal source of amazement<br />
+   is that it performed no useful function whatsoever despite having several times <br />
+   changed hands at ever more inflated prices. &lt;i&gt;Quam credulus emptor nemo ineptior&lt;/i&gt;<br />
+   the plaque concludes pompously. ”<br />
+  aName = (theName)<br />
+  collectiveGroup = exhibitGroup<br />
+;</p>
+
+<p>This way of doing things is still legal, and it will still work, but it
+is now regarded as ‘obsolescent’, so that new game code should instead
+use the collectiveGroups property (with an s on the end) set to a list
+of groups (even if the list contains only a single member) as in the
+previous examples. The practical reason for avoiding the now obsolescent
+collectiveGroup property in new game code is that support for it may
+eventually be withdrawn.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-file-tadsiox-h-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-file-tadsiox-h-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">tadsiox.h</span><span class="type">file</span></p>
+
+<p><a href="../source/tadsiox.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<p>This header defines the tads-io-ext function sets, which provides
+optional extensions to the standard input/output set.</p>
+
+<p>These functions are defined in a separate function set from the basic
+tads-io set, because the features defined here are available only on
+certain platforms. Be aware that using this function set will limit your
+program to interpreters that support it, and will prevent your program
+from running on some systems.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><em>(none)</em> <span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><a href="#enableSystemMenuCommand"><code class="language-plaintext highlighter-rouge">enableSystemMenuCommand</code></a> <a href="#showPopupMenu"><code class="language-plaintext highlighter-rouge">showPopupMenu</code></a></p>
+
+<p><span id="_MacroSummary_"></span></p>
+
+<p><span class="hdln">Summary of Macros</span>  </p>
+
+<p><a href="#MenuStatEventDisable"><code class="language-plaintext highlighter-rouge">MenuStatEventDisable</code></a> <a href="#MenuStatEventEnable"><code class="language-plaintext highlighter-rouge">MenuStatEventEnable</code></a> <a href="#MenuStatLineDisable"><code class="language-plaintext highlighter-rouge">MenuStatLineDisable</code></a> <a href="#MenuStatLineEnable"><code class="language-plaintext highlighter-rouge">MenuStatLineEnable</code></a> <a href="#PopMenuCancel"><code class="language-plaintext highlighter-rouge">PopMenuCancel</code></a> <a href="#PopMenuEof"><code class="language-plaintext highlighter-rouge">PopMenuEof</code></a> <a href="#PopMenuFail"><code class="language-plaintext highlighter-rouge">PopMenuFail</code></a> <a href="#PopMenuHRef"><code class="language-plaintext highlighter-rouge">PopMenuHRef</code></a></p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<p><span class="hdln">Summary of Enums</span>  </p>
+
+<p><em>(none)</em> <span id="_TemplateSummary_"></span></p>
+
+<p><span class="hdln">Summary of Templates</span>  </p>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><span id="enableSystemMenuCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">enableSystemMenuCommand (id, stat)</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#106">106</a>]</p>
+
+<p>Enable/disable a system menu command. Some interpreters offer a set of
+common system-level game commands via menus, toolbars, or similar UI
+widgets, depending on local conventions - commands such as SAVE,
+RESTORE, UNDO, and QUIT that most games offer.</p>
+
+<p>By default, when the player selects this sort of menu command, the
+interpreter sends it to the game by stuffing the literal text of the
+command into the command line, and returning it from the command-line
+input function (inputLine(), typically). This was traditionally the only
+way for the interpreter to send this sort of command to the game. In
+particular, there was no way to send this kind of command via the “event
+input” mechanism (as in inputEvent()).</p>
+
+<p>This function allows the game to control (1) which commands are enabled
+for normal command-line input, and (2) whether or not the commands are
+enabled for inputEvent(). By default, all commands are enabled for
+inputLine(), and all are disabled for inputEvent().</p>
+
+<p>When a command is enabled for inputLine(), it’s returned from
+inputLine() as the command-line string corresponding to the command. The
+SAVE command is returned as the text “save”, for example.</p>
+
+<p>When a command is enabled for inputEvent(), it’s returned as an
+InEvtSysCommand event, with the command ID in the second element of the
+event record’s list.</p>
+
+<p>‘id’ is the ID of the command to enable/disable, or a list or vector of
+IDs to set. If a list or vector is used, all of the commands listed are
+set to the same new status. Command IDs are given by the XxxCommand
+values defined in tadsio.h.</p>
+
+<p>‘stat’ is the new status to send. This is a combination of the
+MenuStatXxxEnable and MenuStatXxxDisable flags defined below. For any
+Xxx, only one of Enable or Disable can be used - if both are specified
+together, the Enable flag takes precedence. If you don’t specify either
+the Enable or Disable flag for an Xxx, then the command is unaffected in
+that context - that is, its previous value is left in effect. For
+example, if you specify MenuStatEventEnable, then the command is enabled
+for inputEvent(), and its previous status for inputLine() is left
+unchanged.</p>
+
+<p><span id="showPopupMenu"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showPopupMenu (x, y, txt)</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#61">61</a>]</p>
+
+<p>Show a popup menu. This opens a temporary window, drawn in a style
+consistent with the local conventions for popup menus. The new window is
+shown in the foreground, in front of the active game window. ‘txt’ gives
+HTML text that’s used for the contents of the new window.</p>
+
+<p>‘x’ and ‘y’ give the location of the top left corner of the new window.
+The coordinates are given in pixels relative to the top left of the game
+window. If these are nil (note that *both* must be nil if either one
+is), the popup is shown at a suitable local default position for a
+context menu. On Windows, the default position is the current mouse
+position.</p>
+
+<p>This function doesn’t return until the user either makes a selection
+from the menu or cancels the menu. If the user clicks the mouse outside
+of the popup menu, or switches to a different window, the popup is
+canceled - this means that the popup menu will automatically disappear,
+and the function will return the ‘canceled’ status code. If the user
+makes a selection from the popup menu by clicking on a hyperlink shown
+within the menu, the menu disappears and the function returns the ‘href’
+status code and the HREF text of the selected hyperlink.</p>
+
+<p>(Note that some systems might have different local conventions for
+operating a popup menu, so the actual user actions involved in selecting
+or canceling might differ from system to system. In these cases, the
+local conventions apply.)</p>
+
+<p>The return value is a list. The first element of the list is one of the
+PopMenuXxx status codes, indicating what happened. If the status code is
+PopMenuHRef, the list will have a second element, containing a string
+giving the HREF of the hyperlink the user clicked on. For any other
+status codes, the list will have no further elements.</p>
+
+<p><span id="_Macros_"></span></p>
+
+<p><span class="hdln">Macros</span>  </p>
+
+<p><span id="MenuStatEventDisable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuStatEventDisable</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#162">162</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(0x0001 | 0x0000)</code><br />
+<em>no description available</em></p>
+
+<p><span id="MenuStatEventEnable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuStatEventEnable</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#161">161</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(0x0001 | 0x0002)</code><br />
+<em>no description available</em></p>
+
+<p><span id="MenuStatLineDisable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuStatLineDisable</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#159">159</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(0x0004 | 0x0000)</code><br />
+<em>no description available</em></p>
+
+<p><span id="MenuStatLineEnable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuStatLineEnable</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#158">158</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(0x0004 | 0x0008)</code><br />
+enableSystemMenuCommand() status codes. You can control the inputLine()
+and inputEvent() status of a command independently - simply specify the
+flags for the context you want to change, and leave the others
+unspecified.</p>
+
+<p>MenuStatLineEnable and MenuStatLineDisable let you control the
+inputLine() status of a command. If neither is specified, the old status
+is left unchagned for inputLine().</p>
+
+<p>MenuStatEventEnable and MenuStatEventDisable control the inputEvent()
+status of a command. If neither is specified, the old status is left
+unchagned for inputEvent().</p>
+
+<p><span id="PopMenuCancel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">PopMenuCancel</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#134">134</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">2</code><br />
+Canceled: the user canceled the menu. This usually means that the user
+clicked outside of the menu, or switched to a different application.</p>
+
+<p><span id="PopMenuEof"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">PopMenuEof</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#140">140</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">3</code><br />
+“End of file”: this indicates that the application is being terminated,
+so it’s not possible to obtain any further input from the user.</p>
+
+<p><span id="PopMenuFail"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">PopMenuFail</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#121">121</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0</code><br />
+Failed: the popup menu could not be shown. This could indicate a
+resource problem (low memory, for example) or another system problem.</p>
+
+<p><span id="PopMenuHRef"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">PopMenuHRef</code></p>
+
+<p><a href="../file/tadsiox.h.html">tadsiox.h</a>[<a href="../source/tadsiox.h.html#128">128</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">1</code><br />
+HRef: the user clicked on a hyperlink shown in the menu. The list will
+contain a second element giving a string with the HREF of the hyperlink
+the user selected.</p>
+
+<p><span id="_Enums_"></span></p>
+
+<p><span class="hdln">Enums</span>  </p>
+
+<p><em>(none)</em> <span id="_Templates_"></span></p>
+
+<p><span class="hdln">Templates</span>  </p>
+
+<p><em>(none)</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-file-parser-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-file-parser-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">parser.t</span><span class="type">file</span></p>
+
+<p><a href="../source/parser.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p>TADS 3 Library: parser</p>
+
+<p>This modules defines the language-independent parts of the command
+parser.</p>
+
+<p>Portions based on xiny.t, copyright 2002 by Steve Breslin and
+incorporated by permission.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><a href="../object/ActorResolveResults.html"><code class="language-plaintext highlighter-rouge">ActorResolveResults</code></a> <a href="../object/AllInContainerNounPhraseProd.html"><code class="language-plaintext highlighter-rouge">AllInContainerNounPhraseProd</code></a> <a href="../object/AllPluralProd.html"><code class="language-plaintext highlighter-rouge">AllPluralProd</code></a> <a href="../object/AmbigResponseKeeper.html"><code class="language-plaintext highlighter-rouge">AmbigResponseKeeper</code></a> <a href="../object/ArbitraryNounProd.html"><code class="language-plaintext highlighter-rouge">ArbitraryNounProd</code></a> <a href="../object/BasicContainerResolver.html"><code class="language-plaintext highlighter-rouge">BasicContainerResolver</code></a> <a href="../object/BasicPossessiveProd.html"><code class="language-plaintext highlighter-rouge">BasicPossessiveProd</code></a> <a href="../object/BasicProd.html"><code class="language-plaintext highlighter-rouge">BasicProd</code></a> <a href="../object/BasicResolveResults.html"><code class="language-plaintext highlighter-rouge">BasicResolveResults</code></a> <a href="../object/BothPluralProd.html"><code class="language-plaintext highlighter-rouge">BothPluralProd</code></a> <a href="../object/ButPossessiveProd.html"><code class="language-plaintext highlighter-rouge">ButPossessiveProd</code></a> <a href="../object/ButProd.html"><code class="language-plaintext highlighter-rouge">ButProd</code></a> <a href="../object/CancelCommandLineException.html"><code class="language-plaintext highlighter-rouge">CancelCommandLineException</code></a> <a href="../object/commandPhrase(ambiguousConj).html"><code class="language-plaintext highlighter-rouge">commandPhrase(ambiguousConj)</code></a> <a href="../object/commandPhrase(definiteConj).html"><code class="language-plaintext highlighter-rouge">commandPhrase(definiteConj)</code></a> <a href="../object/CommandProd.html"><code class="language-plaintext highlighter-rouge">CommandProd</code></a> <a href="../object/CommandProdWithActor.html"><code class="language-plaintext highlighter-rouge">CommandProdWithActor</code></a> <a href="../object/CommandProdWithAmbiguousConj.html"><code class="language-plaintext highlighter-rouge">CommandProdWithAmbiguousConj</code></a> <a href="../object/CommandProdWithDefiniteConj.html"><code class="language-plaintext highlighter-rouge">CommandProdWithDefiniteConj</code></a> <a href="../object/CommandRanking.html"><code class="language-plaintext highlighter-rouge">CommandRanking</code></a> <a href="../object/CommandRankingByProblem.html"><code class="language-plaintext highlighter-rouge">CommandRankingByProblem</code></a> <a href="../object/CommandRankingByWeakness.html"><code class="language-plaintext highlighter-rouge">CommandRankingByWeakness</code></a> <a href="../object/CommandRankingCriterion.html"><code class="language-plaintext highlighter-rouge">CommandRankingCriterion</code></a> <a href="../object/ContainerNounPhraseProd.html"><code class="language-plaintext highlighter-rouge">ContainerNounPhraseProd</code></a> <a href="../object/ContainerResolver.html"><code class="language-plaintext highlighter-rouge">ContainerResolver</code></a> <a href="../object/DefiniteNounProd.html"><code class="language-plaintext highlighter-rouge">DefiniteNounProd</code></a> <a href="../object/DefinitePluralProd.html"><code class="language-plaintext highlighter-rouge">DefinitePluralProd</code></a> <a href="../object/DirectionProd.html"><code class="language-plaintext highlighter-rouge">DirectionProd</code></a> <a href="../object/DisambigPossessiveProd.html"><code class="language-plaintext highlighter-rouge">DisambigPossessiveProd</code></a> <a href="../object/DisambigProd.html"><code class="language-plaintext highlighter-rouge">DisambigProd</code></a> <a href="../object/EmptyLiteralPhraseProd.html"><code class="language-plaintext highlighter-rouge">EmptyLiteralPhraseProd</code></a> <a href="../object/EmptyNounPhraseProd.html"><code class="language-plaintext highlighter-rouge">EmptyNounPhraseProd</code></a> <a href="../object/EmptyTopicPhraseProd.html"><code class="language-plaintext highlighter-rouge">EmptyTopicPhraseProd</code></a> <a href="../object/EverythingButProd.html"><code class="language-plaintext highlighter-rouge">EverythingButProd</code></a> <a href="../object/EverythingProd.html"><code class="language-plaintext highlighter-rouge">EverythingProd</code></a> <a href="../object/ExactQuantifiedPluralProd.html"><code class="language-plaintext highlighter-rouge">ExactQuantifiedPluralProd</code></a> <a href="../object/ExactQuantifiedPossessivePluralProd.html"><code class="language-plaintext highlighter-rouge">ExactQuantifiedPossessivePluralProd</code></a> <a href="../object/ExceptListProd.html"><code class="language-plaintext highlighter-rouge">ExceptListProd</code></a> <a href="../object/ExceptResolver.html"><code class="language-plaintext highlighter-rouge">ExceptResolver</code></a> <a href="../object/ExceptResults.html"><code class="language-plaintext highlighter-rouge">ExceptResults</code></a> <a href="../object/firstCommandPhrase(commandOnly).html"><code class="language-plaintext highlighter-rouge">firstCommandPhrase(commandOnly)</code></a> <a href="../object/FirstCommandProd.html"><code class="language-plaintext highlighter-rouge">FirstCommandProd</code></a> <a href="../object/FirstCommandProdWithActor.html"><code class="language-plaintext highlighter-rouge">FirstCommandProdWithActor</code></a> <a href="../object/HerAdjProd.html"><code class="language-plaintext highlighter-rouge">HerAdjProd</code></a> <a href="../object/HerProd.html"><code class="language-plaintext highlighter-rouge">HerProd</code></a> <a href="../object/HerselfProd.html"><code class="language-plaintext highlighter-rouge">HerselfProd</code></a> <a href="../object/HersNounProd.html"><code class="language-plaintext highlighter-rouge">HersNounProd</code></a> <a href="../object/HimProd.html"><code class="language-plaintext highlighter-rouge">HimProd</code></a> <a href="../object/HimselfProd.html"><code class="language-plaintext highlighter-rouge">HimselfProd</code></a> <a href="../object/HisAdjProd.html"><code class="language-plaintext highlighter-rouge">HisAdjProd</code></a> <a href="../object/HisNounProd.html"><code class="language-plaintext highlighter-rouge">HisNounProd</code></a> <a href="../object/ImpliedActorNounPhraseProd.html"><code class="language-plaintext highlighter-rouge">ImpliedActorNounPhraseProd</code></a> <a href="../object/IndefiniteNounButProd.html"><code class="language-plaintext highlighter-rouge">IndefiniteNounButProd</code></a> <a href="../object/IndefiniteNounProd.html"><code class="language-plaintext highlighter-rouge">IndefiniteNounProd</code></a> <a href="../object/ItProd.html"><code class="language-plaintext highlighter-rouge">ItProd</code></a> <a href="../object/ItsAdjProd.html"><code class="language-plaintext highlighter-rouge">ItsAdjProd</code></a> <a href="../object/ItselfProd.html"><code class="language-plaintext highlighter-rouge">ItselfProd</code></a> <a href="../object/ItsNounProd.html"><code class="language-plaintext highlighter-rouge">ItsNounProd</code></a> <a href="../object/LayeredNounPhraseProd.html"><code class="language-plaintext highlighter-rouge">LayeredNounPhraseProd</code></a> <a href="../object/ListButProd.html"><code class="language-plaintext highlighter-rouge">ListButProd</code></a> <a href="../object/LiteralProd.html"><code class="language-plaintext highlighter-rouge">LiteralProd</code></a> <a href="../object/MeProd.html"><code class="language-plaintext highlighter-rouge">MeProd</code></a> <a href="../object/MineNounProd.html"><code class="language-plaintext highlighter-rouge">MineNounProd</code></a> <a href="../object/MissingObjectRanking.html"><code class="language-plaintext highlighter-rouge">MissingObjectRanking</code></a> <a href="../object/MyAdjProd.html"><code class="language-plaintext highlighter-rouge">MyAdjProd</code></a> <a href="../object/NounListProd.html"><code class="language-plaintext highlighter-rouge">NounListProd</code></a> <a href="../object/NounPhraseProd.html"><code class="language-plaintext highlighter-rouge">NounPhraseProd</code></a> <a href="../object/NounPhraseWithVocab.html"><code class="language-plaintext highlighter-rouge">NounPhraseWithVocab</code></a> <a href="../object/OopsResults.html"><code class="language-plaintext highlighter-rouge">OopsResults</code></a> <a href="../object/ParseFailureException.html"><code class="language-plaintext highlighter-rouge">ParseFailureException</code></a> <a href="../object/ParserException.html"><code class="language-plaintext highlighter-rouge">ParserException</code></a> <a href="../object/PluralProd.html"><code class="language-plaintext highlighter-rouge">PluralProd</code></a> <a href="../object/PossessiveNounProd.html"><code class="language-plaintext highlighter-rouge">PossessiveNounProd</code></a> <a href="../object/PossessivePluralProd.html"><code class="language-plaintext highlighter-rouge">PossessivePluralProd</code></a> <a href="../object/PossessivePronounAdjProd.html"><code class="language-plaintext highlighter-rouge">PossessivePronounAdjProd</code></a> <a href="../object/PossessivePronounNounProd.html"><code class="language-plaintext highlighter-rouge">PossessivePronounNounProd</code></a> <a href="../object/PreResolvedAmbigProd.html"><code class="language-plaintext highlighter-rouge">PreResolvedAmbigProd</code></a> <a href="../object/PreResolvedLiteralProd.html"><code class="language-plaintext highlighter-rouge">PreResolvedLiteralProd</code></a> <a href="../object/PreResolvedProd.html"><code class="language-plaintext highlighter-rouge">PreResolvedProd</code></a> <a href="../object/PronounProd.html"><code class="language-plaintext highlighter-rouge">PronounProd</code></a> <a href="../object/QuantifiedPluralProd.html"><code class="language-plaintext highlighter-rouge">QuantifiedPluralProd</code></a> <a href="../object/ReflexivePronounProd.html"><code class="language-plaintext highlighter-rouge">ReflexivePronounProd</code></a> <a href="../object/ReplacementCommandStringException.html"><code class="language-plaintext highlighter-rouge">ReplacementCommandStringException</code></a> <a href="../object/ResolveAsker.html"><code class="language-plaintext highlighter-rouge">ResolveAsker</code></a> <a href="../object/ResolveInfo.html"><code class="language-plaintext highlighter-rouge">ResolveInfo</code></a> <a href="../object/ResolveResults.html"><code class="language-plaintext highlighter-rouge">ResolveResults</code></a> <a href="../object/RetryCommandTokensException.html"><code class="language-plaintext highlighter-rouge">RetryCommandTokensException</code></a> <a href="../object/SingleNounProd.html"><code class="language-plaintext highlighter-rouge">SingleNounProd</code></a> <a href="../object/SingleNounWithListProd.html"><code class="language-plaintext highlighter-rouge">SingleNounWithListProd</code></a> <a href="../object/StillToResolveItem.html"><code class="language-plaintext highlighter-rouge">StillToResolveItem</code></a> <a href="../object/TerminateCommandException.html"><code class="language-plaintext highlighter-rouge">TerminateCommandException</code></a> <a href="../object/TheirAdjProd.html"><code class="language-plaintext highlighter-rouge">TheirAdjProd</code></a> <a href="../object/TheirsNounProd.html"><code class="language-plaintext highlighter-rouge">TheirsNounProd</code></a> <a href="../object/ThemProd.html"><code class="language-plaintext highlighter-rouge">ThemProd</code></a> <a href="../object/ThemselvesProd.html"><code class="language-plaintext highlighter-rouge">ThemselvesProd</code></a> <a href="../object/TokenListProd.html"><code class="language-plaintext highlighter-rouge">TokenListProd</code></a> <a href="../object/TopicProd.html"><code class="language-plaintext highlighter-rouge">TopicProd</code></a> <a href="../object/TryAsActorResolveResults.html"><code class="language-plaintext highlighter-rouge">TryAsActorResolveResults</code></a> <a href="../object/VagueContainerDefiniteNounPhraseProd.html"><code class="language-plaintext highlighter-rouge">VagueContainerDefiniteNounPhraseProd</code></a> <a href="../object/VagueContainerIndefiniteNounPhraseProd.html"><code class="language-plaintext highlighter-rouge">VagueContainerIndefiniteNounPhraseProd</code></a> <a href="../object/VagueContainerNounPhraseProd.html"><code class="language-plaintext highlighter-rouge">VagueContainerNounPhraseProd</code></a> <a href="../object/VagueContainerResolver.html"><code class="language-plaintext highlighter-rouge">VagueContainerResolver</code></a> <a href="../object/YouProd.html"><code class="language-plaintext highlighter-rouge">YouProd</code></a> <a href="../object/YourAdjProd.html"><code class="language-plaintext highlighter-rouge">YourAdjProd</code></a> <a href="../object/YoursNounProd.html"><code class="language-plaintext highlighter-rouge">YoursNounProd</code></a>
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Objects</span>  </p>
+
+<p><a href="../object/rankByActorSpecified.html"><code class="language-plaintext highlighter-rouge">rankByActorSpecified</code></a> <a href="../object/rankByAllExcluded.html"><code class="language-plaintext highlighter-rouge">rankByAllExcluded</code></a> <a href="../object/rankByAmbiguity.html"><code class="language-plaintext highlighter-rouge">rankByAmbiguity</code></a> <a href="../object/rankByEmptyBut.html"><code class="language-plaintext highlighter-rouge">rankByEmptyBut</code></a> <a href="../object/rankByEndAdj.html"><code class="language-plaintext highlighter-rouge">rankByEndAdj</code></a> <a href="../object/rankByIndefinite.html"><code class="language-plaintext highlighter-rouge">rankByIndefinite</code></a> <a href="../object/rankByInsufficient.html"><code class="language-plaintext highlighter-rouge">rankByInsufficient</code></a> <a href="../object/rankByListForSingle.html"><code class="language-plaintext highlighter-rouge">rankByListForSingle</code></a> <a href="../object/rankByLiteralLength.html"><code class="language-plaintext highlighter-rouge">rankByLiteralLength</code></a> <a href="../object/rankByMiscWordList.html"><code class="language-plaintext highlighter-rouge">rankByMiscWordList</code></a> <a href="../object/rankByMissing.html"><code class="language-plaintext highlighter-rouge">rankByMissing</code></a> <a href="../object/rankByNonMatch.html"><code class="language-plaintext highlighter-rouge">rankByNonMatch</code></a> <a href="../object/rankByNonMatchPoss.html"><code class="language-plaintext highlighter-rouge">rankByNonMatchPoss</code></a> <a href="../object/rankByPluralTrunc.html"><code class="language-plaintext highlighter-rouge">rankByPluralTrunc</code></a> <a href="../object/rankByPronoun.html"><code class="language-plaintext highlighter-rouge">rankByPronoun</code></a> <a href="../object/rankBySubcommands.html"><code class="language-plaintext highlighter-rouge">rankBySubcommands</code></a> <a href="../object/rankByTokenCount.html"><code class="language-plaintext highlighter-rouge">rankByTokenCount</code></a> <a href="../object/rankByTrunc.html"><code class="language-plaintext highlighter-rouge">rankByTrunc</code></a> <a href="../object/rankByUnwantedPlural.html"><code class="language-plaintext highlighter-rouge">rankByUnwantedPlural</code></a> <a href="../object/rankByVerbStructure.html"><code class="language-plaintext highlighter-rouge">rankByVerbStructure</code></a> <a href="../object/rankByVocabNonMatch.html"><code class="language-plaintext highlighter-rouge">rankByVocabNonMatch</code></a> <a href="../object/rankByWeakness.html"><code class="language-plaintext highlighter-rouge">rankByWeakness</code></a>
+<span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><a href="#getResolvedObjects"><code class="language-plaintext highlighter-rouge">getResolvedObjects</code></a> <a href="#intersectNounLists"><code class="language-plaintext highlighter-rouge">intersectNounLists</code></a> <a href="#spliceList"><code class="language-plaintext highlighter-rouge">spliceList</code></a> <a href="#tryAskingForObject"><code class="language-plaintext highlighter-rouge">tryAskingForObject</code></a> <a href="#tryOops"><code class="language-plaintext highlighter-rouge">tryOops</code></a> <a href="#tryOopsMain"><code class="language-plaintext highlighter-rouge">tryOopsMain</code></a></p>
+
+<p><span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><span id="getResolvedObjects"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getResolvedObjects (lst)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#485">485</a>]</p>
+
+<p>Extract the objects from a list obtained with resolveNouns(). Returns a
+list composed only of the objects in the resolution information list.</p>
+
+<p><span id="intersectNounLists"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">intersectNounLists (lst1, lst2)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#447">447</a>]</p>
+
+<p>Intersect two resolved noun lists, returning a list consisting only of
+the unique objects from the two lists.</p>
+
+<p><span id="spliceList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">spliceList (lst, idx, newItems)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4551">4551</a>]</p>
+
+<p>splice a new sublist into a list, replacing the item at ‘idx’</p>
+
+<p><span id="tryAskingForObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryAskingForObject (issuingActor, targetActor, resolver, results, responseProd)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4569">4569</a>]</p>
+
+<p>Try reading a response to a missing object question. If we successfully
+read a noun phrase that matches the given production rule, we’ll resolve
+it, stash the resolved list in the resolvedObjects_ property of the
+match tree, and return the match tree. If they enter something that
+doesn’t look like a response to the question at all, we’ll throw a
+new-command exception to process it.</p>
+
+<p><span id="tryOops"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryOops (tokList, issuingActor, targetActor, firstTokenIndex, cmdTokenList, cmdType)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4349">4349</a>]</p>
+
+<p>Look for an undefined word in a list of tokens, and give the player a
+chance to correct a typo with “OOPS” if appropriate.</p>
+
+<p>If we find an unknown word and we can prompt for interactive resolution,
+we’ll do so, and we’ll throw an appropriate exception to handle the
+response. If we can’t resolve the missing word interactively, we’ll
+throw a parse failure exception.</p>
+
+<p>If there are no undefined words in the command, we’ll simply return.</p>
+
+<p>tokList is the list of tokens under examination; this is a subset of the
+full command token list. cmdTokenList is the full command token list, in
+the usual tokenizer format. firstTokenIndex is the index of the first
+token in tokList within cmdTokenList.</p>
+
+<p>cmdType is an rmcXxx code giving the type of input we’re reading.</p>
+
+<p><span id="tryOopsMain"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryOopsMain (tokList, issuingActor, targetActor, firstTokenIndex, cmdTokenList, cmdType)</code></p>
+
+<p><a href="../file/parser.t.html">parser.t</a>[<a href="../source/parser.t.html#4360">4360</a>]</p>
+
+<p>main “oops” processor</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

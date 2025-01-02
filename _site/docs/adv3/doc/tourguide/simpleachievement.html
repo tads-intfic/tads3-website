@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-simpleachievement-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-simpleachievement-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SimpleAchievement : <a href="achievement.html">Achievement</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="achievement.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="awardpoints.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>SimpleAchievement is a subclass of Achievement with a construct method
+added. This allows you to pass a string in a new SimpleAchievement
+statement to be used as the description of the achievement for which
+points are being awarded. This could be useful, for example, if we
+wanted to award a point for finding each of the tablets. Instead of
+coding this separately on each tablet object, we can write the code once
+on the Tablet class. We’ll award the points once when each tablet is
+taken; to do this we override the actionDobjTake method to add a call to
+addToScoreOnce(). But we want this called on a separate Achievement (or
+rather, SimpleAchievement) object for each separate tablet. We can’t use
+the anonymous nested object syntax for that; if we wrote:</p>
+
+<p>class Tablet : Readable <br />
+  desc = ”\&lt;&lt;theName&gt;&gt; is about eight inches square and an inch thick.<br />
+   &lt;&lt;readDesc&gt;&gt;“   <br />
+  readDesc = ”On it is inscribed:\b&lt;FONT FACE=’TADS-Typewriter’&gt;&lt;&lt;inscription&gt;&gt;&lt;/FONT&gt;\b”  <br />
+  bulk = 4<br />
+  <strong>achievement: Achievement { desc = ”finding &lt;&lt;theName&gt;&gt;“ } // this won’t work</strong><br />
+;</p>
+
+<p>We should end up with only one Achievement object for the whole class,
+which wouldn’t work at all the way we want it to. Instead we need to use
+the <strong>perInstance</strong> macro to create a new instance of an Achievement
+object for each instance of a Tablet object. But then we need to find a
+way to make each Achievement object describe itself appropriately; using
+the SimpleAchievement class, which allows us to pass a description
+string in its constructor (i.e. as a parameter in a
+new SimpleAchievement statement) provides just the solution we need:</p>
+
+<p>class Tablet : Readable <br />
+  desc = ”\&lt;&lt;theName&gt;&gt; is about eight inches square and an inch thick.<br />
+   &lt;&lt;readDesc&gt;&gt;“   <br />
+  readDesc = ”On it is inscribed:\b&lt;FONT FACE=’TADS-Typewriter’&gt;&lt;&lt;inscription&gt;&gt;&lt;/FONT&gt;\b”  <br />
+  bulk = 4<br />
+  <strong>achievement = perInstance(new SimpleAchievement(‘finding ’ + theName)) // this works just fine</strong><br />
+  **dobjFor(Take)<br />
+  {<br />
+    action()<br />
+    {<br />
+      inherited;<br />
+      achievement.addToScoreOnce(1);<br />
+    }<br />
+  }<br />
+**;</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

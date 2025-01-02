@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-webresourceinit-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-webresourceinit-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">WebResourceInit</span><span class="type">class</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1145">1145</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Session initializer resource. This is a mix-in class designed to be used
+for a special resource that initializes the session. Mix this with a
+WebResource class to set up the initializer. When you connect to the
+client via connectWebUI(), point the client to this resource.</p>
+
+<p>There are two elements to setting up the session. First, we need to set
+the program session key as a cookie. The client obtains this from the
+registration mechanism, whose purpose is to launch the game program and
+send the connection information back to the client. The client sends
+this to us in the form of a URL parameter, TADS_session. This key is
+essentially for authentication, to make sure that the client that we’re
+talking to is actually the client that launched the program: only that
+client would be able to get the key, because we invent it and send it to
+the registrar, and the registrar only sends it back to the client
+session it’s already established on its end. This prevents port scanners
+from finding our open port and trying to crawl our “site” or otherwise
+access our services.</p>
+
+<p>The second setup element is to create a client session key. Whereas the
+program session key is for our entire service, the client session key is
+specific to this one connection. If the user opens two browser windows
+on this server, each browser needs its own separate client session so
+that we can tell the traffic apart. The client session key is simply
+another random key we generate, and again we pass it back to the client
+in a cookie.</p>
+
+<p>The reason we set cookies for both of these session keys is that it lets
+the client pass the information back to us on subsequent requests
+without having to encode another parameter in every URL. We set session
+cookies in both cases; the program session is for authentication
+purposes and so we don’t want it to be stored or shared, and the client
+session key is explicitly to identify this one browser session, so it
+obviously shouldn’t be shared across browser instances or sessions.</p>
+
+<p>Note that instances should always provide a string (as opposed to a
+regular expression) for the virtual path (the ‘vpath’ property). We have
+to send the path to the browser UI as part of the connection
+information, so we need a string we can send rather than a pattern to
+match.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">WebResourceInit</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WebResourceInit</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p>` <a href="../object/webMainWin.html"><code class="language-plaintext highlighter-rouge">webMainWin</code></a>  `
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p>` <a href="#server"><code class="language-plaintext highlighter-rouge">server</code></a>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p>` <a href="#connectUI"><code class="language-plaintext highlighter-rouge">connectUI</code></a>  <a href="#processRequest"><code class="language-plaintext highlighter-rouge">processRequest</code></a>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="server"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">server</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1219">1219</a>]</p>
+
+<p>the HTPTServer for communicating with the client</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="connectUI"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">connectUI (srv)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1152">1152</a>]</p>
+
+<p>Connect to the client. The program should call this after creating its
+HTTPServer object, which you pass here as ‘srv’. This establishes the
+client UI connection, generating the path to the start page.</p>
+
+<p><span id="processRequest"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processRequest (req, query)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1165">1165</a>]</p>
+
+<p>Process the request. This sets up the program and client session keys as
+cookies.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-libobjectinitializer-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-libobjectinitializer-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">libObjectInitializer</span><span class="type">object</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2295">2295</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Static object and class initializer.</p>
+
+<p>During startup, we’ll automatically call the classInit() method for each
+class object, and we’ll call the default constructor for each static
+object instance. (“Static” objects are those defined directly in the
+source code, as opposed to objects created dynamically with ‘new’.) This
+makes it easier to write initialization code by making the process more
+uniform across static and dynamic objects.</p>
+
+<p>The first step is to call classInit() on each class. We call this method
+only each class that *directly* defines the method (i.e., we don’t
+call it on classes that only inherit the method from another class). We
+cycle through the objects in arbitrary order. However, you can control
+the relative order when there’s a dependency by setting the
+‘classInitFirst’ property to a list of one or more classes to initialize
+first. When we encounter a class with this property, we’ll call the
+listed classes’ classInit() methods before calling the given class’s
+classInit().</p>
+
+<p>The second step is to call constructStatic() or construct() on each
+regular (non-class) object. We only call this on *static* objects:
+objects defined directly in the source code, as opposed to created
+dynamically with ‘new’. As with classInit(), we visit the objects in
+arbitrary order. You can control dependencies using the ‘constructFirst’
+method: set this to a list of objects to be initialized before self.</p>
+
+<p>If an object defines or inherits a constructStatic() method, we’ll call
+it instead of construct(). Otherwise, if it defines or inherits a
+construct() method with no arguments, we’ll call it. Otherwise we’ll do
+nothing.</p>
+
+<p>Note that it’s possible for a base class to have a compatible
+zero-argument constructor, but for a subclass to override this with a
+constructor that takes arguments. In this case, we’ll search the class
+tree for an inherited zero-argument constructor. If we find one, we’ll
+call the inherited constructor.</p>
+
+<p>We can only call zero-argument construct() methods because we have no
+basis for providing other arguments.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">libObjectInitializer</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">libObjectInitializer</code></strong><br />
+<a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
+<a href="../object/ModuleExecObject.html"><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></a><br />
+`                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#_initedTab"><code class="language-plaintext highlighter-rouge">_initedTab</code></a> <a href="#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+<a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#callConstructor"><code class="language-plaintext highlighter-rouge">callConstructor</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="_initedTab"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_initedTab</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2422">2422</a>]</p>
+
+<p>table of objects we’ve already initialized</p>
+
+<p><span id="execBeforeMe"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execBeforeMe</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2296">2296</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="callConstructor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">callConstructor (obj, conProp, preProp)</code></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2368">2368</a>]</p>
+
+<p>call the given object’s constructor</p>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/misc.t.html">misc.t</a>[<a href="../source/misc.t.html#2297">2297</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

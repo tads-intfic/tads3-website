@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-file-output-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-file-output-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">output.t</span><span class="type">file</span></p>
+
+<p><a href="../source/output.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p>TADS 3 Library - output formatting</p>
+
+<p>This module defines the framework for displaying output text.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><a href="../object/CaptureFilter.html"><code class="language-plaintext highlighter-rouge">CaptureFilter</code></a> <a href="../object/HtmlStyleTag.html"><code class="language-plaintext highlighter-rouge">HtmlStyleTag</code></a> <a href="../object/LogConsole.html"><code class="language-plaintext highlighter-rouge">LogConsole</code></a> <a href="../object/MessageBuilder.html"><code class="language-plaintext highlighter-rouge">MessageBuilder</code></a> <a href="../object/MonitorFilter.html"><code class="language-plaintext highlighter-rouge">MonitorFilter</code></a> <a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a> <a href="../object/OutputStream.html"><code class="language-plaintext highlighter-rouge">OutputStream</code></a> <a href="../object/OutputStreamWindow.html"><code class="language-plaintext highlighter-rouge">OutputStreamWindow</code></a> <a href="../object/ParagraphManager.html"><code class="language-plaintext highlighter-rouge">ParagraphManager</code></a> <a href="../object/StringCaptureFilter.html"><code class="language-plaintext highlighter-rouge">StringCaptureFilter</code></a> <a href="../object/StyleTag.html"><code class="language-plaintext highlighter-rouge">StyleTag</code></a> <a href="../object/SwitchableCaptureFilter.html"><code class="language-plaintext highlighter-rouge">SwitchableCaptureFilter</code></a>
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Objects</span>  </p>
+
+<p><a href="../object/announceObjStyleTag.html"><code class="language-plaintext highlighter-rouge">announceObjStyleTag</code></a> <a href="../object/assumeStyleTag.html"><code class="language-plaintext highlighter-rouge">assumeStyleTag</code></a> <a href="../object/commandSequencer.html"><code class="language-plaintext highlighter-rouge">commandSequencer</code></a> <a href="../object/hyperlinkStyleTag.html"><code class="language-plaintext highlighter-rouge">hyperlinkStyleTag</code></a> <a href="../object/inputlineStyleTag.html"><code class="language-plaintext highlighter-rouge">inputlineStyleTag</code></a> <a href="../object/mainOutputStream.html"><code class="language-plaintext highlighter-rouge">mainOutputStream</code></a> <a href="../object/mainParagraphManager.html"><code class="language-plaintext highlighter-rouge">mainParagraphManager</code></a> <a href="../object/notificationStyleTag.html"><code class="language-plaintext highlighter-rouge">notificationStyleTag</code></a> <a href="../object/outputManager.html"><code class="language-plaintext highlighter-rouge">outputManager</code></a> <a href="../object/parserStyleTag.html"><code class="language-plaintext highlighter-rouge">parserStyleTag</code></a> <a href="../object/roomdescStyleTag.html"><code class="language-plaintext highlighter-rouge">roomdescStyleTag</code></a> <a href="../object/roomnameStyleTag.html"><code class="language-plaintext highlighter-rouge">roomnameStyleTag</code></a> <a href="../object/roomparaStyleTag.html"><code class="language-plaintext highlighter-rouge">roomparaStyleTag</code></a> <a href="../object/statusroomStyleTag.html"><code class="language-plaintext highlighter-rouge">statusroomStyleTag</code></a> <a href="../object/statusscoreStyleTag.html"><code class="language-plaintext highlighter-rouge">statusscoreStyleTag</code></a> <a href="../object/styleTagFilter.html"><code class="language-plaintext highlighter-rouge">styleTagFilter</code></a>
+<span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><a href="#say"><code class="language-plaintext highlighter-rouge">say</code></a> <a href="#withQuotes"><code class="language-plaintext highlighter-rouge">withQuotes</code></a></p>
+
+<p><span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><span id="say"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">say (val)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#21">21</a>]</p>
+
+<p>The standard library output function. We set this up as the default
+display function (for double-quoted strings and for “&lt;&lt; &gt;&gt;”
+embeddings). Code can also call this directly to display items.</p>
+
+<p><span id="withQuotes"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">withQuotes (txt)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#32">32</a>]</p>
+
+<p>Generate a string for showing quoted text. We simply enclose the text in
+a &lt;Q&gt;…&lt;/Q&gt; tag sequence and return the result.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

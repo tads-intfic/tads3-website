@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-file-action-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-file-action-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">action.t</span><span class="type">file</span></p>
+
+<p><a href="../source/action.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p>****************************************************************************
+action.t This module forms part of the adv3Lite library (c) 2012-13 Eric
+Eve</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><a href="../object/Action.html"><code class="language-plaintext highlighter-rouge">Action</code></a> <a href="../object/IAction.html"><code class="language-plaintext highlighter-rouge">IAction</code></a> <a href="../object/LiteralAction.html"><code class="language-plaintext highlighter-rouge">LiteralAction</code></a> <a href="../object/LiteralTAction.html"><code class="language-plaintext highlighter-rouge">LiteralTAction</code></a> <a href="../object/NumericAction.html"><code class="language-plaintext highlighter-rouge">NumericAction</code></a> <a href="../object/NumericTAction.html"><code class="language-plaintext highlighter-rouge">NumericTAction</code></a> <a href="../object/PostRestoreObject.html"><code class="language-plaintext highlighter-rouge">PostRestoreObject</code></a> <a href="../object/PostUndoObject.html"><code class="language-plaintext highlighter-rouge">PostUndoObject</code></a> <a href="../object/PreRestartObject.html"><code class="language-plaintext highlighter-rouge">PreRestartObject</code></a> <a href="../object/PreSaveObject.html"><code class="language-plaintext highlighter-rouge">PreSaveObject</code></a> <a href="../object/SystemAction.html"><code class="language-plaintext highlighter-rouge">SystemAction</code></a> <a href="../object/TAction.html"><code class="language-plaintext highlighter-rouge">TAction</code></a> <a href="../object/TIAction.html"><code class="language-plaintext highlighter-rouge">TIAction</code></a> <a href="../object/TopicAction.html"><code class="language-plaintext highlighter-rouge">TopicAction</code></a> <a href="../object/TopicTAction.html"><code class="language-plaintext highlighter-rouge">TopicTAction</code></a> <a href="../object/TravelAction.html"><code class="language-plaintext highlighter-rouge">TravelAction</code></a> <a href="../object/VerifyResult.html"><code class="language-plaintext highlighter-rouge">VerifyResult</code></a>
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><a href="#askChooseObject"><code class="language-plaintext highlighter-rouge">askChooseObject</code></a> <a href="#askMissingObject"><code class="language-plaintext highlighter-rouge">askMissingObject</code></a> <a href="#execNestedAction"><code class="language-plaintext highlighter-rouge">execNestedAction</code></a> <a href="#nestedAction"><code class="language-plaintext highlighter-rouge">nestedAction</code></a> <a href="#nestedActorAction"><code class="language-plaintext highlighter-rouge">nestedActorAction</code></a> <a href="#noHalt"><code class="language-plaintext highlighter-rouge">noHalt</code></a> <a href="#notePronounAntecedent"><code class="language-plaintext highlighter-rouge">notePronounAntecedent</code></a> <a href="#replaceAction"><code class="language-plaintext highlighter-rouge">replaceAction</code></a> <a href="#replaceActorAction"><code class="language-plaintext highlighter-rouge">replaceActorAction</code></a> <a href="#tryImplicitAction"><code class="language-plaintext highlighter-rouge">tryImplicitAction</code></a> <a href="#tryImplicitActorAction"><code class="language-plaintext highlighter-rouge">tryImplicitActorAction</code></a></p>
+
+<p><span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><span id="askChooseObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askChooseObject (action, role, msg)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3251">3251</a>]</p>
+
+<p>This function displays msg, which should be a message inviting the
+player to choose a suitable object for action in role (DirectObject,
+IndirectObject or AccessoryObject). The action will then be performed
+using the selected object in role.</p>
+
+<p><span id="askMissingObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingObject (action, role)</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3093">3093</a>]</p>
+
+<p>Ask for a missing object to fulfil role in action. First see if there’s
+a uniquely best match to fill the role, and if so execute the action
+with that object. Otherwise ask the player to supply an object.</p>
+
+<p><span id="execNestedAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execNestedAction (isReplacement, actor, action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2965">2965</a>]</p>
+
+<p>Execute a fully-constructed nested action.</p>
+
+<p>‘isReplacement’ indicates whether the action is a full replacement or an
+ordinary nested action. If it’s a replacement, then we use the game time
+taken by the replacement, and set the enclosing action (i.e., the
+current gAction) to take zero time. If it’s an ordinary nested action,
+then we consider the nested action to take zero time, using the current
+action’s time as the overall command time.</p>
+
+<p>‘isRemapping’ indicates whether or not this is a remapped action. If
+we’re remapping from one action to another, this will be true; for any
+other kind of nested or replacement action, this should be nil.</p>
+
+<p><span id="nestedAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nestedAction (action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2944">2944</a>]</p>
+
+<p>Run a nested action for the current actor.</p>
+
+<p><span id="nestedActorAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nestedActorAction (actor, action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2938">2938</a>]</p>
+
+<p>Run a nested action; execution of the parent action continues once the
+nested action is complete.</p>
+
+<p><span id="noHalt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">noHalt ( )</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#1542">1542</a>]</p>
+
+<p>This function can be called from a check nethod to prevent the display
+of text from within the check method halting the action. Calling it from
+anywhere else will have no effect. It’s use is in conjunction with the
+TAction class defined immediatelty below.</p>
+
+<p><span id="notePronounAntecedent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">notePronounAntecedent ([objlist])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#3350">3350</a>]</p>
+
+<p>Note the objects in objlist as potential pronoun antecedents</p>
+
+<p><span id="replaceAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">replaceAction (action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2913">2913</a>]</p>
+
+<p>Run a replacement action.</p>
+
+<p><span id="replaceActorAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">replaceActorAction (actor, action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2923">2923</a>]</p>
+
+<p>Run a replacement action for another actor.</p>
+
+<p><span id="tryImplicitAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryImplicitAction (action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2798">2798</a>]</p>
+
+<p>Try action as an implicit action with [objs] as its objects</p>
+
+<p><span id="tryImplicitActorAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tryImplicitActorAction (actor, action, [objs])</code></p>
+
+<p><a href="../file/action.t.html">action.t</a>[<a href="../source/action.t.html#2878">2878</a>]</p>
+
+<p>Have an actor other than the current gActor try an implicit action (e.g.
+if an npc moving as the result of an AgendaItem needs to implicitly open
+a door to proceed): actor is the actor performing the action, action is
+the action object to be performs, [objs] is the list of objects (if
+any) on which the action is to be performed.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

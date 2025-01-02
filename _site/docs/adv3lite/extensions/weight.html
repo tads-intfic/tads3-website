@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-extensions-weight-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-extensions-weight-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="../../docs/manual/topbar.jpg" data-border="0" /></p>
+
+<p><a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+Weight<br />
+<span class="navnp"><a href="viewport.html" class="nav"><em>Prev:</em> Viewport</a>
+   
+<a href="../../docs/manual/extensions.html" class="nav"><em>Next:</em>
+Extensions</a>     </span></p>
+
+<h1 id="weight">Weight</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>The standard library allows you to assign a bulk to each items and to
+limit what can be carried or placed in, on, under or behind other
+objects according to bulk. The Weight extension allows you to do the
+same with weight. Each item in the game (or at least, each portable
+item) can be assigned a weight according to whatever scale you wish,
+while actors and other objects can be assigned a weightCapacity which
+limits how much weight they can bear. These features are probably not
+needed for the majority of games, in which controlling by bulk is
+usually sufficient, but are provided in this extension for any game that
+wishes to make use of them. The principle difference between weight and
+bulk is, of course, that while the bulk of an object is simply its bulk,
+the weight of an object is its own weight plus the weight of all the
+objects it contains.</p>
+
+<p><span id="properties"></span></p>
+
+<h2 id="new-methods-and-properties">New Methods and Properties</h2>
+
+<p>In addition to a number of properties intended purely for internal use,
+this extension defines the following methods and properties on Thing:</p>
+
+<ul>
+  <li><em>Additional properties</em>: <code class="language-plaintext highlighter-rouge">weight</code>,
+<code class="language-plaintext highlighter-rouge">weightCapacity</code>,
+<code class="language-plaintext highlighter-rouge">maxSingleWeight</code>,
+<code class="language-plaintext highlighter-rouge">maxWeightHiddenUnder</code>,
+<code class="language-plaintext highlighter-rouge">maxWeightHiddenBehind</code>,
+<code class="language-plaintext highlighter-rouge">maxWeightHiddenIn</code>.</li>
+  <li><em>Additional methods</em>: <code class="language-plaintext highlighter-rouge">totalWeight()</code>,
+<code class="language-plaintext highlighter-rouge">getWeightWithin()</code>,
+<code class="language-plaintext highlighter-rouge">getCarriedWeight()</code>,
+<code class="language-plaintext highlighter-rouge">sayTooHeavy(obj)</code>,
+<code class="language-plaintext highlighter-rouge">sayCantBearMoreWeight(obj)</code>,
+<code class="language-plaintext highlighter-rouge">totalWeightIn(lst)</code>,
+<code class="language-plaintext highlighter-rouge">sayTooHeavyToHide(obj, insType)</code>,
+<code class="language-plaintext highlighter-rouge">getWeightHiddenUnder</code>,
+<code class="language-plaintext highlighter-rouge">getWeightHiddenIn</code>,
+<code class="language-plaintext highlighter-rouge">getWeightHiddenBehind</code>.</li>
+</ul>
+
+<p><span id="usage"></span></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Include the weight.t file after the library files but before your game
+source files.</p>
+
+<p>Every object (or every portable object) can be assigned a <strong>weight</strong>
+value, which is an integer value representing its weight on whatever
+scale you find convenient. This <code class="language-plaintext highlighter-rouge">weight</code>
+represents the intrinsic weight of the object by itself, less any
+contents. By default every object has a <code class="language-plaintext highlighter-rouge">weight</code>
+of 0.</p>
+
+<p>The total weight of an object, including its contents, is given by its
+<strong>totalWeight()</strong> method, while the weight of its contents (excluding
+the object’s own weight) is given by its <strong>getWeightWithin()</strong> method.
+Hence for any object, <code class="language-plaintext highlighter-rouge">totalWeight = weight +
+getWeightWithin()</code>. For actors, <strong>getCarriedWeight()</strong> gives the
+total weight carried by the actor; this excludes the weight of anything
+worn or of anything fixed in place (the latter are assumed to be body
+parts).</p>
+
+<p>The carrying capacity of both actors and other objects is defined by
+their <strong>weightCapacity</strong> and <strong>maxSingleWeight</strong> properties. The
+<code class="language-plaintext highlighter-rouge">weightCapacity</code> (by default 100000) is the
+maximum total weight that can be carried by the actor, or the maximum
+load that can be placed in/on/under or behind the object. The
+<code class="language-plaintext highlighter-rouge">maxSingleWeight</code> (which by default takes its
+value from <code class="language-plaintext highlighter-rouge">weightCapacity</code>) defines the maximum
+weight of a single object that can be carried by the actor or borne by
+the object.</p>
+
+<p>The method <strong>sayTooHeavy(obj)</strong> is used to display a message to the
+effect that <em>obj</em> exceeds the load capacity of the object into or onto
+which an attempt is being made to place it (i.e. when the total weight
+of <em>obj</em> exceeds either the <code class="language-plaintext highlighter-rouge">weightCapacity</code> or
+<code class="language-plaintext highlighter-rouge">maxSingleWeight</code> of the object on which
+<code class="language-plaintext highlighter-rouge">sayTooHeavy(obj)</code> is defined). The method
+<strong>sayCantBearMoreWeight(obj)</strong> is used to display a message when <em>obj</em>
+would otherwise cause the object’s weightCapacity to be exceeded (since
+the addition of <em>obj</em> would make its
+<code class="language-plaintext highlighter-rouge">getWeightWithin</code> greater than its
+<code class="language-plaintext highlighter-rouge">weightCapacity</code>).</p>
+
+<p>In some instances, objects can be effectively
+<a href="../../docs/manual/thing.html#hidden">hidden</a> in, under or behind other
+objects by being added to their <code class="language-plaintext highlighter-rouge">hiddenIn</code>,
+<code class="language-plaintext highlighter-rouge">hiddenUnder</code> or
+<code class="language-plaintext highlighter-rouge">hiddenBehind</code> lists. While in virtually every
+case it probably makes more sense to limit this by bulk than by weight,
+for the sake of completeness this extension provides
+<strong>maxWeightHiddenIn</strong>, <strong>maxWeightHiddenUnder</strong> and
+<strong>maxWeightHiddenBehind</strong> properties to limit the total weight that can
+be placed in, under or behind an object in this manner. The default
+value of all these properties is 100000. The method
+<strong>sayTooHeavyToHide(obj, insType)</strong> is used to display a message when
+hiding would cause the maximum weight to be exceeded; <em>obj</em> is the
+object that the player is attempting to hide and <em>insType</em> is one of
+<code class="language-plaintext highlighter-rouge">In</code>, <code class="language-plaintext highlighter-rouge">Under</code> or
+<code class="language-plaintext highlighter-rouge">Behind</code> depending whether the action being
+attempted is PutIn, PutUnder or PutBehind.</p>
+
+<p>Finally, the service method <strong>totalWeightIn(lst)</strong> is used to calculate
+the total weight of all the items in <em>lst</em>.</p>
+
+<p>This covers most of what you need to know to use this extension. For
+additional information see the source code and comments in the
+<a href="../weight.t">weight.t</a> file.</p>
+
+<hr />
+
+<p><em>Adv3Lite Manual</em><br />
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
+Weight<br />
+<span class="navnp"><a href="viewport.html" class="nav"><em>Prev:</em> Viewport</a>
+   
+<a href="../../docs/manual/extensions.html" class="nav"><em>Next:</em>
+Extensions</a>     </span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

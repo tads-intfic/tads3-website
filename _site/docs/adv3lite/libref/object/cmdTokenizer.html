@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-cmdtokenizer-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-cmdtokenizer-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">cmdTokenizer</span><span class="type">object</span></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#66">66</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Command tokenizer for US English. Other language modules should provide
+their own tokenizers to allow for differences in punctuation and other
+lexical elements.</p>
+
+<p>[Required]</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">cmdTokenizer</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Tokenizer.html"><code class="language-plaintext highlighter-rouge">Tokenizer</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">cmdTokenizer</code></strong><br />
+<a href="../object/Tokenizer.html"><code class="language-plaintext highlighter-rouge">Tokenizer</code></a><br />
+`                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#endAssert"><code class="language-plaintext highlighter-rouge">endAssert</code></a> <a href="#patAlphaDashAlpha"><code class="language-plaintext highlighter-rouge">patAlphaDashAlpha</code></a> <a href="#patPunct"><code class="language-plaintext highlighter-rouge">patPunct</code></a> <a href="#patSpelledTens"><code class="language-plaintext highlighter-rouge">patSpelledTens</code></a> <a href="#patSpelledUnits"><code class="language-plaintext highlighter-rouge">patSpelledUnits</code></a> <a href="#punctChars"><code class="language-plaintext highlighter-rouge">punctChars</code></a> <a href="#rules_"><code class="language-plaintext highlighter-rouge">rules_</code></a> <a href="#squote"><code class="language-plaintext highlighter-rouge">squote</code></a> <a href="#wordPunct"><code class="language-plaintext highlighter-rouge">wordPunct</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#acceptAbbrTok"><code class="language-plaintext highlighter-rouge">acceptAbbrTok</code></a> <a href="#buildOrigText"><code class="language-plaintext highlighter-rouge">buildOrigText</code></a> <a href="#tokCvtAbbr"><code class="language-plaintext highlighter-rouge">tokCvtAbbr</code></a> <a href="#tokCvtApostropheS"><code class="language-plaintext highlighter-rouge">tokCvtApostropheS</code></a> <a href="#tokCvtSpelledNumber"><code class="language-plaintext highlighter-rouge">tokCvtSpelledNumber</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Tokenizer</code> :<br />
+<a href="../object/Tokenizer.html#deleteRule"><code class="language-plaintext highlighter-rouge">deleteRule</code></a> <a href="../object/Tokenizer.html#deleteRuleAt"><code class="language-plaintext highlighter-rouge">deleteRuleAt</code></a> <a href="../object/Tokenizer.html#insertRule"><code class="language-plaintext highlighter-rouge">insertRule</code></a> <a href="../object/Tokenizer.html#insertRuleAt"><code class="language-plaintext highlighter-rouge">insertRuleAt</code></a> <a href="../object/Tokenizer.html#tokCvtLower"><code class="language-plaintext highlighter-rouge">tokCvtLower</code></a> <a href="../object/Tokenizer.html#tokCvtSkip"><code class="language-plaintext highlighter-rouge">tokCvtSkip</code></a> <a href="../object/Tokenizer.html#tokenize"><code class="language-plaintext highlighter-rouge">tokenize</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="endAssert"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endAssert</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#199">199</a>]</p>
+
+<p>end-of-token assertion</p>
+
+<p><span id="patAlphaDashAlpha"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patAlphaDashAlpha</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#258">258</a>]</p>
+
+<p>add the part after the hyphen</p>
+
+<p><span id="patPunct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patPunct</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#375">375</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="patSpelledTens"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patSpelledTens</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#371">371</a>]</p>
+
+<p>some pre-compiled regular expressions</p>
+
+<p><span id="patSpelledUnits"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">patSpelledUnits</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#373">373</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="punctChars"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">punctChars</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#196">196</a>]</p>
+
+<p>token-separating punctuation marks, as an &lt;alpha|x|y&gt; pattern</p>
+
+<p><span id="rules_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rules_</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#74">74</a>]</p>
+
+<p>The list of tokenizing rules. This isn’t actually required to be defined
+by the language module, since you *could* just use the default rules
+inherited from the base Tokenizer class, but it’s likely that each
+language will have some quirks that require custom rules.</p>
+
+<p><span id="squote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">squote</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#206">206</a>]</p>
+
+<p>List of characters consisting a single quote mark. This includes regular
+ASCII straight quotes as well as the unicode curly quotes. This is for
+pasting into a &lt;alpha|x|y&gt; pattern.</p>
+
+<p><span id="wordPunct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">wordPunct</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#212">212</a>]</p>
+
+<p>list of acceptable punctuation marks within words; this is for pasting
+into an &lt;alpha|x|y&gt; pattern</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="acceptAbbrTok"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">acceptAbbrTok (txt)</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#270">270</a>]</p>
+
+<p>Check to see if we want to accept an abbreviated token - this is a token
+that ends in a period, which we use for abbreviated words like “Mr.” or
+“Ave.” We’ll accept the token only if it appears as given - including
+the period - in the dictionary. Note that we ignore truncated matches,
+since the only way we’ll accept a period in a word token is as the last
+character; there is thus no way that a token ending in a period could be
+a truncation of any longer valid token.</p>
+
+<p><span id="buildOrigText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildOrigText (toks)</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#311">311</a>]</p>
+
+<p>Given a list of token strings, rebuild the original input string. We
+can’t recover the exact input string, because the tokenization process
+throws away whitespace information, but we can at least come up with
+something that will display cleanly and produce the same results when
+run through the tokenizer.</p>
+
+<p>[Required]</p>
+
+<p><span id="tokCvtAbbr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokCvtAbbr (txt, typ, toks)</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#290">290</a>]</p>
+
+<p>Process an abbreviated token.</p>
+
+<p>When we find an abbreviation, we’ll enter it with the abbreviated word
+minus the trailing period, plus the period as a separate token. We’ll
+mark the period as an “abbreviation period” so that grammar rules will
+be able to consider treating it as an abbreviation – but since it’s
+also a regular period, grammar rules that treat periods as regular
+punctuation will also be able to try to match the result. This will
+ensure that we try it both ways - as abbreviation and as a word with
+punctuation - and pick the one that gives us the best result.</p>
+
+<p><span id="tokCvtApostropheS"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokCvtApostropheS (txt, typ, toks)</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#220">220</a>]</p>
+
+<p>Handle an apostrophe-s word. We’ll return this as two separate tokens:
+one for the word preceding the apostrophe-s, and one for the
+apostrophe-s itself.</p>
+
+<p><span id="tokCvtSpelledNumber"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tokCvtSpelledNumber (txt, typ, toks)</code></p>
+
+<p><a href="../file/tokens.t.html">tokens.t</a>[<a href="../source/tokens.t.html#244">244</a>]</p>
+
+<p>Handle a spelled-out hyphenated number from 21 to 99. We’ll return this
+as three separate tokens: a word for the tens name, a word for the
+hyphen, and a word for the units name.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

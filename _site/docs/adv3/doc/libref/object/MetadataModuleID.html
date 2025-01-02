@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-metadatamoduleid-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-metadatamoduleid-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">MetadataModuleID</span><span class="type">class</span></p>
+
+<p><a href="../file/modid.t.html">modid.t</a>[<a href="../source/modid.t.html#189">189</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A module ID with metadata. During pre-initialization, we’ll
+automatically write out a file with the metadata for each of these
+objects. This is an abstract base class; a subclass must be created for
+each specific metadata format.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">MetadataModuleID</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ModuleID.html"><code class="language-plaintext highlighter-rouge">ModuleID</code></a> <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MetadataModuleID</code></strong><br />
+<a href="../object/ModuleID.html"><code class="language-plaintext highlighter-rouge">ModuleID</code></a><br />
+`                 object<code class="language-plaintext highlighter-rouge">  
+[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">MetadataModuleID</code></strong><br />
+<a href="../object/GameInfoModuleID.html"><code class="language-plaintext highlighter-rouge">GameInfoModuleID</code></a><br />
+<a href="../object/GameID.html"><code class="language-plaintext highlighter-rouge">GameID</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleID</code> :<br />
+<a href="../object/ModuleID.html#byline"><code class="language-plaintext highlighter-rouge">byline</code></a> <a href="../object/ModuleID.html#htmlByline"><code class="language-plaintext highlighter-rouge">htmlByline</code></a> <a href="../object/ModuleID.html#listingOrder"><code class="language-plaintext highlighter-rouge">listingOrder</code></a> <a href="../object/ModuleID.html#name"><code class="language-plaintext highlighter-rouge">name</code></a> <a href="../object/ModuleID.html#version"><code class="language-plaintext highlighter-rouge">version</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#writeMetadataFile"><code class="language-plaintext highlighter-rouge">writeMetadataFile</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleID</code> :<br />
+<a href="../object/ModuleID.html#getModuleList"><code class="language-plaintext highlighter-rouge">getModuleList</code></a> <a href="../object/ModuleID.html#showAbout"><code class="language-plaintext highlighter-rouge">showAbout</code></a> <a href="../object/ModuleID.html#showCredit"><code class="language-plaintext highlighter-rouge">showCredit</code></a> <a href="../object/ModuleID.html#showVersion"><code class="language-plaintext highlighter-rouge">showVersion</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/modid.t.html">modid.t</a>[<a href="../source/modid.t.html#191">191</a>]</p>
+
+<p>execute pre-initialization</p>
+
+<p><span id="writeMetadataFile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">writeMetadataFile ( )</code></p>
+
+<p><a href="../file/modid.t.html">modid.t</a>[<a href="../source/modid.t.html#203">203</a>]</p>
+
+<p>write our metadata file - this must be overridden by each subclass to
+carry out the specific steps needed to create and write the metadata
+file in the appropriate format for the subclass</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

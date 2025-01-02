@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-compiler-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-compiler-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Compiler</span><span class="type">object</span></p>
+
+<p><a href="../file/dynfunc.t.html">dynfunc.t</a>[<a href="../source/dynfunc.t.html#40">40</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Compiler: This object provides a simplified interface to the dynamic
+compiler. The methods here can be used instead of manually creating
+DynamicFunc instances.</p>
+
+<p>The main advantage of using this object to compile code is that it
+automatically provides access to the global symbol table that was used
+to compile the current program, for use in dynamic code. Without the
+global symbol table, dynamic code won’t have access to object names,
+property names, function names, and so on. That doesn’t stop you from
+compiling code that only depends upon its own function parameters and
+local variables, but for most purposes the global symbols are useful to
+have around.</p>
+
+<p>Note that including this object in a project will automatically save the
+global symbol table in the compiled .t3 file. This increases the size of
+the .t3 file, as well as memory usage during execution. If you’re
+concerned about minimizing the .t3 file size or the run-time memory
+footprint, *and* you don’t need global symbols for dynamic code (or
+you don’t use the dynamic compiler at all), you can save some space by
+omitting this whole module from the build.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Compiler</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Compiler</code></strong><br />
+<a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
+<a href="../object/ModuleExecObject.html"><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></a><br />
+`                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#macros_"><code class="language-plaintext highlighter-rouge">macros_</code></a> <a href="#symtab_"><code class="language-plaintext highlighter-rouge">symtab_</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#compile"><code class="language-plaintext highlighter-rouge">compile</code></a> <a href="#defineFunc"><code class="language-plaintext highlighter-rouge">defineFunc</code></a> <a href="#eval"><code class="language-plaintext highlighter-rouge">eval</code></a> <a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="macros_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">macros_</code></p>
+
+<p><a href="../file/dynfunc.t.html">dynfunc.t</a>[<a href="../source/dynfunc.t.html#149">149</a>]</p>
+
+<p>a saved referenced to the preprocessor macro table</p>
+
+<p><span id="symtab_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">symtab_</code></p>
+
+<p><a href="../file/dynfunc.t.html">dynfunc.t</a>[<a href="../source/dynfunc.t.html#146">146</a>]</p>
+
+<p>a saved reference to the global symbol table</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="compile"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compile (str, locals?)</code></p>
+
+<p><a href="../file/dynfunc.t.html">dynfunc.t</a>[<a href="../source/dynfunc.t.html#73">73</a>]</p>
+
+<p>Compile an expression or function. ‘str’ is a string giving the code to
+compile. This can be a simple value expression, such as ‘Me.location’ or
+‘new BigNumber(12345).sqrt()’. Or, it can be a complete unnamed function
+definition, using this syntax:</p>
+
+<p>‘function(x, y, z) { …body of function… }’</p>
+
+<p>The body of the function can contain any executable code that you could
+write in a regular function in static code: if, while, switch, return,
+etc.</p>
+
+<p>The return value is a DynamicFunc containing the compiled expression or
+function. You call it by using the return value as though it were a
+function:</p>
+
+<p>local f = Compiler.compile(‘Me.location’);<br />
+local loc = f();</p>
+
+<p>If the source string was just an expression, it acts like a function
+that takes zero arguments, and returns the computed value of the
+expression. The expression is evaluated anew each time you invoke it, so
+you’ll get the “live” value of an expression that refers to object
+properties or other external data. In the example above, we’d get the
+current value of Me.location every time we call f().</p>
+
+<p>The source string is actually compiled immediately when you call this
+function. This means it’s checked for errors, such as syntax errors and
+unknown symbol names. If the code contains any errors, this method
+throws a CompilerException describing the problem.</p>
+
+<p><span id="defineFunc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">defineFunc (name, str, locals?)</code></p>
+
+<p><a href="../file/dynfunc.t.html">dynfunc.t</a>[<a href="../source/dynfunc.t.html#85">85</a>]</p>
+
+<p>Compile a dynamic function string, and add it to the global symbol table
+as a function with the given name. This effectively creates a new named
+function that you can call from other dynamic code objects.</p>
+
+<p><span id="eval"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eval (str, locals?)</code></p>
+
+<p><a href="../file/dynfunc.t.html">dynfunc.t</a>[<a href="../source/dynfunc.t.html#118">118</a>]</p>
+
+<p>Evaluate an expression. ‘str’ is a string giving code to compile. In
+most cases, this is simply a simple value expression, although it’s also
+acceptable to use the ‘function()’ syntax to create a function that
+takes no arguments.</p>
+
+<p>This method compiles the source string and immediately calls the
+resulting compiled code. The return value is the value returned from the
+compiled code itself. This method thus provides a quick way to evaluate
+an expression.</p>
+
+<p>If the string contains any syntax errors or other compilation errors,
+the method throws a CompilerException. In addition, it’s possible for
+the compiled code to throw exceptions of its own; this method doesn’t
+catch those, leaving it up to the caller to handle them.</p>
+
+<p>If you expect to evaluate the same expression repeatedly, you’re better
+off using compile() to get the compiled representation of the
+expression, and then call that compiled code each time the value is
+needed. That’s more efficient than using eval() each time, since eval()
+to recompile the expression on every call, which is a fairly complex
+process.</p>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/dynfunc.t.html">dynfunc.t</a>[<a href="../source/dynfunc.t.html#138">138</a>]</p>
+
+<p>During preinit, save a reference to the program’s global symbol table in
+a property of self. The VM always makes the global symbols available
+during preinit, but by default it discards the table after that because
+most programs don’t need it. That means that the symbols aren’t
+available by default during normal execution. However, saving a
+reference here prevents the garbage collector from discarding the table
+when preinit finishes, which forces it to be saved in the final .t3 file
+and thus makes it available permanently.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

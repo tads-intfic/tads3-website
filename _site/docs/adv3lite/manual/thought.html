@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-manual-thought-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-manual-thought-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="optional.html" class="nav">Optional Modules</a> &gt; Thoughts<br />
+<span class="navnp"><a href="topicentry.html" class="nav"><em>Prev:</em> Topic Entries</a>
+    <a href="action.html" class="nav"><em>Next:</em> Actions</a>    
+</span></p>
+
+<h1 id="thoughts">Thoughts</h1>
+
+<p>The thoughts.t module provides a framework for responding to commands of
+the form THINK ABOUT WHATEVER. It uses precisely the same TopicEntry
+mechanism as the Consultable/ConsultTopic classes, and can be used in
+almost precisely the same way. All you need to do is to define an object
+of the <strong>ThoughtManager</strong> class and then populate it with <strong>Thought</strong>
+objects, like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myThoughts: ThoughtManager
+    ;
+
+    + Thought @george
+        "To be honest, you're not really sure what he's doing here. "
+    ;
+
+    + Thought @tFire
+        "It's a wretched nuiscance. Your nephew's probably to blame for it
+        somehow, but the important thing right now is just to escape from it. "
+    ;
+
+    + DefaultThought
+        "You find your thoughts start to wander; for some reason you can't
+        concentrate on that topic right now. "
+    ;
+</code></pre></div></div>
+
+<p>Thought inherits from <a href="topicentry.html">TopicEntry</a>, so you can use all
+the properties and methods of TopicEntry with it; Thought and
+DefaultThought work just like ConsultTopic and DefaultConsultTopic.</p>
+
+<p>You can exclude thoughts.t if you don’t want to implement a THINK ABOUT
+command (or you don’t want to implement it this way), but if you include
+thoughts.t you must also include topicentry.t.</p>
+
+<hr />
+
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="optional.html" class="nav">Optional Modules</a> &gt; Thoughts<br />
+<span class="navnp"><a href="topicentry.html" class="nav"><em>Prev:</em> Topic Entries</a>
+    <a href="action.html" class="nav"><em>Next:</em> Actions</a>    
+</span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

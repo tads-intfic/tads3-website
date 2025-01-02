@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-basicactors-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-basicactors-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Basic Actors<br />
+</strong></td>
+<td style="text-align: right;"><a href="overview-actors+npcs.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="actorcustomization.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Without further ado, we’ll start defining the basic Actor (actually
+Person) objects we’ll be needing in this game. Because, with all their
+associated helper objects (ActorStates, TopicEntries, ConvNodes,
+TopicGroups and AgendaItems) actor definitions can end up getting long
+and complicated, it is generally worth defining each but the very
+simplest NPC in its own source file. We’ll begin the Sarah, the young
+lady who will become the player character’s companion and helper:</p>
+
+<p>sarah : Person ’attractive young woman/brunette’ ’young woman’ @lakeRoom<br />
+  ”She’s an attractive brunette, somewhere in her mid-twenties. ”<br />
+  isHer = true<br />
+  properName = ’Sarah’<br />
+  globalParamName = ’sarah’<br />
+;</p>
+
+<p>Often, this is all that is needed in the definition of the basic Actor
+object. We define <strong>isHer</strong> = true so that the parser knows this NPC is
+female (and can be referred to with feminine pronouns such as ‘she’ and
+‘her’). Adding a <strong>globalParamName</strong> to an actor is nearly always
+useful, particularly in a case like this where the woman will change
+from ‘the young woman’ to ‘Sarah’ once we get to know her; it allows us
+to use whatever we have defined as the globalParamName in parameterised
+strings like “{The sarah/she} smiles at you warmly” and have the game
+display “The young woman smiles at you warmly” or “Sarah smiles at you
+warmly” as appropriate to our knowledge of her name. The other property
+we have define, <strong>properName</strong>, is not a library property at all, but
+one we are using for our own purposes to store the name the young woman
+will eventually be known by. To make this useful we need to add a
+corresponding custom method to the actor class:</p>
+
+<p>modify Actor<br />
+  makeProper()<br />
+  {<br />
+    if(properName != nil)<br />
+    {<br />
+      name = properName;<br />
+      initializeVocabWith(properName);<br />
+      isProperName = true;<br />
+    }<br />
+    return name;<br />
+  }<br />
+;</p>
+
+<p>What the makeProper method does is (provided properName is non nil)
+change the name property to the properName (e.g. “young woman” to
+“Sarah”), add properName to the vocabulary words for the actor (so
+henceforth we can also refer to the young woman as “sarah” in commands),
+and sets the library property <strong>isProperName</strong> to true so that the game
+knows that the actor’s name is now a proper name and will display
+messages like “Sarah is here” rather than “The Sarah is here”. Finally
+the method returns the name of the actor as it now is; this means it can
+be used in conversational text such us “&lt;q&gt;Hello, I’m
+&lt;&lt;sarah.makeProper&gt;&gt;.&lt;/q&gt; the young woman introduces herself” both
+to display the name and to update the Actor object appropriately at the
+same time. Unfortunately, we’ll have to wait till we get into
+programming conversations to see this in action (unless you want to add
+some temporary code to try it out, e.g. by making it a response in
+sarah.actionDobjKiss).</p>
+
+<p>We have already made a temporary definition of the curator, but let’s
+move him to his own file and set him up similarly:</p>
+
+<p>curator : Person ’curator’ ’curator’ @behindTable<br />
+  ”The curator is a ferret-faced little man in is mid-forties. ”<br />
+  isHim = true      <br />
+  properName = ’Professor Altmeister’<br />
+  globalParamName = ’curator’<br />
+;</p>
+
+<p>Note that we have stripped out the code that moves him around, as we’ll
+be implementing it differently. Obviously, for the male curator we set
+<strong>isHim</strong> = true. Once again we add a globalParamName.</p>
+
+<p>The other character we’ve already met is King Solomon; here he is as
+we’ll now create him:</p>
+
+<p>solomon : Person ’middle-aged middle aged man/king’ ’middle-aged man’ @solomonChair<br />
+  ”He’s quite good-looking in a middle-eastern sort of way, with long curly<br />
+   black hair that’s just starting to go grey, and a neatly kept beard. He’s<br />
+   dressed in a purple cloak. ”<br />
+  isHim = true    <br />
+  posture = sitting<br />
+  properName = ’King Solomon’<br />
+  globalParamName = ’solomon’<br />
+;</p>
+
+<p>We can also use a single Person object to represent a group of NPCs,
+especially when there’s no particular need to distinguish one from
+another:</p>
+
+<p>demons : Person ’bunch crowd gaggle demons’ ’demons’ @hellPath<br />
+  ”They’re an ugly bunch of mis-shapen, semi-substantial beings, slightly<br />
+   green in tinge with glaring red eyes and tiny forked tails. ”       <br />
+  isPlural = true<br />
+  globalParamName = ’demons’<br />
+;</p>
+
+<p>Since we’ve put the demons in a location we haven’t created yet, we’d
+better add this new location:</p>
+
+<p>hellPath : OutdoorRoom ’Path down Hell Fire Cavern’ ’the path’<br />
+  ”About halfway down the track from the summit to the basalt plain below the track <br />
+   flattens to a small ledge. Stone steps continue upwards towards the top and down<br />
+   to the bleak basalt plain below, while across the plain to the north Mount Gloom<br />
+   continues to belch smoke and flame. ”<br />
+  up = hellPathUp<br />
+  down = hellPathDown<br />
+;</p>
+
+<p>+ hellPathUp : StairwayUp -&gt;roughStaircase ’stone upward up steps’ ’upward steps’<br />
+  ”It looks a rough ascent, possibly treacherous in places, but probably passable<br />
+   with care. ”<br />
+  isPlural = true<br />
+;</p>
+
+<p>+ hellPathDown : StairwayDown ’stone downward down steps’ ’downward steps’<br />
+  ”The rough steps downwards to the basalt plain look even less inviting than those<br />
+   leading up, but they appear to be just about negotiable. ”<br />
+  isPlural = true<br />
+;</p>
+
+<p>You might also want to add hellPath to the locationList property of the
+MultiLoc, Distant volcano object defined earlier.</p>
+
+<p>While we’re in the business of the inhuman NPC, here’s our final
+actor:</p>
+
+<p>ghost : Person ’ghost’ ’ghost’ <br />
+  ”It’s as insubstantial as you’d expect a ghost to be, a pale white shape you can<br />
+   almost see through, with just a hint of washed-out colour. The wan face bears<br />
+   a once-regal demeanour, and its features vaguely resemble those on the golden<br />
+   statue in the grotto. ”<br />
+  isHim = true       <br />
+  isIt = true <br />
+  properName = ’Benedict’<br />
+  globalParamName = ’ghost’<br />
+;</p>
+
+<p>We have deliberately not given this ghost a location, since it will only
+appear (in the cemetery) after the gold statue has been toppled (which
+is why we can be sure it’s safe to refer to the statue in the
+description). Note that we can make the ghost both a “him” and an “it”
+by setting both isHim and isIt to true, since players may think of the
+ghost as being either neuter or masculine (or may change from one to the
+other once the ghost introduces himself as Benedict).</p>
+
+<p>Five NPCs may constitute a fairly sparse population for the size of game
+world we are implementing, but they will suffice for the plot (such as
+it is) and to illustrate how NPCs can be implemented. Over the course of
+the next several sections we shall gradually bring them to life.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

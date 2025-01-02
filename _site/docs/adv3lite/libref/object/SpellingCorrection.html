@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-spellingcorrection-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-spellingcorrection-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">SpellingCorrection</span><span class="type">class</span></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#800">800</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>SpellingCorrection: Each time we attempt a spelling correction, we’ll
+save information on the attempt in one of these objects.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">SpellingCorrection</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SpellingCorrection</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#candidates"><code class="language-plaintext highlighter-rouge">candidates</code></a> <a href="#corrections"><code class="language-plaintext highlighter-rouge">corrections</code></a> <a href="#curCand"><code class="language-plaintext highlighter-rouge">curCand</code></a> <a href="#oldToks"><code class="language-plaintext highlighter-rouge">oldToks</code></a> <a href="#parseError"><code class="language-plaintext highlighter-rouge">parseError</code></a> <a href="#unknown"><code class="language-plaintext highlighter-rouge">unknown</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="candidates"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">candidates</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#823">823</a>]</p>
+
+<p>the candidate list - this is a list of token lists</p>
+
+<p><span id="corrections"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">corrections</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#820">820</a>]</p>
+
+<p>the indices of the corrections so far, before this one</p>
+
+<p><span id="curCand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curCand</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#826">826</a>]</p>
+
+<p>the current candidate index</p>
+
+<p><span id="oldToks"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">oldToks</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#811">811</a>]</p>
+
+<p>the token list before the spelling correction</p>
+
+<p><span id="parseError"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">parseError</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#829">829</a>]</p>
+
+<p>the ParseError that triggered the spelling correction attempt</p>
+
+<p><span id="unknown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">unknown</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#817">817</a>]</p>
+
+<p>is this a correction for an unknown word (as opposed to a word that’s in
+the dictionary, but still could be a typo)?</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (oldToks, candidates, corrections, unknown, err)</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#801">801</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

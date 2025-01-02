@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-defaultasktelltopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-defaultasktelltopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>DefaultAskTellTopic : <a href="defaulttopics-overview.html">DefaultTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="defaulttelltopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="defaultgivetopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A Default AskTellTopic effectively combines the functionality of a
+DefaultAskTopic and a DefaultTellTopic, i.e. it will handle any ASK
+ABOUT or TELL ABOUT command for which no specific TopicEntry has been
+provided.</p>
+
+<p>It can be convenient to have a single DefaultTopic to handle both sets
+of commands, thus avoiding the need for a separate DefaultAskTopic and
+DefaultTellTopic, although it may be slightly harder to devise a series
+of bland responses that look equally convincing in response to both ASK
+ABOUT and TELL ABOUT. The DefaultAskTellTopic is perhaps best used in
+situations where the author does not expect it to be so heavily
+employed, perhaps on relatively minor NPCs, or in little-used
+ActorStates, or as a means of catching irrelevant responses in a
+<a href="conversationnodes-overview.html">Conversation Node</a> (see below).</p>
+
+<p>By way of illustration, we’ll provide DefaultAskTellTopics for the
+curator and Solomon, which would be placed in their respective
+InConversationStates. We’ll start with the curator:</p>
+
+<p>++ DefaultAskTellTopic, ShuffledEventList   <br />
+  [  <br />
+    ’&lt;q&gt;Right,&lt;/q&gt; {the curator/he} nods. ’,<br />
+    ’&lt;q&gt;Hm.&lt;/q&gt; he replies. ’,<br />
+    ’&lt;q&gt;I never discuss that sort of thing when on duty.&lt;/q&gt; he tells you. ’,<br />
+    ’{The curator/he} breaks into a long, boring and utterly incomprehensible <br />
+     explanation that you rapidly stop listening to. ’,<br />
+    ’{The curator/he} proceeds to tell you everything he knows about ’ +<br />
+     gTopicText + ’, until you wish you\d never raised the subject. ’  <br />
+  ] <br />
+;</p>
+
+<p>It should be pointed out, of course, that a list of default responses
+such as this will in any case seem less jarring if the author has
+anticipated the topics players are likely to raise and provided answers
+for them. In reality, we should, at the very least, have provided
+AskTopics to cover the exhibits in general, the specific exhibits on
+display, and the golden banana. The only reason for not doing so is that
+such further examples of AskTopics would serve no useful purpose in the
+course of this tutorial, so that, once again, they must be left as an
+exercise for the reader.</p>
+
+<p>It is, of course, possible to write a DefaultAskTellTopic with a single
+response. Since King Solomon allegedly enjoyed an encyclopedic knowledge
+of every subject under the sun, one might almost get away with:</p>
+
+<p>++ DefaultAskTellTopic<br />
+  ”{The solomon/he} nods sagely and proceeds to treat you to the breadth<br />
+   and depth of his wisdom on the subject of &lt;&lt;gTopicText&gt;&gt;. ”<br />
+;</p>
+
+<p>The player may feel this default response becomes inappropriate if
+Solomon is asked about nuclear physics, George W. Bush, or human
+cloning, but a player who raises such topics in the course of a
+conversation with the ancient Israelite king can hardly expect very
+sensible responses. Again, this kind of default response will be a bit
+less jarring if we supply suitable AskTopics and TellTopics to cover
+things the player could reasonably be expected to try conversing with
+Solomon about.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

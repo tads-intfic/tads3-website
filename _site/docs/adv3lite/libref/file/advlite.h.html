@@ -1,0 +1,2905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-file-advlite-h-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-file-advlite-h-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">advlite.h</span><span class="type">file</span></p>
+
+<p><a href="../source/advlite.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<p>TADS 3 Library - main header</p>
+
+<p>This file provides definitions of macros, properties, and other
+identifiers used throughout the library and in game source.</p>
+
+<p>Each source code file in the library and in a game should generally
+#include this header near the top of the source file.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><em>(none)</em> <span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><em>(none)</em> <span id="_MacroSummary_"></span></p>
+
+<p><span class="hdln">Summary of Macros</span>  </p>
+
+<p><a href="#_STRINGIZE"><code class="language-plaintext highlighter-rouge">_STRINGIZE</code></a> <a href="#_STRINGIZE"><code class="language-plaintext highlighter-rouge">_STRINGIZE</code></a> <a href="#abort"><code class="language-plaintext highlighter-rouge">abort</code></a> <a href="#abortImplicit"><code class="language-plaintext highlighter-rouge">abortImplicit</code></a> <a href="#accFor"><code class="language-plaintext highlighter-rouge">accFor</code></a> <a href="#accList"><code class="language-plaintext highlighter-rouge">accList</code></a> <a href="#ADV3LITE_H"><code class="language-plaintext highlighter-rouge">ADV3LITE_H</code></a> <a href="#AHREF_Plain"><code class="language-plaintext highlighter-rouge">AHREF_Plain</code></a> <a href="#aobjFor"><code class="language-plaintext highlighter-rouge">aobjFor</code></a> <a href="#aobjList"><code class="language-plaintext highlighter-rouge">aobjList</code></a> <a href="#asAccFor"><code class="language-plaintext highlighter-rouge">asAccFor</code></a> <a href="#asAobjFor"><code class="language-plaintext highlighter-rouge">asAobjFor</code></a> <a href="#asDobjFor"><code class="language-plaintext highlighter-rouge">asDobjFor</code></a> <a href="#asDobjWithoutActionFor"><code class="language-plaintext highlighter-rouge">asDobjWithoutActionFor</code></a> <a href="#asDobjWithoutVerifyFor"><code class="language-plaintext highlighter-rouge">asDobjWithoutVerifyFor</code></a> <a href="#asExit"><code class="language-plaintext highlighter-rouge">asExit</code></a> <a href="#asIobjFor"><code class="language-plaintext highlighter-rouge">asIobjFor</code></a> <a href="#asIobjWithoutActionFor"><code class="language-plaintext highlighter-rouge">asIobjWithoutActionFor</code></a> <a href="#asIobjWithoutVerifyFor"><code class="language-plaintext highlighter-rouge">asIobjWithoutVerifyFor</code></a> <a href="#askForAcc"><code class="language-plaintext highlighter-rouge">askForAcc</code></a> <a href="#askForAobj"><code class="language-plaintext highlighter-rouge">askForAobj</code></a> <a href="#askForDobj"><code class="language-plaintext highlighter-rouge">askForDobj</code></a> <a href="#askForIobj"><code class="language-plaintext highlighter-rouge">askForIobj</code></a> <a href="#asObjFor"><code class="language-plaintext highlighter-rouge">asObjFor</code></a> <a href="#asObjWithoutActionFor"><code class="language-plaintext highlighter-rouge">asObjWithoutActionFor</code></a> <a href="#asObjWithoutVerifyFor"><code class="language-plaintext highlighter-rouge">asObjWithoutVerifyFor</code></a> <a href="#AudioLink"><code class="language-plaintext highlighter-rouge">AudioLink</code></a> <a href="#BMsg"><code class="language-plaintext highlighter-rouge">BMsg</code></a> <a href="#BMsg"><code class="language-plaintext highlighter-rouge">BMsg</code></a> <a href="#cannotTouchMsg"><code class="language-plaintext highlighter-rouge">cannotTouchMsg</code></a> <a href="#checkHitMsg"><code class="language-plaintext highlighter-rouge">checkHitMsg</code></a> <a href="#checkTouchMsg"><code class="language-plaintext highlighter-rouge">checkTouchMsg</code></a> <a href="#ConversationLullReason"><code class="language-plaintext highlighter-rouge">ConversationLullReason</code></a> <a href="#dangerous"><code class="language-plaintext highlighter-rouge">dangerous</code></a> <a href="#DefaultTopicReason"><code class="language-plaintext highlighter-rouge">DefaultTopicReason</code></a> <a href="#DefineAction"><code class="language-plaintext highlighter-rouge">DefineAction</code></a> <a href="#DefineIAction"><code class="language-plaintext highlighter-rouge">DefineIAction</code></a> <a href="#DefineLiteralAction"><code class="language-plaintext highlighter-rouge">DefineLiteralAction</code></a> <a href="#DefineLiteralTAction"><code class="language-plaintext highlighter-rouge">DefineLiteralTAction</code></a> <a href="#DefineNumericAction"><code class="language-plaintext highlighter-rouge">DefineNumericAction</code></a> <a href="#DefineNumericTAction"><code class="language-plaintext highlighter-rouge">DefineNumericTAction</code></a> <a href="#DefineSystemAction"><code class="language-plaintext highlighter-rouge">DefineSystemAction</code></a> <a href="#DefineTAction"><code class="language-plaintext highlighter-rouge">DefineTAction</code></a> <a href="#DefineTActionSub"><code class="language-plaintext highlighter-rouge">DefineTActionSub</code></a> <a href="#DefineTIAAction"><code class="language-plaintext highlighter-rouge">DefineTIAAction</code></a> <a href="#DefineTIAActionSub"><code class="language-plaintext highlighter-rouge">DefineTIAActionSub</code></a> <a href="#DefineTIAction"><code class="language-plaintext highlighter-rouge">DefineTIAction</code></a> <a href="#DefineTIActionSub"><code class="language-plaintext highlighter-rouge">DefineTIActionSub</code></a> <a href="#DefineTopicAction"><code class="language-plaintext highlighter-rouge">DefineTopicAction</code></a> <a href="#DefineTopicTAction"><code class="language-plaintext highlighter-rouge">DefineTopicTAction</code></a> <a href="#DefSignal"><code class="language-plaintext highlighter-rouge">DefSignal</code></a> <a href="#DMsg"><code class="language-plaintext highlighter-rouge">DMsg</code></a> <a href="#DMsg"><code class="language-plaintext highlighter-rouge">DMsg</code></a> <a href="#dobjFor"><code class="language-plaintext highlighter-rouge">dobjFor</code></a> <a href="#dobjList"><code class="language-plaintext highlighter-rouge">dobjList</code></a> <a href="#exit"><code class="language-plaintext highlighter-rouge">exit</code></a> <a href="#exitAction"><code class="language-plaintext highlighter-rouge">exitAction</code></a> <a href="#exitCommandLine"><code class="language-plaintext highlighter-rouge">exitCommandLine</code></a> <a href="#feelResponseMsg"><code class="language-plaintext highlighter-rouge">feelResponseMsg</code></a> <a href="#gAcc"><code class="language-plaintext highlighter-rouge">gAcc</code></a> <a href="#gAction"><code class="language-plaintext highlighter-rouge">gAction</code></a> <a href="#gActionIn"><code class="language-plaintext highlighter-rouge">gActionIn</code></a> <a href="#gActionIs"><code class="language-plaintext highlighter-rouge">gActionIs</code></a> <a href="#gActionList"><code class="language-plaintext highlighter-rouge">gActionList</code></a> <a href="#gActionListObj"><code class="language-plaintext highlighter-rouge">gActionListObj</code></a> <a href="#gActionListStr"><code class="language-plaintext highlighter-rouge">gActionListStr</code></a> <a href="#gActor"><code class="language-plaintext highlighter-rouge">gActor</code></a> <a href="#gAobj"><code class="language-plaintext highlighter-rouge">gAobj</code></a> <a href="#gCommand"><code class="language-plaintext highlighter-rouge">gCommand</code></a> <a href="#gCommandToks"><code class="language-plaintext highlighter-rouge">gCommandToks</code></a> <a href="#gDobj"><code class="language-plaintext highlighter-rouge">gDobj</code></a> <a href="#gExitLister"><code class="language-plaintext highlighter-rouge">gExitLister</code></a> <a href="#gExtraHintManager"><code class="language-plaintext highlighter-rouge">gExtraHintManager</code></a> <a href="#gHintManager"><code class="language-plaintext highlighter-rouge">gHintManager</code></a> <a href="#gInformed"><code class="language-plaintext highlighter-rouge">gInformed</code></a> <a href="#gIobj"><code class="language-plaintext highlighter-rouge">gIobj</code></a> <a href="#gLastAction"><code class="language-plaintext highlighter-rouge">gLastAction</code></a> <a href="#gLastCommand"><code class="language-plaintext highlighter-rouge">gLastCommand</code></a> <a href="#gLibMessages"><code class="language-plaintext highlighter-rouge">gLibMessages</code></a> <a href="#gLiteral"><code class="language-plaintext highlighter-rouge">gLiteral</code></a> <a href="#gLocation"><code class="language-plaintext highlighter-rouge">gLocation</code></a> <a href="#gMessageParams"><code class="language-plaintext highlighter-rouge">gMessageParams</code></a> <a href="#gNumber"><code class="language-plaintext highlighter-rouge">gNumber</code></a> <a href="#goInstead"><code class="language-plaintext highlighter-rouge">goInstead</code></a> <a href="#goNested"><code class="language-plaintext highlighter-rouge">goNested</code></a> <a href="#gOutStream"><code class="language-plaintext highlighter-rouge">gOutStream</code></a> <a href="#gPlayerChar"><code class="language-plaintext highlighter-rouge">gPlayerChar</code></a> <a href="#gReveal"><code class="language-plaintext highlighter-rouge">gReveal</code></a> <a href="#gRevealed"><code class="language-plaintext highlighter-rouge">gRevealed</code></a> <a href="#gRoom"><code class="language-plaintext highlighter-rouge">gRoom</code></a> <a href="#gSetKnown"><code class="language-plaintext highlighter-rouge">gSetKnown</code></a> <a href="#gSetSeen"><code class="language-plaintext highlighter-rouge">gSetSeen</code></a> <a href="#gTentativeDobj"><code class="language-plaintext highlighter-rouge">gTentativeDobj</code></a> <a href="#gTentativeDobjIn"><code class="language-plaintext highlighter-rouge">gTentativeDobjIn</code></a> <a href="#gTentativeIobj"><code class="language-plaintext highlighter-rouge">gTentativeIobj</code></a> <a href="#gTentativeIobjIn"><code class="language-plaintext highlighter-rouge">gTentativeIobjIn</code></a> <a href="#gTopic"><code class="language-plaintext highlighter-rouge">gTopic</code></a> <a href="#gTopicMatch"><code class="language-plaintext highlighter-rouge">gTopicMatch</code></a> <a href="#gTopicText"><code class="language-plaintext highlighter-rouge">gTopicText</code></a> <a href="#gTravelActionIs"><code class="language-plaintext highlighter-rouge">gTravelActionIs</code></a> <a href="#gTurns"><code class="language-plaintext highlighter-rouge">gTurns</code></a> <a href="#gUnreveal"><code class="language-plaintext highlighter-rouge">gUnreveal</code></a> <a href="#gVerbPhrase"><code class="language-plaintext highlighter-rouge">gVerbPhrase</code></a> <a href="#gVerbWord"><code class="language-plaintext highlighter-rouge">gVerbWord</code></a> <a href="#gVerifyDobj"><code class="language-plaintext highlighter-rouge">gVerifyDobj</code></a> <a href="#gVerifyIobj"><code class="language-plaintext highlighter-rouge">gVerifyIobj</code></a> <a href="#gVerifyList"><code class="language-plaintext highlighter-rouge">gVerifyList</code></a> <a href="#hitResponseMsg"><code class="language-plaintext highlighter-rouge">hitResponseMsg</code></a> <a href="#IfDebug"><code class="language-plaintext highlighter-rouge">IfDebug</code></a> <a href="#IfDebug"><code class="language-plaintext highlighter-rouge">IfDebug</code></a> <a href="#illogical"><code class="language-plaintext highlighter-rouge">illogical</code></a> <a href="#illogicalAlready"><code class="language-plaintext highlighter-rouge">illogicalAlready</code></a> <a href="#illogicalNow"><code class="language-plaintext highlighter-rouge">illogicalNow</code></a> <a href="#illogicalSelf"><code class="language-plaintext highlighter-rouge">illogicalSelf</code></a> <a href="#implausible"><code class="language-plaintext highlighter-rouge">implausible</code></a> <a href="#inaccessible"><code class="language-plaintext highlighter-rouge">inaccessible</code></a> <a href="#InitiateConversationReason"><code class="language-plaintext highlighter-rouge">InitiateConversationReason</code></a> <a href="#input"><code class="language-plaintext highlighter-rouge">input</code></a> <a href="#iobjFor"><code class="language-plaintext highlighter-rouge">iobjFor</code></a> <a href="#iobjList"><code class="language-plaintext highlighter-rouge">iobjList</code></a> <a href="#isEatable"><code class="language-plaintext highlighter-rouge">isEatable</code></a> <a href="#isPotable"><code class="language-plaintext highlighter-rouge">isPotable</code></a> <a href="#isTouchable"><code class="language-plaintext highlighter-rouge">isTouchable</code></a> <a href="#literalAcc"><code class="language-plaintext highlighter-rouge">literalAcc</code></a> <a href="#literalAobj"><code class="language-plaintext highlighter-rouge">literalAobj</code></a> <a href="#literalDobj"><code class="language-plaintext highlighter-rouge">literalDobj</code></a> <a href="#literalIobj"><code class="language-plaintext highlighter-rouge">literalIobj</code></a> <a href="#logical"><code class="language-plaintext highlighter-rouge">logical</code></a> <a href="#logicalRank"><code class="language-plaintext highlighter-rouge">logicalRank</code></a> <a href="#M_DOWN"><code class="language-plaintext highlighter-rouge">M_DOWN</code></a> <a href="#M_PREV"><code class="language-plaintext highlighter-rouge">M_PREV</code></a> <a href="#M_QUIT"><code class="language-plaintext highlighter-rouge">M_QUIT</code></a> <a href="#M_SEL"><code class="language-plaintext highlighter-rouge">M_SEL</code></a> <a href="#M_UP"><code class="language-plaintext highlighter-rouge">M_UP</code></a> <a href="#MatchAdj"><code class="language-plaintext highlighter-rouge">MatchAdj</code></a> <a href="#MatchNoApprox"><code class="language-plaintext highlighter-rouge">MatchNoApprox</code></a> <a href="#MatchNoTrunc"><code class="language-plaintext highlighter-rouge">MatchNoTrunc</code></a> <a href="#MatchNoun"><code class="language-plaintext highlighter-rouge">MatchNoun</code></a> <a href="#MatchPartMask"><code class="language-plaintext highlighter-rouge">MatchPartMask</code></a> <a href="#MatchPhrase"><code class="language-plaintext highlighter-rouge">MatchPhrase</code></a> <a href="#MatchPlural"><code class="language-plaintext highlighter-rouge">MatchPlural</code></a> <a href="#MatchPrep"><code class="language-plaintext highlighter-rouge">MatchPrep</code></a> <a href="#MatchStrengthMask"><code class="language-plaintext highlighter-rouge">MatchStrengthMask</code></a> <a href="#MatchWeak"><code class="language-plaintext highlighter-rouge">MatchWeak</code></a> <a href="#more"><code class="language-plaintext highlighter-rouge">more</code></a> <a href="#Msg"><code class="language-plaintext highlighter-rouge">Msg</code></a> <a href="#multiAcc"><code class="language-plaintext highlighter-rouge">multiAcc</code></a> <a href="#multiAobj"><code class="language-plaintext highlighter-rouge">multiAobj</code></a> <a href="#multiDobj"><code class="language-plaintext highlighter-rouge">multiDobj</code></a> <a href="#multiIobj"><code class="language-plaintext highlighter-rouge">multiIobj</code></a> <a href="#nextrule"><code class="language-plaintext highlighter-rouge">nextrule</code></a> <a href="#nonObvious"><code class="language-plaintext highlighter-rouge">nonObvious</code></a> <a href="#nostop"><code class="language-plaintext highlighter-rouge">nostop</code></a> <a href="#numberDobj"><code class="language-plaintext highlighter-rouge">numberDobj</code></a> <a href="#numericAcc"><code class="language-plaintext highlighter-rouge">numericAcc</code></a> <a href="#numericAobj"><code class="language-plaintext highlighter-rouge">numericAobj</code></a> <a href="#numericDobj"><code class="language-plaintext highlighter-rouge">numericDobj</code></a> <a href="#numericIobj"><code class="language-plaintext highlighter-rouge">numericIobj</code></a> <a href="#objFor"><code class="language-plaintext highlighter-rouge">objFor</code></a> <a href="#reportAfter"><code class="language-plaintext highlighter-rouge">reportAfter</code></a> <a href="#rnull"><code class="language-plaintext highlighter-rouge">rnull</code></a> <a href="#SelArbitrary"><code class="language-plaintext highlighter-rouge">SelArbitrary</code></a> <a href="#SelDefault"><code class="language-plaintext highlighter-rouge">SelDefault</code></a> <a href="#SelDisambig"><code class="language-plaintext highlighter-rouge">SelDisambig</code></a> <a href="#SelPlural"><code class="language-plaintext highlighter-rouge">SelPlural</code></a> <a href="#SelProg"><code class="language-plaintext highlighter-rouge">SelProg</code></a> <a href="#setPastTense"><code class="language-plaintext highlighter-rouge">setPastTense</code></a> <a href="#singleAcc"><code class="language-plaintext highlighter-rouge">singleAcc</code></a> <a href="#singleAobj"><code class="language-plaintext highlighter-rouge">singleAobj</code></a> <a href="#singleDir"><code class="language-plaintext highlighter-rouge">singleDir</code></a> <a href="#singleDobj"><code class="language-plaintext highlighter-rouge">singleDobj</code></a> <a href="#singleIobj"><code class="language-plaintext highlighter-rouge">singleIobj</code></a> <a href="#stop"><code class="language-plaintext highlighter-rouge">stop</code></a> <a href="#STRINGIZE"><code class="language-plaintext highlighter-rouge">STRINGIZE</code></a> <a href="#STRINGIZE"><code class="language-plaintext highlighter-rouge">STRINGIZE</code></a> <a href="#topicAcc"><code class="language-plaintext highlighter-rouge">topicAcc</code></a> <a href="#topicAobj"><code class="language-plaintext highlighter-rouge">topicAobj</code></a> <a href="#topicDobj"><code class="language-plaintext highlighter-rouge">topicDobj</code></a> <a href="#topicIobj"><code class="language-plaintext highlighter-rouge">topicIobj</code></a> <a href="#touchDesc"><code class="language-plaintext highlighter-rouge">touchDesc</code></a> <a href="#tSel"><code class="language-plaintext highlighter-rouge">tSel</code></a> <a href="#VerbRule"><code class="language-plaintext highlighter-rouge">VerbRule</code></a> <a href="#VideoLink"><code class="language-plaintext highlighter-rouge">VideoLink</code></a> <a href="#waitKey"><code class="language-plaintext highlighter-rouge">waitKey</code></a> <a href="#withPast"><code class="language-plaintext highlighter-rouge">withPast</code></a> <a href="#withPresent"><code class="language-plaintext highlighter-rouge">withPresent</code></a></p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<p><span class="hdln">Summary of Enums</span>  </p>
+
+<p><a href="#ClosedGoal"><code class="language-plaintext highlighter-rouge">ClosedGoal</code></a> <a href="#feminine"><code class="language-plaintext highlighter-rouge">feminine</code></a> <a href="#FootnotesFull"><code class="language-plaintext highlighter-rouge">FootnotesFull</code></a> <a href="#FootnotesMedium"><code class="language-plaintext highlighter-rouge">FootnotesMedium</code></a> <a href="#FootnotesOff"><code class="language-plaintext highlighter-rouge">FootnotesOff</code></a> <a href="#indirectLockable"><code class="language-plaintext highlighter-rouge">indirectLockable</code></a> <a href="#large"><code class="language-plaintext highlighter-rouge">large</code></a> <a href="#lockableWithKey"><code class="language-plaintext highlighter-rouge">lockableWithKey</code></a> <a href="#lockableWithoutKey"><code class="language-plaintext highlighter-rouge">lockableWithoutKey</code></a> <a href="#manyToMany"><code class="language-plaintext highlighter-rouge">manyToMany</code></a> <a href="#manyToOne"><code class="language-plaintext highlighter-rouge">manyToOne</code></a> <a href="#masculine"><code class="language-plaintext highlighter-rouge">masculine</code></a> <a href="#medium"><code class="language-plaintext highlighter-rouge">medium</code></a> <a href="#neuter"><code class="language-plaintext highlighter-rouge">neuter</code></a> <a href="#normalRelation"><code class="language-plaintext highlighter-rouge">normalRelation</code></a> <a href="#notLockable"><code class="language-plaintext highlighter-rouge">notLockable</code></a> <a href="#null"><code class="language-plaintext highlighter-rouge">null</code></a> <a href="#oneToMany"><code class="language-plaintext highlighter-rouge">oneToMany</code></a> <a href="#oneToOne"><code class="language-plaintext highlighter-rouge">oneToOne</code></a> <a href="#OpenGoal"><code class="language-plaintext highlighter-rouge">OpenGoal</code></a> <a href="#OtherObject"><code class="language-plaintext highlighter-rouge">OtherObject</code></a> <a href="#reverseRelation"><code class="language-plaintext highlighter-rouge">reverseRelation</code></a> <a href="#rmcAskLiteral"><code class="language-plaintext highlighter-rouge">rmcAskLiteral</code></a> <a href="#rmcAskObject"><code class="language-plaintext highlighter-rouge">rmcAskObject</code></a> <a href="#rmcCommand"><code class="language-plaintext highlighter-rouge">rmcCommand</code></a> <a href="#rmcDisambig"><code class="language-plaintext highlighter-rouge">rmcDisambig</code></a> <a href="#rmcOops"><code class="language-plaintext highlighter-rouge">rmcOops</code></a> <a href="#small"><code class="language-plaintext highlighter-rouge">small</code></a> <a href="#UndiscoveredGoal"><code class="language-plaintext highlighter-rouge">UndiscoveredGoal</code></a></p>
+
+<p><span id="_TemplateSummary_"></span></p>
+
+<p><span class="hdln">Summary of Templates</span>  </p>
+
+<p><a href="#Achievement"><code class="language-plaintext highlighter-rouge">Achievement</code></a> <a href="#ActorState"><code class="language-plaintext highlighter-rouge">ActorState</code></a> <a href="#AltTopic"><code class="language-plaintext highlighter-rouge">AltTopic</code></a> <a href="#AltTopic"><code class="language-plaintext highlighter-rouge">AltTopic</code></a> <a href="#ClockEvent"><code class="language-plaintext highlighter-rouge">ClockEvent</code></a> <a href="#DefaultConsultTopic"><code class="language-plaintext highlighter-rouge">DefaultConsultTopic</code></a> <a href="#DefaultThought"><code class="language-plaintext highlighter-rouge">DefaultThought</code></a> <a href="#DefaultTopic"><code class="language-plaintext highlighter-rouge">DefaultTopic</code></a> <a href="#Doer"><code class="language-plaintext highlighter-rouge">Doer</code></a> <a href="#Door"><code class="language-plaintext highlighter-rouge">Door</code></a> <a href="#Door"><code class="language-plaintext highlighter-rouge">Door</code></a> <a href="#Enterable"><code class="language-plaintext highlighter-rouge">Enterable</code></a> <a href="#Enterable"><code class="language-plaintext highlighter-rouge">Enterable</code></a> <a href="#EventList"><code class="language-plaintext highlighter-rouge">EventList</code></a> <a href="#EventListItem"><code class="language-plaintext highlighter-rouge">EventListItem</code></a> <a href="#ExtraHint"><code class="language-plaintext highlighter-rouge">ExtraHint</code></a> <a href="#Footnote"><code class="language-plaintext highlighter-rouge">Footnote</code></a> <a href="#Goal"><code class="language-plaintext highlighter-rouge">Goal</code></a> <a href="#Hint"><code class="language-plaintext highlighter-rouge">Hint</code></a> <a href="#MenuItem"><code class="language-plaintext highlighter-rouge">MenuItem</code></a> <a href="#MenuLongTopicItem"><code class="language-plaintext highlighter-rouge">MenuLongTopicItem</code></a> <a href="#MenuTopicItem"><code class="language-plaintext highlighter-rouge">MenuTopicItem</code></a> <a href="#MiscTopic"><code class="language-plaintext highlighter-rouge">MiscTopic</code></a> <a href="#MiscTopic"><code class="language-plaintext highlighter-rouge">MiscTopic</code></a> <a href="#NodeContinuationTopic"><code class="language-plaintext highlighter-rouge">NodeContinuationTopic</code></a> <a href="#NodeContinuationTopic"><code class="language-plaintext highlighter-rouge">NodeContinuationTopic</code></a> <a href="#ProxyActor"><code class="language-plaintext highlighter-rouge">ProxyActor</code></a> <a href="#QueryTopic"><code class="language-plaintext highlighter-rouge">QueryTopic</code></a> <a href="#QueryTopic"><code class="language-plaintext highlighter-rouge">QueryTopic</code></a> <a href="#QueryTopic"><code class="language-plaintext highlighter-rouge">QueryTopic</code></a> <a href="#QueryTopic"><code class="language-plaintext highlighter-rouge">QueryTopic</code></a> <a href="#QueryTopic"><code class="language-plaintext highlighter-rouge">QueryTopic</code></a> <a href="#QueryTopic"><code class="language-plaintext highlighter-rouge">QueryTopic</code></a> <a href="#Region"><code class="language-plaintext highlighter-rouge">Region</code></a> <a href="#Relation"><code class="language-plaintext highlighter-rouge">Relation</code></a> <a href="#Room"><code class="language-plaintext highlighter-rouge">Room</code></a> <a href="#Room"><code class="language-plaintext highlighter-rouge">Room</code></a> <a href="#Rule"><code class="language-plaintext highlighter-rouge">Rule</code></a> <a href="#SensoryEmanation"><code class="language-plaintext highlighter-rouge">SensoryEmanation</code></a> <a href="#ShuffledEventList"><code class="language-plaintext highlighter-rouge">ShuffledEventList</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#string"><code class="language-plaintext highlighter-rouge">string</code></a> <a href="#StyleTag"><code class="language-plaintext highlighter-rouge">StyleTag</code></a> <a href="#SymConnector"><code class="language-plaintext highlighter-rouge">SymConnector</code></a> <a href="#SymConnector"><code class="language-plaintext highlighter-rouge">SymConnector</code></a> <a href="#SymPassage"><code class="language-plaintext highlighter-rouge">SymPassage</code></a> <a href="#SymPassage"><code class="language-plaintext highlighter-rouge">SymPassage</code></a> <a href="#SymPassage"><code class="language-plaintext highlighter-rouge">SymPassage</code></a> <a href="#SymPassage"><code class="language-plaintext highlighter-rouge">SymPassage</code></a> <a href="#Test"><code class="language-plaintext highlighter-rouge">Test</code></a> <a href="#Test"><code class="language-plaintext highlighter-rouge">Test</code></a> <a href="#Thing"><code class="language-plaintext highlighter-rouge">Thing</code></a> <a href="#Topic"><code class="language-plaintext highlighter-rouge">Topic</code></a> <a href="#TopicEntry"><code class="language-plaintext highlighter-rouge">TopicEntry</code></a> <a href="#TopicEntry"><code class="language-plaintext highlighter-rouge">TopicEntry</code></a> <a href="#TopicEntry"><code class="language-plaintext highlighter-rouge">TopicEntry</code></a> <a href="#TopicEntry"><code class="language-plaintext highlighter-rouge">TopicEntry</code></a> <a href="#TopicGroup"><code class="language-plaintext highlighter-rouge">TopicGroup</code></a> <a href="#TravelConnector"><code class="language-plaintext highlighter-rouge">TravelConnector</code></a> <a href="#TravelConnector"><code class="language-plaintext highlighter-rouge">TravelConnector</code></a> <a href="#Unthing"><code class="language-plaintext highlighter-rouge">Unthing</code></a></p>
+
+<p><span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><em>(none)</em> <span id="_Macros_"></span></p>
+
+<p><span class="hdln">Macros</span>  </p>
+
+<p><span id="_STRINGIZE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_STRINGIZE (x)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#265">265</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">#@x</code><br />
+A couple of utility macros we use internally for turning macro values
+into strings. STRINGIZE(x) expands any macros in its argument and then
+turns the result into a single-quoted string, which can then be used in
+regular program text or in directives that evaluate constant
+expressions, such as #if. (STRINGIZE is the real macro; _STRINGIZE is
+needed to force expansion of any macros in the argument, which is
+required because of the weird ANSI C expansion-order rules, and which
+works because of same.)</p>
+
+<p><span id="_STRINGIZE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">_STRINGIZE (x)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#970">970</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">#@x</code><br />
+A couple of utility macros we use internally for turning macro values
+into strings. STRINGIZE(x) expands any macros in its argument and then
+turns the result into a single-quoted string, which can then be used in
+regular program text or in directives that evaluate constant
+expressions, such as #if. (STRINGIZE is the real macro; _STRINGIZE is
+needed to force expansion of any macros in the argument, which is
+required because of the weird ANSI C expansion-order rules, and which
+works because of same.)</p>
+
+<p><span id="abort"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">abort</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#706">706</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">throw new AbortActionSignal()</code><br />
+a concise macro to throw an Abort signal</p>
+
+<p><span id="abortImplicit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">abortImplicit</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#703">703</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">throw new AbortImplicitSignal()</code><br />
+a concise macro to throw an AbortImplicitSignal</p>
+
+<p><span id="accFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">accFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#640">640</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">objFor(Aobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="accList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">accList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#74">74</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">nounList-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="ADV3LITE_H"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ADV3LITE_H</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#16">16</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="AHREF_Plain"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">AHREF_Plain</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#714">714</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0001 /* plain text hyperlink (no underline/color) */</code><br />
+aHref() flags</p>
+
+<p><span id="aobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#638">638</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">objFor(Aobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="aobjList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aobjList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#75">75</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">nounList-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="asAccFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asAccFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#641">641</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjFor(Aobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="asAobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asAobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#639">639</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjFor(Aobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="asDobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asDobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#444">444</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjFor(Dobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="asDobjWithoutActionFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asDobjWithoutActionFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#464">464</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjWithoutActionFor(Dobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="asDobjWithoutVerifyFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asDobjWithoutVerifyFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#476">476</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjWithoutVerifyFor(Dobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="asExit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asExit (dir)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#492">492</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">: UnlistedProxyConnector { direction = dir##Dir }</code><br />
+<em>no description available</em></p>
+
+<p><span id="asIobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asIobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#445">445</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjFor(Iobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="asIobjWithoutActionFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asIobjWithoutActionFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#465">465</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjWithoutActionFor(Iobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="asIobjWithoutVerifyFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asIobjWithoutVerifyFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#477">477</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjWithoutVerifyFor(Iobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="askForAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForAcc (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#482">482</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingObject(action, AccessoryObject)</code><br />
+<em>no description available</em></p>
+
+<p><span id="askForAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForAobj (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#481">481</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingObject(action, AccessoryObject)</code><br />
+<em>no description available</em></p>
+
+<p><span id="askForDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForDobj (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#479">479</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingObject(action, DirectObject)</code><br />
+<em>no description available</em></p>
+
+<p><span id="askForIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">askForIobj (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#480">480</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">askMissingObject(action, IndirectObject)</code><br />
+<em>no description available</em></p>
+
+<p><span id="asObjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjFor (obj, Action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#434">434</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">{ \</code><br />
+<code class="language-plaintext highlighter-rouge">preCond { return preCond##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">verify() { verify##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">remap() { return remap##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">check() { check##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">action() { action##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">report() { report##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">}</code><br />
+Treat an object definition as equivalent to another object definition.
+These can be used immediately after a dobjFor() or iobjFor() to treat
+the first action as though it were the second. So, if the player types
+“search box”, and we want to treat the direct object the same as for
+“look in box”, we could make this definition for the box:</p>
+
+<p>dobjFor(Search) asDobjFor(LookIn)</p>
+
+<p>Note that no semicolon is needed after this definition, and that this
+definition is completely in lieu of a regular property set for the
+object action.</p>
+
+<p>In general, a mapping should NOT change the role of an object:
+dobjFor(X) should not usually be mapped using asIobjFor(Y), and
+iobjFor(X) shouldn’t be mapped using asDobjFor(Y). The problem with
+changing the role is that the handler routines often assume that the
+object is actually in the role for which the handler was written; a
+verify handler might refer to ‘{dobj}’ in generating a message, for
+example, so reversing the roles would give the wrong object in the role.</p>
+
+<p>Role reversals should always be avoided, but can be used if necessary
+under conditions where all of the code involved in the TARGET of the
+mapping can be carefully controlled to ensure that it doesn’t make
+assumptions about object roles, but only references ‘self’. Reversing
+roles in a mapping should never be attempted in general-purpose library
+code, because code based on the library could override the target of the
+role-reversing mapping, and the override could fail to observe the
+restrictions on object role references.</p>
+
+<p>Note that role reversals can almost always be handled with other
+mechanisms that handle reversals cleanly. Always consider
+Doer.doInstead() first when confronted with a situation that seems to
+call for a role-reversing asObjFor() mapping, as doInstead()
+specifically allows for object role changes.</p>
+
+<p><span id="asObjWithoutActionFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjWithoutActionFor (obj, Action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#455">455</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">{ \</code><br />
+<code class="language-plaintext highlighter-rouge">preCond { return preCond##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">verify() { verify##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">remap() { return remap##obj##Action(); } \</code><br />
+<code class="language-plaintext highlighter-rouge">check() { check##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">action() { } \</code><br />
+<code class="language-plaintext highlighter-rouge">}</code><br />
+Define mappings of everything except the action. This can be used in
+cases where we want to pick up the verification, preconditions, and
+check routines from another handler, but not the action. This is often
+useful for two-object verbs where the action processing is entirely
+provided by one or the other object, so applying it to both would be
+redundant.</p>
+
+<p><span id="asObjWithoutVerifyFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">asObjWithoutVerifyFor (obj, Action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#467">467</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">{ \</code><br />
+<code class="language-plaintext highlighter-rouge">preCond { return preCond##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">remap() { return remap##obj##Action(); } \</code><br />
+<code class="language-plaintext highlighter-rouge">check() { check##obj##Action; } \</code><br />
+<code class="language-plaintext highlighter-rouge">action() { action##obj##Action(); } \</code><br />
+<code class="language-plaintext highlighter-rouge">report() { report##obj##Action(); } \</code><br />
+<code class="language-plaintext highlighter-rouge">}</code><br />
+<em>no description available</em></p>
+
+<p><span id="AudioLink"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">AudioLink</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1232">1232</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">1</code><br />
+Communication Link Types</p>
+
+<p>AudioLink means audio communication only is available VideoLink means
+both audio and visual links are available.</p>
+
+<p><span id="BMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BMsg (id, txt, args, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1039">1039</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">buildMessage(#@id, txt, ##args)</code><br />
+<em>no description available</em></p>
+
+<p><span id="BMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BMsg (id, txt, args, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1042">1042</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">buildMessage(#@id, nil, ##args)</code><br />
+<em>no description available</em></p>
+
+<p><span id="cannotTouchMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotTouchMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1266">1266</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">cannotFeelMsg</code><br />
+<em>no description available</em></p>
+
+<p><span id="checkHitMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkHitMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1268">1268</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">checkAttackMsg</code><br />
+<em>no description available</em></p>
+
+<p><span id="checkTouchMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkTouchMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1263">1263</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">checkFeelMsg</code><br />
+Define some synonyms for potentially confusing property names</p>
+
+<p><span id="ConversationLullReason"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ConversationLullReason</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#848">848</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">2</code><br />
+<em>no description available</em></p>
+
+<p><span id="dangerous"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dangerous</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#687">687</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult(new VerifyResult(90, '', true, self, nil))</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefaultTopicReason"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefaultTopicReason</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#849">849</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">3</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefineAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction (name, baseClass, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#511">511</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">name: ##baseClass \</code><br />
+<code class="language-plaintext highlighter-rouge">baseActionClass = name</code><br />
+Define an action OBJECT with the given name inheriting from the given
+base class, for use with the Mercury parser.</p>
+
+<p><span id="DefineIAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineIAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#527">527</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction(name, IAction)</code><br />
+Define a concrete IAction, given the root name for the action. We’ll
+automatically generate a class with name XxxAction.</p>
+
+<p><span id="DefineLiteralAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineLiteralAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#554">554</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction(name, LiteralAction)</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefineLiteralTAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineLiteralTAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#551">551</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTActionSub(name, LiteralTAction)</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefineNumericAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineNumericAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#566">566</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction(name, NumericAction)</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefineNumericTAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineNumericTAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#563">563</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTActionSub(name, NumericTAction)</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefineSystemAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineSystemAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#520">520</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction(name, SystemAction)</code><br />
+Define a “system” action. System actions are meta-game commands, such as
+SAVE and QUIT, that generally operate the user interface and are not
+part of the game world.</p>
+
+<p><span id="DefineTAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#536">536</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTActionSub(name, TAction)</code><br />
+Define a concrete TAction, given the root name for the action. We’ll
+automatically generate a class with name XxxAction, a verProp with name
+verXxx, a checkProp with name checkXxx, and an actionProp with name
+actionDobjXxx.</p>
+
+<p><span id="DefineTActionSub"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTActionSub (name, cls)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#542">542</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction(name, cls) \</code><br />
+<code class="language-plaintext highlighter-rouge">verDobjProp = &amp;verifyDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">remapDobjProp = &amp;remapDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">preCondDobjProp = &amp;preCondDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">checkDobjProp = &amp;checkDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">actionDobjProp = &amp;actionDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">reportDobjProp = &amp;reportDobj##name \</code></p>
+
+<p>Define a concrete TAction with a specific base class.</p>
+
+<p><span id="DefineTIAAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIAAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#610">610</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIAActionSub(name, TIAAction)</code><br />
+The following macros relating to the TIAAction class are only relevant
+when the TIAAction extension is used. The macros are nevertheless
+included here for convenience when using the TIAAction extension.</p>
+
+<p>Define a concrete TIAAction, given the root name for the action. We’ll
+automatically generate a class with name XxxAction, a verDobjProp with
+name verDobjXxx, a verIobjProp with name verIobjxxx, a checkDobjProp
+with name checkDobjXxx, a checkIobjProp with name checkIobjXxx, an
+actionDobjProp with name actionDobjXxx, and an actionIobjProp with name
+actionIobjXxx.</p>
+
+<p><span id="DefineTIAActionSub"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIAActionSub (name, cls)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#616">616</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction(name, cls) \</code><br />
+<code class="language-plaintext highlighter-rouge">verDobjProp = &amp;verifyDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">verIobjProp = &amp;verifyIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">verAobjProp = &amp;verifyAobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">remapDobjProp = &amp;remapDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">remapIobjProp = &amp;remapIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">remapAobjProp = &amp;remapAobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">preCondDobjProp = &amp;preCondDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">preCondIobjProp = &amp;preCondIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">preCondAobjProp = &amp;preCondAobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">checkDobjProp = &amp;checkDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">checkIobjProp = &amp;checkIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">checkAobjProp = &amp;checkAobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">actionDobjProp = &amp;actionDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">actionIobjProp = &amp;actionIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">actionAobjProp = &amp;actionAobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">reportDobjProp = &amp;reportDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">reportIobjProp = &amp;reportIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">reportAobjProp = &amp;reportAobj##name \</code></p>
+
+<p>Define a concrete TIAction with a specific base class.</p>
+
+<p><span id="DefineTIAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#578">578</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIActionSub(name, TIAction)</code><br />
+Define a concrete TIAction, given the root name for the action. We’ll
+automatically generate a class with name XxxAction, a verDobjProp with
+name verDobjXxx, a verIobjProp with name verIobjxxx, a checkDobjProp
+with name checkDobjXxx, a checkIobjProp with name checkIobjXxx, an
+actionDobjProp with name actionDobjXxx, and an actionIobjProp with name
+actionIobjXxx.</p>
+
+<p><span id="DefineTIActionSub"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTIActionSub (name, cls)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#584">584</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction(name, cls) \</code><br />
+<code class="language-plaintext highlighter-rouge">verDobjProp = &amp;verifyDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">verIobjProp = &amp;verifyIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">remapDobjProp = &amp;remapDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">remapIobjProp = &amp;remapIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">preCondDobjProp = &amp;preCondDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">preCondIobjProp = &amp;preCondIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">checkDobjProp = &amp;checkDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">checkIobjProp = &amp;checkIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">actionDobjProp = &amp;actionDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">actionIobjProp = &amp;actionIobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">reportDobjProp = &amp;reportDobj##name \</code><br />
+<code class="language-plaintext highlighter-rouge">reportIobjProp = &amp;reportIobj##name \</code></p>
+
+<p>Define a concrete TIAction with a specific base class.</p>
+
+<p><span id="DefineTopicAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTopicAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#560">560</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineAction(name, TopicAction)</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefineTopicTAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTopicTAction (name)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#557">557</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">DefineTActionSub(name, TopicTAction)</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefSignal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefSignal (sig, nam)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1318">1318</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">sig##Signal: Signal \</code><br />
+<code class="language-plaintext highlighter-rouge">name = #@nam\</code><br />
+<code class="language-plaintext highlighter-rouge">handleProp = &amp;handle_##sig</code><br />
+Definitions for the Signals Extension</p>
+
+<p><span id="DMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DMsg (id, txt, args, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1038">1038</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">message(#@id, txt, ##args)</code><br />
+DMsg() - default English library message cover macro.</p>
+
+<p>Whenever the library displays a message, it uses the DMsg() macro. The
+arguments are a message ID, and the default English message text to
+display. The message ID is a string that identifies the message; this is
+used to look for overriding customizations of the message. Refer to the
+CustomMessages class for information on customizing the standard library
+messages.</p>
+
+<p>In our approach, the library defines the default English text of the
+messages in-line, directly in the code. On the surface, this is contrary
+to standard practices in most modern programming projects, which strive
+to make translations easier by separating the message text from the
+program code, gathering all of the text into a central message file that
+can be replaced for each language. Despite appearances, we’re
+accomplishing the same thing - but in our system, we have the advantage
+that we *also* define the default English message text in-line as part
+of the code it applies to. This makes it easier to read the code by
+keeping a message and its full context in one place; this way you don’t
+have to shuttle between the code and message file.</p>
+
+<p>Here’s how we accomplish the message separation required for
+translations, and also for games that wish to customize the library
+defaults. The DMsg() macro requires both the default English message
+text *and* an ID key for the message. The message display function
+receives both. The display function proceeds to look up the ID key in a
+translation table; if it finds an entry, it uses the version of the
+message in the translation table instead of the English default passed
+in via DMsg(). A language module can provide a message table that
+defines the language translations, and a game can provide a table that
+further customizes the library messages to fit its narrative style.</p>
+
+<p>There’s one additional element. Translators and game authors need to be
+able to see all of the messages in one place, so they can create their
+tables. We would seem to lack that central list of English messages.
+Fortunately, by using a standard macro for each message, we can extract
+a comprehensive English message list automatically via a special tool.
+We use this as part of the library release process to create the English
+message file for reference.</p>
+
+<p>Note that the macro expansion includes the default English text only in
+English builds. It omits the text in non-English builds. This is to save
+space - we assume that the English messages will all be overridden
+anyway by each translated library version, so there’s no point in
+including their text in the final compiled program.</p>
+
+<p><span id="DMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DMsg (id, txt, args, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1041">1041</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">message(#@id, nil, ##args)</code><br />
+<em>no description available</em></p>
+
+<p><span id="dobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#390">390</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">objFor(Dobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="dobjList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dobjList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#94">94</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">nounList-&gt;dobjMatch</code><br />
+Also add a couple of synonyms familiar froma adv3</p>
+
+<p><span id="exit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exit</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#697">697</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">throw new ExitSignal()</code><br />
+a concise macro to throw an ExitSignal</p>
+
+<p><span id="exitAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exitAction</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#700">700</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">throw new ExitActionSignal()</code><br />
+a concise macro to throw an ExitActionSignal</p>
+
+<p><span id="exitCommandLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">exitCommandLine</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#863">863</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">throw new ExitCommandLineSignal()</code><br />
+Terminate execution of the command line. This aborts the current
+command, including any remaining object iterations for the current
+action, and discards anything else on the command line.</p>
+
+<p><span id="feelResponseMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">feelResponseMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1264">1264</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">touchResponseMsg</code><br />
+<em>no description available</em></p>
+
+<p><span id="gAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#643">643</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.curAobj</code><br />
+<em>no description available</em></p>
+
+<p><span id="gAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#294">294</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.curAction)</code><br />
+the Action object of the command being executed</p>
+
+<p><span id="gActionIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionIn (action, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#333">333</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gAction != nil \</code><br />
+<code class="language-plaintext highlighter-rouge">&amp;&amp; (action#foreach/gAction.ofKind(action)/||/))</code><br />
+is the current global action ANY of the specified actions?</p>
+
+<p><span id="gActionIs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionIs (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#329">329</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gAction != nil &amp;&amp; gAction.ofKind(action))</code><br />
+Determine if the current global action is the specified action. Only the
+action prefix is needed - so use “Take” rather than “TakeAction” here.</p>
+
+<p>This tests to see if the current global action is an instance of the
+given action class - we test that it’s an instance rather than the
+action class itself because the parser creates an instance of the action
+when it matches the action’s syntax.</p>
+
+<p><span id="gActionList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#342">342</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(nilToList(gCommand.action.actionList))</code><br />
+the list of objects involved in the action just completed</p>
+
+<p><span id="gActionListObj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionListObj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#353">353</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(object: Thing \</code><br />
+<code class="language-plaintext highlighter-rouge">{ \</code><br />
+<code class="language-plaintext highlighter-rouge">plural = (gAction.reportList.length &gt; 1 || \</code><br />
+<code class="language-plaintext highlighter-rouge">gAction.reportList[1].plural); \</code><br />
+<code class="language-plaintext highlighter-rouge">isIt = (gAction.reportList.length == 1 ? \</code><br />
+<code class="language-plaintext highlighter-rouge">gAction.reportList[1].isIt : nil);\</code><br />
+<code class="language-plaintext highlighter-rouge">isHim = (gAction.reportList.length == 1 ? \</code><br />
+<code class="language-plaintext highlighter-rouge">gAction.reportList[1].isHim : nil);\</code><br />
+<code class="language-plaintext highlighter-rouge">isHer = (gAction.reportList.length == 1 ? \</code><br />
+<code class="language-plaintext highlighter-rouge">gAction.reportList[1].isHer : nil);\</code><br />
+<code class="language-plaintext highlighter-rouge">name = gActionListStr; \</code><br />
+<code class="language-plaintext highlighter-rouge">qualified = true; \</code><br />
+<code class="language-plaintext highlighter-rouge">} )</code><br />
+an object that is singular or plural according to whether gActionList
+represents a single object of a plurality of objects, and which picks up
+the correct gender if there is only a single object.</p>
+
+<p><span id="gActionListStr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActionListStr</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#345">345</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">makeListStr(gCommand.action.reportList, &amp;theName)</code><br />
+a displaying string version of the above</p>
+
+<p><span id="gActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gActor</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#279">279</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.curActor)</code><br />
+the actor performing the current command</p>
+
+<p><span id="gAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#642">642</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.curAobj</code><br />
+<em>no description available</em></p>
+
+<p><span id="gCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gCommand</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#295">295</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.curCommand)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gCommandToks"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gCommandToks</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1165">1165</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gCommand == nil || gCommand.verbProd == nil ? [] \</code><br />
+<code class="language-plaintext highlighter-rouge">: gCommand.verbProd.tokenList.mapAll({t: getTokVal(t)}))</code><br />
+Get the command tokens for the current command.</p>
+
+<p><span id="gDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#287">287</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gAction.curDobj)</code><br />
+For convenience, define some macros that return the current direct and
+indirect objects from the current action. The library only uses direct
+and indirect objects, so games that define additional command objects
+will have to add their own similar macros for those.</p>
+
+<p><span id="gExitLister"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gExitLister</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#898">898</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.exitListerObj)</code><br />
+the exit lister object - if the exits module isn’t included in the game,
+this will be nil</p>
+
+<p><span id="gExtraHintManager"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gExtraHintManager</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#911">911</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.extraHintManagerObj)</code><br />
+the extra hint manager object - if the hints module isn’t included in
+the game, this will be nil</p>
+
+<p><span id="gHintManager"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gHintManager</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#904">904</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.hintManagerObj)</code><br />
+the hint manager object - if the hints module isn’t included in the
+game, this will be nil</p>
+
+<p><span id="gInformed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gInformed (key)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1255">1255</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(getActor.informedAbout(key))</code><br />
+has a topic key been revealed to an NPC through &lt;.inform&gt;?</p>
+
+<p><span id="gIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#288">288</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gAction.curIobj)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gLastAction"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLastAction</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#316">316</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.lastAction)</code><br />
+The previous action and command</p>
+
+<p><span id="gLastCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLastCommand</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#317">317</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.lastCommand)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gLibMessages"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLibMessages</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#892">892</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.libMessageObj)</code><br />
+The current library messages object. This is the source object for
+messages that don’t logically relate to the actor carrying out the
+comamand. It’s mostly used for meta-command replies, and for text
+fragments that are used to construct descriptions.</p>
+
+<p>This message object isn’t generally used for parser messages or action
+replies - most of those come from the objects given by the current
+actor’s getParserMessageObj() or getActionMessageObj(), respectively.</p>
+
+<p>By default, this is set to libMessages. The library never changes this
+itself, but a game can change this if it wants to switch to a new set of
+messages during a game. (If you don’t need to change messages during a
+game, but simply want to customize some of the default messages, you
+don’t need to set this variable - you can simply use ‘modify
+libMessages’ instead. This variable is designed for cases where you want
+to *dynamically* change the standard messages during the game.)</p>
+
+<p><span id="gLiteral"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLiteral</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#289">289</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gAction.literal)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gLocation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gLocation</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#377">377</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gPlayerChar.location)</code><br />
+get the player character’s location</p>
+
+<p><span id="gMessageParams"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gMessageParams (var, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1082">1082</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gAction.setMessageParams(var#foreach/#@var, var/,/))</code><br />
+Some message processors add their own special parameters to messages,
+because they want to use expansion parameters (in the “{the dobj/him}”
+format) outside of the set of objects directly involved in the command.</p>
+
+<p>The Action method setMessageParam() lets you define such a parameter,
+but for convenience, we define this macro for setting one or more
+parameters whose names exactly match their local variable names. In
+other words, if you call this macro like this:</p>
+
+<p>gMessageParams(obj, cont)</p>
+
+<p>then you’ll get one parameter with the text name ‘obj’ whose expansion
+will be the value of the local variable obj, and another with text name
+‘cont’ whose expansion is the value of the local variable cont.</p>
+
+<p><span id="gNumber"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gNumber</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#290">290</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gAction.num)</code><br />
+<em>no description available</em></p>
+
+<p><span id="goInstead"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">goInstead (dirn)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#486">486</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">doInstead(Go, dirn##Dir)</code><br />
+Convenience macros for synthesizing travel in a given compass direction</p>
+
+<p><span id="goNested"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">goNested (dirn)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#487">487</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">doNested(Go, dirn##Dir)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gOutStream"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gOutStream</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1060">1060</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(outputManager.curOutputStream)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gPlayerChar"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gPlayerChar</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#374">374</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.playerChar)</code><br />
+get the current player character Actor object</p>
+
+<p><span id="gReveal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gReveal (key)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1245">1245</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.setRevealed(key))</code><br />
+reveal a topic key, as though through &lt;.reveal&gt;</p>
+
+<p><span id="gRevealed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gRevealed (key)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1242">1242</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.revealedNameTab[key] != nil)</code><br />
+has a topic key been revealed through &lt;.reveal&gt;?</p>
+
+<p><span id="gRoom"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gRoom</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#386">386</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gPlayerChar.getOutermostRoom)</code><br />
+get the player character’s current room (which may or may not be the
+same as his/her location)</p>
+
+<p><span id="gSetKnown"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gSetKnown (obj)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1251">1251</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gPlayerChar.setKnowsAbout(obj))</code><br />
+mark a Topic/Thing as known/seen by the player character</p>
+
+<p><span id="gSetSeen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gSetSeen (obj)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1252">1252</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gPlayerChar.setHasSeen(obj))</code><br />
+<em>no description available</em></p>
+
+<p><span id="gTentativeDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTentativeDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#297">297</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gCommand.dobjs.mapAll({x: x.obj}).toList)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gTentativeDobjIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTentativeDobjIn (lst)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#312">312</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gTentativeDobj.overlapsWith(lst))</code><br />
+An alternative way of dealing with the potential object not yet resolved
+problem, by testing whether any of the objects in lst are in the
+Tentative Object List.</p>
+
+<p><span id="gTentativeIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTentativeIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#298">298</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gCommand.iobjs.mapAll({x: x.obj}).toList)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gTentativeIobjIn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTentativeIobjIn (lst)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#313">313</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gTentativeIobj.overlapsWith(lst))</code><br />
+<em>no description available</em></p>
+
+<p><span id="gTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#392">392</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gAction.curTopic)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gTopicMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTopicMatch</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#394">394</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gTopic.getBestMatch)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gTopicText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTopicText</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#393">393</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gTopic.getTopicText)</code><br />
+<em>no description available</em></p>
+
+<p><span id="gTravelActionIs"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTravelActionIs (dirn)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#338">338</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gAction != nil &amp;&amp; gAction.ofKind(Travel) &amp;&amp; gAction.direction == dirn ## Dir)</code><br />
+is the current action a Travel action going dirn</p>
+
+<p><span id="gTurns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gTurns</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#380">380</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.totalTurns)</code><br />
+get the current turn count</p>
+
+<p><span id="gUnreveal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gUnreveal (key)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1248">1248</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(libGlobal.setUnrevealed(key))</code><br />
+remove a topic key, as though through &lt;.unreveal&gt;</p>
+
+<p><span id="gVerbPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerbPhrase</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1169">1169</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gCommand.getCommandPhrase())</code><br />
+Get the command phrase for the current command.</p>
+
+<p><span id="gVerbWord"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerbWord</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1161">1161</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gCommand == nil || gCommand.verbProd == nil ? '' \</code><br />
+<code class="language-plaintext highlighter-rouge">: getTokVal(gCommand.verbProd.tokenList[1]))</code><br />
+Get the first word the player entered for the current command.</p>
+
+<p><span id="gVerifyDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerifyDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#305">305</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gDobj ?? gTentativeDobj[1])</code><br />
+the probable Action objects of the command being executed for use in
+verify routines when resolution of both objects may not be complete. If
+the gDobj or gIobj is non-nil, use that, otherwise use the first object
+in the tentative resolution list.</p>
+
+<p><span id="gVerifyIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerifyIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#306">306</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gIobj ?? gTentativeIobj[1])</code><br />
+<em>no description available</em></p>
+
+<p><span id="gVerifyList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gVerifyList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#651">651</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.verifyList</code><br />
+Macros for use in verify routines, returning various kinds of verify
+results</p>
+
+<p><span id="hitResponseMsg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">hitResponseMsg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1269">1269</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">attackResponseMsg</code><br />
+<em>no description available</em></p>
+
+<p><span id="IfDebug"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">IfDebug (key, code)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1054">1054</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">if (DebugCtl.enabled[#@key]) { code; } else { }</code><br />
+Debugging. When we compile in development mode, we’ll include a number
+of functions and methods that display information for debugging
+purposes. We omit these in release builds to keep the compiled file size
+smaller, and to avoid making it too easy for end users to snoop around
+in the program internals.</p>
+
+<p><span id="IfDebug"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">IfDebug (key, code)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1057">1057</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="illogical"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">illogical (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#655">655</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult(new VerifyResult(30, msg, nil, self))</code><br />
+<em>no description available</em></p>
+
+<p><span id="illogicalAlready"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">illogicalAlready (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#669">669</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult(new VerifyResult(40, msg, nil, self))</code><br />
+IllogicalAlready doesn’t do anything different from IllogicalNow in
+adv3Lite, but is supplied so that game authors familiar with adv3 can
+use it without getting a compilation error. It may also be slightly
+useful for documentary purposes to clarify why a verify routine in game
+code is ruling out an action.</p>
+
+<p><span id="illogicalNow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">illogicalNow (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#658">658</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult(new VerifyResult(40, msg, nil, self))</code><br />
+<em>no description available</em></p>
+
+<p><span id="illogicalSelf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">illogicalSelf (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#672">672</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult(new VerifyResult(20, msg, nil, self))</code><br />
+<em>no description available</em></p>
+
+<p><span id="implausible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">implausible (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#681">681</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult(new VerifyResult(35, msg, nil, self))</code><br />
+<em>no description available</em></p>
+
+<p><span id="inaccessible"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">inaccessible (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#678">678</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult(new VerifyResult(10, msg, nil, self))</code><br />
+<em>no description available</em></p>
+
+<p><span id="InitiateConversationReason"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">InitiateConversationReason</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#847">847</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">1</code><br />
+Define convenient named constants for use with ConvAgendaItem</p>
+
+<p><span id="input"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">input (x, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1277">1277</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">inputManager.getInputLine(x)</code><br />
+<em>no description available</em></p>
+
+<p><span id="iobjFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjFor (action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#391">391</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">objFor(Iobj, action)</code><br />
+<em>no description available</em></p>
+
+<p><span id="iobjList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">iobjList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#95">95</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">nounList-&gt;iobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="isEatable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isEatable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1133">1133</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">isEdible</code><br />
+The library uses isEdible rather than isEatable, since edible is the
+more natural word to use, but strict consistency might have dictated
+isEatable, so we make it an effective synonym in case some game authors
+use it.</p>
+
+<p><span id="isPotable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isPotable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1140">1140</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">isDrinkable</code><br />
+Conversely, authors alive to the Latin root of edible might try the
+latinate isPotable instead of isDrinable.</p>
+
+<p><span id="isTouchable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isTouchable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1265">1265</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">isFeelable</code><br />
+<em>no description available</em></p>
+
+<p><span id="literalAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">literalAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#85">85</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">literalPhrase-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="literalAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">literalAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#86">86</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">literalPhrase-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="literalDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">literalDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#83">83</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">literalPhrase-&gt;dobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="literalIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">literalIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#84">84</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">literalPhrase-&gt;iobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="logical"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">logical</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#653">653</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult (new VerifyResult(100, '', true, self))</code><br />
+<em>no description available</em></p>
+
+<p><span id="logicalRank"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">logicalRank (score)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#675">675</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult(new VerifyResult(score, '', true, self))</code><br />
+<em>no description available</em></p>
+
+<p><span id="M_DOWN"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_DOWN</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1097">1097</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">4</code><br />
+<em>no description available</em></p>
+
+<p><span id="M_PREV"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_PREV</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1095">1095</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">2</code><br />
+<em>no description available</em></p>
+
+<p><span id="M_QUIT"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_QUIT</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1094">1094</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">1</code><br />
+The indices for the key values used to navigate menus, which are held in
+the keyList array of MenuItems.</p>
+
+<p><span id="M_SEL"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_SEL</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1098">1098</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">5</code><br />
+<em>no description available</em></p>
+
+<p><span id="M_UP"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">M_UP</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1096">1096</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">3</code><br />
+<em>no description available</em></p>
+
+<p><span id="MatchAdj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchAdj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#134">134</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0002</code><br />
+matched an adjective (the phrase contains at least one adjective)</p>
+
+<p><span id="MatchNoApprox"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchNoApprox</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#153">153</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x1000</code><br />
+all words were matched WITHOUT character approximations (such as
+matching ‘a’ to ‘a-umlaut’)</p>
+
+<p><span id="MatchNoTrunc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchNoTrunc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#156">156</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x2000</code><br />
+all words were matched WITHOUT truncation</p>
+
+<p><span id="MatchNoun"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchNoun</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#137">137</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0004</code><br />
+matched a noun (the phrase contains at least one noun word)</p>
+
+<p><span id="MatchPartMask"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchPartMask</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#146">146</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0FFF</code><br />
+mask to select only the part-of-speech flags</p>
+
+<p><span id="MatchPhrase"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchPhrase</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#143">143</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0010</code><br />
+matched a phrase</p>
+
+<p><span id="MatchPlural"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchPlural</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#140">140</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0008</code><br />
+matched a plural (the phrase contains at least one plural word)</p>
+
+<p><span id="MatchPrep"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchPrep</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#125">125</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0001</code><br />
+matched a preposition (the phrase contains at least one preposition)</p>
+
+<p><span id="MatchStrengthMask"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchStrengthMask</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#159">159</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0xF000</code><br />
+mask to select only the match-strength flags</p>
+
+<p><span id="MatchWeak"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MatchWeak</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#131">131</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0001</code><br />
+matched a weak token (which we’ll treat as equivalent to matchimg a
+preposition).</p>
+
+<p><span id="more"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">more</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1276">1276</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">inputManager.pauseForMore()</code><br />
+Define some macros to give abbreviated synonyms to inputManager method</p>
+
+<p><span id="Msg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Msg (id, txt)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#985">985</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">#@id, txt</code><br />
+Msg() - define a custom message to override a library message. ‘id’ is
+the message ID, which is the same ID used for the DMsg() message that
+you wish to override. Do NOT use quotes around the ID - just enter it as
+though it were a variable name. ‘txt’ is the message text, as a
+single-quoted string.</p>
+
+<p>This is used in CustomMessages objects to define message overrides. See
+CustomMessages for full details.</p>
+
+<p><span id="multiAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">multiAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#76">76</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">nounList-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="multiAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">multiAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#77">77</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">nounList-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="multiDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">multiDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#72">72</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">nounList-&gt;dobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="multiIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">multiIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#73">73</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">nounList-&gt;iobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="nextrule"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nextrule</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1298">1298</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">return (rulebook.contValue)</code><br />
+<em>no description available</em></p>
+
+<p><span id="nonObvious"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nonObvious</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#684">684</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gAction.addVerifyResult(new VerifyResult(30, '', true, self, nil))</code><br />
+<em>no description available</em></p>
+
+<p><span id="nostop"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">nostop</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1299">1299</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">return (rulebook.contValue)</code><br />
+<em>no description available</em></p>
+
+<p><span id="numberDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numberDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#78">78</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">numberPhrase-&gt;dobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="numericAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numericAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#90">90</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">numberPhrase -&gt; accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="numericAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numericAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#91">91</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">numberPhrase -&gt; accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="numericDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numericDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#88">88</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">numberPhrase -&gt; dobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="numericIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numericIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#89">89</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">numberPhrase -&gt; iobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="objFor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">objFor (which, action)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#388">388</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">propertyset '*' ## #@which ## #@action</code><br />
+<em>no description available</em></p>
+
+<p><span id="reportAfter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">reportAfter (msg)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#396">396</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">gCommand.afterReports += msg</code><br />
+<em>no description available</em></p>
+
+<p><span id="rnull"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rnull</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1297">1297</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">return null</code><br />
+Convenient abbreviations for rules that want to allow their RuleBook to
+continue processing more rules.</p>
+
+<p><span id="SelArbitrary"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelArbitrary</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#196">196</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0002</code><br />
+This object was chosen arbitrarily from a larger set, because the noun
+phrase construction says we should do so. This flag is set when the noun
+phrase is something TAKE A BOOK or TAKE ANY OF THE BOOKS.</p>
+
+<p><span id="SelDefault"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelDefault</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#210">210</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0008</code><br />
+We selected an object as a default. This is set when the player leaves
+out a noun phrase, but we can guess what was probably meant based on
+context: e.g., ASK ABOUT THE HOUSE is probably directed to Bob if Bob is
+the only person nearby.</p>
+
+<p><span id="SelDisambig"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelDisambig</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#189">189</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0001</code><br />
+The noun phrase required disambiguation, because more than one object
+was in scope that matched the noun phrase. We were able to figure out
+which one(s) the player meant from context, without having to ask the
+player for help.</p>
+
+<p>For example, there are two doors in the room, one open and one closed.
+The player types OPEN DOOR. It’s fairly obvious that they must be
+talking about the closed door. So, we choose that object and set the
+Disambig flag.</p>
+
+<p>(Note that this flag specifically does NOT mean that we had to ask the
+user for help with the dreaded “Which do you mean…” question. It’s
+kind of the opposite: it means that we had a noun phrase that was
+initially ambiguous, but that we managed to disambiguate it on our own.
+When we get the user involved, there’s ambiguity *before* we ask the
+question, but the user’s response removes the ambiguity by telling us
+exactly which alternative they intended. This flag indicates that we
+made an educated guess about what the user must have intended, without
+asking. The flag lets the parser tell the player about the guess, which
+is desirable because the guess is sometimes wrong.</p>
+
+<p><span id="SelPlural"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelPlural</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#202">202</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0004</code><br />
+The noun phrase that we matched was a manifestly plural construction,
+such as TAKE ALL or TAKE THE BOOKS.</p>
+
+<p><span id="SelProg"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SelProg</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#218">218</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x1000</code><br />
+This object was set internally by the program; it did not come from
+parsing any player input. This generally means that the whole command
+was constructed by the program, to handle an event or other internal
+processing, rather than by parsing player input.</p>
+
+<p><span id="setPastTense"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">setPastTense (val)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#923">923</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gameMain.usePastTense = (val))</code><br />
+Set the current narrative tense. Use val = true for past and val = nil
+for present.</p>
+
+<p><span id="singleAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#70">70</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">singleNoun-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="singleAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#71">71</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">singleNoun-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="singleDir"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleDir</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#87">87</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">directionName-&gt;dirMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="singleDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#68">68</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">singleNoun-&gt;dobjMatch</code><br />
+Verb rule noun phrase macros. These are convenience macros for
+specifying the most common noun phrase slots in the grammar templates
+for verb rules.</p>
+
+<p><span id="singleIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">singleIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#69">69</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">singleNoun-&gt;iobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="stop"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">stop</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1285">1285</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">return stopValue;</code><br />
+Definitions for the rules.t extension</p>
+
+<p><span id="STRINGIZE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">STRINGIZE (x)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#266">266</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">_STRINGIZE(x)</code><br />
+<em>no description available</em></p>
+
+<p><span id="STRINGIZE"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">STRINGIZE (x)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#971">971</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">_STRINGIZE(x)</code><br />
+<em>no description available</em></p>
+
+<p><span id="topicAcc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicAcc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#81">81</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">topicPhrase-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="topicAobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicAobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#82">82</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">topicPhrase-&gt;accMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="topicDobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicDobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#79">79</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">topicPhrase-&gt;dobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="topicIobj"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">topicIobj</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#80">80</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">topicPhrase-&gt;iobjMatch</code><br />
+<em>no description available</em></p>
+
+<p><span id="touchDesc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">touchDesc</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1267">1267</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">feelDesc</code><br />
+<em>no description available</em></p>
+
+<p><span id="tSel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tSel (presVal, pastVal)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#929">929</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(gameMain.usePastTense ? (pastVal) : (presVal))</code><br />
+Shorthand macro for selecting one of two values depending on the current
+narrative tense.</p>
+
+<p><span id="VerbRule"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">VerbRule (tag)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#61">61</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">grammar predicate(tag):</code><br />
+The VerbRule macro starts the definition of a verb grammar rule. The tag
+is just an identifying name for the rule, so that you can refer to it
+with ‘replace’ or ‘modify’.</p>
+
+<p><span id="VideoLink"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">VideoLink</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1233">1233</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">2</code><br />
+<em>no description available</em></p>
+
+<p><span id="waitKey"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">waitKey (x, ...)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1278">1278</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">inputManager.getKey(x)</code><br />
+<em>no description available</em></p>
+
+<p><span id="withPast"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">withPast (callback)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#937">937</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(withTense(true, (callback)))</code><br />
+<em>no description available</em></p>
+
+<p><span id="withPresent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">withPresent (callback)</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#936">936</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(withTense(nil, (callback)))</code><br />
+Temporarily override the current narrative tense and invoke a callback
+function.</p>
+
+<p><span id="_Enums_"></span></p>
+
+<p><span class="hdln">Enums</span>  </p>
+
+<p><span id="ClosedGoal"></span> <span id="OpenGoal"></span>
+<span id="UndiscoveredGoal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ClosedGoal   OpenGoal   UndiscoveredGoal   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1202"><code class="language-plaintext highlighter-rouge">1202</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>Enums for Goals in the Hint system</p>
+
+<p><span id="feminine"></span> <span id="masculine"></span>
+<span id="neuter"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">feminine   masculine   neuter   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#871"><code class="language-plaintext highlighter-rouge">871</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p><em>no description available</em></p>
+
+<p><span id="FootnotesFull"></span> <span id="FootnotesMedium"></span>
+<span id="FootnotesOff"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">FootnotesFull   FootnotesMedium   FootnotesOff   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1205"><code class="language-plaintext highlighter-rouge">1205</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>Enums for Footnotes</p>
+
+<p><span id="indirectLockable"></span> <span id="lockableWithKey"></span>
+<span id="lockableWithoutKey"></span> <span id="notLockable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indirectLockable   lockableWithKey   lockableWithoutKey   notLockable   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#869"><code class="language-plaintext highlighter-rouge">869</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>enums for different types of lock:</p>
+
+<p><span id="large"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">large   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1186"><code class="language-plaintext highlighter-rouge">1186</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>Large - the object is large enough that its details can be sensed from a
+distance or through an obscuring medium.</p>
+
+<p><span id="manyToMany"></span> <span id="manyToOne"></span>
+<span id="oneToMany"></span> <span id="oneToOne"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">manyToMany   manyToOne   oneToMany   oneToOne   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1308"><code class="language-plaintext highlighter-rouge">1308</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>Definitions for the relations.t extension</p>
+
+<p><span id="medium"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">medium   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1193"><code class="language-plaintext highlighter-rouge">1193</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>Medium - the object can be sensed at a distance or when obscured, but
+not in any detail. Most objects fall into this category. Note that
+things that are parts of large objects should normally be medium.</p>
+
+<p><span id="normalRelation"></span> <span id="reverseRelation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">normalRelation   reverseRelation   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1311"><code class="language-plaintext highlighter-rouge">1311</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p><em>no description available</em></p>
+
+<p><span id="null"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">null   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1291"><code class="language-plaintext highlighter-rouge">1291</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>Null value to return from Rules that don’t stop a RuleBook from
+continuing to consider rules.</p>
+
+<p><span id="OtherObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">OtherObject   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#956"><code class="language-plaintext highlighter-rouge">956</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>A special role for the “other” object of a two-object command. This can
+be used in certain contexts (such as remapTo) where a particular object
+role is implied by the context, and where the action involved has
+exactly two objects; OtherObject in such contexts means DirectObject
+when the implied role is IndirectObject, and vice versa.</p>
+
+<p><span id="rmcAskLiteral"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcAskLiteral   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#248"><code class="language-plaintext highlighter-rouge">248</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>reading a response to a prompt for a missing literal phrase</p>
+
+<p><span id="rmcAskObject"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcAskObject   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#245"><code class="language-plaintext highlighter-rouge">245</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>reading a response to a prompt for a missing object phrase</p>
+
+<p><span id="rmcCommand"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcCommand   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#239"><code class="language-plaintext highlighter-rouge">239</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>reading a normal command line</p>
+
+<p><span id="rmcDisambig"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcDisambig   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#251"><code class="language-plaintext highlighter-rouge">251</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>reading a response to an interactive disambiguation prompt</p>
+
+<p><span id="rmcOops"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">rmcOops   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#242"><code class="language-plaintext highlighter-rouge">242</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>reading an unknown word response, to check for an “oops” command</p>
+
+<p><span id="small"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">small   </code></p>
+
+<p><a href="../file/advlite.h.html"><code class="language-plaintext highlighter-rouge">advlite.h</code></a><code class="language-plaintext highlighter-rouge">[</code><a href="../source/advlite.h.html#1199"><code class="language-plaintext highlighter-rouge">1199</code></a><code class="language-plaintext highlighter-rouge">]</code></p>
+
+<p>Small - the object cannot be sensed at a distance at all. This is
+appropriate for detailed parts of medium-class objects.</p>
+
+<p><span id="_Templates_"></span></p>
+
+<p><span class="hdln">Templates</span>  </p>
+
+<p><span id="Achievement"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Achievement</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#723">723</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">+points? "desc";</code><br />
+An achievement defines its descriptive text. It can also optionally
+define the number of points it awards.</p>
+
+<p><span id="ActorState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ActorState</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#759">759</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">"specialDesc" 'stateDesc' | "stateDesc" ?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="AltTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">AltTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#834">834</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">"topicResponse" | [eventList];</code><br />
+AltTopics just specify the response text or list</p>
+
+<p><span id="AltTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">AltTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#835">835</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">[firstEvents] [eventList];</code><br />
+<em>no description available</em></p>
+
+<p><span id="ClockEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ClockEvent</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1211">1211</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">[eventTime];</code><br />
+Template for ClockEvent</p>
+
+<p><span id="DefaultConsultTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefaultConsultTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#824">824</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">"topicResponse" | [eventList];</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefaultThought"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefaultThought</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#825">825</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">"topicResponse" | [eventList];</code><br />
+<em>no description available</em></p>
+
+<p><span id="DefaultTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">DefaultTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#823">823</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">"topicResponse" | [eventList];</code><br />
+<em>no description available</em></p>
+
+<p><span id="Doer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Doer</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#840">840</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'cmd';</code><br />
+<em>no description available</em></p>
+
+<p><span id="Door"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Door</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#746">746</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'vocab' @location? "desc"? -&gt;otherSide;</code><br />
+<em>no description available</em></p>
+
+<p><span id="Door"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Door</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#747">747</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">-&gt;otherSide 'vocab' @location? "desc"?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="Enterable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Enterable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#752">752</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">inherited -&gt;connector;</code><br />
+<em>no description available</em></p>
+
+<p><span id="Enterable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Enterable</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#753">753</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">-&gt;connector inherited;</code><br />
+<em>no description available</em></p>
+
+<p><span id="EventList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">EventList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1119">1119</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">[eventList];</code><br />
+templates for EventLists</p>
+
+<p><span id="EventListItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">EventListItem</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1340">1340</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">@myListObj? ~isReady? +minInterval? *maxFireCt? "invokeItem"? ;</code><br />
+Definitions for the eventListItem Extension</p>
+
+<p><span id="ExtraHint"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ExtraHint</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1114">1114</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">+hintDelay? "hintText" | [eventList];</code><br />
+A Template to facilitate the definition of ExtraHints. We can define it
+here and not in a header file since ExtraHints are only defined in this</p>
+
+<p><span id="Footnote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Footnote</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1208">1208</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">"desc";</code><br />
+Template for Footnotes</p>
+
+<p><span id="Goal"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Goal</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1106">1106</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">-&gt;closeWhenAchieved? 'title' 'heading'? [menuContents];</code><br />
+templates for hint system objects</p>
+
+<p><span id="Hint"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Hint</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1107">1107</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'hintText' [referencedGoals]?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="MenuItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuItem</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1101">1101</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'title' 'heading'?;</code><br />
+some templates for defining menu items</p>
+
+<p><span id="MenuLongTopicItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuLongTopicItem</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1103">1103</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'title' 'heading'? 'menuContents';</code><br />
+<em>no description available</em></p>
+
+<p><span id="MenuTopicItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MenuTopicItem</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1102">1102</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'title' 'heading'? [menuContents];</code><br />
+<em>no description available</em></p>
+
+<p><span id="MiscTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MiscTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#828">828</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">"topicResponse" | [eventList];</code><br />
+miscellanous topics just specify the response text or list</p>
+
+<p><span id="MiscTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">MiscTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#829">829</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">[firstEvents] [eventList];</code><br />
+<em>no description available</em></p>
+
+<p><span id="NodeContinuationTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NodeContinuationTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#830">830</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">"topicResponse" | [eventList];</code><br />
+<em>no description available</em></p>
+
+<p><span id="NodeContinuationTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NodeContinuationTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#831">831</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">[firstEvents] [eventList];</code><br />
+<em>no description available</em></p>
+
+<p><span id="ProxyActor"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ProxyActor</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#838">838</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">@location;</code><br />
+The ProxyActor template just specifies the location (i.e. the base
+Actor)</p>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#789">789</a>]</p>
+
+<p>` +matchScore? ‘matchPattern’ “topicResponse” | [eventList] ?;`<br />
+<em>no description available</em></p>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#793">793</a>]</p>
+
+<p>` +matchScore? ‘matchPattern’ [firstEvents] [eventList];`<br />
+<em>no description available</em></p>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#797">797</a>]</p>
+
+<p>` +matchScore? ‘qtype’ @matchObj | [matchObj] | ‘matchPattern’ “topicResponse” | [eventList] ?;`<br />
+<em>no description available</em></p>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#803">803</a>]</p>
+
+<p>` +matchScore? ‘qtype’ @matchObj | [matchObj] | ‘matchPattern’ [firstEvents] [eventList];`<br />
+a ShuffledEventList version of the above</p>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#809">809</a>]</p>
+
+<p>` +matchScore? ‘qtype’ @matchObj | [matchObj] ‘matchPattern’ “topicResponse” | [eventList] ?;`<br />
+we can also include *both* the match object/list *and* pattern</p>
+
+<p><span id="QueryTopic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">QueryTopic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#816">816</a>]</p>
+
+<p>` +matchScore? ‘qtype’ @matchObj | [matchObj] ‘matchPattern’ [firstEvents] [eventList];`<br />
+a ShuffledEventList version of the above</p>
+
+<p><span id="Region"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Region</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#744">744</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">[rooms];</code><br />
+<em>no description available</em></p>
+
+<p><span id="Relation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Relation</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1309">1309</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'name' 'reverseName'? @relationType? +reciprocal?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="Room"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Room</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#741">741</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'roomTitle' 'vocab' "desc"?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="Room"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Room</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#742">742</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'roomTitle' "desc"?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="Rule"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Rule</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1301">1301</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">@location? &amp;action | [action]?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="SensoryEmanation"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SensoryEmanation</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#757">757</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">inherited [eventList]?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="ShuffledEventList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">ShuffledEventList</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1120">1120</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">[firstEvents] [eventList];</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1147">1147</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; mentionA;</code><br />
+String templates for room descriptions etc.</p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1148">1148</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; mentionA;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1149">1149</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; mentionThe;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1150">1150</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&lt; list of * is &gt;&gt; listStrIs;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1151">1151</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&lt; list of * &gt;&gt; makeListInStr;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1152">1152</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&lt; is list of * &gt;&gt; isListStr;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1153">1153</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&lt; exclude * &gt;&gt; makeMentioned;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1214">1214</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; takeTime;</code><br />
+String Templates for Objective Time module</p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1215">1215</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; takeTime;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1216">1216</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; takeTime;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1217">1217</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; takeTime;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1219">1219</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; addTime;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1220">1220</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; addTime;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1221">1221</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; addTime;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1222">1222</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&gt; addTime;</code><br />
+<em>no description available</em></p>
+
+<p><span id="string"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1334">1334</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;&lt;* by room&gt;&gt; byRoomFunc;</code><br />
+<em>no description available</em></p>
+
+<p><span id="StyleTag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">StyleTag</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#731">731</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'tagName' 'openText'? 'closeText'?;</code><br />
+Templates for style tags</p>
+
+<p><span id="SymConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymConnector</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1326">1326</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">-&gt;destination;</code><br />
+Definitions for the SymConn Extension</p>
+
+<p><span id="SymConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymConnector</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1327">1327</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">@room1 @room2;</code><br />
+<em>no description available</em></p>
+
+<p><span id="SymPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymPassage</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1329">1329</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">-&gt;destination 'vocab' "desc"?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="SymPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymPassage</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1330">1330</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'vocab' -&gt;destination "desc"?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="SymPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymPassage</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1331">1331</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'vocab' @room1 @room2 "desc"?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="SymPassage"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">SymPassage</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#1332">1332</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'vocab' [rooms] "desc"?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="Test"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Test</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#843">843</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'testName' [testList] @location? [testHolding]?;</code><br />
+Templates for use with test sequences</p>
+
+<p><span id="Test"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Test</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#844">844</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'testName' [testList] [testHolding]? @location?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="Thing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Thing</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#738">738</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'vocab' @location? "desc"?;</code><br />
+Object definition templates</p>
+
+<p><span id="Topic"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Topic</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#739">739</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'vocab' @familiar?;</code><br />
+<em>no description available</em></p>
+
+<p><span id="TopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicEntry</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#764">764</a>]</p>
+
+<p>` +matchScore? @matchObj | [matchObj] | ‘matchPattern’ “topicResponse” | [eventList] ?;`<br />
+<em>no description available</em></p>
+
+<p><span id="TopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicEntry</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#770">770</a>]</p>
+
+<p>` +matchScore? @matchObj | [matchObj] | ‘matchPattern’ [firstEvents] [eventList];`<br />
+a ShuffledEventList version of the above</p>
+
+<p><span id="TopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicEntry</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#776">776</a>]</p>
+
+<p>` +matchScore? @matchObj | [matchObj] ‘matchPattern’ “topicResponse” | [eventList] ?;`<br />
+we can also include *both* the match object/list *and* pattern</p>
+
+<p><span id="TopicEntry"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicEntry</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#783">783</a>]</p>
+
+<p>` +matchScore? @matchObj | [matchObj] ‘matchPattern’ [firstEvents] [eventList];`<br />
+a ShuffledEventList version of the above</p>
+
+<p><span id="TopicGroup"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TopicGroup</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#761">761</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">+scoreBoost? 'convKeys' | [convKeys] ? ;</code><br />
+<em>no description available</em></p>
+
+<p><span id="TravelConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TravelConnector</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#749">749</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'vocab'? @location? "desc"? -&gt;destination;</code><br />
+<em>no description available</em></p>
+
+<p><span id="TravelConnector"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">TravelConnector</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#750">750</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">-&gt;destination "travelDesc";</code><br />
+<em>no description available</em></p>
+
+<p><span id="Unthing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">Unthing</code></p>
+
+<p><a href="../file/advlite.h.html">advlite.h</a>[<a href="../source/advlite.h.html#755">755</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">'vocab' @location? 'notHereMsg'?;</code><br />
+<em>no description available</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-lister-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-lister-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Lister</span><span class="type">class</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#29">29</a>],
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2920">2920</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Lister is the class that displays lists of objects. This is used in room
+descriptions, inventory lists, and EXAMINE descriptions of objects (to
+show the examined object’s contents).</p>
+
+<p>Showing a listing is basically a function call. The reason we make a
+whole class out of it is that we provide a number of options, and a
+class is a convenient way to specify options. The options are simply
+defined as properties of a lister object, so to create a certain kind of
+list, you just set up a Lister instance with the desired options. We
+provide pre-defined Lister objects for the common library listing types,
+but games can create their own custom list types by creating their own
+Lister objects for different sets of options.</p>
+
+<p><em>Modified in
+<a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2920">2920</a>]:</em><br />
+List display routines</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Lister</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Lister</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Lister</code></strong><br />
+<a href="../object/ItemLister.html"><code class="language-plaintext highlighter-rouge">ItemLister</code></a><br />
+<a href="../object/CustomRoomLister.html"><code class="language-plaintext highlighter-rouge">CustomRoomLister</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/ExitLister1.html"><code class="language-plaintext highlighter-rouge">ExitLister</code></a> <a href="../object/finishOptionsLister.html"><code class="language-plaintext highlighter-rouge">finishOptionsLister</code></a> <a href="../object/fullScoreLister.html"><code class="language-plaintext highlighter-rouge">fullScoreLister</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#buildList"><code class="language-plaintext highlighter-rouge">buildList</code></a> <a href="#listed"><code class="language-plaintext highlighter-rouge">listed</code></a> <a href="#listOrder"><code class="language-plaintext highlighter-rouge">listOrder</code></a> <a href="#show"><code class="language-plaintext highlighter-rouge">show</code></a> <a href="#showList"><code class="language-plaintext highlighter-rouge">showList</code></a> <a href="#showListEmpty"><code class="language-plaintext highlighter-rouge">showListEmpty</code></a> <a href="#showListPrefix"><code class="language-plaintext highlighter-rouge">showListPrefix</code></a> <a href="#showListSuffix"><code class="language-plaintext highlighter-rouge">showListSuffix</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="buildList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">buildList (lst)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#100">100</a>]</p>
+
+<p>Return a string containing what this lister would display, minus the
+terminating paragraph break.</p>
+
+<p><span id="listed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listed (obj)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#84">84</a>]</p>
+
+<p>Should ‘obj’ be listed in this list? Returns true if so, nil if not. By
+default, we list any object whose ‘listed’ property is true.</p>
+
+<p><span id="listOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listOrder (obj)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#92">92</a>]</p>
+
+<p>Get an item’s sorting order. This returns an integer that gives the
+relative position in the list; we order the list in ascending order of
+this value. By default, we return the ‘listOrder’ property of the
+object.</p>
+
+<p><span id="show"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">show (lst, paraCnt, paraBrk, =, true)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#39">39</a>]</p>
+
+<p>Show a list of objects. ‘lst’ is the list of objects to show; ‘paraCnt’
+is the number of paragraph-style descriptions that we’ve already shown
+as part of this description.</p>
+
+<p>Note that many specific listers replaced the ‘paraCnt’ parameter with a
+more useful ‘parent’ parameter, containing the identity of the object
+whose contents are being listed.</p>
+
+<p><span id="showList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showList (lst, pl, paraCnt)</code></p>
+
+<p><a href="../file/english.t.html">english.t</a>[<a href="../source/english.t.html#2926">2926</a>]</p>
+
+<p>Show the list as an ‘and’ list, that is a list of the aNames of each
+item in lst formatted with commas between list elements and ‘and’
+between the last two items in the list.</p>
+
+<p><span id="showListEmpty"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListEmpty (paraCnt)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#77">77</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="showListPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListPrefix (lst, pl, paraCnt)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#73">73</a>]</p>
+
+<p>add a paragraph break at the end, if it’s requested</p>
+
+<p><span id="showListSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListSuffix (lst, pl, paraCnt)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#75">75</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

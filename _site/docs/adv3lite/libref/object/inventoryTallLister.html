@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-inventorytalllister-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-inventorytalllister-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">inventoryTallLister</span><span class="type">object</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#186">186</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>inventoryTallLister for displaying an inventory list in TALL format.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">inventoryTallLister</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/ItemLister.html"><code class="language-plaintext highlighter-rouge">ItemLister</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">inventoryTallLister</code></strong><br />
+<a href="../object/ItemLister.html"><code class="language-plaintext highlighter-rouge">ItemLister</code></a><br />
+<a href="../object/Lister.html"><code class="language-plaintext highlighter-rouge">Lister</code></a><br />
+`                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#contentsListedProp"><code class="language-plaintext highlighter-rouge">contentsListedProp</code></a> <a href="#indentLevel"><code class="language-plaintext highlighter-rouge">indentLevel</code></a> <a href="#listRecursively"><code class="language-plaintext highlighter-rouge">listRecursively</code></a> <a href="#maxIndentLevel"><code class="language-plaintext highlighter-rouge">maxIndentLevel</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ItemLister</code> :<br />
+<a href="../object/ItemLister.html#showAdditionalInfo"><code class="language-plaintext highlighter-rouge">showAdditionalInfo</code></a> <a href="../object/ItemLister.html#showSubListing"><code class="language-plaintext highlighter-rouge">showSubListing</code></a> <a href="../object/ItemLister.html#showWornInfo"><code class="language-plaintext highlighter-rouge">showWornInfo</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#listed"><code class="language-plaintext highlighter-rouge">listed</code></a> <a href="#listName"><code class="language-plaintext highlighter-rouge">listName</code></a> <a href="#showContentsTall"><code class="language-plaintext highlighter-rouge">showContentsTall</code></a> <a href="#showListEmpty"><code class="language-plaintext highlighter-rouge">showListEmpty</code></a> <a href="#showListPrefix"><code class="language-plaintext highlighter-rouge">showListPrefix</code></a> <a href="#showListSuffix"><code class="language-plaintext highlighter-rouge">showListSuffix</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ItemLister</code> :<br />
+<a href="../object/ItemLister.html#show"><code class="language-plaintext highlighter-rouge">show</code></a> <a href="../object/ItemLister.html#showList"><code class="language-plaintext highlighter-rouge">showList</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Lister</code> :<br />
+<a href="../object/Lister.html#buildList"><code class="language-plaintext highlighter-rouge">buildList</code></a> <a href="../object/Lister.html#listOrder"><code class="language-plaintext highlighter-rouge">listOrder</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="contentsListedProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">contentsListedProp</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#307">307</a>]</p>
+
+<p>The property on a Thing-derived container to test whether its contents
+should be listed when listing with this lister</p>
+
+<p><span id="indentLevel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">indentLevel</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#298">298</a>]</p>
+
+<p>The current indentation level for listing subcontents recursively</p>
+
+<p><span id="listRecursively"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listRecursively</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#313">313</a>]</p>
+
+<p>Flag, so we want to list contents of contents when using this lister; by
+default we do.</p>
+
+<p><span id="maxIndentLevel"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">maxIndentLevel</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#301">301</a>]</p>
+
+<p>The maximum level of indentation we want to allow for listed nested
+subcontents.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="listed"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listed (obj)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#188">188</a>]</p>
+
+<p>is the object listed in an inventory list?</p>
+
+<p><span id="listName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">listName (o)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#276">276</a>]</p>
+
+<p>A version of the listName method that doesn’t list an items contents in
+parenthesis after its name, which would be inappropriate to the tall
+inventory format.</p>
+
+<p><span id="showContentsTall"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showContentsTall (lst, parent, paraBrk, =, true)</code></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#207">207</a>]</p>
+
+<p>List the player’s inventory in tall format, i.e., as a columnar list
+with each item on a new line. This method may call itself recursively to
+list subcontents (such as the visible contents of any containers in the
+player character’s inventory).</p>
+
+<p><span id="showListEmpty"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListEmpty (paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#319">319</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="showListPrefix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListPrefix (lst, pl, paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#315">315</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="showListSuffix"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showListSuffix (lst, pl, paraCnt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/lister.t.html">lister.t</a>[<a href="../source/lister.t.html#317">317</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

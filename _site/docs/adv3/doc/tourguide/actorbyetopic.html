@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-actorbyetopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-actorbyetopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ActorByeTopic: <a href="misctopic.html">MiscTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="boredbyetopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="hellogoodbyetopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>ActorByeTopic is the third specialization of
+<a href="impbyetopic.html">ImpByeTopic</a>. It is used when the NPC terminates the
+conversation of its own accord via npc.endConversation(). In the absence
+of an active ActorByeTopic, the active ImpByeTopic will be used
+instead.</p>
+
+<p>npc.endConversation() is used to make an NPC break off a current
+conversation. This is the complement to initiateConversation; it causes
+the NPC to effectively say BYE on its own, rather than waiting for the
+PC to decide to end the conversation. This call is mostly useful when
+the actor’s current state is an
+<a href="inconversationstate.html">InConversationState</a>, since the main function
+of this routine is to switch to an out-of-conversation state.</p>
+
+<p>For example, if our curator was particularly cantankerous, we might, for
+example, tweak one or more of his TopicEntries to call
+endConversation():</p>
+
+<p>+++ AltTopic<br />
+   ”&lt;q&gt;Do I need another ticket if I want to come in again?&lt;/q&gt;<br />
+    you ask.\b<br />
+    &lt;q&gt;No,&lt;/q&gt; he assures you, &lt;q&gt;the ticket you showed me is<br />
+     good for multiple entry.&lt;/q&gt; <strong>&lt;&lt;getActor().endConversation()&gt;&gt; </strong>”<br />
+   isActive = gRevealed(‘ticket-shown’)  <br />
+;</p>
+
+<p>And then add the following in his ConversationReadyState:</p>
+
+<p>+++ ActorByeTopic<br />
+“&lt;q&gt;Now, if that’s all, I have work to do,&lt;/q&gt; he adds, turning back
+to the<br />
+pile of papers on his desk. “<br />
+;</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

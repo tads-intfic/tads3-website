@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-techman-mediatypes-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-techman-mediatypes-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="advtop.html" class="nav">Advanced Topics</a> &gt; Internet Media
+Types for TADS<br />
+<span class="navnp"><a href="t3past.html" class="nav"><em>Prev:</em> Writing a Game in the
+Past Tense</a>    
+<a href="t3projectStarters.html" class="nav"><em>Next:</em> Workbench
+Project Starter Templates</a>     </span></p>
+
+<h1 id="internet-media-types-for-tads">Internet Media Types for TADS</h1>
+
+<p><em>by Andreas Sewe</em></p>
+
+<p>Both TADS 2 and 3 define quite a few file formats used by their
+corresponding interpreters and development tools like compilers and
+linkers. This article describes how to utilize media types when
+distributing files in those formats via the Internet. Media or MIME
+types were originally designed for Internet mail, but have been adopted
+by a number of other protocols of which HTTP is probably the most
+prominent one. All these protocols use media types to specify format and
+purpose of the data transmitted.</p>
+
+<p>If you already know what media types are all about, and you just want to
+look up a particular media type for a file format defined by TADS,
+select one from the following list:</p>
+
+<ul>
+  <li><a href="#gam">TADS 2 Game</a></li>
+  <li><a href="#sav">TADS 2 Saved Game</a></li>
+  <li><a href="#rs">TADS 2 Saved Resource</a></li>
+  <li><a href="#t3x">TADS 3 Executable</a></li>
+  <li><a href="#t3v">TADS 3 Saved Position</a></li>
+  <li><a href="#t3r">TADS 3 Resource</a></li>
+  <li><a href="#t3m">TADS 3 Project</a></li>
+  <li><a href="#tl">TADS 3 Library</a></li>
+  <li><a href="#t">TADS Source</a></li>
+</ul>
+
+<p>Background: Media Type Syntax</p>
+
+<p>While media or MIME types were originally introduced by RFC 1341 their
+current incarnation is defined by a set of five core RFCs, some of which
+have received minor updates. All these RFCs can be obtained from the
+<a href="http://www.ietf.org/">Internet Engineering Task Force</a>. These five
+documents are:</p>
+
+<ul>
+  <li><a href="urn:ietf:rfc:2045">RFC 2045</a> (Draft Standard), MIME: Format of
+Internet Message Bodies</li>
+  <li><a href="urn:ietf:rfc:2046">RFC 2046</a> (Draft Standard), MIME: Media Types</li>
+  <li><a href="urn:ietf:rfc:2047">RFC 2047</a> (Draft Standard), MIME: Message Header
+Extensions for Non-ASCII Text</li>
+  <li><a href="urn:ietf:rfc:2048">RFC 2048</a> (Best Current Practice), MIME:
+Registration Procedure</li>
+  <li><a href="urn:ietf:rfc:2049">RFC 2049</a> (Draft Standard), MIME: Conformance
+Criteria and Examples</li>
+</ul>
+
+<p>Despite the extensive number of RFCs covering this very subject the
+structure of media types themselves is quite simple although there are
+some subtleties to be aware of, too. Every media type consists of a
+(primary) type and a subtype, separated by a slash. Furthermore a media
+type can have a list of parameters attached, each parameter starting
+with a semicolon. Please note that the type, subtype and parameter names
+are not case sensitive, whereas parameter values might very well be case
+sensitive, that is unless explicitly stated otherwise. Finally parameter
+values <em>may</em> be included in quotations marks.</p>
+
+<p>Examples of media types include <code class="language-plaintext highlighter-rouge">application/zip</code>, <code class="language-plaintext highlighter-rouge">image/jpeg</code>, and
+<code class="language-plaintext highlighter-rouge">text/html;charset=us-ascii</code>, all of which are used by
+<a href="http://www.tads.org/">www.tads.org</a> itself. There is also a <a href="http://www.isi.edu/in-notes/iana/assignments/media-types">complete
+database</a> of
+all media types registered with the <a href="http://www.iana.org/">Internet Assigned Numbers
+Authority</a> so far.</p>
+
+<p>Background: Types and Subtypes</p>
+
+<p>As mentioned above a media type consists of both a (top-level) type and
+a subtype. The former can be chosen from the registration tree of
+predefined types, the tree of IETF-defined extensions, or it can be an
+experimental type. All experimental types <em>must</em> be prefixed with <code class="language-plaintext highlighter-rouge">x-</code>,
+but even then introducing experimental types is strongly discouraged.</p>
+
+<p>Furthermore these types are divided into discrete and composite types.
+As of this writing the list of non-experimental discrete types reads as
+follows, the latter two entries being defined in the IETF extension
+tree:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">text</code>: Textual information</li>
+  <li><code class="language-plaintext highlighter-rouge">image</code>: Image data</li>
+  <li><code class="language-plaintext highlighter-rouge">audio</code>: Audio data</li>
+  <li><code class="language-plaintext highlighter-rouge">video</code>: Video data</li>
+  <li><code class="language-plaintext highlighter-rouge">application</code>: Some other kind of data, typically either uninterpreted
+binary data or information to be processed by an application</li>
+  <li><code class="language-plaintext highlighter-rouge">model</code>: 3D model format</li>
+  <li><code class="language-plaintext highlighter-rouge">chemical</code>: Chemical data set</li>
+</ul>
+
+<p>The only non-experimental composite types defined so far are:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">multipart</code>: Data consisting of multiple entities of independent data
+types</li>
+  <li><code class="language-plaintext highlighter-rouge">message</code>: An encapsulated message</li>
+</ul>
+
+<p>As already mentioned the introduction of experimental types is strongly
+discouraged by the IETF, but fortunately the above lists of predefined
+types already include a pair suitable for use by TADS: <code class="language-plaintext highlighter-rouge">application</code> and
+<code class="language-plaintext highlighter-rouge">text</code>.</p>
+
+<p>Subtypes can also be either experimental or chosen from the registration
+trees of IETF-approved subtypes, “Vendor” subtypes, and
+“Personal/Vanity” subtypes. The latter ones are all prefixed with <code class="language-plaintext highlighter-rouge">vnd.</code>
+or <code class="language-plaintext highlighter-rouge">prs.</code>, respectively. Subtypes of all three trees are registered with
+the IANA. But, as already mentioned, instead of choosing an already
+registered subtype one can also define an unregistered experimental
+subtype, which <em>must</em> be prefixed with either <code class="language-plaintext highlighter-rouge">x.</code> or <code class="language-plaintext highlighter-rouge">x-</code>. Now
+experimental subtypes are well-suited for use by TADS, especially since
+official IANA-registration is quite unlikely to occur—that is unless the
+IF Cabal has already infiltrated the Internet Assigned Numbers
+Authority.</p>
+
+<p>The rationale behind the naming of these experimental subtypes, as used
+by TADS, is best illustrated by the following quote from <a href="http://www.tads.org/t3spec/format.html">The T3 Virtual
+Machine Specification</a>:</p>
+
+<blockquote>
+  <p>The structure of the name has some significance: the <code class="language-plaintext highlighter-rouge">x-</code> prefix
+conforms to the MIME standard for indicating an unregistered ad hoc
+[sub]type; the <code class="language-plaintext highlighter-rouge">t3vm</code> portion is descriptive and relatively unlikely
+to collide with other ad hoc [sub]types; and the <code class="language-plaintext highlighter-rouge">-image</code> suffix
+suggests an obvious namespace structure, in case it becomes
+interesting to designate MIME [sub]types for other t3vm-related file
+types (<a href="#t3v">saved-game files</a>, for example) in the future.</p>
+</blockquote>
+
+<p>One final thing worth mentioning is that a media type is by no means
+just an opaque string. A (top-level) type may impose additional
+constraints upon content or even a default handling in case of an
+unrecognized subtype. So an unrecognized <code class="language-plaintext highlighter-rouge">text</code>-subtype may be presented
+to the user nevertheless, whereas an unrecognized <code class="language-plaintext highlighter-rouge">application</code>-subtype
+probably won’t.</p>
+
+<p>Also data of any subtype of <code class="language-plaintext highlighter-rouge">text</code>, when distributed via a
+MIME-compatible protocol, e.g. as an mail attachment, is subject to the
+following constraint: All line breaks <em>must</em> be represented as a CR LF
+(<code class="language-plaintext highlighter-rouge">"\x0D\x0A"</code>) sequence. Use of CR and LF outside of line break
+sequences is forbidden. This constraint does not affect distribution via
+HTTP though, which allows line breaks to be represented as CR, LF, or CR
+LF, respectively. But for interoperability reasons the sole use of CR LF
+is <em>recommended</em>.</p>
+
+<p>This ensures maximum interoperability for distribution via the Internet
+or use with third-party development tools, even though TADS itself is,
+according to Mike Roberts, very flexible in this respect:</p>
+
+<blockquote>
+  <p>Regarding the text [media] types, the TADS compilers are actually
+very flexible about newline conventions; they’ll accept CR, LF, CR LF,
+or LF CR.</p>
+</blockquote>
+
+<p>Similarly one is encouraged to follow the general Internet guidelines of
+being conservative in what you send and liberal in what you accept.</p>
+
+<p>Background: Use Cases</p>
+
+<p>There are a number of ways in which media types can be used. First of
+all there is the use case they were originally designed for:
+distribution of various file formats via <strong>Internet mail</strong>. Here media
+types provide means to transmit reliable information about the content’s
+format and purpose across different systems.</p>
+
+<p>Similarly HTTP uses media types to specify this information about the
+data made available on the <strong>World Wide Web</strong>. Furthermore HTTP allows
+content negotiation based on the media types an application, e.g. a web
+browser, is able to understand. Finally the media type is used to
+determine which plug-in, if any, ought to be invoked upon receiving
+content of a specific type. So following a hyperlink to a <a href="#t3x">TADS 3
+game</a>, thus receiving content of type <code class="language-plaintext highlighter-rouge">application/x-t3vm-image</code>,
+could automatically invoke an appropriate interpreter.</p>
+
+<p>Finally some <strong>file systems</strong> such as the BeFS incorporate native
+support for media types and require them for the description of file
+formats stored therein.</p>
+
+<p>Most operating systems, however, <em>don’t</em> use MIME types for their own
+internal purposes. Most systems instead have their own peculiar ways of
+handling file type sensing, either something completely ad hoc, or
+something proprietary. For example, DOS and Windows systems use file
+extensions (the last part of a filename, conventionally a few letters
+following a period, such as “.txt” or “.doc”). Mac OS 9 and earlier use
+hidden metadata fields in the file system for the “file type” and
+“creator” codes, which are four-character ID codes; application
+developers were <em>supposed</em> to register these with Apple to avoid
+collisions, but most never did. Mac OS X uses a combination of pre-X
+type codes, file extensions, and, starting with OS X 10.3, a whole new
+proprietary type system from Apple called <a href="http://developer.apple.com/macosx/uniformtypeidentifiers.html">Uniform Type
+Identifiers</a>,
+or UTIs. Unix-like systems have traditionally relied on “magic numbers”,
+which means that they look at the <em>contents</em> of a file (usually the
+first few bytes, where most binary formats place a fixed “signature”
+designed for just this kind of sensing) rather than its metadata.</p>
+
+<p>The MIME type system has a couple of advantages over most of these
+OS-specific systems. For one thing it’s uniform across systems, which
+none of the proprietary systems are, obviously. For another, it’s
+formally defined rather than ad hoc. It’s more robust than bundling
+information into the file name - renaming a file won’t affect the type
+it claims to be. Most MIME types are registered with the IANA instead of
+being just made up by a developer, or registered only with a single
+vendor. (But even for unregistered media types—like the ones defined by
+TADS—name clashes are less likely than they are with, say, extensions or
+Mac type codes, just because the namespace is so much larger for MIME
+types.)</p>
+
+<p>For the sake of consistency among applications that work with TADS file
+types on various operating systems, we’ve listed the “official” values
+for several of these ad hoc and proprietary type systems for each of our
+file types, alongside the MIME type in the tables below. “Official” is
+in quotes because these are only official as far as coming from us here
+at tads.org; for the most part, these aren’t registered with the OS
+vendors or any formal standards body.</p>
+
+<p><span id="gam">Media Type: TADS 2 Game</span></p>
+
+<p>This media type is defined for game files as used by TADS 2 interpreters
+and development tools.</p>
+
+<p>It was chosen in consultation with the managers of the <a href="http://www.ifarchive.org/">IF
+Archive</a>, which has adopted it as a local
+standard.</p>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<th width="30%">MIME media type name</th>
+<td><code>application</code></td>
+</tr>
+<tr class="odd">
+<th>MIME subtype name</th>
+<td><code>x-tads</code></td>
+</tr>
+<tr>
+<th>Required parameters</th>
+<td>none</td>
+</tr>
+<tr class="odd">
+<th>Optional parameters</th>
+<td>none</td>
+</tr>
+<tr>
+<th>Applications which use this media type</th>
+<td>TADS 2 interpreters and development tools</td>
+</tr>
+<tr class="odd">
+<th>Magic number(s)</th>
+<td>12 byte sequence. In hexadecimal: 54 41 44 53 32 20 62 69 6E 0A 0D
+1A (<code>"TADS2 bin\x0A\x0D\x1A"</code>)</td>
+</tr>
+<tr>
+<th>File extension(s)</th>
+<td><code>.gam</code></td>
+</tr>
+<tr class="odd">
+<th>Macintosh File Type Code(s)</th>
+<td><code>TADG</code></td>
+</tr>
+<tr>
+<th>UTI</th>
+<td><code>org.tads.tads2-game</code><br />
+conforms to <code>org.tads.tads-game</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>Please note that the magic number contains, contrary to common usage,
+the sequence LF CR (<code class="language-plaintext highlighter-rouge">"\x0A\x0D"</code>) instead of CR LF (<code class="language-plaintext highlighter-rouge">"\x0D\x0A"</code>).</p>
+
+<p><span id="sav">Media Type: TADS 2 Saved Game</span></p>
+
+<p>This media type is defined for saved game files as used by TADS 2
+interpreters.</p>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<th width="30%">MIME media type name</th>
+<td><code>application</code></td>
+</tr>
+<tr class="odd">
+<th>MIME subtype name</th>
+<td><code>x-tads-save</code></td>
+</tr>
+<tr>
+<th>Required parameters</th>
+<td>none</td>
+</tr>
+<tr class="odd">
+<th>Optional parameters</th>
+<td>none</td>
+</tr>
+<tr>
+<th>Applications which use this media type</th>
+<td>TADS 2 interpreters</td>
+</tr>
+<tr class="odd">
+<th>Magic number(s)</th>
+<td>15 byte sequence. In hexadecimal: 54 41 44 53 32 20 73 61 76 65 2F
+67 0A 0D 1A (<code>"TADS2 save/g\x0A\x0D\x1A"</code>)</td>
+</tr>
+<tr>
+<th>File extension(s)</th>
+<td><code>.sav</code></td>
+</tr>
+<tr class="odd">
+<th>Macintosh File Type Code(s)</th>
+<td><code>TADS</code></td>
+</tr>
+<tr>
+<th>UTI</th>
+<td><code>org.tads.tads2-saved-game</code><br />
+conforms to <code>org.tads.tads-saved-game</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>Please note that the magic number contains, contrary to common usage,
+the sequence LF CR (<code class="language-plaintext highlighter-rouge">"\x0A\x0D"</code>) instead of CR LF (<code class="language-plaintext highlighter-rouge">"\x0D\x0A"</code>).</p>
+
+<p><span id="rs">Media Type: TADS 2 Resource</span></p>
+
+<p>This media type is defined for resource files as used by TADS 2
+interpreters and development tools.</p>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<th width="30%">MIME media type name</th>
+<td><code>application</code></td>
+</tr>
+<tr class="odd">
+<th>MIME subtype name</th>
+<td><code>x-tads-resource</code></td>
+</tr>
+<tr>
+<th>Required parameters</th>
+<td>none</td>
+</tr>
+<tr class="odd">
+<th>Optional parameters</th>
+<td>none</td>
+</tr>
+<tr>
+<th>Applications which use this media type</th>
+<td>TADS 2 interpreters and development tools</td>
+</tr>
+<tr class="odd">
+<th>Magic number(s)</th>
+<td>12 byte sequence. In hexadecimal: 54 41 44 53 32 20 72 73 63 0A 0D
+1A (<code>"TADS2 rsc\x0A\x0D\x1A"</code>)</td>
+</tr>
+<tr>
+<th>File extension(s)</th>
+<td><code>.rs</code><var>n</var>; where <var>n</var> = 0, 1, 2, …,
+9</td>
+</tr>
+<tr class="odd">
+<th>Macintosh File Type Code(s)</th>
+<td><code>.RS*</code></td>
+</tr>
+<tr>
+<th>UTI</th>
+<td><code>org.tads.tads2-resource-bundle</code><br />
+conforms to <code>org.tads.tads-resource-bundle</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>Please note that the magic number contains, contrary to common usage,
+the sequence LF CR (“\x0A\x0D”) instead of CR LF (“\x0D\x0A”).</p>
+
+<p><span id="t3x">Media Type: TADS 3 Executable</span></p>
+
+<p>This media type is defined for executable files as used by TADS 3
+interpreters and development tools.</p>
+
+<p>It was chosen in consultation with the managers of the <a href="http://www.ifarchive.org/">IF
+Archive</a>, which has adopted it as a local
+standard.</p>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<th width="30%">MIME media type name</th>
+<td><code>application</code></td>
+</tr>
+<tr class="odd">
+<th>MIME subtype name</th>
+<td><code>x-t3vm-image</code></td>
+</tr>
+<tr>
+<th>Required parameters</th>
+<td>none</td>
+</tr>
+<tr class="odd">
+<th>Optional parameters</th>
+<td>none</td>
+</tr>
+<tr>
+<th>Applications which use this media type</th>
+<td>TADS 3 interpreters and development tools</td>
+</tr>
+<tr class="odd">
+<th>Magic number(s)</th>
+<td>11 byte sequence. In hexadecimal: 54 33 2D 69 6D 61 67 65 0D 0A 1A
+(<code>"T3-image\x0D\x0A\x1A"</code>)</td>
+</tr>
+<tr>
+<th>File extension(s)</th>
+<td><code>.t3x</code>, <code>.t3</code></td>
+</tr>
+<tr class="odd">
+<th>Macintosh File Type Code(s)</th>
+<td><code>.T3X</code></td>
+</tr>
+<tr>
+<th>UTI</th>
+<td><code>org.tads.tads3-game</code><br />
+conforms to <code>org.tads.tads-game</code></td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="t3v">Media Type: TADS 3 Saved Position</span></p>
+
+<p>This media type is defined for saved position files as used by TADS 3
+interpreters.</p>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<th width="30%">MIME media type name</th>
+<td><code>application</code></td>
+</tr>
+<tr class="odd">
+<th>MIME subtype name</th>
+<td><code>x-t3vm-state</code></td>
+</tr>
+<tr>
+<th>Required parameters</th>
+<td>none</td>
+</tr>
+<tr class="odd">
+<th>Optional parameters</th>
+<td>none</td>
+</tr>
+<tr>
+<th>Applications which use this media type</th>
+<td>TADS 3 interpreters</td>
+</tr>
+<tr class="odd">
+<th>Magic number(s)</th>
+<td>10 byte sequence, followed by a 4 byte version identifier, followed
+by a 3 byte sequence. In hexadecimal: 54 33 2D 73 74 61 74 65 26 76
+(<code>"T3-state-v"</code>), version identifier, 0D 0A 1A
+(<code>"\x0D\x0A\x1A"</code>)</td>
+</tr>
+<tr>
+<th>File extension(s)</th>
+<td><code>.t3v</code></td>
+</tr>
+<tr class="odd">
+<th>Macintosh File Type Code(s)</th>
+<td><code>.T3V</code></td>
+</tr>
+<tr>
+<th>UTI</th>
+<td><code>org.tads.tads3-saved-game</code><br />
+conforms to <code>org.tads.tads-saved-game</code></td>
+</tr>
+</tbody>
+</table>
+
+<p><span id="t3r">Media Type: TADS 3 Resource</span></p>
+
+<p>This media type is defined for resource files as used by TADS 3
+interpreters and development tools. Due to the fact that resource files
+are merely a variation of TADS 3 executables, no new media has been
+defined. According to <a href="http://www.tads.org/t3spec/format.html">The T3 Virtual Machine
+Specification</a>:</p>
+
+<blockquote>
+  <p>This variation of the T3 image format allows for one or more separate
+resource files to accompany an image file; this is a resource-only
+image file. A resource-only image file is identical to a standard
+image file, but contains only MRES and EOF blocks.</p>
+</blockquote>
+
+<p>TADS 3 resources have the own file extensions and Macintosh file type
+codes, though.</p>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<th width="30%">MIME media type name</th>
+<td><code>application</code></td>
+</tr>
+<tr class="odd">
+<th>MIME subtype name</th>
+<td><code>x-t3vm-image</code></td>
+</tr>
+<tr>
+<th>Required parameters</th>
+<td>none</td>
+</tr>
+<tr class="odd">
+<th>Optional parameters</th>
+<td>none</td>
+</tr>
+<tr>
+<th>Applications which use this media type</th>
+<td>TADS 3 interpreters and development tools</td>
+</tr>
+<tr class="odd">
+<th>Magic number(s)</th>
+<td>11 byte sequence. In hexadecimal: 54 33 2D 69 6D 61 67 65 0D 0A 1A
+(<code>"T3-image\x0D\x0A\x1A"</code>)</td>
+</tr>
+<tr>
+<th>File extension(s)</th>
+<td><code>.t3r</code>, <code>.3r</code><var>n</var>; where <var>n</var>
+= 0, 1, 2, …, 9</td>
+</tr>
+<tr class="odd">
+<th>Macintosh File Type Code(s)</th>
+<td><code>.T3R</code>, <code>.3R*</code></td>
+</tr>
+<tr>
+<th>UTI</th>
+<td><code>org.tads.tads3-resource-bundle</code><br />
+conforms to <code>org.tads.tads-resource-bundle</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>Please note that a file extension of <code class="language-plaintext highlighter-rouge">.t3r</code> <em>should</em> only be used for
+compiler-loaded resources, e.g. <code class="language-plaintext highlighter-rouge">cmaplib.t3r</code>. In contrast
+interpreter-loaded resources <em>must</em> always use a <code class="language-plaintext highlighter-rouge">.3r</code><code class="language-plaintext highlighter-rouge">n</code> extension.</p>
+
+<p><span id="t3m">Media Type: TADS 3 Project</span></p>
+
+<p>This media type is defined for project files as used by TADS 3
+development tools, most notably its build system.</p>
+
+<p>MIME media type name</p>
+
+<p><code class="language-plaintext highlighter-rouge">text</code></p>
+
+<p>MIME subtype name</p>
+
+<p><code class="language-plaintext highlighter-rouge">plain</code></p>
+
+<p>Required parameters</p>
+
+<p>none</p>
+
+<p>Optional parameters</p>
+
+<p><code class="language-plaintext highlighter-rouge">charset</code>. If the <code class="language-plaintext highlighter-rouge">charset</code> parameter is specified, its value <em>must</em> be
+<code class="language-plaintext highlighter-rouge">us-ascii</code></p>
+
+<p>Applications which use this media type</p>
+
+<p>TADS 3 development tools</p>
+
+<p>Magic number(s)</p>
+
+<p>none</p>
+
+<p>File extension(s)</p>
+
+<p><code class="language-plaintext highlighter-rouge">.t3m</code></p>
+
+<p>Macintosh File Type Code(s)</p>
+
+<p><code class="language-plaintext highlighter-rouge">TEXT</code>, <code class="language-plaintext highlighter-rouge">.T3M</code>; the latter one is currently reserved for future use</p>
+
+<p>UTI</p>
+
+<p><code class="language-plaintext highlighter-rouge">org.tads.tads3-project</code><br />
+conforms to <code class="language-plaintext highlighter-rouge">org.tads.tads-project</code></p>
+
+<p>conforms to <code class="language-plaintext highlighter-rouge">public.plain-text</code></p>
+
+<p>All line breaks <em>should</em> be represented as a CR LF (<code class="language-plaintext highlighter-rouge">"\x0D\x0A"</code>)
+sequence when distributed via HTTP and <em>must</em> be represented as such
+when distributed via MIME-compatible protocols. The use of CR and LF
+outside of line break sequences is forbidden.</p>
+
+<p>Please note that the values of the <code class="language-plaintext highlighter-rouge">charset</code> parameter are not case
+sensitive.</p>
+
+<p><span id="tl">Media Type: TADS 3 Library</span></p>
+
+<p>This media type is defined for library files as used by TADS 3
+development tools, most notably its build system.</p>
+
+<p>MIME media type name</p>
+
+<p><code class="language-plaintext highlighter-rouge">text</code></p>
+
+<p>MIME subtype name</p>
+
+<p><code class="language-plaintext highlighter-rouge">plain</code></p>
+
+<p>Required parameters</p>
+
+<p>none</p>
+
+<p>Optional parameters</p>
+
+<p><code class="language-plaintext highlighter-rouge">charset</code>. If the <code class="language-plaintext highlighter-rouge">charset</code> parameter is specified, its value <em>must</em> be
+<code class="language-plaintext highlighter-rouge">us-ascii</code></p>
+
+<p>Applications which use this media type</p>
+
+<p>TADS 3 development tools</p>
+
+<p>Magic number(s)</p>
+
+<p>none</p>
+
+<p>File extension(s)</p>
+
+<p><code class="language-plaintext highlighter-rouge">.tl</code></p>
+
+<p>Macintosh File Type Code(s)</p>
+
+<p><code class="language-plaintext highlighter-rouge">TEXT</code></p>
+
+<p>UTI</p>
+
+<p><code class="language-plaintext highlighter-rouge">org.tads.tads3-source-library</code><br />
+conforms to <code class="language-plaintext highlighter-rouge">org.tads.tads-source-library</code></p>
+
+<p>conforms to <code class="language-plaintext highlighter-rouge">public.plain-text</code></p>
+
+<p>All line breaks <em>should</em> be represented as a CR LF (<code class="language-plaintext highlighter-rouge">"\x0D\x0A"</code>)
+sequence when distributed via HTTP and <em>must</em> be represented as such
+when distributed via MIME-compatible protocols. The use of CR and LF
+outside of line break sequences is forbidden.</p>
+
+<p>Please note that the values of the <code class="language-plaintext highlighter-rouge">charset</code> parameter are not case
+sensitive.</p>
+
+<p><span id="t">Media Type: TADS Source</span></p>
+
+<p>This media type is defined for source and header files as used by both
+TADS 2 and 3 development tools. Note that, despite sharing media type,
+file extension, and Macintosh file type code, these files are neither
+forward nor backward compatible.</p>
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<th width="30%">MIME media type name</th>
+<td><code>text</code></td>
+</tr>
+<tr class="odd">
+<th>MIME subtype name</th>
+<td><code>plain</code></td>
+</tr>
+<tr>
+<th>Required parameters</th>
+<td>none</td>
+</tr>
+<tr class="odd">
+<th>Optional parameters</th>
+<td><code>charset</code>. If the <code>charset</code> parameter is
+specified, its value <em>should</em> indicate the charset the file is
+actually encoded in</td>
+</tr>
+<tr>
+<th>Applications which use this media type</th>
+<td>TADS 3 development tools</td>
+</tr>
+<tr class="odd">
+<th>Magic number(s)</th>
+<td>none</td>
+</tr>
+<tr>
+<th>File extension(s)</th>
+<td><code>.t</code>, <code>.h</code></td>
+</tr>
+<tr class="odd">
+<th>Macintosh File Type Code(s)</th>
+<td><code>TEXT</code></td>
+</tr>
+<tr>
+<th>UTI</th>
+<td><code>org.tads.tads-source</code><br />
+conforms to <code>public.plain-text</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>All line breaks <em>should</em> be represented as a CR LF (<code class="language-plaintext highlighter-rouge">"\x0D\x0A"</code>)
+sequence when distributed via HTTP and <em>must</em> be represented as such
+when distributed via MIME-compatible protocols. The use of CR and LF
+outside of line break sequences is forbidden.</p>
+
+<p>Please note that the values of the <code class="language-plaintext highlighter-rouge">charset</code> parameter are not case
+sensitive.</p>
+
+<p>In most cases the value of the <code class="language-plaintext highlighter-rouge">charset</code> parameter simply matches the
+charset name as used by TADS, e.g. by its <code class="language-plaintext highlighter-rouge">#charset</code> directive. In some
+cases though, TADS does not only accept the MIME charset names
+registered with the IANA but also further aliases. When in doubt please
+consult the <a href="http://www.iana.org/assignments/character-sets">complete
+database</a> of all charset
+names registered with the <a href="http://www.iana.org/">Internet Assigned Numbers
+Authority</a> so far. The use of those
+widely-recognized names is <em>recommended</em>.</p>
+
+<p>How-To: Configuring Apache</p>
+
+<p>This section describes briefly how to configure the <a href="http://httpd.apache.org/">Apache web
+server</a> to distribute your TADS files using
+their defined media types. For this purpose the Apache base module
+<a href="http://httpd.apache.org/docs-2.0/mod/mod_mime.html"><code class="language-plaintext highlighter-rouge">mod_mime</code></a>
+provides all the configuration directives needed to set up an automatic
+mapping of filename extensions to media types and their respective
+<code class="language-plaintext highlighter-rouge">charset</code> parameters. Fortunately, since it is considered a base module,
+<code class="language-plaintext highlighter-rouge">mod_mime</code> is available on almost every Apache installation. At any
+rate, although this section applies to both Apache version
+<a href="http://httpd.apache.org/docs/">1.3</a> and
+<a href="http://httpd.apache.org/docs-2.0/">2.0</a>, all links point to
+documentation for the latter.</p>
+
+<p>The following two configuration directives are all you need to configure
+your web server appropriately:
+<a href="http://httpd.apache.org/docs-2.0/mod/mod_mime.html#addtype"><code class="language-plaintext highlighter-rouge">AddType</code></a>
+and
+<a href="http://httpd.apache.org/docs-2.0/mod/mod_mime.html#addcharset"><code class="language-plaintext highlighter-rouge">AddCharset</code></a>.</p>
+
+<p>Now you can add these to either the main <a href="http://httpd.apache.org/docs-2.0/configuring.html#main"><code class="language-plaintext highlighter-rouge">httpd.conf</code> configuration
+file</a> or, in
+case you are not allowed to alter it, to a local <a href="http://httpd.apache.org/docs-2.0/configuring.html#htaccess"><code class="language-plaintext highlighter-rouge">.htaccess</code>
+configuration
+file</a>.
+Either way you have to make sure that your TADS files are in
+<a href="http://httpd.apache.org/docs-2.0/sections.html">scope</a> of the
+respective directives, i.e. that they are affected by them. Furthermore,
+when using local <code class="language-plaintext highlighter-rouge">.htaccess</code> configuration files you have to check
+whether you are allowed to change a file’s associated metadata, e.g. its
+media type, at all. This is controlled by the central
+<a href="http://httpd.apache.org/docs-2.0/mod/core.html#allowoverride"><code class="language-plaintext highlighter-rouge">AllowOverride</code></a>
+directive, which has to be set to at least <code class="language-plaintext highlighter-rouge">FileInfo</code>. This ought to be
+done by the web server’s administrator.</p>
+
+<p>Once you have made a decision about the scope and location of the
+appropriate directives, you can add the following to the respective
+configuration file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    # TADS 2 Game
+    AddType application/x-tads .gam
+    # TADS 2 Saved Game
+    AddType application/x-tads-save .sav
+    # TADS 2 Resource
+    AddType application/x-tads-resource .rs0 .rs1 .rs2 .rs3 .rs4 .rs5 .rs6 .rs7 .rs8 .rs9
+
+    # TADS 3 Executable
+    AddType application/x-t3vm-image .t3x .t3
+    # TADS 3 Saved Position
+    AddType application/x-t3vm-state .t3v
+    # TADS 3 Resource
+    AddType application/x-t3vm-image .t3r .3r0 .3r1 .3r2 .3r3 .3r4 .3r5 .3r6 .3r7 .3r8 .3r9
+
+    # TADS 3 Project
+    AddType text/plain .t3m
+    AddCharset us-ascii .t3m
+    # TADS 3 Library
+    AddType text/plain .tl
+    AddCharset us-ascii .tl
+    # TADS Source
+    AddType text/plain .t .h
+</code></pre></div></div>
+
+<p>Additionally, in case all your <a href="#t">TADS Source</a> files are encoded in a
+single charset, e.g. <code class="language-plaintext highlighter-rouge">us-ascii</code>, you might want to add a directive like
+<code class="language-plaintext highlighter-rouge">AddCharset us-ascii .t .h</code>—with the correct charset specified, of
+course.</p>
+
+<p>Please note that, while being an alternative way to configure the
+mapping of filename extensions to media types, the list of media types
+predefined in <code class="language-plaintext highlighter-rouge">mime.types</code>—or any other file as set by the
+<a href="http://httpd.apache.org/docs-2.0/mod/mod_mime.html#typesconfig"><code class="language-plaintext highlighter-rouge">TypesConfig</code></a>
+directive—<em>should not</em> be edited directly.</p>
+
+<hr />
+
+<p><em>TADS 3 Technical Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="advtop.html" class="nav">Advanced Topics</a> &gt; Internet Media
+Types for TADS<br />
+<span class="navnp"><a href="t3past.html" class="nav"><em>Prev:</em> Writing a Game in the
+Past Tense</a>    
+<a href="t3projectStarters.html" class="nav"><em>Next:</em> Workbench
+Project Starter Templates</a>     </span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

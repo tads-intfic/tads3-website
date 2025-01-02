@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-manual-event-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-manual-event-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="topbar.jpg" data-border="0" /></p>
+
+<p><a href="toc.html" class="nav">Table of Contents</a> |
+<a href="optional.html" class="nav">Optional Modules</a> &gt; Events<br />
+<span class="navnp"><a href="attachable.html" class="nav"><em>Prev:</em> Attachables</a>
+    <a href="eventlist.html" class="nav"><em>Next:</em> EventList</a>    
+</span></p>
+
+<h1 id="events">Events</h1>
+
+<p>The Events module implements Daemons and Fuses. A
+<span id="fuse_idx">Fuse</span> is something that causes a piece of code
+to execute after a set number of turns. A Daemon is something that
+causes a piece of code to be executed every turn or every so many turns.
+Daemons and Fuses in adv3Lite are very similar to those in adv3.</p>
+
+<p>To create set up a fuse, just create a new Fuse object thus:</p>
+
+<p><span class="synLit">new
+Fuse(</span><span class="synPar">obj</span><span class="synLit">,
+</span><span class="synPar">prop</span><span class="synLit">,
+</span><span class="synPar">turns</span></p>
+
+<p><span class="synLit">)</span></p>
+
+<p>This defines a Fuse that will call <code class="language-plaintext highlighter-rouge">obj.(prop)</code>,
+i.e. the prop method of obj, after <em>turns</em> turns. If <em>turns</em> is 0 then
+the Fuse will execute on the same turn.</p>
+
+<p>For example, to define an alarm clock that rings in 10 turns’ time after
+you push a button on it, we could define:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    alarmClock: Thing 'alarm clock'
+        "It has a big red button attached. "
+        
+        ring() 
+        {
+           "The alarm clock starts ringing loudly. ";
+           redButton.isDown = nil;
+        }
+    ;
+
+    + redButton: Component 'big red button'
+        dobjFor(Push)
+        {
+            verify()
+            { 
+                if(isDown)
+                   illogicalNow('The button is already down. ');
+            }
+          
+            action()
+            {
+                isDown = true;
+                "You push the red button down. ";
+                new Fuse(alarmClock, &amp;ring, 10);
+            }
+        }
+       
+       isDown = nil
+    ;
+</code></pre></div></div>
+
+<p>Note, by the way, that the property we want to execute has to be listed
+in the arguments to <code class="language-plaintext highlighter-rouge">new Fuse</code> as a property
+<em>pointer</em>, with an ampersand (&amp;) immediately preceding its name.</p>
+
+<p>A <span id="daemon-idx">Daemon</span> is defined in exactly the same
+way, except that instead of only executing once, it will execute every
+<em>turns</em> turns. If <em>turns</em> is given as zero, then the Daemon will execute
+on the current turn (i.e. after zero turns) and then every turn
+thereafter (until it is removed).</p>
+
+<p>It’s sometimes useful to store a reference to a Daemon so we can turn it
+off again:</p>
+
+<p><span class="synPar">daemonID</span><span class="synLit"> = new
+Daemon(</span><span class="synPar">obj</span><span class="synLit">,
+</span><span class="synPar">prop</span><span class="synLit">,
+</span><span class="synPar">turns</span></p>
+
+<p><span class="synLit">)</span></p>
+
+<p>It may be, though, that the player character won’t be around to see (or
+hear, or smell) the event that the Fuse or Daemon is reporting, in which
+case we’d ideally like to suppress any text that the Fuse or Daemon
+would otherwise display. We can do that using a <strong>SenseFuse</strong> or
+<strong>SenseDaemon</strong>. These can be created in exactly the same way as a
+normal Fuse or Daemon but any text they would otherwise display won’t be
+displayed unless the player character can see the object passed as the
+<em>obj</em> parameter when the SenseFuse or SenseDaemon is created.</p>
+
+<p>Occasionally this may not be what we want, since we want to test whether
+the object in question can be smelled or heard rather than seen. Or it
+may be that we want to test the visibility or audibility of some object
+other than the one we passed as the <em>obj</em> parameter, other, that is,
+than the object whose <em>prop</em> method the Fuse or Daemon is executing. In
+such a case we can define the Fuse or Daemon with one or two additional
+parameters:</p>
+
+<p><span class="synLit">new
+<span id="sensefuse-idx">SenseFuse</span>(</span><span class="synPar">obj</span><span class="synLit">,
+</span><span class="synPar">prop</span><span class="synLit">,
+</span><span class="synPar">turns</span><span class="synMark">[,
+senseProp, senseObj]</span></p>
+
+<p><span class="synLit">)</span></p>
+
+<p><span class="synLit">new
+<span id="sensedaemon">SenseDaemon</span>(</span><span class="synPar">obj</span><span class="synLit">,
+</span><span class="synPar">prop</span><span class="synLit">,
+</span><span class="synPar">turns</span><span class="synMark">[,
+senseProp, senseObj]</span></p>
+
+<p><span class="synLit">)</span></p>
+
+<p>Where <em>senseProp</em> must be one of &amp;canSee, &amp;canHear or &amp;canSmell (or
+conceivably &amp;canReach) and <em>senseObj</em> is the object that must be sensed
+appropriately. Note that you can just supply the <em>senseProp</em> parameter
+if you want to test whether <em>obj</em> can be heard or smelled, but that if
+you supply the <em>senseObj</em> parameter you have to supply the <em>senseProp</em>
+parameter as well.</p>
+
+<p><span id="promptdaemon"></span></p>
+
+<p>Finally, you can define a <strong>PromptDaemon</strong> which executes just before
+the command prompt on every turn:</p>
+
+<p><span class="synLit">new
+PromptDaemon(</span><span class="synPar">obj</span><span class="synLit">,
+</span><span class="synPar">prop</span></p>
+
+<p><span class="synLit">)</span></p>
+
+<p>There is also a <strong>OneTimePromptDaemon</strong> which, as its name suggests, is
+a PromptDaemon that executes only once (effectively a PromptFuse, though
+the adv3Lite library keeps the same name for this class as the adv3
+library).</p>
+
+<p>You may wish to stop a Daemon, or prevent a Fuse from executing before
+its due to fire. If you’ve stored a reference to the Fuse or Daemon you
+can disable it by calling its <strong>removeEvent()</strong> method, e.g.:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      daemonID.removeEvent();
+</code></pre></div></div>
+
+<p>If you haven’t stored a reference to the Fuse or Daemon you want to
+remove, you can remove it by calling:</p>
+
+<p><span class="synLit">eventManager.removeMatchingEvents(</span><span class="synPar">obj</span><span class="synLit">,
+</span><span class="synPar">prop</span><span class="synLit">)</span></p>
+
+<p>Where <em>obj</em> and <em>prop</em> are the object and property for which the Fuse or
+Daemon was originally created.</p>
+
+<p>Finally, you can control the order in which Fuses and Daemons are
+processed by overriding their <strong>eventOrder</strong> property. The higher the
+<code class="language-plaintext highlighter-rouge">eventOrder</code>, the later the event; the default
+value of <code class="language-plaintext highlighter-rouge">eventOrder</code> is 100. This doesn’t
+effect <code class="language-plaintext highlighter-rouge">PromptDaemons</code> which are always
+displayed just before the command prompt. Note that while other Fuses
+and Daemons may not be executed if the turn cycle is interrupted (by an
+<code class="language-plaintext highlighter-rouge">abort</code> statement, for example), PromptDaemons
+are always executed.</p>
+
+<hr />
+
+<p><em>adv3Lite Library Manual</em><br />
+<a href="toc.html" class="nav">Table of Contents</a> |
+<a href="optional.html" class="nav">Optional Modules</a> &gt; Events<br />
+<span class="navnp"><a href="attachable.html" class="nav"><em>Prev:</em> Attachables</a>
+    <a href="eventlist.html" class="nav"><em>Next:</em>EventList</a>    
+</span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-file-bignum-h-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-file-bignum-h-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">bignum.h</span><span class="type">file</span></p>
+
+<p><a href="../source/bignum.h.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p><strong>Macros</strong><br />
+<a href="#_MacroSummary_">Summary</a><br />
+<a href="#_Macros_">Details</a></p>
+
+<p><strong>Enums</strong><br />
+<a href="#_EnumSummary_">Summary</a><br />
+<a href="#_Enums_">Details</a></p>
+
+<p><strong>Templates</strong><br />
+<a href="#_TemplateSummary_">Summary</a><br />
+<a href="#_Templates_">Details</a></p>
+
+<p>This header defines the BigNumber intrinsic class.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><a href="../object/BigNumber.html"><code class="language-plaintext highlighter-rouge">BigNumber</code></a>
+<span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><em>(none)</em> <span id="_MacroSummary_"></span></p>
+
+<p><span class="hdln">Summary of Macros</span>  </p>
+
+<p><a href="#BignumCommas"><code class="language-plaintext highlighter-rouge">BignumCommas</code></a> <a href="#BignumCompact"><code class="language-plaintext highlighter-rouge">BignumCompact</code></a> <a href="#BignumEuroStyle"><code class="language-plaintext highlighter-rouge">BignumEuroStyle</code></a> <a href="#BignumExp"><code class="language-plaintext highlighter-rouge">BignumExp</code></a> <a href="#BignumExpSign"><code class="language-plaintext highlighter-rouge">BignumExpSign</code></a> <a href="#BignumKeepTrailingZeros"><code class="language-plaintext highlighter-rouge">BignumKeepTrailingZeros</code></a> <a href="#BignumLeadingZero"><code class="language-plaintext highlighter-rouge">BignumLeadingZero</code></a> <a href="#BignumMaxSigDigits"><code class="language-plaintext highlighter-rouge">BignumMaxSigDigits</code></a> <a href="#BignumPoint"><code class="language-plaintext highlighter-rouge">BignumPoint</code></a> <a href="#BignumPosSpace"><code class="language-plaintext highlighter-rouge">BignumPosSpace</code></a> <a href="#BignumSign"><code class="language-plaintext highlighter-rouge">BignumSign</code></a> <a href="#NumTypeInf"><code class="language-plaintext highlighter-rouge">NumTypeInf</code></a> <a href="#NumTypeNAN"><code class="language-plaintext highlighter-rouge">NumTypeNAN</code></a> <a href="#NumTypeNInf"><code class="language-plaintext highlighter-rouge">NumTypeNInf</code></a> <a href="#NumTypeNum"><code class="language-plaintext highlighter-rouge">NumTypeNum</code></a> <a href="#NumTypeNZero"><code class="language-plaintext highlighter-rouge">NumTypeNZero</code></a> <a href="#NumTypePInf"><code class="language-plaintext highlighter-rouge">NumTypePInf</code></a> <a href="#NumTypePZero"><code class="language-plaintext highlighter-rouge">NumTypePZero</code></a> <a href="#NumTypeZero"><code class="language-plaintext highlighter-rouge">NumTypeZero</code></a></p>
+
+<p><span id="_EnumSummary_"></span></p>
+
+<p><span class="hdln">Summary of Enums</span>  </p>
+
+<p><em>(none)</em> <span id="_TemplateSummary_"></span></p>
+
+<p><span class="hdln">Summary of Templates</span>  </p>
+
+<p><em>(none)</em> <span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><em>(none)</em> <span id="_Macros_"></span></p>
+
+<p><span class="hdln">Macros</span>  </p>
+
+<p><span id="BignumCommas"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumCommas</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#255">255</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0020</code><br />
+insert commas to denote thousands, millions, etc</p>
+
+<p><span id="BignumCompact"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumCompact</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#273">273</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0100</code><br />
+“Compact” format: use the shorter of the regular format and scientific
+notation. If the scientific notation exponent is less than -4 or greater
+than or equal to the number of digits after the decimal point, we’ll use
+scientific notation; otherwise we’ll use the plain format.</p>
+
+<p><span id="BignumEuroStyle"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumEuroStyle</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#265">265</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0080</code><br />
+use European-style formatting: use a comma instead of a period for the
+decimal point, and use periods instead of commas to set off thousands,
+millions, etc</p>
+
+<p><span id="BignumExp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumExp</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#240">240</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0002</code><br />
+always show in exponential format (scientific notation, as in “1.0e20”)</p>
+
+<p><span id="BignumExpSign"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumExpSign</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#243">243</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0004</code><br />
+always show a sign in the exponent, even if positive</p>
+
+<p><span id="BignumKeepTrailingZeros"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumKeepTrailingZeros</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#286">286</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0400</code><br />
+Keep trailing zeros. If there’s a maxDigits value, this keeps enough
+trailing zeros so that the number of digits shown equals maxDigits. By
+default, trailing zeros after the decimal point are removed.</p>
+
+<p><span id="BignumLeadingZero"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumLeadingZero</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#249">249</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0008</code><br />
+show a zero before the decimal point - this is only relevant in
+non-exponential format when the number is between -1 and +1</p>
+
+<p><span id="BignumMaxSigDigits"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumMaxSigDigits</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#279">279</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0200</code><br />
+maxDigits counts only significant digits; leading zeros aren’t counted
+against the maximum.</p>
+
+<p><span id="BignumPoint"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumPoint</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#252">252</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0010</code><br />
+always show a decimal point</p>
+
+<p><span id="BignumPosSpace"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumPosSpace</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#258">258</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0040</code><br />
+show a leading space if the number is positive</p>
+
+<p><span id="BignumSign"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">BignumSign</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#237">237</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0001</code><br />
+always show a sign, even if positive</p>
+
+<p><span id="NumTypeInf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NumTypeInf</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#320">320</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(NumTypePInf | NumTypeNInf)</code><br />
+<em>no description available</em></p>
+
+<p><span id="NumTypeNAN"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NumTypeNAN</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#307">307</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0002</code><br />
+Number type: “Not a number” (NaN). This indicates that the value is the
+result of a calculation with invalid input(s). Currently there are no
+BigNumber calculations that return NaNs, as all functions on invalid
+inputs throw errors instead. But it’s possible to construct NaN value,
+such as by reading an IEEE 754-2008 NaN value from a file via
+unpackBytes().</p>
+
+<p><span id="NumTypeNInf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NumTypeNInf</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#319">319</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0008</code><br />
+<em>no description available</em></p>
+
+<p><span id="NumTypeNum"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NumTypeNum</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#297">297</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0001</code><br />
+Number type: ordinary number.</p>
+
+<p><span id="NumTypeNZero"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NumTypeNZero</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#332">332</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0020</code><br />
+<em>no description available</em></p>
+
+<p><span id="NumTypePInf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NumTypePInf</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#318">318</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0004</code><br />
+Number type: positive infinity, negative infinity. These indicate a
+value that overflowed the capacity of the BigNumber type, or a
+calculation that yields infinity (e.g., tan(pi/2)). Currently there are
+no BigNumber calculations that return Infinities, as all functions where
+an overflow is possible throw errors instead. But it’s possible to
+construct an Infinity value, such as by reading an IEEE 754-2008
+Infinity value from a file via unpackBytes().</p>
+
+<p><span id="NumTypePZero"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NumTypePZero</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#331">331</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">0x0010</code><br />
+Number type: zero, positive or negative. Mathematically, zero is neither
+positive nor negative, but the BigNumber type retains a sign for all
+values, even zeros. Negative zeros can come from calculations that yield
+negative results with absolute values too small for the internal
+representation. It’s also possible to construct a negative zero, such as
+by reading an IEEE 754-2008 negative zero value from a file via
+unpackBytes().</p>
+
+<p><span id="NumTypeZero"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">NumTypeZero</code></p>
+
+<p><a href="../file/bignum.h.html">bignum.h</a>[<a href="../source/bignum.h.html#333">333</a>]</p>
+
+<p><code class="language-plaintext highlighter-rouge">(NumTypePZero | NumTypeNZero)</code><br />
+<em>no description available</em></p>
+
+<p><span id="_Enums_"></span></p>
+
+<p><span class="hdln">Enums</span>  </p>
+
+<p><em>(none)</em> <span id="_Templates_"></span></p>
+
+<p><span class="hdln">Templates</span>  </p>
+
+<p><em>(none)</em></p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

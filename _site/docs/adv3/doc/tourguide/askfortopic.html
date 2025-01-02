@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-askfortopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-askfortopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>AskForTopic : <a href="asktelltopic.html">AskTellTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="asktelltopic.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="askaboutfortopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Just as an AskTopic deals with commands like ASK FRED ABOUT BEER so an
+AskForTopic handles commands like ASK FRED FOR BEER. The programming
+principles are just the same - but the game logic may be somewhat more
+complex. For one thing, as well as asking for game objects like the ring
+or a coin, the player could try asking NPCs for abstract things like
+advice or directions. For another, there are nearly always more
+variables to consider. If I ASK SARAH FOR ADVICE what advice she can
+relevantly give would very much depend on the state of play at the time,
+and might be very difficult to implement decently across the whole game.
+If I ASK SARAH FOR RING then how she responds will depend, not only on
+her willingness or otherwise to part with the ring, but also on whether
+she has the ring, or whether the PC has the ring, and maybe other things
+besides. It’s up to us, as the game author, to handle all this.</p>
+
+<p>Sarah’s ring may be a good example to start with, since it’s relatively
+straightforward. We know that once Sarah has got her ring she switches
+into the sarahFollowing state, and we’ll assume that she isn’t too keen
+to part with it thereafter. Therefore, if we put an AskForTopic
+@diamondRing in sarahFollowing, we can safely assume that Sarah does
+actually have the ring.</p>
+
+<p>The reason the player character may want to request the ring back from
+Sarah is that the diamond is needed to cut open a couple of glass
+objects, the glass jar containing the blue crystal and the display case
+containing the golden banana. The PC may or may not have cut open the
+first of these before he hands the ring over to Sarah. If he then
+decides he needs the diamond to cut open the jar, he may try asking
+Sarah for the ring back. Sarah won’t give it - but there’s no reason why
+Sarah shouldn’t do the cutting herself. So we’ll assume that if the
+glass jar is accessible and not yet cut open when the PC asks Sarah for
+her ring, he’ll explain that he needs it to cut open the jar and she
+duly obliges by doing it herself:</p>
+
+<p>++ AskForTopic @diamondRing<br />
+   ”&lt;q&gt;Can I borrow your ring a moment, please?&lt;/q&gt; you ask.\b<br />
+   &lt;q&gt;Whatever for, I’ve only just got it back!&lt;/q&gt; {the sarah/she}<br />
+   complains. ”<br />
+;</p>
+
+<p>+++ AltTopic <br />
+   topicResponse<br />
+   {<br />
+     ”&lt;q&gt;Can I borrow your diamond ring a moment, please?&lt;/q&gt; you ask.<br />
+     &lt;q&gt;I need something hard to cut this glass jar open.&lt;/q&gt;\b<br />
+     &lt;q&gt;Here, let me.&lt;/q&gt; {the sarah/she} replies, taking the jar. ”;<br />
+     glassJar.moveInto(getActor);<br />
+     newActorAction(getActor, CutWith, glassJar, diamondRing);<br />
+     ”&lt;q&gt;Here you are then,&lt;/q&gt; she declares, handing the now<br />
+     opened glass jar to you. ”;<br />
+     glassJar.moveInto(gPlayerChar);<br />
+   }<br />
+   isActive = (getActor.canTouch(glassJar) &amp;&amp; !glassJar.isOpen)<br />
+;</p>
+
+<p>We’ll handle cutting open the glass display case later, when we come to
+look at <a href="convnode.html">ConvNode</a>. For now we’ll proceed with a different
+example, the root and the carbuncle we need from Solomon. First we need
+to make Solomon prevent the PC from taking either the root or the
+carbuncle unless he’s given permission for them to be taken. We’ll add a
+gifted property to both the root and the carbuncle (add a line saying
+gifted = nil to the definition of both carbuncle and baarasRoot) and
+then override Solomon’s beforeAction() method (we override it on solomon
+rather than one of his ActorStates since he could be in any of his
+ActorStates when the PC attempts to take the root or the carbuncle):</p>
+
+<p>solomon : Person ’middle-aged middle aged man’ ’middle-aged man’ @solomonChair<br />
+  ”He’s quite good-looking in a middle-eastern sort of way, with long curly<br />
+   black hair that’s just starting to go grey, and a neatly kept beard. He’s<br />
+   dressed in a purple cloak. ”<br />
+  isHim = true    <br />
+  posture = sitting<br />
+  properName = ’King Solomon’<br />
+  globalParamName = ’solomon’<br />
+  <strong>beforeAction()<br />
+  {<br />
+    inherited;<br />
+    if(gActionIs(Take) || gActionIs(TakeFrom))<br />
+    {<br />
+      if(gDobj is in (baarasRoot, carbuncle) &amp;&amp; !gDobj.gifted)<br />
+      {<br />
+        ”As you reach out to take {the dobj/him}, {the solomon/he} calmly<br />
+        but firmly interrupts you.<br />
+        &lt;q&gt;You do not take a king’s property without his permission.&lt;/q&gt;<br />
+        he tells you sternly. ”;<br />
+        exit;<br />
+      }<br />
+      if(gDobj == bronzeBowl &amp;&amp; gRevealed(‘bowl-returned’))<br />
+      {<br />
+        ”Before you can touch the bowl, {the solomon/he} remarks, &lt;q&gt;Since<br />
+         I’ve offered to reward you for returning that bowl, I think you<br />
+         had better leave it alone.&lt;/q&gt; ”;<br />
+         exit;<br />
+      }<br />
+    }<br />
+  }</strong><br />
+;</p>
+
+<p>For both the root and the carbuncle, we want an AskForTopic that causes
+the request to be denied until the PC has given Solomon his bowl back,
+and regarded as superfluous once the root or carbuncle has been taken.
+Here’s how we might do it for the root (nesting the AskForTopic inside
+the solomonTalking state):</p>
+
+<p>++ AskForTopic @baarasRoot<br />
+   ”&lt;q&gt;May I have that strange looking root?&lt;/q&gt; you ask.\b<br />
+    &lt;q&gt;No, I’m studying it.&lt;/q&gt; he replies. ”<br />
+;</p>
+
+<p>+++ AltTopic<br />
+  topicResponse<br />
+  {<br />
+   ”&lt;q&gt;May I have that root you’ve got there?&lt;/q&gt; you ask.\b<br />
+    &lt;q&gt;Help yourself.&lt;/q&gt; he replies. ”;<br />
+    baarasRoot.gifted = true;<br />
+  }<br />
+  isActive = gRevealed(‘bowl-returned’)  <br />
+;</p>
+
+<p>+++ AltTopic   <br />
+   ”&lt;q&gt;May I take that root?&lt;/q&gt; you request.\b<br />
+    &lt;q&gt;You already have.&lt;/q&gt; {the solomon/he} points out. ”<br />
+  isActive = (baarasRoot.moved)<br />
+;</p>
+
+<p>This is fine, except that we have to repeat almost exactly the same
+thing for the carbuncle. This may not be too bad here, but for multiple
+objects it could become tedious, so it may be worth exploring an
+alternative approach. For this we need to abandon the nice neat
+declarative syntax of AltTopics and revert to the bad old ways of if and
+else statements:</p>
+
+<p>/* Approach 2 - messier but more concise for multiple objects: */</p>
+
+<p>++ AskForTopic [baarasRoot, carbuncle]<br />
+  handleTopic(fromActor, topic)<br />
+  {<br />
+    /* An AskForTopic matches a ResolvedTopic - to get back to the object<br />
+       match we need to use getBestMatch */<br />
+       <br />
+     local obj = topic.getBestMatch();<br />
+     <br />
+     /* Set a message parameter for convenience */<br />
+     gMessageParams(obj);<br />
+     <br />
+     /* Start with a question common to all situations */<br />
+     ”&lt;q&gt;May I take {the obj/him}?&lt;/q&gt; you ask.\b”;<br />
+     <br />
+     /* Handle Solomon’s response according to the state of play */<br />
+     if(obj.moved)<br />
+       ”&lt;q&gt;You already have.&lt;/q&gt; {the solomon/he} points out. ”;<br />
+     else if(gRevealed(‘bowl-returned’))<br />
+     {<br />
+       ”&lt;q&gt;Help yourself,&lt;/q&gt; {the solomon/he} offers with an expansive<br />
+        wave of the hand, &lt;q&gt;Is there anything else you’d like?&lt;/q&gt; ”;<br />
+        obj.gifted = true;<br />
+     }<br />
+     else<br />
+       ”&lt;q&gt;No, I’m studying it.&lt;/q&gt; he replies. ”;     <br />
+  }<br />
+;</p>
+
+<p>It is less immediately obvious how this works, but it’s not too bad, and
+certainly more compact that writing out a second AskForTopic with its
+associated pair of AltTopics, and has the merit that it could easily be
+extended to a large number of objects simply by adding them to the match
+list at the start of the object declaration. One downside, though, is
+that the exchange between Solomon and the PC is rigidly stereotyped.</p>
+
+<p>A third possibility is to define a special class that handles requests
+for rewards from Solomon, allow some variety and customization within
+the class, and then instantiate the class for each item we want it to
+handle:</p>
+
+<p>/* Approach 3 - perhaps the best compromise for several similar cases */</p>
+
+<p>class AskForRewardTopic : AskForTopic<br />
+   topicResponse<br />
+   {<br />
+      /* We can use the matchObj property to get at the object this topic matches,<br />
+         provided we always define it to match one and only one */<br />
+         <br />
+      /* First we get the player character to ask for the object */<br />
+        requestQuestions.obj = matchObj;<br />
+        requestQuestions.doScript;<br />
+      <br />
+      /* If the matchObj has moved the player character has already taken it */<br />
+         <br />
+       if(matchObj.moved)<br />
+         ”&lt;q&gt;You already have.&lt;/q&gt; {the solomon/he} points out. ”;<br />
+       <br />
+      /* Otherwise, if the bowl has been returned, grant the request */<br />
+       else if(gRevealed(‘bowl-returned’)) <br />
+       {<br />
+         grantRequest;<br />
+         matchObj.gifted = true;<br />
+       }<br />
+      /* Otherwise, refuse the request */ <br />
+       else<br />
+         refuseRequest;<br />
+         <br />
+   }<br />
+   requestQuestions : ShuffledEventList<br />
+   {<br />
+    [<br />
+       ’&lt;q&gt;May I take &lt;&lt;obj.theName &gt;&gt;, please?&lt;/q&gt; you ask.\b’ ,<br />
+       ’&lt;q&gt;Could I have &lt;&lt;obj.theName&gt;&gt;?&lt;/q&gt; you request.\b’ ,<br />
+       ’&lt;q&gt;I\d like to take &lt;&lt;obj.theName&gt;&gt;, is that okay?&lt;/q&gt; you ask.\b’,<br />
+       ’&lt;q&gt;That &lt;&lt;obj.name&gt;&gt; looks interesting, may I take it?&lt;/q&gt; you ask.\b’       <br />
+    ]    <br />
+    obj = nil<br />
+   }<br />
+   refuseRequest = ”&lt;q&gt;No, I’m studying it.&lt;/q&gt; he replies.&lt;.p&gt;”<br />
+   grantRequest = ”&lt;q&gt;Help yourself,&lt;/q&gt; {the solomon/he} offers with an expansive<br />
+        wave of the hand, &lt;q&gt;Is there anything else you’d like?&lt;/q&gt;&lt;.p&gt;”<br />
+;</p>
+
+<p>/* Then add an AskForRewardTopic for each of the possible rewards: */</p>
+
+<p>++ rootTopic : AskForRewardTopic @baarasRoot    <br />
+;</p>
+
+<p>++ AskForRewardTopic @carbuncle   <br />
+   refuseRequest = ”&lt;q&gt;No, it was a personal gift from the Queen of Sheba<br />
+    and I see no reason why you should have it.&lt;/q&gt; he replies.&lt;.p&gt;”<br />
+   grantRequest = ”&lt;q&gt;Very well, take it,&lt;/q&gt; {the solomon/he} sighs, &lt;q&gt;It\s<br />
+    only a pretty bauble, after all.&lt;/q&gt;&lt;.p&gt;“ <br />
+;</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

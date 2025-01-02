@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-gsg-theartofconversation-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-gsg-theartofconversation-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
+
+<p><a href="index.html">[Main]</a><br />
+<em><a href="endingthegame.html">[Previous]</a>   <a href="whatsinaname.html">[Next]</a></em></p>
+
+<h2 id="the-art-of-conversation">The Art of Conversation</h2>
+
+<p>When you go up and talk to someone, the chances are that they won’t just
+carry on what they’re doing while they’re talking with you, they’re more
+likely to stop and adopt another posture (no doubt you can think of
+plenty of exceptions to this, but it’s true most of the time). Also,
+it’s normal to begin and end a conversation with some kind of greeting
+and farewell protocol (e.g. saying “Hello and goodbye.”). Of course
+there are people who will just bounce up to you and say, “Have you done
+the monthly sales figures yet?” or “What do you think about the election
+results?”, but it’s more normal to start with “Good morning” or the
+like.</p>
+
+<p>The traditional way of programming NPCs to respond to ASK ABOUT and TELL
+ABOUT (as in <strong>ask jones about monthly report</strong> or <strong>tell fred about
+election results</strong>) doesn’t really allow for such niceties. The player
+character just walks up to the NPC and tries to find out what topics he,
+she, or it will respond to, without much sense that a conversation is
+starting or ending in the normal way. TADS 3 goes a long way to
+providing a more realistic approximation to the way human beings
+actually converse by using ActorStates and greeting protocols.</p>
+
+<p>The idea is that an actor (NPC) typically starts in a type of ActorState
+called a ConversationReadyState that defines what he or she is doing
+prior to the conversation, and how the conversation is begun and ended.
+Starting a conversation with the actor (either with a <strong>talk to</strong>
+command, or by using <strong>ask about</strong>, <strong>ask for</strong>, <strong>tell about</strong>, <strong>give
+to</strong>, or <strong>show to</strong>) then causes the greeting message to be displayed,
+and the actor to switch into the corresponding InConversationState. This
+latter type of ActorState typically provides a description of what the
+actor is doing while talking to you, and contains within it the various
+TopicEntry objects to which the actor will respond while in that
+state.</p>
+
+<p>To see how this works in practice, add the following code immediately
+after the definition of the DefaultGiveShowTopic:</p>
+
+<p>+ burnerTalking : InConversationState<br />
+  stateDesc = ”He’s standing talking with you. ” <br />
+  specialDesc = ”{The burner/he} is leaning on his spade <br />
+    talking with you. ”<br />
+;</p>
+
+<p>++ burnerWorking : ConversationReadyState<br />
+  stateDesc = ”He’s busily tending the fire. ”<br />
+  specialDesc = ”&lt;&lt;a++ ? ’{The burner/he}’ : ’{A burner/he}’&gt;&gt; <br />
+  is walking round the fire, occasionally shovelling dirt onto it with his <br />
+    spade. ”<br />
+  isInitState = true<br />
+  a = 0<br />
+;</p>
+
+<p>+++ HelloTopic, StopEventList<br />
+  [<br />
+    ’&lt;q&gt;Er, excuse me,&lt;/q&gt; you say, trying to get {the\s burner/her}<br />
+      attention.&lt;.p&gt;<br />
+     {The burner/he} moves away from the fire and leans on his spade<br />
+     to talk to you. &lt;q&gt;Hello, young lady. Mind you don\t get too <br />
+     close to that fire now.&lt;/q&gt;’,<br />
+    ’&lt;q&gt;Hello!&lt;/q&gt; you call cheerfully.&lt;.p&gt;<br />
+     &lt;q&gt;Hello again!&lt;/q&gt; {the burner/he} declares, pausing from <br />
+     his labours to rest on his spade. ’<br />
+  ]<br />
+;</p>
+
+<p>+++ ByeTopic<br />
+  ”&lt;q&gt;Bye for now, then.&lt;/q&gt; you say.&lt;.p&gt;<br />
+   &lt;q&gt;Take care, now.&lt;/q&gt; {the burner/he} admonishes you as he <br />
+     returns to his work. ”<br />
+;</p>
+
+<p>+++ ImpByeTopic<br />
+  ”{The burner/he} gives a little shake of the head and returns <br />
+    to work. ”<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The specialDesc is the description of the actor that appears in the room
+description. The stateDesc is appended to the end of the desc of the
+actor when he’s examined with an <strong>examine</strong> command. By default, the
+library expects to find the ConversationReadyState contained within its
+corresponding InConversationState (which is what we have done here).
+Clearly, the game needs to know which ActorState our charcoal burner
+starts in; we achieve that by setting isInitState = true on
+burnerWorking (the ConversationReadyState).</p>
+
+<p>To display what happens at the start of a conversation, we use a
+HelloTopic located in the ConversationReadyState. In this game, we are
+assuming that Heidi and the charcoal burner have never seen each other
+before, so the exchange between them on their first meeting is likely to
+be different from that on subsequent occasions. We accordingly define
+the HelloTopic to be a StopEventList as well. A StopEventList works
+through each element in its list in sequence, until it reaches the last
+one, which it then keeps repeating. In this example we have only
+provided two strings in the list - one for the first greeting and a
+second one for every subsequent greeting. We could also use an
+ImpHelloTopic to provide a different response if Heidi strikes up a
+conversation with Joe without first explicitly greeting him through a
+player command (<strong>talk to burner</strong>), but this is a complication we can
+manage without here.</p>
+
+<p>Likewise, to display what happens at the end of the conversation we use
+a ByeTopic. We could once again display a list of different messages
+when the conversation is terminated, but here we take the simpler option
+of displaying the same message each time. On the other hand we supply a
+separate ImpByeTopic to define what happens if the conversation is ended
+implicitly (either by Heidi walking away in the middle of the
+conversation, or by exhausting the burner’s attention span by failing to
+continue the conversation) rather than explicitly (with a <strong>bye</strong>
+command).</p>
+
+<p>If this all seems a bit much to take in, it may become clearer if you
+try running the game again with it included and seeing how the charcoal
+burner now behaves (you can get into conversation with him either
+explicitly with <strong>talk to burner</strong> or by trying to give him or show him
+something). At some point you will also want to have a careful read of
+the articles on
+<a href="../techman/t3conv.html" target="_top">Programming Conversations
+with NPCs</a> in TADS 3 in the <em>Technical Manual</em>, though there’s no
+need to do that until you’ve completed this guide.</p>
+
+<p>I should explain, though, that there’s one little trick in the code
+given above that you won’t find documented there or anywhere else. Since
+Heidi has never seen the charcoal burner before, the very first time
+he’s mentioned he should be described as “a charcoal burner”, but, once
+he’s been referred to once, on every subsequent occasion he should be
+called “the charcoal burner” (until we learn his name, when he’ll be
+referred to as “Joe Black”, which is why we’re using the substitution
+strings - {the burner/he} and so forth). To achieve this effect, the
+specialDesc property of burnerWorking has been defined thus:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>specialDesc = ”&lt;&lt;a++ ? ’{The burner/he}’ : ’{A burner/he}’&gt;&gt; <br />
+  is walking round the fire, occasionally shovelling dirt onto <br />
+   it with his spade. ”</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The first part of this little trick is the use of the ternary operator
+? : . This means if the expression before the question-mark is true,
+evaluate to the expression between the question-mark and the colon,
+otherwise evaluate to the expression after the colon. So, for example:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td>(x &gt; 5) ? 96 : 32 <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>evaluates to 96 if x is 6 but to 32 if x is 4. Moreover, a++ means use
+the current value of a, then increase it by one after we’ve use it. We
+have initialized the property a to 0 (something as uninformative as ‘a’
+would normally be frowned upon as a property name, but since we’re using
+it here to determine whether the burner should be called <em>a</em> burner or
+<em>the</em> burner, we might just about be forgiven for it). This means that
+the first time the specialDesc string is displayed, a is zero (which is
+treated as equivalent to nil, i.e. a Boolean false), so the whole
+expression in the double angle brackets evaluates to the parameter
+string ‘{A burner/he}’ which in turn displays as “A charcoal burner”.
+But since the act of displaying the string causes a to increment by one,
+on every subsequent occasion the specialDesc string is displayed a will
+be some number greater than zero, which will be treated as meaning true.
+This will result in the whole expression evaluating to
+‘{The burner/he}’, and thus displaying as “The charcoal burner”.</p>
+
+<p>The next step is to give the charcoal burner a couple of topics he can
+talk about. Since he’s tending a fire, and the fire and smoke are
+mentioned in the room description, they might be two obvious topics to
+start with. Compared with what we’ve just done, coding them is fairly
+straightforward:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>++ AskTopic @smoke<br />
+   ”&lt;q&gt;Doesn’t that smoke bother you?&lt;/q&gt; you ask.&lt;.p&gt;<br />
+   &lt;q&gt;Nah! You get used to it - you just learn not to breathe too deep when<br />
+    it gets blown your way.&lt;/q&gt; he assures you. ”<br />
+;</p>
+
+<p>++ AskTopic, ShuffledEventList @fire<br />
+   [<br />
+     ’&lt;q&gt;Why have you got that great big bonfire in the middle of the <br />
+       forest?&lt;/q&gt; you ask.&lt;.p&gt;<br />
+     &lt;q&gt;It\s not a bonfire, Miss, it\s a fire for making charcoal.&lt;/q&gt; he<br />
+      explains, &lt;q&gt;And to make charcoal I need to burn wood - slow like - <br />
+      and a forest is a good place to find wood - see?&lt;/q&gt;’,<br />
+     ’&lt;q&gt;Doesn\t it get a bit hot, working with that fire all day?&lt;/q&gt; you <br />
+        wonder.&lt;.p&gt;<br />
+     &lt;q&gt;Yes, but it beats being cooped up in an office all day.&lt;/q&gt; he<br />
+       replies, &lt;q&gt;I couldn\t stand that!&lt;/q&gt;’,<br />
+     ’&lt;q&gt;Why do you keep putting that dust on the fire?&lt;/q&gt; you wonder.&lt;.p&gt;<br />
+     &lt;q&gt;To stop it burning too quick.&lt;/q&gt; he tells you. ’<br />
+   ]<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We make them both of class AskTopic so that the burner will respond to
+<strong>ask burner about fire</strong> or <strong>ask burner about smoke</strong>. For the smoke
+we’ve just given him a single reply he’ll give every time (not because
+this is a particularly good idea, but just to show how it’s done). For
+the fire, we’ve given him a list of three responses which will be
+treated as a ShuffledEventList (since their order is not significant).
+There’s only a couple of other points to note here. The first is that
+our response strings define both sides of the conversation, so we see
+what Heidi asks as well as what the burner answers. The second is that
+these topics belong in burnerTalking, the InConversationState, so we
+precede them both with two plus signs to contain them at the right place
+in the object hierarchy.</p>
+
+<p>It’s always possible that the player will try to ask the burner some
+topic we haven’t explicitly defined, so it would be useful to define a
+catchall DefaultAskTellTopic to handle such cases:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>++ DefaultAskTellTopic<br />
+   ”&lt;q&gt;What do you think about &lt;&lt;gTopicText&gt;&gt;?&lt;/q&gt; you ask.&lt;.p&gt;<br />
+   &lt;q&gt;Ah, yes indeed, &lt;&lt;gTopicText&gt;&gt;,&lt;/q&gt; he nods sagely,<br />
+   &lt;q&gt;&lt;&lt;rand(‘Quite so’, ’You never know’, ’Or there again, no <br />
+    indeed’)&gt;&gt;.&lt;/q&gt;”<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This definition (loosely based on a similar trick in the sample game
+that comes with TADS 3), is designed to create the vague illusion of
+responding to any topic (though the illusion will quickly be shattered
+in practice), by using gTopicText, which returns the text of whatever
+the player typed after <strong>about</strong> <strong>** in an **ask burner about</strong> or
+<strong>tell burner about</strong> command. When the rand() function is given a list
+of arguments, as here, it selects one of them at random; this at least
+gives a measure of variety to the charcoal burner’s meaningless replies,
+and will generate a transcript like:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>&gt;<strong>ask burner about the weather</strong><br />
+“What do you think about the weather?” you ask.</p>
+
+<p>“Ah, yes indeed, the weather,” he nods sagely, “You never know.”</p>
+
+<p>&gt;<strong>ask him about weapons of mass destruction</strong><br />
+“What do you think about weapons of mass destruction?” you ask.</p>
+
+<p>“Ah, yes indeed, weapons of mass destruction,” he nods sagely, “Or there
+again, no indeed.”</p>
+
+<p>&gt;<strong>ask him about his mother</strong><br />
+“What do you think about his mother?” you ask.</p>
+
+<p>“Ah, yes indeed, his mother,” he nods sagely, “Or there again, no
+indeed.”</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The last of these rather gives the game away, which is why this
+particular technique (trying to echo what the player typed in the player
+character’s response) is not really satisfactory, unless you’re trying
+to represent your NPC as an eccentric old buffer who displays his
+confusion by talking like this. It’s usually rather better to show
+non-commital responses to the effect that the NPC doesn’t hear the
+question, refuses to answer, mutters an inaudible reply, becomes
+distracted, or says something so convoluted that you fail to understand
+it. In such cases it isn’t really practicable to give the full question
+asked by the player character, so you either have to omit it, or
+represent it in indirect speech (e.g. “You ask your question and…”) or
+have the NPC interrupt it half way through, (e.g. “What do you think
+about…?” you begin. “I don’t,” he interrupts, “Thinking’s for
+intellectuals, and I sure as hell ain’t one of them.”) As an exercise
+you may wish to devise your own list of default ask responses for our
+burner to replace the slightly dodgy ones shown above.</p>
+
+<p>Now the time has come to get the charcoal burner to tell us about
+himself (in response to the player typing <strong>ask burner about himself</strong>).
+This doesn’t require us to define a special himself object or topic,
+since the parser will recognize <strong>ask burner about himself</strong> as
+equivalent to <strong>ask burner about burner</strong>. We simply need to add an
+AskTopic with burner as its matchObj:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>++ AskTopic @burner<br />
+   ”&lt;q&gt;My name’s Heidi.&lt;/q&gt; you announce. &lt;q&gt;What’s yours?&lt;/q&gt;&lt;.p&gt;<br />
+   &lt;q&gt;&lt;&lt;burner.properName&gt;&gt;,&lt;/q&gt; he replies, &lt;q&gt;Mind you, it’ll soon be <br />
+    mud.&lt;/q&gt;“  <br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For clarity of code structure, it might be a good idea to put this just
+before our catchall DefaultAskTellTopic. The one point to note here is
+the use of &lt;&lt;burner.properName&gt;&gt; rather than simply Joe Black. The
+advantage of doing it this way is that if we later decide we want to
+call the charcoal burner ‘Fred Bloggs’ or ‘Ebenezer Oddball Sidewinder
+Bumblebotham’ instead, we need only change the value of the burner
+object’s properName property, rather than having to hunt down and change
+every occurrence of the string ‘Joe Black’.</p>
+
+<p>Joe’s statement (let’s stick with calling him Joe) that his name will
+soon be mud invites the question why, but this doesn’t seem to be the
+sort of question that naturally fits the <strong>ask about</strong> format: <strong>ask joe
+about mud</strong>, for example, wouldn’t read right. What we’d really like is
+to be able to <strong>ask why</strong>, but for this to be a valid question only at
+this point in the conversation. Fortunately TADS 3 makes this possible
+through a mechanism called <em>conversation nodes</em> used in conjunction with
+SpecialTopics. A conversation node represents a particular point in the
+conversation (such as here, when Joe tells us his name will be mud) at
+which particular responses make sense which might not make sense
+elsewhere. Another example might be when an NPC asks a question
+requiring a yes or no answer: it makes sense to answer yes or no at that
+point, but it probably would have made no sense to do so on the previous
+turn, and the moment when it makes sense may have passed by the next
+turn. For something more complicated than a straightforward ‘yes’ or
+‘no’ response, we can define a SpecialTopic, which in principle allows
+the player character to ask any question or make any reply we like
+(though in practice we’ll want to restrict their complexity), with the
+restriction that these responses are only valid while their Conversation
+Node is active (because after that the conversation will have moved on,
+and before that the NPC hadn’t yet made the remark to which these are
+potentially relevant responses).</p>
+
+<p>This may become clearer with an example. What we want to do is to allow
+Heidi to ask why Joe thinks his name will be mud. To do this we need to
+define a conversation node (which we’ll call ‘burner-mud’) and add a
+couple of SpecialTopics to it to handle questions like <strong>ask why</strong>. We
+also need to tell the game when to enter the ‘burner-mud’ conversation
+mode. This can be done by use of the &lt;.convnode name&gt; tag, where name
+is the name of the conversation node we want to enter. We use it by
+including it in the output string at the appropriate point:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>++ AskTopic @burner<br />
+   ”&lt;q&gt;My name’s Heidi.&lt;/q&gt; you announce. &lt;q&gt;What’s yours?&lt;/q&gt;&lt;.p&gt;<br />
+   &lt;q&gt;&lt;&lt;burner.properName&gt;&gt;,&lt;/q&gt; he replies, &lt;q&gt;Mind you, it’ll soon be <br />
+   mud.&lt;/q&gt; &lt;.convnode burner-mud&gt;”<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td>The definition of the ConvNode object is pretty minimal. The
+SpecialTopics require a little more attention, and we add a
+DefaultAskTellTopic at the end to ensure that the player stays in the
+ConvNode until he or she asks the question we want asked: <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>+ ConvNode ’burner-mud’;</p>
+
+<p>++ SpecialTopic, StopEventList    <br />
+   ’deny that mud is a name’    <br />
+   [‘deny’, ’that’, ’mud’, ’is’, ’a’, ’name’]   <br />
+   [<br />
+     ’&lt;q&gt;Mud! What kind of name is that?&lt;q&gt; you ask.&lt;.p&gt;<br />
+     &lt;q&gt;My name – tonight.&lt;/q&gt; he replied gloomily. &lt;.convstay&gt;’,<br />
+     ’&lt;q&gt;But you can\t &lt;i&gt;really&lt;/i&gt; be called &lt;q&gt;Mud&lt;/q&gt;&lt;/q&gt; you <br />
+       insist.&lt;.p&gt;<br />
+     &lt;q&gt;Oh yes I can!&lt;/q&gt; he assures you. &lt;.convstay&gt;’<br />
+   ]<br />
+;</p>
+
+<p>++ SpecialTopic ’ask why’ [‘ask’, ’him’, ’why’]<br />
+  ”&lt;q&gt;Why will your name be mud?&lt;/q&gt; you want to know.&lt;.p&gt;<br />
+  He shakes his head, lets out an enormous sigh, and replies,<br />
+  &lt;q&gt;I was going to give her the ring tonight – her engagement ring –<br />
+  only I’ve gone and lost it. Cost me two months’ wages it did. And<br />
+  now she’ll never speak to me again,&lt;/q&gt; he concludes, with another<br />
+  mournful shake of the head, &lt;q&gt;never.&lt;/q&gt;”<br />
+;</p>
+
+<p>++ DefaultAskTellTopic<br />
+  ”&lt;q&gt;And why does…&lt;/q&gt; you begin.&lt;.p&gt;<br />
+  &lt;q&gt;Mud.&lt;/q&gt; he repeats with a despairing sigh. &lt;.convstay&gt;”<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note that there is only one + sign in front of the ConvNode. This is
+because here we are putting the ConvNode directly inside the actor (in
+this case the burner), not any of its actor states. It is also legal
+(though never necessary) to locate a ConvNode in an ActorState.</p>
+
+<p>We should spend a few minutes thinking about how all this works. First,
+since the player cannot be expected to guess what wording will trigger
+our special topics, we need to provide some kind of prompt. This is what
+the single-quoted strings immediately after the class names do (the
+strings in the name property of the SpecialTopic objects). These strings
+need to be of a form that make sense after “You could…”; in this case
+the player will be prompted with:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td>(You could deny that mud is a name, or ask why.) <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The list of strings in square brackets (the keywordList property) is
+then the list of words (or ‘tokens’) that the parser will check for in
+deciding whether to match a given SpecialTopic. It is not necessary that
+the player types all the words in the list for a match to take place -
+in this instance one or other of the SpecialTopics will be matched if
+the player simply types <strong>deny</strong> or <strong>mud</strong> or <strong>why</strong>, for example; but
+a match will not take place if the command contains any words not in the
+list. For example if the player types <strong>deny mud a proper name</strong> the
+parser will respond with:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td>The word "proper" is not necessary in this story. <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The only way to try to avoid this it to be as careful as possible in the
+list of strings you include in the keywordList; in this instance we have
+mostly just duplicated the words that will appear in the prompt, but it
+seems likely that the player might try something else (and you can be
+sure than many players will), we can always add more words to these
+lists (e.g. ‘him’ between ‘ask’ and ‘why’). Note also that the list of
+the words in the keywordList property must be separated by commas, which
+can often be surprisingly easy to forget.</p>
+
+<p>Everything else about the SpecialTopics works in the same way as for
+other TopicEntries. We supply the ‘deny mud is a name’ topic merely to
+give the player the appearance of having an option at this point; a
+prompt that merely said “(You could ask why)” would look a bit <em>too</em>
+directive. We use the &lt;.convstay&gt; tags in the ‘deny mud’ topic and the
+DefaultAskTellTopic to try to prevent the player from leaving the
+conversation node until he or she has asked why and so given Joe a
+chance to start telling his sorry tale (the player could just walk away
+and terminate the conversation without learning about the ring, but one
+hopes that most players’ natural curiosity will prompt them to <strong>ask
+why</strong> first).</p>
+
+<p>Since the player could type <strong>deny mud is a name</strong> more than once, we
+provide more than one response to it. Once he or she types <strong>ask why</strong>,
+however, the game will leave the conversation node after displaying the
+response, so there’s no need for more than one response.</p>
+
+<p>One further point to note is the use of double dashes (–) in the text
+of various responses. TADS will automatically convert each pair of
+dashes into one long dash, which looks better in the output than a short
+dash.</p>
+
+<p>Finally, note that normally a Conversation Node will normally only last
+for one turn. That is why we needed to insert all those &lt;.convstay&gt;
+tags to keep this node active until the player asks the question we want
+asked. But we could change the default behaviour by setting the
+ConvNode’s isSticky property to true; in that case the Conversation Node
+would remain active until we explicitly left it, either by switching to
+another node, or by using a tag such as &lt;.convnode nil&gt; to leave the
+current node without entering another. You might like to experiment with
+changing the code to use this alternative approach to check that you can
+get it to work.</p>
+
+<p>The next thing that’s likely to occur to the player is to <strong>ask burner
+about ring</strong>. There’s an important story to be told here, so this guide
+will need to provide it’s own version, but before seeing what it is, you
+might first like to try defining an AskTopic of your own to handle this.
+For the sake of argument, assume that Heidi asks “What happened to the
+ring - how did you manage to lose it?”, and try devising your own
+answer. Then check that Joe responds to <strong>ask burner about ring</strong> as you
+intended.</p>
+
+<p>The answer we actually need here, since it’s important to our plot, may
+be supplied thus (this time nested inside burnerTalking again, so put it
+just after the definition of ++ AskTopic @burner):</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>++ AskTellTopic, StopEventList @ring<br />
+   [<br />
+     ’&lt;q&gt;What happened to the ring – how did you manage to lose it?&lt;/q&gt; you <br />
+       ask.&lt;.p&gt;<br />
+     &lt;q&gt;You wouldn\t believe it.&lt;/q&gt; he shakes his head again, &lt;q&gt;I took it <br />
+       out to take a look at it a couple of hours back, and then dropped the<br />
+       thing. Before I could pick it up again, blow me if a thieving little<br />
+       magpie didn\t flutter down and fly off with it!&lt;/q&gt;’,<br />
+     ’&lt;q&gt;Where do you think the ring could have gone?&lt;/q&gt; you wonder.&lt;.p&gt;<br />
+     &lt;q&gt;I suppose it\s fetched up in some nest somewhere,&lt;/q&gt; he sighs, <br />
+     &lt;q&gt;Goodness knows how I\ll ever get it back again!&lt;/q&gt;’,<br />
+     ’&lt;q&gt;Would you like me to try to find your ring for you?&lt;/q&gt; you <br />
+       volunteer earnestly.&lt;.p&gt;<br />
+     &lt;q&gt;Yes, sure, that would be wonderful.&lt;/q&gt; he agrees, without sounding<br />
+      in the least convinced that you\ll be able to. ’<br />
+   ]<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There’s one problem with this (actually, there’s two, but we’ll come to
+the second one in a minute). This part of the conversation presupposes
+that Joe has told Heidi the sad story of how he came to lose the ring,
+but that she hasn’t found it yet. Although events could happen that way
+round, it’s perfectly possible that the player could locate the ring
+before getting into conversation with Joe. That’s easy enough to test
+for - if the ring has been found gPlayerChar.hasSeen(ring) will be true,
+otherwise it will be nil. But where do we put this test without a lot of
+clumsy coding? Once again TADS 3 comes to our rescue with a very neat
+solution, we simply use an AltTopic (directly after the AskTellTopic
+we’ve just defined):</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>+++ AltTopic<br />
+    ”&lt;q&gt;I found a ring in a bird’s nest, up a tree just down there.&lt;/q&gt; you<br />
+     tell him, pointing vaguely southwards, &lt;q&gt;Could it be yours?&lt;/q&gt;&lt;.p&gt;<br />
+    &lt;q&gt;Really?&lt;/q&gt; he asks, his eyes lighting up with disbelieving hope,<br />
+     &lt;q&gt;Let me see it!&lt;/q&gt;”<br />
+    isActive = (gPlayerChar.hasSeen(ring))<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There’s no need to code either the commands or the object the AltTopic
+is to respond to, it will respond to whatever the TopicEntry it’s
+contained in responds to, provided that its isActive property is true.
+If its isActive property is true then it will be used in preference to
+the TopicEntry in which it is contained. In this case we want the
+AltTopic to be used instead of its main AskTellTopic if (and only if)
+Heidi has actually found the ring, which we achieve with the line
+isActive = (gPlayerChar.hasSeen(ring)). Incidentally, this is why we
+made the topic an AskTellTopic instead of simply an AskTopic; once Heidi
+has found the ring the player is just as likely to <strong>tell burner about
+ring</strong> as <strong>ask burner about ring</strong>.</p>
+
+<p>If you now compile and run the game, you should soon encounter the
+second problem. If Heidi has found the ring when she asks or tells Joe
+about it, everything should work as expected, but if she hasn’t, then
+asking (or telling) the charcoal burner about the ring works just like
+asking or telling him about a topic we haven’t defined. This makes sense
+before Heidi has got Joe to tell his sorry tale, since she doesn’t know
+there’s a ring to ask about (which is why the library handles it this
+way), but once Joe has mentioned his ring she ought to be able to ask
+about it.</p>
+
+<p>The TADS library keeps track of which things an actor knows about
+through objects’ isKnown property, which should be tested through
+actors’ actor.knowsAbout(obj) method. Actually, the standard library
+only keeps track of what the Player Character knows about by this means,
+but provides the actors parameter in case some brave soul wants to
+expand the system to a tracking NPCs’ knowledge as well. By default
+actor.knowsAbout(obj) is true either if obj has been seen by the Player
+Character or if obj.isKnown has been set to true. The correct way of
+achieving the latter is by calling gPlayerChar.setKnowsAbout(obj). This
+seems rather long-winded for what is likely to be a quite commonly
+needed operation, so the library offers an abbreviated form (a macro)
+gSetKnown(obj). This macro definition is a preprocessor directive that
+means roughly ‘whenever you see gSetKnown(obj) in the source code,
+replace it with gPlayerChar.setKnowsAbout(obj) before presenting it to
+the compiler, where obj can be any object name we care to use’. In other
+words, all we have to do to fix things is to add &lt;&lt;gSetKnown(ring)&gt;&gt;
+to the end of the output string of the appropriate SpecialTopic, thus:</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>++ SpecialTopic ’ask why’ [‘ask’,’why’]<br />
+  ”&lt;q&gt;Why will your name be mud?&lt;/q&gt; you want to know.&lt;.p&gt;<br />
+  He shakes his head, lets out an enormous sigh, and replies,<br />
+  &lt;q&gt;I was going to give her the ring tonight – her engagement ring –<br />
+  only I’ve gone and lost it. Cost me two months’ wages it did. And<br />
+  now she’ll never speak to me again,&lt;/q&gt; he concludes, with another<br />
+  mournful shake of the head, &lt;q&gt;never.&lt;/q&gt;&lt;&lt;gSetKnown(ring)&gt;&gt;”<br />
+;</p>
+
+<table data-border="0" data-cellpadding="0" data-cellspacing="0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr data-valign="TOP">
+<td width="51"></td>
+<td> <br />
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now, once Joe has mentioned the ring, Heidi will be able to ask about it
+and get a sensible response, even is she hasn’t found the ring yet. If
+you recompile and play the game with these changes, you should find it
+all works properly.</p>
+
+<p>Well, not quite all, perhaps. Although the charcoal burner has told
+Heidi that his name is ‘Joe Black’, he continues to be described as ‘the
+charcoal burner’. Not only that, but the parser refuses to recognize him
+if we try to refer to <strong>joe</strong>, <strong>black</strong> or <strong>joe black</strong>. We’ll fix
+these problems in the next section.</p>
+
+<hr />
+
+<p><em>Getting Started in TADS 3</em><br />
+<a href="index.html">[Main]</a><br />
+<em><a href="endingthegame.html">[Previous]</a>   <a href="whatsinaname.html">[Next]</a></em></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-styletagfilter-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-styletagfilter-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">styleTagFilter</span><span class="type">object</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1087">1087</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>“Style tag” filter. This is an output filter that expands our special
+style tags in output text.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">styleTagFilter</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a> <a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">styleTagFilter</code></strong><br />
+<a href="../object/OutputFilter.html"><code class="language-plaintext highlighter-rouge">OutputFilter</code></a><br />
+`                 object<code class="language-plaintext highlighter-rouge">  
+[</code>PreinitObject<code class="language-plaintext highlighter-rouge">](../object/PreinitObject.html)  
+[</code>ModuleExecObject<code class="language-plaintext highlighter-rouge">](../object/ModuleExecObject.html)  
+</code>                         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#tagPattern"><code class="language-plaintext highlighter-rouge">tagPattern</code></a> <a href="#tagTable"><code class="language-plaintext highlighter-rouge">tagTable</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">PreinitObject</code> :<br />
+<a href="../object/PreinitObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/PreinitObject.html#reverseGlobalSymbols"><code class="language-plaintext highlighter-rouge">reverseGlobalSymbols</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="#filterText"><code class="language-plaintext highlighter-rouge">filterText</code></a> <a href="#translateTag"><code class="language-plaintext highlighter-rouge">translateTag</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="tagPattern"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tagPattern</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1089">1089</a>]</p>
+
+<p>pre-compile our frequently-used tag search pattern</p>
+
+<p><span id="tagTable"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">tagTable</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1197">1197</a>]</p>
+
+<p>Our tag translation table. We’ll initialize this during preinit to a
+lookup table with all of the defined StyleTag objects.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="execute"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">execute ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1179">1179</a>]</p>
+
+<p>preinitialization</p>
+
+<p><span id="filterText"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">filterText (ostr, val)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1093">1093</a>]</p>
+
+<p>filter for a style tag</p>
+
+<p><span id="translateTag"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">translateTag (tag)</code></p>
+
+<p><a href="../file/output.t.html">output.t</a>[<a href="../source/output.t.html#1156">1156</a>]</p>
+
+<p>Translate a tag</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

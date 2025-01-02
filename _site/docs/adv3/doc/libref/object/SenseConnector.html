@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-senseconnector-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-senseconnector-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">SenseConnector</span><span class="type">class</span></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#431">431</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>SenseConnector: an object that can pass senses across room boundaries.
+This is a mix-in class: add it to the superclass list of the object
+before Thing (or a Thing subclass).</p>
+
+<p>A SenseConnector acts as a sense conduit across all of its locations, so
+to establish a connection between locations, simply place a
+SenseConnector in each location. Since a SenseConnector is useful only
+when placed placed in multiple locations, SenseConnector is based on
+MultiLoc.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">SenseConnector</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/MultiLoc.html"><code class="language-plaintext highlighter-rouge">MultiLoc</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SenseConnector</code></strong><br />
+<a href="../object/MultiLoc.html"><code class="language-plaintext highlighter-rouge">MultiLoc</code></a><br />
+<a href="../object/BaseMultiLoc.html"><code class="language-plaintext highlighter-rouge">BaseMultiLoc</code></a><br />
+`                         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">SenseConnector</code></strong><br />
+<a href="../object/DistanceConnector.html"><code class="language-plaintext highlighter-rouge">DistanceConnector</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#connectorMaterial"><code class="language-plaintext highlighter-rouge">connectorMaterial</code></a> <a href="#getConnectedContainers"><code class="language-plaintext highlighter-rouge">getConnectedContainers</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BaseMultiLoc</code> :<br />
+<a href="../object/BaseMultiLoc.html#initialLocationClass"><code class="language-plaintext highlighter-rouge">initialLocationClass</code></a> <a href="../object/BaseMultiLoc.html#locationList"><code class="language-plaintext highlighter-rouge">locationList</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addDirectConnections"><code class="language-plaintext highlighter-rouge">addDirectConnections</code></a> <a href="#checkMoveThrough"><code class="language-plaintext highlighter-rouge">checkMoveThrough</code></a> <a href="#checkMoveViaPath"><code class="language-plaintext highlighter-rouge">checkMoveViaPath</code></a> <a href="#checkThrowThrough"><code class="language-plaintext highlighter-rouge">checkThrowThrough</code></a> <a href="#checkThrowViaPath"><code class="language-plaintext highlighter-rouge">checkThrowViaPath</code></a> <a href="#checkTouchThrough"><code class="language-plaintext highlighter-rouge">checkTouchThrough</code></a> <a href="#checkTouchViaPath"><code class="language-plaintext highlighter-rouge">checkTouchViaPath</code></a> <a href="#forEachConnectedContainer"><code class="language-plaintext highlighter-rouge">forEachConnectedContainer</code></a> <a href="#sensePathFromWithout"><code class="language-plaintext highlighter-rouge">sensePathFromWithout</code></a> <a href="#shineFromWithout"><code class="language-plaintext highlighter-rouge">shineFromWithout</code></a> <a href="#transSensingThru"><code class="language-plaintext highlighter-rouge">transSensingThru</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">MultiLoc</code> :<br />
+<a href="../object/MultiLoc.html#baseMoveInto"><code class="language-plaintext highlighter-rouge">baseMoveInto</code></a> <a href="../object/MultiLoc.html#baseMoveIntoAdd"><code class="language-plaintext highlighter-rouge">baseMoveIntoAdd</code></a> <a href="../object/MultiLoc.html#baseMoveOutOf"><code class="language-plaintext highlighter-rouge">baseMoveOutOf</code></a> <a href="../object/MultiLoc.html#cloneForMultiInstanceContents"><code class="language-plaintext highlighter-rouge">cloneForMultiInstanceContents</code></a> <a href="../object/MultiLoc.html#cloneMultiInstanceContents"><code class="language-plaintext highlighter-rouge">cloneMultiInstanceContents</code></a> <a href="../object/MultiLoc.html#forEachContainer"><code class="language-plaintext highlighter-rouge">forEachContainer</code></a> <a href="../object/MultiLoc.html#getDropDestination"><code class="language-plaintext highlighter-rouge">getDropDestination</code></a> <a href="../object/MultiLoc.html#initializeLocation"><code class="language-plaintext highlighter-rouge">initializeLocation</code></a> <a href="../object/MultiLoc.html#moveIntoAdd"><code class="language-plaintext highlighter-rouge">moveIntoAdd</code></a> <a href="../object/MultiLoc.html#moveOutOf"><code class="language-plaintext highlighter-rouge">moveOutOf</code></a> <a href="../object/MultiLoc.html#reInitializeLocation"><code class="language-plaintext highlighter-rouge">reInitializeLocation</code></a> <a href="../object/MultiLoc.html#restoreLocation"><code class="language-plaintext highlighter-rouge">restoreLocation</code></a> <a href="../object/MultiLoc.html#saveLocation"><code class="language-plaintext highlighter-rouge">saveLocation</code></a> <a href="../object/MultiLoc.html#sensePathToLoc"><code class="language-plaintext highlighter-rouge">sensePathToLoc</code></a> <a href="../object/MultiLoc.html#shineOnLoc"><code class="language-plaintext highlighter-rouge">shineOnLoc</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BaseMultiLoc</code> :<br />
+<a href="../object/BaseMultiLoc.html#buildLocationList"><code class="language-plaintext highlighter-rouge">buildLocationList</code></a> <a href="../object/BaseMultiLoc.html#isDirectlyIn"><code class="language-plaintext highlighter-rouge">isDirectlyIn</code></a> <a href="../object/BaseMultiLoc.html#isIn"><code class="language-plaintext highlighter-rouge">isIn</code></a> <a href="../object/BaseMultiLoc.html#isInitiallyIn"><code class="language-plaintext highlighter-rouge">isInitiallyIn</code></a> <a href="../object/BaseMultiLoc.html#isListedInContents"><code class="language-plaintext highlighter-rouge">isListedInContents</code></a> <a href="../object/BaseMultiLoc.html#isOrIsIn"><code class="language-plaintext highlighter-rouge">isOrIsIn</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="connectorMaterial"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">connectorMaterial</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#436">436</a>]</p>
+
+<p>A SenseConnector’s material generally determines how senses pass through
+the connection.</p>
+
+<p><span id="getConnectedContainers"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getConnectedContainers</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#582">582</a>]</p>
+
+<p>Return a list of my connected containers. We connect to all of our
+containers, so simply return my location list.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addDirectConnections"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addDirectConnections (tab)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#451">451</a>]</p>
+
+<p>Add the direct containment connections for this item to a lookup table.</p>
+
+<p>Since we provide a sense connection among all of our containers, add
+each of our containers to the list.</p>
+
+<p><span id="checkMoveThrough"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkMoveThrough (obj, dest)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#589">589</a>]</p>
+
+<p>Check moving an object through me. This is called when we try to move an
+object from one of our containers to another of our containers through
+me. By default, we don’t allow it.</p>
+
+<p><span id="checkMoveViaPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkMoveViaPath (obj, dest, op)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#617">617</a>]</p>
+
+<p>check for moving via a path</p>
+
+<p><span id="checkThrowThrough"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkThrowThrough (obj, dest)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#611">611</a>]</p>
+
+<p>Check throwing an object through me. This is called when an actor tries
+to throw a projectile ‘obj’ at ‘dest’ via a path that includes ‘self’.
+By default, we don’t allow it.</p>
+
+<p><span id="checkThrowViaPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkThrowViaPath (obj, dest, op)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#647">647</a>]</p>
+
+<p>check for throwing via a path</p>
+
+<p><span id="checkTouchThrough"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkTouchThrough (obj, dest)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#600">600</a>]</p>
+
+<p>Check touching an object through me. This is called when an actor tries
+to reach from one of my containers through me into another of my
+containers. By default, we don’t allow it.</p>
+
+<p><span id="checkTouchViaPath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkTouchViaPath (obj, dest, op)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#632">632</a>]</p>
+
+<p>check for touching via a path</p>
+
+<p><span id="forEachConnectedContainer"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">forEachConnectedContainer (func, [args])</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#573">573</a>]</p>
+
+<p>Call a function on each connected container. Since we provide a sense
+path connection among our containers, we must iterate over each of our
+containers.</p>
+
+<p><span id="sensePathFromWithout"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sensePathFromWithout (fromParent, sense, trans, obs, fill)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#519">519</a>]</p>
+
+<p>Build a sense path from a container to me</p>
+
+<p><span id="shineFromWithout"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">shineFromWithout (fromParent, sense, ambient, fill)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#478">478</a>]</p>
+
+<p>Transmit energy from a container onto me.</p>
+
+<p><span id="transSensingThru"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">transSensingThru (sense)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#442">442</a>]</p>
+
+<p>Determine how senses pass through this connection. By default, we simply
+use the material’s transparency.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

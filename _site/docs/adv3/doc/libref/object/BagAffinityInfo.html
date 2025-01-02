@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-bagaffinityinfo-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-bagaffinityinfo-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">BagAffinityInfo</span><span class="type">class</span></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#373">373</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Bag Affinity Info - this class keeps track of the affinity of a bag of
+holding for an object it might contain. We use this class in building
+bag affinity lists.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">BagAffinityInfo</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BagAffinityInfo</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#aff_"><code class="language-plaintext highlighter-rouge">aff_</code></a> <a href="#bag_"><code class="language-plaintext highlighter-rouge">bag_</code></a> <a href="#bulk_"><code class="language-plaintext highlighter-rouge">bulk_</code></a> <a href="#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#compareAffinityTo"><code class="language-plaintext highlighter-rouge">compareAffinityTo</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#removeMostRecent"><code class="language-plaintext highlighter-rouge">removeMostRecent</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="aff_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aff_</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#450">450</a>]</p>
+
+<p>affinity of the bag for the object</p>
+
+<p><span id="bag_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bag_</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#447">447</a>]</p>
+
+<p>the bag that wants to contain the object</p>
+
+<p><span id="bulk_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">bulk_</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#444">444</a>]</p>
+
+<p>the object’s bulk</p>
+
+<p><span id="obj_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obj_</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#441">441</a>]</p>
+
+<p>the object the bag wants to contain</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="compareAffinityTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">compareAffinityTo (other)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#389">389</a>]</p>
+
+<p>Compare this item to another item, for affinity ranking purposes.
+Returns positive if I should rank higher than the other item, zero if we
+have equal ranking, negative if I rank lower than the other item.</p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (obj, bulk, aff, bag)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#374">374</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="removeMostRecent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeMostRecent (vec)</code></p>
+
+<p><a href="../file/thing.t.html">thing.t</a>[<a href="../source/thing.t.html#421">421</a>]</p>
+
+<p>given a vector of affinities, remove the most recent item (as indicated
+by holdingIndex) and return the BagAffinityInfo object</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

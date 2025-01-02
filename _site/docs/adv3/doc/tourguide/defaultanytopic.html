@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-defaultanytopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-defaultanytopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>DefaultAnyTopic : <a href="defaulttopics-overview.html">DefaultTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="defaultaskfortopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="suggestedtopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A DefaultAnyTopic will respond to any conversational command at all
+(ASK, TELL, GIVE or SHOW) that is not otherwise provided for, subject to
+the scope restrictions on Give and Show that apply to DefaultGiveTopic,
+DefaultShowTopic, and DefaultGiveShowTopic noted above.</p>
+
+<p>Since there is no way of knowing what the player typed to trigger a
+DefaultAnyTopic, this catch-all device must be used with caution. The
+situation where it’s most useful is where an NPC is so intent on its own
+agenda that it’s not really responding to what the player character (PC)
+has just said or done. This can occur in two rather different
+situations: the first is where the NPC is effectively ignoring the PC,
+or at least the specifics of what the PC is saying or doing (e.g.
+because the NPC is drunk or insane or preoccupied with some other
+activity, so its responses can’t really be expected to connect with what
+the PC has just said); the second is where the NPC is pressing the PC
+for an answer and isn’t going to be put off by an attempt to change the
+subject. The second of these possibilities generally occurs in
+Conversation Nodes, and we’ll come to it then. The first might be
+illustrated by the demons NPC; being demons one might expect them to
+give some irrational and mischievous responses:</p>
+
+<p>++ DefaultAnyTopic, ShuffledEventList<br />
+   <br />
+   [<br />
+     ’&lt;q&gt;Look at him! Look at him!&lt;/q&gt; a pair of the demons squeal,<br />
+      &lt;q&gt;Shall we tear him? Shall we eat him?&lt;/q&gt;’,<br />
+     ’The demons burst into hoots of demonic laughter. ’,<br />
+     ’&lt;q&gt;You stupid mortal!&lt;/q&gt; one of demons screeches at you, &lt;q&gt;You<br />
+      understand nothing! Nothing at all!&lt;/q&gt;’,<br />
+     ’&lt;q&gt;You don\t thcare uth!&lt;/q&gt; a lisping demon tells you, &lt;q&gt;Thtupid<br />
+      little human!&lt;/q&gt;’,<br />
+     ’&lt;q&gt;Despair and die! Despair and die!&lt;/q&gt; one of them cries at you,<br />
+      &lt;q&gt;I am Anthrapax, stealer of souls!&lt;/q&gt;\b<br />
+      &lt;q&gt;And I am Princifax, leader of ghouls!&lt;/q&gt; hisses a second.\b<br />
+      &lt;q&gt;And I, most fearsome of all, am Incometax, bleeder of fools!&lt;/q&gt; <br />
+       declares a third.\b’,<br />
+     ’&lt;q&gt;Have you come here to die?&lt;/q&gt; one of them asks, poking you in<br />
+      the ribs, &lt;q&gt;Death is good for humans; it get rid of that futility<br />
+      you call life. Just say the word and we\ll relieve you of it. Won\t<br />
+      we?&lt;/q&gt;\b<br />
+      &lt;q&gt;Yes! yes!&lt;/q&gt; they all cry (apart from the lisping demon who of course<br />
+       cries &lt;q&gt;Yeth! Yeth!&lt;/q&gt;)’,<br />
+     ’&lt;q&gt;You don\t like us much, do you?&lt;/q&gt; sneers the ugliest of the demons,<br />
+      &lt;q&gt;Don\t you know it\s not politically correct to be prejudiced against<br />
+       demons?&lt;/q&gt;\b<br />
+      &lt;q&gt;Not legal either.&lt;/q&gt; one of his fellows agrees. &lt;q&gt;We demons have<br />
+       rights.&lt;/q&gt;\b<br />
+      &lt;q&gt;So mind your manners or we\ll sue you!&lt;/q&gt; warns another, &lt;q&gt;Plenty<br />
+       of lawyers in hell, you know!&lt;/q&gt;‘       <br />
+   ]<br />
+   <br />
+   [<br />
+     ’The demons howl at you derisively. ’,<br />
+     ’One of the demons gives you a sharp jab in the ribs. ’,<br />
+     ’&lt;q&gt;A human a day keeps the doctor away!&lt;/q&gt; one of them chants, eyeing<br />
+      you hungrily. ’,<br />
+     ’&lt;q&gt;The only good human is a dead human.&lt;/q&gt; Anthrapax opines. ’,<br />
+     ’&lt;q&gt;Get lost, foolish mortal!&lt;/q&gt; another demon snarls. ’,<br />
+     ’&lt;q&gt;You\re powerless here, pathetic little mortal.&lt;/q&gt; Princifax tells you. ’,<br />
+     ’&lt;q&gt;He doesn\t know when he\s beaten!&lt;/q&gt; one of the demons giggles from<br />
+      the back of the pack. ’,<br />
+     ’&lt;q&gt;Thtupid little human, thtupid little human!&lt;/q&gt; says the lisping demon’ ,<br />
+     ’&lt;q&gt;We hate &lt;i&gt;all&lt;/i&gt; humans,&lt;/q&gt; Incometax informs you, &lt;q&gt;But &lt;i&gt;especially&lt;/i&gt;<br />
+      you - you are the most pathetic and degraded specimen of a superfluous and<br />
+      misbegotten species!&lt;/q&gt; ’,<br />
+     ’&lt;q&gt;Turn back, foolish mortal!&lt;/q&gt; they chorus, &lt;q&gt;We won\t be patient with<br />
+      you much longer!&lt;/q&gt; ’       <br />
+   ]<br />
+   <br />
+;</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

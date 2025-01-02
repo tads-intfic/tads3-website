@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-platform-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-platform-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Platform : BasicPlatform, <a href="surface.html">Surface</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="basicchair.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="nominalplatform.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A Platform is a NestedRoom that an actor can stand on (or also sit on or
+lie on, though standing on will normally be the most obvious). We’ll add
+a museum lobby with both a carpet and a table that can be stood on:</p>
+
+<p>museumLobby : Room ’Entrance Lobby’ ’the entrance lobby’<br />
+ ”A welcoming sign next to the main museum entrance to the west declares:\n<br />
+  &lt;&lt;museumSign.desc&gt;&gt;.\nOtherwise there’s not much to this small lobby<br />
+  apart from plain white walls, a battered old table, and a shabby carpet. <br />
+  A brightly-lit corridor leads off to the east. ”<br />
+ east = brightCorridor<br />
+ west = museum<br />
+;</p>
+
+<p>+ museumSign : Readable, Fixture ’sign’ ’sign’<br />
+  ”ABSOLUTELY NO ADMITTANCE\nTO THE MUSEUM\nWITHOUT A TICKET”<br />
+;</p>
+
+<p>+ Platform, Heavy ’shabby old carpet’ ’shabby old carpet’<br />
+  ”It may once have been red with a dark blue pattern - or perhaps<br />
+   it was the other way round. ”<br />
+;</p>
+
+<p>+ batteredTable : Platform, Heavy ’battered old table’ ’battered old table’<br />
+  ”This veteran table has clearly seen sterling service for decades,<br />
+   but the poor old thing looks like it’s coming up to retirement: it’s<br />
+   scratched, chipped, and generally battered, and one of the legs is<br />
+   starting to look distinctly crooked. ”<br />
+  actionDobjStandOn<br />
+  {<br />
+    inherited;<br />
+    ”As you stand on the table it creaks alarmingly. ”;<br />
+  }<br />
+  tableHere = (isIn(museumLobby) ? ’a battered old table, ’ : ’’)  <br />
+;</p>
+
+<p>You’ll also need to add west = museumLobby to the definition of
+brightCorridor.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

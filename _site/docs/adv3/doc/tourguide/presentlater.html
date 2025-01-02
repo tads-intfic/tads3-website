@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-presentlater-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-presentlater-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>PresentLater : object<br />
+</strong></td>
+<td style="text-align: right;"><a href="hidden.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="gadgets-introduction.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The PresentLater class is slightly more complicated than the Hidden
+class, although it can be used in ways that look much the same to the
+player. The official purpose of a PresentLater is to define an object
+that is not yet where you place it. That is, you can give a PresentLater
+object a starting location where you want it to appear subsequently, but
+at the preinitialization stage this location will be stored in its
+<strong>eventualLocation</strong> property and the object moved into nil. At the
+point in your game when you want it to appear in its predefined location
+you call its <strong>makePresent()</strong> method. Thus we could have implemented
+hiding the brass key by making it a PresentLater, Thing (note that
+PresentLater is a mix-in class - it does not descend from Thing itself)
+instead of a Hidden, by calling brassKey.makePresent() instead of
+brassKey.discover, and by testing if(brassKey.moved) instead of
+if(brassKey.discovered). The effect (in terms of the transcript seen by
+the player) would have been identical. The main difference is that by
+using Hidden the brass key was in roundCave all along (but not visible
+until discovered), whereas by using PresentLater the brass key would not
+have been in roundCave until makePresent() was called.</p>
+
+<p>There is one important distinction to bear in mind here, though, and
+that is that calling makePresent() on a PresentLater sets its <strong>moved</strong>
+property to true (since makePresent calls moveInto) while calling
+discover on a Hidden does not (because a Hidden is not moved when it is
+discovered).</p>
+
+<p>In a simple case like that of the brass key where Hidden will do the
+job, it’s probably best to use Hidden, unless there’s some reason why
+you actually want the object concerned to be moved rather than simply
+made visible. In more complex cases, however, PresentLater may be the
+better choice, since it has a number of other methods we have yet to
+explore, and which make it a rather more powerful class than might
+appear from what we have seen so far.</p>
+
+<p>In addition to its makePresent, method, PresentLater has a
+<strong>makePresentIf(cond)</strong> method; this moves an object from nil to its
+eventualLocation if cond is true, otherwise it moves it into nil. We can
+illustrate this by adding a console to the Tardis control room; the
+console has a panel behind which is a shallow compartment. Effectively,
+the compartment is only present in the control room if the panel is
+open, so we could use makePresentIf(cond) to bring it into the control
+room when the panel is opened and back into nil (in this case, out of
+sight) when the panel is closed:</p>
+
+<p>tardisConsole: Fixture ’(tardis) hexagonal control console’ ’console’ @tardisControlRoom<br />
+  ”The six-sided console stands in the middle of the room. Amongst its controls<br />
+   are a slider, a dial, a
+switch, and a big red button. Beneath these is<br />
+   a panel set in the side of the lower part of the console. ”<br />
+;</p>
+
+<p>+ tardisPanel : Openable, Component ’panel’ ’panel’<br />
+  makeOpen(stat)<br />
+  {<br />
+    inherited(stat);<br />
+    tardisPanelCompartment.makePresentIf(stat);    <br />
+    if(stat)<br />
+      ”Opening the panel reveals a shallow compartment behind. ”;<br />
+  }   <br />
+;</p>
+
+<p>+ tardisPanelCompartment : PresentLater, RestrictedContainer, Fixture ’shallow compartment’<br />
+   ’shallow compartment’ ”It’s about four inches deep. ”<br />
+  validContents = [fluidLink]   <br />
+;</p>
+
+<p>++ fluidLink : Thing ’fluid link’ ’fluid link’<br />
+  ”It’s a long transparent tube, half full of mercury. ”<br />
+;</p>
+
+<p>We’ll do more with the fluid link later. For the moment let’s continue
+to explore PresentLater. Let’s suppose that in addition to the
+compartment we want a notice on the back of the panel that’s only
+visible when the panel is open. We can make this a PresentLater too, and
+we could simply add tardisPanelNotice.makePresent(stat) to the
+definition of tardisPanel.makeOpen. But there is an alternative if we
+want to make several objects present at once: we can use
+<strong>makePresentByKey(key)</strong>. To use this you need to define a <strong>plKey</strong> on
+each of the PresentLater objects you want controlled by the single
+statement; e.g. you could define plKey = ’tardis’ on both the
+compartment and the notice. To make all objects whose plKey is ‘tardis’
+present at once you would then call
+PresentLater.makePresentByKey(‘tardis’); note that this method is called
+on the PresentLater <em>class</em>. In this case, however, we need to go one
+better still and use the <strong>makePresentByKeyIf(key, cond)</strong> method:</p>
+
+<p>+ tardisPanel : Openable, Component ’panel’ ’panel’<br />
+  makeOpen(stat)<br />
+  {<br />
+    inherited(stat);<br />
+    <strong>PresentLater.makePresentByKeyIf(‘tardis’, stat);</strong>    <br />
+    if(stat)<br />
+      ”Opening the panel reveals a shallow compartment behind <strong>and a notice on<br />
+       the back of the panel</strong>. ”;<br />
+  }   <br />
+;</p>
+
+<p><strong>++ tardisPanelNotice : PresentLater, Component ’notice’ ’notice’<br />
+  ”The notice reads:\bFor best results ensure the fluid link is full of mercury. ”<br />
+  plKey = ’tardis’<br />
+;</strong></p>
+
+<p>+ tardisPanelCompartment : PresentLater, RestrictedContainer, Fixture ’shallow compartment’<br />
+   ’shallow compartment’ ”It’s about four inches deep. ”<br />
+  validContents = [fluidLink]   <br />
+  <strong>plKey = ’tardis’</strong><br />
+;</p>
+
+<p>++ fluidLink : Thing ’fluid link’ ’fluid link’<br />
+  ”It’s a long transparent tube, half full of mercury. ”<br />
+;</p>
+
+<p>One final point about PresentLater, which we’ll describe without
+illustrating in our game, is that it’s possible to use this class for an
+object that <em>starts</em> present and subsequently disappears. To do this we
+set its <strong>initiallyPresent</strong> property to true. It can then be made to
+disappear by calling makePresentIf(nil), and to reappear again by
+calling makePresent.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

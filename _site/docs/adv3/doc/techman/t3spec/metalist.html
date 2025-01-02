@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-techman-t3spec-metalist-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-techman-t3spec-metalist-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><img src="../topbar.jpg" data-border="0" /></p>
+
+<p><a href="../toc.html" class="nav">Table of Contents</a> |
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> &gt;
+Metaclass Identifier List<br />
+<span class="navnp"><a href="fnset_t3.html" class="nav"><em>Prev:</em> t3vm Function Set</a>
+    <a href="save.html" class="nav"><em>Next:</em> Saving and Restoring
+State</a>     </span></p>
+
+<p><img src="t3logo.gif" alt="" /></p>
+
+<h2 id="appendix-metaclass-identifier-list">Appendix: Metaclass Identifier List</h2>
+
+<p>The T3 VM uses metaclass identifiers to associate metaclass types with
+their implementations. A T3 application stores the identifiers of the
+metaclasses it uses in its image file; the VM uses these identifiers to
+allow the application to call code in the metaclasses. Refer to the
+<a href="model.html#metaclass_id">machine model</a> documentation for details of
+this mechanism.</p>
+
+<p>Metaclass identifiers are universally unique. A given metaclass ID
+string always refers to the same metaclass type, for all VM
+implementations and for all applications. This universal identification
+mechanism ensures that an application and VM implementation can agree on
+the exact meaning of a metaclass type. To ensure universal uniqueness,
+we main a central registry of defined metaclasses and their identifiers.</p>
+
+<p>The defined metaclass identifiers are shown below. Metaclass identifier
+strings use only 7-bit ASCII characters, and may be from 1 to 255
+characters in length. By convention, we avoid spaces (using a hyphen
+instead for each word break), and use lower-case letters; however,
+future identifiers will not necessarily be restricted to this subset, so
+implementations should be prepared to accept any 7-bit ASCII characters
+from code points 32 to 126 inclusive.</p>
+
+<p>ID</p>
+
+<p>Metaclass</p>
+
+<p>tads-object</p>
+
+<p>TADS Object</p>
+
+<p>list</p>
+
+<p>List</p>
+
+<p>string</p>
+
+<p>String</p>
+
+<p>lookuptable</p>
+
+<p>Lookup Table</p>
+
+<p>vector</p>
+
+<p>Vector</p>
+
+<p><strong>Implementation Developers:</strong> Anyone who needs to add new metaclasses
+in the course of adapting a T3 VM implementation to a new application
+domain should contact the T3 VM specification’s maintainer to register
+the new metaclasses and obtain identifiers. This will ensure that the
+new metaclasses will coexist with others, which will allow the new
+system to interoperate with existing compilers and other tools.</p>
+
+<p>Copyright © 2001, 2006 by Michael J. Roberts.<br />
+Revision: September, 2006</p>
+
+<hr />
+
+<p><em>TADS 3 Technical Manual</em><br />
+<a href="../toc.html" class="nav">Table of Contents</a> |
+<a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> &gt;
+Metaclass Identifier List<br />
+<span class="navnp"><a href="fnset_t3.html" class="nav"><em>Prev:</em> t3vm Function Set</a>
+    <a href="save.html" class="nav"><em>Next:</em> Saving and Restoring
+State</a>     </span></p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-file-sense-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-file-sense-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">sense.t</span><span class="type">file</span></p>
+
+<p><a href="../source/sense.t.html">source file</a></p>
+
+<p><strong>Classes</strong><br />
+<a href="#_ClassSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Objects</strong><br />
+<a href="#_ObjectSummary_">Summary</a><br />
+ </p>
+
+<p><strong>Functions</strong><br />
+<a href="#_FunctionSummary_">Summary</a><br />
+<a href="#_Functions_">Details</a></p>
+
+<p>TADS 3 Library - senses</p>
+
+<p>This module defines objects and functions related to senses. This file
+is language-independent.</p>
+
+<p><span id="_ClassSummary_"></span></p>
+
+<p><span class="hdln">Summary of Classes</span>  </p>
+
+<p><a href="../object/DistanceConnector.html"><code class="language-plaintext highlighter-rouge">DistanceConnector</code></a> <a href="../object/DropTypeShortThrow.html"><code class="language-plaintext highlighter-rouge">DropTypeShortThrow</code></a> <a href="../object/Material.html"><code class="language-plaintext highlighter-rouge">Material</code></a> <a href="../object/Occluder.html"><code class="language-plaintext highlighter-rouge">Occluder</code></a> <a href="../object/Sense.html"><code class="language-plaintext highlighter-rouge">Sense</code></a> <a href="../object/SenseConnector.html"><code class="language-plaintext highlighter-rouge">SenseConnector</code></a>
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Objects</span>  </p>
+
+<p><a href="../object/adventium.html"><code class="language-plaintext highlighter-rouge">adventium</code></a> <a href="../object/coarseMesh.html"><code class="language-plaintext highlighter-rouge">coarseMesh</code></a> <a href="../object/fineMesh.html"><code class="language-plaintext highlighter-rouge">fineMesh</code></a> <a href="../object/glass.html"><code class="language-plaintext highlighter-rouge">glass</code></a> <a href="../object/paper.html"><code class="language-plaintext highlighter-rouge">paper</code></a> <a href="../object/sight.html"><code class="language-plaintext highlighter-rouge">sight</code></a> <a href="../object/smell.html"><code class="language-plaintext highlighter-rouge">smell</code></a> <a href="../object/sound.html"><code class="language-plaintext highlighter-rouge">sound</code></a> <a href="../object/touch.html"><code class="language-plaintext highlighter-rouge">touch</code></a>
+<span id="FunctionSummary_"></span></p>
+
+<p><span class="hdln">Summary of Global Functions</span>  </p>
+
+<p><a href="#adjustBrightness"><code class="language-plaintext highlighter-rouge">adjustBrightness</code></a> <a href="#transparencyAdd"><code class="language-plaintext highlighter-rouge">transparencyAdd</code></a> <a href="#transparencyCompare"><code class="language-plaintext highlighter-rouge">transparencyCompare</code></a></p>
+
+<p><span id="_Functions_"></span></p>
+
+<p><span class="hdln">Global Functions</span>  </p>
+
+<p><span id="adjustBrightness"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">adjustBrightness (br, trans)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#383">383</a>]</p>
+
+<p>Given a brightness level and a transparency level, compute the
+brightness as modified by the transparency level.</p>
+
+<p><span id="transparencyAdd"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">transparencyAdd (a, b)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#299">299</a>]</p>
+
+<p>“Add” two transparency levels, yielding a new transparency level. This
+function can be used to determine the result of passing a sense through
+multiple layers of material.</p>
+
+<p><span id="transparencyCompare"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">transparencyCompare (a, b)</code></p>
+
+<p><a href="../file/sense.t.html">sense.t</a>[<a href="../source/sense.t.html#328">328</a>]</p>
+
+<p>Compare two transparency levels to determine which one is more
+transparent. Returns 0 if the two levels are equally transparent, 1 if
+the first one is more transparent, and -1 if the second one is more
+transparent. The comparison follows this rule:</p>
+
+<p>transparent &gt; attenuated &gt; distant == obscured &gt; opaque</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

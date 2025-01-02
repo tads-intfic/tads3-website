@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-givetopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-givetopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>GiveTopic : <a href="giveshowtopic.html">GiveShowTopic</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="topicentry.html">[Previous]</a>
+<a href="generalintroduction.html">[Main]</a> <a href="showtopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>We use a GiveTopic to handle GIVE TO commands, instead of writing
+iobjFor(GiveTo) handlers on the actor. Like other TopicEntries,
+GiveTopics can be put in particular ActorStates so that they represent
+the handling particular to that state.</p>
+
+<p>We can now rip out all the iobjFor(GiveTo) handling from the sarah
+object, and achieve the same result with a GiveTopic instead:</p>
+
+<p>sarah : Person ’attractive young woman/brunette’ ’young woman’ @lakeRoom<br />
+  ”She’s an attractive brunette, somewhere in her mid-twenties. ”<br />
+  isHer = true<br />
+  properName = ’Sarah’<br />
+  globalParamName = ’sarah’  <br />
+;<br />
+ …</p>
+
+<p>+ sarahTalking : InConversationState<br />
+  specialDesc = ”Sarah is looking at you, waiting for you to speak. ”<br />
+  stateDesc = ”She’s waiting for you to speak. ”<br />
+  attentionSpan = 5<br />
+;</p>
+
+<p>++ GiveTopic @diamondRing<br />
+  topicResponse<br />
+  {<br />
+    ”&lt;q&gt;Great! Thanks!&lt;/q&gt; {the sarah/she} declares, &lt;q&gt;I’ve been looking for it<br />
+    &lt;i&gt;every&lt;/i&gt;where!&lt;/q&gt; She slips the ring on her finger, then continues,<br />
+    &lt;q&gt;Well, I suppose the next thing is to find a way out of here. You seem to<br />
+     know how to find things, so I guess I’d best follow you.&lt;/q&gt;&lt;.p&gt;”;<br />
+    gDobj.moveInto(getActor);<br />
+    gDobj.makeWornBy(getActor);<br />
+    getActor.setCurState(sarahFollowing);    <br />
+  }<br />
+;</p>
+
+<p>At some point the player will need to give Sarah one of the gas masks if
+she’s to follow him into Hell Fire Cavern. The problem here is that we
+have two identical gas masks and we could equally well give her either
+of them. Again, we don’t know what ActorState she’ll be in when we give
+the gas mask (it’s likely to be the sarahFollowing state, but the player
+character could conceivably hand Sarah a gas mask before giving her the
+diamond ring that makes her start following him around). For this reason
+it might be safer to put this GiveTopic directly inside the sarah object
+(where it’ll be accessible from all of her ActorStates). Be careful with
+the nesting though - don’t put it between an ActorState and something
+that belongs inside that ActorState, or things will start to go awry. To
+solve the two gas-mask problem we need to write custom matchTopic and
+handleTopic methods (note that the kind of method we’ve used here will
+only work on TopicEntries that handle resolved objects rather than
+resolved topics, that is GiveTopic, ShowTopic, GiveShowTopic and their
+Default equivalents):</p>
+
+<p>+ GiveTopic<br />
+  matchTopic(fromActor, obj)<br />
+   { return obj.ofKind(GasMask) ? matchScore : nil; }<br />
+  handleTopic(fromActor, obj)<br />
+  {<br />
+    obj.moveInto(getActor);<br />
+    ”&lt;q&gt;Thanks,&lt;/q&gt; {the sarah/she} remarks dubiously as she accepts it from <br />
+    you, &lt;q&gt;I’m sure it’ll - er - come in very useful.&lt;/q&gt; ”;<br />
+  }<br />
+;</p>
+
+<p>The curator is anxious to add Solomon’s purple carbuncle to his
+collection, so we can add an appropriate GiveTopic to the curator’s
+curatorTalking state:</p>
+
+<p>++ GiveTopic @carbuncle<br />
+  topicResponse<br />
+  {<br />
+   ”{The curator/he} takes the carbuncle and examines it carefully, then declares,<br />
+   &lt;q&gt;Wunderbar! Ausgezeichnet! This is the famous purple carbuncle of King Solomon,<br />
+   nicht wahr? And you are giving it to the museum? How kind, how very kind!&lt;/q&gt; <br />
+   Pausing just to wipe the tears of excitement and gratitude out of his eyes, he<br />
+   continues, &lt;q&gt;I shall enroll you on our roll of honoured benefactors &lt;i&gt;at once&lt;/i&gt;!<br />
+   Please, please, do feel free to inspect the special treasures in our benefactors’<br />
+   exhibition room any time you please!&lt;/q&gt;”;<br />
+   carbuncle.moveInto(getActor);<br />
+  }<br />
+;</p>
+
+<p>Of course giving the wrong thing to the wrong people could have
+disastrous consequences. If the player is foolish enough to hand the
+banana over to the demons, he or she richly deserves to lose, so we can
+code this in a GiveTopic (which, like all the TopicEntries relating to
+the demons, should be placed under the demonsChattering state).</p>
+
+<p>++ GiveTopic @goldenBanana<br />
+  topicResponse<br />
+  {<br />
+    ”&lt;q&gt;Yes!&lt;/q&gt; the demons cry as you hand them the Golden Banana of Discord.<br />
+     &lt;q&gt;It’s back where it belongs - with us, the demonic cabal!&lt;/q&gt;\b<br />
+     It dawns on you that you may just have made a ghastly mistake - probably<br />
+     the worst you’ve ever made.\b<br />
+     But at least it’ll probably be your last.\b ”;<br />
+     endGame(‘YOU HAVE FAILED DISMALLY’);<br />
+  }<br />
+;</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

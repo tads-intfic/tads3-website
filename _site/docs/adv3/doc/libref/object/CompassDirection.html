@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-compassdirection-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-compassdirection-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">CompassDirection</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#110">110</a>],
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3072">3072</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The base class for compass directions (north, south, etc). We don’t add
+anything to the basic Direction class, but we use a separate class for
+compass directions to allow language-specific customizations for all of
+the directions and to allow travel commands to treat these specially
+when needed.</p>
+
+<p><em>Modified in
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3072">3072</a>]:</em><br />
+The English-specific modifications for compass directions.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">CompassDirection</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/Direction.html"><code class="language-plaintext highlighter-rouge">Direction</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">CompassDirection</code></strong><br />
+<a href="../object/Direction.html"><code class="language-plaintext highlighter-rouge">Direction</code></a><br />
+`                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><a href="../object/eastDirection.html"><code class="language-plaintext highlighter-rouge">eastDirection</code></a> <a href="../object/northDirection.html"><code class="language-plaintext highlighter-rouge">northDirection</code></a> <a href="../object/northeastDirection.html"><code class="language-plaintext highlighter-rouge">northeastDirection</code></a> <a href="../object/northwestDirection.html"><code class="language-plaintext highlighter-rouge">northwestDirection</code></a> <a href="../object/southDirection.html"><code class="language-plaintext highlighter-rouge">southDirection</code></a> <a href="../object/southeastDirection.html"><code class="language-plaintext highlighter-rouge">southeastDirection</code></a> <a href="../object/southwestDirection.html"><code class="language-plaintext highlighter-rouge">southwestDirection</code></a> <a href="../object/westDirection.html"><code class="language-plaintext highlighter-rouge">westDirection</code></a>
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Direction</code> :<br />
+<a href="../object/Direction.html#allDirections"><code class="language-plaintext highlighter-rouge">allDirections</code></a> <a href="../object/Direction.html#dirProp"><code class="language-plaintext highlighter-rouge">dirProp</code></a> <a href="../object/Direction.html#sortingOrder"><code class="language-plaintext highlighter-rouge">sortingOrder</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#sayArriving"><code class="language-plaintext highlighter-rouge">sayArriving</code></a> <a href="#sayDeparting"><code class="language-plaintext highlighter-rouge">sayDeparting</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">Direction</code> :<br />
+<a href="../object/Direction.html#defaultConnector"><code class="language-plaintext highlighter-rouge">defaultConnector</code></a> <a href="../object/Direction.html#initializeDirection"><code class="language-plaintext highlighter-rouge">initializeDirection</code></a> <a href="../object/Direction.html#initializeDirectionClass"><code class="language-plaintext highlighter-rouge">initializeDirectionClass</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="sayArriving"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayArriving (traveler)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3074">3074</a>]</p>
+
+<p>describe a traveler arriving from this direction</p>
+
+<p><span id="sayDeparting"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">sayDeparting (traveler)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#3081">3081</a>]</p>
+
+<p>describe a traveler departing in this direction</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

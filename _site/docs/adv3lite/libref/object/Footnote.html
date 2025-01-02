@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-footnote-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-footnote-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">Footnote</span><span class="type">class</span></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#44">44</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Footnote - this allows footnote references to be generated in displayed
+text, and the user to retrieve the contents of the footnote on demand.</p>
+
+<p>Create an instance of Footnote for each footnote. For each footnote
+object, define the “desc” property as a double-quoted string (or method)
+displaying the footnote’s contents.</p>
+
+<p>To display a footnote reference in a passage of text, call
+&lt;&lt;x.noteRef&gt;&gt;, where x is the footnote object in question. That’s
+all you have to do - we’ll automatically assign the footnote a
+sequential number (so that footnote references are always seen by the
+player in ascending order, regardless of the order in which the player
+encounters the sources of the footnotes), and the NOTE command will
+automatically figure out which footnote object is involved for a given
+footnote number.</p>
+
+<p>This class also serves as a daemon notification object to receive
+per-command daemon calls. The first time we show a footnote reference,
+we’ll show an explanation of how footnotes work.</p>
+
+<p>[ONLY IN FOOTNOTE EXTENSION]</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">Footnote</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">Footnote</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#desc"><code class="language-plaintext highlighter-rouge">desc</code></a> <a href="#everShownFootnote"><code class="language-plaintext highlighter-rouge">everShownFootnote</code></a> <a href="#footnoteNum"><code class="language-plaintext highlighter-rouge">footnoteNum</code></a> <a href="#footnoteRead"><code class="language-plaintext highlighter-rouge">footnoteRead</code></a> <a href="#footnoteSettings"><code class="language-plaintext highlighter-rouge">footnoteSettings</code></a> <a href="#lastFootnote"><code class="language-plaintext highlighter-rouge">lastFootnote</code></a> <a href="#numberedFootnotes"><code class="language-plaintext highlighter-rouge">numberedFootnotes</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#checkNotification"><code class="language-plaintext highlighter-rouge">checkNotification</code></a> <a href="#footnoteRef"><code class="language-plaintext highlighter-rouge">footnoteRef</code></a> <a href="#showFootnote"><code class="language-plaintext highlighter-rouge">showFootnote</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="desc"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">desc</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#50">50</a>]</p>
+
+<p>Display the contents of the footnote - this will be called when the user
+asks to show the footnote with the “NOTE n” command. Each instance must
+provide suitable text here.</p>
+
+<p><span id="everShownFootnote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">everShownFootnote</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#193">193</a>]</p>
+
+<p>static property: we’ve never shown a footnote reference before</p>
+
+<p><span id="footnoteNum"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">footnoteNum</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#168">168</a>]</p>
+
+<p>my footnote number - this is assigned the first time I’m referenced;
+initially we have no number, since we don’t want to assign a number
+until the note is first referenced</p>
+
+<p><span id="footnoteRead"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">footnoteRead</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#176">176</a>]</p>
+
+<p>Flag: this footnote’s full text has been displayed. This refers to the
+text of the footnote itself, not the reference, so this is only set when
+the “FOOTNOTE n” command is used to read this footnote.</p>
+
+<p><span id="footnoteSettings"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">footnoteSettings</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#161">161</a>]</p>
+
+<p>SettingsItem tracking our current status</p>
+
+<p><span id="lastFootnote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastFootnote</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#183">183</a>]</p>
+
+<p>Static property: the highest footnote number currently in use. We start
+this at zero, because zero is never a valid footnote number.</p>
+
+<p><span id="numberedFootnotes"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">numberedFootnotes</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#190">190</a>]</p>
+
+<p>Static property: a vector of all footnotes which have had numbers
+assigned. We use this to find a footnote object given its note number.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="checkNotification"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkNotification ( )</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#196">196</a>]</p>
+
+<p>static property: per-command-prompt daemon entrypoint</p>
+
+<p><span id="footnoteRef"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">footnoteRef (num)</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#114">114</a>]</p>
+
+<p>get the string to display for a footnote reference</p>
+
+<p><span id="showFootnote"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showFootnote (num)</code></p>
+
+<p><a href="../file/footnote.t.html">footnote.t</a>[<a href="../source/footnote.t.html#128">128</a>]</p>
+
+<p>Display a footnote given its number. If there is no such footnote, we’ll
+display an error message saying so. (This is a class method, so it
+should be called directly on Footnote, not on instances of Footnote.)</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-pushtraveler-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-pushtraveler-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">PushTraveler</span><span class="type">class</span></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3314">3314</a>],
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2842">2842</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A special Traveler class for travel involving pushing an object from one
+room to another. This class encapsulates the object being pushed and the
+actual Traveler performing the travel.</p>
+
+<p>For the most part, we refer Traveler methods to the underlying Traveler.
+We override a few methods to provide special handling.</p>
+
+<p><em>Modified in
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2842">2842</a>]:</em><br />
+English-specific PushTraveler changes</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">PushTraveler</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">PushTraveler</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#obj_"><code class="language-plaintext highlighter-rouge">obj_</code></a> <a href="#traveler_"><code class="language-plaintext highlighter-rouge">traveler_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#canTravelVia"><code class="language-plaintext highlighter-rouge">canTravelVia</code></a> <a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#explainNoTravelVia"><code class="language-plaintext highlighter-rouge">explainNoTravelVia</code></a> <a href="#propNotDefined"><code class="language-plaintext highlighter-rouge">propNotDefined</code></a> <a href="#travelerName"><code class="language-plaintext highlighter-rouge">travelerName</code></a> <a href="#travelerTravelTo"><code class="language-plaintext highlighter-rouge">travelerTravelTo</code></a> <a href="#travelerTravelWithin"><code class="language-plaintext highlighter-rouge">travelerTravelWithin</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="obj_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">obj_</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3323">3323</a>]</p>
+
+<p>the object being pushed</p>
+
+<p><span id="traveler_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">traveler_</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3329">3329</a>]</p>
+
+<p>the underlying Traveler - this is the real Traveler that will move to a
+new location</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="canTravelVia"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">canTravelVia (connector, dest)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3400">3400</a>]</p>
+
+<p>Can we travel via the given connector? We’ll ask our underlying traveler
+first, and if that succeeds, we’ll ask the object we’re pushing.</p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (obj, traveler)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3315">3315</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="explainNoTravelVia"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">explainNoTravelVia (connector, dest)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3412">3412</a>]</p>
+
+<p>Explain why the given travel is not possible. If our underlying traveler
+raised the objection, let it explain; otherwise, let our pushed object
+explain.</p>
+
+<p><span id="propNotDefined"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">propNotDefined (prop, [args])</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3421">3421</a>]</p>
+
+<p>by default, send everything to the underlying Traveler</p>
+
+<p><span id="travelerName"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerName (arriving)</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2848">2848</a>]</p>
+
+<p>When an actor is pushing an object from one room to another, show its
+name with an additional clause indicating the object being moved along
+with us.</p>
+
+<p><span id="travelerTravelTo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerTravelTo (dest, connector, backConnector)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3337">3337</a>]</p>
+
+<p>Travel to a new location. We’ll run the normal travel routine for the
+underlying real traveler; then, if we ended up in a new location, we’ll
+move the object being pushed to the traveler’s new location.</p>
+
+<p><span id="travelerTravelWithin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">travelerTravelWithin (actor, dest)</code></p>
+
+<p><a href="../file/travel.t.html">travel.t</a>[<a href="../source/travel.t.html#3389">3389</a>]</p>
+
+<p>Perform local travel, between nested rooms within a top-level location.
+By default, we simply don’t allow pushing objects between nested rooms.</p>
+
+<p>To allow pushing an object between nested rooms, override this in
+parallel with travelerTravelTo(). Note that you’ll have to call
+travelerTravelWithin() on the underlying traveler (which will generally
+be the actor), and you’ll probably want to set up a new set of notifiers
+parallel to beforeMovePushable() and movePushable(). You’ll probably
+particularly need to customize the report in your parallel for
+movePushable() - the default (“you push x into the area”) isn’t very
+good when nested rooms are involved, and you’ll probably want something
+more specific.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

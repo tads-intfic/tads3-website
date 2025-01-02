@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-webcommandwin-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-webcommandwin-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">WebCommandWin</span><span class="type">class</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1936">1936</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Command Window. This object keeps track of the state of command window
+within the web UI.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">WebCommandWin</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/WebWindow.html"><code class="language-plaintext highlighter-rouge">WebWindow</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">WebCommandWin</code></strong><br />
+<a href="../object/WebWindow.html"><code class="language-plaintext highlighter-rouge">WebWindow</code></a><br />
+<a href="../object/WebResourceResFile.html"><code class="language-plaintext highlighter-rouge">WebResourceResFile</code></a><br />
+<a href="../object/WebResource.html"><code class="language-plaintext highlighter-rouge">WebResource</code></a><br />
+`                                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p>` <a href="../object/commandWin.html"><code class="language-plaintext highlighter-rouge">commandWin</code></a>  `
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p>` <a href="#isInputOpen"><code class="language-plaintext highlighter-rouge">isInputOpen</code></a>  <a href="#lastInput"><code class="language-plaintext highlighter-rouge">lastInput</code></a>  <a href="#lastInputClient"><code class="language-plaintext highlighter-rouge">lastInputClient</code></a>  <a href="#lastInputReady"><code class="language-plaintext highlighter-rouge">lastInputReady</code></a>  <a href="#mode"><code class="language-plaintext highlighter-rouge">mode</code></a>  <a href="#moreMode"><code class="language-plaintext highlighter-rouge">moreMode</code></a>  <a href="#outbuf"><code class="language-plaintext highlighter-rouge">outbuf</code></a>  <a href="#scrollback"><code class="language-plaintext highlighter-rouge">scrollback</code></a>  <a href="#scrollbackLimit"><code class="language-plaintext highlighter-rouge">scrollbackLimit</code></a>  <a href="#src"><code class="language-plaintext highlighter-rouge">src</code></a>  <a href="#textbuf"><code class="language-plaintext highlighter-rouge">textbuf</code></a>  <a href="#vpath"><code class="language-plaintext highlighter-rouge">vpath</code></a>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebWindow</code> :<br />
+` <a href="../object/WebWindow.html#name"><code class="language-plaintext highlighter-rouge">name</code></a>  <a href="../object/WebWindow.html#pathName"><code class="language-plaintext highlighter-rouge">pathName</code></a>  <a href="../object/WebWindow.html#sthCtx"><code class="language-plaintext highlighter-rouge">sthCtx</code></a>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResourceResFile</code> :<br />
+` <a href="../object/WebResourceResFile.html#binaryExts"><code class="language-plaintext highlighter-rouge">binaryExts</code></a>  <a href="../object/WebResourceResFile.html#browserExtToMime"><code class="language-plaintext highlighter-rouge">browserExtToMime</code></a>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <a href="../object/WebResource.html#group"><code class="language-plaintext highlighter-rouge">group</code></a>  <a href="../object/WebResource.html#priority"><code class="language-plaintext highlighter-rouge">priority</code></a>  `</p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p>` <a href="#cancelInputLine"><code class="language-plaintext highlighter-rouge">cancelInputLine</code></a>  <a href="#clearWindow"><code class="language-plaintext highlighter-rouge">clearWindow</code></a>  <a href="#endMoreMode"><code class="language-plaintext highlighter-rouge">endMoreMode</code></a>  <a href="#flushWin"><code class="language-plaintext highlighter-rouge">flushWin</code></a>  <a href="#getInputLine"><code class="language-plaintext highlighter-rouge">getInputLine</code></a>  <a href="#getState"><code class="language-plaintext highlighter-rouge">getState</code></a>  <a href="#receiveInput"><code class="language-plaintext highlighter-rouge">receiveInput</code></a>  <a href="#showMorePrompt"><code class="language-plaintext highlighter-rouge">showMorePrompt</code></a>  <a href="#textbufToScrollback"><code class="language-plaintext highlighter-rouge">textbufToScrollback</code></a>  <a href="#write"><code class="language-plaintext highlighter-rouge">write</code></a>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebWindow</code> :<br />
+` <a href="../object/WebWindow.html#processName"><code class="language-plaintext highlighter-rouge">processName</code></a>  <a href="../object/WebWindow.html#sendWinEvent"><code class="language-plaintext highlighter-rouge">sendWinEvent</code></a>  <a href="../object/WebWindow.html#sendWinEventTo"><code class="language-plaintext highlighter-rouge">sendWinEventTo</code></a>  <a href="../object/WebWindow.html#winFromPath"><code class="language-plaintext highlighter-rouge">winFromPath</code></a>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResourceResFile</code> :<br />
+` <a href="../object/WebResourceResFile.html#isTextFile"><code class="language-plaintext highlighter-rouge">isTextFile</code></a>  <a href="../object/WebResourceResFile.html#matchRequest"><code class="language-plaintext highlighter-rouge">matchRequest</code></a>  <a href="../object/WebResourceResFile.html#processRequest"><code class="language-plaintext highlighter-rouge">processRequest</code></a>  `</p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">WebResource</code> :<br />
+` <a href="../object/WebResource.html#sendAck"><code class="language-plaintext highlighter-rouge">sendAck</code></a>  <a href="../object/WebResource.html#sendXML"><code class="language-plaintext highlighter-rouge">sendXML</code></a>  `</p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="isInputOpen"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isInputOpen</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2201">2201</a>]</p>
+
+<p>Is an input line open? This is true between sending an &lt;inputLine&gt;
+event and either getting a reply, or explicitly sending a close or
+cancel event.</p>
+
+<p><span id="lastInput"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastInput</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2188">2188</a>]</p>
+
+<p>the text of the last input line we received from the client</p>
+
+<p><span id="lastInputClient"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastInputClient</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2194">2194</a>]</p>
+
+<p>client session who sent the last input line</p>
+
+<p><span id="lastInputReady"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">lastInputReady</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2191">2191</a>]</p>
+
+<p>is input ready?</p>
+
+<p><span id="mode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">mode</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2212">2212</a>]</p>
+
+<p>Current UI mode. This is ‘working’ if the program is running and in the
+process of computing and/or generating output; ‘inputLine’ if we’re
+waiting for the user to enter a line of input; ‘morePrompt’ if we’re
+showing a “More” prompt.</p>
+
+<p><span id="moreMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">moreMode</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2204">2204</a>]</p>
+
+<p>flag: we’re in More mode</p>
+
+<p><span id="outbuf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">outbuf</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2185">2185</a>]</p>
+
+<p>pending output buffer, since last flush</p>
+
+<p><span id="scrollback"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scrollback</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2174">2174</a>]</p>
+
+<p>Scrollback list. After each input, we add the contents of ‘textbuf’ to
+this list. If this pushes the list past the limit, we drop the oldest
+item. This is used to reconstruct a reasonable amount of scrollback
+history when a new client connects, or when an existing client refreshes
+the page.</p>
+
+<p><span id="scrollbackLimit"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">scrollbackLimit</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2182">2182</a>]</p>
+
+<p>The scrollback limit, as a number of command inputs. Each input
+interaction adds one item to the scrollback list. When the number of
+items in the list exceeds the limit set here, we drop the oldest item.</p>
+
+<p><span id="src"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">src</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2216">2216</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="textbuf"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">textbuf</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2165">2165</a>]</p>
+
+<p>main window text buffer since last input read</p>
+
+<p><span id="vpath"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">vpath</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2215">2215</a>]</p>
+
+<p>my virtual path, and the actual resource file location</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="cancelInputLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">cancelInputLine (reset)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2026">2026</a>]</p>
+
+<p>Cancel an input line that was interrupted by a timeout</p>
+
+<p><span id="clearWindow"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">clearWindow ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2086">2086</a>]</p>
+
+<p>Clear the window</p>
+
+<p><span id="endMoreMode"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">endMoreMode ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2158">2158</a>]</p>
+
+<p>receive notification from the client that the user has responded to the
+More prompt, ending the pause</p>
+
+<p><span id="flushWin"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">flushWin ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1949">1949</a>]</p>
+
+<p>Flush the buffers</p>
+
+<p><span id="getInputLine"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getInputLine (timeout?)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1968">1968</a>]</p>
+
+<p>Read a line of input in this window. Blocks until the reply is received.
+Returns nil on timeout.</p>
+
+<p><span id="getState"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getState (client)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2046">2046</a>]</p>
+
+<p>Get the state of this command window</p>
+
+<p><span id="receiveInput"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">receiveInput (req, query)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2057">2057</a>]</p>
+
+<p>Receive input from the client</p>
+
+<p><span id="showMorePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">showMorePrompt ( )</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2137">2137</a>]</p>
+
+<p>Show a “More” prompt</p>
+
+<p><span id="textbufToScrollback"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">textbufToScrollback (cmd)</code></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#2114">2114</a>]</p>
+
+<p>Move the current text buffer contents to the scrollback list. If this
+would make the scrollback list exceed the limit, we’ll drop the oldest
+item.</p>
+
+<p>‘cmd’ is the command line text of the last input. We include this in the
+srollback list with special tagging so that the UI can display it in a
+custom style, if it wants.</p>
+
+<p><span id="write"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">write (txt)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/webui.t.html">webui.t</a>[<a href="../source/webui.t.html#1940">1940</a>]</p>
+
+<p>Write to the window</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-spellingcorrector-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-spellingcorrector-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">spellingCorrector</span><span class="type">object</span></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#9">9</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Spelling corrector. This object implements automatic spelling correction
+on the player’s input.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">spellingCorrector</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">spellingCorrector</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#dict"><code class="language-plaintext highlighter-rouge">dict</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#checkSpacing"><code class="language-plaintext highlighter-rouge">checkSpacing</code></a> <a href="#correct"><code class="language-plaintext highlighter-rouge">correct</code></a> <a href="#correctPairSpacing"><code class="language-plaintext highlighter-rouge">correctPairSpacing</code></a> <a href="#findUnknownWord"><code class="language-plaintext highlighter-rouge">findUnknownWord</code></a> <a href="#getCandidates"><code class="language-plaintext highlighter-rouge">getCandidates</code></a> <a href="#isWordDefined"><code class="language-plaintext highlighter-rouge">isWordDefined</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="dict"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">dict</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#282">282</a>]</p>
+
+<p>the dictionary object we use for looking up words</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="checkSpacing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">checkSpacing (toks, idx, err)</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#148">148</a>]</p>
+
+<p>Find spacing corrections for the token at the given index. This looks
+for extra inserted spaces, missing spaces, and spaces transposed with
+adjacent letters. We return a list of proposed changes; each element is
+a list of three token values, giving the preceding, current and next
+token in the proposed change. The preceding and/or next can be nil, in
+which case we’re not proposing changes to those tokens.</p>
+
+<p>Note that all spacing changes have edit distance 1. All of our
+corrections are single character insertions or deletions, or pair
+transpositions (which we count as one edit).</p>
+
+<p><span id="correct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">correct (toks, idx, err)</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#62">62</a>]</p>
+
+<p>Attempt to correct a typographical error in a token list.</p>
+
+<p>‘toks’ is a token list to be corrected, and ‘idx’ is the index of the
+first unknown word. ‘err’ is ParseError that triggered the spelling
+check. We use the error to filter the list of candidates for corrected
+spellings: for a general verb syntax error, for example, we’ll look for
+words that are used in verb phrases, and for noun resolution we’ll look
+for words associated with in-scope objects.</p>
+
+<p>If we fail to find a correction, the return value is nil.</p>
+
+<p>If we find a correction, the return value is a list of token lists. It’s
+a list rather than a single correction because we might be unable to
+break a tie; rather than picking one arbitrarily, we return all of the
+candidates. This allows the caller to try the different possibilities.
+The caller will generally have more information than we have here about
+the overall context, so it’s in a better position to make a final
+judgment about how to break a tie.</p>
+
+<p>Note that we only correct a single error per call. If the token list has
+additional unknown words, the caller can continue parsing and call here
+again to get candidate corrections for the next word, and so on until
+all unknown words are resolved. We use this iterative approach because
+the first correction might change the parser’s guess about where the
+error lies; by waiting, we get the benefit of the revised context
+information for correcting each additional word.</p>
+
+<p><span id="correctPairSpacing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">correctPairSpacing (toks, idx)</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#211">211</a>]</p>
+
+<p>Try correcting spelling based on changes to the spacing between a pair
+of tokens. We’ll try deleting the intervening space entirely, and we’ll
+try transposing the space with each adjacent letter. ‘toks’ is a vector
+that we’ll modify in place; ‘idx’ is the index of the first word of the
+pair. We return true if we make a correction, nil if not.</p>
+
+<p><span id="findUnknownWord"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">findUnknownWord (toks)</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#14">14</a>]</p>
+
+<p>Find the first word token that isn’t in the dictionary. Returns the
+token index, or nil if we don’t find any unknown words.</p>
+
+<p><span id="getCandidates"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">getCandidates (w)</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#294">294</a>]</p>
+
+<p>Get a list of similar words, with their Levenshtein edit distances This
+returns a list of [word, distance] values.</p>
+
+<p><span id="isWordDefined"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isWordDefined (w)</code></p>
+
+<p><a href="../file/spelling.t.html">spelling.t</a>[<a href="../source/spelling.t.html#288">288</a>]</p>
+
+<p>Is the given word defined? We check the command dictionary for the word.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

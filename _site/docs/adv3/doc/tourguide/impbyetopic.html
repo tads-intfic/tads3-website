@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-impbyetopic-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-impbyetopic-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ImpByeTopic : <a href="misctopic.html">MiscTopic</a><br />
+<br />
+</strong></td>
+<td style="text-align: right;"><a href="byetopic.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="leavebyetopic.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>An ImpByeTopic is yet another kind of <a href="topicentry.html">TopicEntry</a> used
+in <a href="greetingprotocols.html">greeting protocols</a>. Like
+<a href="byetopic.html">ByeTopic</a>, it is used at the end of a conversation, and
+would normally be placed in a
+<a href="conversationreadystate.html">ConversationReadyState</a>. Unlike ByeTopic,
+it handles only implicit conversation endings, which occur either when
+the player character simply leaves the area in mid-conversation, or else
+fails to address a conversational command to the NPC for enough turns to
+exhaust the NPC’s attention span.</p>
+
+<p>For example, we might define the following ImpByeTopic for the curator,
+which should be located in his curatorWatching ConversationReadyState:</p>
+
+<p>+++ ImpByeTopic<br />
+  ”{The curator/he} turns away and goes back to what<br />
+   passes for his work. ”<br />
+;</p>
+
+<p>Note that this doesn’t distinguish between the cases where the
+conversation ends because the PC walks away from the curator and where
+it ends because the curator becomes bored waiting for us to speak. If we
+want to make that distinction, we can use
+<a href="leavebyetopic.html">LeaveByeTopic</a> and
+<a href="boredbyetopic.html">BoredByeTopic</a>.</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

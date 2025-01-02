@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-enterable-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-enterable-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Enterable : <a href="fixture.html">Fixture</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="asexit.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="room.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>The room definition for <a href="asexit.html">outsideCave</a> will work fine (once
+we have defined the <a href="room.html">entranceCave</a> Room) if the player types
+IN or SOUTH or even ENTER, but since the room description mentions a
+cave, the player may try to ENTER CAVE or EXAMINE CAVE. To cover this
+possibility we should define a cave object and make it enterable:</p>
+
+<p>+ Enterable -&gt;entranceTunnel ’eerhtsdat cave/entrance/caves’ ’cave’<br />
+  ”The entrance to the cave is large and welcoming; two large people could easily walk in<br />
+   side by side without stooping. ”<br />
+;</p>
+
+<p>This definition uses the <a href="enterabletemplate.html">Enterable template</a>.</p>
+
+<p>We use the + syntax to locate this Enterable in outsideCave (so make
+sure its definition comes after that of outsideCave and before anything
+else).</p>
+
+<p>Since there is no need to refer to this object from anywhere else in our
+game code we can define it as an anonymous object; there is no need to
+give it an object name, we simply use the class name (without a
+preceding colon).</p>
+
+<p><strong><u>Important Note</u></strong>.</p>
+
+<p>Enterable, in common with <a href="entryportal.html">EntryPortal</a>,
+<a href="shipboardroom.html">Exitable</a> and <a href="exitportal.html">ExitPortal</a>,
+superficially resembles Passage-type objects like
+<a href="throughpassage.html">ThroughPassage</a> in that it represents a game object
+which one can go through and end up in a different location. Unlike the
+various Passage objects (ThroughPassage, Door) etc., Enterable,
+Exitable, EntryPortal and ExitPortal are <em>not</em> TravelConnectors and have
+none of the TravelConnector methods or properties. Also, unlike Passages
+and Doors, they do not descend from Linkable, which means, for example,
+that an EntryPortal cannot be the masterObject of an ExitPortal; these
+classes cannot be linked together as pairs pointing to each other.</p>
+
+<p>Passages and Doors typically refer to other destinations through their
+<strong>otherSide</strong> or <strong>destination</strong> properties.</p>
+
+<p>Enterable, EntryPortal, Exitable and ExitPortal refer to their
+destination through their <strong>connector</strong> property, which may simply be
+set to the location you want an actor to end up in when entering or
+exiting such an object, but may instead be set to a TravelConnector
+object.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

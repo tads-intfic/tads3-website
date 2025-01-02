@@ -1,0 +1,108 @@
+---
+layout: docs
+---
+<span class="title">doorOpen</span><span class="type">object</span>
+
+[precond.t](../file/precond.t.html)\[[929](../source/precond.t.html#929)\]
+
+[Superclass  
+Tree](#_SuperClassTree_)
+
+[Property  
+Summary](#_PropSummary_)
+
+[Method  
+Summary](#_MethodSummary_)
+
+[Property  
+Details](#_Properties_)
+
+[Method  
+Details](#_Methods_)
+
+
+
+Pre-condition: a door must be open. This differs from the regular
+objOpen condition only in that we use a customized version of the
+failure report.
+
+**`doorOpen`**` :   `[`ObjOpenCondition`](../object/ObjOpenCondition.html)
+
+
+
+<span id="_SuperClassTree_"></span>
+
+
+
+<span class="hdln">Superclass Tree</span>   (in declaration order)
+
+
+
+**`doorOpen`**  
+[`ObjOpenCondition`](../object/ObjOpenCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
+`                         object`  
+<span id="_PropSummary_"></span>
+
+
+
+<span class="hdln">Summary of Properties</span>  
+
+
+
+
+
+
+
+Inherited from `PreCondition` :  
+[`preCondOrder`](../object/PreCondition.html#preCondOrder)
+
+<span id="_MethodSummary_"></span>
+
+
+
+<span class="hdln">Summary of Methods</span>  
+
+
+
+[`conditionFailed`](#conditionFailed)
+
+Inherited from `ObjOpenCondition` :  
+[`checkPreCondition`](../object/ObjOpenCondition.html#checkPreCondition) [`verifyPreCondition`](../object/ObjOpenCondition.html#verifyPreCondition)
+
+
+
+<span id="_Properties_"></span>
+
+
+
+<span class="hdln">Properties</span>  
+
+
+
+*(none)* <span id="_Methods_"></span>
+
+
+
+<span class="hdln">Methods</span>  
+
+
+
+<span id="conditionFailed"></span>
+
+`conditionFailed (obj)`<span class="rem">OVERRIDDEN</span>
+
+[precond.t](../file/precond.t.html)\[[930](../source/precond.t.html#930)\]
+
+
+
+*no description available*
+
+
+
+
+
+TADS 3 Library Manual  
+Generated on 5/16/2013 from TADS version 3.1.3
+
+

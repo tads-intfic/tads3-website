@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-specialtopicpreparser-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-specialtopicpreparser-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">specialTopicPreParser</span><span class="type">object</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1903">1903</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Pre-parser for special ConvNode-specific commands. When the player
+character is talking to another character, and the NPC’s current
+ConvNode includes topics with their own commands, we’ll check the
+player’s input to see if it matches any of these topics.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">specialTopicPreParser</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/StringPreParser.html"><code class="language-plaintext highlighter-rouge">StringPreParser</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">specialTopicPreParser</code></strong><br />
+<a href="../object/StringPreParser.html"><code class="language-plaintext highlighter-rouge">StringPreParser</code></a><br />
+<a href="../object/PreinitObject.html"><code class="language-plaintext highlighter-rouge">PreinitObject</code></a><br />
+<a href="../object/ModuleExecObject.html"><code class="language-plaintext highlighter-rouge">ModuleExecObject</code></a><br />
+`                                 object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#aOrTPat"><code class="language-plaintext highlighter-rouge">aOrTPat</code></a> <a href="#punctPat"><code class="language-plaintext highlighter-rouge">punctPat</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
+<a href="../object/StringPreParser.html#regList"><code class="language-plaintext highlighter-rouge">regList</code></a> <a href="../object/StringPreParser.html#regListSorted"><code class="language-plaintext highlighter-rouge">regListSorted</code></a> <a href="../object/StringPreParser.html#runOrder"><code class="language-plaintext highlighter-rouge">runOrder</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#execAfterMe"><code class="language-plaintext highlighter-rouge">execAfterMe</code></a> <a href="../object/ModuleExecObject.html#execBeforeMe"><code class="language-plaintext highlighter-rouge">execBeforeMe</code></a> <a href="../object/ModuleExecObject.html#hasInitialized_"><code class="language-plaintext highlighter-rouge">hasInitialized_</code></a> <a href="../object/ModuleExecObject.html#isDoingExec_"><code class="language-plaintext highlighter-rouge">isDoingExec_</code></a> <a href="../object/ModuleExecObject.html#isExecuted_"><code class="language-plaintext highlighter-rouge">isExecuted_</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#doParsing"><code class="language-plaintext highlighter-rouge">doParsing</code></a> <a href="#processInputStr"><code class="language-plaintext highlighter-rouge">processInputStr</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">StringPreParser</code> :<br />
+<a href="../object/StringPreParser.html#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="../object/StringPreParser.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/StringPreParser.html#registerPreParser"><code class="language-plaintext highlighter-rouge">registerPreParser</code></a> <a href="../object/StringPreParser.html#runAll"><code class="language-plaintext highlighter-rouge">runAll</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">ModuleExecObject</code> :<br />
+<a href="../object/ModuleExecObject.html#_execute"><code class="language-plaintext highlighter-rouge">_execute</code></a> <a href="../object/ModuleExecObject.html#classExec"><code class="language-plaintext highlighter-rouge">classExec</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="aOrTPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">aOrTPat</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2731">2731</a>]</p>
+
+<p>pattern for string starting with “A” or “T” verbs</p>
+
+<p><span id="punctPat"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">punctPat</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2735">2735</a>]</p>
+
+<p>pattern to eliminate punctuation marks from the string</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="doParsing"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">doParsing (str, which)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1904">1904</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="processInputStr"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">processInputStr (str)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#1939">1939</a>],
+<a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#2714">2714</a>]</p>
+
+<p>Process the input string, as desired, for special-topic parsing. This
+method is for the language module’s use; by default, we do nothing.</p>
+
+<p>Language modules should override this to remove punctuation marks and to
+do any other language-dependent processing to make the string parsable.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

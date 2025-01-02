@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-grammaralttokinfo-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-grammaralttokinfo-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">GrammarAltTokInfo</span><span class="type">class</span></p>
+
+<p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#89">89</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Grammar rule token descriptor. GrammarProd.getGrammarInfo() instantiates
+one of these objects to represent each token slot in an alternative; a
+GrammarAltInfo object’s gramTokens property has a list of these objects.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">GrammarAltTokInfo</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">GrammarAltTokInfo</code></strong><br />
+`         object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#gramTargetProp"><code class="language-plaintext highlighter-rouge">gramTargetProp</code></a> <a href="#gramTokenInfo"><code class="language-plaintext highlighter-rouge">gramTokenInfo</code></a> <a href="#gramTokenType"><code class="language-plaintext highlighter-rouge">gramTokenType</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="gramTargetProp"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gramTargetProp</code></p>
+
+<p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#114">114</a>]</p>
+
+<p>The target property - this is the property of the *match object* that
+will store the match information for the token. In a ‘grammar’
+statement, this is the property after the ‘-&gt;’ symbol for this token.</p>
+
+<p><span id="gramTokenInfo"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gramTokenInfo</code></p>
+
+<p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#143">143</a>]</p>
+
+<p>Detailed information for the token slot, which depends on the token
+type:</p>
+
+<p>GramTokTypeProd - this gives the GrammarProd object defining the
+sub-production that this token slot matches</p>
+
+<p>GramTokTypeSpeech - this is the property ID giving the part-of-speech
+property that this token slot matches</p>
+
+<p>GramTokTypeNSpeech - this is a list of property IDs giving the
+part-of-speech properties that this token slot matches</p>
+
+<p>GramTokTypeLiteral - this is a string giving the literal that this slot
+matches</p>
+
+<p>GramTokTypeTokEnum - this is the enum value giving the token type that
+this slot matches</p>
+
+<p>GramTokTypeStar - no extra information (the value will be nil)</p>
+
+<p><span id="gramTokenType"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">gramTokenType</code></p>
+
+<p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#120">120</a>]</p>
+
+<p>The token type. This is one of the GramTokTypeXxx values (see
+gramprod.h) indicating what kind of token slot this is.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (prop, typ, info, ...)</code></p>
+
+<p><a href="../file/gramprod.t.html">gramprod.t</a>[<a href="../source/gramprod.t.html#100">100</a>]</p>
+
+<p>Constructor. GrammarProd.getGrammarInfo() calls this once for each token
+in each alternative in the production, passing in values to fully
+describe the token slot: the target property (in a ‘grammar’ statement,
+this is the property after a ‘-&gt;’ symbol); the token type; and extra
+information that depends on the token type. Note that we use ‘…’ at
+the end of the argument list so that we’ll be compatible with any future
+changes to GrammarProd that add more arguments to this method.</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

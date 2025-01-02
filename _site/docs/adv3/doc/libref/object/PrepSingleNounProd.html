@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-prepsinglenounprod-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-prepsinglenounprod-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">PrepSingleNounProd</span><span class="type">class</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#5463">5463</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>Prepositionally modified single noun phrases. These can be used in
+indirect object responses, so allow for interactions like this:</p>
+
+<p>&gt;unlock door<br />
+What do you want to unlock it with?</p>
+
+<p>&gt;with the key</p>
+
+<p>The entire notion of prepositionally qualified noun phrases in
+interactive indirect object responses is specific to English, so this is
+implemented in the English module only. However, the general notion of
+specialized responses to interactive indirect object queries is handled
+in the language-independent library in some cases, in such a way that
+the language-specific library can customize the behavior - see
+TIAction.askIobjResponseProd.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">PrepSingleNounProd</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/SingleNounProd.html"><code class="language-plaintext highlighter-rouge">SingleNounProd</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">PrepSingleNounProd</code></strong><br />
+<a href="../object/SingleNounProd.html"><code class="language-plaintext highlighter-rouge">SingleNounProd</code></a><br />
+<a href="../object/NounPhraseProd.html"><code class="language-plaintext highlighter-rouge">NounPhraseProd</code></a><br />
+<a href="../object/BasicProd.html"><code class="language-plaintext highlighter-rouge">BasicProd</code></a><br />
+`                                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">PrepSingleNounProd</code></strong><br />
+<a href="../object/atSingleNoun(main).html"><code class="language-plaintext highlighter-rouge">atSingleNoun(main)</code></a><br />
+<a href="../object/forSingleNoun(main).html"><code class="language-plaintext highlighter-rouge">forSingleNoun(main)</code></a><br />
+<a href="../object/fromSingleNoun(main).html"><code class="language-plaintext highlighter-rouge">fromSingleNoun(main)</code></a><br />
+<a href="../object/inSingleNoun(main).html"><code class="language-plaintext highlighter-rouge">inSingleNoun(main)</code></a><br />
+<a href="../object/onSingleNoun(main).html"><code class="language-plaintext highlighter-rouge">onSingleNoun(main)</code></a><br />
+<a href="../object/outOfSingleNoun(main).html"><code class="language-plaintext highlighter-rouge">outOfSingleNoun(main)</code></a><br />
+<a href="../object/throughSingleNoun(main).html"><code class="language-plaintext highlighter-rouge">throughSingleNoun(main)</code></a><br />
+<a href="../object/toSingleNoun(main).html"><code class="language-plaintext highlighter-rouge">toSingleNoun(main)</code></a><br />
+<a href="../object/withSingleNoun(main).html"><code class="language-plaintext highlighter-rouge">withSingleNoun(main)</code></a><br />
+<span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
+<a href="../object/NounPhraseProd.html#filterForCollectives"><code class="language-plaintext highlighter-rouge">filterForCollectives</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+<a href="../object/BasicProd.html#firstTokenIndex"><code class="language-plaintext highlighter-rouge">firstTokenIndex</code></a> <a href="../object/BasicProd.html#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="../object/BasicProd.html#lastTokenIndex"><code class="language-plaintext highlighter-rouge">lastTokenIndex</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#isSpecialResponseMatch"><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch</code></a> <a href="#resolveNouns"><code class="language-plaintext highlighter-rouge">resolveNouns</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">NounPhraseProd</code> :<br />
+<a href="../object/NounPhraseProd.html#filterTruncations"><code class="language-plaintext highlighter-rouge">filterTruncations</code></a> <a href="../object/NounPhraseProd.html#getVerifyKeepers"><code class="language-plaintext highlighter-rouge">getVerifyKeepers</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">BasicProd</code> :<br />
+<a href="../object/BasicProd.html#canResolveTo"><code class="language-plaintext highlighter-rouge">canResolveTo</code></a> <a href="../object/BasicProd.html#getOrigText"><code class="language-plaintext highlighter-rouge">getOrigText</code></a> <a href="../object/BasicProd.html#getOrigTokenList"><code class="language-plaintext highlighter-rouge">getOrigTokenList</code></a> <a href="../object/BasicProd.html#setOrigTokenList"><code class="language-plaintext highlighter-rouge">setOrigTokenList</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><em>(none)</em> <span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="isSpecialResponseMatch"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isSpecialResponseMatch ( )</code></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#5473">5473</a>]</p>
+
+<p>If the response starts with a preposition, it’s pretty clearly a
+response to the special query rather than a new command.</p>
+
+<p><span id="resolveNouns"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">resolveNouns (resolver, results)</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/en_us.t.html">en_us.t</a>[<a href="../source/en_us.t.html#5464">5464</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

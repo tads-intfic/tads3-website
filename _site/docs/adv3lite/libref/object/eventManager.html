@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-object-eventmanager-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-object-eventmanager-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">eventManager</span><span class="type">object</span></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#20">20</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>The eventManager is the object that manages the execution of Events such
+as Fuses and Daemons.</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">eventManager</code></strong><code class="language-plaintext highlighter-rouge"> :   object</code></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">eventManager</code></strong><br />
+`         object`<br />
+<span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#curEvent_"><code class="language-plaintext highlighter-rouge">curEvent_</code></a> <a href="#eventList"><code class="language-plaintext highlighter-rouge">eventList</code></a> <a href="#schedulableList"><code class="language-plaintext highlighter-rouge">schedulableList</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#addEvent"><code class="language-plaintext highlighter-rouge">addEvent</code></a> <a href="#executeList"><code class="language-plaintext highlighter-rouge">executeList</code></a> <a href="#executePrompt"><code class="language-plaintext highlighter-rouge">executePrompt</code></a> <a href="#executeTurn"><code class="language-plaintext highlighter-rouge">executeTurn</code></a> <a href="#removeCurrentEvent"><code class="language-plaintext highlighter-rouge">removeCurrentEvent</code></a> <a href="#removeEvent"><code class="language-plaintext highlighter-rouge">removeEvent</code></a> <a href="#removeMatchingEvents"><code class="language-plaintext highlighter-rouge">removeMatchingEvents</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="curEvent_"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">curEvent_</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#192">192</a>]</p>
+
+<p>restore the enclosing current event</p>
+
+<p><span id="eventList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">eventList</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#194">194</a>]</p>
+
+<p><em>no description available</em></p>
+
+<p><span id="schedulableList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">schedulableList</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#205">205</a>]</p>
+
+<p>A list of ‘schedulables’. These are objects whose executeEvent() method
+should be called each turn prior to other events such as Fuses and
+Daemons. The main use for this in the library is to provide a mechanism
+for the takeTurn method of each Actor to be called before Fuses and
+Daemons are run, mainly in case an AgendaItem sets up a Fuse or Daemon
+that may need to execute on the same turn, or if a Scene wants to do so.</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="addEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">addEvent (event)</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#23">23</a>]</p>
+
+<p>Add an event to the list of events to be executed.</p>
+
+<p><span id="executeList"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeList (lst)</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#143">143</a>]</p>
+
+<p>internal service routine - execute the fuses and daemons in the given
+list, in eventOrder priority order</p>
+
+<p><span id="executePrompt"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executePrompt ( )</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#133">133</a>]</p>
+
+<p>Execute a command prompt turn. We’ll execute each per-command-prompt
+daemon.</p>
+
+<p><span id="executeTurn"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">executeTurn ( )</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#98">98</a>]</p>
+
+<p>Execute a turn. We’ll execute each fuse and each daemon that is
+currently schedulable.</p>
+
+<p><span id="removeCurrentEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeCurrentEvent ( )</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#88">88</a>]</p>
+
+<p>Remove the current event - this is provided for convenience so that an
+event can cancel itself in the course of its execution.</p>
+
+<p>Note that this has no effect on the current event execution - this
+simply prevents the event from receiving additional notifications in the
+future.</p>
+
+<p><span id="removeEvent"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeEvent (event)</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#29">29</a>]</p>
+
+<p>Remove an event from the list of events to be executed.</p>
+
+<p><span id="removeMatchingEvents"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">removeMatchingEvents (obj, prop)</code></p>
+
+<p><a href="../file/events.t.html">events.t</a>[<a href="../source/events.t.html#52">52</a>]</p>
+
+<p>Remove events matching the given object and property combination. We
+remove all events that match both the object and property (events
+matching only the object or only the property are not affected).</p>
+
+<p>This is provided mostly as a convenience for cases where an event is
+known to be uniquely identifiable by its object and property values;
+this saves the caller the trouble of keeping track of the Event object
+created when the event was first registered.</p>
+
+<p>When a particular object/property combination might be used in several
+different events, it’s better to keep a reference to the Event object
+representing each event, and use removeEvent() to remove the specific
+Event object of interest.</p>
+
+<p>Returns true if we find any matching events, nil if not.</p>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

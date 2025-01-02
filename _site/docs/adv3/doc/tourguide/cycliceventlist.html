@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-cycliceventlist-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-cycliceventlist-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CyclicEventList : <a href="eventlist.html">EventList</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="stopeventlist.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="randomeventlist.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>A CyclicEventList is just like an EventList, except that it keeps
+looping round the list; once it reaches the last item in the list it
+goes back to the first, and carries on round indefinitely.</p>
+
+<p>Although one would normally want to randomize the events that occur (or
+strings that are displayed), there may be occasions when you want more
+control over the sequence of events. For example, when our intrepid
+adventurer finally reaches the side of the volcano, he’ll have to wait a
+couple of turns until the volcano happens to set fire to a nearby bush
+before the bush can be pulled up revealing a small hole into the side of
+the volcano. We could control this by means of a CyclicEventList linked
+to a StopEventList that sets fire to the bush first time round and
+merely displays some text thereafter. The following code shows how we
+might go about this, at the same time providing several other examples
+of EventLists, an example of a <a href="sensedaemon.html">SenseDaemon</a>, and a
+means of disposing of the pesky Golden Banana of Discord:</p>
+
+<p>sideOfVolcano : OutdoorRoom ’Side of Volcano’ ’the side of the volcano’<br />
+   ”Halfway up the side of the volcano the path up from the basalt plain<br />
+    peters out. There’s no obvious way to climb any further up from here,<br />
+    and the fact that the volcano is continuously belching fire, smoke,<br />
+    ash, and the occasional rock and dollop of lava probably would <br />
+    probably make any further progress up its side more than a little <br />
+    perilous. ”<br />
+   down = volcanoPathDown<br />
+   in = bushHole<br />
+   atmosphereList : CyclicEventList <br />
+   {<br />
+    [<br />
+      ’A loud rumbling comes from deep inside the mountain. ’,<br />
+       lexicalParent.rockFallList,<br />
+       nil<br />
+    ]<br />
+   }</p>
+
+<p>   rockFallList : StopEventList<br />
+   {<br />
+    [<br />
+      ’High above your head a shower of flame and sparks issues from the<br />
+        top of the volcano, sending blazing rocks tumbling down the<br />
+        hillside. ’,<br />
+      new function <br />
+      {<br />
+        ”A blazing rock comes hurtling down the hillside, narrowly<br />
+         missing you but setting the bush ablaze. ”;<br />
+         bush.daemonID = new SenseDaemon(bush, &amp;burnDaemon, 1, bush, sight);<br />
+      },<br />
+      ’A shower of sparks and rocks spews from the volcano above your head. ’     <br />
+    ]<br />
+   }<br />
+;</p>
+
+<p>+ bush: CustomImmovable ’desiccated burning bush’ ’desiccated bush’<br />
+  ”The bush is &lt;&lt;daemonID == nil ? ’little more than a collections of<br />
+   dried sticks, with only the occasional apology for a leaf doing duty<br />
+   for foliage’ : ’ablaze’&gt;&gt;. ” <br />
+  inRoomDesc = ”The only sign of life on this barren hillside<br />
+    is a desiccated bush. ”<br />
+  burnDaemon { eventList.doScript; }<br />
+  daemonID = nil  <br />
+  eventList : EventList<br />
+  {<br />
+  [<br />
+    ’The bush is alight. ’,<br />
+    ’The bush is burning furiously. ’,<br />
+    ’The bush is starting to burn out. ’,<br />
+    &amp;swap<br />
+  ]  <br />
+  swap()<br />
+   {<br />
+    ”The flames on the bush die out, leaving only charred remains. ”;<br />
+    lexicalParent.daemonID.removeEvent();<br />
+    lexicalParent.daemonID = nil;<br />
+    burnedBush.moveInto(lexicalParent.location);<br />
+    lexicalParent.moveInto(nil);<br />
+   }<br />
+  }<br />
+  cannotTakeMsg = ’Tug as {you/he} will, the bush will not quite come<br />
+    free of the ground. ’<br />
+;</p>
+
+<p>+ volcanoPathDown : StairwayDown ’narrow down path’ ’narrow down path’<br />
+;<br />
+ <br />
++ bushHole : HiddenDoor ’small hole’ ’small hole’<br />
+  ”The small hole exposed by pulling up the burned-out bush looks<br />
+   just large enough to crawl through. ”<br />
+  destination = volcanoTunnel <br />
+  isOpen = (burnedBush.isPulled)<br />
+; <br />
+ <br />
+burnedBush : Lever, Fixture ’burned bush’ ’burned bush’ <br />
+  ”All that remains are the charred remains of the bush. ”<br />
+  makePulled(stat)<br />
+  {<br />
+    if(stat)<br />
+    {<br />
+      ”When {you/he} pull{s} at the burned-out bush, it comes clear of the<br />
+       ground, sending a shower of dried earth tumbling down the hillside<br />
+       and revealing a small hole in the hillside. ”;     <br />
+    }<br />
+    else<br />
+    {<br />
+      ”You push the remains of the bush back into the hole. ”;<br />
+    }   <br />
+    inherited(stat);   <br />
+  }<br />
+; </p>
+
+<p>volcanoTunnel : DarkRoom ’Narrow Tunnel’ ’the narrow tunnel’<br />
+  ”This narrow tunnel is only just about large enough to crawl<br />
+   through. One way it carries on north deep into the volcano, while<br />
+   the other way (south) leads back out. ”<br />
+  out asExit(south)<br />
+  in asExit(north)<br />
+  north = volcanoLedge<br />
+  south = sideOfVolcano<br />
+;</p>
+
+<p>volcanoLedge : Room ’Ledge inside Volcano’ ’the ledge inside the Volcano’<br />
+  ”This narrow ledge, on the inside of the volcanic crater, overlooks a<br />
+   heaving pool of lava below. It’s very hot here and probably not a<br />
+   healthy place to be, but the only way out is through a small hole<br />
+   in the side of the crater. ”<br />
+   in = volcanoTunnel<br />
+   south asExit(in)<br />
+   atmosphereList : EventList<br />
+   {<br />
+     [ nil, <br />
+      ’A plume of lava shoots up from the pool, throwing rocks out<br />
+       of the crater mouth above. ’,<br />
+       nil,<br />
+      ’A second plume of lava bubbles up from the pool, narrowly<br />
+       missing the ledge. ’,<br />
+      ’Yet another jet of steam, lava, rocks and ashes shoots up<br />
+       from the pool, uncomfortably close. ’,<br />
+      {: ”This time, the hissing lava bubbling up from the lake<br />
+       strikes the ledge, scalding you to death.\b&lt;&lt;endGame(ftDeath)&gt;&gt;“ }<br />
+     ]         <br />
+   }<br />
+   enteringRoom(traveler)<br />
+   {<br />
+     atmosphereList.curScriptState = 1;<br />
+   }<br />
+;</p>
+
+<p>+ Enterable -&gt;volcanoTunnel ’small hole’ ’small hole’<br />
+  ”The small hole in the crater wall is just about large enough to<br />
+   crawl through and looks like the only way to leave the ledge. ”<br />
+;</p>
+
+<p>+ Distant ’lava pool’ ’lava pool’<br />
+  ”The pool of seething red lava is bubbling away about two hundred yards<br />
+   beneath the ledge, accordingly throwing up flaming rocks and spurts<br />
+   of lava. ”<br />
+  iobjFor(ThrowAt) asIobjFor(ThrowTo)<br />
+  iobjFor(ThrowTo)<br />
+  {<br />
+    verify() {}    <br />
+  } <br />
+  throwTargetCatch(obj, path) <br />
+  { <br />
+     ”\&lt;&lt;obj.theName&gt;&gt; drops into the bubbling pool of lava and disappears<br />
+        out of sight, lost forever. ”;<br />
+      obj.moveInto(nil);<br />
+  }<br />
+;</p>
+
+<p>Note, that at the moment, there’s no way to reach the sideOfVolcano room
+to try all this out other than using POW DESICCATED BUSH if you’ve
+included ncDebugActions with your code.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

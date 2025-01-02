@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-tourguide-openable-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-tourguide-openable-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<table width="100%" data-border="0" data-cellspacing="0" data-cellpadding="3" data-bgcolor="#C0C0C0">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Openable: <a href="basicopenable.html">BasicOpenable</a><br />
+</strong></td>
+<td style="text-align: right;"><a href="keyring.html">[Previous]</a> <a href="generalintroduction.html">[Main]</a> <a href="basicopenable.html">[Next]</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>Most objects that are lockable are also likely to be openable - after
+all, there’s not a lot of point in locking or unlocking an object that
+can’t be open or closed. However, since most of the objects that are
+openable and closable tend to be container-like objects or door-like
+objects, in practice one tends to use classes like <a href="door.html">Door</a> and
+<a href="openablecontainer.html">OpenableContainer</a> rather more than a bare
+Openable. We are not yet ready to introduce an example of a bare
+Openable in our test game, but there is one later, the
+<a href="presentlater.html">tardisPanel</a> object.</p>
+
+<p>The Openable class inherits all the behaviour of
+<a href="basicopenable.html">BasicOpenable</a> and the mainly adds handling (or at
+least additional preconditions) for a number of common verbs (OPEN,
+CLOSE, PUT IN, POUR INTO, LOCK, LOCK WITH, GET OUT OF, and BOARD).</p>
+
+<p>Openable also defines <strong>lockStatusReportable</strong> to be (!isOpen); for a
+fuller explanation see <a href="lockable.html">Lockable</a>. Finally it defines an
+<strong>openStatus</strong>() method which returns a sentence like “it’s open” or
+“it’s closed” (without punctuation) which can be added to the
+description of an object to indicate whether it’s open or closed. The
+library defaults are usually fine, but you may, for example, want to
+suppress “it’s closed” either for aesthetic reasons or to disguise the
+fact that something is openable, in which case you might write something
+like:</p>
+
+<p>openStatus { return isOpen ? inherited : ’’; }</p>
+
+<p>If you do that, however, the punctuation will look a bit wayward when
+the object is closed, so you also have to tweak the description of the
+object from something like:</p>
+
+<p>“It’s red and square. ”</p>
+
+<p>To</p>
+
+<p>“It’s red and square”</p>
+
+<p>And then write your openStatus method thus:</p>
+
+<p> openStatus = (isOpen ? ’ . It\s open’ : ’’)</p>
+
+<p>Note that the final full stop (or period) and space have been removed
+from the end of the object description and added instead to the start of
+the “It’s open” message.</p>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

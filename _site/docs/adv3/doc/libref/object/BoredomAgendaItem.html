@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3-doc-libref-object-boredomagendaitem-html</title>
+    <meta property="og:title" content=
+    "docs-adv3-doc-libref-object-boredomagendaitem-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<p><span class="title">BoredomAgendaItem</span><span class="type">class</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5180">5180</a>]</p>
+
+<p><a href="#_SuperClassTree_">Superclass<br />
+Tree</a></p>
+
+<p><a href="#_SubClassTree_">Subclass<br />
+Tree</a></p>
+
+<p><a href="#_ObjectSummary_">Global<br />
+Objects</a></p>
+
+<p><a href="#_PropSummary_">Property<br />
+Summary</a></p>
+
+<p><a href="#_MethodSummary_">Method<br />
+Summary</a></p>
+
+<p><a href="#_Properties_">Property<br />
+Details</a></p>
+
+<p><a href="#_Methods_">Method<br />
+Details</a></p>
+
+<p>A special kind of agenda item for monitoring “boredom” during a
+conversation. We check to see if our actor is in a conversation, and the
+PC has been ignoring the conversation for too long; if so, our actor
+initiates the end of the conversation, since the PC apparently isn’t
+paying any attention to us.</p>
+
+<p><code class="language-plaintext highlighter-rouge">class </code><strong><code class="language-plaintext highlighter-rouge">BoredomAgendaItem</code></strong><code class="language-plaintext highlighter-rouge"> :   </code><a href="../object/AgendaItem.html"><code class="language-plaintext highlighter-rouge">AgendaItem</code></a></p>
+
+<p><span id="_SuperClassTree_"></span></p>
+
+<p><span class="hdln">Superclass Tree</span>   (in declaration order)</p>
+
+<p><strong><code class="language-plaintext highlighter-rouge">BoredomAgendaItem</code></strong><br />
+<a href="../object/AgendaItem.html"><code class="language-plaintext highlighter-rouge">AgendaItem</code></a><br />
+`                 object`<br />
+<span id="_SubClassTree_"></span></p>
+
+<p><span class="hdln">Subclass Tree</span>  </p>
+
+<p><em>(none)</em> <span id="_ObjectSummary_"></span></p>
+
+<p><span class="hdln">Global Objects</span>  </p>
+
+<p><em>(none)</em> <span id="_PropSummary_"></span></p>
+
+<p><span class="hdln">Summary of Properties</span>  </p>
+
+<p><a href="#agendaOrder"><code class="language-plaintext highlighter-rouge">agendaOrder</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
+<a href="../object/AgendaItem.html#initiallyActive"><code class="language-plaintext highlighter-rouge">initiallyActive</code></a> <a href="../object/AgendaItem.html#isDone"><code class="language-plaintext highlighter-rouge">isDone</code></a> <a href="../object/AgendaItem.html#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a></p>
+
+<p><span id="_MethodSummary_"></span></p>
+
+<p><span class="hdln">Summary of Methods</span>  </p>
+
+<p><a href="#construct"><code class="language-plaintext highlighter-rouge">construct</code></a> <a href="#invokeItem"><code class="language-plaintext highlighter-rouge">invokeItem</code></a> <a href="#isReady"><code class="language-plaintext highlighter-rouge">isReady</code></a></p>
+
+<p>Inherited from <code class="language-plaintext highlighter-rouge">AgendaItem</code> :<br />
+<a href="../object/AgendaItem.html#execute"><code class="language-plaintext highlighter-rouge">execute</code></a> <a href="../object/AgendaItem.html#getActor"><code class="language-plaintext highlighter-rouge">getActor</code></a> <a href="../object/AgendaItem.html#resetItem"><code class="language-plaintext highlighter-rouge">resetItem</code></a></p>
+
+<p><span id="_Properties_"></span></p>
+
+<p><span class="hdln">Properties</span>  </p>
+
+<p><span id="agendaOrder"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">agendaOrder</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5218">5218</a>]</p>
+
+<p>by default, handle boredom before other agenda items - we do this
+because an ongoing conversation will be the first thing on the NPC’s
+mind</p>
+
+<p><span id="_Methods_"></span></p>
+
+<p><span class="hdln">Methods</span>  </p>
+
+<p><span id="construct"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">construct (actor)</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5182">5182</a>]</p>
+
+<p>we construct these dynamically during actor initialization</p>
+
+<p><span id="invokeItem"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">invokeItem ( )</code><span class="rem">OVERRIDDEN</span></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5204">5204</a>]</p>
+
+<p>on invocation, end the conversation</p>
+
+<p><span id="isReady"></span></p>
+
+<p><code class="language-plaintext highlighter-rouge">isReady ( )</code></p>
+
+<p><a href="../file/actor.t.html">actor.t</a>[<a href="../source/actor.t.html#5192">5192</a>]</p>
+
+<p>we’re ready to run if our actor is in an InConversationState and its
+boredom count has reached the limit for the state</p>
+
+<p>TADS 3 Library Manual<br />
+Generated on 5/16/2013 from TADS version 3.1.3</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-libref-source-mobilecollectivegroup-t-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-libref-source-mobilecollectivegroup-t-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
+<h1 id="mobilecollectivegroupt">mobileCollectiveGroup.t</h1>
+
+<p><a href="../file/mobileCollectiveGroup.t.html">documentation</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#charset "us-ascii"
+#include "advlite.h"
+
+/*---------------------------------------------------------------------------*/
+/*   
+ *   MobileCollective Group Extension
+ *
+ *   This extension requires events.t and extras.t to be present also.
+ */
+
+
+/* 
+ *   A MobileCollectiveGroup is a CollectiveGroup that can be used to represent
+ *   a collection of portable objects, different members of which may be in
+ *   scope at any given moment. A MobileCollectiveGroup is moved into the
+ *   player's location if more than one of its members is visible at the start
+ *   of any turn and moved into nil otherwise.
+ *   [MobileCollectiveGroup EXTENSION]
+ */
+class MobileCollectiveGroup: PreinitObject, CollectiveGroup
+    execute()
+    {
+        /* Set up a daemon to execute every turn */
+        myDaemon = new Daemon(self, &amp;scopeCheck, 1);
+        
+        /* 
+         *   Give the daemon a high event order so that it runs after other
+         *   events if possible.
+         */
+        myDaemon.eventOrder = 10000;
+        
+        /* Set up a prompt daemon to execute just before the first turn */
+        new OneTimePromptDaemon(self, &amp;scopeCheck);
+        
+        /* Create a new vector */
+        local vec = new Vector;
+        
+        /* 
+         *   Populate the vector with all the Things in the game that include
+         *   this MobileCollectiveGroup in their collectiveGroups property.
+         */
+        for(local obj = firstObj(Thing); obj != nil; obj = nextObj(obj, Thing))
+        {
+            if(valToList(obj.collectiveGroups).indexOf(self))
+                vec.append(obj);
+        }
+        
+        /* 
+         *   Convert the vector to a list and store the result in the myObjs
+         *   property.
+         */
+        myObjs = vec.toList;
+    }
+    
+    /*  
+     *   If the player can see more than one of the objects that belong to this
+     *   CollectiveGroup, move it to the player's location (so that it can stand
+     *   in for those objects when required); otherwise move this
+     *   CollectiveGroup out of the way. [MobileCollectiveGroup EXTENSION]
+     */
+    scopeCheck()
+    {
+        if(myObjs.countWhich({x: gPlayerChar.canSee(x)}) &gt; 1)
+            moveInto(gPlayerChar.location);
+        else
+            moveInto(nil);        
+    }
+    
+    /* 
+     *   The list of objects belonging to this MobileCollectiveGroup; this is
+     *   created automatically at PreInit. [MobileCollectiveGroup EXTENSION]
+     */
+    myObjs = nil
+    
+    /* 
+     *   Store a reference to the Daemon used to update the location of this
+     *   MobileCollectiveGroup. [MobileCollectiveGroup EXTENSION]
+     */
+    myDaemon = nil
+;
+</code></pre></div></div>
+
+<p>Adv3Lite Library Reference Manual<br />
+Generated on 15/03/2023 from adv3Lite version 1.6.1</p>
+
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>
