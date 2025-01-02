@@ -28,6 +28,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Cache Site Files
+        uses: actions/cache@v3
+        with:
+          path: _site
+          key: ${{ runner.os }}-jekyll-site-${{ hashFiles('**/*.md') }}
+          restore-keys: |
+            ${{ runner.os }}-jekyll-site-
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
@@ -35,6 +42,7 @@ jobs:
         with:
           source: ./
           destination: ./_site
+          incremental: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
